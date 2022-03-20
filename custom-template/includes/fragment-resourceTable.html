@@ -1,0 +1,57 @@
+  <table class="{{site.data.resources[resource_].status.class}}">
+    <tr><td><b>項目</b></td><td><b>内容</b></td></tr>
+    {% if site.data.resources[resource_].url != nil %}
+    <tr>
+      <td ><i>定義URL</i></td>
+      <td><span class="copy-text">{{site.data.resources[resource_].url}}<button title="Click to copy URL" class="btn-copy" data-clipboard-text="{{site.data.resources[resource_].url}}"/></span></td>
+    </tr>
+    <tr>
+      <td><i>Version</i></td>
+      <td><span class="copy-text">{{site.data.resources[resource_].version}}<button title="Click to copy versioned URL" class="btn-copy" data-clipboard-text="{{site.data.resources[resource_].url}}|{{site.data.resources[resource_].version}}"/></span></td>
+    </tr>
+    {% endif %}
+
+{%if site.data.resources[resource_].name %}
+    <tr>
+      <td><i>Name</i></td>
+      <td>{{site.data.resources[resource_].name | markdownify}}</td>
+    </tr>
+{% endif %}
+{%if site.data.resources[resource_].title %}
+    <tr>
+      <td><i>Title</i></td>
+      <td>{{site.data.resources[resource_].title | markdownify}}</td>
+    </tr>
+{% endif %}
+<tr>
+  <td><i>Status</i></td>
+  <td>{{site.data.resources[resource_].status.status}}
+    {% if site.data.resources[resource_].date %}
+      ( {{site.data.resources[resource_].date | date: "%Y-%m-%d"}} )
+    {% endif %}</td>
+</tr>
+{% if site.data.resources[resource_].keywords %}
+    <tr>
+      <td><i>Keywords</i></td>
+      <td>{{site.data.resources[resource_].keywords}}</td>
+    </tr>
+{% endif %}
+{% if site.data.resources[resource_].contexts %}
+    <tr>
+      <td><i>Usage</i></td>
+      <td>{{site.data.resources[resource_].contexts | markdownify}}</td>
+    </tr>
+{% endif %}
+{%if site.data.resources[resource_].publisher %}
+    <tr>
+      <td><i>公開者</i></td>
+      <td>{{site.data.resources[resource_].publisher | markdownify}}</td>
+    </tr>
+{% endif %}
+{%if site.data.resources[resource_].copyright %}
+    <tr>
+      <td><i>Copyright</i></td>
+      <td>{{site.data.resources[resource_].copyright | markdownify}}</td>
+    </tr>
+{% endif %}
+  </table>

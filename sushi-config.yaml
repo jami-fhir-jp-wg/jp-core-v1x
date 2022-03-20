@@ -1,0 +1,102 @@
+id: hl7.fhir.jp.core
+canonical: http://jpfhir.jp/fhir/core
+name: "FHIRJPCoreImplementationGuide"
+title: "FHIR JP Core 実装ガイド"
+description: "日本医療情報学会(JAMI) NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した日本国内におけるベースとなるJP Core実装ガイドのドラフトVer.1.1 です。"
+status: draft # draft | active | retired | unknown
+version: 1.1.0a
+date: 2022-03-18
+fhirVersion: 4.0.1
+copyrightYear: 2022+
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+publisher:
+  name: FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)
+  url: http://jpfhir.jp
+  email: office@hlfhir.jp
+copyright: >-
+  FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)
+jurisdiction: 'urn:iso:std:iso:3166#JP'
+
+#-----------------------------------------
+# ページタイトル名称設定
+#-----------------------------------------
+pages:
+  index.md:
+    title: HL7 FHIR JP Core 実装ガイド ＜Draft Ver1.1＞
+  guidance.md:
+    title: ガイダンス
+    guide-general.md:
+      title: 総合ガイダンス
+    guide-mustSupportCardinality.md:
+      title: Must SupportとCardinality(多重度)のルール
+    guide-handlingOfNonExistentData.md:
+      title: 欠損値（データが存在しない場合）の扱い
+    guide-characterEncoding.md:
+      title: 文字コード
+    guide-stringSearch.md:
+      title: 検索
+  group-fhircontents.md:
+    title: FHIR Contents List
+    group-administration.md:
+      title: Administration Group
+    group-medication.md:
+      title: Medication Group
+    group-diagnostic.md:
+      title: Diagnostic Group
+    group-clinical.md:
+      title: Clinical Group
+  security.md:
+    title: セキュリティ
+  download.md:
+    title: ダウンロード
+
+#-----------------------------------------
+# メニュー設定
+#-----------------------------------------
+menu:
+  FHIRJP: index.html
+  Guidances: 
+    総合ガイダンス: guide-general.html
+    MustSupportとCardinality: guide-mustSupportCardinality.html
+    欠損値の扱い: guide-handlingOfNonExistentData.html
+    文字コード: guide-characterEncoding.html
+    文字列検索: guide-stringSearch.html
+  FHIRContents: 
+    Administration: group-administration.html
+    Medication: group-medication.html
+    Diagnostic: group-diagnostic.html
+    Clinical: group-clinical.html
+  Security: security.html
+  Artifacts: artifacts.html
+  Download: download.html
+
+#-----------------------------------------
+# IG 外部パラメータ設定
+#-----------------------------------------
+parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  path-resource:
+    - input/resources
+    - fsh-generated/resources
+  path-pages:
+    - input/pagecontent
+    - input/intro-notes
+    - fsh-generated/includes
+    #- input/summaries
+  path-expansion-params: '../../input/_resources/exp-params.json'
+  active-tables: 'false'
+  apply-version: 'true'
+  apply-copyright: 'true'
+  apply-publisher: 'true'
+  apply-contact: 'true'
+  apply-licese: 'true'
+  apply-jurisdiction: 'true'
+  show-inherited-invariants: 'true'
+  usage-stats-opt-out: 'true'
+  excludexml: 'false'
+  excludejsn: 'false'
+  excludettl: 'true'
+  excludemap: 'true'
+  excludeexample: 'true'
+  generate: #what does this do - todo: remove and see
+    - xml
+    - json
