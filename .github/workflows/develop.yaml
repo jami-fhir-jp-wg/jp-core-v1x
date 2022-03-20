@@ -1,0 +1,58 @@
+name: JPCore FHIR Task
+
+on:
+  push:
+    branches: 
+      - main
+    paths:
+      - 'sushi-config.yaml'
+      - 'input/**'
+  pull_request:
+    branches: [ main ]
+    
+jobs:
+  turn:
+
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: ['3.0']
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup npm
+      uses: actions/setup-node@v2
+      with: 
+        check-lastest: true
+
+    - name: Setup Sushi
+      run: |
+        sudo npm install -g fsh-sushi
+
+    - name: Install Jekyll
+      run: |
+        sudo apt-get install jekyll
+        
+    - name: Download IG Publisher
+      uses: Legion2/download-release-action@v2.1.0
+      with:
+        repository: HL7/fhir-ig-publisher
+        tag: 'latest'
+        path: .
+        file: publisher.jar
+   
+    - name: Run IG Publisher
+      run: | 
+        mkdir input-cache
+        mv publisher.jar ./input-cache/publisher.jar
+        unset DISPLAY
+        java -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini
+
+    - name: Deploy Implementation Guide
+      if: success()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: pages
+        publish_dir: ./output
+
