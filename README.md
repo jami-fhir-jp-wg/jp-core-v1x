@@ -15,7 +15,7 @@ FHIRのJpCore環境作成のためのサンプルサイトです。
 > cd (プロジェクトディレクトリ移動)
 
 # (初回のみ実行)gitクローン
-> git clone http://github.com/kazuhiko-ohe/jp-core-v1x.git
+> git clone http://github.com/jami-fhir-jp-wg/jp-core-v1x.git
 
 # git 最新化
 > cd jp-core-v1x
@@ -35,10 +35,10 @@ FHIRのJpCore環境作成のためのサンプルサイトです。
 > cd (プロジェクトディレクトリ移動)
 
 # (初回のみ実行)gitクローン
-> git clone http://github.com/kazuhiko-ohe/jp-core-v1x.git
+> git clone http://github.com/jami-fhir-jp-wg/jp-core-v1x.git
 
 # git 最新化
-> cd kazuhiko-ohe/jp-core-v1x
+> cd jami-fhir-jp-wg/jp-core-v1x
 > git fetch
 > git pull
 
@@ -50,9 +50,9 @@ FHIRのJpCore環境作成のためのサンプルサイトです。
 ```
 
 ## GitHubAction 自動ビルド＆デプロイ
-* [ビルド状況](https://github.com/kazuhiko-ohe/jp-core-v1x/actions)
-* [ビルド警告情報](https://kazuhiko-ohe/jp-core-v1x/qa.html)
-* [最新ビルド結果](https://kazuhiko-ohe/jp-core-v1x/)
+* [ビルド状況](https://github.com/jami-fhir-jp-wg/jp-core-v1x/actions)
+* [ビルド警告情報](https://jami-fhir-jp-wg/jp-core-v1x/qa.html)
+* [最新ビルド結果](https://jami-fhir-jp-wg/jp-core-v1x/)
 
 ## FSH & Markdown記載ルール
 * [FHIR Shorthand記載ルール **(作成中)** ](docs/fishingrule.md)
