@@ -23,7 +23,7 @@ jobs:
     - name: Setup npm
       uses: actions/setup-node@v2
       with: 
-        check-lastest: true
+        check-latest: true
 
     - name: Setup Sushi
       run: |
