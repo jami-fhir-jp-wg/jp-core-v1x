@@ -1,0 +1,1 @@
+FHIR JPCore ver1.1用テストサイト
