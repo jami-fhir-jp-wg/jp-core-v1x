@@ -1,6 +1,7 @@
 Instance: jp-allergyintolerance-category-sp
 InstanceOf: SearchParameter
 Usage: #definition
+Id: jp-allergyintolerance-category-sp
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_AllergyIntolerance_Category_SP"
 * name = "JP_AllergyIntolerance_Category_SP"
 * status = #draft
