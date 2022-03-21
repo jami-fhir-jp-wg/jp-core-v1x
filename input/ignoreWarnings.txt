@@ -3,5 +3,200 @@
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
-ERROR: SearchParameter.url: Resource id/url mismatch%
 
+ERROR: SearchParameter.url: Resource id/url mismatch%
+ERROR: SearchParameter.url: Resource id/url mismatch:
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-allergyintolerance-clinicalstatus-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Allergyintolerance_ClinicalStatus_SP
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-allergyintolerance-criticality-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_AllergyIntolerance_Criticality_SP
+WARNING: SearchParameter/jp-allergyintolerance-criticality-sp: SearchParameter: spd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+== fsh-generated/resources/SearchParameter-jp-allergyintolerance-date-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-allergyintolerance-date-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_AllergyIntolerance_Date_SP
+WARNING: SearchParameter/jp-allergyintolerance-date-sp: SearchParameter: spd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+== fsh-generated/resources/SearchParameter-jp-allergyintolerance-patient-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-allergyintolerance-patient-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_AllergyIntolerance_Patient_SP
+WARNING: SearchParameter/jp-allergyintolerance-patient-sp: SearchParameter: spd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+== fsh-generated/resources/SearchParameter-jp-allergyintolerance-type-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-allergyintolerance-type-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_AllergyIntolerance_Type_SP
+WARNING: SearchParameter/jp-allergyintolerance-type-sp: SearchParameter: spd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+== fsh-generated/resources/SearchParameter-jp-allergyintolerance-verificationstatus-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-allergyintolerance-verificationstatus-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_AllergyIntolerance_VerificationStatus_SP
+WARNING: SearchParameter/jp-allergyintolerance-verificationstatus-sp: SearchParameter: spd-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+== fsh-generated/resources/SearchParameter-jp-condition-category-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-condition-category-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Condition_Category_SP
+== fsh-generated/resources/SearchParameter-jp-condition-clinicalstatus-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-condition-clinicalstatus-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Condition_ClinicalStatus_SP
+== fsh-generated/resources/SearchParameter-jp-condition-date-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-condition-date-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Condition_Date_SP
+== fsh-generated/resources/SearchParameter-jp-condition-patient-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-condition-patient-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Condition_Patient_SP
+== fsh-generated/resources/SearchParameter-jp-condition-verificationstatus-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-condition-verificationstatus-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Condition_VerificationStatus_SP
+== fsh-generated/resources/SearchParameter-jp-coverage-beneficiary-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-coverage-beneficiary-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Beneficiary_SP
+== fsh-generated/resources/SearchParameter-jp-coverage-identifier-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-coverage-identifier-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Identifier_SP
+== fsh-generated/resources/SearchParameter-jp-diagnosticreport-category-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-diagnosticreport-category-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_DiagnosticReport_Category_SP
+== fsh-generated/resources/SearchParameter-jp-diagnosticreport-code-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-diagnosticreport-code-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Diagnosticreport_Code_SP
+== fsh-generated/resources/SearchParameter-jp-diagnosticreport-date-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-diagnosticreport-date-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Diagnosticreport_Date_SP
+== fsh-generated/resources/SearchParameter-jp-diagnosticreport-patient-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-diagnosticreport-patient-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_DiagnosticReport_Patient_SP
+== fsh-generated/resources/SearchParameter-jp-diagnosticreport-servicerequest-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-diagnosticreport-servicerequest-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_DiagnosticReport_ServiceRequest_SP
+== fsh-generated/resources/SearchParameter-jp-encounter-class-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-encounter-class-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Encounter_Class_SP
+== fsh-generated/resources/SearchParameter-jp-encounter-date-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-encounter-date-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Encounter_Date_SP
+== fsh-generated/resources/SearchParameter-jp-encounter-identifier-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-encounter-identifier-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Encounter_Identifier_SP
+== fsh-generated/resources/SearchParameter-jp-encounter-patient-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-encounter-patient-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Encounter_Patient_SP
+== fsh-generated/resources/SearchParameter-jp-encounter-status-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-encounter-status-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Encounter_Status_SP
+== fsh-generated/resources/SearchParameter-jp-encounter-type-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-encounter-type-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Encounter_Type_SP
+== fsh-generated/resources/SearchParameter-jp-imagingstudy-bodysite-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-imagingstudy-bodysite-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_ImagingStudy_BodySite_SP
+== fsh-generated/resources/SearchParameter-jp-imagingstudy-encounter-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-imagingstudy-encounter-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_ImagingStudy_Encounter_SP
+== fsh-generated/resources/SearchParameter-jp-imagingstudy-modality-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-imagingstudy-modality-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_ImagingStudy_Modality_SP
+== fsh-generated/resources/SearchParameter-jp-imagingstudy-patient-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-imagingstudy-patient-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_ImagingStudy_Patient_SP
+== fsh-generated/resources/SearchParameter-jp-imagingstudy-started-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-imagingstudy-started-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_ImagingStudy_Started_SP
+== fsh-generated/resources/SearchParameter-jp-location-address-city-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-location-address-city-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Location_AddressCity_SP
+== fsh-generated/resources/SearchParameter-jp-location-address-postalcode-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-location-address-postalcode-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Location_AddressPostalcode_SP
+== fsh-generated/resources/SearchParameter-jp-location-address-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-location-address-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Location_Address_SP
+== fsh-generated/resources/SearchParameter-jp-location-address-state-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-location-address-state-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Location_AddressState_SP
+== fsh-generated/resources/SearchParameter-jp-location-name-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-location-name-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Location_Name_SP
+== fsh-generated/resources/SearchParameter-jp-medicationadministration-code-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationadministration-code-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationAdministration_Code_SP
+== fsh-generated/resources/SearchParameter-jp-medicationadministration-effectivedatetime-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationadministration-effectivedatetime-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationAdministration_EffectiveDatetime_SP
+== fsh-generated/resources/SearchParameter-jp-medicationadministration-identifier-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationadministration-identifier-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationAdministration_Identifier_SP
+== fsh-generated/resources/SearchParameter-jp-medicationadministration-patient-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationadministration-patient-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationAdministration_Patient_SP
+== fsh-generated/resources/SearchParameter-jp-medicationdispense-code-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationdispense-code-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationDispense_Code_SP
+== fsh-generated/resources/SearchParameter-jp-medicationdispense-encounter-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationdispense-encounter-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationDispense_Encounter_SP
+== fsh-generated/resources/SearchParameter-jp-medicationdispense-identifier-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationdispense-identifier-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationDispense_Identifier_SP
+== fsh-generated/resources/SearchParameter-jp-medicationdispense-patient-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationdispense-patient-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationDispense_Patient_SP
+== fsh-generated/resources/SearchParameter-jp-medicationdispense-performer-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationdispense-performer-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationDispense_Performer_SP
+== fsh-generated/resources/SearchParameter-jp-medicationdispense-whenhandedover-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationdispense-whenhandedover-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationDispense_WhenHandedOver_SP
+== fsh-generated/resources/SearchParameter-jp-medicationdispense-whenprepared-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationdispense-whenprepared-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationDispense_WhenPrepared_SP
+== fsh-generated/resources/SearchParameter-jp-medicationrequest-authoredon-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationrequest-authoredon-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Medicationrequest_AuthoredOn_SP
+== fsh-generated/resources/SearchParameter-jp-medicationrequest-category-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationrequest-category-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationRequest_Category_SP
+== fsh-generated/resources/SearchParameter-jp-medicationrequest-code-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationrequest-code-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationRequest_Code_SP
+== fsh-generated/resources/SearchParameter-jp-medicationrequest-date-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationrequest-date-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationRequest_Date_SP
+== fsh-generated/resources/SearchParameter-jp-medicationrequest-identifier-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationrequest-identifier-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationRequest_Identifier_SP
+== fsh-generated/resources/SearchParameter-jp-medicationrequest-patient-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationrequest-patient-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationRequest_Patient_SP
+== fsh-generated/resources/SearchParameter-jp-medicationrequest-requester-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-medicationrequest-requester-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationRequestr_Requester_SP
+== fsh-generated/resources/SearchParameter-jp-observation-category-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-observation-category-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Observation_Category_SP
+== fsh-generated/resources/SearchParameter-jp-observation-code-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-observation-code-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Observation_Code_SP
+== fsh-generated/resources/SearchParameter-jp-observation-date-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-observation-date-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Observation_Date_SP
+== fsh-generated/resources/SearchParameter-jp-observation-encounter-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-observation-encounter-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Observation_Encounter_SP
+== fsh-generated/resources/SearchParameter-jp-observation-patient-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-observation-patient-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Observation_Patient_SP
+== fsh-generated/resources/SearchParameter-jp-observation-servicerequest-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-observation-servicerequest-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Observation_ServiceRequest_SP
+== fsh-generated/resources/SearchParameter-jp-observation-value-concept-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-observation-value-concept-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Observation_ValueConcept_SP
+== fsh-generated/resources/SearchParameter-jp-observation-value-quantity-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-observation-value-quantity-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Observation_ValueQuantity_SP
+== fsh-generated/resources/SearchParameter-jp-organization-address-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-organization-address-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_Address_SP
+== fsh-generated/resources/SearchParameter-jp-organization-identifier-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-organization-identifier-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_Identifier_SP
+== fsh-generated/resources/SearchParameter-jp-organization-name-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-organization-name-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_Name_SP
+== fsh-generated/resources/SearchParameter-jp-patient-address-postalcode-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-patient-address-postalcode-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_AddressPostalcode_SP
+== fsh-generated/resources/SearchParameter-jp-patient-birthdate-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-patient-birthdate-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_Birthdate_SP
+== fsh-generated/resources/SearchParameter-jp-patient-family-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-patient-family-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_Family_SP
+== fsh-generated/resources/SearchParameter-jp-patient-gender-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-patient-gender-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_Gender_SP
+== fsh-generated/resources/SearchParameter-jp-patient-given-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-patient-given-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_Given_SP
+== fsh-generated/resources/SearchParameter-jp-patient-id-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-patient-id-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_Id_SP
+== fsh-generated/resources/SearchParameter-jp-patient-identifier-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-patient-identifier-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_Identifier_SP
+== fsh-generated/resources/SearchParameter-jp-patient-name-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-patient-name-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_Name_SP
+== fsh-generated/resources/SearchParameter-jp-patient-phone-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-patient-phone-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_Phone_SP
+== fsh-generated/resources/SearchParameter-jp-practitioner-identifier-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-practitioner-identifier-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Practitioner_Identifier_SP
+== fsh-generated/resources/SearchParameter-jp-practitioner-name-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-practitioner-name-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Practitioner_Name_SP
+== fsh-generated/resources/SearchParameter-jp-practitionerrole-practitioner-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-practitionerrole-practitioner-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_PractitionerRole_Practitioner_SP
+== fsh-generated/resources/SearchParameter-jp-practitionerrole-specialty-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-practitionerrole-specialty-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_PractitionerRole_Specialty_SP
+== fsh-generated/resources/SearchParameter-jp-procedure-date-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-procedure-date-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Procedure_Date_SP
+== fsh-generated/resources/SearchParameter-jp-procedure-patient-sp.json ==
+ERROR: SearchParameter.url: Resource id/url mismatch: jp-procedure-patient-sp/http://jpfhir.jp/fhir/core/SearchParameter/JP_Procedure_Patient_SP
+== fsh-generated/resources/StructureDefinition-JP-AllergyIntolerance.json ==
+ERROR: StructureDefinition.url: Resource id/url mismatch: JP-AllergyIntolerance/http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance
+WARNING: StructureDefinition.where(url = 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-jp-condition.json ==
+ERROR: StructureDefinition.url: Resource id/url mismatch: jp-condition/http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition
+WARNING: StructureDefinition.where(url = 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-jp-coverage.json ==
+ERROR: StructureDefinition.url: Resource id/url mismatch: jp-coverage/http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage
+WARNING: StructureDefinition.where(url = 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-jp-coverage-insuredpersonnumber.json ==
+ERROR: StructureDefinition.url: Resource id/url mismatch: jp-coverage-insuredpersonnumber/http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber
+WARNING: StructureDefinition.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-jp-coverage-insuredpersonsubnumber.json ==
+ERROR: StructureDefinition.url: Resource id/url mismatch: jp-coverage-insuredpersonsubnumber/http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber
+WARNING: StructureDefinition.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-jp-coverage-insuredpersonsymbol.json ==
+ERROR: StructureDefinition.url: Resource id/url mismatch: jp-coverage-insuredpersonsymbol/http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol
+WARNING: StructureDefinition.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-jp-diagnosticreport-common.json ==
+ERROR: StructureDefinition.url: Resource id/url mismatch: jp-diagnosticreport-common/http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common
+WARNING: StructureDefinition.where(url = 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-jp-diagnosticreport-labresult.json ==
+ERROR: StructureDefinition.url: Resource id/url mismatch: jp-diagnosticreport-labresult/http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult
+WARNING: StructureDefinition.where(url = 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-jp-diagnosticreport-radiology.json ==
+ERROR: StructureDefinition.url: Resource id/url mismatch: jp-diagnosticreport-radiology/http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology
+WARNING: StructureDefinition.where(url = 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-jp-encounter.json ==
+ERROR: StructureDefinition.url: Resource id/url mismatch: jp-encounter/http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter
+WARNING: StructureDefinition.where(url = 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-jp-humanname.json ==
+ERROR: StructureDefinition.url: Resource id/url mismatch: jp-humanname/http://jpfhir.jp/fhir/core/StructureDefinition/JP_HumanName
+WARNING: StructureDefinition.where(url = 'http://jpfhir.jp/fhir/core/StructureDefinition/JP_HumanName'): The Implementation Guide contains no examples for this data type profile
+== fsh-generated/resources/StructureDefinition-jp-imagingstudy-radiology.json ==
+ERROR: StructureDefinition.url: Resource id/url mismatch: jp-imagingstudy-radiology/http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology
