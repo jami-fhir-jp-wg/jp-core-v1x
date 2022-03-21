@@ -4,4 +4,4 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
-Resource id/url mismatch%
+%Resource id/url mismatch%
