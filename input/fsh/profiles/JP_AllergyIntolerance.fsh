@@ -3,7 +3,7 @@
 // =============================
 Profile: JP_AllergyIntolerance
 Parent: AllergyIntolerance
-Id: jp-allergyintolerance
+Id: JP_AllergyIntolerance
 Title: "JP_AllergyIntolerance"
 Description: "本プロファイルはAllergyIntoleranceリソースに対して、患者のアレルギーや不耐症に関するデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^language = #ja
