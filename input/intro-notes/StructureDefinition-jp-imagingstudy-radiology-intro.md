@@ -43,16 +43,18 @@ DICOMタグは4桁の16進数がコンマで区切られたペア（例　(0008,
 
 このプロファイルは、以下のリソースに対して定義された各プロファイルから直接参照される可能性がある。
 
- - [`Patient`](https://simplifier.net/jp-core-draftv1/jppatient)
- - [`Encounter`](Encounter)
+ - [`Patient`][JP_Patient]
+ - [`Encounter`][JP_Encounter]
  - [`CarePlan`](http://hl7.org/fhir/careplan.html)
  - [`Specimen`](http://hl7.org/fhir/specimen.html)
- - [`Condition`](Condition)
- - [`Location`](Location)
- - [`Procedure`](Procedure)
+ - [`Condition`][JP_Condition]
+ - [`Location`][JP_Location]
+ - [`Procedure`][JP_Procedure]
  - [`Endpoint`](http://hl7.org/fhir/endpoint.html)
- - [`Practitioner`](Practitioner)
- - [`DiagnosticReport`](DiagnosticReportRadiology)
- - [`Observation`](Observation)
+ - [`Practitioner`][JP_Procedure]
+ - [`DiagnosticReport`][JP_DiagnosticReport_Radiology]
+ - [`Observation`][JP_Observation_Common]
  
 ## プロファイル定義
+
+{% include markdown-link-references.md %}

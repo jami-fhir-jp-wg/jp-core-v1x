@@ -11,6 +11,11 @@ header = <<-EOS
     padding-left: 25px !important;
   }
 </style>
+<!-- Obseration章リンク -->
+[JP_Observation_Common_interaction]: StructureDefinition-jp-observation-common.html#インタラクション一覧
+[JP_Observation_Common_Search]: StructureDefinition-jp-observation-common.html#search-parameter一覧
+[JP_Observation_Common_Operation]: StructureDefinition-jp-observation-common.html#operation一覧
+[JP_DiagnosticReport_Common_interaction]: StructureDefinition-jp-diagnosticreport-common.html#interaction一覧
 EOS
 
 #--- 種別指定書き込み処理 ---

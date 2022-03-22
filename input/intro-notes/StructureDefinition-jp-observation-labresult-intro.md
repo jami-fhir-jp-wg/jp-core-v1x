@@ -32,23 +32,23 @@
 - [`ClinicalImpression`](https://www.hl7.org/fhir/clinicalimpression.html)
 - [`Communication`](https://www.hl7.org/fhir/communication.html)
 - [`CommunicationRequest`](https://www.hl7.org/fhir/communicationrequest.html)
-- [`Condition`](Condition)
+- [`Condition`][JP_Condition]
 - [`Contract`](https://www.hl7.org/fhir/contract.html)
 - [`DeviceRequest`](https://www.hl7.org/fhir/devicerequest.html)
 - [`DeviceUseStatement`](https://www.hl7.org/fhir/deviceusestatement.html)
-- [`DiagnosticReport`](DiagnosticReport)
-- [`Encounter`](Encounter)
+- [`DiagnosticReport`][JP_DiagnosticReport_Common]
+- [`Encounter`][JP_Encounter]
 - [`FamilyMemberHistory`](https://www.hl7.org/fhir/familymemberhistory.html)
 - [`Goal`](https://www.hl7.org/fhir/goal.html)
 - [`GuidanceResponse`](https://www.hl7.org/fhir/guidanceresponse.html)
-- [`ImagingStudy`](ImagingStudy2)
+- [`ImagingStudy`][JP_ImagingStudy_Radiology]
 - [`Immunization`](https://www.hl7.org/fhir/immunization.html)
 - [`MedicationAdministration`](https://www.hl7.org/fhir/medicationadministration.html)
 - [`MedicationRequest`](https://www.hl7.org/fhir/MedicationRequest.html)
 - [`MedicationStatement`](https://www.hl7.org/fhir/medicationstatement.html)
 - [`MolecularSequence`](https://www.hl7.org/fhir/molecularsequence.html)
-- [`Observation`](ObservationLabResult)
-- [`Procedure`](Procedure)
+- [`Observation`][JP_Observation_LabResult]
+- [`Procedure`][JP_Procedure]
 - [`QuestionnaireResponse`](https://www.hl7.org/fhir/questionnaireresponse.html)
 - [`RequestGroup`](https://www.hl7.org/fhir/requestgroup.html)
 - [`RiskAssessment`](https://www.hl7.org/fhir/riskassessment.html)
@@ -57,3 +57,5 @@
 
 
 ## プロファイル定義
+
+{% include markdown-link-references.md %}

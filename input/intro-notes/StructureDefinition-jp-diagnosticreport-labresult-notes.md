@@ -41,7 +41,7 @@
 `DiagnosticReport` リソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
 
 
-[DiagnosticReport共通情報プロファイル#インタラクション一覧](DiagnosticReport#DxReportInteraction)
+[DiagnosticReport共通情報プロファイル#インタラクション一覧][JP_DiagnosticReport_Common]
 
 
 
@@ -361,3 +361,5 @@
 ```
 
 ## その他、参考文献、リンク等
+
+{% include markdown-link-references.md %}

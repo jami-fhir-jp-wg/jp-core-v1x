@@ -19,7 +19,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 
   - 患者の生誕地を表す。Address型を使って表現するため、すべての住所情報あるいは、都道府県名のみの情報(Address.state)だけを格納するということも可能である。
 
-- [JP_Patient_Race](https://simplifier.net/jp-core-draftv1/jppatientrace)
+- [JP_Patient_Race][JP_Patient_Race]
 
   - 患者の人種に関する情報を表す。
 
@@ -361,3 +361,4 @@ http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf
 ・ICSR E2B(R3)
 https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html
 
+{% include markdown-link-references.md %}

@@ -13,11 +13,11 @@ Coverage リソースは、次の要素を必ず持たなければならない�
 ### Extensions定義
 
 JP Core Coverage プロファイルで使用される拡張は次の通りである。
-- [JP_Coverage_InsuredPersonSymbol](https://simplifier.net/jp-core-draftv1/jpcoverageinsuredpersonsymbol)
+- [JP_Coverage_InsuredPersonSymbol][JP_Coverage_InsuredPersonSymbol]
     - 健康保険における被保険者証記号を示す拡張。
-- [JP_Coverage_InsuredPersonNumber](https://simplifier.net/jp-core-draftv1/jpcoverageinsuredpersonnumber)
+- [JP_Coverage_InsuredPersonNumber][JP_Coverage_InsuredPersonNumber]
     - 健康保険における被保険者証番号を示す拡張。
-- [JP_Coverage_InsuredPersonSubNumber](https://simplifier.net/jp-core-draftv1/jpcoverageinsuredpersonsubnumber)
+- [JP_Coverage_InsuredPersonSubNumber][JP_Coverage_InsuredPersonSubNumber]
     - 健康保険における被保険者証番号の枝番を示す拡張。
 
 <br><br>
@@ -106,3 +106,6 @@ JP Coverage リソースには、制約は存在しない。
    ```
    GET [base]/Coverageclass?type=*****
    ```
+
+   
+{% include markdown-link-references.md %}

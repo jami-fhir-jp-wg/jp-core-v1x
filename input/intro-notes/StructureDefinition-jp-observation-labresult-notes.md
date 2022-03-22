@@ -46,7 +46,7 @@
 
 `Observation`リソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
 
-[Observation共通情報プロファイル#インタラクション一覧](Observation#ObsInteraction)
+[Observation共通情報プロファイル#インタラクション一覧][JP_Observation_Common_interaction]
 
 ### OperationおよびSearch Parameter 一覧
 
@@ -189,7 +189,7 @@
 
 `Observation`リソースのOperation一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
 
-[Observation共通情報プロファイル#Operation一覧](Observation#ObsOperation)
+[Observation共通情報プロファイル#Operation一覧][JP_Observation_Common_Operation]
 
 ### サンプル
 ```json
@@ -281,3 +281,4 @@
   }
 }
 ```
+{% include markdown-link-references.md %}

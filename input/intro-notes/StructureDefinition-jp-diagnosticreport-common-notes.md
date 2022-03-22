@@ -8,7 +8,7 @@
 | `DiagnosticReport.code` | 検査レポートを記述するコード | Preferred | [`LOINCDiagnosticReportCodes`](https://www.hl7.org/fhir/valueset-report-codes.html) |
 | `DiagnosticReport.conclusionCode` | レポートの補助として提供される診断コード | Example | [`SNOMEDCTClinicalFindings`](https://www.hl7.org/fhir/valueset-clinical-findings.html) |
 
-### Interaction一覧 <a name="DxReportInteraction">link</a>
+### Interaction一覧
 
 | コンフォーマンス | インタラクション                            |
 | ---------------- | ------------------------------------------- |

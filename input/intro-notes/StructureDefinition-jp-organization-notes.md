@@ -15,15 +15,15 @@ Organization リソースは、次の要素を持たなければならない。
 
 JP Oraganization リソースで使用される拡張は次の通りである。
 
-- [JP_OrganizationCategory](https://simplifier.net/jp-core-draftv1/jporganizationcategory)
+- [JP_OrganizationCategory][JP_Organization_InsuranceOrganizationCategory]
 
   - 点数表コード１桁（医科１、歯科２）の情報を表す。
 
-- [JP_OrganizationNo](https://simplifier.net/jp-core-draftv1/jporganizationno)
+- [JP_OrganizationNo][JP_Organization_InsuranceOrganizationNo]
 
   - 保険医療機関番号７桁を表す。
 
-- [JP_PrefectureNo](https://simplifier.net/jp-core-draftv1/jpprefectureno)
+- [JP_PrefectureNo][JP_Organization_PrefectureNo]
 
   - 都道府県番号2桁を表す。
 
@@ -183,3 +183,5 @@ http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf
 
 ・ICSR E2B(R3)
 https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html
+
+{% include markdown-link-references.md %}

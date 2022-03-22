@@ -41,7 +41,7 @@
 
 ## 利用方法
 
-### インタラクション一覧 <a name="ObsInteraction">link</a>
+### インタラクション一覧
 
 | コンフォーマンス | インタラクション                            |
 | ---------------- | ------------------------------------------- |
@@ -51,7 +51,7 @@
 
 ### OperationおよびSearch Parameter 一覧
 
-#### Search Parameter一覧　<a name="ObsSearch">link</a>
+#### Search Parameter一覧
 
 ユースケース独自のSearch Parameterが定義されていない場合、以下の表の内容の共通のSearch Parameterとなる。ただし、`category`パラメータおよび`code`パラメータについては、各ユースケース毎に異なる固定値および用語定義で定められたコード体系を指定することになるので注意が必要である。
 
@@ -134,7 +134,7 @@
    ```
 
 
-#### Operation一覧 <a name="ObsOperation">link</a>
+#### Operation一覧
 
 | コンフォーマンス | オペレーション    | 説明                                                           |
 | ---------------- | ------------- | ------------------------------------------------------------ |
@@ -480,3 +480,5 @@ FHIRの検査には、中心となる2つの異なる側面がある：
 
 ### 遺伝情報についての検査
 遺伝情報の報告には、`DiagnosticReport`リソースと`Observation`リソースを主に使用する。遺伝情報に関する結果の記述についての実装ガイドは[こちら](http://hl7.org/fhir/uv/genomics-reporting/index.html)を参照されたい。
+
+{% include markdown-link-references.md %}

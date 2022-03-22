@@ -38,7 +38,7 @@
 - [`ClinicalImpression`](https://www.hl7.org/fhir/clinicalimpression.html)
 - [`Communication`](https://www.hl7.org/fhir/communication.html)
 - [`CommunicationRequest`](https://www.hl7.org/fhir/communicationrequest.html)
-- [`Condition`](Condition)
+- [`Condition`][JP_Condition]
 - [`Contract`](https://www.hl7.org/fhir/contract.html)
 - [`DeviceRequest`](https://www.hl7.org/fhir/devicerequest.html)
 - [`DeviceUseStatement`](https://www.hl7.org/fhir/deviceusestatement.html)
@@ -48,7 +48,7 @@
 - [`Immunization`](https://www.hl7.org/fhir/immunization.html)
 - [`MedicationAdministration`](https://www.hl7.org/fhir/medicationadministration.html)
 - [`MedicationStatement`](https://www.hl7.org/fhir/medicationstatement.html)
-- [`Procedure`](Procedure)
+- [`Procedure`][JP_Procedure]
 - [`RequestGroup`](https://www.hl7.org/fhir/requestgroup.html)
 - [`RiskAssessment`](https://www.hl7.org/fhir/riskassessment.html)
 - [`ServiceRequest`](https://www.hl7.org/fhir/servicerequest.html)
@@ -56,3 +56,5 @@
 
 
 ## プロファイル定義
+
+{% include markdown-link-references.md %}

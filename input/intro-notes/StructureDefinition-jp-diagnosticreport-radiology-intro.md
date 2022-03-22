@@ -1,5 +1,5 @@
 <br/>
-本プロファイルは、[`DiagnosticReport`リソース](DiagnosticReport#Common2) のうち、放射線画像検査における患者、患者群、機器、場所、およびこれらから得られた画像に対して実施された診断結果またはその解釈を示す「報告書」を表現するリソースの定義である。ここでは、`DiagnosticReport` リソースに対して本プロファイルに準拠する場合に必須となる要素や、サポートすべき拡張、用語、検索パラメータを定義する。
+本プロファイルは、[`DiagnosticReport`リソース][JP_DiagnosticReport_Radiology] のうち、放射線画像検査における患者、患者群、機器、場所、およびこれらから得られた画像に対して実施された診断結果またはその解釈を示す「報告書」を表現するリソースの定義である。ここでは、`DiagnosticReport` リソースに対して本プロファイルに準拠する場合に必須となる要素や、サポートすべき拡張、用語、検索パラメータを定義する。
 報告書は、依頼者や撮影の情報などの臨床的背景のほか、いくつかの計測値、画像、テキストおよびコード化された解釈、テンプレート化された診断報告書により構成される。
 
 ## 背景および想定シナリオ
@@ -8,7 +8,7 @@
 
 - 施設内で発生するオーダをもとに実施される画像検査に対する診断レポートの保存
 - 他のリソースからの放射線検査レポートの参照<br/>
-（例：[`ImagingStudy`リソース](https://simplifier.net/jp-core-draftv1/jpimagingstudy) や[`ServiceRequest`リソース](http://www.hl7.org/fhir/servicerequest.html) の`reasonReference` エレメントで参照される放射線検査レポート）
+（例：[`ImagingStudy`リソース][JP_ImagingStudy_Radiology]) や[`ServiceRequest`リソース](http://www.hl7.org/fhir/servicerequest.html) の`reasonReference` エレメントで参照される放射線検査レポート）
 
 ## スコープ
 
@@ -27,32 +27,35 @@
 
 このプロファイルは、以下のリソースに対して定義された各プロファイルから参照される。
 
-- [`DiagnosticReport`](https://simplifier.net/jp-core-draftv1/jpdiagnosticreportradiology)
-- [`ImagingStudy`](https://simplifier.net/jp-core-draftv1/jpimagingstudy)
+- [`DiagnosticReport`][JP_DiagnosticReport_Radiology]
+- [`ImagingStudy`][JP_ImagingStudy_Radiology]
 
 また，このプロファイルから直接参照されるリソースは以下の通りである。
 
-- [`Patient`](Patient)
+- [`Patient`][JP_Patient]
 - [`Encounter`](http://www.hl7.org/fhir/encounter.html)
-- [`Practitioner`](Practitioner)
-- [`Observation`](Observation)
+- [`Practitioner`][JP_Practitioner]
+- [`Observation`][JP_Observation_Common]
 - [`Media`](http://www.hl7.org/fhir/media.html)
-- [`ImagingStudy`](jpimagingstudy)
+- [`ImagingStudy`][JP_ImagingStudy_Radiology]
 - [`ServiceRequest`](http://hl7.org/fhir/servicerequest.html)
 
 
 また，以下のリソースは関連情報として`presentedForm`にて参照されるレポート内に保持される可能性がある。ただし、レポートシステムの仕様に依存するため、レポートシステムでは各リソースとの相互運用性の確保に配慮することが求められる。
 
-- [患者 (`Patient`)](Patient)
-- [依頼医，読影医，確定医など (`Practitioner`)](Practitioner)
-- [身長 (`Observation`)](https://simplifier.net/jp-core-draftv1/jpobservationbodymeasurement)
-- [体重 (`Observation`)](https://simplifier.net/jp-core-draftv1/jpobservationbodymeasurement.html)
-- [アレルギー情報 (`AllergyIntorelance`)](https://simplifier.net/jp-core-draftv1/jpallergyintolerancev400)
+- [患者 (`Patient`)][JP_Patient]
+- [依頼医，読影医，確定医など (`Practitioner`)][JP_Practitioner]
+- [身長 (`Observation`)][JP_Observation_BodyMeasurement]
+- [体重 (`Observation`)][JP_Observation_BodyMeasurement]
+- [アレルギー情報 (`AllergyIntorelance`)][JP_AllergyIntolerance]
 - [キー画像 (`media`)](http://www.hl7.org/fhir/media.html)
-- [尿素窒素（BUN）(`Observation`)](https://simplifier.net/jp-core-draftv1/jpobservationlabresult)
-- [クレアチニン（Cre）(`Observation`)](https://simplifier.net/jp-core-draftv1/jpobservationlabresult)
-- 感染症情報 [ (`RiskAssessment`) ](http://hl7.org/fhir/riskassessment.html) あるいは [ (`Observation`) ](https://simplifier.net/jp-core-draftv1/jpobservationlabresult)
+- [尿素窒素（BUN）(`Observation`)][JP_DiagnosticReport_LabResult]
+- [クレアチニン（Cre）(`Observation`)][JP_DiagnosticReport_LabResult]
+- 感染症情報 [ (`RiskAssessment`) ](http://hl7.org/fhir/riskassessment.html) あるいは [ (`Observation`) ][JP_DiagnosticReport_LabResult]
 
 運用のフローに関連する TASK、Procedure 等のリソース定義についてはここでは触れない。
 
 ## プロファイル定義
+
+
+{% include markdown-link-references.md %}

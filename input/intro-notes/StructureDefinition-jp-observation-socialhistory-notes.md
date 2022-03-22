@@ -34,7 +34,7 @@
 
 `Observation`リソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
 
-[Observation共通情報プロファイル#インタラクション一覧](Observation#ObsInteraction)
+[Observation共通情報プロファイル#インタラクション一覧][JP_Observation_Common_interaction]
 
 ### OperationおよびSearch Parameter 一覧
 
@@ -44,13 +44,13 @@
 
 検索時の`category`パラメータは"vital-sign"となる。
 
-[Observation共通情報プロファイル#Search Parameter一覧](Observation#ObsSearch)
+[Observation共通情報プロファイル#Search Parameter一覧][JP_Observation_Common_Search]
 
 #### Operation一覧
 
 ObservationリソースのOperation一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
 
-[Observation共通情報プロファイル#Operation一覧](Observation#ObsOperation)
+[Observation共通情報プロファイル#Operation一覧][JP_Observation_Common_Operation]
 
 ### サンプル
 ```json
@@ -135,3 +135,4 @@ ObservationリソースのOperation一覧の定義はユースケースに依存
   }
 }
 ```
+{% include markdown-link-references.md %}

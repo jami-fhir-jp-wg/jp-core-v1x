@@ -12,7 +12,7 @@
 
 次のデータは送信システムに存在する場合はサポートされなければならないことを意味する（Must Support）。
 
-- `text` : (DiagnosticReport [`DomainResource`](https://simplifier.net/simplifier.core.r4.resources/domainresource)) レポートの[narrative](http://www.hl7.org/fhir/narrative.html) dataとして格納する。
+- `text` : (DiagnosticReport [`DomainResource`](http://hl7.org/fhir/domainresource.html)) レポートの[narrative](http://www.hl7.org/fhir/narrative.html) dataとして格納する。
 - `basedOn` ： レポートあるいは画像検査の`ServiceRequest`
 - `subject` ： 患者リソース(`Patient`)への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
 - `issued` ： レポート確定日時
@@ -48,8 +48,8 @@
 NarrativeなtextにアクセスするためのDomainResource定義
 
 (`DiagnosticReport`のResourceType直下に現れる。text以外のDomainResourceの詳細については[こちら](https://www.hl7.org/fhir/domainresource.html)を参照のこと）
-
-{{tree:simplifier.core.r4.resources/domainresource}}
+<!-- 
+{{tree:simplifier.core.r4.resources/domainresource}} -->
 
 例：
 ```json
@@ -171,7 +171,7 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 ### Interaction一覧 
 `DiagnosticReport` リソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
 
-[DiagnosticReport共通情報プロファイル#インタラクション一覧](DiagnosticReport#DxReportInteraction)
+[DiagnosticReport共通情報プロファイル#インタラクション一覧][JP_DiagnosticReport_Common_interaction]
 
 #### 必須検索パラメータ
 
@@ -184,15 +184,15 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 | `code` | `token` | レポート全体を示すコード | `DiagnosticReport.code`<br>[LOINC 18748-4](https://loinc.org/18748-4/)|
 | `conclusion` | `token` | コード化されたレポートの conclusion (interpretation/impression) | `DiagnosticReport.conclusionCode` | 
 | `date` | `date` | レポート作成日 | `DiagnosticReport.effectiveDate` |
-| `encounter` | `reference` | オーダが発行された際の Encounter | `DiagnosticReport.encounter`<br><br> ([`Encounter`](http://www.hl7.org/fhir/encounter.html)) |
+| `encounter` | `reference` | オーダが発行された際の Encounter | `DiagnosticReport.encounter`<br><br> ([`Encounter`][JP_Encounter]) |
 | `identifier` | `token` | レポートの identifier（識別子） | `DiagnosticReport.identifier` | 
 | `issued` | `date` | レポート発行日（確定日） | `DiagnosticReport.issued` |
 | `media` | `reference` | キー画像への参照 | `DiagnosticReport.media.link`<br><br> ([`Media`](http://www.hl7.org/fhir/media.html)) | 
-| `performer` | `reference` | レポート確定者 | `DiagnosticReport.performer`<br><br> ([`Practitioner`](Practitioner)) |
-| `result` | `reference` | 関連する検査結果 (検体検査結果など) | `DiagnosticReport.result`<br><br> ([`Observation`](jpobservationlabresult))|
-| `results-interpreter` | `reference` | 読影者 | `DiagnosticReport.resultsInterpreter`<br><br> ([`Practitioner`](Practitioner)) |
+| `performer` | `reference` | レポート確定者 | `DiagnosticReport.performer`<br><br> ([`Practitioner`][JP_Practitioner]) |
+| `result` | `reference` | 関連する検査結果 (検体検査結果など) | `DiagnosticReport.result`<br><br> ([`Observation`][JP_Observation_LabResult])|
+| `results-interpreter` | `reference` | 読影者 | `DiagnosticReport.resultsInterpreter`<br><br> ([`Practitioner`][JP_Practitioner]) |
 | `status` | `token` | レポートの状態 | `DiagnosticReport.status` |
-| `subject` | `reference` | レポートの対象となる患者 | `DiagnosticReport.subject`<br><br>([`Patient`](Patient)) |
+| `subject` | `reference` | レポートの対象となる患者 | `DiagnosticReport.subject`<br><br>([`Patient`][JP_Patient]) |
 
 ### サンプル
 ```json
@@ -263,3 +263,5 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 - [RadLex radiology lexicon](https://www.rsna.org/practice-tools/data-tools-and-standards/radlex-radiology-lexicon) - 放射線科語彙集
 - [RadElement](https://www.rsna.org/practice-tools/data-tools-and-standards/radelement-common-data-elements) - 放射線関連共通データエレメント
 - [IHE Radiology Technical Framework Supplement - Management of Radiology Report Templates](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_MRRT.pdf)
+
+{% include markdown-link-references.md %}

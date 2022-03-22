@@ -18,7 +18,7 @@
 ### Extensions定義
 本プロファイルで使用される拡張は次の通りである。
 
-- [`JPCoreBodySitePositionExtension`](https://simplifier.net/jp-core-draftv1/jpobservationbodysiteposition)
+- [`JPCoreBodySitePositionExtension`][JP_Observation_BodySite_BodySitePosition]
   - 部位（bodySite）の左右の区別を表現する際に使用する。
 
 ### 用語定義
@@ -43,7 +43,7 @@
 
 Observationリソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
 
-[Observation共通情報プロファイル#インタラクション一覧](Observation#ObsInteraction)
+[Observation共通情報プロファイル#インタラクション一覧][JP_Observation_Common_interaction]
 
 ### OperationおよびSearch Parameter 一覧
 
@@ -53,13 +53,13 @@ Observationリソースのインタラクション一覧の定義はユースケ
 
 検索時の`category`パラメータは"exam"となる。
 
-[Observation共通情報プロファイル#Search Parameter一覧](Observation#ObsSearch)
+[Observation共通情報プロファイル#Search Parameter一覧][JP_Observation_Common_Search]
 
 #### Operation一覧
 
 `Observation`リソースのOperation一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
 
-[Observation共通情報プロファイル#Operation一覧](Observation#ObsOperation)
+[Observation共通情報プロファイル#Operation一覧][JP_Observation_Common_Operation]
 
 ### サンプル
 ```json
@@ -143,3 +143,4 @@ Observationリソースのインタラクション一覧の定義はユースケ
   ]
 }
 ```
+{% include markdown-link-references.md %}
