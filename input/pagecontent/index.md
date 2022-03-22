@@ -68,8 +68,8 @@ Profilesにて利用されるSearch Parameter および Operationをまとめて
 - [ValueSets （値セット）一覧](artifacts.html#6)
 
 ### [CapabilityStatements （機能宣言）](artifacts.html#1)
- - [JP Core Server Capability Statement][JPCoreServerCapabilityStatement]
- - [JP Core Client Capability Statement][JPCoreClientCapabilityStatement]
+ - [JP Core Server Capability Statement][JP_Server_CapabilityStatement]
+ - [JP Core Client Capability Statement][JP_Client_CapabilityStatement]
 
 ### Security （セキュリティ）
 セキュリティに関する要件を記載しています。
