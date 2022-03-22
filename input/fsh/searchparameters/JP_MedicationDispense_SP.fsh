@@ -43,22 +43,22 @@ Usage: #definition
 * modifier[+].extension.url = $capabilityStatement-expectation
 * modifier[=].extension.valueCode = #MAY
 
-
-Instance: jp-medicationdispense-encounter-sp
+Instance: jp-medicationdispense-context-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationDispense_Encounter_SP"
-* name = "JP_MedicationDispense_Encounter_SP"
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationDispense_Context_SP"
+* name = "JP_MedicationDispense_Context_SP"
 * status = #draft
 * date = "2022-03-16"
-* description = "MedicationDispenseリソースのEncounter(来院・入院)に関する検索を定義します。"
-* code = #encounter
+* description = "MedicationDispenseリソースのcontextに関する検索を定義します。"
+* code = #context
 * base = #MedicationDispense
 * type = #reference
-* expression = "MedicationDispense.context.where(resolve() is Encounter)"
+* expression = "MedicationDispense.context"
 * xpath = "f:MedicationDispense/f:context"
 * xpathUsage = #normal
-* target = #Encounter
+* target[0] = #Encounter
+* target[+] = #EpisodeOfCare
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
 * multipleOr.extension.valueCode = #MAY
@@ -74,7 +74,6 @@ Usage: #definition
 * modifier[=].extension.valueCode = #MAY
 * modifier[+].extension.url = $capabilityStatement-expectation
 * modifier[=].extension.valueCode = #MAY
-
 
 Instance: jp-medicationdispense-identifier-sp
 InstanceOf: SearchParameter

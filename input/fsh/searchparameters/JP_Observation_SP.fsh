@@ -1,3 +1,34 @@
+Instance: jp-observation-basedon-sp
+InstanceOf: SearchParameter
+Usage: #definition
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Observation_BasedOn_SP"
+* name = "JP_Observation_BasedOn_SP"
+* status = #draft
+* date = "2022-03-16"
+* description = "Observationリソースの.based-on(検査依頼診療科)に関する検索を定義します。"
+* code = #based-on
+* base = #Observation
+* type = #reference
+* expression = "Observation.basedOn"
+* xpath = "f:Observation/f:basedOn"
+* xpathUsage = #normal
+* target = #ServiceRequest
+* multipleOr = true
+* multipleOr.extension.url = $capabilityStatement-expectation
+* multipleOr.extension.valueCode = #MAY
+* multipleAnd = true
+* multipleAnd.extension.url = $capabilityStatement-expectation
+* multipleAnd.extension.valueCode = #MAY
+* modifier[0] = #missing
+* modifier[+] = #type
+* modifier[+] = #identifier
+* modifier[0].extension.url = $capabilityStatement-expectation
+* modifier[=].extension.valueCode = #MAY
+* modifier[+].extension.url = $capabilityStatement-expectation
+* modifier[=].extension.valueCode = #MAY
+* modifier[+].extension.url = $capabilityStatement-expectation
+* modifier[=].extension.valueCode = #MAY
+
 Instance: jp-observation-category-sp
 InstanceOf: SearchParameter
 Usage: #definition
@@ -203,40 +234,7 @@ Usage: #definition
 * modifier[=].extension.valueCode = #MAY
 
 
-Instance: jp-observation-servicerequest-sp
-InstanceOf: SearchParameter
-Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Observation_ServiceRequest_SP"
-* name = "JP_Observation_ServiceRequest_SP"
-* status = #draft
-* date = "2022-03-16"
-* description = "Observationリソースのservicerequest(検査依頼診療科)に関する検索を定義します。"
-* code = #servicerequest
-* base = #Observation
-* type = #reference
-* expression = "Observation.based-on.where(resolve() is ServiceRequest)"
-* xpath = "f:Observation/f:based-on"
-* xpathUsage = #normal
-* target[0] = #Patient
-* target[+] = #Group
-* multipleOr = true
-* multipleOr.extension.url = $capabilityStatement-expectation
-* multipleOr.extension.valueCode = #MAY
-* multipleAnd = true
-* multipleAnd.extension.url = $capabilityStatement-expectation
-* multipleAnd.extension.valueCode = #MAY
-* modifier[0] = #missing
-* modifier[+] = #type
-* modifier[+] = #identifier
-* modifier[0].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-
-
-Instance: jp-observation-value-concept-sp
+Instance: jp-observation-valueconcept-sp
 InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Observation_ValueConcept_SP"
@@ -282,7 +280,7 @@ Usage: #definition
 * modifier[=].extension.valueCode = #MAY
 
 
-Instance: jp-observation-value-quantity-sp
+Instance: jp-observation-valuequantity-sp
 InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Observation_ValueQuantity_SP"
@@ -330,4 +328,47 @@ Usage: #definition
 * modifier.extension.url = $capabilityStatement-expectation
 * modifier.extension.valueCode = #MAY
 
-
+Instance: jp-observation-valuestring-sp
+InstanceOf: SearchParameter
+Usage: #definition
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Observation_ValueString_SP"
+* name = "JP_Observation_ValueString_SP"
+* status = #draft
+* date = "2022-03-16"
+* description = "Observationリソースのvalue-stringに関する検索を定義します。"
+* code = #value-string
+* base = #Observation
+* type = #token
+* expression = "(Observation.​value as string) | (Observation.​value as CodeableConcept).​text"
+* xpath = "f:Observation/f:value"
+* xpathUsage = #normal
+* multipleOr = true
+* multipleOr.extension.url = $capabilityStatement-expectation
+* multipleOr.extension.valueCode = #MAY
+* multipleAnd = true
+* multipleAnd.extension.url = $capabilityStatement-expectation
+* multipleAnd.extension.valueCode = #MAY
+* modifier[0] = #missing
+* modifier[+] = #text
+* modifier[+] = #not
+* modifier[+] = #in
+* modifier[+] = #not-in
+* modifier[+] = #below
+* modifier[+] = #above
+* modifier[+] = #ofType
+* modifier[0].extension.url = $capabilityStatement-expectation
+* modifier[=].extension.valueCode = #MAY
+* modifier[+].extension.url = $capabilityStatement-expectation
+* modifier[=].extension.valueCode = #MAY
+* modifier[+].extension.url = $capabilityStatement-expectation
+* modifier[=].extension.valueCode = #MAY
+* modifier[+].extension.url = $capabilityStatement-expectation
+* modifier[=].extension.valueCode = #MAY
+* modifier[+].extension.url = $capabilityStatement-expectation
+* modifier[=].extension.valueCode = #MAY
+* modifier[+].extension.url = $capabilityStatement-expectation
+* modifier[=].extension.valueCode = #MAY
+* modifier[+].extension.url = $capabilityStatement-expectation
+* modifier[=].extension.valueCode = #MAY
+* modifier[+].extension.url = $capabilityStatement-expectation
+* modifier[=].extension.valueCode = #MAY

@@ -1,8 +1,8 @@
 Instance: jp-allergyintolerance-category-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/jp-allergyintolerance-category-sp"
-* name = "jp_allergyintolerance_category_sp"
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_AllergyIntolerance_Category_SP"
+* name = "JP_AllergyIntolerance_Category_SP"
 * status = #draft
 * date = "2022-03-16"
 * description = "AllergyIntoleranceリソースのCategory(カテゴリ)に関する検索を定義します。"
@@ -52,7 +52,7 @@ Usage: #definition
 * status = #draft
 * date = "2022-03-16"
 * description = "AllergyIntoleranceリソースのclinicalStatus(アレルギー・不耐性の臨床的なステータス)に関する検索を定義します。"
-* code = #clinicalstatus
+* code = #clinical-status
 * base = #AllergyIntolerance
 * type = #token
 * expression = "AllergyIntolerance.clinicalStatus"
@@ -94,7 +94,7 @@ Instance: jp-allergyintolerance-criticality-sp
 InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_AllergyIntolerance_Criticality_SP"
-* name = "jp-allergyintolerance-criticality-sp"
+* name = "JP_AllergyIntolerance_Criticality_SP"
 * status = #draft
 * date = "2022-03-16"
 * description = "AllergyIntoleranceリソースのcriticalityに関する検索を定義します。"
@@ -140,7 +140,7 @@ Instance: jp-allergyintolerance-date-sp
 InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_AllergyIntolerance_Date_SP"
-* name = "jp-allergyintolerance-date-sp"
+* name = "JP_AllergyIntolerance_Date_SP"
 * status = #draft
 * date = "2022-03-16"
 * description = "AllergyIntoleranceリソースのrecordedDate(記載日付)に関する検索を定義します。"
@@ -189,7 +189,7 @@ Instance: jp-allergyintolerance-patient-sp
 InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_AllergyIntolerance_Patient_SP"
-* name = "jp-allergyintolerance-patient-sp"
+* name = "JP_AllergyIntolerance_Patient_SP"
 * status = #draft
 * date = "2022-03-16"
 * description = "AllergyIntoleranceリソースのPatient(患者)に関する検索を定義します。"
@@ -220,7 +220,7 @@ Instance: jp-allergyintolerance-type-sp
 InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_AllergyIntolerance_Type_SP"
-* name = "jp-allergyintolerance-type-sp"
+* name = "JP_AllergyIntolerance_Type_SP"
 * status = #draft
 * date = "2022-03-16"
 * description = "AllergyIntoleranceリソースのtypeに関する検索を定義します。"
@@ -266,11 +266,11 @@ Instance: jp-allergyintolerance-verificationstatus-sp
 InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_AllergyIntolerance_VerificationStatus_SP"
-* name = "jp-allergyintolerance-verificationstatus-sp"
+* name = "JP_AllergyIntolerance_VerificationStatus_SP"
 * status = #draft
 * date = "2022-03-16"
 * description = "AllergyIntoleranceリソースのverificationStatusに関する検索を定義します。"
-* code = #verificationstatus
+* code = #verification-status
 * base = #AllergyIntolerance
 * type = #token
 * expression = "AllergyIntolerance.verificationStatus"

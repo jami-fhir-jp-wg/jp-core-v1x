@@ -1,8 +1,8 @@
 Instance: jp-medicationrequest-authoredon-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Medicationrequest_AuthoredOn_SP"
-* name = "JP_Medicationrequest_AuthoredOn_SP"
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationRequest_AuthoredOn_SP"
+* name = "JP_MedicationRequest_AuthoredOn_SP"
 * status = #draft
 * date = "2022-03-16"
 * description = "MedicationRequestリソースのAuthoredOn(処方指示日時)に関する検索を定義します。"
@@ -269,8 +269,8 @@ Usage: #definition
 Instance: jp-medicationrequest-requester-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationRequestr_Requester_SP"
-* name = "JP_MedicationRequestr_Requester_SP"
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationRequest_Requester_SP"
+* name = "JP_MedicationRequest_Requester_SP"
 * status = #draft
 * date = "2022-03-16"
 * description = "MedicationRequestリソースのrequesterに関する検索を定義します。"
