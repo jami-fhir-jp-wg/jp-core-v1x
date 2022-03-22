@@ -100,8 +100,6 @@ Usage: #definition
 * name = "JP_Encounter_Identifier_SP"
 * status = #draft
 * date = "2022-03-16"
-* contact.telecom.system = #url
-* contact.telecom.value = "http://www.hl7.org/Special/committees/usrealm/index.cfm"
 * description = "Encounterリソースのidentifierに関する検索を定義します。"
 * code = #identifier
 * base = #Encounter

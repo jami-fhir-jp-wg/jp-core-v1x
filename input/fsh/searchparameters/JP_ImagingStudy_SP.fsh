@@ -201,3 +201,38 @@ Usage: #definition
 * modifier = #missing
 * modifier.extension.url = $capabilityStatement-expectation
 * modifier.extension.valueCode = #MAY
+
+
+Instance: jp-imagingstudy-subject-sp
+InstanceOf: SearchParameter
+Usage: #definition
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_ImagingStudy_Subject_SP"
+* name = "JP_ImagingStudy_Subject_SP"
+* status = #draft
+* date = "2022-03-16"
+* description = "ImagingStudyリソースのsubjectに関する検索を定義します。"
+* code = #subject
+* base = #ImagingStudy
+* type = #reference
+* expression = "ImagingStudy.subject"
+* xpath = "f:ImagingStudy/f:subject"
+* xpathUsage = #normal
+* target[0] = #Patient
+* target[+] = #Group
+* target[+] = #Device
+* target[+] = #Location
+* multipleOr = true
+* multipleOr.extension.url = $capabilityStatement-expectation
+* multipleOr.extension.valueCode = #MAY
+* multipleAnd = true
+* multipleAnd.extension.url = $capabilityStatement-expectation
+* multipleAnd.extension.valueCode = #MAY
+* modifier[0] = #missing
+* modifier[+] = #type
+* modifier[+] = #identifier
+* modifier[0].extension.url = $capabilityStatement-expectation
+* modifier[=].extension.valueCode = #MAY
+* modifier[+].extension.url = $capabilityStatement-expectation
+* modifier[=].extension.valueCode = #MAY
+* modifier[+].extension.url = $capabilityStatement-expectation
+* modifier[=].extension.valueCode = #MAY

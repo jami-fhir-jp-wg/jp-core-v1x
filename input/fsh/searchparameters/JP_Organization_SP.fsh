@@ -104,5 +104,3 @@ Usage: #definition
 * modifier[=].extension.valueCode = #MAY
 * modifier[+].extension.url = $capabilityStatement-expectation
 * modifier[=].extension.valueCode = #MAY
-
-

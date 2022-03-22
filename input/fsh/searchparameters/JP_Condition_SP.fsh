@@ -52,7 +52,7 @@ Usage: #definition
 * status = #draft
 * date = "2022-03-16"
 * description = "ConditionリソースのclinicalStatus(アレルギー・不耐性の臨床的なステータス)に関する検索を定義します。"
-* code = #clinicalstatus
+* code = #clinical-status
 * base = #Condition
 * type = #token
 * expression = "Condition.clinicalStatus"
@@ -89,19 +89,20 @@ Usage: #definition
 * modifier[+].extension.url = $capabilityStatement-expectation
 * modifier[=].extension.valueCode = #MAY
 
-Instance: jp-condition-date-sp
+
+Instance: jp-condition-onsetdate-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Condition_Date_SP"
-* name = "JP_Condition_Date_SP"
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Condition_OnsetDate_SP"
+* name = "JP_Condition_OnsetDate_SP"
 * status = #draft
-* date = "2022-03-16"
-* description = "ConditionリソースのrecordedDate(記載日付)に関する検索を定義します。"
-* code = #date
+* date = "2021-12-01"
+* description = "ConditionリソースのOnset Date(発症日)に関する検索を定義します。"
+* code = #onset-date
 * base = #Condition
 * type = #date
-* expression = "Condition.recordedDate"
-* xpath = "f:Condition/f:recordedDate"
+* expression = "Condition.​onset.​as(dateTime) | Condition.​onset.​as(Period)"
+* xpath = "f:Condition/f:onset"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
@@ -168,6 +169,55 @@ Usage: #definition
 * modifier[+].extension.url = $capabilityStatement-expectation
 * modifier[=].extension.valueCode = #MAY
 
+Instance: jp-condition-recordeddate-sp
+InstanceOf: SearchParameter
+Usage: #definition
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Condition_RecordedDate_SP"
+* name = "JP_Condition_RecordedDate_SP"
+* status = #draft
+* date = "2022-03-16"
+* description = "ConditionリソースのrecordedDate(記載日付)に関する検索を定義します。"
+* code = #recorded-date
+* base = #Condition
+* type = #date
+* expression = "Condition.recordedDate"
+* xpath = "f:Condition/f:recordedDate"
+* xpathUsage = #normal
+* multipleOr = true
+* multipleOr.extension.url = $capabilityStatement-expectation
+* multipleOr.extension.valueCode = #MAY
+* multipleAnd = true
+* multipleAnd.extension.url = $capabilityStatement-expectation
+* multipleAnd.extension.valueCode = #SHOULD
+* comparator[0] = #eq
+* comparator[+] = #ne
+* comparator[+] = #gt
+* comparator[+] = #lt
+* comparator[+] = #le
+* comparator[+] = #sa
+* comparator[+] = #eb
+* comparator[+] = #ap
+* comparator[0].extension.url = $capabilityStatement-expectation
+* comparator[=].extension.valueCode = #MAY
+* comparator[+].extension.url = $capabilityStatement-expectation
+* comparator[=].extension.valueCode = #MAY
+* comparator[+].extension.url = $capabilityStatement-expectation
+* comparator[=].extension.valueCode = #SHALL
+* comparator[+].extension.url = $capabilityStatement-expectation
+* comparator[=].extension.valueCode = #SHALL
+* comparator[+].extension.url = $capabilityStatement-expectation
+* comparator[=].extension.valueCode = #SHALL
+* comparator[+].extension.url = $capabilityStatement-expectation
+* comparator[=].extension.valueCode = #MAY
+* comparator[+].extension.url = $capabilityStatement-expectation
+* comparator[=].extension.valueCode = #MAY
+* comparator[+].extension.url = $capabilityStatement-expectation
+* comparator[=].extension.valueCode = #MAY
+* modifier = #missing
+* modifier.extension.url = $capabilityStatement-expectation
+* modifier.extension.valueCode = #MAY
+
+
 Instance: jp-condition-verificationstatus-sp
 InstanceOf: SearchParameter
 Usage: #definition
@@ -176,7 +226,7 @@ Usage: #definition
 * status = #draft
 * date = "2022-03-16"
 * description = "ConditionリソースのverificationStatusに関する検索を定義します。"
-* code = #verificationstatus
+* code = #verification-status
 * base = #Condition
 * type = #token
 * expression = "Condition.verificationStatus"
