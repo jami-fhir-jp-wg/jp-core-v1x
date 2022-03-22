@@ -2,7 +2,7 @@
 #### MustSupportが付与されていない要素について
 この節では各CardinalityとMustSupportの状態ごとのサーバおよびクライアント動作について表形式にて記載している。JP Coreでは、日本国内で患者データにアクセスするための最小限の適合性要件を定めるという理念に基づき、**いずれの要素にもMustSupportを付与しなかった**。
 
-なお、データが存在しない場合の取り扱いについては、[1.3. データが存在しない場合の扱い](guide-handlingOfNonExistentData.html)にて詳細を記載した。
+なお、データが存在しない場合の取り扱いについては、[欠損値（データが存在しない場合）の扱い](guide-handlingOfNonExistentData.html)にて詳細を記載した。
 
 [最小Cardinalityが1であることは、必ずしも有効なデータを持つことを意味しない](https://www.hl7.org/fhir/conformance-rules.html#:~:text=an%20element%20to%20a-,minimum%20cardinality%20of%201,-does%20not%20ensure)。最小Cardinalityが1であることは、要素が存在することのみを要求しており、例えば、その要素はDataAbsentReason拡張のみを持つかもしれない。
 
@@ -15,7 +15,7 @@ MustSupportフラグが無い場合はFHIRの規約通りであり、以下に�
 |  無  |  0..1, 0..\*  | このエレメントを送信してもよい。 |  このエレメントを受信することを前提にできない。<br>また、is-modifierフラグがない限り受信したエレメントを無視してもよい。\*2 | このエレメントを送信してもよい。 | このエレメントを受信することを前提にできない。<br>また、is-modifierフラグがない限り受信したエレメントを無視してもよい。\*2,\*3 |
 |  無   |  1..1, 1..\*  | Cardinalityの制約に従い，エレメントを送信しなければならない。\*1 | このエレメントを受信することを前提としてよい。\*1<br>また，is-modifierフラグがない限り受信したエレメントを無視してもよい。\*2 | Cardinalityの制約に従い，エレメントを送信しなければならない。\*1 | このエレメントを受信することを前提としてよい。\*1<br>また，is-modifierフラグがない限り受信したエレメントを無視してもよい。\*2,\*3 |
 
-\*1 Nullや空文字列を値として送信することはFHIRの規約上許可されていない。また，最低Cardinalityが1以上であっても必ずしも有効な値を持つことは意味せず，constraintsなど追加の制約が無い限り，DataAbsentReason拡張といった何らかの拡張を持つ場合などもcardinalityの制約を満たすことに注意する。例えば，「”unsupported”というDataAbsentReasonを持つ要素」もこの要件を満たしうる。データが欠損している場合の取り扱いの詳細については[1.3. データが存在しない場合の扱い](guide-handlingOfNonExistentData.html)を参照のこと。
+\*1 Nullや空文字列を値として送信することはFHIRの規約上許可されていない。また，最低Cardinalityが1以上であっても必ずしも有効な値を持つことは意味せず，constraintsなど追加の制約が無い限り，DataAbsentReason拡張といった何らかの拡張を持つ場合などもcardinalityの制約を満たすことに注意する。例えば，「”unsupported”というDataAbsentReasonを持つ要素」もこの要件を満たしうる。データが欠損している場合の取り扱いの詳細については[欠損値（データが存在しない場合）の扱い](guide-handlingOfNonExistentData.html)を参照のこと。
 
 \*2 is-modifierフラグのついたエレメント全てにMustSupportフラグが付与することができれば、MustSupportフラグのついていない全てのエレメントを安全に無視できるようになる。
 
