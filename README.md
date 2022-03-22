@@ -51,8 +51,8 @@ FHIRのJpCore環境作成のためのサンプルサイトです。
 
 ## GitHubAction 自動ビルド＆デプロイ
 * [ビルド状況](https://github.com/jami-fhir-jp-wg/jp-core-v1x/actions)
-* [ビルド警告情報](https://jami-fhir-jp-wg/jp-core-v1x/qa.html)
-* [最新ビルド結果](https://jami-fhir-jp-wg/jp-core-v1x/)
+* [ビルド警告情報](https://jami-fhir-jp-wg.github.io/jp-core-v1x/qa.html)
+* [最新ビルド結果](https://jami-fhir-jp-wg.github.io/jp-core-v1x/)
 
 ## FSH & Markdown記載ルール
 * [FHIR Shorthand記載ルール **(作成中)** ](docs/fishingrule.md)
