@@ -485,7 +485,6 @@ Instance: jp-diagnosticreport-resultsinterpreter-sp
 InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_DiagnosticReport_ResultsInterpreter_SP"
-* version = "1.0.0"
 * name = "JP_DiagnosticReport_ResultsInterpreter_SP"
 * status = #draft
 * date = "2022-03-16"
@@ -575,7 +574,7 @@ Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_DiagnosticReport_Subject_SP"
 * name = "JP_DiagnosticReport_Subject_SP"
 * status = #draft
-* date = "2021-12-01"
+* date = "2022-03-16"
 * description = "DiagnosticReportリソースのsubjectに関する検索を定義します。"
 * code = #subject
 * base = #DiagnosticReport

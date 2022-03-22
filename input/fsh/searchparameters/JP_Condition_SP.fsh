@@ -96,7 +96,7 @@ Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Condition_OnsetDate_SP"
 * name = "JP_Condition_OnsetDate_SP"
 * status = #draft
-* date = "2021-12-01"
+* date = "2022-03-16"
 * description = "ConditionリソースのOnset Date(発症日)に関する検索を定義します。"
 * code = #onset-date
 * base = #Condition
