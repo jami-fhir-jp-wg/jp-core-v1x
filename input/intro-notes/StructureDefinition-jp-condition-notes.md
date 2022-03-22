@@ -12,10 +12,10 @@
 
 | Path                            | 定義                               | バインディング強度 | バリューセット |
 | ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-|Condition.clinicalStatus| 臨床的状態のステータス（アクティブか否かなど）| Required | 1-0.active, 1-1.recurrence, 1-2.relapse, 2-0.inactive, 2-1.remission, 2-2.resolved </br> http://hl7.org/fhir/ValueSet/condition-clinical | 
-|Condition.verificationStatus|clinicalStatus の確からしさ | Required | 1-0.unconfirmed, 1-1.provisional, 1-2.differential, 2.confirmed, 3.refuted, 4.enterd-in-error </br> http://hl7.org/fhir/ValueSet/condition-ver-status |
-|Condition.category| 本状態のカテゴリ| Required | problem-list-item,encounter-diagnosis,health-concern (US-Core),claim-diagnosis (JP-Core) </br> http://jpfhir.jp/fhir/CodeSystem/*** (予定) |
-|Condition.severity|本状態の重症度| Required | severe, moderate, mild </br> http://hl7.org/fhir/ValueSet/condition-severity | 
+|Condition.clinicalStatus| 臨床的状態のステータス（アクティブか否かなど）| Required | 1-0.active, 1-1.recurrence, 1-2.relapse, 2-0.inactive, 2-1.remission, 2-2.resolved <br/> http://hl7.org/fhir/ValueSet/condition-clinical | 
+|Condition.verificationStatus|clinicalStatus の確からしさ | Required | 1-0.unconfirmed, 1-1.provisional, 1-2.differential, 2.confirmed, 3.refuted, 4.enterd-in-error <br/> http://hl7.org/fhir/ValueSet/condition-ver-status |
+|Condition.category| 本状態のカテゴリ| Required | problem-list-item,encounter-diagnosis,health-concern (US-Core),claim-diagnosis (JP-Core) <br/> http://jpfhir.jp/fhir/CodeSystem/*** (予定) |
+|Condition.severity|本状態の重症度| Required | severe, moderate, mild <br/> http://hl7.org/fhir/ValueSet/condition-severity | 
 |Condition.code|本状態の種類| Example | 未定 |
 |Condition.bodySite|本状態が存在する人体部位| Example | 未定 |
 |Condition.stage.summary|本状態の臨床的なステージ（例えば、がんのステージ）| Example | 未定 | 

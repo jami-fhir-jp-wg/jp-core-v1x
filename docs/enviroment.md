@@ -46,7 +46,7 @@ ver8,11,17のLSTバージョン<br/>
 
 * ### Ruby
 入手先:http://jekyllrb-ja.github.io/docs/installation/<br/>
- Ruby+Devkitを選択する</br>
+ Ruby+Devkitを選択する<br/>
 ridk installを選択すること(**gemをインストールするため**)
 
 * ### Jekyll

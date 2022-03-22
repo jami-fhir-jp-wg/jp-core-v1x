@@ -14,16 +14,16 @@
 
 | Path                            | 定義                               | バインディング強度 | バリューセット |
 | ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-|AllergyIntolerance.clinicalStatus| このアレルギー・不耐性の臨床的なステータス。 | Required          | active, inactive, resolved </br> http://hl7.org/fhir/ValueSet/allergyintolerance-clinical |
-|AllergyIntolerance.verificationStatus| 特定された物質（医薬品を含む）に対する反応の傾向や潜在的なリスクに関連する確実性。 | Required | unconfirmed, confirmed, refuted, entered-in-error </br> http://hl7.org/fhir/ValueSet/allergyintolerance-verification |
-|AllergyIntolerance.type| 副作用リスクの原因にある生理学的メカニズムの種類 | Required | allergy, intolerance </br> http://hl7.org/fhir/ValueSet/allergy-intolerance-type |
-|AllergyIntolerance.category| 特定された原因物質のカテゴリ | Required |  jp_food, jp_medication, jp_environment_others </br> http://jpfhir.jp/fhir/CodeSystem/*** (予定)| 
-|AllergyIntolerance.criticality| 特定されたアレルギー物質に対する反応の、潜在的な臨床的危害または深刻さの推定 | Required | low, high, unable-to-assess </br> http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality |
-|AllergyIntolerance.code| アレルゲンのコード | Example | <a href="https://docs.google.com/spreadsheets/d/1BhL5XbaxycmGLRHzh-kdTvOrdPJ8-SZPOYvrOiL1pLE/edit#gid=1994452004" target="_blank"> JPCoreアレルギー用語（JFAGY） </a> </br> http://jpfhir.jp/fhir/CodeSystem/*** (予定)|
+|AllergyIntolerance.clinicalStatus| このアレルギー・不耐性の臨床的なステータス。 | Required          | active, inactive, resolved <br/> http://hl7.org/fhir/ValueSet/allergyintolerance-clinical |
+|AllergyIntolerance.verificationStatus| 特定された物質（医薬品を含む）に対する反応の傾向や潜在的なリスクに関連する確実性。 | Required | unconfirmed, confirmed, refuted, entered-in-error <br/> http://hl7.org/fhir/ValueSet/allergyintolerance-verification |
+|AllergyIntolerance.type| 副作用リスクの原因にある生理学的メカニズムの種類 | Required | allergy, intolerance <br/> http://hl7.org/fhir/ValueSet/allergy-intolerance-type |
+|AllergyIntolerance.category| 特定された原因物質のカテゴリ | Required |  jp_food, jp_medication, jp_environment_others <br/> http://jpfhir.jp/fhir/CodeSystem/*** (予定)| 
+|AllergyIntolerance.criticality| 特定されたアレルギー物質に対する反応の、潜在的な臨床的危害または深刻さの推定 | Required | low, high, unable-to-assess <br/> http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality |
+|AllergyIntolerance.code| アレルゲンのコード | Example | <a href="https://docs.google.com/spreadsheets/d/1BhL5XbaxycmGLRHzh-kdTvOrdPJ8-SZPOYvrOiL1pLE/edit#gid=1994452004" target="_blank"> JPCoreアレルギー用語（JFAGY） </a> <br/> http://jpfhir.jp/fhir/CodeSystem/*** (予定)|
 |AllergyIntolerance.reaction.substance| アレルギー不耐症の原因と考えられた特定の物質（医薬品を含む）の識別情報 | Example | 未定 | 
 |AllergyIntolerance.reaction.manifestation| 有害事象イベントにおいて観測される、または関連する臨床症状および/または兆候 |Example | 未定 |
-|AllergyIntolerance.reaction.severity|有害事象イベントの重症度の臨床評価 | Required | mild, moderate, seevere </br> http://hl7.org/fhir/ValueSet/reaction-event-severity |
-|AllergyIntolerance.reaction.exposureRoute| 被験者が物質にさらされた経路の説明 | Example | 未定 <a href="https://docs.google.com/spreadsheets/d/1ry7_dtM4CS_dh6BC7AGRUPm8SKrswnkBfuh8uu1MspQ/edit#gid=0" target="_blank"> （参考用：SNOMEDの和訳） </a> </br> http://jpfhir.jp/fhir/CodeSystem/*** (予定)　 |
+|AllergyIntolerance.reaction.severity|有害事象イベントの重症度の臨床評価 | Required | mild, moderate, seevere <br/> http://hl7.org/fhir/ValueSet/reaction-event-severity |
+|AllergyIntolerance.reaction.exposureRoute| 被験者が物質にさらされた経路の説明 | Example | 未定 <a href="https://docs.google.com/spreadsheets/d/1ry7_dtM4CS_dh6BC7AGRUPm8SKrswnkBfuh8uu1MspQ/edit#gid=0" target="_blank"> （参考用：SNOMEDの和訳） </a> <br/> http://jpfhir.jp/fhir/CodeSystem/*** (予定)　 |
 
 ### 制約一覧
 
