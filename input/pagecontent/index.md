@@ -11,7 +11,6 @@
 
 ### JP Core FHIRコンテンツ
 JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記載をしています。
-[FHIR BASEをそのまま利用するプロファイル](profile-exception)
 
 #### [Profiles （プロファイル）](artifacts.html#3)
 * [Administrationグループ （運営管理）](group-administration.html)
