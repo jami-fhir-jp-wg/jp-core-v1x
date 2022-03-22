@@ -37,10 +37,48 @@ Kabab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 | codesytesm | jp-{codesystem}-cs <br/> `jp-gender-cs` |
 | valueset | jp-{valueset}-vs <br/> `jp-gender-vs` |
 
+### 2. Name命名規則
+単語はPascal(UpperCamel)区切は_(アンダーバー) とする<br/>
+省略語は英大文字としてもよい
+[ **Aa_BbbCcc_-_dcc** ]を採用する。<br/>
+正規表現 : ``` (([A-Z][a-z]*)[_]?)+ ```
+
+| 項目 | ルール <br/> `(例)`  |
+| --- | --- | 
+| profile | JP_{Profile} <br/>`JP_Patient`|  |
+| extension | JP_{Profile}\_{Element}\_{Extension} <br/>`JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount` |
+| datetype | JP_{DataType} <br/>`JP_HumanName `| |
+| search parameter | JP_{Profile}_{Parameter}_SP <br/>`JP_Patient_Birthdate_SP` | |
+| capblity statement | JP_{Actor}_CapablityStatement <br/>`JP_Client_CapablityStatement` |
+| codesytesm | JP_{CodeSystem}_CS <br/> `JP_Gender_CS` |
+| valueset | JP_{ValueSet}_VS <br/> `JP_Gender_VS` |
+
+
+### 3. 定義URL形式
+* Page部分はNameと同一とする。<br/>
+* JPCoreに関するサイト名称は **http://jpfhir.jp/fhir/core** にて統一する。
+* ただしTerminologyについては **http://jpfhir.jp/fhir/Common** とする。<br/>
+※JPCoreに限らずいろいろな用途として利用されるため。
+
+| 項目 | ルール <br/> `(例)`  |
+| --- | --- | 
+| profile, <br/>datatype | http://jpfhir.jp/fhir/core/StructureDefinition/{Name} <br/>`http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient`| 
+| extension | http://jpfhir.jp/fhir/core/Extension/StructureDefinition/{Name}<br/> `http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race`|
+| search<br/>parameter | http://jpfhir.jp/fhir/core/SearchParameter/{Name} <br/>`http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_Birthdate_SP` | |
+| capblity<br/>statement | http://jpfhir.jp/fhir/core/CapabilityStatement/{Name} <br/>`http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement` |
+| codesystem | http://jpfhir.jp/fhir/Common/CodeSystem/{Name} <br/>`http://jpfhir.jp/fhir/Common/CodeSystem/JP_Gender_CS` |
+| valueset | http://jpfhir.jp/fhir/Common/ValueSet/{Name} <br/>`http://jpfhir.jp/fhir/Common/ValueSet/JP_Gender_VS` |
+
+
+### 5. Title命名規則
+NameをSpace Separator形式に変換する。(全ての項目共通)<br/>省略語は英大文字としてもよい
+``` 
+JP Core Patient Race Extension
+```
 
 ### 2. ファイル配置＆命名規則
 #### 形式
-IDをSnake Case形式(小文字) [ **aaa_bbb_ccc.fsh** ]に変換し、拡張子を.fshとする。<br/>
+Name形式(小文字) [ **Aaa_BbbCcc_ddd.fsh** ]に変換し、拡張子を.fshとする。<br/>
 正規表現 : ``` ([a-z]|[_])+.fsh ```
 
 | 項目 | ルール | 備考 |
@@ -56,48 +94,19 @@ IDをSnake Case形式(小文字) [ **aaa_bbb_ccc.fsh** ]に変換し、拡張子
 
 ```
 # profile, extension
-.\input\fsh\profiles\jp_patient.fsh
+.\input\fsh\profiles\JP_Patient.fsh
 
 # datatype
-.\input\fsh\others\jp_humanname.fsh
+.\input\fsh\others\JP_HumanName.fsh
 
 # search parameter
-.\input\fsh\searchparameters\jp_patient_sp.fsh
+.\input\fsh\searchparameters\JP_Patient_SP.fsh
 
 # code system
-.\input\fsh\codesytems\jp_gender_cs.fsh
+.\input\fsh\codesytems\JP_Gender_CS.fsh
 
 # value set
-.\input\fsh\valuesets\jp_gender_vs.fsh
-```
-
-
-### 3. 定義URL形式
-* Page部分はIDと同一とする。<br/>
-※PageとIDが異なるとIG Publisherの警告対象となるため。
-* JPCoreに関するサイト名称は **http://jpfhir.jp/fhir/core** にて統一する。
-* ただしTerminologyについては **http://jpfhir.jp/fhir/Common** とする。<br/>
-※JPCoreに限らずいろいろな用途として利用されるため。
-
-| 項目 | ルール <br/> `(例)`  |
-| --- | --- | 
-| profile, <br/>datatype | http://jpfhir.jp/fhir/core/StructureDefinition/{id} <br/>`http://jpfhir.jp/fhir/core/StructureDefinition/jp-patient`| 
-| extension | http://jpfhir.jp/fhir/core/Extension/StructureDefinition/{id}<br/> `http://jpfhir.jp/fhir/core/Extension/StructureDefinition/jp-patient-race`|
-| search<br/>parameter | http://jpfhir.jp/fhir/core/SearchParameter/{id} <br/>`http://jpfhir.jp/fhir/core/SearchParameter/jp-patient-birthdate-sp` | |
-| capblity<br/>statement | http://jpfhir.jp/fhir/core/CapabilityStatement/{id} <br/>`http://jpfhir.jp/fhir/core/CapabilityStatement/jp-client-capabilitystatement` |
-| codesystem | http://jpfhir.jp/fhir/Common/CodeSystem/{id} <br/>`http://jpfhir.jp/fhir/Common/CodeSystem/jp-gender-cs` |
-| valueset | http://jpfhir.jp/fhir/Common/ValueSet/{id} <br/>`http://jpfhir.jp/fhir/Common/ValueSet/jp-gender-vs` |
-
-### 4. Name命名規則
-IDをKebab Case形式 → Pascal Case形式に変換する。(全ての項目共通)<br/>省略語は英大文字としてもよい
-``` 
-JPPatientRace
-```
-
-### 5. Title命名規則
-NameをSpace Separator形式に変換する。(全ての項目共通)<br/>省略語は英大文字としてもよい
-``` 
-JP Core Patient Race Extension
+.\input\fsh\valuesets\JP_Gender_VS.fsh
 ```
 
 ## 除外項目

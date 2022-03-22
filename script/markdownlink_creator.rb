@@ -2,7 +2,7 @@ require "json"
 genenareted = "./fsh-generated/resources/"
 work = "./temp/scriptwork/"
 linkpage= work + "markdown-link-references.md"
-# link = "./input/includes/markdown-link-references.md"
+# linkpage = "./input/includes/markdown-link-references.md"
 
 header = <<-EOS
 <!-- Temporary changes to fix formatting for changelog -->
