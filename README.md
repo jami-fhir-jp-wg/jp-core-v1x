@@ -9,8 +9,10 @@ FHIRのJpCore環境作成のためのサンプルサイトです。
 * [FHIR Shorthand & IG Publiser環境作成方法 **(作成中)** ](docs/enviroment.md)
 
 ## クライアントコンパイル手順
+_genonceにてheep sizeのエラーが発生する場合、メモリ量の割り当てを調整してください。
+
 ### Windowsの場合
-``` ruby
+``` sh
 #実行ディレクトリに移動
 > cd (プロジェクトディレクトリ移動)
 
@@ -30,23 +32,23 @@ FHIRのJpCore環境作成のためのサンプルサイトです。
 ```
 
 ### Ubuntuの場合
-``` ruby
+``` sh
 #実行ディレクトリに移動
-> cd (プロジェクトディレクトリ移動)
+$ cd (プロジェクトディレクトリ移動)
 
 # (初回のみ実行)gitクローン
-> git clone http://github.com/jami-fhir-jp-wg/jp-core-v1x.git
+$ git clone http://github.com/jami-fhir-jp-wg/jp-core-v1x.git
 
 # git 最新化
-> cd jami-fhir-jp-wg/jp-core-v1x
-> git fetch
-> git pull
+$ cd jp-core-v1x
+$ git fetch
+$ git pull
 
 # (初回のみ実行)IgPublisher.jarのダウンロード
-> bash _updatePublisher.sh
+$ bash _updatePublisher.sh
 
 # igpublisherの実行
-> bash _genonce.sh
+$ bash _genonce.sh
 ```
 
 ## GitHubAction 自動ビルド＆デプロイ
