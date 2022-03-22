@@ -12,7 +12,7 @@
 ### JP Core FHIRコンテンツ
 JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記載をしています。
 
-#### [Profiles （プロファイル）](artifacts.html#3)
+#### [Profiles （プロファイル）](artifacts.html#structures-resource-profiles)
 * [Administrationグループ （運営管理）](group-administration.html)
   * [JP Core Patient （患者）プロファイル][JP_Patient]
   * [JP Core Coverage （保険・公費）プロファイル][JP_Coverage]
