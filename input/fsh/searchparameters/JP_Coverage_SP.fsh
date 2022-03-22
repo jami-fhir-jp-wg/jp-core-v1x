@@ -38,7 +38,7 @@ Usage: #definition
 * date = "2022-03-16"
 * description = "coverageリソースのclass-typeに関する検索を定義します。"
 * code = #class-type
-* base = #coverage
+* base = #Coverage
 * type = #token
 * expression = "Coverage.class.type"
 * xpath = "f:Coverage/f:class/f:type"
