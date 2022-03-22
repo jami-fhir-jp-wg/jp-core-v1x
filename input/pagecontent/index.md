@@ -57,17 +57,17 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
 
 #### Extensions （拡張）
 Profilesにて利用されるExtensionをまとめています。
-- [Extensions （拡張）一覧](artifacts.html#5)
+- [Extensions （拡張）一覧](artifacts.html#structures-extension-definitions)
 
 #### Operations and Search Parameters （操作および検索パラメータ）
 Profilesにて利用されるSearch Parameter および Operationをまとめています。
-- [Search Parameters（検索パラメータ）一覧](artifacts.html#2)
+- [Search Parameters（検索パラメータ）一覧](artifacts.html#behavior-search-parameters)
 
 #### Terminology （用語集）
-- [CodeSystems （コードシステム）一覧](artifacts.html#7)
-- [ValueSets （値セット）一覧](artifacts.html#6)
+- [CodeSystems （コードシステム）一覧](artifacts.html#terminology-code-systems)
+- [ValueSets （値セット）一覧](artifacts.html#terminology-value-sets)
 
-### [CapabilityStatements （機能宣言）](artifacts.html#1)
+### [CapabilityStatements （機能宣言）](artifacts.html#behavior-capability-statements)
  - [JP Core Server Capability Statement][JP_Server_CapabilityStatement]
  - [JP Core Client Capability Statement][JP_Client_CapabilityStatement]
 

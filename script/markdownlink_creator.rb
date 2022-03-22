@@ -11,7 +11,7 @@ header = <<-EOS
     padding-left: 25px !important;
   }
 </style>
-<!-- Obseration章リンク -->
+<!-- ページ内リンク指定 -->
 [JP_Observation_Common_interaction]: StructureDefinition-jp-observation-common.html#インタラクション一覧
 [JP_Observation_Common_Search]: StructureDefinition-jp-observation-common.html#search-parameter一覧
 [JP_Observation_Common_Operation]: StructureDefinition-jp-observation-common.html#operation一覧
