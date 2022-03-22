@@ -11,6 +11,7 @@
 
 ### JP Core FHIRコンテンツ
 JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記載をしています。
+[FHIR BASEをそのまま利用するプロファイル](profile-exception)
 
 #### [Profiles （プロファイル）](artifacts.html#3)
 * [Administrationグループ （運営管理）](group-administration.html)
@@ -47,6 +48,13 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
   * [JP Core AllergyIntolerance （アレルギー不耐症）プロファイル][JP_AllergyIntolerance]
   * [JP Core Condition （状態）プロファイル][JP_Condition]
   * [JP Core Procedure （処置）プロファイル][JP_Procedure]
+
+#### JP Coreで定義しないProfile(プロファイル)
+次のProfileはFHIR Baseをそのまま利用する。そのためJP Core定義対象外とする。
+* [Resource](https://www.hl7.org/fhir/resource.html)
+* [DomainResource](https://www.hl7.org/fhir/domainresource.html)
+* [Binary](https://www.hl7.org/fhir/binary.html)
+* [Bundle](https://www.hl7.org/fhir/bundle.html)
 
 #### Extensions （拡張）
 Profilesにて利用されるExtensionをまとめています。
