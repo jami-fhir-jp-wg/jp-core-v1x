@@ -540,9 +540,9 @@ HL7ではFHIRに限らず、Ver 2以降全て欧米で使用されている1回�
 </details>
 
 ### サンプル
-[JSONサンプル](templatejsonsample)
-[その２](https://simplifier.net/packages/simplifier.core.r4.resources/4.0.0/files/18949/~json)
-
+<!-- MedicationReqestのexampleではないため、一旦コメントアウト -->
+ <!-- [JSONサンプル](templatejsonsample) -->
+ 
 ## 注意事項
 
 ### 記述の単位について
