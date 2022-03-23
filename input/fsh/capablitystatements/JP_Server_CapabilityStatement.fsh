@@ -188,67 +188,67 @@ Usage: #definition
 * rest.resource[=].searchParam[0].extension.url = $capabilityStatement-expectation
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "beneficiary"
-* rest.resource[=].searchParam[=].definition = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Beneficiary_SP"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Coverage-beneficiary"
 * rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "保険受益者"
+// * rest.resource[=].searchParam[=].documentation = "保険受益者"
 * rest.resource[=].searchParam[+].extension.url = $capabilityStatement-expectation
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "class-type"
-* rest.resource[=].searchParam[=].definition = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_ClassType_SP"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Coverage-class-type"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "保険者が発行した特定の健康カード番号のラベル"
+// * rest.resource[=].searchParam[=].documentation = "保険者が発行した特定の健康カード番号のラベル"
 * rest.resource[=].searchParam[+].extension.url = $capabilityStatement-expectation
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "class-value"
-* rest.resource[=].searchParam[=].definition = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_ClassValue_SP"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Coverage-class-value"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "保険者が発行したラベルに関連付けられた英数字の文字列値"
+// * rest.resource[=].searchParam[=].documentation = "保険者が発行したラベルに関連付けられた英数字の文字列値"
 * rest.resource[=].searchParam[+].extension.url = $capabilityStatement-expectation
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "dependent"
-* rest.resource[=].searchParam[=].definition = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Dependent_SP"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Coverage-dependent"
 * rest.resource[=].searchParam[=].type = #string
-* rest.resource[=].searchParam[=].documentation = "補償対象の被扶養者"
+// * rest.resource[=].searchParam[=].documentation = "補償対象の被扶養者"
 * rest.resource[=].searchParam[+].extension.url = $capabilityStatement-expectation
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "identifier"
-* rest.resource[=].searchParam[=].definition = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Identifier_SP"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Coverage-identifier"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "一意識別子"
+// * rest.resource[=].searchParam[=].documentation = "一意識別子"
 * rest.resource[=].searchParam[+].extension.url = $capabilityStatement-expectation
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "patient"
-* rest.resource[=].searchParam[=].definition = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Patient_SP"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Coverage-patient"
 * rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "患者"
+// * rest.resource[=].searchParam[=].documentation = "患者"
 * rest.resource[=].searchParam[+].extension.url = $capabilityStatement-expectation
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "payor"
-* rest.resource[=].searchParam[=].definition = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Payor_SP"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Coverage-payor"
 * rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "保険の引受人または支払人"
+// * rest.resource[=].searchParam[=].documentation = "保険の引受人または支払人"
 * rest.resource[=].searchParam[+].extension.url = $capabilityStatement-expectation
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "policy-holder"
-* rest.resource[=].searchParam[=].definition = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_PolicyHolder_SP"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Coverage-policy-holder"
 * rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[=].documentation = "保険証券を「所有する」当事者"
+// * rest.resource[=].searchParam[=].documentation = "保険証券を「所有する」当事者"
 * rest.resource[=].searchParam[+].extension.url = $capabilityStatement-expectation
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "status"
-* rest.resource[=].searchParam[=].definition = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Status_SP"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Coverage-status"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[=].documentation = "ステータス"
+// * rest.resource[=].searchParam[=].documentation = "ステータス"
 * rest.resource[=].searchParam[+].extension.url = $capabilityStatement-expectation
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "subscriber"
-* rest.resource[=].searchParam[=].definition = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Subscriber_SP"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Coverage-subscriber"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[=].documentation = "契約当事者"
 * rest.resource[=].searchParam[+].extension.url = $capabilityStatement-expectation
 * rest.resource[=].searchParam[=].extension.valueCode = #SHOULD
 * rest.resource[=].searchParam[=].name = "type"
-* rest.resource[=].searchParam[=].definition = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Type_SP"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Coverage-type"
 * rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[=].documentation = "補償の種類"
 * rest.resource[+].extension[0].url = $capabilityStatement-expectation
