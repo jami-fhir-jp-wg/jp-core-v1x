@@ -1,93 +1,16 @@
-Instance: jp-coverage-beneficiary-sp
+Instance: jp-coverage-insuredpersonnumber-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Beneficiary_SP"
-* name = "JP_Coverage_Beneficiary_SP"
+* url = "http://hl7.org/fhir/us/core/SearchParameter/JP_Coverage_InsuredPersonNumber_SP"
+* name = "JP_Coverage_InsuredPersonNumber_SP"
 * status = #draft
-* date = "2022-03-16"
-* description = "Coverageリソースのbeneficiaryに関する検索を定義します。"
-* code = #beneficiary
-* base = #Coverage
-* type = #reference
-* expression = "Coverage.beneficiary"
-* xpath = "f:Coverage/f:beneficiary"
-* xpathUsage = #normal
-* target = #Patient
-* multipleOr = true
-* multipleOr.extension.url = $capabilityStatement-expectation
-* multipleOr.extension.valueCode = #MAY
-* multipleAnd = true
-* multipleAnd.extension.url = $capabilityStatement-expectation
-* multipleAnd.extension.valueCode = #MAY
-* modifier[0] = #missing
-* modifier[+] = #type
-* modifier[+] = #identifier
-* modifier[0].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-
-Instance: jp-coverage-classtype-sp
-InstanceOf: SearchParameter
-Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_ClassType_SP"
-* name = "JP_Coverage_ClassType_SP"
-* status = #draft
-* date = "2022-03-16"
-* description = "coverageリソースのclass-typeに関する検索を定義します。"
-* code = #class-type
-* base = #Coverage
-* type = #token
-* expression = "Coverage.class.type"
-* xpath = "f:Coverage/f:class/f:type"
-* xpathUsage = #normal
-* multipleOr = true
-* multipleOr.extension.url = $capabilityStatement-expectation
-* multipleOr.extension.valueCode = #MAY
-* multipleAnd = true
-* multipleAnd.extension.url = $capabilityStatement-expectation
-* multipleAnd.extension.valueCode = #MAY
-* modifier[0] = #missing
-* modifier[+] = #text
-* modifier[+] = #not
-* modifier[+] = #in
-* modifier[+] = #not-in
-* modifier[+] = #below
-* modifier[+] = #above
-* modifier[+] = #ofType
-* modifier[0].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-
-
-Instance: jp-coverage-classvalue-sp
-InstanceOf: SearchParameter
-Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_ClassValue_SP"
-* name = "JP_Coverage_ClassValue_SP"
-* status = #draft
-* date = "2022-03-16"
-* description = "CoverageリソースのClassValueに関する検索を定義します。"
-* code = #class-value
+* date = "2022-03-23"
+* description = "CoverageリソースのInsuredPersonNumber(健康保険における被保険者証番号)に関する検索を定義します。"
+* code = #insured-personnumber
 * base = #Coverage
 * type = #string
-* expression = "Coverage.class.value"
-* xpath = "f:Coverage/f:class/f:value"
+* expression = "Coverage.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber').extension.value as string"
+* xpath = "f:Coverage/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber']/f:extension/f:valueString"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
@@ -95,30 +18,21 @@ Usage: #definition
 * multipleAnd = true
 * multipleAnd.extension.url = $capabilityStatement-expectation
 * multipleAnd.extension.valueCode = #MAY
-* modifier[0] = #missing
-* modifier[+] = #exact
-* modifier[+] = #contains
-* modifier[0].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
 
 
-Instance: jp-coverage-dependent-sp
+Instance: jp-coverage-insuredpersonsubnumber-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Dependent_SP"
-* name = "JP_Coverage_Dependent_SP"
+* url = "http://hl7.org/fhir/us/core/SearchParameter/JP_Coverage_InsuredPersonSubNumber_SP"
+* name = "JP_Coverage_InsuredPersonSubNumber_SP"
 * status = #draft
-* date = "2022-03-16"
-* description = "Coverageリソースのdependentに関する検索を定義します。"
-* code = #dependent
+* date = "2022-03-23"
+* description = "CoverageリソースのInsuredPersonSubNumber(健康保険における被保険者証番号の枝番)に関する検索を定義します。"
+* code = #insured-personsubnumber
 * base = #Coverage
 * type = #string
-* expression = "Coverage.dependent"
-* xpath = "f:Coverage/f:dependent"
+* expression = "Coverage.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber').extension.value as string"
+* xpath = "f:Coverage/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber']/f:extension/f:valueString"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
@@ -126,30 +40,21 @@ Usage: #definition
 * multipleAnd = true
 * multipleAnd.extension.url = $capabilityStatement-expectation
 * multipleAnd.extension.valueCode = #MAY
-* modifier[0] = #missing
-* modifier[+] = #exact
-* modifier[+] = #contains
-* modifier[0].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
 
 
-Instance: jp-coverage-identifier-sp
+Instance: jp-coverage-insuredpersonsymbol-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Identifier_SP"
-* name = "JP_Coverage_Identifier_SP"
+* url = "http://hl7.org/fhir/us/core/SearchParameter/JP_Coverage_InsuredPersonSymbol_SP"
+* name = "JP_Coverage_InsuredPersonSymbol_SP"
 * status = #draft
-* date = "2022-03-16"
-* description = "Coverageリソースのidentifierに関する検索を定義します。"
-* code = #identifier
+* date = "2022-03-23"
+* description = "CoverageリソースのInsuredPersonSymbol(健康保険における被保険者証記号)に関する検索を定義します。"
+* code = #insured-personsymbol
 * base = #Coverage
-* type = #token
-* expression = "Coverage.identifier"
-* xpath = "f:Coverage/f:identifier"
+* type = #string
+* expression = "Coverage.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol').extension.value as string"
+* xpath = "f:Coverage/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol']/f:extension/f:valueString"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
@@ -157,243 +62,3 @@ Usage: #definition
 * multipleAnd = true
 * multipleAnd.extension.url = $capabilityStatement-expectation
 * multipleAnd.extension.valueCode = #MAY
-* modifier[0] = #missing
-* modifier[+] = #text
-* modifier[+] = #not
-* modifier[+] = #in
-* modifier[+] = #not-in
-* modifier[+] = #below
-* modifier[+] = #above
-* modifier[+] = #ofType
-* modifier[0].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-
-Instance: jp-coverage-patient-sp
-InstanceOf: SearchParameter
-Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Patient_SP"
-* name = "JP_Coverage_Patient_SP"
-* status = #draft
-* date = "2022-03-16"
-* description = "CoverageリソースのPatient(患者)に関する検索を定義します。"
-* code = #patient
-* base = #Coverage
-* type = #reference
-* expression = "Coverage.subject.where(resolve() is Patient)"
-* xpath = "f:Coverage/f:subject"
-* xpathUsage = #normal
-* target = #Patient
-* multipleOr = true
-* multipleOr.extension.url = $capabilityStatement-expectation
-* multipleOr.extension.valueCode = #MAY
-* multipleAnd = true
-* multipleAnd.extension.url = $capabilityStatement-expectation
-* multipleAnd.extension.valueCode = #MAY
-* modifier[0] = #missing
-* modifier[+] = #type
-* modifier[+] = #identifier
-* modifier[0].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-
-
-Instance: jp-coverage-payor-sp
-InstanceOf: SearchParameter
-Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Payor_SP"
-* name = "JP_Coverage_Payor_SP"
-* status = #draft
-* date = "2022-03-16"
-* description = "Coverageリソースのpayorに関する検索を定義します。"
-* code = #payor
-* base = #Coverage
-* type = #reference
-* expression = "Coverage.payor"
-* xpath = "f:Coverage/f:payor"
-* xpathUsage = #normal
-* target = #Patient
-* multipleOr = true
-* multipleOr.extension.url = $capabilityStatement-expectation
-* multipleOr.extension.valueCode = #MAY
-* multipleAnd = true
-* multipleAnd.extension.url = $capabilityStatement-expectation
-* multipleAnd.extension.valueCode = #MAY
-* modifier[0] = #missing
-* modifier[+] = #type
-* modifier[+] = #identifier
-* modifier[0].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-
-Instance: jp-coverage-policyholder-sp
-InstanceOf: SearchParameter
-Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_PolicyHolder_SP"
-* name = "JP_Coverage_PolicyHolder_SP"
-* status = #draft
-* date = "2022-03-16"
-* description = "CoverageリソースのPolicyHolderに関する検索を定義します。"
-* code = #policy-holder
-* base = #Coverage
-* type = #reference
-* expression = "Coverage.policyHolder"
-* xpath = "f:Coverage/f:policyHolder"
-* xpathUsage = #normal
-* target = #Patient
-* multipleOr = true
-* multipleOr.extension.url = $capabilityStatement-expectation
-* multipleOr.extension.valueCode = #MAY
-* multipleAnd = true
-* multipleAnd.extension.url = $capabilityStatement-expectation
-* multipleAnd.extension.valueCode = #MAY
-* modifier[0] = #missing
-* modifier[+] = #type
-* modifier[+] = #identifier
-* modifier[0].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-
-Instance: jp-coverage-status-sp
-InstanceOf: SearchParameter
-Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Status_SP"
-* name = "JP_Coverage_Status_SP"
-* status = #draft
-* date = "2022-03-16"
-* description = "Coverageリソースのstatusに関する検索を定義します。"
-* code = #status
-* base = #Coverage
-* type = #token
-* expression = "Coverage.status"
-* xpath = "f:Coverage/f:status"
-* xpathUsage = #normal
-* multipleOr = true
-* multipleOr.extension.url = $capabilityStatement-expectation
-* multipleOr.extension.valueCode = #MAY
-* multipleAnd = true
-* multipleAnd.extension.url = $capabilityStatement-expectation
-* multipleAnd.extension.valueCode = #MAY
-* modifier[0] = #missing
-* modifier[+] = #text
-* modifier[+] = #not
-* modifier[+] = #in
-* modifier[+] = #not-in
-* modifier[+] = #below
-* modifier[+] = #above
-* modifier[+] = #ofType
-* modifier[0].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-
-Instance: jp-coverage-subscriber-sp
-InstanceOf: SearchParameter
-Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Subscriber_SP"
-* name = "JP_Coverage_Subscriber_SP"
-* status = #draft
-* date = "2022-03-16"
-* description = "Coverageリソースのsubscriberに関する検索を定義します。"
-* code = #subscriber
-* base = #Coverage
-* type = #reference
-* expression = "Coverage.subscriber"
-* xpath = "f:Coverage/f:subscriber"
-* xpathUsage = #normal
-* multipleOr = true
-* multipleOr.extension.url = $capabilityStatement-expectation
-* multipleOr.extension.valueCode = #MAY
-* multipleAnd = true
-* multipleAnd.extension.url = $capabilityStatement-expectation
-* multipleAnd.extension.valueCode = #MAY
-* modifier[0] = #missing
-* modifier[+] = #type
-* modifier[+] = #identifier
-* modifier[0].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* target = #Patient
-
-
-Instance: jp-coverage-type-sp
-InstanceOf: SearchParameter
-Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_Type_SP"
-* name = "JP_Coverage_Type_SP"
-* status = #draft
-* date = "2022-03-16"
-* description = "Coverageリソースのtypeに関する検索を定義します。"
-* code = #type
-* base = #Coverage
-* type = #token
-* expression = "Coverage.type"
-* xpath = "f:Coverage/f:type"
-* xpathUsage = #normal
-* multipleOr = true
-* multipleOr.extension.url = $capabilityStatement-expectation
-* multipleOr.extension.valueCode = #MAY
-* multipleAnd = true
-* multipleAnd.extension.url = $capabilityStatement-expectation
-* multipleAnd.extension.valueCode = #MAY
-* modifier[0] = #missing
-* modifier[+] = #text
-* modifier[+] = #not
-* modifier[+] = #in
-* modifier[+] = #not-in
-* modifier[+] = #below
-* modifier[+] = #above
-* modifier[+] = #ofType
-* modifier[0].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
-* modifier[+].extension.url = $capabilityStatement-expectation
-* modifier[=].extension.valueCode = #MAY
