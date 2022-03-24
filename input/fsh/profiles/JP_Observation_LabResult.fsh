@@ -4,7 +4,7 @@
 Profile: JP_Observation_LabResult
 Parent: JP_Observation_Common
 Id: jp-observation-labresult
-Title: "JP_Observation_LabResult"
+Title: "JP Core Observation LabResult Profile"
 Description: "このプロファイルはObservationリソースに対して、検体検査結果のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_LabResult"
 * ^status = #draft

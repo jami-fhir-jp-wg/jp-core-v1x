@@ -4,6 +4,7 @@
 Profile: JP_Organization
 Parent: Organization
 Id: jp-organization
+Title: "JP Core Organization Profile"
 Description: "このプロファイルはOrganizationリソースに対して、組織情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization"
 * ^status = #draft
@@ -79,6 +80,7 @@ Description: "このプロファイルはOrganizationリソースに対して、
 // ==============================
 Extension: JP_Organization_InsuranceOrganizationCategory
 Id: jp-organization-insuranceorganizationcategory
+Title: "JP Core Organization InsuranceOrganizationCategory Extension"
 Description: "点数表コード１桁（医科１、歯科３）表現するためのExtension。 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory"
 * ^date = "2022-03-16"
@@ -100,6 +102,7 @@ Description: "点数表コード１桁（医科１、歯科３）表現するた
 
 Extension: JP_Organization_InsuranceOrganizationNo
 Id: jp-organization-insuranceorganizationno
+Title: "JP Core Organization InsuranceOrganizationNo Extension"
 Description: "保険医療機関番号７桁を表現するためのExtension。 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
 * ^date = "2022-03-16"
@@ -120,6 +123,7 @@ Description: "保険医療機関番号７桁を表現するためのExtension。
 
 Extension: JP_Organization_PrefectureNo
 Id: jp-organization-prefectureno
+Title: "JP Core Organization PrefectureNo Extension"
 Description: """都道府県番号２桁を表現するためのExtension。
 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"""
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo"

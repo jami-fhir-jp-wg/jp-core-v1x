@@ -4,6 +4,7 @@
 Profile: JP_ImagingStudy_Radiology
 Parent: ImagingStudy
 Id: jp-imagingstudy-radiology
+Title: "JP Core ImagingStudy Radiology Profile"
 Description: "このプロファイルはImagingStudyリソースに対して、放射線検査のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology"
 * ^status = #draft

@@ -4,7 +4,7 @@
 Profile: JP_Medication
 Parent: Medication
 Id: jp-medication
-Title: "JP_Medication"
+Title: "JP Core Medication Profile"
 Description: "このプロファイルはMedicationリソースに対して、主に薬剤データを送受信するための基礎となる制約と拡張を定めたものである。"
 // extension 参照宣言
 * ingredient.extension contains JP_Medication_Ingredient_DrugNo named DrugNo 0..*
@@ -80,7 +80,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 // ==============================
 Extension: JP_Medication_Ingredient_DrugNo
 Id: jp-medication-ingredient-drugno
-Title: "JP_Medication_Ingredient_DrugNo"
+Title: "JP Core Medication Ingredient DrugNo Extension"
 Description: "投与量が製剤単位か成分単位かを格納する拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo"
 * ^date = "2022-03-16"
@@ -96,7 +96,7 @@ Description: "投与量が製剤単位か成分単位かを格納する拡張"
 
 Extension: JP_Medication_IngredientStrength_StrengthType
 Id: jp-medication-ingredientstrength-strengthtype
-Title: "JP_Medication_IngredientStrength_StrengthType"
+Title: "JP Core Medication IngredientStrength StrengthType Extension"
 Description: "投与量が製剤単位か成分単位かを格納する拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"
 * ^date = "2022-03-16"

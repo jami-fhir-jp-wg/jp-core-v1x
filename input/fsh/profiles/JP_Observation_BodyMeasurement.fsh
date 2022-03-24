@@ -4,7 +4,7 @@
 Profile: JP_Observation_BodyMeasurement
 Parent: JP_Observation_Common
 Id: jp-observation-bodymeasurement
-Title: "JP_Observation_BodyMeasurement"
+Title: "JP Core Observation BodyMeasurement Profile"
 Description: "このプロファイルはObservationリソースに対して、身体計測のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_BodyMeasurement"
 * ^status = #draft
@@ -33,7 +33,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 // ==============================
 Extension: JP_Observation_BodySite_BodySitePosition
 Id: jp-observation-bodysite-bodysiteposition
-Title: "JP_Observation_BodySite_BodySitePosition"
+Title: "JP Core Observation BodySite BodySitePosition Extension"
 Description: "部位（bodySite）の左右の区別を表現する際に使用する"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_BodySite_BodySitePosition"
 * ^context.type = #element

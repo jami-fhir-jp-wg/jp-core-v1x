@@ -4,7 +4,7 @@
 Profile: JP_Observation_PhysicalExam
 Parent: JP_Observation_Common
 Id: jp-observation-physicalexam
-Title: "JP_Observation_PhysicalExam"
+Title: "JP Core Observation PhysicalExam Profile"
 Description: "このプロファイルはObservationリソースに対して、身体所見のデータを送受信するための制約と拡張を定めたものである。"
 * bodySite.extension contains JP_Observation_BodySite_BodySitePosition named JPCoreBodySitePositionExtension 0..*
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_PhysicalExam"

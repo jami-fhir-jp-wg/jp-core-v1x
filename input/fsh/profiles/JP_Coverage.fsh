@@ -4,6 +4,7 @@
 Profile: JP_Coverage
 Parent: Coverage
 Id: jp-coverage
+Title: "JP Core Coverage Profile"
 Description: "このプロファイルはCoverageリソースに対して、保険・公費のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage"
 * ^status = #draft
@@ -116,6 +117,7 @@ Description: "このプロファイルはCoverageリソースに対して、保�
 // ==============================
 Extension: JP_Coverage_InsuredPersonNumber
 Id: jp-coverage-insuredpersonnumber
+Title: "JP Core Coverage InsuredPersonNumber Extension"
 Description: "健康保険における被保険者証番号を示す拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber"
 * ^date = "2022-03-16"
@@ -128,6 +130,7 @@ Description: "健康保険における被保険者証番号を示す拡張"
 
 Extension: JP_Coverage_InsuredPersonSubNumber
 Id: jp-coverage-insuredpersonsubnumber
+Title: "JP Core Coverage InsuredPersonSubNumber Extension"
 Description: "健康保険における被保険者証番号の枝番を示す拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber"
 * ^date = "2022-03-16"
@@ -140,6 +143,7 @@ Description: "健康保険における被保険者証番号の枝番を示す拡
 
 Extension: JP_Coverage_InsuredPersonSymbol
 Id: jp-coverage-insuredpersonsymbol
+Title: "JP Core Coverage InsuredPersonSymbol Extension"
 Description: "健康保険における被保険者証記号を示す拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol"
 * ^date = "2022-03-16"

@@ -4,7 +4,7 @@
 Profile: JP_Patient
 Parent: Patient
 Id: jp-patient
-Title: "JP_Patient"
+Title: "JP Core Patient Profile"
 Description: "このプロファイルはPatientリソースに対して、患者のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient"
 * ^status = #draft
@@ -182,6 +182,7 @@ Description: "このプロファイルはPatientリソースに対して、患�
 // ==============================
 Extension: JP_Patient_Race
 Id: jp-patient-race
+Title: "JP Core Patient Race Extension"
 Description: "人種(Race)に関する情報を格納するためのExtension。"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race"
 * ^date = "2022-03-16"

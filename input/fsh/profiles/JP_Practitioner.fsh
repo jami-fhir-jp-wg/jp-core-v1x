@@ -4,6 +4,7 @@
 Profile: JP_Practitioner
 Parent: Practitioner
 Id: jp-practitioner
+Title: "JP Core Practitioner Profile"
 Description: "このプロファイルはPractitionerリソースに対して、医療従事者のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner"
 * ^status = #draft

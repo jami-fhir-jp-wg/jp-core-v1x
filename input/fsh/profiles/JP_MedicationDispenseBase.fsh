@@ -4,7 +4,7 @@
 Profile: JP_MedicationDispenseBase
 Parent: MedicationDispense
 Id: jp-medicationdispensebase
-Title: "JP_MedicationDispenseBase"
+Title: "JP Core MedicationDispenseBase Profile"
 Description: "このプロファイルはユーザは直接適用するものではなく、JP_MedicationDispenseとJP_MedicationDispenseInjectionの共通の親となる抽象プロファイルである。このプロファイルはMedicationDispenseリソースに対して、内服・外用薬剤処方調剤・払い出し記録のデータを送受信するため、JP_MedicationDispenseとJP_MedicationDispenseInjectionの各プロファイルの基礎となる制約と拡張のうち共通部分を定めている。"
 // extension 参照宣言 基底拡張2個、内部拡張1個
 * extension contains JP_MedicationDispense_Preparation named Preparation 0..*
@@ -163,10 +163,12 @@ Description: "このプロファイルはユーザは直接適用するもので
 * eventHistory ^short = "A list of relevant lifecycle events　関連するライフサイクルイベントのリスト"
 * eventHistory ^definition = "A summary of the events of interest that have occurred, such as when the dispense was verified.\r\n\r\n\r\n調剤が確認されたときなど、発生した対象のイベントのサマリー。"
 
-
+// ==============================
+//   Extension 定義
+// ==============================
 Extension: JP_MedicationDispense_Preparation
 Id: jp-medicationdispense-preparation
-Title: "JP_MedicationDispense_Preparation"
+Title: "JP Core MedicationDispense Preparation Extension"
 Description: "薬剤単位の調剤結果"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation"
 * ^date = "2022-03-16"

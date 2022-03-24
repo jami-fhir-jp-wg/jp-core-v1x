@@ -4,7 +4,7 @@
 Profile: JP_MedicationRequestBase
 Parent: MedicationRequest
 Id: jp-medicationrequestbase
-Title: "JP_MedicationRequestBase"
+Title: "JP Core MedicationRequestBase Profile"
 Description: "このプロファイルはユーザは直接適用するものではなく、JP_MedicationRequestとJP_MedicationRequestInjectionの共通の親となる抽象プロファイルである。MedicationRequestリソースに対して、内服・外用薬剤処方、注射・点滴などのデータを送受信するため、JP_MedicationRequestとJP_MedicationRequestInjectionの各プロファイルの基礎となる制約と拡張のうち共通部分を定めている。"
 // extension 参照宣言 基底拡張2個、内部拡張1個
 * extension contains JP_MedicationDispense_Preparation named Preparation 0..*
@@ -853,7 +853,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 // ==============================
 Extension: JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount
 Id: jp-medicationrequest-dispenserequest-expectedrepeatcount
-Title: "JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount"
+Title: "JP Core MedicationRequest DispenseRequest ExpectedRepeatCount Extension"
 Description: "頓用回数"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount"
 * ^date = "2022-03-16"
@@ -871,7 +871,7 @@ Description: "頓用回数"
 
 Extension: JP_MedicationRequest_DispenseRequest_InstructionForDispense
 Id: jp-medicationrequest-dispenserequest-instructionfordispense
-Title: "JP_MedicationRequest_DispenseRequest_InstructionForDispense"
+Title: "JP Core MedicationRequest DispenseRequest InstructionForDispense Extension"
 Description: "調剤指示。薬剤単位の調剤指示を表現するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense"
 * ^date = "2022-03-16"
@@ -884,7 +884,7 @@ Description: "調剤指示。薬剤単位の調剤指示を表現するための
 
 Extension: JP_MedicationRequest_DosageInstruction_Device
 Id: jp-medicationrequest-dosageinstruction-device
-Title: "JP_MedicationRequest_DosageInstruction_Device"
+Title: "JP Core MedicationRequest DosageInstruction Device Extension"
 Description: "投与装置を格納する拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device"
 * ^date = "2022-03-16"
@@ -900,7 +900,7 @@ Description: "投与装置を格納する拡張"
 
 Extension: JP_MedicationRequest_DosageInstruction_Line
 Id: jp-medicationrequest-dosageinstruction-line
-Title: "JP_MedicationRequest_DosageInstruction_Line"
+Title: "JP Core MedicationRequest DosageInstruction Line Extension"
 Description: "指示ラインを格納するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line"
 * ^date = "2022-03-16"
@@ -918,7 +918,7 @@ Description: "指示ラインを格納するための拡張"
 
 Extension: JP_MedicationRequest_DosageInstruction_PeriodOfUse
 Id: jp-medicationrequest-dosageinstruction-periodofuse
-Title: "JP_MedicationRequest_DosageInstruction_PeriodOfUse"
+Title: "JP Core MedicationRequest DosageInstruction PeriodOfUse Extension"
 Description: "投与開始日を格納する拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse"
 * ^date = "2022-03-16"
@@ -940,7 +940,7 @@ Description: "投与開始日を格納する拡張"
 
 Extension: JP_MedicationRequest_DosageInstruction_UsageDuration
 Id: jp-medicationrequest-dosageinstruction-usageduration
-Title: "JP_MedicationRequest_DosageInstruction_UsageDuration"
+Title: "JP MedicationRequest DosageInstruction UsageDuration Extension"
 Description: "隔⽇投与など、服⽤開始⽇から終了⽇までの⽇数と実投与⽇数が異なる場合に、実投与⽇数を明⽰したい場合に使⽤する拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
 * ^date = "2022-03-16"

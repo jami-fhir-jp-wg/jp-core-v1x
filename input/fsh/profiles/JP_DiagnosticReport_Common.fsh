@@ -4,6 +4,7 @@
 Profile: JP_DiagnosticReport_Common
 Parent: DiagnosticReport
 Id: jp-diagnosticreport-common
+Title: "JP Core DiagnosticReport Common Profile"
 Description: "このプロファイルはDiagnosticReportリソースに対して、データを送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common"
 * ^status = #draft

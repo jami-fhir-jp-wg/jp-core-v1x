@@ -4,6 +4,7 @@
 Profile: JP_DiagnosticReport_LabResult
 Parent: JP_DiagnosticReport_Common
 Id: jp-diagnosticreport-labresult
+Title: "JP Core DiagnosticReport LabResult Profile"
 Description: "このプロファイルはDiagnosticReportリソースに対して、検体検査結果のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult"
 * ^status = #draft

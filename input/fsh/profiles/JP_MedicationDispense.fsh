@@ -4,7 +4,7 @@
 Profile: JP_MedicationDispense
 Parent: JP_MedicationDispenseBase
 Id: jp-medicationdispense
-Title: "JP_MedicationDispense"
+Title: "JP Core MedicationDispense Profile"
 Description: "このプロファイルはMedicationDispenseリソースに対して、内服・外用薬剤処方調剤・払い出し記録のデータを送受信するための基礎となる制約と拡張を定めたものである。JP_MedicationDispenseBaseプロファイルからの派生プロファイルである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispense"
 * ^status = #draft
