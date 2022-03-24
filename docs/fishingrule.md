@@ -40,8 +40,8 @@ Kabab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 ### 2. Name命名規則
 単語はPascal(UpperCamel)区切は_(アンダーバー) とする<br/>
 省略語は英大文字としてもよい
-[ **Aa_BbbCcc_-_dcc** ]を採用する。<br/>
-正規表現 : ``` (([A-Z][a-z]*)[_]?)+ ```
+[ **Aa_BbbCcc_Ddd** ]を採用する。<br/>
+正規表現 : ``` (([A-Z]+[a-z]*)+_)+([A-Z]+[a-z]*)+ ```
 
 | 項目 | ルール <br/> `(例)`  |
 | --- | --- | 
@@ -78,7 +78,7 @@ JP Core Patient Race Extension
 
 ### 2. ファイル配置＆命名規則
 #### 形式
-Name形式(小文字) [ **Aaa_BbbCcc_ddd.fsh** ]に変換し、拡張子を.fshとする。<br/>
+Name形式[ **Aaa_BbbCcc_Ddd.fsh** ]に変換し、拡張子を.fshとする。<br/>
 正規表現 : ``` ([a-z]|[_])+.fsh ```
 
 | 項目 | ルール | 備考 |
