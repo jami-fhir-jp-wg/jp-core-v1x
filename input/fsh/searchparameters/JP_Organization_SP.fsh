@@ -1,7 +1,7 @@
 Instance: jp-organization-insuranceorganizationcategory-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://hl7.org/fhir/us/core/SearchParameter/JP_Organization_InsuranceOrganizationCategory_SP"
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationCategory_SP"
 * name = "JP_Organization_InsuranceOrganizationCategory_SP"
 * status = #draft
 * date = "2022-03-23"
@@ -22,7 +22,7 @@ Usage: #definition
 Instance: jp-organization-insuranceorganizationno-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://hl7.org/fhir/us/core/SearchParameter/JP_Organization_InsuranceOrganizationNo_SP"
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationNo_SP"
 * name = "JP_Organization_InsuranceOrganizationNo_SP"
 * status = #draft
 * date = "2022-03-23"
@@ -44,7 +44,7 @@ Usage: #definition
 Instance: jp-organization-prefectureno-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://hl7.org/fhir/us/core/SearchParameter/JP_Organization_PrefectureNo_SP"
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_PrefectureNo_SP"
 * name = "JP_Organization_PrefectureNo_SP"
 * status = #draft
 * date = "2022-03-23"

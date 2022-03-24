@@ -1,7 +1,7 @@
 Instance: jp-patient-race-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://hl7.org/fhir/us/core/SearchParameter/JP_Patient_Race_SP"
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_Race_SP"
 * name = "JP_Patient_Race_SP"
 * status = #draft
 * date = "2022-03-23"

@@ -1,7 +1,7 @@
 Instance: jp-observation-bodysiteposition-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://hl7.org/fhir/us/core/SearchParameter/JP_Observation_BodySitePosition_SP"
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Observation_BodySitePosition_SP"
 * name = "JP_Observation_BodySite_BodySitePosition_SP"
 * status = #draft
 * date = "2022-03-23"

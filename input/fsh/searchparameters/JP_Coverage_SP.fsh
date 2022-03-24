@@ -1,7 +1,7 @@
 Instance: jp-coverage-insuredpersonnumber-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://hl7.org/fhir/us/core/SearchParameter/JP_Coverage_InsuredPersonNumber_SP"
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonNumber_SP"
 * name = "JP_Coverage_InsuredPersonNumber_SP"
 * status = #draft
 * date = "2022-03-23"
@@ -23,7 +23,7 @@ Usage: #definition
 Instance: jp-coverage-insuredpersonsubnumber-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://hl7.org/fhir/us/core/SearchParameter/JP_Coverage_InsuredPersonSubNumber_SP"
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSubNumber_SP"
 * name = "JP_Coverage_InsuredPersonSubNumber_SP"
 * status = #draft
 * date = "2022-03-23"
@@ -45,7 +45,7 @@ Usage: #definition
 Instance: jp-coverage-insuredpersonsymbol-sp
 InstanceOf: SearchParameter
 Usage: #definition
-* url = "http://hl7.org/fhir/us/core/SearchParameter/JP_Coverage_InsuredPersonSymbol_SP"
+* url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSymbol_SP"
 * name = "JP_Coverage_InsuredPersonSymbol_SP"
 * status = #draft
 * date = "2022-03-23"
