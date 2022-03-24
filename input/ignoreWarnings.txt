@@ -4,7 +4,5 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
-%Resource id/url mismatch%
 %The Implementation Guide contains no examples%
-%could not be resolved%
 %The string value contains text that looks like embedded HTML tags%
