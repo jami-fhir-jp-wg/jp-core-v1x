@@ -12,15 +12,15 @@ def destDir = "./fsh-generated-renamed/resources/"
 def canonicalBase = 'http://jpfhir.jp/fhir/core/'
 
 #ファイルコピー（フォルダチェック付）
-def copyFile(src,dest)
+def copyFile(src, dest)
 
   parent = File::dirname(dest)
   if(!Dir.exists?(parent)) then
     FileUtils.mkdir_p(parent)
   end
 
-  p "copy: " + src.to_s + " -> " + dest
-  FileUtils.cp(src.to_s, dest)
+  p "copy: " + src + " -> " + dest
+  FileUtils.cp(src, dest)
 end
 
 #Resourceファイルを解析し定義URLを取得
@@ -35,7 +35,7 @@ end
 def copyResource(fl)
   url = getUrl(fl) 
   dest = destDir + url.sub(canonicalBase,"") + ".json"
-  copyFile(fl, dest)
+  copyFile(fl.to_s, dest)
 end
 
 #ファイル検索対象を指定してコピー
