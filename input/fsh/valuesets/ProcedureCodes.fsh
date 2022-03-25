@@ -1,7 +1,7 @@
-ValueSet: ProcedureCodes
-Id: jp-core-work-valueset-ProcedureCodes
-Title: "Procedureコード"
-* ^url = "https://hl7fhir.jp/fhir/ImplementationGuide/jp-core-work-valueset-ProcedureCodes"
+ValueSet: JP_ProcedureCodes_VS
+Id: jp-procedurecodes-vs
+Title: "JP ProcedureCodes ValueSet"
+* ^url = "http://jpfhir.jp/fhir/common/ValueSet/JP_ProcedureCodes_VS"
 * ^status = #draft
 * ^date = "2022-03-25"
-* include codes from system ProcedureCodes
+* include codes from system JP_ProcedureCodes_CS

@@ -9,7 +9,7 @@ require 'fileutils'
 # -------------------------------------------------------
 def srcDir = "./fsh-generated/resources/"
 def destDir = "./fsh-generated-renamed/resources/"
-def canonicalBase = 'http://jpfhir.jp/fhir/core/'
+def canonicalBase = 'http://jpfhir.jp/fhir/'
 
 #ファイルコピー（フォルダチェック付）
 def copyFile(src, dest)
@@ -52,19 +52,19 @@ end
 # -------------------------------------------------------
 # メイン処理（エントリポイント）
 # -------------------------------------------------------
-begin
 
-  #出力先フォルダの削除
-    p "delete dir: " + destDir
-  if Dir.exists?(destDir) then
-    FileUtils.rm_r(destDir)
-  end
-
-  #コピー処理開始
-  copyResources("ImplementationGuide")
-  copyResources("StructureDefinition")
-  copyResources("CapabilityStatement")
-  copyResources("SearchParameter")
-  #todo valueSet,codeSystemは名前空間が修正待ち
-  
+p "出力先フォルダクリア（削除）"
+  p "delete dir: " + destDir
+if Dir.exists?(destDir) then
+  FileUtils.rm_r(destDir)
 end
+
+p "コピー処理開始"
+copyResources("ImplementationGuide")
+copyResources("StructureDefinition")
+copyResources("CapabilityStatement")
+copyResources("SearchParameter")
+copyResources("CodeSystem")
+copyResources("ValueSet")
+p "コピー処理終了"
+
