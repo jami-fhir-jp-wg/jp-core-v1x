@@ -116,7 +116,7 @@ jekyll -v     #バージョン確認
 
 * VSCode FHIR Shorthand (FSH) Language Support
 * markdown all in one
-* AML Language Support by Red Hat, with built-in Kubernetes syntax support
+* YAML Language Support by Red Hat, with built-in Kubernetes syntax support
 * Json for Visual Studio Code
 
 
