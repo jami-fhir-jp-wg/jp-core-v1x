@@ -1,18 +1,17 @@
+# =======================================================
+# Resourceファイルアップロード準備作業スクリプト
+# =======================================================
 require "json"
 require 'fileutils'
+
+# -------------------------------------------------------
+# 定義情報
+# -------------------------------------------------------
 def srcDir = "./fsh-generated/resources/"
 def destDir = "./fsh-generated-renamed/resources/"
-def canonical = 'http://jpfhir.jp/fhir/core/'
+def canonicalBase = 'http://jpfhir.jp/fhir/core/'
 
-#Url取得
-def getUrl(fl)
-  File.open(fl) do |f|
-    hash = JSON.load(f)
-    return hash["url"].to_s 
-  end
-end
-
-# フォルダ作成しコピー
+#ファイルコピー（フォルダチェック付）
 def copyFile(src,dest)
 
   parent = File::dirname(dest)
@@ -20,33 +19,48 @@ def copyFile(src,dest)
     FileUtils.mkdir_p(parent)
   end
 
-  p "copy:" + src.to_s + " -> " + dest
+  p "copy: " + src.to_s + " -> " + dest
   FileUtils.cp(src.to_s, dest)
+end
+
+#Resourceファイルを解析し定義URLを取得
+def getUrl(fl)
+  File.open(fl) do |f|
+    hash = JSON.load(f)
+    return hash["url"].to_s 
+  end
 end
 
 #ファイルコピー処理
 def copyResource(fl)
   url = getUrl(fl) 
-  dest = destDir + url.sub!(canonical,"") + ".json"
+  dest = destDir + url.sub(canonicalBase,"") + ".json"
   copyFile(fl, dest)
 end
 
-#--- URL抽出処理 ---
-def copyResources(prefix, extension = false)
-    p "search dir: " + srcDir + prefix + "-*.json"
-    files = Dir.glob(srcDir + prefix + "-*.json")
+#ファイル検索対象を指定してコピー
+def copyResources(prefix)
+    searchPatturn =  srcDir + prefix + "-*.json"
+    p "search dir: " + searchPatturn
+    files = Dir.glob(searchPatturn)
 
     for fl in files
       copyResource(fl)
     end
 end
 
+# -------------------------------------------------------
+# メイン処理（エントリポイント）
+# -------------------------------------------------------
 begin
-  #削除
+
+  #出力先フォルダの削除
     p "delete dir: " + destDir
   if Dir.exists?(destDir) then
     FileUtils.rm_r(destDir)
   end
+
+  #コピー処理開始
   copyResources("ImplementationGuide")
   copyResources("StructureDefinition")
   copyResources("CapabilityStatement")
