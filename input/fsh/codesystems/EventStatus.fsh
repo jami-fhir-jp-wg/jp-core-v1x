@@ -1,7 +1,7 @@
-CodeSystem: EventStatus
-Id: jp-core-work-codesystem-EventStatus
+CodeSystem: JP_EventStatus_CS
+Id: jp-eventstatus-cs
 Title: "Procedureの状態"
-* ^url = "https://hl7fhir.jp/fhir/ImplementationGuide/jp-core-work-codesystem-EventStatus"
+* ^url = "http://jpfhir.jp/fhir/common/CodeSystem/JP_EventStatus_CS"
 * ^status = #draft
 * ^date = "2022-03-25"
 * ^content = #complete

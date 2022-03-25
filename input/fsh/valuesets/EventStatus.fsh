@@ -1,8 +1,7 @@
-ValueSet: EventStatus
-Id: jp-core-work-valueset-EventStatus
-Title: "Procedureの状態"
-
-* ^url = "https://hl7fhir.jp/fhir/ImplementationGuide/jp-core-work-valueset-EventStatus"
+ValueSet: JP_EventStatus_VS
+Id: jp-eventstatus-vs
+Title: "JP EventStatus ValueSet"
+* ^url = "http://jpfhir.jp/fhir/common/ValueSet/JP_EventStatus_VS"
 * ^status = #draft
 * ^date = "2022-03-25"
-* include codes from system EventStatus
+* include codes from system JP_EventStatus_CS
