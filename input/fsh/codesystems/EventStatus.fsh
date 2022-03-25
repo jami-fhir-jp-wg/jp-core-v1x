@@ -3,6 +3,7 @@ Id: jp-core-work-codesystem-EventStatus
 Title: "Procedureの状態"
 * ^url = "https://hl7fhir.jp/fhir/ImplementationGuide/jp-core-work-codesystem-EventStatus"
 * ^status = #draft
+* ^date = "2022-03-25"
 * ^content = #complete
 * #preparation "Preparation" "コアイベントはまだ開始されていませんが、一部のステージングアクティビティが開始されています(e.gです。手術室準備)。準備段階は、請求目的のために追跡できます。"
 * #in-progress "In Progress" "イベントは現在発生中です。"
