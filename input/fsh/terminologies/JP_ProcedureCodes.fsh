@@ -4,7 +4,7 @@
 CodeSystem: JP_ProcedureCodes_CS
 Id: jp-procedurecodes-cs
 Title: "JP ProcedureCodes CodeSystem"
-* ^url = "http://jpfhir.jp/fhir/common/CodeSystem/JP_ProcedureCodes_CS"
+* ^url = "http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodes_CS"
 * ^status = #draft
 * ^date = "2022-03-25"
 * ^caseSensitive = true
@@ -16,7 +16,7 @@ Title: "JP ProcedureCodes CodeSystem"
 ValueSet: JP_ProcedureCodes_VS
 Id: jp-procedurecodes-vs
 Title: "JP ProcedureCodes ValueSet"
-* ^url = "http://jpfhir.jp/fhir/common/ValueSet/JP_ProcedureCodes_VS"
+* ^url = "http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodes_VS"
 * ^status = #draft
 * ^date = "2022-03-25"
 * include codes from system JP_ProcedureCodes_CS

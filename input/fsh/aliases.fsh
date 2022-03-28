@@ -12,19 +12,19 @@ Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation
 
 
 // jpfhir-valueSet
-Alias: $labResult-code = http://jpfhir.jp/fhir/common/ValueSet/labResult-code
-Alias: $bodyMeasurement-category = http://jpfhir.jp/fhir/common/ValueSet/bodyMeasurement-category
-Alias: $bodyMeasurement-code = http://jpfhir.jp/fhir/common/ValueSet/bodyMeasurement-code
-Alias: $observation-bodySite = http://jpfhir.jp/fhir/common/ValueSet/observation-bodySite
-Alias: $observation-method = http://jpfhir.jp/fhir/common/ValueSet/observation-method
-Alias: $socialHistory-code = http://jpfhir.jp/fhir/common/ValueSet/socialHistory-code
-Alias: $vitalSigns-category = http://jpfhir.jp/fhir/common/ValueSet/vitalSigns-category
-Alias: $vitalSigns-code = http://jpfhir.jp/fhir/common/ValueSet/vitalSigns-code
+Alias: $labResult-code = http://jpfhir.jp/fhir/Common/ValueSet/labResult-code
+Alias: $bodyMeasurement-category = http://jpfhir.jp/fhir/Common/ValueSet/bodyMeasurement-category
+Alias: $bodyMeasurement-code = http://jpfhir.jp/fhir/Common/ValueSet/bodyMeasurement-code
+Alias: $observation-bodySite = http://jpfhir.jp/fhir/Common/ValueSet/observation-bodySite
+Alias: $observation-method = http://jpfhir.jp/fhir/Common/ValueSet/observation-method
+Alias: $socialHistory-code = http://jpfhir.jp/fhir/Common/ValueSet/socialHistory-code
+Alias: $vitalSigns-category = http://jpfhir.jp/fhir/Common/ValueSet/vitalSigns-category
+Alias: $vitalSigns-code = http://jpfhir.jp/fhir/Common/ValueSet/vitalSigns-code
 
 
-Alias: $JP_EventStatus_CS = http://jpfhir.jp/fhir/common/CodeSystem/JP_EventStatus_CS
-Alias: $JP_EventStatus_VS = http://jpfhir.jp/fhir/common/ValueSet/JP_EventStatus_VS
-Alias: $JP_PhysicalExamCodes_CS = http://jpfhir.jp/fhir/common/CodeSystem/JP_PhysicalExamCodes_CS
-Alias: $JP_PhysicalExamCodes_VS = http://jpfhir.jp/fhir/common/ValueSet/JP_PhysicalExamCodes_VS
-Alias: $JP_ProcedureCodes_CS = http://jpfhir.jp/fhir/common/CodeSystem/JP_ProcedureCodes_CS
-Alias: $JP_ProcedureCodes_VS = http://jpfhir.jp/fhir/common/ValueSet/JP_ProcedureCodes_VS
+Alias: $JP_EventStatus_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_EventStatus_CS
+Alias: $JP_EventStatus_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_EventStatus_VS
+Alias: $JP_PhysicalExamCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_PhysicalExamCodes_CS
+Alias: $JP_PhysicalExamCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_PhysicalExamCodes_VS
+Alias: $JP_ProcedureCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodes_CS
+Alias: $JP_ProcedureCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodes_VS
