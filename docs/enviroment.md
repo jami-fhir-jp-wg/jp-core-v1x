@@ -65,46 +65,47 @@ jekyll -v     #バージョン確認
 
 ``` ruby
 # aptのアップデート。必要に応じて行ってください。
-> sudo apt update
+$ sudo apt update
 
 # nodejsのインストール
-> sudo apt install nodejs npm
+$ sudo apt install nodejs npm
 
-> node -v    #バージョン確認
-> npm -v    #バージョン確認
+$ node -v    #バージョン確認
+$ npm -v    #バージョン確認
 
 # sushiのインストール
-> sudo npm install -g fsh-sushi
+$ sudo npm install -g fsh-sushi
 
-> sushi -v    #バージョン確認
+$ sushi -v    #バージョン確認
 
 # java sdk のインストール
 #-----------------------------
 # 下記のいずれかをインストールすること
+# 今回はOpenJDKの例を記載
 
 # 1)java jre(ライセンス注意のこと)
-> sudo apt install default-jre
+# $ sudo apt install default-jreZ
 
 # 2)open jdk (xxの部分はバージョン指定)
 # sudo apt install openjdk-xx-jre 下はversion11のインストール例
-> sudo apt install openjdk-11-jre
+$ sudo apt install openjdk-11-jre
 
-> java -version    #バージョン確認
+$ java -version    #バージョン確認
 
 # ruby (developer)のインストール
-> sudo apt install ruby-dev
+$ sudo apt install ruby-dev
 
-> ruby --version
+$ ruby --version
 
 # jekyll ※ruby gemがインストールされていること。
-> sudo gem install jekyll bundler
+$ sudo gem install jekyll bundler
 
-> jekyll -v    #バージョン確認
+$ jekyll -v    #バージョン確認
 
 # git client
-> sudo apt install git
+$ sudo apt install git
 
-> git version    #バージョン確認
+$ git version    #バージョン確認
 
 ```
 
@@ -120,6 +121,10 @@ jekyll -v     #バージョン確認
 * Json for Visual Studio Code
 
 
-### 4.2. Source Tree
-mail addressを登録することで利用できる無料のgitクライアントツール<br/>
+### 4.2. git client
+gitを画面操作できるツールがある。本プロジェクトではVisual Studio Code上での編集を推奨するが、ユーザでの経験があるようであれば他のツールを利用することも可能とする。
 
+#### 参考(git client)
+* Visual Studio Code
+* GitHub Desktop
+* Source Tree
