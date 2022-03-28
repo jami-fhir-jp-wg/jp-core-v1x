@@ -7,8 +7,9 @@ require 'fileutils'
 # -------------------------------------------------------
 # 定義情報
 # -------------------------------------------------------
-def srcDir = "./fsh-generated/resources/"
-def destDir = "./fsh-generated-renamed/resources/"
+def srcDir = "./output/"
+#def srcDir = "./fsh-generated/resources/"  #jsonファイルはoutputを正とする。
+def destDir = "./fsh-generated-renamed/"
 def canonicalBase = 'http://jpfhir.jp/fhir/'
 
 #ファイルコピー（フォルダチェック付）
