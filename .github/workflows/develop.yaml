@@ -4,12 +4,14 @@ on:
   push:
     branches: 
       - main
+      - devlop
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
   pull_request:
-    branches: [ main ]
-    
+    branches: 
+      - main
+      - devlop
 jobs:
   turn:
 
