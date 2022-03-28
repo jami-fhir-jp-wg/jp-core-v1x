@@ -79,16 +79,15 @@ JP Core Patient Race Extension
 ### 2. ファイル配置＆命名規則
 #### 形式
 Name形式[ **Aaa_BbbCcc_Ddd.fsh** ]に変換し、拡張子を.fshとする。<br/>
-正規表現 : ``` ([a-z]|[_])+.fsh ```
 
 | 項目 | ルール | 備考 |
 | --- | --- | --- |
-| profile<br/>extension| profiles/{[snake]Profile ID}.fsh | profileおよびextensionは1ファイル集約 |
-| datatype | others/{[snake]DateType ID}.fsh | |
-| operation | others/{[snake]Operation ID}.fsh |  |
-| search parameter| searchparamters/{[snake]Profile ID}_sp.fsh | postfixとして **[_sp]** があるのを注意。1ファイル集約 |
-| codesystem | codesystems/{[snake]CodeSystem ID}.fsh | |
-| valueset | valuesets/{[snake]ValueSet ID}.fsh | |
+| profile<br/>extension| profiles/{Profile Name}.fsh | profileおよびextensionは1ファイル集約 |
+| datatype | others/{DateType Name}.fsh | |
+| operation | others/{Profile Name}.fsh |  |
+| search parameter| searchparamters/{Profile Name}_sp.fsh | postfixとして **[_sp]** があるのを注意。1ファイル集約 |
+| codesystem | terminologies/{CodeSystem Name}.fsh | |
+| valueset | terminologies/{ValueSet Name}.fsh | |
 
 #### サンプル
 
@@ -103,10 +102,10 @@ Name形式[ **Aaa_BbbCcc_Ddd.fsh** ]に変換し、拡張子を.fshとする。<
 .\input\fsh\searchparameters\JP_Patient_SP.fsh
 
 # code system
-.\input\fsh\codesytems\JP_Gender_CS.fsh
+.\input\fsh\terminologies\JP_Gender_CS.fsh
 
 # value set
-.\input\fsh\valuesets\JP_Gender_VS.fsh
+.\input\fsh\terminologies\JP_Gender_VS.fsh
 ```
 
 ## 除外項目
