@@ -6,7 +6,7 @@ Usage: #definition
 * status = #draft
 * date = "2022-03-23"
 * description = "Patientリソースのrace(人種)に関する検索を定義します。"
-* code = #race
+* code = #jp-race
 * base = #Patient
 * type = #token
 * expression = "Patient.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race').value.as(code)"
