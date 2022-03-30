@@ -6,7 +6,7 @@ Usage: #definition
 * status = #draft
 * date = "2022-03-23"
 * description = "OrganizationリソースのInsuranceOrganizationCategory(点数表コード)に関する検索を定義します。"
-* code = #insurance-organizationcategory
+* code = #jp-insurance-organizationcategory
 * base = #Organization
 * type = #token
 * expression = "Organization.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory').extension.value.code"
@@ -27,7 +27,7 @@ Usage: #definition
 * status = #draft
 * date = "2022-03-23"
 * description = "OrganizationリソースのInsuranceOrganizationNo(保険医療機関番号)に関する検索を定義します。"
-* code = #insurance-organizationno
+* code = #jp-insurance-organizationno
 * base = #Organization
 * type = #token
 * expression = "Organization.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo').extension.value.code"
@@ -49,7 +49,7 @@ Usage: #definition
 * status = #draft
 * date = "2022-03-23"
 * description = "OrganizationリソースのPrefectureNo(都道府県番号)に関する検索を定義します。"
-* code = #prefectureno
+* code = #jp-prefectureno
 * base = #Organization
 * type = #token
 * expression = "Organization.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo').extension.value.code"

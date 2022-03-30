@@ -6,7 +6,7 @@ Usage: #definition
 * status = #draft
 * date = "2022-03-23"
 * description = "CoverageリソースのInsuredPersonNumber(健康保険における被保険者証番号)に関する検索を定義します。"
-* code = #insured-personnumber
+* code = #jp-insured-personnumber
 * base = #Coverage
 * type = #string
 * expression = "Coverage.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber').extension.value as string"
@@ -28,7 +28,7 @@ Usage: #definition
 * status = #draft
 * date = "2022-03-23"
 * description = "CoverageリソースのInsuredPersonSubNumber(健康保険における被保険者証番号の枝番)に関する検索を定義します。"
-* code = #insured-personsubnumber
+* code = #jp-insured-personsubnumber
 * base = #Coverage
 * type = #string
 * expression = "Coverage.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber').extension.value as string"
@@ -50,7 +50,7 @@ Usage: #definition
 * status = #draft
 * date = "2022-03-23"
 * description = "CoverageリソースのInsuredPersonSymbol(健康保険における被保険者証記号)に関する検索を定義します。"
-* code = #insured-personsymbol
+* code = #jp-insured-personsymbol
 * base = #Coverage
 * type = #string
 * expression = "Coverage.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol').extension.value as string"
