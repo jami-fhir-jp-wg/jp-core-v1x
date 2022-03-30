@@ -9,8 +9,8 @@ Usage: #definition
 * code = #bodysite-position
 * base = #Observation
 * type = #token
-* expression = "Observation.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_BodySite_BodySitePosition').extension.value.code"
-* xpath = "f:Observation/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_BodySite_BodySitePosition']/f:extension/f:valueCoding/f:code/@value"
+* expression = "Observation.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_BodySite_BodySitePosition').valuvalue.as(code)"
+* xpath = "f:Observation/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_BodySite_BodySitePosition']/f:valueCoding/f:code/@value"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
