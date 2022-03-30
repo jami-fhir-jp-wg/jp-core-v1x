@@ -6,7 +6,7 @@ Usage: #definition
 * status = #draft
 * date = "2022-03-23"
 * description = "ObservationリソースのBodySitePosition(部位左右区別)に関する検索を定義します。"
-* code = #bodysite-position
+* code = #jp-bodysite-position
 * base = #Observation
 * type = #token
 * expression = "Observation.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_BodySite_BodySitePosition').valuvalue.as(code)"
