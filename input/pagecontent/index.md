@@ -61,15 +61,14 @@ Profilesにて利用されるExtensionをまとめています。
 
 #### Operations and Search Parameters （操作および検索パラメータ）
 Profilesにて利用されるSearch Parameter および Operationをまとめています。
-- [Search Parameters（検索パラメータ）一覧](artifacts.html#behavior-search-parameters)
+- [Search Parameters（検索パラメータ）一覧](group-searchParameter.html)
 
 #### Terminology （用語集）
 - [CodeSystems （コードシステム）一覧](artifacts.html#terminology-code-systems)
 - [ValueSets （値セット）一覧](artifacts.html#terminology-value-sets)
 
-### [CapabilityStatements （機能宣言）](artifacts.html#behavior-capability-statements)
- - [JP Core Server Capability Statement][JP_Server_CapabilityStatement]
- - [JP Core Client Capability Statement][JP_Client_CapabilityStatement]
+### [CapabilityStatements （機能宣言）]
+- [CapablityStatement作成について](group-capablityStatement.html)
 
 ### Security （セキュリティ）
 セキュリティに関する要件を記載しています。
