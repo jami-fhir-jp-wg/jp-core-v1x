@@ -89,9 +89,8 @@ Name形式[ **Aaa_BbbCcc_Ddd.fsh** ]に変換し、拡張子を.fshとする。<
 | codesystem | terminologies/{CodeSystem Name}.fsh | |
 | valueset | terminologies/{ValueSet Name}.fsh | |
 
-#### サンプル
-
 ```
+# ファイル名サンプル
 # profile, extension
 .\input\fsh\profiles\JP_Patient.fsh
 
@@ -121,7 +120,8 @@ Name形式[ **Aaa_BbbCcc_Ddd.fsh** ]に変換し、拡張子を.fshとする。<
 設定してもsushi-config.yamlの内容に上書きされるため記載対象としない。
 
 ## Must Support
-JP Coreでは定義しない。（※日本国内のベースで派生先の制約を少なくしたいため）<br/>JP Coreの派生先での利用を想定している。
+JP Coreの派生先での利用を想定しており、JP Coreでは原則定義しない。（※日本国内のベースで派生先の制約を少なくしたいため）<br/>
+ただしユースケースが限定される場合については、MustSupport定義とともに記述することは可能である。
 
 ## コメント記載
 以下のようにファイル内にグループがある場合、コメントにて区切りを入れ、グループが分かるようにすること。

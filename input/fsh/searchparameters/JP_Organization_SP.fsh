@@ -6,11 +6,11 @@ Usage: #definition
 * status = #draft
 * date = "2022-03-23"
 * description = "OrganizationリソースのInsuranceOrganizationCategory(点数表コード)に関する検索を定義します。"
-* code = #insurance-organizationcategory
+* code = #jp-insurance-organizationcategory
 * base = #Organization
 * type = #token
-* expression = "Organization.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory').extension.value.code"
-* xpath = "f:Organization/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory']/f:extension/f:valueCoding/f:code/@value"
+* expression = "Organization.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory').value.as(code)"
+* xpath = "f:Organization/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory']/f:valueCoding/f:code/@value"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
@@ -27,11 +27,11 @@ Usage: #definition
 * status = #draft
 * date = "2022-03-23"
 * description = "OrganizationリソースのInsuranceOrganizationNo(保険医療機関番号)に関する検索を定義します。"
-* code = #insurance-organizationno
+* code = #jp-insurance-organizationno
 * base = #Organization
 * type = #token
-* expression = "Organization.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo').extension.value.code"
-* xpath = "f:Organization/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo']/f:extension/f:valueCoding/f:code/@value"
+* expression = "Organization.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo').value.as(code)"
+* xpath = "f:Organization/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo']/f:valueCoding/f:code/@value"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
@@ -49,11 +49,11 @@ Usage: #definition
 * status = #draft
 * date = "2022-03-23"
 * description = "OrganizationリソースのPrefectureNo(都道府県番号)に関する検索を定義します。"
-* code = #prefectureno
+* code = #jp-prefectureno
 * base = #Organization
 * type = #token
-* expression = "Organization.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo').extension.value.code"
-* xpath = "f:Organization/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo']/f:extension/f:valueCoding/f:code/@value"
+* expression = "Organization.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo').value.as(code)"
+* xpath = "f:Organization/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo']/f:valueCoding/f:code/@value"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
