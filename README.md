@@ -5,8 +5,8 @@ FHIRのJpCore環境作成のためのサンプルサイトです。
 このドキュメントは日本医療情報学会NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した実装ガイドのドラフトVer.1.1 です。このバージョンは日本HL7協会による承認を受けていません。今後、予告なく内容に変更があります。実装や利用は全て自己責任で行ってください。
 このページの実装ガイドは常に修正、追加がある改訂版開発用ページです。
 
-## クライアント環境
-* [FHIR Shorthand & IG Publiser環境作成方法 **(作成中)** ](docs/enviroment.md)
+## GitHubAction 自動ビルド＆デプロイ
+* [ビルド状況](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/index.html)
 
 ## クライアントコンパイル手順
 _genonceにてheep sizeのエラーが発生する場合、メモリ量の割り当てを調整してください。
@@ -51,8 +51,8 @@ $ bash _updatePublisher.sh
 $ bash _genonce.sh
 ```
 
-## GitHubAction 自動ビルド＆デプロイ
-* [ビルド状況](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/index.html)
+## クライアント環境
+* [FHIR Shorthand & IG Publiser環境作成方法 **(作成中)** ](docs/enviroment.md)
 
 ## FSH & Markdown記載ルール
 * [FHIR Shorthand記載ルール **(作成中)** ](docs/fishingrule.md)
