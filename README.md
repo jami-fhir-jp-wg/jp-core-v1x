@@ -52,9 +52,7 @@ $ bash _genonce.sh
 ```
 
 ## GitHubAction 自動ビルド＆デプロイ
-* [ビルド状況](https://github.com/jami-fhir-jp-wg/jp-core-v1x/actions)
-* [ビルド警告情報](https://jami-fhir-jp-wg.github.io/jp-core-v1x/qa.html)
-* [最新ビルド結果](https://jami-fhir-jp-wg.github.io/jp-core-v1x/)
+* [ビルド状況](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/index.html)
 
 ## FSH & Markdown記載ルール
 * [FHIR Shorthand記載ルール **(作成中)** ](docs/fishingrule.md)
