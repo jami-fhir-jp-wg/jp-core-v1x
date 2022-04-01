@@ -13,8 +13,7 @@ publisher:
   name: FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)
   url: http://jpfhir.jp
   email: office@hlfhir.jp
-copyright: >-
-  FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)
+copyright: FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)
 jurisdiction: 'urn:iso:std:iso:3166#JP'
 
 #-----------------------------------------
