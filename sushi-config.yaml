@@ -22,7 +22,7 @@ jurisdiction: 'urn:iso:std:iso:3166#JP'
 #-----------------------------------------
 pages:
   index.md:
-    title: HL7 FHIR JP Core 実装ガイド ＜Draft Ver1.1＞
+    title: HL7 FHIR JP Core 実装ガイド 【 Draft Ver1.1 】
   guidance.md:
     title: ガイダンス
     guide-general.md:
