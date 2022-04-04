@@ -27,7 +27,7 @@ jobs:
         if ["${{ github.event.pull_request.head.ref }}" == ""]; then
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         else
-          echo "##[set-output name=branch;]$(echo ${{ github.event.pull_request.head.ref }})"
+          echo "##[set-output name=branch;]$(echo 'latest pullrequest')"
         fi
       id: extract_branch
     
