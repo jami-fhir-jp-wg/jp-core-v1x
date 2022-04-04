@@ -16,21 +16,35 @@ JP CoreではCapablityStatementのサンプルや作成に際した注意事項�
 
 ### CapabilityStatement定義作成
 #### 利用するインタラクション
+* アクタ<br/>
+洗い出したアクタに対して、Server, Clinetのどちらに相当するかを振り分けます。ブローカー的な役割を果たすアクタについては、Server,Clientの両方のCapability Statementを記載します。
+* リソース定義
+  * 対象リソースの洗い出し<br/>
+  対象となるProfileを洗い出しを行ないます。派生元ProfileにてFHIR BaseのDefined Search Parameterが存在しているかどうかを確認します。派生元のSearch Parameterで収まる場合、CapabilityStatementは派生元Profileにて定義をするようにします。
+  * supportedProfileの定義<br/>
+  派生先のProfileを列挙します。
+
 * インタラクション
-  * 定義毎にExpectionを記載
-* 利用するSearch Parameter
-* Search Parameterの組み合わせ条件
+  * インタラクションの列挙<br/>
+  提供するインタラクションを提供するかどうかを列挙します。
+    * read
+    * vread
+    * update
+    * patch
+    * delete
+    * history-instance
+    * history-type
+  * インタラクションのコンフォーマンス定義（オプション）<br/>
+  インタラクションのコンフォーマンスを定義します。
 
+* Search Parameter
+  * パラメータの列挙<br/>
+  提供するSearchParameterを列挙します。Defined Search ParamtersやJP Coreでの定義を利用できます。もしそれらにない検索を利用する場合（例えばサイトで追加定義した拡張パラメータを検索対象にしたいとき）には独自にSearch Parameterを定義する必要があります。
+  * パラメータに対するコンフォーマンス定義（オプション）<br/>
+  Search Parameterの実装に関するコンフォーマンス(Shall, Should, May)を割り当てます。
 
-#### 各インタラクションのコンフォーマンス(expected)
-
-#### SearchParameterの洗い出し
-##### 定義済みSearch Parameterとの照らし合わせ
-
-##### 独自Search Parameter定義
-
-##### 複数組み合わせ条件に対する記述
-
+  * 組み合わせ条件およびそのコンフォーマンス定義（オプション）<br/>
+  Search Parameterを単独で利用させたくない場合には、組み合わせに関するコンフォーマンスを定義することも可能です。
 
 ###　サンプル
 #### ユースケース
