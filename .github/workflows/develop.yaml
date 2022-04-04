@@ -8,6 +8,7 @@ on:
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
+      - '.github/workflows/**'
   pull_request:
     branches:
       - main
