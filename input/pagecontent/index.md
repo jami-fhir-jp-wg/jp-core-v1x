@@ -68,7 +68,7 @@ Profilesにて利用されるSearch Parameter および Operationをまとめて
 - [ValueSets （値セット）一覧](artifacts.html#terminology-value-sets)
 
 ### [CapabilityStatements （機能宣言）]
-- [CapablityStatement作成について](group-capablityStatement.html)
+- [CapablityStatement作成について](group-capabilityStatement.html)
 
 ### Security （セキュリティ）
 セキュリティに関する要件を記載しています。
