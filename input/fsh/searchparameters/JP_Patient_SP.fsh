@@ -9,8 +9,8 @@ Usage: #definition
 * code = #jp-race
 * base = #Patient
 * type = #token
-* expression = "Patient.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race').value.as(code)"
-* xpath = "f:Patient/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race']/f:valueCoding/f:code/@value"
+* expression = "Patient.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race').extension.value as code"
+* xpath = "f:Patient/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race']/f:extension/f:valueCoding/f:code"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
