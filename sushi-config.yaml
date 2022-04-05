@@ -100,7 +100,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   excludettl: 'true'
   excludemap: 'true'
   excludeexample: 'true'
-  # suppressedWarningFile: 'input/mySuppressedWarnings.txt'
   generate: #what does this do - todo: remove and see
     - xml
     - json
@@ -172,6 +171,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationCategory_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationNo_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_PrefectureNo_SP
+    - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaName_SP
+    - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanjiName_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_Race_SP
     
 #  logging:

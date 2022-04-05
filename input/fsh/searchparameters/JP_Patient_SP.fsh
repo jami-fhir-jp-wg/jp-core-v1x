@@ -20,7 +20,7 @@ Usage: #definition
 * multipleAnd.extension.valueCode = #MAY
 
 
-Instance: jp-patient-kanji-name-sp
+Instance: jp-patient-kanjiname-sp
 InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanjiName_SP"
@@ -42,7 +42,7 @@ Usage: #definition
 * multipleAnd.extension.valueCode = #MAY
 
 
-Instance: jp-patient-kana-name-sp
+Instance: jp-patient-kananame-sp
 InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaName_SP"
