@@ -44,6 +44,10 @@ pages:
       title: Diagnostic Group
     group-clinical.md:
       title: Clinical Group
+    group-capabilityStatement.md:
+      title: CapabilityStatement
+    group-searchParameter.md:
+      title: Search Parameter
   security.md:
     title: セキュリティ
   download.md:
