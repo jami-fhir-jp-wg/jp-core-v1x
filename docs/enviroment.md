@@ -23,7 +23,6 @@ npmも併せてインストールされる。
 ```
 node -version    #バージョン確認
 npm -version    #バージョン確認
-
 ```
 * ### Sushi
 
@@ -35,10 +34,13 @@ sushi -v    #バージョン確認
 ```
 
 * ### Javaランタイム
+JavaSDKもしくはOpenJDKのいずれかをインストールを行なうこと。
+
 #### JavaSDK
 入手先: https://www.oracle.com/java/technologies/downloads/<br/>
 ver8,11,17のLSTバージョン<br/>
 **Java SDKを利用する場合はライセンス注意**
+
 #### OpenJDK
 入手先: http://jdk.java.net/<br/>
 ダウンロード後解凍し、フォルダに配置する。<br/>
