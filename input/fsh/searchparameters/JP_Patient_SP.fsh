@@ -9,8 +9,8 @@ Usage: #definition
 * code = #jp-race
 * base = #Patient
 * type = #token
-* expression = "Patient.extension.where(url = 'http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race').extension.value as code"
-* xpath = "f:Patient/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race']/f:extension/f:valueCoding/f:code"
+* expression = "Patient.extension.where(url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race').value as code"
+* xpath = "f:Patient/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race']/f:valueCoding/f:code"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
@@ -31,7 +31,7 @@ Usage: #definition
 * code = #jp-kanji-name
 * base = #Patient
 * type = #token
-* expression = "Patient.name.where(extension/url = 'http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and extension/valueCode='IDE')"
+* expression = "Patient.name.where(extension/url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and extension/value.as(code)='IDE')"
 * xpath = "f:Patient/f:name[extension/url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and extension/valueCode='IDE']"
 * xpathUsage = #normal
 * multipleOr = true
@@ -53,7 +53,7 @@ Usage: #definition
 * code = #jp-kana-name
 * base = #Patient
 * type = #token
-* expression = "Patient.name.where(extension/url = 'http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and extension/valueCode='SYL')"
+* expression = "Patient.name.where(extension/url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and extension/value.as(code)='SYL')"
 * xpath = "f:Patient/f:name[extension/@url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and extension/valueCode='SYL']"
 * xpathUsage = #normal
 * multipleOr = true
