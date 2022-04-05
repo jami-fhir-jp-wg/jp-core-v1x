@@ -1,11 +1,6 @@
-## SearchParameter
+検索パラメータ(Search Parameter)は、機能定義の一部であり、各サイトごとにどのような検索方法を提供するかを決定するものである。派生先の各サイトはFHIR BaseもしくはJP Coreに定義されるSearch Parameterを利用可能であり、もし定義がない場合に独自に定義をすることも可能である。JP CoreではFHIR Baseで定義されていないもので、派生先サイトで利用する可能性の高いものを定義している。
 
-### 方針
-1. JP Coreを派生して作成したサイトは、JP Core定義された以外のSearch Parameterを定義することは可能である。各サイトはどのSearch Parameterを採用するかを、CapabilityStatementにて宣言を行なうこととする。
-1. FHIR Baseの[defined search parameter](https://fhir-ru.github.io/searchparameter-registry.html)では各Profile毎に想定されるSearch Parameterが既に定義されており、互換性よりこれ利用することを推奨する。(**SHOULD**)
-1. JP Coreでは、日本固有のルールやExtension等の新しい定義に関して利便性のためSearch Parameterを定義する。
-
-### JP Coreで定義されるSearch Parameter一覧
+### JP Core定義 Search Parameter一覧
 * [JP_Coverage_InsuredPersonNumber_SP]
 * [JP_Coverage_InsuredPersonSubNumber_SP]
 * [JP_Coverage_InsuredPersonSymbol_SP]
@@ -16,5 +11,10 @@
 * [JP_Patient_Race_SP]
 * [JP_Patient_KanjiName_SP]
 * [JP_Patient_KanaName_SP]
+
+### FHIR Base 定義済み検索パラメーター
+FHIR Baseにて定義済み検索パラメータ([Defined Search Parameters](https://fhir-ru.github.io/searchparameter-registry.html))が記載されており、相互運用性の高めるためにもこれを利用することを推奨する(***SHOULD***)。<br/>
+定義済み検索パラメータは``` http://hl7.org/fhir/SearchParameter/[id] ```の命名規則の定義URLにて利用可能である。
+
 
 {% include markdown-link-references.md %}

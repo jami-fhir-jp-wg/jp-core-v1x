@@ -10,7 +10,7 @@ JP Coreは「JAMI NeXEHRS課題研究会（正式名：次世代健康医療記�
 ### SHALL,SHOULD/SHOULD NOT,MAY定義
 ---
 
-| Conformace | 定義 |
+| 要求レベル | 定義 |
 | ---- | ---- |
 | **SHALL** | 実装する際に必ず満たさなければならない。 |
 | **SHALL NOT** | 実装する際に満たしてはならない。 |

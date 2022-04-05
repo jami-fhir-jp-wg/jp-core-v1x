@@ -1,61 +1,49 @@
+<H1>作成中</h1>
+
 CapablityStatementは、実際のユースケースに応じて各アクタがどのような振る舞いや機能を有しているかを外部向けに公開するためのものである。<br/>
-JP Coreより派生したサイトでは、アクタ毎にこれらの機能定義の提示をコンフォーマンスとして提示し、プログラム開発もしくは設定等を行なってゆく。
-JP CoreではCapablityStatementのサンプルや作成に際した注意事項等を記載する。
+JP Coreを派生したサイトでは、アクタ毎にこれらの機能定義を作成し、コンフォーマンスとして提示することを推奨する(***SHOULD***)。<br/>
+Capability Statementを構成する要素に対し策定時の注意事項や要求レベルについて記載をするとともに、サンプル定義を提示する。
 
-### Capability Statement策定の流れ
-#### 利用方法の明確化
-1. アクタの洗い出し<br/>
-データの受け渡しに送受信双方の登場アクタ等を洗い出します。
-1. ユースケースからの利用データの洗い出し<br/>
-利用シーンを想定し、アクタ間でどのようなデータのやり取りがあるのかに着目します。
-1. 対象リソースおよび検索パラメータの洗い出し<br/>
-ユースケース時の問合せの関する引数や戻り値を分析し、問合せの際に利用する検索パラメータを洗い出します。
+### Capability Statement策定時注意事項
+#### 定義対象
+データ受け渡し等を行う場合、送受信の両方のアクタについてCapability Statementを記載とすることが出来る。一般的にServer側へのCapabilityStatement定義され、Client側は必要に応じて記載する。役割やデータの受け渡しのフローにより、アクタが多数になる場合もある。その場合はそれぞれにCapability Statement
 
-#### Capability Statement定義作成
-##### インタラクション定義
-1. 定義対象アクタの決定<br/>
-Capability Statementを記載する対象となるアクタを決定します。洗い出したアクタに対して、Server, Clinetのどちらに相当するかを振り分け、定義が必要なアクタ(Actor)を決定します。受け取ったデータを送信するなどブローカー的な役割を果たすアクタについては、Server, Clientの両方のCapability Statementを記載する必要なケースもあります。
-
-1. 対象プロファイル(Profile)の洗い出し<br/>
-対象となるプロファイルを洗い出しを行ないます。一般的にFHIR BASEに定義されているプロファイルには定義済み検索パラメータ([Defined Search Parameters](https://fhir-ru.github.io/searchparameter-registry.html))をこれを利用するため、Capability Statementは派生元であるプロファイル(Profile)に対して定義を行ない、派生先プロファイル(profile)はサポートプロファイル(Supported Profile)に列挙するのが一般的です。
+#### 対象プロファイル(Profile)
+ユースケースより対象となるプロファイル(Profile)を洗い出しを行ないます。FHIR BASEにある定義済み検索パラメータ([Defined Search Parameters](https://fhir-ru.github.io/searchparameter-registry.html))を利用すること、機能要件はFHIR BASEにて共通に提供されることから、FHIR BASE定義のプロファイル(Profile)を対象するのが一般的である。派生先プロファイル(profile)を利用できるようにするためには、サポートプロファイル(Supported Profile)に登録する必要がある。
   
-1. インタラクションの列挙およびコンフォーマンス<br/>
-対処のプロファイルに対して、どのようあインタラクションを機能として提供するかどうかを決定します。また必要性に応じてコンフォーマンス(shall,should,may)を記載することもできます。
-    * read
-    * vread
-    * update
-    * patch
-    * delete
-    * history-instance
-    * history-type
+#### インタラクション
+各プロファイル(Profile)に対して、どのようなインタラクションを提供するかを決定します。
+| インタラクション| 説明 |
+|---|---|
+|create| 新規作成 |
+|search-type| 指定されたタイプのすべてのリソース |
+|read| 現在状態の検索 |
+|vread| 履歴検索 |
+|update| 新規作成,更新 |
+|patch| 更新 |
+|delete| 削除 |
+|history-instance| 特定のリソースの変更履歴を取得します。 |
+|history-type| 特定のタイプのすべてのリソースの変更履歴を取得します。 |
 
-1. 検索パラメータ(Search Parameter)定義<br/>
-派生元プロファイルにてFHIR Baseのが存在しているかどうかを確認し、なるべくこれを利用する様に検討します。
-   1. パラメータの列挙<br/>
-  提供するSearchParameterを列挙します。まずFHIR BASEにある定義済み検索パラメータ([Defined Search Parameters](https://fhir-ru.github.io/searchparameter-registry.html))や[JP Coreで定義された検索パラメータ](group-searchParameter.html)の中より、適合するものがないかを確認し、あればこれを採用します。もし適合するものが見つからない場合、独自にSearch Parameterを定義することも可能です。例えば派生先サイトで追加定義した拡張パラメータを検索対象にしたいときなどがこれに相当します。
+### 検索パラメータ(Search Parameter)定義
+#### 対象検索パラメータの列挙
+FHIR BASEにある定義済み検索パラメータ([Defined Search Parameters](https://fhir-ru.github.io/searchparameter-registry.html))や[JP Coreで定義された検索パラメータ](group-searchParameter.html)の中より、適合するものがないかを確認しあればこれを採用します。もし適合するものが見つからない場合、独自にSearch Parameterを定義した上で追加します。
 
-   1. 単一パラメータに対するコンフォーマンス定義（オプション）<br/>
-  Search Parameterの実装に関するコンフォーマンス(Shall, Should, May)を割り当てます。
+## Capablity Statementサンプル
+* ユースケース<br/>
+リソースデータを提供するServerに対して、Clientに対して検索機能をする。
 
-   1. 組み合わせ条件およびそのコンフォーマンス定義（オプション）<br/>
-  Search Parameterを単独で利用させたくない等の組み合わせの条件を指定する場合、組み合わせに関するコンフォーマンスを定義することも可能です。
+* 登場アクタの説明
 
+|アクタ|説明|
+|---|---|
+| Server | FHIR準拠したサーバで、Resouceを永続化して保持ししているものに対して検索のサービスを提供する。|
+| Client | FHIR準拠したクライアントにて、リソースに対する検索機能を有する。|
 
-### サンプル
-#### ユースケース
-JP Coreのリソース定義をClientよりServerに対して検索を行なう単純なユースケースを想定した。
-
-#### アクタ
-* Server<br/>
-FHIR準拠したサーバで、Resouceを永続化して保持ししているものに対して検索のサービスを提供する。
-
-* Client
-FHIR準拠したクライアントにて、リソースに対する検索機能を有する。
-
-#### サーバ
+#### Server CapabilityStatement
 [JP Core Server Capability Statement][JP_Server_CapabilityStatement]
-#### クライアント
 
+#### Client CapabilityStatement
 [JP Core Client Capability Statement][JP_Client_CapabilityStatement]
 
 {% include markdown-link-references.md %}

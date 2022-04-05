@@ -67,8 +67,8 @@ Profilesにて利用されるSearch Parameter および Operationをまとめて
 - [CodeSystems （コードシステム）一覧](artifacts.html#terminology-code-systems)
 - [ValueSets （値セット）一覧](artifacts.html#terminology-value-sets)
 
-### [CapabilityStatements （機能宣言）]
-- [CapablityStatement作成について](group-capabilityStatement.html)
+### [Capability Statement （機能宣言）]
+- [Capablity Statement](group-capabilityStatement.html)
 
 ### Security （セキュリティ）
 セキュリティに関する要件を記載しています。
