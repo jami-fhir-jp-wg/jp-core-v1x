@@ -12,7 +12,9 @@ Capability Statementを構成する要素に対し策定時の注意事項や要
 ユースケースより対象となるプロファイル(Profile)を洗い出しを行ないます。FHIR BASEにある定義済み検索パラメータ([Defined Search Parameters](https://fhir-ru.github.io/searchparameter-registry.html))を利用すること、機能要件はFHIR BASEにて共通に提供されることから、FHIR BASE定義のプロファイル(Profile)を対象するのが一般的である。派生先プロファイル(profile)を利用できるようにするためには、サポートプロファイル(Supported Profile)に登録する必要がある。
   
 #### インタラクション
+
 各プロファイル(Profile)に対して、どのようなインタラクションを提供するかを決定します。
+
 | インタラクション| 説明 |
 |---|---|
 |create| 新規作成 |
