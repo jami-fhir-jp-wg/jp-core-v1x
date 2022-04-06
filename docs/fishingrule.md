@@ -120,6 +120,18 @@ Name形式[ **Aaa_BbbCcc_Ddd.fsh** ]に変換し、拡張子を.fshとする。<
 
 設定してもsushi-config.yamlの内容に上書きされるため記載対象としない。
 
+## IG Publisherへの対応
+### input/pagecontentに新しい説明文書（Markdown）を追加する場合
+* sushi-config.yaml「ページタイトル名称設定」を追加する。※これを設定しないとhtmlに変換されない。
+* ホームページの上部メニューに追加する場合は、sushi-config.yaml「メニュー設定」に追記すること。
+
+### 新しいリソースを追加、nameもしくはidを変更した際
+* script/markdownlink_creator.rbを実行し、input/include/markdown-link-reference.mdを更新する。
+* sushi-config.yamlのspecial urlに登録が必要かを確認する。
+* input/pagecontent/group-xxxx.mdに修正・追加が変更が必要か確認する。
+* input/pagecontent/index.mdの追加が必要か確認する。
+* コンパイル後各種リンクが正しく動作するかを確認する。
+
 ## Must Support
 JP Coreの派生先での利用を想定しており、JP Coreでは原則定義しない。（※日本国内のベースで派生先の制約を少なくしたいため）<br/>
 ただしユースケースが限定される場合については、MustSupport定義とともに記述することは可能である。
