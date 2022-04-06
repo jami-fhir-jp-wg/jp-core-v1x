@@ -6,8 +6,8 @@ FHIRのJpCore環境作成のためのサンプルサイトです。
 このページの実装ガイドは常に修正、追加がある改訂版開発用ページです。
 
 ## GitHubAction 自動ビルド＆デプロイ
-* [ビルド状況](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/index.html)
-
+* [ビルド状況](https://github.com/jami-fhir-jp-wg/jp-core-v1x/actions)
+* [ビルド結果](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/index.html)
 
 ## 環境作成
 自端末にてIGのコンパイルまで行なう場合、下記を参考に環境を作成してください。
