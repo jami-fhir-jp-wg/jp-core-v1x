@@ -26,8 +26,10 @@ jobs:
       run: |
         if ["${{ github.event.pull_request.head.ref }}" == ""]; then
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+          echo "##[set-output name=branch_group;]$(echo ${GITHUB_REF#refs/heads/})"
         else
-          echo "##[set-output name=branch;]$(echo 'latest pullrequest')"
+          echo "##[set-output name=branch;]$(echo ${{ github.event.pull_request.head.ref }})"
+          echo "##[set-output name=branch_group;]$(echo 'pullrequest')"
         fi
       id: extract_branch
     
@@ -42,6 +44,7 @@ jobs:
       with:
         _input-file: input/landing_page/_index.yml
         _format-key: '%%key%%'
+        group: ${{ steps.extract_branch.outputs.branch_group }}
         branch: ${{ steps.extract_branch.outputs.branch }}
         date: ${{ steps.extract_date.outputs.date }}
         actor: ${{ github.actor }}
@@ -84,4 +87,4 @@ jobs:
         external_repository: jami-fhir-jp-wg/jp-core-v1xpages
         publish_branch: pages
         publish_dir: ./output
-        destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
+        destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch_group }}
