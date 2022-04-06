@@ -6,7 +6,7 @@ description: "日本医療情報学会(JAMI) NeXEHRS課題研究会「HL7®FHIR�
 status: draft # draft | active | retired | unknown
 version: 1.1.0a
 date: 2022-04-01
-fhirVersion: 4.0.1
+fhirVersion: 4.0.6
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
