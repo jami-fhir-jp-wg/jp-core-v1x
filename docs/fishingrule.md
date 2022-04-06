@@ -7,18 +7,19 @@
 ├─.github #githubに関するシステムファイル
 ├─custom-template #IG Publisher用テンプレート
 ├─docs #github説明用ファイル
-└─input #入力フォルダ
-   ├─fsh #FHIR Shorthandファイル格納フォルダ
-   │  ├─capablitystatements #capablity statement用
-   │  ├─codesystems #code system用
-   │  ├─others #その他
-   │  ├─profiles #profile,extension用
-   │  ├─searchparameters #search parameter
-   │  └─valuesets #values
-   ├─includes #link file
-   ├─intro-notes #profileの前後説明文(-intro.md, -notes.md)
-   ├─pagecontent #Markdown Page
-   └─resources #resource
+├─input #入力フォルダ
+│  ├─fsh #FHIR Shorthandファイル格納フォルダ
+│  │  ├─capablitystatements #capablity statement用
+│  │  ├─codesystems #code system用
+│  │  ├─others #その他
+│  │  ├─profiles #profile,extension用
+│  │  ├─searchparameters #search parameter
+│  │  └─valuesets #values
+│  ├─includes #link file
+│  ├─intro-notes #profileの前後説明文(-intro.md, -notes.md)
+│  ├─pagecontent #Markdown Page
+│  └─resources #resource
+└─script #スクリプト格納フォルダ
 ```
 ## 名称ルール
 
