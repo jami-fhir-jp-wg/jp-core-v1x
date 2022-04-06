@@ -8,8 +8,14 @@ FHIRのJpCore環境作成のためのサンプルサイトです。
 ## GitHubAction 自動ビルド＆デプロイ
 * [ビルド状況](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/index.html)
 
-## クライアントコンパイル手順
-_genonceにてheep sizeのエラーが発生する場合、メモリ量の割り当てを調整してください。
+
+## 環境作成
+自端末にてIGのコンパイルまで行なう場合、下記を参考に環境を作成してください。
+* [FHIR Shorthand & IG Publiser環境作成方法](docs/enviroment.md)
+
+## コンパイル手順
+下記を実行することで、outputフォルダにIGのhtmlが作成されます。
+_genonceの実行にてheep sizeのエラーが発生する場合、メモリ量の割り当てを調整してください。
 
 ### Windowsの場合
 ``` sh
@@ -51,8 +57,6 @@ $ bash _updatePublisher.sh
 $ bash _genonce.sh
 ```
 
-## クライアント環境
-* [FHIR Shorthand & IG Publiser環境作成方法 **(作成中)** ](docs/enviroment.md)
 
 ## FSH & Markdown記載ルール
 * [FHIR Shorthand記載ルール **(作成中)** ](docs/fishingrule.md)
