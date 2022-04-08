@@ -6,8 +6,10 @@ FHIRのJpCore環境作成のためのサンプルサイトです。
 このページの実装ガイドは常に修正、追加がある改訂版開発用ページです。
 
 ## GitHubAction 自動ビルド＆デプロイ
-* [ビルド状況](https://github.com/jami-fhir-jp-wg/jp-core-v1x/actions)
-* [ビルド結果](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/index.html)
+ビルドおよびデプロイに１０分程度時間を要します。
+* [ビルド状況 [step1]](https://github.com/jami-fhir-jp-wg/jp-core-v1x/actions)
+* [デプロイ状況 [step2]](https://github.com/jami-fhir-jp-wg/jp-core-v1xpages/actions)
+* [ビルド結果 [step3]](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/index.html)
 
 ## 環境作成
 自端末にてIGのコンパイルまで行なう場合、下記を参考に環境を作成してください。
@@ -57,12 +59,11 @@ $ bash _updatePublisher.sh
 $ bash _genonce.sh
 ```
 
-
 ## FSH & Markdown記載ルール
-* [FHIR Shorthand記載ルール **(作成中)** ](docs/fishingrule.md)
-* [プロファイル説明用Markdown記載ルール **(作成中)** ](docs/template_intronotes.md)
-* [JP Core IG記載ルール **(作成中)** ](docs/ig_rules.md)
-* [github 利用ルール **(作成中)** ](docs/githubflow.md)
+* [FHIR Shorthand記載ルール](docs/fishingrule.md)
+* [プロファイル説明用Markdown記載ルール](docs/template_intronotes.md)
+* [github 利用ルール](docs/githubflow.md)
+* [文書記載ルール案 **(作成中)** ](docs/ig_rules.md)
 
 ## 資料・学習用サイト等
 * [FHIR Shorthand FSH School(外部リンク)](https://fshschool.org/)

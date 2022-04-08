@@ -21,8 +21,8 @@ npmも併せてインストールされる。
 下記にてインストールを確認する。
 
 ```
-node -version    #バージョン確認
-npm -version    #バージョン確認
+node -version     #バージョン確認
+npm -version      #バージョン確認
 ```
 * ### Sushi
 
@@ -46,10 +46,18 @@ ver8,11,17のLSTバージョン<br/>
 ダウンロード後解凍し、フォルダに配置する。<br/>
 環境変数に対象フォルダを登録し、どの環境からでも実行できるように設定すること。
 
+```
+> java -version    #バージョン確認
+```
+
 * ### Ruby
 入手先:http://jekyllrb-ja.github.io/docs/installation/<br/>
  Ruby+Devkitを選択する<br/>
 ridk installを選択すること(**gemをインストールするため**)
+
+```
+$ ruby --version  #バージョン確認
+```
 
 * ### Jekyll
 ```
@@ -65,7 +73,7 @@ jekyll -v     #バージョン確認
 
 ## 3. Linux ubuntu インストール手順
 
-``` ruby
+``` sh
 # aptのアップデート。必要に応じて行ってください。
 $ sudo apt update
 
