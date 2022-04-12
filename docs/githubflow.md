@@ -5,14 +5,14 @@
 |ブランチ名|説明|
 | --- | ---|
 | main | 公開用ブランチ。mainブランチへの編集およびマージはリリース責任者のみによって行なわれる。|
-| develop | 開発用ブランチ。developブランチへの編集およびマージはSWG責任者以上の権限を必要とする。|
-| feature/xxxxx | 機能追加の際の作業用ブランチ。developブランチから分岐し、SWGメンバ権限以上にて作成および編集し、作業を行う。featureブランチのDevelopへの反映はSWG責任者以上権限のマージによって行なわれる。SWGメンバは作業が終わるとSWG責任者以上に対してマージを依頼する。依頼する手段としてはPull Requestを推奨する。|
+| develop | 開発用ブランチ。developブランチへの編集およびマージはdevelop責任者以上の権限を必要とする。|
+| feature/xxxxx | 機能追加の際の作業用ブランチ。developブランチから分岐し、SWGメンバ権限以上にて作成および編集し、作業を行う。featureブランチのDevelopへの反映はdevelop責任者以上権限のマージによって行なわれる。SWGメンバは作業が終わるとdevelop責任者以上に対してマージを依頼する。依頼する手段としてはPull Requestを推奨する。|
 
 ## 1.2. 各アクタ説明
 |役割|チーム名|説明|
 |---|---|---|
 |リリース責任者|FHIR-swg leaders|mainブランチに対するマージや、releaseのタグ付けを行なう。<br/>fshファイルに対するversion,statusの一括変更等を行なう。|
-|SWG責任者|FHIR-swg editor|developブランチの更新、featureブランチ→developブランチへのマージを実施する。各SWGにて１名以上メンバを立てること。|
+|develop責任者|FHIR-swg editor|developブランチの更新、featureブランチ→developブランチへのマージを実施する。各SWGにて１名以上メンバを立てること。|
 |SWGメンバ|FHIR-swg member|featureブランチに対する修正およびdevelopに対するPullRequestを行なうことができる。|
 |FHIR WG以外| 無所属 | 外部メンバから指摘を受ける場合、Forkを利用してもらいDevelopに対するPull Requestのみを受け付ける。|
 
@@ -55,7 +55,7 @@ FHIR WGメンバにて編集を行なう場合、下記の権限が必要にな�
 
 * github アカウント
 * github Organization(jami-fhir-jp-wg)への所属
-* github Team(SWG責任者、SWGメンバのいずれか)への所属
+* github Team(develop責任者、SWGメンバのいずれか)への所属
 
 FHIR WG以外メンバからは、部外者のFork & pull requestも受け付けることする。
 FHIR WGメンバについては進捗を明らかにする上でもbranch上で編集を行なってゆく。
@@ -78,6 +78,6 @@ GitHub Acount名：
 
 所属SWG名:
 
-役割：SWG責任者 or SWGメンバ
+役割：develop責任者 or SWGメンバ
 -------------------------------------------
 ```
