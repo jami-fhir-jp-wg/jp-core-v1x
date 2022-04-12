@@ -18,6 +18,8 @@ genenareted = "./fsh-generated/resources/"
 linkpage = "./input/includes/markdown-link-references.md"
 # リンク先頭部分
 header = <<-EOS
+<!-- 本ファイル修正不可。-->
+<!-- リソース追加・変更はruby script/markdownlink_creator.mdを実行にて反映される -->
 <!-- Temporary changes to fix formatting for changelog -->
 <style>
   ul.new-content {
