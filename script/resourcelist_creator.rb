@@ -1,3 +1,11 @@
+# =======================================================
+# リソース情報一覧(CSV)作成スクリプト
+# 目的：
+# id,name,url等の記載を比較ため
+# 処理概要：
+# fshgeneretedに出力されたリソースファイルを解析し、
+# 対象項目をピックアップして、tempフォルダに一覧を出力する。
+# =======================================================
 require "json"
 genenareted = "./fsh-generated/resources/"
 work = "./temp/scriptwork/"
@@ -16,21 +24,22 @@ def putRecord(prefix, fw, extension = false)
     end
 end
 
-begin
-  if !Dir.exists?(work) then
-    p "mkdir:" + work
-    Dir.mkdir(work)
-  end
-  File.open(linkpage,"w") do |fw|
-    Dir.chdir(genenareted)
-    fw.puts  "path,resourceType,type,id,name,title,url"
-           
-    putRecord("ImplementationGuide", fw)
-    putRecord("StructureDefinition", fw)
-    putRecord("StructureDefinition", fw, true)
-    putRecord("CapabilityStatement", fw)
-    putRecord("SearchParameter", fw)
-    putRecord("CodeSystem", fw)
-    putRecord("ValueSet", fw)
-  end 
+# -------------------------------------------------------
+# メイン処理（エントリポイント）
+# -------------------------------------------------------
+if !Dir.exists?(work) then
+  p "mkdir:" + work
+  Dir.mkdir(work)
+end
+File.open(linkpage,"w") do |fw|
+  Dir.chdir(genenareted)
+  fw.puts  "path,resourceType,type,id,name,title,url"
+          
+  putRecord("ImplementationGuide", fw)
+  putRecord("StructureDefinition", fw)
+  putRecord("StructureDefinition", fw, true)
+  putRecord("CapabilityStatement", fw)
+  putRecord("SearchParameter", fw)
+  putRecord("CodeSystem", fw)
+  putRecord("ValueSet", fw)
 end

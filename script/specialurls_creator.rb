@@ -1,5 +1,13 @@
+# =======================================================
+# sushi-config.yaml　special url　生成スクリプト
+# 処理概要：
+# cannonical urlの命名規則の警告を避けるため、リソースファイル
+# url情報を抽出し、sushi-config.yamlを書き換える処理を行なう。
+# =======================================================
 require "json"
+# リソース格納フォルダ
 genenareted = "./fsh-generated/resources/"
+# sushi-configパス
 sushiconfigPath="sushi-config.yaml"
 
 #--- URL抽出処理 ---
@@ -29,26 +37,27 @@ def setConfigText(path, text)
   end
 end
 
-#==============================================
+# -------------------------------------------------------
 # メイン処理（エントリポイント）
-#==============================================
-begin
-  sb = "  special-url:\n"
-  
-  Dir.chdir(genenareted)  ##fshgenerated/resoucesに移動
-  #プロパティ名追加
-  
-  #URL出力
-  fillUrl("StructureDefinition", sb)
-  fillUrl("StructureDefinition", sb, true)
-  fillUrl("CapabilityStatement", sb)
-  fillUrl("SearchParameter", sb)
+# -------------------------------------------------------
+sb = "  special-url:\n"
 
-  Dir.chdir('../..')  ##project配下に戻す
-  allText = getConfingText(sushiconfigPath)
-  
-  regex = /\s{2}special-url:\n(\s{4}-\shttp.*\n)*/
-  allText.gsub!(regex, sb)
+Dir.chdir(genenareted)  #カレントディレクトリ移動(fshgenerated/resouces)
 
-  setConfigText(sushiconfigPath, allText)
-end
+p 'url情報取得'
+fillUrl("StructureDefinition", sb)
+fillUrl("StructureDefinition", sb, true)
+fillUrl("CapabilityStatement", sb)
+fillUrl("SearchParameter", sb)
+
+Dir.chdir('../..')  ##カレントディレクトリ移動(project配下)
+
+p 'sushi-configの取得'
+allText = getConfingText(sushiconfigPath)
+
+p '正規表現による置換'
+regex = /\s{2}special-url:\n(\s{4}-\shttp.*\n)*/
+allText.gsub!(regex, sb)
+
+p 'sushi-configによる書き込み'
+setConfigText(sushiconfigPath, allText)

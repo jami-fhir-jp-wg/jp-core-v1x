@@ -7,14 +7,17 @@ require 'fileutils'
 # -------------------------------------------------------
 # 定義情報
 # -------------------------------------------------------
+# コピー元フォルダ
 def srcDir = "./output/"
 #def srcDir = "./fsh-generated/resources/"  #jsonファイルはoutputを正とする。
+# 書き込み先フォルダ
 def destDir = "./fsh-generated-renamed/"
+# cannonical site定義
 def canonicalBase = 'http://jpfhir.jp/fhir/'
 
 #ファイルコピー（フォルダチェック付）
 def copyFile(src, dest)
-
+  
   parent = File::dirname(dest)
   if(!Dir.exists?(parent)) then
     FileUtils.mkdir_p(parent)
@@ -53,7 +56,6 @@ end
 # -------------------------------------------------------
 # メイン処理（エントリポイント）
 # -------------------------------------------------------
-
 p "出力先フォルダクリア（削除）"
   p "delete dir: " + destDir
 if Dir.exists?(destDir) then
