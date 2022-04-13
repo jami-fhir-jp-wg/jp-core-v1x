@@ -33,7 +33,11 @@ header = <<-EOS
 [JP_DiagnosticReport_Common_interaction]: StructureDefinition-jp-diagnosticreport-common.html#interaction一覧
 EOS
 
-def getAddtionalComment(extension)
+def getAddtionalComment(value, extension)
+  if(value != "StructureDefinition") then
+    return ""
+  end
+
   if(extension) then
     return ": Extension"
   else
@@ -42,10 +46,8 @@ def getAddtionalComment(extension)
 end
 #--- コメント出力関数 ---
 def putMarkdownComment(value, fw, extension = false)
-  postfix = ""
-  if(value == "StructureDefinition") then
-    postfix = getAddtionalComment(extension)
-  end
+  
+  postfix = getAddtionalComment(value, extension)
   p value + postfix
   fw.puts format("\n<!-- %<value>s%<postfix>s -->", value: value, postfix: postfix)
 end
