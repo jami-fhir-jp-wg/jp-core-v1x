@@ -33,40 +33,56 @@ header = <<-EOS
 [JP_DiagnosticReport_Common_interaction]: StructureDefinition-jp-diagnosticreport-common.html#interaction一覧
 EOS
 
+def getAddtionalComment(extension)
+  if(extension) then
+    return ": Extension"
+  else
+    return ": Profile, DataType"
+  end
+end
+#--- コメント出力関数 ---
+def putMarkdownComment(value, fw, extension = false)
+  postfix = ""
+  if(value == "StructureDefinition") then
+    postfix = getAddtionalComment(extension)
+  end
+  p value + postfix
+  fw.puts format("\n<!-- %<value>s%<postfix>s -->", value: value, postfix: postfix)
+end
+
+#--- エイリアス情報出力 ---
+def putAlias(name, uri, fw)
+  fw.puts format("[%<name>s]: %<url>s", name: name, url: uri)
+end
+
 #--- 種別指定書き込み処理 ---
 def putMarkdownLink(prefix, fw, extension = false)
-    files = Dir.glob(prefix + "-*.json")
-    for fl in files
-        File.open(fl) do |f|
-            hash = JSON.load(f)
-            if (hash["type"] == "Extension") == extension then
-              fw.puts "[" + hash["name"] +"]: " + fl.gsub(/.json/, '.html') 
-            end
-        end
+  putMarkdownComment(prefix, fw, extension)
+  files = Dir.glob(prefix + "-*.json")
+  for fl in files
+    File.open(fl) do |f|
+      hash = JSON.load(f)
+      if (hash["type"] == "Extension") != extension then
+        break
+      end
+      putAlias(hash["name"].to_s, fl.gsub(/.json/, '.html'), fw)
     end
+  end
 end
 
 # -------------------------------------------------------
 # メイン処理（エントリポイント）
 # -------------------------------------------------------
 File.open(linkpage,"w") do |fw|
-  fw.puts header
-  Dir.chdir(genenareted)
+  Dir.chdir(genenareted)  #カレントディレクトリの移動
   
-  fw.puts "\n<!-- ImplementationGuide -->" 
+  fw.puts header
   putMarkdownLink("ImplementationGuide", fw)
-  fw.puts "\n<!-- StructureDefinition: Profile, DataType -->" 
   putMarkdownLink("StructureDefinition", fw)
-  fw.puts "\n<!-- StructureDefinition: Extension -->" 
   putMarkdownLink("StructureDefinition", fw, true)
-
-  fw.puts "\n<!-- CapabilityStatement -->" 
   putMarkdownLink("CapabilityStatement", fw)
-  fw.puts "\n<!-- SearchParameter -->" 
   putMarkdownLink("SearchParameter", fw)
-
-  fw.puts "\n<!-- CodeSystem -->" 
   putMarkdownLink("CodeSystem", fw)
-  fw.puts "\n<!-- ValueSet -->" 
   putMarkdownLink("ValueSet", fw)
+
 end 
