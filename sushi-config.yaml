@@ -167,13 +167,11 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonNumber_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSubNumber_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSymbol_SP
-    - http://jpfhir.jp/fhir/core/SearchParameter/JP_Observation_BodySitePosition_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationCategory_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationNo_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_PrefectureNo_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaName_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanjiName_SP
-    - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_Race_SP
     
 #  logging:
 #    - init

@@ -4,11 +4,9 @@
 * [JP_Coverage_InsuredPersonNumber_SP]
 * [JP_Coverage_InsuredPersonSubNumber_SP]
 * [JP_Coverage_InsuredPersonSymbol_SP]
-* [JP_Observation_BodySite_BodySitePosition_SP]
 * [JP_Organization_InsuranceOrganizationCategory_SP]
 * [JP_Organization_InsuranceOrganizationNo_SP]
 * [JP_Organization_PrefectureNo_SP]
-* [JP_Patient_Race_SP]
 * [JP_Patient_KanjiName_SP]
 * [JP_Patient_KanaName_SP]
 

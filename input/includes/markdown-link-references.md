@@ -85,13 +85,11 @@
 [JP_Coverage_InsuredPersonNumber_SP]: SearchParameter-jp-coverage-insuredpersonnumber-sp.html
 [JP_Coverage_InsuredPersonSubNumber_SP]: SearchParameter-jp-coverage-insuredpersonsubnumber-sp.html
 [JP_Coverage_InsuredPersonSymbol_SP]: SearchParameter-jp-coverage-insuredpersonsymbol-sp.html
-[JP_Observation_BodySite_BodySitePosition_SP]: SearchParameter-jp-observation-bodysiteposition-sp.html
 [JP_Organization_InsuranceOrganizationCategory_SP]: SearchParameter-jp-organization-insuranceorganizationcategory-sp.html
 [JP_Organization_InsuranceOrganizationNo_SP]: SearchParameter-jp-organization-insuranceorganizationno-sp.html
 [JP_Organization_PrefectureNo_SP]: SearchParameter-jp-organization-prefectureno-sp.html
 [JP_Patient_KanaName_SP]: SearchParameter-jp-patient-kananame-sp.html
 [JP_Patient_KanjiName_SP]: SearchParameter-jp-patient-kanjiname-sp.html
-[JP_Patient_Race_SP]: SearchParameter-jp-patient-race-sp.html
 
 <!-- CodeSystem -->
 [JP_EventStatus_CS]: CodeSystem-jp-eventstatus-cs.html
