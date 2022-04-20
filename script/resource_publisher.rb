@@ -1,5 +1,6 @@
 # =======================================================
 # Resourceファイルアップロード準備作業スクリプト
+# outputにjsonが展開される後に実行すること(※対象はfsh_generatedフォルダではない)
 # =======================================================
 require "json"
 require 'fileutils'
@@ -17,9 +18,9 @@ def canonicalBase = 'http://jpfhir.jp/fhir/'
 
 #ファイルコピー（フォルダチェック付）
 def copyFile(src, dest)
-  
   parent = File::dirname(dest)
   if(!Dir.exists?(parent)) then
+    p "create dir:" + parent
     FileUtils.mkdir_p(parent)
   end
 
