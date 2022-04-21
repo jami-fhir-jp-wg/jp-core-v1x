@@ -1,6 +1,6 @@
 # JP Core FHIR Shorthand記載ルール(案)
 
-## 1. フォルダ構成
+## フォルダ構成
  フォルダ構成は下記の通り
 ```ruby
 (project root)
@@ -22,7 +22,7 @@
 ```
 ## 名称ルール
 
-### 1. ID命名規則
+### [1] ID命名規則
 #### 形式
 Kabab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 正規表現 : ``` ([a-z]|[-])+ ```
@@ -37,7 +37,7 @@ Kabab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 | codesytesm | jp-{codesystem}-cs <br/> `jp-gender-cs` |
 | valueset | jp-{valueset}-vs <br/> `jp-gender-vs` |
 
-### 2. Name命名規則
+### [2] Name命名規則
 単語はPascal(UpperCamel)区切は_(アンダーバー) とする<br/>
 省略語は英大文字としてもよい
 [ **Aa_BbbCcc_Ddd** ]を採用する。<br/>
@@ -54,7 +54,7 @@ Kabab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 | valueset | JP_{ValueSet}_VS <br/> `JP_Gender_VS` |
 
 
-### 3. 定義URL形式
+### [3] 定義URL形式
 * Page部分はNameと同一とする。<br/>
 * JPCoreに関するサイト名称は **http://jpfhir.jp/fhir/core** にて統一する。
 * ただしTerminologyについては **http://jpfhir.jp/fhir/Common** とする。<br/>
@@ -70,13 +70,13 @@ Kabab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 | valueset | http://jpfhir.jp/fhir/Common/ValueSet/{Name} <br/>`http://jpfhir.jp/fhir/Common/ValueSet/JP_Gender_VS` |
 
 
-### 5. Title命名規則
+### [4] Title命名規則
 NameをSpace Separator形式に変換する。(全ての項目共通)<br/>省略語は英大文字としてもよい
 ``` 
 JP Core Patient Race Extension
 ```
 
-### 2. ファイル配置＆命名規則
+### [5] ファイル配置＆命名規則
 #### 形式
 Name形式[ **Aaa_BbbCcc_Ddd.fsh** ]に変換し、拡張子を.fshとする。<br/>
 
@@ -106,8 +106,8 @@ Name形式[ **Aaa_BbbCcc_Ddd.fsh** ]に変換し、拡張子を.fshとする。<
 # value set
 .\input\fsh\terminologies\JP_Gender_VS.fsh
 ```
-
-## 除外項目
+## FSH編集ルール
+### [1] 除外項目
 以下の項目はsushi-config.yamlの定義が展開されるため、.fshファイルでは定義しないこと。
 
 * version (バージョン)
@@ -119,30 +119,35 @@ Name形式[ **Aaa_BbbCcc_Ddd.fsh** ]に変換し、拡張子を.fshとする。<
 
 設定してもsushi-config.yamlの内容に上書きされるため記載対象としない。
 
-## IG Publisherへの対応
-### input/pagecontentに新しい説明文書（Markdown）を追加する場合
-* sushi-config.yaml「ページタイトル名称設定」を追加する。※これを設定しないとhtmlに変換されない。
-* ホームページの上部メニューに追加する場合は、sushi-config.yaml「メニュー設定」に追記すること。
+### [2] Cardinality
+{min}の値が0の時は、{min}を省略すること。
+```
+* <element> {min}..{max}
+* <element> {min}..   // leave max as-is
+* <element> ..{max}   // leave min as-is
+```
 
-### 新しいリソースを追加、nameもしくはidを変更した際
-* script/markdownlink_creator.rbを実行し、input/include/markdown-link-reference.mdを更新する。
-* sushi-config.yamlのspecial urlに登録が必要かを確認する。
-* input/pagecontent/group-xxxx.mdに修正・追加が変更が必要か確認する。
-* input/pagecontent/index.mdの追加が必要か確認する。
-* コンパイル後各種リンクが正しく動作するかを確認する。
+| ケース | 表記 |
+| --- | --- |
+| 0以上1以下 | ..1 |
+| 0固定 | ..0 |
+| 1固定 | 1..1 |
+| 1以上 | 1.. |
 
-## Must Support
-JP Coreの派生先での利用を想定しており、JP Coreでは原則定義しない。（※日本国内のベースで派生先の制約を少なくしたいため）<br/>
-ただしユースケースが限定される場合については、MustSupport定義とともに記述することは可能である。
+Baseに対し、より制約を強くする（範囲を狭める）形で定義を行なうこと。
 
-## コメント記載
-以下のようにファイル内にグループがある場合、コメントにて区切りを入れ、グループが分かるようにすること。
+### [3] FSHファイル中コメント
+#### コメント記載方法
+行頭に`//`置くことでソースファイル中にコメントを記載することが出来る。
+
+#### 区切コメント
+ファイル内にグループがある場合、コメントにて区切りを入れ、グループが分かるようにすること。
 ```
 // ==============================
-//   Extension 定義
+//   Profile 定義
 // ==============================
 
-(　~　prifile記載　~　)
+(　~　profile記載　~　)
 
 // ==============================
 //   Extension 定義
@@ -150,9 +155,37 @@ JP Coreの派生先での利用を想定しており、JP Coreでは原則定義
 
 (　~　extension記載　~　)
 ```
+#### 文中コメント記載時の注意事項
+* コメントにより理解が深まる場合のみ記載すること。
+* 以下のようなコメントは記載しないよう注意すること。
+   1. 説明の必要のないコメント
+   1. ソースと意味が重複しているコメント
+   1. 追加、更新等に関するコメント
 
-## 警告対策
-### xmlタグの開閉
+### [4] definition(定義)、comment(コメント)の記述
+* 日本語のみの記述も可とする。日本語訳が難しいために補助的に英語を付記することは問題ない。
+* 章構成に影響するMarkdownは利用しないこと。<br/>
+下記はいずれもHeadingの解釈されるため利用しないこと
+```
+#
+##
+###
+####
+#####
+######
+
+<h1> </h1>
+<h2> </h2>
+<h3> </h3>
+<h4> </h4>
+<h5> </h5>
+<h6> </h6>
+
+===============
+---------------
+```
+
+* htmlタグを使う場合はxhtml形式とし、タグの開閉に気を付けること。
 
 | 非推奨 | 推奨 | 備考 |
 | --- | --- | --- |
@@ -161,14 +194,24 @@ JP Coreの派生先での利用を想定しており、JP Coreでは原則定義
 | ```<a herf="http://xxx">title</a>``` | ```[title](http://xxx)``` | tagが対応しておらず、閉じていないとの警告が発生する。Markdown形式に変更することで回避 |
 | ```<tag>hoge</tag>``` | ```&gt;tag&lt;hoge&gt;/tag&lt;``` | その他対未対応タグは,xmlのEscape処理を行なう。 |
 
-### 説明文書記載上の注意
 
-##### コメント中のAlternate Syntax
+## リソース追加、urlもしくはid変更時の対処
+
+以下の作業を実施すること。
+
+* markdownlink_creator.rbを実行し、input/include/markdown-link-reference.mdを更新し、リンク情報を書き換えます。
+* specialurls_creator.rbを実行し、sushi-config.yamlのspecial urlを書き換えます。
+
 ```
-見出し1\r\n===============   =>  <h1>見出し1</h1>
-
-見出し2\r\n---------------   =>  <h2>見出し2</h2>
+> ruby script\markdownlink_creator.rb 
+> ruby script\specialurls_creator.rb
 ```
-章立てのカウントに影響を及ぼすため禁止とする。
+その他に下記の確認を行なうこと。
+* input/pagecontent/group-xxxx.mdに修正・追加が変更が必要か確認する。
+* input/pagecontent/index.mdの追加が必要か確認する。
+* コンパイル後各種リンクが正しく動作するかを確認する。
 
+## Must Supportの付与
+JP Coreの派生先での利用を想定しており、JP Coreでは原則定義しない。（※日本国内のベースで派生先の制約を少なくしたいため）<br/>
+ただしユースケースが限定される場合については、MustSupport定義とともに記述することは可能である。
 
