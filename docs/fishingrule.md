@@ -10,11 +10,10 @@
 ├─input #入力フォルダ
 │  ├─fsh #FHIR Shorthandファイル格納フォルダ
 │  │  ├─capablitystatements #capablity statement用
-│  │  ├─codesystems #code system用
 │  │  ├─others #その他
 │  │  ├─profiles #profile,extension用
 │  │  ├─searchparameters #search parameter
-│  │  └─valuesets #values
+│  │  └─terminologies #values,codesystem,conceptmap用
 │  ├─includes #link file
 │  ├─intro-notes #profileの前後説明文(-intro.md, -notes.md)
 │  ├─pagecontent #Markdown Page
