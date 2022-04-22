@@ -194,24 +194,25 @@ Baseに対し、より制約を強くする（範囲を狭める）形で定義�
 | ```<a herf="http://xxx">title</a>``` | ```[title](http://xxx)``` | tagが対応しておらず、閉じていないとの警告が発生する。Markdown形式に変更することで回避 |
 | ```<tag>hoge</tag>``` | ```&gt;tag&lt;hoge&gt;/tag&lt;``` | その他対未対応タグは,xmlのEscape処理を行なう。 |
 
+### [5] Must Supportの付与
+JP Coreの派生先での利用を想定しており、JP Coreでは原則定義しない。（※日本国内のベースで派生先の制約を少なくしたいため）<br/>
+ただしユースケースが限定される場合については、MustSupport定義とともに記述することは可能である。
+
+
 
 ## リソース追加、urlもしくはid変更時の対処
 
-以下の作業を実施すること。
+リソース追加、urlもしくはid変更時には必要に応じ、以下の作業を実施すること。
 
-* markdownlink_creator.rbを実行し、input/include/markdown-link-reference.mdを更新し、リンク情報を書き換えます。
-* specialurls_creator.rbを実行し、sushi-config.yamlのspecial urlを書き換えます。
+* markdownlink_creator.rbを実行し、input/include/markdown-link-reference.mdを更新し、リンク情報を書き換える。
+* specialurls_creator.rbを実行し、sushi-config.yamlのspecial urlを書き換える。
 
 ```
 > ruby script\markdownlink_creator.rb 
 > ruby script\specialurls_creator.rb
 ```
+
 その他に下記の確認を行なうこと。
 * input/pagecontent/group-xxxx.mdに修正・追加が変更が必要か確認する。
 * input/pagecontent/index.mdの追加が必要か確認する。
 * コンパイル後各種リンクが正しく動作するかを確認する。
-
-## Must Supportの付与
-JP Coreの派生先での利用を想定しており、JP Coreでは原則定義しない。（※日本国内のベースで派生先の制約を少なくしたいため）<br/>
-ただしユースケースが限定される場合については、MustSupport定義とともに記述することは可能である。
-
