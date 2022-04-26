@@ -1,8 +1,7 @@
-Instance:  jp-condition-example
+Instance:  jp-condition-example1
 InstanceOf: JP_Condition
-Title: "JP Core Condition Example"
+Title: "JP Core Condition Example1"
 Usage: #example
-* id = "example"
 *  clinicalStatus
   *  coding[0]
     *  system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
@@ -45,7 +44,7 @@ Usage: #example
     *  display = "直腸"   
   *  text = "結腸直腸"
 *  subject
-  *  reference = "Patient/example"
+  *  reference = "Patient/jp-patient-example1"
   *  display = "・・・"
 *  onsetAge
   *  value = 52

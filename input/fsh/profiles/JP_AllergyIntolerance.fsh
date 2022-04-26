@@ -9,7 +9,6 @@ Description: "本プロファイルはAllergyIntoleranceリソースに対して
 * ^language = #ja
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance"
 * ^status = #draft
-* ^experimental = false
 * ^date = "2022-03-16"
 * . ^short = "患者のアレルギーや不耐症 (一般的には、、特定の物質への暴露に対する有害反応)"
 * . ^definition = "Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.\r\n\r\nリソースは患者のアレルギーや不耐症を表現する。\r\n具体的には、特定の物質または物質群への将来の暴露に対して有害反応を起こす傾向、または患者に対する潜在的なリスクを表現する。"

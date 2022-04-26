@@ -1,15 +1,14 @@
-Instance: jp-allergyintolerance-example
+Instance: jp-allergyintolerance-example1
 InstanceOf: JP_AllergyIntolerance
-Title: "JP Core AllergyIntolerance Example"
+Title: "JP Core AllergyIntolerance Example1"
 Usage: #example
-* id = "example"
 * clinicalStatus
   * coding[0]
-    * system = "http://hl7.org/fhir/ValueSet/allergyintolerance-clinical"
+    * system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"
     * code = #active
 * verificationStatus
   * coding[0]
-    * system = "http://hl7.org/fhir/ValueSet/allergyintolerance-verification"
+    * system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
     * code = #confirmed
 * type = #allergy 
 * category = #jp_food
@@ -21,7 +20,7 @@ Usage: #example
     * display = "さば類"
   * text = "ゴマサバ"
 * patient
-  * reference = "Patient/example"
+  * reference = "Patient/jp-patient-example1"
   * display = "・・・・"
 * onsetDateTime = "2021-08-22"
 * recordedDate = "2021-08-23" 
