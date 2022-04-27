@@ -194,11 +194,19 @@ Baseに対し、より制約を強くする（範囲を狭める）形で定義�
 | ```<a herf="http://xxx">title</a>``` | ```[title](http://xxx)``` | tagが対応しておらず、閉じていないとの警告が発生する。Markdown形式に変更することで回避 |
 | ```<tag>hoge</tag>``` | ```&gt;tag&lt;hoge&gt;/tag&lt;``` | その他対未対応タグは,xmlのEscape処理を行なう。 |
 
-### [5] Must Supportの付与
-JP Coreの派生先での利用を想定しており、JP Coreでは原則定義しない。（※日本国内のベースで派生先の制約を少なくしたいため）<br/>
-ただしユースケースが限定される場合については、MustSupport定義とともに記述することは可能である。
+### [5] MustSupport
+* MustSupportの付与<br/>
+JP Coreの派生先でのユースケース毎の利用を想定しており、JP Coreでは原則定義しない。（※日本国内のベースで派生先の制約を少なくしたいため）<br/>
+ただし派生先ユースケースの利用方法を理解した上で、必要な場合に付け加えることは可能とする。この場合、MustSupportの定義(どのような制約になるのか）についても合わせて記述すること。
+* FSHファイル上での記載<br/>
+MustSuppotはFlag Rulesの記載方法を推奨する
+``` 
+// 非推奨
+element mustSupport = false or true
 
-
+// 推奨
+element 1.. MS 
+```
 
 ## リソース追加、urlもしくはid変更時の対処
 
