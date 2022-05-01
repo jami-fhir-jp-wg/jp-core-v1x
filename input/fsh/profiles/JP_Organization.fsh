@@ -32,7 +32,6 @@ Description: "このプロファイルはOrganizationリソースに対して、
 * identifier ^definition = "Identifier for the organization that is used to identify the organization across multiple disparate systems.\r\n\r\n\r\n複数の異種システムにまたがって組織を識別するための識別子"
 * identifier ^requirements = "Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization.\r\n\r\n\r\n組織は様々な ID で知られている。いくつかの機関では複数のIDを保持しており、ほとんどの機関では、組織に関する他の組織との交換のためにIDを収集しています。"
 * identifier contains
-    @default 0..* and
     MedicalInstitutionCode 0..* and
     InsurerNumber 0..*
 * identifier[MedicalInstitutionCode] ^comment = "--- SWG3 コメント---\r\n処方箋等の発行医療機関コードを格納するためのIdentifer/Slicing定義。\r\n\r\nsystemはFixed Valueの\r\n```\r\nhttp://jpfhir.jp/fhir/Common/CodeSystem/insurance-medical-institution-no\r```\r\nを使用する。\r\n\r\n記載の様式(Wikipediaより転載)\r\n\r\n記載されている10桁の内訳は以下の通りである。\r\n\r\n　・最初の2桁 全国地方公共団体コードの都道府県コード（ISO 3166-2:JP）\r\n\r\n　　・都道府県ごとの番号。\r\n\r\n　・3桁目 点数表番号\r\n\r\n　　・医科は「1」。歯科は「3」。\r\n\r\n　　　・したがって、同一の病院または診療所に医科と歯科が併存する場合にはそれぞれ別のコードが与えられる。\r\n\r\n　　　・そのため、レセプトコンピュータでは一医療機関に対して医科と歯科の両方のコードを設定できるようになっている。\r\n\r\n　　　・ちなみに処方箋は発行されないが、「4」は調剤、「5」は老人保健施設、「6」は訪問看護ステーションである。\r\n\r\n　　・下7桁 医療機関コード\r\n\r\n　　　・地区（2桁）+番号（4桁）+チェックディジット（1桁）で構成される。\r\n\r\n　・7桁の医療機関コードについて\r\n\r\n　　各地域を所管する厚生労働省の地方支分部局である地方厚生局のホームページ等で確認できる。"
