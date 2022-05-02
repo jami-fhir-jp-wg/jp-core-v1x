@@ -28,3 +28,5 @@ Alias: $JP_PhysicalExamCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Phy
 Alias: $JP_PhysicalExamCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_PhysicalExamCodes_VS
 Alias: $JP_ProcedureCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodes_CS
 Alias: $JP_ProcedureCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodes_VS
+Alias: $JP_AllergyIntoleranceCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_AllergyIntoleranceCodes_CS
+Alias: $JP_AllergyIntoleranceCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodes_VS
