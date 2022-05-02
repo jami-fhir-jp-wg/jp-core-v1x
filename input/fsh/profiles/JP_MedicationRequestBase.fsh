@@ -770,9 +770,9 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dispenseRequest.quantity.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dispenseRequest.quantity.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
 * dispenseRequest.quantity.system 1..
-* dispenseRequest.quantity.system = "urn:oid:1.2.392.200119.4.403.1" (exactly)
+* dispenseRequest.quantity.system = "urn:oid:1.2.392.100495.20.2.101" (exactly)
 * dispenseRequest.quantity.system ^short = "医薬品単位略号を識別するURL"
-* dispenseRequest.quantity.system ^definition = "医薬品単位略号を識別するURL。urn:oid:1.2.392.200119.4.403.1で固定される。"
+* dispenseRequest.quantity.system ^definition = "医薬品単位略号を識別するURL。urn:oid:1.2.392.100495.20.2.101で固定される。"
 * dispenseRequest.quantity.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
 * dispenseRequest.quantity.system ^requirements = "システムによって定義される単位のコードを把握しておく必要がある。"
 * dispenseRequest.quantity.code 1..
