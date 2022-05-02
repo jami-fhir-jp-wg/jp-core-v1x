@@ -21,12 +21,13 @@ Alias: $socialHistory-code = http://jpfhir.jp/fhir/Common/ValueSet/socialHistory
 Alias: $vitalSigns-category = http://jpfhir.jp/fhir/Common/ValueSet/vitalSigns-category
 Alias: $vitalSigns-code = http://jpfhir.jp/fhir/Common/ValueSet/vitalSigns-code
 
-
 Alias: $JP_EventStatus_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_EventStatus_CS
 Alias: $JP_EventStatus_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_EventStatus_VS
 Alias: $JP_PhysicalExamCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_PhysicalExamCodes_CS
 Alias: $JP_PhysicalExamCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_PhysicalExamCodes_VS
 Alias: $JP_ProcedureCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodes_CS
 Alias: $JP_ProcedureCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodes_VS
-Alias: $JP_AllergyIntoleranceCategoryCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_AllergyIntoleranceCategoryCodes_CS
-Alias: $JP_AllergyIntoleranceCategoryCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCategoryCodes_VS
+//Alias: $JP_AllergyIntoleranceCategoryCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_AllergyIntoleranceCategoryCodes_CS
+//Alias: $JP_AllergyIntoleranceCategoryCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCategoryCodes_VS
+Alias: $jp-allergyintolerancecategorycodes-cs = http://jpfhir.jp/fhir/Common/CodeSystem/JP_AllergyIntoleranceCategoryCodes_CS
+Alias: $jp-allergyintolerancecategorycodes-vs = http://jpfhir.jp/fhir/Common/CodeSystem/JP_AllergyIntoleranceCategoryCodes_VS
