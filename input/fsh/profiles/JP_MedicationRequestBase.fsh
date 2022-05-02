@@ -98,7 +98,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * medication[x].id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
 * medication[x].coding 1..
 * medication[x].coding ^short = "医薬品を表すコード"
-* medication[x].coding ^definition = "医薬品を表すコード。JP Coreでは最低1個のコードを記録しなければならない。\r\n利用できるコードは下記の通りである。\r\n医薬品コード（医薬品マスター）\r\n薬価基準収載医薬品コード\r\nYJコード\r\nHOT コード（9 桁）\r\n⼀般名処⽅マスター"
+* medication[x].coding ^definition = "医薬品を表すコード。JP Coreでは最低1個のコードを記録しなければならない。\r\n利用できるコードは下記の通りである。\r\n医薬品コード（医薬品マスター）\r\n薬価基準収載医薬品コード\r\nYJコード\r\nHOT コード（9 桁）\r\n一般名処方マスター"
 * medication[x].coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。\r\n【JP-CORE】Medication要素の説明を参照のこと。"
 * medication[x].coding.userSelected ^short = "このコードが直接ユーザーが指定したものであるかどうか"
 * medication[x].coding.userSelected ^definition = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
@@ -170,7 +170,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * note ^definition = "他の属性では伝えることができなかったMedicationRequestについての付加的情報。"
 * note ^comment = "構造化されたアノテーションが内システムでは、作成者や記録時間のない一つのアノテーションで情報を伝達している。このエレメントに情報の修正を要する可能性があるためにナラティブな情報も必要としている。Annotationsには機械処理が可能で修正される（\"modifying\")情報を伝達することに使うべきではない(SHOULD NOT)。これがSHOULDである理由はユーザーの行動を強制することはほぼ不可能であるからである。"
 * dosageInstruction ^short = "服用指示"
-* dosageInstruction ^definition = "⽤法や投与量を含む処⽅指⽰。患者がどのようにこの薬剤を服用するのかを示す。"
+* dosageInstruction ^definition = "用法や投与量を含む処方指示。患者がどのようにこの薬剤を服用するのかを示す。"
 * dosageInstruction ^comment = "MedicationRequestで内服や静脈注射、筋肉注射を含めたサンプルがある。たとえば、「オンダンセトロン 8mg 経口あるいは静注1日2回嘔気時頓用」、あるいは「ノバミン®（プロクロロペラジン） 5-10mg 経口あるいは25mg経直腸1日2回嘔気・嘔吐時頓用」のようなものである。このような場合は2つの薬剤オーダーは同じグループにまとめることができるとして作成される。どのような投与経路を選択するかを決定するのは薬剤を必要とする時点の患者の状態にもとづいている。"
 * dosageInstruction.extension ^slicing.discriminator.type = #value
 * dosageInstruction.extension ^slicing.discriminator.path = "url"
@@ -181,7 +181,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.extension[PeriodOfUse] ^min = 0
 * dosageInstruction.extension[UsageDuration] only JP_MedicationRequest_DosageInstruction_UsageDuration
 * dosageInstruction.extension[UsageDuration] ^sliceName = "UsageDuration"
-* dosageInstruction.extension[UsageDuration] ^short = "実投与⽇数"
+* dosageInstruction.extension[UsageDuration] ^short = "実投与日数"
 * dosageInstruction.extension[UsageDuration] ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
 * dosageInstruction.extension[UsageDuration] ^min = 0
 * dosageInstruction.extension[Device] only JP_MedicationRequest_DosageInstruction_Device
@@ -210,23 +210,23 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.additionalInstruction.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.additionalInstruction.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
 * dosageInstruction.additionalInstruction.coding ^short = "用法についてのコード"
-* dosageInstruction.additionalInstruction.coding ^definition = "用法についてのコードが示される。JAMI 補⾜⽤法８桁コードを使用することを想定している。"
+* dosageInstruction.additionalInstruction.coding ^definition = "用法についてのコードが示される。JAMI 補足用法８桁コードを使用することを想定している。"
 * dosageInstruction.additionalInstruction.coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
 * dosageInstruction.additionalInstruction.coding ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
 * dosageInstruction.additionalInstruction.coding.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.additionalInstruction.coding.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
 * dosageInstruction.additionalInstruction.coding.system 1..
 * dosageInstruction.additionalInstruction.coding.system = "urn:oid:1.2.392.200250.2.2.20.22" (exactly)
-* dosageInstruction.additionalInstruction.coding.system ^short = "JAMI 補⾜⽤法８桁コードを識別するURI。"
-* dosageInstruction.additionalInstruction.coding.system ^definition = "JAMI 補⾜⽤法８桁コードを識別するURI"
+* dosageInstruction.additionalInstruction.coding.system ^short = "JAMI 補足用法８桁コードを識別するURI。"
+* dosageInstruction.additionalInstruction.coding.system ^definition = "JAMI 補足用法８桁コードを識別するURI"
 * dosageInstruction.additionalInstruction.coding.system ^comment = "URIはOID(urn:oid:....)やUUID(urn:uuid:....)であることもある。OIDやUUIDはHL7のOIDレジストリを参照していなければならない（SHALL)。そうでなければ、URIはHL7のFHIRのリストに挙げられている特別なURIであるか、用語集が明確な定義が参照されるべきである。"
 * dosageInstruction.additionalInstruction.coding.system ^requirements = "記号の定義の根拠が明確である必要がある。"
 * dosageInstruction.additionalInstruction.coding.version ^short = "用語集のバージョン - もし必要であれば追加する。"
 * dosageInstruction.additionalInstruction.coding.version ^definition = "コードが選択された際に利用されたコードシステムのバージョンである。コードの意味するところがバージョンが変わっても一貫しているように十分にメンテナンスされているコードシステムであれば、バージョンを表記する必要はないことに留意されたい。しかしながら、一貫性はなかなか保証されるものではないし、意味の一貫性が保証されていないのであればバージョンは交換されるべきである（SHOULD)。"
 * dosageInstruction.additionalInstruction.coding.version ^comment = "ターミノロジーのバージョンが文字列としてコードシステムにより定義されていない場合は、そのバージョンが公式に公開された日付を示す（FHIRのdateフォーマットで表現される）dateを用いることが推奨されている。"
 * dosageInstruction.additionalInstruction.coding.code 1..
-* dosageInstruction.additionalInstruction.coding.code ^short = "JAMI 補⾜⽤法コード"
-* dosageInstruction.additionalInstruction.coding.code ^definition = "JAMI 補⾜⽤法コードを指定する。"
+* dosageInstruction.additionalInstruction.coding.code ^short = "JAMI 補足用法コード"
+* dosageInstruction.additionalInstruction.coding.code ^definition = "JAMI 補足用法コードを指定する。"
 * dosageInstruction.additionalInstruction.coding.code ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.additionalInstruction.coding.code ^requirements = "システム内の特定のコードを参照する必要がある。"
 * dosageInstruction.additionalInstruction.coding.display ^short = "コードの表⽰名"
@@ -251,32 +251,32 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.timing.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.timing.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
 * dosageInstruction.timing.event ^short = "服用タイミングを示す時刻"
-* dosageInstruction.timing.event ^definition = "服⽤タイミングを具体的な⽇時で指定する場合に使⽤する"
+* dosageInstruction.timing.event ^definition = "服⽤タイミングを具体的な日時で指定する場合に使⽤する"
 * dosageInstruction.timing.repeat ^short = "イベントが発生する時刻"
 * dosageInstruction.timing.repeat ^definition = "イベントがスケジュールされたルールについての記述。"
 * dosageInstruction.timing.repeat ^requirements = "スケジュールされたタイミングの多くは規則的な繰り返しで決定されている。"
 * dosageInstruction.timing.repeat.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.timing.repeat.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
 * dosageInstruction.timing.repeat.bounds[x] only Duration
-* dosageInstruction.timing.repeat.bounds[x] ^short = "服⽤開始⽇から服⽤終了⽇までの全⽇数"
-* dosageInstruction.timing.repeat.bounds[x] ^definition = "服⽤開始⽇から服⽤終了⽇までの全⽇数。実投与⽇数ではないことに注意する。"
+* dosageInstruction.timing.repeat.bounds[x] ^short = "服⽤開始日から服⽤終了日までの全日数"
+* dosageInstruction.timing.repeat.bounds[x] ^definition = "服⽤開始日から服⽤終了日までの全日数。実投与日数ではないことに注意する。"
 * dosageInstruction.timing.repeat.bounds[x].id ..0
 * dosageInstruction.timing.repeat.bounds[x].value 1..
-* dosageInstruction.timing.repeat.bounds[x].value ^short = "投薬⽇数"
-* dosageInstruction.timing.repeat.bounds[x].value ^definition = "投薬⽇数"
+* dosageInstruction.timing.repeat.bounds[x].value ^short = "投薬日数"
+* dosageInstruction.timing.repeat.bounds[x].value ^definition = "投薬日数"
 * dosageInstruction.timing.repeat.bounds[x].comparator ..0
 * dosageInstruction.timing.repeat.bounds[x].unit 1..
 * dosageInstruction.timing.repeat.bounds[x].code = #d (exactly)
 * dosageInstruction.timing.repeat.bounds[x].system = "http://unitsofmeasure.org" (exactly)
 * dosageInstruction.timing.repeat.bounds[x].unit = "日" (exactly)
-* dosageInstruction.timing.repeat.bounds[x].unit ^short = "投薬⽇数の単位"
-* dosageInstruction.timing.repeat.bounds[x].unit ^definition = "投薬⽇数の単位⽂字列。日で固定される"
+* dosageInstruction.timing.repeat.bounds[x].unit ^short = "投薬日数の単位"
+* dosageInstruction.timing.repeat.bounds[x].unit ^definition = "投薬日数の単位文字列。日で固定される"
 * dosageInstruction.timing.repeat.bounds[x].system 1..
 * dosageInstruction.timing.repeat.bounds[x].system ^short = "UCUM"
 * dosageInstruction.timing.repeat.bounds[x].system ^definition = "単位コード UCUMを識別するURI。固定値。"
 * dosageInstruction.timing.repeat.bounds[x].code 1..
-* dosageInstruction.timing.repeat.bounds[x].code ^short = "投与⽇数の単位"
-* dosageInstruction.timing.repeat.bounds[x].code ^definition = "単位コードUCUMにおける投与⽇数の単位。dで固定される。"
+* dosageInstruction.timing.repeat.bounds[x].code ^short = "投与日数の単位"
+* dosageInstruction.timing.repeat.bounds[x].code ^definition = "単位コードUCUMにおける投与日数の単位。dで固定される。"
 * dosageInstruction.timing.repeat.count ^short = "繰り返し服用回数"
 * dosageInstruction.timing.repeat.count ^definition = "Timing仕様の全てにおいて、特定の期間に繰り返されるように指定された総回数。もし、countMaxが設定されていれば、このエレメントは許容される最低限度の回数を示す。"
 * dosageInstruction.timing.repeat.count ^comment = "回数に上限、下限の範囲がある場合は、このcountで示される回数が起きるまでは、エレメントは範囲の中にあると解釈されるべきである。"
@@ -324,7 +324,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.timing.code ^comment = "BIDなどは「施設特有の時間」として定義される。たとえば、施設がBIDを「つねに朝7時と夕方6時」であると指定することがある。この指定が不適切であれば、BIDというコードは使うべきではない。その代わり、HL7が定義したBIDのコードではなく、その施設特有のコードで明示的に示すべきであり、構造化された表現を使うべきである（この場合、2回のイベントの時刻を指定する必要がある）。"
 * dosageInstruction.asNeeded[x] only boolean
 * dosageInstruction.asNeeded[x] ^short = "「頓用」指示"
-* dosageInstruction.asNeeded[x] ^definition = "JP Coreでは頓⽤型の⽤法を指定する場合に”true”を指定し、そのコードを指定する場合は用法コードとして指定する。\r\nMedication(薬剤)が必要なときに指定された量とスケジュールのみで内服するか（Booleanで選択される）、内服する前提条件(CodeableConcept)を示している。"
+* dosageInstruction.asNeeded[x] ^definition = "JP Coreでは頓⽤型の用法を指定する場合に”true”を指定し、そのコードを指定する場合は用法コードとして指定する。\r\nMedication(薬剤)が必要なときに指定された量とスケジュールのみで内服するか（Booleanで選択される）、内服する前提条件(CodeableConcept)を示している。"
 * dosageInstruction.site ^short = "投与される身体部位"
 * dosageInstruction.site ^definition = "投与される身体部位。外⽤薬で部位を指定する場合に使⽤する。"
 * dosageInstruction.site ^comment = "もし、BodySite resourceの属性が必要な場合(たとえば、部位の指定や別々に投与経路を設定する場合)は、[bodySite](extension-bodysite.html)の標準拡張を使うこと。要約コードや非常に正確な位置の定義へのreferenceを使用することもできる。"
@@ -369,8 +369,8 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.route.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.route.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
 * dosageInstruction.route.coding 1..1
-* dosageInstruction.route.coding ^short = "JAMI ⽤法コード表投与経路区分２桁コード"
-* dosageInstruction.route.coding ^definition = "JAMI ⽤法コード表投与経路区分２桁コードを識別するURI。JP Coreでは必須。"
+* dosageInstruction.route.coding ^short = "JAMI 用法コード表投与経路区分２桁コード"
+* dosageInstruction.route.coding ^definition = "JAMI 用法コード表投与経路区分２桁コードを識別するURI。JP Coreでは必須。"
 * dosageInstruction.route.coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
 * dosageInstruction.route.coding ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
 * dosageInstruction.route.coding.id ^short = "エレメント間参照のためのユニークID"
@@ -385,50 +385,50 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.route.coding.version ^definition = "コードが選択された際に利用されたコードシステムのバージョンである。コードの意味するところがバージョンが変わっても一貫しているように十分にメンテナンスされているコードシステムであれば、バージョンを表記する必要はないことに留意されたい。しかしながら、一貫性はなかなか保証されるものではないし、意味の一貫性が保証されていないのであればバージョンは交換されるべきである（SHOULD)。"
 * dosageInstruction.route.coding.version ^comment = "ターミノロジーのバージョンが文字列としてコードシステムにより定義されていない場合は、そのバージョンが公式に公開された日付を示す（FHIRのdateフォーマットで表現される）dateを用いることが推奨されている。"
 * dosageInstruction.route.coding.code 1..
-* dosageInstruction.route.coding.code ^short = "JAMI ⽤法コード表投与経路区分２桁コード"
-* dosageInstruction.route.coding.code ^definition = "JAMI ⽤法コード表投与経路区分２桁コード"
+* dosageInstruction.route.coding.code ^short = "JAMI 用法コード表投与経路区分２桁コード"
+* dosageInstruction.route.coding.code ^definition = "JAMI 用法コード表投与経路区分２桁コード"
 * dosageInstruction.route.coding.code ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.route.coding.code ^requirements = "システム内の特定のコードを参照する必要がある。"
-* dosageInstruction.route.coding.display ^short = "JAMI ⽤法コード表投与経路区分２桁コードの表⽰名"
-* dosageInstruction.route.coding.display ^definition = "JAMI ⽤法コード表投与経路区分２桁コードの表⽰名"
+* dosageInstruction.route.coding.display ^short = "JAMI 用法コード表投与経路区分２桁コードの表⽰名"
+* dosageInstruction.route.coding.display ^definition = "JAMI 用法コード表投与経路区分２桁コードの表⽰名"
 * dosageInstruction.route.coding.display ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.route.coding.display ^requirements = "コードが持つ意味をそのシステムを知らない人でも読めるように人間可読であるようにしている必要がある。"
 * dosageInstruction.route.coding.userSelected ^short = "このコードが直接ユーザーが指定したものであるかどうか"
 * dosageInstruction.route.coding.userSelected ^definition = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
 * dosageInstruction.route.coding.userSelected ^comment = "選択肢の中から、直接選ばれたコードは新しく翻訳するときには最も適切なスタート地点である。何をもって「直接選ばれた」とするのかには曖昧なところがあり、このエレメントの使用について明確にして結論として何を意味するのかより完全になるよう取引先との合意が必要となる。"
 * dosageInstruction.route.coding.userSelected ^requirements = "このエレメントは臨床安全のために特定されてきた。System/codeのペアが明示的に選択されることは、言語処理や何らかの規則を元に推測されるよりも正確だからである。"
-* dosageInstruction.route.text ^short = "投与経路の⽂字列表現"
-* dosageInstruction.route.text ^definition = "投与経路の⽂字列表現。コードで指定できない場合、本要素で⽂字列として指定してもよい。"
+* dosageInstruction.route.text ^short = "投与経路の文字列表現"
+* dosageInstruction.route.text ^definition = "投与経路の文字列表現。コードで指定できない場合、本要素で文字列として指定してもよい。"
 * dosageInstruction.route.text ^comment = "textエレメントはcodingのdisplayNameエレメントと一致することがよくある。"
 * dosageInstruction.route.text ^requirements = "ターミノロジー由来のコードは必ずしも人間が使う言葉の全てのニュアンスを含めた正確な意味を捉えているわけではなく、適切なコードが見つからない場合もある。そのような場合でもtextエレメントは元々の意味のすべてを捉えるために使うことができる。"
 * dosageInstruction.method ^short = "投与方法"
-* dosageInstruction.method ^definition = "投与方法。投与⽅法に対応するJAMI ⽤法コード表基本⽤法１桁コード。"
+* dosageInstruction.method ^definition = "投与方法。投与⽅法に対応するJAMI 用法コード表基本用法１桁コード。"
 * dosageInstruction.method ^comment = "ターミノロジーは投与する経路あるいは剤型をあらかじめ指定するために用いられる。"
 * dosageInstruction.method ^requirements = "コード化された値は体内に薬剤が投与される方法を示している。注射ではよく使われる。たとえば、緩徐に注入、深部に静注など。"
 * dosageInstruction.method.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.method.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
-* dosageInstruction.method.coding ^short = "投与⽅法に対応するJAMI ⽤法コード表基本⽤法１桁コード"
-* dosageInstruction.method.coding ^definition = "投与⽅法に対応するJAMI ⽤法コード表基本⽤法１桁コードを識別するURI。urn:oid:1.2.392.200250.2.2.20.30"
+* dosageInstruction.method.coding ^short = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コード"
+* dosageInstruction.method.coding ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コードを識別するURI。urn:oid:1.2.392.200250.2.2.20.30"
 * dosageInstruction.method.coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
 * dosageInstruction.method.coding ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
 * dosageInstruction.method.coding.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.method.coding.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
 * dosageInstruction.method.coding.system 1..
 * dosageInstruction.method.coding.system = "urn:oid:1.2.392.200250.2.2.20.30" (exactly)
-* dosageInstruction.method.coding.system ^short = "投与⽅法に対応するJAMI ⽤法コード表基本⽤法１桁コードを示すURI"
-* dosageInstruction.method.coding.system ^definition = "投与⽅法に対応するJAMI ⽤法コード表基本⽤法１桁コード。urn:oid:1.2.392.200250.2.2.20.30で固定される。"
+* dosageInstruction.method.coding.system ^short = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コードを示すURI"
+* dosageInstruction.method.coding.system ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コード。urn:oid:1.2.392.200250.2.2.20.30で固定される。"
 * dosageInstruction.method.coding.system ^comment = "URIはOID(urn:oid:....)やUUID(urn:uuid:....)であることもある。OIDやUUIDはHL7のOIDレジストリを参照していなければならない（SHALL)。そうでなければ、URIはHL7のFHIRのリストに挙げられている特別なURIであるか、用語集が明確な定義が参照されるべきである。"
 * dosageInstruction.method.coding.system ^requirements = "記号の定義の根拠が明確である必要がある。"
 * dosageInstruction.method.coding.version ^short = "用語集のバージョン - もし必要であれば追加する。"
 * dosageInstruction.method.coding.version ^definition = "コードが選択された際に利用されたコードシステムのバージョンである。コードの意味するところがバージョンが変わっても一貫しているように十分にメンテナンスされているコードシステムであれば、バージョンを表記する必要はないことに留意されたい。しかしながら、一貫性はなかなか保証されるものではないし、意味の一貫性が保証されていないのであればバージョンは交換されるべきである（SHOULD)。"
 * dosageInstruction.method.coding.version ^comment = "ターミノロジーのバージョンが文字列としてコードシステムにより定義されていない場合は、そのバージョンが公式に公開された日付を示す（FHIRのdateフォーマットで表現される）dateを用いることが推奨されている。"
 * dosageInstruction.method.coding.code 1..
-* dosageInstruction.method.coding.code ^short = "JAMI ⽤法コード表基本⽤法１桁コード"
-* dosageInstruction.method.coding.code ^definition = "JAMI ⽤法コード表基本⽤法１桁コード。"
+* dosageInstruction.method.coding.code ^short = "JAMI 用法コード表基本用法１桁コード"
+* dosageInstruction.method.coding.code ^definition = "JAMI 用法コード表基本用法１桁コード。"
 * dosageInstruction.method.coding.code ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.method.coding.code ^requirements = "システム内の特定のコードを参照する必要がある。"
-* dosageInstruction.method.coding.display ^short = "JAMI ⽤法コード表基本⽤法１桁コードの表⽰名"
-* dosageInstruction.method.coding.display ^definition = "JAMI ⽤法コード表基本⽤法１桁コードの表⽰名。"
+* dosageInstruction.method.coding.display ^short = "JAMI 用法コード表基本用法１桁コードの表⽰名"
+* dosageInstruction.method.coding.display ^definition = "JAMI 用法コード表基本用法１桁コードの表⽰名。"
 * dosageInstruction.method.coding.display ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.method.coding.display ^requirements = "コードが持つ意味をそのシステムを知らない人でも読めるように人間可読であるようにしている必要がある。"
 * dosageInstruction.method.coding.userSelected ^short = "このコードが直接ユーザーが指定したものであるかどうか"
@@ -436,7 +436,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.method.coding.userSelected ^comment = "選択肢の中から、直接選ばれたコードは新しく翻訳するときには最も適切なスタート地点である。何をもって「直接選ばれた」とするのかには曖昧なところがあり、このエレメントの使用について明確にして結論として何を意味するのかより完全になるよう取引先との合意が必要となる。"
 * dosageInstruction.method.coding.userSelected ^requirements = "このエレメントは臨床安全のために特定されてきた。System/codeのペアが明示的に選択されることは、言語処理や何らかの規則を元に推測されるよりも正確だからである。"
 * dosageInstruction.method.text ^short = "投与⽅法のテキスト表現"
-* dosageInstruction.method.text ^definition = "投与⽅法のテキスト表現。コードで指定できない場合、本要素で⽂字列として指定してもよい。"
+* dosageInstruction.method.text ^definition = "投与⽅法のテキスト表現。コードで指定できない場合、本要素で文字列として指定してもよい。"
 * dosageInstruction.method.text ^comment = "textエレメントはcodingのdisplayNameエレメントと一致することがよくある。"
 * dosageInstruction.method.text ^requirements = "ターミノロジー由来のコードは必ずしも人間が使う言葉の全てのニュアンスを含めた正確な意味を捉えているわけではなく、適切なコードが見つからない場合もある。そのような場合でもtextエレメントは元々の意味のすべてを捉えるために使うことができる。"
 * dosageInstruction.doseAndRate ^short = "薬剤の投与量"
@@ -444,35 +444,35 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.doseAndRate.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.doseAndRate.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
 * dosageInstruction.doseAndRate.type 1..
-* dosageInstruction.doseAndRate.type ^short = "⼒価区分"
-* dosageInstruction.doseAndRate.type ^definition = "⼒価区分"
+* dosageInstruction.doseAndRate.type ^short = "力価区分"
+* dosageInstruction.doseAndRate.type ^definition = "力価区分"
 * dosageInstruction.doseAndRate.type ^comment = "投与速度・量の一般的パターンに全てのターミノロジーが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。"
 * dosageInstruction.doseAndRate.type ^requirements = "このtypeに値が指定されていなければ、\"ordered\"であることが想定される。"
 * dosageInstruction.doseAndRate.type.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.doseAndRate.type.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
 * dosageInstruction.doseAndRate.type.coding 1..1
-* dosageInstruction.doseAndRate.type.coding ^short = "⼒価区分コード"
-* dosageInstruction.doseAndRate.type.coding ^definition = "⼒価区分コード"
+* dosageInstruction.doseAndRate.type.coding ^short = "力価区分コード"
+* dosageInstruction.doseAndRate.type.coding ^definition = "力価区分コード"
 * dosageInstruction.doseAndRate.type.coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
 * dosageInstruction.doseAndRate.type.coding ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
 * dosageInstruction.doseAndRate.type.coding.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.doseAndRate.type.coding.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
 * dosageInstruction.doseAndRate.type.coding.system 1..
 * dosageInstruction.doseAndRate.type.coding.system = "urn:oid:1.2.392.100495.20.2.22" (exactly)
-* dosageInstruction.doseAndRate.type.coding.system ^short = "⼒価区分コードのコード体系を識別するURI"
-* dosageInstruction.doseAndRate.type.coding.system ^definition = "⼒価区分コードのコード体系を識別するURI。固定値。"
+* dosageInstruction.doseAndRate.type.coding.system ^short = "力価区分コードのコード体系を識別するURI"
+* dosageInstruction.doseAndRate.type.coding.system ^definition = "力価区分コードのコード体系を識別するURI。固定値。"
 * dosageInstruction.doseAndRate.type.coding.system ^comment = "URIはOID(urn:oid:....)やUUID(urn:uuid:....)であることもある。OIDやUUIDはHL7のOIDレジストリを参照していなければならない（SHALL)。そうでなければ、URIはHL7のFHIRのリストに挙げられている特別なURIであるか、用語集が明確な定義が参照されるべきである。"
 * dosageInstruction.doseAndRate.type.coding.system ^requirements = "記号の定義の根拠が明確である必要がある。"
 * dosageInstruction.doseAndRate.type.coding.version ^short = "用語集のバージョン - もし必要であれば追加する。"
 * dosageInstruction.doseAndRate.type.coding.version ^definition = "コードが選択された際に利用されたコードシステムのバージョンである。コードの意味するところがバージョンが変わっても一貫しているように十分にメンテナンスされているコードシステムであれば、バージョンを表記する必要はないことに留意されたい。しかしながら、一貫性はなかなか保証されるものではないし、意味の一貫性が保証されていないのであればバージョンは交換されるべきである（SHOULD)。"
 * dosageInstruction.doseAndRate.type.coding.version ^comment = "ターミノロジーのバージョンが文字列としてコードシステムにより定義されていない場合は、そのバージョンが公式に公開された日付を示す（FHIRのdateフォーマットで表現される）dateを用いることが推奨されている。"
 * dosageInstruction.doseAndRate.type.coding.code 1..
-* dosageInstruction.doseAndRate.type.coding.code ^short = "⼒価区分コード"
-* dosageInstruction.doseAndRate.type.coding.code ^definition = "⼒価区分コード"
+* dosageInstruction.doseAndRate.type.coding.code ^short = "力価区分コード"
+* dosageInstruction.doseAndRate.type.coding.code ^definition = "力価区分コード"
 * dosageInstruction.doseAndRate.type.coding.code ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.doseAndRate.type.coding.code ^requirements = "システム内の特定のコードを参照する必要がある。"
-* dosageInstruction.doseAndRate.type.coding.display ^short = "⼒価区分コードの表示名"
-* dosageInstruction.doseAndRate.type.coding.display ^definition = "⼒価区分コードの表示名"
+* dosageInstruction.doseAndRate.type.coding.display ^short = "力価区分コードの表示名"
+* dosageInstruction.doseAndRate.type.coding.display ^definition = "力価区分コードの表示名"
 * dosageInstruction.doseAndRate.type.coding.display ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.doseAndRate.type.coding.display ^requirements = "コードが持つ意味をそのシステムを知らない人でも読めるように人間可読であるようにしている必要がある。"
 * dosageInstruction.doseAndRate.type.coding.userSelected ^short = "このコードが直接ユーザーが指定したものであるかどうか"
@@ -499,15 +499,15 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.doseAndRate.dose[x].code ^definition = "医薬品単位略号"
 * dosageInstruction.doseAndRate.rate[x] only Ratio
 * dosageInstruction.doseAndRate.rate[x] ^short = "単位時間内での薬剤量"
-* dosageInstruction.doseAndRate.rate[x] ^definition = "単位時間内での薬剤量。JP Coreでは1 ⽇投与量を表す。"
+* dosageInstruction.doseAndRate.rate[x] ^definition = "単位時間内での薬剤量。JP Coreでは1日投与量を表す。"
 * dosageInstruction.doseAndRate.rate[x] ^comment = "JP Coreでは日本ではまだ一般的に利用されている一日量での処方のためにrateRatioを用いる。\r\n\r\n薬剤の詳細な投与法、提供方法を伝えるために、投与速度(rate)とdoseQuantityの両方の情報を提供することができる。もし、投与速度が変更されるようであれば、ローカルルールや制限に基づいて、全ての変更は新しいバージョンのMeddicationRequestに更新された投与速度を記録するか、MedicationRequestの新しいインスタンスに新しい投与速度を記録されるようにするべきである。\r\n\r\nrateRatioとrateQuantityのいずれかを使って時間内の投与速度（たとえば100ml/hour)を指定することができる。rateQuantityを使うには、ml/hourが投与速度の単位と言うだけではなく、時間が分母として指定されているということを示しているというようなUCUM単位の文法をシステムがパース可能であることが求められる。500mlを2時間でというような投与速度指示では、rateRatioがrateQuantityで250mg/hourとするよりもセマンティクスを正確に伝えることができるかもしれない。"
 * dosageInstruction.doseAndRate.rate[x] ^requirements = "患者の体内に導入される、あるいはされた薬剤の速度を指定する。一般的には、たとえば1時間あたり100mlあるいは100ml/hrのように注射の速度を示す。たとえば、500mlを2時間でというように、単位時間あたりの速さを表現することもできる。その他、200マイクログラム/minや200マイクログラム/1分, 1 リットル/8時間のような表現もできる。しばしば、投与速度を投与総量/ 投与総時間で表ような場合に投与時間が明示される（たとえば、500ml/2時間という場合は、投与時間が2時間であることを示している）。しかしながら、投与速度で投与時間が明示されない場合（たとえば、250ml/毎時)は、timing.repeat.durationが注射の総投与時間を示すためには必要となる。"
 * dosageInstruction.doseAndRate.rate[x].numerator 1..
-* dosageInstruction.doseAndRate.rate[x].numerator ^short = "1 ⽇投与量"
-* dosageInstruction.doseAndRate.rate[x].numerator ^definition = "1 ⽇投与量"
+* dosageInstruction.doseAndRate.rate[x].numerator ^short = "1日投与量"
+* dosageInstruction.doseAndRate.rate[x].numerator ^definition = "1日投与量"
 * dosageInstruction.doseAndRate.rate[x].numerator.value 1..
-* dosageInstruction.doseAndRate.rate[x].numerator.value ^short = "1 ⽇投与量"
-* dosageInstruction.doseAndRate.rate[x].numerator.value ^definition = "1 ⽇投与量"
+* dosageInstruction.doseAndRate.rate[x].numerator.value ^short = "1日投与量"
+* dosageInstruction.doseAndRate.rate[x].numerator.value ^definition = "1日投与量"
 * dosageInstruction.doseAndRate.rate[x].numerator.comparator ..0
 * dosageInstruction.doseAndRate.rate[x].numerator.unit 1..
 * dosageInstruction.doseAndRate.rate[x].numerator.unit ^short = "投与量の単位"
@@ -519,25 +519,25 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.doseAndRate.rate[x].numerator.code ^short = "医薬品単位略号"
 * dosageInstruction.doseAndRate.rate[x].numerator.code ^definition = "医薬品単位略号"
 * dosageInstruction.doseAndRate.rate[x].denominator 1..
-* dosageInstruction.doseAndRate.rate[x].denominator ^short = "1 ⽇投与量の分⺟である「1 ⽇」を表す"
-* dosageInstruction.doseAndRate.rate[x].denominator ^definition = "1 ⽇投与量の分⺟である「1 ⽇」を表す。"
+* dosageInstruction.doseAndRate.rate[x].denominator ^short = "1日投与量の分母である「1日」を表す"
+* dosageInstruction.doseAndRate.rate[x].denominator ^definition = "1日投与量の分母である「1日」を表す。"
 * dosageInstruction.doseAndRate.rate[x].denominator.value 1..
 * dosageInstruction.doseAndRate.rate[x].denominator.value = 1 (exactly)
-* dosageInstruction.doseAndRate.rate[x].denominator.value ^short = "1 ⽇投与量の分⺟である「1 ⽇」"
-* dosageInstruction.doseAndRate.rate[x].denominator.value ^definition = "1 ⽇投与量の分⺟である「1 ⽇」を表す。"
+* dosageInstruction.doseAndRate.rate[x].denominator.value ^short = "1日投与量の分母である「1日」"
+* dosageInstruction.doseAndRate.rate[x].denominator.value ^definition = "1日投与量の分母である「1日」を表す。"
 * dosageInstruction.doseAndRate.rate[x].denominator.comparator ..0
 * dosageInstruction.doseAndRate.rate[x].denominator.unit 1..
 * dosageInstruction.doseAndRate.rate[x].denominator.code = #d (exactly)
 * dosageInstruction.doseAndRate.rate[x].denominator.system = "http://unitsofmeasure.org" (exactly)
-* dosageInstruction.doseAndRate.rate[x].denominator.unit = "⽇" (exactly)
-* dosageInstruction.doseAndRate.rate[x].denominator.unit ^short = "1 ⽇投与量の分⺟である「1 ⽇」の単位"
-* dosageInstruction.doseAndRate.rate[x].denominator.unit ^definition = "1 ⽇投与量の分⺟である「1 ⽇」の単位。「日」で固定される。"
+* dosageInstruction.doseAndRate.rate[x].denominator.unit = "日" (exactly)
+* dosageInstruction.doseAndRate.rate[x].denominator.unit ^short = "1日投与量の分母である「1日」の単位"
+* dosageInstruction.doseAndRate.rate[x].denominator.unit ^definition = "1日投与量の分母である「1日」の単位。「日」で固定される。"
 * dosageInstruction.doseAndRate.rate[x].denominator.system 1..
 * dosageInstruction.doseAndRate.rate[x].denominator.system ^short = "UCUM単位コードを識別するURI"
 * dosageInstruction.doseAndRate.rate[x].denominator.system ^definition = "UCUM単位コードを識別するURI"
 * dosageInstruction.doseAndRate.rate[x].denominator.code 1..
-* dosageInstruction.doseAndRate.rate[x].denominator.code ^short = "「⽇」を表すUCUM単位コード。"
-* dosageInstruction.doseAndRate.rate[x].denominator.code ^definition = "「⽇」を表すUCUM単位コード。dで固定される。"
+* dosageInstruction.doseAndRate.rate[x].denominator.code ^short = "「日」を表すUCUM単位コード。"
+* dosageInstruction.doseAndRate.rate[x].denominator.code ^definition = "「日」を表すUCUM単位コード。dで固定される。"
 * dosageInstruction.maxDosePerPeriod ^short = "単位期間内の薬剤投与上限"
 * dosageInstruction.maxDosePerPeriod ^definition = "単位期間内の薬剤投与上限"
 * dosageInstruction.maxDosePerPeriod ^comment = "このエレメントは投与量に上限があるときに用法指示の補助として使われる。たとえば、「1回2錠4時間おきに、1日8錠まで」のような表現である。"
@@ -765,8 +765,8 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dispenseRequest.quantity.comparator ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dispenseRequest.quantity.comparator ^requirements = "計測法に制限があって値が<5ug/L や >400mg/L として示されるような場合でも値を扱えるようなフレームワークが必要である。"
 * dispenseRequest.quantity.unit 1..
-* dispenseRequest.quantity.unit ^short = "単位⽂字列"
-* dispenseRequest.quantity.unit ^definition = "単位⽂字列"
+* dispenseRequest.quantity.unit ^short = "単位文字列"
+* dispenseRequest.quantity.unit ^definition = "単位文字列"
 * dispenseRequest.quantity.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dispenseRequest.quantity.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
 * dispenseRequest.quantity.system 1..
@@ -780,14 +780,14 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dispenseRequest.quantity.code ^definition = "医薬品単位略号。"
 * dispenseRequest.quantity.code ^comment = "UCUMが推奨されるシステムではあるが、SNOMED CT(慣用単位のために）やISO 4217を通貨のために利用することができる。コンテキストによっては特定なシステムによるコードが付加的に求められることもある。"
 * dispenseRequest.quantity.code ^requirements = "どのような形式であっても機械処理できる単位形式であることが求められる。UCUMは量についての単位を提供し、SNOMED CTは他に関心のある単位を提供する。"
-* dispenseRequest.expectedSupplyDuration ^short = "調剤⽇数"
+* dispenseRequest.expectedSupplyDuration ^short = "調剤日数"
 * dispenseRequest.expectedSupplyDuration ^definition = "供給される製品が使用されるか、あるいは払い出しが想定されている時間を指定する期間。"
 * dispenseRequest.expectedSupplyDuration ^comment = "状況によっては、この属性は物理的に供給される量というよりも、想定されている期間に供給される薬剤の量を指定する数量の代わりに使われることもある。たとえば、薬剤が90日間供給される（オーダーされた量に基づいて）など。可能であれば、量も示した方がより正確になる。expectedSupplyDurationは外部要因に影響をうけることのある予測値である。"
 * dispenseRequest.expectedSupplyDuration.id ^short = "エレメント間参照のためのユニークID"
 * dispenseRequest.expectedSupplyDuration.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
 * dispenseRequest.expectedSupplyDuration.value 1..
-* dispenseRequest.expectedSupplyDuration.value ^short = "調剤⽇数"
-* dispenseRequest.expectedSupplyDuration.value ^definition = "調剤⽇数"
+* dispenseRequest.expectedSupplyDuration.value ^short = "調剤日数"
+* dispenseRequest.expectedSupplyDuration.value ^definition = "調剤日数"
 * dispenseRequest.expectedSupplyDuration.value ^comment = "暗示された精度については常に尊重すべきである。貨幣計算では制度に関する独自のルールがある（会計についての標準的な教科書を参照すること）。"
 * dispenseRequest.expectedSupplyDuration.comparator ..0
 * dispenseRequest.expectedSupplyDuration.comparator ^short = "< | <= | >= | > - 値の解釈法"
@@ -797,9 +797,9 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dispenseRequest.expectedSupplyDuration.unit 1..
 * dispenseRequest.expectedSupplyDuration.code = #d (exactly)
 * dispenseRequest.expectedSupplyDuration.system = "http://unitsofmeasure.org" (exactly)
-* dispenseRequest.expectedSupplyDuration.unit = "⽇" (exactly)
-* dispenseRequest.expectedSupplyDuration.unit ^short = "調剤⽇数の単位"
-* dispenseRequest.expectedSupplyDuration.unit ^definition = "調剤⽇数の単位。「⽇」固定。"
+* dispenseRequest.expectedSupplyDuration.unit = "日" (exactly)
+* dispenseRequest.expectedSupplyDuration.unit ^short = "調剤日数の単位"
+* dispenseRequest.expectedSupplyDuration.unit ^definition = "調剤日数の単位。「日」固定。"
 * dispenseRequest.expectedSupplyDuration.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dispenseRequest.expectedSupplyDuration.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
 * dispenseRequest.expectedSupplyDuration.system 1..
@@ -808,8 +808,8 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dispenseRequest.expectedSupplyDuration.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
 * dispenseRequest.expectedSupplyDuration.system ^requirements = "システムによって定義される単位のコードを把握しておく必要がある。"
 * dispenseRequest.expectedSupplyDuration.code 1..
-* dispenseRequest.expectedSupplyDuration.code ^short = "「⽇」を表すUCUM単位コード"
-* dispenseRequest.expectedSupplyDuration.code ^definition = "「⽇」を表すUCUM単位コード。固定値。"
+* dispenseRequest.expectedSupplyDuration.code ^short = "「日」を表すUCUM単位コード"
+* dispenseRequest.expectedSupplyDuration.code ^definition = "「日」を表すUCUM単位コード。固定値。"
 * dispenseRequest.expectedSupplyDuration.code ^comment = "UCUMが推奨されるシステムではあるが、SNOMED CT(慣用単位のために）やISO 4217を通貨のために利用することができる。コンテキストによっては特定なシステムによるコードが付加的に求められることもある。"
 * dispenseRequest.expectedSupplyDuration.code ^requirements = "どのような形式であっても機械処理できる単位形式であることが求められる。UCUMは量についての単位を提供し、SNOMED CTは他に関心のある単位を提供する。"
 * dispenseRequest.performer ^short = "想定された払い出し薬局"
@@ -941,10 +941,10 @@ Description: "投与開始日を格納する拡張"
 Extension: JP_MedicationRequest_DosageInstruction_UsageDuration
 Id: jp-medicationrequest-dosageinstruction-usageduration
 Title: "JP MedicationRequest DosageInstruction UsageDuration Extension"
-Description: "隔⽇投与など、服⽤開始⽇から終了⽇までの⽇数と実投与⽇数が異なる場合に、実投与⽇数を明⽰したい場合に使⽤する拡張"
+Description: "隔日投与など、服⽤開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使⽤する拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
 * ^date = "2022-03-16"
-* ^purpose = "隔⽇投与など、服⽤開始⽇から終了⽇までの⽇数と実投与⽇数が異なる場合に、実投与⽇数を明⽰したい場合に使⽤する拡張"
+* ^purpose = "隔日投与など、服⽤開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使⽤する拡張"
 * ^context[0].type = #element
 * ^context[=].expression = "MedicationRequest.dosageInstruction"
 * ^context[+].type = #element
@@ -954,7 +954,7 @@ Description: "隔⽇投与など、服⽤開始⽇から終了⽇までの⽇数
 * id ^definition = "JP Coreでは使用されない。"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration" (exactly)
 * value[x] only Duration
-* value[x] ^short = "実投与⽇数"
+* value[x] ^short = "実投与日数"
 * value[x] ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
 * value[x].id ..0
 * value[x].id ^short = "エレメント間参照のためのID"
@@ -973,5 +973,5 @@ Description: "隔⽇投与など、服⽤開始⽇から終了⽇までの⽇数
 * value[x].system ^short = "UCUM"
 * value[x].system ^definition = "単位コード UCUMを識別するURI。固定値。"
 * value[x].code 1..
-* value[x].code ^short = "単位コードUCUMにおける実投与⽇数の単位"
-* value[x].code ^definition = "単位コードUCUMにおける実投与⽇数の単位。dで固定される"
+* value[x].code ^short = "単位コードUCUMにおける実投与日数の単位"
+* value[x].code ^definition = "単位コードUCUMにおける実投与日数の単位。dで固定される"
