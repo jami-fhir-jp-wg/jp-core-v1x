@@ -407,34 +407,73 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.method ^requirements = "コード化された値は体内に薬剤が投与される方法を示している。注射ではよく使われる。たとえば、緩徐に注入、深部に静注など。"
 * dosageInstruction.method.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.method.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
-* dosageInstruction.method.coding ^short = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コード"
-* dosageInstruction.method.coding ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コードを識別するURI。urn:oid:1.2.392.200250.2.2.20.30"
-* dosageInstruction.method.coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
-* dosageInstruction.method.coding ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
-* dosageInstruction.method.coding.id ^short = "エレメント間参照のためのユニークID"
-* dosageInstruction.method.coding.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
-* dosageInstruction.method.coding.system 1..
-* dosageInstruction.method.coding.system = "urn:oid:1.2.392.200250.2.2.20.30" (exactly)
-* dosageInstruction.method.coding.system ^short = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コードを示すURI"
-* dosageInstruction.method.coding.system ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コード。urn:oid:1.2.392.200250.2.2.20.30で固定される。"
-* dosageInstruction.method.coding.system ^comment = "URIはOID(urn:oid:....)やUUID(urn:uuid:....)であることもある。OIDやUUIDはHL7のOIDレジストリを参照していなければならない（SHALL)。そうでなければ、URIはHL7のFHIRのリストに挙げられている特別なURIであるか、用語集が明確な定義が参照されるべきである。"
-* dosageInstruction.method.coding.system ^requirements = "記号の定義の根拠が明確である必要がある。"
-* dosageInstruction.method.coding.version ^short = "用語集のバージョン - もし必要であれば追加する。"
-* dosageInstruction.method.coding.version ^definition = "コードが選択された際に利用されたコードシステムのバージョンである。コードの意味するところがバージョンが変わっても一貫しているように十分にメンテナンスされているコードシステムであれば、バージョンを表記する必要はないことに留意されたい。しかしながら、一貫性はなかなか保証されるものではないし、意味の一貫性が保証されていないのであればバージョンは交換されるべきである（SHOULD)。"
-* dosageInstruction.method.coding.version ^comment = "ターミノロジーのバージョンが文字列としてコードシステムにより定義されていない場合は、そのバージョンが公式に公開された日付を示す（FHIRのdateフォーマットで表現される）dateを用いることが推奨されている。"
-* dosageInstruction.method.coding.code 1..
-* dosageInstruction.method.coding.code ^short = "JAMI 用法コード表基本用法１桁コード"
-* dosageInstruction.method.coding.code ^definition = "JAMI 用法コード表基本用法１桁コード。"
-* dosageInstruction.method.coding.code ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
-* dosageInstruction.method.coding.code ^requirements = "システム内の特定のコードを参照する必要がある。"
-* dosageInstruction.method.coding.display ^short = "JAMI 用法コード表基本用法１桁コードの表⽰名"
-* dosageInstruction.method.coding.display ^definition = "JAMI 用法コード表基本用法１桁コードの表⽰名。"
-* dosageInstruction.method.coding.display ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
-* dosageInstruction.method.coding.display ^requirements = "コードが持つ意味をそのシステムを知らない人でも読めるように人間可読であるようにしている必要がある。"
-* dosageInstruction.method.coding.userSelected ^short = "このコードが直接ユーザーが指定したものであるかどうか"
-* dosageInstruction.method.coding.userSelected ^definition = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
-* dosageInstruction.method.coding.userSelected ^comment = "選択肢の中から、直接選ばれたコードは新しく翻訳するときには最も適切なスタート地点である。何をもって「直接選ばれた」とするのかには曖昧なところがあり、このエレメントの使用について明確にして結論として何を意味するのかより完全になるよう取引先との合意が必要となる。"
-* dosageInstruction.method.coding.userSelected ^requirements = "このエレメントは臨床安全のために特定されてきた。System/codeのペアが明示的に選択されることは、言語処理や何らかの規則を元に推測されるよりも正確だからである。"
+
+* dosageInstruction.method.coding ^slicing.discriminator.type = #value
+* dosageInstruction.method.coding ^slicing.discriminator.path = "system"
+* dosageInstruction.method.coding ^slicing.rules = #open
+
+* dosageInstruction.method.coding contains
+    unitDigit1 0..1 and
+    unitDigit2 0..1
+    
+* dosageInstruction.method.coding[unitDigit1] ^short = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コード"
+* dosageInstruction.method.coding[unitDigit1] ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コードを識別するURI。"
+* dosageInstruction.method.coding[unitDigit1] ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
+* dosageInstruction.method.coding[unitDigit1] ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
+* dosageInstruction.method.coding[unitDigit1].id ^short = "エレメント間参照のためのユニークID"
+* dosageInstruction.method.coding[unitDigit1].id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
+* dosageInstruction.method.coding[unitDigit1].system 1..
+* dosageInstruction.method.coding[unitDigit1].system = "urn:oid:1.2.392.200250.2.2.20.30" (exactly)
+* dosageInstruction.method.coding[unitDigit1].system ^short = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コードを示すURI"
+* dosageInstruction.method.coding[unitDigit1].system ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コード。urn:oid:1.2.392.200250.2.2.20.30"
+* dosageInstruction.method.coding[unitDigit1].system ^comment = "URIはOID(urn:oid:....)やUUID(urn:uuid:....)であることもある。OIDやUUIDはHL7のOIDレジストリを参照していなければならない（SHALL)。そうでなければ、URIはHL7のFHIRのリストに挙げられている特別なURIであるか、用語集が明確な定義が参照されるべきである。"
+* dosageInstruction.method.coding[unitDigit1].system ^requirements = "記号の定義の根拠が明確である必要がある。"
+* dosageInstruction.method.coding[unitDigit1].version ^short = "用語集のバージョン - もし必要であれば追加する。"
+* dosageInstruction.method.coding[unitDigit1].version ^definition = "コードが選択された際に利用されたコードシステムのバージョンである。コードの意味するところがバージョンが変わっても一貫しているように十分にメンテナンスされているコードシステムであれば、バージョンを表記する必要はないことに留意されたい。しかしながら、一貫性はなかなか保証されるものではないし、意味の一貫性が保証されていないのであればバージョンは交換されるべきである（SHOULD)。"
+* dosageInstruction.method.coding[unitDigit1].version ^comment = "ターミノロジーのバージョンが文字列としてコードシステムにより定義されていない場合は、そのバージョンが公式に公開された日付を示す（FHIRのdateフォーマットで表現される）dateを用いることが推奨されている。"
+* dosageInstruction.method.coding[unitDigit1].code 1..
+* dosageInstruction.method.coding[unitDigit1].code ^short = "JAMI 用法コード表基本用法１桁コード"
+* dosageInstruction.method.coding[unitDigit1].code ^definition = "JAMI 用法コード表基本用法１桁コード。"
+* dosageInstruction.method.coding[unitDigit1].code ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
+* dosageInstruction.method.coding[unitDigit1].code ^requirements = "システム内の特定のコードを参照する必要がある。"
+* dosageInstruction.method.coding[unitDigit1].display ^short = "JAMI 用法コード表基本用法１桁コードの表⽰名"
+* dosageInstruction.method.coding[unitDigit1].display ^definition = "JAMI 用法コード表基本用法１桁コードの表⽰名。"
+* dosageInstruction.method.coding[unitDigit1].display ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
+* dosageInstruction.method.coding[unitDigit1].display ^requirements = "コードが持つ意味をそのシステムを知らない人でも読めるように人間可読であるようにしている必要がある。"
+* dosageInstruction.method.coding[unitDigit1].userSelected ^short = "このコードが直接ユーザーが指定したものであるかどうか"
+* dosageInstruction.method.coding[unitDigit1].userSelected ^definition = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
+* dosageInstruction.method.coding[unitDigit1].userSelected ^comment = "選択肢の中から、直接選ばれたコードは新しく翻訳するときには最も適切なスタート地点である。何をもって「直接選ばれた」とするのかには曖昧なところがあり、このエレメントの使用について明確にして結論として何を意味するのかより完全になるよう取引先との合意が必要となる。"
+* dosageInstruction.method.coding[unitDigit1].userSelected ^requirements = "このエレメントは臨床安全のために特定されてきた。System/codeのペアが明示的に選択されることは、言語処理や何らかの規則を元に推測されるよりも正確だからである。"
+
+* dosageInstruction.method.coding[unitDigit2] ^short = "投与⽅法に対応するJAMI 用法コード表基本用法2桁コード"
+* dosageInstruction.method.coding[unitDigit2] ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法2桁コードを識別するURI。２桁コードurn:oid:1.2.392.200250.2.2.20.40"
+* dosageInstruction.method.coding[unitDigit2] ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
+* dosageInstruction.method.coding[unitDigit2] ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
+* dosageInstruction.method.coding[unitDigit2].id ^short = "エレメント間参照のためのユニークID"
+* dosageInstruction.method.coding[unitDigit2].id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
+* dosageInstruction.method.coding[unitDigit2].system 1..
+* dosageInstruction.method.coding[unitDigit2].system = "urn:oid:1.2.392.200250.2.2.20.40" (exactly)
+* dosageInstruction.method.coding[unitDigit2].system ^short = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コードを示すURI"
+* dosageInstruction.method.coding[unitDigit2].system ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法2桁コード。２桁コードurn:oid:1.2.392.200250.2.2.20.40で固定される。"
+* dosageInstruction.method.coding[unitDigit2].system ^comment = "URIはOID(urn:oid:....)やUUID(urn:uuid:....)であることもある。OIDやUUIDはHL7のOIDレジストリを参照していなければならない（SHALL)。そうでなければ、URIはHL7のFHIRのリストに挙げられている特別なURIであるか、用語集が明確な定義が参照されるべきである。"
+* dosageInstruction.method.coding[unitDigit2].system ^requirements = "記号の定義の根拠が明確である必要がある。"
+* dosageInstruction.method.coding[unitDigit2].version ^short = "用語集のバージョン - もし必要であれば追加する。"
+* dosageInstruction.method.coding[unitDigit2].version ^definition = "コードが選択された際に利用されたコードシステムのバージョンである。コードの意味するところがバージョンが変わっても一貫しているように十分にメンテナンスされているコードシステムであれば、バージョンを表記する必要はないことに留意されたい。しかしながら、一貫性はなかなか保証されるものではないし、意味の一貫性が保証されていないのであればバージョンは交換されるべきである（SHOULD)。"
+* dosageInstruction.method.coding[unitDigit2].version ^comment = "ターミノロジーのバージョンが文字列としてコードシステムにより定義されていない場合は、そのバージョンが公式に公開された日付を示す（FHIRのdateフォーマットで表現される）dateを用いることが推奨されている。"
+* dosageInstruction.method.coding[unitDigit2].code 1..
+* dosageInstruction.method.coding[unitDigit2].code ^short = "JAMI 用法コード表基本用法2桁コード"
+* dosageInstruction.method.coding[unitDigit2].code ^definition = "JAMI 用法コード表基本用法2桁コード。"
+* dosageInstruction.method.coding[unitDigit2].code ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
+* dosageInstruction.method.coding[unitDigit2].code ^requirements = "システム内の特定のコードを参照する必要がある。"
+* dosageInstruction.method.coding[unitDigit2].display ^short = "JAMI 用法コード表基本用法2桁コードの表⽰名"
+* dosageInstruction.method.coding[unitDigit2].display ^definition = "JAMI 用法コード表基本用法2桁コードの表⽰名。"
+* dosageInstruction.method.coding[unitDigit2].display ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
+* dosageInstruction.method.coding[unitDigit2].display ^requirements = "コードが持つ意味をそのシステムを知らない人でも読めるように人間可読であるようにしている必要がある。"
+* dosageInstruction.method.coding[unitDigit2].userSelected ^short = "このコードが直接ユーザーが指定したものであるかどうか"
+* dosageInstruction.method.coding[unitDigit2].userSelected ^definition = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
+* dosageInstruction.method.coding[unitDigit2].userSelected ^comment = "選択肢の中から、直接選ばれたコードは新しく翻訳するときには最も適切なスタート地点である。何をもって「直接選ばれた」とするのかには曖昧なところがあり、このエレメントの使用について明確にして結論として何を意味するのかより完全になるよう取引先との合意が必要となる。"
+* dosageInstruction.method.coding[unitDigit2].userSelected ^requirements = "このエレメントは臨床安全のために特定されてきた。System/codeのペアが明示的に選択されることは、言語処理や何らかの規則を元に推測されるよりも正確だからである。"
+
 * dosageInstruction.method.text ^short = "投与⽅法のテキスト表現"
 * dosageInstruction.method.text ^definition = "投与⽅法のテキスト表現。コードで指定できない場合、本要素で文字列として指定してもよい。"
 * dosageInstruction.method.text ^comment = "textエレメントはcodingのdisplayNameエレメントと一致することがよくある。"
