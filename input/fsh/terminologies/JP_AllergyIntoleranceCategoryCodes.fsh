@@ -1,10 +1,10 @@
 // ==============================
 //   CodeSystem 定義
 // ==============================
-CodeSystem: JP_AllergyIntoleranceCodes_CS
-Id: jp-allergyintolerancecodes-cs
-Title: "JP AllergyIntoleranceCodes CodeSystem"
-* ^url = "http://jpfhir.jp/fhir/Common/CodeSystem/JP_AllergyIntoleranceCodes_CS"
+CodeSystem: JP_AllergyIntoleranceCategoryCodes_CS
+Id: jp-allergyintolerancecategorycodes-cs
+Title: "JP AllergyIntoleranceCategoryCodes CodeSystem"
+* ^url = "http://jpfhir.jp/fhir/Common/CodeSystem/JP_AllergyIntoleranceCategoryCodes_CS"
 * ^status = #draft
 * ^date = "2022-03-25"
 * ^caseSensitive = true
@@ -16,10 +16,10 @@ Title: "JP AllergyIntoleranceCodes CodeSystem"
 // ==============================
 //   ValueSet 定義
 // ==============================
-ValueSet: JP_AllergyIntoleranceCodes_VS
-Id: jp-allergyintolerancecodes-vs
-Title: "JP AllergyIntoleranceCodes ValueSet"
-* ^url = "http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodes_VS"
+ValueSet: JP_AllergyIntoleranceCategoryCodes_VS
+Id: jp-allergyintolerancecategorycodes-vs
+Title: "JP AllergyIntoleranceCategoryCodes ValueSet"
+* ^url = "http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCategoryCodes_VS"
 * ^status = #draft
 * ^date = "2022-03-25"
-* include codes from system JP_AllergyIntoleranceCodes_CS
+* include codes from system JP_AllergyIntoleranceCategoryCodes_CS
