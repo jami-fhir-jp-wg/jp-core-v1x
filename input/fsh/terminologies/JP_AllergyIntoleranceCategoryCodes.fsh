@@ -9,9 +9,10 @@ Title: "JP AllergyIntoleranceCategoryCodes CodeSystem"
 * ^date = "2022-03-25"
 * ^caseSensitive = true
 * ^content = #complete
-* #jp_food "jp_food" "食品を原因とするアレルギー"
-* #jp_medication "jp_medication" "医薬品を原因とするアレルギー"
-* #jp_environment_others "jp_environment_others" "食品と医薬品以外を原因とするアレルゲン（主に生活や環境に由来するアレルゲン）"
+* #food "food" "食品を原因とするアレルギー"
+* #medication "medication" "医薬品を原因とするアレルギー"
+* #environment "environment" "生活環境因子を原因とするアレルギー"
+* #others "others" "それ以外を原因とするアレルギー"
 
 // ==============================
 //   ValueSet 定義
