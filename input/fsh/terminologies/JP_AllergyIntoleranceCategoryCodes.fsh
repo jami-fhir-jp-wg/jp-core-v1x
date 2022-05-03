@@ -9,9 +9,9 @@ Title: "JP AllergyIntoleranceCategoryCodes CodeSystem"
 * ^date = "2022-03-25"
 * ^caseSensitive = true
 * ^content = #complete
-* #food "food" "食品を原因とするアレルギー"
-* #medication "medication" "医薬品を原因とするアレルギー"
-* #environment "environment" "生活環境因子を原因とするアレルギー"
+//* #food "food" "食品を原因とするアレルギー"
+//* #medication "medication" "医薬品を原因とするアレルギー"
+//* #environment "environment" "生活環境因子を原因とするアレルギー"
 * #others "others" "それ以外を原因とするアレルギー"
 
 // ==============================
@@ -23,4 +23,5 @@ Title: "JP AllergyIntoleranceCategoryCodes ValueSet"
 * ^url = "http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCategoryCodes_VS"
 * ^status = #draft
 * ^date = "2022-03-25"
+* include codes from system http://hl7.org/fhir/ValueSet/allergy-intolerance-category
 * include codes from system JP_AllergyIntoleranceCategoryCodes_CS
