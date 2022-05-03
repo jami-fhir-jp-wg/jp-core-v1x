@@ -64,7 +64,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier[RequestIdentifier] ^min = 0
 * identifier[RequestIdentifier].system 1..
 * identifier[RequestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier" (exactly)
-* status = #draft (exactly)
 * status ^definition = "JP coreでは\"active\"に固定される。\r\nオーダーの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
 * status ^comment = "このエレメントはmodifierとされている。StatusとはこのResourceが現在妥当な状態ではないことも示すからである。"
 * status ^isModifierReason = "このエレメントは modifier である。Statusエレメントが entered-in-error という正当な情報として扱うべきではない状態の値も取り得るからである。"
