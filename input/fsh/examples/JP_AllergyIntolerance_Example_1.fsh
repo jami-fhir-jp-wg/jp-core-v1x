@@ -1,6 +1,6 @@
-Instance: jp-allergyintolerance-example1
+Instance: jp-allergyintolerance-example-1
 InstanceOf: JP_AllergyIntolerance
-Title: "JP Core AllergyIntolerance Example1"
+Title: "JP Core AllergyIntolerance Basic Example"
 Usage: #example
 * clinicalStatus
   * coding[0]
@@ -20,8 +20,8 @@ Usage: #example
     * display = "さば類"
   * text = "ゴマサバ"
 * patient
-  * reference = "Patient/jp-patient-example1"
-  * display = "・・・・"
+  * reference = "Patient/jp-patient-example-1"
+  * display = "山田 太郎"
 * onsetDateTime = "2021-08-22"
 * recordedDate = "2021-08-23" 
 * reaction

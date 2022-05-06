@@ -1,6 +1,6 @@
-Instance:  jp-condition-example1
+Instance:  jp-condition-example-1
 InstanceOf: JP_Condition
-Title: "JP Core Condition Example1"
+Title: "JP Core Condition Basic Example"
 Usage: #example
 *  clinicalStatus
   *  coding[0]
@@ -44,8 +44,8 @@ Usage: #example
     *  display = "直腸"   
   *  text = "結腸直腸"
 *  subject
-  *  reference = "Patient/jp-patient-example1"
-  *  display = "・・・"
+  *  reference = "Patient/jp-patient-example-1"
+  *  display = "山田 太郎"
 *  onsetAge
   *  value = 52
   *  unit = "years"

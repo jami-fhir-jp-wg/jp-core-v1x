@@ -1,5 +1,6 @@
-Instance: jp-patient-example1
+Instance: jp-patient-example-1
 InstanceOf: JP_Patient
+Title: "JP Core Patient Basic Example"
 Usage: #example
 * address.postalCode = "1600023"
 * address.text = "東京都新宿区"
