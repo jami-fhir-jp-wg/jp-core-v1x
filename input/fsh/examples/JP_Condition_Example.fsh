@@ -53,6 +53,10 @@ Usage: #example
   *  code = #a
 *  recordedDate = "2020-12-01"
 *  evidence[0]
-  *  detail[0]
-    *  reference = ".../example"
-    *  display = "..."
+  *  code[0]
+    * coding[0]
+      *  system = "http://jpfhir.jp/fhir/CodeSystem/***"
+      *  code = #c
+  // *  detail[0]
+  //   *  reference = ".../example"
+  //   *  display = "..."

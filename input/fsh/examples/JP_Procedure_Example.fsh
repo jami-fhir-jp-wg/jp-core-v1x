@@ -5,15 +5,14 @@ Usage:  #example
 * status = #completed
 * category
   * coding
-    * system = "http://terminology.hl7.org/CodeSystem/procedurecategory"
-    * code = #srg
+    * system = "http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCategory_CS"
+    * code = #surgical
     * display = "手術処置"
   * text = "・・・"
 * code
   * coding
-    * system = "http://jpfhir.jp/fhir/CodeSystem/Procedure"
-    * code = #1234567
-    * display = "・・・"
+    * system = "http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodes_CS"
+    * code = #demo_cataract_surgery
   * text = "・・・"
 * subject
   * reference = "Patient/jp-patient-example1"

@@ -11,7 +11,7 @@ Usage: #example
     * system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
     * code = #confirmed
 * type = #allergy 
-* category = #jp_food
+* category = #food
 * criticality = #low 
 * code
   * coding
