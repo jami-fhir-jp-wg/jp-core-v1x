@@ -1,5 +1,5 @@
 // ==============================
-//   Profile 定義
+//   Profile 定義 テスト
 // ==============================
 Profile: JP_AllergyIntolerance
 Parent: AllergyIntolerance
