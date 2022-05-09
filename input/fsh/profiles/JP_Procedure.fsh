@@ -38,10 +38,10 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * category.text ^comment = "Very often the text is the same as a displayName of one of the codings.\r\n多くの場合、テキストはいずれかのコーディングのdisplayNameと同じです。"
 * category.text ^requirements = "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.\r\n用語のコードは、それらを使用する人間のすべてのニュアンスで常に正しい意味を捉えているとは限らない。または、適切なコードがまったくない場合もあります。このような場合、テキストはソースの完全な意味をキャプチャするために使用される。"
 * code 1..
+* code from http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodes_VS (required)
 * code ^short = "Identification of the procedure　プロシジャーの識別子"
 * code ^definition = "行われた具体的な手順。手技の正確な性質がコード化できない場合はテキストを使用する（例：「腹腔鏡下虫垂切除術」）"
 * code ^comment = "すべての用語の使用がこの一般的なパターンに当てはまるわけではない。場合によっては、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係や事前・事後の調整を管理するための独自の構造を提供すべきである。"
-* code ^binding.strength = #required
 * code ^binding.description = "Procedureコード"
 * subject only Reference(JP_Patient)
 * subject ^short = "Who the procedure was performed on　プロシジャーが実施された対象人"
