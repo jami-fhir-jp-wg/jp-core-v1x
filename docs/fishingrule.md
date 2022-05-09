@@ -10,6 +10,7 @@
 ├─input #入力フォルダ
 │  ├─fsh #FHIR Shorthandファイル格納フォルダ
 │  │  ├─capablitystatements #capablity statement用
+│  │  ├─examples #リソース例 example
 │  │  ├─others #その他
 │  │  ├─profiles #profile,extension用
 │  │  ├─searchparameters #search parameter
@@ -36,6 +37,7 @@ Kabab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 | capblity statement | jp-{actor}-capablitystatement <br/>`jp-client-capablitystatement` |
 | codesytesm | jp-{codesystem}-cs <br/> `jp-gender-cs` |
 | valueset | jp-{valueset}-vs <br/> `jp-gender-vs` |
+| example | jp-{profile}-example-{N} <br/> `jp-patient-example-1` |
 
 ### [2] Name命名規則
 単語はPascal(UpperCamel)区切は_(アンダーバー) とする<br/>
@@ -52,7 +54,7 @@ Kabab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 | capblity statement | JP_{Actor}_CapablityStatement <br/>`JP_Client_CapablityStatement` |
 | codesytesm | JP_{CodeSystem}_CS <br/> `JP_Gender_CS` |
 | valueset | JP_{ValueSet}_VS <br/> `JP_Gender_VS` |
-
+| example | JP_{Profile}_Example_{N} <br/> `JP_Patient_Example_1` |
 
 ### [3] 定義URL形式
 * Page部分はNameと同一とする。<br/>
@@ -68,7 +70,6 @@ Kabab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 | capblity<br/>statement | http://jpfhir.jp/fhir/core/CapabilityStatement/{Name} <br/>`http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement` |
 | codesystem | http://jpfhir.jp/fhir/Common/CodeSystem/{Name} <br/>`http://jpfhir.jp/fhir/Common/CodeSystem/JP_Gender_CS` |
 | valueset | http://jpfhir.jp/fhir/Common/ValueSet/{Name} <br/>`http://jpfhir.jp/fhir/Common/ValueSet/JP_Gender_VS` |
-
 
 ### [4] Title命名規則
 NameをSpace Separator形式に変換する。(全ての項目共通)<br/>省略語は英大文字としてもよい
@@ -88,6 +89,7 @@ Name形式[ **Aaa_BbbCcc_Ddd.fsh** ]に変換し、拡張子を.fshとする。<
 | search parameter| searchparamters/{Profile Name}_sp.fsh | postfixとして **[_sp]** があるのを注意。1ファイル集約 |
 | codesystem | terminologies/{CodeSystem Name}.fsh | |
 | valueset | terminologies/{ValueSet Name}.fsh | |
+| example | examples/JP_{Profile}_Example.fsh | 1ファイル集約 |
 
 ```
 # ファイル名サンプル
@@ -105,6 +107,9 @@ Name形式[ **Aaa_BbbCcc_Ddd.fsh** ]に変換し、拡張子を.fshとする。<
 
 # value set
 .\input\fsh\terminologies\JP_Gender_VS.fsh
+
+# example
+.\input\fsh\examples\JP_Gender_Example.fsh
 ```
 ## FSH編集ルール
 ### [1] 除外項目
