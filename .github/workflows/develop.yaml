@@ -87,4 +87,4 @@ jobs:
         external_repository: jami-fhir-jp-wg/jp-core-v1xpages
         publish_branch: pages
         publish_dir: ./output
-        destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch_group }}
+        destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
