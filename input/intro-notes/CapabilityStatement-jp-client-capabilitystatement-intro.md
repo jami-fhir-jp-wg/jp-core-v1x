@@ -3,28 +3,6 @@
 JP Core Serverによってサポートされる FHIR プロファイル・RESTful操作・検索パラメータの完全なリストを定義する。  
 JP Core Clientは個別のユースケースや意味的な要請に応じてこれらのリストを通じて必要なデータにアクセスすることができる。
 
-## FHIR RESTful Capabilities
-- JP Coreは以下の要件を必須とする(**SHALL**)
-  - FHIR仕様に基づくRESTfulなふるまいの実装
-- 以下のレスポンスクラスを返すこと
-  - (Status 400): invalid parameter
-  - (Status 401/4xx): unauthorized request
-  - (Status 403): insufficient scope
-  - (Status 404): unknown resource
-  - (Status 410): deleted resource.
-
-- 全てのJP Core interactionにおいてjson記述をサポートすること(**SHOULD**)  
-
-- JP Coreは以下の要件を満たすべきである(**SHOULD**)
-  - 各インスタンス を、FHIR meta.profile 属性の一部としてサポートされる JP Core profileとして認識すること
-
-- JP Coreでは以下の要件を実装しても良い(**MAY**)。
-  - 全てのJP Core interactionにおいてXML記述をサポートすること
-
-- セキュリティ  
-  - See the General Security Considerations section for requirements and recommendations.
-  - サーバーはunauthorizedなリクエストに対してはHTTP 401を返さなければならない。(**SHALL**)
-
 ## 検索条件サマリ
 
 |Resource Type|Supported Profiles|Supported Searches|
