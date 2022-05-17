@@ -1,7 +1,7 @@
 Profile: JP_CarePlan
 Parent: CarePlan
 Id: jp-careplan
-* ^url = "https://example.org/fhir/StructureDefinition/JP_CarePlan"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_CarePlan"
 * ^status = #draft
 * basedOn only Reference(JP_CarePlan)
 * replaces only Reference(JP_CarePlan)

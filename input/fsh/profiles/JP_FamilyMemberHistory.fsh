@@ -1,7 +1,7 @@
 Profile: JP_FamilyMemberHistory
 Parent: FamilyMemberHistory
 Id: jp-familymemberhistory
-* ^url = "https://example.org/fhir/StructureDefinition/JP_FamilyMemberHistory"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory"
 * ^status = #draft
 * instantiatesCanonical ^definition = "The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this FamilyMemberHistory. （よくわからない）"
 * instantiatesUri ^definition = "The URL pointing to an externally maintained protocol, guideline, orderset or other definition that is adhered to in whole or in part by this FamilyMemberHistory.（よくわからない）"
