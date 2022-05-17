@@ -111,6 +111,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter
+    - https://example.org/fhir/StructureDefinition/JP_FamilyMemberHistory
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_HumanName
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Location
