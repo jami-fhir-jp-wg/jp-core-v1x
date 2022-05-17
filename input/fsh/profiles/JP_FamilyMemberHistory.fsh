@@ -24,6 +24,7 @@ Id: jp-familymemberhistory
 * estimatedAge ^definition = "If true, indicates that the age value specified is an estimated value. 年齢が推定かどうか。"
 * deceased[x] ^definition = "Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record. 死亡フラグ／家族の死亡時の実年齢／おおよその年齢。"
 * reasonCode ^definition = "Describes why the family member history occurred in coded or textual form. 家族歴を聴取した理由となる疾患（患者が有する疾患）"
+* reasonReference only Reference(QuestionnaireResponse or DocumentReference or JP_AllergyIntolerance or JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)
 * reasonReference ^definition = "Indicates a Condition, Observation, AllergyIntolerance, or QuestionnaireResponse that justifies this family member history event. この家族歴が聴取されたきっかけとなったFHIRリソースへの参照。"
 * note ^definition = "This property allows a non condition-specific note to the made about the related person. Ideally, the note would be in the condition property, but this is not always possible. この家族に関するメモ。"
 * condition ^definition = "The significant Conditions (or condition) that the family member had. This is a repeating section to allow a system to represent more than one condition per resource, though there is nothing stopping multiple resources - one per condition. この家族が持っていた疾患（または状態）。"
