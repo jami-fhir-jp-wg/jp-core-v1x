@@ -40,7 +40,6 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * category.text ^comment = "Very often the text is the same as a displayName of one of the codings.\r\n多くの場合、テキストはいずれかのコーディングのdisplayNameと同じです。"
 * category.text ^requirements = "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.\r\n用語のコードは、それらを使用する人間のすべてのニュアンスで常に正しい意味を捉えているとは限らない。または、適切なコードがまったくない場合もあります。このような場合、テキストはソースの完全な意味をキャプチャするために使用される。"
 * code 1..
-* code from http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodes_VS (required)
 * code ^short = "Identification of the procedure　プロシジャーの識別子"
 * code ^definition = "行われた具体的な手順。手技の正確な性質がコード化できない場合はテキストを使用する（例：「腹腔鏡下虫垂切除術」）"
 * code ^comment = "すべての用語の使用がこの一般的なパターンに当てはまるわけではない。場合によっては、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係や事前・事後の調整を管理するための独自の構造を提供すべきである。"
@@ -124,3 +123,31 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * usedCode ^short = "Coded items used during the procedure　プロシジャー中に使用したアイテムのコード"
 * usedCode ^definition = "Identifies coded items that were used as part of the procedure.\r\nProcedureの一部として使用されたコード化されたアイテムを識別する。"
 * usedCode ^comment = "For devices actually implanted or removed, use Procedure.device.\r\n実際に埋め込まれた、または取り外されたデバイスについては、Procedure.deviceを使用すること。"
+
+* statusReason from JP_ProcedureNotPerformedReason_VS (example)
+* code from JP_ProcedureCodesMedical_VS (example)
+* code.coding ^slicing.discriminator[0].type = #value
+* code.coding ^slicing.discriminator[=].path = "system"
+* code.coding ^slicing.rules = #open
+* code.coding contains medical 0..1
+* code.coding[medical] from JP_ProcedureCodesMedical_VS (required)
+* code.coding[medical].system = $JP_ProcedureCodesMedical_CS (exactly)
+* code.coding contains stem7 0..1
+* code.coding[stem7] from JP_ProcedureCodesSTEM7_VS (required)
+* code.coding[stem7].system = $JP_ProcedureCodesSTEM7_CS (exactly)
+* code.coding contains dental 0..1
+* code.coding[dental] from JP_ProcedureCodesDental_VS (required)
+* code.coding[dental].system = $JP_ProcedureCodesDental_CS (exactly)
+* code.coding contains nurse 0..1
+* code.coding[nurse] from JP_ProcedureCodesNurse_VS (required)
+* code.coding[nurse].system = $JP_ProcedureCodesNurse_CS (exactly)
+* code.coding contains ichi 0..1
+* code.coding[ichi] from JP_ProcedureCodesICHI_VS (required)
+* code.coding[ichi].system = $JP_ProcedureCodesICHI_CS (exactly)
+* performer.function from JP_ProcedurePerformerRoleCodes_VS (example)
+* reasonCode from JP_ProcedureReasonCodes_VS (example)
+* bodySite from JP_ProcedureBodySite_VS (example)
+* complication from JP_ProcedureConditionCodes_VS (example)
+* followUp from JP_ProcedureFollowUpCodes_VS (example)
+* focalDevice.action from JP_ProcedureDeviceActionCodes_VS (preferred)
+* usedCode from JP_ProcedureDeviceKind_VS (example)
