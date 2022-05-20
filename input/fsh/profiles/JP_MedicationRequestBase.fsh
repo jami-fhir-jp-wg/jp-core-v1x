@@ -918,7 +918,7 @@ Description: "調剤指示。薬剤単位の調剤指示を表現するための
 * ^context.expression = "MedicationRequest.dispenseRequest"
 * id ..0
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense" (exactly)
-* value[x] only string or CodeableConcept
+* value[x] only CodeableConcept
 
 Extension: JP_MedicationRequest_DosageInstruction_Device
 Id: jp-medicationrequest-dosageinstruction-device
