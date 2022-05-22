@@ -22,6 +22,8 @@ Alias: $vitalSigns-category = http://jpfhir.jp/fhir/Common/ValueSet/vitalSigns-c
 Alias: $vitalSigns-code = http://jpfhir.jp/fhir/Common/ValueSet/vitalSigns-code
 
 
+Alias: $JP_AllergyIntoleranceCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_AllergyIntoleranceCodes_CS
+Alias: $JP_AllergyIntoleranceCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodes_VS
 Alias: $JP_EventStatus_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_EventStatus_CS
 Alias: $JP_EventStatus_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_EventStatus_VS
 Alias: $JP_PhysicalExamCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_PhysicalExamCodes_CS
