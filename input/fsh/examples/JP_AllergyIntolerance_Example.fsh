@@ -16,7 +16,7 @@ Usage: #example
 * criticality = #low 
 * code
   * coding
-    * system = $JP_AllergyIntoleranceCodes_CS
+    * system = $JP_JFAGY_CS
     * code = #J7F7111190
     * display = "さば類"
   * text = "ゴマサバ"
