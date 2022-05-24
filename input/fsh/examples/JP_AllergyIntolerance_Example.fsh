@@ -1,6 +1,7 @@
 Instance: jp-allergyintolerance-example-1
 InstanceOf: JP_AllergyIntolerance
 Title: "JP Core AllergyIntolerance Basic Example"
+Description: "AllergyIntoleranceリソースの1例。山田太郎さんがゴマサバに対して軽度のじん麻疹のアレルギーを有する。"
 Usage: #example
 * clinicalStatus
   * coding[0]
