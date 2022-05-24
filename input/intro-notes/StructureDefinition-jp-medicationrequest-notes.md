@@ -52,8 +52,8 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |処方区分|MERIT-9(処方区分)|http://jpfhir.jp/ePrewscription/CodeSystem/merit9-category|
 |処方区分|JAHIS処方データ交換規約Ver.3.0C(JHSP表0003)|http://jpfhir.jp/ePrewscription/CodeSystem/JHSP0003|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
-|力価区分|電子処方箋HL7 FHIR仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
-|調剤指示|電子処方箋HL7 FHIR仕様(調剤指示)|urn:oid:1.2.392.200250.2.2.30.10|
+|力価区分|処方情報HL7 FHIR記述仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
+|調剤指示|処方情報HL7 FHIR記述仕様(調剤指示)|urn:oid:1.2.392.200250.2.2.30.10|
 |用法|JAMI処方・注射オーダ標準用法規格(用法コード)|urn:oid:1.2.392.200250.2.2.20.20|
 |用法|JAMI処方・注射オーダ標準用法規格(補足用法コード)|urn:oid:1.2.392.200250.2.2.20.22|
 |投与部位|JAMI処方・注射オーダ標準用法規格(部位コード)|urn:oid:1.2.392.200250.2.2.20.32|
@@ -691,8 +691,8 @@ doseQuantityエレメントは省略可能(0..1)である。
 ```
 
 ### 調剤指示の記述方法
-単一の薬剤に対する調剤指示は、dispenseRequest要素に対して定義した拡張「InstructionForDispense」を使用する。この拡張は、string型を使用してテキストとして指示の内容を記録できる拡張と、CodeableConcept型を使用してコード化された指示を記録できる拡張の２つを含んでおり、テキストによる指示とコードによる指示を並記することができる。一つの薬剤に対して、複数の指示を記録する場合には、この拡張を、拡張単位で繰り返して記録する。 
-調剤指示で使用するコードは、電子処方箋HL7 FHIR仕様(調剤指示)("urn:oid:1.2.392.200250.2.2.30.10")を推奨する。
+単一の薬剤に対する調剤指示は、dispenseRequest要素に対して定義した拡張「InstructionForDispense」を使用する。この拡張は、CodeableConcept型を使用して、コード化された指示ないしテキストによる指示を記録できる。両方を併記してもよい。テキストによる指示を記録する場合は text要素を使用する。一つの薬剤に対して、複数の指示を記録する場合には、この拡張を、拡張単位で繰り返して記録する。 
+調剤指示で使用するコードは、処方情報HL7 FHIR記述仕様(調剤指示)("urn:oid:1.2.392.200250.2.2.30.10")を推奨する。
 
 薬剤単位の調剤指示を表すインスタンス例を示す。
 ```json
@@ -700,24 +700,21 @@ doseQuantityエレメントは省略可能(0..1)である。
   "extension": [
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense",
-      "extension": [
-        {
-          "url": "TextContent",
-          "valueString": "嚥下障害のため、上記粉砕指示"
-        },
-        {
-          "url": "CodedContent",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "code": "C",
-                "system": "urn:oid:1.2.392.200250.2.2.30.10",
-                "display": "粉砕指示"
-              }
-            ]
+      "valueCodeableConcept": {
+        "text": "嚥下障害のため、上記粉砕指示"
+      }
+    },
+    {
+      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "C",
+            "system": "urn:oid:1.2.392.200250.2.2.30.10",
+            "display": "粉砕指示"
           }
-        }
-      ]
+        ]
+      }
     }
   ],
 ```
@@ -1435,7 +1432,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 
 ### 隔日指定投与の記述方法
 隔日指定投与は、連続して服用する日数と、その後の連続して休薬する日数を指定する用法である。
-JAMI標準用法コードを使用する表現方法と、HL7 FHIR本来の表現方法の2種類の表現方法が可能であるが、電子処方箋FHIR仕様との整合性を考慮してJAMI標準用法コードを使用する方法を推奨する。
+JAMI標準用法コードを使用する表現方法と、HL7 FHIR本来の表現方法の2種類の表現方法が可能であるが、処方情報HL7 FHIR記述仕様との整合性を考慮してJAMI標準用法コードを使用する方法を推奨する。
 
 JAMI標準用法コードを使用する表現方法では、dosageInstruction.timing.code 要素に CodeableConcept型でJAMI標準用法コード（urn:oid:1.2.392.100495.20.2.31）を指定する。さらに、dosageInstruction.timing.additionalInstrunction要素に、CodeableConcept型で、JAMI標準「処方・注射オーダ標準用法規格」 8桁補足用法コード（urn:oid:1.2.392.100495.20.2.32）を指定する。詳細は、「JAMI標準 処方注射オーダ標準用法規格」規格書 8.1「日数間隔指定」 を参照のこと。
 
@@ -1503,7 +1500,7 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
 
 ### 曜日指定投与の記述方法
 曜日指定投与は、「火曜日と金曜日に服用」など、服用する曜日を指定する用法である。
-JAMI標準用法コードを使用する表現方法と、HL7 FHIR本来の表現方法の2種類の表現方法が可能であるが、電子処方箋FHIR仕様との整合性を考慮してJAMI標準用法コードを使用する方法を推奨する。
+JAMI標準用法コードを使用する表現方法と、HL7 FHIR本来の表現方法の2種類の表現方法が可能であるが、処方情報HL7 FHIR記述仕様との整合性を考慮してJAMI標準用法コードを使用する方法を推奨する。
 
 JAMI標準用法コードを使用する表現方法では、dosageInstruction.timing.code 要素に CodeableConcept型でJAMI標準用法コード（urn:oid:1.2.392.100495.20.2.31）を指定する。さらに、dosageInstruction.timing.additionalInstrunction要素に、CodeableConcept型で、JAMI標準「処方・注射オーダ標準用法規格」 8桁補足用法コード（urn:oid:1.2.392.100495.20.2.32）を指定する。詳細は、「JAMI標準 処方注射オーダ標準用法規格」規格書 8.2「曜日指定」 を参照のこと。
 
@@ -1559,6 +1556,7 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
 
 ## その他、参考文献・リンク等
 1. HL7, FHIR MedicationRequest Resource, http://hl7.org/fhir/medicationrequest.html
+1. 日本医療情報学会, JAMI標準（JAMISDP02）：処方情報HL7 FHIR記述仕様, https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf
 1. 保健医療福祉情報システム工業会, JAHIS 処方データ交換規約 Ver.3.0C, https://www.jahis.jp/standard/detail/id=564
 1. 日本医療情報学会MERIT-9研究会, 医療情報交換規約運用指針、MERIT-9 処方オーダver 1.0, http://merit-9.mi.hama-med.ac.jp/jahis/SHOHOU.pdf
 1. 保健医療福祉情報システム工業会, JAHISデータ交換規約（共通編）Ver.1.1, https://www.jahis.jp/standard/detail/id=125
@@ -1568,6 +1566,6 @@ https://github.com/Acedia-Belphegor/hl7v2-to-fhir/
 1. Mike Henderson, 日本HL7協会監修、「HL7メッセージ交換」、第2版、インナービジョン社、2013年
 1. 厚生労働省、保険医療機関及び保険医療養担当規則、平三〇厚労令二〇・一部改正, https://www.mhlw.go.jp/web/t_doc?dataId=84035000&dataType=0&pageNo=1
 1. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, http://www2.medis.or.jp/hcode/
-1. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, http://www.jami.jp/jamistd/ssmix2.php
+1. 日本医療情報学会, SS-MIX2仕様書・ガイドライン, http://www.jami.jp/jamistd/ssmix2.php
 1. 保健医療福祉情報システム工業会, JAHIS電子処方箋実装ガイドVer.1.2, https://www.jahis.jp/standard/detail/id=774
 1. 令和２年度厚⽣労働科学特別研究事業「診療情報提供書, 電⼦処⽅箋等の電⼦化医療⽂書の相互運⽤性確保のための標準規格の開発研究」研究班, 電子処方箋HL7 FHIR記述仕様書案, https://std.jpfhir.jp/
