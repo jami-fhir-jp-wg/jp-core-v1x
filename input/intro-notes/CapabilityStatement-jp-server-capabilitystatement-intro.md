@@ -18,9 +18,6 @@ JP Core Clientは個別のユースケースや意味的な要請に応じてこ
 - JP Coreは以下の要件を満たすべきである(**SHOULD**)
   - 各インスタンス を、FHIR meta.profile 属性の一部としてサポートされる JP Core profileとして認識すること
 
-- JP Coreでは以下の要件を実装しても良い(**MAY**)。
-  - 全てのJP Core interactionにおいてXML記述をサポートすること
-
 - セキュリティ  
   - See the General Security Considerations section for requirements and recommendations.
   - サーバーはunauthorizedなリクエストに対してはHTTP 401を返さなければならない。(**SHALL**)

@@ -1,6 +1,7 @@
 Instance:  jp-condition-example-1
 InstanceOf: JP_Condition
 Title: "JP Core Condition Basic Example"
+Description: "JP_Conditionリソースの1例"
 Usage: #example
 *  clinicalStatus
   *  coding[0]

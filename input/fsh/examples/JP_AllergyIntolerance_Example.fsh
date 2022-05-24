@@ -1,6 +1,7 @@
 Instance: jp-allergyintolerance-example-1
 InstanceOf: JP_AllergyIntolerance
 Title: "JP Core AllergyIntolerance Basic Example"
+Description: "JP_AllergyIntoleranceリソースの1例"
 Usage: #example
 * clinicalStatus
   * coding[0]
@@ -15,7 +16,7 @@ Usage: #example
 * criticality = #low 
 * code
   * coding
-    * system = "http://jpfhir.jp/fhir/core/JP_AllergyIntolerance/CodeSystem/JFAGY"
+    * system = $JP_AllergyIntoleranceCodes_CS
     * code = #J7F7111190
     * display = "さば類"
   * text = "ゴマサバ"

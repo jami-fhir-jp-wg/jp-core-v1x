@@ -1,7 +1,7 @@
 /* Remove TOC box */
-/* .markdown-toc {
+.markdown-toc {
   display: none;
-} */
+}
 
 /*
   Uses system typography for better readability.

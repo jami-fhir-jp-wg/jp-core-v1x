@@ -9,7 +9,7 @@ Usage: #definition
 * code = #jp-kanji-name
 * base = #Patient
 * type = #token
-* expression = "Patient.name.where(extension/url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and extension/value.as(code)='IDE')"
+* expression = "Patient.name.where(extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation').value.as(code)='IDE')"
 * xpath = "f:Patient/f:name[extension/url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and extension/valueCode='IDE']"
 * xpathUsage = #normal
 * multipleOr = true
@@ -31,7 +31,7 @@ Usage: #definition
 * code = #jp-kana-name
 * base = #Patient
 * type = #token
-* expression = "Patient.name.where(extension/url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and extension/value.as(code)='SYL')"
+* expression = "Patient.name.where(extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation').value.as(code)='SYL')"
 * xpath = "f:Patient/f:name[extension/@url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and extension/valueCode='SYL']"
 * xpathUsage = #normal
 * multipleOr = true

@@ -4,6 +4,7 @@
 CodeSystem: JP_EventStatus_CS
 Id: jp-eventstatus-cs
 Title: "JP EventStatus CodeSystem"
+Description: "JP EventStatusのCodeSystem"
 * ^url = "http://jpfhir.jp/fhir/Common/CodeSystem/JP_EventStatus_CS"
 * ^status = #draft
 * ^date = "2022-03-25"
@@ -24,6 +25,7 @@ Title: "JP EventStatus CodeSystem"
 ValueSet: JP_EventStatus_VS
 Id: jp-eventstatus-vs
 Title: "JP EventStatus ValueSet"
+Description: "JP EventStatusのValueSet"
 * ^url = "http://jpfhir.jp/fhir/Common/ValueSet/JP_EventStatus_VS"
 * ^status = #draft
 * ^date = "2022-03-25"

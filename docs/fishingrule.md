@@ -213,16 +213,33 @@ element mustSupport = false or true
 element 1.. MS 
 ```
 
+### [6] プロファイルでの参照先
+プロファイル参照する際に、既にJP Coreにて定義がされている場合、FHIR BASEではなくJP Coreプロファイルを利用すること。
+
+``` 
+// 非推奨
+* subject only Reference(Patient)
+
+// 推奨 JP Coreプロファイルを指定する
+* subject only Reference(JP_Patient)
+``` 
+
 ## リソース追加、urlもしくはid変更時の対処
 
 リソース追加、urlもしくはid変更時には必要に応じ、以下の作業を実施すること。
-
+* sushiを実行する。
 * markdownlink_creator.rbを実行し、input/include/markdown-link-reference.mdを更新し、リンク情報を書き換える。
 * specialurls_creator.rbを実行し、sushi-config.yamlのspecial urlを書き換える。
 
-```
-> ruby script\markdownlink_creator.rb 
-> ruby script\specialurls_creator.rb
+``` sh
+# sushi実行 fsh_generatedにjsonファイルが作成される。
+$ sushi 
+
+# markdown-link-reference.md更新
+$ ruby script\markdownlink_creator.rb
+
+# sushi-config.yamlのspecial-url更新
+$ ruby script\specialurls_creator.rb
 ```
 
 その他に下記の確認を行なうこと。

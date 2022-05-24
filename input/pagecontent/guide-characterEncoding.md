@@ -5,7 +5,7 @@ HL7®FHIR®規格では，文字コードとしてUnicodeを用い，UTF-8で符
 サーバーは「[updateもしくはcreateを受け入れるときは送信された通りに受け入れ，のちにreadアクセスがあった際には同じ内容を返すべき（**SHOULD**）](https://www.hl7.org/fhir/http.html#update、https://www.hl7.org/fhir/http.html#create)」とされているが、[Transactional Integrity](https://www.hl7.org/fhir/http.html#transactional-integrity)に記載されているように、既存のコンテンツとのマージや，ビジネスルールの適用による変換，リソースとして可能な値すべてをサポートしていないといった様々な理由で，返される内容が変化していることがある。サーバーおよびクライアントは，「[このような整合性がどのように扱われるかCapabilityStatementに明確に記載しなければならない（**SHOULD**）](https://www.hl7.org/fhir/http.html#conformance-rules)」とされている。このことから、サーバー側での不可逆な文字コード変換は推奨されず、行う場合はCapabilityStatementに明確に記載しなければならない。
 
 ###  私的領域
-FHIR JPにおいては，相互運用性確保のためUnicodeの私的領域（E000～F8FF），補助私的領域A(FFF80～FFFFF)，補助私的領域B(10FF80～10FFFF)は利用するべきではない（**SHOULD NOT**）。とくにオープンなシステムに対して，特段の規定がない限りユーザー定義外字領域を利用したデータを送信することは避けるべきである。氏名および地名についてはIPAの[文字情報基盤事業](https://moji.or.jp/mojikiban/mjlist/)により[戸籍統一文字（約5万6千字）・住基ネット登録文字（約2万字）のUnicode化が完了して](https://k-tai.watch.impress.co.jp/docs/news/1098780.html)おり、外字が必要となる場面は限定される。
+FHIR JPにおいては，相互運用性確保のためUnicodeの私的領域（E000～F8FF），補助私的領域A(FFF80～FFFFF)，補助私的領域B(10FF80～10FFFF)は利用するべきではない（**SHOULD NOT**）。とくにオープンなシステムに対して，特段の規定がない限りユーザー定義外字領域を利用したデータを送信することは避けるべきである。氏名および地名についてはIPAの[文字情報基盤事業](https://moji.or.jp/mojikiban/mjlist/)により[戸籍統一文字（約5万6千字）・住基ネット登録文字（約2万字）のUnicode化が完了して](https://www.ipa.go.jp/about/press/20171225.html)おり、外字が必要となる場面は限定される。
 
 ### 基本多言語面（Basic Multilingual Plane, BMP）外の文字や異体字セレクタ
 一部の古いプログラム・ライブラリではこれらの文字を入力するとエラーを生じてしまうものもある。しかし、BMP外の文字や異体字セレクタについても，エラーなく送受信可能であるべきであり，サーバーは「[updateもしくはcreateを受け入れるときは送信された通りに受け入れ，のちにreadアクセスがあった際には同じ内容を返すべき（SHOULD）](https://www.hl7.org/fhir/http.html#update)」である。
@@ -30,5 +30,5 @@ FHIR®において改行コードについての規定は特に存在せず、[s
 サーバー上の整合性についてはCapabilityStatementに記述されているはず（**SHOULD**）であるが，厳密な往復の保全性が必要な場合，サーバー上で何らかの変換がなされないか十分にテストを行うべきである。
 
 ### 文字コード変換にまつわる諸問題
-円記号，バックスラッシュ，チルダ，オーバーライン，波ダッシュなど文字コード変換しばし問題となる文字が知られている(https://xtech.nikkei.com/it/article/COLUMN/20061122/254626/?P=2)。
+円記号，バックスラッシュ，チルダ，オーバーライン，波ダッシュなど文字コード変換しばし問題となる文字が知られている。
 Shift-JISの円記号(0x5c)を，Unicodeの円記号(U+00A5)ではなくASCIのバックスラッシュ(0x5c)に準じてバックスラッシュ(U+005c)にマップするなど慣習的な変換も広く用いられており，文字の使用意義に沿った変換を行うべきである。
