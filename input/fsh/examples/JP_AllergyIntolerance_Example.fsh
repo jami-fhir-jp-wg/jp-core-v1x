@@ -17,9 +17,9 @@ Usage: #example
 * code
   * coding
     * system = $JP_JFAGY_CS
-    * code = #J7F7111190
-    * display = "さば類"
-  * text = "ゴマサバ"
+    * code = #J9F713920000
+    * display = "ほや類"
+  * text = "ほや"
 * patient
   * reference = "Patient/jp-patient-example-1"
   * display = "山田 太郎"
