@@ -15,7 +15,7 @@ Usage: #example
 * category = #food
 * criticality = #low 
 * code
-  * coding
+  * coding[food]
     * system = $JP_JFAGY_CS
     * code = #J9F713920000
     * display = "ほや類"
