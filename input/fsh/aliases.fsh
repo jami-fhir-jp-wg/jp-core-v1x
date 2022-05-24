@@ -10,7 +10,6 @@ Alias: $capabilityStatement-combination = http://hl7.org/fhir/StructureDefinitio
 Alias: $v2-0136 = http://terminology.hl7.org/ValueSet/v2-0136
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 
-
 // jpfhir-valueSet
 Alias: $labResult-code = http://jpfhir.jp/fhir/Common/ValueSet/labResult-code
 Alias: $bodyMeasurement-category = http://jpfhir.jp/fhir/Common/ValueSet/bodyMeasurement-category
@@ -21,9 +20,12 @@ Alias: $socialHistory-code = http://jpfhir.jp/fhir/Common/ValueSet/socialHistory
 Alias: $vitalSigns-category = http://jpfhir.jp/fhir/Common/ValueSet/vitalSigns-category
 Alias: $vitalSigns-code = http://jpfhir.jp/fhir/Common/ValueSet/vitalSigns-code
 
-
-Alias: $JP_AllergyIntoleranceCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_AllergyIntoleranceCodes_CS
-Alias: $JP_AllergyIntoleranceCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodes_VS
+// Alias: $JP_AllergyIntoleranceCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_AllergyIntoleranceCodes_CS
+// Alias: $JP_AllergyIntoleranceCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodes_VS
+Alias: $JP_JFAGY_CS = http://jpfhir.jp/fhir/Common/CodeSystem/jfagy
+Alias: $JP_AllergyIntoleranceCodesFood_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodesFood_VS
+Alias: $JP_AllergyIntoleranceCodesMedicine_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodesMedicine_VS
+Alias: $JP_AllergyIntoleranceCodesNonFoodNonMedicine_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodesNonFoodNonMedicine_VS
 Alias: $JP_EventStatus_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_EventStatus_CS
 Alias: $JP_EventStatus_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_EventStatus_VS
 Alias: $JP_PhysicalExamCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_PhysicalExamCodes_CS
