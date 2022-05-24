@@ -1,6 +1,7 @@
 Instance:  jp-procedure-example-1
 InstanceOf: JP_Procedure
 Title:   "JP Core Procedure Basic Example"
+Description: "JP_Procedureリソースの1例"
 Usage:  #example
 * status = #completed
 * category
