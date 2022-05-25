@@ -12,7 +12,7 @@ sushiconfigPath="sushi-config.yaml"
 
 #--- URL抽出処理 ---
 def fillUrl(prefix, sb, extension = false)
-  files = Dir.glob(prefix + "-*.json")
+  files = Dir.glob(prefix + "-*.json").sort
   for fl in files
       File.open(fl) do |f|
           h = JSON.load(f)

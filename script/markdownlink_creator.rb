@@ -60,7 +60,7 @@ end
 #--- 種別指定書き込み処理 ---
 def putMarkdownLink(prefix, fw, extension = false)
   putMarkdownComment(prefix, fw, extension)
-  files = Dir.glob(prefix + "-*.json")
+  files = Dir.glob(prefix + "-*.json").sort
   for fl in files
     File.open(fl) do |f|
       hash = JSON.load(f)
