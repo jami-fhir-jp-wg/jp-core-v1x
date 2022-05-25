@@ -1,4 +1,3 @@
----
 ここで扱っているTransactionの多くは、患者の医療や健康に関する重要な情報を扱っている。データの扱いに方によっては、情報流出リスクを伴い、社会的な信頼を失うことも想定される。すべてのTransactionは、適切なアクセス権限の設定やサービスの公開方法、データの暗号化等を実施した上で、データを保護する必要がある。  
 本対象は、健康医療データを扱う機関であり、医療福祉施設およびサービス・システム提供業者の両方に当てはまる。 ここで記載されている内容は最低限考慮すべき事項であって、実装にあっては分析を行った上でより環境に応じて適切ルールを策定すること。規約等は更新されている場合があるため、検討する際には最新ものであることを確認すること。
 
@@ -12,6 +11,7 @@
 - [Digital Signatures](http://hl7.org/fhir/R4/security.html#digital%20signatures)
 - [Security Labels](http://hl7.org/fhir/R4/security-labels.html)
 - [Narrative](http://hl7.org/fhir/R4/security.html#narrative)
+
 ### JP CoreにおけるSecurity要件
 ---
 #### 全般
