@@ -34,11 +34,12 @@ sushi -v    #バージョン確認
 ```
 
 * ### Javaランタイム
-JavaSDKもしくはOpenJDKのいずれかをインストールを行なうこと。
+自動ビルド環境に合わせてJavaSDK ver17をインストールすことを推奨する。<br/>
+IGPublisherとしてはJavaSDKもしくはOpenJDKの8,11,17での動作を保証している。
+実行モジュールはPathが解決していることが条件になる。
 
 #### JavaSDK
 入手先: https://www.oracle.com/java/technologies/downloads/<br/>
-ver8,11,17のLSTバージョン<br/>
 **Java SDKを利用する場合はライセンス注意**
 
 #### OpenJDK
