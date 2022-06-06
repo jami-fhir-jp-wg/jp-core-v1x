@@ -8,7 +8,7 @@ Usage: #definition
 * description = "PatientリソースのKanjiName(漢字名称)に関する検索を定義します。"
 * code = #jp-kanji-name
 * base = #Patient
-* type = #token
+* type = #string
 * expression = "Patient.name.where(extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation').value.as(code)='IDE')"
 * xpath = "f:Patient/f:name[extension/url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and extension/valueCode='IDE']"
 * xpathUsage = #normal
@@ -30,7 +30,7 @@ Usage: #definition
 * description = "PatientリソースのKanaName(カナ名称)に関する検索を定義します。"
 * code = #jp-kana-name
 * base = #Patient
-* type = #token
+* type = #string
 * expression = "Patient.name.where(extension.where(url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation').value.as(code)='SYL')"
 * xpath = "f:Patient/f:name[extension/@url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and extension/valueCode='SYL']"
 * xpathUsage = #normal
