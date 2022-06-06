@@ -44,7 +44,7 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 * name ^definition = "This will either be a name or a description; e.g. \"Aunt Susan\", \"my cousin with the red hair\". 対象の家族の呼び名。例えば「スーザンおばさん」、「赤毛のいとこ」。"
 * relationship 1..1
 * relationship only CodeableConcept
-* relationship from v3.FamilyMember (example)
+* relationship from http://terminology.hl7.org/ValueSet/v3-FamilyMember (example)
 * relationship ^definition = "The type of relationship this person has to the patient (father, mother, brother etc.). 患者と家族との関係の種類（父、母、兄弟など）"
 * sex 0..1
 * sex only CodeableConcept

@@ -9,7 +9,7 @@ Usage: #definition
 * description = "JP Core Server Actorの期待される機能について説明する。\nJP Core ServerがサポートするFHIRプロファイル、OperationsおよびSearch Parametersのリストが定義されている。"
 * kind = #requirements
 * instantiates = "http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Server_CapabilityStatement"
-* fhirVersion = #4.0.1
+* fhirVersion = #4.3.0
 * format[0] = #xml
 * format[+] = #json
 * rest.mode = #server
