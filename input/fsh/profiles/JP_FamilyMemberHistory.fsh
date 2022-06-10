@@ -30,7 +30,7 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 * dataAbsentReason 0..1
 * dataAbsentReason only CodeableConcept
 * dataAbsentReason from FamilyHistoryAbsentReason (example)
-* dataAbsentReason ^short = "subject-unknown | withheld | unable-to-obtain | deferred"
+* dataAbsentReason ^short = "subject-unknown | withheld | unable-to-obtain | deferred (対象家族を知らない | 情報の提供を拒否 | 聞き出すことができない | 後日情報を提供できる)"
 * dataAbsentReason ^definition = "Describes why the family member's history is not available. 1)subject-unknown：患者が対象の家族のことを知らない（例：患者は養子のため実親を知らない）, 2)withheld：患者が家族歴の共有を拒否, 3)unable-to-obtain：患者から聞き取れない（例：患者が意識不明）, 4)deferred：患者は今は知らないが、後日共有するつもりである。"
 * dataAbsentReason ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination."
 * patient 1..1
@@ -50,7 +50,7 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 * sex only CodeableConcept
 * sex from AdministrativeGender (extensible)
 * sex ^short = "male | female | other | unknown（男性｜女性｜その他｜不明）"
-* sex ^definition = "The birth sex of the family member.（＊リスクアセスメント目的のためバイオロジカルな性別が良いだろう）"
+* sex ^definition = "The birth sex of the family member.（*Extensibleなのでこのまま列挙して必要に応じて追加するもあり）"
 * sex ^binding.description = "Codes describing the sex assigned at birth as documented on the birth registration.（出生届に記載されている性別）"
 * born[x] 0..1
 * born[x] only Period or date or string
