@@ -29,11 +29,9 @@ jobs:
         if ["${{ github.event.pull_request.head.ref }}" == ""]; then
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
           echo "##[set-output name=branch_group;]$(echo ${GITHUB_REF#refs/heads/})"
-          echo "##[set-output name=pullrequest_url;]$(echo 'none')"
         else
           echo "##[set-output name=branch;]$(echo ${{ github.event.pull_request.head.ref }})"
           echo "##[set-output name=branch_group;]$(echo 'pullrequest')"
-          echo "##[set-output name=pullrequest_url;]$(echo ${{ github.event.pull_request.html_url }})"
         fi
       id: extract_branch
     
@@ -52,6 +50,7 @@ jobs:
         branch: ${{ steps.extract_branch.outputs.branch }}
         date: ${{ steps.extract_date.outputs.date }}
         actor: ${{ github.actor }}
+        pullrequest_url: ${{ github.event.pull_request.html_url }}
         _output-file: input/landing_page/_index.yml
 
     - name: Setup npm
