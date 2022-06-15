@@ -29,7 +29,7 @@ jobs:
         if ["${{ github.event.pull_request.head.ref }}" == ""]; then
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
           echo "##[set-output name=branch_group;]$(echo ${GITHUB_REF#refs/heads/})"
-          echo "##[set-output name=pullrequest_url;]$(echo '')"
+          echo "##[set-output name=pullrequest_url;]$(echo 'none')"
         else
           echo "##[set-output name=branch;]$(echo ${{ github.event.pull_request.head.ref }})"
           echo "##[set-output name=branch_group;]$(echo 'pullrequest')"
