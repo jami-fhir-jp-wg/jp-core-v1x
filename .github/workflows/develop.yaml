@@ -3,15 +3,17 @@ name: JPCore FHIR Task
 on:
   push:
     branches: 
-      - main
+      - 'main'
       - 'develop'
+      - 'release/**'
+      - 'hotfix/**'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
       - '.github/workflows/**'
   pull_request:
     branches:
-      - main
+      - 'main'
       - 'develop'
 jobs:
   turn:
@@ -24,6 +26,7 @@ jobs:
 
     - name: Extract branch name
       run: |
+        echo "##[set-output name=pullrequest_url;]$(echo ${{ github.event.pull_request.html_url }})"
         if ["${{ github.event.pull_request.head.ref }}" == ""]; then
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
           echo "##[set-output name=branch_group;]$(echo ${GITHUB_REF#refs/heads/})"

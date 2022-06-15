@@ -6,3 +6,4 @@ group: %%group%%
 branch: %%branch%%
 actor: %%actor%%
 type: draft
+pullrequest_url: %%pullrequest_url%%
