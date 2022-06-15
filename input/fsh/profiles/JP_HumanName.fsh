@@ -1,5 +1,5 @@
 // ==============================
-//   Profile 定義
+//   Profile 定義 test
 // ==============================
 Profile: JP_HumanName
 Parent: HumanName
