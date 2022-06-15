@@ -26,13 +26,14 @@ jobs:
 
     - name: Extract branch name
       run: |
-        echo "##[set-output name=pullrequest_url;]$(echo ${{ github.event.pull_request.html_url }})"
         if ["${{ github.event.pull_request.head.ref }}" == ""]; then
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
           echo "##[set-output name=branch_group;]$(echo ${GITHUB_REF#refs/heads/})"
+          echo "##[set-output name=pullrequest_url;]$(echo '')"
         else
           echo "##[set-output name=branch;]$(echo ${{ github.event.pull_request.head.ref }})"
           echo "##[set-output name=branch_group;]$(echo 'pullrequest')"
+          echo "##[set-output name=pullrequest_url;]$(echo ${{ github.event.pull_request.html_url }})"
         fi
       id: extract_branch
     
