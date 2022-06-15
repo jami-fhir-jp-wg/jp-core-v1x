@@ -28,11 +28,11 @@ jobs:
       run: |
         if ["${{ github.event.pull_request.head.ref }}" == ""]; then
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-          
-          if [startWith(${GITHUB_REF#refs/heads/}, 'release/')]; then
+
+          if [startWith("${{GITHUB_REF#refs/heads/}}", 'release/')]; then
             echo "##[set-output name=branch_group;]$(echo 'release')"
           fi
-          if [startWith(${GITHUB_REF#refs/heads/}, 'hotfix/')]; then
+          if [startWith("${{GITHUB_REF#refs/heads/}}", 'hotfix/')]; then
             echo "##[set-output name=branch_group;]$(echo 'hotfix')"
           fi
           echo "##[set-output name=branch_group;]$(echo ${GITHUB_REF#refs/heads/})"
