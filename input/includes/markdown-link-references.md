@@ -114,6 +114,7 @@
 [JP_AllergyIntoleranceCodesFood_VS]: ValueSet-jp-allergyintolerance-codes-food-vs.html
 [JP_AllergyIntoleranceCodesMedicine_VS]: ValueSet-jp-allergyintolerance-codes-medicine-vs.html
 [JP_AllergyIntoleranceCodesNonFoodNonMedicine_VS]: ValueSet-jp-allergyintolerance-codes-non-food-non-medicine-vs.html
+[JP_PhysicalExamCodes_VS]: ValueSet-jp-physicalexamcodes-vs.html
 [JP_ProcedureBodySite_VS]: ValueSet-jp-procedure-body-site-vs.html
 [JP_ProcedureCodesMedical_VS]: ValueSet-jp-procedure-code-medical-vs.html
 [JP_ProcedureCodesSTEM7_VS]: ValueSet-jp-procedure-code-stem7-vs.html
