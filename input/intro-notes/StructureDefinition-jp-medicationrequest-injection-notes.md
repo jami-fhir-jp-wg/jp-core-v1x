@@ -46,6 +46,12 @@ JP Core MedicationRequestプロファイルで追加された以下のExtension�
 |調剤指示|薬剤単位の調剤指示を表現するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense|string or CodeableConcept|
 |頓用回数|頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount|integer|
 
+また、HL7 Internationalで定義されている以下のExtensionを利用する。
+
+|拡張|説明|URL|値の型|
+|------------|-------------|----------|-----|
+|BodyStructure|薬剤の投与部位を表現するのに使用する|http://hl7.org/fhir/StructureDefinition/bodySite|Reference (BodyStructure)|
+
 ### 用語定義
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS注射データ交換規約やSS-MIX2で使われている用語集を採用した。
 
