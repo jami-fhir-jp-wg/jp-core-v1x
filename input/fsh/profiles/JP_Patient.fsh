@@ -50,11 +50,16 @@ Description: "このプロファイルはPatientリソースに対して、患�
 * name only JP_HumanName
 * name ^slicing.discriminator.type = #value
 * name ^slicing.discriminator.path = "extension.value[x]"
-* name ^slicing.rules = #closed
+* name ^slicing.rules = #open
 * name ^definition = "A name associated with the individual.\r\n\r\n個人に関連付けられた名前。"
 * name ^comment = "Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts might or might not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely.\r\n\r\n患者は、用途や適用期間が異なる複数の名前を持つ場合があります。動物の場合、名前は人間によって割り当てられて使用され、同じパターンを持つという意味で「HumanName」です。\r\n\r\n--------SWG3 コメント-----------\r\n\r\nFHIRデータ型仕様に従って、以下の案とした。\r\n\r\n・姓名分割できる場合は、名前パート HumanName.familyとHumanName.givenに指定する。\r\n\r\n・ミドルネームがある場合は、given に指定する（givenは繰り返し可能）\r\n\r\n・姓名に分割できない場合は、HumanName.text にフルネームを指定する。\r\n\r\n・各名前パートとtext は、両方存在してもよい。\r\n\r\n　※診療文書構造化記述規約等では、姓に指定するとなっていた。\r\n\r\n・漢字氏名、カナ氏名の区別は、iso21090-EN-representation を使用する。\r\n\r\n・漢字、カナの指定がない場合やローマ字名の場合などはデフォルトスライスが適用される。"
 * name ^requirements = "Need to be able to track the patient by multiple names. Examples are your official name and a partner name.\r\n\r\n複数の名前で患者を追跡できる必要があります。例としては、正式名とパートナー名があります。"
 * name ^mustSupport = false
+* name  contains
+        kanji   0..1
+    and kana    0..1
+* name[kanji].extension.valueCode = #IDE
+* name[kana].extension.valueCode = #SYL
 * telecom ^short = "A contact detail for the individual　個人に連絡するための連絡先の詳細"
 * telecom ^definition = "A contact detail (e.g. a telephone number or an email address) by which the individual may be contacted.\r\n\r\n個人に連絡するための連絡先の詳細（電話番号や電子メールアドレスなど）。"
 * telecom ^comment = "A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address might not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).\r\n\r\n患者は、さまざまな用途または適用期間違いで連絡先を複数の方法を持っている場合があります。緊急時連絡先として、また身元確認を支援するためのオプションが必要になる場合があります。患者当人に直接連絡できない場合がありますが、患者を代理できる別の関係者（自宅の電話、またはペットの所有者の電話）を設定する場合もあります。"
