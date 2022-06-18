@@ -18,18 +18,12 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * active ^comment = "If the practitioner is not in use by one organization, then it should mark the period on the PractitonerRole with an end date (even if they are active) as they may be active in another role.\r\n\r\n医療従事者がある組織で使用されていない場合、別のロールでアクティブになっている可能性があるので、(例えそれらがアクティブであっても)PractitonerRoleに有効期間を終了日でマークしておく必要がある。"
 * active ^requirements = "Need to be able to mark a practitioner record as not to be used because it was created in error.\r\n\r\n医療従事者のレコードを誤って作成してしまったとき、使用しないようにマークできるようにする必要がある。"
 * active ^meaningWhenMissing = "This resource is generally assumed to be active if no value is provided for the active element\r\n\r\nこの要素に値が提供されていない場合、このリソースは通常アクティブである（1が入力されている）と解釈されます。"
-* name ^slicing.discriminator.type = #value
-* name ^slicing.discriminator.path = "extension.value[x]"
-* name ^slicing.rules = #open
+
+* name only JP_HumanName
 * name ^definition = "The name(s) associated with the practitioner.\r\n\r\n医療従事者の氏名（複数の場合もある）"
 * name ^comment = "The selection of the use property should ensure that there is a single usual name specified, and others use the nickname (alias), old, or other values as appropriate.  \r\rIn general, select the value to be used in the ResourceReference.display based on this:\r\r1. There is more than 1 name\r2. Use = usual\r3. Period is current to the date of the usage\r4. Use = official\r5. Other order as decided by internal business rules.\r\n\r\nuseプロパティの選択は、指定された単一の通常の名前があることを保証しなければならず、他の値はニックネーム（別名）、旧名、または他の値を適切に使用します。\r\n\r\n一般的には、以下を基準にResourceReference.displayで使用する値を選択する。\r\n\r\n 1. There is more than 1 name（最低限1つ以上の名前があること）\r\n 2. Use = usual（useプロパティが「usual」であること）\r\n 3. Period is current to the date of the usage（有効期限は利用開始日から現在まであること）\r\n 4. Use = official（useプロパティが「official」であること\r\n 5. Other order as decided by internal business rules.（その他、内部ルールで決められた順番）\r\n\r\n医療従事者のNameの漢字カナ表記については、JP_Patient.nameで採用した方法を踏襲する。\r\nそのほか、要素の説明は、JP_Patient.nameを参照。"
 * name ^requirements = "The name(s) that a Practitioner is known by. Where there are multiple, the name that the practitioner is usually known as should be used in the display.\r\n\r\n\r\n医療従事者が知られている名前。複数ある場合は、従事者が通常知られている名前を表示に使用します。"
-* name contains
-    IDE 0..* and
-    SYL 0..* and
-    @default 0..*
-* name[IDE] only JP_HumanName
-* name[SYL] only JP_HumanName
+
 * telecom ^short = "A contact detail for the practitioner (that apply to all roles)　電話番号やメールアドレスなど、従事者への詳細な連絡先。"
 * telecom ^definition = "A contact detail for the practitioner, e.g. a telephone number or an email address.\r\n\r\n電話番号やメールアドレスなど、従事者への詳細な連絡先。"
 * telecom ^comment = "Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and to help with identification.  These typically will have home numbers, or mobile numbers that are not role specific.\r\n\r\n人は、異なる用途や適用される期間に応じて複数の連絡方法を持っている可能性がある。本人に緊急に連絡を取るためのオプションが必要な場合があり、また本人の身元確認に役立つ場合がある。これらは通常、自宅の電話番号、または役割が特定されていない携帯電話番号を持つことになる。\r\n\r\n要素の説明は、JP_Patient.telecomを参照。"

@@ -18,6 +18,19 @@ Description: "このプロファイルはHumanName DataTypeに対して、患者
 * extension contains $iso21090-EN-representation named nameRepresentationUse 1..*
 * extension[nameRepresentationUse] ^definition = "Name Representation.\r\n\r\n名前の表現方法"
 * extension[nameRepresentationUse] ^comment = "The transcription of the name - how it is represented (for e.g. Japanese names).\r\n\r\n名前の文字起こし-表現方法（日本の名前など）。"
+* extension[nameRepresentationUse] ^slicing.discriminator.type = #value
+* extension[nameRepresentationUse] ^slicing.discriminator.path = "value[x]"
+* extension[nameRepresentationUse] ^slicing.rules = #open
+* extension[nameRepresentationUse]   contains
+        kanji   0..1
+    and kana    0..1
+    and alphabet 0..1
+* extension[nameRepresentationUse][kanji].valueCode = #IDE (exactly)
+* extension[nameRepresentationUse][kanji] ^definition = "漢字氏名"
+* extension[nameRepresentationUse][kana].valueCode = #SYL (exactly)
+* extension[nameRepresentationUse][kana] ^definition = "カナ氏名"
+* extension[nameRepresentationUse][alphabet].valueCode = #ABC (exactly)
+* extension[nameRepresentationUse][alphabet] ^definition = "英字氏名"
 * use ^definition = "Identifies the purpose for this name.\r\n\r\nこの名前の使用目的"
 * use ^comment = "Applications can assume that a name is current unless it explicitly says that it is temporary or old.\r\n\r\nアプリケーションは、名前が明示的に一時的な名前（temp ）あるいは以前の名前だ（old ）と設定されていない場合には、現時点での名前だとみなしてよい。"
 * use ^requirements = "Allows the appropriate name for a particular context of use to be selected from among a set of names.\r\n\r\n一連の名前の中から、特定の使用状況に適した名前を選択できるようになる。"
