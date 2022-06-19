@@ -8,7 +8,7 @@ Title: "JP Core Patient Profile"
 Description: "このプロファイルはPatientリソースに対して、患者のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient"
 * ^status = #draft
-* ^date = "2022-03-16"
+* ^date = "2022-06-19"
 * . ^short = "Information about an individual or animal receiving health care services　医療サービスを受けている個人または動物に関する情報"
 * . ^definition = "Demographics and other administrative information about an individual or animal receiving care or other health-related services.\r\n\r\nケアまたはその他の健康関連サービスを受けている個人または動物に関する人口統計およびその他の管理情報。"
 * extension ^slicing.discriminator.type = #value
@@ -27,10 +27,10 @@ Description: "このプロファイルはPatientリソースに対して、患�
 * extension[birthPlace] ^definition = "The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.\r\n患者の登録された出生地。システムは、birthPlaceアドレスを個別の要素に格納しない場合、address.textを使用してよい。"
 * extension[birthPlace] ^comment = "患者の生誕地をAddress型で表現する"
 * extension[birthPlace] ^min = 0
-* extension[Race] ^short = "患者の人種。"
-* extension[Race] ^definition = "Optional Extension Element - found in all resources.\r\nオプションの拡張要素-すべてのリソースで使用できる。"
-* extension[Race] ^comment = "患者の人種をValueSet(Race)より選択する。\r\n\r\n2034-7 中国人\r\n2039-6 日本人\r\n2040-4 韓国人\r\n2108-9 ヨーロッパ人\r\n2110-5 英国人\r\n2111-3 フランス人\r\n2112-1 ドイツ人\r\n\r\nなど"
-* extension[Race] ^min = 0
+* extension[race] ^short = "患者の人種。"
+* extension[race] ^definition = "Optional Extension Element - found in all resources.\r\nオプションの拡張要素-すべてのリソースで使用できる。"
+* extension[race] ^comment = "患者の人種をValueSet(Race)より選択する。\r\n\r\n2034-7 中国人\r\n2039-6 日本人\r\n2040-4 韓国人\r\n2108-9 ヨーロッパ人\r\n2110-5 英国人\r\n2111-3 フランス人\r\n2112-1 ドイツ人\r\n\r\nなど"
+* extension[race] ^min = 0
 * identifier 1..
 * identifier ^definition = "An identifier for this patient.\r\n\r\nこの患者の識別子。"
 * identifier ^comment = "【JP_CORE】\r\nIDの名前空間を表す Patient.identifier.system と ID値そのものを表す Patient.identifier.value の組み合わせとして表現する。\r\nPatient.identifier.system には、\r\n　urn:oid:1.2.392.100495.20.3.51.医療機関識別OID番号\r\nを使用する。\r\n医療機関識別OID番号は、患者IDの発行者である医療機関の識別するもので、保険医療機関の場合、都道府県番号２桁から始まる10桁の医療機関番号（都道府県2桁、保険点数表コード1桁、保険医療機関番号７桁を連結したもの）または、特定健診・特定保健指導機関の医療機関番号10桁の先頭に１をつけた11桁とする。\r\n保険点数表コード1桁は医科は１，歯科は３である。\r\n医療機関コードを持たない場合、「[9]＋当該施設の電話番号下 9 桁」を医療機関コードとして、その先頭に１をつけた11桁とする。\r\n\r\n例：医療機関コード「1312345670」の場合「urn:oid:1.2.392.100495.20.3.51.11312345670」\r\nなお、urn:oid:1.2.392.100495.20.3.51　の部分は、厚生労働省 電子処方箋CDA 記述仕様第1版（平成30年7月）付表2 OID一覧において患者番号として割り当てられたOIDのURL型である。\r\n\r\n地域医療連携ネットワークの地域患者IDを指定する場合も同様に、地域患者IDを識別する名前空間（IHE ITI PIX等で使用されるOID等）を system に使用することができる。"
