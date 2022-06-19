@@ -18,7 +18,7 @@ Description: "このプロファイルはPatientリソースに対して、患�
 * extension contains
     $patient-religion named religion 0..* and
     $patient-birthPlace named birthPlace 0..1 and
-    JP_Patient_Race named Race 0..*
+    JP_Patient_Race named race 0..*
 * extension[religion] ^short = "患者の宗教"
 * extension[religion] ^definition = "The patient's professed religious affiliations.\r\n患者の公言された宗教的所属。"
 * extension[religion] ^comment = "患者の宗教をValueSet(v3.ReligiousAffiliation)より選択する。輸血や食事で考慮が必要な場合がある。\r\n\r\n1013 キリスト教\r\n1020 ヒンドゥー教\r\n1023 イスラム教\r\n\r\nなど"
