@@ -21,12 +21,10 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension ^min = 0
 * extension[RequestDepartment] ^short = "依頼科"
 * extension[RequestDepartment] ^definition = "依頼科を格納するための拡張"
 * extension[Requester] ^short = "依頼医"
 * extension[Requester] ^definition = "依頼医を格納するための拡張。\r\n依頼医を記述した Practitioner  リソースへの参照。"
-* extension[Requester] ^min = 0
 * extension[RequestAuthoredOn] ^short = "依頼日時"
 * extension[RequestAuthoredOn] ^definition = "依頼日時を格納するための拡張"
 * extension[Location] ^short = "実施場所"
