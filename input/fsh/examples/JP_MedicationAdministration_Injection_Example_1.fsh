@@ -15,7 +15,7 @@ Usage: #example
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location"
 * extension[=].valueReference = Reference(Location/jp-location-example-ward) "09A病棟 021病室 4ベッド"
 * identifier[0].system = "http://www.example.com/fhir/order-number"
-* identifier[=].value = "123456789012345"
+* identifier[=].value = "123456789012345.1"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[=].value = "1"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.82"

@@ -11,7 +11,7 @@ Usage: #example
 * identifier[=].value = "1"
 * intent = #order
 * status = #active
-* medicationCodeableConcept.coding = urn:oid:1.2.392.200119.4.403.1#103835401 "ムコダイン錠２５０ｍｇ"
+* medicationCodeableConcept = urn:oid:1.2.392.200119.4.403.1#103835401 "ムコダイン錠２５０ｍｇ"
 * subject = Reference(Patient/jp-patient-example-1)
 * dosageInstruction.extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse"
 * dosageInstruction.extension[=].valuePeriod.start = "2020-04-01"

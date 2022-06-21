@@ -3,13 +3,10 @@ InstanceOf: JP_MedicationRequest_Injection
 Title: "JP MedicationRequest Injection 点滴注射"
 Description: "点滴注射"
 Usage: #example
-* meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection"
-* contained[0] = jp-medicationrequest-injection-medication-example-2
-* contained[+] = jp-medicationrequest-injection-bodystructure-example-2
 * identifier[0].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
 * identifier[=].value = "1234567890.2.1"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[=].value = "1"
+* identifier[=].value = "2"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.82"
 * identifier[=].value = "2"
 * status = #active
@@ -17,7 +14,7 @@ Usage: #example
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
 * category[+] = http://jpfhir.jp/Common/CodeSystem/merit9-category#IHP "入院処方"
 * category[+] = http://jpfhir.jp/Common/CodeSystem/JHSI0001#FTP "定時処方"
-* medicationReference = Reference(Medication/jp-medicationrequest-injection-medication-example-2)
+* medicationReference = Reference(Medication/jp-medicationrequest-injection-medication-example-1)
 * subject = Reference(Patient/jp-patient-example-1)
 * authoredOn = "2016-07-01"
 * requester = Reference(Practitioner/jp-practionner-example-female-1)

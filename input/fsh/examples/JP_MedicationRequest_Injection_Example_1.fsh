@@ -6,7 +6,6 @@ Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-1
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-1
 * contained[+] = jp-medicationrequest-injection-device-example-1
-* contained[+] = jp-coverage-example-1
 * contained[+] = jp-practionner-example-female-1
 * contained[+] = jp-patient-example-1
 * identifier[0].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"

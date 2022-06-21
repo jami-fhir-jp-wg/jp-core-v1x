@@ -1,5 +1,5 @@
 Instance: jp-medicationadministration-injection-example-2
-InstanceOf: MedicationAdministration
+InstanceOf: JP_MedicationAdministration_Injection
 Title: "JP MedicationAdministration Injection 点滴注射（実施）"
 Description: "点滴注射（実施）"
 Usage: #example
@@ -14,11 +14,11 @@ Usage: #example
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location"
 * extension[=].valueReference = Reference(Location/jp-location-example-ward) "09A病棟 021病室 4ベッド"
 * identifier[0].system = "http://www.example.com/fhir/order-number"
-* identifier[=].value = "123456789012345"
+* identifier[=].value = "123456789012345.2"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[=].value = "1"
+* identifier[=].value = "2"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[=].value = "1"
+* identifier[=].value = "2"
 * status = #completed
 * category = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
 * medicationReference = Reference(Medication/jp-medicationadministration-injection-medication-example-2)
@@ -35,5 +35,5 @@ Usage: #example
 * dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
 * dosage.method = http://terminology.hl7.org/CodeSystem/v2-0165#IVP "IV Push"
 * dosage.dose = 510 'mL' "mL"
-* dosage.rateRatio.numerator = 102 'mL' "mL"
-* dosage.rateRatio.denominator = 1 'h' "h"
+// * dosage.rateRatio.numerator = 102 'mL' "mL" 
+// * dosage.rateRatio.denominator = 1 'h' "h"
