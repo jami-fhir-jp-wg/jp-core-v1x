@@ -80,3 +80,36 @@ Description: "このProfileはImmunizationリソースに対して日本での�
 * reaction ^definition = "予防接種に関連する時期に発生した副反応を示す分類されたデータ。"
 * protocolApplied ^short = "提供者が実施したプロトコール"
 * protocolApplied ^definition = "ワクチンを接種した提供者が実施したプロトコール（推奨される手順の集合）。"
+
+Extension: JP_Immunization_DueDateOfNextDose
+Id: jp-immunization-duedateofnextdose
+Title: "DueDateOfNectDose"
+Description: "次回摂取予定日"
+* ^url = "https://jpfhir.jp/fhir/StructureDefinition/JP_Immunization_DueDateOfNextDose"
+* ^status = #draft
+* ^context.type = #element
+* ^context.expression = "Immunization"
+* url = "https://jpfhir.jp/fhir/StructureDefinition/JP_Immunization_DueDateOfNextDose" (exactly)
+* value[x] only date
+
+Extension: JP_Immunization_CertificatedDate
+Id: jp-immunization-certificateddate
+Title: "CertificatedDate"
+Description: "検定年月日"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization_CertificatedDate"
+* ^status = #draft
+* ^context.type = #element
+* ^context.expression = "Immunization"
+* url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization_CertificatedDate" (exactly)
+* value[x] only date
+
+Extension: JP_Immunization_ManufacturedDate
+Id: jp-immunization-manufactureddate
+Title: "ManufacturedDate"
+Description: "製造年月日"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization_ManufacturedDate"
+* ^status = #draft
+* ^context.type = #element
+* ^context.expression = "Immunization"
+* url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization_ManufacturedDate" (exactly)
+* value[x] only date
