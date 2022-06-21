@@ -1,6 +1,7 @@
 Instance: jp-practionner-example-female-1
 InstanceOf: Practitioner
-Title: "JP Practionner 女性医師"
+Title: "JP Practionner 医師女性"
+Description: "医師女性"
 Usage: #example
 * name[0].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
 * name[=].extension.valueCode = #IDE
@@ -16,7 +17,8 @@ Usage: #example
 
 Instance: jp-practionner-example-female-2
 InstanceOf: Practitioner
-Title: "JP Practionner 女性看護師"
+Title: "JP Practionner 看護師女性"
+Description: "看護師女性"
 Usage: #example
 * name[0].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
 * name[=].extension.valueCode = #IDE
@@ -33,7 +35,8 @@ Usage: #example
 
 Instance: jp-practionner-example-male-1
 InstanceOf: Practitioner
-Title: "JP Practionner 男性医師"
+Title: "JP Practionner 医師男性"
+Description: "医師男性"
 Usage: #example
 * name[0].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
 * name[=].extension.valueCode = #IDE
@@ -49,7 +52,8 @@ Usage: #example
 
 Instance: jp-practionner-example-male-2
 InstanceOf: Practitioner
-Title: "JP Practionner 男性看護師"
+Title: "JP Practionner 看護師男性"
+Description: "看護師男性"
 Usage: #example
 * name[0].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
 * name[=].extension.valueCode = #IDE

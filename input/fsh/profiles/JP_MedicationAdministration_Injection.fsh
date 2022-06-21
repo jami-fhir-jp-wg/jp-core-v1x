@@ -2,7 +2,7 @@
 //   Profile 定義
 // ==============================
 Profile: JP_MedicationAdministration_Injection
-Parent: MedicationAdministration
+Parent: JP_MedicationAdministration
 Id: jp-medicationadministration-injection
 Title: "JP Core MedicationAdministration Injection Profile"
 Description: "このプロファイルはMedicationAdministrationリソースに対して、注射薬剤処方投与実施情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
@@ -52,6 +52,5 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * dosage.rate[x].extension ^slicing.discriminator.type = #value
 * dosage.rate[x].extension ^slicing.discriminator.path = "url"
 * dosage.rate[x].extension ^slicing.rules = #open
-* dosage.rate[x].extension ^min = 0
 * dosage.rate[x].extension[RateComment] only JP_MedicationAdministration_DosageRate_RateComment
 * dosage.rate[x].extension[RateComment] ^sliceName = "RateComment"

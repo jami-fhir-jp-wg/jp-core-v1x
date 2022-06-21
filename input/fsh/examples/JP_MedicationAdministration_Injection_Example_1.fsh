@@ -23,7 +23,6 @@ Usage: #example
 * status = #completed
 * category = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
 * medicationReference = Reference(Medication/jp-medicationadministration-injection-medication-example-1)
-// * medicationReference.type = "JP_Medication"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectivePeriod.start = "2016-07-01T10:05:21+09:00"
 * effectivePeriod.end = "2016-07-01T10:05:21+09:00"

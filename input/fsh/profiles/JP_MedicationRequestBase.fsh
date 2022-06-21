@@ -87,7 +87,18 @@ Description: "このプロファイルはユーザは直接適用するもので
 * doNotPerform ^isModifierReason = "このエレメントは実施すべきオーダーを否定するものであるため、このエレメントはmodifierとされている。（たとえば、この薬剤オーダーが不適切なものであったり初歩宇部着物ではない場合)"
 * reported[x] ^short = "初期記録にはない報告"
 * reported[x] ^definition = "このレコードは元々の一次記録から報告されたものか、二次的に「報告された」資料から取り込まれたものかを示す。報告の情報源についても示される。"
-* medication[x] only CodeableConcept
+* medicationCodeableConcept only CodeableConcept
+* medicationCodeableConcept.coding 1..
+* medicationCodeableConcept.coding ^short = "医薬品を表すコード"
+* medicationCodeableConcept.coding ^definition = "医薬品を表すコード。JP Coreでは最低1個のコードを記録しなければならない。\r\n利用できるコードは下記の通りである。\r\n医薬品コード（医薬品マスター）\r\n薬価基準収載医薬品コード\r\nYJコード\r\nHOT コード（9 桁）\r\n一般名処方マスター"
+* medicationCodeableConcept.coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。\r\n【JP-CORE】Medication要素の説明を参照のこと。"
+* medicationCodeableConcept.coding.userSelected ^short = "このコードが直接ユーザーが指定したものであるかどうか"
+* medicationCodeableConcept.coding.userSelected ^definition = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
+* medicationCodeableConcept.coding.userSelected ^comment = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
+* medicationCodeableConcept.text ^short = "この概念のプレーンテキスト表現"
+* medicationCodeableConcept.text ^definition = "入力したユーザーが見た/選択した/発したとおりの概念および・またはユーザーが意図した概念を自然言語で表現したもの。"
+* medicationCodeableConcept.text ^comment = "textエレメントはcodingのdisplayNameエレメントと一致することがよくある。"
+* medicationReference only Reference(JP_Medication)
 * medication[x] ^short = "投与される薬剤"
 * medication[x] ^definition = "医薬品コードと医薬品名称。coding要素を繰り返すことでHOT9 やYJコードなど複数のコード体系で医薬品コード並記することが可能。\r\n薬される薬剤についてのID。JP Coreでは内服処方箋で使用されるMedicationRequestではcodeableConceptのみを使用する。"
 * medication[x] ^comment = "日本での運用を検討した場合に、煩雑ではあるがMedication resourceを参照するのではなくcodeableConceptとして1薬剤ごとにMedicationRequestインスタンスを生成する方針とした。\r\n\r\nコードだけが指定されていても、製品を特定できる必要がある。もし、多くの情報が必要であれば、Medication Resourceを利用することが推奨される。たとえば、もし、薬剤の剤型や、ロット番号を知る必要があったり、薬剤の成分や臨時で調整されたものであったりする場合には、Medication Resourceを参照しなくてはならない。\r\n 【JP-CORE】 ひとつのtext要素と、複数のcoding 要素を記述できる。処方オーダ時に選択または入力し、実際に処方箋に印字される文字列を必ずtext要素に格納した上で、それをコード化した情報を1個以上のcoding 要素に記述する。\r\n厚生労働省標準であるHOT9コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。\r\nなお、上記のいずれの標準的コードも付番されていない医薬品や医療材料の場合には、薬機法の下で使用されているGS1標準の識別コードであるGTIN(Global Trade Item Number)の調剤包装単位（最少包装単位、個別包装単位）14桁を使用する。\r\nひとつの処方薬、医療材料を複数のコード体系のコードで記述してもよく、その場合にcoding 要素を繰り返して記述する。 ただし、ひとつの処方薬を複数のコードで繰り返し記述する場合には、それらのコードが指し示す処方薬、医療材料は当然同一でなければならない。 また、処方を発行した医療機関内でのデータ利用のために、医療機関固有コード体系によるコード（ハウスコード、ローカルコード）の記述を含めてもよいが、その場合でも上述したいずれかの標準コードを同時に記述することが必要である。"
@@ -95,16 +106,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * medication[x] ^binding.description = "処方する製剤を表すコード。"
 * medication[x].id ^short = "エレメント間参照のためのユニークID"
 * medication[x].id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
-* medication[x].coding 1..
-* medication[x].coding ^short = "医薬品を表すコード"
-* medication[x].coding ^definition = "医薬品を表すコード。JP Coreでは最低1個のコードを記録しなければならない。\r\n利用できるコードは下記の通りである。\r\n医薬品コード（医薬品マスター）\r\n薬価基準収載医薬品コード\r\nYJコード\r\nHOT コード（9 桁）\r\n一般名処方マスター"
-* medication[x].coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。\r\n【JP-CORE】Medication要素の説明を参照のこと。"
-* medication[x].coding.userSelected ^short = "このコードが直接ユーザーが指定したものであるかどうか"
-* medication[x].coding.userSelected ^definition = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
-* medication[x].coding.userSelected ^comment = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
-* medication[x].text ^short = "この概念のプレーンテキスト表現"
-* medication[x].text ^definition = "入力したユーザーが見た/選択した/発したとおりの概念および・またはユーザーが意図した概念を自然言語で表現したもの。"
-* medication[x].text ^comment = "textエレメントはcodingのdisplayNameエレメントと一致することがよくある。"
 * subject only Reference(JP_Patient)
 * subject ^short = "処方箋が発行された対象(個人あるいはグループ)"
 * subject ^definition = "JP Coreでは患者を表すPatientリソースへの参照。\r\n一般には薬剤が投与される対象となる人（あるいはグループ)を表現するResourceに対するリンク。"
@@ -174,7 +175,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.extension ^slicing.discriminator.type = #value
 * dosageInstruction.extension ^slicing.discriminator.path = "url"
 * dosageInstruction.extension ^slicing.rules = #open
-* dosageInstruction.extension ^min = 0
 * dosageInstruction.extension[PeriodOfUse] only JP_MedicationRequest_DosageInstruction_PeriodOfUse
 * dosageInstruction.extension[PeriodOfUse] ^sliceName = "PeriodOfUse"
 * dosageInstruction.extension[PeriodOfUse] ^min = 0
@@ -182,17 +182,14 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.extension[UsageDuration] ^sliceName = "UsageDuration"
 * dosageInstruction.extension[UsageDuration] ^short = "実投与日数"
 * dosageInstruction.extension[UsageDuration] ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
-* dosageInstruction.extension[UsageDuration] ^min = 0
 * dosageInstruction.extension[Device] only JP_MedicationRequest_DosageInstruction_Device
 * dosageInstruction.extension[Device] ^sliceName = "Device"
 * dosageInstruction.extension[Device] ^short = "投与機器の情報"
 * dosageInstruction.extension[Device] ^definition = "投与機器の情報を記述する拡張。"
-* dosageInstruction.extension[Device] ^min = 0
 * dosageInstruction.extension[Line] only JP_MedicationRequest_DosageInstruction_Line
 * dosageInstruction.extension[Line] ^sliceName = "Line"
 * dosageInstruction.extension[Line] ^short = "投与ラインの情報"
 * dosageInstruction.extension[Line] ^definition = "投与ラインの情報を記述する拡張。"
-* dosageInstruction.extension[Line] ^min = 0
 * dosageInstruction.sequence ^short = "服用指示の順番"
 * dosageInstruction.sequence ^definition = "どの服用指示を適応するか判断するかについての順序を示したもの"
 * dosageInstruction.sequence ^comment = "32 bitの数値。これ以上の値であれば10進数を使うこと。"
@@ -256,26 +253,26 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.timing.repeat ^requirements = "スケジュールされたタイミングの多くは規則的な繰り返しで決定されている。"
 * dosageInstruction.timing.repeat.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.timing.repeat.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
-* dosageInstruction.timing.repeat.bounds[x] only Duration
+* dosageInstruction.timing.repeat.bounds[x] only Duration or Period or Range
+* dosageInstruction.timing.repeat.boundsDuration.id ..0
+* dosageInstruction.timing.repeat.boundsDuration.value 1..
+* dosageInstruction.timing.repeat.boundsDuration.value ^short = "投薬日数"
+* dosageInstruction.timing.repeat.boundsDuration.value ^definition = "投薬日数"
+* dosageInstruction.timing.repeat.boundsDuration.comparator ..0
+* dosageInstruction.timing.repeat.boundsDuration.unit 1..
+* dosageInstruction.timing.repeat.boundsDuration.code = #d (exactly)
+* dosageInstruction.timing.repeat.boundsDuration.system = "http://unitsofmeasure.org" (exactly)
+* dosageInstruction.timing.repeat.boundsDuration.unit = "日" (exactly)
+* dosageInstruction.timing.repeat.boundsDuration.unit ^short = "投薬日数の単位"
+* dosageInstruction.timing.repeat.boundsDuration.unit ^definition = "投薬日数の単位文字列。日で固定される"
+* dosageInstruction.timing.repeat.boundsDuration.system 1..
+* dosageInstruction.timing.repeat.boundsDuration.system ^short = "UCUM"
+* dosageInstruction.timing.repeat.boundsDuration.system ^definition = "単位コード UCUMを識別するURI。固定値。"
+* dosageInstruction.timing.repeat.boundsDuration.code 1..
+* dosageInstruction.timing.repeat.boundsDuration.code ^short = "投与日数の単位"
+* dosageInstruction.timing.repeat.boundsDuration.code ^definition = "単位コードUCUMにおける投与日数の単位。dで固定される。"
 * dosageInstruction.timing.repeat.bounds[x] ^short = "服⽤開始日から服⽤終了日までの全日数"
 * dosageInstruction.timing.repeat.bounds[x] ^definition = "服⽤開始日から服⽤終了日までの全日数。実投与日数ではないことに注意する。"
-* dosageInstruction.timing.repeat.bounds[x].id ..0
-* dosageInstruction.timing.repeat.bounds[x].value 1..
-* dosageInstruction.timing.repeat.bounds[x].value ^short = "投薬日数"
-* dosageInstruction.timing.repeat.bounds[x].value ^definition = "投薬日数"
-* dosageInstruction.timing.repeat.bounds[x].comparator ..0
-* dosageInstruction.timing.repeat.bounds[x].unit 1..
-* dosageInstruction.timing.repeat.bounds[x].code = #d (exactly)
-* dosageInstruction.timing.repeat.bounds[x].system = "http://unitsofmeasure.org" (exactly)
-* dosageInstruction.timing.repeat.bounds[x].unit = "日" (exactly)
-* dosageInstruction.timing.repeat.bounds[x].unit ^short = "投薬日数の単位"
-* dosageInstruction.timing.repeat.bounds[x].unit ^definition = "投薬日数の単位文字列。日で固定される"
-* dosageInstruction.timing.repeat.bounds[x].system 1..
-* dosageInstruction.timing.repeat.bounds[x].system ^short = "UCUM"
-* dosageInstruction.timing.repeat.bounds[x].system ^definition = "単位コード UCUMを識別するURI。固定値。"
-* dosageInstruction.timing.repeat.bounds[x].code 1..
-* dosageInstruction.timing.repeat.bounds[x].code ^short = "投与日数の単位"
-* dosageInstruction.timing.repeat.bounds[x].code ^definition = "単位コードUCUMにおける投与日数の単位。dで固定される。"
 * dosageInstruction.timing.repeat.count ^short = "繰り返し服用回数"
 * dosageInstruction.timing.repeat.count ^definition = "Timing仕様の全てにおいて、特定の期間に繰り返されるように指定された総回数。もし、countMaxが設定されていれば、このエレメントは許容される最低限度の回数を示す。"
 * dosageInstruction.timing.repeat.count ^comment = "回数に上限、下限の範囲がある場合は、このcountで示される回数が起きるまでは、エレメントは範囲の中にあると解釈されるべきである。"
@@ -443,7 +440,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.method.coding[unitDigit1].userSelected ^definition = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
 * dosageInstruction.method.coding[unitDigit1].userSelected ^comment = "選択肢の中から、直接選ばれたコードは新しく翻訳するときには最も適切なスタート地点である。何をもって「直接選ばれた」とするのかには曖昧なところがあり、このエレメントの使用について明確にして結論として何を意味するのかより完全になるよう取引先との合意が必要となる。"
 * dosageInstruction.method.coding[unitDigit1].userSelected ^requirements = "このエレメントは臨床安全のために特定されてきた。System/codeのペアが明示的に選択されることは、言語処理や何らかの規則を元に推測されるよりも正確だからである。"
-
 * dosageInstruction.method.coding[unitDigit2] ^short = "投与⽅法に対応するJAMI 用法コード表基本用法2桁コード"
 * dosageInstruction.method.coding[unitDigit2] ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法2桁コードを識別するURI。２桁コードurn:oid:1.2.392.200250.2.2.20.40"
 * dosageInstruction.method.coding[unitDigit2] ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"

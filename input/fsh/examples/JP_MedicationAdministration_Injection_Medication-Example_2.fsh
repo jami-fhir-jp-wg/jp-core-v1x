@@ -2,7 +2,7 @@ Instance: jp-medicationadministration-injection-medication-example-2
 InstanceOf: JP_Medication
 Title: "JP_Medication 後発医薬品"
 Description: "後発医薬品"
-Usage: #inline
+Usage: #example
 * status = #active
 * ingredient[0].itemCodeableConcept = urn:oid:1.2.392.100495.20.2.74#107750602 "ソリタ－Ｔ３号輸液５００ｍＬ"
 * ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#HON "本"

@@ -23,10 +23,8 @@ Description: "このプロファイルはユーザは直接適用するもので
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension ^min = 0
 * extension[Preparation] ^short = "調剤結果"
 * extension[Preparation] ^definition = "薬剤単位の調剤結果"
-* extension[Preparation] ^min = 0
 * partOf ^short = "Event that dispense is part of 親イベントへの参照"
 * partOf ^definition = "The procedure that trigger the dispense. \r\n\r\nこの調剤の契機となったProcedureリソースへの参照。"
 * status ^short = "preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | unknown"
@@ -36,6 +34,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * category ^short = "Type of medication dispense　調剤タイプ"
 * category ^definition = "Indicates the type of medication dispense (for example, where the medication is expected to be consumed or administered (i.e. inpatient or outpatient)).\r\n\r\n投薬のタイプを示します（たとえば、薬剤が消費または投与されると予想される場所（つまり、入院患者または外来患者））。　入院、外来、退院、自宅など。"
 * medication[x] only CodeableConcept or Reference(JP_Medication)
+* medicationCodeableConcept only CodeableConcept
 * medicationCodeableConcept.coding 1..
 * medicationCodeableConcept.coding ^short = "Code defined by a terminology system コード集で定義された医薬品コード"
 * medicationCodeableConcept.coding ^definition = "A reference to a code defined by a terminology system.\r\n\r\nコード集で定義された医薬品コードへの情報"
@@ -43,6 +42,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * medicationCodeableConcept.coding.system 1..
 * medicationCodeableConcept.coding.code 1..
 * medicationCodeableConcept.coding.display 1..
+* medicationReference only Reference(JP_Medication)
 * medication[x] ^short = "What medication was supplied　医薬品"
 * medication[x] ^definition = "Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.\r\n\r\n投与された薬剤を識別する。既知の薬のリストから薬を識別するコード情報を設定する。"
 * medication[x] ^comment = "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.\r\n\r\n【JP-CORE】\r\nひとつのtext要素と、複数のcoding 要素を記述できる。処方オーダ時に選択または入力し、実際に処方箋に印字される文字列を必ずtext要素に格納した上で、それをコード化した情報を1個以上のcoding 要素に記述する。\r\n\r\n厚生労働省標準であるHOT9コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。\r\n\rなお、上記のいずれの標準的コードも付番されていない医薬品や医療材料の場合には、薬機法の下で使用されているGS1標準の識別コードであるGTIN(Global Trade Item Number)の調剤包装単位（最少包装単位、個別包装単位）14桁を使用する。\r\n\rひとつの処方薬、医療材料を複数のコード体系のコードで記述してもよく、その場合にcoding 要素を繰り返して記述する。\rただし、ひとつの処方薬を複数のコードで繰り返し記述する場合には、それらのコードが指し示す処方薬、医療材料は当然同一でなければならない。\rまた、処方を発行した医療機関内でのデータ利用のために、医療機関固有コード体系によるコード（ハウスコード、ローカルコード）の記述を含めてもよいが、その場合でも上述したいずれかの標準コードを同時に記述することが必要である。"
