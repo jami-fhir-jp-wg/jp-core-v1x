@@ -34,3 +34,29 @@ Usage: #example
 * dosageInstruction.route = urn:oid:2.16.840.1.113883.3.1937.777.10.5.162#IV "静脈内"
 * dosageInstruction.method = urn:oid:1.2.392.200250.2.2.20.40#30 "静脈注射"
 * dosageInstruction.doseAndRate.doseQuantity = 2 'mL' "mL"
+
+Instance: jp-medicationdispense-injection-medication-example-1
+InstanceOf: JP_Medication
+Usage: #inline
+* status = #active
+* ingredient.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo"
+* ingredient.extension.valueInteger = 1
+* ingredient.itemCodeableConcept = urn:oid:1.2.392.100495.20.2.74#100558502 "ホリゾン注射液１０ｍｇ"
+* ingredient.strength.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"
+* ingredient.strength.extension.valueCodeableConcept = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
+* ingredient.strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#AMP "アンプル"
+* ingredient.strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#KAI "回"
+
+Instance: jp-medicationdispense-injection-bodystructure-example-1
+InstanceOf: BodyStructure
+Title: "BodyStructure 左腕"
+Description: "左腕"
+Usage: #inline
+* location = http://terminology.hl7.org/CodeSystem/v2-0550#ARM "Arm"
+* locationQualifier = http://terminology.hl7.org/CodeSystem/v2-0495#L "Left"
+* patient = Reference(Patient/jp-patient-example-1)
+
+Instance: jp-medicationdispense-injection-device-example-1
+InstanceOf: Device
+Usage: #inline
+* type = http://jpfhir.jp/medication/99ILL#01 "シリンジ"
