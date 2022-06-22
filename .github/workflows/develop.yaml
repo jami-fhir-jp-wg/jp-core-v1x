@@ -67,7 +67,7 @@ jobs:
         sudo apt-get install jekyll
         
     - name: Download IG Publisher
-      uses: Legion2/download-release-action@v2.1.0
+      uses: Legion2/download-release-action@v2.9.0
       with:
         repository: HL7/fhir-ig-publisher
         tag: 'latest'
