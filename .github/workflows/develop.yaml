@@ -91,3 +91,5 @@ jobs:
         publish_branch: pages
         publish_dir: ./output
         destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
+        user_name: 'findex-miyakawa'
+        user_email: 'findex-miyakawa@users.noreply.github.com'
