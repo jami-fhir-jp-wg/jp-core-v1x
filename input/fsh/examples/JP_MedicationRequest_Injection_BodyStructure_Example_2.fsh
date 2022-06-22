@@ -1,6 +1,8 @@
 Instance: jp-medicationrequest-injection-bodystructure-example-2
 InstanceOf: BodyStructure
-Usage: #inline
-* location = http://terminology.hl7.org/CodeSystem/v2-0550#ARM "腕"
-* locationQualifier = http://terminology.hl7.org/CodeSystem/v2-0495#L "左"
+Title: "BodyStructure 右腕"
+Description: "右腕"
+Usage: #example
+* location = http://terminology.hl7.org/CodeSystem/v2-0550#ARM "Arm"
+* locationQualifier = http://terminology.hl7.org/CodeSystem/v2-0495#R "Right"
 * patient = Reference(Patient/jp-patient-example-1)

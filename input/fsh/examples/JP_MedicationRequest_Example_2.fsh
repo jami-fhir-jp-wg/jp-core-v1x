@@ -1,12 +1,12 @@
 Instance: jp-medicationrequest-example-2
-InstanceOf: MedicationRequest
-Title: "内服処方2"
+InstanceOf: JP_MedicationRequest
+Title: "JP MedicationRequest 内服処方1"
+Description: "内服処方1"
 Usage: #example
-* meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
-* identifier[0].system = "http://sample.com/medication"
+* identifier[0].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
 * identifier[=].value = "1234567890.1.2"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[=].value = "1"
+* identifier[=].value = "2"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.82"
 * identifier[=].value = "2"
 * intent = #order
@@ -17,8 +17,9 @@ Usage: #example
 * dosageInstruction.extension[=].valuePeriod.start = "2020-04-01"
 * dosageInstruction.extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
 * dosageInstruction.extension[=].valueDuration = 3 'd' "日"
+* dosageInstruction.text = "内服・経口・１日３回朝昼夕食後"
 * dosageInstruction.timing.code = urn:oid:1.2.392.200250.2.2.20.20#1013044400000000 "内服・経口・１日３回朝昼夕食後"
-* dosageInstruction.route = urn:oid:2.16.840.1.113883.3.1937.777.10.5.162#PO "口"
+* dosageInstruction.route = http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes#PO "口"
 * dosageInstruction.method = urn:oid:1.2.392.200250.2.2.20.40#10 "経口"
 * dosageInstruction.doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 * dosageInstruction.doseAndRate.doseQuantity = 2 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
