@@ -84,9 +84,11 @@ jobs:
 
     - name: Deploy Implementation Guide
       if: success()
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@v2.1.0
       with:
-        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        PUBLISH_BRANCH: pages
-        PUBLISH_DIR: ./output
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
+        external_repository: jami-fhir-jp-wg/jp-core-v1xpages
+        publish_branch: pages
+        publish_dir: ./output
+        destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
 
