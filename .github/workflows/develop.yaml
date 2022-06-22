@@ -82,12 +82,23 @@ jobs:
         java -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini
         mv ./input/landing_page/_index.yml ./output/
 
+    # - name: Deploy Implementation Guide
+    #   if: success()
+    #   uses: peaceiris/actions-gh-pages@3
+    #   with:
+    #     personal_token: ${{ secrets.PERSONAL_TOKEN }}
+    #     external_repository: jami-fhir-jp-wg/jp-core-v1xpages
+    #     publish_branch: pages
+    #     publish_dir: ./output
+    #     destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
+
     - name: Deploy Implementation Guide
       if: success()
-      uses: peaceiris/actions-gh-pages@3.8.0
+      uses: JamesIves/github-pages-deploy-action@v4.3.3
       with:
-        personal_token: ${{ secrets.PERSONAL_TOKEN }}
-        external_repository: jami-fhir-jp-wg/jp-core-v1xpages
-        publish_branch: pages
-        publish_dir: ./output
-        destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
+        token: ${{ secrets.PERSONAL_TOKEN }}
+        repositoryName: jami-fhir-jp-wg/jp-core-v1xpages
+        branch: pages
+        folder: ./output
+        target-folder: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
+    
