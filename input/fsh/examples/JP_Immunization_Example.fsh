@@ -3,7 +3,7 @@ InstanceOf: JP_Immunization
 Title: "JP Immunization 新型コロナワクチン接種"
 Description: "新型コロナワクチン接種"
 Usage: #example
-* meta.profile = "https://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
+* meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
 * status = #completed
 * vaccineCode = urn:oid:1.2.392.200119.4.403.1#182110901 "コミナティ筋注"
 * patient = Reference(Patient/jp-patient-example-1)
