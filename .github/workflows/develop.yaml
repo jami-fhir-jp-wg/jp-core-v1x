@@ -86,10 +86,7 @@ jobs:
       if: success()
       uses: peaceiris/actions-gh-pages@v3
       with:
-        personal_token: ${{ secrets.PERSONAL_TOKEN }}
-        external_repository: jami-fhir-jp-wg/githubpage_test
-        publish_branch: pages
-        publish_dir: ./output
-        destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
-        user_name: 'findex-miyakawa'
-        user_email: 'findex-miyakawa@users.noreply.github.com'
+        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        PUBLISH_BRANCH: pages
+        PUBLISH_DIR: ./output
+
