@@ -86,7 +86,7 @@ jobs:
       if: success()
       uses: peaceiris/actions-gh-pages@v3
       with:
-        personal_token: ${{ secrets.PERSONAL_TOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         external_repository: jami-fhir-jp-wg/jp-core-v1xpages
         publish_branch: pages
         publish_dir: ./output
