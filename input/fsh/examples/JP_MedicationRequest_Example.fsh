@@ -30,8 +30,8 @@ Usage: #example
 
 Instance: jp-medicationrequest-example-2
 InstanceOf: JP_MedicationRequest
-Title: "JP MedicationRequest 内服処方1"
-Description: "内服処方1"
+Title: "JP MedicationRequest 内服処方2"
+Description: "内服処方2"
 Usage: #example
 * identifier[0].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
 * identifier[=].value = "1234567890.1.2"
