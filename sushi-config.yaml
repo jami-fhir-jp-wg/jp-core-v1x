@@ -17,7 +17,7 @@ copyright: FHIR Japanese implementation research working group in Japan Associat
 jurisdiction: 'urn:iso:std:iso:3166#JP'
 
 #-----------------------------------------
-# ページタイトル名称設定
+# ページタイトル名称設定 
 #-----------------------------------------
 pages:
   index.md:
