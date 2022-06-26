@@ -55,14 +55,106 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * qualification ^slicing.discriminator.type = #value
 * qualification ^slicing.discriminator.path = "identifier.system"
 * qualification ^slicing.rules = #open
+* qualification ^comment = "【JP-CORE】\r\n麻薬施用者免許番号、または医籍登録番号を格納するためのQualification/Slicing定義。\r\n\r\ns麻薬施用者免許番号の場合のsystemはFixed Valueの urn:oid:1.2.392.100495.20.3.32.1[都道府県番号] を使用する。\r\n( 頭に1をつけて末尾3桁で表現する。これは北海道などの場合、都道府県番号は01になるが、OID\r\nでは先頭が0は許可されていないため、頭に1をつけて3桁で表現する)\r\nつまり麻薬施用者免許番号を発行した都道府県ごとにsystemも異なる値となる。\r\n医籍登録番号のsystemはFixed Valueの urn:oid:1.2.392.100495.20.3.31 を使用する。"
 * qualification contains
-    narcoticPrescriptionLicenseNumber 0..* and
-    medicalRegistrationNumber 0..*
-* qualification[narcoticPrescriptionLicenseNumber] ^comment = "【JP-CORE】\r\n麻薬施用者免許番号に関する情報を格納するためのQualification/Slicing定義。\r\n\r\nsystemはFixed Valueの urn:oid:1.2.392.100495.20.3.32.1[都道府県番号] を使用する。\r\n( 頭に1をつけて末尾3桁で表現する。これは北海道などの場合、都道府県番号は01になるが、OID\r\nでは先頭が0は許可されていないため、頭に1をつけて3桁で表現する)\r\nつまり麻薬施用者免許番号を発行した都道府県ごとにsystemも異なる値となる。\r\nこのプロファイルのidentifier.systemには例として北海道の番号「urn:oid:1.2.392.100495.20.3.32.101」を設定している"
-* qualification[narcoticPrescriptionLicenseNumber].identifier.system = "urn:oid:1.2.392.100495.20.3.32.101" (exactly)
-* qualification[medicalRegistrationNumber] ^comment = "【JP-CORE】\r\n\r\n医籍登録番号を格納するためのIdentifer/Slicing定義。\r\n\r\nsystemはFixed Valueの urn:oid:1.2.392.100495.20.3.31 を使用する。"
+    narcoticPrescriptionLicenseNumber01 0..1 and
+    narcoticPrescriptionLicenseNumber02 0..1 and
+    narcoticPrescriptionLicenseNumber03 0..1 and
+    narcoticPrescriptionLicenseNumber04 0..1 and
+    narcoticPrescriptionLicenseNumber05 0..1 and
+    narcoticPrescriptionLicenseNumber06 0..1 and
+    narcoticPrescriptionLicenseNumber07 0..1 and
+    narcoticPrescriptionLicenseNumber08 0..1 and
+    narcoticPrescriptionLicenseNumber09 0..1 and
+    narcoticPrescriptionLicenseNumber10 0..1 and
+    narcoticPrescriptionLicenseNumber11 0..1 and
+    narcoticPrescriptionLicenseNumber12 0..1 and
+    narcoticPrescriptionLicenseNumber13 0..1 and
+    narcoticPrescriptionLicenseNumber14 0..1 and
+    narcoticPrescriptionLicenseNumber15 0..1 and
+    narcoticPrescriptionLicenseNumber16 0..1 and
+    narcoticPrescriptionLicenseNumber17 0..1 and
+    narcoticPrescriptionLicenseNumber18 0..1 and
+    narcoticPrescriptionLicenseNumber19 0..1 and
+    narcoticPrescriptionLicenseNumber20 0..1 and
+    narcoticPrescriptionLicenseNumber21 0..1 and
+    narcoticPrescriptionLicenseNumber22 0..1 and
+    narcoticPrescriptionLicenseNumber23 0..1 and
+    narcoticPrescriptionLicenseNumber24 0..1 and
+    narcoticPrescriptionLicenseNumber25 0..1 and
+    narcoticPrescriptionLicenseNumber26 0..1 and
+    narcoticPrescriptionLicenseNumber27 0..1 and
+    narcoticPrescriptionLicenseNumber28 0..1 and
+    narcoticPrescriptionLicenseNumber29 0..1 and
+    narcoticPrescriptionLicenseNumber30 0..1 and
+    narcoticPrescriptionLicenseNumber31 0..1 and
+    narcoticPrescriptionLicenseNumber32 0..1 and
+    narcoticPrescriptionLicenseNumber33 0..1 and
+    narcoticPrescriptionLicenseNumber34 0..1 and
+    narcoticPrescriptionLicenseNumber35 0..1 and
+    narcoticPrescriptionLicenseNumber36 0..1 and
+    narcoticPrescriptionLicenseNumber37 0..1 and
+    narcoticPrescriptionLicenseNumber38 0..1 and
+    narcoticPrescriptionLicenseNumber39 0..1 and
+    narcoticPrescriptionLicenseNumber40 0..1 and
+    narcoticPrescriptionLicenseNumber41 0..1 and
+    narcoticPrescriptionLicenseNumber42 0..1 and
+    narcoticPrescriptionLicenseNumber43 0..1 and
+    narcoticPrescriptionLicenseNumber44 0..1 and
+    narcoticPrescriptionLicenseNumber45 0..1 and
+    narcoticPrescriptionLicenseNumber46 0..1 and
+    narcoticPrescriptionLicenseNumber47 0..1 and
+    medicalRegistrationNumber 0..1
+* qualification[narcoticPrescriptionLicenseNumber01].identifier.system = "urn:oid:1.2.392.100495.20.3.32.101"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber02].identifier.system = "urn:oid:1.2.392.100495.20.3.32.102"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber03].identifier.system = "urn:oid:1.2.392.100495.20.3.32.103"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber04].identifier.system = "urn:oid:1.2.392.100495.20.3.32.104"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber05].identifier.system = "urn:oid:1.2.392.100495.20.3.32.105"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber06].identifier.system = "urn:oid:1.2.392.100495.20.3.32.106"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber07].identifier.system = "urn:oid:1.2.392.100495.20.3.32.107"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber08].identifier.system = "urn:oid:1.2.392.100495.20.3.32.108"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber09].identifier.system = "urn:oid:1.2.392.100495.20.3.32.109"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber10].identifier.system = "urn:oid:1.2.392.100495.20.3.32.110"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber11].identifier.system = "urn:oid:1.2.392.100495.20.3.32.111"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber12].identifier.system = "urn:oid:1.2.392.100495.20.3.32.112"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber13].identifier.system = "urn:oid:1.2.392.100495.20.3.32.113"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber14].identifier.system = "urn:oid:1.2.392.100495.20.3.32.114"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber15].identifier.system = "urn:oid:1.2.392.100495.20.3.32.115"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber16].identifier.system = "urn:oid:1.2.392.100495.20.3.32.116"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber17].identifier.system = "urn:oid:1.2.392.100495.20.3.32.117"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber18].identifier.system = "urn:oid:1.2.392.100495.20.3.32.118"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber19].identifier.system = "urn:oid:1.2.392.100495.20.3.32.119"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber20].identifier.system = "urn:oid:1.2.392.100495.20.3.32.120"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber21].identifier.system = "urn:oid:1.2.392.100495.20.3.32.121"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber22].identifier.system = "urn:oid:1.2.392.100495.20.3.32.122"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber23].identifier.system = "urn:oid:1.2.392.100495.20.3.32.123"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber24].identifier.system = "urn:oid:1.2.392.100495.20.3.32.124"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber25].identifier.system = "urn:oid:1.2.392.100495.20.3.32.125"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber26].identifier.system = "urn:oid:1.2.392.100495.20.3.32.126"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber27].identifier.system = "urn:oid:1.2.392.100495.20.3.32.127"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber28].identifier.system = "urn:oid:1.2.392.100495.20.3.32.128"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber29].identifier.system = "urn:oid:1.2.392.100495.20.3.32.129"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber30].identifier.system = "urn:oid:1.2.392.100495.20.3.32.130"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber31].identifier.system = "urn:oid:1.2.392.100495.20.3.32.131"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber32].identifier.system = "urn:oid:1.2.392.100495.20.3.32.132"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber33].identifier.system = "urn:oid:1.2.392.100495.20.3.32.133"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber34].identifier.system = "urn:oid:1.2.392.100495.20.3.32.134"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber35].identifier.system = "urn:oid:1.2.392.100495.20.3.32.135"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber36].identifier.system = "urn:oid:1.2.392.100495.20.3.32.136"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber37].identifier.system = "urn:oid:1.2.392.100495.20.3.32.137"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber38].identifier.system = "urn:oid:1.2.392.100495.20.3.32.138"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber39].identifier.system = "urn:oid:1.2.392.100495.20.3.32.139"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber40].identifier.system = "urn:oid:1.2.392.100495.20.3.32.140"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber41].identifier.system = "urn:oid:1.2.392.100495.20.3.32.141"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber42].identifier.system = "urn:oid:1.2.392.100495.20.3.32.142"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber43].identifier.system = "urn:oid:1.2.392.100495.20.3.32.143"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber44].identifier.system = "urn:oid:1.2.392.100495.20.3.32.144"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber45].identifier.system = "urn:oid:1.2.392.100495.20.3.32.145"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber46].identifier.system = "urn:oid:1.2.392.100495.20.3.32.146"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber47].identifier.system = "urn:oid:1.2.392.100495.20.3.32.147"  (exactly)
+
 * qualification[medicalRegistrationNumber].identifier.system = "urn:oid:1.2.392.100495.20.3.31" (exactly)
-* qualification[medicalRegistrationNumber].identifier.system ^comment = "Identifier.system is always case sensitive.\r\n\r\n\r\n--------SWG3 コメント-----------\r\n\r\n医籍登録番号を格納するためのqualification/IdentiferのSlicing定義。\r\n\r\nsystemはFixed Valueの urn:oid:1.2.392.100495.20.3.31を使用する。"
+
 * communication ^short = "A language the practitioner can use in patient communication　医療従事者が患者とのコミュニケーションで使用できる言語。"
 * communication ^definition = "A language the practitioner can use in patient communication.\r\n\r\n医療従事者が患者とのコミュニケーションで使用できる言語。"
 * communication ^comment = "The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.\r\n\r\nこのように正確なケーシングを持つ構造体 aa-BB は、ロケールのために最も広く使われている表記法の一つ。しかし、すべてのシステムがこれをコード化しているわけではなく、代わりにフリーテキストとしている。そのため、データ型としてはコードの代わりに CodeableConcept を使用している。"
