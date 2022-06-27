@@ -9,6 +9,7 @@
 * [JP_Organization_PrefectureNo_SP]
 * [JP_Patient_KanjiName_SP]
 * [JP_Patient_KanaName_SP]
+* [JP_Patient_KanaSort_SP]
 
 ### FHIR Base 定義済み検索パラメーター
 FHIR Baseにて定義済み検索パラメータ([Defined Search Parameters](https://fhir-ru.github.io/searchparameter-registry.html))が記載されており、相互運用性の高めるためにもこれを利用することを推奨する(***SHOULD***)。<br/>
