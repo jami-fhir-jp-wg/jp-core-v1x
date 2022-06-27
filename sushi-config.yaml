@@ -174,4 +174,5 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_PrefectureNo_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaName_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanjiName_SP
+    - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP
 
