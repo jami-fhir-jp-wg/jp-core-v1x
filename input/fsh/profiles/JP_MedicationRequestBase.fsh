@@ -61,7 +61,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier[OrderInRp].assigner ..0
 * identifier[RequestIdentifier] ^short = "処方オーダーに対するID"
 * identifier[RequestIdentifier] ^definition = "薬剤をオーダーする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。"
-* identifier[RequestIdentifier] ^min = 0
 * identifier[RequestIdentifier].system 1..
 * identifier[RequestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier" (exactly)
 * status ^definition = "JP coreでは\"active\"に固定される。\r\nオーダーの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
