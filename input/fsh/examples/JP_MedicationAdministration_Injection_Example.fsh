@@ -37,7 +37,7 @@ Usage: #example
 * dosage.site.extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageSite_SiteComment"
 * dosage.site.extension[=].valueString = "左利きのため"
 * dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
-* dosage.method.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Method_MethodComment"
+* dosage.method.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageMethod_MethodComment"
 * dosage.method.extension.valueString = "１分ほどかけて緩徐に行いました"
 * dosage.method = http://jpfhir.jp/medication/99ILL#101 "静注(末梢)"
 * dosage.dose = 2 'mL' "mL"

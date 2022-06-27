@@ -3,7 +3,7 @@ Parent: Immunization
 Id: jp-immunization
 Title: "JP Core Immunization Profile"
 Description: "このProfileはImmunizationリソースに対して日本での予防接種データを送受信するための成約を加えてものである。"
-* ^url = "https://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
 * ^version = "1.0.1"
 * ^status = #draft
 * ^date = "2022-02-18"
