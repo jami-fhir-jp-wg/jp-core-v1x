@@ -26,9 +26,9 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。\r\n処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。\r\nこのIDは業務手順によって定められた処方オーダーに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
 * identifier contains
+    RequestIdentifier 0..* and
     RpNumber 1..1 and
-    OrderInRp 1..1 and
-    RequestIdentifier 0..*
+    OrderInRp 1..1
 * identifier[RpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[RpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[RpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
