@@ -8,7 +8,7 @@ Title: "JP Core Practitioner Profile"
 Description: "このプロファイルはPractitionerリソースに対して、医療従事者のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner"
 * ^status = #draft
-* ^date = "2022-03-16"
+* ^date = "2022-06-13"
 * . ^short = "ヘルスケアまたは関連サービスの提供に正式な責任を負う人"
 * . ^definition = "A person who is directly or indirectly involved in the provisioning of healthcare.\r\n\r\n医療の提供に直接または間接的に関与する者をいう。"
 * identifier ^definition = "An identifier that applies to this person in this role.\r\n\r\nある役割の人に適用される識別子。"
@@ -18,18 +18,10 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * active ^comment = "If the practitioner is not in use by one organization, then it should mark the period on the PractitonerRole with an end date (even if they are active) as they may be active in another role.\r\n\r\n医療従事者がある組織で使用されていない場合、別のロールでアクティブになっている可能性があるので、(例えそれらがアクティブであっても)PractitonerRoleに有効期間を終了日でマークしておく必要がある。"
 * active ^requirements = "Need to be able to mark a practitioner record as not to be used because it was created in error.\r\n\r\n医療従事者のレコードを誤って作成してしまったとき、使用しないようにマークできるようにする必要がある。"
 * active ^meaningWhenMissing = "This resource is generally assumed to be active if no value is provided for the active element\r\n\r\nこの要素に値が提供されていない場合、このリソースは通常アクティブである（1が入力されている）と解釈されます。"
-* name ^slicing.discriminator.type = #value
-* name ^slicing.discriminator.path = "extension.value[x]"
-* name ^slicing.rules = #open
+* name only JP_HumanName
 * name ^definition = "The name(s) associated with the practitioner.\r\n\r\n医療従事者の氏名（複数の場合もある）"
 * name ^comment = "The selection of the use property should ensure that there is a single usual name specified, and others use the nickname (alias), old, or other values as appropriate.  \r\rIn general, select the value to be used in the ResourceReference.display based on this:\r\r1. There is more than 1 name\r2. Use = usual\r3. Period is current to the date of the usage\r4. Use = official\r5. Other order as decided by internal business rules.\r\n\r\nuseプロパティの選択は、指定された単一の通常の名前があることを保証しなければならず、他の値はニックネーム（別名）、旧名、または他の値を適切に使用します。\r\n\r\n一般的には、以下を基準にResourceReference.displayで使用する値を選択する。\r\n\r\n 1. There is more than 1 name（最低限1つ以上の名前があること）\r\n 2. Use = usual（useプロパティが「usual」であること）\r\n 3. Period is current to the date of the usage（有効期限は利用開始日から現在まであること）\r\n 4. Use = official（useプロパティが「official」であること\r\n 5. Other order as decided by internal business rules.（その他、内部ルールで決められた順番）\r\n\r\n医療従事者のNameの漢字カナ表記については、JP_Patient.nameで採用した方法を踏襲する。\r\nそのほか、要素の説明は、JP_Patient.nameを参照。"
 * name ^requirements = "The name(s) that a Practitioner is known by. Where there are multiple, the name that the practitioner is usually known as should be used in the display.\r\n\r\n\r\n医療従事者が知られている名前。複数ある場合は、従事者が通常知られている名前を表示に使用します。"
-* name contains
-    IDE 0..* and
-    SYL 0..* and
-    @default 0..*
-* name[IDE] only JP_HumanName
-* name[SYL] only JP_HumanName
 * telecom ^short = "A contact detail for the practitioner (that apply to all roles)　電話番号やメールアドレスなど、従事者への詳細な連絡先。"
 * telecom ^definition = "A contact detail for the practitioner, e.g. a telephone number or an email address.\r\n\r\n電話番号やメールアドレスなど、従事者への詳細な連絡先。"
 * telecom ^comment = "Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and to help with identification.  These typically will have home numbers, or mobile numbers that are not role specific.\r\n\r\n人は、異なる用途や適用される期間に応じて複数の連絡方法を持っている可能性がある。本人に緊急に連絡を取るためのオプションが必要な場合があり、また本人の身元確認に役立つ場合がある。これらは通常、自宅の電話番号、または役割が特定されていない携帯電話番号を持つことになる。\r\n\r\n要素の説明は、JP_Patient.telecomを参照。"
@@ -48,30 +40,121 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * photo ^definition = "Image of the person.\r\n\r\n医療従事者の写真。"
 * photo ^comment = "When providing a summary view (for example with Observation.value[x]) Attachment should be represented with a brief display text such as \"Signed Procedure Consent\".\r\n\r\nサマリービューを提供する場合（例えば、Observation.value[x]で）、添付ファイルは \"Signed Procedure Consent \"のような簡単な表示テキストで表現されなければなりません。"
 * photo ^requirements = "Many EHR systems have the capability to capture an image of patients and personnel. Fits with newer social media usage too.\r\n\r\n多くのEHRシステムは、患者や職員の画像をキャプチャする機能を持っています。新しいソーシャルメディアの利用にも対応しています。"
-* qualification ^slicing.discriminator.type = #value
-* qualification ^slicing.discriminator.path = "identifier.system"
-* qualification ^slicing.rules = #open
 * qualification ^short = "Certification, licenses, or training pertaining to the provision of care　ケアの提供に関連する認定、ライセンス、またはトレーニング"
 * qualification ^definition = "The official certifications, training, and licenses that authorize or otherwise pertain to the provision of care by the practitioner.  For example, a medical license issued by a medical board authorizing the practitioner to practice medicine within a certian locality.\r\n\r\n医療従事者によるケアの提供を認可する、あるいは関連する、公式の証明書、トレーニング、免許証等。\r\n例えば、医療委員会が発行した医師免許証は、認定された地域内で医療を行うことを開業医に許可するものである。"
 * qualification ^comment = "【JP_CORE】\r\nidentifierには資格番号を入力する。\r\nCodeは、v2 table 0360が例としてのっている。0360は、USER-DEFINED TABLES であるため、適切なCodeがなければ追加できる。\r\nPeriodにはその資格の開始日・終了日を入力する。（例：麻薬資格者の有効期限等の格納）\r\n\r\n医籍登録番号　Practitioner.qualification.identifier　urn:oid:1.2.392.100495.20.3.31\r\n麻薬施用者番号　Practitioner.qualification.identifier　urn:oid:1.2.392.100495.20.3.32.都道府県OID番号\r\n　　（都道府県OID番号は、都道府県番号2桁の先頭に１をつけた3桁の番号）"
+* qualification.identifier ^definition = "An identifier that applies to this person's qualification in this role.\r\n\r\n\r\nこの人物のこの役割における資格に適用される識別子。"
+* qualification.identifier ^requirements = "Often, specific identities are assigned for the qualification.\r\n\r\n\r\n多くの場合、資格には特定の識別子が割り当てられる。"
+* qualification.code ^definition = "Coded representation of the qualification.\r\n\r\n\r\n資格のコード化された表現。"
+* qualification.code ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\n\r\n\r\nすべての用語の使用がこの一般的なパターンに適合するわけではない。いくつかのケースでは、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係、および前後の調整を管理するための独自の構造を提供することが望ましい。"
+* qualification.period ^definition = "Period during which the qualification is valid.\r\n\r\n\r\n資格が有効な期間。"
+* qualification.period ^comment = "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).\r\n\r\n\r\n使用のコンテキストは、範囲全体が適用されるか（例：「患者はこの時間範囲で病院の入院患者であった」）、範囲内の1つの値が適用されるか（例：「この2つの時間の間に患者に与える」）を指定します。\r\n\r\n期間は、期間(経過時間の尺度)には使用されません。[Duration](datatypes.html#Duration)を参照のこと。"
+* qualification.period ^requirements = "Qualifications are often for a limited period of time, and can be revoked.\r\n\r\n\r\n資格は期間限定のものが多く、取り消されることもあります。"
+* qualification.issuer ^definition = "Organization that regulates and issues the qualification.\r\n\r\n\r\n資格を規制し、発行する機関"
+* qualification.issuer ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n\r\n参照は実際のFHIRリソースへの参照でなければならず、解決可能でなければなりません。解決は URL からの検索、またはリソースタイプによって、絶対参照を正規の URL として扱い、ローカルのレジストリ/リポジトリで検索することで行うことができます。"
+* qualification ^slicing.discriminator.type = #value
+* qualification ^slicing.discriminator.path = "identifier.system"
+* qualification ^slicing.rules = #open
+* qualification ^comment = "【JP-CORE】\r\n麻薬施用者免許番号、または医籍登録番号を格納するためのQualification/Slicing定義。\r\n\r\ns麻薬施用者免許番号の場合のsystemはFixed Valueの urn:oid:1.2.392.100495.20.3.32.1[都道府県番号] を使用する。\r\n( 頭に1をつけて末尾3桁で表現する。これは北海道などの場合、都道府県番号は01になるが、OID\r\nでは先頭が0は許可されていないため、頭に1をつけて3桁で表現する)\r\nつまり麻薬施用者免許番号を発行した都道府県ごとにsystemも異なる値となる。\r\n医籍登録番号のsystemはFixed Valueの urn:oid:1.2.392.100495.20.3.31 を使用する。"
 * qualification contains
-    @default 0..* and
-    narcoticPrescriptionLicenseNumber 0..* and
-    medicalRegistrationNumber 0..*
-* qualification[@default].identifier ^definition = "An identifier that applies to this person's qualification in this role.\r\n\r\n\r\nこの人物のこの役割における資格に適用される識別子。"
-* qualification[@default].identifier ^requirements = "Often, specific identities are assigned for the qualification.\r\n\r\n\r\n多くの場合、資格には特定の識別子が割り当てられる。"
-* qualification[@default].code ^definition = "Coded representation of the qualification.\r\n\r\n\r\n資格のコード化された表現。"
-* qualification[@default].code ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\n\r\n\r\nすべての用語の使用がこの一般的なパターンに適合するわけではない。いくつかのケースでは、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係、および前後の調整を管理するための独自の構造を提供することが望ましい。"
-* qualification[@default].period ^definition = "Period during which the qualification is valid.\r\n\r\n\r\n資格が有効な期間。"
-* qualification[@default].period ^comment = "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).\r\n\r\n\r\n使用のコンテキストは、範囲全体が適用されるか（例：「患者はこの時間範囲で病院の入院患者であった」）、範囲内の1つの値が適用されるか（例：「この2つの時間の間に患者に与える」）を指定します。\r\n\r\n期間は、期間(経過時間の尺度)には使用されません。[Duration](datatypes.html#Duration)を参照のこと。"
-* qualification[@default].period ^requirements = "Qualifications are often for a limited period of time, and can be revoked.\r\n\r\n\r\n資格は期間限定のものが多く、取り消されることもあります。"
-* qualification[@default].issuer ^definition = "Organization that regulates and issues the qualification.\r\n\r\n\r\n資格を規制し、発行する機関"
-* qualification[@default].issuer ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n\r\n参照は実際のFHIRリソースへの参照でなければならず、解決可能でなければなりません。解決は URL からの検索、またはリソースタイプによって、絶対参照を正規の URL として扱い、ローカルのレジストリ/リポジトリで検索することで行うことができます。"
-* qualification[narcoticPrescriptionLicenseNumber] ^comment = "【JP-CORE】\r\n麻薬施用者免許番号に関する情報を格納するためのQualification/Slicing定義。\r\n\r\nsystemはFixed Valueの urn:oid:1.2.392.100495.20.3.32.1[都道府県番号] を使用する。\r\n( 頭に1をつけて末尾3桁で表現する。これは北海道などの場合、都道府県番号は01になるが、OID\r\nでは先頭が0は許可されていないため、頭に1をつけて3桁で表現する)\r\nつまり麻薬施用者免許番号を発行した都道府県ごとにsystemも異なる値となる。\r\nこのプロファイルのidentifier.systemには例として北海道の番号「urn:oid:1.2.392.100495.20.3.32.101」を設定している"
-* qualification[narcoticPrescriptionLicenseNumber].identifier.system = "urn:oid:1.2.392.100495.20.3.32.101" (exactly)
-* qualification[medicalRegistrationNumber] ^comment = "【JP-CORE】\r\n\r\n医籍登録番号を格納するためのIdentifer/Slicing定義。\r\n\r\nsystemはFixed Valueの urn:oid:1.2.392.100495.20.3.31 を使用する。"
+    narcoticPrescriptionLicenseNumber01 0..1 and
+    narcoticPrescriptionLicenseNumber02 0..1 and
+    narcoticPrescriptionLicenseNumber03 0..1 and
+    narcoticPrescriptionLicenseNumber04 0..1 and
+    narcoticPrescriptionLicenseNumber05 0..1 and
+    narcoticPrescriptionLicenseNumber06 0..1 and
+    narcoticPrescriptionLicenseNumber07 0..1 and
+    narcoticPrescriptionLicenseNumber08 0..1 and
+    narcoticPrescriptionLicenseNumber09 0..1 and
+    narcoticPrescriptionLicenseNumber10 0..1 and
+    narcoticPrescriptionLicenseNumber11 0..1 and
+    narcoticPrescriptionLicenseNumber12 0..1 and
+    narcoticPrescriptionLicenseNumber13 0..1 and
+    narcoticPrescriptionLicenseNumber14 0..1 and
+    narcoticPrescriptionLicenseNumber15 0..1 and
+    narcoticPrescriptionLicenseNumber16 0..1 and
+    narcoticPrescriptionLicenseNumber17 0..1 and
+    narcoticPrescriptionLicenseNumber18 0..1 and
+    narcoticPrescriptionLicenseNumber19 0..1 and
+    narcoticPrescriptionLicenseNumber20 0..1 and
+    narcoticPrescriptionLicenseNumber21 0..1 and
+    narcoticPrescriptionLicenseNumber22 0..1 and
+    narcoticPrescriptionLicenseNumber23 0..1 and
+    narcoticPrescriptionLicenseNumber24 0..1 and
+    narcoticPrescriptionLicenseNumber25 0..1 and
+    narcoticPrescriptionLicenseNumber26 0..1 and
+    narcoticPrescriptionLicenseNumber27 0..1 and
+    narcoticPrescriptionLicenseNumber28 0..1 and
+    narcoticPrescriptionLicenseNumber29 0..1 and
+    narcoticPrescriptionLicenseNumber30 0..1 and
+    narcoticPrescriptionLicenseNumber31 0..1 and
+    narcoticPrescriptionLicenseNumber32 0..1 and
+    narcoticPrescriptionLicenseNumber33 0..1 and
+    narcoticPrescriptionLicenseNumber34 0..1 and
+    narcoticPrescriptionLicenseNumber35 0..1 and
+    narcoticPrescriptionLicenseNumber36 0..1 and
+    narcoticPrescriptionLicenseNumber37 0..1 and
+    narcoticPrescriptionLicenseNumber38 0..1 and
+    narcoticPrescriptionLicenseNumber39 0..1 and
+    narcoticPrescriptionLicenseNumber40 0..1 and
+    narcoticPrescriptionLicenseNumber41 0..1 and
+    narcoticPrescriptionLicenseNumber42 0..1 and
+    narcoticPrescriptionLicenseNumber43 0..1 and
+    narcoticPrescriptionLicenseNumber44 0..1 and
+    narcoticPrescriptionLicenseNumber45 0..1 and
+    narcoticPrescriptionLicenseNumber46 0..1 and
+    narcoticPrescriptionLicenseNumber47 0..1 and
+    medicalRegistrationNumber 0..1
+* qualification[narcoticPrescriptionLicenseNumber01].identifier.system = "urn:oid:1.2.392.100495.20.3.32.101"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber02].identifier.system = "urn:oid:1.2.392.100495.20.3.32.102"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber03].identifier.system = "urn:oid:1.2.392.100495.20.3.32.103"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber04].identifier.system = "urn:oid:1.2.392.100495.20.3.32.104"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber05].identifier.system = "urn:oid:1.2.392.100495.20.3.32.105"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber06].identifier.system = "urn:oid:1.2.392.100495.20.3.32.106"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber07].identifier.system = "urn:oid:1.2.392.100495.20.3.32.107"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber08].identifier.system = "urn:oid:1.2.392.100495.20.3.32.108"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber09].identifier.system = "urn:oid:1.2.392.100495.20.3.32.109"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber10].identifier.system = "urn:oid:1.2.392.100495.20.3.32.110"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber11].identifier.system = "urn:oid:1.2.392.100495.20.3.32.111"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber12].identifier.system = "urn:oid:1.2.392.100495.20.3.32.112"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber13].identifier.system = "urn:oid:1.2.392.100495.20.3.32.113"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber14].identifier.system = "urn:oid:1.2.392.100495.20.3.32.114"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber15].identifier.system = "urn:oid:1.2.392.100495.20.3.32.115"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber16].identifier.system = "urn:oid:1.2.392.100495.20.3.32.116"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber17].identifier.system = "urn:oid:1.2.392.100495.20.3.32.117"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber18].identifier.system = "urn:oid:1.2.392.100495.20.3.32.118"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber19].identifier.system = "urn:oid:1.2.392.100495.20.3.32.119"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber20].identifier.system = "urn:oid:1.2.392.100495.20.3.32.120"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber21].identifier.system = "urn:oid:1.2.392.100495.20.3.32.121"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber22].identifier.system = "urn:oid:1.2.392.100495.20.3.32.122"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber23].identifier.system = "urn:oid:1.2.392.100495.20.3.32.123"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber24].identifier.system = "urn:oid:1.2.392.100495.20.3.32.124"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber25].identifier.system = "urn:oid:1.2.392.100495.20.3.32.125"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber26].identifier.system = "urn:oid:1.2.392.100495.20.3.32.126"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber27].identifier.system = "urn:oid:1.2.392.100495.20.3.32.127"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber28].identifier.system = "urn:oid:1.2.392.100495.20.3.32.128"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber29].identifier.system = "urn:oid:1.2.392.100495.20.3.32.129"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber30].identifier.system = "urn:oid:1.2.392.100495.20.3.32.130"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber31].identifier.system = "urn:oid:1.2.392.100495.20.3.32.131"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber32].identifier.system = "urn:oid:1.2.392.100495.20.3.32.132"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber33].identifier.system = "urn:oid:1.2.392.100495.20.3.32.133"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber34].identifier.system = "urn:oid:1.2.392.100495.20.3.32.134"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber35].identifier.system = "urn:oid:1.2.392.100495.20.3.32.135"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber36].identifier.system = "urn:oid:1.2.392.100495.20.3.32.136"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber37].identifier.system = "urn:oid:1.2.392.100495.20.3.32.137"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber38].identifier.system = "urn:oid:1.2.392.100495.20.3.32.138"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber39].identifier.system = "urn:oid:1.2.392.100495.20.3.32.139"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber40].identifier.system = "urn:oid:1.2.392.100495.20.3.32.140"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber41].identifier.system = "urn:oid:1.2.392.100495.20.3.32.141"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber42].identifier.system = "urn:oid:1.2.392.100495.20.3.32.142"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber43].identifier.system = "urn:oid:1.2.392.100495.20.3.32.143"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber44].identifier.system = "urn:oid:1.2.392.100495.20.3.32.144"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber45].identifier.system = "urn:oid:1.2.392.100495.20.3.32.145"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber46].identifier.system = "urn:oid:1.2.392.100495.20.3.32.146"  (exactly)
+* qualification[narcoticPrescriptionLicenseNumber47].identifier.system = "urn:oid:1.2.392.100495.20.3.32.147"  (exactly)
+
 * qualification[medicalRegistrationNumber].identifier.system = "urn:oid:1.2.392.100495.20.3.31" (exactly)
-* qualification[medicalRegistrationNumber].identifier.system ^comment = "Identifier.system is always case sensitive.\r\n\r\n\r\n--------SWG3 コメント-----------\r\n\r\n医籍登録番号を格納するためのqualification/IdentiferのSlicing定義。\r\n\r\nsystemはFixed Valueの urn:oid:1.2.392.100495.20.3.31を使用する。"
+
 * communication ^short = "A language the practitioner can use in patient communication　医療従事者が患者とのコミュニケーションで使用できる言語。"
 * communication ^definition = "A language the practitioner can use in patient communication.\r\n\r\n医療従事者が患者とのコミュニケーションで使用できる言語。"
 * communication ^comment = "The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.\r\n\r\nこのように正確なケーシングを持つ構造体 aa-BB は、ロケールのために最も広く使われている表記法の一つ。しかし、すべてのシステムがこれをコード化しているわけではなく、代わりにフリーテキストとしている。そのため、データ型としてはコードの代わりに CodeableConcept を使用している。"

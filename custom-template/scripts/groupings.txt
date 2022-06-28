@@ -1,0 +1,92 @@
+<grouping xmlns="http://hl7.org/fhir" id="-dyn-capabilitystatement">
+  <name value="Behavior: Capability Statements"/>
+  <description value="以下のアーティファクト（生成物）は、この実装ガイドに準拠するために、さまざまなタイプのシステムに期待される特定の機能（Capability）を定義しています。この実装ガイドに準拠するシステムは、次の1つ以上の機能ステートメント（Capability Statement）への準拠を宣言することが期待されています。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-dyn-operationdefinition">
+  <name value="Behavior: Operation Definitions"/>
+  <description value="これらは、この実装ガイドに準拠するシステムによってサポートおよび/または呼び出されるカスタム操作(Operation)です。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-dyn-messagedefinition">
+  <name value="Behavior: Message Definitions"/>
+  <description value="これらは、この実装ガイドに準拠するシステムによって送信および/または受信できるメッセージのタイプを定義します"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-dyn-searchparameter">
+  <name value="Behavior: Search Parameters"/>
+  <description value="これらは、RESTfulサーバーを検索できるプロパティを定義します。また、関連リソースの並べ替えや組み込みにも使用できます。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-str-graphdefinition">
+  <name value="Structures: Graph Definitions"/>
+  <description value="これらは、グループとして渡すのに役立つ相互に関連するリソースのコレクションを定義します"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-str-logicalmodel">
+  <name value="Structures: Logical Models"/>
+  <description value="これらは、基盤となるFHIRリソースよりもビジネスに適した用語で、この実装ガイドの対象となるドメインを表すデータモデルを定義します。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-str-questionnaire">
+  <name value="Structures: Questionnaires"/>
+  <description value="これらは、この実装ガイドに準拠するシステムがデータをキャプチャまたはエンドユーザーに公開するために使用するフォームを定義します"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-str-abstractprofile">
+  <name value="Structures: Abstract Profiles"/>
+  <description value="これらは、他のプロファイルで使用されるパターンを記述するリソースまたはデータ型のプロファイルですが、直接インスタンス化することはできません。つまりインスタンスは、これらの抽象プロファイルに*基づいて*プロファイルに準拠できますが、抽象プロファイル自体への準拠を宣言しません。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-str-profile">
+  <name value="Structures: Resource Profiles"/>
+  <description value="これらは、この実装ガイドに準拠するシステムでの、FHIRリソースに対する制約を定義します。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-str-datatype">
+  <name value="Structures: Data Type Profiles"/>
+  <description value="これらは、この実装ガイドに準拠するシステムでの、Data Type プロファイルに対する制約を定義します。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-str-extension">
+  <name value="Structures: Extension Definitions"/>
+  <description value="これらは、この実装ガイドに準拠するシステムでの、拡張プロファイル（Extension Profile）を定義します。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-term-valueset">
+  <name value="Terminology: Value Sets"/>
+  <description value="これらは、この実装ガイドに準拠するシステムでの、値セット（ValueSet）を定義します。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-term-codesystem">
+  <name value="Terminology: Code Systems"/>
+  <description value="これらは、この実装ガイドに準拠するシステムでの、新しいコードシステム（CodeSystem）を定義します。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-term-namingsystem">
+  <name value="Terminology: Naming Systems"/>
+  <description value="これらは、この実装ガイドに準拠するシステムでの、新しい識別子システムと／またはコードシステム（Identifier and/or CodeSystem）を定義します。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-map-structuremap">
+  <name value="Terminology: Structure Maps"/>
+  <description value="これらは、この実装ガイドに準拠するシステムで使われるデータ構造間での変換を定義します。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-map-conceptmap">
+  <name value="Terminology: Concept Maps"/>
+  <description value="これらは、この実装ガイドに準拠するシステムでの、ふたつのコードシステム（CodeSystem）間でのコンセプト対応表（Concept Map）を定義します。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-ka-activitydefinition">
+  <name value="Knowledge Artifacts: Activity Definitions"/>
+  <description value="これらは、この実装ガイドのコンテンツの一部として実行できるアクティビティを定義します"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-ka-plandefinition">
+  <name value="Knowledge Artifacts: Plan Definitions"/>
+  <description value="これらは、この実装ガイドのコンテンツの一部としてワークフロー、ルール、戦略、またはプロトコルを定義します"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-ka-library">
+  <name value="Knowledge Artifacts: Libraries"/>
+  <description value="これらは、この実装ガイドのコンテンツの一部として、ロジック、アセットコレクション、およびその他のライブラリを定義します"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-ka-measure">
+  <name value="Knowledge Artifacts: Measure"/>
+  <description value="これらは、この実装ガイドのコンテンツの一部としてメジャー（Measure）を定義します"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-ex-examplescenario">
+  <name value="Example: Example Scenarios"/>
+  <description value="これらは、この実装ガイドでサポートされている1つ以上のワークフローを示す相互に関連する例のグループを定義します"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-ex-example">
+  <name value="Example: Example Instances"/>
+  <description value="これらは、この実装ガイドに準拠するシステムによって生成および消費されるデータがどのように見えるかを示すインスタンスの例です。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-other">
+  <name value="Other"/>
+  <description value="これらは、この実装ガイド内で使用されているリソースであり、他のカテゴリのいずれにも当てはまりません。"/>
+</grouping>
