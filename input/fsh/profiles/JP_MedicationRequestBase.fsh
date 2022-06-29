@@ -27,8 +27,8 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
 * identifier contains
     RequestIdentifier 0..* and
-    RpNumber 1..1 and
-    OrderInRp 1..1
+    RpNumber 0..1 and
+    OrderInRp 0..1
 * identifier[RpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[RpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[RpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
