@@ -27,8 +27,9 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
 * identifier contains
     RequestIdentifier 0..* and
-    RpNumber 0..1 and
-    OrderInRp 0..1
+    RpNumber ..1 and
+    OrderInRp ..1
+* identifier[RpNumber] ^min = 1
 * identifier[RpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[RpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[RpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
@@ -44,6 +45,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier[RpNumber].value ^comment = "【JP-CORE】value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
 * identifier[RpNumber].period ..0
 * identifier[RpNumber].assigner ..0
+* identifier[OrderInRp] ^min = 1
 * identifier[OrderInRp] ^short = "【JP-CORE】同一RP番号（剤グループ）での薬剤の表記順"
 * identifier[OrderInRp] ^definition = "【JP-CORE】同一剤グループでの薬剤を表記する際の順番。XML形式と異なりJSON形式の場合、表記順は項目の順序を意味しない。したがって、薬剤の記載順を別に規定する必要があるためIDを用いて表現する。"
 * identifier[OrderInRp] ^comment = "【JP-CORE】同一剤グループ内での薬剤の順番を1から順の番号で示す。"
