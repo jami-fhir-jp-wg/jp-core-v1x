@@ -3,12 +3,12 @@ InstanceOf: JP_MedicationRequest_Injection
 Title: "JP MedicationRequest Injection ワンショット静脈注射"
 Description: "ホリゾン注射液１０ｍｇ１アンプルを左腕に静脈注射"
 Usage: #example
-* identifier[0].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
-* identifier[=].value = "1234567890.1.1"
-* identifier[+].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[0].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[=].value = "1"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.82"
 * identifier[=].value = "2"
+* identifier[+].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier[=].value = "1234567890.1.1"
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
@@ -39,12 +39,12 @@ InstanceOf: JP_MedicationRequest_Injection
 Title: "JP MedicationRequest Injection 点滴注射"
 Description: "点滴注射"
 Usage: #example
-* identifier[0].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
-* identifier[=].value = "1234567890.2.1"
-* identifier[+].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[0].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[=].value = "2"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.82"
 * identifier[=].value = "2"
+* identifier[+].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier[=].value = "1234567890.2.1"
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
