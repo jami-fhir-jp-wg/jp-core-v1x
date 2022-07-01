@@ -7,8 +7,6 @@
 * [JP_Organization_InsuranceOrganizationCategory_SP]
 * [JP_Organization_InsuranceOrganizationNo_SP]
 * [JP_Organization_PrefectureNo_SP]
-* [JP_Patient_KanjiName_SP]
-* [JP_Patient_KanaName_SP]
 * [JP_Patient_KanaSort_SP]
 
 ### FHIR Base 定義済み検索パラメーター
