@@ -86,7 +86,7 @@ Instance: jp-medicationadministration-injection-medication-example-1
 InstanceOf: JP_Medication
 Title: "JP Medication 薬剤　ホリゾン注射液"
 Description: "ホリゾン注射液"
-Usage: #example
+Usage: #inline
 * status = #active
 * ingredient.itemCodeableConcept = urn:oid:1.2.392.100495.20.2.74#100558502 "ホリゾン注射液１０ｍｇ"
 * ingredient.strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#AMP "アンプル"
@@ -94,9 +94,9 @@ Usage: #example
 
 Instance: jp-medicationadministration-injection-medication-example-2
 InstanceOf: JP_Medication
-Title: "JP_Medication 後発医薬品"
-Description: "後発医薬品"
-Usage: #example
+Title: "JP_Medication ソリタ－＋アドナ注"
+Description: "ソリタ－＋アドナ注"
+Usage: #inline
 * status = #active
 * ingredient[0].itemCodeableConcept = urn:oid:1.2.392.100495.20.2.74#107750602 "ソリタ－Ｔ３号輸液５００ｍＬ"
 * ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#HON "本"
@@ -109,7 +109,7 @@ Instance: jp-medicationadministration-injection-bodystructure-example-1
 InstanceOf: BodyStructure
 Title: "BodyStructure 右腕"
 Description: "右腕"
-Usage: #example
+Usage: #inline
 * location = http://terminology.hl7.org/CodeSystem/v2-0550#ARM "Arm"
 * locationQualifier = http://terminology.hl7.org/CodeSystem/v2-0495#R "Right"
 * patient = Reference(Patient/jp-patient-example-1)
@@ -118,7 +118,7 @@ Instance: jp-medicationadministration-injection-bodystructure-example-2
 InstanceOf: BodyStructure
 Title: "BodyStructure 左腕"
 Description: "左腕"
-Usage: #example
+Usage: #inline
 * location = http://terminology.hl7.org/CodeSystem/v2-0550#ARM "Arm"
 * locationQualifier = http://terminology.hl7.org/CodeSystem/v2-0495#L "Left"
 * patient = Reference(Patient/jp-patient-example-1)
