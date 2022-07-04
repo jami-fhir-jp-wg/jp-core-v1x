@@ -6,3 +6,10 @@ Thumbs.db
 /output
 /temp
 /template
+
+# for Emacs
+*~
+*#
+
+\#*
+.\#*
