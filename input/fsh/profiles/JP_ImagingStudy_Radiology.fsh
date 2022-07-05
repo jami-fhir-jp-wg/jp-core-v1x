@@ -79,7 +79,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.modality ^short = "The modality of the instances in the series　シリーズにおけるインスタンスのモダリティー"
 * series.modality ^definition = "The modality of this series sequence.\r\n\r\nシリーズシーケンスのモダリティー"
 * series.modality ^comment = "Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.\r\n\r\nコードは、列挙型またはコードリストで、SNOMED CTなどの非常に正式な定義まで、非常に柔軟に定義できる。詳細については、HL7v3コア原則を参照。\r\n\r\n【JP-CORE】\r\n当該シリーズのモダリティコード。1シリーズ1モダリティ（1つのシリーズの中に複数のモダリティが混在することはない）。\r\n<br/>\r\n（参照先）<br/>\r\nftp://medical.nema.org/medical/dicom/resources/valuesets/fhir/json/CID_29.json<br/>\r\nhttp://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html"
-* series.modality from ftp://medical.nema.org/medical/dicom/resources/valuesets/fhir/json/ValueSet-dicom-cid-29-AcquisitionModality.json (extensible)
+* series.modality from http://hl7.org/fhir/ValueSet/dicom-cid29 (extensible)
 * series.description ^short = "A short human readable summary of the series　シリーズの人間可読な短い要約記述"
 * series.description ^definition = "A description of the series.\r\n\r\nシリーズの記述。"
 * series.description ^comment = "Note that FHIR strings SHALL NOT exceed 1MB in size\r\n\r\nFHIR文字列のサイズは1MBを超えてはならないことに注意。\r\n\r\n【JP-CORE】\r\nシリーズごとにつけられるフリーコメント。"
