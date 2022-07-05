@@ -1,5 +1,5 @@
 Instance: jp-location-example-ope
-InstanceOf: Location
+InstanceOf: JP_Location
 Title: "JP Location 手術室"
 Description: "手術室"
 Usage: #example
@@ -9,7 +9,7 @@ Usage: #example
 * name = "南ウィング　神経放射線科　手術室1"
 * alias[0] = "南ウィング　神経放射線科　手術室5"
 * alias[+] = "メインウィング　神経放射線科　手術室2"
-* description = "Old South Wing, Neuro Radiology Operation Room 1 on second floor"
+* description = "South Wing, Neuro Radiology Operation Room 1 on second floor"
 * mode = #instance
 * type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#RNEU
 * telecom.system = #phone
@@ -18,7 +18,7 @@ Usage: #example
 
 
 Instance: jp-location-example-ward
-InstanceOf: Location
+InstanceOf: JP_Location
 Title: "JP Location 病棟"
 Description: "JP Location 病棟の例"
 Usage: #example
