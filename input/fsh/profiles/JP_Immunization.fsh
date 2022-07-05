@@ -4,7 +4,6 @@ Id: jp-immunization
 Title: "JP Core Immunization Profile"
 Description: "このProfileはImmunizationリソースに対して日本での予防接種データを送受信するための成約を加えてものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
-* ^version = "1.0.1"
 * ^status = #draft
 * ^date = "2022-02-18"
 * ^purpose = "予防接種の記録を交換するために用いられる。"
@@ -14,20 +13,17 @@ Description: "このProfileはImmunizationリソースに対して日本での�
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension ^min = 0
 * extension contains
-    JP_Immunization_DueDateOfNextDose named DueDateOfNextDose 0..1 and
-    JP_Immunization_ManufacturedDate named ManufacturedDate 0..1 and
-    JP_Immunization_CertificatedDate named CertificatedDate 0..1
-* extension[DueDateOfNextDose] ^short = "次回接種予定日"
-* extension[DueDateOfNextDose] ^definition = "次回接種を予定している日、期限"
-* extension[DueDateOfNextDose] ^isModifier = false
-* extension[ManufacturedDate] ^short = "製造年月日"
-* extension[ManufacturedDate] ^definition = "ワクチンが製造された年月日"
-* extension[ManufacturedDate] ^isModifier = false
-* extension[CertificatedDate] ^short = "検定年月日"
-* extension[CertificatedDate] ^definition = "ワクチンが検定された年月日"
-* extension[CertificatedDate] ^isModifier = false
+    JP_Immunization_DueDateOfNextDose named dueDateOfNextDose 0..1 and
+    JP_Immunization_ManufacturedDate named manufacturedDate 0..1 and
+    JP_Immunization_CertificatedDate named certificatedDate 0..1
+* extension[dueDateOfNextDose] ^short = "次回接種予定日"
+* extension[dueDateOfNextDose] ^definition = "次回接種を予定している日、期限"
+* extension[manufacturedDate] ^short = "製造年月日"
+* extension[manufacturedDate] ^definition = "ワクチンが製造された年月日"
+* extension[certificatedDate] ^short = "検定年月日"
+* extension[certificatedDate] ^definition = "ワクチンが検定された年月日"
+
 * status ^definition = "予防接種記録の現在の状態を示すコード"
 * status ^binding.strength = #required
 * status ^binding.description = "予防接種の現在の状態を表すコード"
@@ -83,18 +79,18 @@ Description: "このProfileはImmunizationリソースに対して日本での�
 
 Extension: JP_Immunization_DueDateOfNextDose
 Id: jp-immunization-duedateofnextdose
-Title: "DueDateOfNectDose"
+Title: "JP Core Immunization DueDateOfNectDose Extension"
 Description: "次回摂取予定日"
-* ^url = "https://jpfhir.jp/fhir/StructureDefinition/JP_Immunization_DueDateOfNextDose"
+* ^url = "http://jpfhir.jp/fhir/StructureDefinition/JP_Immunization_DueDateOfNextDose"
 * ^status = #draft
 * ^context.type = #element
 * ^context.expression = "Immunization"
-* url = "https://jpfhir.jp/fhir/StructureDefinition/JP_Immunization_DueDateOfNextDose" (exactly)
+* url = "http://jpfhir.jp/fhir/StructureDefinition/JP_Immunization_DueDateOfNextDose" (exactly)
 * value[x] only date
 
 Extension: JP_Immunization_CertificatedDate
 Id: jp-immunization-certificateddate
-Title: "CertificatedDate"
+Title: "JP Core Immunization CertificatedDate Extension"
 Description: "検定年月日"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization_CertificatedDate"
 * ^status = #draft
@@ -105,7 +101,7 @@ Description: "検定年月日"
 
 Extension: JP_Immunization_ManufacturedDate
 Id: jp-immunization-manufactureddate
-Title: "ManufacturedDate"
+Title: "JP Core Immunization ManufacturedDate Extension"
 Description: "製造年月日"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization_ManufacturedDate"
 * ^status = #draft
