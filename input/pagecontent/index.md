@@ -1,8 +1,8 @@
-このドキュメントは日本医療情報学会NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した実装ガイドのドラフトVer.1.1 です。このバージョンは日本HL7協会による承認を受けていません。今後、予告なく内容に変更があります。実装や利用は全て自己責任で行ってください。 <br/>
+このドキュメントは日本医療情報学会NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した実装ガイドのドラフトVer.1.1である。このバージョンは日本HL7協会による承認を受けていない。今後、予告なく内容に変更がある。また実装や利用は全て自己責任で行なうこと。 <br/>
 **このページの実装ガイドは常に修正、追加がある改訂版開発用ページです。**
 
 ### 概要
-ガイダンス: JP Coreでの全体に関わる規則や注意事項を記載しています。
+ガイダンス: JP Coreでの全体に関わる規則や注意事項を記載している。
 * [総合ガイダンス](guide-general.html)
 * [Must SupportとCardinality(多重度)のルール](guide-mustSupportCardinality.html)
 * [欠損値の扱い](guide-handlingOfNonExistentData.html)
@@ -10,7 +10,7 @@
 * [検索](guide-stringSearch.html)
 
 ### JP Core FHIRコンテンツ
-JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記載をしています。
+JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記載をしている。
 
 #### [Profiles （プロファイル）](artifacts.html#structures-resource-profiles)
 * [Administrationグループ （運営管理）](group-administration.html)
@@ -51,34 +51,36 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
   * [JP Core CarePlan（ケアプラン）プロファイル][JP_CarePlan]
 
 #### JP Coreで定義しないProfile(プロファイル)
-次のProfileはJP Coreでは定義を行なわず、FHIR Baseをそのまま利用することとする。
+次のProfileはJP Coreでは定義を行なわず、FHIR Baseをそのまま利用する。
 * [Resource](https://www.hl7.org/fhir/resource.html)
 * [DomainResource](https://www.hl7.org/fhir/domainresource.html)
 * [Binary](https://www.hl7.org/fhir/binary.html)
 * [Bundle](https://www.hl7.org/fhir/bundle.html)
 
 #### Extensions （拡張）
-Profilesにて利用されるExtensionをまとめています。
+JP Coreにて利用されるExtensionの一覧。
 - [Extensions （拡張）一覧](artifacts.html#structures-extension-definitions)
 
 #### Operations and Search Parameters （操作および検索パラメータ）
-Profilesにて利用されるSearch Parameter および Operationをまとめています。
+JP Coreにて利用されるSearch Parameter および Operationの一覧。
 - [Search Parameters（検索パラメータ）一覧](group-searchParameter.html)
 
 #### Terminology （用語集）
+JP Coreにて利用されるCodeSytem および ValueSetの一覧。
 - [CodeSystems （コードシステム）一覧](artifacts.html#terminology-code-systems)
 - [ValueSets （値セット）一覧](artifacts.html#terminology-value-sets)
 
 ### Capability Statement （機能宣言）
+JP Coreを参考に定義したCapabiltyStetamentの一例。
 - [Capablity Statement（機能宣言）](group-capabilityStatement.html)
 
 ### Security （セキュリティ）
-セキュリティに関する要件を記載しています。
+JP Core利用にあたり、考慮すべきセキュリティに関する要件を記載する。
  - [Security （セキュリティ）](security.html)
 
 ---
 ### Contributers：
-JP-Coreは以下の方々、および各サーブワーキンググループのここに記載されていない多くのメンバーの献身的な活動や協力により作成されています。
+JP Coreは以下の方々、および各サーブワーキンググループのここに記載されていない多くのメンバーの献身的な活動や協力により作成されている。
 * SWG1：FHIR Infrastructure
   * リーダー：㈱ファインデックス　宮川 力
   * サブリーダー：東京大学　三谷 知宏、㈱ケーアイエス　小西 由貴範
