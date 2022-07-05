@@ -2,7 +2,7 @@ FHIR®では[JSON](https://www.hl7.org/fhir/json.html#2.6.2)および[XML](https
 
 データがない場合に、[Data Absent Reason拡張](https://www.hl7.org/fhir/extension-data-absent-reason.html)を用いて、データが欠損している理由を表すことができる。
 
-JP Core の検索要求するクライアント(Requester)およびサーバ(Responder)は以下の要求を満たすこと **(SHALL)**
+JP Core の検索要求するクライアント(Requester)およびサーバ(Responder)は以下の要求を満たすこと **(SHALL)**。
 ### クライアント(Requster)
 ---
 #### 実装ガイドに準拠するクライアントは、Cardinalityが1以上が付与された要素を含むリソースを受信した場合、エラーを発生させたりアプリケーションを失敗させることなく、それらの値を処理することができなければならない **(SHALL)**。
@@ -48,17 +48,17 @@ Patient.birthDateの値に欠損情報が付与されているリソースを、
 ---
 
 #### 要素の値を保持している場合
-JP Core 実装ガイドに準拠するサーバは、当該要素の値を保持している場合には、要求された検索結果のリソースのデータ要素として含めることができるべきである。 **(SHOULD)**
+JP Core 実装ガイドに準拠するサーバは、当該要素の値を保持している場合には、要求された検索結果のリソースのデータ要素として含めることができるべきである **(SHOULD)**。
 
 
 #### 要素の値を保持していない場合
 
 ##### その要素のCardinalityが0を含む場合
-JP Core 実装ガイドに準拠するサーバは、Cardinalityが0を含む要素の値を保持していない場合、そのデータ要素の項目を省略してもよい。 **(MAY)**
+JP Core 実装ガイドに準拠するサーバは、Cardinalityが0を含む要素の値を保持していない場合、そのデータ要素の項目を省略してもよい **(MAY)**。
 
  **例)**
 ```
-Patient.telecomが欠損している場合…telecom要素は含まなくてよい
+Patient.telecomが欠損している場合…telecom要素は含まなくてよい。
 {
     "resourceType" : "Patient",
     ...
@@ -69,11 +69,11 @@ Patient.telecomが欠損している場合…telecom要素は含まなくてよ�
 ```
 
 ##### その要素のCardinalityが1以上の場合
-JP Core実装ガイドのサーバは、Cardinalityが1以上の要素の値を保持していない場合、次のように、データの欠損理由を指定しなければならない。 **(SHALL)**
+JP Core実装ガイドのサーバは、Cardinalityが1以上の要素の値を保持していない場合、次のように、データの欠損理由を指定しなければならない **(SHALL)**。
 
 ###### 非コード化要素の場合
 非コード化値の場合： Data Absent Reason拡張を使用して、欠損理由を送
-信できなければならない。 **(SHALL)** 
+信できなければならない **(SHALL)** 。
 
  **例)**
 患者の生年月日が不明なため、Patient.birthDateに値を保持していない場合（Patient.birthDateが必須 MustSupport）、Data Absent Reason 拡張を使用して、欠損理由（＝不明）を示す。なお、birthDateはdate型というprimitive typeであり、そのextensionは"_"を先頭につけたプロパティに対して設定される([2.6.2.3 JSON representation of primitive elements](https://www.hl7.org/fhir/json.html#primitive))。
@@ -95,7 +95,7 @@ JP Core実装ガイドのサーバは、Cardinalityが1以上の要素の値を�
 
   a)  そのコード化要素のバインディング強度が、example, preferred, extensible のいずれかの場合
 
-i. コード化値の代替となる文字情報を持っている場合は、文字データのみを使用する
+i. コード化値の代替となる文字情報を持っている場合は、文字データのみを使用する。
 
  **例)**
  Patient.maritalStatus が必須要素の場合で、Patient.maritalStatus のコード値はわからないが、「既婚」という文字情報は持っている場合、CodeableConcept の text を使用する。
@@ -111,7 +111,7 @@ i. コード化値の代替となる文字情報を持っている場合は、�
 }
 ```
 
-ii. コード化値の代替となる文字情報がない場合、バリューセットの中に例外値を表現するコードがあればその値を使用する
+ii. コード化値の代替となる文字情報がない場合、バリューセットの中に例外値を表現するコードがあればその値を使用する。
 
  **例)**バリューセットに含まれる例外値を表現するコードを使用（ValueSet marital-statusには、不明な状態を表すコード[UNK]を含んでいるため、UNKを使用する）
 ```
