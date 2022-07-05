@@ -94,9 +94,7 @@
 [JP_Organization_InsuranceOrganizationCategory_SP]: SearchParameter-jp-organization-insuranceorganizationcategory-sp.html
 [JP_Organization_InsuranceOrganizationNo_SP]: SearchParameter-jp-organization-insuranceorganizationno-sp.html
 [JP_Organization_PrefectureNo_SP]: SearchParameter-jp-organization-prefectureno-sp.html
-[JP_Patient_KanaName_SP]: SearchParameter-jp-patient-kananame-sp.html
 [JP_Patient_KanaSort_SP]: SearchParameter-jp-patient-kanasort-sp.html
-[JP_Patient_KanjiName_SP]: SearchParameter-jp-patient-kanjiname-sp.html
 
 <!-- CodeSystem -->
 [JP_JFAGY_CS]: CodeSystem-jp-jfagy-cs.html
