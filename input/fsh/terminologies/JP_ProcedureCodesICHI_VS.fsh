@@ -1,6 +1,6 @@
 ValueSet: JP_ProcedureCodesICHI_VS
 Id: jp-procedure-codes-ichi-vs
-Title: "JP Procedure Codes(ICHI)"
+Title: "JP Core Procedure Codes(ICHI)"
 Description: "Procesureで使用する処置のコード International Classification of Health Interventions (ICHI)"
 * ^url = $JP_ProcedureCodesICHI_VS
 * ^status = #draft

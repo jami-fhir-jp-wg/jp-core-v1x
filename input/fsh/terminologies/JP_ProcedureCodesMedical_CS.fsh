@@ -1,6 +1,6 @@
 CodeSystem: JP_ProcedureCodesMedical_CS
 Id: jp-procedure-codes-medical-cs
-Title: "JP Procedure Codes(Medical)"
+Title: "JP Core Procedure Codes(Medical)"
 Description: "Procesureで使用する処置のコード 医科診療行為マスタ"
 * ^url = $JP_ProcedureCodesMedical_CS
 * ^status = #draft

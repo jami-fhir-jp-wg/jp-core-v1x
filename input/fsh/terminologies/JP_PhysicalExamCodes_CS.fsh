@@ -1,6 +1,6 @@
 CodeSystem: JP_PhysicalExamCodes_CS
 Id: jp-physicalexamcodes-cs
-Title: "JP PhysicalExamCodes CodeSystem"
+Title: "JP Core PhysicalExamCodes CodeSystem"
 Description: "身体所見の区分を表すコード"
 * ^url = $JP_PhysicalExamCodes_CS
 * ^status = #draft
