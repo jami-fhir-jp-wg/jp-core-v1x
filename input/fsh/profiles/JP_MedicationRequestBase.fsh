@@ -973,7 +973,7 @@ Description: "投与開始日を格納する拡張"
 
 Extension: JP_MedicationRequest_DosageInstruction_UsageDuration
 Id: jp-medicationrequest-dosageinstruction-usageduration
-Title: "JP MedicationRequest DosageInstruction UsageDuration Extension"
+Title: "JP Core MedicationRequest DosageInstruction UsageDuration Extension"
 Description: "隔日投与など、服⽤開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使⽤する拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
 * ^date = "2022-03-16"
