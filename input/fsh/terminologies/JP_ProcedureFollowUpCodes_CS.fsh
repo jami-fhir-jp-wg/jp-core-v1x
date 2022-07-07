@@ -1,6 +1,6 @@
 CodeSystem: JP_ProcedureFollowUpCodes_CS
 Id: jp-procedure-followup-codes-cs
-Title: "JP Procedure Follow up Codes"
+Title: "JP Core Procedure Follow up Codes"
 Description:  "Procedure follow up codes."
 * ^url = $JP_ProcedureFollowUpCodes_CS
 * ^status = #draft

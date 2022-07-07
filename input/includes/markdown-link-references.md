@@ -27,6 +27,7 @@
 [JP_FamilyMemberHistory]: StructureDefinition-jp-familymemberhistory.html
 [JP_HumanName]: StructureDefinition-jp-humanname.html
 [JP_ImagingStudy_Radiology]: StructureDefinition-jp-imagingstudy-radiology.html
+[JP_Immunization]: StructureDefinition-jp-immunization.html
 [JP_Location]: StructureDefinition-jp-location.html
 [JP_Medication]: StructureDefinition-jp-medication.html
 [JP_MedicationAdministration_Injection]: StructureDefinition-jp-medicationadministration-injection.html
@@ -53,6 +54,9 @@
 [JP_Coverage_InsuredPersonNumber]: StructureDefinition-jp-coverage-insuredpersonnumber.html
 [JP_Coverage_InsuredPersonSubNumber]: StructureDefinition-jp-coverage-insuredpersonsubnumber.html
 [JP_Coverage_InsuredPersonSymbol]: StructureDefinition-jp-coverage-insuredpersonsymbol.html
+[JP_Immunization_CertificatedDate]: StructureDefinition-jp-immunization-certificateddate.html
+[JP_Immunization_DueDateOfNextDose]: StructureDefinition-jp-immunization-duedateofnextdose.html
+[JP_Immunization_ManufacturedDate]: StructureDefinition-jp-immunization-manufactureddate.html
 [JP_Medication_Ingredient_DrugNo]: StructureDefinition-jp-medication-ingredient-drugno.html
 [JP_Medication_IngredientStrength_StrengthType]: StructureDefinition-jp-medication-ingredientstrength-strengthtype.html
 [JP_MedicationAdministration_Dosage_DosageComment]: StructureDefinition-jp-medicationadministration-dosage-dosagecomment.html
@@ -90,8 +94,6 @@
 [JP_Organization_InsuranceOrganizationCategory_SP]: SearchParameter-jp-organization-insuranceorganizationcategory-sp.html
 [JP_Organization_InsuranceOrganizationNo_SP]: SearchParameter-jp-organization-insuranceorganizationno-sp.html
 [JP_Organization_PrefectureNo_SP]: SearchParameter-jp-organization-prefectureno-sp.html
-[JP_Patient_KanaName_SP]: SearchParameter-jp-patient-kananame-sp.html
-[JP_Patient_KanjiName_SP]: SearchParameter-jp-patient-kanjiname-sp.html
 [JP_Patient_KanaSort_SP]: SearchParameter-jp-patient-kanasort-sp.html
 
 <!-- CodeSystem -->

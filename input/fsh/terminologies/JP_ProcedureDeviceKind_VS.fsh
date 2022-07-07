@@ -1,6 +1,6 @@
 ValueSet: JP_ProcedureDeviceKind_VS
 Id: jp-procedure-devicekind-vs
-Title: "JP Procedure DeviceKind"
+Title: "JP Core Procedure DeviceKind"
 Description:  "Codes used to identify medical devices."
 * ^url = $JP_ProcedureDeviceKind_VS
 * ^status = #draft

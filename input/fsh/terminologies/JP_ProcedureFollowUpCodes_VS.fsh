@@ -1,6 +1,6 @@
 ValueSet: JP_ProcedureFollowUpCodes_VS
 Id: jp-procedure-followup-vs
-Title: "JP Procedure Follow up Codes"
+Title: "JP Core Procedure Follow up Codes"
 Description:  "Procedure follow up codes."
 * ^url = $JP_ProcedureFollowUpCodes_VS
 * ^status = #draft

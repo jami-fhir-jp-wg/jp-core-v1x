@@ -223,6 +223,10 @@ element 1.. MS
 // 推奨 JP Coreプロファイルを指定する
 * subject only Reference(JP_Patient)
 ``` 
+### [7] Sliceの名称命名規則
+Sliceの名称定義の際は、Camel形式(lower camelCase)とする。
+https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#item-names
+
 
 ## リソース追加、urlもしくはid変更時の対処
 

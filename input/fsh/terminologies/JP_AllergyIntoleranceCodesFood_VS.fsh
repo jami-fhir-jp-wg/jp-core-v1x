@@ -1,6 +1,6 @@
 ValueSet: JP_AllergyIntoleranceCodesFood_VS
 Id: jp-allergyintolerance-codes-food-vs
-Title: "JP AllergyIntolerance Codes Food"
+Title: "JP Core AllergyIntolerance Codes Food"
 Description: "J-FAGYにおける食品に関するアレルゲンコード"
 * ^url = $JP_AllergyIntoleranceCodesFood_VS
 * ^status = #draft

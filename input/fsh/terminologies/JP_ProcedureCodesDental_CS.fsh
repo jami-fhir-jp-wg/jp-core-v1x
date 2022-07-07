@@ -1,6 +1,6 @@
 CodeSystem: JP_ProcedureCodesDental_CS
 Id: jp-procedure-codes-dental-cs
-Title: "JP Procedure Codes(Dental)"
+Title: "JP Core Procedure Codes(Dental)"
 Description: "Procesureで使用する処置のコード 歯科診療行為マスタ"
 * ^url = $JP_ProcedureCodesDental_CS
 * ^status = #draft

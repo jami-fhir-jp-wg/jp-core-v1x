@@ -17,7 +17,7 @@ copyright: FHIR Japanese implementation research working group in Japan Associat
 jurisdiction: 'urn:iso:std:iso:3166#JP'
 
 #-----------------------------------------
-# ページタイトル名称設定 
+# ページタイトル名称設定
 #-----------------------------------------
 pages:
   index.md:
@@ -115,6 +115,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_HumanName
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Location
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration_Injection
@@ -139,6 +140,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization_CertificatedDate
+    - http://jpfhir.jp/fhir/StructureDefinition/JP_Immunization_DueDateOfNextDose
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization_ManufacturedDate
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_DosageComment
@@ -172,7 +176,5 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationCategory_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationNo_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_PrefectureNo_SP
-    - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaName_SP
-    - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanjiName_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP
 
