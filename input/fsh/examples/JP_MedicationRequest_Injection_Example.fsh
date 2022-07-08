@@ -19,7 +19,7 @@ Usage: #example
 * category[+] = http://jpfhir.jp/Common/CodeSystem/JHSI0001#FTP "定時処方"
 * medicationReference = Reference(Medication/jp-medicationrequest-injection-medication-example-1)
 * subject = Reference(Patient/jp-patient-example-1)
-* authoredOn = "2016-07-01"
+* authoredOn = "2016-07-01T09:28:17+09:00"
 * requester = Reference(Practitioner/jp-practionner-example-female-1)
 * insurance = Reference(Coverage/jp-coverage-example-1)
 * dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device"
@@ -57,7 +57,7 @@ Usage: #example
 * category[+] = http://jpfhir.jp/Common/CodeSystem/JHSI0001#FTP "定時処方"
 * medicationReference = Reference(Medication/jp-medicationrequest-injection-medication-example-2)
 * subject = Reference(Patient/jp-patient-example-1)
-* authoredOn = "2016-07-01"
+* authoredOn = "2016-07-01T07:28:17+09:00"
 * requester = Reference(Practitioner/jp-practionner-example-female-1)
 * insurance = Reference(Coverage/jp-coverage-example-1)
 * dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line"

@@ -127,6 +127,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * supportingInformation ^short = "薬剤オーダについて補助的情報"
 * supportingInformation ^definition = "薬剤をオーダーするときに補助的となる追加情報（たとえば、患者の身長や体重））を含む。"
 * supportingInformation ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resouce型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
+* authoredOn 1..
 * authoredOn ^short = "この処方オーダーが最初に記述された日"
 * authoredOn ^definition = "JP Core profileでは必須。処方指示が最初に作成された日時。秒の精度まで記録する。タイムゾーンも付与しなければならない。"
 * requester ^short = "このオーダーを発行した人・物"
