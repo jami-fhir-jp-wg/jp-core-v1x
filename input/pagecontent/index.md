@@ -29,6 +29,7 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
   * [JP Core MedicationDispense Injection （注射薬剤処方調剤・払い出し記録）プロファイル][JP_MedicationDispense_Injection]
   * [JP Core MedicationAdministration （内服・外用薬剤投与実施情報）プロファイル][JP_MedicationAdministration]
   * [JP Core MedicationAdministration Injection （注射薬剤投与実施情報）プロファイル][JP_MedicationAdministration_Injection]
+  * [JP Core Immunization （予防接種記録）プロファイル][JP_Immunization]
 * [Diagnosticグループ （診断）](group-diagnostic.html)
   * Observation （検査）
     * [JP Core Observation Common （共通）プロファイル][JP_Observation_Common]
