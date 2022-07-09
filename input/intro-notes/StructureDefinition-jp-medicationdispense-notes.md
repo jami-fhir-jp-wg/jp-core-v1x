@@ -247,182 +247,183 @@ HTTP/1.1 200 OK
 ```
 
 ### サンプル
+下記の内容の処方に従って調剤する例をFHIRで表現する場合のサンプルを示す。
 ```
 Rp1 ムコダイン錠２５０ｍｇ１錠（  １日３錠)
 　　１日３回朝昼夕食後３日分
 ```
 
-```JSON
+```json
 {
-    "resourceType": "MedicationDispense",
-    "extension": [
-        {
-            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration",
-            "valueDuration": {
-                "value": 3,
-                "unit": "日",
-                "system": "http://unitsofmeasure.org",
-                "code": "d"
-            }
-        }
-    ],
-    "identifier": [ 
-        {
-            "system": "http://www.sample.com/fhir/medication-dispense",
-            "value": "1234567890"
-        },
-        {
-            "system": "urn:oid:1.2.392.100495.20.3.81",
-            "value": "1"
-        },
-        {
-            "system": "urn:oid:1.2.392.100495.20.3.82",
-            "value": "1"
-        } 
-    ],
-    "status" : "completed",
-    "category" : {
-        "coding":  [
-            {
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0482",
-                "code": "I",
-                "display": "入院オーダ"
-            }
-        ]
+  "resourceType": "MedicationDispense",
+  "id": "jp-medicationdispense-example-1",
+  "meta": {
+    "profile": [
+      "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispense"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationdispense-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medicationdispense.html\">JP Core MedicationDispense Profile</a></p></div><p><b>identifier</b>: id: 1234567890, id: 1, id: 1</p><p><b>status</b>: completed</p><p><b>category</b>: Inpatient Order <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0482.html\">orderType</a>#I)</span></p><p><b>medication</b>: ムコダイン錠２５０ｍｇ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#103835401)</span></p><p><b>subject</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><h3>Performers</h3><table class=\"grid\"><tr><td>-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>Packager <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-medicationdispense-performer-function.html\">MedicationDispense Performer Function Codes</a>#packager)</span></td><td><a href=\"Practitioner-jp-practionner-example-male-1.html\">Practitioner/jp-practionner-example-male-1</a> \" 大阪\"</td></tr></table><p><b>quantity</b>: 9 錠<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code TAB = 'TAB')</span></p><p><b>whenPrepared</b>: 2021-10-07 10:47:19+0900</p><p><b>whenHandedOver</b>: 2021-10-07 10:55:23+0900</p><p><b>destination</b>: <a href=\"Location-jp-location-example-ward.html\">Location/jp-location-example-ward</a> \"09A病棟 021病室 4ベッド\"</p><p><b>note</b>: 後発品へ変更可能か依頼医のＡ医師に確認したところ、患者の希望により不可との回答あり。</p><h3>Substitutions</h3><table class=\"grid\"><tr><td>-</td><td><b>WasSubstituted</b></td><td><b>Type</b></td><td><b>Reason</b></td></tr><tr><td>*</td><td>true</td><td>generic composition <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-substanceAdminSubstitution.html\">Substance Admin Substitution</a>#G)</span></td><td>regulatory requirement <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-ActReason.html\">ActReason</a>#RR)</span></td></tr></table></div>"
+  },
+  "identifier": [
+    {
+      "system": "http://www.sample.com/fhir/medication-dispense",
+      "value": "1234567890"
     },
-    "medicationCodeableConcept": {
-        "coding":  [
-            {
-                "system": "urn:oid:1.2.392.200119.4.403.1",
-                "code": "103835401",
-                "display": "ムコダイン錠２５０ｍｇ"
-            }
-        ]
+    {
+      "system": "urn:oid:1.2.392.100495.20.3.81",
+      "value": "1"
     },
-    "subject" : {
-        "reference" : "Patient/1234567890"
-    },
-    "performer" : [
-        {
-            "function" : {
-                "coding" : [
-                    {
-                        "code" : "packager",
-                        "system" : "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function",
-                        "display" : "Packager"
-                    }
-                ]
-            },
-            "actor" : {
-                "reference" : "Practitioner/01234567"
-            }
-        }
-    ],
-    "quantity": {
-        "value": 9,
-        "unit": "錠",
-        "system": "urn:oid:1.2.392.100495.20.2.101",
-        "code": "TAB"
-    },
-    "whenPrepared" : "2021-10-07T10:47:19+09:00",
-    "whenHandedOver" : "2021-10-07T10:55:23+09:00",
-    "destination" : {
-        "reference" : "Location/12A"
-    },
-    "note" : [
-        {
-            "text" : "後発品へ変更可能か依頼医のＡ医師に確認したところ、患者の希望により不可との回答あり。"
-        }
-    ],
-    "dosageInstruction":  [
-        {
-            "timing": {
-                "code":  {
-             "coding":  [
-                 {
-                     "system": "urn:oid:1.2.392.200250.2.2.20.20",
-                     "code": "1013044400000000",
-                     "display": "内服・経口・１日３回朝昼夕食後"
-                 }
-                    ]
-         }
-            },
-            "route": {
-                "coding": [
-                    {
-                        "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
-                        "code": "PO",
-                        "display": "口"
-                    }
-                ]
-            },
-            "method": {
-                "coding": [
-                    {
-                        "system": "urn:oid:1.2.392.200250.2.2.20.40",
-                        "code": "10",
-                        "display": "経口"
-                    }
-                ]
-            },
-            "doseAndRate":  [
-                {
-                    "type": {
-                        "coding":  [
-                            {
-                                "system": "urn:oid:1.2.392.100495.20.2.22",
-                                "code": "1",
-                                "display": "製剤量"
-                            }
-                        ]
-                    },
-                    "doseQuantity": {
-                        "value": 1,
-                        "unit": "錠",
-                        "system": "urn:oid:1.2.392.100495.20.2.101",
-                        "code": "TAB"
-                    },
-                    "rateRatio": {
-                        "numerator": {
-                            "value": 3,
-                            "unit": "錠",
-                            "system": "urn:oid:1.2.392.100495.20.2.101",
-                            "code": "TAB"
-                        },
-                        "denominator": {
-                            "value": 1,
-                            "unit": "日",
-                            "system": "http://unitsofmeasure.org",
-                            "code": "d"
-                        }
-                    }
-                }
-            ]
-        }
-    ],
-    "substitution" : {
-        "wasSubstituted" : true,
-        "type" : {
-            "coding" : [
-                {
-                    "code" : "G",
-                    "system" : "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
-                    "display" : "generic composition"
-                }
-            ]
-        },
-        "reason": [
-            {
-                "coding" : [
-                    {
-                        "code" : "RR",
-                        "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-                        "display" : "regulatory requirement"
-                    }
-                ]
-            }
-        ]
+    {
+      "system": "urn:oid:1.2.392.100495.20.3.82",
+      "value": "1"
     }
+  ],
+  "status": "completed",
+  "category": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0482",
+        "code": "I",
+        "display": "Inpatient Order"
+      }
+    ]
+  },
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "urn:oid:1.2.392.200119.4.403.1",
+        "code": "103835401",
+        "display": "ムコダイン錠２５０ｍｇ"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/jp-patient-example-1"
+  },
+  "performer": [
+    {
+      "function": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function",
+            "code": "packager",
+            "display": "Packager"
+          }
+        ]
+      },
+      "actor": {
+        "reference": "Practitioner/jp-practionner-example-male-1"
+      }
+    }
+  ],
+  "quantity": {
+    "value": 9,
+    "unit": "錠",
+    "system": "urn:oid:1.2.392.100495.20.2.101",
+    "code": "TAB"
+  },
+  "whenPrepared": "2021-10-07T10:47:19+09:00",
+  "whenHandedOver": "2021-10-07T10:55:23+09:00",
+  "destination": {
+    "reference": "Location/jp-location-example-ward"
+  },
+  "note": [
+    {
+      "text": "後発品へ変更可能か依頼医のＡ医師に確認したところ、患者の希望により不可との回答あり。"
+    }
+  ],
+  "dosageInstruction": [
+    {
+      "text": "内服・経口・１日３回朝昼夕食後",
+      "timing": {
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200250.2.2.20.20",
+              "code": "1013044400000000",
+              "display": "内服・経口・１日３回朝昼夕食後"
+            }
+          ]
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
+            "code": "PO",
+            "display": "口"
+          }
+        ]
+      },
+      "method": {
+        "coding": [
+          {
+            "system": "urn:oid:1.2.392.200250.2.2.20.40",
+            "code": "10",
+            "display": "経口"
+          }
+        ]
+      },
+      "doseAndRate": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.392.100495.20.2.22",
+                "code": "1",
+                "display": "製剤量"
+              }
+            ]
+          },
+          "doseQuantity": {
+            "value": 1,
+            "unit": "錠",
+            "system": "urn:oid:1.2.392.100495.20.2.101",
+            "code": "TAB"
+          },
+          "rateRatio": {
+            "numerator": {
+              "value": 3,
+              "unit": "錠",
+              "system": "urn:oid:1.2.392.100495.20.2.101",
+              "code": "TAB"
+            },
+            "denominator": {
+              "value": 1,
+              "unit": "日",
+              "system": "http://unitsofmeasure.org",
+              "code": "d"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "substitution": {
+    "wasSubstituted": true,
+    "type": {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
+          "code": "G",
+          "display": "generic composition"
+        }
+      ]
+    },
+    "reason": [
+      {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+            "code": "RR",
+            "display": "regulatory requirement"
+          }
+        ]
+      }
+    ]
+  }
 }
 ```
 
