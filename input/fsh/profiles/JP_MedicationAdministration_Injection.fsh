@@ -49,7 +49,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * dosage.method.extension ^slicing.rules = #open
 * dosage.method.extension[MethodComment] only JP_MedicationAdministration_DosageMethod_MethodComment
 * dosage.method.extension[MethodComment] ^sliceName = "MethodComment"
-* dosage.rate[x] only Ratio or SimpleQuantity
+* dosage.rate[x] only Ratio
 * dosage.rate[x].extension ^slicing.discriminator.type = #value
 * dosage.rate[x].extension ^slicing.discriminator.path = "url"
 * dosage.rate[x].extension ^slicing.rules = #open
