@@ -6,6 +6,7 @@
 * [JP Core MedicationDispense Injection （注射薬剤処方調剤・払い出し記録）プロファイル][JP_MedicationDispense_Injection]
 * [JP Core MedicationAdministration （内服・外用薬剤投与実施情報）プロファイル][JP_MedicationAdministration]
 * [JP Core MedicationAdministration Injection （注射薬剤投与実施情報）プロファイル][JP_MedicationAdministration_Injection]
+* [JP Core Immunization （予防接種記録）プロファイル][JP_Immunization]
 
 ### Extensions
 * [JP_Medication_IngredientStrength_StrengthType]
@@ -25,5 +26,8 @@
 * [JP_MedicationRequest_DosageInstruction_Device]
 * [JP_MedicationRequest_DosageInstruction_PeriodOfUse]
 * [JP_MedicationRequest_DosageInstruction_UsageDuration]
+* [JP_Immunization_CertificatedDate]
+* [JP_Immunization_DueDateOfNextDose]
+* [JP_Immunization_ManufacturedDate]
 
 {% include markdown-link-references.md %}
