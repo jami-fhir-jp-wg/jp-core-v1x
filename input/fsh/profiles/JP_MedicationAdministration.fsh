@@ -82,7 +82,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * effective[x] only dateTime or Period
 * effective[x] ^short = "Start and end time of administration　開始時間と終了時間"
 * effective[x] ^definition = "A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.\r\n\r\n投与が行われた（または「notGiven」属性がtrueの場合は行われなかった）特定の日時または時間間隔。錠剤を飲み込むなど、多くの管理では、dateTimeの使用がより適切である。"
-* effective[x] ^comment = "【JP-CORE】\r\n投与実施日時であり、JP Coreでは必須である。"
+* effective[x] ^comment = "\r\n投与実施日時であり、JP Coreでは必須である。"
 * performer ^short = "Who performed the medication administration and what they did　投薬を実施した人"
 * performer ^definition = "Indicates who or what performed the medication administration and how they were involved.\r\n投薬およびそれに関与した人"
 * reasonCode ^short = "Reason administration performed　投薬が実施された理由"

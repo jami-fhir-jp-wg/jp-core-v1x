@@ -83,7 +83,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * whenPrepared ^definition = "The time when the dispensed product was packaged and reviewed.\r\n\r\n調剤がパッケージ化され、レビューされた日時"
 * whenHandedOver 1..
 * whenHandedOver ^short = "Medication order that authorizes the dispense　払い出された日時"
-* whenHandedOver ^definition = "The time the dispensed product was provided to the patient or their representative.\r\n\r\n【JP Core】\r\n必須。\r\n患者あるいはその代理人に払い出される薬剤が提供された日時。"
+* whenHandedOver ^definition = "The time the dispensed product was provided to the patient or their representative.\r\n\r\n必須。\r\n患者あるいはその代理人に払い出される薬剤が提供された日時。"
 * destination ^short = "Where the medication was sent　薬が送られた場所"
 * destination ^definition = "Identification of the facility/location where the medication was shipped to, as part of the dispense event.\r\n\r\n調剤イベントの一環として、薬剤が出荷された行先先の施設/場所のLocarionリソースへの参照。"
 * destination ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
