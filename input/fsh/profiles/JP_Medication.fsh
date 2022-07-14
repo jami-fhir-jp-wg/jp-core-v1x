@@ -7,8 +7,8 @@ Id: jp-medication
 Title: "JP Core Medication Profile"
 Description: "このプロファイルはMedicationリソースに対して、主に薬剤データを送受信するための基礎となる制約と拡張を定めたものである。"
 // extension 参照宣言
-* ingredient.extension contains JP_Medication_Ingredient_DrugNo named DrugNo ..*
-* ingredient.strength.extension contains JP_Medication_IngredientStrength_StrengthType named StrenghtType ..*
+* ingredient.extension contains JP_Medication_Ingredient_DrugNo named drugNo ..*
+* ingredient.strength.extension contains JP_Medication_IngredientStrength_StrengthType named strenghtType ..*
 //
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication"
 * ^status = #draft
@@ -59,9 +59,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * ingredient.strength.extension ^slicing.discriminator.type = #value
 * ingredient.strength.extension ^slicing.discriminator.path = "url"
 * ingredient.strength.extension ^slicing.rules = #open
-* ingredient.strength.extension[StrenghtType] only JP_Medication_IngredientStrength_StrengthType
-* ingredient.strength.extension[StrenghtType] ^sliceName = "StrenghtType"
-* ingredient.strength.extension[StrenghtType] ^definition = "投与量が製剤単位か成分単位かを格納する拡張"
+* ingredient.strength.extension[strenghtType] ^definition = "投与量が製剤単位か成分単位かを格納する拡張"
 * batch ^short = "分包された薬剤についての詳細な解説"
 * batch ^definition = "薬剤のパッケージ（薬品そのものではない）についての情報。"
 * batch.lotNumber ^short = "バッチのID"
