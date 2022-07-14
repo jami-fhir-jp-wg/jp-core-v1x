@@ -9,7 +9,7 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter"
 * ^status = #draft
 * ^date = "2022-03-16"
-* . ^short = "An interaction during which services are provided to the patient / 患者さんにサービスが提供されている間の相互作用"
+* . ^short = "An interaction during which services are provided to the patient / 患者にサービスが提供されている間の相互作用"
 * . ^definition = "An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.\r\n\r\n医療サービスの提供または患者の健康状態の評価を目的とした、患者と医療提供者との間の相互作用。エンカウンターと表現される。\r\n\r\n【JP-CORE】\r\n外来受診、救急受診、入院、退院、対面診察、電話診察、など。"
 * identifier ^short = "Identifier(s) by which this encounter is known / このEncounterが知られている識別子（複数可）"
 * identifier ^definition = "Identifier(s) by which this encounter is known.\r\n\r\nこのEncounterが知られている識別子（複数可）。"
@@ -126,15 +126,15 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * hospitalization.specialArrangement ^definition = "Any special requests that have been made for this hospitalization encounter, such as the provision of specific equipment or other things.\r\n\r\n\r\n特定の器具の提供など、今回の入院の出会いのために特別な要望があったもの"
 * hospitalization.specialArrangement ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\n\r\n\r\nすべての用語の使用がこの一般的なパターンに適合するわけではない。いくつかのケースでは、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係、および前後の調整を管理するための独自の構造を提供することが望ましい。"
 * hospitalization.destination only Reference(JP_Location or JP_Organization)
-* hospitalization.destination ^short = "Location/organization to which the patient is discharged / 患者さんが退院する場所・機関"
-* hospitalization.destination ^definition = "Location/organization to which the patient is discharged.\r\n\r\n\r\n患者さんが退院する場所・機関"
+* hospitalization.destination ^short = "Location/organization to which the patient is discharged / 患者が退院する場所・機関"
+* hospitalization.destination ^definition = "Location/organization to which the patient is discharged.\r\n\r\n\r\n患者が退院する場所・機関"
 * hospitalization.destination ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n\r\n参照は実際のFHIRリソースへの参照でなければならず、解決可能でなければなりません。解決は URL からの検索、またはリソースタイプによって、絶対参照を正規の URL として扱い、ローカルのレジストリ/リポジトリで検索することで行うことができます。"
 * hospitalization.destination only Reference(JP_Location or JP_Organization)
 * hospitalization.dischargeDisposition ^short = "Category or kind of location after discharge / 退院後の場所の区分や種類。"
 * hospitalization.dischargeDisposition ^definition = "Category or kind of location after discharge.\r\n\r\n\r\n退院後の場所の区分や種類。"
 * hospitalization.dischargeDisposition ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\n\r\n\r\nすべての用語の使用がこの一般的なパターンに適合するわけではない。いくつかのケースでは、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係、および前後の調整を管理するための独自の構造を提供することが望ましい。"
-* location ^short = "List of locations where the patient has been / 患者さんがいたことのある場所の一覧"
-* location ^definition = "List of locations where  the patient has been during this encounter.\r\n\r\nこのEncounterの間に患者さんがいたことのある場所のリスト"
+* location ^short = "List of locations where the patient has been / 患者がいたことのある場所の一覧"
+* location ^definition = "List of locations where  the patient has been during this encounter.\r\n\r\nこのEncounterの間に患者がいたことのある場所のリスト"
 * location ^comment = "Virtual encounters can be recorded in the Encounter by specifying a location reference to a location of type \"kind\" such as \"client's home\" and an encounter.class = \"virtual\".\r\n\r\n仮想Encouterは、\"client's home \"のような \"kind \"型の場所を参照し、encounter.class = \"virtual \"を指定することで、Encounterに記録することができる。"
 * location.location only Reference(JP_Location)
 * location.location ^short = "Location the encounter takes place / Encounterの場所"
