@@ -3,12 +3,12 @@ InstanceOf: JP_MedicationRequest
 Title: "JP MedicationRequest 内服処方1"
 Description: "内服処方1"
 Usage: #example
-* identifier[0].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[=].value = "1"
-* identifier[+].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[=].value = "1"
-* identifier[+].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
-* identifier[=].value = "1234567890.1.1"
+* identifier[RpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[RpNumber].value = "1"
+* identifier[OrderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+* identifier[OrderInRp].value = "1"
+* identifier[RequestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier[RequestIdentifier].value = "1234567890.1.1"
 * intent = #order
 * status = #active
 * medicationCodeableConcept = urn:oid:1.2.392.200119.4.403.1#103835401 "ムコダイン錠２５０ｍｇ"
@@ -34,12 +34,12 @@ InstanceOf: JP_MedicationRequest
 Title: "JP MedicationRequest 内服処方2"
 Description: "内服処方2"
 Usage: #example
-* identifier[0].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[=].value = "2"
-* identifier[+].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[=].value = "2"
-* identifier[+].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
-* identifier[=].value = "1234567890.1.2"
+* identifier[RpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[RpNumber].value = "2"
+* identifier[OrderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+* identifier[OrderInRp].value = "2"
+* identifier[RequestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier[RequestIdentifier].value = "1234567890.1.2"
 * intent = #order
 * status = #active
 * medicationCodeableConcept = urn:oid:1.2.392.200119.4.403.1#110626901 "パンスポリンＴ錠１００ １００ｍｇ"
