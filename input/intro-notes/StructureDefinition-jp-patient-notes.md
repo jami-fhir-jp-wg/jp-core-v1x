@@ -68,12 +68,12 @@ JP Patient リソースで使用される拡張は次の通りである。
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
 | SHALL            | identifier    | token  | GET [base]/Patient?identifier=http://myhospital.com/fhir/pid\|123456 |
-| SHOULD            | name          | string | GET [base]/Patient?name=山田太郎                            |
-| SHOULD           | birthdate,name | date,string  | GET [base]/Patient?birthdate=eq2013-01-14&name=山田太郎  |
+| SHOULD            | name          | string | GET [base]/Patient?name=山田%20太郎                            |
+| SHOULD           | birthdate,name | date,string  | GET [base]/Patient?birthdate=eq2013-01-14&name=山田%20太郎  |
 | SHOULD           | birthdate,gender | date,code  | GET [base]/Patient?birthdate=eq2013-01-14&gender=male  |
-| SHOULD           | birthdate,name,gender | date,string,code  | GET [base]/Patient?birthdate=eq2013-01-14&name=山田太郎&gender=male  |
-| SHOULD           | name,phone | string,token  | GET [base]/Patient?name=山田太郎&phone=111-222-3333  |
-| SHOULD           | name,address-postalcode | string,string  | GET [base]/Patient?name=山田太郎&address-postalcode=1234567  |
+| SHOULD           | birthdate,name,gender | date,string,code  | GET [base]/Patient?birthdate=eq2013-01-14&name=山田%20太郎&gender=male  |
+| SHOULD           | name,phone | string,token  | GET [base]/Patient?name=山田%20太郎&phone=111-222-3333  |
+| SHOULD           | name,address-postalcode | string,string  | GET [base]/Patient?name=山田%20太郎&address-postalcode=1234567  |
 | MAY           | family,given,birthdate,gender,phone,address-postalcode | string,string,date,token,token,string  | GET [base]/Patient?family=山田&given=太郎&birthdate=eq2013-01-14&gender=male&phone=111-222-3333&address-postalcode=1234567  |
 
 ##### 必須検索パラメータ
@@ -108,7 +108,7 @@ JP Patient リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Patient?name=山田太郎
+   GET [base]/Patient?name=山田%20太郎
    ```
 
 
@@ -122,7 +122,7 @@ JP Patient リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Patient?birthdate=2000-10-10&name=山田太郎
+   GET [base]/Patient?birthdate=2000-10-10&name=山田%20太郎
    ```
 
 
@@ -147,7 +147,7 @@ JP Patient リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Patient?birthdate=2000-10-10&name=山田太郎&gender=male
+   GET [base]/Patient?birthdate=2000-10-10&name=山田%20太郎&gender=male
    ```
 
 5. name, phone 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
@@ -159,7 +159,7 @@ JP Patient リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Patient?name=山田太郎&phone=0123456789
+   GET [base]/Patient?name=山田%20太郎&phone=0123456789
    ```
 
 6. name, address-postalcode 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。address-postalcodeはPatient.address.postalCode要素に対する検索パラメータであり、日本の住所表記における郵便番号をキーにして検索することを想定している。
@@ -171,7 +171,7 @@ JP Patient リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Patient?name=山田太郎&address-postalcode=1234567
+   GET [base]/Patient?name=山田%20太郎&address-postalcode=1234567
    ```
 
 
@@ -307,7 +307,7 @@ HTTP/1.1 200 OK
             "valueCode": "IDE"
           }
         ],
-        "use": "official",
+        "use": "usual",
         "text": "山田 太郎",
         "family": "山田",
         "given": [
@@ -321,7 +321,7 @@ HTTP/1.1 200 OK
             "valueCode": "SYL"
           }
         ],
-        "use": "official",
+        "use": "usual",
         "text": "ヤマダ タロウ",
         "family": "ヤマダ",
         "given": [
