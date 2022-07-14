@@ -7,12 +7,12 @@ Id: jp-medicationrequestbase
 Title: "JP Core MedicationRequestBase Profile"
 Description: "このプロファイルはユーザは直接適用するものではなく、JP_MedicationRequestとJP_MedicationRequestInjectionの共通の親となる抽象プロファイルである。MedicationRequestリソースに対して、内服・外用薬剤処方、注射・点滴などのデータを送受信するため、JP_MedicationRequestとJP_MedicationRequestInjectionの各プロファイルの基礎となる制約と拡張のうち共通部分を定めている。"
 // extension 参照宣言 基底拡張2個、内部拡張1個
-* extension contains JP_MedicationDispense_Preparation named Preparation ..*
+* extension contains JP_MedicationDispense_Preparation named preparation ..*
 * dosageInstruction.extension contains
-    JP_MedicationRequest_DosageInstruction_UsageDuration named UsageDuration ..1 and
-    JP_MedicationRequest_DosageInstruction_PeriodOfUse named PeriodOfUse ..1 and
-    JP_MedicationRequest_DosageInstruction_Line named Line ..* and
-    JP_MedicationRequest_DosageInstruction_Device named Device ..*
+    JP_MedicationRequest_DosageInstruction_PeriodOfUse named periodOfUse ..1 and
+    JP_MedicationRequest_DosageInstruction_UsageDuration named usageDuration ..1 and
+    JP_MedicationRequest_DosageInstruction_Line named line ..* and
+    JP_MedicationRequest_DosageInstruction_Device named device ..*
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequestBase"
 * ^status = #draft
 * ^date = "2022-03-16"
@@ -26,43 +26,43 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。\r\n処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。\r\nこのIDは業務手順によって定められた処方オーダーに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
 * identifier contains
-    RpNumber 1..1 and
-    OrderInRp 1..1 and
-    RequestIdentifier ..*
-* identifier[RpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
-* identifier[RpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
-* identifier[RpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
-* identifier[RpNumber].use ..0
-* identifier[RpNumber].type ..0
-* identifier[RpNumber].system 1..
-* identifier[RpNumber].system = "urn:oid:1.2.392.100495.20.3.81" (exactly)
-* identifier[RpNumber].system ^short = "【JP-CORE】Rp番号(剤グループ番号)についてのsystem値"
-* identifier[RpNumber].system ^definition = "【JP-CORE】ここで付番されたIDがRp番号であることを明示するためにOIDとして定義された。urn:oid:1.2.392.100495.20.3.81で固定される。"
-* identifier[RpNumber].value 1..
-* identifier[RpNumber].value ^short = "【JP-CORE】Rp番号(剤グループ番号)"
-* identifier[RpNumber].value ^definition = "【JP-CORE】Rp番号(剤グループ番号)。\"1\"など。"
-* identifier[RpNumber].value ^comment = "【JP-CORE】value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
-* identifier[RpNumber].period ..0
-* identifier[RpNumber].assigner ..0
-* identifier[OrderInRp] ^short = "【JP-CORE】同一RP番号（剤グループ）での薬剤の表記順"
-* identifier[OrderInRp] ^definition = "【JP-CORE】同一剤グループでの薬剤を表記する際の順番。XML形式と異なりJSON形式の場合、表記順は項目の順序を意味しない。したがって、薬剤の記載順を別に規定する必要があるためIDを用いて表現する。"
-* identifier[OrderInRp] ^comment = "【JP-CORE】同一剤グループ内での薬剤の順番を1から順の番号で示す。"
-* identifier[OrderInRp].use ..0
-* identifier[OrderInRp].type ..0
-* identifier[OrderInRp].system 1..
-* identifier[OrderInRp].system = "urn:oid:1.2.392.100495.20.3.82" (exactly)
-* identifier[OrderInRp].system ^short = "【JP-CORE】RP番号内（剤グループ内）の連番を示すsystem値"
-* identifier[OrderInRp].system ^definition = "剤グループ内番号の名前空間を識別するURI。固定値urn:oid:1.2.392.100495.20.3.82"
-* identifier[OrderInRp].value 1..
-* identifier[OrderInRp].value ^short = "【JP-CORE】RP番号内（剤グループ内）の連番"
-* identifier[OrderInRp].value ^definition = "剤グループ内連番。"
-* identifier[OrderInRp].value ^comment = "【JP-CORE】value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
-* identifier[OrderInRp].period ..0
-* identifier[OrderInRp].assigner ..0
-* identifier[RequestIdentifier] ^short = "処方オーダーに対するID"
-* identifier[RequestIdentifier] ^definition = "薬剤をオーダーする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。"
-* identifier[RequestIdentifier].system 1..
-* identifier[RequestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier" (exactly)
+    rpNumber 1..1 and
+    orderInRp 1..1 and
+    requestIdentifier ..*
+* identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
+* identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
+* identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
+* identifier[rpNumber].use ..0
+* identifier[rpNumber].type ..0
+* identifier[rpNumber].system 1..
+* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81" (exactly)
+* identifier[rpNumber].system ^short = "【JP-CORE】Rp番号(剤グループ番号)についてのsystem値"
+* identifier[rpNumber].system ^definition = "【JP-CORE】ここで付番されたIDがRp番号であることを明示するためにOIDとして定義された。urn:oid:1.2.392.100495.20.3.81で固定される。"
+* identifier[rpNumber].value 1..
+* identifier[rpNumber].value ^short = "【JP-CORE】Rp番号(剤グループ番号)"
+* identifier[rpNumber].value ^definition = "【JP-CORE】Rp番号(剤グループ番号)。\"1\"など。"
+* identifier[rpNumber].value ^comment = "【JP-CORE】value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
+* identifier[rpNumber].period ..0
+* identifier[rpNumber].assigner ..0
+* identifier[orderInRp] ^short = "【JP-CORE】同一RP番号（剤グループ）での薬剤の表記順"
+* identifier[orderInRp] ^definition = "【JP-CORE】同一剤グループでの薬剤を表記する際の順番。XML形式と異なりJSON形式の場合、表記順は項目の順序を意味しない。したがって、薬剤の記載順を別に規定する必要があるためIDを用いて表現する。"
+* identifier[orderInRp] ^comment = "【JP-CORE】同一剤グループ内での薬剤の順番を1から順の番号で示す。"
+* identifier[orderInRp].use ..0
+* identifier[orderInRp].type ..0
+* identifier[orderInRp].system 1..
+* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82" (exactly)
+* identifier[orderInRp].system ^short = "【JP-CORE】RP番号内（剤グループ内）の連番を示すsystem値"
+* identifier[orderInRp].system ^definition = "剤グループ内番号の名前空間を識別するURI。固定値urn:oid:1.2.392.100495.20.3.82"
+* identifier[orderInRp].value 1..
+* identifier[orderInRp].value ^short = "【JP-CORE】RP番号内（剤グループ内）の連番"
+* identifier[orderInRp].value ^definition = "剤グループ内連番。"
+* identifier[orderInRp].value ^comment = "【JP-CORE】value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
+* identifier[orderInRp].period ..0
+* identifier[orderInRp].assigner ..0
+* identifier[requestIdentifier] ^short = "処方オーダーに対するID"
+* identifier[requestIdentifier] ^definition = "薬剤をオーダーする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。"
+* identifier[requestIdentifier].system 1..
+* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier" (exactly)
 * status ^definition = "JP Coreでは\"active\"に固定される。\r\nオーダーの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
 * status ^comment = "このエレメントはmodifierとされている。StatusとはこのResourceが現在妥当な状態ではないことも示すからである。"
 * status ^isModifierReason = "このエレメントは modifier である。Statusエレメントが entered-in-error という正当な情報として扱うべきではない状態の値も取り得るからである。"
@@ -175,20 +175,12 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.extension ^slicing.discriminator.type = #value
 * dosageInstruction.extension ^slicing.discriminator.path = "url"
 * dosageInstruction.extension ^slicing.rules = #open
-* dosageInstruction.extension[PeriodOfUse] only JP_MedicationRequest_DosageInstruction_PeriodOfUse
-* dosageInstruction.extension[PeriodOfUse] ^sliceName = "PeriodOfUse"
-* dosageInstruction.extension[UsageDuration] only JP_MedicationRequest_DosageInstruction_UsageDuration
-* dosageInstruction.extension[UsageDuration] ^sliceName = "UsageDuration"
-* dosageInstruction.extension[UsageDuration] ^short = "実投与日数"
-* dosageInstruction.extension[UsageDuration] ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
-* dosageInstruction.extension[Device] only JP_MedicationRequest_DosageInstruction_Device
-* dosageInstruction.extension[Device] ^sliceName = "Device"
-* dosageInstruction.extension[Device] ^short = "投与機器の情報"
-* dosageInstruction.extension[Device] ^definition = "投与機器の情報を記述する拡張。"
-* dosageInstruction.extension[Line] only JP_MedicationRequest_DosageInstruction_Line
-* dosageInstruction.extension[Line] ^sliceName = "Line"
-* dosageInstruction.extension[Line] ^short = "投与ラインの情報"
-* dosageInstruction.extension[Line] ^definition = "投与ラインの情報を記述する拡張。"
+* dosageInstruction.extension[usageDuration] ^short = "実投与日数"
+* dosageInstruction.extension[usageDuration] ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
+* dosageInstruction.extension[device] ^short = "投与機器の情報"
+* dosageInstruction.extension[device] ^definition = "投与機器の情報を記述する拡張。"
+* dosageInstruction.extension[line] ^short = "投与ラインの情報"
+* dosageInstruction.extension[line] ^definition = "投与ラインの情報を記述する拡張。"
 * dosageInstruction.sequence ^short = "服用指示の順番"
 * dosageInstruction.sequence ^definition = "どの服用指示を適応するか判断するかについての順序を示したもの"
 * dosageInstruction.sequence ^comment = "32 bitの数値。これ以上の値であれば10進数を使うこと。"
@@ -683,14 +675,14 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dispenseRequest.extension ^slicing.discriminator.path = "url"
 * dispenseRequest.extension ^slicing.rules = #open
 * dispenseRequest.extension contains
-    JP_MedicationRequest_DispenseRequest_InstructionForDispense named InstructionForDispense ..* and
-    JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount named ExpectedRepeatCount ..1
-* dispenseRequest.extension[InstructionForDispense] ^short = "調剤指示"
-* dispenseRequest.extension[InstructionForDispense] ^definition = "薬剤単位の調剤指示を格納する"
-* dispenseRequest.extension[InstructionForDispense].value[x] ^short = "調剤指示"
-* dispenseRequest.extension[InstructionForDispense].value[x] ^definition = "薬剤単位の調剤・払い出し指示"
-* dispenseRequest.extension[ExpectedRepeatCount] ^short = "頓用回数"
-* dispenseRequest.extension[ExpectedRepeatCount] ^definition = "頓用回数"
+    JP_MedicationRequest_DispenseRequest_InstructionForDispense named instructionForDispense ..* and
+    JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount named expectedRepeatCount ..1
+* dispenseRequest.extension[instructionForDispense] ^short = "調剤指示"
+* dispenseRequest.extension[instructionForDispense] ^definition = "薬剤単位の調剤指示を格納する"
+* dispenseRequest.extension[instructionForDispense].value[x] ^short = "調剤指示"
+* dispenseRequest.extension[instructionForDispense].value[x] ^definition = "薬剤単位の調剤・払い出し指示"
+* dispenseRequest.extension[expectedRepeatCount] ^short = "頓用回数"
+* dispenseRequest.extension[expectedRepeatCount] ^definition = "頓用回数"
 * dispenseRequest.initialFill ^short = "初回の調剤詳細"
 * dispenseRequest.initialFill ^definition = "初回の薬剤払い出しでの期間や量への指示"
 * dispenseRequest.initialFill ^comment = "このエレメントを設定するときには量あるいは期間が指定されていなければならない。"

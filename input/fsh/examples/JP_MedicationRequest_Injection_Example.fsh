@@ -6,12 +6,12 @@ Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-1
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-1
 * contained[+] = jp-medicationrequest-injection-device-example-1
-* identifier[RpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[RpNumber].value = "1"
-* identifier[OrderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[OrderInRp].value = "2"
-* identifier[RequestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
-* identifier[RequestIdentifier].value = "1234567890.1.1"
+* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].value = "1"
+* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+* identifier[orderInRp].value = "2"
+* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier[requestIdentifier].value = "1234567890.1.1"
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
@@ -44,12 +44,12 @@ Description: "点滴注射"
 Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-2
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-2
-* identifier[RpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[RpNumber].value = "2"
-* identifier[OrderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[OrderInRp].value = "2"
-* identifier[RequestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
-* identifier[RequestIdentifier].value = "1234567890.2.1"
+* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].value = "2"
+* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+* identifier[orderInRp].value = "2"
+* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier[requestIdentifier].value = "1234567890.2.1"
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
