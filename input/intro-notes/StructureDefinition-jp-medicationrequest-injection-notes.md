@@ -305,202 +305,258 @@ HTTP/1.1 200 OK
 ```
 
 ### サンプル
-
-#### 処方例１
-<details>
-<summary><b>ホリゾン注射液１０ｍｇ１アンプルを左腕に静脈注射(クリックで展開)</b></summary>
-<div>
-
+ホリゾン注射液１０ｍｇ１アンプルを左腕に静脈注射する処方例をFHIRで表現する場合のサンプルを示す。
 ```json
 {
-    "resourceType": "MedicationRequest",
-    "contained": [{
-            "resourceType": "Medication",
-            "id": "medication1",
-            "ingredient": [{
-                "extension": [{
-                    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo",
-                    "valueInteger": 1
-                }],
-                "itemCodeableConcept": {
-                    "coding": [{
-                        "system": "urn:oid:1.2.392.100495.20.2.74",
-                        "code": "100558502",
-                        "display": "ホリゾン注射液１０ｍｇ"
-                    }]
-                },
-                "strength": {
-                    "extension": [{
-                        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Strength_StrengthType",
-                        "valueCodeableConcept": {
-                            "coding": [{
-                                "system": "urn:oid:1.2.392.100495.20.2.22",
-                                "code": "1",
-                                "display": "製剤量"
-                            }]
-                        }
-                    }],
-                    "numerator": {
-                        "value": 1,
-                        "unit": "アンプル",
-                        "system": "urn:oid:1.2.392.100495.20.2.101",
-                        "code": "AMP"
-                    },
-                    "denominator": {
-                        "value": 1,
-                        "unit": "回",
-                        "system": "urn:oid:1.2.392.100495.20.2.101",
-                        "code": "KAI"
+  "resourceType": "MedicationRequest",
+  "id": "jp-medicationrequest-injection-example-1",
+  "meta": {
+    "profile": [
+      "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationrequest-injection-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medicationrequest-injection.html\">JP Core MedicationRequest Injection Profile</a></p></div><p><b>identifier</b>: id: 1, id: 2, id: 1234567890.1.1</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>category</b>: Inpatient Order <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0482.html\">orderType</a>#I)</span>, 入院処方 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (merit9-category#IHP)</span>, 定時処方 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (JHSI0001#FTP)</span></p><p><b>medication</b>: <a name=\"jp-medicationrequest-injection-medication-example-1\"> </a></p><blockquote><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationrequest-injection-medication-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medication.html\">JP Core Medication Profile</a></p></div><p><b>status</b>: active</p><h3>Ingredients</h3><table class=\"grid\"><tr><td>-</td><td><b>Extension</b></td><td><b>Item[x]</b></td><td><b>Strength</b></td></tr><tr><td>*</td><td></td><td>ホリゾン注射液１０ｍｇ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#100558502)</span></td><td>1 アンプル<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code AMP = 'AMP')</span>/1 回<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code KAI = 'KAI')</span></td></tr></table></blockquote><p><b>subject</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><p><b>authoredOn</b>: 2016-07-01 09:28:17+0900</p><p><b>requester</b>: <a href=\"Practitioner-jp-practionner-example-female-1.html\">Practitioner/jp-practionner-example-female-1</a> \" 東京\"</p><p><b>insurance</b>: <a href=\"Coverage-jp-coverage-example-1.html\">Coverage/jp-coverage-example-1</a></p></div>"
+  },
+  "contained": [
+    {
+      "resourceType": "Medication",
+      "id": "jp-medicationrequest-injection-medication-example-1",
+      "meta": {
+        "profile": [
+          "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication"
+        ]
+      },
+      "status": "active",
+      "ingredient": [
+        {
+          "extension": [
+            {
+              "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo",
+              "valueInteger": 1
+            }
+          ],
+          "itemCodeableConcept": {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.392.100495.20.2.74",
+                "code": "100558502",
+                "display": "ホリゾン注射液１０ｍｇ"
+              }
+            ]
+          },
+          "strength": {
+            "extension": [
+              {
+                "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType",
+                "valueCodeableConcept": {
+                  "coding": [
+                    {
+                      "system": "urn:oid:1.2.392.100495.20.2.22",
+                      "code": "1",
+                      "display": "製剤量"
                     }
+                  ]
                 }
-            }]
-        },
-        {
-            "resourceType": "BodyStructure",
-            "id": "bodystructure1",
-            "location": {
-                "coding": [{
-                    "system": "http://terminology.hl7.org/CodeSystem/v2-0550",
-                    "code": "ARM",
-                    "display": "腕"
-                }]
+              }
+            ],
+            "numerator": {
+              "value": 1,
+              "unit": "アンプル",
+              "system": "urn:oid:1.2.392.100495.20.2.101",
+              "code": "AMP"
             },
-            "locationQualifier": [{
-                "coding": [{
-                    "system": "http://terminology.hl7.org/CodeSystem/v2-0495",
-                    "code": "L",
-                    "display": "左"
-                }]
-            }],
-            "patient": {
-                "reference": "urn:uuid:79965040-5c95-4ce5-b8f7-efe606c364b4",
-                "type": "Patient"
+            "denominator": {
+              "value": 1,
+              "unit": "回",
+              "system": "urn:oid:1.2.392.100495.20.2.101",
+              "code": "KAI"
             }
-        },
+          }
+        }
+      ]
+    },
+    {
+      "resourceType": "BodyStructure",
+      "id": "jp-medicationrequest-injection-bodystructure-example-1",
+      "location": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0550",
+            "code": "ARM",
+            "display": "Arm"
+          }
+        ]
+      },
+      "locationQualifier": [
         {
-            "resourceType": "Device",
-            "id": "device1",
-            "type": {
-                "coding": [{
-                    "system": "http://jpfhir.jp/medication/99ILL",
-                    "code": "01",
-                    "display": "シリンジ"
-                }]
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0495",
+              "code": "L",
+              "display": "Left"
             }
+          ]
         }
-    ],
-    "identifier": [{
-            "system": "urn:oid:1.2.392.100495.20.3.11",
-            "value": "123456789012345"
-        },
+      ],
+      "patient": {
+        "reference": "Patient/jp-patient-example-1"
+      }
+    },
+    {
+      "resourceType": "Device",
+      "id": "jp-medicationrequest-injection-device-example-1",
+      "type": {
+        "coding": [
+          {
+            "system": "http://jpfhir.jp/medication/99ILL",
+            "code": "01",
+            "display": "シリンジ"
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "urn:oid:1.2.392.100495.20.3.81",
+      "value": "1"
+    },
+    {
+      "system": "urn:oid:1.2.392.100495.20.3.82",
+      "value": "2"
+    },
+    {
+      "system": "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier",
+      "value": "1234567890.1.1"
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
         {
-            "system": "urn:oid:1.2.392.100495.20.3.81",
-            "value": "123456789012345_01_001"
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0482",
+          "code": "I",
+          "display": "Inpatient Order"
         }
-    ],
-    "status": "active",
-    "intent": "order",
-    "category": [{
-            "coding": [{
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0482",
-                "code": "I",
-                "display": "入院患者オーダ"
-            }]
-        },
+      ]
+    },
+    {
+      "coding": [
         {
-            "coding": [{
-                "system": "http://jpfhir.jp/Common/CodeSystem/merit9-category",
-                "code": "IHP",
-                "display": "入院処方"
-            }]
-        },
-        {
-            "coding": [{
-                "system": "http://jpfhir.jp/Common/CodeSystem/JHSI0001",
-                "code": "FTP",
-                "display": "定時処方"
-            }]
+          "system": "http://jpfhir.jp/Common/CodeSystem/merit9-category",
+          "code": "IHP",
+          "display": "入院処方"
         }
-    ],
-    "medicationReference": {
-        "reference": "#medication1",
-        "type": "Medication"
+      ]
     },
-    "subject": {
-        "reference": "urn:uuid:79965040-5c95-4ce5-b8f7-efe606c364b4",
-        "type": "Patient"
-    },
-    "authoredOn": "2016-07-01",
-    "requester": {
-        "reference": "urn:uuid:b598aedf-28fb-406a-b38e-250d3e92ac60",
-        "type": "PractitionerRole"
-    },
-    "insurance": [{
-        "reference": "urn:uuid:df0ebf6d-e527-49d4-bce2-0885045a7afd",
-        "type": "Coverage"
-    }],
-    "dosageInstruction": [{
-        "extension": [{
-            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device",
+    {
+      "coding": [
+        {
+          "system": "http://jpfhir.jp/Common/CodeSystem/JHSI0001",
+          "code": "FTP",
+          "display": "定時処方"
+        }
+      ]
+    }
+  ],
+  "medicationReference": {
+    "reference": "#jp-medicationrequest-injection-medication-example-1"
+  },
+  "subject": {
+    "reference": "Patient/jp-patient-example-1"
+  },
+  "authoredOn": "2016-07-01T09:28:17+09:00",
+  "requester": {
+    "reference": "Practitioner/jp-practionner-example-female-1"
+  },
+  "insurance": [
+    {
+      "reference": "Coverage/jp-coverage-example-1"
+    }
+  ],
+  "dosageInstruction": [
+    {
+      "extension": [
+        {
+          "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device",
+          "valueReference": {
+            "reference": "#jp-medicationrequest-injection-device-example-1"
+          }
+        }
+      ],
+      "text": "ワンショット 静脈注射 静脈内 左腕",
+      "additionalInstruction": [
+        {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200250.2.2.20.22",
+              "code": "1",
+              "display": "ワンショット"
+            }
+          ]
+        }
+      ],
+      "timing": {
+        "repeat": {
+          "boundsPeriod": {
+            "start": "2016-07-01T10:00:00+09:00"
+          }
+        }
+      },
+      "site": {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/bodySite",
             "valueReference": {
-                "reference": "#device1",
-                "type": "Device"
+              "reference": "#jp-medicationrequest-injection-bodystructure-example-1"
             }
-        }],
-        "additionalInstruction": [{
-            "coding": [{
-                "system": "urn:oid:1.2.392.200250.2.2.20.45",
-                "code": "1",
-                "display": "ワンショット"
-            }]
-        }],
-        "timing": {
-            "repeat": {
-                "boundsPeriod": {
-                    "start": "2016-07-01T10:00:00+09:00"
-                }
-            }
-        },
-        "site": {
-            "extension": [{
-                "url": "http://hl7.org/fhir/StructureDefinition/bodySite",
-                "valueReference": {
-                    "reference": "#bodystructure1",
-                    "type": "BodyStructure"
-                }
-            }]
-        },
-        "route": {
-            "coding": [{
-                "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
-                "code": "IV",
-                "display": "静脈内"
-            }]
-        },
-        "method": {
-            "coding": [{
-                "system": "urn:oid:1.2.392.200250.2.2.20.40",
-                "code": "30",
-                "display": "静脈注射"
-            }]
-        },
-        "doseAndRate": [{
-            "doseQuantity": {
-                "value": 2.0,
-                "unit": "mL",
-                "system": "http://unitsofmeasure.org",
-                "code": "mL"
-            }
-        }]
-    }]
+          }
+        ]
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes",
+            "code": "IV",
+            "display": "静脈内"
+          }
+        ]
+      },
+      "method": {
+        "coding": [
+          {
+            "system": "urn:oid:1.2.392.200250.2.2.20.40",
+            "code": "30",
+            "display": "静脈注射"
+          }
+        ]
+      },
+      "doseAndRate": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.392.100495.20.2.22",
+                "code": "1"
+              }
+            ]
+          },
+          "doseQuantity": {
+            "value": 2,
+            "unit": "mL",
+            "system": "urn:oid:1.2.392.100495.20.2.101",
+            "code": "mL"
+          }
+        }
+      ]
+    }
+  ]
 }
 ```
-
-</div>
-</details>
-
-#### 処方例２
-[処方例２](https://simplifier.net/jpcore/a97c3c13-ac3c-412a-a9fb-2237a17138b8/~json)
 
 ## 注意事項
 
