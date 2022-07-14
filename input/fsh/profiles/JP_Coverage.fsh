@@ -15,20 +15,16 @@ Description: "このプロファイルはCoverageリソースに対して、保�
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension ^min = 0
 * extension contains
-    JP_Coverage_InsuredPersonSymbol named InsuredPersonSymbol 0..* and
-    JP_Coverage_InsuredPersonNumber named InsuredPersonNumber 0..* and
-    JP_Coverage_InsuredPersonSubNumber named InsuredPersonSubNumber 0..*
-* extension[InsuredPersonSymbol] ^comment = "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.\r\n\r\n【JP-CORE】\r\n健康保険における被保険者証記号を示す拡張"
-* extension[InsuredPersonSymbol] ^min = 0
-* extension[InsuredPersonSymbol].value[x] ^comment = "A stream of bytes, base64 encoded\r\n\r\n【JP-CORE】\r\n被保険者記号の文字列。"
-* extension[InsuredPersonNumber] ^comment = "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.\r\n\r\n【JP-CORE】\r\n健康保険における被保険者証番号を示す拡張"
-* extension[InsuredPersonNumber] ^min = 0
-* extension[InsuredPersonNumber].value[x] ^comment = "A stream of bytes, base64 encoded\r\n\r\n【JP-CORE】\r\n被保険者番号"
-* extension[InsuredPersonSubNumber] ^comment = "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.\r\n\r\n【JP-CORE】\r\n健康保険における被保険者証番号の枝番を示す拡張\r\n枝番号は2桁。"
-* extension[InsuredPersonSubNumber] ^min = 0
-* extension[InsuredPersonSubNumber].value[x] ^comment = "A stream of bytes, base64 encoded\r\n\r\n【JP-CORE】\r\n2桁の半角数字文字列。一桁の場合には先頭に０をつけて2桁にする。"
+    JP_Coverage_InsuredPersonSymbol named insuredPersonSymbol ..* and
+    JP_Coverage_InsuredPersonNumber named insuredPersonNumber ..* and
+    JP_Coverage_InsuredPersonSubNumber named insuredPersonSubNumber ..*
+* extension[insuredPersonSymbol] ^comment = "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.\r\n\r\n【JP-CORE】\r\n健康保険における被保険者証記号を示す拡張"
+* extension[insuredPersonSymbol].value[x] ^comment = "A stream of bytes, base64 encoded\r\n\r\n【JP-CORE】\r\n被保険者記号の文字列。"
+* extension[insuredPersonNumber] ^comment = "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.\r\n\r\n【JP-CORE】\r\n健康保険における被保険者証番号を示す拡張"
+* extension[insuredPersonNumber].value[x] ^comment = "A stream of bytes, base64 encoded\r\n\r\n【JP-CORE】\r\n被保険者番号"
+* extension[insuredPersonSubNumber] ^comment = "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.\r\n\r\n【JP-CORE】\r\n健康保険における被保険者証番号の枝番を示す拡張\r\n枝番号は2桁。"
+* extension[insuredPersonSubNumber].value[x] ^comment = "A stream of bytes, base64 encoded\r\n\r\n【JP-CORE】\r\n2桁の半角数字文字列。一桁の場合には先頭に０をつけて2桁にする。"
 * identifier ^short = "Business Identifier for the coverage　このカバレッジに割り当てられた一意の識別子。"
 * identifier ^definition = "A unique identifier assigned to this coverage.\r\n\r\nこのカバレッジに割り当てられた一意の識別子。"
 * identifier ^comment = "The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatenation of the Coverage.SubscriberID and the Coverage.dependant.\r\n\r\nカバレッジのメイン（および場合によっては唯一の）識別子-多くの場合、メンバーID、証明書番号、個人の健康番号、またはケースIDと呼ばれます。 Coverage.SubscriberIDとCoverage.dependantの連結として構築できます"

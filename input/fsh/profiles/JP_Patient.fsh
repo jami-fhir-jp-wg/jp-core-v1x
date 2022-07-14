@@ -14,23 +14,19 @@ Description: "このプロファイルはPatientリソースに対して、患�
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension ^min = 0
 * extension contains
-    $patient-religion named religion 0..* and
-    $patient-birthPlace named birthPlace 0..1 and
-    JP_Patient_Race named race 0..*
+    $patient-religion named religion ..* and
+    $patient-birthPlace named birthPlace ..1 and
+    JP_Patient_Race named race ..*
 * extension[religion] ^short = "患者の宗教"
 * extension[religion] ^definition = "The patient's professed religious affiliations.\r\n患者の公言された宗教的所属。"
 * extension[religion] ^comment = "患者の宗教をValueSet(v3.ReligiousAffiliation)より選択する。輸血や食事で考慮が必要な場合がある。\r\n\r\n1013 キリスト教\r\n1020 ヒンドゥー教\r\n1023 イスラム教\r\n\r\nなど"
-* extension[religion] ^min = 0
 * extension[birthPlace] ^short = "患者の生誕地。"
 * extension[birthPlace] ^definition = "The registered place of birth of the patient. A sytem may use the address.text if they don't store the birthPlace address in discrete elements.\r\n患者の登録された出生地。システムは、birthPlaceアドレスを個別の要素に格納しない場合、address.textを使用してよい。"
 * extension[birthPlace] ^comment = "患者の生誕地をAddress型で表現する"
-* extension[birthPlace] ^min = 0
 * extension[race] ^short = "患者の人種。"
 * extension[race] ^definition = "Optional Extension Element - found in all resources.\r\nオプションの拡張要素-すべてのリソースで使用できる。"
 * extension[race] ^comment = "患者の人種をValueSet(Race)より選択する。\r\n\r\n2034-7 中国人\r\n2039-6 日本人\r\n2040-4 韓国人\r\n2108-9 ヨーロッパ人\r\n2110-5 英国人\r\n2111-3 フランス人\r\n2112-1 ドイツ人\r\n\r\nなど"
-* extension[race] ^min = 0
 * identifier 1..
 * identifier ^definition = "An identifier for this patient.\r\n\r\nこの患者の識別子。"
 * identifier ^comment = "IDの名前空間を表す Patient.identifier.system と ID値そのものを表す Patient.identifier.value の組み合わせとして表現する。\r\nPatient.identifier.system には、\r\n　urn:oid:1.2.392.100495.20.3.51.医療機関識別OID番号\r\nを使用する。\r\n医療機関識別OID番号は、患者IDの発行者である医療機関の識別するもので、保険医療機関の場合、都道府県番号２桁から始まる10桁の医療機関番号（都道府県2桁、保険点数表コード1桁、保険医療機関番号７桁を連結したもの）または、特定健診・特定保健指導機関の医療機関番号10桁の先頭に１をつけた11桁とする。\r\n保険点数表コード1桁は医科は１，歯科は３である。\r\n医療機関コードを持たない場合、「[9]＋当該施設の電話番号下 9 桁」を医療機関コードとして、その先頭に１をつけた11桁とする。\r\n\r\n例：医療機関コード「1312345670」の場合「urn:oid:1.2.392.100495.20.3.51.11312345670」\r\nなお、urn:oid:1.2.392.100495.20.3.51　の部分は、厚生労働省 電子処方箋CDA 記述仕様第1版（平成30年7月）付表2 OID一覧において患者番号として割り当てられたOIDのURL型である。\r\n\r\n地域医療連携ネットワークの地域患者IDを指定する場合も同様に、地域患者IDを識別する名前空間（IHE ITI PIX等で使用されるOID等）を system に使用することができる。"
@@ -52,7 +48,6 @@ Description: "このプロファイルはPatientリソースに対して、患�
 * name ^definition = "A name associated with the individual.\r\n\r\n個人に関連付けられた名前。"
 * name ^comment = "Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts might or might not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely.\r\n患者は、用途や適用期間が異なる複数の名前を持つ場合がある。動物の場合、名前は人間によって割り当てられて使用され、同じパターンを持つという意味で「HumanName」を使用する。\r\nFHIRデータ型仕様に従って、以下の内容を採用する。\r\n・姓名分割できる場合は、名前パート HumanName.familyとHumanName.givenに指定する。\r\n・ミドルネームがある場合は、given に指定する（givenは繰り返し可能）\r\n・姓名に分割できない場合は、HumanName.text にフルネームを指定する。\r\n・各名前パートとtext は、両方存在してもよい。\r\n・漢字氏名、カナ氏名の区別は、iso21090-EN-representation を使用する。\r\n・漢字、カナの指定がない場合やローマ字名の場合などはデフォルトスライスが適用される。"
 * name ^requirements = "Need to be able to track the patient by multiple names. Examples are your official name and a partner name.\r\n\r\n複数の名前で患者を追跡できる必要があります。例としては、正式名とパートナー名があります。"
-* name ^mustSupport = false
 * telecom ^short = "A contact detail for the individual　個人に連絡するための連絡先の詳細"
 * telecom ^definition = "A contact detail (e.g. a telephone number or an email address) by which the individual may be contacted.\r\n\r\n個人に連絡するための連絡先の詳細（電話番号や電子メールアドレスなど）。"
 * telecom ^comment = "A Patient may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and also to help with identification. The address might not go directly to the individual, but may reach another party that is able to proxy for the patient (i.e. home phone, or pet owner's phone).\r\n\r\n患者は、さまざまな用途または適用期間違いで連絡先を複数の方法を持っている場合があります。緊急時連絡先として、また身元確認を支援するためのオプションが必要になる場合があります。患者当人に直接連絡できない場合がありますが、患者を代理できる別の関係者（自宅の電話、またはペットの所有者の電話）を設定する場合もあります。"
