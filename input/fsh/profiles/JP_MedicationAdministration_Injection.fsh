@@ -15,7 +15,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * dosage.site.extension contains JP_MedicationAdministration_DosageSite_SiteComment named SiteComment 0..*
 * dosage.route.extension contains JP_MedicationAdministration_DosageRoute_RouteComment named RouteComment 0..*
 * dosage.method.extension contains JP_MedicationAdministration_DosageMethod_MethodComment named MethodComment 0..*
-* dosage.rate[x].extension contains JP_MedicationAdministration_DosageRate_RateComment named RateComment 0..*
+* dosage.rateRatio.extension contains JP_MedicationAdministration_DosageRate_RateComment named RateComment 0..*
 // 
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration_Injection"
 * ^status = #draft
@@ -49,9 +49,9 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * dosage.method.extension ^slicing.rules = #open
 * dosage.method.extension[MethodComment] only JP_MedicationAdministration_DosageMethod_MethodComment
 * dosage.method.extension[MethodComment] ^sliceName = "MethodComment"
-* dosage.rate[x] only Ratio or SimpleQuantity
-* dosage.rate[x].extension ^slicing.discriminator.type = #value
-* dosage.rate[x].extension ^slicing.discriminator.path = "url"
-* dosage.rate[x].extension ^slicing.rules = #open
-* dosage.rate[x].extension[RateComment] only JP_MedicationAdministration_DosageRate_RateComment
-* dosage.rate[x].extension[RateComment] ^sliceName = "RateComment"
+* dosage.rateRatio.extension ^slicing.discriminator.type = #value
+* dosage.rateRatio.extension ^slicing.discriminator.path = "url"
+* dosage.rateRatio.extension ^slicing.rules = #open
+* dosage.rateRatio.extension[RateComment] only JP_MedicationAdministration_DosageRate_RateComment
+* dosage.rateRatio.extension[RateComment] ^sliceName = "RateComment"
+* dosage.rateQuantity ^short = "JP-Coreでは未使用"
