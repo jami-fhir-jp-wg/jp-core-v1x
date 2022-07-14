@@ -25,6 +25,9 @@ Usage: #example
 * birthDate = "1970-01-01"
 * address.postalCode = "1600023"
 * address.text = "東京都新宿区"
-* extension[patient-religion].valueCodeableConcept = http://terminology.hl7.org/ValueSet/v3-ReligiousAffiliation#1046 "Shinto"
-* extension[patient-birthPlace].valueAddress.state = "東京"
-* extension[JP_Patient_Race].valueCoding = urn:oid:2.16.840.1.113883.5.104#2039-6 "Japanese"
+* extension[0].url = $patient-religion
+* extension[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1046 "Shinto"
+* extension[+].url = $patient-birthPlace
+* extension[=].valueAddress.state = "東京"
+* extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race"
+* extension[=].valueCoding = urn:oid:2.16.840.1.113883.5.104#2039-6 "Japanese"
