@@ -82,7 +82,7 @@ JP Encounter リソースで使用される拡張は次の通りである。
 | SHOULD           | patient, type    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/us-npi\|123456?type=http://hl7.org/fhir/sid/us-npi\ADMS  |
 | SHOULD           | patient, status    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/us-npi\|123456?status=http://hl7.org/fhir/sid/us-npi\arrived  |
 
-<span style="color: red;">★★コメント： この表に合致する形で以下の説明を記載していく必要があります。★★</span>
+
 
 ##### 必須検索パラメータ
 
@@ -148,6 +148,7 @@ URL: [base]/Encounter/[id]/$everything
 <!--
 <span style="color: red;">http://www.hl7.org/fhir/encounter-operation-everything.html</span>
 -->
+
 | 名前   | 多重度 | 型      | バインディング | プロファイル | 説明                                                         |
 | ------ | ------ | ------- | -------------- | ------------ | ------------------------------------------------------------ |
 | _since | 0..1   | instant |                |              | 指定された日時以降に更新されたリソースのみが応答に含まれる。 |
@@ -159,6 +160,7 @@ URL: [base]/Encounter/[id]/$everything
 <!--
 <span style="color: red;">http://www.hl7.org/fhir/encounter-operation-everything.html</span>
 -->
+
 | 名前   | 多重度 | 型     | バインディング | プロファイル | 説明                                                         |
 | ------ | ------ | ------ | -------------- | ------------ | ------------------------------------------------------------ |
 | return | 1..1   | Bundle |                |              | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
@@ -219,14 +221,6 @@ HTTP/1.1 200 OK
     "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
     "code": "AMB"
   },
-  "type": [ {
-    "coding": [ {
-      "system": "http://snomed.info/sct",
-      "code": "410620009",
-      "display": "Well child visit (procedure)"
-    } ],
-    "text": "Well child visit (procedure)"
-  } ],
   "subject": {
     "reference": "Patient/587224",
     "display": "Jonathan639 Kassulke119"
