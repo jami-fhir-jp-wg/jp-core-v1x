@@ -64,9 +64,11 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * participant.period ^definition = "The period of time that the specified participant participated in the encounter. These can overlap or be sub-sets of the overall encounter's period.\r\n\r\n\r\n指定された参加者がEncounterに参加した期間。これらは重複することも、Encounter全体の期間のサブセットになることもあります。"
 * participant.individual ^short = "Persons involved in the encounter other than the patient / 患者以外のこのEncounterに関わった人"
 * participant.individual ^definition = "Persons involved in the encounter other than the patient.\r\n\r\n\r\n患者以外のこのEncounterに関わった人。"
+* participant.individual only Reference(JP_Practitioner or JP_PractitionerRole or RelatedPerson)
 * appointment ^short = "The appointment that scheduled this encounter / このEncounterをスケジュールした予定"
 * appointment ^definition = "The appointment that scheduled this encounter.\r\n\r\nこのEncounterをスケジュールした予定。"
 * appointment ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
+* appointment only Reference(Appointment)
 * period ^short = "The start and end time of the encounter / このEncounterの開始時間と終了時間"
 * period ^definition = "The start and end time of the encounter.\r\n\r\nこのEncounterの開始時間と終了時間。"
 * period ^comment = "If not (yet) known, the end of the Period may be omitted.\r\n\r\n（まだ）わからない場合は、期間の終了を省略できる。"
@@ -79,6 +81,7 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * reasonReference ^short = "Reason the encounter takes place (reference)　エンカウンターがあった理由"
 * reasonReference ^definition = "Reason the encounter takes place, expressed as a code. For admissions, this can be used for a coded admission diagnosis.\r\n\r\nコードとして表現されたエンカウンターが起こった理由。入院の場合、これはコード化されたコード化された入院時診断に使用できます。"
 * reasonReference ^comment = "For systems that need to know which was the primary diagnosis, these will be marked with the standard extension primaryDiagnosis (which is a sequence value rather than a flag, 1 = primary diagnosis).\r\n\r\nどれが主たる診断であったかを知る必要があるシステムでは、これらは標準のエクステンションであるprimaryDiagnosis（フラグではなくシーケンス値、1 = 主たる診断）でマークされる。"
+* reasonReference only Reference(JP_Condition or JP_Procedure or JP_Observation_Common or ImmunizationRecommendation)
 * diagnosis ^short = "The list of diagnosis relevant to this encounter / このEncounterに関連する診断名のリスト"
 * diagnosis ^definition = "The list of diagnosis relevant to this encounter.\r\n\r\nこのEncounterに関連する診断名のリスト"
 * diagnosis.condition ^short = "The diagnosis or procedure relevant to the encounter / Encounterに関連する診断または処置"
@@ -88,6 +91,7 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * diagnosis.use ^definition = "Role that this diagnosis has within the encounter (e.g. admission, billing, discharge …).\r\n\r\n\r\nこの診断名がある受診機会において持っている役割（例えば、入院、請求、退院...）。"
 * diagnosis.rank ^short = "Ranking of the diagnosis (for each role type) / 診断名の順位（役割別）"
 * diagnosis.rank ^definition = "Ranking of the diagnosis (for each role type).\r\n\r\n\r\n診断名の順位（役割別）"
+* diagnosis.condition only Reference(JP_Condition or JP_Procedure)
 * account ^short = "The set of accounts that may be used for billing for this Encounter / あるEncounterの請求に使用される会計セット"
 * account ^definition = "The set of accounts that may be used for billing for this Encounter.\r\n\r\nあるEncounterの請求に使用される会計セット。"
 * account ^comment = "The billing system may choose to allocate billable items associated with the Encounter to different referenced Accounts based on internal business rules.\r\n\r\n請求システムは、内部ルールに基づいて、ある受診機会に関連付けられた請求可能な項目を異なる参照先の会計に割り当てることができる。"
@@ -99,6 +103,7 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * hospitalization.origin ^short = "The location/organization from which the patient came before admission/患者が入院する前に来院した場所/組織"
 * hospitalization.origin ^definition = "The location/organization from which the patient came before admission.\r\n\r\n\r\n患者が入院する前に来院した場所/組織"
 * hospitalization.origin ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n\r\n参照は実際のFHIRリソースへの参照でなければならず、解決可能でなければなりません。解決は URL からの検索、またはリソースタイプによって、絶対参照を正規の URL として扱い、ローカルのレジストリ/リポジトリで検索することで行うことができます。"
+* hospitalization.origin only Reference(JP_Location or JP_Organization)
 * hospitalization.admitSource ^short = "From where patient was admitted (physician referral, transfer)/患者がどこから入院したか（医師の紹介、転院）"
 * hospitalization.admitSource ^definition = "From where patient was admitted (physician referral, transfer).\r\n\r\n\r\n患者がどこから入院したか（医師の紹介、転院）\r\n例：他の病院からの転院、かかりつけ医からの紹介、この病院で産まれた、など"
 * hospitalization.admitSource ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\n\r\n\r\nすべての用語の使用がこの一般的なパターンに適合するわけではない。いくつかのケースでは、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係、および前後の調整を管理するための独自の構造を提供することが望ましい。"
@@ -118,6 +123,7 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * hospitalization.destination ^short = "Location/organization to which the patient is discharged / 患者さんが退院する場所・機関"
 * hospitalization.destination ^definition = "Location/organization to which the patient is discharged.\r\n\r\n\r\n患者さんが退院する場所・機関"
 * hospitalization.destination ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n\r\n参照は実際のFHIRリソースへの参照でなければならず、解決可能でなければなりません。解決は URL からの検索、またはリソースタイプによって、絶対参照を正規の URL として扱い、ローカルのレジストリ/リポジトリで検索することで行うことができます。"
+* hospitalization.destination only Reference(JP_Location or JP_Organization)
 * hospitalization.dischargeDisposition ^short = "Category or kind of location after discharge / 退院後の場所の区分や種類。"
 * hospitalization.dischargeDisposition ^definition = "Category or kind of location after discharge.\r\n\r\n\r\n退院後の場所の区分や種類。"
 * hospitalization.dischargeDisposition ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\n\r\n\r\nすべての用語の使用がこの一般的なパターンに適合するわけではない。いくつかのケースでは、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係、および前後の調整を管理するための独自の構造を提供することが望ましい。"
@@ -127,6 +133,7 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * location.location ^short = "Location the encounter takes place / Encounterの場所"
 * location.location ^definition = "The location where the encounter takes place.\r\n\r\n\r\nEncounterの舞台となる場所。"
 * location.location ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n\r\n参照は実際のFHIRリソースへの参照でなければならず、解決可能でなければなりません。解決は URL からの検索、またはリソースタイプによって、絶対参照を正規の URL として扱い、ローカルのレジストリ/リポジトリで検索することで行うことができます。"
+* location.location only Reference(JP_Location)
 * location.status ^definition = "The status of the participants' presence at the specified location during the period specified. If the participant is no longer at the location, then the period will have an end date/time.\r\n\r\n\r\n指定された期間中の指定された場所での参加者の存在状況。参加者がその場所にいなくなった場合、その期間は終了日時を持つ。"
 * location.status ^comment = "When the patient is no longer active at a location, then the period end date is entered, and the status may be changed to completed.\r\n\r\n\r\n患者がその場所で活動しなくなった場合、期間終了日が入力され、ステータスが完了した状態に変更されることがあります"
 * location.physicalType ^short = "The physical type of the location (usually the level in the location hierachy - bed room ward etc.) / 場所の物理的なタイプ（通常は場所の階層のレベル - ベッド・病室・病棟など）"
@@ -138,6 +145,8 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * serviceProvider ^short = "The organization (facility) responsible for this encounter / このEncouterに責任を持つ組織（施設）"
 * serviceProvider ^definition = "The organization that is primarily responsible for this Encounter's services. This MAY be the same as the organization on the Patient record, however it could be different, such as if the actor performing the services was from an external organization (which may be billed seperately) for an external consultation.  Refer to the example bundle showing an abbreviated set of Encounters for a colonoscopy.\r\n\r\nこのEncouterのサービスに主に責任を持つ組織。これは、患者記録上の組織と同じであってもよいが、例えば、サービスを実行しているアクターが外部組織のものである場合（外部コンサルテーションのために別個に請求される場合がある）など、異なる可能性がある。 大腸内視鏡検査のためのEncouterの省略されたセットを示すバンドル例を参照のこと。"
 * serviceProvider ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
+* serviceProvider only Reference(JP_Organization)
 * partOf ^short = "Another Encounter this encounter is part of / このEncouterが属するもう一つのEncouter"
 * partOf ^definition = "Another Encounter of which this encounter is a part of (administratively or in time).\r\n\r\nこのEncouterが（管理的に、あるいは時間的に）一部となっているもう一つのEncouter。"
 * partOf ^comment = "This is also used for associating a child's encounter back to the mother's encounter.\r\rRefer to the Notes section in the Patient resource for further details.\r\n\r\n子供の受診を母親の受診にさかのぼって連携するときにも使われる。\r\n（※出産時などを表していると思われる）\r\n詳細については、Patient ResourceのNotesセクションを参照のこと。"
+* partOf only Reference(JP_Encounter)
