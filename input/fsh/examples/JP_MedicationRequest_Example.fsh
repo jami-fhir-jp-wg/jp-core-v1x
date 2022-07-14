@@ -6,7 +6,7 @@ Usage: #example
 * identifier[RpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[RpNumber].value = "1"
 * identifier[OrderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[OrderInRp].value = "1"
+* identifier[OrderInRp].value = "2"
 * identifier[RequestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
 * identifier[RequestIdentifier].value = "1234567890.1.1"
 * intent = #order
