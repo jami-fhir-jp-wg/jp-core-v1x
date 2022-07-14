@@ -33,17 +33,21 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * dosage.site.extension ^slicing.discriminator.type = #value
 * dosage.site.extension ^slicing.discriminator.path = "url"
 * dosage.site.extension ^slicing.rules = #open
+* dosage.site.extension[siteComment] only JP_MedicationAdministration_DosageSite_SiteComment
 * dosage.site.extension[siteComment] ^short = "投与部位コメント"
 * dosage.site.extension[siteComment] ^definition = "投与部位コメントを格納するための拡張"
 * dosage.route.extension ^slicing.discriminator.type = #value
 * dosage.route.extension ^slicing.discriminator.path = "url"
 * dosage.route.extension ^slicing.rules = #open
+* dosage.route.extension[routeComment] only JP_MedicationAdministration_DosageRoute_RouteComment
 * dosage.route.extension[routeComment] ^short = "投与経路コメント"
 * dosage.route.extension[routeComment] ^definition = "投与経路コメントを格納するための拡張"
 * dosage.method.extension ^slicing.discriminator.type = #value
 * dosage.method.extension ^slicing.discriminator.path = "url"
 * dosage.method.extension ^slicing.rules = #open
+* dosage.method.extension[methodComment] only JP_MedicationAdministration_DosageMethod_MethodComment
 * dosage.rateRatio.extension ^slicing.discriminator.type = #value
 * dosage.rateRatio.extension ^slicing.discriminator.path = "url"
 * dosage.rateRatio.extension ^slicing.rules = #open
+* dosage.rateRatio.extension[rateComment] only JP_MedicationAdministration_DosageRate_RateComment
 * dosage.rateQuantity ^short = "JP Coreでは未使用"

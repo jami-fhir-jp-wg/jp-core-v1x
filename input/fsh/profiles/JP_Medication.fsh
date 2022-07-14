@@ -59,6 +59,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * ingredient.strength.extension ^slicing.discriminator.type = #value
 * ingredient.strength.extension ^slicing.discriminator.path = "url"
 * ingredient.strength.extension ^slicing.rules = #open
+* ingredient.strength.extension[strenghtType] only JP_Medication_IngredientStrength_StrengthType
 * ingredient.strength.extension[strenghtType] ^definition = "投与量が製剤単位か成分単位かを格納する拡張"
 * batch ^short = "分包された薬剤についての詳細な解説"
 * batch ^definition = "薬剤のパッケージ（薬品そのものではない）についての情報。"

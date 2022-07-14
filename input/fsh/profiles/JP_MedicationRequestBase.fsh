@@ -175,10 +175,14 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.extension ^slicing.discriminator.type = #value
 * dosageInstruction.extension ^slicing.discriminator.path = "url"
 * dosageInstruction.extension ^slicing.rules = #open
+* dosageInstruction.extension[periodOfUse] only JP_MedicationRequest_DosageInstruction_PeriodOfUse
+* dosageInstruction.extension[usageDuration] only JP_MedicationRequest_DosageInstruction_UsageDuration
 * dosageInstruction.extension[usageDuration] ^short = "実投与日数"
 * dosageInstruction.extension[usageDuration] ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
+* dosageInstruction.extension[device] only JP_MedicationRequest_DosageInstruction_Device
 * dosageInstruction.extension[device] ^short = "投与機器の情報"
 * dosageInstruction.extension[device] ^definition = "投与機器の情報を記述する拡張。"
+* dosageInstruction.extension[line] only JP_MedicationRequest_DosageInstruction_Line
 * dosageInstruction.extension[line] ^short = "投与ラインの情報"
 * dosageInstruction.extension[line] ^definition = "投与ラインの情報を記述する拡張。"
 * dosageInstruction.sequence ^short = "服用指示の順番"
