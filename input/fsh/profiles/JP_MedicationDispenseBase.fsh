@@ -7,12 +7,12 @@ Id: jp-medicationdispensebase
 Title: "JP Core MedicationDispenseBase Profile"
 Description: "このプロファイルはユーザは直接適用するものではなく、JP_MedicationDispenseとJP_MedicationDispenseInjectionの共通の親となる抽象プロファイルである。このプロファイルはMedicationDispenseリソースに対して、内服・外用薬剤処方調剤・払い出し記録のデータを送受信するため、JP_MedicationDispenseとJP_MedicationDispenseInjectionの各プロファイルの基礎となる制約と拡張のうち共通部分を定めている。"
 // extension 参照宣言 基底拡張2個、内部拡張1個
-* extension contains JP_MedicationDispense_Preparation named Preparation 0..*
+* extension contains JP_MedicationDispense_Preparation named Preparation ..*
 * dosageInstruction.extension contains
-    JP_MedicationRequest_DosageInstruction_UsageDuration named UsageDuration 0..1 and
-    JP_MedicationRequest_DosageInstruction_PeriodOfUse named PeriodOfUse 0..1 and
-    JP_MedicationRequest_DosageInstruction_Line named Line 0..* and
-    JP_MedicationRequest_DosageInstruction_Device named Device 0..*
+    JP_MedicationRequest_DosageInstruction_UsageDuration named UsageDuration ..1 and
+    JP_MedicationRequest_DosageInstruction_PeriodOfUse named PeriodOfUse ..1 and
+    JP_MedicationRequest_DosageInstruction_Line named Line ..* and
+    JP_MedicationRequest_DosageInstruction_Device named Device ..*
 //
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispenseBase"
 * ^status = #draft

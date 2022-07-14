@@ -39,13 +39,13 @@ Description: "本プロファイルはAllergyIntoleranceリソースに対して
 * code.coding ^slicing.discriminator[0].type = #value
 * code.coding ^slicing.discriminator[=].path = "system"
 * code.coding ^slicing.rules = #open
-* code.coding contains food 0..1
+* code.coding contains food ..1
 * code.coding[food] from JP_AllergyIntoleranceCodesFood_VS (required)
 * code.coding[food].system = $JP_JFAGY_CS (exactly)
-* code.coding contains medicine 0..1
+* code.coding contains medicine ..1
 * code.coding[medicine] from JP_AllergyIntoleranceCodesMedicine_VS (required)
 * code.coding[medicine].system = $JP_JFAGY_CS (exactly)
-* code.coding contains nonfoodnonmedicine 0..1
+* code.coding contains nonfoodnonmedicine ..1
 * code.coding[nonfoodnonmedicine] from JP_AllergyIntoleranceCodesNonFoodNonMedicine_VS (required)
 * code.coding[nonfoodnonmedicine].system = $JP_JFAGY_CS (exactly)
 * patient only Reference(JP_Patient)
