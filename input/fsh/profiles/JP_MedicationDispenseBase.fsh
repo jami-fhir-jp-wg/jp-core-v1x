@@ -101,7 +101,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.extension ^slicing.discriminator.type = #value
 * dosageInstruction.extension ^slicing.discriminator.path = "url"
 * dosageInstruction.extension ^slicing.rules = #open
-* dosageInstruction.extension ^min = 0
 * dosageInstruction.extension[UsageDuration] ^short = "実服用日数"
 * dosageInstruction.extension[UsageDuration] ^definition = "実服用日数を格納する拡張。\r\n実服用日数（実投与日数）とは、投与期間において実際に服用（投与）が行われる実日数であり、休薬日を含まない。\r\n全期間が７日で、用法が隔日投与の場合には、１日目、３日目、５日目、７日目の４日間に服用することになるので、実服用日数は４日となる。"
 * dosageInstruction.extension[PeriodOfUse] ^short = "投与期間"
@@ -110,12 +109,10 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.extension[Device] ^sliceName = "Device"
 * dosageInstruction.extension[Device] ^short = "投与機器の情報"
 * dosageInstruction.extension[Device] ^definition = "投与機器の情報を記述する拡張。"
-* dosageInstruction.extension[Device] ^min = 0
 * dosageInstruction.extension[Line] only JP_MedicationRequest_DosageInstruction_Line
 * dosageInstruction.extension[Line] ^sliceName = "Line"
 * dosageInstruction.extension[Line] ^short = "投与ラインの情報"
 * dosageInstruction.extension[Line] ^definition = "投与ラインの情報を記述する拡張。"
-* dosageInstruction.extension[Line] ^min = 0
 * dosageInstruction.sequence ^short = "The order of the dosage instructions　投与量の指示の順序"
 * dosageInstruction.sequence ^definition = "Indicates the order in which the dosage instructions should be applied or interpreted.\r\n\r\n投与量の指示が適用または解釈されるべき順序を示す。"
 * dosageInstruction.sequence ^requirements = "If the sequence number of multiple Dosages is the same, then it is implied that the instructions are to be treated as concurrent.  If the sequence number is different, then the Dosages are intended to be sequential.\r\n\r\n複数の投与量のシーケンス番号が同じである場合、命令は同時として扱われることを意味する。シーケンス番号が異なる場合、投与量は連続するように意図されています。"

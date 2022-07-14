@@ -7,12 +7,12 @@ Id: jp-medicationrequestbase
 Title: "JP Core MedicationRequestBase Profile"
 Description: "このプロファイルはユーザは直接適用するものではなく、JP_MedicationRequestとJP_MedicationRequestInjectionの共通の親となる抽象プロファイルである。MedicationRequestリソースに対して、内服・外用薬剤処方、注射・点滴などのデータを送受信するため、JP_MedicationRequestとJP_MedicationRequestInjectionの各プロファイルの基礎となる制約と拡張のうち共通部分を定めている。"
 // extension 参照宣言 基底拡張2個、内部拡張1個
-* extension contains JP_MedicationDispense_Preparation named Preparation 0..*
+* extension contains JP_MedicationDispense_Preparation named Preparation ..*
 * dosageInstruction.extension contains
-    JP_MedicationRequest_DosageInstruction_UsageDuration named UsageDuration 0..1 and
-    JP_MedicationRequest_DosageInstruction_PeriodOfUse named PeriodOfUse 0..1 and
-    JP_MedicationRequest_DosageInstruction_Line named Line 0..* and
-    JP_MedicationRequest_DosageInstruction_Device named Device 0..*
+    JP_MedicationRequest_DosageInstruction_UsageDuration named UsageDuration ..1 and
+    JP_MedicationRequest_DosageInstruction_PeriodOfUse named PeriodOfUse ..1 and
+    JP_MedicationRequest_DosageInstruction_Line named Line ..* and
+    JP_MedicationRequest_DosageInstruction_Device named Device ..*
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequestBase"
 * ^status = #draft
 * ^date = "2022-03-16"
@@ -28,7 +28,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier contains
     RpNumber 1..1 and
     OrderInRp 1..1 and
-    RequestIdentifier 0..*
+    RequestIdentifier ..*
 * identifier[RpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[RpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[RpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
@@ -177,7 +177,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.extension ^slicing.rules = #open
 * dosageInstruction.extension[PeriodOfUse] only JP_MedicationRequest_DosageInstruction_PeriodOfUse
 * dosageInstruction.extension[PeriodOfUse] ^sliceName = "PeriodOfUse"
-* dosageInstruction.extension[PeriodOfUse] ^min = 0
 * dosageInstruction.extension[UsageDuration] only JP_MedicationRequest_DosageInstruction_UsageDuration
 * dosageInstruction.extension[UsageDuration] ^sliceName = "UsageDuration"
 * dosageInstruction.extension[UsageDuration] ^short = "実投与日数"
@@ -409,8 +408,8 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.method.coding ^slicing.rules = #open
 
 * dosageInstruction.method.coding contains
-    unitDigit1 0..1 and
-    unitDigit2 0..1
+    unitDigit1 ..1 and
+    unitDigit2 ..1
     
 * dosageInstruction.method.coding[unitDigit1] ^short = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コード"
 * dosageInstruction.method.coding[unitDigit1] ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コードを識別するURI。"
@@ -683,18 +682,15 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dispenseRequest.extension ^slicing.discriminator.type = #value
 * dispenseRequest.extension ^slicing.discriminator.path = "url"
 * dispenseRequest.extension ^slicing.rules = #open
-* dispenseRequest.extension ^min = 0
 * dispenseRequest.extension contains
-    JP_MedicationRequest_DispenseRequest_InstructionForDispense named InstructionForDispense 0..* and
-    JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount named ExpectedRepeatCount 0..1
+    JP_MedicationRequest_DispenseRequest_InstructionForDispense named InstructionForDispense ..* and
+    JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount named ExpectedRepeatCount ..1
 * dispenseRequest.extension[InstructionForDispense] ^short = "調剤指示"
 * dispenseRequest.extension[InstructionForDispense] ^definition = "薬剤単位の調剤指示を格納する"
-* dispenseRequest.extension[InstructionForDispense] ^min = 0
 * dispenseRequest.extension[InstructionForDispense].value[x] ^short = "調剤指示"
 * dispenseRequest.extension[InstructionForDispense].value[x] ^definition = "薬剤単位の調剤・払い出し指示"
 * dispenseRequest.extension[ExpectedRepeatCount] ^short = "頓用回数"
 * dispenseRequest.extension[ExpectedRepeatCount] ^definition = "頓用回数"
-* dispenseRequest.extension[ExpectedRepeatCount] ^min = 0
 * dispenseRequest.initialFill ^short = "初回の調剤詳細"
 * dispenseRequest.initialFill ^definition = "初回の薬剤払い出しでの期間や量への指示"
 * dispenseRequest.initialFill ^comment = "このエレメントを設定するときには量あるいは期間が指定されていなければならない。"

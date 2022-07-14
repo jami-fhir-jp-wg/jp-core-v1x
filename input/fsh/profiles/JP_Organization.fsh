@@ -14,7 +14,6 @@ Description: "このプロファイルはOrganizationリソースに対して、
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension ^min = 0
 * extension contains
     JP_Organization_PrefectureNo named prefectureNo ..1 and
     JP_Organization_InsuranceOrganizationCategory named organizationCategory ..1 and

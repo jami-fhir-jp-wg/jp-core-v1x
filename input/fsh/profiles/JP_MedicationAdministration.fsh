@@ -8,10 +8,10 @@ Title: "JP Core MedicationAdministration Profile"
 Description: "このプロファイルはMedicationAdministrationリソースに対して、内服・外用薬剤処方投与実施情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 // extension 参照宣言
 * extension contains
-    JP_MedicationAdministration_RequestDepartment named RequestDepartment 0..1 and
-    JP_MedicationAdministration_RequestAuthoredOn named RequestAuthoredOn 0..1 and
-    JP_MedicationAdministration_Location named Location 0..1   and
-    JP_MedicationAdministration_Requester named Requester 0..*
+    JP_MedicationAdministration_RequestDepartment named RequestDepartment ..1 and
+    JP_MedicationAdministration_RequestAuthoredOn named RequestAuthoredOn ..1 and
+    JP_MedicationAdministration_Location named Location ..1   and
+    JP_MedicationAdministration_Requester named Requester ..*
 //
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
 * ^status = #draft

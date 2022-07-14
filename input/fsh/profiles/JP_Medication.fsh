@@ -7,8 +7,8 @@ Id: jp-medication
 Title: "JP Core Medication Profile"
 Description: "このプロファイルはMedicationリソースに対して、主に薬剤データを送受信するための基礎となる制約と拡張を定めたものである。"
 // extension 参照宣言
-* ingredient.extension contains JP_Medication_Ingredient_DrugNo named DrugNo 0..*
-* ingredient.strength.extension contains JP_Medication_IngredientStrength_StrengthType named StrenghtType 0..*
+* ingredient.extension contains JP_Medication_Ingredient_DrugNo named DrugNo ..*
+* ingredient.strength.extension contains JP_Medication_IngredientStrength_StrengthType named StrenghtType ..*
 //
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication"
 * ^status = #draft
@@ -44,8 +44,6 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * ingredient.extension ^slicing.discriminator.type = #value
 * ingredient.extension ^slicing.discriminator.path = "url"
 * ingredient.extension ^slicing.rules = #open
-* ingredient.extension ^min = 0
-* ingredient.extension[DrugNo] ^min = 0
 * ingredient.item[x] only CodeableConcept
 * ingredient.item[x] ^short = "有効な成分あるいは含有物"
 * ingredient.item[x] ^definition = "有効成分。物質(単純成分）あるいは他の薬剤や処方。"
@@ -61,11 +59,9 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * ingredient.strength.extension ^slicing.discriminator.type = #value
 * ingredient.strength.extension ^slicing.discriminator.path = "url"
 * ingredient.strength.extension ^slicing.rules = #open
-* ingredient.strength.extension ^min = 0
 * ingredient.strength.extension[StrenghtType] only JP_Medication_IngredientStrength_StrengthType
 * ingredient.strength.extension[StrenghtType] ^sliceName = "StrenghtType"
 * ingredient.strength.extension[StrenghtType] ^definition = "投与量が製剤単位か成分単位かを格納する拡張"
-* ingredient.strength.extension[StrenghtType] ^min = 0
 * batch ^short = "分包された薬剤についての詳細な解説"
 * batch ^definition = "薬剤のパッケージ（薬品そのものではない）についての情報。"
 * batch.lotNumber ^short = "バッチのID"
