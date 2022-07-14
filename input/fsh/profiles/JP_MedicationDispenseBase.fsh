@@ -106,11 +106,9 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.extension[periodOfUse] ^short = "投与期間"
 * dosageInstruction.extension[periodOfUse] ^definition = "投与期間を明示的に記述する拡張。\r\nこの拡張を使用する場合には、開始日は必須。"
 * dosageInstruction.extension[device] only JP_MedicationRequest_DosageInstruction_Device
-* dosageInstruction.extension[device] ^sliceName = "Device"
 * dosageInstruction.extension[device] ^short = "投与機器の情報"
 * dosageInstruction.extension[device] ^definition = "投与機器の情報を記述する拡張。"
 * dosageInstruction.extension[line] only JP_MedicationRequest_DosageInstruction_Line
-* dosageInstruction.extension[line] ^sliceName = "Line"
 * dosageInstruction.extension[line] ^short = "投与ラインの情報"
 * dosageInstruction.extension[line] ^definition = "投与ラインの情報を記述する拡張。"
 * dosageInstruction.sequence ^short = "The order of the dosage instructions　投与量の指示の順序"
