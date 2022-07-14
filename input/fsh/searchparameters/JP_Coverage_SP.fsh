@@ -5,7 +5,7 @@ Usage: #definition
 * name = "JP_Coverage_InsuredPersonNumber_SP"
 * status = #draft
 * date = "2022-03-23"
-* description = "CoverageリソースのInsuredPersonNumber(健康保険における被保険者証番号)に関する検索を定義します。"
+* description = "CoverageリソースのInsuredPersonNumber(健康保険における被保険者証番号)に関する検索を定義する。"
 * code = #jp-insured-personnumber
 * base = #Coverage
 * type = #string
@@ -26,7 +26,7 @@ Usage: #definition
 * name = "JP_Coverage_InsuredPersonSubNumber_SP"
 * status = #draft
 * date = "2022-03-23"
-* description = "CoverageリソースのInsuredPersonSubNumber(健康保険における被保険者証番号の枝番)に関する検索を定義します。"
+* description = "CoverageリソースのInsuredPersonSubNumber(健康保険における被保険者証番号の枝番)に関する検索を定義する。"
 * code = #jp-insured-personsubnumber
 * base = #Coverage
 * type = #string
@@ -48,7 +48,7 @@ Usage: #definition
 * name = "JP_Coverage_InsuredPersonSymbol_SP"
 * status = #draft
 * date = "2022-03-23"
-* description = "CoverageリソースのInsuredPersonSymbol(健康保険における被保険者証記号)に関する検索を定義します。"
+* description = "CoverageリソースのInsuredPersonSymbol(健康保険における被保険者証記号)に関する検索を定義する。"
 * code = #jp-insured-personsymbol
 * base = #Coverage
 * type = #string
