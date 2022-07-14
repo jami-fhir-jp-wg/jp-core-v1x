@@ -8,10 +8,10 @@ Title: "JP Core MedicationAdministration Profile"
 Description: "このプロファイルはMedicationAdministrationリソースに対して、内服・外用薬剤処方投与実施情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 // extension 参照宣言
 * extension contains
-    JP_MedicationAdministration_RequestDepartment named RequestDepartment ..1 and
-    JP_MedicationAdministration_RequestAuthoredOn named RequestAuthoredOn ..1 and
-    JP_MedicationAdministration_Location named Location ..1   and
-    JP_MedicationAdministration_Requester named Requester ..*
+    JP_MedicationAdministration_RequestDepartment named requestDepartment ..1 and
+    JP_MedicationAdministration_RequestAuthoredOn named requestAuthoredOn ..1 and
+    JP_MedicationAdministration_Location named location ..1   and
+    JP_MedicationAdministration_Requester named requester ..*
 //
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
 * ^status = #draft
@@ -21,14 +21,14 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension[RequestDepartment] ^short = "依頼科"
-* extension[RequestDepartment] ^definition = "依頼科を格納するための拡張"
-* extension[Requester] ^short = "依頼医"
-* extension[Requester] ^definition = "依頼医を格納するための拡張。\r\n依頼医を記述した Practitioner  リソースへの参照。"
-* extension[RequestAuthoredOn] ^short = "依頼日時"
-* extension[RequestAuthoredOn] ^definition = "依頼日時を格納するための拡張"
-* extension[Location] ^short = "実施場所"
-* extension[Location] ^definition = "実施場所を格納するための拡張。\r\n実施場所を記述した  Locationリソースへの参照。"
+* extension[requestDepartment] ^short = "依頼科"
+* extension[requestDepartment] ^definition = "依頼科を格納するための拡張"
+* extension[requester] ^short = "依頼医"
+* extension[requester] ^definition = "依頼医を格納するための拡張。\r\n依頼医を記述した Practitioner  リソースへの参照。"
+* extension[requestAuthoredOn] ^short = "依頼日時"
+* extension[requestAuthoredOn] ^definition = "依頼日時を格納するための拡張"
+* extension[location] ^short = "実施場所"
+* extension[location] ^definition = "実施場所を格納するための拡張。\r\n実施場所を記述した  Locationリソースへの参照。"
 * identifier ^short = "External identifier 外部識別子"
 * identifier ^definition = "Identifiers associated with this Medication Administration that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.\r\n\r\nビジネスプロセスによって定義され、リソース自体への直接URL参照が適切でない場合にそれを参照するために使用される、この投薬管理に関連付けられた識別子。これらは、実行者または他のシステムによってこのリソースに割り当てられたビジネスIDであり、リソースが更新されてサーバーからサーバーに伝播される間、一定のままである。"
 * instantiates ^short = "Instantiates protocol or definition　プロトコルや定義のインスタンス化"
@@ -50,7 +50,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * medicationCodeableConcept.coding 1..
 * medicationCodeableConcept.coding ^short = "Code defined by a terminology system コード集で定義された医薬品コード"
 * medicationCodeableConcept.coding ^definition = "A reference to a code defined by a terminology system.\r\n\r\nコード集で定義された医薬品コードへの情報"
-* medicationCodeableConcept.coding ^comment = "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.\r\n【JP-CORE】"
+* medicationCodeableConcept.coding ^comment = "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.\r\n"
 * medicationCodeableConcept.coding.system 1..
 * medicationCodeableConcept.coding.code 1..
 * medicationCodeableConcept.coding.display 1..
