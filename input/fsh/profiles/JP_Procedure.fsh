@@ -14,7 +14,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * id ^short = "Logical id of this artifact"
 * contained ^short = "Contained, inline Resources"
 * identifier ^definition = "これは、ビジネスプロセスによって定義され、リソース自体への直接のURL参照が適切でない場合に参照するために使用される、このProcedureに関連する識別子を記録する。"
-* identifier ^comment = "これはビジネス識別子であり、リソース識別子ではありません（議論参照）。識別子は1つのリソースインスタンスにのみ表示されることがベストですが、ビジネス上の慣習により、同じ識別子を持つ複数のリソースインスタンスが存在することがあるかもしれません。例えば、複数のPatientとPersonリソースインスタンスが同じ社会保険番号を共有しているかもしれない。"
+* identifier ^comment = "これはビジネス識別子であり、リソース識別子ではない（議論参照）。識別子は1つのリソースインスタンスにのみ表示されることがベストだが、ビジネス上の慣習により、同じ識別子を持つ複数のリソースインスタンスが存在することがあるかもしれない。例えば、複数のPatientとPersonリソースインスタンスが同じ社会保険番号を共有しているかもしれない。"
 * instantiatesCanonical ^definition = "本Procedureの全部または一部を遵守するFHIR定義のプロトコル、ガイドライン、オーダーセット、その他の定義を指すURL."
 * instantiatesUri ^definition = "本Procedrure全体または一部を遵守する、外部で管理されているプロトコル、ガイドライン、オーダーセット、またはその他の定義を指すURL。"
 * basedOn only Reference(JP_CarePlan or ServiceRequest)
@@ -36,7 +36,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * category.coding ^comment = "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.\r\n\r\nコードは、列挙型またはコードリストで、SNOMED CTなどの非常に正式な定義まで、非常に柔軟に定義できる。詳細については、HL7v3コア原則を参照。コーディングの順序は定義されておらず、意味を推測するために使用してはならない。\r\n一般に、コーディング値の多くても1つだけが　UserSelected = true　としてラベル付けされる。"
 * category.text ^short = "Plain text representation of the concept　この概念のシンプルなテキスト記述"
 * category.text ^definition = "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.\r\n\r\nデータを入力したユーザーによって見られた/選択された/発声された、および/またはユーザーの意図された意味を表す概念の人間の言語表現。"
-* category.text ^comment = "Very often the text is the same as a displayName of one of the codings.\r\n多くの場合、テキストはいずれかのコーディングのdisplayNameと同じです。"
+* category.text ^comment = "Very often the text is the same as a displayName of one of the codings.\r\n多くの場合、テキストはいずれかのコーディングのdisplayNameと同じである。"
 * category.text ^requirements = "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.\r\n用語のコードは、それらを使用する人間のすべてのニュアンスで常に正しい意味を捉えているとは限らない。または、適切なコードがまったくない場合もある。このような場合、テキストはソースの完全な意味をキャプチャするために使用される。"
 * code 1..
 * code ^short = "Identification of the procedure　プロシジャーの識別子"
@@ -50,7 +50,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * encounter only Reference(JP_Encounter)
 * encounter ^short = "Encounter created as part of　一部として作成されたエンカウンター"
 * encounter ^definition = "プロシジャーが作成または実行されたエンカウンター、またはこの記録の作成が緊密に関連しているエンカウンター。"
-* encounter ^comment = "これは通常、イベントが発生した出会いの中で行われますが、活動によっては、出会いの公式な終了前または終了後に開始されても、出会いの文脈と結びついている場合がある。"
+* encounter ^comment = "これは通常、イベントが発生した出会いの中で行われるが、活動によっては、出会いの公式な終了前または終了後に開始されても、出会いの文脈と結びついている場合がある。"
 * performed[x] 1..
 * performed[x] only dateTime or Period
 * performed[x] ^short = "When the procedure was performed　プロシジャーが実施された時期"
@@ -59,16 +59,16 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * recorder only Reference(JP_Patient or RelatedPerson or JP_Practitioner or JP_PractitionerRole)
 * recorder ^short = "Who recorded the procedure　プロシジャーを記録した人"
 * recorder ^definition = "Individual who recorded the record and takes responsibility for its content.\r\n記録を記録し、その内容に責任を負う個人。"
-* recorder ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要があります（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
+* recorder ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
 * asserter only Reference(JP_Patient or RelatedPerson or JP_Practitioner or JP_PractitionerRole)
 * asserter ^short = "Person who asserts this procedure　プロシジャーを実施したと報告する人"
 * asserter ^definition = "Individual who is making the procedure statement.\r\nプロシジャー記録を作成している個人"
-* asserter ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要があります（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
+* asserter ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
 * performer.actor only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or RelatedPerson or Device)
 * performer ^short = "The people who performed the procedure　プロシジャーを実施した人々"
 * performer ^definition = "Limited to \"real\" people rather than equipment.\r\n医療機器ではなく「生身の人間」に限定。"
 * performer.function ^definition = "Distinguishes the type of involvement of the performer in the procedure. For example, surgeon, anaesthetist, endoscopist.\r\nプロシジャーへの実施者の関与のタイプを区別する。たとえば、外科医、麻酔科医、内視鏡医。"
-* performer.function ^comment = "すべての用語の使用がこの一般的なパターンに当てはまるわけではない。場合によっては、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係や事前・事後の調整を管理するための独自の構造を提供するべきです。\r\n\r\n 【JP-CORE】\r\n当面利用しない。"
+* performer.function ^comment = "すべての用語の使用がこの一般的なパターンに当てはまるわけではない。場合によっては、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係や事前・事後の調整を管理するための独自の構造を提供するべきである。\r\n\r\n 【JP-CORE】\r\n当面利用しない。"
 * performer.actor ^short = "The reference to the practitioner　医療従事者への参照"
 * performer.actor ^definition = "The practitioner who was involved in the procedure.\r\nプロシジャーに関わった医療従事者。"
 * performer.actor ^comment = "参照は、実際のFHIRリソースへの参照であり、解決可能でなければならない（アクセス制御、一時的な利用不可などを可能にする）。解決には、URLからの検索、またはリソースタイプによって適用可能な場合は、絶対参照を正規のURLとして扱い、ローカルレジストリ/リポジトリで検索することができる。"
@@ -79,7 +79,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * location only Reference(JP_Location)
 * location ^short = "Where the procedure happened　　プロシジャーが実施された場所"
 * location ^definition = "プロシジャーが実施された場所。\r\n例：自宅での出生、レストランで気管切開など。"
-* location ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要があります（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
+* location ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
 * reasonCode ^short = "Coded reason procedure performed　プロシジャーが実施された理由コード"
 * reasonCode ^definition = "処置が行われたコード化された理由。\r\nこれはある種のコード化された実体であるかもしれないし、単にテキストとして存在するかもしれない。"
 * reasonCode ^comment = "Use Procedure.reasonCode when a code sufficiently describes the reason.  Use Procedure.reasonReference when referencing a resource, which allows more information to be conveyed, such as onset date. Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used.  Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.\r\n\r\nひとつのコードが理由を十分に説明している場合は、Procedure.reasonCodeを使用する。\r\nリソースを参照する場合は、Procedure.reasonReferenceを使用する。これにより、開始日など、より多くの情報を伝達できる。\r\nProcedure.reasonCodeとProcedure.reasonReferenceは、重複することを意図したものではない。単一の理由で、Procedure.reasonCodeまたはProcedure.reasonReferenceのいずれかだけを使用できる。\r\n Procedure.reasonCodeは要約コードの場合もあれば、Procedure.reasonReferenceを使用して、Condition | Observation | Procedure | DiagnosticReport | DocumentReference　のいずれかにより、非常に精緻な理由の定義を参照することもできる。\r\nもしプロシージャの異なる理由を説明しているのであれば、Procedure.reasonCodeとProcedure.reasonReferenceの両方を使用できる。"
@@ -103,14 +103,14 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * complicationDetail only Reference(JP_Condition)
 * complicationDetail ^short = "A condition that is a result of the procedure　プロシジャーの結果であるような患者状態"
 * complicationDetail ^definition = "Any complications that occurred during the procedure, or in the immediate post-performance period.\r\nProcedureの実施中、または実施直後に発生した全ての合併症。"
-* complicationDetail ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要があります（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
+* complicationDetail ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
 * complicationDetail ^requirements = "This is used to document a condition that is a result of the procedure, not the condition that was the reason for the procedure.\r\nこれは、プロシジャーの理由であった状態ではなく、プロシジャーの結果である状態を文書化するために使用される。"
 * followUp ^short = "Instructions for follow up　フォローアップの指示"
 * followUp ^definition = "If the procedure required specific follow up - e.g. removal of sutures. The follow up may be represented as a simple note or could potentially be more complex, in which case the CarePlan resource can be used.\r\n\r\n処置が特別なフォローアップを必要とする場合（例：抜糸）、フォローアップはシンプルなnote として表現してもよいが、より複雑になる可能性もあり、その場合はケアプランリソースを使用することができる。"
 * followUp ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\n\r\nすべてのターミノロジーの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係と調整前後の関係を管理するための独自の構造を提供する必要がある。"
 * note ^short = "Additional information about the procedure　プロシジャーの関する追加情報"
 * note ^definition = "Any other notes and comments about the procedure.\r\nProcedureに関する注意点やコメントなど。"
-* note ^comment = "For systems that do not have structured annotations, they can simply communicate a single annotation with no author or time.  This element may need to be included in narrative because of the potential for modifying information.  *Annotations SHOULD NOT* be used to communicate \"modifying\" information that could be computable. (This is a SHOULD because enforcing user behavior is nearly impossible).\r\n\r\n構造化された注釈（アノテーション）を持たないシステムの場合、作成者や時間なしで単一の注釈を簡単に伝達できる。情報を変更する可能性があるため、この要素をナラティブに含める必要がある場合がある。 \r\n*注釈は、計算機処理れきる「変更」情報を伝達するために使用されるべきではない*。 （ユーザーの行動を強制することはほとんど不可能であるため、これはSHOULDです）。"
+* note ^comment = "For systems that do not have structured annotations, they can simply communicate a single annotation with no author or time.  This element may need to be included in narrative because of the potential for modifying information.  *Annotations SHOULD NOT* be used to communicate \"modifying\" information that could be computable. (This is a SHOULD because enforcing user behavior is nearly impossible).\r\n\r\n構造化された注釈（アノテーション）を持たないシステムの場合、作成者や時間なしで単一の注釈を簡単に伝達できる。情報を変更する可能性があるため、この要素をナラティブに含める必要がある場合がある。 \r\n*注釈は、計算機処理れきる「変更」情報を伝達するために使用されるべきではない*。 （ユーザーの行動を強制することはほとんど不可能であるため、これはSHOULDとする）。"
 * focalDevice ^short = "Manipulated, implanted, or removed device　操作、埋め込み、または削除されたデバイス"
 * focalDevice ^definition = "A device that is implanted, removed or otherwise manipulated (calibration, battery replacement, fitting a prosthesis, attaching a wound-vac, etc.) as a focal portion of the Procedure.\r\n\r\nProcedureが行われる局所に、あるいは、そこから、埋め込まれる、取り外される、またはその他の操作（キャリブレーション、バッテリー交換、プロテーゼの装着、陰圧ドレインバックの装着など）が行われるデバイス。"
 * focalDevice.action ^definition = "Procedure中にデバイスに起こった変化の種類。【JP仕様】https://www.hl7.org/fhir/procedure.htmlを参照"
