@@ -1,14 +1,14 @@
 
 ### 必須要素
 
- JP Core PractitionerRole リソースで定義された必須要素は特にありません。
+ JP Core PractitionerRole リソースで定義された必須要素はない。
 
 
   
 
 ### Extensions定義
 
- JP Core PractitionerRole リソースで定義された拡張は特にありません。
+ JP Core PractitionerRole リソースで定義された拡張はない。
 
 
    
@@ -28,14 +28,12 @@
 
 ### 制約一覧
 
-制約はありません。
+制約はない。
 
 
 ## 利用方法
 
 ### インタラクション一覧
-
-<span style="color: red;">★★コメント ： 説明のための例示です。内容の妥当性は考慮していません。★★</span>
 
 
 
@@ -102,12 +100,12 @@
 
 ##### 推奨検索パラメータ
 
-推奨検索パラメータはありません。
+推奨検索パラメータはない。
 
 
 ##### 追加検索パラメータ 
 
-追加検索パラメータはありません。
+追加検索パラメータはない。
 
 
 
@@ -115,7 +113,7 @@
 
 #### Operation一覧
 
-PractitionerRoleに対するOperationは定義されていません。
+PractitionerRoleに対するOperationは定義されていない。
 
 
 
@@ -235,8 +233,8 @@ PractitionerRoleに対するOperationは定義されていません。
 ## 注意事項
 
 
-PractitionerRoleには、ここで定義されているlocationに住所が含まれているため、addressはありません。
-これにより、複数のリソースにaddressの値を重複させる必要がなくなります。
+PractitionerRoleには、ここで定義されているlocationに住所が含まれているため、addressは存在しない。
+これにより、複数のリソースにaddressの値を重複させる必要がなくなる。
 
 
 
