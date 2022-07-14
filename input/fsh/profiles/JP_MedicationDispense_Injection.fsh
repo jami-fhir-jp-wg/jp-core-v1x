@@ -7,7 +7,7 @@ Id: jp-medicationdispense-injection
 Title: "JP Core MedicationDispense Injection Profile"
 Description: "このプロファイルはMedicationDispenseリソースに対して、注射薬剤処方調剤・払い出し記録のデータを送受信するための基礎となる制約と拡張を定めたものである。JP_MedicationDispenseBaseプロファイルからの派生プロファイルである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispense_Injection"
-* ^status = #draft
+* ^status = #active
 * ^date = "2022-03-16"
 * ^purpose = "このプロファイルはMedicationDispenseリソースに対して、注射薬剤処方調剤・払い出し記録のデータを送受信するための基礎となる制約と拡張を定めたものである。JP_MedicationDispenseBaseプロファイルからの派生プロファイルである。"
 * . ^short = "指定された患者への注射薬剤の払い出し"

@@ -7,7 +7,7 @@ Id: jp-observation-bodymeasurement
 Title: "JP Core Observation BodyMeasurement Profile"
 Description: "このプロファイルはObservationリソースに対して、身体計測のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_BodyMeasurement"
-* ^status = #draft
+* ^status = #active
 * . ^short = "身体計測に関する測定や簡単な観察事実（assertion）"
 * . ^definition = "患者の身体計測に関する測定と簡単な観察事実（assertion）。"
 * . ^comment = "身体計測に関するObservation（検査測定や観察事実）の制約プロフィール"

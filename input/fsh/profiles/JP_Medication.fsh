@@ -11,7 +11,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * ingredient.strength.extension contains JP_Medication_IngredientStrength_StrengthType named strenghtType ..*
 //
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication"
-* ^status = #draft
+* ^status = #active
 * ^date = "2022-03-16"
 * ^purpose = "このプロファイルはMedicationリソースに対して、主に薬剤データを送受信するための基礎となる制約と拡張を定めたものである。"
 * . ^short = "Medication Resourceの定義"

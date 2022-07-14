@@ -7,7 +7,7 @@ Id: jp-observation-labresult
 Title: "JP Core Observation LabResult Profile"
 Description: "このプロファイルはObservationリソースに対して、検体検査結果のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_LabResult"
-* ^status = #draft
+* ^status = #active
 * . ^short = "検体検査結果"
 * . ^definition = "Measurements and simple assertions made about a patient, device or other subject.\r\n\r\n検体検査結果の格納に使用する。"
 * . ^comment = "すべてのObservation（検査測定や観察事実）の制約プロファイル"

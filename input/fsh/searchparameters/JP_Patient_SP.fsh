@@ -3,7 +3,7 @@ InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP"
 * name = "JP_Patient_KanaSort_SP"
-* status = #draft
+* status = #active
 * date = "2022-06-23"
 * description = "Patientリソースをカナ名称でソートするための検索を定義する。検索に_sort=jp-kana-sortを指定すると、name.use=usualかつカナと指定されているname.text（フルネーム）を使ったソートを行う。"
 * code = #jp-kana-sort

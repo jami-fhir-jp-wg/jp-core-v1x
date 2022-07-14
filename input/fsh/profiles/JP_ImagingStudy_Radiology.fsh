@@ -7,7 +7,7 @@ Id: jp-imagingstudy-radiology
 Title: "JP Core ImagingStudy Radiology Profile"
 Description: "このプロファイルはImagingStudyリソースに対して、放射線検査のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology"
-* ^status = #draft
+* ^status = #active
 * . ^short = "A set of images produced in single study (one or more series of references images)　単一の検査スタディで生成された画像のセット（1つ以上の一連の参照画像）"
 * . ^definition = "Representation of the content produced in a DICOM imaging study. A study comprises a set of series, each of which includes a set of Service-Object Pair Instances (SOP Instances - images or other data) acquired or produced in a common context.  A series is of only one modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple series of different modalities.\r\n\r\nDICOM画像検査で作成されたコンテンツの表現。スタディは一連のシリーズで構成され、各シリーズには、共通のコンテキストで取得または生成された一連のサービスオブジェクトペアインスタンス（SOPインスタンス-画像またはその他のデータ）が含まれる。シリーズは1つのモダリティ（X線、CT、MR、超音波など）のみだが、スタディには複数の異なるモダリティのシリーズが含まれる場合がある。"
 * identifier ^short = "Identifiers for the whole study　スタディ全体の識別子"

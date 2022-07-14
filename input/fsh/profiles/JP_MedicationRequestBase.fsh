@@ -14,7 +14,7 @@ Description: "このプロファイルはユーザは直接適用するもので
     JP_MedicationRequest_DosageInstruction_Line named line ..* and
     JP_MedicationRequest_DosageInstruction_Device named device ..*
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequestBase"
-* ^status = #draft
+* ^status = #active
 * ^date = "2022-03-16"
 * ^purpose = "このプロファイルはユーザは直接適用するものではなく、JP_MedicationRequestとJP_MedicationRequestInjectionの共通の親となる抽象プロファイルである。MedicationRequestリソースに対して、内服・外用薬剤処方、注射・点滴などのデータを送受信するため、JP_MedicationRequestとJP_MedicationRequestInjectionの各プロファイルの基礎となる制約と拡張のうち共通部分を定めている。"
 * . ^short = "患者あるいはグループに対しての薬剤処方オーダ"
