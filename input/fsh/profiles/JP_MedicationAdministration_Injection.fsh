@@ -19,7 +19,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 // 
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration_Injection"
 * ^status = #active
-* ^date = "2022-03-16"
+* ^date = "2022-07-31"
 * ^purpose = "このプロファイルはMedicationAdministrationリソースに対して、注射薬剤処方投与実施情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * . ^short = "患者への注射薬剤投与記録"
 * extension[uncategorizedComment] ^definition = "未分類コメントを格納するための拡張"

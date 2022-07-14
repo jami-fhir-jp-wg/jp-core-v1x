@@ -8,7 +8,7 @@ Title: "JP Core Condition Profile"
 Description: "本プロファイルはConditionリソースに対して、患者の健康状態に関するデータを送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition"
 * ^status = #active
-* ^date = "2022-03-16"
+* ^date = "2022-07-31"
 * . ^short = "Detailed information about conditions, problems or diagnoses 身体的状態、問題、診断に関する詳細情報"
 * . ^definition = "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.\r\n\r\n患者の健康上の懸念となるレベルに達した、身体的、精神的、社会的な負の状態(conditon)や問題（problem／issue）、医療者による診断(diagnosis)、生じたイベント(event)、置かれている状況(situation)、臨床医学的概念(clinical concept)を表現する。"
 * identifier ^definition = "Business identifiers assigned to this condition by the performer or other systems which remain constant as the resource is updated and propagates from server to server.\r\n\r\n実行者または他のシステムによってこの条件に割り当てられたビジネス識別子。リソースが更新され、サーバーからサーバーに伝送されるときにも変化しない。"

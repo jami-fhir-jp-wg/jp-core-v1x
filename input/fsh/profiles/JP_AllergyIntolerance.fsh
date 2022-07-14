@@ -9,7 +9,7 @@ Description: "本プロファイルはAllergyIntoleranceリソースに対して
 * ^language = #ja
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance"
 * ^status = #active
-* ^date = "2022-03-16"
+* ^date = "2022-07-31"
 * . ^short = "患者のアレルギーや不耐症 (一般的には、、特定の物質への暴露に対する有害反応)"
 * . ^definition = "Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.\r\n\r\nリソースは患者のアレルギーや不耐症を表現する。\r\n具体的には、特定の物質または物質群への将来の暴露に対して有害反応を起こす傾向、または患者に対する潜在的なリスクを表現する。"
 * . ^comment = "Substances include, but are not limited to: a therapeutic substance administered correctly at an appropriate dosage for the individual; food; material derived from plants or animals; or venom from insect stings.\r\n\r\nアレルギー又は不耐症の対象物質は、医薬品（適切な用量で正しく投与された場合）、化学物質、食べ物、植物や動物に由来する物質、または昆虫刺傷からの毒などである。"
