@@ -14,9 +14,9 @@ Description: "このProfileはImmunizationリソースに対して日本での�
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    JP_Immunization_DueDateOfNextDose named dueDateOfNextDose 0..1 and
-    JP_Immunization_ManufacturedDate named manufacturedDate 0..1 and
-    JP_Immunization_CertificatedDate named certificatedDate 0..1
+    JP_Immunization_DueDateOfNextDose named dueDateOfNextDose ..1 and
+    JP_Immunization_ManufacturedDate named manufacturedDate ..1 and
+    JP_Immunization_CertificatedDate named certificatedDate ..1
 * extension[dueDateOfNextDose] ^short = "次回接種予定日"
 * extension[dueDateOfNextDose] ^definition = "次回接種を予定している日、期限"
 * extension[manufacturedDate] ^short = "製造年月日"

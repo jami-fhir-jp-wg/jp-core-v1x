@@ -1,7 +1,7 @@
 
 ### 必須要素
 
-JP Core Location リソースで定義された必須要素は特にありません。
+JP Core Location リソースで定義された必須要素はない。
 
 
 
@@ -10,7 +10,7 @@ JP Core Location リソースで定義された必須要素は特にありませ
 ### Extensions定義
 
 
-JP Core Location リソースで定義された拡張は特にありません。
+JP Core Location リソースで定義された拡張はない。
 
 
     
@@ -33,17 +33,13 @@ JP Core Location リソースで定義された拡張は特にありません。
 
 ### 制約一覧
 
-制約はありません。
+制約はない。
 
 
 
 ## 利用方法
 
 ### インタラクション一覧
-
-<span style="color: red;">★★コメント ： 説明のための例示です。内容の妥当性は考慮していません。★★</span>
-
-
 
 | コンフォーマンス | インタラクション                            |
 | ---------------- | ------------------------------------------- |
@@ -56,15 +52,7 @@ JP Core Location リソースで定義された拡張は特にありません。
 ### OperationおよびSearch Parameter 一覧
 
 
-
-<span style="color: red;">★★コメント ： サンプルを例示します。説明のための例示であり内容の妥当性は考慮していません。表の形式はテンプレートにあわせましたが、Search Parameter については、US-Coreを参考に、下に書いたような説明や例を追加したため、一覧の表は不要ではないでしょうか。US-Coreにも一覧表はありません。★★</span>
-
-
-
-
-
 #### Search Parameter一覧
-
 
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
@@ -169,13 +157,13 @@ address-state=東京都    |
 
 ##### 追加検索パラメータ 
 
-追加検索パラメータはありません。
+追加検索パラメータはない。
 
 
 
 #### Operation一覧
 
-Locationに対するOperationは定義されていません。
+Locationに対するOperationは定義されていない。
 
 
 
@@ -251,7 +239,7 @@ Locationに対するOperationは定義されていません。
 ## 注意事項
 
 
-注意事項はありません。
+注意事項はない。
 
 
 
@@ -261,18 +249,18 @@ Locationに対するOperationは定義されていません。
 ## その他、参考文献・リンク等
 
 ・退院時サマリー規約
-http://www.hl7.jp/library/item/HL7J-CDA-007.pdf
+[http://www.hl7.jp/library/item/HL7J-CDA-007.pdf](http://www.hl7.jp/library/item/HL7J-CDA-007.pdf)
 
 ・診療情報提供書規格
-http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf
+[http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf](http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf)
 
 ・特定健診情報ファイル仕様
-https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html
+[https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html)
 
 ・SS-MIX2 標準化ストレージ 仕様書 Ver.1.2f
-http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf
+[http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf](http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf)
 
 ・ICSR E2B(R3)
-https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html
+[https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)
 
 

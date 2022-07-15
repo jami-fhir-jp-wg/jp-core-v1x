@@ -1,17 +1,17 @@
 Instance: jp-medicationrequest-injection-example-1
 InstanceOf: JP_MedicationRequest_Injection
-Title: "JP MedicationRequest Injection ワンショット静脈注射"
+Title: "JP Core MedicationRequest Injection ワンショット静脈注射"
 Description: "ホリゾン注射液１０ｍｇ１アンプルを左腕に静脈注射"
 Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-1
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-1
 * contained[+] = jp-medicationrequest-injection-device-example-1
-* identifier[0].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[=].value = "1"
-* identifier[+].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[=].value = "2"
-* identifier[+].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
-* identifier[=].value = "1234567890.1.1"
+* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].value = "1"
+* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+* identifier[orderInRp].value = "2"
+* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier[requestIdentifier].value = "1234567890.1.1"
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
@@ -39,17 +39,17 @@ Usage: #example
 
 Instance: jp-medicationrequest-injection-example-2
 InstanceOf: JP_MedicationRequest_Injection
-Title: "JP MedicationRequest Injection 点滴注射"
+Title: "JP Core MedicationRequest Injection 点滴注射"
 Description: "点滴注射"
 Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-2
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-2
-* identifier[0].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[=].value = "2"
-* identifier[+].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[=].value = "2"
-* identifier[+].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
-* identifier[=].value = "1234567890.2.1"
+* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].value = "2"
+* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+* identifier[orderInRp].value = "2"
+* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier[requestIdentifier].value = "1234567890.2.1"
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"

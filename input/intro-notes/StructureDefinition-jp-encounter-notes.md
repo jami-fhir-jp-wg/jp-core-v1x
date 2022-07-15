@@ -28,9 +28,6 @@ JP Encounter リソースで使用される拡張は次の通りである。
 
 ### 用語定義
 
-
-
-
 | Path                            | 定義                               | バインディング強度 | バリューセット |
 | ------------------------------- | ---------------------------------- | ------------------ | -------------- |
 | Encounter.status               | 現在の診療実施状況 | Required          | [EncounterStatus](https://www.hl7.org/fhir/valueset-encounter-status.html) |
@@ -82,13 +79,13 @@ JP Encounter リソースで使用される拡張は次の通りである。
 | SHOULD           | patient, type    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/us-npi\|123456?type=http://hl7.org/fhir/sid/us-npi\ADMS  |
 | SHOULD           | patient, status    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/us-npi\|123456?status=http://hl7.org/fhir/sid/us-npi\arrived  |
 
-<span style="color: red;">★★コメント： この表に合致する形で以下の説明を記載していく必要があります。★★</span>
+
 
 ##### 必須検索パラメータ
 
 次の検索パラメータはでサポートされるべきである。(SHALL)
 
-必須検索パラメータ(SHALL)はありません。
+必須検索パラメータ(SHALL)はない。
 
 ##### 推奨検索パラメータ
 
@@ -114,7 +111,7 @@ JP Encounter リソースで使用される拡張は次の通りである。
 
 オプションとして次の検索パラメータをサポートすることができる。(MAY)
 
-オプション検索パラメータ(MAY)はありません。
+オプション検索パラメータ(MAY)はない。
 
 #### Operation一覧
 
@@ -148,6 +145,7 @@ URL: [base]/Encounter/[id]/$everything
 <!--
 <span style="color: red;">http://www.hl7.org/fhir/encounter-operation-everything.html</span>
 -->
+
 | 名前   | 多重度 | 型      | バインディング | プロファイル | 説明                                                         |
 | ------ | ------ | ------- | -------------- | ------------ | ------------------------------------------------------------ |
 | _since | 0..1   | instant |                |              | 指定された日時以降に更新されたリソースのみが応答に含まれる。 |
@@ -159,6 +157,7 @@ URL: [base]/Encounter/[id]/$everything
 <!--
 <span style="color: red;">http://www.hl7.org/fhir/encounter-operation-everything.html</span>
 -->
+
 | 名前   | 多重度 | 型     | バインディング | プロファイル | 説明                                                         |
 | ------ | ------ | ------ | -------------- | ------------ | ------------------------------------------------------------ |
 | return | 1..1   | Bundle |                |              | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
@@ -219,14 +218,6 @@ HTTP/1.1 200 OK
     "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
     "code": "AMB"
   },
-  "type": [ {
-    "coding": [ {
-      "system": "http://snomed.info/sct",
-      "code": "410620009",
-      "display": "Well child visit (procedure)"
-    } ],
-    "text": "Well child visit (procedure)"
-  } ],
   "subject": {
     "reference": "Patient/587224",
     "display": "Jonathan639 Kassulke119"
@@ -252,23 +243,24 @@ HTTP/1.1 200 OK
 
 ## 注意事項
 
-Encounterリソースは、予定情報や予約の保存には使用されません。予約の保存にはAppointmentリソースを利用してください。FHIRでは、Appointmentは診察の日付を決定するのに利用されるのに対して、Encounterは実際に患者が来院して診察が実施されたことを表現します。
-そのため、「計画済み」 status の Encounter は実際に発生する前の Encounter であり、診療行為が完了するまで更新されることが期待されます。
+Encounterリソースは、予定情報や予約の保存には使用されない。予約の保存にはAppointmentリソースを利用すること。FHIRでは、Appointmentは診察の日付を決定するのに利用されるのに対して、Encounterは実際に患者が来院して診察が実施されたことを表現する。
+そのため、「計画済み」 status の Encounter は実際に発生する前の Encounter であり、診療行為が完了するまで更新されることが期待される。
 
 
 ## その他、参考文献・リンク等
 
 ・退院時サマリー規約
-http://www.hl7.jp/library/item/HL7J-CDA-007.pdf
+[http://www.hl7.jp/library/item/HL7J-CDA-007.pdf](http://www.hl7.jp/library/item/HL7J-CDA-007.pdf)
 
 ・診療情報提供書規格
-http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf
+[http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf](http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf)
 
 ・特定健診情報ファイル仕様
-https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html
+[https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html)
+
 
 ・SS-MIX2 標準化ストレージ 仕様書 Ver.1.2f
-http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf
+[http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf](http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf)
 
 ・ICSR E2B(R3)
-https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html
+[https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)

@@ -1,6 +1,6 @@
 Instance: jp-medicationadministration-injection-example-1
 InstanceOf: JP_MedicationAdministration_Injection
-Title: "JP MedicationAdministration Injection ワンショット静脈注射（実施）"
+Title: "JP Core MedicationAdministration Injection ワンショット静脈注射（実施）"
 Description: "ワンショット静脈注射（実施）"
 Usage: #example
 * contained[0] = jp-medicationadministration-injection-medication-example-1
@@ -79,8 +79,8 @@ Usage: #example
 * dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
 * dosage.method = http://terminology.hl7.org/CodeSystem/v2-0165#IVP "IV Push"
 * dosage.dose = 510 'mL' "mL"
-// * dosage.rateRatio.numerator = 102 'mL' "mL" 
-// * dosage.rateRatio.denominator = 1 'h' "h"
+* dosage.rateRatio.numerator = 102 'mL' "mL" 
+* dosage.rateRatio.denominator = 1 'h' "h"
 
 Instance: jp-medicationadministration-injection-medication-example-1
 InstanceOf: JP_Medication

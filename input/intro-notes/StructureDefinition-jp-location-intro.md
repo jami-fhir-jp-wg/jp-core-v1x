@@ -28,11 +28,6 @@
 
 
 ## 関連するプロファイル
-
-<span style="color: red;">★★コメント ： 各JP リソースの参照個所に、JP版リソースが追加されることを前提としています。★★</span>
-
-
-
 JP Location リソースは、以下のリソースから直接参照される。
 
 - UsageContext, Account, ActivityDefinition, AdverseEvent, Appointment, AppointmentResponse, AuditEvent, CarePlan, Claim, ClaimResponse, Contract, CoverageEligibilityRequest, Device, DeviceRequest, DiagnosticReport, Encounter, ExplanationOfBenefit, Flag, HealthcareService, ImagingStudy, Immunization, InsurancePlan, List, itself, MeasureReport, Media, MedicationDispense, Observation, OrganizationAffiliation, PractitionerRole, Procedure, Provenance, ResearchStudy, Schedule, ServiceRequest, Specimen, SupplyDelivery, SupplyRequest and Task

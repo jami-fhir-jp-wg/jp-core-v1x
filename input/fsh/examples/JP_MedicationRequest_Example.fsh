@@ -1,14 +1,14 @@
 Instance: jp-medicationrequest-example-1
 InstanceOf: JP_MedicationRequest
-Title: "JP MedicationRequest 内服処方1"
+Title: "JP Core MedicationRequest 内服処方1"
 Description: "内服処方1"
 Usage: #example
-* identifier[0].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[=].value = "1"
-* identifier[+].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[=].value = "1"
-* identifier[+].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
-* identifier[=].value = "1234567890.1.1"
+* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].value = "1"
+* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+* identifier[orderInRp].value = "1"
+* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier[requestIdentifier].value = "1234567890.1.1"
 * intent = #order
 * status = #active
 * medicationCodeableConcept = urn:oid:1.2.392.200119.4.403.1#103835401 "ムコダイン錠２５０ｍｇ"
@@ -31,15 +31,15 @@ Usage: #example
 
 Instance: jp-medicationrequest-example-2
 InstanceOf: JP_MedicationRequest
-Title: "JP MedicationRequest 内服処方2"
+Title: "JP Core MedicationRequest 内服処方2"
 Description: "内服処方2"
 Usage: #example
-* identifier[0].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[=].value = "2"
-* identifier[+].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[=].value = "2"
-* identifier[+].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
-* identifier[=].value = "1234567890.1.2"
+* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].value = "2"
+* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+* identifier[orderInRp].value = "2"
+* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier[requestIdentifier].value = "1234567890.1.2"
 * intent = #order
 * status = #active
 * medicationCodeableConcept = urn:oid:1.2.392.200119.4.403.1#110626901 "パンスポリンＴ錠１００ １００ｍｇ"
