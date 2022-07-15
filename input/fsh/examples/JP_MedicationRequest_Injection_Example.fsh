@@ -39,7 +39,7 @@ Usage: #example
 
 Instance: jp-medicationrequest-injection-example-2
 InstanceOf: JP_MedicationRequest_Injection
-Title: "JP MedicationRequest Injection 点滴注射"
+Title: "JP Core MedicationRequest Injection 点滴注射"
 Description: "点滴注射"
 Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-2
