@@ -44,7 +44,7 @@ Usage: #example
 
 Instance: jp-medicationadministration-injection-example-2
 InstanceOf: JP_MedicationAdministration_Injection
-Title: "JP MedicationAdministration Injection 点滴注射（実施）"
+Title: "JP Core MedicationAdministration Injection 点滴注射（実施）"
 Description: "点滴注射（実施）"
 Usage: #example
 * contained[0] = jp-medicationadministration-injection-medication-example-2
