@@ -50,7 +50,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * procedureReference ^definition = "The procedure which this ImagingStudy was part of.\r\n\r\nこのImagingStudyが含まれていたprocedure リソースへの参照。"
 * procedureReference ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。\r\n\r\n進捗状況に関するProcedureリソースを参照。"
 * procedureCode ^short = "The performed procedure code　実施されたProcedureのコード"
-* procedureCode ^definition = "The code for the performed procedure type.\r\n\r\n実施されたProcesureのタイプを表すコード。"
+* procedureCode ^definition = "The code for the performed procedure type.\r\n\r\n実施されたProcedureのタイプを表すコード。"
 * procedureCode ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\n\r\nすべてのターミノロジーの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係と調整前後の関係を管理するための独自の構造を提供する必要がある。\r\n\r\nエラーコードなどを記載"
 * location ^short = "Where ImagingStudy occurred　ImagingStudy が起こった場所"
 * location ^definition = "The principal physical location where the ImagingStudy was performed.\r\n\r\nImagingStudyが実行された主要な物理的な場所。"
