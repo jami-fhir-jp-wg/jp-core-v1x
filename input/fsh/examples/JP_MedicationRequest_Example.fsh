@@ -1,6 +1,6 @@
 Instance: jp-medicationrequest-example-1
 InstanceOf: JP_MedicationRequest
-Title: "JP MedicationRequest 内服処方1"
+Title: "JP Core MedicationRequest 内服処方1"
 Description: "内服処方1"
 Usage: #example
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"

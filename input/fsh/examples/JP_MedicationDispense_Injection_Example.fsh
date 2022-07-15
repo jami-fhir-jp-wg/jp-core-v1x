@@ -1,6 +1,6 @@
 Instance: jp-medicationdispense-injection-example-1
 InstanceOf: JP_MedicationDispense_Injection
-Title: "JP MedicationDispense Injection 注射薬調剤実施"
+Title: "JP Core MedicationDispense Injection 注射薬調剤実施"
 Description: "注射薬調剤実施"
 Usage: #example
 * contained[0] = jp-medicationdispense-injection-medication-example-1

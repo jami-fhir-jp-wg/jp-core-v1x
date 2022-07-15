@@ -1,6 +1,6 @@
 Instance: jp-medication-example-1
 InstanceOf: JP_Medication
-Title: "JP_Medication ホリゾン注射液"
+Title: "JP Core Medication ホリゾン注射液"
 Description: "ホリゾン注射液"
 Usage: #example
 * status = #active
@@ -14,7 +14,7 @@ Usage: #example
 
 Instance: jp-medication-example-2
 InstanceOf: JP_Medication
-Title: "JP_Medication ソリタ－＋アドナ注"
+Title: "JP Core Medication ソリタ－＋アドナ注"
 Description: "ソリタ－＋アドナ注"
 Usage: #example
 * status = #active
