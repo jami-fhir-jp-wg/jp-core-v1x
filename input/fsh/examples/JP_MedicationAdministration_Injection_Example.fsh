@@ -1,6 +1,6 @@
 Instance: jp-medicationadministration-injection-example-1
 InstanceOf: JP_MedicationAdministration_Injection
-Title: "JP MedicationAdministration Injection ワンショット静脈注射（実施）"
+Title: "JP Core MedicationAdministration Injection ワンショット静脈注射（実施）"
 Description: "ワンショット静脈注射（実施）"
 Usage: #example
 * contained[0] = jp-medicationadministration-injection-medication-example-1

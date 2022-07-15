@@ -1,6 +1,6 @@
 Instance: jp-medicationrequest-injection-example-1
 InstanceOf: JP_MedicationRequest_Injection
-Title: "JP MedicationRequest Injection ワンショット静脈注射"
+Title: "JP Core MedicationRequest Injection ワンショット静脈注射"
 Description: "ホリゾン注射液１０ｍｇ１アンプルを左腕に静脈注射"
 Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-1
