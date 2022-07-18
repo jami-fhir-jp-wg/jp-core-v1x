@@ -5,7 +5,7 @@ Usage: #definition
 * name = "JP_Patient_KanaSort_SP"
 * status = #draft
 * date = "2022-06-23"
-* description = "Patientリソースをカナ名称でソートするための検索を定義します。検索に_sort=jp-kana-sortを指定すると、name.use=usualかつカナと指定されているname.text（フルネーム）を使ったソートを行います。"
+* description = "Patientリソースをカナ名称でソートするための検索を定義する。検索に_sort=jp-kana-sortを指定すると、name.use=usualかつカナと指定されているname.text（フルネーム）を使ったソートを行う。"
 * code = #jp-kana-sort
 * base = #Patient
 * type = #string

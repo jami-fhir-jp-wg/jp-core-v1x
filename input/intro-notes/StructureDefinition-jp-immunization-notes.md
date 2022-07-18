@@ -419,13 +419,13 @@ MEDIS標準病名マスターの病名交換用コード("urn:oid:1.2.392.200119
 
 
 ## その他、参考文献・リンク等
-1. HL7, FHIR Immunization Resource, http://hl7.org/fhir/Immunization.html
-1. 母子手帳（厚生労働省令，P51), https://www.mhlw.go.jp/content/000622161.pdf
-1. ワクチン接種記録システム(VRS), https://cio.go.jp/sites/default/files/uploads/documents/vrs_announcement_210430a_att1.pdf
-1. 予防接種台帳, https://www.mhlw.go.jp/content/10906000/000588379.pdf
-1. マイナポータル, https://myna.go.jp/html/api/selfinfo/R4-6/B-084_R4-6.xlsx
-1. 新型コロナワクチン接種証明書アプリ, https://www.digital.go.jp/policies/vaccinecert/faq_06
+1. HL7, FHIR Immunization Resource, [http://hl7.org/fhir/Immunization.html](http://hl7.org/fhir/Immunization.html)
+1. 母子手帳（厚生労働省令，P51), [https://www.mhlw.go.jp/content/000622161.pdf](https://www.mhlw.go.jp/content/000622161.pdf)
+1. ワクチン接種記録システム(VRS), [https://cio.go.jp/sites/default/files/uploads/documents/vrs_announcement_210430a_att1.pdf](https://cio.go.jp/sites/default/files/uploads/documents/vrs_announcement_210430a_att1.pdf)
+1. 予防接種台帳, [https://www.mhlw.go.jp/content/10906000/000588379.pdf](https://www.mhlw.go.jp/content/10906000/000588379.pdf)
+1. マイナポータル, [https://myna.go.jp/html/api/selfinfo/R4-6/B-084_R4-6.xlsx](https://myna.go.jp/html/api/selfinfo/R4-6/B-084_R4-6.xlsx)
+1. 新型コロナワクチン接種証明書アプリ, [https://www.digital.go.jp/policies/vaccinecert/faq_06](https://www.digital.go.jp/policies/vaccinecert/faq_06)
 2. Mike Henderson, 日本HL7協会監修、「HL7メッセージ交換」、第2版、インナービジョン社、2013年
-3. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, http://www2.medis.or.jp/hcode/
-4. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, http://www.jami.jp/jamistd/ssmix2.php
+3. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, [http://www2.medis.or.jp/hcode/](http://www2.medis.or.jp/hcode/)
+4. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)
 

@@ -7,8 +7,8 @@ Id: jp-medication
 Title: "JP Core Medication Profile"
 Description: "このプロファイルはMedicationリソースに対して、主に薬剤データを送受信するための基礎となる制約と拡張を定めたものである。"
 // extension 参照宣言
-* ingredient.extension contains JP_Medication_Ingredient_DrugNo named DrugNo 0..*
-* ingredient.strength.extension contains JP_Medication_IngredientStrength_StrengthType named StrenghtType 0..*
+* ingredient.extension contains JP_Medication_Ingredient_DrugNo named drugNo ..*
+* ingredient.strength.extension contains JP_Medication_IngredientStrength_StrengthType named strenghtType ..*
 //
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication"
 * ^status = #draft
@@ -32,7 +32,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * status ^comment = "このステータスは薬剤がローカルにあるシステム内で薬剤データベースや棚卸表で有効とされているかどうかを識別するためのものである。たとえば、薬剤システムで「ABC病院特製クリーム」といった製剤のために新しい薬剤ファイルを作成されるような場合もある。未来のある時点では、薬剤記録を作成した時にエラーが発生し、ステータスが「entered-in-error」に変化することもありうる。このステータスは薬剤が特定の処方集に記載されているかどうかを指定するためのものではない。薬剤記録が複数の処方集やカタログを参照することも可能であり、それぞれの記録が異なるステータスを持つこともある。"
 * status ^isModifierReason = "このエレメントはすべての属性の解釈によって変化する。"
 * manufacturer ^short = "製品の製造者"
-* manufacturer ^definition = "Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.\r\n\r\n医薬品の製造元の詳細を説明します。これは、医薬品の販売業者を表すことを意図したものではない。"
+* manufacturer ^definition = "Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.\r\n\r\n医薬品の製造元の詳細を説明する。これは、医薬品の販売業者を表すことを意図したものではない。"
 * form ^definition = "製品の剤型についての説明。散剤(powder)、錠剤(tablets)、カプセル(capsule)など。"
 * form ^comment = "もし、Medication ResourceがMedicationRequest Resourceから参照された場合は、これはオーダーされた剤型である。Medication ResourceがMedicationDispense Resourceから参照された場合は、払い出された剤型である。MedicationAdministration ResourceからMedication Resourceが参照されていれば、投与された剤型である。"
 * amount ^short = "パッケージ中の薬剤の量"
@@ -44,8 +44,6 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * ingredient.extension ^slicing.discriminator.type = #value
 * ingredient.extension ^slicing.discriminator.path = "url"
 * ingredient.extension ^slicing.rules = #open
-* ingredient.extension ^min = 0
-* ingredient.extension[DrugNo] ^min = 0
 * ingredient.item[x] only CodeableConcept
 * ingredient.item[x] ^short = "有効な成分あるいは含有物"
 * ingredient.item[x] ^definition = "有効成分。物質(単純成分）あるいは他の薬剤や処方。"
@@ -61,11 +59,8 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * ingredient.strength.extension ^slicing.discriminator.type = #value
 * ingredient.strength.extension ^slicing.discriminator.path = "url"
 * ingredient.strength.extension ^slicing.rules = #open
-* ingredient.strength.extension ^min = 0
-* ingredient.strength.extension[StrenghtType] only JP_Medication_IngredientStrength_StrengthType
-* ingredient.strength.extension[StrenghtType] ^sliceName = "StrenghtType"
-* ingredient.strength.extension[StrenghtType] ^definition = "投与量が製剤単位か成分単位かを格納する拡張"
-* ingredient.strength.extension[StrenghtType] ^min = 0
+* ingredient.strength.extension[strenghtType] only JP_Medication_IngredientStrength_StrengthType
+* ingredient.strength.extension[strenghtType] ^definition = "投与量が製剤単位か成分単位かを格納する拡張"
 * batch ^short = "分包された薬剤についての詳細な解説"
 * batch ^definition = "薬剤のパッケージ（薬品そのものではない）についての情報。"
 * batch.lotNumber ^short = "バッチのID"

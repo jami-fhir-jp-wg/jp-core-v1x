@@ -6,7 +6,7 @@ Parent: JP_Observation_Common
 Id: jp-observation-physicalexam
 Title: "JP Core Observation PhysicalExam Profile"
 Description: "このプロファイルはObservationリソースに対して、身体所見のデータを送受信するための制約と拡張を定めたものである。"
-* bodySite.extension contains JP_Observation_BodySite_BodySitePosition named JPCoreBodySitePositionExtension 0..*
+* bodySite.extension contains JP_Observation_BodySite_BodySitePosition named bodySitePosition ..*
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_PhysicalExam"
 * ^status = #draft
 * . ^short = "身体所見に関する測定や簡単な観察事実（assertion）"
@@ -34,11 +34,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * bodySite.extension ^slicing.discriminator.type = #value
 * bodySite.extension ^slicing.discriminator.path = "url"
 * bodySite.extension ^slicing.rules = #open
-* bodySite.extension ^min = 0
-* bodySite.extension[JPCoreBodySitePositionExtension] only JP_Observation_BodySite_BodySitePosition
-* bodySite.extension[JPCoreBodySitePositionExtension] ^sliceName = "JPCoreBodySitePositionExtension"
-* bodySite.extension[JPCoreBodySitePositionExtension] ^comment = "左右の区別を表現する際に使用する"
-* bodySite.extension[JPCoreBodySitePositionExtension] ^min = 0
+* bodySite.extension[bodySitePosition] only JP_Observation_BodySite_BodySitePosition
+* bodySite.extension[bodySitePosition] ^comment = "左右の区別を表現する際に使用する"
 * method from $observation-method (preferred)
 * method ^comment = "Only used if not implicit in code for Observation.code.\r\n\r\n【JP仕様】<br/>\r\n症状・所見マスターの「診察方法」を基にバリューセットを定義する<br/>\r\n具体的なコードについてはSWG6と連携して決定する必要がある（TBD）"
 * hasMember only Reference(Observation or QuestionnaireResponse or MolecularSequence or JP_Observation_PhysicalExam)
