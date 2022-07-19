@@ -51,6 +51,7 @@ jobs:
         date: ${{ steps.extract_date.outputs.date }}
         actor: ${{ github.actor }}
         pullrequest_url: ${{ github.event.pull_request.html_url }}
+        pullrequest_title: ${{ github.event.pull_request.title }}
         _output-file: input/landing_page/_index.yml
 
     - name: Setup npm
