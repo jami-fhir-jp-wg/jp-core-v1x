@@ -16,9 +16,9 @@ publisher:
 copyright: FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)
 jurisdiction: 'urn:iso:std:iso:3166#JP'
 
-#-----------------------------------------
+#----------------------------------------
 # ページタイトル名称設定
-#-----------------------------------------
+#----------------------------------------
 pages:
   index.md:
     title: HL7 FHIR JP Core 実装ガイド ＜ Draft Ver1.1 ＞
