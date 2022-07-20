@@ -18,7 +18,7 @@
       </ul>
     </div>
     <div>
-      <p>このページには、この実装ガイドの一部として定義されているFHIRアーティファクト（FHIR生成物）のリストが記載されています。</p>
+      <p>このページには、この実装ガイドの一部として定義されているFHIRアーティファクト（FHIR生成物）のリストを記載している。</p>
       <xsl:for-each select="f:definition/f:grouping">
         <xsl:variable name="relevantResources">
           <xsl:for-each select="f:resource[f:extension[@url='http://hl7.org/fhir/StructureDefinition/implementationguide-page']][not(f:extension[@url='http://hl7.org/fhir/StructureDefinition/tools-alternateVersion'] or $version) or (f:extension[@url='http://hl7.org/fhir/StructureDefinition/tools-alternateVersion']/f:valueCode/@value=$version)]|
