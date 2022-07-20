@@ -1,6 +1,6 @@
 Instance: jp-observation-bodyMeasurement-example-1
 InstanceOf: JP_Observation_BodyMeasurement
-Title: "JP Core Observation Basic Example"
+Title: "JP Core Observation BodyMeasurement Basic Example"
 Description: "JP_ObservationBodyMeasurementリソースの1例"
 Usage: #example
 * id = "bm-12345"
@@ -15,6 +15,4 @@ Usage: #example
 * valueQuantity.unit = "kg"
 * valueQuantity.value = 63.5
 * status = #final
-* meta.lastUpdated = "2021-10-22T07:33:41Z"
-* meta.versionId = 1
-* encounter = Reference("Encounter/jp-encounter-example1") "入院時の体重"
+* encounter = Reference("Encounter/jp-encounter-example1")
