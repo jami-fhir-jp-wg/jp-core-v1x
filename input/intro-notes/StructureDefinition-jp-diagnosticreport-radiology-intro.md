@@ -23,38 +23,6 @@
 
 `DiagnosticReport`リソースは、過去の結果（リソース内での過去および現在の結果）の提示をサポートすることを意図していない。`DiagnosticReport`リソースは、シーケンスの構造化を含めレポートの完全なサポートをまだ提供できていないが、将来実装される予定である。
 
-## 関連するプロファイル
-
-このプロファイルは、以下のリソースに対して定義された各プロファイルから参照される。
-
-- [`DiagnosticReport`][JP_DiagnosticReport_Radiology]
-- [`ImagingStudy`][JP_ImagingStudy_Radiology]
-
-また，このプロファイルから直接参照されるリソースは以下の通りである。
-
-- [`Patient`][JP_Patient]
-- [`Encounter`](http://www.hl7.org/fhir/encounter.html)
-- [`Practitioner`][JP_Practitioner]
-- [`Observation`][JP_Observation_Common]
-- [`Media`](http://www.hl7.org/fhir/media.html)
-- [`ImagingStudy`][JP_ImagingStudy_Radiology]
-- [`ServiceRequest`](http://hl7.org/fhir/servicerequest.html)
-
-
-また，以下のリソースは関連情報として`presentedForm`にて参照されるレポート内に保持される可能性がある。ただし、レポートシステムの仕様に依存するため、レポートシステムでは各リソースとの相互運用性の確保に配慮することが求められる。
-
-- [患者 (`Patient`)][JP_Patient]
-- [依頼医，読影医，確定医など (`Practitioner`)][JP_Practitioner]
-- [身長 (`Observation`)][JP_Observation_BodyMeasurement]
-- [体重 (`Observation`)][JP_Observation_BodyMeasurement]
-- [アレルギー情報 (`AllergyIntorelance`)][JP_AllergyIntolerance]
-- [キー画像 (`media`)](http://www.hl7.org/fhir/media.html)
-- [尿素窒素（BUN）(`Observation`)][JP_DiagnosticReport_LabResult]
-- [クレアチニン（Cre）(`Observation`)][JP_DiagnosticReport_LabResult]
-- 感染症情報 [ (`RiskAssessment`) ](http://hl7.org/fhir/riskassessment.html) あるいは [ (`Observation`) ][JP_DiagnosticReport_LabResult]
-
-運用のフローに関連する TASK、Procedure 等のリソース定義についてはここでは触れない。
-
 ## プロファイル定義
 
 

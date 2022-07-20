@@ -36,6 +36,7 @@ JP Core MedicationRequest リソースで使用される拡張は次の通りで
 
 既存のExtensionの利用は特にない。
 
+
 ### 用語定義
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS処方データ交換規約やSS-MIX2で使われている用語集を採用した。
 
@@ -60,32 +61,6 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |投与経路|HL7 V2(使用者定義表0162)|http://terminology.hl7.org/CodeSystem/v2-0162|
 |投与方法|JAMI処方・注射オーダ標準用法規格(用法詳細区分)|urn:oid:1.2.392.200250.2.2.20.40|
 |入外区分|HL7 V2(HL7表0482)|http://terminology.hl7.org/CodeSystem/v2-0482|
-
-JP Core MedicationRequestリソースの各要素のバインディングは以下の通りである。
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| MedicationRequest.status | オーダーの現在の状態を示すコード | required | http://hl7.org/fhir/ValueSet/medicationrequest-status |
-| MedicationRequest.medicationCodeableConcept | 医薬品の識別情報 | prefered | HOT7,HOT9,HOT13,YJコード,一般処方名マスター |
-| MedicationRequest.dosageInstruction.additionalInstruction | 補足用法 | prefered | JAMI処方・注射オーダ標準用法規格(補足用法コード) |
-| MedicationRequest.dosageInstruction.timing.code | 用法コード | prefered | JAMI処方・注射オーダ標準用法規格(用法コード) |
-| MedicationRequest.dosageInstruction.site | 投与部位 | prefered | JAMI処方・注射オーダ標準用法規格(外用部位コード) |
-| MedicationRequest.dosageInstruction.route | 投与経路 | prefered | HL7 V2(使用者定義表0162)|
-| MedicationRequest.dosageInstruction.method | 投与方法 | prefered | JAMI処方・注射オーダ標準用法規格(用法詳細区分) |
-| MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.code | １回量単位 | prefered | MERIT-9(単位) |
-| MedicationRequest.dosageInstruction.doseAndRate.doseRatio.numerator.code | １日量単位 | prefered | MERIT-9(単位) |
-| MedicationRequest.dosageInstruction.doseAndRate.doseRatio.denominator.code | １日 | required | UCUM(http://hl7.org/fhir/ValueSet/ucum-units) |
-| MedicationRequest.dispenseRequest.quantity.code | 調剤量単位 | prefered | MERIT-9(単位) |
-
-
-### 制約一覧
-JP Core MedicationRequest リソースは、以下の制約を満たさなければならない。
-- status : JP Coreでは"active"に固定される。
-- intent : JP Coreでは"intent" に固定される。
-- dosageInstruction.doseAndRage.doseRatio.denominator.value : １日量を記述する場合"1"に固定される。
-- dosageInstruction.doseAndRage.doseRatio.denominator.unit : １日量を記述する場合"日"に固定される。
-- dosageInstruction.doseAndRage.doseRatio.denominator.system : １日量を記述する場合"http://unitsofmeasure.org"に固定される。
-- dosageInstruction.doseAndRage.doseRatio.denominator.code : １日量を記述する場合"d"に固定される。
 
 ### 項目の追加
 療養担当則23条では、「保険医は、処方箋を交付する場合には、様式第二号若しくは第二号の二又はこれらに準ずる様式の処方箋に必要な事項を記載しなければならない。」とされており、外来処方、院内処方の区分を明示していない。したがって、個別のユースケースにおいては一部を省略されることも前提の上で、規格としてはこれに準拠すべきと考え、様式に収載されている以下の項目を追加した。

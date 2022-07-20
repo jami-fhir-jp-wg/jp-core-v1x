@@ -12,5 +12,8 @@
     * [JP Core DiagnosticReport Common （共通）プロファイル][JP_DiagnosticReport_Common]
     * [JP Core DiagnosticReport LabResult （検体検査レポート）プロファイル][JP_DiagnosticReport_LabResult]
     * [JP Core DiagnosticReport Radiology （放射線検査レポート）プロファイル][JP_DiagnosticReport_Radiology]
-    
+
+### Extensions
+* [JP_Observation_BodySite_BodySitePosition]
+
 {% include markdown-link-references.md %}

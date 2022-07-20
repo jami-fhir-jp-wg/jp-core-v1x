@@ -24,37 +24,6 @@ JP Encounter リソースで使用される拡張は次の通りである。
 
   - リソースで関連付けを定義しているプロパティが存在しないEncounterを参照するために利用する
 
-    
-
-### 用語定義
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| Encounter.status               | 現在の診療実施状況 | Required          | [EncounterStatus](https://www.hl7.org/fhir/valueset-encounter-status.html) |
-| Encounter.statusHistory.status | 現在の診療実施状況 | Required          | [EncounterStatus](https://www.hl7.org/fhir/valueset-encounter-status.html) |
-| Encounter.class | 診療実施分類 | Extensible          | [v3.ActEncounterCode](https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html) |
-| Encounter.classHistory.class | 過去の診療実施分類 | Extensible          | [v3.ActEncounterCode](https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html) |
-| Encounter.type | 診療の種別 | Example | [EncounterType](https://www.hl7.org/fhir/valueset-encounter-type.html) |
-| Encounter.serviceType | 特定の診療の種別 | Example | [ServiceType](https://www.hl7.org/fhir/valueset-service-type.html) |
-| Encounter.priority | 診療の優先順位 | Example | [v3.ActPriority](https://www.hl7.org/fhir/v3/ActPriority/vs.html) |
-| Encounter.participant.type | 診療担当者の役割 | Extensible  | [ParticipantType](https://www.hl7.org/fhir/valueset-encounter-participant-type.html) |
-| Encounter.reasonCode | 診療が行われる理由 | Preferred | [EncounterReasonCodes](https://www.hl7.org/fhir/valueset-encounter-reason.html) |
-| Encounter.diagnosis.use | 診断の種類 | Preferred | [DiagnosisRole](https://www.hl7.org/fhir/valueset-diagnosis-role.html) |
-| Encounter.hospitalization.admitSource | 入院した場所 | Preferred | [AdmitSource](https://www.hl7.org/fhir/valueset-encounter-admit-source.html) |
-| Encounter.hospitalization.reAdmission | 再入院した理由 | Example | [v2.0092](https://www.hl7.org/fhir/v2/0092/index.html) |
-| Encounter.hospitalization.dietPreference | 食事の事情 | Example |  [Diet](https://www.hl7.org/fhir/valueset-encounter-diet.html) |
-| Encounter.hospitalization.specialCourtesy | 特別な作法 | Preferred |  [SpecialCourtesy](https://www.hl7.org/fhir/valueset-encounter-special-courtesy.html) |
-| Encounter.hospitalization.specialArrangement | 特別待遇 | Preferred | [SpecialArrangements](https://www.hl7.org/fhir/valueset-encounter-special-arrangements.html) |
-| Encounter.hospitalization.dischargeDisposition | 退院の判断 | Example | [DischargeDisposition](https://www.hl7.org/fhir/valueset-encounter-discharge-disposition.html) |
-| Encounter.location.status | 場所の状態 | Required | [EncounterLocationStatus](https://www.hl7.org/fhir/valueset-encounter-location-status.html) |
-| Encounter.location.physicalType | 実際の場所 | Example | [LocationType](https://www.hl7.org/fhir/valueset-location-physical-type.html) |
-
-
-
-### 制約一覧
-
-このプロファイルでは制約定義は行っていない。
-
 
 ## 利用方法
 

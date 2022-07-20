@@ -18,14 +18,4 @@ Coverage リソースは、FHIRワークフローの観点からは「イベン�
 
 <br/>
 
-## 関連するプロファイル
-
-JP Coverage リソースは、以下のリソースから直接参照される。
-
-- Account, Claim, ClaimResponse, CoverageEligibilityRequest, CoverageEligibilityResponse, DeviceRequest, EnrollmentRequest, ExplanationOfBenefit, MedicationRequest, ServiceRequest and Task
-
-<br/>
-JP Coverage リソースには、直接参照するリソースは存在しない。
-<br/><br/>
-
 ## プロファイル定義

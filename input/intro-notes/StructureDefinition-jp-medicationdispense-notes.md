@@ -58,29 +58,6 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |投与経路|HL7 V2(使用者定義表0162)|http://terminology.hl7.org/CodeSystem/v2-0162|
 |入外区分|HL7V2(HL7表0482)|http://terminology.hl7.org/CodeSystem/v2-0482|
 
-JP Core MedicationDispenseリソースの各要素のバインディングは以下の通りである。
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| MedicationDispense.status | オーダーの現在の状態を示すコード | required | http://hl7.org/fhir/ValueSet/MedicationDispense-status |
-| MedicationDispense.medicationCodeableConcept | 医薬品の識別情報 | prefered | HOT7,HOT9,HOT13,YJコード,一般処方名マスター |
-| MedicationDispense.dosageInstruction.additionalInstruction | 補足用法 | prefered | JAMI処方・注射オーダ標準用法規格(補足用法コード) |
-| MedicationDispense.dosageInstruction.timing.code | 用法コード | prefered | JAMI処方・注射オーダ標準用法規格(用法コード) |
-| MedicationDispense.dosageInstruction.site | 投与部位 | prefered | JAMI処方・注射オーダ標準用法規格(外用部位コード) |
-| MedicationDispense.dosageInstruction.route | 投与経路 | prefered | HL7 V2(HL7表0162)|
-| MedicationDispense.dosageInstruction.method | 投与方法 | prefered | JAMI処方・注射オーダ標準用法規格(用法詳細区分) |
-| MedicationDispense.dosageInstruction.doseAndRate.doseQuantity.code | １回量単位 | prefered | MERIT-9(単位) |
-| MedicationDispense.dosageInstruction.doseAndRate.rateRatio.numerator.code | １日量単位 | prefered | MERIT-9(単位) |
-| MedicationDispense.dosageInstruction.doseAndRate.rateRatio.denominator.code | １日 | required | UCUM(http://hl7.org/fhir/ValueSet/ucum-units) |
-| MedicationDispense.quantity.code | 調剤量単位 | prefered | MERIT-9(単位) |
-
-### 制約一覧
-JP Core MedicationDispense リソースは、以下の制約を満たさなければならない。
-- dosageInstruction.doseAndRage.rateRatio.denominator.value : １日量を記述する場合"1"に固定される。
-- dosageInstruction.doseAndRage.rateRatio.denominator.unit : １日量を記述する場合"日"に固定される。
-- dosageInstruction.doseAndRage.rateRatio.denominator.system : １日量を記述する場合"http://unitsofmeasure.org"に固定される。
-- dosageInstruction.doseAndRage.rateRatio.denominator.code : １日量を記述する場合"d"に固定される。
-
 ### 項目の追加
 療養担当則23条では、「保険医は、処方箋を交付する場合には、様式第二号若しくは第二号の二又はこれらに準ずる様式の処方箋に必要な事項を記載しなければならない。」とされており、外来処方、院内処方の区分を明示していない。
 したがって、個別のユースケースにおいては一部を省略されることも前提の上で、規格としてはこれに準拠すべきと考え、様式に収載されている以下の項目を追加した。
@@ -587,8 +564,7 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 1. 保健医療福祉情報システム工業会, JAHISデータ交換規約（共通編）Ver.1.1, [https://www.jahis.jp/standard/detail/id=125](https://www.jahis.jp/standard/detail/id=125)
 1. 保健医療福祉情報システム工業会, JAHIS注射データ交換規約Ver.2.1C, [https://www.jahis.jp/standard/detail/id=590](https://www.jahis.jp/standard/detail/id=590)
 1. 児玉 義憲、[hl7v2-to-fhir, 
-https://github.com/Acedia-Belphegor/hl7v2-to-fhir/](hl7v2-to-fhir, 
-https://github.com/Acedia-Belphegor/hl7v2-to-fhir/)
+https://github.com/Acedia-Belphegor/hl7v2-to-fhir/](https://github.com/Acedia-Belphegor/hl7v2-to-fhir/)
 1. Mike Henderson, 日本HL7協会監修、「HL7メッセージ交換」、第2版、インナービジョン社、2013年
 1. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, [http://www2.medis.or.jp/hcode/](http://www2.medis.or.jp/hcode/)
 1. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)

@@ -22,22 +22,4 @@
 
 また、このプロファイルのMedicationRequestリソースは薬剤の指示（オーダー）に関するものであり、調剤や払い出し、実施記録は対象としない。それぞれ、MedicationDispense, MedicationAdministrationが対応するリソースである。
 
-## 関連するプロファイル
-JP Core MedicationRequest Injection リソースは、以下のリソースから直接参照される。
-
-- JP Core MedicationDispenseリソース
-- JP Core MedicationAdministrationリソース
-- JP Core DiagnosticReportリソース
-- JP Core Observationリソース
-
-JP Core MedicationRequest Injection リソースは、以下のリソースを直接参照する。
-
-- JP Core Patientリソース
-- JP Core Encounterリソース
-- JP Core Practitionerリソース
-- JP Core PractitionerRoleリソース
-- JP Core Organizationリソース
-- JP Core Coverageリソース
-- JP Core Medicationリソース
-
 ## プロファイル定義

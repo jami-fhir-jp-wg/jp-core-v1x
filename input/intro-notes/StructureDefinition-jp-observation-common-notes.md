@@ -15,29 +15,6 @@
 ### Extension定義
 このプロファイルでは拡張定義は行っていない。
 
-### 用語定義
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| `Observation.status` | 検査の状態を提供するコード | Required（必須） | [ObservationStatus](https://www.hl7.org/fhir/valueset-observation-status.html) |
-| `Observation.category` | 上位レベルの検査カテゴリのコード | Example（例） | [ObservationCategoryCodes](https://www.hl7.org/fhir/valueset-observation-category.html) |
-| `Observation.code`<br>`Observation.component.code` | 単一の検査名を特定するコード | Example（例） | [LOINCCodes](https://www.hl7.org/fhir/valueset-observation-codes.html) |
-| `Observation.dataAbsentReason` <br> `Observation.component.dataAbsentReason` | 結果(`Observation.value[x]`)の欠損理由を特定するコード | Extensible（拡張可能） | [DataAbsentReason](https://www.hl7.org/fhir/valueset-data-absent-reason.html) |
-| `Observation.interpretation` <br> `Observation.component.interpretation` | 検査の解釈を特定するコード | Extensible（拡張可能） | [ObservationInterpretationCodes](https://www.hl7.org/fhir/valueset-observation-interpretation.html) |
-| `Observation.bodySite` | 解剖学的位置を表現するコード。ラテラリティ（左右）も含む場合あり。 | Example（例） | [SNOMEDCTBodyStructures](https://www.hl7.org/fhir/valueset-body-site.html) |
-| `Observation.method` | 単一の検査の測定方法 | Example（例） | [ObservationMethods](https://www.hl7.org/fhir/valueset-observation-methods.html) |
-| `Observation.referenceRange.type` | 基準値の種別コード | Preferred（優先） | [ObservationReferenceRangeMeaningCodes](https://www.hl7.org/fhir/valueset-referencerange-meaning.html) |
-| `Observation.referenceRange.appliesTo` | 基準値が適用される母集団を識別するコード | Example（例） | [ObservationReferenceRangeAppliesToCodes](https://www.hl7.org/fhir/valueset-referencerange-appliesto.html) |
-
-
-### 制約一覧
-| id |レベル| 位置 | 説明 |式|
-|  ---  |  ---  |  ---  |  ---  |  ---  |
-| obs-3 | Rule | `Observation.referenceRange` | 少なくとも上限・下限もしくはテキストが必要。 | `low.exists()`<br/>or<br/>`high.exists()`<br/>or<br/>`text.exists()` |
-| obs-6 | Rule | (base) | `Observation.value[x]` が存在しない場合にのみ `dataAbsentReason` が存在するようする必要がある。(SHALL) | `dataAbsentReason.empty()`<br/>or<br/>`value.empty()` |
-| obs-7 | Rule | (base) | `Observation.code` が `Observation.component.code` と同一だった場合、コードに関連付けられた`value`要素は存在してはいけない。(SHALL NOT) | `value.empty()`<br/>or<br/>`component.code.where(coding.intersect(%resource.code.coding).exists()).empty()` |
-
-
 
 ## 利用方法
 

@@ -21,22 +21,6 @@
 - [`JPCoreBodySitePositionExtension`][JP_Observation_BodySite_BodySitePosition]
   - 部位（bodySite）の左右の区別を表現する際に使用する。
 
-### 用語定義
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| `Observation.category` | 「exam」固定 | Preferred | [`ObservationCategoryCodes`](https://hl7.org/fhir/valueset-observation-category.html) |
-| `Observation.code` | 所見の有無を表すコード（固定値） | Required | [`ObservationPhysicalExam`](https://simplifier.net/jp-core-draftv1/jpobservationphysicalexamcode) |
-| `Observation.value[x]` | コードに限定する | Required | [`Hl7VSYesNoIndicator`](http://terminology.hl7.org/ValueSet/v2-0136) |
-| `Observation.bodySite` | 外保連の操作対象部位を基にバリューセットを定義する。左右の区別は拡張で表現する | Preferred | `ObservationBodySite` |
-| `Observation.method` | MEDIS症状・所見マスターの「診察方法」を基にバリューセットを定義する | Preferred | `ObservationMethod` |
-| `Observation.component.code` | 具体的な所見を表すコード（固定値） | Required | [`ObservationPhysicalExam`](https://simplifier.net/jp-core-draftv1/jpobservationphysicalexamcode) |
-
-### 制約一覧
-
-このプロファイルでは制約定義は行っていない。
-
-
 ## 利用方法
 
 ### インタラクション一覧

@@ -26,15 +26,6 @@
 (全体に対する注意事項等、その他の部分について記載します。）## 
 -->
 
-
-### 用語定義
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| `DiagnosticReport.status` | レポートのステータス | Required | [`DiagnosticReportStatus`](http://hl7.org/fhir/valueset-diagnostic-report-status.html) |
-| `DiagnosticReport.category` | レポート（所見）を作成した部門 | Preferred | [`DiagnosticServiceSectionCodes`](http://hl7.org/fhir/ValueSet/diagnostic-service-sections)<br>"RAD", "RX", "CT", "NMR", "NMS", "RUS", "VUS", "OUS", "CUS"などを指定。デフォルトは"LAB"。 |
-
-
 ## 利用方法
 
 ### Interaction一覧 
