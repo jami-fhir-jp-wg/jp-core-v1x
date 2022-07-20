@@ -28,28 +28,6 @@ JP Patient リソースで使用される拡張は次の通りである。
 
   - 患者氏名(Patient.name)の漢字表記・カナ表記識別のために使用する。
 
-
-
-### 用語定義
-
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| Patient.gender.code<br>Patient.contact.gender.code | 患者の性別 | required          | [AdministrativeGender](http://hl7.org/fhir/valueset-administrative-gender.html) |
-| Patient.marialStatus.CodeableConcept | 患者の婚姻関係の状況 | Extensible          | [MarialStatus](http://hl7.org/fhir/valueset-marital-status.html) |
-| Patient.contact.relationship.CodeableConcept | 患者の連絡先(contact)との関係性 | Extensible          | [Patient Contact Relationship](http://hl7.org/fhir/valueset-patient-contactrelationship.html) |
-| Patient.link.type.code | 別の患者リソースへのリンクに関するタイプ | Required          | [LinkType](http://hl7.org/fhir/valueset-link-type.html) |
-| Patient.identifier.use | この識別子の目的を特定する | Required          | [IdentifierUse](http://hl7.org/fhir/valueset-identifier-use.html) |
-| Patient.telecom.system | コンタクトポイントの通信方法に関する情報 | Required          | [ContactPointSystem](http://hl7.org/fhir/valueset-contact-point-system.html) |
-| Patient.telecom.use | 家やオフィスなどコンタクトポイントのタイプに関する情報 | Required          | [ContactPointUse](http://hl7.org/fhir/valueset-contact-point-use.html) |
-| Patient.address.use | 家やオフィスなど住所のタイプに関する情報 | Required          | [AddressUse](http://hl7.org/fhir/valueset-address-use.html) |
-| Patient.addresss.type | 住所の種類 | Required          | [AddressType](http://hl7.org/fhir/valueset-address-type.html) |
-
-
-### 制約一覧
-
-制約はない。
-
 ## 利用方法
 
 ### インタラクション一覧

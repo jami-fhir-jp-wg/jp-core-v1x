@@ -9,33 +9,7 @@ JP Core Location リソースで定義された必須要素はない。
 
 ### Extensions定義
 
-
 JP Core Location リソースで定義された拡張はない。
-
-
-    
-
-### 用語定義
-
-
-
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| Location.status | 所在場所のステータス | Required          | [LocationStatus](http://hl7.org/fhir/valueset-location-status.html) |
-| Location.operationalStatus | 所在場所の運用ステータス（通常、ベッド/部屋のみ） | Preferred          | [v2 BED STATUS](http://hl7.org/fhir/v2/0116/index.html) |
-| Location.mode | リソースインスタンスが特定の場所を表すか、場所のクラスを表すかを示すモード | Required          | [LocationMode](http://hl7.org/fhir/valueset-location-mode.html) |
-| Location.type | 実行される機能のタイプ | Extensible          | [V3 Value SetServiceDeliveryLocationRoleType](http://hl7.org/fhir/v3/ServiceDeliveryLocationRoleType/vs.html) |
-| Location.physicalType | 所在場所の物理的な形、例えば建物、部屋、車両、道路 | Example          | [Location type](http://hl7.org/fhir/valueset-location-physical-type.html) |
-| Location.hoursOfOperation.daysOfWeek | 開始時刻と終了時刻の間に利用可能な曜日 | Required          | [DaysOfWeek](http://hl7.org/fhir/valueset-days-of-week.html) |
-
-
-
-### 制約一覧
-
-制約はない。
-
-
 
 ## 利用方法
 

@@ -31,12 +31,11 @@ MedicationAdministration リソースで使用される拡張は次の通りで�
 
 既存のExtensionの利用は特にない。
 
+
 ### 用語定義
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS処方データ交換規約やSS-MIX2で使われている用語集を採用した。
 
 HL7 V2系では用語集を識別するコーディングシステム名(以下、「CS名」）は文字列であったが、FHIRではURIを指定する必要があるため、それぞれにURIを割り当てた。以下に使用する用語集のCS名とURI表記を列記する。
-
-★電子処方箋HL7 FHIR仕様を参照しているがよいか。
 
 |分類|CS名|URI|
 |---------|----|---------------------------|
@@ -53,23 +52,6 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |投与方法|JAMI処方・注射オーダ標準用法規格(基本用法区分)|urn:oid:1.2.392.200250.2.2.20.30|
 |投与経路|JAMI処方・注射オーダ標準用法規格(用法詳細区分)|urn:oid:1.2.392.200250.2.2.20.40|
 |入外区分|HL7V2(HL7表0482)|http://terminology.hl7.org/CodeSystem/v2-0482|
-
-MedicationAdministrationの各要素のバインディングは以下の通りである。
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| MedicationAdministration.status | 投与実施の状態を示すコード | required | http://hl7.org/fhir/ValueSet/medication-admin-status |
-| MedicationAdministration.medicationCodeableConcept | 医薬品の識別情報 | prefered | HOT7,HOT9,HOT13,YJコード |
-| MedicationAdministration.dosage.site | 投与部位 | prefered | JAMI処方・注射オーダ標準用法規格(外用部位コード) |
-| MedicationAdministration.dosage.route | 投与経路 | prefered | JAMI処方・注射オーダ標準用法規格(用法詳細区分) |
-| MedicationAdministration.dosage.method | 投与方法 | prefered | JAMI処方・注射オーダ標準用法規格(基本用法区分) |
-| MedicationAdministration.dosage.dose.code | １回量単位 | prefered | MERIT-9(単位) |
-
-
-### 制約一覧
-MedicationAdministration リソースは、以下の制約を満たさなければならない。
-- status : JP Coreでは `completed` or `stopped` に限定される。
-
 ### 項目の追加
 MedicationAdministrationリソースでは、依頼元のMedicationRequestリソースをrequest要素にReferenceで参照できるようになっているが、
 依頼元のMedicationRequestリソースが取得できないケースも考慮して、依頼情報を直接記述できるように以下の項目を追加した。

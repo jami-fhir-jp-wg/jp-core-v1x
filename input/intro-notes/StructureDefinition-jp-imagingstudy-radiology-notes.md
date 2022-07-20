@@ -24,21 +24,6 @@
 
 <br>
 
-### 用語定義
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| `ImagingStudy.modality` | 全シリーズで用いられているモダリティのリスト。(0008,0060), (0008, 0061)をOR条件で記述し、重複する値は１つにまとめて表現する。 | Extensible | [DICOM Part16 CID29 Acquisition Modality](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html) |
-| `ImagingStudy.series.modality` | このシリーズのモダリティ |  Extensible | [DICOM Part16 CID29 Acquisition Modality](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html) |
-| `ImagingStudy.series.bodySite` | このシリーズの撮像対象となった解剖学的部位 | Example | [DICOM Part16 Annex L](http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) |
-
-
-<br>
-
-### 制約一覧
-
-このプロファイルでは制約定義は行っていない。
-
 ## 利用方法
 
 ### インタラクション一覧

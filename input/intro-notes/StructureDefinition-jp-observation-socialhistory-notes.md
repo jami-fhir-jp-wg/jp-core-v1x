@@ -17,17 +17,6 @@
 ### Extension定義
 このプロファイルでは拡張定義は行っていない。
 
-### 用語定義
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| `JP_Observation_SocialHistory.category` | 基底仕様のカテゴリ「social-history」固定とする | Preferred | [`ObservationCategoryCodes`](https://hl7.org/fhir/valueset-observation-category.html) |
-| `JP_Observation_SocialHistory.code` | MEDIS-DCによるJ-MIX（電子保存された診療録情報の交換のためのデータ項目セット）第6章を元に定義する | Preferred | `SocialHistoryCode` |
-
-### 制約一覧
-
-このプロファイルでは制約定義は行っていない。
-
 ## 利用方法
 
 ### インタラクション一覧
