@@ -1,9 +1,9 @@
 # =======================================================
-# Markdown Link作成スクリプト
+# FSH用Alieas作成スクリプト
 # 処理概要：
 # fsh-generatedフォルダに作成されたリソースファイル(JSON)
-# を解析し、input/includes/markdown-link-references.md
-# にエイリアスに利用できるLink情報を書き込みます。
+# を解析し、input/fsh/aliases-jpcore.fsh
+# にエイリアス情報を書き込みます
 # リソースのNameとURL情報を取得します。
 # =======================================================
 
