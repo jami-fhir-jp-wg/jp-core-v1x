@@ -23,32 +23,6 @@
 
 レポートに関連する医用画像や汎用画像、およびキー画像は、`DiagnosticReport`リソースで参照される。詳細でかつ実際の画像インスタンスは、`DiagnosticReport.media`エレメントを使用して検査レポートで直接参照するか、`DiagnosticReport.ImagingStudy`エレメントを介して、特定の患者のDICOM画像検査またはDICOMインスタンスのセットで生成されたコンテンツを表す[`ImagingStudy`リソース](http://www.hl7.org/fhir/imagingstudy.html)を間接的に参照することができる。
 
-
-## 関連するプロファイル
-このプロファイルは、以下のリソースに対して定義された各プロファイルから直接参照される可能性がある。
-
-- [`CarePlan`](https://www.hl7.org/fhir/careplan.html)
-- [`ChargeItem`](https://www.hl7.org/fhir/chargeitem.html)
-- [`ClinicalImpression`](https://www.hl7.org/fhir/clinicalimpression.html)
-- [`Communication`](https://www.hl7.org/fhir/communication.html)
-- [`CommunicationRequest`](https://www.hl7.org/fhir/communicationrequest.html)
-- [`Condition`][JP_Condition]
-- [`Contract`](https://www.hl7.org/fhir/contract.html)
-- [`DeviceRequest`](https://www.hl7.org/fhir/devicerequest.html)
-- [`DeviceUseStatement`](https://www.hl7.org/fhir/deviceusestatement.html)
-- [`FamilyMemberHistory`](https://www.hl7.org/fhir/familymemberhistory.html)
-- [`GuidanceResponse`](https://www.hl7.org/fhir/guidanceresponse.html)
-- [`ImagingStudy`][JP_ImagingStudy_Radiology]
-- [`Immunization`](https://www.hl7.org/fhir/immunization.html)
-- [`MedicationAdministration`](https://www.hl7.org/fhir/medicationadministration.html)
-- [`MedicationStatement`](https://www.hl7.org/fhir/medicationstatement.html)
-- [`Procedure`][JP_Procedure]
-- [`RequestGroup`](https://www.hl7.org/fhir/requestgroup.html)
-- [`RiskAssessment`](https://www.hl7.org/fhir/riskassessment.html)
-- [`ServiceRequest`](https://www.hl7.org/fhir/servicerequest.html)
-- [`SupplyRequest`](https://www.hl7.org/fhir/supplyrequest.html)
-
-
 ## プロファイル定義
 
 {% include markdown-link-references.md %}

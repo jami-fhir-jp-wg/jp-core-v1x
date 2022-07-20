@@ -21,13 +21,4 @@
 
 また、このリソースは単独で用いられることはない。
 
-## 関連するプロファイル
-JP Medicationリソースは、以下のリソースから直接参照される。
-
-- JP Core MedicationRequestリソース
-- JP Core MedicationDispenseリソース
-- JP Core MedicationAdministrationリソース
-
-JP Medicationリソースが参照するリソースはない。
-
 ## プロファイル定義

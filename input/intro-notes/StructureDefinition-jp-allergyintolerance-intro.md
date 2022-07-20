@@ -13,12 +13,4 @@
 - AllergyIntoleranceリソースの記録・更新・検索。
 - 他リソースからの参照（例：AdverseEvent, FamilyMemberHistory）
 
-## 関連するプロファイル
-本プロファイルは、以下のリソースに対して定義された各プロファイルから直接参照される可能性がある。
-
-- [AdverseEvent](https://www.hl7.org/fhir/adverseevent.html)
-- [ClinicalImpression](https://www.hl7.org/fhir/clinicalimpression.html)
-- [FamilyMemberHistory](https://www.hl7.org/fhir/familymemberhistory.html)
-- ...（その他多数）
-
 ## プロファイル定義

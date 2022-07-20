@@ -16,18 +16,3 @@
 
 #### 対象としないこと
 このプロファイルはワクチン以外の一般的な注射薬剤については対象としない。一般的な注射薬剤は、JP Core MedicationRequest Injectionプロファイルで記述することとする。
-
-## 関連するプロファイル
-JP Core Immunizationリソースは、以下のリソースから直接参照される。
-
-- 特になし
-
-JP Core Immunizationリソースは、以下のリソースを直接参照する。
-
-- JP Core Patientリソース
-- JP Core Encounterリソース
-- JP Core Practitionerリソース
-- JP Core PractitionerRoleリソース
-- JP Core Organizationリソース
-- JP Core Locationリソース
-- JP Core Conditionリソース

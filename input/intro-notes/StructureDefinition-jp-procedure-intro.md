@@ -25,23 +25,5 @@ Procedureリソースは、患者に対して実施されたもしくは実施�
 
 Procedureリソースは、処置の発生に関する要約情報を提供するものであり、処置行為が進行する際のリアルタイムのスナップショットを提供することを意図したものではないが、心理療法のような長期にわたる治療の場合は、全体的な進捗状況に関する要約レベルの情報を表すことができる。詳細なリアルタイムの処置情報をサポートするリソースの作成は、そのような情報を共有するための具体的な実装のユースケースの特定後に行うことになる。
 
-## 関連するプロファイル
-本プロファイルは、以下のリソースに対して定義された各プロファイルから直接参照される可能性がある。
-
-- AdverseEvent
-- Appointment
-- ChargeItem
-- Claim
-- DeviceUseStatement
-- Encounter
-- ExplanationOfBenefit
-- Flag
-- ImagingStudy
-- MedicationAdministration
-- MedicationDispense
-- MedicationStatement
-- Observation
-- Procedure
-- QuestionnaireResponse
 
 ## プロファイル定義

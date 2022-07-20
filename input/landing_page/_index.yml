@@ -7,3 +7,4 @@ branch: %%branch%%
 actor: %%actor%%
 type: draft
 pullrequest_url: %%pullrequest_url%%
+pullrequest_title: %%pullrequest_title%%
