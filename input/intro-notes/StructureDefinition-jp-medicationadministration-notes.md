@@ -52,6 +52,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |投与方法|JAMI処方・注射オーダ標準用法規格(基本用法区分)|urn:oid:1.2.392.200250.2.2.20.30|
 |投与経路|JAMI処方・注射オーダ標準用法規格(用法詳細区分)|urn:oid:1.2.392.200250.2.2.20.40|
 |入外区分|HL7V2(HL7表0482)|http://terminology.hl7.org/CodeSystem/v2-0482|
+
 ### 項目の追加
 MedicationAdministrationリソースでは、依頼元のMedicationRequestリソースをrequest要素にReferenceで参照できるようになっているが、
 依頼元のMedicationRequestリソースが取得できないケースも考慮して、依頼情報を直接記述できるように以下の項目を追加した。
