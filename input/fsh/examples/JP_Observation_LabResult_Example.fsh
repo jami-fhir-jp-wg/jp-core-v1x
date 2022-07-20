@@ -7,7 +7,8 @@ Usage: #example
 * category.coding.code = #laboratory
 * category.coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
 * category.coding.display = "尿酸"
-* basedOn = Reference("ServiceRequest/ServiceRequest-12345")
+//TODO: ServiceRequestのサンプル作成の必要あり
+* basedOn = Reference(ServiceRequest/ServiceRequest-12345)
 * code.coding[0].code = #05104
 * code.coding[=].system = "http://abc-hospital.local/fhir/Observation/localcode"
 * code.coding[=].display = "尿酸"
@@ -28,6 +29,7 @@ Usage: #example
 * referenceRange.type.coding.display = "Normal Range"
 * valueQuantity.unit = #mg/dL
 * valueQuantity.value = 3.5
-* subject = Reference("Patient/Patient-67890")
-* performer = Reference("Practitioner/Practitioner-abcde")
-* specimen = Reference("Specimen/Specimen-fgh")
+* subject = Reference(Patient/jp-patient-example-1)
+* performer = Reference(jp-practionner-example-female-1)
+//TODO: Specimenのサンプル作成の必要あり
+* specimen = Reference(Specimen/Specimen-fgh)
