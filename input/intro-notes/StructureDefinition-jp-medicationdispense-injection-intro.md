@@ -17,19 +17,4 @@
 
 このプロファイルのMedicationDispenseリソースは薬剤の調剤情報に関するものであり、処方指示や実施記録は対象としない。それぞれ、MedicationRequest, MedicationAdministrationが対応するリソースである。
 
-## 関連するプロファイル
-JP Core MedicationDispense Injectionリソースは、以下のリソースから直接参照される。
-
-- JP Core Observationリソース
-
-JP Core MedicationDispense Injection リソースは、以下のリソースを直接参照する。
-
-- JP Core Patientリソース
-- JP Core Encounterリソース
-- JP Core Practitionerリソース
-- JP Core PractitionerRoleリソース
-- JP Core Organizationリソース
-- JP Core MedicationRequest Injectionリソース
-- JP Core Medicationリソース
-
 ## プロファイル定義

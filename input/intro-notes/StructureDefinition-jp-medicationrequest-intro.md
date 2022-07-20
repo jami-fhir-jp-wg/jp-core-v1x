@@ -27,23 +27,4 @@
 
 また、療養担当則23条様式2号の処方箋形式の中で、患者情報、保険情報、処方医情報、医療機関情報などについては対象としない。それぞれ、Patient, Coverage, Practitioner, Organizationが対応するリソースである。
 
-## 関連するプロファイル
-JP Core MedicationRequestリソースは、以下のリソースから直接参照される。
-
-- JP Core MedicationDispenseリソース
-- JP Core MedicationAdministrationリソース
-- JP Core DiagnosticReportリソース
-- JP Core Observationリソース
-
-JP Core MedicationRequestリソースは、以下のリソースを直接参照する。
-
-- JP Core Patientリソース
-- JP Core Encounterリソース
-- JP Core Practitionerリソース
-- JP Core PractitionerRoleリソース
-- JP Core Organizationリソース
-- JP Core Coverageリソース
-- JP Core Medicationリソース
-
-
 ## プロファイル定義
