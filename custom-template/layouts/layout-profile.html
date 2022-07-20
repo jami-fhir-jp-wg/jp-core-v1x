@@ -40,7 +40,7 @@
 
   <!-- no uri -->
   <a name="profile"> </a>
-  <h3 id="profile">Formal Views of Profile Content</h3>
+  <h3 id="profile">Profile Content (プロファイル詳細) </h3>
   <p>
     <a href="{{site.data.fhir.path}}profiling.html#presentation">Description of Profiles, Differentials, Snapshots and how the different presentations work</a>.
   </p>
@@ -54,6 +54,12 @@
       </li>
       <li>
         <a href="#tabs-snap">Snapshot Table</a>
+      </li>
+      <li>
+        <a href="#terminology-bindings-view">Terminology Bindings</a>
+      </li>
+      <li>
+        <a href="#constraints-view">Constraints</a>
       </li>
 <!--
       <li>
@@ -106,6 +112,19 @@
         <div id="tbl-snap-inner">
           {%include StructureDefinition-{{[id]}}-snapshot.xhtml%}
         </div>
+      </div>
+    </div>
+    <a name="terminology-bindings-view"> </a>
+    <div id="terminology-bindings-view">
+      <div id="terminology-bindings-view-inner">
+        <!--Terminology Bindings heading in the fragment -->
+        {%include StructureDefinition-{{[id]}}-tx.xhtml%}
+      </div>
+    </div>
+    <a name="constraints-view"> </a>
+    <div id="constraints-view">
+      <div id="constraints-view-inner">
+        {%include StructureDefinition-{{[id]}}-inv.xhtml%}
       </div>
     </div>
 {% unless excludexml == 'y' %}
@@ -203,25 +222,23 @@
         </div>
       </div>-->
 {% endunless %}
+      <div id="terminology-bindings-view">
+        <div id="terminology-bindings-view-inner">
+          <!--Terminology Bindings heading in the fragment -->
+          {%include StructureDefinition-{{[id]}}-tx.xhtml%}
+        </div>
+      </div>
+      <div id="constraints-view">
+        <div id="constraints-view-inner">
+          {%include StructureDefinition-{{[id]}}-inv.xhtml%}
+        </div>
+      </div>
     </div>
   </div>
   <p>&#160;</p>
   <p>Other representations of profile: <a href="{{[type]}}-{{[id]}}.csv">CSV</a>, <a href="{{[type]}}-{{[id]}}.xlsx">Excel</a>{% unless modelType == 'Logical Model' %}, <a href="{{[type]}}-{{[id]}}.sch">Schematron</a>
 {% endunless %} 
   </p>
-  <a name="tx"> </a>
-  <!--Terminology Bindings heading in the fragment -->
-  {%include StructureDefinition-{{[id]}}-tx.xhtml%}
-
-  {% capture invariants %}
-    {% include StructureDefinition-{{[id]}}-inv.xhtml %}
-  {% endcapture %}
-  <!-- 218 is size of empty table -->
-  {% unless invariants.size <= 218 %}
-    <a name="inv"> </a>
-    <!--Constraints  heading in the fragment -->
-    {% include StructureDefinition-{{[id]}}-inv.xhtml %}
-  {% endunless%}
 
   {% if site.data.resources[resource_].contained != nil %}
   <h4>Contained resources</h4>
