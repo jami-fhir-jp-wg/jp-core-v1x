@@ -105,7 +105,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - json
   special-url:
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance
-    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_CarePlan
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common

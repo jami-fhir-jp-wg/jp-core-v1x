@@ -17,7 +17,6 @@
 
 <!-- StructureDefinition: Profile, DataType -->
 [JP_AllergyIntolerance]: StructureDefinition-jp-allergyintolerance.html
-[JP_CarePlan]: StructureDefinition-jp-careplan.html
 [JP_Condition]: StructureDefinition-jp-condition.html
 [JP_Coverage]: StructureDefinition-jp-coverage.html
 [JP_DiagnosticReport_Common]: StructureDefinition-jp-diagnosticreport-common.html
