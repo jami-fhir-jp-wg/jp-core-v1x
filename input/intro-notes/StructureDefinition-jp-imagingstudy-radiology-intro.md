@@ -39,22 +39,6 @@ DICOMタグは4桁の16進数がコンマで区切られたペア（例　(0008,
 
 このプロファイルでは上記のようなDICOMに関連して用いられる `ImagingStudy`の用途がスコープであり、`ImagingStudy`の情報項目の１つを取り扱う際に、必要な要件を定義している。
 
-## 関連するプロファイル
-
-このプロファイルは、以下のリソースに対して定義された各プロファイルから直接参照される可能性がある。
-
- - [`Patient`][JP_Patient]
- - [`Encounter`][JP_Encounter]
- - [`CarePlan`](http://hl7.org/fhir/careplan.html)
- - [`Specimen`](http://hl7.org/fhir/specimen.html)
- - [`Condition`][JP_Condition]
- - [`Location`][JP_Location]
- - [`Procedure`][JP_Procedure]
- - [`Endpoint`](http://hl7.org/fhir/endpoint.html)
- - [`Practitioner`][JP_Procedure]
- - [`DiagnosticReport`][JP_DiagnosticReport_Radiology]
- - [`Observation`][JP_Observation_Common]
- 
 ## プロファイル定義
 
 {% include markdown-link-references.md %}

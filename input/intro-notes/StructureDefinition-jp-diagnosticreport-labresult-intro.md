@@ -29,30 +29,6 @@
 
 このプロファイルでは上記想定シナリオにて用いられる`Observation`の用途がスコープであり、患者基本情報の中でも特に検体検査に該当する情報項目の１つを取り扱う際に、必要な要件を定義している。
 -->
-## 関連するプロファイル
-
-このプロファイルは、以下のリソースに対して定義された各プロファイルから直接参照される可能性がある。
-
-- [`CarePlan`](https://www.hl7.org/fhir/careplan.html)
-- [`ChargeItem`](https://www.hl7.org/fhir/chargeitem.html)
-- [`ClinicalImpression`](https://www.hl7.org/fhir/clinicalimpression.html)
-- [`Communication`](https://www.hl7.org/fhir/communication.html)
-- [`CommunicationRequest`](https://www.hl7.org/fhir/communicationrequest.html)
-- [`Condition`][JP_Condition]
-- [`Contract`](https://www.hl7.org/fhir/contract.html)
-- [`DeviceRequest`](https://www.hl7.org/fhir/devicerequest.html)
-- [`DeviceUseStatement`](https://www.hl7.org/fhir/deviceusestatement.html)
-- [`FamilyMemberHistory`](https://www.hl7.org/fhir/familymemberhistory.html)
-- [`GuidanceResponse`](https://www.hl7.org/fhir/guidanceresponse.html)
-- [`ImagingStudy`](https://www.hl7.org/fhir/imagingstudy.html)
-- [`Immunization`](https://www.hl7.org/fhir/immunization.html)
-- [`MedicationAdministration`](https://www.hl7.org/fhir/medicationadministration.html)
-- [`MedicationStatement`](https://www.hl7.org/fhir/medicationstatement.html)
-- [`Procedure`][JP_Procedure]
-- [`RequestGroup`](https://www.hl7.org/fhir/requestgroup.html)
-- [`RiskAssessment`](https://www.hl7.org/fhir/riskassessment.html)
-- [`ServiceRequest`](https://www.hl7.org/fhir/servicerequest.html)
-- [`SupplyRequest`](https://www.hl7.org/fhir/supplyrequest.html)
 
 
 ## プロファイル定義

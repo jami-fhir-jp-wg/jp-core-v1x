@@ -22,24 +22,6 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 
 <br><br>
 
-
-### 用語定義
-
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| Coverage.status | インスタンスの状態を指定するcode。 | Required | [FinancialResourceStatusCodes](https://www.hl7.org/fhir/valueset-fm-status.html) |
-| Coverage.type | 保険種別（国民健康保険、公害医療、労災、地方公費など）を表すCodeableConcept。<br>JAHIS病名情報交換規約、又は電子処方箋CDA記述仕様のコード表を参照することができる。 | Preferred　|  [JAHIS病名情報データ交換規約・JHSD0001](https://www.jahis.jp/standard/detail/id=134) <br> [電子処方箋CDA記述仕様・別表11](https://www.mhlw.go.jp/content/10800000/000342368.pdf)|
-| Coverage.relationship | 患者と被保険者の関係を表すCodeableConcept。<br>JAHIS病名情報交換規約、又は電子処方箋CDA記述仕様のコード表を参照することができる。 | Extensible | [JAHIS病名情報データ交換規約・HL7表0063](https://www.jahis.jp/standard/detail/id=134) <br> [電子処方箋CDA記述仕様・別表12](https://www.mhlw.go.jp/content/10800000/000342368.pdf) |
-| Coverage.costToBeneficiary.type | 患者の自己負担額に関するサービスや負担率、上限額等の種類を指定するCodeableConcept。 | Extensible | [CoverageCopayTypeCodes](https://www.hl7.org/fhir/valueset-coverage-copay-type.html) |
-
-
-<br>
-### 制約一覧
-
-JP Coverage リソースには、制約は存在しない。
-<br><br>
-
 ## 利用方法
 <br>
 
@@ -76,8 +58,6 @@ JP Coverage リソースには、制約は存在しない。
 
 
 ##### 推奨検索パラメータ
-
-<span style="color: red;">★★コメント： 説明は記載途中です★★</span>
 
 次の検索パラメータをサポートすることが望ましい。
 

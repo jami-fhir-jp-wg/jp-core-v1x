@@ -6,7 +6,7 @@ Description: "このProfileはImmunizationリソースに対して日本での�
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
 * ^status = #draft
 * ^date = "2022-02-18"
-* ^purpose = "予防接種の記録を交換するために用いられる。"
+// * ^purpose = "予防接種の記録を交換するために用いられる。"
 * . ^short = "予防接種"
 * . ^definition = "ワクチンを接種したときの記録，あるいは予防接種について患者や医療従事者などが報告した記録。"
 * id ^short = "このResourceに対する論理ID"
@@ -14,9 +14,9 @@ Description: "このProfileはImmunizationリソースに対して日本での�
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    JP_Immunization_DueDateOfNextDose named dueDateOfNextDose 0..1 and
-    JP_Immunization_ManufacturedDate named manufacturedDate 0..1 and
-    JP_Immunization_CertificatedDate named certificatedDate 0..1
+    JP_Immunization_DueDateOfNextDose named dueDateOfNextDose ..1 and
+    JP_Immunization_ManufacturedDate named manufacturedDate ..1 and
+    JP_Immunization_CertificatedDate named certificatedDate ..1
 * extension[dueDateOfNextDose] ^short = "次回接種予定日"
 * extension[dueDateOfNextDose] ^definition = "次回接種を予定している日、期限"
 * extension[manufacturedDate] ^short = "製造年月日"

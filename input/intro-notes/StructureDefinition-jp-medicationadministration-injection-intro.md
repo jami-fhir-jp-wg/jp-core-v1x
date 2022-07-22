@@ -18,20 +18,4 @@
 
 また、このリソースは薬剤の投与実施に関するものであり、指示（オーダー）、調剤や払い出しは対象としない。それぞれ、MedicationRequest、MedicationDispense が対応するリソースである。
 
-## 関連するプロファイル
-
-JP MedicationAdministrationリソースは、以下のリソースから直接参照される。
-
-- JP Core Observationリソース
-- JP Core Procedureリソース
-
-JP MedicationAdministrationリソースは、以下のリソースを直接参照する。
-
-- JP Core Patientリソース
-- JP Core Encounterリソース
-- JP Core Practitionerリソース
-- JP Core PractitionerRoleリソース
-- JP Core MedicationRequestリソース
-- JP Core Medicationリソース
-
 ## プロファイル定義

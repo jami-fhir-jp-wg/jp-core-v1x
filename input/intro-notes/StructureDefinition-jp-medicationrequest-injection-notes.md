@@ -52,6 +52,7 @@ JP Core MedicationRequestプロファイルで追加された以下のExtension�
 |------------|-------------|----------|-----|
 |BodyStructure|薬剤の投与部位を表現するのに使用する|http://hl7.org/fhir/StructureDefinition/bodySite|Reference (BodyStructure)|
 
+
 ### 用語定義
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS注射データ交換規約やSS-MIX2で使われている用語集を採用した。
 
@@ -81,46 +82,6 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 |投与手技|JAHIS注射データ交換規約Ver.2.1C(JHSI表0003)|http://jpfhir.jp/ePrescription/CodeSystem/JHSI0003|
 |投与経路|HL7 V2(使用者定義表0162)|http://terminology.hl7.org/CodeSystem/v2-0162|
 |入外区分|HL7 V2(HL7表0482)|http://terminology.hl7.org/CodeSystem/v2-0482|
-
-JP Core MedicationRequest Injectionリソースの各要素のバインディングは以下の通りである。
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| MedicationRequest.status | オーダーの現在の状態を示すコード | required | http://hl7.org/fhir/ValueSet/medicationrequest-status |
-| MedicationRequest.dosageInstruction.timing.code | 用法コード | prefered | JAMI処方・注射オーダ標準用法規格(用法コード) |
-| MedicationRequest.dosageInstruction.site | 投与部位 | prefered | JAMI処方・注射オーダ標準用法規格(外用部位コード) |
-| MedicationRequest.dosageInstruction.route | 投与経路 | prefered | HL7 V2(使用者定義表0162) |
-| MedicationRequest.dosageInstruction.method | 投与方法 | prefered | JAMI処方・注射オーダ標準用法規格(用法詳細区分) |
-| MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.code | 投与量単位 | prefered | UCUM(http://hl7.org/fhir/ValueSet/ucum-units) |
-| MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.code | 投与速度用量単位 | prefered | UCUM(http://hl7.org/fhir/ValueSet/ucum-units) |
-| MedicationRequest.dosageInstruction.doseAndRate.rateRatio.denominator.code | 投与速度時間単位 | required | UCUM(http://hl7.org/fhir/ValueSet/ucum-units) |
-| MedicationRequest.dispenseRequest.quantity.code | 調剤容量単位 | required | UCUM(http://hl7.org/fhir/ValueSet/ucum-units) |
-
-JP Core MedicationRequest Injectionリソースに内包されるMedicationリソースのバインディングは以下の通りである。
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| Medication.ingredient.itemCodeableConcept | 医薬品の識別情報 | prefered | HOT7,HOT9,HOT13,YJコード |
-| Medication.ingredient.strength.numerator.code | 成分量単位 | prefered | MERIT-9(単位) |
-| Medication.ingredient.strength.denominator.code | １回 | prefered | MERIT-9(単位) |
-
-JP Core MedicationRequest Injectionリソースに内包されるBodyStructureリソースのバインディングは以下の通りである。
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| BodyStructure.location | 投与部位 | prefered | HL7 V2(HL7表0550)|
-| BodyStructure.locationModifier | 投与部位修飾子 | prefered |HL7 V2(HL7表0495) |
-
-### 制約一覧
-JP Core MedicationRequest Injectionリソースは、以下の制約を満たさなければならない。
-- status : JP Coreでは"active"に固定される。
-- intent : JP Coreでは"intent" に固定される。
-
-JP Core MedicationRequest Injectionリソースに内包されるMedicationリソースは、以下の制約を満たさなければならない。
-- ingredient.strength.denominator.value : "1"に固定される。
-- ingredient.strength.denominator.unit : "回"に固定される。
-- ingredient.strength.denominator.system : "urn:oid:1.2.392.100495.20.2.101"に固定される。
-- ingredient.strength.denominator.code : "KAI"に固定される。
 
 ### 項目の追加
 日本国内の電子カルテシステムでの注射オーダの運用に合わせ、以下の項目を追加した。

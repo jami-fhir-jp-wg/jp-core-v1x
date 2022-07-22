@@ -1,7 +1,7 @@
 
 ### 必須要素
 
-次のデータ項目は必須（データが存在しなければならない）これらは、人間が読めるように簡単に説明しています。プロファイル固有の指針と例も提供されている。以下の正式なプロファイル定義では，正式な概要，定義，および用語の要件が示されている。
+次のデータ項目は必須（データが存在しなければならない）これらは、人間が読めるように簡単に説明している。プロファイル固有の指針と例も提供されている。以下の正式なプロファイル定義では，正式な概要，定義，および用語の要件が示されている。
 
 Organization リソースは、次の要素を持たなければならない。
 
@@ -26,26 +26,6 @@ JP Oraganization リソースで使用される拡張は次の通りである。
 - [JP_PrefectureNo][JP_Organization_PrefectureNo]
 
   - 都道府県番号2桁を表す。
-
-
-
-### 用語定義
-
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| Organization.type | 組織の分類 | Example | [OrgazationalType](https://www.hl7.org/fhir/valueset-organization-type.html) |
-| Organization.contact.purpose | 連絡する目的 | Extensible　| [ContactEntityType](https://www.hl7.org/fhir/valueset-contactentity-type.html) |
-
-
-
-### 制約一覧
-
-| id       | レベル | 位置              | 説明                                                         | 式                                                           |
-| -------- | ------ | -----------------| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| jp-org-1 | Rule   | (base) | 組織は、少なくとも一つ場合によっては複数の名前または識別子を持たなければならない | (identifier.count() + name.count()) > 0|
-|  jp-org-2 |  Rule |Organization.address | 組織の住所に「ホーム」を使用することはできない | where(use = 'home').empty() |
-| jp-org-3 | Rule| Organization.telecom | 組織のtelecomに「ホーム」を使用することはできない | where(use = 'home').empty()
 
 ### その他
 

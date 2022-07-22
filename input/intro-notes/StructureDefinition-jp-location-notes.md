@@ -1,7 +1,7 @@
 
 ### 必須要素
 
-JP Core Location リソースで定義された必須要素は特にありません。
+JP Core Location リソースで定義された必須要素はない。
 
 
 
@@ -9,41 +9,11 @@ JP Core Location リソースで定義された必須要素は特にありませ
 
 ### Extensions定義
 
-
-JP Core Location リソースで定義された拡張は特にありません。
-
-
-    
-
-### 用語定義
-
-
-
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| Location.status | 所在場所のステータス | Required          | [LocationStatus](http://hl7.org/fhir/valueset-location-status.html) |
-| Location.operationalStatus | 所在場所の運用ステータス（通常、ベッド/部屋のみ） | Preferred          | [v2 BED STATUS](http://hl7.org/fhir/v2/0116/index.html) |
-| Location.mode | リソースインスタンスが特定の場所を表すか、場所のクラスを表すかを示すモード | Required          | [LocationMode](http://hl7.org/fhir/valueset-location-mode.html) |
-| Location.type | 実行される機能のタイプ | Extensible          | [V3 Value SetServiceDeliveryLocationRoleType](http://hl7.org/fhir/v3/ServiceDeliveryLocationRoleType/vs.html) |
-| Location.physicalType | 所在場所の物理的な形、例えば建物、部屋、車両、道路 | Example          | [Location type](http://hl7.org/fhir/valueset-location-physical-type.html) |
-| Location.hoursOfOperation.daysOfWeek | 開始時刻と終了時刻の間に利用可能な曜日 | Required          | [DaysOfWeek](http://hl7.org/fhir/valueset-days-of-week.html) |
-
-
-
-### 制約一覧
-
-制約はありません。
-
-
+JP Core Location リソースで定義された拡張はない。
 
 ## 利用方法
 
 ### インタラクション一覧
-
-<span style="color: red;">★★コメント ： 説明のための例示です。内容の妥当性は考慮していません。★★</span>
-
-
 
 | コンフォーマンス | インタラクション                            |
 | ---------------- | ------------------------------------------- |
@@ -56,15 +26,7 @@ JP Core Location リソースで定義された拡張は特にありません。
 ### OperationおよびSearch Parameter 一覧
 
 
-
-<span style="color: red;">★★コメント ： サンプルを例示します。説明のための例示であり内容の妥当性は考慮していません。表の形式はテンプレートにあわせましたが、Search Parameter については、US-Coreを参考に、下に書いたような説明や例を追加したため、一覧の表は不要ではないでしょうか。US-Coreにも一覧表はありません。★★</span>
-
-
-
-
-
 #### Search Parameter一覧
-
 
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
@@ -169,13 +131,13 @@ address-state=東京都    |
 
 ##### 追加検索パラメータ 
 
-追加検索パラメータはありません。
+追加検索パラメータはない。
 
 
 
 #### Operation一覧
 
-Locationに対するOperationは定義されていません。
+Locationに対するOperationは定義されていない。
 
 
 
@@ -251,7 +213,7 @@ Locationに対するOperationは定義されていません。
 ## 注意事項
 
 
-注意事項はありません。
+注意事項はない。
 
 
 
@@ -261,18 +223,18 @@ Locationに対するOperationは定義されていません。
 ## その他、参考文献・リンク等
 
 ・退院時サマリー規約
-http://www.hl7.jp/library/item/HL7J-CDA-007.pdf
+[http://www.hl7.jp/library/item/HL7J-CDA-007.pdf](http://www.hl7.jp/library/item/HL7J-CDA-007.pdf)
 
 ・診療情報提供書規格
-http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf
+[http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf](http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf)
 
 ・特定健診情報ファイル仕様
-https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html
+[https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html)
 
 ・SS-MIX2 標準化ストレージ 仕様書 Ver.1.2f
-http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf
+[http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf](http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf)
 
 ・ICSR E2B(R3)
-https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html
+[https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)
 
 

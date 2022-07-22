@@ -28,28 +28,6 @@ JP Patient リソースで使用される拡張は次の通りである。
 
   - 患者氏名(Patient.name)の漢字表記・カナ表記識別のために使用する。
 
-
-
-### 用語定義
-
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| Patient.gender.code<br>Patient.contact.gender.code | 患者の性別 | required          | [AdministrativeGender](http://hl7.org/fhir/valueset-administrative-gender.html) |
-| Patient.marialStatus.CodeableConcept | 患者の婚姻関係の状況 | Extensible          | [MarialStatus](http://hl7.org/fhir/valueset-marital-status.html) |
-| Patient.contact.relationship.CodeableConcept | 患者の連絡先(contact)との関係性 | Extensible          | [Patient Contact Relationship](http://hl7.org/fhir/valueset-patient-contactrelationship.html) |
-| Patient.link.type.code | 別の患者リソースへのリンクに関するタイプ | Required          | [LinkType](http://hl7.org/fhir/valueset-link-type.html) |
-| Patient.identifier.use | この識別子の目的を特定する | Required          | [IdentifierUse](http://hl7.org/fhir/valueset-identifier-use.html) |
-| Patient.telecom.system | コンタクトポイントの通信方法に関する情報 | Required          | [ContactPointSystem](http://hl7.org/fhir/valueset-contact-point-system.html) |
-| Patient.telecom.use | 家やオフィスなどコンタクトポイントのタイプに関する情報 | Required          | [ContactPointUse](http://hl7.org/fhir/valueset-contact-point-use.html) |
-| Patient.address.use | 家やオフィスなど住所のタイプに関する情報 | Required          | [AddressUse](http://hl7.org/fhir/valueset-address-use.html) |
-| Patient.addresss.type | 住所の種類 | Required          | [AddressType](http://hl7.org/fhir/valueset-address-type.html) |
-
-
-### 制約一覧
-
-制約はありません。
-
 ## 利用方法
 
 ### インタラクション一覧
@@ -197,7 +175,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 
 ##### 追加検索パラメータ 
 
-JP Patientリソースに追加された検索パラメータはありません。
+JP Patientリソースに追加された検索パラメータはない。
 
 #### Operation一覧
 
@@ -342,23 +320,24 @@ HTTP/1.1 200 OK
 
 ## 注意事項
 
-注意事項はありません。
+注意事項はない。
 
 ## その他、参考文献・リンク等
 
 ・退院時サマリー規約
-http://www.hl7.jp/library/item/HL7J-CDA-007.pdf
+[http://www.hl7.jp/library/item/HL7J-CDA-007.pdf](http://www.hl7.jp/library/item/HL7J-CDA-007.pdf)
 
 ・診療情報提供書規格
-http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf
+[http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf](http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf)
 
 ・特定健診情報ファイル仕様
-https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html
+[https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html)
 
 ・SS-MIX2 標準化ストレージ 仕様書 Ver.1.2f
-http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf
+[http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf](http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf)
 
 ・ICSR E2B(R3)
-https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html
+[https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)
+
 
 {% include markdown-link-references.md %}

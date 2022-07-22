@@ -4,7 +4,7 @@
 
 次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
 
-JP Practitioner リソースには、必須要素はありません。
+JP Practitioner リソースには、必須要素はない。
 
   
 ### Extensions定義
@@ -16,23 +16,6 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 - [nameRepresentationUse](http://hl7.org/fhir/R4/extension-iso21090-en-representation.html)
 
   - 医療従事者氏名(Practitioner.name)の漢字表記・カナ表記識別のために使用する。
-
-### 用語定義
-
-
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| Practitioner.gender.code | 医療従事者の性別 | required          | [AdministrativeGender](http://hl7.org/fhir/valueset-administrative-gender.html) |
-| Practitioner.communication | 医療従事者の使用できる言語 | Preferred, but limited to ALLLanguage          | [CommonLanguages](http://hl7.org/fhir/valueset-languages.html) |
-
-
-
-### 制約一覧
-
-
-制約はありません。
-
 
 ### その他
 
@@ -108,16 +91,16 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 
 ##### 推奨検索パラメータ
 
-推奨検索パラメータ(SHOULD)はありません。
+推奨検索パラメータ(SHOULD)はない。
 
 
 ##### オプション検索パラメータ 
 
-オプション検索パラメータ(MAY)はありません。
+オプション検索パラメータ(MAY)はない。
 
 #### Operation一覧
 
-Operationはありません。
+Operationはない。
 
 ### サンプル
 
@@ -182,22 +165,23 @@ Operationはありません。
 
 ## 注意事項
 
-注意事項はありません。
+注意事項はない。
 
 ## その他、参考文献・リンク等
 
 ・退院時サマリー規約
-http://www.hl7.jp/library/item/HL7J-CDA-007.pdf
+[http://www.hl7.jp/library/item/HL7J-CDA-007.pdf](http://www.hl7.jp/library/item/HL7J-CDA-007.pdf)
 
 ・診療情報提供書規格
-http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf
+[http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf](http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf)
 
 ・特定健診情報ファイル仕様
-https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html
+[https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html)
 
 ・SS-MIX2 標準化ストレージ 仕様書 Ver.1.2f
-http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf
+[http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf](http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf)
 
 ・ICSR E2B(R3)
-https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html
+[https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)
+
 

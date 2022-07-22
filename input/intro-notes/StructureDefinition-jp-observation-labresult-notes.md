@@ -22,24 +22,6 @@
 
 このプロファイルでは拡張定義は行っていない。
 
-### 用語定義
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| `Observation.category` | 「laboratoy」固定 | Preferred | [`ObservationCategoryCodes`](https://hl7.org/fhir/valueset-observation-category.html) |
-| `Observation.code` | JLAC10 | Preferred | `LabResultCode` |
-
-### 制約一覧
-
-<!-- <span style="color:red;">レベルの指定が必要。</span>> 
--->
-
-| id |レベル| 位置 | 説明 |式|
-|  ---  |  ---  |  ---  |  ---  |  ---  |
-| jp-core-1 | Warning | `Observation.effective[x]` | 一日を含む細かな検体採取日時を必要がある。（年月のみでは不足） | `Observation.effectiveDateTime.exists() implies Observation.effectiveDateTime.toString().length() >= 8` |
-| jp-core-2 | Warning | `Observation` | `component` または、`hasMember` が存在しない場合、`value`が存在する必要がある。 | `component.empty() and hasMember.empty()) implies  value.exists()` |
-| obs-3 | Guideline | `Observation.referenceRange` | 可能な限り`low`、`high`に構造化すべき。構造化できない場合、あるいは`low`、`high`に該当しない場合は`text`を使用 | `low.exists() or high.exists() or text.exists()` |
-
-
 ## 利用方法
 
 ### インタラクション一覧

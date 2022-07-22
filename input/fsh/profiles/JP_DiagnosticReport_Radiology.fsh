@@ -53,7 +53,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * media ^comment = "【JP仕様】<br/>\r\nキーイメージを設定\r\n<br/><br/>"
 * media ^requirements = "多くの診断サービスには、サービスの一部としてレポートに画像が含まれている。"
 * media.comment ^definition = "イメージに関するコメント。通常、これは画像が含まれる理由を説明したり、依頼者の注意を重要な内容に引き付けるために使用される。"
-* media.comment ^comment = "コメントは、画像と共に表示される。レポートでは画像の内容に関する追加の議論が、DiagnosticReport.textやDiagnosticReport.conclusionなどの他のセクションに含まれるのが一般的です。\r\n<br/><br/>\r\n【JP仕様】<br/>\r\nキーイメージの説明\r\n<br/><br/>"
+* media.comment ^comment = "コメントは、画像と共に表示される。レポートでは画像の内容に関する追加の議論が、DiagnosticReport.textやDiagnosticReport.conclusionなどの他のセクションに含まれるのが一般的である。\r\n<br/><br/>\r\n【JP仕様】<br/>\r\nキーイメージの説明\r\n<br/><br/>"
 * media.comment ^requirements = "レポート作成者は、レポートに含まれる各画像についてコメントを付け加える"
 * media.link ^definition = "イメージ ソースへの参照。"
 * media.link ^comment = "参照は実際のFHIRリソースへの参照であり、解決可能である必要がある。解決はURLから取得するか、または、リソースタイプが利用できる場合は絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索する。\r\n<br/><br/>\r\n【JP仕様】<br/>\r\nキーイメージの参照先\r\n<br/><br/>"

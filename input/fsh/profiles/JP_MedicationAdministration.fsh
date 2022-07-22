@@ -8,27 +8,27 @@ Title: "JP Core MedicationAdministration Profile"
 Description: "このプロファイルはMedicationAdministrationリソースに対して、内服・外用薬剤処方投与実施情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 // extension 参照宣言
 * extension contains
-    JP_MedicationAdministration_RequestDepartment named RequestDepartment 0..1 and
-    JP_MedicationAdministration_RequestAuthoredOn named RequestAuthoredOn 0..1 and
-    JP_MedicationAdministration_Location named Location 0..1   and
-    JP_MedicationAdministration_Requester named Requester 0..*
+    JP_MedicationAdministration_RequestDepartment named requestDepartment ..1 and
+    JP_MedicationAdministration_RequestAuthoredOn named requestAuthoredOn ..1 and
+    JP_MedicationAdministration_Location named location ..1   and
+    JP_MedicationAdministration_Requester named requester ..*
 //
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
 * ^status = #draft
 * ^date = "2022-03-16"
-* ^purpose = "このプロファイルはMedicationAdministrationリソースに対して、内服・外用薬剤処方投与実施情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
+// * ^purpose = "このプロファイルはMedicationAdministrationリソースに対して、内服・外用薬剤処方投与実施情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * . ^short = "患者への薬剤投与記録"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension[RequestDepartment] ^short = "依頼科"
-* extension[RequestDepartment] ^definition = "依頼科を格納するための拡張"
-* extension[Requester] ^short = "依頼医"
-* extension[Requester] ^definition = "依頼医を格納するための拡張。\r\n依頼医を記述した Practitioner  リソースへの参照。"
-* extension[RequestAuthoredOn] ^short = "依頼日時"
-* extension[RequestAuthoredOn] ^definition = "依頼日時を格納するための拡張"
-* extension[Location] ^short = "実施場所"
-* extension[Location] ^definition = "実施場所を格納するための拡張。\r\n実施場所を記述した  Locationリソースへの参照。"
+* extension[requestDepartment] ^short = "依頼科"
+* extension[requestDepartment] ^definition = "依頼科を格納するための拡張"
+* extension[requester] ^short = "依頼医"
+* extension[requester] ^definition = "依頼医を格納するための拡張。\r\n依頼医を記述した Practitioner  リソースへの参照。"
+* extension[requestAuthoredOn] ^short = "依頼日時"
+* extension[requestAuthoredOn] ^definition = "依頼日時を格納するための拡張"
+* extension[location] ^short = "実施場所"
+* extension[location] ^definition = "実施場所を格納するための拡張。\r\n実施場所を記述した  Locationリソースへの参照。"
 * identifier ^short = "External identifier 外部識別子"
 * identifier ^definition = "Identifiers associated with this Medication Administration that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.\r\n\r\nビジネスプロセスによって定義され、リソース自体への直接URL参照が適切でない場合にそれを参照するために使用される、この投薬管理に関連付けられた識別子。これらは、実行者または他のシステムによってこのリソースに割り当てられたビジネスIDであり、リソースが更新されてサーバーからサーバーに伝播される間、一定のままである。"
 * instantiates ^short = "Instantiates protocol or definition　プロトコルや定義のインスタンス化"
@@ -50,7 +50,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * medicationCodeableConcept.coding 1..
 * medicationCodeableConcept.coding ^short = "Code defined by a terminology system コード集で定義された医薬品コード"
 * medicationCodeableConcept.coding ^definition = "A reference to a code defined by a terminology system.\r\n\r\nコード集で定義された医薬品コードへの情報"
-* medicationCodeableConcept.coding ^comment = "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.\r\n【JP-CORE】"
+* medicationCodeableConcept.coding ^comment = "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.\r\n"
 * medicationCodeableConcept.coding.system 1..
 * medicationCodeableConcept.coding.code 1..
 * medicationCodeableConcept.coding.display 1..
@@ -66,13 +66,13 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * subject.reference ^short = "Literal reference, Relative, internal or absolute URL　リテラル参照、相対、内部、または絶対URL"
 * subject.reference ^definition = "A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources.\r\n\r\n他のリソースが見つかった場合そのいリソース箇所への参照。参照は相対参照である場合がある。その場合、参照はサービスベースURLに相対的であるか、リソースが見つかった場所を解決する絶対URL。参照はバージョン固有である場合とそうでない場合がある。参照がFHIR　RESTfulサーバーを参照していない場合は、バージョン固有であると見なす必要がある。内部フラグメント参照（「＃」で始まる）は、含まれているリソースを参照する。"
 * subject.type ^short = "Type the reference refers to (e.g. \"Patient\")　参照リソースのタイプ"
-* subject.type ^definition = "The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent.\n\nThe type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. \"Patient\" is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources).\r\n\r\n参照のターゲットの予想されるタイプ。 Reference.typeとReference.referenceの両方が入力され、Reference.referenceがFHIR URLである場合、両方が一貫している必要がある。\r\nタイプは、この参照が参照するタイプであるリソース定義の正規URLです。参照は、http：//hl7.org/fhir/StructureDefinition/に関連するURLとなる。例： 「患者」リソースの場合は、http://hl7.org/fhir/StructureDefinition/Patient　となる。絶対URLは、論理モデルでのみ許可されます（また、論理モデルの参照でのみ使用でき、リソースでは使用できません）。"
+* subject.type ^definition = "The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent.\n\nThe type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. \"Patient\" is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources).\r\n\r\n参照のターゲットの予想されるタイプ。 Reference.typeとReference.referenceの両方が入力され、Reference.referenceがFHIR URLである場合、両方が一貫している必要がある。\r\nタイプは、この参照が参照するタイプであるリソース定義の正規URLである。参照は、http：//hl7.org/fhir/StructureDefinition/に関連するURLとなる。例： 「患者」リソースの場合は、http://hl7.org/fhir/StructureDefinition/Patient　となる。絶対URLは、論理モデルでのみ許可される（また、論理モデルの参照でのみ使用でき、リソースでは使用できない）。"
 * subject.identifier ^short = "Logical reference, when literal reference is not known　リテラル参照（reference要素）で記述できない場合の論理ID参照"
 * subject.identifier ^definition = "An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference.\r\n\r\nターゲットリソースの識別子。これは、他のリソースを直接参照する方法がない場合に使用される。これは、リソースが表すエンティティがFHIRサーバーを介して利用できないため、またはリソースの作成者が既知の識別子を実際の場所に変換する方法がないためである 。 Reference.identifierが実際にFHIRインスタンスとして公開されているものを指している必要はないが、FHIRインスタンスとして公開されることが期待されるビジネス概念を指している必要があり、そのインスタンスは参照で許可されているFHIRリソースタイプとなる。"
 * subject.identifier ^comment = "When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. \n\nWhen both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference\n\nApplications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.\n\nReference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any).\r\n\r\n参照の代わりに識別子が提供される場合、参照を処理するシステムは、識別子が使用されるビジネスコンテキストを理解している場合にのみ、識別子を参照に解決できる。これはグローバルな場合もあるが（たとえば、国民ID）、そうでない場合もある。このため、参照を操作するために説明されている便利なメカニズム（チェーン、インクルードなど）はどれも不可能であり、サーバーが参照を解決できると期待されるべきではない。サーバーは、識別子ベースの参照をそのまま受け入れ、解決したり、拒否したりする場合がある。CapabilityStatement.rest.resource.referencePolicyを参照。\r\n\r\n識別子とリテラル参照の両方が提供されている場合は、リテラル参照が優先される。リソースを処理するアプリケーションは、識別子がリテラル参照と一致することを確認できるが、確認することは必須ではない。\r\n\r\n論理参照をリテラル参照に変換するアプリケーションは、論理参照を存在させたままにするか、削除するかを選択できる。\r\n\r\n参照は、FHIRリソースとして表現できる可能性のある構造を指すことを目的としているが、実際のFHIRリソースインスタンスとして存在する必要はない。ただし、アプリケーションが参照のターゲットを実際に見つけたい場合を除く。識別子と呼ばれるコンテンツは、参照に許可されるリソースタイプの制限によって暗示される論理的な制約を満たす必要がある。たとえば、タイプがReference（Observation | DiagnosticReport）の場合、薬の処方箋の識別子を送信することは正当ではない。 Reference.identifierのユースケースの1つは、FHIR表現が存在しない状況である（タイプはReference（Any）である）。"
 * subject.display ^short = "Text alternative for the resource　リソースの代替テキスト"
 * subject.display ^definition = "Plain text narrative that identifies the resource in addition to the resource reference.\r\n\r\nリソース参照に加えてリソースを識別するプレーンテキストの説明。"
-* subject.display ^comment = "This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.\r\n\r\nこれは通常、参照されるリソースのResource.textと同じではありません。目的は、参照されているものを特定することであり、完全に説明することではありません。"
+* subject.display ^comment = "This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.\r\n\r\nこれは通常、参照されるリソースのResource.textと同じではない。目的は、参照されているものを特定することであり、完全に説明することではない。"
 * context ^short = "Encounter or Episode of Care administered as part of　エンカウンター、または一部として実施されるケアエピソード"
 * context ^definition = "The visit, admission, or other contact between patient and health care provider during which the medication administration was performed.\r\n\r\n投薬が行われた患者と医療提供者の間の訪問、入院、またはその他の接触。\r\n受診情報や入院情報を表すエンカウンターへの参照。"
 * context ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
@@ -82,7 +82,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * effective[x] only dateTime or Period
 * effective[x] ^short = "Start and end time of administration　開始時間と終了時間"
 * effective[x] ^definition = "A specific date/time or interval of time during which the administration took place (or did not take place, when the 'notGiven' attribute is true). For many administrations, such as swallowing a tablet the use of dateTime is more appropriate.\r\n\r\n投与が行われた（または「notGiven」属性がtrueの場合は行われなかった）特定の日時または時間間隔。錠剤を飲み込むなど、多くの管理では、dateTimeの使用がより適切である。"
-* effective[x] ^comment = "【JP-CORE】\r\n投与実施日時であり、JP Coreでは必須である。"
+* effective[x] ^comment = "\r\n投与実施日時であり、JP Coreでは必須である。"
 * performer ^short = "Who performed the medication administration and what they did　投薬を実施した人"
 * performer ^definition = "Indicates who or what performed the medication administration and how they were involved.\r\n投薬およびそれに関与した人"
 * reasonCode ^short = "Reason administration performed　投薬が実施された理由"
@@ -92,7 +92,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * reasonReference ^comment = "This is a reference to a condition that is the reason for the medication request.  If only a code exists, use reasonCode.\r\n\r\nこれは、投薬要求の理由である状態への参照。コードのみが存在する場合は、reasonCodeを使用する。"
 * request ^short = "Request administration performed against　実施された元の投与依頼情報"
 * request ^definition = "The original request, instruction or authority to perform the administration.\r\n\r\n投与を実行する元になった投与指示や権限への参照情報。"
-* request ^comment = "This is a reference to the MedicationRequest  where the intent is either order or instance-order.  It should not reference MedicationRequests where the intent is any other value.\r\n\r\nこれは、orderまたはinstance-orderのいずれかであるMedicationRequestへの参照。インテントが他の値である場合は、MedicationRequestsを参照しないでください。"
+* request ^comment = "This is a reference to the MedicationRequest  where the intent is either order or instance-order.  It should not reference MedicationRequests where the intent is any other value.\r\n\r\nこれは、orderまたはinstance-orderのいずれかであるMedicationRequestへの参照。インテントが他の値である場合は、MedicationRequestsを参照しないこと。"
 * request ^requirements = "これは、インテント（意図）がorderまたはinstance-orderのいずれかであるMedicationRequestへの参照である。\r\nインテントが他の値である場合は、MedicationRequestsを参照しないこと。"
 * device ^short = "Device used to administer　投与に使用されるデバイス"
 * device ^definition = "The device used in administering the medication to the patient.  For example, a particular infusion pump.\r\n\r\n患者に薬を投与する際に使用されるデバイスへの参照。たとえば、特定の輸液ポンプ。"
@@ -103,7 +103,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * dosage ^short = "Details of how medication was taken　薬の服用方法の詳細"
 * dosage ^definition = "Describes the medication dosage information details e.g. dose, rate, site, route, etc.\r\n投薬量情報の詳細を説明する。線量、率、場所、ルートなど。"
 * dosage.text ^short = "Free text dosage instructions e.g. SIG　フリーテキストの投与方法の説明　SIG:用法"
-* dosage.text ^definition = "Free text dosage can be used for cases where the dosage administered is too complex to code. When coded dosage is present, the free text dosage may still be present for display to humans.\r\rThe dosage instructions should reflect the dosage of the medication that was administered.\r\n\r\nフリーテキストの投与量用法は、投与される投与量や用法が複雑すぎてコーディングできない場合に使用できる。コード化された投与量や用法が存在する場合、フリーテキストの投与量や用法は、人間に表示するためにまだ存在している可能性がある。\r\n投与量や用法のこの指示は、実際に投与される薬の投与量や用法を反映する必要があります。"
+* dosage.text ^definition = "Free text dosage can be used for cases where the dosage administered is too complex to code. When coded dosage is present, the free text dosage may still be present for display to humans.\r\rThe dosage instructions should reflect the dosage of the medication that was administered.\r\n\r\nフリーテキストの投与量用法は、投与される投与量や用法が複雑すぎてコーディングできない場合に使用できる。コード化された投与量や用法が存在する場合、フリーテキストの投与量や用法は、人間に表示するためにまだ存在している可能性がある。\r\n投与量や用法のこの指示は、実際に投与される薬の投与量や用法を反映する必要がある。"
 * dosage.site ^short = "Body site administered to　投与部位"
 * dosage.site ^definition = "A coded specification of the anatomic site where the medication first entered the body.  For example, \"left arm\".\r\n\r\n薬が最初に体内に入った解剖学的部位のコード化された記述。たとえば、「左腕」。"
 * dosage.site ^comment = "If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.\r\n\r\nユースケースでBodySiteリソースの属性が必要な場合（たとえば、個別に識別して追跡するため）、標準の拡張機能[bodySite]（extension-bodysite.html）を使用する。要約コード、または場所の非常に正確な定義への参照、あるいはその両方である可能性がある。"
@@ -112,7 +112,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * dosage.route ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\n\r\nすべてのターミノロジーの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係とpre-coordinationとpost-coordinationの用語関係を管理するための独自の構造を提供する必要がある。"
 * dosage.method ^short = "How drug was administered　投与方法"
 * dosage.method ^definition = "A coded value indicating the method by which the medication is intended to be or was introduced into or on the body.  This attribute will most often NOT be populated.  It is most commonly used for injections.  For example, Slow Push, Deep IV.\r\n\r\n薬物が体内に導入されることを意図している、または体内に導入された方法を示すコード化された値。ほとんどの場合、この属性は入力されないが、注射では最も一般的に使用される。たとえば、スロープッシュ（ゆっくり注射）、ディープIV（深部静脈注射）。"
-* dosage.method ^comment = "One of the reasons this attribute is not used often, is that the method is often pre-coordinated with the route and/or form of administration.  This means the codes used in route or form may pre-coordinate the method in the route code or the form code.  The implementation decision about what coding system to use for route or form code will determine how frequently the method code will be populated e.g. if route or form code pre-coordinate method code, then this attribute will not be populated often; if there is no pre-coordination then method code may  be used frequently.\r\n\r\nこの属性がふつう使用されない理由の1つは、メソッドが管理のルートや形式と事前に調整されていることが多いためである。これは、ルートまたはフォーム（剤型）で使用されるコードが、ルートコードまたは剤型コードによってメソッドが事前に決まる可能性があることを意味している。ルートコードまたは剤型コードに使用するコーディングシステムに関する実装の決定により、メソッドコードが入力される頻度が決まります。ルートコードまたは剤型コードによってメソッドコードが事前に決まる場合、この属性はふつう入力されない。決まらない場合は、メソッドコードが使用される可能性があります。"
+* dosage.method ^comment = "One of the reasons this attribute is not used often, is that the method is often pre-coordinated with the route and/or form of administration.  This means the codes used in route or form may pre-coordinate the method in the route code or the form code.  The implementation decision about what coding system to use for route or form code will determine how frequently the method code will be populated e.g. if route or form code pre-coordinate method code, then this attribute will not be populated often; if there is no pre-coordination then method code may  be used frequently.\r\n\r\nこの属性がふつう使用されない理由の1つは、メソッドが管理のルートや形式と事前に調整されていることが多いためである。これは、ルートまたはフォーム（剤型）で使用されるコードが、ルートコードまたは剤型コードによってメソッドが事前に決まる可能性があることを意味している。ルートコードまたは剤型コードに使用するコーディングシステムに関する実装の決定により、メソッドコードが入力される頻度が決まる。ルートコードまたは剤型コードによってメソッドコードが事前に決まる場合、この属性はふつう入力されない。決まらない場合は、メソッドコードが使用される可能性がある。"
 * dosage.dose ^short = "Amount of medication per dose　用量あたりの投薬量"
 * dosage.dose ^definition = "The amount of the medication given at one administration event.   Use this value when the administration is essentially an instantaneous event such as a swallowing a tablet or giving an injection.\r\n\r\n1回の投与イベントで投与される薬剤の量。この値は、投与が錠剤の飲み込みや注射などの本質的に瞬間的なイベントである場合に使用する。"
 * dosage.rate[x] only Ratio or SimpleQuantity

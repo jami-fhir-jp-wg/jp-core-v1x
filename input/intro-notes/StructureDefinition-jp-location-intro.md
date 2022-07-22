@@ -26,21 +26,4 @@
 
 これらの所在場所は、何かが発生した患者の所在場所（骨折した部位、例えば足）をカバーすることを目的としていないが、患者が足を骨折した場所（例えば、遊び場）をカバーすることができる。
 
-
-## 関連するプロファイル
-
-<span style="color: red;">★★コメント ： 各JP リソースの参照個所に、JP版リソースが追加されることを前提としています。★★</span>
-
-
-
-JP Location リソースは、以下のリソースから直接参照される。
-
-- UsageContext, Account, ActivityDefinition, AdverseEvent, Appointment, AppointmentResponse, AuditEvent, CarePlan, Claim, ClaimResponse, Contract, CoverageEligibilityRequest, Device, DeviceRequest, DiagnosticReport, Encounter, ExplanationOfBenefit, Flag, HealthcareService, ImagingStudy, Immunization, InsurancePlan, List, itself, MeasureReport, Media, MedicationDispense, Observation, OrganizationAffiliation, PractitionerRole, Procedure, Provenance, ResearchStudy, Schedule, ServiceRequest, Specimen, SupplyDelivery, SupplyRequest and Task
-
-
-JP Core Location リソースは、以下のリソースを直接参照する。
-
-- Organization, Location and Endpoint
-
-
 ## プロファイル定義

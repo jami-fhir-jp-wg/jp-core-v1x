@@ -24,40 +24,6 @@ JP Encounter リソースで使用される拡張は次の通りである。
 
   - リソースで関連付けを定義しているプロパティが存在しないEncounterを参照するために利用する
 
-    
-
-### 用語定義
-
-
-
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| Encounter.status               | 現在の診療実施状況 | Required          | [EncounterStatus](https://www.hl7.org/fhir/valueset-encounter-status.html) |
-| Encounter.statusHistory.status | 現在の診療実施状況 | Required          | [EncounterStatus](https://www.hl7.org/fhir/valueset-encounter-status.html) |
-| Encounter.class | 診療実施分類 | Extensible          | [v3.ActEncounterCode](https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html) |
-| Encounter.classHistory.class | 過去の診療実施分類 | Extensible          | [v3.ActEncounterCode](https://www.hl7.org/fhir/v3/ActEncounterCode/vs.html) |
-| Encounter.type | 診療の種別 | Example | [EncounterType](https://www.hl7.org/fhir/valueset-encounter-type.html) |
-| Encounter.serviceType | 特定の診療の種別 | Example | [ServiceType](https://www.hl7.org/fhir/valueset-service-type.html) |
-| Encounter.priority | 診療の優先順位 | Example | [v3.ActPriority](https://www.hl7.org/fhir/v3/ActPriority/vs.html) |
-| Encounter.participant.type | 診療担当者の役割 | Extensible  | [ParticipantType](https://www.hl7.org/fhir/valueset-encounter-participant-type.html) |
-| Encounter.reasonCode | 診療が行われる理由 | Preferred | [EncounterReasonCodes](https://www.hl7.org/fhir/valueset-encounter-reason.html) |
-| Encounter.diagnosis.use | 診断の種類 | Preferred | [DiagnosisRole](https://www.hl7.org/fhir/valueset-diagnosis-role.html) |
-| Encounter.hospitalization.admitSource | 入院した場所 | Preferred | [AdmitSource](https://www.hl7.org/fhir/valueset-encounter-admit-source.html) |
-| Encounter.hospitalization.reAdmission | 再入院した理由 | Example | [v2.0092](https://www.hl7.org/fhir/v2/0092/index.html) |
-| Encounter.hospitalization.dietPreference | 食事の事情 | Example |  [Diet](https://www.hl7.org/fhir/valueset-encounter-diet.html) |
-| Encounter.hospitalization.specialCourtesy | 特別な作法 | Preferred |  [SpecialCourtesy](https://www.hl7.org/fhir/valueset-encounter-special-courtesy.html) |
-| Encounter.hospitalization.specialArrangement | 特別待遇 | Preferred | [SpecialArrangements](https://www.hl7.org/fhir/valueset-encounter-special-arrangements.html) |
-| Encounter.hospitalization.dischargeDisposition | 退院の判断 | Example | [DischargeDisposition](https://www.hl7.org/fhir/valueset-encounter-discharge-disposition.html) |
-| Encounter.location.status | 場所の状態 | Required | [EncounterLocationStatus](https://www.hl7.org/fhir/valueset-encounter-location-status.html) |
-| Encounter.location.physicalType | 実際の場所 | Example | [LocationType](https://www.hl7.org/fhir/valueset-location-physical-type.html) |
-
-
-
-### 制約一覧
-
-このプロファイルでは制約定義は行っていない。
-
 
 ## 利用方法
 
@@ -88,7 +54,7 @@ JP Encounter リソースで使用される拡張は次の通りである。
 
 次の検索パラメータはでサポートされるべきである。(SHALL)
 
-必須検索パラメータ(SHALL)はありません。
+必須検索パラメータ(SHALL)はない。
 
 ##### 推奨検索パラメータ
 
@@ -114,7 +80,7 @@ JP Encounter リソースで使用される拡張は次の通りである。
 
 オプションとして次の検索パラメータをサポートすることができる。(MAY)
 
-オプション検索パラメータ(MAY)はありません。
+オプション検索パラメータ(MAY)はない。
 
 #### Operation一覧
 
@@ -246,23 +212,24 @@ HTTP/1.1 200 OK
 
 ## 注意事項
 
-Encounterリソースは、予定情報や予約の保存には使用されません。予約の保存にはAppointmentリソースを利用してください。FHIRでは、Appointmentは診察の日付を決定するのに利用されるのに対して、Encounterは実際に患者が来院して診察が実施されたことを表現します。
-そのため、「計画済み」 status の Encounter は実際に発生する前の Encounter であり、診療行為が完了するまで更新されることが期待されます。
+Encounterリソースは、予定情報や予約の保存には使用されない。予約の保存にはAppointmentリソースを利用すること。FHIRでは、Appointmentは診察の日付を決定するのに利用されるのに対して、Encounterは実際に患者が来院して診察が実施されたことを表現する。
+そのため、「計画済み」 status の Encounter は実際に発生する前の Encounter であり、診療行為が完了するまで更新されることが期待される。
 
 
 ## その他、参考文献・リンク等
 
 ・退院時サマリー規約
-http://www.hl7.jp/library/item/HL7J-CDA-007.pdf
+[http://www.hl7.jp/library/item/HL7J-CDA-007.pdf](http://www.hl7.jp/library/item/HL7J-CDA-007.pdf)
 
 ・診療情報提供書規格
-http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf
+[http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf](http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf)
 
 ・特定健診情報ファイル仕様
-https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html
+[https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html)
+
 
 ・SS-MIX2 標準化ストレージ 仕様書 Ver.1.2f
-http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf
+[http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf](http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf)
 
 ・ICSR E2B(R3)
-https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html
+[https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)

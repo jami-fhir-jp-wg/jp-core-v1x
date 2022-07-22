@@ -32,14 +32,14 @@ ProcedureとEncounterはお互いへの参照を持つが、これらは異な�
 
 ステータス管理
 
-Encounterのライフサイクルでは、多くのステータス(status)を遷移する。一般的に、これらは組織のワークフローの順に、 planned(計画), in-progress(進行中), finished/cancelled(終了/キャンセル)となります。
+Encounterのライフサイクルでは、多くのステータス(status)を遷移する。一般的に、これらは組織のワークフローの順に、 planned(計画), in-progress(進行中), finished/cancelled(終了/キャンセル)となる。
 このステータス情報はしばしば他のことに使用され、その際にはステータス履歴の分析が必要となることもある。これは、Encounterのすべてのhistoryを検索し、それぞれの期間をチェックし、何らかの形で後処理を行うことで可能となる。しかし、このような負担を軽減するために（またはシステムがリソース履歴をサポートしていない場合のために）、statusHistoryコンポーネントが用意されている。
 
 そのEncounterが「来院した/入院した」ということを判断できる、statusの値は存在しない。Encounterの使用法およびジネスプラクティス/ポリシー/ワークフロー/タイプがこの定義に影響を与える可能性がある。(例：急性期医療施設、高齢者医療センター、外来診療所、救急部、地域に根ざした診療所など）
 arrived, triaged または in-progress のstatusは入院の開始と考えられ、入力されたhospitalizationサブコンポーネントの存在を意味する。
 
 on leave のstatusは、例えば、患者が週末に帰宅することを許可された場合や、その他の形式の外部イベントの場合など、入院の一部である場合もあれば、そうでない場合もある。
-Encounterには「入院した」という固定した定義はないので、例えば外来（日帰り手術-大腸内視鏡検査）などの例では、患者は入院しているとも考えられる。少なくとも、ステータスが「in-progress」の場合は、患者は入院していると考えられます。
+Encounterには「入院した」という固定した定義はないので、例えば外来（日帰り手術-大腸内視鏡検査）などの例では、患者は入院しているとも考えられる。少なくとも、ステータスが「in-progress」の場合は、患者は入院していると考えられる。
 
 <h3>Boudaries and Relationships の内容</h3>
 
@@ -76,59 +76,5 @@ Encounterリソースは、partOf要素を仕様して、他のEncounterイン�
 またEncounterリソースは、受診前の情報を伝達するために生成することもできる。この場合、status要素は「planned」に設定される。患者の受信内容が入院に関連する場合は、hospitalization要素に入院イベントに関連する拡張情報を格納することができる。
 なおこの入院イベントの関連付けは、Encounterリソースのperiod要素で指定されている期間と同じ期間内であることが望ましい。もし期間が異なる場合は、別のEncounterインスタンスを使用し、このEncounterインスタンスの一部として情報を関連付ける必要がある。
 
-
-## 関連するプロファイル
-
-Encounter リソースは、以下のリソースから直接参照される。
-
- - AdverseEvent
- - AllergyIntolerance
- - CarePlan
- - CareTeam
- - ChargeItem
- - Claim
- - ClinicalImpression
- - Communication
- - CommunicationRequest
- - Composition
- - Condition
- - Contract
- - DeviceRequest
- - DiagnosticReport
- - DocumentReference
- - Encounter
- - ExplanationOfBenefit
- - Flag
- - GuidanceResponse
- - ImagingStudy
- - Immunization
- - List
- - Media
- - MedicationAdministration
- - MedicationDispense
- - MedicationRequest
- - MedicationStatement
- - NutritionOrder
- - Observation
- - Procedure
- - QuestionnaireResponse
- - RequestGroup
- - RiskAssessment
- - ServiceRequest
- - Task
- - VisionPrescription
-
-
-Encounter リソースは、以下のリソースを直接参照する。
-
- - Account
- - Appoiontment
- - Encounter
- - Location
- - Observation
- - Organization
- - Patient
- - ServiceRequest
- 
 
 ## プロファイル定義
