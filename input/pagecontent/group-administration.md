@@ -8,9 +8,9 @@
 * [JP Core PractitionerRole （医療従事者役割)プロファイル][JP_PractitionerRole]
 
 ### Extensions
-* [JP_Coverage_InsuredPersonSymbol]
 * [JP_Coverage_InsuredPersonNumber]
 * [JP_Coverage_InsuredPersonSubNumber]
+* [JP_Coverage_InsuredPersonSymbol]
 * [JP_Organization_InsuranceOrganizationCategory]
 * [JP_Organization_InsuranceOrganizationNo]
 * [JP_Organization_PrefectureNo]

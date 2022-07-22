@@ -10,32 +10,9 @@
 
  JP Core PractitionerRole リソースで定義された拡張はない。
 
-
-   
-
-### 用語定義
-
-
-
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| PractitionerRole.code | 医療者が組織のために担当することを許可されている役割 | Example          | JP用語集 |
-| PractitionerRole.specialty | 医療者の特定の専門性 |           | 推奨値なし |
-| PractitionerRole.availableTime.daysOfWeek | 開始時刻と終了時刻の間の利用可能な曜日 | Required          | [DaysOfWeek](http://hl7.org/fhir/valueset-days-of-week.html) |
-
-
-
-### 制約一覧
-
-制約はない。
-
-
 ## 利用方法
 
 ### インタラクション一覧
-
-
 
 | コンフォーマンス | インタラクション                            |
 | ---------------- | ------------------------------------------- |

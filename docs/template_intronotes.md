@@ -66,25 +66,6 @@ Practitioner リソースは、ヘルスケアサービスの提供組織を代�
 
 PractitionerRole リソースは、医療従事者が、特定の組織において与えられている役割の詳細を表す。特定の施設に関係しない資格や識別子（例：医籍番号や麻薬施用者免許証番号）は、Practitioner リソースに記録することが望ましい。一方で、特定の施設における医療従事者の識別子や役割（例：特定の医療機関における医療従事者ID）は、施設を表すOrganizationリソースとあわせて PractitionerRole リソースに記録することが望ましい。
 
-## 関連するプロファイル
-<!--関連とするプロファイルのリンクを記載します-->
-<!-- 各JP リソースの参照個所に、JP版リソースが追加されることを前提としています。 -->
-
-JP Practitioner プロファイルは、以下のプロファイルから直接参照される。
-
-- JP Core Patientプロファイル
-- JP Core Encounterプロファイル
-- JP Core PractitionerRoleプロファイル
-- JP Core MedicationRequestプロファイル
-- JP Core MedicationDispenseプロファイル
-- JP Core MedicationAdministrationプロファイル
-- JP Core Observationプロファイル
-- JP Core ImagingStudyプロファイル
-- JP Core DiagnosticReportプロファイル
-- JP Core AllergyIntoleranceプロファイル
-- JP Core Conditioプロファイル
-- JP Core Procedureプロファイル
-
 ## プロファイル定義
 <!-- プロファイルの定義について説明を行います。下の例はPatientプロファイル -->
 
@@ -115,16 +96,6 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
 
 - animalSpecies
   - 動物をつかったヘルスケアサービスの提供を行う場合（例：がん探知犬）、動物の種を表す。
-
-
-### 用語定義
-<!--利用するコード体系や追加した用語集などを記載-->
-
-<!--★★コメント ： 利用するコード体系や追加した用語集など。現状の定義では、基底のPractitionerで定義されている用語に加えて追加されているものはないため、例示します。★★-->
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| Practitioner.qualification.code | 医療従事者が保有する資格（hcRole） | Preferred          | HealthcareRole |
 
 ## 利用方法
 （OperationやSearch Parameter中心に記載を行います。）
@@ -240,7 +211,7 @@ URL: [base]/Practitioner/[id]/$everything
     ```
 レスポンス：指定されたPractitionerに関連する全てのリソースを返す。
 
-    ```http
+    ```
     HTTP/1.1 200 OK
     [other headers]
 
@@ -327,8 +298,8 @@ URL: [base]/Practitioner/[id]/$everything
     ```
 
 ### サンプル
-[JSONサンプル](templatejsonsample)
-[その２](https://simplifier.net/packages/simplifier.core.r4.resources/4.0.0/files/18949/~json)
+[外来患者１](http:xxxxx.json.html)
+[入院患者１](http:yyyyy.json.html)
 
 ## 注意事項
 (全体に対する注意事項等、その他の部分について記載します。）

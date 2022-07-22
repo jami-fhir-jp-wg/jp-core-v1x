@@ -17,23 +17,6 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 
   - 医療従事者氏名(Practitioner.name)の漢字表記・カナ表記識別のために使用する。
 
-### 用語定義
-
-
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| Practitioner.gender.code | 医療従事者の性別 | required          | [AdministrativeGender](http://hl7.org/fhir/valueset-administrative-gender.html) |
-| Practitioner.communication | 医療従事者の使用できる言語 | Preferred, but limited to ALLLanguage          | [CommonLanguages](http://hl7.org/fhir/valueset-languages.html) |
-
-
-
-### 制約一覧
-
-
-制約はない。
-
-
 ### その他
 
  Practitioner.qualificationには、以下の医療従事者のqualification(資格)を格納できるようスライシングによる定義が追加されている。

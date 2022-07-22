@@ -24,6 +24,7 @@ Medication リソースで使用される拡張は次の通りである。
 
 既存のExtensionで利用するものはない。
 
+
 ### 用語定義
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS注射データ交換規約やSS-MIX2で使われている用語集を採用した。
 
@@ -38,24 +39,6 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 |剤形|MERIT-9(剤形)|http://jpfhir.jp/ePrescription/CodeSystem/merit9-form|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
 |力価区分|電子処方箋HL7 FHIR仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
-
-Medicationの各要素のバインディングは以下の通りである。
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| Medication.ingredient.itemCodeableConcept | 医薬品の識別情報 | prefered | HOT7,HOT9,HOT13,YJコード |
-| Medication.ingredient.strength.numerator.code | 成分量単位 | prefered | MERIT-9(単位) |
-| Medication.ingredient.strength.denominator.code | １回 | prefered | MERIT-9(単位) |
-
-### 制約一覧
-Medication リソースは、以下の制約を満たさなければならない。
-- status : JP Coreでは"active"に固定される。
-
-Medicationリソースは、以下の制約を満たさなければならない。
-- ingredient.strength.denominator.value : "1"に固定される。
-- ingredient.strength.denominator.unit : "回"に固定される。
-- ingredient.strength.denominator.system : "urn:oid:1.2.392.100495.20.2.101"に固定される。
-- ingredient.strength.denominator.code : "KAI"に固定される。
 
 ### 項目の追加
 日本国内の電子カルテシステムでの注射オーダの運用に合わせ、以下の項目を追加した。

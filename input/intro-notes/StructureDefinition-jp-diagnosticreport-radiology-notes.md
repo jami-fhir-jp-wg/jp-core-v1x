@@ -30,16 +30,7 @@
 本プロファイルはextensionを定義しない。
 
 
-### 用語定義
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| `DiagnosticReport.status` | レポートのステータス | Required | [`DiagnosticReportStatus`](http://hl7.org/fhir/valueset-diagnostic-report-status.html) |
-| `DiagnosticReport.category` | レポート（所見）を作成した部門 | Preferred | [`DiagnosticServiceSectionCodes`](http://hl7.org/fhir/ValueSet/diagnostic-service-sections)<br>"RAD", "RX", "CT", "NMR", "NMS", "RUS", "VUS", "OUS", "CUS"などを指定。デフォルトは"RAD"。 |
-| `DiagnosticReport.code` | レポートのフォーマット、種類など | Preferred | [Diagnostic imaging study](https://loinc.org/18748-4/) |
-| `DiagnosticReport.conclusionCode` | 診断レポートの結論・要約 | Example | [ICD-10](https://icd.who.int/browse10/2019/en), [ICD-11](https://icd.who.int/browse11/l-m/en) |
-
-## 注意
+## 注意事項
 
 ### Text
 

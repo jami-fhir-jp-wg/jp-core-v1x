@@ -5,7 +5,7 @@
 
 JP Core MedicationRequest リソースは、次の要素を持たなければならない。
 - status : ステータスは必須であり、JP Coreでは"active"に固定される。
-- intent : 意図は必須であり、JP Coreでは"intent" に固定される。
+- intent : 意図は必須であり、JP Coreでは"order" に固定される。
 - medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない。
 - subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
 - authoredOn : 処方依頼日時であり、JP Coreでは必須である。
@@ -36,6 +36,7 @@ JP Core MedicationRequest リソースで使用される拡張は次の通りで
 
 既存のExtensionの利用は特にない。
 
+
 ### 用語定義
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS処方データ交換規約やSS-MIX2で使われている用語集を採用した。
 
@@ -43,22 +44,22 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 
 |分類|CS名|URI|
 |---------|----|---------------------------|
-|医薬品|HOT7|urn:oid:1.2.392.100495.20.2.73|
+|医薬品|HOT7|urn:oid:1.2.392.200119.4.403.2|
 |医薬品|HOT9|urn:oid:1.2.392.200119.4.403.1|
-|医薬品|HOT13|urn:oid:1.2.392.100495.20.2.75|
+|医薬品|HOT13|urn:oid:1.2.392.200119.4.402.1|
 |医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
 |医薬品|⼀般処⽅名マスター|urn:oid:1.2.392.100495.20.1.81|
-|剤形|MERIT-9(剤形)|http://jpfhir.jp/Common/CodeSystem/merit9-form |
-|処方区分|MERIT-9(処方区分)|http://jpfhir.jp/Common/CodeSystem/merit9-category|
-|処方区分|JAHIS処方データ交換規約Ver.3.0C(JHSP表0003)|http://jpfhir.jp/Common/CodeSystem/JHSP0003|
+|剤形|MERIT-9(剤形)|http://jpfhir.jp/ePrewscription/CodeSystem/merit9-form |
+|処方区分|MERIT-9(処方区分)|http://jpfhir.jp/ePrewscription/CodeSystem/merit9-category|
+|処方区分|JAHIS処方データ交換規約Ver.3.0C(JHSP表0003)|http://jpfhir.jp/ePrewscription/CodeSystem/JHSP0003|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
-|力価区分|電子処方箋HL7 FHIR仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
-|調剤指示|電子処方箋HL7 FHIR仕様(調剤指示)|urn:oid:1.2.392.200250.2.2.30.10|
+|力価区分|処方情報HL7 FHIR記述仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
+|調剤指示|処方情報HL7 FHIR記述仕様(調剤指示)|urn:oid:1.2.392.200250.2.2.30.10|
 |用法|JAMI処方・注射オーダ標準用法規格(用法コード)|urn:oid:1.2.392.200250.2.2.20.20|
 |用法|JAMI処方・注射オーダ標準用法規格(補足用法コード)|urn:oid:1.2.392.200250.2.2.20.22|
 |投与部位|JAMI処方・注射オーダ標準用法規格(部位コード)|urn:oid:1.2.392.200250.2.2.20.32|
 |投与経路|HL7 V2(使用者定義表0162)|http://terminology.hl7.org/CodeSystem/v2-0162|
-|投与方法|JAMI処方・注射オーダ標準用法規格(用法詳細区分)|urn:oid:1.2.392.200250.2.2.20.40|
+|投与方法2桁コード|JAMI処方・注射オーダ標準用法規格(用法詳細区分)|urn:oid:1.2.392.200250.2.2.20.40|
 |入外区分|HL7 V2(HL7表0482)|http://terminology.hl7.org/CodeSystem/v2-0482|
 
 JP Core MedicationRequestリソースの各要素のバインディングは以下の通りである。
@@ -73,8 +74,8 @@ JP Core MedicationRequestリソースの各要素のバインディングは以�
 | MedicationRequest.dosageInstruction.route | 投与経路 | prefered | HL7 V2(使用者定義表0162)|
 | MedicationRequest.dosageInstruction.method | 投与方法 | prefered | JAMI処方・注射オーダ標準用法規格(用法詳細区分) |
 | MedicationRequest.dosageInstruction.doseAndRate.doseQuantity.code | １回量単位 | prefered | MERIT-9(単位) |
-| MedicationRequest.dosageInstruction.doseAndRate.doseRatio.numerator.code | １日量単位 | prefered | MERIT-9(単位) |
-| MedicationRequest.dosageInstruction.doseAndRate.doseRatio.denominator.code | １日 | required | UCUM(http://hl7.org/fhir/ValueSet/ucum-units) |
+| MedicationRequest.dosageInstruction.doseAndRate.rateRatio.numerator.code | １日量単位 | prefered | MERIT-9(単位) |
+| MedicationRequest.dosageInstruction.doseAndRate.rateRatio.denominator.code | １日 | required | UCUM(http://hl7.org/fhir/ValueSet/ucum-units) |
 | MedicationRequest.dispenseRequest.quantity.code | 調剤量単位 | prefered | MERIT-9(単位) |
 
 
@@ -82,10 +83,10 @@ JP Core MedicationRequestリソースの各要素のバインディングは以�
 JP Core MedicationRequest リソースは、以下の制約を満たさなければならない。
 - status : JP Coreでは"active"に固定される。
 - intent : JP Coreでは"intent" に固定される。
-- dosageInstruction.doseAndRage.doseRatio.denominator.value : １日量を記述する場合"1"に固定される。
-- dosageInstruction.doseAndRage.doseRatio.denominator.unit : １日量を記述する場合"日"に固定される。
-- dosageInstruction.doseAndRage.doseRatio.denominator.system : １日量を記述する場合"http://unitsofmeasure.org"に固定される。
-- dosageInstruction.doseAndRage.doseRatio.denominator.code : １日量を記述する場合"d"に固定される。
+- dosageInstruction.doseAndRage.rateRatio.denominator.value : １日量を記述する場合"1"に固定される。
+- dosageInstruction.doseAndRage.rateRatio.denominator.unit : １日量を記述する場合"日"に固定される。
+- dosageInstruction.doseAndRage.rateRatio.denominator.system : １日量を記述する場合"http://unitsofmeasure.org"に固定される。
+- dosageInstruction.doseAndRage.rateRatio.denominator.code : １日量を記述する場合"d"に固定される。
 
 ### 項目の追加
 療養担当則23条では、「保険医は、処方箋を交付する場合には、様式第二号若しくは第二号の二又はこれらに準ずる様式の処方箋に必要な事項を記載しなければならない。」とされており、外来処方、院内処方の区分を明示していない。したがって、個別のユースケースにおいては一部を省略されることも前提の上で、規格としてはこれに準拠すべきと考え、様式に収載されている以下の項目を追加した。
@@ -99,7 +100,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 * ⼒価区分の追加（dosageInstruction.doseAndRate.typeを使用）
 * リフィル回数の追加（dispenseRequest.numberOfRepeatsAllowedを使用）
 
-## 2.1.2.2.4 利用方法
+## 利用方法
 
 ### Interaction一覧
 
@@ -126,13 +127,13 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
 1. identifier 検索パラメータを使用して、オーダーIDなどの識別子によるMedicationReuqestの検索をサポートしなければならない（SHALL）。
 
-   ```http
+   ```
    GET [base]/MedicationRequest?identifier={system|}[code]
    ```
 
    例：
 
-   ```http
+   ```
    GET [base]/MedicationRequest?identifier=http://myhospital.com/fhir/medication\|1234567890
    ```
 
@@ -145,14 +146,14 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
 1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationRequestの検索をサポートすることが望ましい（SHOULD）。
 
-   ```http
+   ```
    GET [base]/MedicationRequest?patient=[id]
    GET [base]/MedicationRequest?patient=[url]
    ```
 
    例：
 
-   ```http
+   ```
    GET [base]/MedicationRequest?patient=123456
    ```
 
@@ -160,14 +161,14 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
 1. patient,date 検索パラメータを使用して、患者のリファレンス情報と服用日によるMedicationRequestの検索をサポートすることが望ましい（SHOULD）。
 
-   ```http
+   ```
    GET [base]/MedicationRequest?patient=[id]&date=[date]
    GET [base]/MedicationRequest?patient=[url]&date=[date]
    ```
 
    例：
 
-   ```http
+   ```
    GET [base]/MedicationRequest?patient=123456&date=eq2013-01-14
    ```
 
@@ -175,14 +176,14 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
 1. patient,authoredon 検索パラメータを使用して、患者のリファレンス情報と依頼日によるMedicationRequestの検索をサポートすることが望ましい（SHOULD）。
 
-   ```http
+   ```
    GET [base]/MedicationRequest?patient=[id]&authoredon=[date]
    GET [base]/MedicationRequest?patient=[url]&authoredon=[date]
    ```
 
    例：
 
-   ```http
+   ```
    GET [base]/MedicationRequest?patient=123456&authoredon=eq2013-03-21
    ```
 
@@ -192,14 +193,14 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
 1. patient,jp-core-startdate 検索パラメータを使用して、患者のリファレンス情報と服用開始によるMedicationRequestの検索をサポートすることが望ましい（SHOULD）。
 
-   ```http
+   ```
    GET [base]/MedicationRequest?patient=[id]&jp-core-startdate=[date]
    GET [base]/MedicationRequest?patient=[url]&jp-core-startdate=[date]
    ```
 
    例：
 
-   ```http
+   ```
    GET [base]/MedicationRequest?patient=123456&jp-core-startdate=eq2013-03-21
    ```
 
@@ -222,7 +223,7 @@ JP MedicationRequest リソースに対して使用される操作は次の通�
 
 この操作の公式なURLは以下である。
 
-```http
+```
 http://hl7.jp/fhir/OperationDefinition/MedicationRequest-everything
 ```
 
@@ -251,14 +252,14 @@ URL: [base]/MedicationRequest/[id]/$everything
 
 リクエスト：単一のMedicationRequestに関連する全てのリソースを取得する。
 
-```http
+```
 GET [base]/MedicationRequest/1234567890/$everything
 [some headers]
 ```
 
 レスポンス：指定されたMedicationRequestに関連する全てのリソースを返す。
 
-```http
+```
 HTTP/1.1 200 OK
 [other headers]
 
@@ -284,266 +285,307 @@ HTTP/1.1 200 OK
 ```
 
 ### サンプル
-. 処方例1{{link:jp_medication_example_1.xml}}
-1. 一日量処方例(JSON)
-1. 不均等処方の一日量表現(JSON)
-1. 分割処方箋(TBD)
+[JAHIS処方データ交換規約 Ver.3.0C](https://www.jahis.jp/standard/detail/id=564)98ページに記載されている下記の処方例をFHIRで表現する場合のサンプルを示す
 
-#### 処方箋メッセージ作成例
-具体的な内服処方箋の作成例について、上記のサンプルのそれぞれについて解説する。
-
-##### 処方例１
-この処方箋例では[JAHIS処方データ交換規約 Ver.3.0C](https://www.jahis.jp/standard/detail/id=564)98ページに記載されている下記の処方例をFHIRで表現する場合について解説する。
 ```
-Rp1 ムコダイン錠２５０ｍｇ１錠（  １日３錠)
-　パンスポリンＴ錠１００１００ｍｇ２錠（  １日６錠）
+Rp1 ムコダイン錠２５０ｍｇ　１錠（  １日３錠)
+　パンスポリンＴ錠１００　１００ｍｇ　２錠（  １日６錠）
 　　１日３回朝昼夕食後３日分
 ```
 
 HL7ではFHIRに限らず、Ver 2以降全て欧米で使用されている1回量処方で記述されることにまず注意すべきである。（1日量処方への対応については後述する。）
 
-処方箋の上記部分をFHIR R4で記述する場合以下のようになる。
-<details>
-<summary><b>FHIRでの処方例一部抜粋(クリックで展開)</b></summary>
-<div>
+処方箋の上記部分をFHIR R4で記述する場合、薬剤ごとにそれぞれ以下のようになる。
 
+#### ムコダイン錠２５０ｍｇ　１錠
 ```json
 {
-    "resource": {
-        "resourceType": "MedicationRequest",
-        "identifier": [{
-                "system": "http://sample.com/medication",
-                "value": "1234567890.1.1"
-            },
-            {
-                "system": "urn:oid:1.2.392.100495.20.3.81",
-                "value": "1"
-            },
-            {
-                "system": "urn:oid:1.2.392.100495.20.3.82",
-                "value": "1"
-            }
-        ],
-        "intent": "order",
-        "status": "active",
-        "medicationCodeableConcept": {
-            "coding": [{
-                "system": "urn:oid:1.2.392.200119.4.403.1",
-                "code": "103835401",
-                "display": "ムコダイン錠２５０ｍｇ"
-            }]
-        },
-        "subject": {
-            "reference": "Patient/1234567890"
-        },
-        "dosageInstruction": [{
-            "extension": [{
-                    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse",
-                    "valuePeriod": {
-                        "start": "2020-04-01"
-                    }
-                },
-                {
-                    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration",
-                    "valueDuration": {
-                        "value": 3,
-                        "unit": "日",
-                        "system": "http://unitsofmeasure.org",
-                        "code": "d"
-                    }
-                }
-            ],
-            "timing": {
-                "code": {
-                    "coding": [{
-                        "system": "urn:oid:1.2.392.200250.2.2.20.20",
-                        "code": "1013044400000000",
-                        "display": "内服・経口・１日３回朝昼夕食後"
-                    }]
-                }
-            },
-            "route": {
-                "coding": [{
-                    "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
-                    "code": "PO",
-                    "display": "口"
-                }]
-            },
-            "method": {
-                "coding": [{
-                    "system": "urn:oid:1.2.392.200250.2.2.20.40",
-                    "code": "10",
-                    "display": "経口"
-                }]
-            },
-            "doseAndRate": [{
-                "type": {
-                    "coding": [{
-                        "system": "urn:oid:1.2.392.100495.20.2.22",
-                        "code": "1",
-                        "display": "製剤量"
-                    }]
-                },
-                "doseQuantity": {
-                    "value": 1,
-                    "unit": "錠",
-                    "system": "urn:oid:1.2.392.100495.20.2.101",
-                    "code": "TAB"
-                },
-                "rateRatio": {
-                    "numerator": {
-                        "value": 3,
-                        "unit": "錠",
-                        "system": "urn:oid:1.2.392.100495.20.2.101",
-                        "code": "TAB"
-                    },
-                    "denominator": {
-                        "value": 1,
-                        "unit": "日",
-                        "system": "http://unitsofmeasure.org",
-                        "code": "d"
-                    }
-                }
-            }]
-        }],
-        "dispenseRequest": {
-            "quantity": {
-                "value": 9,
-                "unit": "錠",
-                "system": "urn:oid:1.2.392.100495.20.2.101",
-                "code": "TAB"
-            },
-            "expectedSupplyDuration": {
-                "value": 3,
-                "unit": "日",
-                "system": "http://unitsofmeasure.org",
-                "code": "d"
-            }
-        }
+  "resourceType": "MedicationRequest",
+  "id": "jp-medicationrequest-example-1",
+  "meta": {
+    "profile": [
+      "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationrequest-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medicationrequest.html\">JP Core MedicationRequest Profile</a></p></div><p><b>identifier</b>: id: 1, id: 1, id: 1234567890.1.1</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: ムコダイン錠２５０ｍｇ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#103835401)</span></p><p><b>subject</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><p><b>authoredOn</b>: 2020-04-01 12:28:17+0900</p><blockquote><p><b>dispenseRequest</b></p><p><b>quantity</b>: 9 錠<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code TAB = 'TAB')</span></p></blockquote></div>"
+  },
+  "identifier": [
+    {
+      "system": "urn:oid:1.2.392.100495.20.3.81",
+      "value": "1"
+    },
+    {
+      "system": "urn:oid:1.2.392.100495.20.3.82",
+      "value": "1"
+    },
+    {
+      "system": "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier",
+      "value": "1234567890.1.1"
     }
-}, {
-    "resource": {
-        "resourceType": "MedicationRequest",
-        "identifier": [{
-                "system": "http://sample.com/medication",
-                "value": "1234567890.1.2"
-            },
-            {
-                "system": "urn:oid:1.2.392.100495.20.3.81",
-                "value": "1"
-            },
-            {
-                "system": "urn:oid:1.2.392.100495.20.3.82",
-                "value": "2"
-            }
-        ],
-        "intent": "order",
-        "status": "active",
-        "medicationCodeableConcept": {
-            "coding": [{
-                "system": "urn:oid:1.2.392.200119.4.403.1",
-                "code": "110626901",
-                "display": "パンスポリンＴ錠１００ １００ｍｇ"
-            }]
+  ],
+  "status": "active",
+  "intent": "order",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "urn:oid:1.2.392.200119.4.403.1",
+        "code": "103835401",
+        "display": "ムコダイン錠２５０ｍｇ"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/jp-patient-example-1"
+  },
+  "authoredOn": "2020-04-01T12:28:17+09:00",
+  "dosageInstruction": [
+    {
+      "extension": [
+        {
+          "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse",
+          "valuePeriod": {
+            "start": "2020-04-01"
+          }
         },
-        "subject": {
-            "reference": "Patient/1234567890"
-        },
-        "dosageInstruction": [{
-            "extension": [{
-                    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse",
-                    "valuePeriod": {
-                        "start": "2020-04-01"
-                    }
-                },
-                {
-                    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration",
-                    "valueDuration": {
-                        "value": 3,
-                        "unit": "日",
-                        "system": "http://unitsofmeasure.org",
-                        "code": "d"
-                    }
-                }
-            ],
-            "timing": {
-                "code": {
-                    "coding": [{
-                        "system": "urn:oid:1.2.392.200250.2.2.20.20",
-                        "code": "1013044400000000",
-                        "display": "内服・経口・１日３回朝昼夕食後"
-                    }]
-                }
-            },
-            "route": {
-                "coding": [{
-                    "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
-                    "code": "PO",
-                    "display": "口"
-                }]
-            },
-            "method": {
-                "coding": [{
-                    "system": "urn:oid:1.2.392.200250.2.2.20.40",
-                    "code": "10",
-                    "display": "経口"
-                }]
-            },
-            "doseAndRate": [{
-                "type": {
-                    "coding": [{
-                        "system": "urn:oid:1.2.392.100495.20.2.22",
-                        "code": "1",
-                        "display": "製剤量"
-                    }]
-                },
-                "doseQuantity": {
-                    "value": 2,
-                    "unit": "錠",
-                    "system": "urn:oid:1.2.392.100495.20.2.101",
-                    "code": "TAB"
-                },
-                "rateRatio": {
-                    "numerator": {
-                        "value": 6,
-                        "unit": "錠",
-                        "system": "urn:oid:1.2.392.100495.20.2.101",
-                        "code": "TAB"
-                    },
-                    "denominator": {
-                        "value": 1,
-                        "unit": "日",
-                        "system": "http://unitsofmeasure.org",
-                        "code": "d"
-                    }
-                }
-            }]
-        }],
-        "dispenseRequest": {
-            "quantity": {
-                "value": 18,
-                "unit": "錠",
-                "system": "urn:oid:1.2.392.100495.20.2.101",
-                "code": "TAB"
-            },
-            "expectedSupplyDuration": {
-                "value": 3,
-                "unit": "日",
-                "system": "http://unitsofmeasure.org",
-                "code": "d"
-            }
+        {
+          "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration",
+          "valueDuration": {
+            "value": 3,
+            "unit": "日",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
         }
+      ],
+      "text": "内服・経口・１日３回朝昼夕食後",
+      "timing": {
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200250.2.2.20.20",
+              "code": "1013044400000000",
+              "display": "内服・経口・１日３回朝昼夕食後"
+            }
+          ]
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes",
+            "code": "PO",
+            "display": "口"
+          }
+        ]
+      },
+      "method": {
+        "coding": [
+          {
+            "system": "urn:oid:1.2.392.200250.2.2.20.40",
+            "code": "10",
+            "display": "経口"
+          }
+        ]
+      },
+      "doseAndRate": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.392.100495.20.2.22",
+                "code": "1",
+                "display": "製剤量"
+              }
+            ]
+          },
+          "doseQuantity": {
+            "value": 1,
+            "unit": "錠",
+            "system": "urn:oid:1.2.392.100495.20.2.101",
+            "code": "TAB"
+          },
+          "rateRatio": {
+            "numerator": {
+              "value": 3,
+              "unit": "錠",
+              "system": "urn:oid:1.2.392.100495.20.2.101",
+              "code": "TAB"
+            },
+            "denominator": {
+              "value": 1,
+              "unit": "日",
+              "system": "http://unitsofmeasure.org",
+              "code": "d"
+            }
+          }
+        }
+      ]
     }
+  ],
+  "dispenseRequest": {
+    "quantity": {
+      "value": 9,
+      "unit": "錠",
+      "system": "urn:oid:1.2.392.100495.20.2.101",
+      "code": "TAB"
+    },
+    "expectedSupplyDuration": {
+      "value": 3,
+      "unit": "日",
+      "system": "http://unitsofmeasure.org",
+      "code": "d"
+    }
+  }
 }
 ```
-</div>
-</details>
 
-### サンプル
-[JSONサンプル](templatejsonsample)
-[その２](https://simplifier.net/packages/simplifier.core.r4.resources/4.0.0/files/18949/~json)
+#### パンスポリンＴ錠１００　１００ｍｇ　２錠
+```json
+{
+  "resourceType": "MedicationRequest",
+  "id": "jp-medicationrequest-example-2",
+  "meta": {
+    "profile": [
+      "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationrequest-example-2\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medicationrequest.html\">JP Core MedicationRequest Profile</a></p></div><p><b>identifier</b>: id: 2, id: 2, id: 1234567890.1.2</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: パンスポリンＴ錠１００ １００ｍｇ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#110626901)</span></p><p><b>subject</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><p><b>authoredOn</b>: 2020-04-01 12:28:17+0900</p><blockquote><p><b>dispenseRequest</b></p><p><b>quantity</b>: 18 錠<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code TAB = 'TAB')</span></p></blockquote></div>"
+  },
+  "identifier": [
+    {
+      "system": "urn:oid:1.2.392.100495.20.3.81",
+      "value": "2"
+    },
+    {
+      "system": "urn:oid:1.2.392.100495.20.3.82",
+      "value": "2"
+    },
+    {
+      "system": "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier",
+      "value": "1234567890.1.2"
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "urn:oid:1.2.392.200119.4.403.1",
+        "code": "110626901",
+        "display": "パンスポリンＴ錠１００ １００ｍｇ"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/jp-patient-example-1"
+  },
+  "authoredOn": "2020-04-01T12:28:17+09:00",
+  "dosageInstruction": [
+    {
+      "extension": [
+        {
+          "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse",
+          "valuePeriod": {
+            "start": "2020-04-01"
+          }
+        },
+        {
+          "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration",
+          "valueDuration": {
+            "value": 3,
+            "unit": "日",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        }
+      ],
+      "text": "内服・経口・１日３回朝昼夕食後",
+      "timing": {
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200250.2.2.20.20",
+              "code": "1013044400000000",
+              "display": "内服・経口・１日３回朝昼夕食後"
+            }
+          ]
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes",
+            "code": "PO",
+            "display": "口"
+          }
+        ]
+      },
+      "method": {
+        "coding": [
+          {
+            "system": "urn:oid:1.2.392.200250.2.2.20.40",
+            "code": "10",
+            "display": "経口"
+          }
+        ]
+      },
+      "doseAndRate": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.392.100495.20.2.22",
+                "code": "1",
+                "display": "製剤量"
+              }
+            ]
+          },
+          "doseQuantity": {
+            "value": 2,
+            "unit": "錠",
+            "system": "urn:oid:1.2.392.100495.20.2.101",
+            "code": "TAB"
+          },
+          "rateRatio": {
+            "numerator": {
+              "value": 6,
+              "unit": "錠",
+              "system": "urn:oid:1.2.392.100495.20.2.101",
+              "code": "TAB"
+            },
+            "denominator": {
+              "value": 1,
+              "unit": "日",
+              "system": "http://unitsofmeasure.org",
+              "code": "d"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "dispenseRequest": {
+    "quantity": {
+      "value": 18,
+      "unit": "錠",
+      "system": "urn:oid:1.2.392.100495.20.2.101",
+      "code": "TAB"
+    },
+    "expectedSupplyDuration": {
+      "value": 3,
+      "unit": "日",
+      "system": "http://unitsofmeasure.org",
+      "code": "d"
+    }
+  }
+}
+```
 
-## 2.1.2.2.5 注意事項
+## 注意事項
 
 ### 記述の単位について
 MedicationRequestは薬剤をCodeableConceptとして1つまでしか持つか、Medicationリソースのreferenceをもつことしかできない。したがって、複数の薬剤を同一のRp番号で表現する場合にはMedicationRequestを繰り返すか、複数の薬剤をまとめたMedication Resouceのインスタンスを参照することとなる。ワーキンググループでの検討の結果、冗長とはなるがidentifierにRp番号と薬剤番号を記録することとし、MedicationRequestを繰り返すことで表現する方法を推奨することとした。
@@ -691,8 +733,8 @@ doseQuantityエレメントは省略可能(0..1)である。
 ```
 
 ### 調剤指示の記述方法
-単一の薬剤に対する調剤指示は、dispenseRequest要素に対して定義した拡張「InstructionForDispense」を使用する。この拡張は、string型を使用してテキストとして指示の内容を記録できる拡張と、CodeableConcept型を使用してコード化された指示を記録できる拡張の２つを含んでおり、テキストによる指示とコードによる指示を並記することができる。一つの薬剤に対して、複数の指示を記録する場合には、この拡張を、拡張単位で繰り返して記録する。 
-調剤指示で使用するコードは、電子処方箋HL7 FHIR仕様(調剤指示)("urn:oid:1.2.392.200250.2.2.30.10")を推奨する。
+単一の薬剤に対する調剤指示は、dispenseRequest要素に対して定義した拡張「InstructionForDispense」を使用する。この拡張は、CodeableConcept型を使用して、コード化された指示ないしテキストによる指示を記録できる。両方を併記してもよい。テキストによる指示を記録する場合は text要素を使用する。一つの薬剤に対して、複数の指示を記録する場合には、この拡張を、拡張単位で繰り返して記録する。 
+調剤指示で使用するコードは、処方情報HL7 FHIR記述仕様(調剤指示)("urn:oid:1.2.392.200250.2.2.30.10")を推奨する。
 
 薬剤単位の調剤指示を表すインスタンス例を示す。
 ```json
@@ -700,26 +742,23 @@ doseQuantityエレメントは省略可能(0..1)である。
   "extension": [
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense",
-      "extension": [
-        {
-          "url": "TextContent",
-          "valueString": "嚥下障害のため、上記粉砕指示"
-        },
-        {
-          "url": "CodedContent",
-          "valueCodeableConcept": {
-            "coding": [
-              {
-                "code": "C",
-                "system": "urn:oid:1.2.392.200250.2.2.30.10",
-                "display": "粉砕指示"
-              }
-            ]
+      "valueCodeableConcept": {
+        "text": "嚥下障害のため、上記粉砕指示"
+      }
+    },
+    {
+      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "C",
+            "system": "urn:oid:1.2.392.200250.2.2.30.10",
+            "display": "粉砕指示"
           }
-        }
-      ]
+        ]
+      }
     }
-  ],
+  ],      
 ```
 
 ### 外用部位の記述方法
@@ -863,7 +902,6 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 
 #### １回用法の例
 朝食後に4錠、昼食後2錠、夕食後1錠、合計1日投与量7錠であることを1回用法で３つの剤グループで表現したインスタンスの例である。
-<details><summary>１回用法の例</summary><div>
 
 ```json
 {
@@ -1001,7 +1039,9 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
       }
     }
   }
-},
+```
+
+```json
 {
   "fullUrl": "urn:uuid:c39d005e-22e0-7991-bca2-565bff406e10",
   "resource": {
@@ -1133,7 +1173,9 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
       }
     }
   }
-},
+```
+
+```json
 {
   "fullUrl": "urn:uuid:713d17e1-1e8b-dba1-95e2-763f179e805a",
   "resource": {
@@ -1267,15 +1309,13 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
   }
 }
 ```
-</div></details>
 
 #### １日用法の例
 朝食後に4錠、昼食後2錠、夕食後1錠、合計1日投与量7錠であることを1日用法で表現したインスタンスの例である。
 １つのMedicationRequestリソースの1つのdosageInstruction要素を使用し、dosageInstruction.doseAndRate.rateRatio要素に、1日投与量のみを記載する。1回の投与量の情報をコードとして記述できる場合は、dosageInstruction.additionalInstruction要素に、1 日の服用回数分だけ繰り返し、JAMI補足用法コードを使用し記述する。コード化できない場合は、明細単位の備考としてテキストで記述する。
-<details><summary>１日用法の例</summary><div>
 
 ```json
-"resource": {
+{
   "resourceType": "MedicationRequest",
   "text": {
     "status": "generated",
@@ -1431,11 +1471,10 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
   }
 }
 ```
-</div></details>
 
 ### 隔日指定投与の記述方法
 隔日指定投与は、連続して服用する日数と、その後の連続して休薬する日数を指定する用法である。
-JAMI標準用法コードを使用する表現方法と、HL7 FHIR本来の表現方法の2種類の表現方法が可能であるが、電子処方箋FHIR仕様との整合性を考慮してJAMI標準用法コードを使用する方法を推奨する。
+JAMI標準用法コードを使用する表現方法と、HL7 FHIR本来の表現方法の2種類の表現方法が可能であるが、処方情報HL7 FHIR記述仕様との整合性を考慮してJAMI標準用法コードを使用する方法を推奨する。
 
 JAMI標準用法コードを使用する表現方法では、dosageInstruction.timing.code 要素に CodeableConcept型でJAMI標準用法コード（urn:oid:1.2.392.100495.20.2.31）を指定する。さらに、dosageInstruction.timing.additionalInstrunction要素に、CodeableConcept型で、JAMI標準「処方・注射オーダ標準用法規格」 8桁補足用法コード（urn:oid:1.2.392.100495.20.2.32）を指定する。詳細は、「JAMI標準 処方注射オーダ標準用法規格」規格書 8.1「日数間隔指定」 を参照のこと。
 
@@ -1503,7 +1542,7 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
 
 ### 曜日指定投与の記述方法
 曜日指定投与は、「火曜日と金曜日に服用」など、服用する曜日を指定する用法である。
-JAMI標準用法コードを使用する表現方法と、HL7 FHIR本来の表現方法の2種類の表現方法が可能であるが、電子処方箋FHIR仕様との整合性を考慮してJAMI標準用法コードを使用する方法を推奨する。
+JAMI標準用法コードを使用する表現方法と、HL7 FHIR本来の表現方法の2種類の表現方法が可能であるが、処方情報HL7 FHIR記述仕様との整合性を考慮してJAMI標準用法コードを使用する方法を推奨する。
 
 JAMI標準用法コードを使用する表現方法では、dosageInstruction.timing.code 要素に CodeableConcept型でJAMI標準用法コード（urn:oid:1.2.392.100495.20.2.31）を指定する。さらに、dosageInstruction.timing.additionalInstrunction要素に、CodeableConcept型で、JAMI標準「処方・注射オーダ標準用法規格」 8桁補足用法コード（urn:oid:1.2.392.100495.20.2.32）を指定する。詳細は、「JAMI標準 処方注射オーダ標準用法規格」規格書 8.2「曜日指定」 を参照のこと。
 
@@ -1585,7 +1624,7 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
 }
 ```
 
-## 2.1.2.2.6 その他、参考文献・リンク等
+## その他、参考文献・リンク等
 1. HL7, FHIR MedicationRequest Resource, http://hl7.org/fhir/medicationrequest.html
 1. 保健医療福祉情報システム工業会, JAHIS 処方データ交換規約 Ver.3.0C, https://www.jahis.jp/standard/detail/id=564
 1. 日本医療情報学会MERIT-9研究会, 医療情報交換規約運用指針、MERIT-9 処方オーダver 1.0, http://merit-9.mi.hama-med.ac.jp/jahis/SHOHOU.pdf

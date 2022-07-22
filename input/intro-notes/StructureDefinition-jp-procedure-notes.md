@@ -10,23 +10,6 @@
 
 - Extensions定義はない
 
-### 用語定義
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| Procedure.status |本処置の状態 | Required          | [EventStatus](http://www.hl7.org/fhir/ValueSet/event-status) |
-| Procedure.statusReason| 本処置が行われなかった場合、その理由を表すコード。 | Example        | http://jpfhir.jp/fhir/CodeSystem/*** (予定) |
-| Procedure.category | 本処置のカテゴリ | Example  | http://jpfhir.jp/fhir/CodeSystem/*** (予定) |
-| Procedure.code| 本処置のコード | Required          | [ProcedureCodes](http://www.hl7.org/fhir/valueset/jp-core-procedure-code) |
-| Procedure.performer.function | 本処置を行う医療者の職種| Example | http://jpfhir.jp/fhir/CodeSystem/*** (予定) |
-| Procedure.reasonCode | 本処置が行われた理由　| Example| 未定　|
-| Procedure.bodySite | 本処置が行われた部位　| Example | http://jpfhir.jp/fhir/CodeSystem/*** (予定) 　|
-| Procedure.outcome | 本処置によるアウトカム 　| Example | http://hl7.org/fhir/ValueSet/procedure-outcome |
-| Procedure.complication | 本処置により生じた合併症 |未定 | 未定　 |
-| Procedure.followUp | 本処置の後に行われる処置 |未定 | 未定　 |
-| PProcedure.focalDevice.action | 本処置の最中にデバイスに生じた変更 |未定 | 未定　 |
-| Procedure.usedCode | 本処置に使われたデバイス |未定 | 未定　 |
-
 ## 利用方法
 
 ### インタラクション一覧

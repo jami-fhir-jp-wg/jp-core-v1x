@@ -23,9 +23,11 @@ JP Core Immunization リソースで使用される拡張は次の通りであ�
 
 #### 既存のExtensionの利用
 
-既存のExtensionの利用は特にない。
+既存のExtensionの利用はない。
+
 
 ### 用語定義
+
 HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが使われているが、日本ではHOTコードやYJコードで一通り使用されているワクチンが定義されているため、国内で利用する際の用語集としては HOTコードとYJコードを採用した。それ以外の用語集の利用を妨げるものではない。
 
 |分類|名称|URI|
@@ -34,20 +36,6 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 |ワクチン|HOT13|urn:oid:1.2.392.100495.20.2.75|
 |ワクチン|YJコード|urn:oid:1.2.392.100495.20.1.73|
 |対象疾患|MEDIS標準病名マスター病名交換用コード| urn:oid:1.2.392.200119.4.101.6|
-
-JP Core Immunizationリソースの各要素のバインディングは以下の通りである。
-
-| Path                            | 定義                               | バインディング強度 | バリューセット |
-| ------------------------------- | ---------------------------------- | ------------------ | -------------- |
-| Immunization.status | オーダーの現在の状態を示すコード | required | http://hl7.org/fhir/ValueSet/immunization-status |
-| Immunization.vaccineCode | ワクチンの識別情報 | prefered | HOT9,HOT13,YJコード |
-| Immunization.site | 接種部位 | prefered | JAMI処方・注射オーダ標準用法規格(外用部位コード) |
-| Immunization.route | 接種経路 | prefered | HL7 V2(使用者定義表0162)|
-| Immunization.doseQuantity.code | 接種量単位 | prefered | UCUM |
-| Immunization.protocolApplied.targetDisease | ワクチン対象疾患 | prefered | MEDIS標準病名マスター病名交換用コード |
-
-### 制約一覧
-JP Core Immunization リソースは、以下の制約を満たさなければならない。
 
 ### 項目の追加
 参考にしたワクチン関係の文書やAPIで扱われている項目に合わせ、以下の項目を追加した。

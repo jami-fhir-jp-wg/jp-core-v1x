@@ -211,7 +211,7 @@ Description: "実施場所を格納するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location" (exactly)
-* value[x] only Reference
+* value[x] only Reference(JP_Location)
 * value[x] ^short = "実施場所"
 
 Extension: JP_MedicationAdministration_RequestAuthoredOn
@@ -248,7 +248,7 @@ Description: "依頼医を格納するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester" (exactly)
-* value[x] only Reference
+* value[x] only Reference(JP_Practitioner)
 
 Extension: JP_MedicationAdministration_UncategorizedComment
 Id: jp-medicationadministration-uncategorizedcomment
