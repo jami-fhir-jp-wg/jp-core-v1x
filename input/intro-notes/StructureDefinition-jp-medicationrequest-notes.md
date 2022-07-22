@@ -1624,6 +1624,172 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
 }
 ```
 
+### 展開テスト
+
+<details>
+<summary><b>FHIRでの処方例一部抜粋(クリックで展開)</b></summary>
+<dev>
+
+{% highlight json %}
+{
+  "resourceType": "MedicationRequest",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:9</li>プレドニン錠５ｍｇ</ul><li>１日３回　毎食後（４錠－２錠－１錠）　７日分</li></div>"
+  },
+  "identifier": [
+    {
+      "system": "urn:oid:1.2.392.100495.20.3.81",
+      "value": "9"
+    },
+    {
+      "system": "urn:oid:1.2.392.100495.20.3.82",
+      "value": "1"
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "urn:oid:1.2.392.200119.4.403.1",
+        "code": "105271807",
+        "display": "プレドニン錠５ｍｇ"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "urn:uuid:1af0a9a6-a91d-3aef-fc4e-069995b89c4f"
+  },
+  "authoredOn": "2020-08-21T12:28:17+09:00",
+  "dosageInstruction": [
+    {
+      "additionalInstruction": [
+        {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200250.2.2.20.22",
+              "code": "V14NNNNN",
+              "display": "不均等・１回目・４錠"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200250.2.2.20.22",
+              "code": "V22NNNNN",
+              "display": "不均等・２回目・２錠"
+            }
+          ]
+        },
+        {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200250.2.2.20.22",
+              "code": "V31NNNNN",
+              "display": "不均等・３回目・１錠"
+            }
+          ]
+        }
+      ],
+      "text": "１日３回　毎食後　７錠",
+      "timing": {
+        "repeat": {
+          "boundsDuration": {
+            "value": 7,
+            "unit": "日",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
+        },
+        "code": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200250.2.2.20.20",
+              "code": "1013044400000000",
+              "display": "１日３回毎食後"
+            }
+          ]
+        }
+      },
+      "route": {
+        "coding": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
+            "code": "PO",
+            "display": "口"
+          }
+        ]
+      },
+      "method": {
+        "coding": [
+          {
+            "system": "urn:oid:1.2.392.200250.2.2.20.40",
+            "code": "10",
+            "display": "経口"
+          }
+        ]
+      },
+      "doseAndRate": [
+        {
+          "type": {
+            "coding": [
+              {
+                "system": "urn:oid:1.2.392.100495.20.2.22",
+                "code": "1",
+                "display": "製剤量"
+              }
+            ]
+          },
+          "rateRatio": {
+            "numerator": {
+              "value": 7,
+              "unit": "錠",
+              "system": "urn:oid:1.2.392.100495.20.2.101",
+              "code": "TAB"
+            },
+            "denominator": {
+              "value": 1,
+              "unit": "日",
+              "system": "http://unitsofmeasure.org",
+              "code": "d"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "dispenseRequest": {
+    "quantity": {
+      "value": 49,
+      "unit": "錠",
+      "system": "urn:oid:1.2.392.100495.20.2.101",
+      "code": "TAB"
+    },
+    "expectedSupplyDuration": {
+      "value": 7,
+      "unit": "日",
+      "system": "http://unitsofmeasure.org",
+      "code": "d"
+    }
+  },
+  "substitution": {
+    "allowedCodeableConcept": {
+      "coding": [
+        {
+          "system": "urn:oid:1.2.392.100495.20.2.41",
+          "code": "0",
+          "display": "変更可"
+        }
+      ]
+    }
+  }
+}
+{% endhighlight %}
+</dev>
+</details>
+
 ## その他、参考文献・リンク等
 1. HL7, FHIR MedicationRequest Resource, http://hl7.org/fhir/medicationrequest.html
 1. 保健医療福祉情報システム工業会, JAHIS 処方データ交換規約 Ver.3.0C, https://www.jahis.jp/standard/detail/id=564
