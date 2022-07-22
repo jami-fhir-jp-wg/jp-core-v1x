@@ -3,7 +3,6 @@ InstanceOf: JP_Observation_VitalSigns
 Title: "JP Core Observation VitalSigns Basic Example"
 Description: "JP_ObservationVitalSignsリソースの1例"
 Usage: #example
-* id = "vital-12345"
 * category.coding.code = #呼吸機能
 //TODO CategoryのCodeSystem定義されていない
 * category.coding.system = "http://jpfhir.jp/Common/CodeSystem/vitalsign-category"
