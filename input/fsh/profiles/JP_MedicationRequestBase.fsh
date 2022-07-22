@@ -922,7 +922,7 @@ Description: "投与装置を格納する拡張"
 * . ^short = "投与装置"
 * . ^definition = "投与装置を格納する拡張"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device" (exactly)
-* value[x] only Reference
+* value[x] only Reference(Device)
 
 Extension: JP_MedicationRequest_DosageInstruction_Line
 Id: jp-medicationrequest-dosageinstruction-line
