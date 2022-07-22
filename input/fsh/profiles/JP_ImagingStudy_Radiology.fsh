@@ -16,11 +16,10 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * identifier ^requirements = "If one or more series elements are present in the ImagingStudy, then there shall be one DICOM Study UID identifier (see [DICOM PS 3.3 C.7.2](http://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.2.html).\r\nImagingStudyに1つ以上のシリーズ要素が存在する場合、1つのDICOMスタディUID識別子が存在する必要がある（[DICOM PS 3.3 C.7.2]（http://dicom.nema.org/medical/dicom/current/output/を参照） chtml / part03 / sect_C.7.2.html）。"
 * status ^definition = "The current state of the ImagingStudy.　\r\nImagingStudyの現在のステータス"
 * status ^comment = "Unknown does not represent \"other\" - one of the defined statuses must apply.  Unknown is used when the authoring system is not sure what the current status is.\r\n\r\n不明は「その他」を表すものではない。定義されたステータスの1つを適用する必要がある。不明は、オーサリングシステムが現在のステータスを確認できない場合に使用される。\r\n\r\n<br/><br/>\r\n【JP仕様】<br/>\r\nリソースの状態。"
-* modality from https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html
 * modality ^short = "All series modality if actual acquisition modalities　実際の取得モダリティーの場合、モダリティーの全シリーズ"
 * modality ^definition = "A list of all the series.modality values that are actual acquisition modalities, i.e. those in the DICOM Context Group 29 (value set OID 1.2.840.10008.6.1.19).\r\n\r\n実際の取得モダリティであるすべてのseries.modality値のリスト、つまりDICOMコンテキストグループ29（値セットOID 1.2.840.10008.6.1.19）の値。"
 * modality ^comment = "Codes may be defined very casually in enumerations or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.\r\n\r\nコードは、列挙型またはコードリストで、SNOMED CTなどの非常に正式な定義まで、非常にカジュアルに定義できる。詳細については、HL7v3コア原則を参照のこと。\r\n\r\n・モダリティのコードを設定。<br/>\r\n・Seriesの階層の(0008,0060)を集約する、または(0008,0060)　と　(0008, 0061) のOR。但し、重複する値は1つにまとめて表現。<br/>"
-* subject only 	Reference(JP_Patient or Device or Group)
+* subject only Reference(JP_Patient or Device or Group)
 * subject ^short = "Who or what is the subject of the study　検査対象者"
 * subject ^definition = "The subject, typically a patient, of the imaging study.\r\n\r\n画像検査の対象、通常は患者。"
 * subject ^comment = "QA phantoms can be recorded with a Device; multiple subjects (such as mice) can be recorded with a Group.\r\n\r\nQAファントムはデバイスで記録できる。複数の被験者（マウスなど）をグループで記録できる。\r\n\r\n・患者(Patient)リソースを参照。<br/>\r\n・DICOMタグ値を参照する場合は、tag mappingの通りグループ0010（患者情報に関連する情報を扱うグループ）を参照。<br/>\r\n・不明患者は、空もしくは不明を指すPatientリソースを参照。<br/>"
