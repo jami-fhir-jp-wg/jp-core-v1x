@@ -211,7 +211,7 @@ URL: [base]/Practitioner/[id]/$everything
     ```
 レスポンス：指定されたPractitionerに関連する全てのリソースを返す。
 
-    ```http
+    ```
     HTTP/1.1 200 OK
     [other headers]
 
