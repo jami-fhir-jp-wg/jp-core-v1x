@@ -47,6 +47,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * result ^definition = "診断レポートの一部となるObservationリソース"
 * result ^comment = "Observationはさらにobservationを含むことができる。\r\n\r\n【JP-CORE】\r\n計測情報などの付随所見をObservationリソースとして定義できるが、該当するコードが定義できないため放射線レポートでは未定義とする。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。\r\n<br/><br/>"
 * result ^requirements = "結果のグループ化が任意だが、意味のある個別の結果または結果のグループをサポートする必要がある。"
+* imagingStudy only Reference(JP_ImagingStudy_Radiology)
 * imagingStudy ^definition = "実行された画像検査の完全な詳細に関する1つあるいは複数のリンク。通常、これは DICOM対応モダリティによって実行されるイメージングだが、DICOMであることが必須ではない。完全に有効な PACS ビューアは、この情報を使用してソース イメージのビューを提供できる。"
 * imagingStudy ^comment = "【JP-CORE】\r\n・対象となるImagingStudyリソースを参照<br/>\r\n・放射線レポートでは検査実施後には必須（複数もあり得る）\r\n<br/><br/>"
 * media ^definition = "このレポートに関連付けられているキーイメージの一覧。"
