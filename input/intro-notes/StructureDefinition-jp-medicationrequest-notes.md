@@ -49,9 +49,9 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |医薬品|HOT13|urn:oid:1.2.392.200119.4.402.1|
 |医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
 |医薬品|⼀般処⽅名マスター|urn:oid:1.2.392.100495.20.1.81|
-|剤形|MERIT-9(剤形)|http://jpfhir.jp/ePrewscription/CodeSystem/merit9-form |
-|処方区分|MERIT-9(処方区分)|http://jpfhir.jp/ePrewscription/CodeSystem/merit9-category|
-|処方区分|JAHIS処方データ交換規約Ver.3.0C(JHSP表0003)|http://jpfhir.jp/ePrewscription/CodeSystem/JHSP0003|
+|剤形|MERIT-9(剤形)|http://jpfhir.jp/Common/CodeSystem/merit9-form |
+|処方区分|MERIT-9(処方区分)|http://jpfhir.jp/Common/CodeSystem/merit9-category|
+|処方区分|JAHIS処方データ交換規約Ver.3.0C(JHSP表0003)|http://jpfhir.jp/Common/CodeSystem/JHSP0003|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
 |力価区分|処方情報HL7 FHIR記述仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
 |調剤指示|処方情報HL7 FHIR記述仕様(調剤指示)|urn:oid:1.2.392.200250.2.2.30.10|
