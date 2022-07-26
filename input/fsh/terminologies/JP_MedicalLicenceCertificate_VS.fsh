@@ -1,6 +1,6 @@
 ValueSet: JP_MedicalLicenceCertificate_VS
 Id: jp-medicallicencecertificate-vs
-Title: "JP Core PhysicalExamCodes ValueSet"
+Title: "JP Core MedicalLicence Certificate ValueSet"
 Description: "医療関連免許証明に関する値セット"
 * ^url = $JP_MedicalLicenceCertificate_VS
 * ^status = #draft
