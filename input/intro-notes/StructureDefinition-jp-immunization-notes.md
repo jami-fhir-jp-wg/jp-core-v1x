@@ -69,13 +69,13 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 1. identifier 検索パラメータを使用して、オーダーIDなどの識別子によるMedicationReuqestの検索をサポートしなければならない（SHALL）。
 
-   ```http
+   ```
    GET [base]/Immunization?identifier={system|}[code]
    ```
 
    例：
 
-   ```http
+   ```
    GET [base]/Immunization?identifier=http://myhospital.com/fhir/medication\|1234567890
    ```
 
@@ -88,14 +88,14 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 1. patient 検索パラメータを使用して、患者のリファレンス情報によるImmunizationの検索をサポートすることが望ましい（SHOULD）。
 
-   ```http
+   ```
    GET [base]/Immunization?patient=[id]
    GET [base]/Immunization?patient=[url]
    ```
 
    例：
 
-   ```http
+   ```
    GET [base]/Immunization?patient=123456
    ```
 
@@ -103,14 +103,14 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 1. patient,date 検索パラメータを使用して、患者のリファレンス情報と接種日によるImmunizationの検索をサポートすることが望ましい（SHOULD）。
 
-   ```http
+   ```
    GET [base]/Immunization?patient=[id]&date=[date]
    GET [base]/Immunization?patient=[url]&date=[date]
    ```
 
    例：
 
-   ```http
+   ```
    GET [base]/Immunization?patient=123456&date=eq2013-01-14
    ```
 
@@ -134,7 +134,7 @@ JP Immunization リソースに対して使用される操作は次の通りで�
 
 この操作の公式なURLは以下である。
 
-```http
+```
 http://hl7.jp/fhir/OperationDefinition/Immunization-everything
 ```
 
@@ -163,14 +163,14 @@ URL: [base]/Immunization/[id]/$everything
 
 リクエスト：単一のImmunizationに関連する全てのリソースを取得する。
 
-```http
+```
 GET [base]/Immunization/1234567890/$everything
 [some headers]
 ```
 
 レスポンス：指定されたImmunizationに関連する全てのリソースを返す。
 
-```http
+```
 HTTP/1.1 200 OK
 [other headers]
 
@@ -196,28 +196,104 @@ HTTP/1.1 200 OK
 ```
 
 ### サンプル
-. ワクチン接種例1{{link:jp_medication_example_1.xml}}
-
-#### ワクチン接種メッセージ作成例
-具体的な内服処方箋の作成例について、上記のサンプルのそれぞれについて解説する。
-
-##### ワクチン接種例１
 このワクチン接種例では下記の内容をFHIRで表現する場合について解説する。
-```
-```
 
+| 項目名 | 項目値 | 備考 |
+| :--- | :--- | :--- |
+| 接種ワクチン | コミナティ筋注 (182110901) |
+| 対象疾患 | ＣＯＶＩＤ－１９ (S9VN) |
+| 接種量 | 0.45mL |
+| 接種部位 | 左上腕 (74L) |
+| 接種実施者 | 大阪 一郎 |
+| 接種日時 | 2021/07/01 10:30 |
+| ロット番号 | 12345678 |
 
 ワクチン接種の上記部分をFHIR R4で記述する場合以下のようになる。
+
 <details>
-<summary><b>FHIRでのワクチン接種例一部抜粋(クリックで展開)</b></summary>
-<div>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
 
-```json
-```
-</div>
+{% highlight json %}
+{
+  "resourceType": "Immunization",
+  "id": "jp-immunization-example-1",
+  "meta": {
+    "profile": [
+      "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-immunization-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-immunization.html\">JP Core Immunization Profile</a></p></div><p><b>status</b>: completed</p><p><b>vaccineCode</b>: コミナティ筋注 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#182110901)</span></p><p><b>patient</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><p><b>occurrence</b>: 2021-07-01 10:30:00+0900</p><p><b>lotNumber</b>: 12345678</p><p><b>site</b>: 左上腕 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#74L)</span></p><p><b>doseQuantity</b>: 0.45 mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mL = 'mL')</span></p><h3>Performers</h3><table class=\"grid\"><tr><td>-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>Administering Provider <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0443.html\">providerRole</a>#AP)</span></td><td><a href=\"Practitioner-jp-practionner-example-male-1.html\">Practitioner/jp-practionner-example-male-1: 大阪 一郎</a> \" 大阪\"</td></tr></table><h3>ProtocolApplieds</h3><table class=\"grid\"><tr><td>-</td><td><b>TargetDisease</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td>*</td><td>ＣＯＶＩＤ－１９ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#S9VN)</span></td><td>1</td></tr></table></div>"
+  },
+  "status": "completed",
+  "vaccineCode": {
+    "coding": [
+      {
+        "system": "urn:oid:1.2.392.200119.4.403.1",
+        "code": "182110901",
+        "display": "コミナティ筋注"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/jp-patient-example-1"
+  },
+  "occurrenceDateTime": "2021-07-01T10:30:00+09:00",
+  "lotNumber": "12345678",
+  "site": {
+    "coding": [
+      {
+        "system": "urn:oid:1.2.392.200250.2.2.20.32",
+        "code": "74L",
+        "display": "左上腕"
+      }
+    ]
+  },
+  "doseQuantity": {
+    "value": 0.45,
+    "unit": "mL",
+    "system": "http://unitsofmeasure.org",
+    "code": "mL"
+  },
+  "performer": [
+    {
+      "function": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+            "code": "AP",
+            "display": "Administering Provider"
+          }
+        ]
+      },
+      "actor": {
+        "reference": "Practitioner/jp-practionner-example-male-1",
+        "display": "大阪 一郎"
+      }
+    }
+  ],
+  "protocolApplied": [
+    {
+      "targetDisease": [
+        {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.4.101.6",
+              "code": "S9VN",
+              "display": "ＣＯＶＩＤ－１９"
+            }
+          ]
+        }
+      ],
+      "doseNumberPositiveInt": 1
+    }
+  ]
+}
+{% endhighlight json %}
+</dev>
 </details>
-
-### サンプル
 
 ## 注意事項
 
@@ -230,11 +306,11 @@ Immunizationはワクチンを vaccineCodeとして1つまでしか持つこと�
 ```json
 "vaccineCode": {
   "coding":  [
-      {
-          "system": "urn:oid:1.2.392.100495.20.2.75",
-          "code": "1820201040101",
-          "display": "インフルエンザHAワクチン「第一三共」1mL"
-      }
+    {
+      "system": "urn:oid:1.2.392.100495.20.2.75",
+      "code": "1820201040101",
+      "display": "インフルエンザHAワクチン「第一三共」1mL"
+    }
   ]
 }
 ```
@@ -264,7 +340,7 @@ Immunization.occurrenceString要素を使用した例：
 
 ```json
 "location" : {
-    "reference" : "Location/1234"
+  "reference" : "Location/1234"
 }
 ```
 
@@ -273,7 +349,7 @@ Immunization.occurrenceString要素を使用した例：
 
 ```json
 "manufacturer" : {
-    "reference" : "Organization/1234"
+  "reference" : "Organization/1234"
 }
 ```
 

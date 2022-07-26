@@ -230,7 +230,11 @@ Rp1 ムコダイン錠２５０ｍｇ１錠（  １日３錠)
 　　１日３回朝昼夕食後３日分
 ```
 
-```json
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationDispense",
   "id": "jp-medicationdispense-example-1",
@@ -402,7 +406,9 @@ Rp1 ムコダイン錠２５０ｍｇ１錠（  １日３錠)
     ]
   }
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 ## 注意事項
 
@@ -419,16 +425,16 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 
 ```json
 "quantity": {
-    "value": 21,
-    "unit": "錠",
-    "system": "urn:oid:1.2.392.100495.20.2.101",
-    "code": "TAB"
+  "value": 21,
+  "unit": "錠",
+  "system": "urn:oid:1.2.392.100495.20.2.101",
+  "code": "TAB"
 },
 "daysSupply": {
-    "value": 7,
-    "unit": "日",
-    "system": "http://unitsofmeasure.org",
-    "code": "d"
+  "value": 7,
+  "unit": "日",
+  "system": "http://unitsofmeasure.org",
+  "code": "d"
 }
 ```
 
@@ -444,27 +450,27 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 
 ```json
 "substitution" : {
-    "wasSubstituted" : true,
-    "type" : {
-        "coding" : [
-            {
-                "code" : "G",
-                "system" : "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
-                "display" : "generic composition"
-            }
-        ]
-    },
-    "reason": [
-        {
-            "coding" : [
-                {
-                    "code" : "RR",
-                    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-                    "display" : "regulatory requirement"
-                }
-            ]
-        }
+  "wasSubstituted" : true,
+  "type" : {
+    "coding" : [
+      {
+        "code" : "G",
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
+        "display" : "generic composition"
+      }
     ]
+  },
+  "reason": [
+    {
+      "coding" : [
+        {
+          "code" : "RR",
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "display" : "regulatory requirement"
+        }
+      ]
+    }
+  ]
 }
 ```
 
@@ -473,7 +479,7 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 
 ```json
 "destination" : {
-    "reference" : "Location/12A"
+  "reference" : "Location/12A"
 }
 ```
 
@@ -488,20 +494,20 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 
 ```json
 "performer" : [
-    {
-        "function" : {
-            "coding" : [
-                {
-                    "code" : "packager",
-                    "system" : "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function",
-                    "display" : "Packager"
-                }
-            ]
-        },
-        "actor" : {
-            "reference" : "Practitioner/01234567"
+  {
+    "function" : {
+      "coding" : [
+        {
+          "code" : "packager",
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function",
+          "display" : "Packager"
         }
+      ]
+    },
+    "actor" : {
+      "reference" : "Practitioner/01234567"
     }
+  }
 ]
 ```
 
@@ -514,23 +520,24 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 薬剤単位の調剤結果を表すインスタンス例を示す。
 ```json
 "extension": [
-    {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation",
-        "valueCodeableConcept": {
-            "coding": [
-                {
-                "code": "C",
-                "system": "urn:oid:1.2.392.200250.2.2.30.10",
-                "display": "粉砕指示"
-                }
-            ]
+  {
+    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation",
+    "valueCodeableConcept": {
+      "coding": [
+        {
+          "code": "C",
+          "system": "urn:oid:1.2.392.200250.2.2.30.10",
+          "display": "粉砕指示"
         }
-    }, {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation",
-        "valueCodeableConcept": {
-            "text" : "嚥下障害のため、上記粉砕指示"
-        }
-    } 
+      ]
+    }
+  }, 
+  {
+    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation",
+    "valueCodeableConcept": {
+      "text" : "嚥下障害のため、上記粉砕指示"
+    }
+  } 
 ],
 
 ```

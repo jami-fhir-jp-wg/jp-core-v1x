@@ -55,7 +55,12 @@ Medication リソースは単体として用いられないため、検索など
 [MedicationRequest(注射)][JP_MedicationRequest_Injection]や[MedicationDispense(注射)][JP_MedicationDispense_Injection]、[MedicationAdministration(注射)][JP_MedicationAdministration_Injection]も参照すること。
 
 #### ホリゾン注射液１０ｍｇ
-```json
+
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "Medication",
   "id": "jp-medication-example-1",
@@ -117,10 +122,17 @@ Medication リソースは単体として用いられないため、検索など
     }
   ]
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 #### ソリタ－Ｔ３号輸液５００ｍＬ　１本とアドナ注（静脈用）５０ｍｇ／１０ｍＬ　１アンプルの混注
-```json
+
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "Medication",
   "id": "jp-medication-example-2",
@@ -187,7 +199,9 @@ Medication リソースは単体として用いられないため、検索など
     }
   ]
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 ### 各種コメントの記述方法
 

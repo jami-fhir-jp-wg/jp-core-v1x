@@ -257,7 +257,11 @@ HTTP/1.1 200 OK
 | 実施場所 | 09A/021/4 |
 | 進捗 | 完了 (CP) |
 
-```json
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationAdministration",
   "id": "jp-medicationadministration-injection-example-1",
@@ -489,7 +493,9 @@ HTTP/1.1 200 OK
     }
   }
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 #### （４）実施情報（点滴実施）
 
@@ -526,7 +532,11 @@ HTTP/1.1 200 OK
 | #2 実施場所 | 09A/021/4 |
 | #2 進捗 | 完了 (CP) |
 
-```json
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationAdministration",
   "id": "jp-medicationadministration-injection-example-2",
@@ -782,7 +792,9 @@ HTTP/1.1 200 OK
     }
   }
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 ## 注意事項
 

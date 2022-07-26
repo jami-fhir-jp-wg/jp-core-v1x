@@ -246,7 +246,12 @@ Rp1
 | 実施更新日時 | 2016/08/25 12:03:43 |
 
 #### ムコダイン錠２５０ｍｇ（実施）
-```json
+
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationAdministration",
   "id": "jp-medicationadministration-example-1",
@@ -375,10 +380,17 @@ Rp1
     }
   }
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 #### パンスポリンＴ錠１００ １００ｍｇ（中止）
-```json
+
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationAdministration",
   "id": "jp-medicationadministration-example-2",
@@ -457,7 +469,9 @@ Rp1
     "reference": "MedicationRequest/jp-medicationrequest-example-2"
   }
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 ## 注意事項
 
