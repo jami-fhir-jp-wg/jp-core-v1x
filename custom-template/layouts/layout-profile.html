@@ -56,10 +56,10 @@
         <a href="#tabs-snap">Snapshot Table</a>
       </li>
       <li>
-        <a href="#terminology-bindings-view">Terminology Bindings</a>
+        <a href="#tabs-terminology-bindings-view">Terminology Bindings</a>
       </li>
       <li>
-        <a href="#constraints-view">Constraints</a>
+        <a href="#tabs-constraints-view">Constraints</a>
       </li>
 <!--
       <li>
@@ -115,16 +115,20 @@
       </div>
     </div>
     <a name="terminology-bindings-view"> </a>
-    <div id="terminology-bindings-view">
-      <div id="terminology-bindings-view-inner">
-        <!--Terminology Bindings heading in the fragment -->
-        {%include StructureDefinition-{{[id]}}-tx.xhtml%}
+    <div id="tabs-terminology-bindings-view">
+      <div id="tbl-terminology-bindings-view">
+        <div id="terminology-bindings-view-inner">
+          <!--Terminology Bindings heading in the fragment -->
+          {%include StructureDefinition-{{[id]}}-tx.xhtml%}
+        </div>
       </div>
     </div>
     <a name="constraints-view"> </a>
-    <div id="constraints-view">
-      <div id="constraints-view-inner">
-        {%include StructureDefinition-{{[id]}}-inv.xhtml%}
+    <div id="tabs-constraints-view">
+      <div id="tbl-constraints-view">
+        <div id="constraints-view-inner">
+          {%include StructureDefinition-{{[id]}}-inv.xhtml%}
+        </div>
       </div>
     </div>
 {% unless excludexml == 'y' %}
@@ -222,16 +226,12 @@
         </div>
       </div>-->
 {% endunless %}
-      <div id="terminology-bindings-view">
-        <div id="terminology-bindings-view-inner">
-          <!--Terminology Bindings heading in the fragment -->
-          {%include StructureDefinition-{{[id]}}-tx.xhtml%}
-        </div>
+      <div id="all-tbl-terminology-bindings-view-inner">
+        <!--Terminology Bindings heading in the fragment -->
+        {%include StructureDefinition-{{[id]}}-tx.xhtml%}
       </div>
-      <div id="constraints-view">
-        <div id="constraints-view-inner">
-          {%include StructureDefinition-{{[id]}}-inv.xhtml%}
-        </div>
+      <div id="all-tbl-constraints-view-inner">
+        {%include StructureDefinition-{{[id]}}-inv.xhtml%}
       </div>
     </div>
   </div>
