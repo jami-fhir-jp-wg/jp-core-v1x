@@ -233,7 +233,12 @@ HTTP/1.1 200 OK
 
 ### サンプル
 ホリゾン注射液１０ｍｇ１アンプルを左腕に静脈注射する処方例をFHIRで表現する場合のサンプルを示す。
-```JSON
+
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationDispense",
   "id": "jp-medicationdispense-injection-example-1",
@@ -474,8 +479,9 @@ HTTP/1.1 200 OK
     }
   ]
 }
-```
-
+{% endhighlight json %}
+</dev>
+</details>
 
 ## 注意事項
 
@@ -635,27 +641,27 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 
 ```json
 "substitution" : {
-    "wasSubstituted" : true,
-    "type" : {
-        "coding" : [
-            {
-                "code" : "G",
-                "system" : "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
-                "display" : "generic composition"
-            }
-        ]
-    },
-    "reason": [
-        {
-            "coding" : [
-                {
-                    "code" : "RR",
-                    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-                    "display" : "regulatory requirement"
-                }
-            ]
-        }
+  "wasSubstituted" : true,
+  "type" : {
+    "coding" : [
+      {
+        "code" : "G",
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
+        "display" : "generic composition"
+      }
     ]
+  },
+  "reason": [
+    {
+      "coding" : [
+        {
+          "code" : "RR",
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "display" : "regulatory requirement"
+        }
+      ]
+    }
+  ]
 }
 ```
 
@@ -679,20 +685,20 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 
 ```json
 "performer" : [
-    {
-        "function" : {
-            "coding" : [
-                {
-                    "code" : "packager",
-                    "system" : "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function",
-                    "display" : "Packager"
-                }
-            ]
-        },
-        "actor" : {
-            "reference" : "Practitioner/01234567"
+  {
+    "function" : {
+      "coding" : [
+        {
+          "code" : "packager",
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function",
+          "display" : "Packager"
         }
+      ]
+    },
+    "actor" : {
+      "reference" : "Practitioner/01234567"
     }
+  }
 ]
 ```
 
@@ -705,12 +711,12 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 薬剤単位の調剤結果を表すインスタンス例を示す。
 ```json
 "extension": [
-    {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation",
-        "valueCodeableConcept": {
-            "text" : "5mLに溶解して2mL抜きとる"
-        }
-    } 
+  {
+    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation",
+    "valueCodeableConcept": {
+      "text" : "5mLに溶解して2mL抜きとる"
+    }
+  } 
 ],
 
 ```

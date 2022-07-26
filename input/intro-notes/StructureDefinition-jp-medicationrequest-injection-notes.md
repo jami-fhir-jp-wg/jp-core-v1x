@@ -267,7 +267,12 @@ HTTP/1.1 200 OK
 
 ### サンプル
 ホリゾン注射液１０ｍｇ１アンプルを左腕に静脈注射する処方例をFHIRで表現する場合のサンプルを示す。
-```json
+
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationRequest",
   "id": "jp-medicationrequest-injection-example-1",
@@ -517,7 +522,9 @@ HTTP/1.1 200 OK
     }
   ]
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 ## 注意事項
 
