@@ -69,13 +69,13 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 1. identifier 検索パラメータを使用して、オーダーIDなどの識別子によるMedicationReuqestの検索をサポートしなければならない（SHALL）。
 
-   ```http
+   ```
    GET [base]/Immunization?identifier={system|}[code]
    ```
 
    例：
 
-   ```http
+   ```
    GET [base]/Immunization?identifier=http://myhospital.com/fhir/medication\|1234567890
    ```
 
@@ -88,14 +88,14 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 1. patient 検索パラメータを使用して、患者のリファレンス情報によるImmunizationの検索をサポートすることが望ましい（SHOULD）。
 
-   ```http
+   ```
    GET [base]/Immunization?patient=[id]
    GET [base]/Immunization?patient=[url]
    ```
 
    例：
 
-   ```http
+   ```
    GET [base]/Immunization?patient=123456
    ```
 
@@ -103,14 +103,14 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 1. patient,date 検索パラメータを使用して、患者のリファレンス情報と接種日によるImmunizationの検索をサポートすることが望ましい（SHOULD）。
 
-   ```http
+   ```
    GET [base]/Immunization?patient=[id]&date=[date]
    GET [base]/Immunization?patient=[url]&date=[date]
    ```
 
    例：
 
-   ```http
+   ```
    GET [base]/Immunization?patient=123456&date=eq2013-01-14
    ```
 
@@ -134,7 +134,7 @@ JP Immunization リソースに対して使用される操作は次の通りで�
 
 この操作の公式なURLは以下である。
 
-```http
+```
 http://hl7.jp/fhir/OperationDefinition/Immunization-everything
 ```
 
@@ -163,14 +163,14 @@ URL: [base]/Immunization/[id]/$everything
 
 リクエスト：単一のImmunizationに関連する全てのリソースを取得する。
 
-```http
+```
 GET [base]/Immunization/1234567890/$everything
 [some headers]
 ```
 
 レスポンス：指定されたImmunizationに関連する全てのリソースを返す。
 
-```http
+```
 HTTP/1.1 200 OK
 [other headers]
 

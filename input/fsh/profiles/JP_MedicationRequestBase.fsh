@@ -901,7 +901,6 @@ Title: "JP Core MedicationRequest DispenseRequest InstructionForDispense Extensi
 Description: "調剤指示。薬剤単位の調剤指示を表現するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense"
 * ^date = "2022-07-31"
-* ^purpose = "薬剤単位の調剤指示を表現するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationRequest.dispenseRequest"
 * id ..0
@@ -914,7 +913,6 @@ Title: "JP Core MedicationRequest DosageInstruction Device Extension"
 Description: "投与装置を格納する拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device"
 * ^date = "2022-07-31"
-* ^purpose = "投与装置を格納する拡張"
 * ^context[0].type = #element
 * ^context[=].expression = "MedicationRequest.dosageInstruction"
 * ^context[+].type = #element
@@ -930,7 +928,6 @@ Title: "JP Core MedicationRequest DosageInstruction Line Extension"
 Description: "指示ラインを格納するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line"
 * ^date = "2022-07-31"
-* ^purpose = "指示ラインを格納するための拡張"
 * ^context[0].type = #element
 * ^context[=].expression = "MedicationRequest.dosageInstruction"
 * ^context[+].type = #element
@@ -970,7 +967,6 @@ Title: "JP Core MedicationRequest DosageInstruction UsageDuration Extension"
 Description: "隔日投与など、服⽤開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使⽤する拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
 * ^date = "2022-07-31"
-* ^purpose = "隔日投与など、服⽤開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使⽤する拡張"
 * ^context[0].type = #element
 * ^context[=].expression = "MedicationRequest.dosageInstruction"
 * ^context[+].type = #element
