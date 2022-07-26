@@ -131,7 +131,6 @@ Title: "JP Core MedicationAdministration Dosage DosageComment Extension"
 Description: "用法コメントを格納するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_DosageComment"
 * ^date = "2022-03-16"
-* ^purpose = "用法コメントを格納するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration.dosage"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_DosageComment" (exactly)
@@ -143,7 +142,6 @@ Title: "JP Core MedicationAdministration atDosage LineComment Extension"
 Description: "ラインコメントを格納する"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_LineComment"
 * ^date = "2022-03-16"
-* ^purpose = "ラインコメントを格納する"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration.dosage"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_LineComment" (exactly)
@@ -155,7 +153,6 @@ Title: "JP Core MedicationAdministration DosageMethod MethodComment Extension"
 Description: "手技コメントを格納するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageMethod_MethodComment"
 * ^date = "2022-03-16"
-* ^purpose = "手技コメントを格納するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration.dosage.method"
 * . ^short = "手技コメント"
@@ -169,7 +166,6 @@ Title: "JP Core MedicationAdministration DosageRate RateComment Extension"
 Description: "投与速度コメントを格納するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageRate_RateComment"
 * ^date = "2022-03-16"
-* ^purpose = "投与速度コメントを格納するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration.dosage.rate[x]"
 * . ^short = "投与速度コメント"
@@ -183,7 +179,6 @@ Title: "JP Core MedicationAdministration DosageRoute RouteComment Extension"
 Description: "投与経路コメントを格納するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageRoute_RouteComment"
 * ^date = "2022-03-16"
-* ^purpose = "投与経路コメントを格納するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration.dosage.route"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageRoute_RouteComment" (exactly)
@@ -195,7 +190,6 @@ Title: "JP Core MedicationAdministration DosageSite SiteComment Extension"
 Description: "投与部位コメントを格納するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageSite_SiteComment"
 * ^date = "2022-03-16"
-* ^purpose = "投与部位コメントを格納するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration.dosage.site"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageSite_SiteComment" (exactly)
@@ -207,7 +201,6 @@ Title: "JP Core MedicationAdministration Location Extension"
 Description: "実施場所を格納するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location"
 * ^date = "2022-03-16"
-* ^purpose = "実施場所を格納するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location" (exactly)
@@ -220,7 +213,6 @@ Title: "JP Core MedicationAdministration RequestAuthoredOn Extension"
 Description: "依頼日時を格納するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn"
 * ^date = "2022-03-16"
-* ^purpose = "依頼日時を格納するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn" (exactly)
@@ -232,7 +224,6 @@ Title: "JP Core MedicationAdministration RequestDepartment Extension"
 Description: "依頼科を格納するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment"
 * ^date = "2022-03-16"
-* ^purpose = "依頼科を格納するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment" (exactly)
@@ -244,7 +235,6 @@ Title: "JP Core MedicationAdministration Requester Extension"
 Description: "依頼医を格納するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester"
 * ^date = "2022-03-16"
-* ^purpose = "依頼医を格納するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester" (exactly)
@@ -256,7 +246,6 @@ Title: "JP Core MedicationAdministration UncategorizedComment Extension"
 Description: "未分類コメントを格納するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_UncategorizedComment"
 * ^date = "2022-03-16"
-* ^purpose = "未分類コメントを格納するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration"
 * . ^short = "未分類コメント"
