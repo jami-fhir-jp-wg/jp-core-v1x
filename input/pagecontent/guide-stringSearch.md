@@ -21,7 +21,8 @@ FHIR®におけるテキストについての検索は大きく4種類に分け�
 
 1. case sensitiveな完全一致
     - [string:exact](https://www.hl7.org/fhir/search.html#:~:text=The%20%3Aexact%20modifier%20returns%20results%20that%20match%20the%20entire%20supplied%20parameter%2C%20including%20casing%20and%20accents.)
-    - [token](https://www.hl7.org/fhir/search.html#:~:text=Match%20is%20case%20sensitive) (ただし2.の例外あり)
+    - [token](https://www.hl7.org/fhir/search.html#:~:text=Match%20is%20case%20sensitive) (ただし2.の例外あり)  
+FHIR R4において、「caseや発音区別符号を含めた完全一致」として定義されている。ただし、発音区別符号に伴う合成文字など正準等価な文字を正規化するか、単純にユニコードのコードポイントによって検索するかはサーバーの実装に委ねられている。一方で、日本語において正準等価性に基づいた正規化を行うと、CJK統合漢字（例：福）とCJK互換漢字（例：福）が正規化されてしまい、:exactというパラメータの趣旨にそぐわないと考えられる。したがって、JP Coreにおいては、CJK統合漢字とCJK互換漢字を区別した完全一致を行うことが望ましい（MAY）と定める。ただし、異体字セレクタについてはコードポイントによる一致のみを検出するか、何らかの対応（例：SVSやIVSを含んだ福(U+798F U+FE00)や福(U+798F U+E0101)、福(U+798F U+E0103)で検索した場合に、福(U+FA1B)をヒットさせる、など）を行うかはサーバーの実装に委ねることとする。
 
 2. case insensitiveな完全一致
     - token ([CodeSystem.caseSensitiveなどによりcase insensitiveなことが示されているとき](https://www.hl7.org/fhir/search.html#:~:text=unless%20the%20underlying%20semantics%20for%20the%20context%20indicate%20that%20the%20token%20should%20be%20interpreted%20case-insensitively))
@@ -39,6 +40,18 @@ FHIR®におけるテキストについての検索は大きく4種類に分け�
     - [_text](https://www.hl7.org/fhir/search.html#:~:text=text%20search%20parameters%2C-,_text,-and%20_content%2C%20search)
     - [_content](https://www.hl7.org/fhir/search.html#:~:text=parameters%2C%20_text%20and-,_content,-%2C%20search%20on%20the)  
 _textと_contentはすべてのリソースに適応される[共通のsearch parameter](https://www.hl7.org/fhir/search.html#all)である。これらのSearchParameterは全文検索のためのSearchParameterであり、「[テキストをインデックス化する高度な検索機能をサポートすべきである（**SHOULD**）](https://www.hl7.org/fhir/search.html#:~:text=these%20parameters%20SHOULD%20support%20a%20sophisticated%20search%20functionality%20of%20the%20type%20offered%20by%20typical%20text%20indexing%20services)」とされており、加えて類語検索やあいまい検索、AND検索・OR検索なども実装することが望ましい。
+
+5. _filterを用いた検索  
+通常のsearch parameterについて、_filterパラメータを用いて検索することができる。ただし、Maturity Level:2 であることに注意する。String型のsearch parameterに対しては、  
+    - eq (equals: Character sequence is the same (case insensitive))
+    - ne (not equals: Character sequence is not the same (case insensitive))
+    - co (contains: Character sequence matches somewhere (case insensitive))
+    - sw (starts with: Character sequence matches from first digit (left most, when L->R) (case insensitive))
+    - ew (ends with: Character sequence matches up to last digit (right most, when L->R) (case insensitive))
+    - gt / lt / ge / le (Based on Integer comparison of Unicode code points of starting character (trimmed) (case insensitive))
+
+    といったオペレータが用意されており、eqを用いてcase insensitiveな全体一致をクエリできる。
+
 
 ### 人名の検索について
 組織ごとに患者記録が作成、維持されており、複数の組織でケアを受けている患者は、その情報が[複数のリソースに存在する可能性が高い](https://www.hl7.org/fhir/patient.html#scope)。多くの場合は氏名による検索や、姓の変更があった場合でも下の名前＋生年月日などの検索である程度候補を絞ることが可能である。一方で日本語表記を持たない外国人など、氏名を表す音をカタカナで表現した場合その方法は一意ではなく、複数システムとの連携を行う場合において、同一人物の突合が困難になる恐れがある。
