@@ -8,6 +8,7 @@ Usage: #example
 * identifier[insuredIdentifier].extension[insuredPersonNumber].valueString = "1-2"
 * identifier[insuredIdentifier].extension[insuredPersonSubNumber].valueString = "01"
 * identifier[insuredIdentifier].value = "宮 6・1-2（枝番）01"
+* identifier[insuredIdentifier].period.start= "2022-01-04"
 * payor = Reference(jp-organization-example-payer)
 * beneficiary = Reference(Patient/jp-patient-example-1)
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#PUBLICPOL
