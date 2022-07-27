@@ -12,23 +12,29 @@ Description: "このプロファイルはCoverageリソースに対して、保�
 * . ^short = "Insurance or medical plan or a payment agreement　保険または医療費支払いプラン、または合意された支払い方法"
 * . ^definition = "Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.\r\n\r\nヘルスケア製品およびサービスの償還または支払いに使用される可能性のある金融商品。 保険と自己負担の両方が含まれる。"
 * . ^comment = "The Coverage resource contains the insurance card level information, which is customary to provide on claims and other communications between providers and insurers.\r\n\r\nCoverageには、保険証レベルの情報が含まれている。これは、保険金請求やプロバイダーと保険会社間のその他の通信で提供するのが通例である。"
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
-* extension contains
-    JP_Coverage_InsuredPersonSymbol named insuredPersonSymbol ..* and
-    JP_Coverage_InsuredPersonNumber named insuredPersonNumber ..* and
-    JP_Coverage_InsuredPersonSubNumber named insuredPersonSubNumber ..*
-* extension[insuredPersonSymbol] ^comment = "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.\r\n\r\n健康保険における被保険者証記号を示す拡張"
-* extension[insuredPersonSymbol].value[x] ^comment = "A stream of bytes, base64 encoded\r\n\r\n被保険者記号の文字列。"
-* extension[insuredPersonNumber] ^comment = "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.\r\n\r\n健康保険における被保険者証番号を示す拡張"
-* extension[insuredPersonNumber].value[x] ^comment = "A stream of bytes, base64 encoded\r\n\r\n被保険者番号"
-* extension[insuredPersonSubNumber] ^comment = "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.\r\n\r\n健康保険における被保険者証番号の枝番を示す拡張\r\n枝番号は2桁。"
-* extension[insuredPersonSubNumber].value[x] ^comment = "A stream of bytes, base64 encoded\r\n\r\n2桁の半角数字文字列。一桁の場合には先頭に０をつけて2桁にする。"
 * identifier ^short = "Business Identifier for the coverage　このカバレッジに割り当てられた一意の識別子。"
 * identifier ^definition = "A unique identifier assigned to this coverage.\r\n\r\nこのカバレッジに割り当てられた一意の識別子。"
 * identifier ^comment = "The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatenation of the Coverage.SubscriberID and the Coverage.dependant.\r\n\r\nカバレッジのメイン（および場合によっては唯一の）識別子-多くの場合、メンバーID、証明書番号、個人の健康番号、またはケースIDと呼ばれる。 Coverage.SubscriberIDとCoverage.dependantの連結として構築できる。"
 * identifier ^requirements = "Allows coverages to be distinguished and referenced.\r\n\r\n\r\nカバレッジを区別して参照できるようにする。"
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^slicing.description = "保険証特定するための一意情報"
+* identifier contains
+    insuredIdentifier ..*
+* identifier[insuredIdentifier].system = $insured-identifier (exactly)
+* identifier[insuredIdentifier].value ^short = "Extensionで定義される各種項目を本形式にて結合して格納する。【形式】({被保険者記号}・)?{被保険者番号}((枝番){枝番})?を記載する。"
+* identifier[insuredIdentifier].value ^comment = "Extensionで定義される各種項目を本形式にて結合して格納する。【形式】({被保険者記号}・)?{被保険者番号}((枝番){枝番})?を記載する。\r\n\r\n 例）宮 6・1-2（枝番）01"
+* identifier[insuredIdentifier].extension contains
+    JP_Coverage_InsuredPersonSymbol named insuredPersonSymbol 0..1 and
+    JP_Coverage_InsuredPersonNumber named insuredPersonNumber 1..1 and
+    JP_Coverage_InsuredPersonSubNumber named insuredPersonSubNumber 0..1
+* identifier[insuredIdentifier].extension[insuredPersonSymbol] ^comment = "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.\r\n\r\n健康保険における被保険者証記号を示す拡張"
+* identifier[insuredIdentifier].extension[insuredPersonSymbol].value[x] ^comment = "A stream of bytes, base64 encoded\r\n\r\n被保険者記号の文字列。"
+* identifier[insuredIdentifier].extension[insuredPersonNumber] ^comment = "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.\r\n\r\n健康保険における被保険者証番号を示す拡張"
+* identifier[insuredIdentifier].extension[insuredPersonNumber].value[x] ^comment = "A stream of bytes, base64 encoded\r\n\r\n被保険者番号"
+* identifier[insuredIdentifier].extension[insuredPersonSubNumber] ^comment = "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.\r\n\r\n健康保険における被保険者証番号の枝番を示す拡張\r\n枝番号は2桁。"
+* identifier[insuredIdentifier].extension[insuredPersonSubNumber].value[x] ^comment = "A stream of bytes, base64 encoded\r\n\r\n2桁の半角数字文字列。一桁の場合には先頭に０をつけて2桁にする。"
 * status ^definition = "The status of the resource instance.\r\n\r\nリソースインスタンスのステータス。"
 * status ^comment = "This element is labeled as a modifier because the status contains the code entered-in-error that marks the coverage as not currently valid.\r\n\r\nステータスには、カバレッジが現在無効であることを示すエラー入力されたコードが含まれているため、この要素は修飾子としてラベル付けされる。"
 * status ^requirements = "Need to track the status of the resource as 'draft' resources may undergo further edits while 'active' resources are immutable and may only have their status changed to 'cancelled'.\r\n\r\n\r\n「ドラフト」リソースはさらに編集される可能性があり、「アクティブ」リソースは不変であり、ステータスが「キャンセル」に変更されるだけである可能性があるため、リソースのステータスを追跡する必要がある。"
@@ -115,37 +121,37 @@ Extension: JP_Coverage_InsuredPersonNumber
 Id: jp-coverage-insuredpersonnumber
 Title: "JP Core Coverage InsuredPersonNumber Extension"
 Description: "健康保険における被保険者証番号を示す拡張"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber"
+* ^url = $JP_Coverage_InsuredPersonNumber
 * ^date = "2022-03-16"
 * ^context.type = #element
 * ^context.expression = "Coverage"
 * . ^short = "健康保険における被保険者証番号"
 * . ^comment = "健康保険における被保険者証番号を示す拡張"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber" (exactly)
+* url = $JP_Coverage_InsuredPersonNumber (exactly)
 * value[x] only string
 
 Extension: JP_Coverage_InsuredPersonSubNumber
 Id: jp-coverage-insuredpersonsubnumber
 Title: "JP Core Coverage InsuredPersonSubNumber Extension"
 Description: "健康保険における被保険者証番号の枝番を示す拡張"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber"
+* ^url = $JP_Coverage_InsuredPersonSubNumber
 * ^date = "2022-03-16"
 * ^context.type = #element
 * ^context.expression = "Coverage"
 * . ^short = "健康保険における被保険者証番号の枝番"
 * . ^comment = "健康保険における被保険者証番号の枝番を示す拡張"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber" (exactly)
+* url = $JP_Coverage_InsuredPersonSubNumber (exactly)
 * value[x] only string
 
 Extension: JP_Coverage_InsuredPersonSymbol
 Id: jp-coverage-insuredpersonsymbol
 Title: "JP Core Coverage InsuredPersonSymbol Extension"
 Description: "健康保険における被保険者証記号を示す拡張"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol"
+* ^url = $JP_Coverage_InsuredPersonSymbol
 * ^date = "2022-03-16"
 * ^context.type = #element
 * ^context.expression = "Coverage"
 * . ^short = "健康保険における被保険者証記号"
 * . ^comment = "健康保険における被保険者証記号を示す拡張"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol" (exactly)
+* url = $JP_Coverage_InsuredPersonSymbol (exactly)
 * value[x] only string
