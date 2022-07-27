@@ -50,6 +50,7 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * qualification.period ^definition = "Period during which the qualification is valid.\r\n\r\n\r\n資格が有効な期間。"
 * qualification.period ^comment = "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).\r\n\r\n\r\n使用のコンテキストは、範囲全体が適用されるか（例：「患者はこの時間範囲で病院の入院患者であった」）、範囲内の1つの値が適用されるか（例：「この2つの時間の間に患者に与える」）を指定する。\r\n\r\n期間は、期間(経過時間の尺度)には使用されない。[Duration](datatypes.html#Duration)を参照のこと。"
 * qualification.period ^requirements = "Qualifications are often for a limited period of time, and can be revoked.\r\n\r\n\r\n資格は期間限定のものが多く、取り消されることもある。"
+* qualification.issuer only Reference(JP_Organization)
 * qualification.issuer ^definition = "Organization that regulates and issues the qualification.\r\n\r\n\r\n資格を規制し、発行する機関"
 * qualification.issuer ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n\r\n参照は実際のFHIRリソースへの参照でなければならず、解決可能でなければならない。解決は URL からの検索、またはリソースタイプによって、絶対参照を正規の URL として扱い、ローカルのレジストリ/リポジトリで検索することで行うことができる。"
 * qualification ^slicing.discriminator.type = #value
@@ -346,11 +347,59 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * qualification[narcoticPrescriptionLicenseNumber46].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
 * qualification[narcoticPrescriptionLicenseNumber47].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
 
+* qualification[narcoticPrescriptionLicenseNumber01].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber02].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber03].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber04].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber05].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber06].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber07].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber08].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber09].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber10].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber11].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber12].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber13].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber14].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber15].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber16].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber17].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber18].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber19].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber20].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber21].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber22].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber23].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber24].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber25].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber26].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber27].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber28].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber29].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber30].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber31].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber32].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber33].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber34].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber35].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber36].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber37].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber38].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber39].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber40].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber41].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber42].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber43].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber44].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber45].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber46].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber47].issuer only Reference(JP_Organization)
+
 * qualification[medicalRegistrationNumber].identifier.system = "urn:oid:1.2.392.100495.20.3.31" (exactly)
 * qualification[medicalRegistrationNumber].identifier.value ^short = "医籍登録番号"
 * qualification[medicalRegistrationNumber].identifier.value ^comment = "医籍登録番号"
 * qualification[medicalRegistrationNumber].code from $JP_MedicalLicenceCertificate_VS (required)
-* qualification[medicalRegistrationNumber].code = $JP_MedicalLicenceCertificate_CS#medical-registration (exactly)
+* qualification[medicalRegistrationNumber].issuer only Reference(JP_Organization)
 
 * communication ^short = "A language the practitioner can use in patient communication　医療従事者が患者とのコミュニケーションで使用できる言語。"
 * communication ^definition = "A language the practitioner can use in patient communication.\r\n\r\n医療従事者が患者とのコミュニケーションで使用できる言語。"
