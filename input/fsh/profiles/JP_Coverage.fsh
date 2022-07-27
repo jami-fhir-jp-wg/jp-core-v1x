@@ -124,7 +124,7 @@ Description: "健康保険における被保険者証番号を示す拡張"
 * ^url = $JP_Coverage_InsuredPersonNumber
 * ^date = "2022-03-16"
 * ^context.type = #element
-* ^context.expression = "Coverage"
+* ^context.expression = "Coverage.identifier"
 * . ^short = "健康保険における被保険者証番号"
 * . ^comment = "健康保険における被保険者証番号を示す拡張"
 * url = $JP_Coverage_InsuredPersonNumber (exactly)
@@ -137,7 +137,7 @@ Description: "健康保険における被保険者証番号の枝番を示す拡
 * ^url = $JP_Coverage_InsuredPersonSubNumber
 * ^date = "2022-03-16"
 * ^context.type = #element
-* ^context.expression = "Coverage"
+* ^context.expression = "Coverage.identifier"
 * . ^short = "健康保険における被保険者証番号の枝番"
 * . ^comment = "健康保険における被保険者証番号の枝番を示す拡張"
 * url = $JP_Coverage_InsuredPersonSubNumber (exactly)
@@ -150,7 +150,7 @@ Description: "健康保険における被保険者証記号を示す拡張"
 * ^url = $JP_Coverage_InsuredPersonSymbol
 * ^date = "2022-03-16"
 * ^context.type = #element
-* ^context.expression = "Coverage"
+* ^context.expression = "Coverage.identifier"
 * . ^short = "健康保険における被保険者証記号"
 * . ^comment = "健康保険における被保険者証記号を示す拡張"
 * url = $JP_Coverage_InsuredPersonSymbol (exactly)
