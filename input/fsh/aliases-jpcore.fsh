@@ -118,3 +118,5 @@ Alias: $JP_ProcedureFollowUpCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_
 Alias: $JP_ProcedureNotPerformedReason_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureNotPerformedReason_VS
 Alias: $JP_ProcedurePerformerRoleCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedurePerformerRoleCodes_VS
 Alias: $JP_ProcedureReasonCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureReasonCodes_VS
+
+Alias: $JP_InsurancePlan_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_InsurancePlan_CS
