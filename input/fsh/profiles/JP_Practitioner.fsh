@@ -153,9 +153,304 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * qualification[narcoticPrescriptionLicenseNumber46].identifier.system = "urn:oid:1.2.392.100495.20.3.32.146"  (exactly)
 * qualification[narcoticPrescriptionLicenseNumber47].identifier.system = "urn:oid:1.2.392.100495.20.3.32.147"  (exactly)
 
+* qualification[narcoticPrescriptionLicenseNumber01].identifier.value ^short = "麻薬施用者番号(北海道)"
+* qualification[narcoticPrescriptionLicenseNumber02].identifier.value ^short = "麻薬施用者番号(青森県)"
+* qualification[narcoticPrescriptionLicenseNumber03].identifier.value ^short = "麻薬施用者番号(岩手県)"
+* qualification[narcoticPrescriptionLicenseNumber04].identifier.value ^short = "麻薬施用者番号(宮城県)"
+* qualification[narcoticPrescriptionLicenseNumber05].identifier.value ^short = "麻薬施用者番号(秋田県)"
+* qualification[narcoticPrescriptionLicenseNumber06].identifier.value ^short = "麻薬施用者番号(山形県)"
+* qualification[narcoticPrescriptionLicenseNumber07].identifier.value ^short = "麻薬施用者番号(福島県)"
+* qualification[narcoticPrescriptionLicenseNumber08].identifier.value ^short = "麻薬施用者番号(茨城県)"
+* qualification[narcoticPrescriptionLicenseNumber09].identifier.value ^short = "麻薬施用者番号(栃木県)"
+* qualification[narcoticPrescriptionLicenseNumber10].identifier.value ^short = "麻薬施用者番号(群馬県)"
+* qualification[narcoticPrescriptionLicenseNumber11].identifier.value ^short = "麻薬施用者番号(埼玉県)"
+* qualification[narcoticPrescriptionLicenseNumber12].identifier.value ^short = "麻薬施用者番号(千葉県)"
+* qualification[narcoticPrescriptionLicenseNumber13].identifier.value ^short = "麻薬施用者番号(東京都)"
+* qualification[narcoticPrescriptionLicenseNumber14].identifier.value ^short = "麻薬施用者番号(神奈川)"
+* qualification[narcoticPrescriptionLicenseNumber15].identifier.value ^short = "麻薬施用者番号(新潟県)"
+* qualification[narcoticPrescriptionLicenseNumber16].identifier.value ^short = "麻薬施用者番号(富山県)"
+* qualification[narcoticPrescriptionLicenseNumber17].identifier.value ^short = "麻薬施用者番号(石川県)"
+* qualification[narcoticPrescriptionLicenseNumber18].identifier.value ^short = "麻薬施用者番号(福井県)"
+* qualification[narcoticPrescriptionLicenseNumber19].identifier.value ^short = "麻薬施用者番号(山梨県)"
+* qualification[narcoticPrescriptionLicenseNumber20].identifier.value ^short = "麻薬施用者番号(長野県)"
+* qualification[narcoticPrescriptionLicenseNumber21].identifier.value ^short = "麻薬施用者番号(岐阜県)"
+* qualification[narcoticPrescriptionLicenseNumber22].identifier.value ^short = "麻薬施用者番号(静岡県)"
+* qualification[narcoticPrescriptionLicenseNumber23].identifier.value ^short = "麻薬施用者番号(愛知県)"
+* qualification[narcoticPrescriptionLicenseNumber24].identifier.value ^short = "麻薬施用者番号(三重県)"
+* qualification[narcoticPrescriptionLicenseNumber25].identifier.value ^short = "麻薬施用者番号(滋賀県)"
+* qualification[narcoticPrescriptionLicenseNumber26].identifier.value ^short = "麻薬施用者番号(京都府)"
+* qualification[narcoticPrescriptionLicenseNumber27].identifier.value ^short = "麻薬施用者番号(大阪府)"
+* qualification[narcoticPrescriptionLicenseNumber28].identifier.value ^short = "麻薬施用者番号(兵庫県)"
+* qualification[narcoticPrescriptionLicenseNumber29].identifier.value ^short = "麻薬施用者番号(奈良県)"
+* qualification[narcoticPrescriptionLicenseNumber30].identifier.value ^short = "麻薬施用者番号(和歌山県)"
+* qualification[narcoticPrescriptionLicenseNumber31].identifier.value ^short = "麻薬施用者番号(鳥取県)"
+* qualification[narcoticPrescriptionLicenseNumber32].identifier.value ^short = "麻薬施用者番号(島根県)"
+* qualification[narcoticPrescriptionLicenseNumber33].identifier.value ^short = "麻薬施用者番号(岡山県)"
+* qualification[narcoticPrescriptionLicenseNumber34].identifier.value ^short = "麻薬施用者番号(広島県)"
+* qualification[narcoticPrescriptionLicenseNumber35].identifier.value ^short = "麻薬施用者番号(山口県)"
+* qualification[narcoticPrescriptionLicenseNumber36].identifier.value ^short = "麻薬施用者番号(徳島県)"
+* qualification[narcoticPrescriptionLicenseNumber37].identifier.value ^short = "麻薬施用者番号(香川県)"
+* qualification[narcoticPrescriptionLicenseNumber38].identifier.value ^short = "麻薬施用者番号(愛媛県)"
+* qualification[narcoticPrescriptionLicenseNumber39].identifier.value ^short = "麻薬施用者番号(高知県)"
+* qualification[narcoticPrescriptionLicenseNumber40].identifier.value ^short = "麻薬施用者番号(福岡県)"
+* qualification[narcoticPrescriptionLicenseNumber41].identifier.value ^short = "麻薬施用者番号(佐賀県)"
+* qualification[narcoticPrescriptionLicenseNumber42].identifier.value ^short = "麻薬施用者番号(長崎県)"
+* qualification[narcoticPrescriptionLicenseNumber43].identifier.value ^short = "麻薬施用者番号(熊本県)"
+* qualification[narcoticPrescriptionLicenseNumber44].identifier.value ^short = "麻薬施用者番号(大分県)"
+* qualification[narcoticPrescriptionLicenseNumber45].identifier.value ^short = "麻薬施用者番号(宮崎県)"
+* qualification[narcoticPrescriptionLicenseNumber46].identifier.value ^short = "麻薬施用者番号(鹿児島県)"
+* qualification[narcoticPrescriptionLicenseNumber47].identifier.value ^short = "麻薬施用者番号(沖縄県)"
+
+
+* qualification[narcoticPrescriptionLicenseNumber01].identifier.value ^comment = "麻薬施用者番号(北海道)"
+* qualification[narcoticPrescriptionLicenseNumber02].identifier.value ^comment = "麻薬施用者番号(青森県)"
+* qualification[narcoticPrescriptionLicenseNumber03].identifier.value ^comment = "麻薬施用者番号(岩手県)"
+* qualification[narcoticPrescriptionLicenseNumber04].identifier.value ^comment = "麻薬施用者番号(宮城県)"
+* qualification[narcoticPrescriptionLicenseNumber05].identifier.value ^comment = "麻薬施用者番号(秋田県)"
+* qualification[narcoticPrescriptionLicenseNumber06].identifier.value ^comment = "麻薬施用者番号(山形県)"
+* qualification[narcoticPrescriptionLicenseNumber07].identifier.value ^comment = "麻薬施用者番号(福島県)"
+* qualification[narcoticPrescriptionLicenseNumber08].identifier.value ^comment = "麻薬施用者番号(茨城県)"
+* qualification[narcoticPrescriptionLicenseNumber09].identifier.value ^comment = "麻薬施用者番号(栃木県)"
+* qualification[narcoticPrescriptionLicenseNumber10].identifier.value ^comment = "麻薬施用者番号(群馬県)"
+* qualification[narcoticPrescriptionLicenseNumber11].identifier.value ^comment = "麻薬施用者番号(埼玉県)"
+* qualification[narcoticPrescriptionLicenseNumber12].identifier.value ^comment = "麻薬施用者番号(千葉県)"
+* qualification[narcoticPrescriptionLicenseNumber13].identifier.value ^comment = "麻薬施用者番号(東京都)"
+* qualification[narcoticPrescriptionLicenseNumber14].identifier.value ^comment = "麻薬施用者番号(神奈川)"
+* qualification[narcoticPrescriptionLicenseNumber15].identifier.value ^comment = "麻薬施用者番号(新潟県)"
+* qualification[narcoticPrescriptionLicenseNumber16].identifier.value ^comment = "麻薬施用者番号(富山県)"
+* qualification[narcoticPrescriptionLicenseNumber17].identifier.value ^comment = "麻薬施用者番号(石川県)"
+* qualification[narcoticPrescriptionLicenseNumber18].identifier.value ^comment = "麻薬施用者番号(福井県)"
+* qualification[narcoticPrescriptionLicenseNumber19].identifier.value ^comment = "麻薬施用者番号(山梨県)"
+* qualification[narcoticPrescriptionLicenseNumber20].identifier.value ^comment = "麻薬施用者番号(長野県)"
+* qualification[narcoticPrescriptionLicenseNumber21].identifier.value ^comment = "麻薬施用者番号(岐阜県)"
+* qualification[narcoticPrescriptionLicenseNumber22].identifier.value ^comment = "麻薬施用者番号(静岡県)"
+* qualification[narcoticPrescriptionLicenseNumber23].identifier.value ^comment = "麻薬施用者番号(愛知県)"
+* qualification[narcoticPrescriptionLicenseNumber24].identifier.value ^comment = "麻薬施用者番号(三重県)"
+* qualification[narcoticPrescriptionLicenseNumber25].identifier.value ^comment = "麻薬施用者番号(滋賀県)"
+* qualification[narcoticPrescriptionLicenseNumber26].identifier.value ^comment = "麻薬施用者番号(京都府)"
+* qualification[narcoticPrescriptionLicenseNumber27].identifier.value ^comment = "麻薬施用者番号(大阪府)"
+* qualification[narcoticPrescriptionLicenseNumber28].identifier.value ^comment = "麻薬施用者番号(兵庫県)"
+* qualification[narcoticPrescriptionLicenseNumber29].identifier.value ^comment = "麻薬施用者番号(奈良県)"
+* qualification[narcoticPrescriptionLicenseNumber30].identifier.value ^comment = "麻薬施用者番号(和歌山県)"
+* qualification[narcoticPrescriptionLicenseNumber31].identifier.value ^comment = "麻薬施用者番号(鳥取県)"
+* qualification[narcoticPrescriptionLicenseNumber32].identifier.value ^comment = "麻薬施用者番号(島根県)"
+* qualification[narcoticPrescriptionLicenseNumber33].identifier.value ^comment = "麻薬施用者番号(岡山県)"
+* qualification[narcoticPrescriptionLicenseNumber34].identifier.value ^comment = "麻薬施用者番号(広島県)"
+* qualification[narcoticPrescriptionLicenseNumber35].identifier.value ^comment = "麻薬施用者番号(山口県)"
+* qualification[narcoticPrescriptionLicenseNumber36].identifier.value ^comment = "麻薬施用者番号(徳島県)"
+* qualification[narcoticPrescriptionLicenseNumber37].identifier.value ^comment = "麻薬施用者番号(香川県)"
+* qualification[narcoticPrescriptionLicenseNumber38].identifier.value ^comment = "麻薬施用者番号(愛媛県)"
+* qualification[narcoticPrescriptionLicenseNumber39].identifier.value ^comment = "麻薬施用者番号(高知県)"
+* qualification[narcoticPrescriptionLicenseNumber40].identifier.value ^comment = "麻薬施用者番号(福岡県)"
+* qualification[narcoticPrescriptionLicenseNumber41].identifier.value ^comment = "麻薬施用者番号(佐賀県)"
+* qualification[narcoticPrescriptionLicenseNumber42].identifier.value ^comment = "麻薬施用者番号(長崎県)"
+* qualification[narcoticPrescriptionLicenseNumber43].identifier.value ^comment = "麻薬施用者番号(熊本県)"
+* qualification[narcoticPrescriptionLicenseNumber44].identifier.value ^comment = "麻薬施用者番号(大分県)"
+* qualification[narcoticPrescriptionLicenseNumber45].identifier.value ^comment = "麻薬施用者番号(宮崎県)"
+* qualification[narcoticPrescriptionLicenseNumber46].identifier.value ^comment = "麻薬施用者番号(鹿児島県)"
+* qualification[narcoticPrescriptionLicenseNumber47].identifier.value ^comment = "麻薬施用者番号(沖縄県)"
+
+* qualification[narcoticPrescriptionLicenseNumber01].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber02].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber03].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber04].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber05].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber06].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber07].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber08].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber09].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber10].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber11].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber12].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber13].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber14].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber15].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber16].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber17].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber18].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber19].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber20].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber21].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber22].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber23].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber24].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber25].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber26].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber27].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber28].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber29].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber30].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber31].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber32].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber33].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber34].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber35].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber36].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber37].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber38].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber39].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber40].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber41].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber42].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber43].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber44].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber45].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber46].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[narcoticPrescriptionLicenseNumber47].code from $JP_MedicalLicenceCertificate_VS (required)
+
+* qualification[narcoticPrescriptionLicenseNumber01].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber02].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber03].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber04].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber05].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber06].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber07].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber08].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber09].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber10].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber11].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber12].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber13].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber14].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber15].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber16].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber17].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber18].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber19].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber20].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber21].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber22].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber23].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber24].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber25].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber26].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber27].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber28].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber29].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber30].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber31].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber32].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber33].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber34].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber35].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber36].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber37].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber38].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber39].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber40].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber41].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber42].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber43].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber44].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber45].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber46].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber47].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner (exactly)
+
+* qualification[narcoticPrescriptionLicenseNumber01].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber02].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber03].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber04].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber05].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber06].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber07].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber08].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber09].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber10].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber11].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber12].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber13].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber14].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber15].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber16].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber17].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber18].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber19].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber20].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber21].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber22].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber23].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber24].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber25].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber26].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber27].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber28].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber29].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber30].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber31].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber32].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber33].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber34].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber35].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber36].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber37].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber38].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber39].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber40].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber41].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber42].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber43].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber44].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber45].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber46].issuer only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber47].issuer only Reference(JP_Organization)
+
+
+* qualification[narcoticPrescriptionLicenseNumber01].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber02].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber03].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber04].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber05].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber06].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber07].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber08].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber09].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber10].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber11].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber12].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber13].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber14].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber15].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber16].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber17].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber18].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber19].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber20].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber21].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber22].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber23].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber24].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber25].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber26].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber27].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber28].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber29].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber30].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber31].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber32].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber33].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber34].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber35].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber36].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber37].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber38].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber39].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber40].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber41].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber42].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber43].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber44].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber45].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber46].identifier.assigner only Reference(JP_Organization)
+* qualification[narcoticPrescriptionLicenseNumber47].identifier.assigner only Reference(JP_Organization)
+
 * qualification[medicalRegistrationNumber].identifier.system = "urn:oid:1.2.392.100495.20.3.31" (exactly)
+* qualification[medicalRegistrationNumber].identifier.value ^short = "医籍登録番号"
+* qualification[medicalRegistrationNumber].identifier.value ^comment = "医籍登録番号"
+* qualification[medicalRegistrationNumber].code from $JP_MedicalLicenceCertificate_VS (required)
+* qualification[medicalRegistrationNumber].identifier.assigner only Reference(JP_Organization)
+* qualification[medicalRegistrationNumber].issuer only Reference(JP_Organization)
 
 * communication ^short = "A language the practitioner can use in patient communication　医療従事者が患者とのコミュニケーションで使用できる言語。"
 * communication ^definition = "A language the practitioner can use in patient communication.\r\n\r\n医療従事者が患者とのコミュニケーションで使用できる言語。"
 * communication ^comment = "The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.\r\n\r\nこのように正確なケーシングを持つ構造体 aa-BB は、ロケールのために最も広く使われている表記法の一つ。しかし、すべてのシステムがこれをコード化しているわけではなく、代わりにフリーテキストとしている。そのため、データ型としてはコードの代わりに CodeableConcept を使用している。"
-* communication ^requirements = "Knowing which language a practitioner speaks can help in facilitating communication with patients.\r\n\r\n医療従事者がどの言語を話すかを知ることは、患者とのコミュニケーションを円滑にするのに役立る。"
+* communication ^requirements = "Knowing which language a practitioner speaks can help in facilitating communication with patients.\r\n\r\n医療従事者がどの言語を話すかを知ることは、患者とのコミュニケーションを円滑にするのに役立つ。"
