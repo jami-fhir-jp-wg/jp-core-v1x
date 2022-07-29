@@ -6,5 +6,7 @@ Description: "医療関連免許証明に関するコードシステム。（現
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
-* #narcotics-practitioner "Narcotics Practitioner" "麻薬施用者番号"
-* #medical-registration "Medical registration" "医籍登録番号"
+* #narcotics-practitioner "麻薬施用者番号"
+    "各都道府県にて管理される麻薬施用に関する免許番号"
+* #medical-registration "医籍登録番号"
+    "厚労省が発行する医師免許に割り振られる登録番号"
