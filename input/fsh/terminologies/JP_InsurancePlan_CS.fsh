@@ -1,7 +1,7 @@
 CodeSystem: JP_InsurancePlan_CS
 Id: jp-insuranceplan-cs
 Title: "JP Core InsurancePlan CodeSystem"
-Description: "保険種別を表すコード"
+Description: "保険種別を表すコード （現在作成中）"
 * ^url = $JP_InsurancePlan_CS
 * ^status = #draft
 * ^caseSensitive = true
@@ -14,6 +14,7 @@ Description: "保険種別を表すコード"
 * #OE       "自費（保険なし） "
 * #OT       "その他"
 
+* #MI       "医保保険または国民健康保険"
 * #MI-C0    "国民健康保険"
 * #MI-01    "全国健康保険協会管掌健康保険（協会けんぽ）"
 * #MI-02    "船員保険"
@@ -32,6 +33,7 @@ Description: "保険種別を表すコード"
 * #MI-73    "地方公務員等特定共済組合"
 * #MI-74    "警察特定共済組合"
 
+* #PE       "地方公費または公費保険"
 * #PE-D0    "地方公費"
 * #PE-10    "感染症予防・医療（結核患者の適正医療）"
 * #PE-11    "感染症予防・医療（結核入院）"

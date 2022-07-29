@@ -12,4 +12,4 @@ Usage: #example
 * extension[=].valueString = "01"
 * payor = Reference(jp-organization-example-payer)
 * beneficiary = Reference(Patient/jp-patient-example-1)
-* type = http://terminology.hl7.org/CodeSystem/v3-ActCode#PUBLICPOL
+* type = $JP_InsurancePlan_CS#MI-C0

@@ -97,6 +97,7 @@
 [JP_Patient_KanaSort_SP]: SearchParameter-jp-patient-kanasort-sp.html
 
 <!-- CodeSystem -->
+[JP_InsurancePlan_CS]: CodeSystem-jp-insuranceplan-cs.html
 [JP_JFAGY_CS]: CodeSystem-jp-jfagy-cs.html
 [JP_PhysicalExamCodes_CS]: CodeSystem-jp-physicalexamcodes-cs.html
 [JP_ProcedureBodySite_CS]: CodeSystem-jp-procedure-body-site-cs.html
@@ -117,6 +118,7 @@
 [JP_AllergyIntoleranceCodesFood_VS]: ValueSet-jp-allergyintolerance-codes-food-vs.html
 [JP_AllergyIntoleranceCodesMedicine_VS]: ValueSet-jp-allergyintolerance-codes-medicine-vs.html
 [JP_AllergyIntoleranceCodesNonFoodNonMedicine_VS]: ValueSet-jp-allergyintolerance-codes-non-food-non-medicine-vs.html
+[JP_InsurancePlan_VS]: ValueSet-jp-insuranceplan-vs.html
 [JP_PhysicalExamCodes_VS]: ValueSet-jp-physicalexamcodes-vs.html
 [JP_ProcedureBodySite_VS]: ValueSet-jp-procedure-body-site-vs.html
 [JP_ProcedureCodesMedical_VS]: ValueSet-jp-procedure-code-medical-vs.html
