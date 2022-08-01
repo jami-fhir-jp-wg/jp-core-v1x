@@ -1,8 +1,8 @@
-CodeSystem: JP_JFAGY_CS
-Id: jp-jfagy-cs
-Title: "JP Core JFAGY (AllergyIntolerance Code System)"
-Description: "Japanese Food Allergy Code System"
-* ^url = $JP_JFAGY_CS
+CodeSystem: JP_JfagyFoodAllergenCodes_CS
+Id: jp-jfagy-food-allergen-codes-cs
+Title: "JFAGY Food Allergen Codes CodeSystem"
+Description: "JFAGY アレルゲンコード（食品）"
+* ^url = $JP_JfagyFoodAllergenCodes_CS
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
