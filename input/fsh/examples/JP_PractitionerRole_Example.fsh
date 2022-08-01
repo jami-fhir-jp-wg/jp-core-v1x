@@ -1,6 +1,6 @@
-Instance:  jp-procedurerole-example-1
+Instance:  jp-practitionerrole-example-1
 InstanceOf: JP_PractitionerRole
-Title:   "JP Core ProcedureRole 診察"
+Title:   "JP Core ProcedureRole 精神科外来サービス担当"
 Description: "JP_ProcedureRole "
 Usage:  #example
 * contained[0] = jp-healthcareservice-example-1
@@ -35,18 +35,17 @@ Usage:  #example
 * availabilityExceptions = "祝祭日やクリスマス・年末年始の休暇中は、大阪 一郎は休日です。"
 
 
-
 Instance: jp-healthcareservice-example-1
 InstanceOf: HealthcareService
+Title:   "HealthcareService 精神科外来サービス"
 Usage: #inline
 * identifier.system = "http://example.org/shared-ids"
 * identifier.value = "HS-12"
 * active = true
 * providedBy = Reference(Organization/jp-organization-example-hospital) "健康第一病院"
-* category = http://terminology.hl7.org/CodeSystem/service-category#8 "Counselling"
-* category.text = "Counselling"
-* type[0] = http://terminology.hl7.org/CodeSystem/service-type#Psychiatric "Psychiatric"
-* type[+] = http://terminology.hl7.org/CodeSystem/service-type##Psychology "Psychology"
+* category = http://terminology.hl7.org/3.1.0/CodeSystem/service-category#8
+* type[0] = http://terminology.hl7.org/3.1.0/CodeSystem/service-type#147
+* type[+] = http://terminology.hl7.org/3.1.0/CodeSystem/service-type#142
 // * specialty = http://xxxx/yyyy/zzzz "Posttraumatic stress disorder"
 * location = Reference(Location/jp-location-example-examinationroom)
 * name = "PTSDに関する精神科もしくは診療内科のサービス"
@@ -56,10 +55,10 @@ Usage: #inline
 * eligibility.comment = "精神科もしくは心療内科の専門医を資格を有します。"
 * program.text = "PTSD回復プログラム"
 * characteristic.coding.display = "車いすでのアクセス"
-* referralMethod[0] = #phone "Phone"
-* referralMethod[+] = #fax "Fax"
-* referralMethod[+] = #elec "Secure Messaging"
-* referralMethod[+] = #semail "Secure Email"
+* referralMethod[0] = http://terminology.hl7.org/CodeSystem/service-referral-method#phone
+* referralMethod[+] = http://terminology.hl7.org/CodeSystem/service-referral-method#fax
+* referralMethod[+] = http://terminology.hl7.org/CodeSystem/service-referral-method#elec
+* referralMethod[+] = http://terminology.hl7.org/CodeSystem/service-referral-method#semail
 * appointmentRequired = false
 * availableTime[0].daysOfWeek = #wed
 * availableTime[=].allDay = true
