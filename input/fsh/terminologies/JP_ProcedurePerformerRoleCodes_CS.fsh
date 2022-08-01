@@ -1,7 +1,7 @@
 CodeSystem: JP_ProcedurePerformerRoleCodes_CS
 Id: jp-procedure-performer-role-codes-cs
 Title: "JP Core Procedure Performer Role Codes"
-Description: "This code system defines the set of codes that can be used to indicate a role of a procedure performer."
+Description: "処置を実施した者の役割（ロール）を示すコード."
 * ^url = $JP_ProcedurePerformerRoleCodes_CS
 * ^status = #draft
 * ^caseSensitive = true
