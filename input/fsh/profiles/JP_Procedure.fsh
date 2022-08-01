@@ -131,6 +131,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * code.coding ^slicing.discriminator[=].path = "system"
 * code.coding ^slicing.rules = #open
 * code.coding contains medical ..1
+// TODO: requiredをpreferredに変更するか要検討
 * code.coding[medical] from JP_ProcedureCodesMedical_VS (required)
 * code.coding[medical].system = $JP_ProcedureCodesMedical_CS (exactly)
 * code.coding contains stem7 ..1
