@@ -114,7 +114,9 @@
 [JP_ProcedureReasonCodes_CS]: CodeSystem-jp-procedure-reason-codes-cs.html
 
 <!-- ValueSet -->
-[JP_AllergyIntoleranceCodes_VS]: ValueSet-jp-allergyintolerance-codes-vs.html
+[JP_AllergyIntoleranceCodesFood_VS]: ValueSet-jp-allergyintolerance-codes-food-vs.html
+[JP_AllergyIntoleranceCodesMedicine_VS]: ValueSet-jp-allergyintolerance-codes-medicine-vs.html
+[JP_AllergyIntoleranceCodesNonFoodNonMedicine_VS]: ValueSet-jp-allergyintolerance-codes-non-food-non-medicine-vs.html
 [JP_PhysicalExamCodes_VS]: ValueSet-jp-physicalexamcodes-vs.html
 [JP_ProcedureBodySite_VS]: ValueSet-jp-procedure-body-site-vs.html
 [JP_ProcedureCodesMedical_VS]: ValueSet-jp-procedure-code-medical-vs.html
@@ -129,3 +131,39 @@
 [JP_ProcedureNotPerformedReason_VS]: ValueSet-jp-procedure-not-performed-reason-vs.html
 [JP_ProcedurePerformerRoleCodes_VS]: ValueSet-jp-procedure-performer-role-codes-vs.html
 [JP_ProcedureReasonCodes_VS]: ValueSet-jp-procedure-reason-codes-vs.html
+
+<!-- Example -->
+[jp-condition-example-1]: Condition-jp-condition-example-1.html
+[jp-coverage-example-1]: Coverage-jp-coverage-example-1.html
+[jp-diagnosticreport-radiology-example-1]: DiagnosticReport-jp-diagnosticreport-radiology-example-1.html
+[jp-encounter-example1]: Encounter-jp-encounter-example1.html
+[jp-immunization-example-1]: Immunization-jp-immunization-example-1.html
+[jp-location-example-examinationroom]: Location-jp-location-example-examinationroom.html
+[jp-location-example-ope]: Location-jp-location-example-ope.html
+[jp-location-example-ward]: Location-jp-location-example-ward.html
+[jp-medication-example-1]: Medication-jp-medication-example-1.html
+[jp-medication-example-2]: Medication-jp-medication-example-2.html
+[jp-medicationadministration-example-1]: MedicationAdministration-jp-medicationadministration-example-1.html
+[jp-medicationadministration-example-2]: MedicationAdministration-jp-medicationadministration-example-2.html
+[jp-medicationadministration-injection-example-1]: MedicationAdministration-jp-medicationadministration-injection-example-1.html
+[jp-medicationadministration-injection-example-2]: MedicationAdministration-jp-medicationadministration-injection-example-2.html
+[jp-medicationdispense-example-1]: MedicationDispense-jp-medicationdispense-example-1.html
+[jp-medicationdispense-injection-example-1]: MedicationDispense-jp-medicationdispense-injection-example-1.html
+[jp-medicationrequest-example-1]: MedicationRequest-jp-medicationrequest-example-1.html
+[jp-medicationrequest-example-2]: MedicationRequest-jp-medicationrequest-example-2.html
+[jp-medicationrequest-injection-example-1]: MedicationRequest-jp-medicationrequest-injection-example-1.html
+[jp-medicationrequest-injection-example-2]: MedicationRequest-jp-medicationrequest-injection-example-2.html
+[bm-12345]: Observation-bm-12345.html
+[jp-observation-labresult-example-1]: Observation-jp-observation-labresult-example-1.html
+[jp-observation-socialhistory-example-1]: Observation-jp-observation-socialhistory-example-1.html
+[jp-observation-vitalsigns-example-1]: Observation-jp-observation-vitalsigns-example-1.html
+[jp-organization-example-clinic]: Organization-jp-organization-example-clinic.html
+[jp-organization-example-hospital]: Organization-jp-organization-example-hospital.html
+[jp-organization-example-payer]: Organization-jp-organization-example-payer.html
+[jp-patient-example-1]: Patient-jp-patient-example-1.html
+[jp-practionner-example-female-1]: Practitioner-jp-practionner-example-female-1.html
+[jp-practionner-example-female-2]: Practitioner-jp-practionner-example-female-2.html
+[jp-practionner-example-male-1]: Practitioner-jp-practionner-example-male-1.html
+[jp-practionner-example-male-2]: Practitioner-jp-practionner-example-male-2.html
+[jp-procedurerole-example-1]: PractitionerRole-jp-procedurerole-example-1.html
+[jp-procedure-example-1]: Procedure-jp-procedure-example-1.html

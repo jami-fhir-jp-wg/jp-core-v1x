@@ -57,6 +57,41 @@ def putAlias(name, uri, fw)
   fw.puts format("[%<name>s]: %<url>s", name: name, url: uri)
 end
 
+#--- Exampleファイルであるかどうか ---
+def IsExample(resourceType)
+    case resourceType
+    when 'CapabilityStatement' then
+      return false
+    when 'CodeSystem' then
+      return false
+    when 'ImplementationGuide' then
+      return false
+    when 'SearchParameter' then
+      return false
+    when 'StructureDefinition' then
+      return false
+    when 'ValueSet' then
+      return false
+    else
+      return true
+    end
+end
+
+#--- 種別指定書き込み処理 ---
+def putExampleMarkdownLink(fw)
+  fw.puts "\n<!-- Example -->"
+  files = Dir.glob("*.json").sort
+  for fl in files
+    File.open(fl) do |f|
+      hash = JSON.load(f)
+      if (!IsExample(hash["resourceType"])) then
+        break
+      end
+      putAlias(hash["id"].to_s, fl.gsub(/.json/, '.html'), fw)
+    end
+  end
+end
+
 #--- 種別指定書き込み処理 ---
 def putMarkdownLink(prefix, fw, extension = false)
   putMarkdownComment(prefix, fw, extension)
@@ -86,5 +121,6 @@ File.open(linkpage,"w") do |fw|
   putMarkdownLink("SearchParameter", fw)
   putMarkdownLink("CodeSystem", fw)
   putMarkdownLink("ValueSet", fw)
+  putExampleMarkdownLink(fw)
 
 end 
