@@ -101,9 +101,7 @@ Alias: $JP_ProcedurePerformerRoleCodes_CS = http://jpfhir.jp/fhir/Common/CodeSys
 Alias: $JP_ProcedureReasonCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureReasonCodes_CS
 
 // ValueSet
-Alias: $JP_AllergyIntoleranceCodesFood_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodesFood_VS
-Alias: $JP_AllergyIntoleranceCodesMedicine_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodesMedicine_VS
-Alias: $JP_AllergyIntoleranceCodesNonFoodNonMedicine_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodesNonFoodNonMedicine_VS
+Alias: $JP_AllergyIntoleranceCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodes_VS
 Alias: $JP_PhysicalExamCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_PhysicalExamCodes_VS
 Alias: $JP_ProcedureBodySite_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureBodySite_VS
 Alias: $JP_ProcedureCodesMedical_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodesMedical_VS
