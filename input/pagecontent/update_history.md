@@ -45,8 +45,8 @@ v1.0 → v1.1に変更するあたり、開発環境(simplefier→ Sushi & IG Pu
 
 * Search Parameter
     * [Search Parameter Registry](http://hl7.org/fhir/R4/searchparameter-registry.html)に記載されているSeach ParameterはJP Coreでは新たに定義する必用ないと判断し削除した。
-    * Coverageの被保険証関連Extension([JP_Coverage_InsuredPersonNumber], [JP_Coverage_InsuredPersonSubNumber], [JP_Coverage_InsuredPersonSymbolExtension])に対する検索パラメータを追加した
-    * Organizationの施設関連Extension([JP_Organization_InsuranceOrganizationCategory], [JP_Organization_InsuranceOrganizationNo], [JP_Organization_PrefectureNo])に対する検索パラメータの追加した。
+    * Coverageの被保険証関連Extension( [JP_Coverage_InsuredPersonNumber], [JP_Coverage_InsuredPersonSubNumber], [JP_Coverage_InsuredPersonSymbol] )に対する検索パラメータを追加した
+    * Organizationの施設関連Extension( [JP_Organization_InsuranceOrganizationCategory], [JP_Organization_InsuranceOrganizationNo], [JP_Organization_PrefectureNo] )に対する検索パラメータの追加した。
     * Patientのカナソート用の検索パラメータを追加した。
 
 * Terminology
@@ -58,3 +58,6 @@ v1.0 → v1.1に変更するあたり、開発環境(simplefier→ Sushi & IG Pu
 ### ver1.0
 
 * 新規作成
+
+
+{% include markdown-link-references.md %}
