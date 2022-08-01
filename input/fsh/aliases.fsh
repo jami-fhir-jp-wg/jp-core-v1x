@@ -20,5 +20,8 @@ Alias: $socialHistory-code = http://jpfhir.jp/fhir/Common/ValueSet/socialHistory
 Alias: $vitalSigns-category = http://jpfhir.jp/fhir/Common/ValueSet/vitalSigns-category
 Alias: $vitalSigns-code = http://jpfhir.jp/fhir/Common/ValueSet/vitalSigns-code
 
+//jpfhir-idSystem
+Alias: $insured-identifier = http://jpfhir.jp/fhir/Common/IdSystem/insured-identifier
+
 // JPCor定義はaliases-jpcore.fshに記載すること
 

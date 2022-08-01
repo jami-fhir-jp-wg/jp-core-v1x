@@ -9,8 +9,8 @@ Usage: #definition
 * code = #jp-insured-personnumber
 * base = #Coverage
 * type = #string
-* expression = "Coverage.extension.where(url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber').value.as(string)"
-* xpath = "f:Coverage/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber']/f:valueString"
+* expression = "Coverage.identifier.extension.where(url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber').value.as(string)"
+* xpath = "f:Coverage/f:identifier/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber']/f:valueString"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
@@ -30,8 +30,8 @@ Usage: #definition
 * code = #jp-insured-personsubnumber
 * base = #Coverage
 * type = #string
-* expression = "Coverage.extension.where(url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber').value.as(string)"
-* xpath = "f:Coverage/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber']/f:valueString"
+* expression = "Coverage.identifier.extension.where(url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber').value.as(string)"
+* xpath = "f:Coverage/f:identifier/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber']/f:valueString"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
@@ -52,8 +52,8 @@ Usage: #definition
 * code = #jp-insured-personsymbol
 * base = #Coverage
 * type = #string
-* expression = "Coverage.extension.where(url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol').value.as(string)"
-* xpath = "f:Coverage/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol']/f:valueString"
+* expression = "Coverage.identifier.extension.where(url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol').value.as(string)"
+* xpath = "f:Coverage/f:identifier/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol']/f:valueString"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
