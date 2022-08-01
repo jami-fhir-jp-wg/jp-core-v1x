@@ -28,6 +28,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * status ^comment = "The \"unknown\" code is not to be used to convey other statuses.  The \"unknown\" code should be used when one of the statuses applies, but the authoring system doesn't know the current state of the procedure.\n\nThis element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.\r\n\r\n「不明な」コードは、他のステータスを伝えるために使用されるべきではない。ステータスの1つが当てはまる場合、「不明」コードを使用する必要があるが、オーサリングシステムはプロシージャの現在の状態を認識していない。\r\nステータスにリソースを現在無効としてマークするコードが含まれているため、この要素は修飾子としてラベル付けされる。"
 * statusReason ^definition = "プロシージャの現在の状態の理由を設定する。"
 * statusReason ^comment = "This is generally only used for \"exception\" statuses such as \"not-done\", \"suspended\" or \"aborted\". The reason for performing the event at all is captured in reasonCode, not here.\r\n\r\nこれは通常、「未完了」、「一時停止」、「中止」などの「例外」ステータスにのみ使用される。イベントを実行する理由は、ここではなく、reasonCodeに設定する。"
+// TODO: 基底にしては制限が強すぎないか要検討
 * category 1..
 * category ^definition = "検索、ソート、表示のためにProcedureを分類したコード（例：「外科的Procedure」）。"
 * category ^comment = "すべての用語の使用がこの一般的なパターンに当てはまるわけではない。場合によっては、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係や事前・事後の調整を管理するための独自の構造を提供する必要がある。 \r\n【JPーCORE】JP_Conditionに合わせて必須。"
@@ -38,6 +39,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * category.text ^definition = "A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user.\r\n\r\nデータを入力したユーザーによって見られた/選択された/発声された、および/またはユーザーの意図された意味を表す概念の人間の言語表現。"
 * category.text ^comment = "Very often the text is the same as a displayName of one of the codings.\r\n多くの場合、テキストはいずれかのコーディングのdisplayNameと同じである。"
 * category.text ^requirements = "The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source.\r\n用語のコードは、それらを使用する人間のすべてのニュアンスで常に正しい意味を捉えているとは限らない。または、適切なコードがまったくない場合もある。このような場合、テキストはソースの完全な意味をキャプチャするために使用される。"
+// TODO: 基底にしては制限が強すぎないか要検討
 * code 1..
 * code ^short = "Identification of the procedure　プロシジャーの識別子"
 * code ^definition = "行われた具体的な手順。手技の正確な性質がコード化できない場合はテキストを使用する（例：「腹腔鏡下虫垂切除術」）"
