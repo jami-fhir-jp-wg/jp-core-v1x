@@ -15,4 +15,4 @@ Usage: #example
 * valueQuantity.unit = "kg"
 * valueQuantity.value = 63.5
 * status = #final
-* encounter = Reference(Encounter/jp-encounter-example1)
+* encounter = Reference(Encounter/jp-encounter-example-1)

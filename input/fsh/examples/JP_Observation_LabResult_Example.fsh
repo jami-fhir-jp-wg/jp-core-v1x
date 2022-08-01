@@ -37,7 +37,7 @@ Usage: #inline
 * code = http://abc-hospital.local/fhir/ObservationOrder/localcode#12345678
 * code.text = "尿検査"
 * subject = Reference(Patient/jp-patient-example-1)
-* encounter = Reference(Encounter/jp-encounter-example1)
+* encounter = Reference(Encounter/jp-encounter-example-1)
 * occurrenceDateTime = "2021-10-10T17:39:00+09:00"
 * requester = Reference(Practitioner/jp-practionner-example-female-1)
 * performer = Reference(Practitioner/jp-practionner-example-male-2)

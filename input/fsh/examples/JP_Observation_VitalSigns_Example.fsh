@@ -20,4 +20,4 @@ Usage: #example
 * valueQuantity.value = 400
 * performer = Reference(jp-practionner-example-male-2)
 * status = #final
-* encounter = Reference(Encounter/jp-encounter-example1)
+* encounter = Reference(Encounter/jp-encounter-example-1)
