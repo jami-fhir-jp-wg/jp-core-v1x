@@ -23,6 +23,7 @@ Description: "本プロファイルはConditionリソースに対して、患者
 * severity ^short = "Subjective severity of condition　状態の主観的な重症度"
 * severity ^definition = "A subjective assessment of the severity of the condition as evaluated by the clinician.\r\n\r\n医師によって評価された本状態の主観的な重症度。"
 * severity ^comment = "Coding of the severity with a terminology is preferred, where possible.\r\n可能な限り、ターミノロジーを用いて重症度をコーディングすること。\r\n\r\n【JP-CORE】\r\ncodeとしてhttp://snomed.info/sctに定義された下記が用いられる。\r\ncode:24484000 Display:Severe\r\ncode:6736007 Display:Moderate\r\ncode:255604002 Display:Mild"
+// TODO: 基底にしては制限が強すぎないか要検討
 * code 1..
 * code ^short = "Identification of the condition, problem or diagnosis　状態、問題、診断の識別情報"
 * code ^definition = "Identification of the condition, problem or diagnosis.\r\n本状態の種類を表すコード。"

@@ -1,6 +1,7 @@
 このドキュメントは日本医療情報学会NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した実装ガイドのドラフトVer.1.1である。このバージョンは日本HL7協会による承認を受けていない。今後、予告なく内容に変更がある。また実装や利用は全て自己責任で行なうこと。 <br/>
 **このページの実装ガイドは常に修正、追加がある改訂版開発用ページである。**
 
+
 ### 概要
 ガイダンス: JP Coreでの全体に関わる規則や注意事項を記載している。
 * [総合ガイダンス](guide-general.html)
@@ -20,7 +21,7 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
   * [JP Core Location （所在場所）プロファイル][JP_Location]
   * [JP Core Organization （組織）プロファイル][JP_Organization]
   * [JP Core Practitioner （医療従事者）プロファイル][JP_Practitioner]
-  * [JP Core PractitionerRole （医療従事者役割)プロファイル][JP_PractitionerRole]
+  * [JP Core PractitionerRole （医療従事者役割）プロファイル][JP_PractitionerRole]
 * [Medicationグループ （薬剤リスト）](group-medication.html)
   * [JP Core Medication （薬剤）プロファイル][JP_Medication]
   * [JP Core MedicationRequest （内服・外用薬剤処方）プロファイル][JP_MedicationRequest]
@@ -78,6 +79,9 @@ JP Coreを参考に定義したCapabiltyStetamentの一例。
 ### Security （セキュリティ）
 JP Core利用にあたり、考慮すべきセキュリティに関する要件を記載する。
  - [Security （セキュリティ）](security.html)
+
+### 変更履歴
+- [変更履歴](update_history.html)
 
 ---
 ### Contributers：

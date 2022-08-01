@@ -11,7 +11,7 @@
 
 
 #### MustSupport
-このプロファイルではMustSupportMustSupportを定めていない。
+このプロファイルではMustSupportを定めていない。
 
 
 ### Extensions定義
