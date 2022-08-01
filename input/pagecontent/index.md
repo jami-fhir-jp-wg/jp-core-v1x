@@ -1,5 +1,6 @@
 このドキュメントは日本医療情報学会NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した実装ガイドのドラフトVer.1.1である。このバージョンは日本HL7協会による承認を受けていない。今後、予告なく内容に変更がある。また実装や利用は全て自己責任で行なうこと。 <br/>
 
+
 ### 概要
 ガイダンス: JP Coreでの全体に関わる規則や注意事項を記載している。
 * [総合ガイダンス](guide-general.html)
@@ -76,6 +77,9 @@ JP Coreを参考に定義したCapabiltyStetamentの一例。
 ### Security （セキュリティ）
 JP Core利用にあたり、考慮すべきセキュリティに関する要件を記載する。
  - [Security （セキュリティ）](security.html)
+
+### 変更履歴
+- [変更履歴](update_history.html)
 
 ---
 ### Contributers：
