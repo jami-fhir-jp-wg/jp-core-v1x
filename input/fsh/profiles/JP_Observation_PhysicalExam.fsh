@@ -6,7 +6,6 @@ Parent: JP_Observation_Common
 Id: jp-observation-physicalexam
 Title: "JP Core Observation PhysicalExam Profile"
 Description: "このプロファイルはObservationリソースに対して、身体所見のデータを送受信するための制約と拡張を定めたものである。"
-* bodySite.extension contains JP_Observation_BodySite_BodySitePosition named bodySitePosition ..*
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_PhysicalExam"
 * ^status = #draft
 * . ^short = "身体所見に関する測定や簡単な観察事実（assertion）"
@@ -30,12 +29,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * value[x] ^comment = "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.\r\n\r\n【JP仕様】<br/>\r\nコードに限定する"
 * value[x] ^binding.description = "Codes specifying either Yes or No used in fields containing binary answers generally user-specified."
 * bodySite from $observation-bodySite (preferred)
-* bodySite ^comment = "Only used if not implicit in code found in Observation.code.  In many systems, this may be represented as a related observation instead of an inline component.   \n\nIf the use case requires BodySite to be handled as a separate resource (e.g. to identify and track separately) then use the standard extension[ bodySite](extension-bodysite.html).\r\n\r\n【JP仕様】<br/>\r\n外保連の手術基幹コード（STEM7）の操作対象部位を基にバリューセットを定義する<br/>\r\n左右の区別は拡張で表現する<br/>\r\n具体的なコードについてはSWG6と連携して決定する必要がある（TBD）"
-* bodySite.extension ^slicing.discriminator.type = #value
-* bodySite.extension ^slicing.discriminator.path = "url"
-* bodySite.extension ^slicing.rules = #open
-* bodySite.extension[bodySitePosition] only JP_Observation_BodySite_BodySitePosition
-* bodySite.extension[bodySitePosition] ^comment = "左右の区別を表現する際に使用する"
+* bodySite ^comment = "ICD-11"
 * method from $observation-method (preferred)
 * method ^comment = "Only used if not implicit in code for Observation.code.\r\n\r\n【JP仕様】<br/>\r\n症状・所見マスターの「診察方法」を基にバリューセットを定義する<br/>\r\n具体的なコードについてはSWG6と連携して決定する必要がある（TBD）"
 * hasMember only Reference(JP_Observation_Common or QuestionnaireResponse or MolecularSequence or JP_Observation_PhysicalExam)

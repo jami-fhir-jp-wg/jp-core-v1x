@@ -64,7 +64,6 @@ Alias: $JP_MedicationRequest_DosageInstruction_Device = http://jpfhir.jp/fhir/co
 Alias: $JP_MedicationRequest_DosageInstruction_Line = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line
 Alias: $JP_MedicationRequest_DosageInstruction_PeriodOfUse = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse
 Alias: $JP_MedicationRequest_DosageInstruction_UsageDuration = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration
-Alias: $JP_Observation_BodySite_BodySitePosition = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_BodySite_BodySitePosition
 Alias: $JP_Organization_InsuranceOrganizationCategory = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory
 Alias: $JP_Organization_InsuranceOrganizationNo = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo
 Alias: $JP_Organization_PrefectureNo = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo

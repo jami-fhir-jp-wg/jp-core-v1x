@@ -77,7 +77,6 @@
 [JP_MedicationRequest_DosageInstruction_Line]: StructureDefinition-jp-medicationrequest-dosageinstruction-line.html
 [JP_MedicationRequest_DosageInstruction_PeriodOfUse]: StructureDefinition-jp-medicationrequest-dosageinstruction-periodofuse.html
 [JP_MedicationRequest_DosageInstruction_UsageDuration]: StructureDefinition-jp-medicationrequest-dosageinstruction-usageduration.html
-[JP_Observation_BodySite_BodySitePosition]: StructureDefinition-jp-observation-bodysite-bodysiteposition.html
 [JP_Organization_InsuranceOrganizationCategory]: StructureDefinition-jp-organization-insuranceorganizationcategory.html
 [JP_Organization_InsuranceOrganizationNo]: StructureDefinition-jp-organization-insuranceorganizationno.html
 [JP_Organization_PrefectureNo]: StructureDefinition-jp-organization-prefectureno.html
