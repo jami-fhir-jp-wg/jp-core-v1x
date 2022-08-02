@@ -9,6 +9,7 @@
 * [欠損値の扱い](guide-handlingOfNonExistentData.html)
 * [文字コード](guide-characterEncoding.html)
 * [検索](guide-stringSearch.html)
+* [変更履歴](update_history.html)
 
 ### JP Core FHIRコンテンツ
 JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記載をしている。
@@ -80,8 +81,6 @@ JP Coreを参考に定義したCapabiltyStetamentの一例。
 JP Core利用にあたり、考慮すべきセキュリティに関する要件を記載する。
  - [Security （セキュリティ）](security.html)
 
-### 変更履歴
-- [変更履歴](update_history.html)
 
 ---
 ### Contributers：
