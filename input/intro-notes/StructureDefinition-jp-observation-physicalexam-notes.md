@@ -16,10 +16,7 @@
 このプロファイルでは MustSupport要素定義は行っていない。
 
 ### Extensions定義
-本プロファイルで使用される拡張は次の通りである。
-
-- [`JPCoreBodySitePositionExtension`][JP_Observation_BodySite_BodySitePosition]
-  - 部位（bodySite）の左右の区別を表現する際に使用する。
+このプロファイルでは拡張定義は行っていない。
 
 ## 利用方法
 
@@ -88,12 +85,6 @@ Observationリソースのインタラクション一覧の定義はユースケ
     ]
   },
   "bodySite": {
-    "extension": [
-      {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_BodySite_BodySitePosition",
-        "valueString": "右"
-      }
-    ],
     "coding": [
       {
         "system": "http://jpfhir.jp/fhir/Common/CodeSystem/observation-bodySite",
