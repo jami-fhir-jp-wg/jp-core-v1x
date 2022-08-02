@@ -6,5 +6,5 @@ Description: "JFAGY アレルゲンコード（医薬品）"
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
-// TODO:JFAGYよりのコードと用語を追加
+// TODO:最新版JFAGYよりのコードと用語を追加
 * #YCM000000000 "YJコード医薬品"
