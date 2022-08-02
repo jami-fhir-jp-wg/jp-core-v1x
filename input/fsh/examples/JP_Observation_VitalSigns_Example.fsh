@@ -1,7 +1,7 @@
 Instance: jp-observation-vitalsigns-example-1
 InstanceOf: JP_Observation_VitalSigns
-Title: "JP Core Observation VitalSigns Basic Example"
-Description: "JP_ObservationVitalSignsリソースの1例"
+Title: "JP Core Observation VitalSigns Basic バイタル（呼吸数）"
+Description: "バイタル（呼吸数）"
 Usage: #example
 * category.coding.code = #呼吸機能
 //TODO CategoryのCodeSystem定義されていない

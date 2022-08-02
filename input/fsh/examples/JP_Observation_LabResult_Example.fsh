@@ -1,7 +1,7 @@
 Instance: jp-observation-labresult-example-1
 InstanceOf: JP_Observation_LabResult
-Title: "JP Core Observation LabResult Basic Example"
-Description: "JP_ObservationLabResultリソースの1例"
+Title: "JP Core Observation LabResult Example 検体検査（尿）"
+Description: "検体検査（尿）"
 Usage: #example
 * contained[0] = jp-servicerequest-example-1
 * contained[+] = jp-specimen-example-1
