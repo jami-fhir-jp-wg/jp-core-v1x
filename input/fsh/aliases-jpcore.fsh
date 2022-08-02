@@ -84,8 +84,8 @@ Alias: $JP_Patient_KanaSort_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_P
 
 // CodeSystem
 Alias: $JP_JfagyFoodAllergenCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_JfagyFoodAllergenCodes_CS
-Alias: $JP_JfagyNonFoodNonMedicationAllergenCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_JfagyNonFoodNonMedicationAllergenCodes_CS
 Alias: $JP_JfagyMedicationAllergenCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_JfagyMedicationAllergenCodes_CS
+Alias: $JP_JfagyNonFoodNonMedicationAllergenCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_JfagyNonFoodNonMedicationAllergenCodes_CS
 Alias: $JP_PhysicalExamCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_PhysicalExamCodes_CS
 Alias: $JP_ProcedureBodySite_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureBodySite_CS
 Alias: $JP_ProcedureCodesDental_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesDental_CS
