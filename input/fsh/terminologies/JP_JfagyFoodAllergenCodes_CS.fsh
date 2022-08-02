@@ -6,6 +6,7 @@ Description: "JFAGY アレルゲンコード（食品）"
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
+// TODO:最新版JFAGYよりのコードと用語を追加
 * #J9F000000000 "食品"
 * #J9F690000000 "農産食品"
 * #J9F691000000 "米穀"

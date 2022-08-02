@@ -6,4 +6,5 @@ Description: "JFAGY アレルゲンコード（非食品・非医薬品）"
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
+// TODO:最新版JFAGYよりのコードと用語を追加
 * #J9N000000000 "非食品・非医薬品"
