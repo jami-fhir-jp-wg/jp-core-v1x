@@ -9,13 +9,6 @@
 - `status`︓検査項目情報の状態は必須である。
 - `subject`︓このリソースが示す検査項目が、どの患者のものかを示すため、このプロファイルでは参照する`patient`リソースの定義を必須である。
 
-#### MustSupport
-`ImagingStudy`リソースは、以下をサポートしなければならない。
-
-- 画像データが送信システムに存在する場合には`identifier`, `modality`はサポートされなければならない。
-- 画像データが送信システムにSeriesが存在する場合には, `series.uid`, `series.modality`, `series.instance.uid`, `series.instance.sopClass`はサポートされなければならない。
-- 画像検査を行うためのオーダ情報が送信システムに存在する場合には, `encouter`と`basedOn`はサポートされなければならない。
-
 <br>
 
 ### Extension定義
