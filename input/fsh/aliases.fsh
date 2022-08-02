@@ -12,7 +12,6 @@ Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation
 
 // jpfhir-valueSet
 Alias: $labResult-code = http://jpfhir.jp/fhir/Common/ValueSet/labResult-code
-Alias: $bodyMeasurement-category = http://jpfhir.jp/fhir/Common/ValueSet/bodyMeasurement-category
 Alias: $bodyMeasurement-code = http://jpfhir.jp/fhir/Common/ValueSet/bodyMeasurement-code
 Alias: $observation-bodySite = http://jpfhir.jp/fhir/Common/ValueSet/observation-bodySite
 Alias: $observation-method = http://jpfhir.jp/fhir/Common/ValueSet/observation-method

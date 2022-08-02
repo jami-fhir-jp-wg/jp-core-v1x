@@ -3,7 +3,7 @@ InstanceOf: JP_Observation_SocialHistory
 Title: "JP Core Observatio SocialHistory Basic Example"
 Description: "JP_ObservationSocialHistoryリソースの1例"
 Usage: #example
-* categoy = $observation-category#social-history
+* category = $observation-category#social-history
 * subject = Reference(Patient/jp-patient-example-1)
 * code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#abc-local-456#abc-local-456 "ブリンクマン指数"
 * code.coding[+] = http://jpfhir.jp/Common/CodeSystem/social-history#MD0012920 "喫煙指数"
