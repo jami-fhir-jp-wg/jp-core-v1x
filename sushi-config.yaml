@@ -34,6 +34,8 @@ pages:
       title: 文字コード
     guide-stringSearch.md:
       title: 検索
+    update_history.md:
+      title: 更新履歴
   group-fhircontents.md:
     title: FHIR Contents List
     group-administration.md:
@@ -52,8 +54,6 @@ pages:
     title: セキュリティ
   download.md:
     title: ダウンロード
-  update_history.md:
-    title: 更新履歴
 
 #-----------------------------------------
 # メニュー設定
