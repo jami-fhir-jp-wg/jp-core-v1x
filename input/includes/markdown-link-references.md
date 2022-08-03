@@ -146,6 +146,7 @@
 [jp-diagnosticreport-radiology-example-1]: DiagnosticReport-jp-diagnosticreport-radiology-example-1.html
 [jp-encounter-example-1]: Encounter-jp-encounter-example-1.html
 [jp-immunization-example-1]: Immunization-jp-immunization-example-1.html
+[jp-location-example-examinationroom]: Location-jp-location-example-examinationroom.html
 [jp-location-example-ope]: Location-jp-location-example-ope.html
 [jp-location-example-ward]: Location-jp-location-example-ward.html
 [jp-medication-example-1]: Medication-jp-medication-example-1.html
@@ -165,10 +166,12 @@
 [jp-observation-socialhistory-example-1]: Observation-jp-observation-socialhistory-example-1.html
 [jp-observation-vitalsigns-example-1]: Observation-jp-observation-vitalsigns-example-1.html
 [jp-organization-example-clinic]: Organization-jp-organization-example-clinic.html
+[jp-organization-example-hospital]: Organization-jp-organization-example-hospital.html
 [jp-organization-example-payer]: Organization-jp-organization-example-payer.html
 [jp-patient-example-1]: Patient-jp-patient-example-1.html
 [jp-practionner-example-female-1]: Practitioner-jp-practionner-example-female-1.html
 [jp-practionner-example-female-2]: Practitioner-jp-practionner-example-female-2.html
 [jp-practionner-example-male-1]: Practitioner-jp-practionner-example-male-1.html
 [jp-practionner-example-male-2]: Practitioner-jp-practionner-example-male-2.html
+[jp-practitionerrole-example-1]: PractitionerRole-jp-practitionerrole-example-1.html
 [jp-procedure-example-1]: Procedure-jp-procedure-example-1.html
