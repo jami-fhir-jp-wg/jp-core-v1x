@@ -5,7 +5,7 @@ Profile: JP_AllergyIntolerance
 Parent: AllergyIntolerance
 Id: jp-allergyintolerance
 Title: "JP Core AllergyIntolerance Profile"
-Description: "患者のアレルギー不耐症に関するデータを送受信するための制約と拡張を定めたプロファイル"
+Description: "本プロファイルはAllergyIntoleranceリソースに対して、患者のアレルギー不耐症に関するデータを送受信するための制約と拡張を定めたものである。"
 * ^language = #ja
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance"
 * ^status = #draft
@@ -36,8 +36,8 @@ Description: "患者のアレルギー不耐症に関するデータを送受信
 * onset[x] ^definition = "Estimated or actual date, date-time, or age when allergy or intolerance was identified.\r\n\r\nアレルギー不耐症が同定された推定時期または実際の時期で、日付、日時、年齢"
 * recordedDate ^short = "Date first version of the resource instance was recorded このリソースインスタンスの最初の版が記録された日付"
 * recorder only Reference(JP_Practitioner or JP_PractitionerRole or JP_Patient or RelatedPerson)
-* recorder ^short = "Who recorded the sensitivity このレコードを記録した人"
-* recorder ^definition = "Individual who recorded the record and takes responsibility for its content.\r\n\r\nこのレコードを記録し、その内容に責任を持つ個人。"
+* recorder ^short = "Who recorded the sensitivity 誰がこのアレルギー不耐症を記録したか"
+* recorder ^definition = "Individual who recorded the record and takes responsibility for its content.\r\n\r\nこのアレルギー不耐症を記録し、その内容に責任を持つ個人。"
 * recorder ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
 * asserter only Reference(JP_Patient or RelatedPerson or JP_Practitioner or JP_PractitionerRole)
 * asserter ^short = "Source of the information about the allergy このアレルギー不耐症の情報源"
@@ -59,8 +59,8 @@ Description: "患者のアレルギー不耐症に関するデータを送受信
 * reaction.manifestation ^comment = "Manifestation can be expressed as a single word, phrase or brief description. For example: nausea, rash or no reaction. It is preferable that manifestation should be coded with a terminology, where possible. The values entered here may be used to display on an application screen as part of a list of adverse reactions, as recommended in the UK NHS CUI guidelines.  Terminologies commonly used include, but are not limited to, SNOMED CT or ICD10.\r\n\r\n症状は、単一の単語、フレーズ、または簡単な説明で表現できる。例:吐き気、発疹、反応なし。可能であれば、症状をターミノロジーを使ってコーディングすることが望ましい。ここに入力された値は、英国NHS CUIガイドラインで推奨されているように、副作用のリストの一部としてアプリケーション画面に表示するために使用される場合がある。一般的に使用される用語には、SNOMED CTまたはICD10が含まれるが、これらに限定されない。"
 * reaction.description ^short = "Description of the event as a whole 事象の全体的な記述"
 * reaction.description ^definition = "Text description about the reaction as a whole, including details of the manifestation if required.\r\n\r\n必要なら症状兆候の詳細も含めた、反応事象に関する全体としてはテキスト記述。"
-* reaction.description ^comment = "Use the description to provide any details of a particular event of the occurred reaction such as circumstances, reaction specifics, what happened before/after. Information, related to the event, but not describing a particular care should be captured in the comment field. For example: at the age of four, the patient was given penicillin for strep throat and subsequently developed severe hives.\r\n\r\nこの要素を使用して、状況、反応の詳細、前後に何が起こったかなど、発生した反応の特定のイベントの詳細を提供できる。イベントに関連しているが、特定の治療的対応を記述しない情報は、コメントフィールドに取り込む必要がある。\r\n例:4歳のとき、患者は連鎖球菌性咽頭炎のためにペニシリンを投与され、その後重度のじんましんを発症しました。"
-* reaction.onset ^short = "Date(/time) when manifestations showed 症状所見がみられた日時"
+* reaction.description ^comment = "Use the description to provide any details of a particular event of the occurred reaction such as circumstances, reaction specifics, what happened before/after. Information, related to the event, but not describing a particular care should be captured in the comment field. For example: at the age of four, the patient was given penicillin for strep throat and subsequently developed severe hives.\r\n\r\nこの要素を使用して、状況、反応の詳細、前後に何が起こったかなど、発生した反応の特定のイベントの詳細を提供できる。イベントに関連しているが、特定の治療的対応を記述しない情報は、コメントフィールドに取り込む必要がある。\r\n例:4歳のとき、患者は連鎖球菌性咽頭炎のためにペニシリンを投与され、その後、重度の蕁麻疹を発症した。"
+* reaction.onset ^short = "Date(/time) when manifestations showed この兆候がみられた日時"
 * reaction.onset ^definition = "Record of the date and/or time of the onset of the Reaction.\r\n\r\n反応の開始の日付か日時の記録。"
 * reaction.severity ^definition = "Clinical assessment of the severity of the reaction event as a whole, potentially considering multiple different manifestations.\r\n\r\n反応事象の重症度の全体としての臨床的な評価で、潜在的には複数の異なる症状兆候を考慮して決める。"
 * reaction.severity ^comment = "It is acknowledged that this assessment is very subjective. There may be some specific practice domains where objective scales have been applied. Objective scales can be included in this model as extensions.\r\n\r\nこの評価は非常に主観的なものであることが認められている。客観的な尺度が適用されている特定の実践領域がいくつかあるかもしれない。客観的なスケールは、このモデルに拡張Extensionとして記述できる。"
