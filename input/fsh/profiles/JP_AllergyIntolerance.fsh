@@ -34,7 +34,7 @@ Description: "このプロファイルはAllergyIntoleranceリソースに対し
 * encounter ^definition = "The encounter when the allergy or intolerance was asserted.\r\n\r\nこのアレルギー不耐症が判明した際の受診情報。"
 * encounter ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
 * onset[x] ^definition = "Estimated or actual date, date-time, or age when allergy or intolerance was identified.\r\n\r\nアレルギー不耐症が同定された推定時期または実際の時期で、日付、日時、年齢"
-* recordedDate ^short = "Date first version of the resource instance was recorded このリソースインスタンスの最初の版が記録された日付"
+* recordedDate ^short = "Date first version of the resource instance was recorded このリソースインスタンスの最初の版が記録された日時"
 * recorder only Reference(JP_Practitioner or JP_PractitionerRole or JP_Patient or RelatedPerson)
 * recorder ^short = "Who recorded the sensitivity 誰がこのアレルギー不耐症を記録したか"
 * recorder ^definition = "Individual who recorded the record and takes responsibility for its content.\r\n\r\nこのアレルギー不耐症を記録し、その内容に責任を持つ個人。"
