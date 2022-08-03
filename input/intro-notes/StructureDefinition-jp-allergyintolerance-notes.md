@@ -176,7 +176,7 @@
 
 ## 注意事項
 
-- Negated Allergies and Intolerances. [https://hl7.org/fhir/R4/allergyintolerance.html#9.1.3.3]
+- Negated Allergies and Intolerances. [https://hl7.org/fhir/R4/allergyintolerance.html#9.1.3.3](https://hl7.org/fhir/R4/allergyintolerance.html#9.1.3.3)
 
 ## その他、参考文献・リンク等
 

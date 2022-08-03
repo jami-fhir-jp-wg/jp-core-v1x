@@ -1,6 +1,6 @@
 CodeSystem: JP_JfagyMedicationAllergenCodes_CS
 Id: jp-jfagy-medication-allergen-codes-cs
-Title: "JFAGY Medication Allergen Codes CodeSystem"
+Title: "JFAGY Medication Allergen Codes"
 Description: "JFAGY アレルゲンコード（医薬品）"
 * ^url = $JP_JfagyMedicationAllergenCodes_CS
 * ^status = #draft

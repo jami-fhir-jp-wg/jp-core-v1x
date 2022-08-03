@@ -131,6 +131,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * code.coding contains ichi ..1
 * code.coding[ichi] from JP_ProcedureCodesICHI_VS (required)
 * code.coding[ichi].system = $JP_ProcedureCodesICHI_CS (exactly)
+* outcome from JP_ProcedureOutcomeCodes_VS (example)
 * performer.function from JP_ProcedurePerformerRoleCodes_VS (example)
 * reasonCode from JP_ProcedureReasonCodes_VS (example)
 * bodySite from JP_ProcedureBodySite_VS (example)

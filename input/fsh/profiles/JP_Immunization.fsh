@@ -81,31 +81,31 @@ Extension: JP_Immunization_DueDateOfNextDose
 Id: jp-immunization-duedateofnextdose
 Title: "JP Core Immunization DueDateOfNectDose Extension"
 Description: "次回摂取予定日"
-* ^url = "http://jpfhir.jp/fhir/StructureDefinition/JP_Immunization_DueDateOfNextDose"
+* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose"
 * ^status = #active
 * ^context.type = #element
 * ^context.expression = "Immunization"
-* url = "http://jpfhir.jp/fhir/StructureDefinition/JP_Immunization_DueDateOfNextDose" (exactly)
+* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose" (exactly)
 * value[x] only date
 
 Extension: JP_Immunization_CertificatedDate
 Id: jp-immunization-certificateddate
 Title: "JP Core Immunization CertificatedDate Extension"
 Description: "検定年月日"
-* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization_CertificatedDate"
+* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate"
 * ^status = #active
 * ^context.type = #element
 * ^context.expression = "Immunization"
-* url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization_CertificatedDate" (exactly)
+* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate" (exactly)
 * value[x] only date
 
 Extension: JP_Immunization_ManufacturedDate
 Id: jp-immunization-manufactureddate
 Title: "JP Core Immunization ManufacturedDate Extension"
 Description: "製造年月日"
-* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization_ManufacturedDate"
+* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate"
 * ^status = #active
 * ^context.type = #element
 * ^context.expression = "Immunization"
-* url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization_ManufacturedDate" (exactly)
+* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate" (exactly)
 * value[x] only date

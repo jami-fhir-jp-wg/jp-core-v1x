@@ -6,6 +6,7 @@ Description: "処置を実施した者の役割（ロール）を示すコード
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
+// TODO: より適切なコードと用語に見直し
 * #B12101 "医師"
 * #B12201 "歯科医師"
 * #B12301 "獣医師"

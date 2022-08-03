@@ -16,18 +16,32 @@ Usage: #example
 * telecom.value = "2329"
 * physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#ro
 
-
 Instance: jp-location-example-ward
 InstanceOf: JP_Location
 Title: "JP Core Location 病棟"
-Description: "病棟の例"
+Description: "病棟"
 Usage: #example
 * identifier.value = "09A.021.4"
-* status = #suspended
+* status = #active
 * name = "09A病棟 021病室 4ベッド"
 * description = "09A病棟 021病室 4ベッド"
 * mode = #instance
 * type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#WARD
 * telecom.system = #phone
-* telecom.value = "2329"
+* telecom.value = "3478"
 * physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#bd
+
+Instance: jp-location-example-examinationroom
+InstanceOf: JP_Location
+Title: "JP Core Location 診察室"
+Description: "診察室"
+Usage: #example
+* identifier.value = "G-101"
+* status = #active
+* name = "外来101診察室"
+* description = "外来101診察室"
+* mode = #instance
+* type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#OF
+* telecom.system = #phone
+* telecom.value = "8193"
+* physicalType = http://terminology.hl7.org/CodeSystem/location-physical-type#ro

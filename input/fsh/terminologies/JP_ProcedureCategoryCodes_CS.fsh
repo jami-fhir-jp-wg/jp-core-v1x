@@ -1,6 +1,6 @@
 CodeSystem: JP_ProcedureCategoryCodes_CS
 Id: jp-procedure-category-codes-cs
-Title: "JP Core Procedure Category Codes CodeSystem"
+Title: "JP Core Procedure Category Codes"
 Description: "処置のカテゴリを示すコードのコードシステム"
 * ^url = $JP_ProcedureCategoryCodes_CS
 * ^status = #draft

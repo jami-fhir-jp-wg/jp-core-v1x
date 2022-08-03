@@ -37,7 +37,6 @@ v1.0 → v1.1に変更するあたり、開発環境(simplefier→ Sushi & IG Pu
     * DiagnosticReport Profile関連
     
 * Clinical Profile関連
-    * JP_CarePlanリソースを追加した。
     * JP_Procedureリソースにてcode,peformer.function, bodySite, complication, followUp, focalDevice.action, usedCode等のTerminology Bindingを定義した。
 
 * OperationおよびSearch Parameter関連
