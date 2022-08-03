@@ -1,7 +1,7 @@
 Instance:  jp-practitionerrole-example-1
 InstanceOf: JP_PractitionerRole
 Title:   "JP Core ProcedureRole 精神科外来サービス担当"
-Description: "精神科外来サービス担当 "
+Description: "精神科外来サービス担当"
 Usage:  #example
 * contained[0] = jp-healthcareservice-example-1
 * identifier.system = "http://www.acme.org/practitioners"
