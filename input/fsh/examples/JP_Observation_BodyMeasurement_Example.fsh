@@ -1,7 +1,7 @@
 Instance: jp-observation-bodyMeasurement-example-1
 InstanceOf: JP_Observation_BodyMeasurement
-Title: "JP Core Observation BodyMeasurement Basic Example"
-Description: "JP_ObservationBodyMeasurementリソースの1例"
+Title: "JP Core Observation BodyMeasurement Example 身体計測（体重）"
+Description: "身体計測（体重）"
 Usage: #example
 * id = "bm-12345"
 * category.coding.code = #体重
@@ -15,4 +15,4 @@ Usage: #example
 * valueQuantity.unit = "kg"
 * valueQuantity.value = 63.5
 * status = #final
-* encounter = Reference(Encounter/jp-encounter-example1)
+* encounter = Reference(Encounter/jp-encounter-example-1)

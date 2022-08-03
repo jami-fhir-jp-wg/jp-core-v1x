@@ -63,7 +63,6 @@ Alias: $JP_MedicationRequest_DosageInstruction_Device = http://jpfhir.jp/fhir/co
 Alias: $JP_MedicationRequest_DosageInstruction_Line = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line
 Alias: $JP_MedicationRequest_DosageInstruction_PeriodOfUse = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse
 Alias: $JP_MedicationRequest_DosageInstruction_UsageDuration = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration
-Alias: $JP_Observation_BodySite_BodySitePosition = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_BodySite_BodySitePosition
 Alias: $JP_Organization_InsuranceOrganizationCategory = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory
 Alias: $JP_Organization_InsuranceOrganizationNo = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo
 Alias: $JP_Organization_PrefectureNo = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo
@@ -83,9 +82,13 @@ Alias: $JP_Organization_PrefectureNo_SP = http://jpfhir.jp/fhir/core/SearchParam
 Alias: $JP_Patient_KanaSort_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP
 
 // CodeSystem
-Alias: $JP_JFAGY_CS = http://jpfhir.jp/fhir/Common/CodeSystem/jfagy
+Alias: $JP_JfagyFoodAllergenCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_JfagyFoodAllergenCodes_CS
+Alias: $JP_JfagyMedicationAllergenCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_JfagyMedicationAllergenCodes_CS
+Alias: $JP_JfagyNonFoodNonMedicationAllergenCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_JfagyNonFoodNonMedicationAllergenCodes_CS
+Alias: $JP_ConditionSeverity_CS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ConditionSeverity_CS
 Alias: $JP_PhysicalExamCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_PhysicalExamCodes_CS
 Alias: $JP_ProcedureBodySite_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureBodySite_CS
+Alias: $JP_ProcedureCategoryCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCategoryCodes_CS
 Alias: $JP_ProcedureCodesDental_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesDental_CS
 Alias: $JP_ProcedureCodesICHI_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesICHI_CS
 Alias: $JP_ProcedureCodesMedical_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesMedical_CS
@@ -101,8 +104,10 @@ Alias: $JP_ProcedureReasonCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_
 
 // ValueSet
 Alias: $JP_AllergyIntoleranceCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodes_VS
+Alias: $JP_ConditionSeverity_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ConditionSeverity_VS
 Alias: $JP_PhysicalExamCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_PhysicalExamCodes_VS
 Alias: $JP_ProcedureBodySite_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureBodySite_VS
+Alias: $JP_ProcedureCategoryCodes_VS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCategoryCodes_VS
 Alias: $JP_ProcedureCodesMedical_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodesMedical_VS
 Alias: $JP_ProcedureCodesSTEM7_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodesSTEM7_VS
 Alias: $JP_ProcedureCodesDental_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodesDental_VS

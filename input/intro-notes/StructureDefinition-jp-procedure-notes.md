@@ -2,13 +2,11 @@
 本プロファイルに準拠するためには、次の項目の値が存在しなければならない。
 
 - status : 処置のステータス。
-- code : 処置の種類を示すコード。
-- subject : 処置の実施対象となる患者。
-- performed : 処置が実施もしくは実施が予定されていた、推定または実際の日付、日時、期間、または年齢。
+- subject : 処置が実施された対象の人。
 
 ### Extensions定義
 
-- Extensions定義はない
+- Extensions定義はない。
 
 ## 利用方法
 
@@ -102,24 +100,16 @@
 
 ##### オプション検索パラメータ 
 
-- オプション検索パラメータはない
+- オプション検索パラメータはない。
 
 #### Operation一覧
 
-- Operation一覧はない
+- Operation一覧はない。
 
 ## 注意事項
 
-- 未定
+- 注意事項はない。
 
 ## その他、参考文献・リンク等
 
-- 未定
-
-
-
-
-
-
-
-
+- ICHI(International Classification of Health Interventions)[https://icd.who.int/dev11/l-ichi/en]
