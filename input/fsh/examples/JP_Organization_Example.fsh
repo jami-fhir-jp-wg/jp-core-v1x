@@ -34,7 +34,7 @@ Usage: #example
 Instance: jp-organization-example-hospital
 InstanceOf: JP_Organization
 Title: "JP Core Organization 病院"
-Description: "病院"
+Description: "健康第一病院"
 Usage: #example
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo"
 * extension[=].valueIdentifier.system = "urn:oid:1.2.392.100495.20.3.21"
