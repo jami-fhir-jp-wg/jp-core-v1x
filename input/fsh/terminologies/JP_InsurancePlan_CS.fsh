@@ -5,7 +5,6 @@ Description: "保険種別を表すコード （現在作成中）"
 * ^url = $JP_InsurancePlan_CS
 * ^status = #draft
 * ^caseSensitive = true
-* ^valueSet = $JP_InsurancePlan_CS
 * ^content = #complete
 * #LI       "労災保険"
 * #TI       "自賠責保険"
