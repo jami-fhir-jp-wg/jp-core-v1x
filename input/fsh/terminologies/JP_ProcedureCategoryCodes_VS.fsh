@@ -1,6 +1,6 @@
 ValueSet: JP_ProcedureCategoryCodes_VS
 Id: jp-procedure-category-codes-vs
-Title: "JP Core Procedure Category Codes ValueSet"
+Title: "JP Core Procedure Category Codes"
 Description: "処置のカテゴリを示すコード"
 * ^url = $JP_ProcedureCategoryCodes_VS
 * ^status = #draft
