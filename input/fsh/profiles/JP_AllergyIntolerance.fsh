@@ -5,7 +5,7 @@ Profile: JP_AllergyIntolerance
 Parent: AllergyIntolerance
 Id: jp-allergyintolerance
 Title: "JP Core AllergyIntolerance Profile"
-Description: "本プロファイルはAllergyIntoleranceリソースに対して、患者のアレルギー不耐症に関するデータを送受信するための制約と拡張を定めたものである。"
+Description: "このプロファイルはAllergyIntoleranceリソースに対して、患者のアレルギー不耐症に関するデータを送受信するための制約と拡張を定めたものである。"
 * ^language = #ja
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance"
 * ^status = #draft

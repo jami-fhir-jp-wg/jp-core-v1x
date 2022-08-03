@@ -5,7 +5,7 @@ Profile: JP_Condition
 Parent: Condition
 Id: jp-condition
 Title: "JP Core Condition Profile"
-Description: "本プロファイルはConditionリソースに対して、患者の健康状態に関するデータを送受信するための共通の制約と拡張を定めたものである。"
+Description: "このプロファイルはConditionリソースに対して、患者の健康状態に関するデータを送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition"
 * ^status = #draft
 * ^date = "2022-03-16"
