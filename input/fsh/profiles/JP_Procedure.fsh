@@ -78,6 +78,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * bodySite ^definition = "詳細かつ構造化された解剖学的な位置情報。複数の場所を指定することができる。例えば、1つの病変に対して複数のパンチングバイオプシーを行うことができる。"
 * bodySite ^comment = "If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [procedure-targetbodystructure](extension-procedure-targetbodystructure.html).\r\n\r\nユースケースでBodySiteリソースの属性が必要な場合（たとえば、個別に識別して追跡するため）、標準の拡張extension [procedure-targetbodystructure]（extension-procedure-targetbodystructure.html）を使用する。"
 * outcome ^short = "The result of procedure プロシジャーの結果"
+
 * outcome ^definition = "The outcome of the procedure - did it resolve the reasons for the procedure being performed?\r\nProcedureの結果 - Procedureが行われた理由が解決されたか？"
 * outcome ^comment = "If outcome contains narrative text only, it can be captured using the CodeableConcept.text.\r\n結果に叙述的記述トのみが含まれている場合は、CodeableConcept.textを使用してその情報を格納できる。"
 * report only Reference(JP_DiagnosticReport_Common or DocumentReference or Composition)

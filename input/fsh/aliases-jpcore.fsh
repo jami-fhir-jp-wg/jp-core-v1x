@@ -100,6 +100,7 @@ Alias: $JP_ProcedureDeviceActionCodes_CS = http://jpfhir.jp/fhir/Common/CodeSyst
 Alias: $JP_ProcedureDeviceKind_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureDeviceKind_CS
 Alias: $JP_ProcedureFollowUpCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureFollowUpCodes_CS
 Alias: $JP_ProcedureNotPerformedReason_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureNotPerformedReason_CS
+Alias: $JP_ProcedureOutcomeCodes_CS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureOutcomeCodes_CS
 Alias: $JP_ProcedurePerformerRoleCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedurePerformerRoleCodes_CS
 Alias: $JP_ProcedureReasonCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureReasonCodes_CS
 
@@ -119,5 +120,6 @@ Alias: $JP_ProcedureDeviceActionCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet
 Alias: $JP_ProcedureDeviceKind_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureDeviceKind_VS
 Alias: $JP_ProcedureFollowUpCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureFollowUpCodes_VS
 Alias: $JP_ProcedureNotPerformedReason_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureNotPerformedReason_VS
+Alias: $JP_ProcedureOutcomeCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureOutcomeCodes_VS
 Alias: $JP_ProcedurePerformerRoleCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedurePerformerRoleCodes_VS
 Alias: $JP_ProcedureReasonCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureReasonCodes_VS
