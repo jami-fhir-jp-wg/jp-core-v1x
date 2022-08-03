@@ -11,6 +11,5 @@
 本プロファイルは、以下のようなユースケースを想定する。
 
 - AllergyIntoleranceリソースの記録・更新・検索。
-- 他リソースからの参照（例：AdverseEvent, FamilyMemberHistory）
 
 ## プロファイル定義

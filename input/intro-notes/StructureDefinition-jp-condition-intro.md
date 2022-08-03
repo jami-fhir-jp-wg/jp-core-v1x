@@ -11,6 +11,5 @@
 本プロファイルは、以下のようなユースケースを想定する。
 
 - Conditionリソースの記録・更新・検索。
-- 他のリソースからの参照（例：FamilyMemberHistory, Observation, Procedure）
 
 ## プロファイル定義
