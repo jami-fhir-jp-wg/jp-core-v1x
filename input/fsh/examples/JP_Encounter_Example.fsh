@@ -1,4 +1,4 @@
-Instance: jp-encounter-example1
+Instance: jp-encounter-example-1
 InstanceOf: JP_Encounter
 Title: "JP Core Enconter 外来"
 Description: "外来"

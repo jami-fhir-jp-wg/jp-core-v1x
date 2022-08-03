@@ -1,13 +1,11 @@
 ### 必須要素
 本プロファイルに準拠するためには、次の項目の値が存在しなければならない。
 
-- code : 患者が有する状態の種類を示すコード。
 - subject : 本リソースを有する患者。
 
 ### Extensions定義
 
-- Extensions定義はない
-
+- Extensions定義はない。
 
 ## 利用方法
 ### インタラクション一覧
@@ -121,17 +119,16 @@
 
 ##### オプション検索パラメータ 
 
-- オプション検索パラメータはない
+- オプション検索パラメータはない。
 
 #### Operation一覧
 
-- Operation一覧はない
+- Operation一覧はない。
 
 ## 注意事項
 
-- 未定
+- 注意事項はない。
 
 ## その他、参考文献・リンク等
 
-- 未定
-
+- HL70421 Severity of Illness Code ... JAHIS データ交換規約（共通編）Ver1.3 p.119 [https://www.jahis.jp/files/user/04_JAHIS%20standard/22-003_JAHIS%20データ交換規約（共通編）Ver.1.3.pdf](https://www.jahis.jp/files/user/04_JAHIS%20standard/22-003_JAHIS%20データ交換規約（共通編）Ver.1.3.pdf)

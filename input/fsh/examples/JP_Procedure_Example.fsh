@@ -3,19 +3,28 @@ InstanceOf: JP_Procedure
 Title:   "JP Core Procedure Basic Example"
 Description: "JP_Procedureリソースの1例"
 Usage:  #example
-* status = #completed
+* status = #in-progress
 * category
   * coding
-    * system = "http://jpfhir.jp/fhir/Common/CodeSystem/***"
-    * code = #surgical
-    * display = "手術処置"
-  * text = "・・・"
+    * system = "http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCategoryCodes_CS"
+    * code = #JPPCC004
+    * display = "外科的処置"
+  * text = "創傷処置"
 * code
   * coding
-    * system = "http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodes_CS"
-    * code = #demo_cataract_surgery
-  * text = "・・・"
+    * system = "http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesMedical_CS"
+    * code = #140000610
+  * text = "創傷処置（１００ｃｍ２未満）"
 * subject
   * reference = "Patient/jp-patient-example-1"
   * display = "山田 太郎"
-* performedDateTime = "2021-08-24"
+* performedDateTime = "2022-08-03"
+* bodySite
+  * text = "前額部"
+* outcome
+  * coding
+    * system = "http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureOutcomeCodes_CS"
+    * code = #JPPOC001
+    * display = "成功"
+* followUp
+  * text = "縫合糸の除去"
