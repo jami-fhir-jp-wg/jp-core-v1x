@@ -1,7 +1,7 @@
 Instance: jp-observation-socialhistory-example-1
 InstanceOf: JP_Observation_SocialHistory
-Title: "JP Core Observatio SocialHistory Basic Example"
-Description: "JP_ObservationSocialHistoryリソースの1例"
+Title: "JP Core Observation SocialHistory Example 喫煙"
+Description: "喫煙に関する項目"
 Usage: #example
 * category = $observation-category#social-history
 * subject = Reference(Patient/jp-patient-example-1)

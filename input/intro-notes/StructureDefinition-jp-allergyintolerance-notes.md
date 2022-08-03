@@ -2,12 +2,11 @@
 
 本プロファイルに準拠するためには、次の項目の値が存在しなければならない。
 
-- code : アレルギーまたは不耐性の種類を示すコード。
 - patient : 本リソースを有する患者。
 
 ### Extensions定義
 
-- Extensions定義はない
+- Extensions定義はない。
 
 ## 利用方法
 
@@ -169,19 +168,19 @@
 
 ##### オプション検索パラメータ 
 
-- オプション検索パラメータはない
+- オプション検索パラメータはない。
 
 #### Operation一覧
 
-- Operation一覧はない
+- Operation一覧はない。
 
 ## 注意事項
 
-- 未定
+- Negated Allergies and Intolerances. [https://hl7.org/fhir/R4/allergyintolerance.html#9.1.3.3](https://hl7.org/fhir/R4/allergyintolerance.html#9.1.3.3)
 
 ## その他、参考文献・リンク等
 
-- 未定
+- 特になし。
 
 
 

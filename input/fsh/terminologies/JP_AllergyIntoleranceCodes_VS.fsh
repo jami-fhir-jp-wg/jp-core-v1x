@@ -1,7 +1,7 @@
 ValueSet: JP_AllergyIntoleranceCodes_VS
 Id: jp-allergyintolerance-codes-vs
-Title: "JP Core AllergyIntolerance ValueSet"
-Description: "アレルギー・不耐症のコード"
+Title: "JP Core AllergyIntolerance Codes"
+Description: "アレルギー・不耐症に関連するアレルゲンコード"
 * ^url = $JP_AllergyIntoleranceCodes_VS
 * ^status = #draft
 * include codes from system JP_JfagyFoodAllergenCodes_CS

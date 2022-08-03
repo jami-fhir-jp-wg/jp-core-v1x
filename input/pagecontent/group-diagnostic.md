@@ -14,6 +14,6 @@
     * [JP Core DiagnosticReport Radiology （放射線検査レポート）プロファイル][JP_DiagnosticReport_Radiology]
 
 ### Extensions
-* [JP_Observation_BodySite_BodySitePosition]
+なし
 
 {% include markdown-link-references.md %}
