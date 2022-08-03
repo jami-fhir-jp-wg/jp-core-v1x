@@ -21,7 +21,7 @@ Usage: #example
     * display = "小麦粉"
   * text = "こむぎこ"
 * patient
-  * reference = "JP_Patient/jp-patient-example-1"
+  * reference = "Patient/jp-patient-example-1"
   * display = "山田 太郎"
 * onsetDateTime = "2022-08-01"
 * recordedDate = "2022-08-03" 

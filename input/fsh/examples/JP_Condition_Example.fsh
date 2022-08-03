@@ -25,7 +25,7 @@ Usage: #example
 *  bodySite[0]
   *  text = "結腸直腸"
 *  subject
-  *  reference = "JP_Patient/jp-patient-example-1"
+  *  reference = "Patient/jp-patient-example-1"
   *  display = "山田 太郎"
 *  onsetAge
   *  value = 52
