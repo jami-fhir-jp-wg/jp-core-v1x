@@ -19,27 +19,29 @@ v1.0 → v1.1に変更するあたり、開発環境(simplefier→ Sushi & IG Pu
 * 概要
     * 文字検索等の説明を追加した。
     * JP Coreで定義してしていない用語の扱いについて説明を行なった。
-    
-* Administration Profile関連
-    * JP_HumanNameにてtext欄の名前の区切り文字に、半角空白であることを明示した。
-    * JP_Patient.nameをSlicingを利用せずに、参照先をJP_HumanNameとするように定義した。
-    * JP_Practitioner.nameをSlicingを利用せずに、参照先をJP_HumanNameとするように定義した。
-    * JP_Practitioner.qualificationの定義を詳細化した。
 
-* Medication Profile関連
-    * JP_Immunizationプロファイルを追加した。
-    * Extensionにて参照される型を厳密化した。
-    * リソースのdescriptionとpurposeが同一の場合にpurposeの記述を削除した。
+* プロファイル
+    * Administration関連
+        * `JP_HumanName`にてtext欄の名前の区切り文字に、半角空白であることを明示した。
+        * `JP_Patient` religionおよびbirthPlaceのExtensionを追加した。
+        * `JP_Patient` nameをSlicingを利用せずに、参照先を`JP_HumanName`とすることのみにした。
+        * `JP_Practitioner` nameをSlicingを利用せずに、参照先を`JP_HumanName`とすることのみにした。
+        * `JP_Practitioner` qualification.codeに対するバインディング対象となる免許に関するValueSet(`JP_MedicalLicenceCertificate_VS`)およびCodeSystem(`JP_MedicalLicenceCertificate_CS`)を定義した。
 
-* Diagnostic Profile関連
-    * Observation Profile関連
-    * ImagingStudy Profile関連
-    * DiagnosticReport Profile関連
-    
-* Clinical Profile関連
-    * JP_CarePlanリソースを追加した。
-    * JP_Procedureリソースにてcode,peformer.function, bodySite, complication, followUp, focalDevice.action, usedCode等のTerminology Bindingを定義した。
+    * Medication関連
+        * `JP_Immunization`プロファイルを追加した。
+        * `JP_MedicationAdministration` effective[x]にPeriod型を追加した。
+        * `JP_MedicationAdministration_Requester` valueを`JP_Practitioner`を参照するように限定した。
+        * `JP_MedicationAdministration_Location` valueを`JP_Location`を参照するように限定した。
 
+    * Diagnostic関連
+
+        
+    * Clinical関連
+        * 説明文書の全面的な見直し
+        * `JP_FamilyMemberHistory`プロファイルを追加した。
+        * `JP_AllergyIntolerance` ValueSet`JP_AllergyIntoleranceCodes_VS`を定義し、３つのCodeSystem(`JP_JfagyFoodAllergenCodes_CS`,`JP_JfagyNonFoodNonMedicationAllergenCodes_CS`,`JP_JfagyMedicationAllergenCodes_CS`)を参照するように変更を行なった。
+        
 * OperationおよびSearch Parameter関連
     * JP Core派生の必要条件ではなく、派生先実装ガイドにて定義するものとして、特にJP CoreのExtension(拡張)にて検索パラメータとして利用頻度の高いと思われるものを定義するようにした。
     * [Search Parameter Registry](http://hl7.org/fhir/R4/searchparameter-registry.html)に記載されているSeach ParameterはJP Coreでは新たに定義する必用ないと判断し削除した。
@@ -48,7 +50,7 @@ v1.0 → v1.1に変更するあたり、開発環境(simplefier→ Sushi & IG Pu
     * Patientのカナソート用の検索パラメータを追加した。
 
 * Terminology関連
-    * 
+    * FHIR Baseで定義されるバインディングされた用語のライセンスに対する注意事項を記載した。
 
 * Capablity Statement関連
     * JP Core派生の必要条件ではなく、派生先実装ガイド作成ための参考例として記載をあらためた。
