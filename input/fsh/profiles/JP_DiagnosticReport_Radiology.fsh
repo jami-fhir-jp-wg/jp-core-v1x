@@ -19,6 +19,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * status ^definition = "診断レポートの状態"
 * status ^comment = "FHIRのstringsは1MBを越えてはならない（SHALL NOT）ことに留意すること。\r\n\r\n【JP-CORE】\r\n・診断レポートのステータス<br/>\r\n・定義通りの選択肢（例：preliminary 一次読影, final 二次読影（完了）等）を利用。\r\n<br/><br/>"
 * status ^requirements = "診断サービスではルーチンに仮確定あるいは不完全なレポートが発生することがある。また、しばしば前に発行されたレポートが取り消されることもある。"
+* category = $diagnostic-service-sectionid-cs#RAD (exactly)
 * category ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。"
 * category ^comment = "様々なカテゴリのシェーマを用いて複数のカテゴリを設定できる。 カテゴリの情報粒度はvalue setに定義されている。より詳細なフィルタリングの粒度が必要な場合はDiagnosticReport.codeのmetadata等を用いることで対応できる。\r\n\r\n【JP-CORE】\r\n放射線レポートは ”RAD” をデフォルトとして設定。追加の情報については任意。\r\n<br/><br/>"
 * code ^definition = "この診断レポートを表現するコードや名称"
