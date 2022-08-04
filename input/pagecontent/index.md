@@ -9,7 +9,7 @@
 * [欠損値の扱い](guide-handlingOfNonExistentData.html)
 * [文字コード](guide-characterEncoding.html)
 * [検索](guide-stringSearch.html)
-* [変更履歴](update_history.html)
+* [更新履歴](update_history.html)
 
 ### JP Core FHIRコンテンツ
 JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記載をしている。
