@@ -35,9 +35,9 @@
 
 | コンフォーマンス | パラメータ | 型 | 例 |
 | --- | --- | --- | --- |
-| MAY | subject,category,code,`value-quantity` | reference,token,token,quantity  | `GET [base]/Observation?subject=Patient/123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40` |
-| MAY | subject,category,code,`value-quantity`,date | reference,token,token,quantity,date  | `GET [base]/Observation?subject=Patient/123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31` |
-| MAY | subject,category,code,`value-quantity`,encounter | reference,token,token,quantity,encounter  | `GET [base]/Observation?subject=Patient/123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&encounter=Encounter/456` |
+| MAY | subject,category,code,value-quantity | reference,token,token,quantity  | `GET [base]/Observation?subject=Patient/123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40` |
+| MAY | subject,category,code,value-quantity,date | reference,token,token,quantity,date  | `GET [base]/Observation?subject=Patient/123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31` |
+| MAY | subject,category,code,value-quantity,encounter | reference,token,token,quantity,encounter  | `GET [base]/Observation?subject=Patient/123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&encounter=Encounter/456` |
 
 
 #### 操作詳細
@@ -62,9 +62,9 @@
 
 1.患者中心での検索：subjet（= Patientリソース：対象患者）、category（対象カテゴリ）、code（対象項目）、`value[x].valueQuantity`（値条件）での検索をサポートすることが望ましい。（MAY）
 
-検査結果値であるエレメント=`value[x].valueQuantity`の実際のSearch Parameterは`value-quantity`となる。
+検査結果値であるエレメント=`value[x].valueQuantity`の実際のSearch Parameterはvalue-quantityとなる。
 
-subject,category,code,`value-quantity` の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
+subject,category,code,value-quantity の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
    GET [base]/Observation?subject={reference}&category={token}&code={token}&value-quantity={quantity}
@@ -79,9 +79,9 @@ subject,category,code,`value-quantity` の各検索パラメータに一致す�
 
 2.項目中心の検索：subjet（= 複数のPatientリソース：母集団としての患者範囲）、category（対象カテゴリ）、code（対象項目）、`value[x].valueQuantity`（値条件）、`effective[x].effectiveDateTime` または `.effectivePeriod`（期間範囲）での検索をサポートすることが望ましい。（MAY）
 
-検査結果値であるエレメント=`value[x].valueQuantity`の実際のSearch Parameterは`value-quantity`となり、期間指定についてはエレメントが`effective[x].effectiveDateTime` または `.effectivePeriod` いずれの場合においてもSearch Parameterはdateとなる。
+検査結果値であるエレメント=`value[x].valueQuantity`の実際のSearch Parameterはvalue-quantityとなり、期間指定についてはエレメントが`effective[x].effectiveDateTime` または `.effectivePeriod` いずれの場合においてもSearch Parameterはdateとなる。
 
-subject,category,code,`value-quantity`,date の各検索パラメータに一致するObservationリソースを含むBundleを検索する。
+subject,category,code,value-quantity,date の各検索パラメータに一致するObservationリソースを含むBundleを検索する。
 
 
    ```
@@ -98,7 +98,7 @@ subject,category,code,`value-quantity`,date の各検索パラメータに一致
 
 3.訪問診療等の検索：subjet（= 複数のPatientリソース：母集団としての患者範囲）、category（対象カテゴリ）、code（対象項目）、`value[x].valueQuantity`（値条件）、encounter（= Encounterリソース：対象医療行為）での検索をサポートすることが望ましい。（MAY）
 
-subject,category,code,`value-quantity`,date,encountr の各検索パラメータに一致するObservationリソースを含むBundleを検索する。
+subject,category,code,value-quantity,date,encountr の各検索パラメータに一致するObservationリソースを含むBundleを検索する。
 
    ```
    GET [base]/Observation?subject={reference}&category={token}&code={token}&value-quantity={quantity}&date={date}&&encounter={encounter}
