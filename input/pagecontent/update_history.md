@@ -31,8 +31,8 @@ v1.0 → v1.1に変更するあたり、開発環境(simplefier→ Sushi & IG Pu
     * Medication関連
         * `JP_Immunization`プロファイルを追加した。
         * `JP_MedicationAdministration` effective[x]にPeriod型を追加した。
-        * `JP_MedicationAdministration_Requester` valueをJP_Practitionerを参照するように限定した。
-        * `JP_MedicationAdministration_Location` valueをJP_Locationを参照するように限定した。
+        * `JP_MedicationAdministration_Requester` valueに対して`JP_Practitioner`を参照するように限定した。
+        * `JP_MedicationAdministration_Location` valueに対して`JP_Location`を参照するように限定した。
 
     * Diagnostic関連
 
@@ -45,9 +45,9 @@ v1.0 → v1.1に変更するあたり、開発環境(simplefier→ Sushi & IG Pu
 * OperationおよびSearch Parameter
     * JP Core派生の必要条件ではなく、派生先実装ガイドにて定義するものとして、特にJP CoreのExtension(拡張)にて検索パラメータとして利用頻度の高いと思われるものを定義するようにした。
     * [Search Parameter Registry](http://hl7.org/fhir/R4/searchparameter-registry.html)に記載されているSeach ParameterはJP Coreでは新たに定義する必用ないと判断し削除した。
-    * Coverageの被保険証関連Extension( `JP_Coverage_InsuredPersonNumber`, `JP_Coverage_InsuredPersonSubNumber`, `JP_Coverage_InsuredPersonSymbol` )に対する検索パラメータを追加した
-    * Organizationの施設関連Extension( `JP_Organization_InsuranceOrganizationCategory`, `JP_Organization_InsuranceOrganizationNo`, `JP_Organization_PrefectureNo` )に対する検索パラメータの追加した。
-    * Patientのカナソート用の検索パラメータを追加した。
+    * `JP_Coverage`の被保険証関連Extension( `JP_Coverage_InsuredPersonNumber`, `JP_Coverage_InsuredPersonSubNumber`, `JP_Coverage_InsuredPersonSymbol` )に対する検索パラメータを追加した
+    * `JP_Organization`の施設関連Extension( `JP_Organization_InsuranceOrganizationCategory`, `JP_Organization_InsuranceOrganizationNo`, `JP_Organization_PrefectureNo` )に対する検索パラメータの追加した。
+    * `JP_Patient`のカナソート用の検索パラメータを追加した。
 
 * Terminology
     * FHIR Baseで定義されるバインディングされた用語のライセンスに対する注意事項を記載した。
