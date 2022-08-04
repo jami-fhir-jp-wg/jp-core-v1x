@@ -260,63 +260,7 @@ HTTP/1.1 200 OK
 
 
 ### サンプル
-
-```json
-{
-    "resourceType": "Patient",
-    "address": [
-      {
-        "postalCode": "1600023",
-        "text": "東京都新宿区"
-      }
-    ],
-    "birthDate": "1970-01-01",
-    "gender": "male",
-    "identifier": [
-      {
-        "value": "1001"
-      }
-    ],
-    "name": [
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
-            "valueCode": "IDE"
-          }
-        ],
-        "use": "usual",
-        "text": "山田 太郎",
-        "family": "山田",
-        "given": [
-          "太郎"
-        ]
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
-            "valueCode": "SYL"
-          }
-        ],
-        "use": "usual",
-        "text": "ヤマダ タロウ",
-        "family": "ヤマダ",
-        "given": [
-          "タロウ"
-        ]
-      }
-    ],
-    "telecom": [
-      {
-        "value": "0312345678"
-      }
-    ]
-  }
-  
-```
-
-
+* [**患者男性 山田 太郎**][jp-patient-example-1]
 
 ## 注意事項
 

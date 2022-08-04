@@ -75,7 +75,7 @@ PractitionerRoleに対するOperationは定義されていない。
 
 ### サンプル
 
-[精神科外来サービス担当][jp-practitionerrole-example-1]
+* [**精神科外来サービス担当**][jp-practitionerrole-example-1]
 
 ## 注意事項
 
