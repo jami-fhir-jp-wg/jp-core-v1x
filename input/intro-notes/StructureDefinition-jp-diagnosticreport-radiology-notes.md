@@ -137,7 +137,7 @@ DiagnosticReport_Radiology リソースではtypeエレメントを明示する�
 
 ### 時間の指定
 
-このプロファイルのリソースでは、`effective[x]`エレメントにはレポート作成時間を[dateTime](http://www.hl7.org/fhir/datatypes.html#dateTime)で格納する。
+このプロファイルのリソースでは、effective[x]エレメントにはレポート作成時間を[dateTime](http://www.hl7.org/fhir/datatypes.html#dateTime)で格納する。
 
 ### 関連するObservation
 

@@ -12,7 +12,7 @@ DiagnosticReport（検査レポート）リソースは、患者、患者のグ�
 
 なお、DiagnosticReportリソースは蓄積された結果の表示（例えば過去および現在のレポートの結果一覧の表示）をサポートしていない。連続的に作成された詳細な構造化レポートを完全にサポートすることは現時点ではできておらず、将来のリリースで実現するように計画されている。
 
-また、DiagnosticReportリソースは、FHIRのワークフロー([Workflowを参照](http://www.hl7.org/fhir/workflow.html)）の観点からは、「イベント」リソースの１つである。このリソース（DiagnosticReport）を、[イベントリソース](http://www.hl7.org/fhir/workflow.html#event)のワークフローパターンに合わせることは、Ordersや`Observation Workgroup`が意図するところである。
+また、DiagnosticReportリソースは、FHIRのワークフロー([Workflowを参照](http://www.hl7.org/fhir/workflow.html)）の観点からは、「イベント」リソースの１つである。このリソース（DiagnosticReport）を、[イベントリソース](http://www.hl7.org/fhir/workflow.html#event)のワークフローパターンに合わせることは、OrdersやObservation Workgroupが意図するところである。
 
 ## スコープ
 多くの診断プロセスは、Observation（検査、観察）とDiagnosticReport（検査レポート）を生成する手続きである点に留意する必要がある。多くの場合、Observationを作成するために明示的に手続きの発行を要しないが、診断手順がどのように実行されたかについての詳細な関心がある場合、[Procedure](http://www.hl7.org/fhir/procedure.html)リソースが行為を記述するために使用される。
