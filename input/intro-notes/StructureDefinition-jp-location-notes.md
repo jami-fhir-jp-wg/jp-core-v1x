@@ -126,7 +126,7 @@ address-state=東京都    |
 Locationに対するOperationは定義されていない。
 
 ### サンプル
-* [**診察室**][jp-location-example-examinationroom]:
+* [**診察室**][jp-location-example-examinationroom]
 * [**手術室**][jp-location-example-ope]
 * [**病棟**][jp-location-example-ward]
 
