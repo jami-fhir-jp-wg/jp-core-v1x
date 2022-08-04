@@ -11,8 +11,11 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^short = "生活背景の情報"
 * . ^definition = "生活背景の情報"
 * . ^comment = "生活背景に関するObservation（収集したり観察した事実など）の制約プロフィール"
-* category 1..1
-* category = $observation-category#social-history (exactly)
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category contains socialHistory 1..1
+* category[socialHistory] = $observation-category#social-history
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP仕様】<br/>\r\n基底仕様のカテゴリ「social-history」固定とする"
 * code from $socialHistory-code (preferred)
 * code ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP仕様】<br/>\r\n項目についてはMEDISのJ-MIXの「生活背景情報」を基にバリューセットを定義する<br/>\r\n具体的なコードについてはSWG6と連携して決定する必要がある（TBD）"

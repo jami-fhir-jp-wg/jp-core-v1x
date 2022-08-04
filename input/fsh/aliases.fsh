@@ -17,7 +17,7 @@ Alias: $bodyMeasurement-code = http://jpfhir.jp/fhir/Common/ValueSet/bodyMeasure
 Alias: $observation-bodySite = http://jpfhir.jp/fhir/Common/ValueSet/observation-bodySite
 Alias: $observation-method = http://jpfhir.jp/fhir/Common/ValueSet/observation-method
 Alias: $socialHistory-code = http://jpfhir.jp/fhir/Common/ValueSet/socialHistory-code
-Alias: $vitalSigns-category = http://jpfhir.jp/fhir/Common/ValueSet/vitalSigns-category
+//Alias: $vitalSigns-category = http://jpfhir.jp/fhir/Common/ValueSet/vitalSigns-category
 Alias: $vitalSigns-code = http://jpfhir.jp/fhir/Common/ValueSet/vitalSigns-code
 
 // JPCor定義はaliases-jpcore.fshに記載すること
