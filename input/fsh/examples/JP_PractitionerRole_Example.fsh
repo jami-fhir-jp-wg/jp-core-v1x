@@ -1,6 +1,6 @@
 Instance:  jp-practitionerrole-example-1
 InstanceOf: JP_PractitionerRole
-Title:   "JP Core ProcedureRole 精神科外来サービス担当"
+Title:   "JP Core ProcedureRole Example 精神科外来サービス担当"
 Description: "精神科外来サービス担当"
 Usage:  #example
 * contained[0] = jp-healthcareservice-example-1
@@ -37,7 +37,7 @@ Usage:  #example
 
 Instance: jp-healthcareservice-example-1
 InstanceOf: HealthcareService
-Title:   "HealthcareService 精神科外来サービス"
+Title:   "HealthcareService Example 精神科外来サービス"
 Usage: #inline
 * identifier.system = "http://example.org/shared-ids"
 * identifier.value = "HS-12"

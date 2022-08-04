@@ -1,6 +1,6 @@
 Instance: jp-immunization-example-1
 InstanceOf: JP_Immunization
-Title: "JP Core Immunization 新型コロナワクチン接種"
+Title: "JP Core Immunization Example 新型コロナワクチン接種"
 Description: "新型コロナワクチン接種"
 Usage: #example
 * meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"

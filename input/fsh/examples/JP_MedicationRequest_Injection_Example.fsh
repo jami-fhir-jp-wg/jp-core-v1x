@@ -1,6 +1,6 @@
 Instance: jp-medicationrequest-injection-example-1
 InstanceOf: JP_MedicationRequest_Injection
-Title: "JP Core MedicationRequest Injection ワンショット静脈注射"
+Title: "JP Core MedicationRequest Injection Example ワンショット静脈注射"
 Description: "ホリゾン注射液１０ｍｇ１アンプルを左腕に静脈注射"
 Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-1
@@ -39,7 +39,7 @@ Usage: #example
 
 Instance: jp-medicationrequest-injection-example-2
 InstanceOf: JP_MedicationRequest_Injection
-Title: "JP Core MedicationRequest Injection 点滴注射"
+Title: "JP Core MedicationRequest Injection Example 点滴注射"
 Description: "点滴注射"
 Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-2
@@ -79,7 +79,7 @@ Usage: #example
 
 Instance: jp-medicationrequest-injection-medication-example-1
 InstanceOf: JP_Medication
-Title: "JP Medication ホリゾン注射液"
+Title: "JP Core Medication Example ホリゾン注射液"
 Description: "ホリゾン注射液"
 Usage: #inline
 * status = #active
@@ -93,7 +93,7 @@ Usage: #inline
 
 Instance: jp-medicationrequest-injection-medication-example-2
 InstanceOf: JP_Medication
-Title: "JP Medication ソリタ－＋アドナ注"
+Title: "JP Core Medication Example ソリタ－＋アドナ注"
 Description: "ソリタ－＋アドナ注"
 Usage: #inline
 * status = #active
@@ -106,7 +106,7 @@ Usage: #inline
 
 Instance: jp-medicationrequest-injection-bodystructure-example-1
 InstanceOf: BodyStructure
-Title: "BodyStructure 左腕"
+Title: "BodyStructure Example 左腕"
 Description: "左腕"
 Usage: #inline
 * location = http://terminology.hl7.org/CodeSystem/v2-0550#ARM "Arm"
@@ -115,7 +115,7 @@ Usage: #inline
 
 Instance: jp-medicationrequest-injection-bodystructure-example-2
 InstanceOf: BodyStructure
-Title: "BodyStructure 右腕"
+Title: "BodyStructure Example 右腕"
 Description: "右腕"
 Usage: #inline
 * location = http://terminology.hl7.org/CodeSystem/v2-0550#ARM "Arm"
@@ -124,7 +124,7 @@ Usage: #inline
 
 Instance: jp-medicationrequest-injection-device-example-1
 InstanceOf: Device
-Title: "シリンジ"
+Title: "Device Example シリンジ"
 Description: "シリンジ"
 Usage: #inline
 * type = http://jpfhir.jp/medication/99ILL#01 "シリンジ"
