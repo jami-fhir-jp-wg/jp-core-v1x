@@ -11,9 +11,6 @@ Description: "このプロファイルはPatientリソースに対して、患�
 * ^date = "2022-06-19"
 * . ^short = "Information about an individual or animal receiving health care services　医療サービスを受けている個人または動物に関する情報"
 * . ^definition = "Demographics and other administrative information about an individual or animal receiving care or other health-related services.\r\n\r\nケアまたはその他の健康関連サービスを受けている個人または動物に関する人口統計およびその他の管理情報。"
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
 * extension contains
     $patient-religion named religion ..* and
     $patient-birthPlace named birthPlace ..1 and
@@ -168,5 +165,5 @@ Description: "人種(Race)に関する情報を格納するためのExtension。
 * . ^short = "人種に関する情報"
 * . ^comment = "人種に関する情報を表現する拡張。\r\nValueSetとして\r\nhttp://terminology.hl7.org/CodeSystem/v3-Race\r\nを使用する。\r\n例：\r\nCode : Description\r\n2103-3 : White\r\n2039-6 : Japanese\r\n2040-4 : Korean\r\n等"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race" (exactly)
-* value[x] only Coding
-* value[x].system = "urn:oid:2.16.840.1.113883.5.104" (exactly)
+* value[x] only CodeableConcept
+* valueCodeableConcept from $patient-race-vs
