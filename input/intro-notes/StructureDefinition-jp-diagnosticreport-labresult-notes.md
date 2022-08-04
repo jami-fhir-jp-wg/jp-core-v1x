@@ -4,10 +4,10 @@
 次のデータ項目はデータが存在しなければならない（必須）であるか、あるいは、データが送信システムに存在する場合はサポートされなければならない（Must Support）要素である。
 
 #### 必須
-`DiagnosticReport`リソースは、次の要素を持たなければならない。
+DiagnosticReportリソースは、次の要素を持たなければならない。
 
- - `status`︓検体検査情報項目の状態は必須である。
- - `code`︓このリソースは何の検体検査情報項目であるかを示すため必須である。
+ - status︓検体検査情報項目の状態は必須である。
+ - code︓このリソースは何の検体検査情報項目であるかを示すため必須である。
 
 
 #### MustSupport
@@ -29,7 +29,7 @@
 ## 利用方法
 
 ### Interaction一覧 
-`DiagnosticReport` リソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
+DiagnosticReport リソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
 
 
 [DiagnosticReport共通情報プロファイル#インタラクション一覧][JP_DiagnosticReport_Common]
@@ -41,9 +41,9 @@
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHOULD | `subject`,`category` | `reference`  | `GET [base]/DiagnosticReport?subject=Patient/123&category=LAB` |
-| SHOULD | `subject`,`category`,`based-on` | `reference`,`reference`  | `GET [base]/DiagnosticReport?subject=Patient/123&category=LAB&based-on=ServiceRequest/456` |
-| SHOULD | `subject`,`category`,`date` | `reference`,`date`  | `GET [base]/Observation?subject=Patient/123&category=LAB&date=le2020-12-31` |
+| SHOULD | subject,category | reference  | `GET [base]/DiagnosticReport?subject=Patient/123&category=LAB` |
+| SHOULD | subject,category,`based-on` | reference,reference  | `GET [base]/DiagnosticReport?subject=Patient/123&category=LAB&based-on=ServiceRequest/456` |
+| SHOULD | subject,category,date | reference,date  | `GET [base]/Observation?subject=Patient/123&category=LAB&date=le2020-12-31` |
 
 ##### 必須検索パラメータ
 
@@ -56,7 +56,7 @@
 1. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)を指定した検索をサポートすることが望ましい。（SHOULD）
 
 
-`subject`の各検索パラメータに一致する`Observation`リソースを含むBundleを取得することができる。
+subjectの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
    GET [base]/DiagnosticReport?subject={reference}&category={token}
@@ -71,7 +71,7 @@
 2. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、based-on (検査オーダの依頼科)を指定した検索をサポートすることが望ましい。（SHOULD）
 
 
-`subject`,`based-on`の各検索パラメータに一致する`Observation`リソースを含むBundleを取得することができる。
+subject,`based-on`の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
    GET [base]/DiagnosticReport?subject={reference}&category={token}&based-on={reference}
@@ -86,7 +86,7 @@
 3. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、date(レポート作成日)を指定した検索をサポートすることが望ましい。（SHOULD）
 
 
-`subject`,`date`の各検索パラメータに一致する`Observation`リソースを含むBundleを取得することができる。
+subject,dateの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
    GET [base]/DiagnosticReport?subject={reference}&category={token}&date={date}

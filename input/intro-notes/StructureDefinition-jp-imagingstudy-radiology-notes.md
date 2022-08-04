@@ -4,17 +4,17 @@
 次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
 
 #### 必須
-`ImagingStudy`リソースは、次の要素を持たなければならない。
+ImagingStudyリソースは、次の要素を持たなければならない。
 
-- `status`︓検査項目情報の状態は必須である。
-- `subject`︓このリソースが示す検査項目が、どの患者のものかを示すため、このプロファイルでは参照する`patient`リソースの定義を必須である。
+- status︓検査項目情報の状態は必須である。
+- subject︓このリソースが示す検査項目が、どの患者のものかを示すため、このプロファイルでは参照するpatientリソースの定義を必須である。
 
 #### MustSupport
-`ImagingStudy`リソースは、以下をサポートしなければならない。
+ImagingStudyリソースは、以下をサポートしなければならない。
 
-- 画像データが送信システムに存在する場合には`identifier`, `modality`はサポートされなければならない。
+- 画像データが送信システムに存在する場合にはidentifier, modalityはサポートされなければならない。
 - 画像データが送信システムにSeriesが存在する場合には, `series.uid`, `series.modality`, `series.instance.uid`, `series.instance.sopClass`はサポートされなければならない。
-- 画像検査を行うためのオーダ情報が送信システムに存在する場合には, `encounter`と`basedOn`はサポートされなければならない。
+- 画像検査を行うためのオーダ情報が送信システムに存在する場合には, encounterとbasedOnはサポートされなければならない。
 
 <br>
 
@@ -44,12 +44,12 @@
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
- | SHOULD | `subject(Patient)` | `reference` | `GET [base]/ImagingStudy?subject=Patient/123` |
- | SHOULD | `subject,modality` | `reference`,`token` | `GET [base]/ImagingStudy?subject=Patient/123&modality=CT` |
- | SHOULD | `subject`,`bodysite` | `reference`,`token` | `GET [base]/ImagingStudy?subject=Patient/123&bodysite=T-15460` |
- | SHOULD | `subject`,`started` | `reference`,`date` | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-25` |
- | SHOULD | `subject`,`started`,`modality`,`bodysite` | `reference`,`date`,`token`,`token`  | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-18&modality=CT&bodysite=T-15460` |
- | SHOULD | `encounter` | `reference`  | `GET [base]/ImagingStudy?encounter=Encounter/456` |
+ | SHOULD | `subject(Patient)` | reference | `GET [base]/ImagingStudy?subject=Patient/123` |
+ | SHOULD | `subject,modality` | reference,token | `GET [base]/ImagingStudy?subject=Patient/123&modality=CT` |
+ | SHOULD | subject,bodysite | reference,token | `GET [base]/ImagingStudy?subject=Patient/123&bodysite=T-15460` |
+ | SHOULD | subject,started | reference,date | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-25` |
+ | SHOULD | subject,started,modality,bodysite | reference,date,token,token  | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-18&modality=CT&bodysite=T-15460` |
+ | SHOULD | encounter | reference  | `GET [base]/ImagingStudy?encounter=Encounter/456` |
 
 
 <br>
@@ -61,7 +61,7 @@
 ##### 必須検索パラメータ
 
 次の検索パラメータは必須でサポートされなければならない。（SHALL）
-`ImagingStudy`リソースでは検索の多様性が求められるため、必須としての検索項目は定義していない。
+ImagingStudyリソースでは検索の多様性が求められるため、必須としての検索項目は定義していない。
 
 <br>
 
@@ -69,7 +69,7 @@
 
 次の検索パラメータはサポートすることが推奨される。（SHOULD）
 
-1.患者中心での検索：対象患者（= `Patient`リソース）を条件とした検索をサポートすることが望ましい。
+1.患者中心での検索：対象患者（= Patientリソース）を条件とした検索をサポートすることが望ましい。
 
    ```
    GET [base]/ImagingStudy?subject={reference}
@@ -83,7 +83,7 @@
 
 <br>
 
-2.モダリティ中心の検索：対象患者（= `Patient`リソース）と撮影に使用されたモダリティを条件とした検索をサポートすることが望ましい。
+2.モダリティ中心の検索：対象患者（= Patientリソース）と撮影に使用されたモダリティを条件とした検索をサポートすることが望ましい。
 
 
    ```
@@ -97,7 +97,7 @@
    ```
 <br>
 
-3.部位中心の検索：対象患者（= `Patient`リソース）と撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい。
+3.部位中心の検索：対象患者（= Patientリソース）と撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい。
 
 
    ```
@@ -111,7 +111,7 @@
    ```
 <br>
 
-4.日付中心の検索：対象患者（= `Patient`リソース）と撮影の日時を条件とした検索をサポートすることが望ましい。
+4.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい。
 
 
    ```
@@ -126,7 +126,7 @@
 
 <br>
 
-5.日付中心の検索：対象患者（= `Patient`リソース）と撮影の日時を条件とした検索をサポートすることが望ましい。
+5.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい。
 
 
    ```
@@ -141,7 +141,7 @@
 
 <br>
    
-6.複数の条件を組み合わせた検索：対象患者（= `Patient`リソース）、撮影の日時、撮影に使用されたモダリティ、撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい。
+6.複数の条件を組み合わせた検索：対象患者（= Patientリソース）、撮影の日時、撮影に使用されたモダリティ、撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい。
 
 
    ```
@@ -156,7 +156,7 @@
 
 <br>
    
-7.来院情報中心の検索：来院情報（= `Encounter`リソース）を条件とした検索をサポートすることが望ましい。
+7.来院情報中心の検索：来院情報（= Encounterリソース）を条件とした検索をサポートすることが望ましい。
 
 
    ```
