@@ -102,6 +102,7 @@
 [JP_JfagyNonFoodNonMedicationAllergenCodes_CS]: CodeSystem-jp-jfagy-non-food-non-medication-allergen-codes-cs.html
 [JP_MedicalLicenceCertificate_CS]: CodeSystem-jp-medicallicencecertificate-cs.html
 [JP_PhysicalExamCodes_CS]: CodeSystem-jp-physicalexamcodes-cs.html
+[JP_PractitionerRoleCodes_CS]: CodeSystem-jp-practitioner-role-codes-cs.html
 [JP_ProcedureBodySite_CS]: CodeSystem-jp-procedure-body-site-cs.html
 [JP_ProcedureCategoryCodes_CS]: CodeSystem-jp-procedure-category-codes-cs.html
 [JP_ProcedureCodesDental_CS]: CodeSystem-jp-procedure-codes-dental-cs.html
@@ -115,7 +116,6 @@
 [JP_ProcedureFollowUpCodes_CS]: CodeSystem-jp-procedure-followup-codes-cs.html
 [JP_ProcedureNotPerformedReason_CS]: CodeSystem-jp-procedure-not-performed-reason-cs.html
 [JP_ProcedureOutcomeCodes_CS]: CodeSystem-jp-procedure-outcome-codes-cs.html
-[JP_ProcedurePerformerRoleCodes_CS]: CodeSystem-jp-procedure-performer-role-codes-cs.html
 [JP_ProcedureReasonCodes_CS]: CodeSystem-jp-procedure-reason-codes-cs.html
 
 <!-- ValueSet -->
@@ -163,6 +163,7 @@
 [jp-medicationrequest-injection-example-2]: MedicationRequest-jp-medicationrequest-injection-example-2.html
 [bm-12345]: Observation-bm-12345.html
 [jp-observation-labresult-example-1]: Observation-jp-observation-labresult-example-1.html
+[jp-observation-physicalexam-example-1]: Observation-jp-observation-physicalexam-example-1.html
 [jp-observation-socialhistory-example-1]: Observation-jp-observation-socialhistory-example-1.html
 [jp-observation-vitalsigns-example-1]: Observation-jp-observation-vitalsigns-example-1.html
 [jp-organization-example-clinic]: Organization-jp-organization-example-clinic.html
