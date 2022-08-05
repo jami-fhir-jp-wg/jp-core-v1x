@@ -367,7 +367,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.route.coding.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.route.coding.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
 * dosageInstruction.route.coding.system 1..
-* dosageInstruction.route.coding.system = "http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes" (exactly)
+* dosageInstruction.route.coding.system = "http://jpfhir.jp/fhir/Common/CodeSystem/route-codes" (exactly)
 * dosageInstruction.route.coding.system ^short = "HL7v2-0162表をベースにしたJPFHIRでの投与経路コード表"
 * dosageInstruction.route.coding.system ^definition = "HL7v2-0162表をベースにしたJPFHIRでの投与経路コード表を示すURL"
 * dosageInstruction.route.coding.system ^comment = "URIはOID(urn:oid:....)やUUID(urn:uuid:....)であることもある。OIDやUUIDはHL7のOIDレジストリを参照していなければならない（SHALL)。そうでなければ、URIはHL7のFHIRのリストに挙げられている特別なURIであるか、用語集が明確な定義が参照されるべきである。"
