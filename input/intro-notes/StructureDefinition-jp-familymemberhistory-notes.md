@@ -87,7 +87,7 @@
     例：
 
     http
-    GET [base]/JP_FamilyMemberHistory?patinet=123456&date=ge2021-08-24
+    GET [base]/JP_FamilyMemberHistory?patient=123456&date=ge2021-08-24
     
     指定された患者と日付を有するすべてのJP_FamilyMemberHistoryを含むBundleを返却する。
 

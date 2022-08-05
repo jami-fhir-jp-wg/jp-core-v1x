@@ -3,7 +3,7 @@
 
 ## スコープ
 
-- JP_Conditionリソースは、患者の健康上の懸念となるレベルに達した、身体的、精神的、社会的な<strong>負</strong>の状態(conditon)や問題（problem／issue）、医療者による診断(diagnosis)、生じたイベント(event)、置かれている状況(situation)、臨床医学的概念(clinical concept)を表現する。
+- JP_Conditionリソースは、患者の健康上の懸念となるレベルに達した、身体的、精神的、社会的な<strong>負</strong>の状態(condition)や問題（problem／issue）、医療者による診断(diagnosis)、生じたイベント(event)、置かれている状況(situation)、臨床医学的概念(clinical concept)を表現する。
 - 健康上の<strong>負の状態</strong>を表すものであるため、"妊娠"のようにそれが正常なものである場合にはJP_Conditionの対象外である。
 
 ## 想定シナリオ
