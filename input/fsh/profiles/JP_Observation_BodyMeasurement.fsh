@@ -11,13 +11,9 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^short = "身体計測に関する測定や簡単な観察事実（assertion）"
 * . ^definition = "患者の身体計測に関する測定と簡単な観察事実（assertion）。"
 * . ^comment = "身体計測に関するObservation（検査測定や観察事実）の制約プロフィール"
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category contains vitalSigns 1..1
-* category[vitalSigns] = $observation-category#vital-signs
+* category from $bodyMeasurement-category-vs (preferred)
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP仕様】<br/>\r\nMEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類2．身体計測の「焦点」を基にバリューセットを定義する<br/>\r\n具体的なコードについてはSWG6と連携して決定する必要がある（TBD）"
-* code from $bodyMeasurement-code (preferred)
+* code from $bodyMeasurement-code-vs (preferred)
 * code ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP仕様】<br/>\r\n項目についてはMEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類2．身体計測を対象とする<br/>\r\n具体的なコードについてはSWG6と連携して決定する必要がある（TBD）"
 * subject 1..
 * subject only Reference(JP_Patient)
