@@ -30,7 +30,7 @@
 | MAY              | patient,clinicalstatus | reference,code | GET [base]/AllergyIntolerance?patient=Patient/123&clinicalstatus=active |
 | MAY              | patient,verificationstatus | reference,code | GET [base]/AllergyIntolerance?patient=Patient/123&verificationstatus=confirmed |
 | MAY              | patient,type | reference,code | GET [base]/AllergyIntolerance?patient=Patient/123&type=allergy |
-| MAY              | patient,category | reference,code | GET [base]/AllergyIntolerance?patient=Patient/123&category=jp_food |
+| MAY              | patient,category | reference,code | GET [base]/AllergyIntolerance?patient=Patient/123&category=food |
 | MAY              | patient,criticality | reference,code | GET [base]/AllergyIntolerance?patient=Patient/123&criticality=high |
 
 ##### 必須検索パラメータ
@@ -58,12 +58,12 @@
 1. 検索パラメータpatientを指定し、該当するすべてのAllergyIntoleranceを検索。
 
    http
-   GET [base]/JP_AllergyIntolerance?patient={reference}
+   GET [base]/AllergyIntolerance?patient={reference}
 
    例：
 
    http
-   GET [base]/JP_AllergyIntolerance?patient=Patient/123
+   GET [base]/AllergyIntolerance?patient=Patient/123
    
    指定された患者のすべてのAllergyIntoleranceを含むBundleを返却する。
 
@@ -76,44 +76,44 @@
   * dateに対する次の比較演算子のサポートを含む: gt,lt,ge,le
   * AND検索のオプションのサポートを含む (例えば.date=[date]&date=[date]]&...)
     http
-    GET [base]/JP_AllergyIntolerance?patient={reference}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}
+    GET [base]/AllergyIntolerance?patient={reference}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}
 
     例：
 
     http
-    GET [base]/JP_AllergyIntolerance?patient=Patient/123&date=ge2021-08-24
+    GET [base]/AllergyIntolerance?patient=Patient/123&date=ge2021-08-24
     
-    指定された患者および日付のすべてのJP_AllergyIntoleranceを含むBundleを返却する。
+    指定された患者および日付のすべてのAllergyIntoleranceを含むBundleを返却する。
 
 3. 検索パラメータpatientとclinicalstatusの組みを指定し、該当するすべてのAllergyIntoleranceを検索。
   * OR検索のサポートを含む(例えば clinicalstatus={system|}[code],{system|}[code],...)
 
     http
-    GET [base]/JP_AllergyIntolerance?patient={reference}&clinicalstatus={system|}[code]{,{system|}[code],...}
+    GET [base]/AllergyIntolerance?patient={reference}&clinicalstatus={system|}[code]{,{system|}[code],...}
     
     例：
 
     http
-    GET [base]/JP_AllergyIntolerance?patient=Patient/123&clinicalstatus=active
+    GET [base]/AllergyIntolerance?patient=Patient/123&clinicalstatus=active
     
     http
-    GET [base]/JP_AllergyIntolerance?patient=Patient/123&clinicalstatus=http://hl7.org/fhir/ValueSet/allergyintoleranceclinical|active
+    GET [base]/AllergyIntolerance?patient=Patient/123&clinicalstatus=http://hl7.org/fhir/ValueSet/allergyintoleranceclinical|active
     
-    指定された患者およびステータスのすべてのJP_AllergyIntoleranceを含むBundleを返却する。
+    指定された患者およびステータスのすべてのAllergyIntoleranceを含むBundleを返却する。
 
 2. 検索パラメータpatientとverificationstatus組みを指定し、該当するすべてのAllergyIntoleranceを検索。
   * OR検索のサポートを含む(例えば verificationstatus={system|}[code],{system|}[code],...)
 
     http
-    GET [base]/JP_AllergyIntolerance?patient={reference}&verificationstatus={system|}[code]{,{system|}[code],...}
+    GET [base]/AllergyIntolerance?patient={reference}&verificationstatus={system|}[code]{,{system|}[code],...}
     
     例：
 
     http
-    GET [base]/JP_AllergyIntolerance?patient=Patient/123&verificationstatus=confirmed
+    GET [base]/AllergyIntolerance?patient=Patient/123&verificationstatus=confirmed
     
     http
-    GET [base]/JP_AllergyIntolerance?patient=Patient/123&verificationstatus=http://hl7.org/fhir/ValueSet/allergyintoleranceverification|confirmed
+    GET [base]/AllergyIntolerance?patient=Patient/123&verificationstatus=http://hl7.org/fhir/ValueSet/allergyintoleranceverification|confirmed
     
     指定された患者およびステータスのすべてのAllergyIntoleranceを含むBundleを返却する。
 
@@ -121,15 +121,15 @@
   * OR検索のサポートを含む(例えば type={system|}[code],{system|}[code],...)
 
     http
-    GET [base]/JP_AllergyIntolerance?patient={reference}&type={system|}[code]{,{system|}[code],...}
+    GET [base]/AllergyIntolerance?patient={reference}&type={system|}[code]{,{system|}[code],...}
     
     例：
 
     http
-    GET [base]/JP_AllergyIntolerance?patient=Patient/123&type=allergy
+    GET [base]/AllergyIntolerance?patient=Patient/123&type=allergy
     
     http
-    GET [base]/JP_AllergyIntolerance?patient=Patient/123&category=http://hl7.org/fhir/ValueSet/allergy-intolerance-type|allergy
+    GET [base]/AllergyIntolerance?patient=Patient/123&category=http://hl7.org/fhir/ValueSet/allergy-intolerance-type|allergy
     
     指定された患者およびステータスのすべてのAllergyIntoleranceを含むBundleを返却する。
 
@@ -137,15 +137,15 @@
   * OR検索のサポートを含む(例えば category={system|}[code],{system|}[code],...)
 
     http
-    GET [base]/JP_AllergyIntolerance?patient={reference}&category={system|}[code]{,{system|}[code],...}
+    GET [base]/AllergyIntolerance?patient={reference}&category={system|}[code]{,{system|}[code],...}
 
     例：
 
     http
-    GET [base]/JP_AllergyIntolerance?patient=Patient/123&category=jp_food
+    GET [base]/AllergyIntolerance?patient=Patient/123&category=food
     
     http
-    GET [base]/JP_AllergyIntolerance?patient=Patient/123&category=http://jpfhir.jp/fhir/CodeSystem/***|jp_food
+    GET [base]/AllergyIntolerance?patient=Patient/123&category=http://hl7.org/fhir/ValueSet/condition-category|food
     
     指定された患者およびステータスのすべてのAllergyIntoleranceを含むBundleを返却する。
 
@@ -153,15 +153,15 @@
   * OR検索のサポートを含む(例えば criticality={system|}[code],{system|}[code],...)
 
     http
-    GET [base]/JP_AllergyIntolerance?patient={reference}&criticality={system|}[code]{,{system|}[code],...}
+    GET [base]/AllergyIntolerance?patient={reference}&criticality={system|}[code]{,{system|}[code],...}
     
     例：
 
     http
-    GET [base]/JP_AllergyIntolerance?patient=Patient/123&&criticality=high
+    GET [base]/AllergyIntolerance?patient=Patient/123&&criticality=high
     
     http
-    GET [base]/JP_AllergyIntolerance?patient=Patient/123&criticality=http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality|high
+    GET [base]/AllergyIntolerance?patient=Patient/123&criticality=http://hl7.org/fhir/ValueSet/allergy-intolerance-criticality|high
     
     指定された患者およびステータスのすべてのAllergyIntoleranceを含むBundleを返却する。
 
