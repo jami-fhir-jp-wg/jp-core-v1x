@@ -33,11 +33,11 @@ JP Core Location リソースで定義された拡張はない。
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
 | SHALL            | name    | string  | GET [base]/Location?name=３南 |
 | SHALL            | address          | string | GET [base]/Location?address=〒113-0033東京都文京区本郷７丁目３−１                            |
-| SHOULD           | address-city | stringn  | GET [base]/Location?address-city=文京区    |
+| SHOULD           | address-city | string  | GET [base]/Location?address-city=文京区    |
 | SHOULD           | 
-address-state | stringn  | GET [base]/Location?
+address-state | string  | GET [base]/Location?
 address-state=東京都    |
-| SHOULD           | address-postalcode | stringn  | GET [base]/Location?address-postalcode=1130033    |
+| SHOULD           | address-postalcode | string  | GET [base]/Location?address-postalcode=1130033    |
 
 
 
