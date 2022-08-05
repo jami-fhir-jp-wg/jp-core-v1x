@@ -102,6 +102,7 @@
 [JP_JfagyNonFoodNonMedicationAllergenCodes_CS]: CodeSystem-jp-jfagy-non-food-non-medication-allergen-codes-cs.html
 [JP_MedicalLicenceCertificate_CS]: CodeSystem-jp-medicallicencecertificate-cs.html
 [JP_PhysicalExamCodes_CS]: CodeSystem-jp-physicalexamcodes-cs.html
+[JP_PractitionerRoleCodes_CS]: CodeSystem-jp-practitioner-role-codes-cs.html
 [JP_ProcedureBodySite_CS]: CodeSystem-jp-procedure-body-site-cs.html
 [JP_ProcedureCategoryCodes_CS]: CodeSystem-jp-procedure-category-codes-cs.html
 [JP_ProcedureCodesDental_CS]: CodeSystem-jp-procedure-codes-dental-cs.html
@@ -115,7 +116,6 @@
 [JP_ProcedureFollowUpCodes_CS]: CodeSystem-jp-procedure-followup-codes-cs.html
 [JP_ProcedureNotPerformedReason_CS]: CodeSystem-jp-procedure-not-performed-reason-cs.html
 [JP_ProcedureOutcomeCodes_CS]: CodeSystem-jp-procedure-outcome-codes-cs.html
-[JP_ProcedurePerformerRoleCodes_CS]: CodeSystem-jp-procedure-performer-role-codes-cs.html
 [JP_ProcedureReasonCodes_CS]: CodeSystem-jp-procedure-reason-codes-cs.html
 
 <!-- ValueSet -->
@@ -145,6 +145,7 @@
 [jp-coverage-example-1]: Coverage-jp-coverage-example-1.html
 [jp-diagnosticreport-radiology-example-1]: DiagnosticReport-jp-diagnosticreport-radiology-example-1.html
 [jp-encounter-example-1]: Encounter-jp-encounter-example-1.html
+[jp-imagingstudy-radiology-example-1]: ImagingStudy-jp-imagingstudy-radiology-example-1.html
 [jp-immunization-example-1]: Immunization-jp-immunization-example-1.html
 [jp-location-example-examinationroom]: Location-jp-location-example-examinationroom.html
 [jp-location-example-ope]: Location-jp-location-example-ope.html
