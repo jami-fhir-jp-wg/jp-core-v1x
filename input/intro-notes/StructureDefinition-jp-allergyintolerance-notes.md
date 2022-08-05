@@ -177,6 +177,10 @@
 
 - Operation一覧はない。
 
+#### サンプル
+
+* [**食物アレルギー（小麦）**][jp-allergyintolerance-example-1]
+
 ## 注意事項
 
 - Negated Allergies and Intolerances. [https://hl7.org/fhir/R4/allergyintolerance.html#9.1.3.3](https://hl7.org/fhir/R4/allergyintolerance.html#9.1.3.3)
@@ -184,3 +188,5 @@
 ## その他、参考文献・リンク等
 
 - 特になし。
+
+{% include markdown-link-references.md %}

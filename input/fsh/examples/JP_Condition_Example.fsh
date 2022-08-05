@@ -1,6 +1,6 @@
 Instance:  jp-condition-example-1
 InstanceOf: JP_Condition
-Title: "JP Core Condition Example 1"
+Title: "JP Core Condition Example 病名（直腸癌）"
 Description: "下血を生じたKRAS野生型の転移性結腸直腸癌の例"
 Usage: #example
 *  clinicalStatus

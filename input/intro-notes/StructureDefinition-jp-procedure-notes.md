@@ -105,6 +105,10 @@
 
 - Operation一覧はない。
 
+#### サンプル
+
+* [**処置（抜糸）**][jp-procedure-example-1]
+
 ## 注意事項
 
 - 注意事項はない。
@@ -112,3 +116,5 @@
 ## その他、参考文献・リンク等
 
 - ICHI(International Classification of Health Interventions) [https://icd.who.int/dev11/l-ichi/en](https://icd.who.int/dev11/l-ichi/en)
+
+{% include markdown-link-references.md %}

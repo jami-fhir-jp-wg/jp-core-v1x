@@ -1,6 +1,6 @@
 Instance: jp-familymemberhistory-example-1
 InstanceOf: JP_FamilyMemberHistory
-Title: "JP Core FamilyMemberHistory Example 1"
+Title: "JP Core FamilyMemberHistory Example 家族歴（母親）"
 Description: "母親が糖尿病と難聴を有する家族歴の例"
 Usage: #example
 * status = #partial
