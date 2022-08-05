@@ -35,7 +35,7 @@
 
 本プロファイルに準拠するためには、以下の検索パラメータをサポートしなければならない（SHALL）
 
-1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によるすべてのConditionを検索。
+1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりConditionを検索。
 
    ```
    GET [base]/Condition?identifier={system|}[code]

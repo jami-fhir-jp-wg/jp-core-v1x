@@ -37,7 +37,7 @@
 
 本プロファイルに準拠するためには、以下の検索パラメータをサポートしなければならない（SHALL）
 
-1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によるすべてのAllergyIntoleranceを検索。
+1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりAllergyIntoleranceを検索。
 
    ```
    GET [base]/AllergyIntolerance?identifier={system|}[code]
