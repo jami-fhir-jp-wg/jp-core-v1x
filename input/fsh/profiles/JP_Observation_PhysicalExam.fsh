@@ -11,6 +11,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^short = "身体所見に関する測定や簡単な観察事実（assertion）"
 * . ^definition = "身体所見に関する測定や簡単な観察事実"
 * . ^comment = "身体所見に関するObservation（検査測定や観察事実）の制約プロフィール"
+* category 1..
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open

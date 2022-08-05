@@ -11,6 +11,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^short = "生活背景の情報"
 * . ^definition = "生活背景の情報"
 * . ^comment = "生活背景に関するObservation（収集したり観察した事実など）の制約プロフィール"
+* category 1..
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open

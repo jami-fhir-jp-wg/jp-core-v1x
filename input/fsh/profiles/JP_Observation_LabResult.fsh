@@ -24,6 +24,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * partOf ^comment = "To link an Observation to an Encounter use `encounter`.  See the  [Notes](observation.html#obsgrouping) below for guidance on referencing another Observation.\r\n<p/>【JP仕様】<br/>\r\n当面は使用しない。"
 * status ^definition = "The status of the result value.\r\n<br/>結果値の状態。"
 * status ^comment = "This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.\r\n<p/>---SS-MIX2メモ---<br/>OBX-11(検査結果状態)<br/>「F」（最終結果）を使用する。\r\n<p/>【JP仕様】<br/>\r\nv2.5の「F」に相当する値は「final」であるが、ここでは 必須コード表「ObservationStatus」より、全てのコード値を使用可とする。<br/>\r\n(registered | preliminary | final | amended |   corrected | cancelled | entered-in-error | unknown)"
+* category 1..
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
