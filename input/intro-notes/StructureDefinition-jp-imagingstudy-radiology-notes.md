@@ -13,7 +13,7 @@ ImagingStudyリソースは、次の要素を持たなければならない。
 ImagingStudyリソースは、以下をサポートしなければならない。
 
 - 画像データが送信システムに存在する場合にはidentifier, modalityはサポートされなければならない。
-- 画像データが送信システムにSeriesが存在する場合には, `series.uid`, `series.modality`, `series.instance.uid`, `series.instance.sopClass`はサポートされなければならない。
+- 画像データが送信システムにSeriesが存在する場合には, series.uid, series.modality, series.instance.uid, series.instance.sopClassはサポートされなければならない。
 - 画像検査を行うためのオーダ情報が送信システムに存在する場合には, encounterとbasedOnはサポートされなければならない。
 
 <br>

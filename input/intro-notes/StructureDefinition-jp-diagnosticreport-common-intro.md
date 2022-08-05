@@ -21,7 +21,7 @@ DiagnosticReport（検査レポート）リソースは、患者、患者のグ�
 
 高度に構造化されたレポートがある場合は、データとワークフローをサポートするDiagnosticReportを使用する。診断調査のリクエストに関する詳細は、さまざまな「リクエスト」リソース（[ServiceRequestなど](http://www.hl7.org/fhir/servicerequest.html)）に取り込まれ、レポートを臨床ワークフローに接続できるようにする。組織診、剖検などにおいて、少ないワークフローでナラティブに書き起こされるレポートの場合は、[Compositionリソース](http://www.hl7.org/fhir/composition.html)の方が適切である。
 
-レポートに関連する医用画像や汎用画像、およびキー画像は、DiagnosticReportリソースで参照される。詳細でかつ実際の画像インスタンスは、`DiagnosticReport.media`エレメントを使用して検査レポートで直接参照するか、`DiagnosticReport.ImagingStudy`エレメントを介して、特定の患者のDICOM画像検査またはDICOMインスタンスのセットで生成されたコンテンツを表す[ImagingStudyリソース](http://www.hl7.org/fhir/imagingstudy.html)を間接的に参照することができる。
+レポートに関連する医用画像や汎用画像、およびキー画像は、DiagnosticReportリソースで参照される。詳細でかつ実際の画像インスタンスは、DiagnosticReport.mediaエレメントを使用して検査レポートで直接参照するか、DiagnosticReport.ImagingStudyエレメントを介して、特定の患者のDICOM画像検査またはDICOMインスタンスのセットで生成されたコンテンツを表す[ImagingStudyリソース](http://www.hl7.org/fhir/imagingstudy.html)を間接的に参照することができる。
 
 ## プロファイル定義
 

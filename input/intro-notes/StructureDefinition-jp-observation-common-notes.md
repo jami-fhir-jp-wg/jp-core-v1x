@@ -60,9 +60,9 @@
 
 オプションとして次の検索パラメータをサポートすることができる。(MAY)
 
-1.患者中心での検索：subjet（= Patientリソース：対象患者）、category（対象カテゴリ）、code（対象項目）、`value[x].valueQuantity`（値条件）での検索をサポートすることが望ましい。（MAY）
+1.患者中心での検索：subjet（= Patientリソース：対象患者）、category（対象カテゴリ）、code（対象項目）、value[x].valueQuantity（値条件）での検索をサポートすることが望ましい。（MAY）
 
-検査結果値であるエレメント=`value[x].valueQuantity`の実際のSearch Parameterはvalue-quantityとなる。
+検査結果値であるエレメント=value[x].valueQuantityの実際のSearch Parameterはvalue-quantityとなる。
 
 subject,category,code,value-quantity の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
@@ -77,9 +77,9 @@ subject,category,code,value-quantity の各検索パラメータに一致するO
    ```
 
 
-2.項目中心の検索：subjet（= 複数のPatientリソース：母集団としての患者範囲）、category（対象カテゴリ）、code（対象項目）、`value[x].valueQuantity`（値条件）、`effective[x].effectiveDateTime` または `.effectivePeriod`（期間範囲）での検索をサポートすることが望ましい。（MAY）
+2.項目中心の検索：subjet（= 複数のPatientリソース：母集団としての患者範囲）、category（対象カテゴリ）、code（対象項目）、value[x].valueQuantity（値条件）、effective[x].effectiveDateTime または .effectivePeriod（期間範囲）での検索をサポートすることが望ましい。（MAY）
 
-検査結果値であるエレメント=`value[x].valueQuantity`の実際のSearch Parameterはvalue-quantityとなり、期間指定についてはエレメントが`effective[x].effectiveDateTime` または `.effectivePeriod` いずれの場合においてもSearch Parameterはdateとなる。
+検査結果値であるエレメント=value[x].valueQuantityの実際のSearch Parameterはvalue-quantityとなり、期間指定についてはエレメントがeffective[x].effectiveDateTime または .effectivePeriod いずれの場合においてもSearch Parameterはdateとなる。
 
 subject,category,code,value-quantity,date の各検索パラメータに一致するObservationリソースを含むBundleを検索する。
 
@@ -96,7 +96,7 @@ subject,category,code,value-quantity,date の各検索パラメータに一致�
 
 
 
-3.訪問診療等の検索：subjet（= 複数のPatientリソース：母集団としての患者範囲）、category（対象カテゴリ）、code（対象項目）、`value[x].valueQuantity`（値条件）、encounter（= Encounterリソース：対象医療行為）での検索をサポートすることが望ましい。（MAY）
+3.訪問診療等の検索：subjet（= 複数のPatientリソース：母集団としての患者範囲）、category（対象カテゴリ）、code（対象項目）、value[x].valueQuantity（値条件）、encounter（= Encounterリソース：対象医療行為）での検索をサポートすることが望ましい。（MAY）
 
 subject,category,code,value-quantity,date,encountr の各検索パラメータに一致するObservationリソースを含むBundleを検索する。
 
@@ -128,7 +128,7 @@ subject,category,code,value-quantity,date,encountr の各検索パラメータ�
 
 また取得される結果には以下のルールに従う。
 - 追加パラメータによりフィルタされる
-- 取得される結果は`Observation.code`の値によるグルーピング処理(Group by)される
+- 取得される結果はObservation.codeの値によるグルーピング処理(Group by)される
 - 新しいデータから古いデータの順にソートされる
 - グループごとにmaxパラメータに指定された数だけ応答が返る。maxが指定されない場合は、最新の結果のみが返される。
 
@@ -209,18 +209,18 @@ HTTP/1.1 200 OK
 多くの検査は、他の検査と重要な関係性を持っているため、グループ化する必要がある。 
 
 - 例えば、構造は以下のように定義される：  
-検査レポートと`DiagnosticReport.result`（検査レポート結果）
+検査レポートとDiagnosticReport.result（検査レポート結果）
 
 - 検査の要素については以下のように定義される：  
-`Observation.component`（検査コンポーネント）、 `Observation.hasMember`（検査保持メンバ）、`Observation.derivedFrom`（検査派生元）
+Observation.component（検査コンポーネント）、 Observation.hasMember（検査保持メンバ）、Observation.derivedFrom（検査派生元）
 
 以下の節では、使用される構造に関しての指針について述べる。何をグループ化するのかという考え方は、しばしば文脈に高く依存しており、エンドユーザーの視点にも基づくため、使用する構造の選択は、権限や組織的な訓練、文脈などによって決めるべきである。通常、プロファイリングは実装に必要になるだろう。
 
 #### DiagnosticReport.result（検査レポート結果）
-検査レポートはオーダ（サービス要求）に直接関連している。`DiagnosticReport.code`（検査レポートコード）はパネルに名前を付け、グループ化要素として機能する。従来、これは臨床検査において"パネル"や"バッテリー"と呼ばれていたものである。`DiagnosticReport.result`（検査レポート結果）の要素は、個々の検査を参照する。いくつかの例では、検査レポートを使った検査のグループ化をグループ化の構造として示している。
+検査レポートはオーダ（サービス要求）に直接関連している。DiagnosticReport.code（検査レポートコード）はパネルに名前を付け、グループ化要素として機能する。従来、これは臨床検査において"パネル"や"バッテリー"と呼ばれていたものである。DiagnosticReport.result（検査レポート結果）の要素は、個々の検査を参照する。いくつかの例では、検査レポートを使った検査のグループ化をグループ化の構造として示している。
 
 #### Observation.component（検査コンポーネント）
-`Observation.component`（検査コンポーネント）は、構成するObservationリソースの範囲を超えて、合理的には解釈できないような結果をサポートするために使われる。検査コンポーネントは、個別かつ分けられた検査の一部分から構成されるか、`Observation.code`に対して適切な情報を提供する。また、`Observation.code`に関して唯一、解釈を与えるものとなる（例えば、`$stats`操作を参照）。従って、正しく検査の意味を理解するためには、**すべて**の code-value（コード・値） と `component.code`-`component.value`（要素コード・要素値） のペアを考慮する必要がある。コンポーネントは、一つの手法、一つの検査、一人の検査実施者、一つの装置、および1回しかない場合のみ使用するべきである。この構造を使用するユースケースには次のようなものがある。：
+Observation.component（検査コンポーネント）は、構成するObservationリソースの範囲を超えて、合理的には解釈できないような結果をサポートするために使われる。検査コンポーネントは、個別かつ分けられた検査の一部分から構成されるか、Observation.codeに対して適切な情報を提供する。また、Observation.codeに関して唯一、解釈を与えるものとなる（例えば、`$stats`操作を参照）。従って、正しく検査の意味を理解するためには、**すべて**の code-value（コード・値） と component.code-component.value（要素コード・要素値） のペアを考慮する必要がある。コンポーネントは、一つの手法、一つの検査、一人の検査実施者、一つの装置、および1回しかない場合のみ使用するべきである。この構造を使用するユースケースには次のようなものがある。：
 
 - 1.一般的に生成され、一緒に解釈される検査。たとえば、収縮期および拡張期の血圧は、単一の血圧パネルとして表現。
 - 2.一般的に一緒に生成および解釈される評価ツールの結果。たとえば、5つの要素を持つ単一の検査である新生児のアプガー指数。
@@ -229,10 +229,10 @@ HTTP/1.1 200 OK
 一方で、別の検査の構成要素であるという文脈から外れた臨床的に関連する検査は、個別のObservationリソースで表されるべきである。例えば、ボディマス指数（BMI）検査は、身長と体重は臨床的に関連した検査であるから、これらを要素に含むべきではない。個別のObservationリソースとして表現するべきである。どのように独立した検査を関連付けるか、後述するセクションを参照のこと。
 
 #### Observation.hasMember（検査保持メンバ） および Observation.derivedFrom（検査派生元）
-`Observation.hasMember`（検査保持メンバ）と `Observation.derivedFrom`（検査派生元）、および中核となる拡張機能であるObservation-sequelTo（検査・続編） と Observation-replaces（検査・置換）は、手法、検査、実施者、機器、時間、エラー状態に対して1つ以上の異なる値を持った結果や、それ自体の使用や解釈した結果をサポートするために利用される。この構造を用いる2つの共通事例は以下の通り:
+Observation.hasMember（検査保持メンバ）と Observation.derivedFrom（検査派生元）、および中核となる拡張機能であるObservation-sequelTo（検査・続編） と Observation-replaces（検査・置換）は、手法、検査、実施者、機器、時間、エラー状態に対して1つ以上の異なる値を持った結果や、それ自体の使用や解釈した結果をサポートするために利用される。この構造を用いる2つの共通事例は以下の通り:
 
-- 1."パネル"や"バッテリー"などに対する検査に関連したグループ分けについて。この事例では、`Observation.code`（検査コード）は、"パネル"コードを表す。典型的には、`Observation.value[x]`（検査値）は存在せず、検査メンバのセットが`Observation.hasMember`（検査保持メンバ）に一覧される。この構造は、検査レポート（例えば、複雑なマイクロ分離と感受性検査報告）と共に利用される場合には、入れ子になったグループ分けを許可する。
-- 2.ある検査が派生して他の検査と関連付ける場合、`Observation.code`（検査コード） と `Observation.value[x]`（検査値）の両方とも存在し、関連付けられた検査は`Observation.derivedFrom`（検査派生元）に一覧される。この一例として、身長と体重の計測値が参照されるボディマス指数（BMI）検査がある。
+- 1."パネル"や"バッテリー"などに対する検査に関連したグループ分けについて。この事例では、Observation.code（検査コード）は、"パネル"コードを表す。典型的には、Observation.value[x]（検査値）は存在せず、検査メンバのセットがObservation.hasMember（検査保持メンバ）に一覧される。この構造は、検査レポート（例えば、複雑なマイクロ分離と感受性検査報告）と共に利用される場合には、入れ子になったグループ分けを許可する。
+- 2.ある検査が派生して他の検査と関連付ける場合、Observation.code（検査コード） と Observation.value[x]（検査値）の両方とも存在し、関連付けられた検査はObservation.derivedFrom（検査派生元）に一覧される。この一例として、身長と体重の計測値が参照されるボディマス指数（BMI）検査がある。
 
 ### 検査におけるコード利用
 結果の値をコードを用いて事前定義された概念で表現するとき、valueCodeableConceptが使われる。この要素は、SNOMED CTなどの標準的な命名法または元システム（"ローカル"）でコード化された結果値で構成される値セットにバインドされる。
@@ -266,7 +266,7 @@ HTTP/1.1 200 OK
  }
 ```
 
-コード化された回答リストに"その他"の概念コードが含まれ、概念のフリーテキスト記述がある場合、情報源の完全な意味を取り込むため `valueCodeableConcept.text`要素を使用するべきである。以下の例では、回答コード"その他"は、valueCodeableConcept要素の中で提供され、`valueCodeableConcept.text`要素の中で提供される値がテキスト値となる。
+コード化された回答リストに"その他"の概念コードが含まれ、概念のフリーテキスト記述がある場合、情報源の完全な意味を取り込むため valueCodeableConcept.text要素を使用するべきである。以下の例では、回答コード"その他"は、valueCodeableConcept要素の中で提供され、valueCodeableConcept.text要素の中で提供される値がテキスト値となる。
 
 ```json
 {
@@ -297,41 +297,41 @@ HTTP/1.1 200 OK
 ```
 
 #### FHIRにおけるコード値の組み合わせを用いた相互運用性の課題
-多くの検査イベントに対して（特定パターンかどうかに関わらず）繰り返し発生する課題は、`Observation.code`（検査コード）と`Observation.value`（検査値）を追加する方法を決める時に起こる。このことは臨床検査においてはごく簡単なことだが、所見や疾患、家族歴などのその他の種類の検査にて曖昧性を生じる。この議論は、そのようなステートメントのコード化された表現が `Observation.code`（検査コード）および `Observation.value`（検査値）の要素を使用して表現される方法に焦点を当てている。
+多くの検査イベントに対して（特定パターンかどうかに関わらず）繰り返し発生する課題は、Observation.code（検査コード）とObservation.value（検査値）を追加する方法を決める時に起こる。このことは臨床検査においてはごく簡単なことだが、所見や疾患、家族歴などのその他の種類の検査にて曖昧性を生じる。この議論は、そのようなステートメントのコード化された表現が Observation.code（検査コード）および Observation.value（検査値）の要素を使用して表現される方法に焦点を当てている。
 
 FHIRの検査には、中心となる2つの異なる側面がある：
   - プロパティが検査された所見 および/または プロパティを作成するために実行されたアクション。例：血中ヘモグロビンの測定。
   - 検査の結果。例：14 g/dl。
 
-`Observation.code`と`Observation.value`の異なる組み合わせを使用して、同じ情報を表すいくつかの異なる方法が存在する。代替手段の制約のない使用は、意味的等価性の計算と、さまざまなアプリケーションおよびユーザーからの検査に対する安全な解釈が大きな課題である。次の4つのパターンは、同じケースを合理的に表すことができる。 Observationリソースは多くのユースケースをサポートする必要があることを考慮すると、特定のパターンを定義する適切な場所は、FHIRを実装する権限 および/または 組織によって指定されたプロファイルおよび実装ガイドを通じて行われることが期待される。:
+Observation.codeとObservation.valueの異なる組み合わせを使用して、同じ情報を表すいくつかの異なる方法が存在する。代替手段の制約のない使用は、意味的等価性の計算と、さまざまなアプリケーションおよびユーザーからの検査に対する安全な解釈が大きな課題である。次の4つのパターンは、同じケースを合理的に表すことができる。 Observationリソースは多くのユースケースをサポートする必要があることを考慮すると、特定のパターンを定義する適切な場所は、FHIRを実装する権限 および/または 組織によって指定されたプロファイルおよび実装ガイドを通じて行われることが期待される。:
 
-  - 1.`Observation.code` は、検査の性質を表現しており、`Observation.value` は数値以外の結果値を表している。これらは、FHIR検査の中心となる2つの異なる側面となっている。  
+  - 1.Observation.code は、検査の性質を表現しており、Observation.value は数値以外の結果値を表している。これらは、FHIR検査の中心となる2つの異なる側面となっている。  
 例:
     - code=[検査]
     - value=[腹部圧痛]
-  - 2.`Observation.code` は上記1.とほぼ同じだが、粒度のレベルは値からコードに移行される。    
+  - 2.Observation.code は上記1.とほぼ同じだが、粒度のレベルは値からコードに移行される。    
 例:
     - code=[腹部検査]
     - value=[圧痛]
-  - 3.`Observation.code` は、検査アクションを指定しない方法でも表現されるが、上記の項目のように、単一の名前（または用語）にまとめられた検出結果に関するステートメントを示す。 この例では、`Observation.value` が存在し、通常それを確認または否決する結果を「修飾」する。  
+  - 3.Observation.code は、検査アクションを指定しない方法でも表現されるが、上記の項目のように、単一の名前（または用語）にまとめられた検出結果に関するステートメントを示す。 この例では、Observation.value が存在し、通常それを確認または否決する結果を「修飾」する。  
 例:
     - code=[腹部圧痛]
     - value=[確認/陽性]
-  - 4.この例では `Observation.code` は、検査アクションを指定しない方法で表現されているが、単一の名前（または用語）にまとめられた検出結果に関するステートメントを示している。 この文脈における特定の例では、`Observation.value`は省略されている。  
+  - 4.この例では Observation.code は、検査アクションを指定しない方法で表現されているが、単一の名前（または用語）にまとめられた検出結果に関するステートメントを示している。 この文脈における特定の例では、Observation.valueは省略されている。  
 例：
     - code=[腹部圧痛]
     - value要素は省略
 
 #### ガイダンス:
 - 1.ケース1 と ケース2 の推奨ルール:
-  - `Observation.code` はLOINC概念コードであることが望ましい。
+  - Observation.code はLOINC概念コードであることが望ましい。
     - もし SNOMED CT 概念コードを使用する場合、363787002 (*Observable entity (Observable entity)*) か386053000 (*Evaluation procedure(evaluation procedure)*) を表す必要がある（SHOULD）。
-  - 数値以外の場合、`Observation.value` はSNOMED CT概念コードであることが望ましい。
+  - 数値以外の場合、Observation.value はSNOMED CT概念コードであることが望ましい。
 
 - 2.ケース3 の推奨ルール:
-  - `Observation.value` はLOINCまたはSNOMED CT概念コードであることが望ましい。
+  - Observation.value はLOINCまたはSNOMED CT概念コードであることが望ましい。
     - もしSNOMED CT 概念コードを使用する場合、404684003 (*Clinical finding (finding)*)、413350009 (*Finding with explicit context(finding)*)、または 272379006 (*Event(event)*) を表す必要がある（SHOULD）。
-  - `Observation.value` は以下のどちらかによって表される。
+  - Observation.value は以下のどちらかによって表される。
     - valueBoolean（論理値）
     - valueCodeableConceptはできれば以下を利用:
       - SNOMED CTの362981000 (*Qualifier value (qualifiervalue)*) の下位概念
@@ -339,8 +339,8 @@ FHIRの検査には、中心となる2つの異なる側面がある：
       - HL7 v2 の 拡張 Y/N Indicator (*unfortunately is missing 'not given'*)
 
 - 3.ケース4の推奨ルール:
-  - `Observation.code` がSNOMED CTの404684003 (*Clinical finding (finding)*)、413350009 (*Finding with explicit context(finding)*) または 272379006 (*Event(event)*)の下位概念。
-  - `Observation.value` は省略される。デフォルトの解釈は、`Observation.code`で表される概念（単一コードまたは表現）が患者に存在すること。"clinical-finding"（臨床所見）の `Observation.dataAbsentReason` 値は想定される値が欠損している理由を明記している必要がある（SHOULD）。
+  - Observation.code がSNOMED CTの404684003 (*Clinical finding (finding)*)、413350009 (*Finding with explicit context(finding)*) または 272379006 (*Event(event)*)の下位概念。
+  - Observation.value は省略される。デフォルトの解釈は、Observation.codeで表される概念（単一コードまたは表現）が患者に存在すること。"clinical-finding"（臨床所見）の Observation.dataAbsentReason 値は想定される値が欠損している理由を明記している必要がある（SHOULD）。
 
 - 4.HL7 Version 3 Implementation Guide: TermInfo - Using SNOMED CT in CDA R2 Models, Release 1 で説明されているアサーションパターンは使用してはならない（SHOULD NOT）。
 
@@ -367,8 +367,8 @@ FHIRの検査には、中心となる2つの異なる側面がある：
 }
 ```
 
-- 2.または上記のように`Observation.code` で追加のコードを使用する。  
-例: `Observation.code` = *coding-1: 59408-5 パルスオキシメータによる動脈血酸素飽和度, coding-2: 20564-1 血中酸素飽和度*
+- 2.または上記のようにObservation.code で追加のコードを使用する。  
+例: Observation.code = *coding-1: 59408-5 パルスオキシメータによる動脈血酸素飽和度, coding-2: 20564-1 血中酸素飽和度*
 
 ```json
 {
@@ -397,7 +397,7 @@ FHIRの検査には、中心となる2つの異なる側面がある：
 （備考：既存の Observation Extensionsを評価するため、実装者コミュニティからの意見を募集中。フィードバックは[こちら](https://chat.fhir.org/#narrow/stream/103-Orders-and.20Observation.20WG)。）
 
 ### 値とデータ型
-`Observation.value[x]`要素には、次のように型に応じた変数名がある。
+Observation.value[x]要素には、次のように型に応じた変数名がある。
   - valueQuantity（量）
   - valueCodeableConcept（コーダブルコンセプト値）
   - valueString（文字列）
