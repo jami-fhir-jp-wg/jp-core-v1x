@@ -164,3 +164,5 @@
 
 #### サンプル
 * [**放射線画像検査**][jp-imagingstudy-radiology-example-1]
+
+{% include markdown-link-references.md %}
