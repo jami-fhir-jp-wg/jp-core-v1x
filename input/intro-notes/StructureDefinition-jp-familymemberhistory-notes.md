@@ -24,72 +24,58 @@
 
 #### Search Parameter一覧
 
-| コンフォーマンス | パラメータ    | 型     | 例                                                           |
-| ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHALL            | patient    | reference  | GET [base]/JP_FamilyMemberHistory?patient=123456 |
-| SHALL            | patient,relationship | reference,reference | GET [base]/JP_FamilyMemberHistory?patient=123456&relationship=FAMMEMB |
-| SHALL            | patient,status | reference,code | GET [base]/JP_FamilyMemberHistory?patient=123456&status=completed |
-| SHOULD           | patient,date | reference,dateTime | GET [base]/JP_FamilyMemberHistory?patient=123456&date=ge2021-08-24 |
+| コンフォーマンス    | パラメータ             | 型                  | 例                                                           |
+| ---------------- | -------------------- | ------------------- | ------------------------------------------------------------ |
+| SHALL            | identifier           | token               | GET [base]/FamilyMemberHistory?identifier=http://myhospital.com/fhir/gamilymemberhistory\|123 |
+| SHOULD           | patient              | reference           | GET [base]/FamilyMemberHistory?patient=Patient/123           |
+| MAY              | patient,relationship | reference,reference | GET [base]/FamilyMemberHistory?patient=Patient/123&relationship=FAMMEMB |
+| MAY              | patient,status       | reference,code      | GET [base]/FamilyMemberHistory?patient=Patient/123&status=completed     |
 
 ##### 必須検索パラメータ
 
-本プロファイルに準拠するためには、以下の検索パラメータをサポートしなければならない（SHALL）。
+本プロファイルに準拠するためには、以下の検索パラメータをサポートしなければならない（SHALL）
 
-1. 検索パラメータpatientを指定し、該当するすべてのJP_FamilyMemberHistoryを検索。
+1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりFamilyMemberHistoryを検索。
 
-   http
-   GET [base]/JP_FamilyMemberHistory?patient={Type/}[id]
-
+   ```
+   GET [base]/FamilyMemberHistory?identifier={system|}[code]
+   ```
    例：
+   ```
+   GET [base]/FamilyMemberHistory?identifier=http://myhospital.com/fhir/familymemberhistory\|123
+   ```
 
-   http
-   GET [base]/JP_FamilyMemberHistory?patient=123456
-   
-   指定された患者が有するすべてのJP_FamilyMemberHistoryを含むBundleを返却する。
-
-2. 検索パラメータpatientとrelationshipを指定し、該当するすべてのJP_FamilyMemberHistoryを検索。
-
-   http
-   GET [base]/JP_FamilyMemberHistory?patient={Type/}[id]&relationship={Type/}[coding]
-
-   例：
-
-   http
-   GET [base]/JP_FamilyMemberHistory?patient=123456&relationship=FAMMEMB
-   
-   指定された患者と対象家族が有するすべてのJP_FamilyMemberHistoryを含むBundleを返却する。
-
-
-3. 検索パラメータpatientとstatusの組みを指定し、該当するすべてのJP_FamilyMemberHistoryを検索。
-  * OR検索のサポートを含む(例えば status={system|}[code],{system|}[code],...)
-
-    http
-    GET [base]/JP_FamilyMemberHistory?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}
-    
-    例：
-
-    http
-    GET [base]/JP_FamilyMemberHistory?patient=123456&status=completed
-    
-    指定された患者とステータスを有するすべてのP_FamilyMemberHistoryを含むBundleを返却する。
+   指定された識別子に一致するFamilyMemberHistoryリソースを含むBundleを検索する。
 
 ##### 推奨検索パラメータ
 
-本プロファイルに準拠するためには、以下の検索パラメータをサポートすることが推奨（SHOULD）される。
+1. 検索パラメータpatientとrelationshipを指定し、該当するすべてのFamilyMemberHistoryを検索。
 
-1. 検索パラメータpatientとdateの組みを指定し、該当するすべてのJP_FamilyMemberHistoryを検索。
+   ```
+   GET [base]/FamilyMemberHistory?patient={reference}
+   ```
+   例：
+   ```
+   GET [base]/FamilyMemberHistory?patient=Patient/123
+   ```
 
-  * dateに対する次の比較演算子のサポートを含む: gt,lt,ge,le
-  * AND検索のオプションのサポートを含む (例えば.date=[date]&date=[date]]&...)
-    http
-    GET [base]/JP_FamilyMemberHistory?patient={Type/}[id]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}
-    
-    例：
+   指定された患者のすべてのFamilyMemberHistoryを含むBundleを返却する。
 
-    http
-    GET [base]/JP_FamilyMemberHistory?patient=123456&date=ge2021-08-24
-    
-    指定された患者と日付を有するすべてのJP_FamilyMemberHistoryを含むBundleを返却する。
+##### 追加検索パラメータ
+
+オプションとして次の検索パラメータをサポートすることができる（MAY）
+
+1. 検索パラメータpatientとstatusの組みを指定し、該当するすべてのFamilyMemberHistoryを検索。
+
+  * OR検索のサポートを含む(例えば status={system|}[code],{system|}[code],...)
+
+   ```
+   GET [base]/FamilyMemberHistory?patient={reference}&status={system|}[code]{,{system|}[code],...}
+   ```
+   例：
+   ```
+   GET [base]/FamilyMemberHistory?patient=Patient/123&status=completed
+   ```
 
 ##### オプション検索パラメータ 
 
