@@ -16,13 +16,9 @@ ImagingStudyリソースは、以下をサポートしなければならない�
 - 画像データが送信システムにSeriesが存在する場合には, series.uid, series.modality, series.instance.uid, series.instance.sopClassはサポートされなければならない。
 - 画像検査を行うためのオーダ情報が送信システムに存在する場合には, encounterとbasedOnはサポートされなければならない。
 
-<br>
-
 ### Extension定義
 
 このプロファイルでは拡張定義は行っていない。
-
-<br>
 
 ## 利用方法
 
@@ -34,36 +30,26 @@ ImagingStudyリソースは、以下をサポートしなければならない�
 | SHOULD（推奨）   | vread、history-instance                     |
 | MAY（利用可能）  | create、update、patch、delete、history-type |
 
-<br>
-
 ### OperationおよびSearch Parameter 一覧
-
-<br>
 
 #### Search Parameter一覧
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
- | SHOULD | `subject(Patient)` | reference | `GET [base]/ImagingStudy?subject=Patient/123` |
- | SHOULD | `subject,modality` | reference,token | `GET [base]/ImagingStudy?subject=Patient/123&modality=CT` |
+ | SHOULD | subject(Patient) | reference | `GET [base]/ImagingStudy?subject=Patient/123` |
+ | SHOULD | subject,modality | reference,token | `GET [base]/ImagingStudy?subject=Patient/123&modality=CT` |
  | SHOULD | subject,bodysite | reference,token | `GET [base]/ImagingStudy?subject=Patient/123&bodysite=T-15460` |
  | SHOULD | subject,started | reference,date | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-25` |
  | SHOULD | subject,started,modality,bodysite | reference,date,token,token  | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-18&modality=CT&bodysite=T-15460` |
  | SHOULD | encounter | reference  | `GET [base]/ImagingStudy?encounter=Encounter/456` |
 
 
-<br>
-
 #### 操作詳細
-
-<br>
 
 ##### 必須検索パラメータ
 
 次の検索パラメータは必須でサポートされなければならない。（SHALL）
 ImagingStudyリソースでは検索の多様性が求められるため、必須としての検索項目は定義していない。
-
-<br>
 
 ##### 推奨検索パラメータ
 
@@ -81,7 +67,6 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    GET [base]/ImagingStudy?subject=Patient/123
    ```
 
-<br>
 
 2.モダリティ中心の検索：対象患者（= Patientリソース）と撮影に使用されたモダリティを条件とした検索をサポートすることが望ましい。
 
@@ -95,7 +80,6 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    ```
    GET [base]/ImagingStudy?subject=Patient/123&modality=CT
    ```
-<br>
 
 3.部位中心の検索：対象患者（= Patientリソース）と撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい。
 
@@ -124,8 +108,6 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    GET [base]/ImagingStudy?subject=subject=Patient/123&data=eq2021-06-25
    ```
 
-<br>
-
 5.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい。
 
 
@@ -138,8 +120,6 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    ```
    GET [base]/ImagingStudy?subject=subject=Patient/123&data=eq2021-06-25
    ```
-
-<br>
    
 6.複数の条件を組み合わせた検索：対象患者（= Patientリソース）、撮影の日時、撮影に使用されたモダリティ、撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい。
 
@@ -153,8 +133,6 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    ```
    GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-18&modality=CT&bodysite=T-15460
    ```
-
-<br>
    
 7.来院情報中心の検索：来院情報（= Encounterリソース）を条件とした検索をサポートすることが望ましい。
 
@@ -169,68 +147,16 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    GET [base]/ImagingStudy?encounter=Encounter/456
    ```
 
-
-
-<br>
-
 ##### オプション検索パラメータ
 
 このプロファイルではオプション検索パラメータ定義は行っていない。
-
-<br>
 
 #### Operation一覧
 
 このプロファイルではオペレーション定義は行っていない。
 
 #### サンプル
-```json
-{
-  "resourceType": "ImagingStudy",
-  "id": "imagingstudy-example-12345",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">胸部CT  患者番号: 09236 アクセッション番号: W12342398 2011-01-01実施 3シリーズ, 12画像撮影。</div>"
-  },
-  "identifier": [
-    {
-      "system": "urn:dicom:uid",
-      "value": "urn:oid:2.16.124.113543.6003.1154777499.30246.19789.3503430045"
-    }
-  ],
-  "status": "available",
-  "subject": {
-    "reference": "Patient/Patient-67890"
-  },
-  "started": "2011-01-01T11:01:20+09:00",
-  "numberOfSeries": 1,
-  "numberOfInstances": 1,
-  "series": [
-    {
-      "uid": "2.16.124.113543.6003.2588828330.45298.17418.2723805630",
-      "number": 3,
-      "modality": {
-        "system": "http://dicom.nema.org/resources/ontology/DCM",
-        "code": "CT"
-      },
-      "description": "CT胸部スクリーニング",
-      "numberOfInstances": 1,
-      "bodySite": {
-        "system": "http://jpfhir.jp/Common/ValueSet/imagingStudy-bodySite",
-        "code": "43799004",
-        "display": "Chest"
-      },
-      "instance": [
-        {
-          "uid": "2.16.124.113543.6003.189642796.63084.16748.2599092903",
-          "sopClass": {
-            "system": "urn:ietf:rfc:3986",
-            "code": "urn:oid:1.2.840.10008.5.1.4.1.1.2"
-          },
-          "number": 1
-        }
-      ]
-    }
-  ]
-}
-```
+
+* [**放射線画像検査**][jp-imagingstudy-radiology-example-1]
+
+{% include markdown-link-references.md %}
