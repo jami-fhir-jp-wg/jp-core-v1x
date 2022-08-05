@@ -12,16 +12,16 @@ Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation
 
 // jpfhir-codeSytem,valueSet
 Alias: $labResult-code = http://jpfhir.jp/fhir/Common/ValueSet/labResult-code
-Alias: $bodymeasurement-category-cs = http://jpfhir.jp/Common/CodeSystem/bodymeasurement-category
+Alias: $bodymeasurement-category-cs = http://jpfhir.jp/fhir/Common/CodeSystem/bodymeasurement-category
 Alias: $bodyMeasurement-category-vs = http://jpfhir.jp/fhir/Common/ValueSet/bodyMeasurement-category
-Alias: $bodyMeasurement-code-cs = http://jpfhir.jp/Common/CodeSystem/bodyMeasurement-code
+Alias: $bodyMeasurement-code-cs = http://jpfhir.jp/fhir/Common/CodeSystem/bodyMeasurement-code
 Alias: $bodyMeasurement-code-vs = http://jpfhir.jp/fhir/Common/ValueSet/bodyMeasurement-code
 Alias: $observation-bodySite = http://jpfhir.jp/fhir/Common/ValueSet/observation-bodySite
 Alias: $observation-method = http://jpfhir.jp/fhir/Common/ValueSet/observation-method
 Alias: $socialHistory-code = http://jpfhir.jp/fhir/Common/ValueSet/socialHistory-code
-Alias: $vitalSigns-category-cs = http://jpfhir.jp/Common/CodeSystem/vitalSigns-category
+Alias: $vitalSigns-category-cs = http://jpfhir.jp/fhir/Common/CodeSystem/vitalSigns-category
 Alias: $vitalSigns-category-vs = http://jpfhir.jp/fhir/Common/ValueSet/vitalSigns-category
-Alias: $vitalSigns-code-cs = http://jpfhir.jp/Common/CodeSystem/vitalSigns-code
+Alias: $vitalSigns-code-cs = http://jpfhir.jp/fhir/Common/CodeSystem/vitalSigns-code
 Alias: $vitalSigns-code-vs = http://jpfhir.jp/fhir/Common/ValueSet/vitalSigns-code
 
 // JPCor定義はaliases-jpcore.fshに記載すること
