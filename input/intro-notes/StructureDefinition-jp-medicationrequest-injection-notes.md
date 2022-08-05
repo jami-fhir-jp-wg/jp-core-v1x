@@ -705,7 +705,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 ```
 
 ### 調剤指示の記述方法
-単一の薬剤に対する調剤指示は、dispenseRequest要素に対して定義した拡張「InstructionForDispense」を使用する。この拡張は、string型を使用してテキストとして指示の内容を記録できる拡張と、CodeableConcept型を使用してコード化された指示を記録できる拡張の２つを含んでおり、テキストによる指示とコードによる指示を並記することができる。一つの薬剤に対して、複数の指示を記録する場合には、この拡張を、拡張単位で繰り返して記録する。 
+単一の薬剤に対する調剤指示は、dispenseRequest要素に対して定義した拡張「InstructionForDispense」を使用する。この拡張は、CodeableConcept型を使用して、コード化された指示ないしテキストによる指示を記録できる。両方を併記してもよい。テキストによる指示を記録する場合は text要素を使用する。一つの薬剤に対して、複数の指示を記録する場合には、この拡張を、拡張単位で繰り返して記録する。 
 
 薬剤単位の調剤指示を表すインスタンス例を示す。
 
@@ -714,12 +714,9 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
   "extension": [
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense",
-      "extension": [
-        {
-          "url": "TextContent",
-          "valueString": "5mLに溶解して2mL抜きとる"
-        }
-      ]
+      "valueCodeableConcept": {
+        "text": "5mLに溶解して2mL抜きとる"
+      }
     }
   ],
 ```
