@@ -67,15 +67,17 @@
 
 1. 検索パラメータpatientとstatusの組みを指定し、該当するすべてのFamilyMemberHistoryを検索。
 
-  * OR検索のサポートを含む(例えば status={system|}[code],{system|}[code],...)
+    * OR検索のサポートを含む(例えば status={system|}[code],{system|}[code],...)
+      
+      ```
+      GET [base]/FamilyMemberHistory?patient={reference}&status={system|}[code]{,{system|}[code],...}
+      ```
+      例：
+      ```
+      GET [base]/FamilyMemberHistory?patient=Patient/123&status=completed
+      ```
 
-   ```
-   GET [base]/FamilyMemberHistory?patient={reference}&status={system|}[code]{,{system|}[code],...}
-   ```
-   例：
-   ```
-   GET [base]/FamilyMemberHistory?patient=Patient/123&status=completed
-   ```
+      指定された患者のすべてのFamilyMemberHistoryを含むBundleを返却する。
 
 ##### オプション検索パラメータ 
 

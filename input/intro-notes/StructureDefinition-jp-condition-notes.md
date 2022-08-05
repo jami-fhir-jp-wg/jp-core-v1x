@@ -69,67 +69,69 @@
 
 1. 検索パラメータpatientとdateを指定し、該当するすべてのConditionを検索。
 
-  * dateに対する次の比較演算子のサポートを含む: gt,lt,ge,le
-  * AND検索のオプションのサポートを含む (例えば.date=[date]&date=[date]]&...)
-
-   ```
-   GET [base]/Condition?patient={reference}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}
-   ```
-   例：
-   ```
-   GET [base]/Condition?patient=Patient/123&date=ge2021-08-24
-   ```
+      * dateに対する次の比較演算子のサポートを含む: gt,lt,ge,le
+      * AND検索のオプションのサポートを含む (例えば.date=[date]&date=[date]]&...)
+      
+      ```
+      GET [base]/Condition?patient={reference}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}
+      ```
+      例：
+      ```
+      GET [base]/Condition?patient=Patient/123&date=ge2021-08-24
+      ```
    
-   指定された患者および日付のすべてのConditionを含むBundleを検索する。
+      指定された患者および日付のすべてのConditionを含むBundleを検索する。
 
 2. 検索パラメータpatientとclinicalstatusを指定し、該当するすべてのConditionを検索。
 
-  * OR検索のサポートを含む(例えば clinicalstatus={system|}[code],{system|}[code],...)
-
-   ```
-   GET [base]/Condition?patient={reference}&clinicalstatus={system|}[code]{,{system|}[code],...}
-   ```
-   例：
-   ```
-   GET [base]/Condition?patient=Patient/123&clinicalstatus=active
-   ```
-   ```
-   GET [base]/Condition?patient=Patient/123&clinicalstatus=http://hl7.org/fhir/ValueSet/condition-clinical|active
-   ```
+      * OR検索のサポートを含む(例えば clinicalstatus={system|}[code],{system|}[code],...)
+      
+      ```
+      GET [base]/Condition?patient={reference}&clinicalstatus={system|}[code]{,{system|}[code],...}
+      ```
+      例：
+      ```
+      GET [base]/Condition?patient=Patient/123&clinicalstatus=active
+      ```
+      ```
+      GET [base]/Condition?patient=Patient/123&clinicalstatus=http://hl7.org/fhir/ValueSet/condition-clinical|active
+      ```
    
-   指定された患者およびステータスのすべてのConditionを含むBundleを検索する。
+      指定された患者およびステータスのすべてのConditionを含むBundleを検索する。
 
 3. 検索パラメータpatientとverificationstatusを指定し、該当するすべてのConditionを検索。
-  * OR検索のサポートを含む(例えば verificationstatus={system|}[code],{system|}[code],...)
 
-   ```
-   GET [base]/Condition?patient={reference}&verificationstatus={system|}[code]{,{system|}[code],...}
-   ```
-   例：
-   ```
-   GET [base]/Condition?patient=Patient/123&verificationstatus=confirmed
-   ```
-   ```
-   GET [base]/Condition?patient=Patient/123&verificationstatus=http://hl7.org/fhir/ValueSet/http://hl7.org/fhir/ValueSet/condition-ver-status|confirmed
-   ```
+      * OR検索のサポートを含む(例えば verificationstatus={system|}[code],{system|}[code],...)
+      
+      ```
+      GET [base]/Condition?patient={reference}&verificationstatus={system|}[code]{,{system|}[code],...}
+      ```
+      例：
+      ```
+      GET [base]/Condition?patient=Patient/123&verificationstatus=confirmed
+      ```
+      ```
+      GET [base]/Condition?patient=Patient/123&verificationstatus=http://hl7.org/fhir/ValueSet/http://hl7.org/fhir/ValueSet/condition-ver-status|confirmed
+      ```
    
-   指定された患者およびステータスのすべてのConditionを含むBundleを検索する。
+      指定された患者およびステータスのすべてのConditionを含むBundleを検索する。
 
 4. 検索パラメータpatientとcategoryを指定し、該当するすべてのConditionを検索。
-  * OR検索のサポートを含む(例えば category={system|}[code],{system|}[code],...)
 
-   ```
-   GET [base]/Condition?patient={reference}&category={system|}[code]{,{system|}[code],...}
-   ```  
-   例：
-   ```
-   GET [base]/Condition?patient=Patient/123&category=claim-diagnosis
-   ``` 
-   ```
-   GET [base]/Condition?patient=Patient/123&category=	http://hl7.org/fhir/ValueSet/condition-category|claim-diagnosis
-   ``` 
+      * OR検索のサポートを含む(例えば category={system|}[code],{system|}[code],...)
 
-   指定された患者およびステータスのすべてのConditionを含むBundleを検索する。
+      ```
+      GET [base]/Condition?patient={reference}&category={system|}[code]{,{system|}[code],...}
+      ```  
+      例：
+      ```
+      GET [base]/Condition?patient=Patient/123&category=claim-diagnosis
+      ``` 
+      ```
+      GET [base]/Condition?patient=Patient/123&category=	http://hl7.org/fhir/ValueSet/condition-category|claim-diagnosis
+      ``` 
+
+      指定された患者およびステータスのすべてのConditionを含むBundleを検索する。
 
 ##### オプション検索パラメータ 
 

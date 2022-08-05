@@ -50,18 +50,18 @@
 
 1. 検索パラメータpatientとdateを指定し、該当するすべてのProcedureを検索。
 
-  * dateに対する次の比較演算子のサポートを含む: gt,lt,ge,le
-  * AND検索のオプションのサポートを含む (例えば.date=[date]&date=[date]]&...)
-   
-   ```
-   GET [base]/Procedure?patient={reference}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}
-   ```
-   例：
-   ```
-   GET [base]/Procedure?patient=Patient/123&date=ge2021-08-24
-   ```
+      * dateに対する次の比較演算子のサポートを含む: gt,lt,ge,le
+      * AND検索のオプションのサポートを含む (例えば.date=[date]&date=[date]]&...)
+      
+      ```
+      GET [base]/Procedure?patient={reference}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}
+      ```
+      例：
+      ```
+      GET [base]/Procedure?patient=Patient/123&date=ge2021-08-24
+      ```
 
-   指定された患者および日付のすべてのProcedureを含むBundleを検索する。
+      指定された患者および日付のすべてのProcedureを含むBundleを検索する。
 
 ##### 追加検索パラメータ
 
@@ -69,33 +69,33 @@
 
 1. 検索パラメータpatientとstatusを指定し、該当するすべてのProcedureを検索。
 
-  * OR検索のサポートを含む(例えば status={system|}[code],{system|}[code],...)
+      * OR検索のサポートを含む(例えば status={system|}[code],{system|}[code],...)
 
-   ```
-   GET [base]/Procedure?patient={reference}&status={system|}[code]{,{system|}[code],...}
-   ```
-   例：
-   ```
-   GET [base]/Procedure?patient=Patient/123&status=completed
-   ```
+      ```
+      GET [base]/Procedure?patient={reference}&status={system|}[code]{,{system|}[code],...}
+      ```
+      例：
+      ```
+      GET [base]/Procedure?patient=Patient/123&status=completed
+      ```
    
-   指定された患者およびステータスのすべてのProcedureを含むBundleを検索する。
+      指定された患者およびステータスのすべてのProcedureを含むBundleを検索する。
 
 2. 検索パラメータpatientとcodeとdateを指定し、該当するすべてのProcedureを検索。
 
-  * OR検索のオプションのサポートを含む (例えば code={system|}[code],{system|}[code],...)
-  * dateに対する次の比較演算子のサポートを含む:gt,lt,ge,le
-  * AND検索のオプションのサポートを含む (例えばdate=[date]&date=[date]]&...)
+      * OR検索のオプションのサポートを含む (例えば code={system|}[code],{system|}[code],...)
+      * dateに対する次の比較演算子のサポートを含む:gt,lt,ge,le
+      * AND検索のオプションのサポートを含む (例えばdate=[date]&date=[date]]&...)
 
-   ```
-   GET [base]/Procedure?patient={reference}&code={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}
-   ```
-   例：
-   ```
-   GET [base]/Procedure?patient=Patient/123&date=ge2019-01-14T00:00:00Z&code=http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodesMedical_VS|140000610
-   ```
+      ```
+      GET [base]/Procedure?patient={reference}&code={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}
+      ```
+      例：
+      ```
+      GET [base]/Procedure?patient=Patient/123&date=ge2019-01-14T00:00:00Z&code=http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodesMedical_VS|140000610
+      ```
    
-   指定された患者および日付およびプロシージャコードのすべてのProcedureを含むBundleを検索する。
+      指定された患者および日付およびプロシージャコードのすべてのProcedureを含むBundleを検索する。
 
 ##### オプション検索パラメータ 
 
