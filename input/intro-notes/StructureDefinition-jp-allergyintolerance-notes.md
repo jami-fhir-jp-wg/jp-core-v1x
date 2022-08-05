@@ -81,8 +81,8 @@
    ```
    GET [base]/AllergyIntolerance?patient=Patient/123&date=ge2021-08-24
    ```
-
-    指定された患者および日付のすべてのAllergyIntoleranceを含むBundleを返却する。
+   
+   指定された患者および日付のすべてのAllergyIntoleranceを含むBundleを返却する。
 
 3. 検索パラメータpatientとclinicalstatusの組みを指定し、該当するすべてのAllergyIntoleranceを検索。
   * OR検索のサポートを含む(例えば clinicalstatus={system|}[code],{system|}[code],...)
