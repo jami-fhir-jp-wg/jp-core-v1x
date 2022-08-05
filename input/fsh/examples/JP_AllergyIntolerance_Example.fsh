@@ -1,7 +1,7 @@
 Instance: jp-allergyintolerance-example-1
 InstanceOf: JP_AllergyIntolerance
-Title: "JP Core AllergyIntolerance Basic Example"
-Description: "JP_AllergyIntoleranceリソースの1例"
+Title: "JP Core AllergyIntolerance Example 1"
+Description: "じん麻疹を生じた小麦粉アレルギーの例"
 Usage: #example
 * clinicalStatus
   * coding[0]

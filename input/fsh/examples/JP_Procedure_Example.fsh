@@ -1,7 +1,7 @@
 Instance:  jp-procedure-example-1
 InstanceOf: JP_Procedure
-Title:   "JP Core Procedure Basic Example"
-Description: "JP_Procedureリソースの1例"
+Title:   "JP Core Procedure Example 1"
+Description: "前額部に創傷処置を施術しフォローアップとして縫合糸の除去を予定している例"
 Usage:  #example
 * status = #in-progress
 * category
