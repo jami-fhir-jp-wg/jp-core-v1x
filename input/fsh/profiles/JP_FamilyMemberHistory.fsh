@@ -14,7 +14,7 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 * status ^short = "partial | completed | entered-in-error | health-unknown （部分的 | 完全 | 記録エラー | 健康状態不明）"
 * status ^definition = "A code specifying the status of the record of the family history of a specific family member.\r\n\r\n家族歴の記録のステータス。記録が部分的なものか完全なものかなど。"
 * dataAbsentReason ^short = "subject-unknown | withheld | unable-to-obtain | deferred (対象家族を知らない|情報の提供を拒否|聞き出すことができない|後日情報を提供できる)"
-* dataAbsentReason ^definition = "Describes why the family member's history is not available.\r\n\r\n1)subject-unknown:患者が対象の家族のことを知らない（例:患者は養子のため実親を知らない）\r\n2)withheld:患者が家族歴の共有を拒否\r\n3)unable-to-obtain:患者から聞き取れない（例：患者が意識不明）\r\n4)deferred:患者は今は知らないが、後日共有するつもりである"
+* dataAbsentReason ^definition = "Describes why the family member's history is not available.\r\n\r\n1)subject-unknown:患者が対象の家族のことを知らない（例:患者は養子のため実親を知らない）\r\n\r\n2)withheld:患者が家族歴の共有を拒否\r\n\r\n3)unable-to-obtain:患者から聞き取れない（例：患者が意識不明）\r\n\r\n4)deferred:患者は今は知らないが、後日共有するつもりである"
 * patient only Reference(JP_Patient)
 * patient ^definition = "The person who this history concerns.\r\n\r\nこの家族歴を有する患者。"
 * date ^definition = "The date (and possibly time) when the family member history was recorded or last updated.\r\n\r\nこの家族歴の最終更新日。"
