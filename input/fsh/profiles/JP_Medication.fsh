@@ -101,3 +101,5 @@ Description: "投与量が製剤単位か成分単位かを格納する拡張"
 * . ^definition = "投与量が製剤単位か成分単位かを格納する"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType" (exactly)
 * value[x] only CodeableConcept
+* value[x] from JP_MedicationIngredientStrengthType_VS (example)
+* value[x].coding.system = "http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationIngredientStrengthType" (exactly)
