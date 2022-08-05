@@ -223,10 +223,6 @@ HTTP/1.1 200 OK
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
     ]
   },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-immunization-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-immunization.html\">JP Core Immunization Profile</a></p></div><p><b>status</b>: completed</p><p><b>vaccineCode</b>: コミナティ筋注 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#182110901)</span></p><p><b>patient</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><p><b>occurrence</b>: 2021-07-01 10:30:00+0900</p><p><b>lotNumber</b>: 12345678</p><p><b>site</b>: 左上腕 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#74L)</span></p><p><b>doseQuantity</b>: 0.45 mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mL = 'mL')</span></p><h3>Performers</h3><table class=\"grid\"><tr><td>-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>Administering Provider <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0443.html\">providerRole</a>#AP)</span></td><td><a href=\"Practitioner-jp-practionner-example-male-1.html\">Practitioner/jp-practionner-example-male-1: 大阪 一郎</a> \" 大阪\"</td></tr></table><h3>ProtocolApplieds</h3><table class=\"grid\"><tr><td>-</td><td><b>TargetDisease</b></td><td><b>DoseNumber[x]</b></td></tr><tr><td>*</td><td>ＣＯＶＩＤ－１９ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#S9VN)</span></td><td>1</td></tr></table></div>"
-  },
   "status": "completed",
   "vaccineCode": {
     "coding": [

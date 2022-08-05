@@ -281,10 +281,6 @@ HTTP/1.1 200 OK
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection"
     ]
   },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationrequest-injection-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medicationrequest-injection.html\">JP Core MedicationRequest Injection Profile</a></p></div><p><b>identifier</b>: id: 1, id: 2, id: 1234567890.1.1</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>category</b>: Inpatient Order <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0482.html\">orderType</a>#I)</span>, 入院処方 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (merit9-category#IHP)</span>, 定時処方 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (JHSI0001#FTP)</span></p><p><b>medication</b>: <a name=\"jp-medicationrequest-injection-medication-example-1\"> </a></p><blockquote><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationrequest-injection-medication-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medication.html\">JP Core Medication Profile</a></p></div><p><b>status</b>: active</p><h3>Ingredients</h3><table class=\"grid\"><tr><td>-</td><td><b>Extension</b></td><td><b>Item[x]</b></td><td><b>Strength</b></td></tr><tr><td>*</td><td></td><td>ホリゾン注射液１０ｍｇ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#100558502)</span></td><td>1 アンプル<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code AMP = 'AMP')</span>/1 回<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code KAI = 'KAI')</span></td></tr></table></blockquote><p><b>subject</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><p><b>authoredOn</b>: 2016-07-01 09:28:17+0900</p><p><b>requester</b>: <a href=\"Practitioner-jp-practionner-example-female-1.html\">Practitioner/jp-practionner-example-female-1</a> \" 東京\"</p><p><b>insurance</b>: <a href=\"Coverage-jp-coverage-example-1.html\">Coverage/jp-coverage-example-1</a></p></div>"
-  },
   "contained": [
     {
       "resourceType": "Medication",
@@ -712,7 +708,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 ```
 
 ### 調剤指示の記述方法
-単一の薬剤に対する調剤指示は、dispenseRequest要素に対して定義した拡張「InstructionForDispense」を使用する。この拡張は、string型を使用してテキストとして指示の内容を記録できる拡張と、CodeableConcept型を使用してコード化された指示を記録できる拡張の２つを含んでおり、テキストによる指示とコードによる指示を並記することができる。一つの薬剤に対して、複数の指示を記録する場合には、この拡張を、拡張単位で繰り返して記録する。 
+単一の薬剤に対する調剤指示は、dispenseRequest要素に対して定義した拡張「InstructionForDispense」を使用する。この拡張は、CodeableConcept型を使用して、コード化された指示ないしテキストによる指示を記録できる。両方を併記してもよい。テキストによる指示を記録する場合は text要素を使用する。一つの薬剤に対して、複数の指示を記録する場合には、この拡張を、拡張単位で繰り返して記録する。  
 
 薬剤単位の調剤指示を表すインスタンス例を示す。
 
@@ -721,12 +717,9 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
   "extension": [
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense",
-      "extension": [
-        {
-          "url": "TextContent",
-          "valueString": "5mLに溶解して2mL抜きとる"
-        }
-      ]
+      "valueCodeableConcept": {
+        "text": "5mLに溶解して2mL抜きとる"
+      }
     }
   ],
 ```

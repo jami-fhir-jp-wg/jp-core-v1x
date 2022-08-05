@@ -312,10 +312,6 @@ HL7ではFHIRに限らず、Ver 2以降全て欧米で使用されている1回�
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
     ]
   },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationrequest-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medicationrequest.html\">JP Core MedicationRequest Profile</a></p></div><p><b>identifier</b>: id: 1, id: 1, id: 1234567890.1.1</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: ムコダイン錠２５０ｍｇ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#103835401)</span></p><p><b>subject</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><p><b>authoredOn</b>: 2020-04-01 12:28:17+0900</p><blockquote><p><b>dispenseRequest</b></p><p><b>quantity</b>: 9 錠<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code TAB = 'TAB')</span></p></blockquote></div>"
-  },
   "identifier": [
     {
       "system": "urn:oid:1.2.392.100495.20.3.81",
@@ -462,10 +458,6 @@ HL7ではFHIRに限らず、Ver 2以降全て欧米で使用されている1回�
     "profile": [
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
     ]
-  },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationrequest-example-2\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medicationrequest.html\">JP Core MedicationRequest Profile</a></p></div><p><b>identifier</b>: id: 2, id: 2, id: 1234567890.1.2</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: パンスポリンＴ錠１００ １００ｍｇ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#110626901)</span></p><p><b>subject</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><p><b>authoredOn</b>: 2020-04-01 12:28:17+0900</p><blockquote><p><b>dispenseRequest</b></p><p><b>quantity</b>: 18 錠<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code TAB = 'TAB')</span></p></blockquote></div>"
   },
   "identifier": [
     {
