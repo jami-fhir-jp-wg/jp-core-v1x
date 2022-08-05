@@ -51,7 +51,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 Medication リソースは単体として用いられないため、検索などはMedicationRequestなどの一部として行われる。
 
 ### サンプル
-注射関係のMedicationRequest、MedicationDisepense、MedicationAdministrationリソースから参照されるサンプルを示す。
+注射関係のMedicationRequest、MedicationDispense、MedicationAdministrationリソースから参照されるサンプルを示す。
 [MedicationRequest(注射)][JP_MedicationRequest_Injection]や[MedicationDispense(注射)][JP_MedicationDispense_Injection]、[MedicationAdministration(注射)][JP_MedicationAdministration_Injection]も参照すること。
 
 #### ホリゾン注射液１０ｍｇ
