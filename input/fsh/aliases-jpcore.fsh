@@ -89,6 +89,7 @@ Alias: $JP_JfagyMedicationAllergenCodes_CS = http://jpfhir.jp/fhir/Common/CodeSy
 Alias: $JP_JfagyNonFoodNonMedicationAllergenCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_JfagyNonFoodNonMedicationAllergenCodes_CS
 Alias: $JP_MedicalLicenceCertificate_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicalLicenceCertificate_CS
 Alias: $JP_PhysicalExamCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_PhysicalExamCodes_CS
+Alias: $JP_PractitionerRoleCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_PractitionerRoleCodes_CS
 Alias: $JP_ProcedureBodySite_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureBodySite_CS
 Alias: $JP_ProcedureCategoryCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCategoryCodes_CS
 Alias: $JP_ProcedureCodesDental_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesDental_CS
@@ -102,7 +103,6 @@ Alias: $JP_ProcedureDeviceKind_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_P
 Alias: $JP_ProcedureFollowUpCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureFollowUpCodes_CS
 Alias: $JP_ProcedureNotPerformedReason_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureNotPerformedReason_CS
 Alias: $JP_ProcedureOutcomeCodes_CS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureOutcomeCodes_CS
-Alias: $JP_ProcedurePerformerRoleCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedurePerformerRoleCodes_CS
 Alias: $JP_ProcedureReasonCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureReasonCodes_CS
 
 // ValueSet

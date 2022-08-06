@@ -20,7 +20,8 @@ Usage: #example
 * valueQuantity.unit = #mg/dL
 * valueQuantity.value = 3.5
 * subject = Reference(Patient/jp-patient-example-1)
-* performer = Reference(jp-practionner-example-female-1)
+* performer = Reference(jp-practitioner-example-female-1)
+//TODO: Specimenのサンプル作成の必要あり
 * specimen = Reference(Specimen/jp-specimen-example-1)
 
 // 検査オーダ
@@ -34,8 +35,8 @@ Usage: #inline
 * subject = Reference(Patient/jp-patient-example-1)
 * encounter = Reference(Encounter/jp-encounter-example-1)
 * occurrenceDateTime = "2021-10-10T17:39:00+09:00"
-* requester = Reference(Practitioner/jp-practionner-example-female-1)
-* performer = Reference(Practitioner/jp-practionner-example-male-2)
+* requester = Reference(Practitioner/jp-practitioner-example-female-1)
+* performer = Reference(Practitioner/jp-practitioner-example-male-2)
 
 //検体材料
 Instance: jp-specimen-example-1

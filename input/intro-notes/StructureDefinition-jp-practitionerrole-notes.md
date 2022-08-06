@@ -59,7 +59,7 @@
    2.GET [base]/PractitionerRole?practitioner.name=山田&_include=PractitionerRole:practitioner&_include=PractitionerRole?endpoint
    ```
 
-   practitioner.nameまたはpractitioner.identifierの連結パラメータに一致するPractitionerRoleリソースを含むBundleを検索する。PractionerRole.practitionerとPractitionerRole.endpointの_include検索をサポートすることが望ましい。（SHOULD）
+   practitioner.nameまたはpractitioner.identifierの連結パラメータに一致するPractitionerRoleリソースを含むBundleを検索する。PractitionerRole.practitionerとPractitionerRole.endpointの_include検索をサポートすることが望ましい。（SHOULD）
 
 ##### 推奨検索パラメータ
 
@@ -75,7 +75,7 @@ PractitionerRoleに対するOperationは定義されていない。
 
 ### サンプル
 
-[精神科外来サービス担当][jp-practitionerrole-example-1]
+* [**精神科外来サービス担当**][jp-practitionerrole-example-1]
 
 ## 注意事項
 
@@ -93,8 +93,8 @@ PractitionerRoleには、ここで定義されているlocationに住所が含�
 ・特定健診情報ファイル仕様
 [https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html)
 
-・SS-MIX2 標準化ストレージ 仕様書 Ver.1.2f
-[http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf](http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf)
+・SS-MIX2 標準化ストレージ 仕様書 Ver.1.2h
+[https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf](https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf)
 
 ・ICSR E2B(R3)
 [https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)

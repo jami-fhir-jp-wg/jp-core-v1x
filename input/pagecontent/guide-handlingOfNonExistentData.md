@@ -3,7 +3,7 @@ FHIR®では[JSON](https://www.hl7.org/fhir/json.html#2.6.2)および[XML](https
 データがない場合に、[Data Absent Reason拡張](https://www.hl7.org/fhir/extension-data-absent-reason.html)を用いて、データが欠損している理由を表すことができる。
 
 JP Core の検索要求するクライアント(Requester)およびサーバ(Responder)は以下の要求を満たすこと **(SHALL)**。
-### クライアント(Requster)
+### クライアント(Requester)
 ---
 #### 実装ガイドに準拠するクライアントは、Cardinalityが1以上が付与された要素を含むリソースを受信した場合、エラーを発生させたりアプリケーションを失敗させることなく、それらの値を処理することができなければならない **(SHALL)**。
 

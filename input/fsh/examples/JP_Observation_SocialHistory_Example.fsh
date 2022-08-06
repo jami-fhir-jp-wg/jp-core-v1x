@@ -17,5 +17,5 @@ Usage: #example
 * component[=].code.text = "１日の喫煙本数"
 * component[=].valueQuantity.unit = "本"
 * component[=].valueQuantity.value = 20
-* performer = Reference(Practitioner/jp-practionner-example-female-2)
+* performer = Reference(Practitioner/jp-practitioner-example-female-2)
 * status = #final
