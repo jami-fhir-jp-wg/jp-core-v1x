@@ -15,7 +15,6 @@
 ### Extension定義
 このプロファイルでは拡張定義は行っていない。
 
-
 ## 利用方法
 
 ### インタラクション一覧
@@ -60,7 +59,7 @@
 
 オプションとして次の検索パラメータをサポートすることができる。(MAY)
 
-1.患者中心での検索：subjet（= Patientリソース：対象患者）、category（対象カテゴリ）、code（対象項目）、value[x].valueQuantity（値条件）での検索をサポートすることが望ましい。（MAY）
+1.患者中心での検索：subject（= Patientリソース：対象患者）、category（対象カテゴリ）、code（対象項目）、value[x].valueQuantity（値条件）での検索をサポートすることが望ましい。（MAY）
 
 検査結果値であるエレメント=value[x].valueQuantityの実際のSearch Parameterはvalue-quantityとなる。
 
@@ -77,7 +76,7 @@ subject,category,code,value-quantity の各検索パラメータに一致するO
    ```
 
 
-2.項目中心の検索：subjet（= 複数のPatientリソース：母集団としての患者範囲）、category（対象カテゴリ）、code（対象項目）、value[x].valueQuantity（値条件）、effective[x].effectiveDateTime または .effectivePeriod（期間範囲）での検索をサポートすることが望ましい。（MAY）
+2.項目中心の検索：subject（= 複数のPatientリソース：母集団としての患者範囲）、category（対象カテゴリ）、code（対象項目）、value[x].valueQuantity（値条件）、effective[x].effectiveDateTime または .effectivePeriod（期間範囲）での検索をサポートすることが望ましい。（MAY）
 
 検査結果値であるエレメント=value[x].valueQuantityの実際のSearch Parameterはvalue-quantityとなり、期間指定についてはエレメントがeffective[x].effectiveDateTime または .effectivePeriod いずれの場合においてもSearch Parameterはdateとなる。
 
@@ -96,9 +95,9 @@ subject,category,code,value-quantity,date の各検索パラメータに一致�
 
 
 
-3.訪問診療等の検索：subjet（= 複数のPatientリソース：母集団としての患者範囲）、category（対象カテゴリ）、code（対象項目）、value[x].valueQuantity（値条件）、encounter（= Encounterリソース：対象医療行為）での検索をサポートすることが望ましい。（MAY）
+3.訪問診療等の検索：subject（= 複数のPatientリソース：母集団としての患者範囲）、category（対象カテゴリ）、code（対象項目）、value[x].valueQuantity（値条件）、encounter（= Encounterリソース：対象医療行為）での検索をサポートすることが望ましい。（MAY）
 
-subject,category,code,value-quantity,date,encountr の各検索パラメータに一致するObservationリソースを含むBundleを検索する。
+subject,category,code,value-quantity,date,encounter の各検索パラメータに一致するObservationリソースを含むBundleを検索する。
 
    ```
    GET [base]/Observation?subject={reference}&category={token}&code={token}&value-quantity={quantity}&date={date}&&encounter={encounter}
