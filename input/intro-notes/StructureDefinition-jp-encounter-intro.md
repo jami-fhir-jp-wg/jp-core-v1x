@@ -10,13 +10,13 @@
 
 - 外来予約患者の来院状況の検索、一覧表示
 
-- その他、上記以外の他のリソースからの患者受診歴の参照（例：Observationリソースの encounterで参照される対象とする患者の受診や、Careplanリソースのencounterで参照される患者の受診歴（入院歴））
+- その他、上記以外の他のリソースからの患者受診歴の参照（例：Observationリソースの encounterで参照される対象とする患者の受診や、CarePlanリソースのencounterで参照される患者の受診歴（入院歴））
 
 <h3>Scope and Usageの内容</h3>
 
 範囲と使用方法
 
-患者に関連したEncounterの情報はその利用される状況によって特徴づけられる。例えば、外来、救急、在宅医療、入院、およびオンライン受診の情報も含まれる。Encounterは入院前手続き、外来受診、入院、入院中の滞在、および退院などの一連のライフサイクルを含む。Encounterに含まれる、PratitionerやLocationといった情報は状況に応じて変更されていくことがある。
+患者に関連したEncounterの情報はその利用される状況によって特徴づけられる。例えば、外来、救急、在宅医療、入院、およびオンライン受診の情報も含まれる。Encounterは入院前手続き、外来受診、入院、入院中の滞在、および退院などの一連のライフサイクルを含む。Encounterに含まれる、PractitionerやLocationといった情報は状況に応じて変更されていくことがある。
 
 このようにEncounterの適用範囲は広範になるため、すべてのエレメントがすべての状況で利用されるとは限らない。このため、入院/退院に関連した情報は、Encounter内のhospitalizationエレメントに保持される。classエレメントはこれらの状況を区別するために使用され、これによりさらなる検証とビジネスルールの適用が導かれる。
 
@@ -26,7 +26,7 @@ Encounterインスタンスは、入院前情報を表現するために実際�
 
 Hospitalizationコンポーネントは、入院イベントに関連する拡張情報を格納するためのものである。これは常に、Encounter自体と同じ期間であることが期待される。期間が異なる場合は、別のEncounterのインスタンスを使用して、このEncounterのインスタンスの一部としてpartOfエレメントを使用してこの情報を取り込むべきである。
 
-ProcedureとEncounterはお互いへの参照を持つが、これらは異なるProcedureであるべきである。1つは、Encounterの間に行われたProcedure（Procedure.encounterに格納）、もう1つは、Encounterが別のProcedureの結果である場合（Encounter.indicationに格納）、例えば、以前のProcedureによる合併症を解決するためのフォローアップのEncouterなどである。
+ProcedureとEncounterはお互いへの参照を持つが、これらは異なるProcedureであるべきである。1つは、Encounterの間に行われたProcedure（Procedure.encounterに格納）、もう1つは、Encounterが別のProcedureの結果である場合（Encounter.indicationに格納）、例えば、以前のProcedureによる合併症を解決するためのフォローアップのEncounterなどである。
 
 <h3>Status Managementの内容</h3>
 
@@ -41,7 +41,7 @@ arrived, triaged または in-progress のstatusは入院の開始と考えら�
 on leave のstatusは、例えば、患者が週末に帰宅することを許可された場合や、その他の形式の外部イベントの場合など、入院の一部である場合もあれば、そうでない場合もある。
 Encounterには「入院した」という固定した定義はないので、例えば外来（日帰り手術-大腸内視鏡検査）などの例では、患者は入院しているとも考えられる。少なくとも、ステータスが「in-progress」の場合は、患者は入院していると考えられる。
 
-<h3>Boudaries and Relationships の内容</h3>
+<h3>Boundaries and Relationships の内容</h3>
 
 境界線と関係性
 

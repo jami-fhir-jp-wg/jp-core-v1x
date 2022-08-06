@@ -13,7 +13,7 @@ Organization リソースは、次の要素を持たなければならない。
 
 ### Extensions定義
 
-JP Oraganization リソースで使用される拡張は次の通りである。
+JP Organization リソースで使用される拡張は次の通りである。
 
 - [JP_OrganizationCategory][JP_Organization_InsuranceOrganizationCategory]
 
@@ -29,13 +29,12 @@ JP Oraganization リソースで使用される拡張は次の通りである。
 
 ### その他
 
- Organization.identifierには、以下のOraganization(組織)に関連したidentifier(ID情報)を格納できるようスライシングによる定義が追加されている。
+ Organization.identifierには、以下のOrganization(組織)に関連したidentifier(ID情報)を格納できるようスライシングによる定義が追加されている。
 
 | スライシング定義名 | 目的 | 指定方法 |
 | ---------------- | ---------------- | ---------------- |   
 | MedicalInstitutionCode | 医療機関コードを格納する | identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/insurance-medical-institution-no" を指定し、医療機関コード(10桁)を同valueに格納する。*7桁医療機関コードは異なるURIとなるので注意すること。  |
 | InsurerNumber | 健康保険組合などの保険者の保険者番号を表現する | identifier.system = "urn:oid:1.2.392.100495.20.3.61" を指定し、保険者番号を同valueに格納する。 |
-
 
 ## 利用方法
 
@@ -49,8 +48,6 @@ JP Oraganization リソースで使用される拡張は次の通りである。
 
 
 ### OperationおよびSearch Parameter 一覧
-
-
 
 ### Search Parameter一覧
 
@@ -114,39 +111,13 @@ Operationは特にない。
 
 ### サンプル  
 
-```json
-    { 
-      "resourceType" : "Organization",
-      "identifier":  [
-         {
-            "system": "urn:oid:1.2.392.100495.20.3.21",
-            "value": "13"
-         },
-         {
-            "system": "urn:oid:1.2.392.100495.20.3.22",
-            "value": "1"
-         },
-         {
-            "system": "urn:oid:1.2.392.100495.20.3.23",
-            "value": "9999999"
-         }
-       ],
-      "name": "太郎花子クリニック",
-      "address":  [
-         {
-            "line":  [
-                    "東京都文京区向丘３−２−１"
-                ],
-                "city": "文京区",
-                "state": "東京都",
-                "country": "JPN"
-         }
-        ]
-    }
-```
+* [**太郎花子クリニック**][jp-organization-example-clinic]
+* [**健康第一病院**][jp-organization-example-hospital]
+* [**ひまわり健康保険組合**][jp-organization-example-payer]
 
 ## 注意事項
 連絡先情報は2箇所に記載がある。1つはOrganization自体にあり、一般的な公的組織の連絡先として使用される。もう1つはContactEntity構造を使用した場所であり、特定の目的のために連絡を受けるように組織が指定した人物や関係者に連絡を取るために使用される。
+
 ## その他、参考文献、リンク等
 
 ・退院時サマリー規約
@@ -158,8 +129,8 @@ Operationは特にない。
 ・特定健診情報ファイル仕様
 [https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html)
 
-・SS-MIX2 標準化ストレージ 仕様書 Ver.1.2f
-[http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf](http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf)
+・SS-MIX2 標準化ストレージ 仕様書 Ver.1.2h
+[https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf](https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf)
 
 ・ICSR E2B(R3)
 [https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)
