@@ -20,7 +20,7 @@ Usage: #example
 * medicationReference = Reference(Medication/jp-medicationrequest-injection-medication-example-1)
 * subject = Reference(Patient/jp-patient-example-1)
 * authoredOn = "2016-07-01T09:28:17+09:00"
-* requester = Reference(Practitioner/jp-practionner-example-female-1)
+* requester = Reference(Practitioner/jp-practitioner-example-female-1)
 * insurance = Reference(Coverage/jp-coverage-example-1)
 * dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device"
 * dosageInstruction.extension.valueReference = Reference(Device/jp-medicationrequest-injection-device-example-1)
@@ -58,7 +58,7 @@ Usage: #example
 * medicationReference = Reference(Medication/jp-medicationrequest-injection-medication-example-2)
 * subject = Reference(Patient/jp-patient-example-1)
 * authoredOn = "2016-07-01T07:28:17+09:00"
-* requester = Reference(Practitioner/jp-practionner-example-female-1)
+* requester = Reference(Practitioner/jp-practitioner-example-female-1)
 * insurance = Reference(Coverage/jp-coverage-example-1)
 * dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line"
 * dosageInstruction.extension.valueCodeableConcept = http://hl7fhir.jp/medication/99ILL#01 "主管"

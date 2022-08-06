@@ -171,9 +171,9 @@
 [jp-organization-example-hospital]: Organization-jp-organization-example-hospital.html
 [jp-organization-example-payer]: Organization-jp-organization-example-payer.html
 [jp-patient-example-1]: Patient-jp-patient-example-1.html
-[jp-practionner-example-female-1]: Practitioner-jp-practionner-example-female-1.html
-[jp-practionner-example-female-2]: Practitioner-jp-practionner-example-female-2.html
-[jp-practionner-example-male-1]: Practitioner-jp-practionner-example-male-1.html
-[jp-practionner-example-male-2]: Practitioner-jp-practionner-example-male-2.html
+[jp-practitioner-example-female-1]: Practitioner-jp-practitioner-example-female-1.html
+[jp-practitioner-example-female-2]: Practitioner-jp-practitioner-example-female-2.html
+[jp-practitioner-example-male-1]: Practitioner-jp-practitioner-example-male-1.html
+[jp-practitioner-example-male-2]: Practitioner-jp-practitioner-example-male-2.html
 [jp-practitionerrole-example-1]: PractitionerRole-jp-practitionerrole-example-1.html
 [jp-procedure-example-1]: Procedure-jp-procedure-example-1.html
