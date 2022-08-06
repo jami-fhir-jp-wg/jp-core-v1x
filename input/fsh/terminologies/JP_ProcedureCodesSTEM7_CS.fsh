@@ -1,7 +1,7 @@
 CodeSystem: JP_ProcedureCodesSTEM7_CS
 Id: jp-procedure-codes-stem7-cs
-Title: "JP Core Procedure Codes(STEM7)"
-Description: "Procesureで使用する処置のコード 外保連手術基幹コード(STEM7)"
+Title: "JP Core Procedure Codes STEM7"
+Description: "処置のコード:外保連手術基幹コード(STEM7)"
 * ^url = $JP_ProcedureCodesSTEM7_CS
 * ^status = #draft
 * ^caseSensitive = true

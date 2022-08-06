@@ -27,20 +27,3 @@ Description: "このプロファイルはObservationリソースに対して、�
 * hasMember ^comment = "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.\r\n\r\n【JP仕様】<br/>\r\n関連する参照リソースにJP_Observation_BodyMeasurementを追加"
 * derivedFrom only Reference(DocumentReference or ImagingStudy or Media or QuestionnaireResponse or JP_Observation_Common or MolecularSequence or JP_Observation_BodyMeasurement)
 * derivedFrom ^comment = "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.\r\n\r\n【JP仕様】<br/>\r\n導出元の参照リソースにJP_Observation_BodyMeasurementを追加"
-
-// ==============================
-//   Extension 定義
-// ==============================
-Extension: JP_Observation_BodySite_BodySitePosition
-Id: jp-observation-bodysite-bodysiteposition
-Title: "JP Core Observation BodySite BodySitePosition Extension"
-Description: "部位（bodySite）の左右の区別を表現する際に使用する"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_BodySite_BodySitePosition"
-* ^context.type = #element
-* ^context.expression = "Observation.bodySite"
-* . ..1
-* . ^short = "部位（bodySite）の左右の区別を表現する際に使用する"
-* . ^definition = "部位（bodySite）の左右の区別を表現する際に使用する"
-* . ^comment = "部位（bodySite）の左右の区別を表現する際に使用する"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_BodySite_BodySitePosition" (exactly)
-* value[x] only string or CodeableConcept

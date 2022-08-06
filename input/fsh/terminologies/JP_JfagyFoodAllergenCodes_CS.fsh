@@ -1,11 +1,12 @@
-CodeSystem: JP_JFAGY_CS
-Id: jp-jfagy-cs
-Title: "JP Core JFAGY (AllergyIntolerance Code System)"
-Description: "Japanese Food Allergy Code System"
-* ^url = $JP_JFAGY_CS
+CodeSystem: JP_JfagyFoodAllergenCodes_CS
+Id: jp-jfagy-food-allergen-codes-cs
+Title: "JFAGY Food Allergen Codes"
+Description: "JFAGY アレルゲンコード（食品）"
+* ^url = $JP_JfagyFoodAllergenCodes_CS
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
+// TODO:最新版JFAGYよりのコードと用語を追加
 * #J9F000000000 "食品"
 * #J9F690000000 "農産食品"
 * #J9F691000000 "米穀"

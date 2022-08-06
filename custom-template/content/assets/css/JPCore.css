@@ -5,3 +5,10 @@
 table.colsd td {
     background-color: #F9FFE6;
 }
+
+img[title="Japan"] 
+{
+    border:1px solid #888888;
+    width: 45px;
+    height: 30px;
+}

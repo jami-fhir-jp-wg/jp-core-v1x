@@ -6,7 +6,6 @@ Parent: JP_Observation_Common
 Id: jp-observation-physicalexam
 Title: "JP Core Observation PhysicalExam Profile"
 Description: "このプロファイルはObservationリソースに対して、身体所見のデータを送受信するための制約と拡張を定めたものである。"
-* bodySite.extension contains JP_Observation_BodySite_BodySitePosition named bodySitePosition ..*
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_PhysicalExam"
 * ^status = #draft
 * . ^short = "身体所見に関する測定や簡単な観察事実（assertion）"
@@ -16,7 +15,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category = $observation-category#exam "Exam" (exactly)
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP仕様】<br/>\r\n基底仕様のカテゴリ「exam」固定とする"
 * code = $JP_PhysicalExamCodes_CS#physical-findings "Physical Findings" (exactly)
-* code from $JP_PhysicalExamCodes_VS (required)
+* code from JP_PhysicalExamCodes_VS (required)
 * code ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP仕様】<br/>\r\n所見の有無を表すコード（固定値）"
 * subject 1..
 * subject only Reference(JP_Patient)
@@ -30,12 +29,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * value[x] ^comment = "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.\r\n\r\n【JP仕様】<br/>\r\nコードに限定する"
 * value[x] ^binding.description = "Codes specifying either Yes or No used in fields containing binary answers generally user-specified."
 * bodySite from $observation-bodySite (preferred)
-* bodySite ^comment = "Only used if not implicit in code found in Observation.code.  In many systems, this may be represented as a related observation instead of an inline component.   \n\nIf the use case requires BodySite to be handled as a separate resource (e.g. to identify and track separately) then use the standard extension[ bodySite](extension-bodysite.html).\r\n\r\n【JP仕様】<br/>\r\n外保連の手術基幹コード（STEM7）の操作対象部位を基にバリューセットを定義する<br/>\r\n左右の区別は拡張で表現する<br/>\r\n具体的なコードについてはSWG6と連携して決定する必要がある（TBD）"
-* bodySite.extension ^slicing.discriminator.type = #value
-* bodySite.extension ^slicing.discriminator.path = "url"
-* bodySite.extension ^slicing.rules = #open
-* bodySite.extension[bodySitePosition] only JP_Observation_BodySite_BodySitePosition
-* bodySite.extension[bodySitePosition] ^comment = "左右の区別を表現する際に使用する"
+* bodySite ^comment = "ICD-11"
 * method from $observation-method (preferred)
 * method ^comment = "Only used if not implicit in code for Observation.code.\r\n\r\n【JP仕様】<br/>\r\n症状・所見マスターの「診察方法」を基にバリューセットを定義する<br/>\r\n具体的なコードについてはSWG6と連携して決定する必要がある（TBD）"
 * hasMember only Reference(JP_Observation_Common or QuestionnaireResponse or MolecularSequence or JP_Observation_PhysicalExam)
@@ -44,6 +38,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * derivedFrom ^comment = "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.\r\n\r\n【JP仕様】<br/>\r\n導出元の参照リソースにJP_Observation_PhysicalExamを追加"
 * component ^comment = "For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.\r\n\r\n【JP仕様】<br/>\r\n具体的な所見を記載する"
 * component.code = $JP_PhysicalExamCodes_CS#detailed-physical-findings "Detailed Physical Findings" (exactly)
-* component.code from $JP_PhysicalExamCodes_VS (required)
+* component.code from JP_PhysicalExamCodes_VS (required)
 * component.code ^comment = "*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP仕様】<br/>\r\n具体的な所見を表すコード（固定値）"
 * component.value[x] only CodeableConcept or string

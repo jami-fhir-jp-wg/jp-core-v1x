@@ -5,7 +5,7 @@
 * [JP Core Location （所在場所）プロファイル][JP_Location]
 * [JP Core Organization （組織）プロファイル][JP_Organization]
 * [JP Core Practitioner （医療従事者）プロファイル][JP_Practitioner]
-* [JP Core PractitionerRole （医療従事者役割)プロファイル][JP_PractitionerRole]
+* [JP Core PractitionerRole （医療従事者役割）プロファイル][JP_PractitionerRole]
 
 ### Extensions
 * [JP_Coverage_InsuredPersonNumber]

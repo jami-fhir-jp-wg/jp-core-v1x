@@ -367,7 +367,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.route.coding.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.route.coding.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
 * dosageInstruction.route.coding.system 1..
-* dosageInstruction.route.coding.system = "http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes" (exactly)
+* dosageInstruction.route.coding.system = "http://jpfhir.jp/fhir/Common/CodeSystem/route-codes" (exactly)
 * dosageInstruction.route.coding.system ^short = "HL7v2-0162表をベースにしたJPFHIRでの投与経路コード表"
 * dosageInstruction.route.coding.system ^definition = "HL7v2-0162表をベースにしたJPFHIRでの投与経路コード表を示すURL"
 * dosageInstruction.route.coding.system ^comment = "URIはOID(urn:oid:....)やUUID(urn:uuid:....)であることもある。OIDやUUIDはHL7のOIDレジストリを参照していなければならない（SHALL)。そうでなければ、URIはHL7のFHIRのリストに挙げられている特別なURIであるか、用語集が明確な定義が参照されるべきである。"
@@ -901,7 +901,6 @@ Title: "JP Core MedicationRequest DispenseRequest InstructionForDispense Extensi
 Description: "調剤指示。薬剤単位の調剤指示を表現するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense"
 * ^date = "2022-03-16"
-* ^purpose = "薬剤単位の調剤指示を表現するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationRequest.dispenseRequest"
 * id ..0
@@ -914,7 +913,6 @@ Title: "JP Core MedicationRequest DosageInstruction Device Extension"
 Description: "投与装置を格納する拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device"
 * ^date = "2022-03-16"
-* ^purpose = "投与装置を格納する拡張"
 * ^context[0].type = #element
 * ^context[=].expression = "MedicationRequest.dosageInstruction"
 * ^context[+].type = #element
@@ -930,7 +928,6 @@ Title: "JP Core MedicationRequest DosageInstruction Line Extension"
 Description: "指示ラインを格納するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line"
 * ^date = "2022-03-16"
-* ^purpose = "指示ラインを格納するための拡張"
 * ^context[0].type = #element
 * ^context[=].expression = "MedicationRequest.dosageInstruction"
 * ^context[+].type = #element
@@ -970,7 +967,6 @@ Title: "JP Core MedicationRequest DosageInstruction UsageDuration Extension"
 Description: "隔日投与など、服⽤開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使⽤する拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
 * ^date = "2022-03-16"
-* ^purpose = "隔日投与など、服⽤開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使⽤する拡張"
 * ^context[0].type = #element
 * ^context[=].expression = "MedicationRequest.dosageInstruction"
 * ^context[+].type = #element

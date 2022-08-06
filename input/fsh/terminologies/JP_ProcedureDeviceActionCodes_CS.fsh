@@ -1,7 +1,7 @@
 CodeSystem: JP_ProcedureDeviceActionCodes_CS
 Id: jp-procedure-device-action-codes-cs
 Title: "JP Core Procedure Device Action Codes"
-Description:  "Codes indicating the change that happened to the device during the procedure."
+Description:  "処置の実施中に機器に起こった変化を示すコード"
 * ^url = $JP_ProcedureDeviceActionCodes_CS
 * ^status = #draft
 * ^caseSensitive = true
