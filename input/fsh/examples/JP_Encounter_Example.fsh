@@ -1,6 +1,6 @@
 Instance: jp-encounter-example-1
 InstanceOf: JP_Encounter
-Title: "JP Core Enconter 外来"
+Title: "JP Core Enconter Example 外来"
 Description: "外来"
 Usage: #example
 * status = #finished

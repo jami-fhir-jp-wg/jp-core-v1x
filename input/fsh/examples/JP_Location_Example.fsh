@@ -1,6 +1,6 @@
 Instance: jp-location-example-ope
 InstanceOf: JP_Location
-Title: "JP Core Location 手術室"
+Title: "JP Core Location Example 手術室"
 Description: "手術室"
 Usage: #example
 * identifier.value = "B1-S.F2.1.00"
@@ -18,7 +18,7 @@ Usage: #example
 
 Instance: jp-location-example-ward
 InstanceOf: JP_Location
-Title: "JP Core Location 病棟"
+Title: "JP Core Location Example 病棟"
 Description: "病棟"
 Usage: #example
 * identifier.value = "09A.021.4"
@@ -33,7 +33,7 @@ Usage: #example
 
 Instance: jp-location-example-examinationroom
 InstanceOf: JP_Location
-Title: "JP Core Location 診察室"
+Title: "JP Core Location Example 診察室"
 Description: "診察室"
 Usage: #example
 * identifier.value = "G-101"

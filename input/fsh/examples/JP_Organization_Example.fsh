@@ -1,6 +1,6 @@
 Instance: jp-organization-example-payer
 InstanceOf: JP_Organization
-Title: "JP Core Organization ひまわり健康保険組合"
+Title: "JP Core Organization Example ひまわり健康保険組合"
 Description: "ひまわり健康保険組合"
 Usage: #example
 * type = http://terminology.hl7.org/CodeSystem/organization-type#pay "Payer"
@@ -10,8 +10,8 @@ Usage: #example
 
 Instance: jp-organization-example-clinic
 InstanceOf: JP_Organization
-Title: "JP Core Organization クリニック"
-Description: "クリニック"
+Title: "JP Core Organization Example クリニック"
+Description: "太郎花子クリニック"
 Usage: #example
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo"
 * extension[=].valueIdentifier.system = "urn:oid:1.2.392.100495.20.3.21"
@@ -33,7 +33,7 @@ Usage: #example
 
 Instance: jp-organization-example-hospital
 InstanceOf: JP_Organization
-Title: "JP Core Organization 病院"
+Title: "JP Core Organization Example 病院"
 Description: "健康第一病院"
 Usage: #example
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo"

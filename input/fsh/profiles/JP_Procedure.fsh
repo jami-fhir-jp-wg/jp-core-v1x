@@ -16,7 +16,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * identifier ^definition = "これは、ビジネスプロセスによって定義され、リソース自体への直接のURL参照が適切でない場合に参照するために使用される、このProcedureに関連する識別子を記録する。"
 * identifier ^comment = "これはビジネス識別子であり、リソース識別子ではない（議論参照）。識別子は1つのリソースインスタンスにのみ表示されることがベストだが、ビジネス上の慣習により、同じ識別子を持つ複数のリソースインスタンスが存在することがあるかもしれない。例えば、複数のPatientとPersonリソースインスタンスが同じ社会保険番号を共有しているかもしれない。"
 * instantiatesCanonical ^definition = "本Procedureの全部または一部を遵守するFHIR定義のプロトコル、ガイドライン、オーダーセット、その他の定義を指すURL。"
-* instantiatesUri ^definition = "本Procedrure全体または一部を遵守する、外部で管理されているプロトコル、ガイドライン、オーダーセット、またはその他の定義を指すURL。"
+* instantiatesUri ^definition = "本Procedure全体または一部を遵守する、外部で管理されているプロトコル、ガイドライン、オーダーセット、またはその他の定義を指すURL。"
 * basedOn only Reference(CarePlan or ServiceRequest)
 * basedOn ^short = "A request for this procedure このプロシージャの依頼情報"
 * basedOn ^definition = "このプロシージャの依頼情報の詳細を含むリソースへの参照。"
@@ -41,7 +41,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * encounter ^definition = "プロシジャーが作成または実行されたエンカウンター、またはこの記録の作成が緊密に関連しているエンカウンター。"
 * encounter ^comment = "これは通常、イベントが発生した出会いの中で行われるが、活動によっては、出会いの公式な終了前または終了後に開始されても、出会いの文脈と結びついている場合がある。"
 * performed[x] ^short = "When the procedure was performed プロシジャーが実施された時期"
-* performed[x] ^definition = "Procedureが行われた推定または実際の日付、日時、期間、または年齢。複数の日付にまたがる複雑なProcdedureをサポートするために期間を許可し、Procdedureの長さを把握することも可能。"
+* performed[x] ^definition = "Procedureが行われた推定または実際の日付、日時、期間、または年齢。複数の日付にまたがる複雑なProcedureをサポートするために期間を許可し、Procdedureの長さを把握することも可能。"
 * performed[x] ^comment = "Age is generally used when the patient reports an age at which the procedure was performed. Range is generally used when the patient reports an age range when the procedure was performed, such as sometime between 20-25 years old.  dateTime supports a range of precision due to some procedures being reported as past procedures that might not have millisecond precision while other procedures performed and documented during the encounter might have more precise UTC timestamps with timezone.\r\n\r\n年齢は一般的に、患者が手技が行われた年齢を報告するときに使用される。\r\n範囲は、一般的に、患者が手順が実行されたときに年齢範囲を報告する場合に使用される。たとえば、20〜25歳の間など。\r\ndateTimeは、ミリ秒の精度を持たない可能性がある過去の手順として報告される一部の手順と、エンカウンターの期間において実施され文書化された他の手順が、タイムゾーンでより正確なUTCタイムスタンプを持つ可能性があるため、さまざまな精度をサポートする。"
 * recorder only Reference(JP_Patient or RelatedPerson or JP_Practitioner or JP_PractitionerRole)
 * recorder ^short = "Who recorded the procedure プロシジャーを記録した人"
@@ -56,7 +56,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * performer ^definition = "Limited to \"real\" people rather than equipment.\r\n医療機器ではなく「生身の人間」に限定。"
 * performer.function ^definition = "Distinguishes the type of involvement of the performer in the procedure. For example, surgeon, anaesthetist, endoscopist.\r\nプロシジャーへの実施者の関与のタイプを区別する。たとえば、外科医、麻酔科医、内視鏡医。"
 * performer.function ^comment = "すべての用語の使用がこの一般的なパターンに当てはまるわけではない。場合によっては、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係や事前・事後の調整を管理するための独自の構造を提供するべきである。\r\n\r\n 【JP-CORE】\r\n当面利用しない。"
-* performer.actor ^short = "The reference to the practitioner　医療従事者への参照"
+* performer.actor ^short = "The reference to the practitioner 医療従事者への参照"
 * performer.actor ^definition = "The practitioner who was involved in the procedure.\r\nプロシジャーに関わった医療従事者。"
 * performer.actor ^comment = "参照は、実際のFHIRリソースへの参照であり、解決可能でなければならない（アクセス制御、一時的な利用不可などを可能にする）。解決には、URLからの検索、またはリソースタイプによって適用可能な場合は、絶対参照を正規のURLとして扱い、ローカルレジストリ/リポジトリで検索することができる。"
 * performer.onBehalfOf only Reference(JP_Organization)
@@ -72,7 +72,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * reasonCode ^comment = "Use Procedure.reasonCode when a code sufficiently describes the reason.  Use Procedure.reasonReference when referencing a resource, which allows more information to be conveyed, such as onset date. Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used.  Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.\r\n\r\nひとつのコードが理由を十分に説明している場合は、Procedure.reasonCodeを使用する。\r\nリソースを参照する場合は、Procedure.reasonReferenceを使用する。これにより、開始日など、より多くの情報を伝達できる。\r\nProcedure.reasonCodeとProcedure.reasonReferenceは、重複することを意図したものではない。単一の理由で、Procedure.reasonCodeまたはProcedure.reasonReferenceのいずれかだけを使用できる。\r\n Procedure.reasonCodeは要約コードの場合もあれば、Procedure.reasonReferenceを使用して、Condition | Observation | Procedure | DiagnosticReport | DocumentReference のいずれかにより、非常に精緻な理由の定義を参照することもできる。\r\nもしプロシージャの異なる理由を説明しているのであれば、Procedure.reasonCodeとProcedure.reasonReferenceの両方を使用できる。"
 * reasonReference only Reference(JP_Condition or JP_Observation_Common or JP_Procedure or JP_DiagnosticReport_Common or DocumentReference)
 * reasonReference ^short = "The justification that the procedure was performed プロシジャーが実施された正当性"
-* reasonReference ^definition = "なぜそのようなPlocedureを行ったのか、その正当性を示す。"
+* reasonReference ^definition = "なぜそのようなProcedureを行ったのか、その正当性を示す。"
 * reasonReference ^comment = "It is possible for a procedure to be a reason (such as C-Section) for another procedure (such as an epidural). Other examples include endoscopy for dilatation and biopsy (a combination of diagnostic and therapeutic use). \nUse Procedure.reasonCode when a code sufficiently describes the reason.  Use Procedure.reasonReference when referencing a resource, which allows more information to be conveyed, such as onset date. Procedure.reasonCode and Procedure.reasonReference are not meant to be duplicative.  For a single reason, either Procedure.reasonCode or Procedure.reasonReference can be used.  Procedure.reasonCode may be a summary code, or Procedure.reasonReference may be used to reference a very precise definition of the reason using Condition | Observation | Procedure | DiagnosticReport | DocumentReference.  Both Procedure.reasonCode and Procedure.reasonReference can be used if they are describing different reasons for the procedure.\r\n\r\nある手順が別の手順（硬膜外など）の理由（帝王切開など）になる可能性がある。他の例には、拡張および生検（診断および治療用途の組み合わせ）のための内視鏡検査が含まれる。\r\nコードが理由を十分に説明している場合は、Procedure.reasonCodeを使用する。\r\nリソースを参照する場合は、Procedure.reasonReferenceを使用する。これにより、開始日など、より多くの情報を伝達できる。\r\nProcedure.reasonCodeとProcedure.reasonReferenceは、重複することを意図したものではない。単一の理由で、Procedure.reasonCodeまたはProcedure.reasonReferenceのいずれかだけを使用できる。\r\n Procedure.reasonCodeは要約コードの場合もあれば、Procedure.reasonReferenceを使用して、Condition | Observation | Procedure | DiagnosticReport | DocumentReference"
 * bodySite ^short = "Target body sites 対象の人体部位"
 * bodySite ^definition = "詳細かつ構造化された解剖学的な位置情報。複数の場所を指定することができる。例えば、1つの病変に対して複数のパンチングバイオプシーを行うことができる。"

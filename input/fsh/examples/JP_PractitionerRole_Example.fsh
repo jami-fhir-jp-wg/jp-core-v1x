@@ -1,7 +1,7 @@
 Instance:  jp-practitionerrole-example-1
 InstanceOf: JP_PractitionerRole
-Title:   "JP Core ProcedureRole 精神科外来サービス担当"
-Description: "精神科外来サービス担当 "
+Title:   "JP Core ProcedureRole Example 精神科外来サービス担当"
+Description: "精神科外来サービス担当"
 Usage:  #example
 * contained[0] = jp-healthcareservice-example-1
 * identifier.system = "http://www.acme.org/practitioners"
@@ -11,7 +11,7 @@ Usage:  #example
 * period.end = "2012-03-31"
 * practitioner = Reference(Practitioner/jp-practionner-example-male-1) "大阪 一郎"
 * organization = Reference(Organization/jp-organization-example-hospital) "健康第一病院"
-* code = $JP_ProcedurePerformerRoleCodes_CS#B12101
+* code = $JP_PractitionerRoleCodes_CS#B12101
 * location = Reference(Location/jp-location-example-examinationroom) "外来101診察室"
 * healthcareService = Reference(HealthcareService/jp-healthcareservice-example-1)
 * telecom[0].system = #phone
@@ -37,7 +37,7 @@ Usage:  #example
 
 Instance: jp-healthcareservice-example-1
 InstanceOf: HealthcareService
-Title:   "HealthcareService 精神科外来サービス"
+Title:   "HealthcareService Example 精神科外来サービス"
 Usage: #inline
 * identifier.system = "http://example.org/shared-ids"
 * identifier.value = "HS-12"

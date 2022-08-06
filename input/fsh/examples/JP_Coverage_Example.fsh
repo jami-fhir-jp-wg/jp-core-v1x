@@ -1,6 +1,6 @@
 Instance: jp-coverage-example-1
 InstanceOf: JP_Coverage
-Title: "JP Core Coverage 健康保険証"
+Title: "JP Core Coverage Example 健康保険証"
 Description: "健康保険証"
 Usage: #example
 * status = #active

@@ -1,6 +1,6 @@
 Instance: jp-medicationadministration-example-1
 InstanceOf: JP_MedicationAdministration
-Title: "JP Core MedicationAdministration 投薬実施"
+Title: "JP Core MedicationAdministration Example 投薬実施"
 Description: "投薬実施"
 Usage: #example
 * meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
@@ -32,7 +32,7 @@ Usage: #example
 
 Instance: jp-medicationadministration-example-2
 InstanceOf: JP_MedicationAdministration
-Title: "JP MedicationAdministration 投薬中止"
+Title: "JP Core MedicationAdministration Example 投薬中止"
 Description: "投薬中止"
 Usage: #example
 * meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
