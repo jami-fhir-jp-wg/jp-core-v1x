@@ -7,9 +7,6 @@ Coverage リソースは、次の要素を必ず持たなければならない�
 - beneficiary : 「サービスを受ける者」を示すエレメント。Patientリソースを参照する。
 - payor ： 「負担者」を示すエレメント。Organization、Patient、RelatedPersonのいずれかを参照する。
 
-<br><br>
-
-
 ### Extensions定義
 
 JP Core Coverage プロファイルで使用される拡張は次の通りである。
@@ -19,8 +16,6 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
     - 健康保険における被保険者証番号を示す拡張。
 - [JP_Coverage_InsuredPersonSubNumber][JP_Coverage_InsuredPersonSubNumber]
     - 健康保険における被保険者証番号の枝番を示す拡張。
-
-<br><br>
 
 ## 利用方法
 <br>
@@ -33,11 +28,7 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 | SHOULD（推奨）   | vread、history-instance                     |
 | MAY（利用可能）  | create、update、patch、delete、history-type |
 
-<br>
-
 ### OperationおよびSearch Parameter 一覧
-
-<br>
 
 #### Search Parameter一覧
 
@@ -54,8 +45,6 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 | SHOULD           | status | token  | GET [base]/Coverage?status=***
 | SHOULD           | subscriber | reference  | GET [base]/Coverage?subscriber=***
 | SHOULD           | type | token  | GET [base]/Coverage?token=***
-
-
 
 ##### 推奨検索パラメータ
 
@@ -87,5 +76,8 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
    GET [base]/Coverageclass?type=*****
    ```
 
-   
+### サンプル
+
+* [**健康保険証**][jp-coverage-example-1]
+
 {% include markdown-link-references.md %}

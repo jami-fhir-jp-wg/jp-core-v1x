@@ -1,7 +1,5 @@
 
-
 ### 必須要素
-
 
 次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
 
@@ -23,7 +21,6 @@ JP Encounter リソースで使用される拡張は次の通りである。
 - [Associated Encounter](https://www.hl7.org/fhir/extension-encounter-associatedencounter.html)
 
   - リソースで関連付けを定義しているプロパティが存在しないEncounterを参照するために利用する
-
 
 ## 利用方法
 
@@ -48,8 +45,6 @@ JP Encounter リソースで使用される拡張は次の通りである。
 | SHOULD           | patient, type    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/us-npi\|123456?type=http://hl7.org/fhir/sid/us-npi\ADMS  |
 | SHOULD           | patient, status    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/us-npi\|123456?status=http://hl7.org/fhir/sid/us-npi\arrived  |
 
-
-
 ##### 必須検索パラメータ
 
 次の検索パラメータはでサポートされるべきである。(SHALL)
@@ -57,7 +52,6 @@ JP Encounter リソースで使用される拡張は次の通りである。
 必須検索パラメータ(SHALL)はない。
 
 ##### 推奨検索パラメータ
-
 
 次の検索パラメータをサポートすることが望ましい。(SHOULD)
 
@@ -171,44 +165,7 @@ HTTP/1.1 200 OK
 ```
 
 ### サンプル
-
-
-```JSON
-{
-  "resourceType": "Encounter",
-  "id": "587293",
-  "meta": {
-    "versionId": "1",
-    "lastUpdated": "2020-01-06T15:11:11.447+00:00",
-    "source": "#tK0UvlqmgxxHWOc2"
-  },
-  "status": "finished",
-  "class": {
-    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
-    "code": "AMB"
-  },
-  "subject": {
-    "reference": "Patient/587224",
-    "display": "Jonathan639 Kassulke119"
-  },
-  "participant": [ {
-    "individual": {
-      "reference": "Practitioner/587226",
-      "display": "Dr. Shirely692 Berge125"
-    }
-  } ],
-  "period": {
-    "start": "2016-05-08T03:08:24+02:00",
-    "end": "2016-05-08T03:23:24+02:00"
-  },
-  "serviceProvider": {
-    "reference": "Organization/587225",
-    "display": "PCP15810"
-  }
-}
-```
-
-
+* [**クリニック来院**][jp-encounter-example-1]
 
 ## 注意事項
 
@@ -233,3 +190,6 @@ Encounterリソースは、予定情報や予約の保存には使用されな�
 
 ・ICSR E2B(R3)
 [https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)
+
+
+{% include markdown-link-references.md %}

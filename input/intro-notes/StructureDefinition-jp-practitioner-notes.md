@@ -1,12 +1,10 @@
 
 ### 必須要素
 
-
 次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
 
 JP Practitioner リソースには、必須要素はない。
 
-  
 ### Extensions定義
 
 JP Practitioner リソースで使用される拡張は次の通りである。
@@ -14,7 +12,6 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 #### 既存のExtensionの利用
 
 - [nameRepresentationUse](http://hl7.org/fhir/R4/extension-iso21090-en-representation.html)
-
   - 医療従事者氏名(Practitioner.name)の漢字表記・カナ表記識別のために使用する。
 
 ### その他
@@ -26,12 +23,9 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 | DrugUserQualification | 麻薬施用者免許番号を表現する | qualification.identifier.system = "urn:oid:1.2.392.100495.20.3.32.[都道府県番号]" を指定し、麻薬取扱免許番号を同valueに格納する。<br> [都道府県番号](https://www.mhlw.go.jp/topics/2007/07/dl/tp0727-1d.pdf)  |
 | MedicalRegistrationNumber | 医籍登録者番号を表現する | qualification.identifier.system = "urn:oid:1.2.392.100495.20.3.31" を指定し、医籍登録者番号を同valueに格納する。 |
 
-
-
 ## 利用方法
 
 ### インタラクション一覧
-
 
 | コンフォーマンス | インタラクション                            |
 | ---------------- | ------------------------------------------- |
@@ -39,19 +33,14 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 | SHOULD（推奨）   | vread、history-instance                     |
 | MAY（利用可能）  | create、update、patch、delete、history-type |
 
-
-
 ### OperationおよびSearch Parameter 一覧
 
-
 #### Search Parameter一覧
-
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
 | SHALL            | identifier    | token  | GET [base]/Practitioner?identifier=http://myhospital.com/fhir/drid\|789 |
 | SHALL            | name          | string | GET [base]/Practitioner?name=山田                            |
-
 
 ##### 必須検索パラメータ
 
@@ -87,12 +76,9 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 
    名前（姓:family、名:given、またはテキスト:text）が一致するPractitionerリソースを含むBundleを検索する。
 
-   
-
 ##### 推奨検索パラメータ
 
 推奨検索パラメータ(SHOULD)はない。
-
 
 ##### オプション検索パラメータ 
 
@@ -104,64 +90,10 @@ Operationはない。
 
 ### サンプル
 
-```JSON
-{
-  "resourceType": "Practitioner",
-  "id": "example",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>神奈川　花子</li><li>カナガワ　ハナコ</li><li>麻薬施用者免許番号：4-321</li></ul></div>"
-  },
-  "name": [
-    {
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
-          "valueCode": "IDE"
-        }
-      ],
-      "text": "神奈川花子",
-      "family": "神奈川",
-      "given": [
-        "花子"
-      ]
-    },
-    {
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
-          "valueCode": "SYL"
-        }
-      ],
-      "text": "カナガワハナコ",
-      "family": "カナガワ",
-      "given": [
-        "ハナコ"
-      ]
-    }
-  ],
-  "qualification": [
-    {
-      "identifier": [
-        {
-          "system": "urn:oid:1.2.392.100495.20.3.32.13",
-          "value": "4-321"
-        }
-      ],
-      "code": {
-        "Coding": [
-          {
-            "system": "http://hl7.jp/fhir/ePrescription/certificate",
-            "code": "NarcoticsPractitioner"
-          }
-        ]
-      }
-    }
-  ]
-}
-```
-
-
+* [**女性医師 麻薬施用者番号あり**][jp-practionner-example-female-1]
+* [**女性看護師**][jp-practionner-example-female-2]
+* [**男性医師**][jp-practionner-example-male-1]
+* [**男性看護師**][jp-practionner-example-male-2]
 
 ## 注意事項
 
@@ -184,4 +116,4 @@ Operationはない。
 ・ICSR E2B(R3)
 [https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)
 
-
+{% include markdown-link-references.md %}

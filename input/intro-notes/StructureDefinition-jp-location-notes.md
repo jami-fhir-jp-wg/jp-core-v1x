@@ -3,10 +3,6 @@
 
 JP Core Location リソースで定義された必須要素はない。
 
-
-
-  
-
 ### Extensions定義
 
 JP Core Location リソースで定義された拡張はない。
@@ -21,13 +17,9 @@ JP Core Location リソースで定義された拡張はない。
 | SHOULD（推奨）   | vread、history-instance                     |
 | MAY（利用可能）  | create、update、patch、delete、history-type |
 
-
-
 ### OperationおよびSearch Parameter 一覧
 
-
 #### Search Parameter一覧
-
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
@@ -38,10 +30,6 @@ JP Core Location リソースで定義された拡張はない。
 address-state | string  | GET [base]/Location?
 address-state=東京都    |
 | SHOULD           | address-postalcode | string  | GET [base]/Location?address-postalcode=1130033    |
-
-
-
-
 
 ##### 必須検索パラメータ
 
@@ -133,92 +121,18 @@ address-state=東京都    |
 
 追加検索パラメータはない。
 
-
-
 #### Operation一覧
 
 Locationに対するOperationは定義されていない。
 
-
-
 ### サンプル
-
-
-
-
-```JSON
-{
-  "resourceType": "Location",
-  "id": "2",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">バーガー緊急医療センター, 南ウィング, 2階, 神経放射線科　手術室　1</div>"
-  },
-  "identifier": [
-    {
-      "value": "B1-S.F2.1.00"
-    }
-  ],
-  "status": "suspended",
-  "operationalStatus": {
-    "system": "http://terminology.hl7.org/CodeSystem/v2-0116",
-    "code": "H",
-    "display": "清掃中"
-  },
-  "name": "南ウィング　神経放射線科　手術室1",
-  "alias": [
-    "南ウィング　神経放射線科　手術室5",
-    "メインウィング　神経放射線科　手術室2"
-  ],
-  "description": "Old South Wing, Neuro Radiology Operation Room 1 on second floor",
-  "mode": "instance",
-  "type": [
-    {
-      "coding": [
-        {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-          "code": "RNEU",
-          "display": "神経放射線科ユニット"
-        }
-      ]
-    }
-  ],
-  "telecom": [
-    {
-      "system": "phone",
-      "value": "2329"
-    }
-  ],
-  "physicalType": {
-    "coding": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
-        "code": "ro",
-        "display": "部屋"
-      }
-    ]
-  },
-  "managingOrganization": {
-    "reference": "Organization/f001"
-  },
-  "partOf": {
-    "reference": "Location/1"
-  }
-}
-
-```
-
-
+* [**診察室**][jp-location-example-examinationroom]
+* [**手術室**][jp-location-example-ope]
+* [**病棟**][jp-location-example-ward]
 
 ## 注意事項
 
-
 注意事項はない。
-
-
-
-
-
 
 ## その他、参考文献・リンク等
 
@@ -237,4 +151,5 @@ Locationに対するOperationは定義されていない。
 ・ICSR E2B(R3)
 [https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)
 
+{% include markdown-link-references.md %}
 
