@@ -260,63 +260,7 @@ HTTP/1.1 200 OK
 
 
 ### サンプル
-
-```json
-{
-    "resourceType": "Patient",
-    "address": [
-      {
-        "postalCode": "1600023",
-        "text": "東京都新宿区"
-      }
-    ],
-    "birthDate": "1970-01-01",
-    "gender": "male",
-    "identifier": [
-      {
-        "value": "1001"
-      }
-    ],
-    "name": [
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
-            "valueCode": "IDE"
-          }
-        ],
-        "use": "usual",
-        "text": "山田 太郎",
-        "family": "山田",
-        "given": [
-          "太郎"
-        ]
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
-            "valueCode": "SYL"
-          }
-        ],
-        "use": "usual",
-        "text": "ヤマダ タロウ",
-        "family": "ヤマダ",
-        "given": [
-          "タロウ"
-        ]
-      }
-    ],
-    "telecom": [
-      {
-        "value": "0312345678"
-      }
-    ]
-  }
-  
-```
-
-
+* [**患者男性 山田 太郎**][jp-patient-example-1]
 
 ## 注意事項
 
@@ -333,8 +277,8 @@ HTTP/1.1 200 OK
 ・特定健診情報ファイル仕様
 [https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html)
 
-・SS-MIX2 標準化ストレージ 仕様書 Ver.1.2f
-[http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf](http://www.jami.jp/jamistd/docs/SS-MIX2/f/SS-MIX2_StndrdStrgSpecVer.1.2f.pdf)
+・SS-MIX2 標準化ストレージ 仕様書 Ver.1.2h
+[https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf](https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf)
 
 ・ICSR E2B(R3)
 [https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)

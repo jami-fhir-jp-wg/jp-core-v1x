@@ -1,6 +1,6 @@
-Instance: jp-practionner-example-female-1
+Instance: jp-practitioner-example-female-1
 InstanceOf: JP_Practitioner
-Title: "JP Core Practionner 医師女性１"
+Title: "JP Core Practitioner Example 医師女性１"
 Description: "医師女性"
 Usage: #example
 * name[0].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
@@ -14,10 +14,19 @@ Usage: #example
 * name[=].family = "トウキョウ"
 * name[=].given = "ハルコ"
 * gender = #female
+* qualification[0].identifier.system = "urn:oid:1.2.392.100495.20.3.32.113"
+* qualification[=].identifier.value  = "999-12345"
+* qualification[=].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner
+* qualification[+].identifier.system = "urn:oid:1.2.392.100495.20.3.32.101"
+* qualification[=].identifier.value  = "999-54321"
+* qualification[=].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner
+* qualification[+].identifier.system = "urn:oid:1.2.392.100495.20.3.31"
+* qualification[=].identifier.value = "999999-00001"
+* qualification[=].code = $JP_MedicalLicenceCertificate_CS#medical-registration
 
-Instance: jp-practionner-example-female-2
+Instance: jp-practitioner-example-female-2
 InstanceOf: JP_Practitioner
-Title: "JP Core Practionner 看護師女性１"
+Title: "JP Core Practitioner Example 看護師女性１"
 Description: "看護師女性"
 Usage: #example
 * name[0].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
@@ -33,9 +42,9 @@ Usage: #example
 * gender = #female
 
 
-Instance: jp-practionner-example-male-1
+Instance: jp-practitioner-example-male-1
 InstanceOf: JP_Practitioner
-Title: "JP Core Practionner 医師男性１"
+Title: "JP Core Practitioner Example 医師男性１"
 Description: "医師男性"
 Usage: #example
 * name[0].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
@@ -49,10 +58,13 @@ Usage: #example
 * name[=].family = "オオサカ"
 * name[=].given = "イチロウ"
 * gender = #male
+* qualification[0].identifier.system = "urn:oid:1.2.392.100495.20.3.31"
+* qualification[=].identifier.value = "999999-00001"
+* qualification[=].code = $JP_MedicalLicenceCertificate_CS#medical-registration
 
-Instance: jp-practionner-example-male-2
+Instance: jp-practitioner-example-male-2
 InstanceOf: JP_Practitioner
-Title: "JP Core Practionner 看護師男性１"
+Title: "JP Core Practitioner Example 看護師男性１"
 Description: "看護師男性"
 Usage: #example
 * name[0].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"

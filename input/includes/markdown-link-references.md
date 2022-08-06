@@ -96,11 +96,15 @@
 [JP_Patient_KanaSort_SP]: SearchParameter-jp-patient-kanasort-sp.html
 
 <!-- CodeSystem -->
+[JP_ConditionSeverity_CS]: CodeSystem-jp-condition-severity-cs.html
 [JP_JfagyFoodAllergenCodes_CS]: CodeSystem-jp-jfagy-food-allergen-codes-cs.html
 [JP_JfagyMedicationAllergenCodes_CS]: CodeSystem-jp-jfagy-medication-allergen-codes-cs.html
 [JP_JfagyNonFoodNonMedicationAllergenCodes_CS]: CodeSystem-jp-jfagy-non-food-non-medication-allergen-codes-cs.html
+[JP_MedicalLicenceCertificate_CS]: CodeSystem-jp-medicallicencecertificate-cs.html
 [JP_PhysicalExamCodes_CS]: CodeSystem-jp-physicalexamcodes-cs.html
+[JP_PractitionerRoleCodes_CS]: CodeSystem-jp-practitioner-role-codes-cs.html
 [JP_ProcedureBodySite_CS]: CodeSystem-jp-procedure-body-site-cs.html
+[JP_ProcedureCategoryCodes_CS]: CodeSystem-jp-procedure-category-codes-cs.html
 [JP_ProcedureCodesDental_CS]: CodeSystem-jp-procedure-codes-dental-cs.html
 [JP_ProcedureCodesICHI_CS]: CodeSystem-jp-procedure-codes-ichi-cs.html
 [JP_ProcedureCodesMedical_CS]: CodeSystem-jp-procedure-codes-medical-cs.html
@@ -111,13 +115,16 @@
 [JP_ProcedureDeviceKind_CS]: CodeSystem-jp-procedure-devicekind-cs.html
 [JP_ProcedureFollowUpCodes_CS]: CodeSystem-jp-procedure-followup-codes-cs.html
 [JP_ProcedureNotPerformedReason_CS]: CodeSystem-jp-procedure-not-performed-reason-cs.html
-[JP_ProcedurePerformerRoleCodes_CS]: CodeSystem-jp-procedure-performer-role-codes-cs.html
+[JP_ProcedureOutcomeCodes_CS]: CodeSystem-jp-procedure-outcome-codes-cs.html
 [JP_ProcedureReasonCodes_CS]: CodeSystem-jp-procedure-reason-codes-cs.html
 
 <!-- ValueSet -->
 [JP_AllergyIntoleranceCodes_VS]: ValueSet-jp-allergyintolerance-codes-vs.html
+[JP_ConditionSeverity_VS]: ValueSet-jp-condition-severity-vs.html
+[JP_MedicalLicenceCertificate_VS]: ValueSet-jp-medicallicencecertificate-vs.html
 [JP_PhysicalExamCodes_VS]: ValueSet-jp-physicalexamcodes-vs.html
 [JP_ProcedureBodySite_VS]: ValueSet-jp-procedure-body-site-vs.html
+[JP_ProcedureCategoryCodes_VS]: ValueSet-jp-procedure-category-codes-vs.html
 [JP_ProcedureCodesMedical_VS]: ValueSet-jp-procedure-code-medical-vs.html
 [JP_ProcedureCodesSTEM7_VS]: ValueSet-jp-procedure-code-stem7-vs.html
 [JP_ProcedureCodesDental_VS]: ValueSet-jp-procedure-codes-dental-vs.html
@@ -128,15 +135,20 @@
 [JP_ProcedureDeviceKind_VS]: ValueSet-jp-procedure-devicekind-vs.html
 [JP_ProcedureFollowUpCodes_VS]: ValueSet-jp-procedure-followup-vs.html
 [JP_ProcedureNotPerformedReason_VS]: ValueSet-jp-procedure-not-performed-reason-vs.html
+[JP_ProcedureOutcomeCodes_VS]: ValueSet-jp-procedure-outcome-codes-vs.html
 [JP_ProcedurePerformerRoleCodes_VS]: ValueSet-jp-procedure-performer-role-codes-vs.html
 [JP_ProcedureReasonCodes_VS]: ValueSet-jp-procedure-reason-codes-vs.html
 
 <!-- Example -->
+[jp-allergyintolerance-example-1]: AllergyIntolerance-jp-allergyintolerance-example-1.html
 [jp-condition-example-1]: Condition-jp-condition-example-1.html
 [jp-coverage-example-1]: Coverage-jp-coverage-example-1.html
 [jp-diagnosticreport-radiology-example-1]: DiagnosticReport-jp-diagnosticreport-radiology-example-1.html
-[jp-encounter-example1]: Encounter-jp-encounter-example1.html
+[jp-encounter-example-1]: Encounter-jp-encounter-example-1.html
+[jp-familymemberhistory-example-1]: FamilyMemberHistory-jp-familymemberhistory-example-1.html
+[jp-imagingstudy-radiology-example-1]: ImagingStudy-jp-imagingstudy-radiology-example-1.html
 [jp-immunization-example-1]: Immunization-jp-immunization-example-1.html
+[jp-location-example-examinationroom]: Location-jp-location-example-examinationroom.html
 [jp-location-example-ope]: Location-jp-location-example-ope.html
 [jp-location-example-ward]: Location-jp-location-example-ward.html
 [jp-medication-example-1]: Medication-jp-medication-example-1.html
@@ -156,10 +168,12 @@
 [jp-observation-socialhistory-example-1]: Observation-jp-observation-socialhistory-example-1.html
 [jp-observation-vitalsigns-example-1]: Observation-jp-observation-vitalsigns-example-1.html
 [jp-organization-example-clinic]: Organization-jp-organization-example-clinic.html
+[jp-organization-example-hospital]: Organization-jp-organization-example-hospital.html
 [jp-organization-example-payer]: Organization-jp-organization-example-payer.html
 [jp-patient-example-1]: Patient-jp-patient-example-1.html
-[jp-practionner-example-female-1]: Practitioner-jp-practionner-example-female-1.html
-[jp-practionner-example-female-2]: Practitioner-jp-practionner-example-female-2.html
-[jp-practionner-example-male-1]: Practitioner-jp-practionner-example-male-1.html
-[jp-practionner-example-male-2]: Practitioner-jp-practionner-example-male-2.html
+[jp-practitioner-example-female-1]: Practitioner-jp-practitioner-example-female-1.html
+[jp-practitioner-example-female-2]: Practitioner-jp-practitioner-example-female-2.html
+[jp-practitioner-example-male-1]: Practitioner-jp-practitioner-example-male-1.html
+[jp-practitioner-example-male-2]: Practitioner-jp-practitioner-example-male-2.html
+[jp-practitionerrole-example-1]: PractitionerRole-jp-practitionerrole-example-1.html
 [jp-procedure-example-1]: Procedure-jp-procedure-example-1.html

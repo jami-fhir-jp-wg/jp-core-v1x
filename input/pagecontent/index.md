@@ -9,6 +9,7 @@
 * [欠損値の扱い](guide-handlingOfNonExistentData.html)
 * [文字コード](guide-characterEncoding.html)
 * [検索](guide-stringSearch.html)
+* [更新履歴](update_history.html)
 
 ### JP Core FHIRコンテンツ
 JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記載をしている。
@@ -68,23 +69,21 @@ JP Coreにて利用されるSearch Parameter および Operationの一覧。
 - [Search Parameters（検索パラメータ）一覧](group-searchParameter.html)
 
 #### Terminology （用語集）
-JP Coreにて利用されるCodeSytem および ValueSetの一覧。
+JP Coreにて利用されるCodeSystem および ValueSetの一覧。
 - [CodeSystems （コードシステム）一覧](artifacts.html#terminology-code-systems)
 - [ValueSets （値セット）一覧](artifacts.html#terminology-value-sets)
 
 ### Capability Statement （機能宣言）
-JP Coreを参考に定義したCapabiltyStetamentの一例。
-- [Capablity Statement（機能宣言）](group-capabilityStatement.html)
+JP Coreを参考に定義したCapabilityStatementの一例。
+- [Capability Statement（機能宣言）](group-capabilityStatement.html)
 
 ### Security （セキュリティ）
 JP Core利用にあたり、考慮すべきセキュリティに関する要件を記載する。
  - [Security （セキュリティ）](security.html)
 
-### 変更履歴
-- [変更履歴](update_history.html)
 
 ---
-### Contributers：
+### Contributors：
 JP Coreは以下の方々、および各サーブワーキンググループのここに記載されていない多くのメンバーの献身的な活動や協力により作成されている。
 * SWG1：FHIR Infrastructure
   * リーダー：㈱ファインデックス　宮川 力
