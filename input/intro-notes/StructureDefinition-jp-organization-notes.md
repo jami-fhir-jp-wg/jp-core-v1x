@@ -13,7 +13,7 @@ Organization リソースは、次の要素を持たなければならない。
 
 ### Extensions定義
 
-JP Oraganization リソースで使用される拡張は次の通りである。
+JP Organization リソースで使用される拡張は次の通りである。
 
 - [JP_OrganizationCategory][JP_Organization_InsuranceOrganizationCategory]
 
@@ -29,7 +29,7 @@ JP Oraganization リソースで使用される拡張は次の通りである。
 
 ### その他
 
- Organization.identifierには、以下のOraganization(組織)に関連したidentifier(ID情報)を格納できるようスライシングによる定義が追加されている。
+ Organization.identifierには、以下のOrganization(組織)に関連したidentifier(ID情報)を格納できるようスライシングによる定義が追加されている。
 
 | スライシング定義名 | 目的 | 指定方法 |
 | ---------------- | ---------------- | ---------------- |   
