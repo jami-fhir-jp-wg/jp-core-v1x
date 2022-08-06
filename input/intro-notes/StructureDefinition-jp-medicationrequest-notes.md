@@ -357,7 +357,7 @@ HL7ではFHIRに限らず、Ver 2以降全て欧米で使用されている1回�
       "route": {
         "coding": [
           {
-            "system": "http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes",
+            "system": "http://jpfhir.jp/fhir/Common/CodeSystem/route-codes",
             "code": "PO",
             "display": "口"
           }
@@ -501,7 +501,7 @@ HL7ではFHIRに限らず、Ver 2以降全て欧米で使用されている1回�
       "route": {
         "coding": [
           {
-            "system": "http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes",
+            "system": "http://jpfhir.jp/fhir/Common/CodeSystem/route-codes",
             "code": "PO",
             "display": "口"
           }
