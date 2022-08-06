@@ -8,6 +8,23 @@
 - `code` ：レポートの種別（画像診断レポート交換手順ガイドライン「5.1 レポート種別コード」に記載されているLOINCコード "Diagnostic imaging study" を指定）
 - `effectiveDateTime` ： レポート作成日時
 
+### MustSupport
+
+次のデータは送信システムに存在する場合はサポートされなければならないことを意味する（Must Support）。
+
+- `text` : (DiagnosticReport [`DomainResource`](http://hl7.org/fhir/domainresource.html)) レポートの[narrative](http://www.hl7.org/fhir/narrative.html) dataとして格納する。
+- `basedOn` ： レポートあるいは画像検査の`ServiceRequest`
+- `subject` ： 患者リソース(`Patient`)への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
+- `issued` ： レポート確定日時
+- `performer` ： `Practitioner`でレポートの関係者（作成者、読影者、確定者など）を列挙
+- `resultInterpreter` ： `Practitioner`でレポート確定者を示す
+- `imagingStudy` ： 診断の対象となる画像
+- `link` ：キーイメージの参照先
+- `conclusion` ： 診断の結果、impression
+- `presentedForm` ：レポート本体（全体のイメージあるいは所見等のテキスト）
+
+`imagingStudy`エレメントはCardinalityが0..1だが、放射線レポートでは画像が必ず存在することから、検査実施後には必須（複数の可能性もあり）である。しかし、検査実施前などのstatusによっては0もあることから、とりあえずMustSupportのままとする。将来的な議論の結果によっては、cardinalityを変更する可能性がある。
+
 ### Extensions定義
 
 本プロファイルはextensionを定義しない。
