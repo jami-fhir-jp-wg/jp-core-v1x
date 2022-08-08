@@ -44,7 +44,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier[rpNumber].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
 * identifier[rpNumber].period ..0
 * identifier[rpNumber].assigner ..0
-
 * identifier[requestIdentifier] ^short = "処方オーダーに対するID"
 * identifier[requestIdentifier] ^definition = "薬剤をオーダーする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。"
 * identifier[requestIdentifier].system 1..
