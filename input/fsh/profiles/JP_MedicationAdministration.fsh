@@ -135,6 +135,7 @@ Description: "用法コメントを格納するための拡張"
 * ^context.expression = "MedicationAdministration.dosage"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_DosageComment" (exactly)
 * value[x] only string or CodeableConcept
+* value[x] from JP_MedicationAdministrationDosageDosageComment_VS (example)
 
 Extension: JP_MedicationAdministration_Dosage_LineComment
 Id: jp-medicationadministration-dosage-linecomment

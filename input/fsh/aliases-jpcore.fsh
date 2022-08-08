@@ -104,6 +104,7 @@ Alias: $JP_ProcedureNotPerformedReason_CS = http://jpfhir.jp/fhir/Common/CodeSys
 Alias: $JP_ProcedureOutcomeCodes_CS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureOutcomeCodes_CS
 Alias: $JP_PractitionerRoleCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_PractitionerRoleCodes_CS
 Alias: $JP_ProcedureReasonCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureReasonCodes_CS
+Alias: $JP_MedicationAdministrationDosageDosageComment_CS = http://example.jp/CodeSystem/JP_MedicationAdministrationDosageDosageComment_CS
 
 // ValueSet
 Alias: $JP_AllergyIntoleranceCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodes_VS
@@ -125,3 +126,4 @@ Alias: $JP_ProcedureNotPerformedReason_VS = http://jpfhir.jp/fhir/Common/ValueSe
 Alias: $JP_ProcedureOutcomeCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureOutcomeCodes_VS
 Alias: $JP_ProcedurePerformerRoleCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedurePerformerRoleCodes_VS
 Alias: $JP_ProcedureReasonCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureReasonCodes_VS
+Alias: $JP_MedicationAdministrationDosageDosageComment_VS = http://example.jp/ValueSet/JP_MedicationAdministrationDosageDosageComment_VS
