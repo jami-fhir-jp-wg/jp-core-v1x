@@ -20,7 +20,7 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 
 | スライシング定義名 | 目的 | 指定方法 |
 | ---------------- | ---------------- | ---------------- |   
-| DrugUserQualification | 麻薬施用者免許番号を表現する | qualification.identifier.system = "urn:oid:1.2.392.100495.20.3.32.[都道府県番号]" を指定し、麻薬取扱免許番号を同valueに格納する。<br> [都道府県番号](https://www.mhlw.go.jp/topics/2007/07/dl/tp0727-1d.pdf)  |
+| DrugUserQualification | 麻薬施用者免許番号を表現する | qualification.identifier.system = "urn:oid:1.2.392.100495.20.3.32.1[都道府県番号]" を指定し、麻薬取扱免許番号を同valueに格納する。<br> [都道府県番号](https://www.mhlw.go.jp/topics/2007/07/dl/tp0727-1d.pdf)  |
 | MedicalRegistrationNumber | 医籍登録者番号を表現する | qualification.identifier.system = "urn:oid:1.2.392.100495.20.3.31" を指定し、医籍登録者番号を同valueに格納する。 |
 
 ## 利用方法
@@ -90,10 +90,10 @@ Operationはない。
 
 ### サンプル
 
-* [**女性医師 麻薬施用者番号あり**][jp-practionner-example-female-1]
-* [**女性看護師**][jp-practionner-example-female-2]
-* [**男性医師**][jp-practionner-example-male-1]
-* [**男性看護師**][jp-practionner-example-male-2]
+* [**女性医師 麻薬施用者番号あり**][jp-practitioner-example-female-1]
+* [**女性看護師**][jp-practitioner-example-female-2]
+* [**男性医師**][jp-practitioner-example-male-1]
+* [**男性看護師**][jp-practitioner-example-male-2]
 
 ## 注意事項
 
