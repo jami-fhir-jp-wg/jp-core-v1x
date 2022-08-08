@@ -11,7 +11,9 @@ Description: "このプロファイルはOrganizationリソースに対して、
 * ^date = "2022-03-16"
 * . ^short = "A grouping of people or organizations with a common purpose/共通の目的を持った人や組織の集まり"
 * . ^definition = "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.\r\n\r\n\r\n集団行動の何らかの形での達成を目的として結成された、正式または非公式に認められた人々または組織のグループ。企業、機関、企業、部門、コミュニティグループ、医療実践グループ、支払者/保険者などが含まれる。"
-
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = "url"
+* extension ^slicing.rules = #open
 * extension contains
     JP_Organization_PrefectureNo named prefectureNo ..1 and
     JP_Organization_InsuranceOrganizationCategory named organizationCategory ..1 and
@@ -83,28 +85,35 @@ Extension: JP_Organization_InsuranceOrganizationCategory
 Id: jp-organization-insuranceorganizationcategory
 Title: "JP Core Organization InsuranceOrganizationCategory Extension"
 Description: "点数表コード１桁（医科１、歯科３）表現するためのExtension。 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"
-* ^url = $JP_Organization_InsuranceOrganizationCategory
+* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory"
 * ^date = "2022-03-16"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * . ^short = "点数表コード１桁（医科1、歯科３）"
 * . ^comment = "点数表コード１桁（医科1、歯科３）。Identifier型の拡張\r\n「InsuranceOrganizationCategory」を使用する。systemには点数表番号\r\nを表すOID「1.2.392.100495.20.3.22」を指定する。"
-* url = $JP_Organization_InsuranceOrganizationCategory (exactly)
-* value[x] only Coding
-* valueCoding from JP_MedicalFeeScoreType_VS
+* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory" (exactly)
+* value[x] only Identifier
+* value[x].id ..0
+* value[x].use ..0
+* value[x].type ..0
+* value[x].system = "urn:oid:1.2.392.100495.20.3.22" (exactly)
+* value[x].system ^definition = "点数表番号の名前空間を識別するURIを指定。固定値。"
+* value[x].value ^definition = "点数表コード１桁「1：医科」、「3：歯科」。"
+* value[x].period ..0
+* value[x].assigner ..0
 
 
 Extension: JP_Organization_InsuranceOrganizationNo
 Id: jp-organization-insuranceorganizationno
 Title: "JP Core Organization InsuranceOrganizationNo Extension"
 Description: "保険医療機関番号７桁を表現するためのExtension。 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"
-* ^url = $JP_Organization_InsuranceOrganizationNo
+* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
 * ^date = "2022-03-16"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * . ^short = "保険医療機関番号７桁"
 * . ^comment = "保険医療機関番号７桁。Identifier型の拡張\r\n「InsuranceOrganizationNo」を使用する。systemには医療機関コードを\r\n表すOID「1.2.392.100495.20.3.23」を指定する。\r\n\r\n電子処方箋 H7FHIR記述仕様書案の定義をベースにしているが、URLを以下に変更している \r\nhttp://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
-* url = $JP_Organization_InsuranceOrganizationNo (exactly)
+* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo" (exactly)
 * value[x] only Identifier
 * value[x].id ..0
 * value[x].use ..0
@@ -120,13 +129,19 @@ Id: jp-organization-prefectureno
 Title: "JP Core Organization PrefectureNo Extension"
 Description: """都道府県番号２桁を表現するためのExtension。
 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"""
-* ^url = $JP_Organization_PrefectureNo
+* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo"
 * ^date = "2022-03-16"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * . ^short = "都道府県番号2桁"
 * . ^comment = "都道府県番号２桁。Identifier型の拡張を使用する。\r\nvalueには都道府県番号2桁の値を格納し、systemには都道府県番号を表すOID「1.2.392.100495.20.3.21」を指定する。"
-* url = $JP_Organization_PrefectureNo (exactly)
-* value[x] only Coding
-* valueCoding from JP_PrefectureNumber_VS
-
+* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo" (exactly)
+* value[x] only Identifier
+* value[x].id ..0
+* value[x].use ..0
+* value[x].type ..0
+* value[x].system = "urn:oid:1.2.392.100495.20.3.21" (exactly)
+* value[x].system ^definition = "都道府県番号の名前空間を識別するURIを指定"
+* value[x].value ^definition = "2桁にゼロパディングされた都道府県番号。 例）北海道　 \"01\""
+* value[x].period ..0
+* value[x].assigner ..0
