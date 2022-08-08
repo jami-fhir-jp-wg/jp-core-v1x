@@ -7,7 +7,8 @@ Id: jp-diagnosticreport-radiology
 Title: "JP Core DiagnosticReport Radiology Profile"
 Description: "このプロファイルはDiagnosticReportリソースに対して、放射線検査のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology"
-* ^status = #draft MS
+* status MS
+* ^status = #draft
 * . ^short = "A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports 診断レポート-依頼情報、１項目単位の結果、画像、解釈、およびフォーマットされたレポートの組み合わせ　【JP_CORE】画像結果レポートのプロフィール"
 * . ^definition = "The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.\r\n\r\n患者、患者のグループ、デバイス、場所、これらから派生した検体に対して実行された診断的検査の結果と解釈。レポートには、依頼情報や依頼者情報などの臨床コンテキスト（文脈）、および１項目単位の結果、画像、テキストとコード化された解釈、および診断レポートのフォーマットされた表現のいくつかの組み合わせが含まれる。\r\n\r\n【JP_CORE】\r\n画像結果レポートのプロフィール"
 * identifier ^definition = "実行者または他のシステムによってこのレポートに割り当てられた識別子。"
@@ -20,7 +21,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * status ^definition = "診断レポートの状態"
 * status ^comment = "FHIRのstringsは1MBを越えてはならない（SHALL NOT）ことに留意すること。\r\n\r\n【JP-CORE】\r\n・診断レポートのステータス<br/>\r\n・定義通りの選択肢（例：preliminary 一次読影, final 二次読影（完了）等）を利用。\r\n<br/><br/>"
 * status ^requirements = "診断サービスではルーチンに仮確定あるいは不完全なレポートが発生することがある。また、しばしば前に発行されたレポートが取り消されることもある。"
-* category ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。" MS
+* category MS
+* category ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。" 
 * category ^comment = "様々なカテゴリのシェーマを用いて複数のカテゴリを設定できる。 カテゴリの情報粒度はvalue setに定義されている。より詳細なフィルタリングの粒度が必要な場合はDiagnosticReport.codeのmetadata等を用いることで対応できる。\r\n\r\n【JP-CORE】\r\n放射線レポートは ”RAD” をデフォルトとして設定。追加の情報については任意。\r\n<br/><br/>"
 * code ^definition = "この診断レポートを表現するコードや名称"
 * code ^comment = "すべての用語の使用がこの一般的なパターンに適合するわけではない。 場合によっては、モデルにcodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係と事前調整および事後調整を管理するための独自の構造を提供する必要がある。 \r\n\r\n【JP-CORE】\r\n[画像診断レポート交換手順ガイドライン](https://www.jira-net.or.jp/publishing/files/jesra/JESRA_TR-0042_2018.pdf)「5.1 レポート種別コード」に記載されているLOINCコード [Diagnostic imaging study](https://loinc.org/18748-4/) を指定\r\n<br/><br/>"
