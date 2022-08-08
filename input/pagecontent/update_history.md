@@ -1,7 +1,7 @@
 
 ***v1.1***
 
-v1.0 → v1.1に変更するあたり、開発環境(simplefier→ Sushi & IG Publisher)を変更しているため、特に見た目や動作等が変更されている。<br/>
+v1.0 → v1.1に変更するあたり、開発環境(Sushi & IG Publisher)を変更しているため、特に見た目や動作等が変更されている。<br/>
 内容に関する主な変更については下記のとおりである。
 
 * 全般
@@ -9,7 +9,7 @@ v1.0 → v1.1に変更するあたり、開発環境(simplefier→ Sushi & IG Pu
     * 全てのリソースに対して、idを割り振った。
     * name,title,url等は命名規則に合わせるように見直しを行なった。
     * 説明文書について、「である調」に合わせた。
-    * Terminlogy BindingおよびConstrantsに関する記述はは、IG Publisherによる自動生成記述に変更した。
+    * Terminology BindingおよびConstraintsに関する記述はは、IG Publisherによる自動生成記述に変更した。
     * リソースの被参照、参照先の記載を削除した。
     * slice名称を先頭小文字に統一した。
     * FHIR Baseの説明に一部機械翻訳を用いた。
@@ -52,7 +52,7 @@ v1.0 → v1.1に変更するあたり、開発環境(simplefier→ Sushi & IG Pu
 * Terminology
     * FHIR Baseで定義されるバインディングされた用語のライセンスに対する注意事項を記載した。
 
-* Capablity Statement
+* Capability Statement
     * JP Core派生の必要条件ではなく、派生先実装ガイド作成ための参考例として記載をあらためた。
 
 * Security

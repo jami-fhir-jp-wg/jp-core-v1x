@@ -48,7 +48,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |医薬品|HOT13|urn:oid:1.2.392.200119.4.402.1|
 |医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
 |医薬品|⼀般処⽅名マスター|urn:oid:1.2.392.100495.20.1.81|
-|剤形|MERIT-9(剤形)|http://jpfhir.jp/ePrescription/CodeSystem/merit9-form |
+|剤形|MERIT-9(剤形)|http://jpfhir.jp/Common/CodeSystem/merit9-form |
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
 |力価区分|電子処方箋HL7 FHIR仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
 |用法|JAMI処方・注射オーダ標準用法規格(用法コード)|urn:oid:1.2.392.200250.2.2.20.20|
@@ -92,7 +92,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダーIDなどの識別子によるMedicationReuqestの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、オーダーIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）。
 
    ```
    GET [base]/MedicationDispense?identifier={system|}[code]
@@ -230,7 +230,11 @@ Rp1 ムコダイン錠２５０ｍｇ１錠（  １日３錠)
 　　１日３回朝昼夕食後３日分
 ```
 
-```json
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationDispense",
   "id": "jp-medicationdispense-example-1",
@@ -238,10 +242,6 @@ Rp1 ムコダイン錠２５０ｍｇ１錠（  １日３錠)
     "profile": [
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispense"
     ]
-  },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationdispense-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medicationdispense.html\">JP Core MedicationDispense Profile</a></p></div><p><b>identifier</b>: id: 1234567890, id: 1, id: 1</p><p><b>status</b>: completed</p><p><b>category</b>: Inpatient Order <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0482.html\">orderType</a>#I)</span></p><p><b>medication</b>: ムコダイン錠２５０ｍｇ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#103835401)</span></p><p><b>subject</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><h3>Performers</h3><table class=\"grid\"><tr><td>-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>Packager <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-medicationdispense-performer-function.html\">MedicationDispense Performer Function Codes</a>#packager)</span></td><td><a href=\"Practitioner-jp-practionner-example-male-1.html\">Practitioner/jp-practionner-example-male-1</a> \" 大阪\"</td></tr></table><p><b>quantity</b>: 9 錠<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code TAB = 'TAB')</span></p><p><b>whenPrepared</b>: 2021-10-07 10:47:19+0900</p><p><b>whenHandedOver</b>: 2021-10-07 10:55:23+0900</p><p><b>destination</b>: <a href=\"Location-jp-location-example-ward.html\">Location/jp-location-example-ward</a> \"09A病棟 021病室 4ベッド\"</p><p><b>note</b>: 後発品へ変更可能か依頼医のＡ医師に確認したところ、患者の希望により不可との回答あり。</p><h3>Substitutions</h3><table class=\"grid\"><tr><td>-</td><td><b>WasSubstituted</b></td><td><b>Type</b></td><td><b>Reason</b></td></tr><tr><td>*</td><td>true</td><td>generic composition <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-substanceAdminSubstitution.html\">Substance Admin Substitution</a>#G)</span></td><td>regulatory requirement <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-ActReason.html\">ActReason</a>#RR)</span></td></tr></table></div>"
   },
   "identifier": [
     {
@@ -402,7 +402,9 @@ Rp1 ムコダイン錠２５０ｍｇ１錠（  １日３錠)
     ]
   }
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 ## 注意事項
 
@@ -419,16 +421,16 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 
 ```json
 "quantity": {
-    "value": 21,
-    "unit": "錠",
-    "system": "urn:oid:1.2.392.100495.20.2.101",
-    "code": "TAB"
+  "value": 21,
+  "unit": "錠",
+  "system": "urn:oid:1.2.392.100495.20.2.101",
+  "code": "TAB"
 },
 "daysSupply": {
-    "value": 7,
-    "unit": "日",
-    "system": "http://unitsofmeasure.org",
-    "code": "d"
+  "value": 7,
+  "unit": "日",
+  "system": "http://unitsofmeasure.org",
+  "code": "d"
 }
 ```
 
@@ -436,7 +438,7 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 用量は製剤量で記述することを基本とするが、必要に応じて原薬量指定も可能とする。この識別の記述方法は、JP Core MedicationRequestと同様とする。
 
 ### 代替医薬品への変更内容の記述方法
-調剤時に行ったジェネリック医薬品などへの変更内容の記述は、substitution.wasSubstituted, substitution.type, substitusion.reason を使用する。
+調剤時に行ったジェネリック医薬品などへの変更内容の記述は、substitution.wasSubstituted, substitution.type, substitution.reason を使用する。
 変更の種類はデフォルトのコード表（"http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"）を使用する。
 変更の理由はデフォルトのコード表（"http://terminology.hl7.org/CodeSystem/v3-ActReason")を使用するかフリーテキストで記述する。ローカルのコード表を使用してもよい。
 
@@ -444,27 +446,27 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 
 ```json
 "substitution" : {
-    "wasSubstituted" : true,
-    "type" : {
-        "coding" : [
-            {
-                "code" : "G",
-                "system" : "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
-                "display" : "generic composition"
-            }
-        ]
-    },
-    "reason": [
-        {
-            "coding" : [
-                {
-                    "code" : "RR",
-                    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-                    "display" : "regulatory requirement"
-                }
-            ]
-        }
+  "wasSubstituted" : true,
+  "type" : {
+    "coding" : [
+      {
+        "code" : "G",
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
+        "display" : "generic composition"
+      }
     ]
+  },
+  "reason": [
+    {
+      "coding" : [
+        {
+          "code" : "RR",
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "display" : "regulatory requirement"
+        }
+      ]
+    }
+  ]
 }
 ```
 
@@ -473,7 +475,7 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 
 ```json
 "destination" : {
-    "reference" : "Location/12A"
+  "reference" : "Location/12A"
 }
 ```
 
@@ -488,20 +490,20 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 
 ```json
 "performer" : [
-    {
-        "function" : {
-            "coding" : [
-                {
-                    "code" : "packager",
-                    "system" : "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function",
-                    "display" : "Packager"
-                }
-            ]
-        },
-        "actor" : {
-            "reference" : "Practitioner/01234567"
+  {
+    "function" : {
+      "coding" : [
+        {
+          "code" : "packager",
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function",
+          "display" : "Packager"
         }
+      ]
+    },
+    "actor" : {
+      "reference" : "Practitioner/01234567"
     }
+  }
 ]
 ```
 
@@ -514,23 +516,24 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 薬剤単位の調剤結果を表すインスタンス例を示す。
 ```json
 "extension": [
-    {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation",
-        "valueCodeableConcept": {
-            "coding": [
-                {
-                "code": "C",
-                "system": "urn:oid:1.2.392.200250.2.2.30.10",
-                "display": "粉砕指示"
-                }
-            ]
+  {
+    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation",
+    "valueCodeableConcept": {
+      "coding": [
+        {
+          "code": "C",
+          "system": "urn:oid:1.2.392.200250.2.2.30.10",
+          "display": "粉砕指示"
         }
-    }, {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation",
-        "valueCodeableConcept": {
-            "text" : "嚥下障害のため、上記粉砕指示"
-        }
-    } 
+      ]
+    }
+  }, 
+  {
+    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation",
+    "valueCodeableConcept": {
+      "text" : "嚥下障害のため、上記粉砕指示"
+    }
+  } 
 ],
 
 ```

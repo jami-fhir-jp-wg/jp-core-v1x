@@ -17,7 +17,7 @@ Usage: #example
 * medicationReference = Reference(jp-medicationdispense-injection-medication-example-1)
 * subject = Reference(Patient/jp-patient-example-1)
 * performer.function = http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function#packager "Packager"
-* performer.actor = Reference(Practitioner/jp-practionner-example-female-1)
+* performer.actor = Reference(Practitioner/jp-practitioner-example-female-1)
 * quantity = 2 'mL' "mL"
 * whenPrepared = "2021-10-07T10:47:19+09:00"
 * whenHandedOver = "2021-10-07T10:55:23+09:00"
