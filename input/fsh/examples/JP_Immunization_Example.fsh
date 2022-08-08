@@ -12,6 +12,6 @@ Usage: #example
 * site = urn:oid:1.2.392.200250.2.2.20.32#74L "左上腕"
 * doseQuantity = 0.45 'mL' "mL"
 * performer.function = http://terminology.hl7.org/CodeSystem/v2-0443#AP "Administering Provider"
-* performer.actor = Reference(Practitioner/jp-practionner-example-male-1) "大阪 一郎"
+* performer.actor = Reference(Practitioner/jp-practitioner-example-male-1) "大阪 一郎"
 * protocolApplied.targetDisease = urn:oid:1.2.392.200119.4.101.6#S9VN "ＣＯＶＩＤ－１９"
 * protocolApplied.doseNumberPositiveInt = 1

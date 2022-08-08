@@ -10,13 +10,13 @@
 
 - 外来予約患者の来院状況の検索、一覧表示
 
-- その他、上記以外の他のリソースからの患者受診歴の参照（例：Observationリソースの encounterで参照される対象とする患者の受診や、Careplanリソースのencounterで参照される患者の受診歴（入院歴））
+- その他、上記以外の他のリソースからの患者受診歴の参照（例：Observationリソースの encounterで参照される対象とする患者の受診や、CarePlanリソースのencounterで参照される患者の受診歴（入院歴））
 
 <h3>Scope and Usageの内容</h3>
 
 範囲と使用方法
 
-患者に関連したEncounterの情報はその利用される状況によって特徴づけられる。例えば、外来、救急、在宅医療、入院、およびオンライン受診の情報も含まれる。Encounterは入院前手続き、外来受診、入院、入院中の滞在、および退院などの一連のライフサイクルを含む。Encounterに含まれる、PratitionerやLocationといった情報は状況に応じて変更されていくことがある。
+患者に関連したEncounterの情報はその利用される状況によって特徴づけられる。例えば、外来、救急、在宅医療、入院、およびオンライン受診の情報も含まれる。Encounterは入院前手続き、外来受診、入院、入院中の滞在、および退院などの一連のライフサイクルを含む。Encounterに含まれる、PractitionerやLocationといった情報は状況に応じて変更されていくことがある。
 
 このようにEncounterの適用範囲は広範になるため、すべてのエレメントがすべての状況で利用されるとは限らない。このため、入院/退院に関連した情報は、Encounter内のhospitalizationエレメントに保持される。classエレメントはこれらの状況を区別するために使用され、これによりさらなる検証とビジネスルールの適用が導かれる。
 
@@ -26,7 +26,7 @@ Encounterインスタンスは、入院前情報を表現するために実際�
 
 Hospitalizationコンポーネントは、入院イベントに関連する拡張情報を格納するためのものである。これは常に、Encounter自体と同じ期間であることが期待される。期間が異なる場合は、別のEncounterのインスタンスを使用して、このEncounterのインスタンスの一部としてpartOfエレメントを使用してこの情報を取り込むべきである。
 
-ProcedureとEncounterはお互いへの参照を持つが、これらは異なるProcedureであるべきである。1つは、Encounterの間に行われたProcedure（Procedure.encounterに格納）、もう1つは、Encounterが別のProcedureの結果である場合（Encounter.indicationに格納）、例えば、以前のProcedureによる合併症を解決するためのフォローアップのEncouterなどである。
+ProcedureとEncounterはお互いへの参照を持つが、これらは異なるProcedureとするべきである。1つは、Encounterの間に行われたProcedure（Procedure.encounterに格納）、もう1つは、Encounterが別のProcedureの結果である場合（Encounter.indicationに格納）、例えば、以前のProcedureによる合併症を解決するためのフォローアップのEncounterなどである。
 
 <h3>Status Managementの内容</h3>
 
@@ -41,7 +41,7 @@ arrived, triaged または in-progress のstatusは入院の開始と考えら�
 on leave のstatusは、例えば、患者が週末に帰宅することを許可された場合や、その他の形式の外部イベントの場合など、入院の一部である場合もあれば、そうでない場合もある。
 Encounterには「入院した」という固定した定義はないので、例えば外来（日帰り手術-大腸内視鏡検査）などの例では、患者は入院しているとも考えられる。少なくとも、ステータスが「in-progress」の場合は、患者は入院していると考えられる。
 
-<h3>Boudaries and Relationships の内容</h3>
+<h3>Boundaries and Relationships の内容</h3>
 
 境界線と関係性
 
@@ -53,7 +53,7 @@ Appointmentは通常、Appointmentの計画段階、検索、空いている時�
 
 Communicationリソースは、直接の接触がない場合に、医療従事者と患者の間で同時に行われる対話に使用される。例としては、電話によるメッセージや、通信文書の送信などがある。通信資源には継続時間は記録されないが、送信時間と受信時間が含まれる可能性がある。
 
-標準拡張。Associcated Encounter
+標準拡張。Associated Encounter
 この拡張機能は、リソース上にこの関連性を定義するプロパティが既に存在しない場合に、エンカウンターを参照するために使用されるべきである。
 
 ## スコープ
@@ -69,11 +69,11 @@ Encounterリソースは、class要素を用いて医療提供環境を特徴づ
 - 検査通院
 - 遠隔診療
 
-Encounter リソースは発生単位が医療機関や組織ごとに異なる可能性がある。例えば、入院中に開業医が1回訪問するたびに新しいEncounterインスタンスが発生する可能性もあるし、地域の慣行や関連システムによっては、入院全体で1つのインスタンスに集約される場合もある。
+Encounter リソースは発生単位が医療機関や組織ごとに異なる可能性がある。例えば、入院中に開業医が1回訪問するたびに新しいEncounterインスタンスが発生する可能性や、地域の慣行や関連システムによっては、入院全体で1つのインスタンスに集約される場合もある。
 
-Encounterリソースは、partOf要素を仕様して、他のEncounterインスタンスの下に集約することができる。
+Encounterリソースは、partOf要素を使用して、他のEncounterインスタンスの下に集約できる。
 
-またEncounterリソースは、受診前の情報を伝達するために生成することもできる。この場合、status要素は「planned」に設定される。患者の受信内容が入院に関連する場合は、hospitalization要素に入院イベントに関連する拡張情報を格納することができる。
+またEncounterリソースは、受診前の情報を伝達するために生成することもできる。この場合、status要素は「planned」に設定される。患者の受信内容が入院に関連する場合は、hospitalization要素に入院イベントに関連する拡張情報を格納できる。
 なおこの入院イベントの関連付けは、Encounterリソースのperiod要素で指定されている期間と同じ期間内であることが望ましい。もし期間が異なる場合は、別のEncounterインスタンスを使用し、このEncounterインスタンスの一部として情報を関連付ける必要がある。
 
 

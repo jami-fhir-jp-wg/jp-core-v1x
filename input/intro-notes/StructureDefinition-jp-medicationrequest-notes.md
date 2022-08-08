@@ -281,7 +281,12 @@ HL7ではFHIRに限らず、Ver 2以降全て欧米で使用されている1回�
 処方箋の上記部分をFHIR R4で記述する場合、薬剤ごとにそれぞれ以下のようになる。
 
 #### ムコダイン錠２５０ｍｇ　１錠
-```json
+
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationRequest",
   "id": "jp-medicationrequest-example-1",
@@ -289,10 +294,6 @@ HL7ではFHIRに限らず、Ver 2以降全て欧米で使用されている1回�
     "profile": [
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
     ]
-  },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationrequest-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medicationrequest.html\">JP Core MedicationRequest Profile</a></p></div><p><b>identifier</b>: id: 1, id: 1, id: 1234567890.1.1</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: ムコダイン錠２５０ｍｇ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#103835401)</span></p><p><b>subject</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><p><b>authoredOn</b>: 2020-04-01 12:28:17+0900</p><blockquote><p><b>dispenseRequest</b></p><p><b>quantity</b>: 9 錠<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code TAB = 'TAB')</span></p></blockquote></div>"
   },
   "identifier": [
     {
@@ -422,10 +423,17 @@ HL7ではFHIRに限らず、Ver 2以降全て欧米で使用されている1回�
     }
   }
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 #### パンスポリンＴ錠１００　１００ｍｇ　２錠
-```json
+
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationRequest",
   "id": "jp-medicationrequest-example-2",
@@ -433,10 +441,6 @@ HL7ではFHIRに限らず、Ver 2以降全て欧米で使用されている1回�
     "profile": [
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
     ]
-  },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationrequest-example-2\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medicationrequest.html\">JP Core MedicationRequest Profile</a></p></div><p><b>identifier</b>: id: 2, id: 2, id: 1234567890.1.2</p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: パンスポリンＴ錠１００ １００ｍｇ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#110626901)</span></p><p><b>subject</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><p><b>authoredOn</b>: 2020-04-01 12:28:17+0900</p><blockquote><p><b>dispenseRequest</b></p><p><b>quantity</b>: 18 錠<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code TAB = 'TAB')</span></p></blockquote></div>"
   },
   "identifier": [
     {
@@ -566,7 +570,9 @@ HL7ではFHIRに限らず、Ver 2以降全て欧米で使用されている1回�
     }
   }
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 ## 注意事項
 
@@ -596,7 +602,7 @@ Timingデータ型のrepeat.boundsDuration要素を使用した服用期間の�
     "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration",
     "valueDuration": {
       "value": 7,
-"unit": "日",
+      "unit": "日",
       "system": "http://unitsofmeasure.org",
       "code": "d"
     }
@@ -748,27 +754,27 @@ doseQuantityエレメントは省略可能(0..1)である。
 外用用法で部位を指定する場合は、dosageInstruction.site 要素に、CodeableConcept型で指定する。部位コードは、JAMI標準用法コード 表13 外用部位コード（"urn:oid:1.2.392.100495.20.2.33"）を使用する。
 ```json
 "dosageInstruction": [
-{
+  {
     "text": "外用・点眼・１日３回　１回１滴（右眼）",
     "timing": {
-    "code": {
+      "code": {
         "coding": [
-        {
+          {
             "system": "urn:oid:1.2.392.200250.2.2.20.20",
             "code": "2H73000000000000",
             "display": "外用・点眼・１日３回"
-        }
+          }
         ]
-    }
+      }
     },
     "site": {
-    "coding": [
+      "coding": [
         {
-        "system": "urn:oid:1.2.392.200250.2.2.20.32",
-        "code": "26R",
-        "display": "右眼"
+          "system": "urn:oid:1.2.392.200250.2.2.20.32",
+          "code": "26R",
+          "display": "右眼"
         }
-    ]
+      ]
     },
 
 ```
@@ -825,35 +831,38 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 
 ```json
 "route": {
-    "coding": [
-        {
-            "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
-            "code": "AP",
-            "display": "外用"
-        }
-    ]
+  "coding": [
+    {
+      "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
+      "code": "AP",
+      "display": "外用"
+    }
+  ]
 },
 "method": {
-    "coding": [
-        {
-            "system": "urn:oid:1.2.392.200250.2.2.20.40",
-            "code": "2B",
-            "display": "塗布"
-        }
-    ]
+  "coding": [
+    {
+      "system": "urn:oid:1.2.392.200250.2.2.20.40",
+      "code": "2B",
+      "display": "塗布"
+    }
+  ]
 },
 ```
 
 ### 入外区分
 薬剤オーダの入院、外来を区別するための区分として表現される入外区分は、HL7V2で定義されているHL7表0482を使用し、category要素にコードおよび文字列で指定することができる。入外区分を識別するURIとして、"http://terminology.hl7.org/CodeSystem/v2-0482"を使用する。
 ```json
-"category": [ {
-  "coding": [ {
-    "system": "http://terminology.hl7.org/CodeSystem/v2-0482",
-    "code": "O",
-    "display": "外来オーダ"
-  } ]
-},
+"category": [
+  {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0482",
+        "code": "O",
+        "display": "外来オーダ"
+      }
+    ]
+  },
 ```
 
 
@@ -861,19 +870,25 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 薬剤オーダの運用上の区分である処方区分は、MERIT-9(処方区分)およびJAHIS処方データ交換規約Ver.3.0CのJHSP表0007を使用し、category要素に2種類のコードおよび文字列で指定することができる。MERIT-9(処方区分)をしきべつするURIとして"http://jpfhir.jp/Common/CodeSystem/merit9-category"を、JHSP表0007を識別するURIとして"http://jpfhir.jp/Common/CodeSystem/JHSP0003"を使用する。
 
 ```json
-"category": [ {
-  "coding": [ {
-    "system": "http://jpfhir.jp/Common/CodeSystem/merit9-category",
-    "code": "OHP",
-    "display": "外来処方"
-  } ]
-}, {
-  "coding": [ {
-    "system": "http://jpfhir.jp/Common/CodeSystem/merit9-category",
-    "code": "OHO",
-    "display": "院外処方"
-  } ]
-}, 
+"category": [
+  {
+    "coding": [ 
+      {
+        "system": "http://jpfhir.jp/Common/CodeSystem/merit9-category",
+        "code": "OHP",
+        "display": "外来処方"
+      } 
+    ]
+  },
+  {
+    "coding": [ 
+      {
+        "system": "http://jpfhir.jp/Common/CodeSystem/merit9-category",
+        "code": "OHO",
+        "display": "院外処方"
+      } 
+    ]
+  }, 
 ```
 
 ### 各種コメントの記述方法
@@ -886,7 +901,11 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 #### １回用法の例
 朝食後に4錠、昼食後2錠、夕食後1錠、合計1日投与量7錠であることを1回用法で３つの剤グループで表現したインスタンスの例である。
 
-```json
+<details>
+<summary><b>インスタンス例(RP1)（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "fullUrl": "urn:uuid:e0ebc512-f8fa-8551-5116-0320bd420395",
   "resource": {
@@ -1022,9 +1041,16 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
       }
     }
   }
-```
+}
+{% endhighlight json %}
+</dev>
+</details>
 
-```json
+<details>
+<summary><b>インスタンス例(RP2)（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "fullUrl": "urn:uuid:c39d005e-22e0-7991-bca2-565bff406e10",
   "resource": {
@@ -1156,9 +1182,16 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
       }
     }
   }
-```
+}  
+{% endhighlight json %}
+</dev>
+</details>
 
-```json
+<details>
+<summary><b>インスタンス例(RP3)（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "fullUrl": "urn:uuid:713d17e1-1e8b-dba1-95e2-763f179e805a",
   "resource": {
@@ -1291,13 +1324,19 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     }
   }
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 #### １日用法の例
 朝食後に4錠、昼食後2錠、夕食後1錠、合計1日投与量7錠であることを1日用法で表現したインスタンスの例である。
 １つのMedicationRequestリソースの1つのdosageInstruction要素を使用し、dosageInstruction.doseAndRate.rateRatio要素に、1日投与量のみを記載する。1回の投与量の情報をコードとして記述できる場合は、dosageInstruction.additionalInstruction要素に、1 日の服用回数分だけ繰り返し、JAMI補足用法コードを使用し記述する。コード化できない場合は、明細単位の備考としてテキストで記述する。
 
-```json
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationRequest",
   "text": {
@@ -1453,7 +1492,10 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     }
   }
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
+
 
 ### 隔日指定投与の記述方法
 隔日指定投与は、連続して服用する日数と、その後の連続して休薬する日数を指定する用法である。
@@ -1464,36 +1506,36 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
 用法「１日３回 朝昼夕食後 １回１錠 ７日分（隔日投与）」をJAMI標準用法コード、及び、補足用法コードで表現したインスタンス例を示す。
 ```json
 "dosageInstruction": [
-{
-  "text": "１日３回　朝昼夕食後　１回１錠　７日分（隔日投与）",
-  "additinalInstruction": {
+  {
+    "text": "１日３回　朝昼夕食後　１回１錠　７日分（隔日投与）",
+    "additinalInstruction": {
       "coding": [
-          {
+        {
           "system": "urn:oid:1.2.392.200250.2.2.20.22",
           "code": "I1100000",
           "display": "隔日投与"
-          }
+        }
       ]
-  },
-  "timing": {
+    },
+    "timing": {
       "repeat": {
-          "boundsDuration": {
-              "value": 13,
-              "unit": "日",
-              "system": "http://unitsofmeasure.org",
-              "code": "d"
-          }
+        "boundsDuration": {
+          "value": 13,
+          "unit": "日",
+          "system": "http://unitsofmeasure.org",
+          "code": "d"
+        }
       },
       "code": {
-          "coding": [
+        "coding": [
           {
-              "system": "urn:oid:1.2.392.200250.2.2.20.20",
-              "code": "1013044400000000 ",
-              "display": "内服・経口・１日３回朝昼夕食後"
+            "system": "urn:oid:1.2.392.200250.2.2.20.20",
+            "code": "1013044400000000 ",
+            "display": "内服・経口・１日３回朝昼夕食後"
           }
-          ]
+        ]
       }
-  },
+    },
 
 ```
 
@@ -1532,50 +1574,52 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
 曜日指定投与「１日１回 朝食後 １回１錠 （月曜日、木曜日）」を、JAMI標準用法コードで記録したインスタンス例を示す。
 ```json
 "dosageInstruction": [
-{
+  {
     "text": "１日１回　朝食後　１回１錠　（月曜日、木曜日）",
     "additinalInstruction": {
-        "coding": [
-            {
-            "system": "urn:oid:1.2.392.200250.2.2.20.22",
-            "code": "W0100100",
-            "display": "月曜日、木曜日"
-            }
-        ]
+      "coding": [
+        {
+          "system": "urn:oid:1.2.392.200250.2.2.20.22",
+          "code": "W0100100",
+          "display": "月曜日、木曜日"
+        }
+      ]
     },
     "timing": {
-    "code": {
+      "code": {
         "coding": [
-        {
+          {
             "system": "urn:oid:1.2.392.200250.2.2.20.20",
             "code": "1011000400000000 ",
             "display": "内服・経口・１日１回朝食後"
-        }
+          }
         ]
-    }
+      }
     },
 ```
 
 なお、HL7 FHIR本来の表現方法では、dosageInstruction.timing.repeat.dayOfWeek 要素に値セットDaysOfWeek (http://hl7.org/fhir/ValueSet/days-of-week) を使用して、服用する曜日に対応するコードを配列で指定する。
 ```json
 "dosageInstruction": [
-{
-  "text": "１日１回　朝食後　１回１錠　（月曜日、木曜日）",
-  "timing": {
-    "repeat": {
-      "dayOfWeek": [
-        "mon",
-        "thu"
-      ],
-    },
-    "code": {
-      "coding": [ {
-        "system": "urn:oid:1.2.392.200250.2.2.20.20",
-        "code": "1011000400000000 ",
-        "display": "内服・経口・１日１回朝食後"
-      } ]
+  {
+    "text": "１日１回　朝食後　１回１錠　（月曜日、木曜日）",
+    "timing": {
+      "repeat": {
+        "dayOfWeek": [
+          "mon",
+          "thu"
+        ],
+      },
+      "code": {
+        "coding": [ 
+          {
+            "system": "urn:oid:1.2.392.200250.2.2.20.20",
+            "code": "1011000400000000 ",
+            "display": "内服・経口・１日１回朝食後"
+          } 
+        ]
+      }
     }
-}
 ```
 
 ### リフィル処方箋でのリフィル回数の記述方法
@@ -1599,10 +1643,10 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
     "code": "TAB"
   },
   "expectedSupplyDuration": {
-      "value": 28,
-      "unit": "日",
-      "system": "http://unitsofmeasure.org",
-      "code": "d"
+    "value": 28,
+    "unit": "日",
+    "system": "http://unitsofmeasure.org",
+    "code": "d"
   }
 }
 ```

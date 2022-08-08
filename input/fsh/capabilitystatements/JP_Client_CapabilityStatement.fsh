@@ -36,7 +36,7 @@ Usage: #definition
 * rest.resource[=].extension[=].extension[+].url = "required"
 * rest.resource[=].extension[=].extension[=].valueString = "name"
 * rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "gnender"
+* rest.resource[=].extension[=].extension[=].valueString = "gender"
 * rest.resource[=].extension[=].url = $capabilityStatement-combination
 * rest.resource[=].extension[+].extension[0].url = $capabilityStatement-expectation
 * rest.resource[=].extension[=].extension[=].valueCode = #SHOULD
@@ -65,7 +65,7 @@ Usage: #definition
 * rest.resource[=].extension[=].extension[+].url = "required"
 * rest.resource[=].extension[=].extension[=].valueString = "phone"
 * rest.resource[=].extension[=].extension[+].url = "required"
-* rest.resource[=].extension[=].extension[=].valueString = "adress-phostalcode"
+* rest.resource[=].extension[=].extension[=].valueString = "address-phostalcode"
 * rest.resource[=].extension[=].url = $capabilityStatement-combination
 * rest.resource[=].type = #Patient
 * rest.resource[=].supportedProfile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient"

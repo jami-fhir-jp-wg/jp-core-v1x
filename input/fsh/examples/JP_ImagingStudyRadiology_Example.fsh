@@ -2,7 +2,7 @@
 
 Instance: jp-imagingstudy-radiology-example-1
 InstanceOf: JP_ImagingStudy_Radiology
-Title: "JP Core ImagingStudy Ragiology Example 放射線画像検査"
+Title: "JP Core ImagingStudy Radiology Example 放射線画像検査"
 Description: "放射線画像検査"
 Usage: #example
 * identifier.system = "http://www.acme.com/identifiers/patient"
