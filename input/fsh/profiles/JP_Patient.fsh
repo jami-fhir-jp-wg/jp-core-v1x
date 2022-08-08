@@ -166,4 +166,4 @@ Description: "人種(Race)に関する情報を格納するためのExtension。
 * . ^comment = "人種に関する情報を表現する拡張。\r\nValueSetとして\r\nhttp://terminology.hl7.org/CodeSystem/v3-Race\r\nを使用する。\r\n例：\r\nCode : Description\r\n2103-3 : White\r\n2039-6 : Japanese\r\n2040-4 : Korean\r\n等"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race" (exactly)
 * value[x] only CodeableConcept
-* valueCodeableConcept from $patient-race-vs
+* valueCodeableConcept from $patient-race-vs  (preferred)
