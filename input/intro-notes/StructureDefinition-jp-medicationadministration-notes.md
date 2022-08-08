@@ -354,7 +354,7 @@ Rp1
       "coding": [
         {
           "system": "urn:oid:1.2.392.200250.2.2.20.40",
-          "code": "0",
+          "code": "10",
           "display": "経口"
         }
       ]
@@ -552,7 +552,7 @@ performer.actorには、医療従事者(Practitioner)、または患者(Patient)
     "coding": [
       {
         "system": "urn:oid:1.2.392.200250.2.2.20.40",
-        "code": "0",
+        "code": "10",
         "display": "経口"
       }
     ]
