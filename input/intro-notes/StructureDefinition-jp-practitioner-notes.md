@@ -90,10 +90,10 @@ Operationはない。
 
 ### サンプル
 
-* [**女性医師 麻薬施用者番号あり**][jp-practionner-example-female-1]
-* [**女性看護師**][jp-practionner-example-female-2]
-* [**男性医師**][jp-practionner-example-male-1]
-* [**男性看護師**][jp-practionner-example-male-2]
+* [**女性医師 麻薬施用者番号あり**][jp-practitioner-example-female-1]
+* [**女性看護師**][jp-practitioner-example-female-2]
+* [**男性医師**][jp-practitioner-example-male-1]
+* [**男性看護師**][jp-practitioner-example-male-2]
 
 ## 注意事項
 
