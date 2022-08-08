@@ -1,7 +1,7 @@
 Instance: jp-patient-example-1
 InstanceOf: JP_Patient
-Title: "JP Core Patient Example 患者（日本人）"
-Description: "日本人患者－山田 太郎"
+Title: "JP Core Patient Example 患者男性"
+Description: "患者男性"
 Usage: #example
 * meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient"
 * identifier.system = "urn:oid:1.2.392.100495.20.3.51.11311234567"
