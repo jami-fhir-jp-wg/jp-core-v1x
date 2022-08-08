@@ -233,7 +233,12 @@ HTTP/1.1 200 OK
 
 ### サンプル
 ホリゾン注射液１０ｍｇ１アンプルを左腕に静脈注射する処方例をFHIRで表現する場合のサンプルを示す。
-```JSON
+
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationDispense",
   "id": "jp-medicationdispense-injection-example-1",
@@ -241,10 +246,6 @@ HTTP/1.1 200 OK
     "profile": [
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispense_Injection"
     ]
-  },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationdispense-injection-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medicationdispense-injection.html\">JP Core MedicationDispense Injection Profile</a></p></div><p><b>identifier</b>: id: 1234567890, id: 1, id: 1</p><p><b>status</b>: completed</p><p><b>category</b>: Inpatient Order <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0482.html\">orderType</a>#I)</span></p><p><b>medication</b>: <a name=\"jp-medicationdispense-injection-medication-example-1\"> </a></p><blockquote><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationdispense-injection-medication-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medication.html\">JP Core Medication Profile</a></p></div><p><b>status</b>: active</p><h3>Ingredients</h3><table class=\"grid\"><tr><td>-</td><td><b>Extension</b></td><td><b>Item[x]</b></td><td><b>Strength</b></td></tr><tr><td>*</td><td></td><td>ホリゾン注射液１０ｍｇ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#100558502)</span></td><td>1 アンプル<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code AMP = 'AMP')</span>/1 回<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code KAI = 'KAI')</span></td></tr></table></blockquote><p><b>subject</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><h3>Performers</h3><table class=\"grid\"><tr><td>-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>Packager <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-medicationdispense-performer-function.html\">MedicationDispense Performer Function Codes</a>#packager)</span></td><td><a href=\"Practitioner-jp-practionner-example-female-1.html\">Practitioner/jp-practionner-example-female-1</a> \" 東京\"</td></tr></table><p><b>quantity</b>: 2 mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mL = 'mL')</span></p><p><b>whenPrepared</b>: 2021-10-07 10:47:19+0900</p><p><b>whenHandedOver</b>: 2021-10-07 10:55:23+0900</p><p><b>destination</b>: <a href=\"Location-jp-location-example-ward.html\">Location/jp-location-example-ward</a> \"09A病棟 021病室 4ベッド\"</p></div>"
   },
   "contained": [
     {
@@ -474,8 +475,9 @@ HTTP/1.1 200 OK
     }
   ]
 }
-```
-
+{% endhighlight json %}
+</dev>
+</details>
 
 ## 注意事項
 
@@ -635,27 +637,27 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 
 ```json
 "substitution" : {
-    "wasSubstituted" : true,
-    "type" : {
-        "coding" : [
-            {
-                "code" : "G",
-                "system" : "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
-                "display" : "generic composition"
-            }
-        ]
-    },
-    "reason": [
-        {
-            "coding" : [
-                {
-                    "code" : "RR",
-                    "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-                    "display" : "regulatory requirement"
-                }
-            ]
-        }
+  "wasSubstituted" : true,
+  "type" : {
+    "coding" : [
+      {
+        "code" : "G",
+        "system" : "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
+        "display" : "generic composition"
+      }
     ]
+  },
+  "reason": [
+    {
+      "coding" : [
+        {
+          "code" : "RR",
+          "system" : "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+          "display" : "regulatory requirement"
+        }
+      ]
+    }
+  ]
 }
 ```
 
@@ -679,20 +681,20 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 
 ```json
 "performer" : [
-    {
-        "function" : {
-            "coding" : [
-                {
-                    "code" : "packager",
-                    "system" : "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function",
-                    "display" : "Packager"
-                }
-            ]
-        },
-        "actor" : {
-            "reference" : "Practitioner/01234567"
+  {
+    "function" : {
+      "coding" : [
+        {
+          "code" : "packager",
+          "system" : "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function",
+          "display" : "Packager"
         }
+      ]
+    },
+    "actor" : {
+      "reference" : "Practitioner/01234567"
     }
+  }
 ]
 ```
 
@@ -705,12 +707,12 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 薬剤単位の調剤結果を表すインスタンス例を示す。
 ```json
 "extension": [
-    {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation",
-        "valueCodeableConcept": {
-            "text" : "5mLに溶解して2mL抜きとる"
-        }
-    } 
+  {
+    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation",
+    "valueCodeableConcept": {
+      "text" : "5mLに溶解して2mL抜きとる"
+    }
+  } 
 ],
 
 ```
