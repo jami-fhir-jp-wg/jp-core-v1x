@@ -27,6 +27,26 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * identifier[orderInRp].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
 * identifier[orderInRp].period ..0
 * identifier[orderInRp].assigner ..0
+* dosageInstruction.doseAndRate.rate[x].denominator 1..
+* dosageInstruction.doseAndRate.rate[x].denominator ^short = "1日投与量の分母である「1日」を表す"
+* dosageInstruction.doseAndRate.rate[x].denominator ^definition = "1日投与量の分母である「1日」を表す。"
+* dosageInstruction.doseAndRate.rate[x].denominator.value 1..
+* dosageInstruction.doseAndRate.rate[x].denominator.value = 1 (exactly)
+* dosageInstruction.doseAndRate.rate[x].denominator.value ^short = "1日投与量の分母である「1日」"
+* dosageInstruction.doseAndRate.rate[x].denominator.value ^definition = "1日投与量の分母である「1日」を表す。"
+* dosageInstruction.doseAndRate.rate[x].denominator.comparator ..0
+* dosageInstruction.doseAndRate.rate[x].denominator.unit 1..
+* dosageInstruction.doseAndRate.rate[x].denominator.code = #d (exactly)
+* dosageInstruction.doseAndRate.rate[x].denominator.system = "http://unitsofmeasure.org" (exactly)
+* dosageInstruction.doseAndRate.rate[x].denominator.unit = "日" (exactly)
+* dosageInstruction.doseAndRate.rate[x].denominator.unit ^short = "1日投与量の分母である「1日」の単位"
+* dosageInstruction.doseAndRate.rate[x].denominator.unit ^definition = "1日投与量の分母である「1日」の単位。「日」で固定される。"
+* dosageInstruction.doseAndRate.rate[x].denominator.system 1..
+* dosageInstruction.doseAndRate.rate[x].denominator.system ^short = "UCUM単位コードを識別するURI"
+* dosageInstruction.doseAndRate.rate[x].denominator.system ^definition = "UCUM単位コードを識別するURI"
+* dosageInstruction.doseAndRate.rate[x].denominator.code 1..
+* dosageInstruction.doseAndRate.rate[x].denominator.code ^short = "「日」を表すUCUM単位コード。"
+* dosageInstruction.doseAndRate.rate[x].denominator.code ^definition = "「日」を表すUCUM単位コード。dで固定される。"
 * dosageInstruction.extension[device] ..0
 * dosageInstruction.extension[device] ^short = "Device"
 * dosageInstruction.extension[line] ..0
