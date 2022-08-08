@@ -44,21 +44,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier[rpNumber].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
 * identifier[rpNumber].period ..0
 * identifier[rpNumber].assigner ..0
-* identifier[orderInRp] ^short = "同一RP番号（剤グループ）での薬剤の表記順"
-* identifier[orderInRp] ^definition = "同一剤グループでの薬剤を表記する際の順番。XML形式と異なりJSON形式の場合、表記順は項目の順序を意味しない。したがって、薬剤の記載順を別に規定する必要があるためIDを用いて表現する。"
-* identifier[orderInRp] ^comment = "同一剤グループ内での薬剤の順番を1から順の番号で示す。"
-* identifier[orderInRp].use ..0
-* identifier[orderInRp].type ..0
-* identifier[orderInRp].system 1..
-* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82" (exactly)
-* identifier[orderInRp].system ^short = "RP番号内（剤グループ内）の連番を示すsystem値"
-* identifier[orderInRp].system ^definition = "剤グループ内番号の名前空間を識別するURI。固定値urn:oid:1.2.392.100495.20.3.82"
-* identifier[orderInRp].value 1..
-* identifier[orderInRp].value ^short = "RP番号内（剤グループ内）の連番"
-* identifier[orderInRp].value ^definition = "剤グループ内連番。"
-* identifier[orderInRp].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
-* identifier[orderInRp].period ..0
-* identifier[orderInRp].assigner ..0
+
 * identifier[requestIdentifier] ^short = "処方オーダーに対するID"
 * identifier[requestIdentifier] ^definition = "薬剤をオーダーする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。"
 * identifier[requestIdentifier].system 1..
