@@ -96,7 +96,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * subject ^comment = "処方オーダーの対象は必須項目である。\r\n二次利用のためにどこに実際の対象がいるのかについての情報は提供されない。特定の対象に対して匿名化することも必要である。"
 * subject.id ^short = "内部エレメントを参照するためのユニークID"
 * subject.id ^definition = "リソース内のエレメントを参照（内部参照）するためのユニークなID。空白を含まなければどのような文字列であってもよい。"
-* subject.reference 1..
+* subject.reference 1..1
 * subject.reference ^short = "文字列による参照、関係、内部あるいは絶対URL"
 * subject.reference ^definition = "対象となる患者を表すPatient resourceへの参照である。PatientリソースのfullUrl要素に指定されるUUID を指定すること\r\n一般には他のResourceが存在する場所への参照。参照はサービスのベースURLに対する相対的なものや、リソースがある場所を示す絶対的URLであることもある。参照はバージョンを指定していることもあればそうでないこともある。もし参照が、FHIRのRESTfulサーバ以外を対象としていれば、それはバージョンが指定されているべきである。分割された内部参照('#'で始まる)の場合は内部に含まれるResourceへの参照である。"
 * subject.reference ^comment = "絶対URLを使えば安定してクラウドやWeb上にスケーラブルな対応をすることができる。一方で、相対・論理参照を使えば閉鎖されたエコシステム内部に適した柔軟な対応ができる。絶対URLをはFHIRリソースのRESTfulサーバを指定するために必要となるわけではないが、より推奨される方法である。もし、URLが\"/[type]/[id]\"で構成されていれば、FHIRのRESTfulサーバへの参照を想定していると推測することもできる。"
@@ -506,7 +506,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.doseAndRate.dose[x].value ^definition = "1回投与量"
 * dosageInstruction.doseAndRate.dose[x].unit 1..
 * dosageInstruction.doseAndRate.dose[x].system 1..
-* dosageInstruction.doseAndRate.dose[x].system = "urn:oid:1.2.392.100495.20.2.101" (exactly)
+* dosageInstruction.doseAndRate.dose[x].system = "urn:oid:1.2.392.100495.20.2.101"
 * dosageInstruction.doseAndRate.dose[x].system ^short = "医薬品単位略号を識別するOID。"
 * dosageInstruction.doseAndRate.dose[x].system ^definition = "医薬品単位略号を識別するOID。固定値。"
 * dosageInstruction.doseAndRate.dose[x].code ^short = "医薬品単位略号"
@@ -527,7 +527,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.doseAndRate.rate[x].numerator.unit ^short = "投与量の単位"
 * dosageInstruction.doseAndRate.rate[x].numerator.unit ^definition = "投与量の単位。"
 * dosageInstruction.doseAndRate.rate[x].numerator.system 1..
-* dosageInstruction.doseAndRate.rate[x].numerator.system = "urn:oid:1.2.392.100495.20.2.101" (exactly)
+* dosageInstruction.doseAndRate.rate[x].numerator.system = "urn:oid:1.2.392.100495.20.2.101"
 * dosageInstruction.doseAndRate.rate[x].numerator.system ^short = "医薬品単位略号を識別するOID"
 * dosageInstruction.doseAndRate.rate[x].numerator.system ^definition = "医薬品単位略号を識別するOID。固定値。"
 * dosageInstruction.doseAndRate.rate[x].numerator.code ^short = "医薬品単位略号"
@@ -761,7 +761,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dispenseRequest.quantity.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dispenseRequest.quantity.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
 * dispenseRequest.quantity.system 1..
-* dispenseRequest.quantity.system = "urn:oid:1.2.392.100495.20.2.101" (exactly)
+* dispenseRequest.quantity.system = "urn:oid:1.2.392.100495.20.2.101"
 * dispenseRequest.quantity.system ^short = "医薬品単位略号を識別するURL"
 * dispenseRequest.quantity.system ^definition = "医薬品単位略号を識別するURL。urn:oid:1.2.392.100495.20.2.101で固定される。"
 * dispenseRequest.quantity.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
