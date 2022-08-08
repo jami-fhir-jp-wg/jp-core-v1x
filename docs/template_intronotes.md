@@ -239,63 +239,8 @@ URL: [base]/Practitioner/[id]/$everything
 
 ### サンプル
 
-<!--★★コメント：例示します。★★</span>-->
-    ```JSON
-    {
-    "resourceType": "Practitioner",
-    "id": "example",
-    "text": {
-        "status": "generated",
-        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>神奈川　花子</li><li>カナガワ　ハナコ</li><li>麻薬施用者免許番号：4-321</li></ul></div>"
-    },
-    "name": [
-        {
-        "extension": [
-            {
-            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
-            "valueCode": "IDE"
-            }
-        ],
-        "text": "神奈川花子",
-        "family": "神奈川",
-        "given": [
-            "花子"
-        ]
-        },
-        {
-          "extension": [
-            {
-            "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
-            "valueCode": "SYL"
-            }
-        ],
-        "text": "カナガワハナコ",
-          "family": "カナガワ",
-        "given": [
-            "ハナコ"
-        ]
-        }
-      ],
-      "qualification": [
-        {
-        "identifier": [
-            {
-            "system": "urn:oid:1.2.392.100495.20.3.32.13",
-            "value": "4-321"
-            }
-        ],
-          "code": {
-            "Coding": [
-            {
-                "system": "http://hl7.jp/fhir/ePrescription/certificate",
-                "code": "NarcoticsPractitioner"
-            }
-            ]
-          }
-        }
-    ]
-    }
-    ```
+<!--★★コメント：サンプルファイルのリソースのリンクを記載します。★★</span>-->
+    [患者日本人－山田 太郎] [jp-patient-example-1]
 
 ### サンプル
 [外来患者１](http:xxxxx.json.html)

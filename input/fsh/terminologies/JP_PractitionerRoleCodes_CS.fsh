@@ -1,11 +1,12 @@
-CodeSystem: JP_ProcedurePerformerRoleCodes_CS
-Id: jp-procedure-performer-role-codes-cs
-Title: "JP Core Procedure Performer Role Codes"
-Description: "処置を実施した者の役割（ロール）を示すコード"
-* ^url = $JP_ProcedurePerformerRoleCodes_CS
+CodeSystem: JP_PractitionerRoleCodes_CS
+Id: jp-practitioner-role-codes-cs
+Title: "JP Core Practitioner Role Codes"
+Description: "実施者のロール（役割）を示すコード"
+* ^url = $JP_PractitionerRoleCodes_CS
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
+// TODO: より適切なコードと用語に見直し
 * #B12101 "医師"
 * #B12201 "歯科医師"
 * #B12301 "獣医師"

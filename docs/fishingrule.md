@@ -1,4 +1,4 @@
-# JP Core FHIR Shorthand記載ルール(案)
+# JP Core FHIR Shorthand記載ルール
 
 ## フォルダ構成
  フォルダ構成は下記の通り
@@ -9,7 +9,7 @@
 ├─docs #github説明用ファイル
 ├─input #入力フォルダ
 │  ├─fsh #FHIR Shorthandファイル格納フォルダ
-│  │  ├─capablitystatements #capablity statement用
+│  │  ├─capabilitystatements #capability statement用
 │  │  ├─examples #リソース例 example
 │  │  ├─others #その他
 │  │  ├─profiles #profile,extension用
@@ -25,7 +25,7 @@
 
 ### [1] ID命名規則
 #### 形式
-Kabab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
+Kebab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 正規表現 : ``` ([a-z]|[-])+ ```
 
 | 項目 | ルール <br/> `(例)`  |
@@ -34,8 +34,8 @@ Kabab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 | extension | jp-{profile}-{element}-{extension} <br/>`jp-medicationrequest-dispenserequest-expectedrepeatcount` <br/>64文字を超える場合は、**{element}-** を省略可能とする |
 | datetype | jp-{datatype} <br/>`jp-humanname `| |
 | search parameter | jp-{profile}-{parameter}-sp <br/>`jp-patient-birthdate-sp` | |
-| capblity statement | jp-{actor}-capablitystatement <br/>`jp-client-capablitystatement` |
-| codesytesm | jp-{codesystem}-cs <br/> `jp-gender-cs` |
+| capability statement | jp-{actor}-capabilitystatement <br/>`jp-client-capabilitystatement` |
+| codesystem | jp-{codesystem}-cs <br/> `jp-gender-cs` |
 | valueset | jp-{valueset}-vs <br/> `jp-gender-vs` |
 | example | jp-{profile}-example-{N} <br/> `jp-patient-example-1` |
 
@@ -51,8 +51,8 @@ Kabab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 | extension | JP_{Profile}\_{Element}\_{Extension} <br/>`JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount` |
 | datetype | JP_{DataType} <br/>`JP_HumanName `| |
 | search parameter | JP_{Profile}_{Parameter}_SP <br/>`JP_Patient_Birthdate_SP` | |
-| capblity statement | JP_{Actor}_CapablityStatement <br/>`JP_Client_CapablityStatement` |
-| codesytesm | JP_{CodeSystem}_CS <br/> `JP_Gender_CS` |
+| capability statement | JP_{Actor}_CapabilityStatement <br/>`JP_Client_CapabilityStatement` |
+| codesystem | JP_{CodeSystem}_CS <br/> `JP_Gender_CS` |
 | valueset | JP_{ValueSet}_VS <br/> `JP_Gender_VS` |
 | example | JP_{Profile}_Example_{N} <br/> `JP_Patient_Example_1` |
 
@@ -67,7 +67,7 @@ Kabab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 | profile, <br/>datatype | http://jpfhir.jp/fhir/core/StructureDefinition/{Name} <br/>`http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient`| 
 | extension | http://jpfhir.jp/fhir/core/Extension/StructureDefinition/{Name}<br/> `http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race`|
 | search<br/>parameter | http://jpfhir.jp/fhir/core/SearchParameter/{Name} <br/>`http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_Birthdate_SP` | |
-| capblity<br/>statement | http://jpfhir.jp/fhir/core/CapabilityStatement/{Name} <br/>`http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement` |
+| capability<br/>statement | http://jpfhir.jp/fhir/core/CapabilityStatement/{Name} <br/>`http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement` |
 | codesystem | http://jpfhir.jp/fhir/Common/CodeSystem/{Name} <br/>`http://jpfhir.jp/fhir/Common/CodeSystem/JP_Gender_CS` |
 | valueset | http://jpfhir.jp/fhir/Common/ValueSet/{Name} <br/>`http://jpfhir.jp/fhir/Common/ValueSet/JP_Gender_VS` |
 
@@ -119,7 +119,7 @@ Name形式[ **Aaa_BbbCcc_Ddd.fsh** ]に変換し、拡張子を.fshとする。<
 * copyright (コピーライト)
 * publisher (公開者)
 * contract (契約者)
-* licese (ライセンス)
+* license (ライセンス)
 * jurisdiction (管轄)
 
 設定してもsushi-config.yamlの内容に上書きされるため記載対象としない。
@@ -204,7 +204,7 @@ Baseに対し、より制約を強くする（範囲を狭める）形で定義�
 JP Coreの派生先でのユースケース毎の利用を想定しており、JP Coreでは原則定義しない。（※日本国内のベースで派生先の制約を少なくしたいため）<br/>
 ただし派生先ユースケースの利用方法を理解した上で、必要な場合に付け加えることは可能とする。この場合、MustSupportの定義(どのような制約になるのか）についても合わせて記述すること。
 * FSHファイル上での記載<br/>
-MustSuppotはFlag Rulesの記載方法を推奨する
+MustSupportはFlag Rulesの記載方法を推奨する
 ``` 
 // 非推奨
 element mustSupport = false or true

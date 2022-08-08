@@ -33,10 +33,13 @@ Description: "このプロファイルはOrganizationリソースに対して、
 * identifier contains
     medicalInstitutionCode ..* and
     insurerNumber ..*
+* identifier.assigner only Reference(JP_Organization)
 * identifier[medicalInstitutionCode] ^comment = "処方箋等の発行医療機関コードを格納するためのIdentifer/Slicing定義。\r\n\r\nsystemはFixed Valueの\r\n```\r\nhttp://jpfhir.jp/fhir/Common/IdSystem/insurance-medical-institution-no\r```\r\nを使用する。\r\n\r\n記載の様式(Wikipediaより転載)\r\n\r\n記載されている10桁の内訳は以下の通りである。\r\n\r\n　・最初の2桁 全国地方公共団体コードの都道府県コード（ISO 3166-2:JP）\r\n\r\n　　・都道府県ごとの番号。\r\n\r\n　・3桁目 点数表番号\r\n\r\n　　・医科は「1」。歯科は「3」。\r\n\r\n　　　・したがって、同一の病院または診療所に医科と歯科が併存する場合にはそれぞれ別のコードが与えられる。\r\n\r\n　　　・そのため、レセプトコンピュータでは一医療機関に対して医科と歯科の両方のコードを設定できるようになっている。\r\n\r\n　　　・ちなみに処方箋は発行されないが、「4」は調剤、「5」は老人保健施設、「6」は訪問看護ステーションである。\r\n\r\n　　・下7桁 医療機関コード\r\n\r\n　　　・地区（2桁）+番号（4桁）+チェックディジット（1桁）で構成される。\r\n\r\n　・7桁の医療機関コードについて\r\n\r\n　　各地域を所管する厚生労働省の地方支分部局である地方厚生局のホームページ等で確認できる。"
 * identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/Common/IdSystem/insurance-medical-institution-no" (exactly)
+* identifier[medicalInstitutionCode].assigner only Reference(JP_Organization)
 * identifier[insurerNumber] ^comment = "健康保険組合などの保険者の保険者番号を表現する際のIdentifer表現に使用する\r\nsystem要素には保険者番号を示すOID\"urn:oid:1.2.392.100495.20.3.61\"を指定する。"
 * identifier[insurerNumber].system = "urn:oid:1.2.392.100495.20.3.61" (exactly)
+* identifier[insurerNumber].assigner only Reference(JP_Organization)
 * active ^short = "Whether the organization's record is still in active use / 組織の記録がまだ有効に使われているかどうか"
 * active ^definition = "Whether the organization's record is still in active use.\r\n\r\n\r\n組織の記録がまだ現役であるかどうか。"
 * active ^comment = "This active flag is not intended to be used to mark an organization as temporarily closed or under construction. Instead the Location(s) within the Organization should have the suspended status. If further details of the reason for the suspension are required, then an extension on this element should be used.\n\nThis element is labeled as a modifier because it may be used to mark that the resource was created in error.\r\n\r\n\r\nこのアクティブフラグは、組織を一時的に閉鎖したり、工事中であることを示すために使用されることを意図していない。代わりに、組織内の場所(複数可)は、中断されたステータスを持っている必要がある。一時停止の理由の詳細が必要な場合は、この要素の拡張子を使用する必要がある。\r\n\r\nこの要素は、リソースがエラーで作成されたことをマークするために使用される可能性があるため、修飾子としてラベル付けされている。"
@@ -61,6 +64,7 @@ Description: "このプロファイルはOrganizationリソースに対して、
 * address ^definition = "An address for the organization.\r\n\r\n\r\n組織の住所"
 * address ^comment = "Organization may have multiple addresses with different uses or applicable periods. The use code 'home' is not to be used.\r\n\r\n\r\n組織は、用途や適用期間が異なる複数の住所を持っている場合がある。使用コード「home」は使用しないこと。"
 * address ^requirements = "May need to keep track of the organization's addresses for contacting, billing or reporting requirements.\r\n\r\n\r\n連絡、請求、または報告のために、組織のアドレスを追跡する必要がある場合がある。"
+* partOf only Reference(JP_Organization)
 * partOf ^short = "The organization of which this organization forms a part"
 * partOf ^definition = "The organization of which this organization forms a part.\r\nこの組織が一部を構成する組織"
 * partOf ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
@@ -68,6 +72,7 @@ Description: "このプロファイルはOrganizationリソースに対して、
 * contact ^definition = "Contact for the organization for a certain purpose.\r\n特定の目的のための組織の連絡先"
 * contact ^comment = "Where multiple contacts for the same purpose are provided there is a standard extension that can be used to determine which one is the preferred contact to use.\r\n同じ目的で複数の連絡先が提供されている場合、どの連絡先を使用するのが好ましいかを判断するために使用できる標準の拡張extension がある。"
 * contact ^requirements = "Need to keep track of assigned contact points within bigger organization.\r\nより大きな組織内で割り当てられた連絡先を追跡する必要がある。"
+* contact.name only JP_HumanName
 * endpoint ^short = "Technical endpoints providing access to services operated for the organization　　組織のために運営されているサービスへのアクセスを提供する技術的エンドポイント"
 * endpoint ^definition = "Technical endpoints providing access to services operated for the organization.\r\n組織のために運営されているサービスへのアクセスを提供する技術的エンドポイント"
 * endpoint ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"

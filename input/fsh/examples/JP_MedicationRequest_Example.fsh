@@ -1,6 +1,6 @@
 Instance: jp-medicationrequest-example-1
 InstanceOf: JP_MedicationRequest
-Title: "JP Core MedicationRequest 内服処方1"
+Title: "JP Core MedicationRequest Example 内服処方1"
 Description: "内服処方1"
 Usage: #example
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
@@ -20,7 +20,7 @@ Usage: #example
 * dosageInstruction.extension[=].valueDuration = 3 'd' "日"
 * dosageInstruction.text = "内服・経口・１日３回朝昼夕食後"
 * dosageInstruction.timing.code = urn:oid:1.2.392.200250.2.2.20.20#1013044400000000 "内服・経口・１日３回朝昼夕食後"
-* dosageInstruction.route = http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes#PO "口"
+* dosageInstruction.route = http://jpfhir.jp/fhir/Common/CodeSystem/route-codes#PO "口"
 * dosageInstruction.method = urn:oid:1.2.392.200250.2.2.20.40#10 "経口"
 * dosageInstruction.doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 * dosageInstruction.doseAndRate.doseQuantity = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
@@ -31,7 +31,7 @@ Usage: #example
 
 Instance: jp-medicationrequest-example-2
 InstanceOf: JP_MedicationRequest
-Title: "JP Core MedicationRequest 内服処方2"
+Title: "JP Core MedicationRequest Example 内服処方2"
 Description: "内服処方2"
 Usage: #example
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
@@ -51,7 +51,7 @@ Usage: #example
 * dosageInstruction.extension[=].valueDuration = 3 'd' "日"
 * dosageInstruction.text = "内服・経口・１日３回朝昼夕食後"
 * dosageInstruction.timing.code = urn:oid:1.2.392.200250.2.2.20.20#1013044400000000 "内服・経口・１日３回朝昼夕食後"
-* dosageInstruction.route = http://jpfhir.jp/fhir/ePrescription/CodeSystem/route-codes#PO "口"
+* dosageInstruction.route = http://jpfhir.jp/fhir/Common/CodeSystem/route-codes#PO "口"
 * dosageInstruction.method = urn:oid:1.2.392.200250.2.2.20.40#10 "経口"
 * dosageInstruction.doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 * dosageInstruction.doseAndRate.doseQuantity = 2 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
