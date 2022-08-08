@@ -1,7 +1,7 @@
 CodeSystem: JP_Department_SsMix3Digits_CS
 Id: jp-department-ssmix3digits-cs
-Title: "JP Core Department SS-MIX2 CodeSystem"
-Description: "SS-MIX統一診療科コード"
+Title: "JP Core Department SS-MIX2 3DigitsCodes"
+Description: "SS-MIX統一診療科コード（３桁）"
 * ^url = $JP_Department_SsMix3Digits_CS
 * ^status = #draft
 * ^caseSensitive = true

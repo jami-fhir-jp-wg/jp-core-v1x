@@ -1,6 +1,6 @@
 ValueSet: JP_Department_SsMix_VS
 Id: jp-department-ssmix-vs
-Title: "JP Core DepartmentSsMix2 ValueSet"
+Title: "JP Core Department SS-MIX2 ValueSet"
 Description: "SS-MIX統一診療科コードの値セット"
 * ^url = $JP_Department_SsMix_VS
 * ^status = #draft
