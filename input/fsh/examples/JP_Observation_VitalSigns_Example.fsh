@@ -18,6 +18,6 @@ Usage: #example
 * effectiveDateTime = "2021-10-19T10:00:00+09:00"
 * valueQuantity.unit = "回"
 * valueQuantity.value = 400
-* performer = Reference(jp-practionner-example-male-2)
+* performer = Reference(jp-practitioner-example-male-2)
 * status = #final
 * encounter = Reference(Encounter/jp-encounter-example-1)

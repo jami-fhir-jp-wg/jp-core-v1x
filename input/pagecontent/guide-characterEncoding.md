@@ -10,7 +10,7 @@ FHIR JPにおいては、相互運用性確保のためUnicodeの私的領域（
 ### 基本多言語面（Basic Multilingual Plane, BMP）外の文字や異体字セレクタ
 一部の古いプログラム・ライブラリではこれらの文字を入力するとエラーを生じてしまうものもある。しかし、BMP外の文字や異体字セレクタについても、エラーなく送受信可能であるべきであり、サーバーは「[updateもしくはcreateを受け入れるときは送信された通りに受け入れ、のちにreadアクセスがあった際には同じ内容を返すべき（SHOULD）](https://www.hl7.org/fhir/http.html#update)」である。
 
-なお、Unicode6.3においてCJK互換漢字と等価なCJK統合漢字と異体字セレクタの組み合わせがStandardized Variantsに登録され、Standardized Variation Sequense(SVS)として利用可能になった。今のところ広く用いられているわけではないものの、これはUnicode上での重複符号化を生じ、主に検索の場面などで潜在的に意図しない挙動の理由となりうる。詳しくは、[文字列検索](guide-stringSearch.html)を参照のこと。
+なお、Unicode6.3においてCJK互換漢字と等価なCJK統合漢字と異体字セレクタの組み合わせがStandardized Variantsに登録され、Standardized Variation Sequence(SVS)として利用可能になった。今のところ広く用いられているわけではないものの、これはUnicode上での重複符号化を生じ、主に検索の場面などで潜在的に意図しない挙動の理由となりうる。詳しくは、[文字列検索](guide-stringSearch.html)を参照のこと。
 
 ### Bytes Order Mark, BOM
 FHIR®において[JSONフォーマットはRFC8259に従う](https://www.hl7.org/fhir/json.html#2.6.2)こととされており、[RFC8259](https://www.rfc-editor.org/rfc/rfc8259)では「[BOMは付加してはならない（**MUST NOT**）が、相互運用性のためにJSONテキストを解析する実装はエラーとして扱うのではなくBOMを無視してパースしてもよい（**MAY**）](https://www.rfc-editor.org/rfc/rfc8259#section-8.1)」と規定されている。

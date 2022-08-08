@@ -114,7 +114,7 @@ Alias: $JP_MedicationUsageJAMIAdditional_CS = urn:oid:1.2.392.200250.2.2.20.22
 Alias: $JP_MedicationCodeHOT9_CS = urn:oid:1.2.392.200119.4.403.1
 Alias: $JP_MedicationCodeYJ_CS = urn:oid:1.2.392.100495.20.1.73
 Alias: $JP_MedicationCodeCommon_CS = urn:oid:1.2.392.100495.20.1.73
-
+Alias: $JP_MedicationIngredientStrengthStrengthType_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationIngredientStrengthStrengthType_CS
 
 // ValueSet
 Alias: $JP_AllergyIntoleranceCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodes_VS
@@ -147,3 +147,4 @@ Alias: $JP_MedicationUsageJAMIAdditional_VS = http://jpfhir.jp/fhir/Common/Value
 Alias: $JP_MedicationCodeHOT9_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCodeHOT9_VS
 Alias: $JP_MedicationCodeYJ_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCodeYJ_VS
 Alias: $JP_MedicationCodeCommon_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCodeCommon_VS
+Alias: $JP_MedicationIngredientStrengthStrengthType_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationIngredientStrengthStrengthType_VS
