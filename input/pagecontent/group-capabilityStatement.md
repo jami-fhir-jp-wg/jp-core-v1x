@@ -29,7 +29,7 @@ JP Coreを派生したサイトでは、アクタ毎にこれらの機能定義�
 FHIR BASEにある定義済み検索パラメータ([Defined Search Parameters](https://fhir-ru.github.io/searchparameter-registry.html))や[JP Coreで定義された検索パラメータ](group-searchParameter.html)の中より、適合するものがないかを確認しあればこれを採用します。
 もし適合するものが見つからない場合、独自にSearch Parameterを定義した上で追加します。
 
-## Capablity Statementの実装例
+## Capability Statementの実装例
 * ユースケース<br/>
 リソースデータを提供するServerに対して、Clientに対して検索機能をする。
 
@@ -37,7 +37,7 @@ FHIR BASEにある定義済み検索パラメータ([Defined Search Parameters](
 
 |アクタ|説明|
 |---|---|
-| Server | FHIR準拠したサーバで、Resouceを永続化して保持ししているものに対して検索のサービスを提供する。|
+| Server | FHIR準拠したサーバで、Resourceを永続化して保持ししているものに対して検索のサービスを提供する。|
 | Client | FHIR準拠したクライアントにて、リソースに対する検索機能を有する。|
 
 #### Server CapabilityStatement

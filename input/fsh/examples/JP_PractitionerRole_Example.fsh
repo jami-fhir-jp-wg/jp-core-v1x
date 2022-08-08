@@ -9,7 +9,7 @@ Usage:  #example
 * active = true
 * period.start = "2012-01-01"
 * period.end = "2012-03-31"
-* practitioner = Reference(Practitioner/jp-practionner-example-male-1) "大阪 一郎"
+* practitioner = Reference(Practitioner/jp-practitioner-example-male-1) "大阪 一郎"
 * organization = Reference(Organization/jp-organization-example-hospital) "健康第一病院"
 * code = $JP_PractitionerRoleCodes_CS#B12101
 * location = Reference(Location/jp-location-example-examinationroom) "外来101診察室"

@@ -22,81 +22,80 @@
 
 #### Search Parameter一覧
 
-| コンフォーマンス | パラメータ    | 型     | 例                                                           |
+| コンフォーマンス    | パラメータ     | 型      | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHALL            | patient    | reference  | GET [base]/JP_Procedure?patient=123456 |
-| SHALL            | patient,date          | reference,date | GET [base]/JP_Procedure?patient=123456&date=ge2021-08-24 |
-
+| SHALL            | identifier    | token          | GET [base]/Procedure?identifier=http://myhospital.com/fhir/procedure\|123 |
+| SHOULD           | patient       | reference      | GET [base]/Procedure?patient=123 |
+| MAY              | patient,date  | reference,date | GET [base]/Procedure?patient=123&date=ge2021-08-24 |
 
 ##### 必須検索パラメータ
 
-本プロファイルに準拠するためには、以下の検索パラメータをサポートしなければならない（SHALL）。
+本プロファイルに準拠するためには、以下の検索パラメータをサポートしなければならない（SHALL）
 
-1. 検索パラメータpatientで指定される患者が有する全てのJP_Procedureの検索をサポートしなければならない（SHALL）。
+1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりProcedureを検索。
 
-   http
-   GET [base]/JP_Procedure?patient={Type/}[id]
-   
-
+   ```
+   GET [base]/Procedure?identifier={system|}[code]
+   ```
    例：
-
-   http
-   GET [base]/JP_Procedure?patient=123456
+   ```
+   GET [base]/Procedure?identifier=http://myhospital.com/fhir/procedure\|123
+   ```
    
-
-   指定された患者のすべてのJP_Procedureリソースを含むBundleを検索する。
-
-2. 検索パラメータpatientとdateの両者で指定されるJP_Procedureの検索をサポートしなければならない（SHALL）。
-
-  * dateに対する次の比較演算子のサポートを含む: gt,lt,ge,le
-  * AND検索のオプションのサポートを含む (例えば.date=[date]&date=[date]]&...)
-    http
-    GET [base]/JP_Procedure?patient={Type/}[id]&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}
-    
-
-    例：
-
-    http
-    GET [base]/JP_Procedure?patinet=123456&date=ge2021-08-24
-    
-
-    指定された患者および日付のすべてのJP_Procedureを含むBundleを検索する。
-
+   指定された識別子に一致するProcedureリソースを含むBundleを検索する。
 
 ##### 推奨検索パラメータ
 
-次の検索パラメータをサポートすることが推奨(SHOULD)される。
+本プロファイルに準拠するためには、以下の検索パラメータをサポートすることが推奨される（SHOULD）
 
-1. 検索パラメータpatientとstatusパラメータの組み合わせを使用した検索をサポートすることが望ましい（SHOULD）。
-  * OR検索のサポートを含む(例えば status={system|}[code],{system|}[code],...)
+1. 検索パラメータpatientとdateを指定し、該当するすべてのProcedureを検索。
 
-    http
-    GET [base]/JP_Procedure?patient={Type/}[id]&status={system|}[code]{,{system|}[code],...}
-    
+      * dateに対する次の比較演算子のサポートを含む: gt,lt,ge,le
+      * AND検索のオプションのサポートを含む (例えば.date=[date]&date=[date]]&...)
+      
+      ```
+      GET [base]/Procedure?patient={reference}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}
+      ```
+      例：
+      ```
+      GET [base]/Procedure?patient=Patient/123&date=ge2021-08-24
+      ```
 
-    例：
+      指定された患者および日付のすべてのProcedureを含むBundleを検索する。
 
-    http
-    GET [base]/JP_Procedure?patient=123456&status=completed
-    
+##### 追加検索パラメータ
 
-    指定された患者およびステータスのすべてのJP_Procedureを含むBundleを検索する。
+オプションとして次の検索パラメータをサポートすることができる（MAY）
 
-2. 検索パラメータpatientとcodeとdateパラメータの組み合わせを使用した検索をサポートすることが望ましい（SHOULD）。
-  * OR検索のオプションのサポートを含む (例えば code={system|}[code],{system|}[code],...)
-  * dateに対する次の比較演算子のサポートを含む:gt,lt,ge,le
-  * AND検索のオプションのサポートを含む (例えばdate=[date]&date=[date]]&...)
-    http
-    GET [base]/JP_Procedure?patient={Type/}[id]&code={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}
-    
+1. 検索パラメータpatientとstatusを指定し、該当するすべてのProcedureを検索。
 
-    例：
+      * OR検索のサポートを含む(例えば status={system|}[code],{system|}[code],...)
 
-    http
-    GET [base]/JP_Procedure?patient=123456&date=ge2019-01-14T00:00:00Z&code=http://jpfhir.jp/fhir/CodeSystem/Procedure|123456
-    
+      ```
+      GET [base]/Procedure?patient={reference}&status={system|}[code]{,{system|}[code],...}
+      ```
+      例：
+      ```
+      GET [base]/Procedure?patient=Patient/123&status=completed
+      ```
+   
+      指定された患者およびステータスのすべてのProcedureを含むBundleを検索する。
 
-    指定された患者および日付およびプロシージャコードのすべてのJP_Procedureを含むBundleを検索する。複数のコードによる検索をサポートしなければならない。
+2. 検索パラメータpatientとcodeとdateを指定し、該当するすべてのProcedureを検索。
+
+      * OR検索のオプションのサポートを含む (例えば code={system|}[code],{system|}[code],...)
+      * dateに対する次の比較演算子のサポートを含む:gt,lt,ge,le
+      * AND検索のオプションのサポートを含む (例えばdate=[date]&date=[date]]&...)
+
+      ```
+      GET [base]/Procedure?patient={reference}&code={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}
+      ```
+      例：
+      ```
+      GET [base]/Procedure?patient=Patient/123&date=ge2019-01-14T00:00:00Z&code=http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodesMedical_VS|140000610
+      ```
+   
+      指定された患者および日付およびプロシージャコードのすべてのProcedureを含むBundleを検索する。
 
 ##### オプション検索パラメータ 
 
@@ -106,6 +105,10 @@
 
 - Operation一覧はない。
 
+#### サンプル
+
+* [**処置（抜糸）**][jp-procedure-example-1]
+
 ## 注意事項
 
 - 注意事項はない。
@@ -113,3 +116,5 @@
 ## その他、参考文献・リンク等
 
 - ICHI(International Classification of Health Interventions) [https://icd.who.int/dev11/l-ichi/en](https://icd.who.int/dev11/l-ichi/en)
+
+{% include markdown-link-references.md %}
