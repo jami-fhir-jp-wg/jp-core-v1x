@@ -97,7 +97,8 @@
 
 <!-- CodeSystem -->
 [JP_ConditionSeverity_CS]: CodeSystem-jp-condition-severity-cs.html
-[JP_DepartmentSsMix2_CS]: CodeSystem-jp-department-ssmix2-cs.html
+[JP_Department_SsMix2Digits_CS]: CodeSystem-jp-department-ssmix-2digits-cs.html
+[JP_Department_SsMix3Digits_CS]: CodeSystem-jp-department-ssmix3digits-cs.html
 [JP_JfagyFoodAllergenCodes_CS]: CodeSystem-jp-jfagy-food-allergen-codes-cs.html
 [JP_JfagyMedicationAllergenCodes_CS]: CodeSystem-jp-jfagy-medication-allergen-codes-cs.html
 [JP_JfagyNonFoodNonMedicationAllergenCodes_CS]: CodeSystem-jp-jfagy-non-food-non-medication-allergen-codes-cs.html
@@ -122,7 +123,7 @@
 <!-- ValueSet -->
 [JP_AllergyIntoleranceCodes_VS]: ValueSet-jp-allergyintolerance-codes-vs.html
 [JP_ConditionSeverity_VS]: ValueSet-jp-condition-severity-vs.html
-[JP_DepartmentSsMix2_VS]: ValueSet-jp-department-ssmix2-vs.html
+[JP_Department_SsMix_VS]: ValueSet-jp-department-ssmix-vs.html
 [JP_MedicalLicenceCertificate_VS]: ValueSet-jp-medicallicencecertificate-vs.html
 [JP_PhysicalExamCodes_VS]: ValueSet-jp-physicalexamcodes-vs.html
 [JP_ProcedureBodySite_VS]: ValueSet-jp-procedure-body-site-vs.html
