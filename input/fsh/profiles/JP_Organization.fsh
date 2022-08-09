@@ -67,7 +67,7 @@ Description: "このプロファイルはOrganizationリソースに対して、
 * partOf only Reference(JP_Organization)
 * partOf ^short = "The organization of which this organization forms a part"
 * partOf ^definition = "The organization of which this organization forms a part.\r\nこの組織が一部を構成する組織"
-* partOf ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
+* partOf ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
 * contact ^short = "Contact for the organization for a certain purpose　特定の目的のための組織の連絡先"
 * contact ^definition = "Contact for the organization for a certain purpose.\r\n特定の目的のための組織の連絡先"
 * contact ^comment = "Where multiple contacts for the same purpose are provided there is a standard extension that can be used to determine which one is the preferred contact to use.\r\n同じ目的で複数の連絡先が提供されている場合、どの連絡先を使用するのが好ましいかを判断するために使用できる標準の拡張extension がある。"
@@ -75,7 +75,7 @@ Description: "このプロファイルはOrganizationリソースに対して、
 * contact.name only JP_HumanName
 * endpoint ^short = "Technical endpoints providing access to services operated for the organization　　組織のために運営されているサービスへのアクセスを提供する技術的エンドポイント"
 * endpoint ^definition = "Technical endpoints providing access to services operated for the organization.\r\n組織のために運営されているサービスへのアクセスを提供する技術的エンドポイント"
-* endpoint ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
+* endpoint ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
 * endpoint ^requirements = "Organizations have multiple systems that provide various services and need to be able to define the technical connection details for how to connect to them, and for what purpose.\r\n組織にはさまざまなサービスを提供する複数のシステムがあり、それらに接続する方法と目的について、技術的な接続の詳細を定義できる必要がある。"
 
 // ==============================
