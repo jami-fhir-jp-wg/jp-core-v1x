@@ -196,28 +196,100 @@ HTTP/1.1 200 OK
 ```
 
 ### サンプル
-. ワクチン接種例1{{link:jp_medication_example_1.xml}}
-
-#### ワクチン接種メッセージ作成例
-具体的な内服処方箋の作成例について、上記のサンプルのそれぞれについて解説する。
-
-##### ワクチン接種例１
 このワクチン接種例では下記の内容をFHIRで表現する場合について解説する。
-```
-```
 
+| 項目名 | 項目値 | 備考 |
+| :--- | :--- | :--- |
+| 接種ワクチン | コミナティ筋注 (182110901) |
+| 対象疾患 | ＣＯＶＩＤ－１９ (S9VN) |
+| 接種量 | 0.45mL |
+| 接種部位 | 左上腕 (74L) |
+| 接種実施者 | 大阪 一郎 |
+| 接種日時 | 2021/07/01 10:30 |
+| ロット番号 | 12345678 |
 
 ワクチン接種の上記部分をFHIR R4で記述する場合以下のようになる。
+
 <details>
-<summary><b>FHIRでのワクチン接種例一部抜粋(クリックで展開)</b></summary>
-<div>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
 
-```json
-```
-</div>
+{% highlight json %}
+{
+  "resourceType": "Immunization",
+  "id": "jp-immunization-example-1",
+  "meta": {
+    "profile": [
+      "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
+    ]
+  },
+  "status": "completed",
+  "vaccineCode": {
+    "coding": [
+      {
+        "system": "urn:oid:1.2.392.200119.4.403.1",
+        "code": "182110901",
+        "display": "コミナティ筋注"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/jp-patient-example-1"
+  },
+  "occurrenceDateTime": "2021-07-01T10:30:00+09:00",
+  "lotNumber": "12345678",
+  "site": {
+    "coding": [
+      {
+        "system": "urn:oid:1.2.392.200250.2.2.20.32",
+        "code": "74L",
+        "display": "左上腕"
+      }
+    ]
+  },
+  "doseQuantity": {
+    "value": 0.45,
+    "unit": "mL",
+    "system": "http://unitsofmeasure.org",
+    "code": "mL"
+  },
+  "performer": [
+    {
+      "function": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+            "code": "AP",
+            "display": "Administering Provider"
+          }
+        ]
+      },
+      "actor": {
+        "reference": "Practitioner/jp-practionner-example-male-1",
+        "display": "大阪 一郎"
+      }
+    }
+  ],
+  "protocolApplied": [
+    {
+      "targetDisease": [
+        {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.200119.4.101.6",
+              "code": "S9VN",
+              "display": "ＣＯＶＩＤ－１９"
+            }
+          ]
+        }
+      ],
+      "doseNumberPositiveInt": 1
+    }
+  ]
+}
+{% endhighlight json %}
+</dev>
 </details>
-
-### サンプル
 
 ## 注意事項
 
@@ -230,11 +302,11 @@ Immunizationはワクチンを vaccineCodeとして1つまでしか持つこと�
 ```json
 "vaccineCode": {
   "coding":  [
-      {
-          "system": "urn:oid:1.2.392.100495.20.2.75",
-          "code": "1820201040101",
-          "display": "インフルエンザHAワクチン「第一三共」1mL"
-      }
+    {
+      "system": "urn:oid:1.2.392.100495.20.2.75",
+      "code": "1820201040101",
+      "display": "インフルエンザHAワクチン「第一三共」1mL"
+    }
   ]
 }
 ```
@@ -264,7 +336,7 @@ Immunization.occurrenceString要素を使用した例：
 
 ```json
 "location" : {
-    "reference" : "Location/1234"
+  "reference" : "Location/1234"
 }
 ```
 
@@ -273,7 +345,7 @@ Immunization.occurrenceString要素を使用した例：
 
 ```json
 "manufacturer" : {
-    "reference" : "Organization/1234"
+  "reference" : "Organization/1234"
 }
 ```
 

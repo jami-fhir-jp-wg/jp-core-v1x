@@ -260,7 +260,7 @@ HTTP/1.1 200 OK
 
 
 ### サンプル
-* [**患者男性 山田 太郎**][jp-patient-example-1]
+* [**患者男性**][jp-patient-example-1]
 
 ## 注意事項
 

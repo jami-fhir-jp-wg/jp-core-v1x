@@ -27,7 +27,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
 * identifier contains
     rpNumber 1..1 and
-    orderInRp 1..1 and
     requestIdentifier ..*
 * identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
@@ -44,21 +43,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier[rpNumber].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
 * identifier[rpNumber].period ..0
 * identifier[rpNumber].assigner ..0
-* identifier[orderInRp] ^short = "同一RP番号（剤グループ）での薬剤の表記順"
-* identifier[orderInRp] ^definition = "同一剤グループでの薬剤を表記する際の順番。XML形式と異なりJSON形式の場合、表記順は項目の順序を意味しない。したがって、薬剤の記載順を別に規定する必要があるためIDを用いて表現する。"
-* identifier[orderInRp] ^comment = "同一剤グループ内での薬剤の順番を1から順の番号で示す。"
-* identifier[orderInRp].use ..0
-* identifier[orderInRp].type ..0
-* identifier[orderInRp].system 1..
-* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82" (exactly)
-* identifier[orderInRp].system ^short = "RP番号内（剤グループ内）の連番を示すsystem値"
-* identifier[orderInRp].system ^definition = "剤グループ内番号の名前空間を識別するURI。固定値urn:oid:1.2.392.100495.20.3.82"
-* identifier[orderInRp].value 1..
-* identifier[orderInRp].value ^short = "RP番号内（剤グループ内）の連番"
-* identifier[orderInRp].value ^definition = "剤グループ内連番。"
-* identifier[orderInRp].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
-* identifier[orderInRp].period ..0
-* identifier[orderInRp].assigner ..0
 * identifier[requestIdentifier] ^short = "処方オーダーに対するID"
 * identifier[requestIdentifier] ^definition = "薬剤をオーダーする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。"
 * identifier[requestIdentifier].system 1..
@@ -92,7 +76,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * medicationCodeableConcept.coding 1..
 * medicationCodeableConcept.coding ^short = "医薬品を表すコード"
 * medicationCodeableConcept.coding ^definition = "医薬品を表すコード。JP Coreでは最低1個のコードを記録しなければならない。\r\n利用できるコードは下記の通りである。\r\n医薬品コード（医薬品マスター）\r\n薬価基準収載医薬品コード\r\nYJコード\r\nHOT コード（9 桁）\r\n一般名処方マスター"
-* medicationCodeableConcept.coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。\r\n【JP-CORE】Medication要素の説明を参照のこと。"
+* medicationCodeableConcept.coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。\r\n【JP-Core仕様】Medication要素の説明を参照のこと。"
 * medicationCodeableConcept.coding.userSelected ^short = "このコードが直接ユーザーが指定したものであるかどうか"
 * medicationCodeableConcept.coding.userSelected ^definition = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
 * medicationCodeableConcept.coding.userSelected ^comment = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
@@ -102,7 +86,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * medicationReference only Reference(JP_Medication)
 // * medication[x] ^short = "投与される薬剤"
 // * medication[x] ^definition = "医薬品コードと医薬品名称。coding要素を繰り返すことでHOT9 やYJコードなど複数のコード体系で医薬品コード並記することが可能。\r\n薬される薬剤についてのID。JP Coreでは内服処方箋で使用されるMedicationRequestではcodeableConceptのみを使用する。"
-// * medication[x] ^comment = "日本での運用を検討した場合に、煩雑ではあるがMedication resourceを参照するのではなくcodeableConceptとして1薬剤ごとにMedicationRequestインスタンスを生成する方針とした。\r\n\r\nコードだけが指定されていても、製品を特定できる必要がある。もし、多くの情報が必要であれば、Medication Resourceを利用することが推奨される。たとえば、もし、薬剤の剤型や、ロット番号を知る必要があったり、薬剤の成分や臨時で調整されたものであったりする場合には、Medication Resourceを参照しなくてはならない。\r\n 【JP-CORE】 ひとつのtext要素と、複数のcoding 要素を記述できる。処方オーダ時に選択または入力し、実際に処方箋に印字される文字列を必ずtext要素に格納した上で、それをコード化した情報を1個以上のcoding 要素に記述する。\r\n厚生労働省標準であるHOT9コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。\r\nなお、上記のいずれの標準的コードも付番されていない医薬品や医療材料の場合には、薬機法の下で使用されているGS1標準の識別コードであるGTIN(Global Trade Item Number)の調剤包装単位（最少包装単位、個別包装単位）14桁を使用する。\r\nひとつの処方薬、医療材料を複数のコード体系のコードで記述してもよく、その場合にcoding 要素を繰り返して記述する。 ただし、ひとつの処方薬を複数のコードで繰り返し記述する場合には、それらのコードが指し示す処方薬、医療材料は当然同一でなければならない。 また、処方を発行した医療機関内でのデータ利用のために、医療機関固有コード体系によるコード（ハウスコード、ローカルコード）の記述を含めてもよいが、その場合でも上述したいずれかの標準コードを同時に記述することが必要である。"
+// * medication[x] ^comment = "日本での運用を検討した場合に、煩雑ではあるがMedication resourceを参照するのではなくcodeableConceptとして1薬剤ごとにMedicationRequestインスタンスを生成する方針とした。\r\n\r\nコードだけが指定されていても、製品を特定できる必要がある。もし、多くの情報が必要であれば、Medication Resourceを利用することが推奨される。たとえば、もし、薬剤の剤型や、ロット番号を知る必要があったり、薬剤の成分や臨時で調整されたものであったりする場合には、Medication Resourceを参照しなくてはならない。\r\n 【JP-Core仕様】 ひとつのtext要素と、複数のcoding 要素を記述できる。処方オーダ時に選択または入力し、実際に処方箋に印字される文字列を必ずtext要素に格納した上で、それをコード化した情報を1個以上のcoding 要素に記述する。\r\n厚生労働省標準であるHOT9コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。\r\nなお、上記のいずれの標準的コードも付番されていない医薬品や医療材料の場合には、薬機法の下で使用されているGS1標準の識別コードであるGTIN(Global Trade Item Number)の調剤包装単位（最少包装単位、個別包装単位）14桁を使用する。\r\nひとつの処方薬、医療材料を複数のコード体系のコードで記述してもよく、その場合にcoding 要素を繰り返して記述する。 ただし、ひとつの処方薬を複数のコードで繰り返し記述する場合には、それらのコードが指し示す処方薬、医療材料は当然同一でなければならない。 また、処方を発行した医療機関内でのデータ利用のために、医療機関固有コード体系によるコード（ハウスコード、ローカルコード）の記述を含めてもよいが、その場合でも上述したいずれかの標準コードを同時に記述することが必要である。"
 // * medication[x].id ^short = "エレメント間参照のためのユニークID"
 // * medication[x].id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。" 
 * subject only Reference(JP_Patient)
@@ -547,26 +531,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.doseAndRate.rate[x].numerator.system ^definition = "医薬品単位略号を識別するOID。固定値。"
 * dosageInstruction.doseAndRate.rate[x].numerator.code ^short = "医薬品単位略号"
 * dosageInstruction.doseAndRate.rate[x].numerator.code ^definition = "医薬品単位略号"
-* dosageInstruction.doseAndRate.rate[x].denominator 1..
-* dosageInstruction.doseAndRate.rate[x].denominator ^short = "1日投与量の分母である「1日」を表す"
-* dosageInstruction.doseAndRate.rate[x].denominator ^definition = "1日投与量の分母である「1日」を表す。"
-* dosageInstruction.doseAndRate.rate[x].denominator.value 1..
-* dosageInstruction.doseAndRate.rate[x].denominator.value = 1 (exactly)
-* dosageInstruction.doseAndRate.rate[x].denominator.value ^short = "1日投与量の分母である「1日」"
-* dosageInstruction.doseAndRate.rate[x].denominator.value ^definition = "1日投与量の分母である「1日」を表す。"
-* dosageInstruction.doseAndRate.rate[x].denominator.comparator ..0
-* dosageInstruction.doseAndRate.rate[x].denominator.unit 1..
-* dosageInstruction.doseAndRate.rate[x].denominator.code = #d (exactly)
-* dosageInstruction.doseAndRate.rate[x].denominator.system = "http://unitsofmeasure.org" (exactly)
-* dosageInstruction.doseAndRate.rate[x].denominator.unit = "日" (exactly)
-* dosageInstruction.doseAndRate.rate[x].denominator.unit ^short = "1日投与量の分母である「1日」の単位"
-* dosageInstruction.doseAndRate.rate[x].denominator.unit ^definition = "1日投与量の分母である「1日」の単位。「日」で固定される。"
-* dosageInstruction.doseAndRate.rate[x].denominator.system 1..
-* dosageInstruction.doseAndRate.rate[x].denominator.system ^short = "UCUM単位コードを識別するURI"
-* dosageInstruction.doseAndRate.rate[x].denominator.system ^definition = "UCUM単位コードを識別するURI"
-* dosageInstruction.doseAndRate.rate[x].denominator.code 1..
-* dosageInstruction.doseAndRate.rate[x].denominator.code ^short = "「日」を表すUCUM単位コード。"
-* dosageInstruction.doseAndRate.rate[x].denominator.code ^definition = "「日」を表すUCUM単位コード。dで固定される。"
 * dosageInstruction.maxDosePerPeriod ^short = "単位期間内の薬剤投与上限"
 * dosageInstruction.maxDosePerPeriod ^definition = "単位期間内の薬剤投与上限"
 * dosageInstruction.maxDosePerPeriod ^comment = "このエレメントは投与量に上限があるときに用法指示の補助として使われる。たとえば、「1回2錠4時間おきに、1日8錠まで」のような表現である。"
