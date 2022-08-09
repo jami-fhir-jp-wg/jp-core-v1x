@@ -27,7 +27,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
 * identifier contains
     rpNumber 1..1 and
-    orderInRp 1..1 and
     requestIdentifier ..*
 * identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
@@ -532,26 +531,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.doseAndRate.rate[x].numerator.system ^definition = "医薬品単位略号を識別するOID。固定値。"
 * dosageInstruction.doseAndRate.rate[x].numerator.code ^short = "医薬品単位略号"
 * dosageInstruction.doseAndRate.rate[x].numerator.code ^definition = "医薬品単位略号"
-* dosageInstruction.doseAndRate.rate[x].denominator 1..
-* dosageInstruction.doseAndRate.rate[x].denominator ^short = "1日投与量の分母である「1日」を表す"
-* dosageInstruction.doseAndRate.rate[x].denominator ^definition = "1日投与量の分母である「1日」を表す。"
-* dosageInstruction.doseAndRate.rate[x].denominator.value 1..
-* dosageInstruction.doseAndRate.rate[x].denominator.value = 1 (exactly)
-* dosageInstruction.doseAndRate.rate[x].denominator.value ^short = "1日投与量の分母である「1日」"
-* dosageInstruction.doseAndRate.rate[x].denominator.value ^definition = "1日投与量の分母である「1日」を表す。"
-* dosageInstruction.doseAndRate.rate[x].denominator.comparator ..0
-* dosageInstruction.doseAndRate.rate[x].denominator.unit 1..
-* dosageInstruction.doseAndRate.rate[x].denominator.code = #d (exactly)
-* dosageInstruction.doseAndRate.rate[x].denominator.system = "http://unitsofmeasure.org" (exactly)
-* dosageInstruction.doseAndRate.rate[x].denominator.unit = "日" (exactly)
-* dosageInstruction.doseAndRate.rate[x].denominator.unit ^short = "1日投与量の分母である「1日」の単位"
-* dosageInstruction.doseAndRate.rate[x].denominator.unit ^definition = "1日投与量の分母である「1日」の単位。「日」で固定される。"
-* dosageInstruction.doseAndRate.rate[x].denominator.system 1..
-* dosageInstruction.doseAndRate.rate[x].denominator.system ^short = "UCUM単位コードを識別するURI"
-* dosageInstruction.doseAndRate.rate[x].denominator.system ^definition = "UCUM単位コードを識別するURI"
-* dosageInstruction.doseAndRate.rate[x].denominator.code 1..
-* dosageInstruction.doseAndRate.rate[x].denominator.code ^short = "「日」を表すUCUM単位コード。"
-* dosageInstruction.doseAndRate.rate[x].denominator.code ^definition = "「日」を表すUCUM単位コード。dで固定される。"
 * dosageInstruction.maxDosePerPeriod ^short = "単位期間内の薬剤投与上限"
 * dosageInstruction.maxDosePerPeriod ^definition = "単位期間内の薬剤投与上限"
 * dosageInstruction.maxDosePerPeriod ^comment = "このエレメントは投与量に上限があるときに用法指示の補助として使われる。たとえば、「1回2錠4時間おきに、1日8錠まで」のような表現である。"

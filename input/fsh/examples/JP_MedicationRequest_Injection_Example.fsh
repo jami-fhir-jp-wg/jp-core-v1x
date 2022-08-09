@@ -8,8 +8,6 @@ Usage: #example
 * contained[+] = jp-medicationrequest-injection-device-example-1
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[rpNumber].value = "1"
-* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[orderInRp].value = "2"
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.1.1"
 * status = #active
@@ -34,7 +32,7 @@ Usage: #example
 * dosageInstruction.doseAndRate.doseQuantity.value = 2
 * dosageInstruction.doseAndRate.doseQuantity.unit = "mL"
 * dosageInstruction.doseAndRate.doseQuantity.system = "urn:oid:1.2.392.100495.20.2.101"
-* dosageInstruction.doseAndRate.doseQuantity.code = #mL
+* dosageInstruction.doseAndRate.doseQuantity.code = #ML
 * dosageInstruction.doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1
 
 Instance: jp-medicationrequest-injection-example-2
@@ -46,8 +44,6 @@ Usage: #example
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-2
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[rpNumber].value = "2"
-* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[orderInRp].value = "2"
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.2.1"
 * status = #active
@@ -89,7 +85,7 @@ Usage: #inline
 * ingredient.strength.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"
 * ingredient.strength.extension.valueCodeableConcept = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 * ingredient.strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#AMP "アンプル"
-* ingredient.strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#KAI "回"
+* ingredient.strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
 
 Instance: jp-medicationrequest-injection-medication-example-2
 InstanceOf: JP_Medication
@@ -99,10 +95,10 @@ Usage: #inline
 * status = #active
 * ingredient[0].itemCodeableConcept = urn:oid:1.2.392.100495.20.2.74#107750602 "ソリタ－Ｔ３号輸液５００ｍＬ"
 * ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#HON "本"
-* ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#KAI "回"
+* ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
 * ingredient[+].itemCodeableConcept = urn:oid:1.2.392.100495.20.2.74#108010001 "アドナ注（静脈用）５０ｍｇ"
 * ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#AMP "アンプル"
-* ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#KAI "回"
+* ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
 
 Instance: jp-medicationrequest-injection-bodystructure-example-1
 InstanceOf: BodyStructure
