@@ -12,7 +12,7 @@ Usage: #example
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2008-06-17"
 * issued = "2008-06-18T09:23:00+10:00"
-* performer = Reference(Practitioner/jp-practionner-example-male-1) "大阪 一郎"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1) "大阪 一郎"
 * imagingStudy.display = "CHEST CT DICOM imaging study"
 * imagingStudy = Reference(ImagingStudy/jp-imagingstudy-radiology-example-1)
 * conclusion = "インプレッション: ひだり肺上葉の空洞性病変。 肺腺癌を疑う。みぎ肺上葉陳旧性炎症性瘢痕。"

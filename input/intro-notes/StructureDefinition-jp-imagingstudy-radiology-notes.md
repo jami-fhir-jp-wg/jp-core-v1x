@@ -9,12 +9,6 @@ ImagingStudyリソースは、次の要素を持たなければならない。
 - status︓検査項目情報の状態は必須である。
 - subject︓このリソースが示す検査項目が、どの患者のものかを示すため、このプロファイルでは参照するpatientリソースの定義を必須である。
 
-#### MustSupport
-ImagingStudyリソースは、以下をサポートしなければならない。
-
-- 画像データが送信システムに存在する場合にはidentifier, modalityはサポートされなければならない。
-- 画像データが送信システムにSeriesが存在する場合には, series.uid, series.modality, series.instance.uid, series.instance.sopClassはサポートされなければならない。
-- 画像検査を行うためのオーダ情報が送信システムに存在する場合には, encounterとbasedOnはサポートされなければならない。
 
 ### Extension定義
 

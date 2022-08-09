@@ -12,7 +12,6 @@
 
 次のデータは送信システムに存在する場合はサポートされなければならないことを意味する（Must Support）。
 
-- text : (DiagnosticReport [DomainResource](http://hl7.org/fhir/domainresource.html)) レポートの[narrative](http://www.hl7.org/fhir/narrative.html) dataとして格納する。
 - basedOn ： レポートあるいは画像検査のServiceRequest
 - subject ： 患者リソース(Patient)への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
 - issued ： レポート確定日時
