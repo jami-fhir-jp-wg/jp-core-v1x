@@ -191,6 +191,7 @@
 [jp-medicationrequest-injection-example-2]: MedicationRequest-jp-medicationrequest-injection-example-2.html
 [jp-observation-bodyMeasurement-example-1]: Observation-jp-observation-bodyMeasurement-example-1.html
 [jp-observation-labresult-example-1]: Observation-jp-observation-labresult-example-1.html
+[jp-observation-physicalexam-example-1]: Observation-jp-observation-physicalexam-example-1.html
 [jp-observation-socialhistory-example-1]: Observation-jp-observation-socialhistory-example-1.html
 [jp-observation-vitalsigns-example-1]: Observation-jp-observation-vitalsigns-example-1.html
 [jp-organization-example-clinic]: Organization-jp-organization-example-clinic.html
