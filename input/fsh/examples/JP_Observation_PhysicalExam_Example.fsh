@@ -6,8 +6,8 @@ Usage: #example
 * status = #final
 * category[exam] = $observation-category#exam "Exam"
 * code = $JP_PhysicalExamCodes_CS#physical-findings "Physical Findings"
-* subject = Reference(http://jpfhir.jp/fhir/Patient/jp-patient)
-* encounter = Reference(http://jpfhir.jp/fhir/Encounter/jp-encounter)
+* subject = Reference(Patient/jp-patient-example-1)
+* encounter = Reference(Encounter/jp-encounter-example-1)
 * effectiveDateTime = "2021-07-09T17:00:00+09:00"
 * valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0532#Y "Yes"
 //TODO: コーディング不明のためTextで回避
