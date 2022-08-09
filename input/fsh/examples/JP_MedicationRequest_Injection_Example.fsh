@@ -8,8 +8,8 @@ Usage: #example
 * contained[+] = jp-medicationrequest-injection-device-example-1
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[rpNumber].value = "1"
-* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[orderInRp].value = "2"
+//* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+//* identifier[orderInRp].value = "2"
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.1.1"
 * status = #active
@@ -46,8 +46,8 @@ Usage: #example
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-2
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[rpNumber].value = "2"
-* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[orderInRp].value = "2"
+//* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+//* identifier[orderInRp].value = "2"
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.2.1"
 * status = #active
