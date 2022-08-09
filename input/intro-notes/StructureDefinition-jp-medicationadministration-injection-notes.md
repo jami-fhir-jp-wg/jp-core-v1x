@@ -257,7 +257,11 @@ HTTP/1.1 200 OK
 | 実施場所 | 09A/021/4 |
 | 進捗 | 完了 (CP) |
 
-```json
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationAdministration",
   "id": "jp-medicationadministration-injection-example-1",
@@ -265,10 +269,6 @@ HTTP/1.1 200 OK
     "profile": [
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration_Injection"
     ]
-  },
-  "text": {
-    "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationadministration-injection-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medicationadministration-injection.html\">JP Core MedicationAdministration Injection Profile</a></p></div><p><b>JP Core MedicationAdministration RequestDepartment Extension</b>: 内科 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#01)</span></p><p><b>JP Core MedicationAdministration Requester Extension</b>: <a href=\"Practitioner-jp-practionner-example-male-1.html\">Practitioner/jp-practionner-example-male-1: 大阪 一郎</a> \" 大阪\"</p><p><b>JP Core MedicationAdministration RequestAuthoredOn Extension</b>: 2016-07-01 12:00:00+0900</p><p><b>JP Core MedicationAdministration Location Extension</b>: <a href=\"Location-jp-location-example-ward.html\">Location/jp-location-example-ward: 09A病棟 021病室 4ベッド</a> \"09A病棟 021病室 4ベッド\"</p><p><b>identifier</b>: id: 123456789012345.1, id: 1, id: 1</p><p><b>status</b>: completed</p><p><b>category</b>: Inpatient Order <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0482.html\">orderType</a>#I)</span></p><p><b>medication</b>: <a name=\"jp-medicationadministration-injection-medication-example-1\"> </a></p><blockquote><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationadministration-injection-medication-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medication.html\">JP Core Medication Profile</a></p></div><p><b>status</b>: active</p><h3>Ingredients</h3><table class=\"grid\"><tr><td>-</td><td><b>Item[x]</b></td><td><b>Strength</b></td></tr><tr><td>*</td><td>ホリゾン注射液１０ｍｇ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#100558502)</span></td><td>1 アンプル<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code AMP = 'AMP')</span>/1 回<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code KAI = 'KAI')</span></td></tr></table></blockquote><p><b>subject</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><p><b>effective</b>: 2016-07-01 10:05:21+0900 --&gt; 2016-07-01 10:05:21+0900</p><h3>Performers</h3><table class=\"grid\"><tr><td>-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>Performer <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-med-admin-perform-function.html\">MedicationAdministration Performer Function Codes</a>#performer)</span></td><td><a href=\"Practitioner-jp-practionner-example-male-1.html\">Practitioner/jp-practionner-example-male-1: 愛知 太郎</a> \" 大阪\"</td></tr></table><p><b>request</b>: <a href=\"MedicationRequest-jp-medicationrequest-injection-example-1.html\">MedicationRequest/jp-medicationrequest-injection-example-1</a></p><p><b>device</b>: <a name=\"jp-medicationadministration-injection-device-example-1\"> </a></p><blockquote><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationadministration-injection-device-example-1\" </p></div><p><b>type</b>: シリンジ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (99ILL#01)</span></p></blockquote><h3>Dosages</h3><table class=\"grid\"><tr><td>-</td><td><b>Extension</b></td><td><b>Site</b></td><td><b>Route</b></td><td><b>Method</b></td><td><b>Dose</b></td></tr><tr><td>*</td><td></td><td> <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></td><td>Intravenous <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0162.html\">routeOfAdministration</a>#IV)</span></td><td>静注(末梢) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (99ILL#101)</span></td><td>2 mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mL = 'mL')</span></td></tr></table></div>"
   },
   "contained": [
     {
@@ -365,7 +365,7 @@ HTTP/1.1 200 OK
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester",
       "valueReference": {
-        "reference": "Practitioner/jp-practionner-example-male-1",
+        "reference": "Practitioner/jp-practitioner-example-male-1",
         "display": "大阪 一郎"
       }
     },
@@ -427,7 +427,7 @@ HTTP/1.1 200 OK
         ]
       },
       "actor": {
-        "reference": "Practitioner/jp-practionner-example-male-1",
+        "reference": "Practitioner/jp-practitioner-example-male-1",
         "display": "愛知 太郎"
       }
     }
@@ -489,7 +489,9 @@ HTTP/1.1 200 OK
     }
   }
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 #### （４）実施情報（点滴実施）
 
@@ -526,7 +528,11 @@ HTTP/1.1 200 OK
 | #2 実施場所 | 09A/021/4 |
 | #2 進捗 | 完了 (CP) |
 
-```json
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationAdministration",
   "id": "jp-medicationadministration-injection-example-2",
@@ -534,10 +540,6 @@ HTTP/1.1 200 OK
     "profile": [
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration_Injection"
     ]
-  },
-  "text": {
-    "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationadministration-injection-example-2\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medicationadministration-injection.html\">JP Core MedicationAdministration Injection Profile</a></p></div><p><b>JP Core MedicationAdministration RequestDepartment Extension</b>: 内科 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#01)</span></p><p><b>JP Core MedicationAdministration Requester Extension</b>: <a href=\"Practitioner-jp-practionner-example-female-1.html\">Practitioner/jp-practionner-example-female-1: 東京 春子</a> \" 東京\"</p><p><b>JP Core MedicationAdministration RequestAuthoredOn Extension</b>: 2016-07-01 12:00:00+0900</p><p><b>JP Core MedicationAdministration Location Extension</b>: <a href=\"Location-jp-location-example-ward.html\">Location/jp-location-example-ward: 09A病棟 021病室 4ベッド</a> \"09A病棟 021病室 4ベッド\"</p><p><b>identifier</b>: id: 123456789012345.2, id: 2, id: 2</p><p><b>status</b>: completed</p><p><b>category</b>: Inpatient Order <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0482.html\">orderType</a>#I)</span></p><p><b>medication</b>: <a name=\"jp-medicationadministration-injection-medication-example-2\"> </a></p><blockquote><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationadministration-injection-medication-example-2\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medication.html\">JP Core Medication Profile</a></p></div><p><b>status</b>: active</p><blockquote><p><b>ingredient</b></p><p><b>item</b>: ソリタ－Ｔ３号輸液５００ｍＬ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#107750602)</span></p><p><b>strength</b>: 1 本<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code HON = 'HON')</span>/1 回<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code KAI = 'KAI')</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: アドナ注（静脈用）５０ｍｇ／１０ｍＬ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#108010001)</span></p><p><b>strength</b>: 1 アンプル<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code AMP = 'AMP')</span>/1 回<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code KAI = 'KAI')</span></p></blockquote></blockquote><p><b>subject</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><p><b>effective</b>: 2016-07-01 08:05:21+0900 --&gt; 2016-07-01 01:05:43+0900</p><h3>Performers</h3><table class=\"grid\"><tr><td>-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>Performer <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-med-admin-perform-function.html\">MedicationAdministration Performer Function Codes</a>#performer)</span></td><td><a href=\"Practitioner-jp-practionner-example-female-1.html\">Practitioner/jp-practionner-example-female-1: 福岡 花子</a> \" 東京\"</td></tr></table><p><b>request</b>: <a href=\"MedicationRequest-jp-medicationrequest-injection-example-2.html\">MedicationRequest/jp-medicationrequest-injection-example-2</a></p><h3>Dosages</h3><table class=\"grid\"><tr><td>-</td><td><b>Extension</b></td><td><b>Site</b></td><td><b>Route</b></td><td><b>Method</b></td><td><b>Dose</b></td></tr><tr><td>*</td><td></td><td> <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ()</span></td><td>Intravenous <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0162.html\">routeOfAdministration</a>#IV)</span></td><td>IV Push <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0165.html\">administrationMethod</a>#IVP)</span></td><td>510 mL<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM code mL = 'mL')</span></td></tr></table></div>"
   },
   "contained": [
     {
@@ -646,7 +648,7 @@ HTTP/1.1 200 OK
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester",
       "valueReference": {
-        "reference": "Practitioner/jp-practionner-example-female-1",
+        "reference": "Practitioner/jp-practitioner-example-female-1",
         "display": "東京 春子"
       }
     },
@@ -708,7 +710,7 @@ HTTP/1.1 200 OK
         ]
       },
       "actor": {
-        "reference": "Practitioner/jp-practionner-example-female-1",
+        "reference": "Practitioner/jp-practitioner-example-female-1",
         "display": "福岡 花子"
       }
     }
@@ -782,12 +784,14 @@ HTTP/1.1 200 OK
     }
   }
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 ## 注意事項
 
 ### 記述の単位について
-MedicationAdministrationは薬剤をCodeableConceptとして1つまでしか持つか、Medicationリソースのreferenceをもつことしかできない。したがって、複数の薬剤を同一のRp番号で表現する場合にはMedicationAdministrationを繰り返すか、複数の薬剤をまとめたMedication Resouceのインスタンスを参照することとなる。ワーキンググループでの検討の結果、複数の薬剤をまとめたMedicationリソースのインスタンスをcontained属性に内包した上で参照することとした。
+MedicationAdministrationは薬剤をCodeableConceptとして1つまでしか持つか、Medicationリソースのreferenceをもつことしかできない。したがって、複数の薬剤を同一のRp番号で表現する場合にはMedicationAdministrationを繰り返すか、複数の薬剤をまとめたMedication Resourceのインスタンスを参照することとなる。ワーキンググループでの検討の結果、複数の薬剤をまとめたMedicationリソースのインスタンスをcontained属性に内包した上で参照することとした。
 
 ### 投与薬剤、投与量の記述方法
 １回の投与薬剤と投与量は、RP内の薬剤が１薬剤の場合も混注などで複数の薬剤を含む場合も、すべての薬剤を記述したMedicationリソースを contained 属性に内包し、それをMedicationRequest.medicationReference属性で参照するようにする。
@@ -1193,7 +1197,7 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
 ```
 
 #### 未分類コメント
-上記のコメントに分類できない、またはシステム的に分類して管理されていない場合、MedicationAdminstrationに対して定義した拡張「JP_MedicationAdministration_UncategorizedComment」を使用する。
+上記のコメントに分類できない、またはシステム的に分類して管理されていない場合、MedicationAdministrationに対して定義した拡張「JP_MedicationAdministration_UncategorizedComment」を使用する。
 この拡張は、コメントがコード化されている場合はCodeableConcept型を使用して記述する。コード化されていない場合はString型を使用して記述する。
 複数のコメントを記述する場合は、この拡張を繰り返して記述する。
 

@@ -246,7 +246,12 @@ Rp1
 | 実施更新日時 | 2016/08/25 12:03:43 |
 
 #### ムコダイン錠２５０ｍｇ（実施）
-```json
+
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationAdministration",
   "id": "jp-medicationadministration-example-1",
@@ -254,10 +259,6 @@ Rp1
     "profile": [
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
     ]
-  },
-  "text": {
-    "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationadministration-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medicationadministration.html\">JP Core MedicationAdministration Profile</a></p></div><p><b>JP Core MedicationAdministration RequestDepartment Extension</b>: 内科 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#01)</span></p><p><b>JP Core MedicationAdministration Requester Extension</b>: <a href=\"Practitioner-jp-practionner-example-female-1.html\">Practitioner/jp-practionner-example-female-1: 東京 春子</a> \" 東京\"</p><p><b>JP Core MedicationAdministration RequestAuthoredOn Extension</b>: 2016-08-25 12:00:00+0900</p><p><b>JP Core MedicationAdministration Location Extension</b>: <a href=\"Location-jp-location-example-ward.html\">Location/jp-location-example-ward: 09A病棟 021病室 4ベッド</a> \"09A病棟 021病室 4ベッド\"</p><p><b>identifier</b>: id: 12345678, id: 1, id: 1</p><p><b>status</b>: completed</p><p><b>category</b>: Inpatient Order <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0482.html\">orderType</a>#I)</span></p><p><b>medication</b>: ムコダイン錠２５０ｍｇ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#103835401)</span></p><p><b>subject</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><p><b>effective</b>: 2016-08-25 08:30:00+0900</p><h3>Performers</h3><table class=\"grid\"><tr><td>-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>Performer <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-med-admin-perform-function.html\">MedicationAdministration Performer Function Codes</a>#performer)</span></td><td><a href=\"Practitioner-jp-practionner-example-female-1.html\">Practitioner/jp-practionner-example-female-1: 福岡 花子</a> \" 東京\"</td></tr></table><p><b>request</b>: <a href=\"MedicationRequest-jp-medicationrequest-example-1.html\">MedicationRequest/jp-medicationrequest-example-1</a></p><h3>Dosages</h3><table class=\"grid\"><tr><td>-</td><td><b>Route</b></td><td><b>Method</b></td><td><b>Dose</b></td></tr><tr><td>*</td><td>経口 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#0)</span></td><td>内服 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#1)</span></td><td>1 錠<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code TAB = 'TAB')</span></td></tr></table></div>"
   },
   "extension": [
     {
@@ -275,7 +276,7 @@ Rp1
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester",
       "valueReference": {
-        "reference": "Practitioner/jp-practionner-example-female-1",
+        "reference": "Practitioner/jp-practitioner-example-female-1",
         "display": "東京 春子"
       }
     },
@@ -340,7 +341,7 @@ Rp1
         ]
       },
       "actor": {
-        "reference": "Practitioner/jp-practionner-example-female-1",
+        "reference": "Practitioner/jp-practitioner-example-female-1",
         "display": "福岡 花子"
       }
     }
@@ -353,7 +354,7 @@ Rp1
       "coding": [
         {
           "system": "urn:oid:1.2.392.200250.2.2.20.40",
-          "code": "0",
+          "code": "10",
           "display": "経口"
         }
       ]
@@ -375,10 +376,17 @@ Rp1
     }
   }
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 #### パンスポリンＴ錠１００ １００ｍｇ（中止）
-```json
+
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "MedicationAdministration",
   "id": "jp-medicationadministration-example-2",
@@ -386,10 +394,6 @@ Rp1
     "profile": [
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
     ]
-  },
-  "text": {
-    "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medicationadministration-example-2\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medicationadministration.html\">JP Core MedicationAdministration Profile</a></p></div><p><b>JP Core MedicationAdministration RequestDepartment Extension</b>: 内科 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#01)</span></p><p><b>JP Core MedicationAdministration Requester Extension</b>: <a href=\"Practitioner-jp-practionner-example-male-1.html\">Practitioner/jp-practionner-example-male-1: 大阪 一郎</a> \" 大阪\"</p><p><b>JP Core MedicationAdministration RequestAuthoredOn Extension</b>: 2016-08-25 12:00:00+0900</p><p><b>identifier</b>: id: 12345678, id: 1, id: 2</p><p><b>status</b>: stopped</p><p><b>category</b>: Inpatient Order <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v2-0482.html\">orderType</a>#I)</span></p><p><b>medication</b>: パンスポリンＴ錠１００ １００ｍｇ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#110626901)</span></p><p><b>subject</b>: <a href=\"Patient-jp-patient-example-1.html\">Patient/jp-patient-example-1</a> \" 山田\"</p><p><b>effective</b>: 2016-08-25 08:30:00+0900</p><p><b>request</b>: <a href=\"MedicationRequest-jp-medicationrequest-example-2.html\">MedicationRequest/jp-medicationrequest-example-2</a></p></div>"
   },
   "extension": [
     {
@@ -407,7 +411,7 @@ Rp1
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester",
       "valueReference": {
-        "reference": "Practitioner/jp-practionner-example-male-1",
+        "reference": "Practitioner/jp-practitioner-example-male-1",
         "display": "大阪 一郎"
       }
     },
@@ -457,7 +461,9 @@ Rp1
     "reference": "MedicationRequest/jp-medicationrequest-example-2"
   }
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 ## 注意事項
 
@@ -546,7 +552,7 @@ performer.actorには、医療従事者(Practitioner)、または患者(Patient)
     "coding": [
       {
         "system": "urn:oid:1.2.392.200250.2.2.20.40",
-        "code": "0",
+        "code": "10",
         "display": "経口"
       }
     ]

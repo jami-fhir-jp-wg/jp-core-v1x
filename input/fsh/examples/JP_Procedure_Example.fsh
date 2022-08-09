@@ -1,6 +1,6 @@
 Instance:  jp-procedure-example-1
 InstanceOf: JP_Procedure
-Title:   "JP Core Procedure Example 1"
+Title:   "JP Core Procedure Example 処置（抜糸）"
 Description: "前額部に創傷処置を施術しフォローアップとして縫合糸の除去を予定している例"
 Usage:  #example
 * status = #in-progress

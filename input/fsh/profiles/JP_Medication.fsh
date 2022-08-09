@@ -75,10 +75,10 @@ Description: "このプロファイルはMedicationリソースに対して、�
 Extension: JP_Medication_Ingredient_DrugNo
 Id: jp-medication-ingredient-drugno
 Title: "JP Core Medication Ingredient DrugNo Extension"
-Description: "投与量が製剤単位か成分単位かを格納する拡張"
+Description: "同一剤グループ内での順番を格納する拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo"
 * ^date = "2022-03-16"
-* ^purpose = "投与量が製剤単位か成分単位かを格納する拡張"
+* ^purpose = "同一剤グループ内での順番を格納する拡張"
 * ^context.type = #element
 * ^context.expression = "Medication.ingredient"
 * . ^short = "RP内の薬剤の連番"
@@ -101,3 +101,4 @@ Description: "投与量が製剤単位か成分単位かを格納する拡張"
 * . ^definition = "投与量が製剤単位か成分単位かを格納する"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType" (exactly)
 * value[x] only CodeableConcept
+* value[x] from JP_MedicationIngredientStrengthStrengthType_VS (example)

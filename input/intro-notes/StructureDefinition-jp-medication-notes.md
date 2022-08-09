@@ -36,7 +36,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 |医薬品|HOT9|urn:oid:1.2.392.200119.4.403.1|
 |医薬品|HOT13|	urn:oid:1.2.392.200119.4.402.1|
 |医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
-|剤形|MERIT-9(剤形)|http://jpfhir.jp/ePrescription/CodeSystem/merit9-form|
+|剤形|MERIT-9(剤形)|http://jpfhir.jp/Common/CodeSystem/merit9-form|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
 |力価区分|電子処方箋HL7 FHIR仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
 
@@ -55,7 +55,12 @@ Medication リソースは単体として用いられないため、検索など
 [MedicationRequest(注射)][JP_MedicationRequest_Injection]や[MedicationDispense(注射)][JP_MedicationDispense_Injection]、[MedicationAdministration(注射)][JP_MedicationAdministration_Injection]も参照すること。
 
 #### ホリゾン注射液１０ｍｇ
-```json
+
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "Medication",
   "id": "jp-medication-example-1",
@@ -63,10 +68,6 @@ Medication リソースは単体として用いられないため、検索など
     "profile": [
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication"
     ]
-  },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medication-example-1\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medication.html\">JP Core Medication Profile</a></p></div><p><b>status</b>: active</p><h3>Ingredients</h3><table class=\"grid\"><tr><td>-</td><td><b>Extension</b></td><td><b>Item[x]</b></td><td><b>Strength</b></td></tr><tr><td>*</td><td></td><td>ホリゾン注射液１０ｍｇ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#100558502)</span></td><td>1 アンプル<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code AMP = 'AMP')</span>/1 回<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code KAI = 'KAI')</span></td></tr></table></div>"
   },
   "status": "active",
   "ingredient": [
@@ -117,10 +118,17 @@ Medication リソースは単体として用いられないため、検索など
     }
   ]
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 #### ソリタ－Ｔ３号輸液５００ｍＬ　１本とアドナ注（静脈用）５０ｍｇ／１０ｍＬ　１アンプルの混注
-```json
+
+<details>
+<summary><b>インスタンス例（クリックで展開）</b></summary>
+<dev>
+
+{% highlight json %}
 {
   "resourceType": "Medication",
   "id": "jp-medication-example-2",
@@ -128,10 +136,6 @@ Medication リソースは単体として用いられないため、検索など
     "profile": [
       "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication"
     ]
-  },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"jp-medication-example-2\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-jp-medication.html\">JP Core Medication Profile</a></p></div><p><b>status</b>: active</p><blockquote><p><b>ingredient</b></p><p><b>item</b>: ソリタ－Ｔ３号輸液５００ｍＬ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#107750602)</span></p><p><b>strength</b>: 1 本<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code HON = 'HON')</span>/1 回<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code KAI = 'KAI')</span></p></blockquote><blockquote><p><b>ingredient</b></p><p><b>item</b>: アドナ注（静脈用）５０ｍｇ／１０ｍＬ <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#108010001)</span></p><p><b>strength</b>: 1 アンプル<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code AMP = 'AMP')</span>/1 回<span style=\"background: LightGoldenRodYellow\"> (Details: urn:oid:1.2.392.100495.20.2.101 code KAI = 'KAI')</span></p></blockquote></div>"
   },
   "status": "active",
   "ingredient": [
@@ -187,7 +191,9 @@ Medication リソースは単体として用いられないため、検索など
     }
   ]
 }
-```
+{% endhighlight json %}
+</dev>
+</details>
 
 ### 各種コメントの記述方法
 

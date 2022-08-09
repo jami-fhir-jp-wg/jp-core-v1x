@@ -16,7 +16,7 @@ Usage: #example
 * medicationCodeableConcept = urn:oid:1.2.392.200119.4.403.1#103835401 "ムコダイン錠２５０ｍｇ"
 * subject = Reference(Patient/jp-patient-example-1)
 * performer.function = http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function#packager "Packager"
-* performer.actor = Reference(Practitioner/jp-practionner-example-male-1)
+* performer.actor = Reference(Practitioner/jp-practitioner-example-male-1)
 * quantity = 9 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 * whenPrepared = "2021-10-07T10:47:19+09:00"
 * whenHandedOver = "2021-10-07T10:55:23+09:00"
