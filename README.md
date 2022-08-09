@@ -63,7 +63,7 @@ $ bash _genonce.sh
 * [FHIR Shorthand記載ルール](docs/fishingrule.md)
 * [プロファイル説明用Markdown記載ルール](docs/template_intronotes.md)
 * [github 利用ルール](docs/githubflow.md)
-* [文書記載ルール案 **(作成中)** ](docs/ig_rules.md)
+* [文書記載ルール](docs/ig_rules.md)
 
 ## 資料・学習用サイト等
 * [FHIR Shorthand FSH School(外部リンク)](https://fshschool.org/)
