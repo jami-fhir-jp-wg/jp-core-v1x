@@ -32,7 +32,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * subject ^requirements = "対象のコンテキストが必要である。"
 * encounter ^definition = "この診断レポートが関するヘルスケアイベント。"
 * encounter ^comment = "これは通常、レポートの作成が発生するエンカウンターだが、一部のイベントはエンカウンターの正式な完了の前または後に開始される場合がある（例えば入院前の検査）。その場合でも（入院に関連して検査が行われる場合など）、エンカウンターのコンテキストに関連付けられる。\r\n\r\n【JP-CORE】\r\nこのレポートを書く切っ掛けとなる Encounterリソース（例：術前検査の場合、術前訪問） を参照"
-* encounter ^requirements = "Enconterコンテキストへのリンクが必要である"
+* encounter ^requirements = "Encounterコンテキストへのリンクが必要である"
 * effective[x] 1..
 * effective[x] only dateTime
 * effective[x] ^definition = "観測値が関連する時間または期間。レポートの対象が患者である場合、これは通常、読影開始の時間であり、日付/時刻自体のみが提供される。"
@@ -43,11 +43,11 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * issued ^requirements = "臨床医は、レポートがリリースされた日付を確認できる必要がある。"
 * performer MS
 * performer ^definition = "レポートの発行を担当するもの。"
-* performer ^comment = "臨床診断レポートに対して責任を持つもの.\r\n\r\n【JP-CORE】\r\nレポート確定者<br/>\r\n（責任としては performaer > resultsInterpreter という関係性）"
+* performer ^comment = "臨床診断レポートに対して責任を持つもの.\r\n\r\n【JP-CORE】\r\nレポート確定者<br/>\r\n（責任としては performer > resultsInterpreter という関係性）"
 * performer ^requirements = "結果に関する問い合わせがある場合は、誰に連絡を取るべきかを知る必要がある。また、データ二次分析のためにレポートの発生源を追跡する必要が生じる場合もある。"
 * resultsInterpreter MS
 * resultsInterpreter ^definition = "レポートの結論や読影に関わる医師や組織"
-* resultsInterpreter ^comment = "必ずしも診断レポートに対して責任を持つものを示すわけでは無い。\r\n\r\n【JP-CORE】\r\nレポートの関係者（作成者、読影者、確定者など）を列挙\r\n<br/><br/>\r\n【議論】<br/>\r\n但し、一次読影や二次読影などの役割 (Practioner Roll) の指定方法はペンディング"
+* resultsInterpreter ^comment = "必ずしも診断レポートに対して責任を持つものを示すわけでは無い。\r\n\r\n【JP-CORE】\r\nレポートの関係者（作成者、読影者、確定者など）を列挙\r\n<br/><br/>\r\n【議論】<br/>\r\n但し、一次読影や二次読影などの役割 (Practitioner Roll) の指定方法はペンディング"
 * resultsInterpreter ^requirements = "結果に関する問い合わせがある場合は、誰に連絡を取るべきかを知る必要がある。また、データ二次分析のためにレポートの発生源を追跡する必要が生じる場合もある。"
 * specimen ^definition = "診断レポートの対象となる検体"
 * specimen ^comment = "【JP-CORE】\r\n・未使用<br/>\r\n・画像ガイド下生検で得られる検体の可能性は有り得るが、本項目は病理レポートで利用されることを想定し、放射線レポートでは特には規定しない"
