@@ -1,6 +1,6 @@
 Instance: jp-observation-vitalsigns-example-1
 InstanceOf: JP_Observation_VitalSigns
-Title: "JP Core Observation VitalSigns Basic バイタル（呼吸数）"
+Title: "JP Core Observation VitalSigns Example バイタル（呼吸数）"
 Description: "バイタル（呼吸数）"
 Usage: #example
 * category = $vitalSigns-category-cs#呼吸機能 "呼吸機能"

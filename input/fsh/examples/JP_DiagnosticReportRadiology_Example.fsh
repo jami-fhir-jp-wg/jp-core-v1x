@@ -1,7 +1,7 @@
 Instance: jp-diagnosticreport-radiology-example-1
 InstanceOf: JP_DiagnosticReport_Radiology
-Title: "JP Core DiagnosticReport Radiology Example1"
-Description: "放射線レポート1"
+Title: "JP Core DiagnosticReport Radiology Example 放射線レポート"
+Description: "放射線レポート"
 Usage: #example
 * identifier.use = #usual
 * identifier.system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"

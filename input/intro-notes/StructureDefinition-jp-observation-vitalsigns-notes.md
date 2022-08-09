@@ -42,53 +42,9 @@ ObservationリソースのOperation一覧の定義はユースケースに依存
 [Observation共通情報プロファイル#Operation一覧][JP_Observation_Common_Operation]
 
 ### サンプル
-```json
-{
-  "resourceType": "Observation",
-  "id": "vital-12345",
-  "category": [
-    {
-      "coding": [
-        {
-          "code": "呼吸機能",
-          "system": "http://jpfhir.jp/Common/CodeSystem/vitalsign-category",
-          "display": "呼吸機能"
-        }
-      ]
-    }
-  ],
-  "subject": {
-    "reference": "Patient/Patient-67890"
-  },
-  "code": {
-    "coding": [
-      {
-        "code": "abc-local-123",
-        "system": "http://abc-hospital.local/fhir/Observation/localcode",
-        "display": "呼吸数"
-      },
-      {
-        "code": "31001369",
-        "system": "http://jpfhir.jp/Common/CodeSystem/vitalsign-code",
-        "display": "呼吸数"
-      }
-    ]
-  },
-  "effectiveDateTime": "2021-10-19T10:00:00+09:00",
-  "valueQuantity": {
-    "unit": "回",
-    "value": 90
-  },
-  "performer": [
-    {
-      "reference": "Practitioner/Practitioner-abcde"
-    }
-  ],
-  "status": "final",
-  "meta": {
-    "lastUpdated": "2021-10-22T07:33:41Z",
-    "versionId": "1"
-  }
-}
-```
+
+
+* [**バイタル（呼吸数）**][jp-observation-vitalsigns-example-1]
+
+
 {% include markdown-link-references.md %}
