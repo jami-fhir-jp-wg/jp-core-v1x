@@ -388,7 +388,7 @@ HTTP/1.1 200 OK
         ]
       },
       "actor": {
-        "reference": "Practitioner/jp-practionner-example-female-1"
+        "reference": "Practitioner/jp-practitioner-example-female-1"
       }
     }
   ],

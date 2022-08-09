@@ -276,7 +276,7 @@ Rp1
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester",
       "valueReference": {
-        "reference": "Practitioner/jp-practionner-example-female-1",
+        "reference": "Practitioner/jp-practitioner-example-female-1",
         "display": "東京 春子"
       }
     },
@@ -341,7 +341,7 @@ Rp1
         ]
       },
       "actor": {
-        "reference": "Practitioner/jp-practionner-example-female-1",
+        "reference": "Practitioner/jp-practitioner-example-female-1",
         "display": "福岡 花子"
       }
     }
@@ -411,7 +411,7 @@ Rp1
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester",
       "valueReference": {
-        "reference": "Practitioner/jp-practionner-example-male-1",
+        "reference": "Practitioner/jp-practitioner-example-male-1",
         "display": "大阪 一郎"
       }
     },

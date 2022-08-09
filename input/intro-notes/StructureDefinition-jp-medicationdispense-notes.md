@@ -291,7 +291,7 @@ Rp1 ムコダイン錠２５０ｍｇ１錠（  １日３錠)
         ]
       },
       "actor": {
-        "reference": "Practitioner/jp-practionner-example-male-1"
+        "reference": "Practitioner/jp-practitioner-example-male-1"
       }
     }
   ],

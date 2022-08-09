@@ -433,7 +433,7 @@ HTTP/1.1 200 OK
   },
   "authoredOn": "2016-07-01T09:28:17+09:00",
   "requester": {
-    "reference": "Practitioner/jp-practionner-example-female-1"
+    "reference": "Practitioner/jp-practitioner-example-female-1"
   },
   "insurance": [
     {
@@ -525,7 +525,7 @@ HTTP/1.1 200 OK
 ## 注意事項
 
 ### 記述の単位について
-MedicationRequestは薬剤をCodeableConceptとして1つまでしか持つか、Medicationリソースのreferenceをもつことしかできない。したがって、複数の薬剤を同一のRp番号で表現する場合にはMedicationRequestを繰り返すか、複数の薬剤をまとめたMedication Resouceのインスタンスを参照することとなる。ワーキンググループでの検討の結果、複数の薬剤をまとめたMedicationリソースのインスタンスをcontained属性に内包した上で参照することとした。
+MedicationRequestは薬剤をCodeableConceptとして1つまでしか持つか、Medicationリソースのreferenceをもつことしかできない。したがって、複数の薬剤を同一のRp番号で表現する場合にはMedicationRequestを繰り返すか、複数の薬剤をまとめたMedication Resourceのインスタンスを参照することとなる。ワーキンググループでの検討の結果、複数の薬剤をまとめたMedicationリソースのインスタンスをcontained属性に内包した上で参照することとした。
 
 １オーダー内に複数のRpがある場合には、MedicationRequestを繰り返し、identifier属性にオーダー番号、Rp番号をそれぞれ持つことでリソース間の関係性がわかるようにする。
 
@@ -792,7 +792,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 "dispenseRequest": {
   "extension": {
     "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount",
-    "valueInterger": 10
+    "valueInteger": 10
   }
 }
 ```
@@ -999,7 +999,7 @@ HL7 FHIRでは、注射箋の中で同一の用法を持つ剤グループ(RP)�
 
 ```
 
-一方、投与のそれぞれのタイミングの順番である施用番号については、MedicationRequestリソースの dossageInstruction.sequence で表現することができる。すなわち、同一RPの薬剤を複数回投与する場合、投与のタイミングごとに dosageInstructionごと繰り返し、そのタイミングは dosageInstruction.timing で表現することになる。
+一方、投与のそれぞれのタイミングの順番である施用番号については、MedicationRequestリソースの dosageInstruction.sequence で表現することができる。すなわち、同一RPの薬剤を複数回投与する場合、投与のタイミングごとに dosageInstructionごと繰り返し、そのタイミングは dosageInstruction.timing で表現することになる。
 
 開始日時「2021/07/07 09:00」「同 13:00」「2021/07/08 09:00」を記述したインスタンス例を示す。
 
