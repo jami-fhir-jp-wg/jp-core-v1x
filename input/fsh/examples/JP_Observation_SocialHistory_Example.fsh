@@ -1,6 +1,6 @@
 Instance: jp-observation-socialhistory-example-1
 InstanceOf: JP_Observation_SocialHistory
-Title: "JP Core Observation SocialHistory Example　社会的背景（喫煙）"
+Title: "JP Core Observation SocialHistory Example 社会的背景（喫煙）"
 Description: "喫煙に関する項目"
 Usage: #example
 * category[socialHistory] = $observation-category#social-history
