@@ -43,48 +43,7 @@ ObservationリソースのOperation一覧の定義はユースケースに依存
 [Observation共通情報プロファイル#Operation一覧][JP_Observation_Common_Operation]
 
 ### サンプル
-```json
-{
-  "resourceType": "Observation",
-  "id": "bm-12345",
-  "category": [
-    {
-      "coding": [
-        {
-          "code": "体重",
-          "system": "http://jpfhir.jp/Common/CodeSystem/bodymeasurement-category",
-          "display": "体重"
-        }
-      ]
-    }
-  ],
-  "subject": {
-    "reference": "Patient/Patient-67890"
-  },
-  "code": {
-    "coding": [
-      {
-        "code": "abc-local-456",
-        "system": "http://abc-hospital.local/fhir/Observation/localcode",
-        "display": "体重"
-      },
-      {
-        "code": "31000296",
-        "system": "http://jpfhir.jp/Common/CodeSystem/vitalsign-code",
-        "display": "体重"
-      }
-    ]
-  },
-  "effectiveDateTime": "2021-10-19T10:00:00+09:00",
-  "valueQuantity": {
-    "unit": "kg",
-    "value": 63.5
-  },
-  "status": "final",
-  "meta": {
-    "lastUpdated": "2021-10-22T07:33:41Z",
-    "versionId": "1"
-  }
-}
-```
+
+* [**身体所見（腹痛）**][jp-observation-bodyMeasurement-example-1]
+
 {% include markdown-link-references.md %}
