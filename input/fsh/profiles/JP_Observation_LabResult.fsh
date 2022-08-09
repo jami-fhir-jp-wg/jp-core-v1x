@@ -24,10 +24,14 @@ Description: "このプロファイルはObservationリソースに対して、�
 * partOf ^comment = "To link an Observation to an Encounter use `encounter`.  See the  [Notes](observation.html#obsgrouping) below for guidance on referencing another Observation.\r\n<p/>【JP仕様】<br/>\r\n当面は使用しない。"
 * status ^definition = "The status of the result value.\r\n<br/>結果値の状態。"
 * status ^comment = "This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.\r\n<p/>【JP仕様】<br/>\r\nv2.5の「F」に相当する値は「final」であるが、ここでは 必須コード表「ObservationStatus」より、全てのコード値を使用可とする。<br/>\r\n(registered | preliminary | final | amended |   corrected | cancelled | entered-in-error | unknown)"
-* category 1..1
+* category 1..
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category contains laboratory 1..1
+* category[laboratory] = $observation-category#laboratory
 * category ^definition = "A code that classifies the general type of observation being made.\r\n<br/>行われた検査の一般的なタイプの分類。取得、表示の際のフィルタリングに使用。"
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n<p/>【JP仕様】<br/>\r\n推奨コード表「ObservationCategoryCodes」より、本プロファイルでは「laboratory」固定とする。<br/>\r\n(social-history | vital-signs | imaging | laboratory | procedure | survey | exam | therapy | activity)"
-* category.coding 1..1
 * category.coding ^comment = "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.\r\n\r\n<p/>【JP仕様】<br/>\r\n推奨コード表「ObservationCategoryCodes」より、本プロファイルでは「laboratory」固定とする。<br/>"
 * code from $labResult-code (preferred)
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".\r\n<br/>検査の内容の説明。検査名称。"

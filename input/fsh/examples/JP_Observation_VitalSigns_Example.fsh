@@ -3,18 +3,11 @@ InstanceOf: JP_Observation_VitalSigns
 Title: "JP Core Observation VitalSigns Basic バイタル（呼吸数）"
 Description: "バイタル（呼吸数）"
 Usage: #example
-* category.coding.code = #呼吸機能
-//TODO CategoryのCodeSystem定義されていない
-* category.coding.system = "http://jpfhir.jp/Common/CodeSystem/vitalsign-category"
-* category.coding.display = "呼吸機能"
+* category = $vitalSigns-category-cs#呼吸機能 "呼吸機能"
 * subject = Reference(Patient/jp-patient-example-1)
-* code.coding[0].code = #abc-local-456
-* code.coding[=].system = "http://abc-hospital.local/fhir/Observation/localcode"
-* code.coding[=].display = "呼吸数"
-//TODO LocalCodeを２つ並べるのは例としてはふさわしくないのでは。
-* code.coding[1].code = #31001369
-* code.coding[=].system = "http://abc-hospital.local/fhir/Observation/localcode"
-* code.coding[=].display = "呼吸数"
+* code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#abc-local-456 "呼吸数"
+* code.coding[+] = http://loinc.org#9279-1 "Respiratory rate"
+* code.coding[+] = $vitalSigns-code-cs#呼吸数 "呼吸数"
 * effectiveDateTime = "2021-10-19T10:00:00+09:00"
 * valueQuantity.unit = "回"
 * valueQuantity.value = 400

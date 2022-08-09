@@ -11,8 +11,12 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^short = "身体所見に関する測定や簡単な観察事実（assertion）"
 * . ^definition = "身体所見に関する測定や簡単な観察事実"
 * . ^comment = "身体所見に関するObservation（検査測定や観察事実）の制約プロフィール"
-* category 1..1
-* category = $observation-category#exam "Exam" (exactly)
+* category 1..
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category contains exam 1..1
+* category[exam] = $observation-category#exam
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP仕様】<br/>\r\n基底仕様のカテゴリ「exam」固定とする"
 * code = $JP_PhysicalExamCodes_CS#physical-findings "Physical Findings" (exactly)
 * code from JP_PhysicalExamCodes_VS (required)
@@ -20,7 +24,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * subject 1..
 * subject only Reference(JP_Patient)
 * subject ^comment = "One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.\r\n\r\n【JP仕様】<br/>\r\n患者"
-* encounter 1..
 * encounter ^comment = "This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission laboratory tests).\r\n\r\n【JP仕様】<br/>\r\n診察"
 * effective[x] only dateTime or Period
 * effective[x] ^comment = "At least a date should be present unless this observation is a historical report.  For recording imprecise or \"fuzzy\" times (For example, a blood glucose measurement taken \"after breakfast\") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.\r\n\r\n【JP仕様】<br/>\r\neffectiveDateTime：医療者が確認した日時<br/>\r\neffectivePeriod：医療者が確認した期間"
