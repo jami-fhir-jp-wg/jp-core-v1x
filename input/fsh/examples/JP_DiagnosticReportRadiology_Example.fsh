@@ -7,8 +7,8 @@ Usage: #example
 * identifier.system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
 * identifier.value = "123456"
 * status = #final
-* category = http://terminology.hl7.org/CodeSystem/v2-0074#RAD
-* code = http://loinc.org#10191-5
+* category = $diagnostic-service-sectionid-cs#RAD
+* code = http://loinc.org#10191-5 "Physical findings of Abdomen Narrative"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2008-06-17"
 * issued = "2008-06-18T09:23:00+10:00"
