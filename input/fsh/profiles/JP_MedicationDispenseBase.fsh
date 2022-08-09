@@ -28,7 +28,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * partOf ^short = "Event that dispense is part of 親イベントへの参照"
 * partOf ^definition = "The procedure that trigger the dispense. \r\n\r\nこの調剤の契機となったProcedureリソースへの参照。"
 * status ^short = "preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | unknown"
-* status ^definition = "A code specifying the state of the set of dispense events.\r\n\r\n\r\n一連の調剤イベントの状態を指定するコード。"
+* status ^definition = "A code specifying the state of the set of dispense events.\r\n\r\n一連の調剤イベントの状態を指定するコード。"
 * statusReason[x] ^short = "Why a dispense was not performed　調剤が実行されなかった理由"
 * statusReason[x] ^definition = "Indicates the reason why a dispense was not performed.\r\n\r\n調剤が実行されなかった理由を示す。"
 * category ^short = "Type of medication dispense　調剤タイプ"
@@ -156,7 +156,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * detectedIssue ^short = "Clinical issue with action アクションを伴う臨床的問題"
 * detectedIssue ^definition = "Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. drug-drug interaction, duplicate therapy, dosage alert etc.\r\n\r\n患者に対する1つまたは複数のアクティブまたは提案された臨床アクションを伴う、またはそれらの間の実際のまたは潜在的な臨床問題を示す。例えば薬物間相互作用、重複治療、投与量アラートなど。\r\nDetectedIssue リソースへの参照。"
 * eventHistory ^short = "A list of relevant lifecycle events　関連するライフサイクルイベントのリスト"
-* eventHistory ^definition = "A summary of the events of interest that have occurred, such as when the dispense was verified.\r\n\r\n\r\n調剤が確認されたときなど、発生した対象のイベントのサマリー。"
+* eventHistory ^definition = "A summary of the events of interest that have occurred, such as when the dispense was verified.\r\n\r\n調剤が確認されたときなど、発生した対象のイベントのサマリー。"
 
 // ==============================
 //   Extension 定義
