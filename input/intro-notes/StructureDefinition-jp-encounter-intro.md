@@ -26,7 +26,7 @@ Encounterインスタンスは、入院前情報を表現するために実際�
 
 Hospitalizationコンポーネントは、入院イベントに関連する拡張情報を格納するためのものである。これは常に、Encounter自体と同じ期間であることが期待される。期間が異なる場合は、別のEncounterのインスタンスを使用して、このEncounterのインスタンスの一部としてpartOfエレメントを使用してこの情報を取り込むべきである。
 
-ProcedureとEncounterはお互いへの参照を持つが、これらは異なるProcedureであるべきである。1つは、Encounterの間に行われたProcedure（Procedure.encounterに格納）、もう1つは、Encounterが別のProcedureの結果である場合（Encounter.indicationに格納）、例えば、以前のProcedureによる合併症を解決するためのフォローアップのEncounterなどである。
+ProcedureとEncounterはお互いへの参照を持つが、これらは異なるProcedureとするべきである。1つは、Encounterの間に行われたProcedure（Procedure.encounterに格納）、もう1つは、Encounterが別のProcedureの結果である場合（Encounter.indicationに格納）、例えば、以前のProcedureによる合併症を解決するためのフォローアップのEncounterなどである。
 
 <h3>Status Managementの内容</h3>
 
@@ -53,7 +53,7 @@ Appointmentは通常、Appointmentの計画段階、検索、空いている時�
 
 Communicationリソースは、直接の接触がない場合に、医療従事者と患者の間で同時に行われる対話に使用される。例としては、電話によるメッセージや、通信文書の送信などがある。通信資源には継続時間は記録されないが、送信時間と受信時間が含まれる可能性がある。
 
-標準拡張。Associcated Encounter
+標準拡張。Associated Encounter
 この拡張機能は、リソース上にこの関連性を定義するプロパティが既に存在しない場合に、エンカウンターを参照するために使用されるべきである。
 
 ## スコープ
@@ -69,11 +69,11 @@ Encounterリソースは、class要素を用いて医療提供環境を特徴づ
 - 検査通院
 - 遠隔診療
 
-Encounter リソースは発生単位が医療機関や組織ごとに異なる可能性がある。例えば、入院中に開業医が1回訪問するたびに新しいEncounterインスタンスが発生する可能性もあるし、地域の慣行や関連システムによっては、入院全体で1つのインスタンスに集約される場合もある。
+Encounter リソースは発生単位が医療機関や組織ごとに異なる可能性がある。例えば、入院中に開業医が1回訪問するたびに新しいEncounterインスタンスが発生する可能性や、地域の慣行や関連システムによっては、入院全体で1つのインスタンスに集約される場合もある。
 
-Encounterリソースは、partOf要素を仕様して、他のEncounterインスタンスの下に集約することができる。
+Encounterリソースは、partOf要素を使用して、他のEncounterインスタンスの下に集約できる。
 
-またEncounterリソースは、受診前の情報を伝達するために生成することもできる。この場合、status要素は「planned」に設定される。患者の受信内容が入院に関連する場合は、hospitalization要素に入院イベントに関連する拡張情報を格納することができる。
+またEncounterリソースは、受診前の情報を伝達するために生成することもできる。この場合、status要素は「planned」に設定される。患者の受信内容が入院に関連する場合は、hospitalization要素に入院イベントに関連する拡張情報を格納できる。
 なおこの入院イベントの関連付けは、Encounterリソースのperiod要素で指定されている期間と同じ期間内であることが望ましい。もし期間が異なる場合は、別のEncounterインスタンスを使用し、このEncounterインスタンスの一部として情報を関連付ける必要がある。
 
 
