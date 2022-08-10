@@ -12,12 +12,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^definition = "バイタルサインに関する測定と簡単な観察事実（assertion）。"
 * . ^comment = "バイタルサインに関するObservation（検査測定や観察事実）の制約プロフィール"
 * category 1..
-* category from $vitalSigns-category-vs (preferred)
-// 具体的なコードについてはSWG6と連携して決定する必要がある（TBD）
-* category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP-Core仕様】MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「焦点」を基にバリューセットを定義する"
-* code from $vitalSigns-code-vs (preferred)
-// 具体的なコードについてはSWG6と連携して決定する必要がある（TBD）
-* code ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP-Core仕様】項目についてはMEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインを対象とする"
+* category from JP_ObservationVitalSignsCategory_VS (preferred)
+* category ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「焦点」"
+* code from JP_ObservationVitalSignsCode_VS (preferred)
+* code ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「観察名称」"
 * subject 1..
 * subject only Reference(JP_Patient)
 * subject ^comment = "One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.\r\n\r\n【JP-Core仕様】患者"
