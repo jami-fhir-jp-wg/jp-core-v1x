@@ -302,7 +302,7 @@ HTTP/1.1 200 OK
               "value": 1,
               "unit": "回",
               "system": "urn:oid:1.2.392.100495.20.2.101",
-              "code": "KAI"
+              "code": "TIME"
             }
           }
         }
@@ -573,7 +573,7 @@ HTTP/1.1 200 OK
               "value": 1,
               "unit": "回",
               "system": "urn:oid:1.2.392.100495.20.2.101",
-              "code": "KAI"
+              "code": "TIME"
             }
           }
         },
@@ -598,7 +598,7 @@ HTTP/1.1 200 OK
               "value": 1,
               "unit": "回",
               "system": "urn:oid:1.2.392.100495.20.2.101",
-              "code": "KAI"
+              "code": "TIME"
             }
           }
         }
