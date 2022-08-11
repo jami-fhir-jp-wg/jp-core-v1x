@@ -121,6 +121,7 @@ Alias: $JP_ProcedureOutcomeCodes_CS = http://jpfhir.jp/fhir/Common/ValueSet/JP_P
 Alias: $JP_ProcedureReasonCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureReasonCodes_CS
 Alias: $JP_ObservationBodySite_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationBodySite_CS
 Alias: $JP_ObservationMethod_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationMethod_CS
+Alias: $JP_ObservationLabResultCode_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationLabResultCode_CS
 
 // ValueSet
 Alias: $JP_AllergyIntoleranceCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodes_VS
@@ -158,3 +159,4 @@ Alias: $JP_ProcedurePerformerRoleCodes_VS = http://jpfhir.jp/fhir/Common/ValueSe
 Alias: $JP_ProcedureReasonCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureReasonCodes_VS
 Alias: $JP_ObservationBodySite_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ObservationBodySite_VS
 Alias: $JP_ObservationMethod_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ObservationMethod_VS
+Alias: $JP_ObservationLabResultCode_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ObservationLabResultCode_VS
