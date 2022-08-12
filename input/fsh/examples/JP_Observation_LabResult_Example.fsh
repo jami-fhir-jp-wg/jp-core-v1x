@@ -21,7 +21,6 @@ Usage: #example
 * valueQuantity.value = 3.5
 * subject = Reference(Patient/jp-patient-example-1)
 * performer = Reference(jp-practitioner-example-female-1)
-//TODO: Specimenのサンプル作成の必要あり
 * specimen = Reference(Specimen/jp-specimen-example-1)
 
 // 検査オーダ
