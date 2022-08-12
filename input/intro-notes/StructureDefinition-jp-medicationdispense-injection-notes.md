@@ -735,9 +735,9 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 
 
 ## その他、参考文献・リンク等
-1. HL7, FHIR MedicationDispense Resource, [http://hl7.org/fhir/MedicationDispense.html](http://hl7.org/fhir/MedicationDispense.html)
-1. HL7, FHIR Medication Resource, [http://hl7.org/fhir/medication.html](http://hl7.org/fhir/medication.html)
-1. HL7, FHIR BodyStructure Resource, [http://hl7.org/fhir/bodystructure.html](http://hl7.org/fhir/bodystructure.html)
+1. HL7, FHIR MedicationDispense Resource, [https://hl7.org/fhir/R4/MedicationDispense.html](https://hl7.org/fhir/R4/MedicationDispense.html)
+1. HL7, FHIR Medication Resource, [https://hl7.org/fhir/R4/medication.html](https://hl7.org/fhir/R4/medication.html)
+1. HL7, FHIR BodyStructure Resource, [https://hl7.org/fhir/R4/bodystructure.html](https://hl7.org/fhir/R4/bodystructure.html)
 1. 保健医療福祉情報システム工業会, JAHIS 注射データ交換規約 Ver.2.1C, [https://www.jahis.jp/standard/detail/id=590](https://www.jahis.jp/standard/detail/id=590)
 1. 日本医療情報学会MERIT-9研究会, 医療情報交換規約運用指針、MERIT-9 処方オーダver 1.0, [http://merit-9.mi.hama-med.ac.jp/jahis/SHOHOU.pdf](http://merit-9.mi.hama-med.ac.jp/jahis/SHOHOU.pdf)
 1. 保健医療福祉情報システム工業会, JAHISデータ交換規約（共通編）Ver.1.2, [https://www.jahis.jp/standard/detail/id=725](https://www.jahis.jp/standard/detail/id=725)

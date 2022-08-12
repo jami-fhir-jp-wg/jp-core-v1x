@@ -479,7 +479,7 @@ MEDIS標準病名マスターの病名交換用コード("urn:oid:1.2.392.200119
 
 
 ## その他、参考文献・リンク等
-1. HL7, FHIR Immunization Resource, [http://hl7.org/fhir/Immunization.html](http://hl7.org/fhir/Immunization.html)
+1. HL7, FHIR Immunization Resource, [https://hl7.org/fhir/R4/Immunization.html](https://hl7.org/fhir/R4/Immunization.html)
 1. 母子手帳（厚生労働省令，P51), [https://www.mhlw.go.jp/content/000622161.pdf](https://www.mhlw.go.jp/content/000622161.pdf)
 1. ワクチン接種記録システム(VRS), [https://cio.go.jp/sites/default/files/uploads/documents/vrs_announcement_210430a_att1.pdf](https://cio.go.jp/sites/default/files/uploads/documents/vrs_announcement_210430a_att1.pdf)
 1. 予防接種台帳, [https://www.mhlw.go.jp/content/10906000/000588379.pdf](https://www.mhlw.go.jp/content/10906000/000588379.pdf)

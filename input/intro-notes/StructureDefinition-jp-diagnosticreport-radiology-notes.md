@@ -169,8 +169,8 @@ DiagnosticReport リソースのインタラクション一覧の定義はユー
 
 | Name | Type | Description | Expression |
 | --- | --- | --- | --- |
-| based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn<br><br> ([ServiceRequest](http://hl7.org/fhir/servicerequest.html)) |
-| category | token | レポート種別 | DiagnosticReport.category ([ValueSet](http://hl7.org/fhir/valueset-diagnostic-service-sections.html)) <br> "RAD", "RX", "CT", "NMR", "NMS", "RUS", etc.<br> default = “RAD” |
+| based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn<br><br> ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) |
+| category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) <br> "RAD", "RX", "CT", "NMR", "NMS", "RUS", etc.<br> default = “RAD” |
 | code | token | レポート全体を示すコード | DiagnosticReport.code<br>[LOINC 18748-4](https://loinc.org/18748-4/)|
 | conclusion | token | コード化されたレポートの conclusion (interpretation/impression) | DiagnosticReport.conclusionCode | 
 | date | date | レポート作成日 | DiagnosticReport.effectiveDate |
