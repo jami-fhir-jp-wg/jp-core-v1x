@@ -5,7 +5,7 @@ Description: "SS-MIX統一診療科コード（３桁）"
 * ^url = $JP_Department_SsMix3Digits_CS
 * ^status = #draft
 * ^caseSensitive = true
-* ^content = #com
+* ^content = #complete
 // 以下PDFより参照
 // https://www.jami.jp/jamistd/docs/SS-MIX2/SS-MIX2-V1.2c/SS-MIX2stdstrspecv12c_code.pdf
 // ３桁名称
