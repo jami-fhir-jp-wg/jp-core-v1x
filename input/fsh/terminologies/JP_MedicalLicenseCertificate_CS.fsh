@@ -1,8 +1,8 @@
-CodeSystem: JP_MedicalLicenceCertificate_CS
-Id: jp-medicallicencecertificate-cs
-Title: "JP Core MedicalLicenceCertificate CodeSystem"
+CodeSystem: JP_MedicalLicenseCertificate_CS
+Id: jp-medicallicensecertificate-cs
+Title: "JP Core MedicalLicenseCertificate CodeSystem"
 Description: "医療関連免許証明に関するコードシステム。（現在作成中、今後医療系免許に関する情報追加する予定です。）"
-* ^url = $JP_MedicalLicenceCertificate_CS
+* ^url = $JP_MedicalLicenseCertificate_CS
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete

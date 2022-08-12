@@ -16,13 +16,13 @@ Usage: #example
 * gender = #female
 * qualification[0].identifier.system = "urn:oid:1.2.392.100495.20.3.32.113"
 * qualification[=].identifier.value  = "999-12345"
-* qualification[=].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner
+* qualification[=].code = $JP_MedicalLicenseCertificate_CS#narcotics-practitioner
 * qualification[+].identifier.system = "urn:oid:1.2.392.100495.20.3.32.101"
 * qualification[=].identifier.value  = "999-54321"
-* qualification[=].code = $JP_MedicalLicenceCertificate_CS#narcotics-practitioner
+* qualification[=].code = $JP_MedicalLicenseCertificate_CS#narcotics-practitioner
 * qualification[+].identifier.system = "urn:oid:1.2.392.100495.20.3.31"
 * qualification[=].identifier.value = "999999-00001"
-* qualification[=].code = $JP_MedicalLicenceCertificate_CS#medical-registration
+* qualification[=].code = $JP_MedicalLicenseCertificate_CS#medical-registration
 
 Instance: jp-practitioner-example-female-2
 InstanceOf: JP_Practitioner
@@ -60,7 +60,7 @@ Usage: #example
 * gender = #male
 * qualification[0].identifier.system = "urn:oid:1.2.392.100495.20.3.31"
 * qualification[=].identifier.value = "999999-00001"
-* qualification[=].code = $JP_MedicalLicenceCertificate_CS#medical-registration
+* qualification[=].code = $JP_MedicalLicenseCertificate_CS#medical-registration
 
 Instance: jp-practitioner-example-male-2
 InstanceOf: JP_Practitioner
