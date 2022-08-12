@@ -31,11 +31,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * value[x] from $v2-0136 (required)
 * value[x] ^comment = "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.\r\n\r\n【JP-Core仕様】コードに限定する"
 * value[x] ^binding.description = "Codes specifying either Yes or No used in fields containing binary answers generally user-specified."
-* bodySite from $observation-bodySite (preferred)
+* bodySite from JP_ObservationPhysicalExamBodySite_VS (preferred)
 * bodySite ^comment = "ICD-11"
-* method from $observation-method (preferred)
-// 具体的なコードについてはSWG6と連携して決定する必要がある（TBD）
-* method ^comment = "Only used if not implicit in code for Observation.code.\r\n\r\n【JP-Core仕様】症状・所見マスターの「診察方法」を基にバリューセットを定義する"
+* method from JP_ObservationPhysicalExamMethod_VS (preferred)
+* method ^comment = "MEDIS症状・所見マスターの「診察方法」"
 * hasMember only Reference(JP_Observation_Common or QuestionnaireResponse or MolecularSequence or JP_Observation_PhysicalExam)
 * hasMember ^comment = "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.\r\n\r\n【JP-Core仕様】関連する参照リソースにJP_Observation_PhysicalExamを追加"
 * derivedFrom only Reference(DocumentReference or ImagingStudy or Media or QuestionnaireResponse or JP_Observation_Common or MolecularSequence or JP_Observation_PhysicalExam)
