@@ -114,6 +114,7 @@
       <div id="tbl-terminology-bindings-view">
         <div id="terminology-bindings-view-inner">
           <!--Terminology Bindings heading in the fragment -->
+          <p><b>Terminology Bindings</b></p>
           {%include StructureDefinition-{{[id]}}-tx.xhtml%}
         </div>
       </div>
@@ -122,6 +123,7 @@
     <div id="tabs-constraints-view">
       <div id="tbl-constraints-view">
         <div id="constraints-view-inner">
+          <p><b>Constraints</b></p>
           {%include StructureDefinition-{{[id]}}-inv.xhtml%}
         </div>
       </div>
@@ -215,9 +217,11 @@
 {% endunless %}
       <div id="all-tbl-terminology-bindings-view-inner">
         <!--Terminology Bindings heading in the fragment -->
+        <p><b>Terminology Bindings</b></p>
         {%include StructureDefinition-{{[id]}}-tx.xhtml%}
       </div>
       <div id="all-tbl-constraints-view-inner">
+        <p><b>Constraints</b></p>
         {%include StructureDefinition-{{[id]}}-inv.xhtml%}
       </div>
     </div>
