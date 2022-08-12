@@ -49,8 +49,8 @@ Usage: #inline
 * subject = Reference(Patient/jp-patient-example-1)
 * receivedTime = "2021-10-11T11:03:00+09:00"
 * container.identifier.value = "48736-15394-75465"
-* container.description = "Spitch"
-* container.type.text = "spitch"
+* container.description = "採尿容器"
+* container.type.text = "採尿容器"
 * container.capacity.value = 20
 * container.capacity.unit = "mL"
 * container.specimenQuantity.value = 18
