@@ -8,7 +8,7 @@ Usage: #example
 * identifier.value = "123456"
 * status = #final
 * category = $diagnostic-service-sectionid-cs#RAD
-* code = http://loinc.org#10191-5 "Physical findings of Abdomen Narrative"
+* code = http://loinc.org#18748-4 "Diagnostic imaging study"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2008-06-17"
 * issued = "2008-06-18T09:23:00+10:00"
