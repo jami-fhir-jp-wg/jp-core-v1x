@@ -45,7 +45,7 @@ Description: "このプロファイルはCoverageリソースに対して、保�
 * subscriber only Reference(JP_Patient or RelatedPerson)
 * subscriber ^short = "Subscriber to the policy　契約当事者"
 * subscriber ^definition = "The party who has signed-up for or 'owns' the contractual relationship to the policy or to whom the benefit of the policy for services rendered to them or their family is due.\r\n\r\nポリシーにサインアップした、またはポリシーとの契約関係を「所有」している当事者、またはポリシーの利益が彼らまたはその家族に提供されることになっている当事者。"
-* subscriber ^comment = "May be self or a parent in the case of dependants.\r\n\r\n扶養家族の場合、自己または親である可能性がある。"
+* subscriber ^comment = "May be self or a parent in the case of dependents.\r\n\r\n扶養家族の場合、自己または親である可能性がある。"
 * subscriber ^requirements = "This is the party who is entitled to the benefits under the policy.\r\n\r\nこれは、ポリシーに基づいて給付を受ける権利を有する当事者である。\r\n\r\n【JP-Core仕様】公費情報で本リソースを使用する場合には、この要素に公費受給者番号を設定する。"
 * subscriberId ^short = "ID assigned to the subscriber　契約当事者に割り当てられたID"
 * subscriberId ^definition = "The insurer assigned ID for the Subscriber.\r\n\r\n契約当事者に保険者が割り当てたID"
