@@ -123,6 +123,8 @@ Alias: $JP_ObservationBodySite_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_O
 Alias: $JP_ObservationMethod_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationMethod_CS
 Alias: $JP_ObservationPhysicalExamBodySite_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationPhysicalExamBodySite_CS
 Alias: $JP_ObservationPhysicalExamMethod_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationPhysicalExamMethod_CS
+Alias: $JP_ObservationSocialHistoryCode_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationSocialHistoryCode_CS
+Alias: $JP_ObservationLabResultCode_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationLabResultCode_CS
 
 // ValueSet
 Alias: $JP_AllergyIntoleranceCodes_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntoleranceCodes_VS
@@ -162,3 +164,5 @@ Alias: $JP_ObservationBodySite_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_Obs
 Alias: $JP_ObservationMethod_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ObservationMethod_VS
 Alias: $JP_ObservationPhysicalExamBodySite_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ObservationPhysicalExamBodySite_VS
 Alias: $JP_ObservationPhysicalExamMethod_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ObservationPhysicalExamMethod_VS
+Alias: $JP_ObservationSocialHistoryCode_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ObservationSocialHistoryCode_VS
+Alias: $JP_ObservationLabResultCode_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ObservationLabResultCode_VS

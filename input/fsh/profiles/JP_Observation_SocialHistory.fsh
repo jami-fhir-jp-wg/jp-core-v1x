@@ -18,9 +18,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category contains socialHistory 1..1
 * category[socialHistory] = $observation-category#social-history
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP-Core仕様】基底仕様のカテゴリ「social-history」固定とする"
-* code from $socialHistory-code (preferred)
-// 具体的なコードについてはSWG6と連携して決定する必要がある（TBD）
-* code ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP-Core仕様】項目についてはMEDISのJ-MIXの「生活背景情報」を基にバリューセットを定義する"
+* code from JP_ObservationSocialHistoryCode_VS (preferred)
+* code ^comment = "MEDISのJ-MIXの「生活背景情報」（※宗教を除く）"
 * subject 1..
 * subject only Reference(JP_Patient)
 * subject ^comment = "One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.\r\n\r\n【JP-Core仕様】患者"

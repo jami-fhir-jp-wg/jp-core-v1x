@@ -234,25 +234,25 @@ Observation.hasMember（検査保持メンバ）と Observation.derivedFrom（�
 - 2.ある検査が派生して他の検査と関連付ける場合、Observation.code（検査コード） と Observation.value[x]（検査値）の両方とも存在し、関連付けられた検査はObservation.derivedFrom（検査派生元）に一覧される。この一例として、身長と体重の計測値が参照されるボディマス指数（BMI）検査がある。
 
 ### 検査におけるコード利用
-結果の値をコードを用いて事前定義された概念で表現するとき、valueCodeableConceptが使われる。この要素は、SNOMED CTなどの標準的な命名法または元システム（"ローカル"）でコード化された結果値で構成される値セットにバインドされる。
+結果の値をコードを用いて事前定義された概念で表現するとき、valueCodeableConceptが使われる。この要素は、LOINCなどの標準的な命名法または元システム（"ローカル"）でコード化された結果値で構成される値セットにバインドされる。
 
 #### 多重コーディング
-結果は、異なるコードシステムに基づいて複数の値セットでコーディングでき、概念マップリソースを使用してマッピングしたり、下の例に示すように要素に直接追加のコーディングとして指定したりできる。 例えば、[LOINC 43304-5（*プローブおよびターゲット増幅法による不特定検体中のクラミジア･トラコマチスrRNA [Presence] *）](https://loinc.org/43304-5/)は、典型的にコード化された presence もしくは absence の概念と関連付けられる。 標準コード変換を用いて "陰性" をコード化した値を利用して、valueCodeableConceptは以下のように表現される：
+結果は、異なるコードシステムに基づいて複数の値セットでコーディングでき、概念マップリソースを使用してマッピングしたり、下の例に示すように要素に直接追加のコーディングとして指定したりできる。 例えば、検体検査プロファイルでは、"尿酸"に関するローカルコードと標準コードの両方を同時に関連付けることが可能であり、valueCodeableConcept は以下のように表現される：
 
 ```json
  "valueCodeableConcept": {
   "coding": [
    {
-    "system": "http://snomed.info/sct",
-    "code": "260385009",
-    "display": "陰性"
+    "system": "http://abc-hospital.local/fhir/Observation/localcode",
+    "code": "05104",
+    "display": "尿酸"
    }, {
-    "system": "https://acme.lab/resultcodes",
-    "code": "NEG",
-    "display": "陰性"
+    "system": "http://jpfhir.jp/Common/ValueSet/labResult-code",
+    "code": "3C020000002327101",
+    "display": "尿酸(UA)"
    }
   ],
-  "text": "クラミジア・トラコマチスrRNA 陰性"
+  "text": "検査項目コード"
  }
 ```
 
@@ -302,46 +302,28 @@ FHIRの検査には、中心となる2つの異なる側面がある：
   - プロパティが検査された所見 および/または プロパティを作成するために実行されたアクション。例：血中ヘモグロビンの測定。
   - 検査の結果。例：14 g/dl。
 
-Observation.codeとObservation.valueの異なる組み合わせを使用して、同じ情報を表すいくつかの異なる方法が存在する。代替手段の制約のない使用は、意味的等価性の計算と、さまざまなアプリケーションおよびユーザーからの検査に対する安全な解釈が大きな課題である。次の4つのパターンは、同じケースを合理的に表すことができる。 Observationリソースは多くのユースケースをサポートする必要があることを考慮すると、特定のパターンを定義する適切な場所は、FHIRを実装する権限 および/または 組織によって指定されたプロファイルおよび実装ガイドを通じて行われることが期待される。:
+Observation.codeとObservation.valueの異なる組み合わせを使用して、同じ情報を表すいくつかの異なる方法が存在する。代替手段の制約のない使用は、意味的等価性の計算と、さまざまなアプリケーションおよびユーザーからの検査に対する安全な解釈が大きな課題である。次の5つのパターンは、同じケースを合理的に表すことができる。 Observationリソースは多くのユースケースをサポートする必要があることを考慮すると、特定のパターンを定義する適切な場所は、FHIRを実装する権限 および/または 組織によって指定されたプロファイルおよび実装ガイドを通じて行われることが期待される。:
 
-  - 1.Observation.code は、検査の性質を表現しており、Observation.value は数値以外の結果値を表している。これらは、FHIR検査の中心となる2つの異なる側面となっている。  
+  - ケース1. Observation.code は、検査の性質を表現しており、Observation.value は数値以外の結果値を表している。これらは、FHIR検査の中心となる2つの異なる側面となっている。  
 例:
     - code=[検査]
     - value=[腹部圧痛]
-  - 2.Observation.code は上記1.とほぼ同じだが、粒度のレベルは値からコードに移行される。    
+  - ケース2. Observation.code は上記1.とほぼ同じだが、粒度のレベルは値からコードに移行される。    
 例:
     - code=[腹部検査]
     - value=[圧痛]
-  - 3.Observation.code は、検査アクションを指定しない方法でも表現されるが、上記の項目のように、単一の名前（または用語）にまとめられた検出結果に関するステートメントを示す。 この例では、Observation.value が存在し、通常それを確認または否決する結果を「修飾」する。  
+  - ケース3. Observation.code は、検査アクションを指定しない方法でも表現されるが、上記の項目のように、単一の名前（または用語）にまとめられた検出結果に関するステートメントを示す。 この例では、Observation.value が存在し、通常それを確認または否決する結果を「修飾」する。  
 例:
     - code=[腹部圧痛]
     - value=[確認/陽性]
-  - 4.この例では Observation.code は、検査アクションを指定しない方法で表現されているが、単一の名前（または用語）にまとめられた検出結果に関するステートメントを示している。 この文脈における特定の例では、Observation.valueは省略されている。  
+  - ケース4. この例では Observation.code は、検査アクションを指定しない方法で表現されているが、単一の名前（または用語）にまとめられた検出結果に関するステートメントを示している。 この文脈における特定の例では、Observation.valueは省略されている。  
 例：
     - code=[腹部圧痛]
     - value要素は省略
-
-#### ガイダンス:
-- 1.ケース1 と ケース2 の推奨ルール:
-  - Observation.code はLOINC概念コードであることが望ましい。
-    - もし SNOMED CT 概念コードを使用する場合、363787002 (*Observable entity (Observable entity)*) か386053000 (*Evaluation procedure(evaluation procedure)*) を表す必要がある（SHOULD）。
-  - 数値以外の場合、Observation.value はSNOMED CT概念コードであることが望ましい。
-
-- 2.ケース3 の推奨ルール:
-  - Observation.value はLOINCまたはSNOMED CT概念コードであることが望ましい。
-    - もしSNOMED CT 概念コードを使用する場合、404684003 (*Clinical finding (finding)*)、413350009 (*Finding with explicit context(finding)*)、または 272379006 (*Event(event)*) を表す必要がある（SHOULD）。
-  - Observation.value は以下のどちらかによって表される。
-    - valueBoolean（論理値）
-    - valueCodeableConceptはできれば以下を利用:
-      - SNOMED CTの362981000 (*Qualifier value (qualifiervalue)*) の下位概念
-      - HL7 v2 の Y/N Indicator
-      - HL7 v2 の 拡張 Y/N Indicator (*unfortunately is missing 'not given'*)
-
-- 3.ケース4の推奨ルール:
-  - Observation.code がSNOMED CTの404684003 (*Clinical finding (finding)*)、413350009 (*Finding with explicit context(finding)*) または 272379006 (*Event(event)*)の下位概念。
-  - Observation.value は省略される。デフォルトの解釈は、Observation.codeで表される概念（単一コードまたは表現）が患者に存在すること。"clinical-finding"（臨床所見）の Observation.dataAbsentReason 値は想定される値が欠損している理由を明記している必要がある（SHOULD）。
-
-- 4.HL7 Version 3 Implementation Guide: TermInfo - Using SNOMED CT in CDA R2 Models, Release 1 で説明されているアサーションパターンは使用してはならない（SHOULD NOT）。
+  - 5.この例では、Observation.code にて、まず所見の有無（http://terminology.hl7.org/CodeSystem/v2-0532#Y）を指定し、Observation.bodySite.text に当該所見の部位（例えば、下腹部）を指定する。"圧痛"といった詳細な所見は Observation.component.code や Observation.component.valueString に記載する。**日本仕様においては本ケースによる記述方法を想定する。**
+    - code=[Yes]
+    - bodySite.text=[下腹部]
+    - component.valueString = [圧痛あり]
 
 ### 追加コードや複数の検査による Observation 解釈の精緻化
 次のリストは、コードの使用または他の複数の検査によって、検査の解釈が変更される可能性がある追加文脈を付与するためのガイドである。:
