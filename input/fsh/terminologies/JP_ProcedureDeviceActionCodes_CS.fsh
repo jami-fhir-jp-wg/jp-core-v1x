@@ -6,3 +6,5 @@ Description:  "処置の実施中に機器に起こった変化を示すコー�
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
+
+// TODO:要実装

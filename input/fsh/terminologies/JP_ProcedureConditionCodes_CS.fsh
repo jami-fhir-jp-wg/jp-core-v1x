@@ -6,3 +6,5 @@ Description: "処置中もしくは処置の後に発生した合併症を示す
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
+
+// TODO:要実装

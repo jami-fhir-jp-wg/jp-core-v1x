@@ -7,3 +7,4 @@ Description: "処置が実施された理由を示すコード"
 * ^caseSensitive = true
 * ^content = #complete
 
+// TODO:要実装

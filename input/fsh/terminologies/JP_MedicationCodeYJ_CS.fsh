@@ -6,3 +6,5 @@ Description: "医薬品YJコードのコードシステム"
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #example
+
+// TODO:　YJ医薬品コード追加
