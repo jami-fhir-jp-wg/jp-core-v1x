@@ -112,7 +112,7 @@ Medication リソースは単体として用いられないため、検索など
           "value": 1,
           "unit": "回",
           "system": "urn:oid:1.2.392.100495.20.2.101",
-          "code": "KAI"
+          "code": "TIME"
         }
       }
     }
@@ -160,7 +160,7 @@ Medication リソースは単体として用いられないため、検索など
           "value": 1,
           "unit": "回",
           "system": "urn:oid:1.2.392.100495.20.2.101",
-          "code": "KAI"
+          "code": "TIME"
         }
       }
     },
@@ -185,7 +185,7 @@ Medication リソースは単体として用いられないため、検索など
           "value": 1,
           "unit": "回",
           "system": "urn:oid:1.2.392.100495.20.2.101",
-          "code": "KAI"
+          "code": "TIME"
         }
       }
     }
