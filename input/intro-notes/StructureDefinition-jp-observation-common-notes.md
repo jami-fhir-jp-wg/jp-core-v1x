@@ -69,7 +69,7 @@ subject,category,code,value-quantity の各検索パラメータに一致するO
    GET [base]/Observation?subject={reference}&category={token}&code={token}&value-quantity={quantity}
    ```
 
-   例：
+   例：患者123の心拍数が40超えのバイタルサインを取得したい場合
 
    ```
    GET [base]/Observation?subject=Patient/123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40
@@ -87,7 +87,7 @@ subject,category,code,value-quantity,date の各検索パラメータに一致�
    GET [base]/Observation?subject={reference}&category={token}&code={token}&value-quantity={quantity}&date={date}
    ```
 
-   例：
+   例：患者123の心拍数が40超えかつ2020年12月31日以前のバイタルサインを取得したい場合
 
    ```
    GET [base]/Observation?subject=Patient/123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31
@@ -103,7 +103,7 @@ subject,category,code,value-quantity,date,encounter の各検索パラメータ�
    GET [base]/Observation?subject={reference}&category={token}&code={token}&value-quantity={quantity}&date={date}&&encounter={encounter}
    ```
 
-   例：
+   例：患者123の心拍数が40超えかつ2020年12月31日以前で診療456の時のバイタルサインを取得したい場合
 
    ```
    GET [base]/Observation?subject=Patient/123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31&encounter=Encounter/456
@@ -320,7 +320,7 @@ Observation.codeとObservation.valueの異なる組み合わせを使用して�
 例：
     - code=[腹部圧痛]
     - value要素は省略
-  - 5.この例では、Observation.code にて、まず所見の有無（http://terminology.hl7.org/CodeSystem/v2-0532#Y）を指定し、Observation.bodySite.text に当該所見の部位（例えば、下腹部）を指定する。"圧痛"といった詳細な所見は Observation.component.code や Observation.component.valueString に記載する。**日本仕様においては本ケースによる記述方法を想定する。**
+  - ケース5.この例では、Observation.code にて、まず所見の有無（http://terminology.hl7.org/CodeSystem/v2-0532#Y）を指定し、Observation.bodySite.text に当該所見の部位（例えば、下腹部）を指定する。"圧痛"といった詳細な所見は Observation.component.code や Observation.component.valueString に記載する。**日本仕様においては本ケースによる記述方法を想定する。**
     - code=[Yes]
     - bodySite.text=[下腹部]
     - component.valueString = [圧痛あり]
