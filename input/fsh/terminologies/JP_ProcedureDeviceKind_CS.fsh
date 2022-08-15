@@ -6,3 +6,5 @@ Description:  "処置の実施に利用された医療機器を識別するコ�
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
+
+// TODO:要実装

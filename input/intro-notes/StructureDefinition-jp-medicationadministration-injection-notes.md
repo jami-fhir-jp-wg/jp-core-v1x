@@ -302,7 +302,7 @@ HTTP/1.1 200 OK
               "value": 1,
               "unit": "回",
               "system": "urn:oid:1.2.392.100495.20.2.101",
-              "code": "KAI"
+              "code": "TIME"
             }
           }
         }
@@ -365,7 +365,7 @@ HTTP/1.1 200 OK
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester",
       "valueReference": {
-        "reference": "Practitioner/jp-practionner-example-male-1",
+        "reference": "Practitioner/jp-practitioner-example-male-1",
         "display": "大阪 一郎"
       }
     },
@@ -427,7 +427,7 @@ HTTP/1.1 200 OK
         ]
       },
       "actor": {
-        "reference": "Practitioner/jp-practionner-example-male-1",
+        "reference": "Practitioner/jp-practitioner-example-male-1",
         "display": "愛知 太郎"
       }
     }
@@ -573,7 +573,7 @@ HTTP/1.1 200 OK
               "value": 1,
               "unit": "回",
               "system": "urn:oid:1.2.392.100495.20.2.101",
-              "code": "KAI"
+              "code": "TIME"
             }
           }
         },
@@ -598,7 +598,7 @@ HTTP/1.1 200 OK
               "value": 1,
               "unit": "回",
               "system": "urn:oid:1.2.392.100495.20.2.101",
-              "code": "KAI"
+              "code": "TIME"
             }
           }
         }
@@ -648,7 +648,7 @@ HTTP/1.1 200 OK
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester",
       "valueReference": {
-        "reference": "Practitioner/jp-practionner-example-female-1",
+        "reference": "Practitioner/jp-practitioner-example-female-1",
         "display": "東京 春子"
       }
     },
@@ -710,7 +710,7 @@ HTTP/1.1 200 OK
         ]
       },
       "actor": {
-        "reference": "Practitioner/jp-practionner-example-female-1",
+        "reference": "Practitioner/jp-practitioner-example-female-1",
         "display": "福岡 花子"
       }
     }
@@ -791,7 +791,7 @@ HTTP/1.1 200 OK
 ## 注意事項
 
 ### 記述の単位について
-MedicationAdministrationは薬剤をCodeableConceptとして1つまでしか持つか、Medicationリソースのreferenceをもつことしかできない。したがって、複数の薬剤を同一のRp番号で表現する場合にはMedicationAdministrationを繰り返すか、複数の薬剤をまとめたMedication Resouceのインスタンスを参照することとなる。ワーキンググループでの検討の結果、複数の薬剤をまとめたMedicationリソースのインスタンスをcontained属性に内包した上で参照することとした。
+MedicationAdministrationは薬剤をCodeableConceptとして1つまでしか持つか、Medicationリソースのreferenceをもつことしかできない。したがって、複数の薬剤を同一のRp番号で表現する場合にはMedicationAdministrationを繰り返すか、複数の薬剤をまとめたMedication Resourceのインスタンスを参照することとなる。ワーキンググループでの検討の結果、複数の薬剤をまとめたMedicationリソースのインスタンスをcontained属性に内包した上で参照することとした。
 
 ### 投与薬剤、投与量の記述方法
 １回の投与薬剤と投与量は、RP内の薬剤が１薬剤の場合も混注などで複数の薬剤を含む場合も、すべての薬剤を記述したMedicationリソースを contained 属性に内包し、それをMedicationRequest.medicationReference属性で参照するようにする。
@@ -1197,7 +1197,7 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
 ```
 
 #### 未分類コメント
-上記のコメントに分類できない、またはシステム的に分類して管理されていない場合、MedicationAdminstrationに対して定義した拡張「JP_MedicationAdministration_UncategorizedComment」を使用する。
+上記のコメントに分類できない、またはシステム的に分類して管理されていない場合、MedicationAdministrationに対して定義した拡張「JP_MedicationAdministration_UncategorizedComment」を使用する。
 この拡張は、コメントがコード化されている場合はCodeableConcept型を使用して記述する。コード化されていない場合はString型を使用して記述する。
 複数のコメントを記述する場合は、この拡張を繰り返して記述する。
 
@@ -1281,7 +1281,7 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
 ```
 
 ## その他、参考文献・リンク等
-1. HL7, FHIR MedicationRequest Resource, [http://hl7.org/fhir/medicationrequest.html](http://hl7.org/fhir/medicationrequest.html)
+1. HL7, FHIR MedicationRequest Resource, [https://hl7.org/fhir/R4/medicationrequest.html](https://hl7.org/fhir/R4/medicationrequest.html)
 1. 保健医療福祉情報システム工業会, JAHIS 処方データ交換規約 Ver.3.0C, [https://www.jahis.jp/standard/detail/id=564](https://www.jahis.jp/standard/detail/id=564)
 1. 日本医療情報学会MERIT-9研究会, 医療情報交換規約運用指針、MERIT-9 処方オーダver 1.0, [http://merit-9.mi.hama-med.ac.jp/jahis/SHOHOU.pdf](http://merit-9.mi.hama-med.ac.jp/jahis/SHOHOU.pdf)
 1. 保健医療福祉情報システム工業会, JAHISデータ交換規約（共通編）Ver.1.1, [https://www.jahis.jp/standard/detail/id=125](https://www.jahis.jp/standard/detail/id=125)

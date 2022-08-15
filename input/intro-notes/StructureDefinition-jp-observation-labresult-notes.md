@@ -6,17 +6,12 @@
 #### 必須
 本プロファイルでは、次の要素を持たなければならない。
 
- - `status`︓検体検査情報項目の状態は必須である。
- - `category`︓このリソースが示す検体検査情報項目を分類するための区分であり、このプロファイルでは必須とする。
- - `code`︓このリソースは何の検体検査情報項目であるかを示すため必須である。
- - `subject`︓このリソースが示す検体検査情報項目が、どの患者のものかを示すため、このプロファイルでは参照する`patient`リソースの定義を必須とする。
- - `effective[x]`：このリソースが示す検体検査情報項目が、いつ発生したかを示すためこのプロファイルでは必須とする。検体採取日時。
- - `specimen`：このリソースが示す検体検査情報項目が、どの検体で検査されるのかを示すため、このプロファイルでは参照する`specimen`リソースの定義を必須とする。
-
-#### MustSupport
-本プロファイルでは、次の要素はMustSupportである。
-
- - `value[x]`：このリソースが示す検体検査情報項目の結果である。
+ - status︓検体検査情報項目の状態は必須である。
+ - category︓このリソースが示す検体検査情報項目を分類するための区分であり、このプロファイルでは必須とする。
+ - code︓このリソースは何の検体検査情報項目であるかを示すため必須である。
+ - subject︓このリソースが示す検体検査情報項目が、どの患者のものかを示すため、このプロファイルでは参照するpatientリソースの定義を必須とする。
+ - effective[x]：このリソースが示す検体検査情報項目が、いつ発生したかを示すためこのプロファイルでは必須とする。検体採取日時。
+ - specimen：このリソースが示す検体検査情報項目が、どの検体で検査されるのかを示すため、このプロファイルでは参照するspecimenリソースの定義を必須とする。
 
 ### Extensions定義
 
@@ -26,7 +21,7 @@
 
 ### インタラクション一覧
 
-`Observation`リソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
+Observationリソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
 
 [Observation共通情報プロファイル#インタラクション一覧][JP_Observation_Common_interaction]
 
@@ -38,13 +33,13 @@
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHOULD | `subject`,`code`,`date`,`based-on` | `reference`,`token`,`date`,`reference`  | `GET [base]/Observation?subject=Patient/123&code=http://loinc.org|8867-4&date=le2020-12-31&based-on=ServiceRequest/456` |
-| SHOULD | `subject`,`code`,`date`,`value-quantity`,`based-on` | `reference`,`token`,`date`,`quantity`,`reference`  | `GET [base]/Observation?subject=Patient/123&code=http://loinc.org|8867-4&date=le2020-12-31&value-quantity=gt40&based-on=ServiceRequest/456` |
-| SHOULD | `subject`,`code`,`date`,`value-concept`,`based-on` | `reference`,`token`,`date`,`code`,`reference`  | `GET [base]/Observation?subject=Patient/123&code=http://loinc.org|8867-4&date=le2020-12-31&value-concept=http://snomed.info/sct|1082004&based-on=ServiceRequest/456` |
-| SHOULD | `subject`,`code`,`date`,`value-string`,`based-on` | `reference`,`token`,`date`,`string`,`reference`  | `GET [base]/Observation?subject=Patient/123&code=http://loinc.org|8867-4&date=le2020-12-31&value-string=positive&based-on=ServiceRequest/456` |
-| SHOULD | `code`,`value-quantity`,`subject` | `token`,`quantity`,`reference`  | `GET [base]/Observation?code=http://loinc.org|8867-4&value-quantity=gt40&subject=Patient/123` |
-| SHOULD | `code`,`value-concept`,`subject` | `token`,`code`,`reference` | `GET [base]/Observation?code=http://loinc.org|8867-4&value-concept=http://snomed.info/sct|1082004&subject=Patient/123` |
-| SHOULD | `code`,`value-string`,`subject` | `token`,`string`,`reference`  | `GET [base]/Observation?code=http://loinc.org|8867-4&value-string=positive&subject=Patient/123` |
+| SHOULD | subject,code,date,based-on | reference,token,date,reference  | `GET [base]/Observation?subject=Patient/123&code=http://loinc.org|8867-4&date=le2020-12-31&based-on=ServiceRequest/456` |
+| SHOULD | subject,code,date,value-quantity,based-on | reference,token,date,quantity,reference  | `GET [base]/Observation?subject=Patient/123&code=http://loinc.org|8867-4&date=le2020-12-31&value-quantity=gt40&based-on=ServiceRequest/456` |
+| SHOULD | subject,code,date,value-concept,based-on | reference,token,date,code,reference  | `GET [base]/Observation?subject=Patient/123&code=http://loinc.org|8867-4&date=le2020-12-31&value-concept=http://snomed.info/sct|1082004&based-on=ServiceRequest/456` |
+| SHOULD | subject,code,date,value-string,based-on | reference,token,date,string,reference  | `GET [base]/Observation?subject=Patient/123&code=http://loinc.org|8867-4&date=le2020-12-31&value-string=positive&based-on=ServiceRequest/456` |
+| SHOULD | code,value-quantity,subject | token,quantity,reference  | `GET [base]/Observation?code=http://loinc.org|8867-4&value-quantity=gt40&subject=Patient/123` |
+| SHOULD | code,value-concept,subject | token,code,reference | `GET [base]/Observation?code=http://loinc.org|8867-4&value-concept=http://snomed.info/sct|1082004&subject=Patient/123` |
+| SHOULD | code,value-string,subject | token,string,reference  | `GET [base]/Observation?code=http://loinc.org|8867-4&value-string=positive&subject=Patient/123` |
 
 
 #### 操作詳細
@@ -60,7 +55,7 @@
 1. 臨床での検索：subject = Patient（対象患者）、検体採取日、検査項目、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。（SHOULD）
 
 
-`subject`,`code`,`date`,`based-on` の各検索パラメータに一致する`Observation`リソースを含むBundleを取得することができる。
+subject,code,date,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
    GET [base]/Observation?subject={reference}&code={code}}&date={date}}&based-on={reference}
@@ -74,7 +69,7 @@
 
 2. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（数値、条件：基準値から外れている、等）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(SHOULD)
 
-`subject`,`code`,`date`,`value-quantity`,`based-on` の各検索パラメータに一致する`Observation`リソースを含むBundleを取得することができる。
+subject,code,date,value-quantity,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
    GET [base]/Observation?subject={reference}&code={code}}&date={date}}&value-quantity={quantity}&based-on={reference}
@@ -88,7 +83,7 @@
 
 3. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（コード）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(SHOULD)
 
-`subject`,`code`,`date`,`value-concept`,`based-on` の各検索パラメータに一致する`Observation`リソースを含むBundleを取得することができる。
+subject,code,date,value-concept,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
    GET [base]/Observation?subject={reference}&code={code}}&date={date}}&value-concept={code}&based-on={reference}
@@ -103,7 +98,7 @@
 
 4. 臨床（NST）での検索：subject = Patient（対象患者）、検査項目、検査値（文字列）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(SHOULD)
 
-`subject`,`code`,`date`,`value-string`,`based-on` の各検索パラメータに一致する`Observation`リソースを含むBundleを取得することができる。
+subject,code,date,value-string,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
    GET [base]/Observation?subject={reference}&code={code}}&date={date}}&value-string={string}&based-on={reference}
@@ -117,7 +112,7 @@
 
 5. 研究での検索：検査項目、検査値（数値、条件：ある値以上／以下、等）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(SHOULD)
 
-`code`,`value-quantity`,`subject` の各検索パラメータに一致する`Observation`リソースを含むBundleを取得することができる。
+code,value-quantity,subject の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
    GET [base]/Observation?code={code}}&value-quantity={quantity}&subject={reference}&
@@ -131,7 +126,7 @@
 
 6. 研究での検索：検査項目、検査値（コード）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(SHOULD)
 
-`code`,`value-concept`,`subject` の各検索パラメータに一致する`Observation`リソースを含むBundleを取得することができる。
+code,value-concept,subject の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
    GET [base]/Observation?code={code}}&value-concept={code}&subject={reference}
@@ -145,7 +140,7 @@
 
 5. 研究での検索：検査項目、検査値（文字列）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(SHOULD)
 
-`code`,`value-string`,`subject` の各検索パラメータに一致する`Observation`リソースを含むBundleを取得することができる。
+code,value-string,subject の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
    GET [base]/Observation?code={code}}&value-string={string}&subject={reference}
@@ -169,98 +164,12 @@
 
 #### Operation一覧
 
-`Observation`リソースのOperation一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
+ObservationリソースのOperation一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
 
 [Observation共通情報プロファイル#Operation一覧][JP_Observation_Common_Operation]
 
 ### サンプル
-```json
-{
-  "resourceType": "Observation",
-  "id": "lab-12345",
-  "category": [
-    {
-      "coding": [
-        {
-          "code": "laboratory",
-          "system": "http://terminology.hl7.org/CodeSystem/observation-category",
-          "display": "Laboratory"
-        }
-      ]
-    }
-  ],
-  "basedOn": [
-    {
-      "reference": "ServiceRequest/ServiceRequest-12345"
-    }
-  ],
-  "code": {
-    "coding": [
-      {
-        "code": "05104",
-        "system": "http://abc-hospital.local/fhir/Observation/localcode",
-        "display": "尿酸"
-      },
-      {
-        "code": "3C020000002327101",
-        "system": "http://jpfhir.jp/Common/ValueSet/labResult-code",
-        "display": "尿酸(UA)"
-      }
-    ],
-    "text": "検査項目コード"
-  },
-  "interpretation": [
-    {
-      "coding": [
-        {
-          "code": "L",
-          "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
-          "display": "正常値下限越え"
-        }
-      ],
-      "text": "HLマーク"
-    }
-  ],
-  "effectiveDateTime": "2021-10-19T17:39:00+09:00",
-  "status": "final",
-  "referenceRange": [
-    {
-      "low": {
-        "value": 3.7
-      },
-      "high": {
-        "value": 7.8
-      },
-      "type": {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/referencerange-meaning",
-            "code": "normal",
-            "display": "Normal Range"
-          }
-        ]
-      }
-    }
-  ],
-  "valueQuantity": {
-    "unit": "mg/dL",
-    "value": 3.5
-  },
-  "subject": {
-    "reference": "Patient/Patient-67890"
-  },
-  "performer": [
-    {
-      "reference": "Practitioner/Practitioner-abcde"
-    }
-  ],
-  "specimen": {
-    "reference": "Specimen/Specimen-fgh"
-  },
-  "meta": {
-    "lastUpdated": "2021-10-19T08:59:58Z",
-    "versionId": "1"
-  }
-}
-```
+
+* [**検体検査（尿）**][jp-observation-labresult-example-1]
+
 {% include markdown-link-references.md %}

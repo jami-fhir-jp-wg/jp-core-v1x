@@ -5,4 +5,6 @@ Description: "医薬品HOT9コードのコードシステム"
 * ^url = $JP_MedicationCodeHOT9_CS
 * ^status = #draft
 * ^caseSensitive = true
-* ^content = #example
+* ^content = #not-present
+
+// TODO:　HOT9医薬品コード追加

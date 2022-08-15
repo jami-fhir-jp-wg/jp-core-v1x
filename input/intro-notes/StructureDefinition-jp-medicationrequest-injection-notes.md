@@ -333,7 +333,7 @@ HTTP/1.1 200 OK
               "value": 1,
               "unit": "回",
               "system": "urn:oid:1.2.392.100495.20.2.101",
-              "code": "KAI"
+              "code": "TIME"
             }
           }
         }
@@ -433,7 +433,7 @@ HTTP/1.1 200 OK
   },
   "authoredOn": "2016-07-01T09:28:17+09:00",
   "requester": {
-    "reference": "Practitioner/jp-practionner-example-female-1"
+    "reference": "Practitioner/jp-practitioner-example-female-1"
   },
   "insurance": [
     {
@@ -525,7 +525,7 @@ HTTP/1.1 200 OK
 ## 注意事項
 
 ### 記述の単位について
-MedicationRequestは薬剤をCodeableConceptとして1つまでしか持つか、Medicationリソースのreferenceをもつことしかできない。したがって、複数の薬剤を同一のRp番号で表現する場合にはMedicationRequestを繰り返すか、複数の薬剤をまとめたMedication Resouceのインスタンスを参照することとなる。ワーキンググループでの検討の結果、複数の薬剤をまとめたMedicationリソースのインスタンスをcontained属性に内包した上で参照することとした。
+MedicationRequestは薬剤をCodeableConceptとして1つまでしか持つか、Medicationリソースのreferenceをもつことしかできない。したがって、複数の薬剤を同一のRp番号で表現する場合にはMedicationRequestを繰り返すか、複数の薬剤をまとめたMedication Resourceのインスタンスを参照することとなる。ワーキンググループでの検討の結果、複数の薬剤をまとめたMedicationリソースのインスタンスをcontained属性に内包した上で参照することとした。
 
 １オーダー内に複数のRpがある場合には、MedicationRequestを繰り返し、identifier属性にオーダー番号、Rp番号をそれぞれ持つことでリソース間の関係性がわかるようにする。
 
@@ -565,7 +565,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
             "value": 1,
             "unit": "回",
             "system": "urn:oid:1.2.392.100495.20.2.101",
-            "code": "KAI"
+            "code": "TIME"
           }
         }
       }, {
@@ -589,7 +589,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
             "value": 1,
             "unit": "回",
             "system": "urn:oid:1.2.392.100495.20.2.101",
-            "code": "KAI"
+            "code": "TIME"
           }
         }
       }
@@ -687,7 +687,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
         "value": 1,
         "unit": "回",
         "system": "urn:oid:1.2.392.100495.20.2.101",
-        "code": "KAI"
+        "code": "TIME"
       }
     },
 
@@ -745,7 +745,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 ```
 
 ### 投与開始タイミングのあいまい指示の記述方法
-例えば「07/15 夕方」など、投与開始タイミングを時刻ではなくイベントで指定する場合、dosageInstruction.timing.event要素で日付をdateTime型で、dosageInstruction.timing.when要素でタイミングをcode型で表現する。コードは、EventTiming("http://hl7.org/fhir/ValueSet/event-timing")を使用する。あいまい指示の場合、投与終了タイミングを指定することはできない。
+例えば「07/15 夕方」など、投与開始タイミングを時刻ではなくイベントで指定する場合、dosageInstruction.timing.event要素で日付をdateTime型で、dosageInstruction.timing.when要素でタイミングをcode型で表現する。コードは、EventTiming("https://hl7.org/fhir/R4/valueset-event-timing.html")を使用する。あいまい指示の場合、投与終了タイミングを指定することはできない。
 
 あいまい指示「2021/07/15 夕方」を指定した場合のインスタンス例を示す。
 
@@ -792,7 +792,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 "dispenseRequest": {
   "extension": {
     "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount",
-    "valueInterger": 10
+    "valueInteger": 10
   }
 }
 ```
@@ -999,7 +999,7 @@ HL7 FHIRでは、注射箋の中で同一の用法を持つ剤グループ(RP)�
 
 ```
 
-一方、投与のそれぞれのタイミングの順番である施用番号については、MedicationRequestリソースの dossageInstruction.sequence で表現することができる。すなわち、同一RPの薬剤を複数回投与する場合、投与のタイミングごとに dosageInstructionごと繰り返し、そのタイミングは dosageInstruction.timing で表現することになる。
+一方、投与のそれぞれのタイミングの順番である施用番号については、MedicationRequestリソースの dosageInstruction.sequence で表現することができる。すなわち、同一RPの薬剤を複数回投与する場合、投与のタイミングごとに dosageInstructionごと繰り返し、そのタイミングは dosageInstruction.timing で表現することになる。
 
 開始日時「2021/07/07 09:00」「同 13:00」「2021/07/08 09:00」を記述したインスタンス例を示す。
 
@@ -1094,9 +1094,9 @@ HL7 FHIRでは、注射箋の中で同一の用法を持つ剤グループ(RP)�
 全体のコメントはCommunicationリソースを使用し、薬剤単位、RP単位のコメントは、調剤指示以外はコード化されていれば dosageInstruction.additionalInstruction 要素ないしそうでないものは dosageInstruction.patientInstruction 要素を使用し、調剤指示は dispenseRequest要素に対して定義した拡張「InstructionForDispense」を使用する。
 
 ## その他、参考文献・リンク等
-1. HL7, FHIR MedicationRequest Resource, [http://hl7.org/fhir/medicationrequest.html](http://hl7.org/fhir/medicationrequest.html)
-1. HL7, FHIR Medication Resource, [http://hl7.org/fhir/medication.html](http://hl7.org/fhir/medication.html)
-1. HL7, FHIR BodyStructure Resource, [http://hl7.org/fhir/bodystructure.html](http://hl7.org/fhir/bodystructure.html)
+1. HL7, FHIR MedicationRequest Resource, [https://hl7.org/fhir/R4/medicationrequest.html](https://hl7.org/fhir/R4/medicationrequest.html)
+1. HL7, FHIR Medication Resource, [https://hl7.org/fhir/R4/medication.html](https://hl7.org/fhir/R4/medication.html)
+1. HL7, FHIR BodyStructure Resource, [https://hl7.org/fhir/R4/bodystructure.html](https://hl7.org/fhir/R4/bodystructure.html)
 1. 保健医療福祉情報システム工業会, JAHIS 注射データ交換規約 Ver.2.1C, [https://www.jahis.jp/standard/detail/id=590](https://www.jahis.jp/standard/detail/id=590)
 1. 日本医療情報学会MERIT-9研究会, 医療情報交換規約運用指針、MERIT-9 処方オーダver 1.0, [http://merit-9.mi.hama-med.ac.jp/jahis/SHOHOU.pdf](http://merit-9.mi.hama-med.ac.jp/jahis/SHOHOU.pdf)
 1. 保健医療福祉情報システム工業会, JAHISデータ交換規約（共通編）Ver.1.2, [https://www.jahis.jp/standard/detail/id=725](https://www.jahis.jp/standard/detail/id=725)

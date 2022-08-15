@@ -6,6 +6,7 @@ Description: "処置のコード:歯科診療行為マスタ"
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
+// TODO:要実装
 * #304000110 "電気的根管長測定検査"
 * #304000270 "２根管以上加算（電気的根管長測定検査）"
 * #304000310 "細菌簡易培養検査"

@@ -1,4 +1,4 @@
-# JP Core FHIR Shorthand記載ルール(案)
+# JP Core FHIR Shorthand記載ルール
 
 ## フォルダ構成
  フォルダ構成は下記の通り
@@ -9,7 +9,7 @@
 ├─docs #github説明用ファイル
 ├─input #入力フォルダ
 │  ├─fsh #FHIR Shorthandファイル格納フォルダ
-│  │  ├─capabilitystatements #capablity statement用
+│  │  ├─capabilitystatements #capability statement用
 │  │  ├─examples #リソース例 example
 │  │  ├─others #その他
 │  │  ├─profiles #profile,extension用
@@ -204,7 +204,7 @@ Baseに対し、より制約を強くする（範囲を狭める）形で定義�
 JP Coreの派生先でのユースケース毎の利用を想定しており、JP Coreでは原則定義しない。（※日本国内のベースで派生先の制約を少なくしたいため）<br/>
 ただし派生先ユースケースの利用方法を理解した上で、必要な場合に付け加えることは可能とする。この場合、MustSupportの定義(どのような制約になるのか）についても合わせて記述すること。
 * FSHファイル上での記載<br/>
-MustSuppotはFlag Rulesの記載方法を推奨する
+MustSupportはFlag Rulesの記載方法を推奨する
 ``` 
 // 非推奨
 element mustSupport = false or true

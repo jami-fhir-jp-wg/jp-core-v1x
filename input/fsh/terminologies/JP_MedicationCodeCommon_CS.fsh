@@ -6,3 +6,5 @@ Description: "医薬品一般名処方コードのコードシステム"
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #example
+
+// TODO:　一般名処方コード追加

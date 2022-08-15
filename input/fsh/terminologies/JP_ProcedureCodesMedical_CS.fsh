@@ -6,6 +6,7 @@ Description: "処置のコード:医科診療行為マスタ"
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
+// TODO:要実装
 * #140000610 "創傷処置（１００ｃｍ２未満）"
 * #140002210 "消炎鎮痛等処置（湿布処置）（１日につき）"
 * #140002450 "肛門処置（１日につき）"

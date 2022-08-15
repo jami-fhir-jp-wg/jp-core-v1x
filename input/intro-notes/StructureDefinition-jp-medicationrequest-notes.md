@@ -577,10 +577,10 @@ HL7ではFHIRに限らず、Ver 2以降全て欧米で使用されている1回�
 ## 注意事項
 
 ### 記述の単位について
-MedicationRequestは薬剤をCodeableConceptとして1つまでしか持つか、Medicationリソースのreferenceをもつことしかできない。したがって、複数の薬剤を同一のRp番号で表現する場合にはMedicationRequestを繰り返すか、複数の薬剤をまとめたMedication Resouceのインスタンスを参照することとなる。ワーキンググループでの検討の結果、冗長とはなるがidentifierにRp番号と薬剤番号を記録することとし、MedicationRequestを繰り返すことで表現する方法を推奨することとした。
+MedicationRequestは薬剤をCodeableConceptとして1つまでしか持つか、Medicationリソースのreferenceをもつことしかできない。したがって、複数の薬剤を同一のRp番号で表現する場合にはMedicationRequestを繰り返すか、複数の薬剤をまとめたMedication Resourceのインスタンスを参照することとなる。ワーキンググループでの検討の結果、冗長とはなるがidentifierにRp番号と薬剤番号を記録することとし、MedicationRequestを繰り返すことで表現する方法を推奨することとした。
 
 ### 服用期間、実服用日数の記述方法
-服用期間は、dosageInsturction.dosageInstruction.timing.repeat.boundsDuration要素に、Duration型を使用して記録する。本要素に指定される日数は、服用開始日から服用終了日までの全日数である。そのため、隔日投与や指定曜日の投与の場合には、服用しない日も日数に含まれることになり、処方箋に記録される実服用日数とは異なる値が記録されることとなる。服用期間とは別に実服用日数を表現したい場合には、dosageInstruction要素に対して定義した拡張「JP_MedicationRequest_DosageInstruction_UsageDuration」を使用し、Duration型で記載する。
+服用期間は、dosageInstruction.dosageInstruction.timing.repeat.boundsDuration要素に、Duration型を使用して記録する。本要素に指定される日数は、服用開始日から服用終了日までの全日数である。そのため、隔日投与や指定曜日の投与の場合には、服用しない日も日数に含まれることになり、処方箋に記録される実服用日数とは異なる値が記録されることとなる。服用期間とは別に実服用日数を表現したい場合には、dosageInstruction要素に対して定義した拡張「JP_MedicationRequest_DosageInstruction_UsageDuration」を使用し、Duration型で記載する。
 
 Timingデータ型のrepeat.boundsDuration要素を使用した服用期間のインスタンス例を示す。
 ```json
@@ -787,7 +787,7 @@ doseQuantityエレメントは省略可能(0..1)である。
 "dispenseRequest": {
   "extension": {
     "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount",
-    "valueInterger": 5
+    "valueInteger": 5
   },
   "quantity": {
     "value": 10,
@@ -1508,7 +1508,7 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
 "dosageInstruction": [
   {
     "text": "１日３回　朝昼夕食後　１回１錠　７日分（隔日投与）",
-    "additinalInstruction": {
+    "additionalInstruction": {
       "coding": [
         {
           "system": "urn:oid:1.2.392.200250.2.2.20.22",
@@ -1576,7 +1576,7 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
 "dosageInstruction": [
   {
     "text": "１日１回　朝食後　１回１錠　（月曜日、木曜日）",
-    "additinalInstruction": {
+    "additionalInstruction": {
       "coding": [
         {
           "system": "urn:oid:1.2.392.200250.2.2.20.22",
@@ -1598,7 +1598,7 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
     },
 ```
 
-なお、HL7 FHIR本来の表現方法では、dosageInstruction.timing.repeat.dayOfWeek 要素に値セットDaysOfWeek (http://hl7.org/fhir/ValueSet/days-of-week) を使用して、服用する曜日に対応するコードを配列で指定する。
+なお、HL7 FHIR本来の表現方法では、dosageInstruction.timing.repeat.dayOfWeek 要素に値セットDaysOfWeek (https://hl7.org/fhir/R4/valueset-days-of-week.html) を使用して、服用する曜日に対応するコードを配列で指定する。
 ```json
 "dosageInstruction": [
   {
@@ -1652,7 +1652,7 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
 ```
 
 ## その他、参考文献・リンク等
-1. HL7, FHIR MedicationRequest Resource, [http://hl7.org/fhir/medicationrequest.html](http://hl7.org/fhir/medicationrequest.html)
+1. HL7, FHIR MedicationRequest Resource, [https://hl7.org/fhir/R4/medicationrequest.html](https://hl7.org/fhir/R4/medicationrequest.html)
 1. 保健医療福祉情報システム工業会, JAHIS 処方データ交換規約 Ver.3.0C, [https://www.jahis.jp/standard/detail/id=564](https://www.jahis.jp/standard/detail/id=564)
 1. 日本医療情報学会MERIT-9研究会, 医療情報交換規約運用指針、MERIT-9 処方オーダver 1.0, [http://merit-9.mi.hama-med.ac.jp/jahis/SHOHOU.pdf](http://merit-9.mi.hama-med.ac.jp/jahis/SHOHOU.pdf)
 1. 保健医療福祉情報システム工業会, JAHISデータ交換規約（共通編）Ver.1.1, [https://www.jahis.jp/standard/detail/id=125](https://www.jahis.jp/standard/detail/id=125)

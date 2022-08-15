@@ -5,14 +5,10 @@ Description: "検体検査（尿）"
 Usage: #example
 * contained[0] = jp-servicerequest-example-1
 * contained[+] = jp-specimen-example-1
-* category.coding = http://terminology.hl7.org/CodeSystem/observation-category#laboratory "Laboratory"
+* category[laboratory].coding = $observation-category#laboratory "Laboratory"
 * basedOn = Reference(ServiceRequest/jp-servicerequest-example-1)
-* code.coding[0].code = #05104
-* code.coding[=].system = "http://abc-hospital.local/fhir/Observation/localcode"
-* code.coding[=].display = "尿酸"
-* code.coding[+].code = #3C020000002327101
-* code.coding[=].system = "http://jpfhir.jp/Common/ValueSet/labResult-code"
-* code.coding[=].display = "尿酸(UA)"
+* code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#05104 "尿酸"
+* code.coding[+] = http://jpfhir.jp/Common/ValueSet/labResult-code#3C020000002327101 "尿酸(UA)"
 * code.text = "検査項目コード"
 * interpretation.coding = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#L "Low"
 * interpretation.text = "HLマーク"
@@ -25,7 +21,6 @@ Usage: #example
 * valueQuantity.value = 3.5
 * subject = Reference(Patient/jp-patient-example-1)
 * performer = Reference(jp-practitioner-example-female-1)
-//TODO: Specimenのサンプル作成の必要あり
 * specimen = Reference(Specimen/jp-specimen-example-1)
 
 // 検査オーダ
@@ -54,8 +49,8 @@ Usage: #inline
 * subject = Reference(Patient/jp-patient-example-1)
 * receivedTime = "2021-10-11T11:03:00+09:00"
 * container.identifier.value = "48736-15394-75465"
-* container.description = "Spitch"
-* container.type.text = "spitch"
+* container.description = "採尿容器"
+* container.type.text = "採尿容器"
 * container.capacity.value = 20
 * container.capacity.unit = "mL"
 * container.specimenQuantity.value = 18

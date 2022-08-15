@@ -30,7 +30,7 @@ Description: "このProfileはImmunizationリソースに対して日本での�
 * statusReason ^short = "実施しなかった理由"
 * vaccineCode ^short = "接種されたワクチン製剤"
 * vaccineCode ^definition = "接種されたあるいは接種予定のワクチン。"
-* vaccineCode ^comment = "全てのターミノロジーがこのパターンに当てはまるわけではない。モデルによってはCoceableConceptではなく，独自構造でCodingを直接指定して文書やコーディング，その解釈や事前条件や事後条件との関連について示される。"
+* vaccineCode ^comment = "全てのターミノロジーがこのパターンに当てはまるわけではない。モデルによってはCodeableConceptではなく，独自構造でCodingを直接指定して文書やコーディング，その解釈や事前条件や事後条件との関連について示される。"
 * patient ^short = "予防接種を受けた人"
 * patient ^definition = "予防接種を受けた，あるいは受けなかった患者。"
 * encounter ^short = "予防接種を受けた診察"
@@ -79,7 +79,7 @@ Description: "このProfileはImmunizationリソースに対して日本での�
 
 Extension: JP_Immunization_DueDateOfNextDose
 Id: jp-immunization-duedateofnextdose
-Title: "JP Core Immunization DueDateOfNectDose Extension"
+Title: "JP Core Immunization DueDateOfNextDose Extension"
 Description: "次回摂取予定日"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose"
 * ^status = #active

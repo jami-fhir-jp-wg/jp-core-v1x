@@ -6,3 +6,5 @@ Description: "処置の対象となる身体部位のコード"
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
+
+// TODO:要実装

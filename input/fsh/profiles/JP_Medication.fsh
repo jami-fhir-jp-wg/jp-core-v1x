@@ -8,7 +8,7 @@ Title: "JP Core Medication Profile"
 Description: "このプロファイルはMedicationリソースに対して、主に薬剤データを送受信するための基礎となる制約と拡張を定めたものである。"
 // extension 参照宣言
 * ingredient.extension contains JP_Medication_Ingredient_DrugNo named drugNo ..*
-* ingredient.strength.extension contains JP_Medication_IngredientStrength_StrengthType named strenghtType ..*
+* ingredient.strength.extension contains JP_Medication_IngredientStrength_StrengthType named strengthType ..*
 //
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication"
 * ^status = #active
@@ -24,7 +24,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * identifier ^comment = "IDとしてシリアルナンバーを使うこともできる。"
 * code ^short = "この薬剤を特定するコード"
 * code ^definition = "A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.\r\n\r\nこの薬剤を指定するコード。該当するコードがない場合はテキスト表記。\r\n使用法について注記：日本ではHOTコードを利用することが推奨される。一般的な薬剤コードとしてRxNorm、SNOMD CT, IDMPなど標準的な医薬品コードを使うことができる。国や地域に特有のローカルコードも使うことができ、他のコードに変換することもできる。"
-* code ^comment = "使われるコンテキストによるが、ユーザー(処方や調剤などを行った人）によって実際にコードが選択されたのであれば、coding.userSelectedはtrueとすることとなる。Codingのデータ型で説明されているように、「ユーザーインターフェース（たとえば、選択肢から特定の項目をユーザーが選択するような形式）で特定のコードをユーザーが選択したのであれば、\"userSlected\"に記録されてもよい」\r\nユーザーが選択したコードがあれば、その選択がコード変換などで優先される。そのほかのコードは代替のコードシステムか低粒度のコード（たとえば、ベンダー固有の初期値のための一般的なコード）に文字列変換変換するしかない。"
+* code ^comment = "使われるコンテキストによるが、ユーザー(処方や調剤などを行った人）によって実際にコードが選択されたのであれば、coding.userSelectedはtrueとすることとなる。Codingのデータ型で説明されているように、「ユーザーインターフェース（たとえば、選択肢から特定の項目をユーザーが選択するような形式）で特定のコードをユーザーが選択したのであれば、\"userSelected\"に記録されてもよい」\r\nユーザーが選択したコードがあれば、その選択がコード変換などで優先される。そのほかのコードは代替のコードシステムか低粒度のコード（たとえば、ベンダー固有の初期値のための一般的なコード）に文字列変換変換するしかない。"
 * code ^binding.strength = #preferred
 * code ^binding.description = "薬品の種類を規定するコード化された概念"
 * status 1..
@@ -50,7 +50,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * ingredient.item[x] ^comment = "すべての用語集はこの一般的な様式を満たさない。場合によっては、情報モデルとしてCodeableConceptや直接Codingを使うべきではなく、テキストやコード、翻訳や事前条件と事後条件でのエレメントの関係などを示すことも適切ではない。"
 * ingredient.item[x] ^requirements = "成分は物質（たとえば、アモキシシリン）や、他の薬剤（たとえば、Glaxal Baseなどの合成製品）を参照されることもある。"
 * ingredient.isActive ^short = "有効成分の指標"
-* ingredient.isActive ^definition = "この成分が薬剤の治療効果に影響するかどうかの指標\r\nI\r\nndication of whether this ingredient affects the therapeutic action of the drug."
+* ingredient.isActive ^definition = "この成分が薬剤の治療効果に影響するかどうかの指標\r\n\r\nIndication of whether this ingredient affects the therapeutic action of the drug."
 * ingredient.isActive ^requirements = "Trueであれば、この成分が薬剤の治療効果に影響がある（たとえば有効）ということを示す。\r\nFalseであれば、この成分が薬剤の治療効果に影響がない（たとえば無効）ということを示す。"
 * ingredient.strength 1..
 * ingredient.strength ^short = "成分の活性量"
@@ -59,8 +59,8 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * ingredient.strength.extension ^slicing.discriminator.type = #value
 * ingredient.strength.extension ^slicing.discriminator.path = "url"
 * ingredient.strength.extension ^slicing.rules = #open
-* ingredient.strength.extension[strenghtType] only JP_Medication_IngredientStrength_StrengthType
-* ingredient.strength.extension[strenghtType] ^definition = "投与量が製剤単位か成分単位かを格納する拡張"
+* ingredient.strength.extension[strengthType] only JP_Medication_IngredientStrength_StrengthType
+* ingredient.strength.extension[strengthType] ^definition = "投与量が製剤単位か成分単位かを格納する拡張"
 * batch ^short = "分包された薬剤についての詳細な解説"
 * batch ^definition = "薬剤のパッケージ（薬品そのものではない）についての情報。"
 * batch.lotNumber ^short = "バッチのID"
@@ -75,10 +75,10 @@ Description: "このプロファイルはMedicationリソースに対して、�
 Extension: JP_Medication_Ingredient_DrugNo
 Id: jp-medication-ingredient-drugno
 Title: "JP Core Medication Ingredient DrugNo Extension"
-Description: "投与量が製剤単位か成分単位かを格納する拡張"
+Description: "同一剤グループ内での順番を格納する拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo"
 * ^date = "2022-07-31"
-* ^purpose = "投与量が製剤単位か成分単位かを格納する拡張"
+* ^purpose = "同一剤グループ内での順番を格納する拡張"
 * ^context.type = #element
 * ^context.expression = "Medication.ingredient"
 * . ^short = "RP内の薬剤の連番"

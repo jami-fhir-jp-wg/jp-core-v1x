@@ -11,7 +11,7 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 
 #### 既存のExtensionの利用
 
-- [nameRepresentationUse](http://hl7.org/fhir/R4/extension-iso21090-en-representation.html)
+- [nameRepresentationUse](https://hl7.org/fhir/R4/extension-iso21090-en-representation.html)
   - 医療従事者氏名(Practitioner.name)の漢字表記・カナ表記識別のために使用する。
 
 ### その他
@@ -90,10 +90,10 @@ Operationはない。
 
 ### サンプル
 
-* [**女性医師 麻薬施用者番号あり**][jp-practionner-example-female-1]
-* [**女性看護師**][jp-practionner-example-female-2]
-* [**男性医師**][jp-practionner-example-male-1]
-* [**男性看護師**][jp-practionner-example-male-2]
+* [**女性医師 麻薬施用者番号あり**][jp-practitioner-example-female-1]
+* [**女性看護師**][jp-practitioner-example-female-2]
+* [**男性医師**][jp-practitioner-example-male-1]
+* [**男性看護師**][jp-practitioner-example-male-2]
 
 ## 注意事項
 

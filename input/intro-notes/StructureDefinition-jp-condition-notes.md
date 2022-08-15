@@ -111,7 +111,7 @@
       GET [base]/Condition?patient=Patient/123&verificationstatus=confirmed
       ```
       ```
-      GET [base]/Condition?patient=Patient/123&verificationstatus=http://hl7.org/fhir/ValueSet/http://hl7.org/fhir/ValueSet/condition-ver-status|confirmed
+      GET [base]/Condition?patient=Patient/123&verificationstatus=http://hl7.org/fhir/ValueSet/condition-ver-status|confirmed
       ```
    
       指定された患者およびステータスのすべてのConditionを含むBundleを検索する。
@@ -128,7 +128,7 @@
       GET [base]/Condition?patient=Patient/123&category=claim-diagnosis
       ``` 
       ```
-      GET [base]/Condition?patient=Patient/123&category=	http://hl7.org/fhir/ValueSet/condition-category|claim-diagnosis
+      GET [base]/Condition?patient=Patient/123&category=http://hl7.org/fhir/ValueSet/condition-category|claim-diagnosis
       ``` 
 
       指定された患者およびステータスのすべてのConditionを含むBundleを検索する。
