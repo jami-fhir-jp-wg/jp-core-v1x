@@ -5,7 +5,6 @@ Description: "Observation（バイタルサイン）で使用する項目コー�
 * ^url = $JP_ObservationVitalSignsCode_CS
 * ^status = #draft
 * ^caseSensitive = true
-* ^valueSet = $JP_ObservationVitalSignsCode_VS
 * ^content = #complete
 
 //TODO : MEDISへ利用許可要確認
