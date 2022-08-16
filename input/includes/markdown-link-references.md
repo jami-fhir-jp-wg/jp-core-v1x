@@ -103,7 +103,7 @@
 [JP_JfagyFoodAllergenCodes_CS]: CodeSystem-jp-jfagy-food-allergen-codes-cs.html
 [JP_JfagyMedicationAllergenCodes_CS]: CodeSystem-jp-jfagy-medication-allergen-codes-cs.html
 [JP_JfagyNonFoodNonMedicationAllergenCodes_CS]: CodeSystem-jp-jfagy-non-food-non-medication-allergen-codes-cs.html
-[JP_MedicalLicenceCertificate_CS]: CodeSystem-jp-medicallicencecertificate-cs.html
+[JP_MedicalLicenseCertificate_CS]: CodeSystem-jp-medicallicensecertificate-cs.html
 [JP_MedicationBodySiteJAMIExternal_CS]: CodeSystem-jp-medication-bodysite-jami-external-cs.html
 [JP_MedicationCodeCommon_CS]: CodeSystem-jp-medication-code-common-cs.html
 [JP_MedicationCodeHOT9_CS]: CodeSystem-jp-medication-code-hot9-cs.html
@@ -148,7 +148,7 @@
 [JP_ConditionSeverity_VS]: ValueSet-jp-condition-severity-vs.html
 [JP_Department_SsMix_VS]: ValueSet-jp-department-ssmix-vs.html
 [JP_MedicalFeeScoreType_VS]: ValueSet-jp-medicalfeescoretype-vs.html
-[JP_MedicalLicenceCertificate_VS]: ValueSet-jp-medicallicencecertificate-vs.html
+[JP_MedicalLicenseCertificate_VS]: ValueSet-jp-medicallicensecertificate-vs.html
 [JP_MedicationBodySiteJAMIExternal_VS]: ValueSet-jp-medication-bodysite-jami-external-vs.html
 [JP_MedicationCodeCommon_VS]: ValueSet-jp-medication-code-common-vs.html
 [JP_MedicationCodeHOT9_VS]: ValueSet-jp-medication-code-hot9-vs.html
