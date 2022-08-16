@@ -1,6 +1,7 @@
 <br/>
 このプロファイルは薬剤のリストを表現する。注射ではしばしば複数の薬剤が混注して用いられ、不可分であることからMedicationリソースを利用して処方を表現することとした。
-主に注射薬剤処方の一部としてMedicationRequest, MedicationDispense, MedicationAdministrationリソースと組み合わせて利用する。薬剤リストに使用する用語集は諸外国と日本では異なっており、日本国内で規格を運用するためにExtensionの追加や用語集の追加・変更を行った。現在、日本での注射関連規格として利用されているJAHIS 注射データ交換規約 Ver 2.1CおよびSS-MIX2 Ver.1.2gを参考にした。
+
+主に注射薬剤処方の一部としてMedicationRequest, MedicationDispense, MedicationAdministrationリソースと組み合わせて利用する。薬剤リストに使用する用語集は諸外国と日本では異なっており、日本国内で規格を運用するためにExtensionの追加や用語集の追加・変更を行った。現在、日本での注射関連規格として利用されているJAHIS 注射データ交換規約 Ver 2.1CおよびSS-MIX2 Ver.1.2hを参考にした。
 
 ## 背景および想定シナリオ
 本プロファイルは、以下のようなユースケースを想定している。
