@@ -5,6 +5,7 @@ Description: "Observation（バイタルサイン）で使用する分類のコ�
 * ^url = $JP_ObservationVitalSignsCategory_CS
 * ^status = #draft
 * ^caseSensitive = true
+* ^valueSet = $JP_ObservationVitalSignsCategory_VS
 * ^content = #complete
 
 // コード体系をどうするのか。

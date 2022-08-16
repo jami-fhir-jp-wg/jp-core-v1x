@@ -5,6 +5,7 @@ Description: "Observation（身体計測）で使用する分類のコード"
 * ^url = $JP_ObservationBodyMeasurementCategory_CS
 * ^status = #draft
 * ^caseSensitive = true
+* ^valueSet = $JP_ObservationBodyMeasurementCategory_VS
 * ^content = #complete
 
 * #weight "体重"
