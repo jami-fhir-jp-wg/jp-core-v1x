@@ -55,7 +55,7 @@ $ git pull
 # (初回のみ実行)IgPublisher.jarのダウンロード
 $ bash _updatePublisher.sh
 
-# IGPublisherの実行の実行
+# IGPublisherの実行
 $ bash _genonce.sh
 ```
 
