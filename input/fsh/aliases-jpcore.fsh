@@ -83,7 +83,7 @@ Alias: $JP_Organization_PrefectureNo_SP = http://jpfhir.jp/fhir/core/SearchParam
 Alias: $JP_Patient_KanaSort_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP
 
 // CodeSystem
-Alias: $JP_MedicalFeeScoreType_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicalFeeScoreType_CS
+Alias: $JP_MedicalFeeScoreType_CS = urn:oid:1.2.392.100495.20.3.22
 Alias: $JP_ConditionSeverity_CS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ConditionSeverity_CS
 Alias: $JP_Department_SsMix2Digits_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Department_SsMix2Digits_CS
 Alias: $JP_Department_SsMix3Digits_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Department_SsMix3Digits_CS
@@ -114,7 +114,7 @@ Alias: $JP_ObservationVitalSignsCategory_CS = http://jpfhir.jp/fhir/Common/CodeS
 Alias: $JP_ObservationVitalSignsCode_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationVitalSignsCode_CS
 Alias: $JP_PhysicalExamCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_PhysicalExamCodes_CS
 Alias: $JP_PractitionerRoleCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_PractitionerRoleCodes_CS
-Alias: $JP_PrefectureNumber_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_PrefectureNumber_CS
+Alias: $JP_PrefectureNumber_CS = urn:oid:1.2.392.100495.20.3.21
 Alias: $JP_ProcedureBodySite_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureBodySite_CS
 Alias: $JP_ProcedureCategoryCodes_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCategoryCodes_CS
 Alias: $JP_ProcedureCodesDental_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesDental_CS

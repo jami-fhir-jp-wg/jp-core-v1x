@@ -4,7 +4,9 @@ Title: "JP Core PrefectureNumber Codes"
 Description: "都道府県番号"
 * ^url = $JP_PrefectureNumber_CS
 * ^status = #active
+* ^valueSet = $JP_PrefectureNumber_VS
 * ^content = #complete
+
 * #01 "北海道"
 * #02 "青森県"
 * #03 "岩手県"
