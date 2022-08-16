@@ -28,7 +28,6 @@ imagingStudyエレメントはCardinalityが0..1だが、放射線レポート�
 
 本プロファイルはextensionを定義しない。
 
-
 ## 注意事項
 
 ### Text
@@ -42,6 +41,7 @@ NarrativeなtextにアクセスするためのDomainResource定義
 {{tree:simplifier.core.r4.resources/domainresource}} -->
 
 例：
+
 ```json
 {
   "resourceType": "DiagnosticReport",
@@ -93,13 +93,13 @@ NarrativeなtextにアクセスするためのDomainResource定義
 }
 ```
 
-
 ### Identifier
 
 Identifier のデータタイプはオーダー依頼者であるPlacerあるいはオーダーの実施者であるFiller（HL7 Version 2 Messaging Standardにて'Placer'あるいは'Filler'として知られている）によって割り当てられた識別子を区別するために利用されるtypeエレメントを持っている。typeエレメントは以下の様に利用する。
 <br>
 
 #### Placerの場合
+
 ```json
 {
   "identifier":[{
@@ -115,7 +115,9 @@ Identifier のデータタイプはオーダー依頼者であるPlacerあるい
   }]
 }
 ```
+
 #### Fillerの場合
+
 ```json
 {
   "identifier":[{
@@ -158,7 +160,8 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 ## 利用方法
 
-### Interaction一覧 
+### Interaction一覧
+
 DiagnosticReport リソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
 
 [DiagnosticReport共通情報プロファイル#インタラクション一覧][JP_DiagnosticReport_Common_interaction]
