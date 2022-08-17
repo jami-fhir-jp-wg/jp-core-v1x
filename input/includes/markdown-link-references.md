@@ -192,6 +192,7 @@
 [jp-allergyintolerance-example-1]: AllergyIntolerance-jp-allergyintolerance-example-1.html
 [jp-condition-example-1]: Condition-jp-condition-example-1.html
 [jp-coverage-example-1]: Coverage-jp-coverage-example-1.html
+[jp-diagnosticreport-labresult-example-1]: DiagnosticReport-jp-diagnosticreport-labresult-example-1.html
 [jp-diagnosticreport-radiology-example-1]: DiagnosticReport-jp-diagnosticreport-radiology-example-1.html
 [jp-encounter-example-1]: Encounter-jp-encounter-example-1.html
 [jp-familymemberhistory-example-1]: FamilyMemberHistory-jp-familymemberhistory-example-1.html
