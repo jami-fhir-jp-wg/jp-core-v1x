@@ -13,7 +13,7 @@ Alias: $diagnostic-service-sectionid-cs = http://terminology.hl7.org/CodeSystem/
 Alias: $patient-race-cs = http://terminology.hl7.org/CodeSystem/v3-Race
 Alias: $patient-race-vs = http://terminology.hl7.org/ValueSet/v3-Race
 
-// jpfhir-codeSytem,valueSet
+// jpfhir-codeSystem,valueSet
 Alias: $labResult-code = http://jpfhir.jp/fhir/Common/ValueSet/labResult-code
 Alias: $bodymeasurement-category-cs = http://jpfhir.jp/fhir/Common/CodeSystem/bodymeasurement-category
 Alias: $bodyMeasurement-category-vs = http://jpfhir.jp/fhir/Common/ValueSet/bodyMeasurement-category
