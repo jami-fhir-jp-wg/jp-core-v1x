@@ -1,6 +1,8 @@
 //検体材料
 Instance: jp-specimen-example-1
 InstanceOf: Specimen
+Title: "JP Core Specimen Example 検体材料（尿）"
+Description: "検体材料（尿）"
 Usage: #example
 * identifier.system = "http://abc-hospital.local/identifiers/collections"
 * identifier.value = "23234352356"
@@ -20,6 +22,8 @@ Usage: #example
 
 Instance: jp-specimen-example-2
 InstanceOf: Specimen
+Title: "JP Core Specimen Example 検体材料（血液）"
+Description: "検体材料（血液）"
 Usage: #example
 * identifier.system = "http://abc-hospital.local/identifiers/collections"
 * identifier.value = "23234352357"
