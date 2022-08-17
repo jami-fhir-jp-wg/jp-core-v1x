@@ -14,11 +14,11 @@ Usage: #example
 * numberOfInstances = 1
 * series.uid = "2.16.124.113543.6003.2588828330.45298.17418.2723805630"
 * series.number = 3
-* series.modality.system = "https://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html"
+* series.modality.system = "http://dicom.nema.org/resources/ontology/DCM"
 * series.modality.code = #CT
 * series.description = "CT胸部スクリーニング"
 * series.numberOfInstances = 1
-* series.bodySite.system = "http://jpfhir.jp/Common/ValueSet/imagingStudy-bodySite"
+* series.bodySite.system = "http://jpfhir.jp/Common/CodeSystem/JP_ImagingStudy_BodySite_CS"
 * series.bodySite.code = #43799004
 * series.bodySite.display = "Chest"
 * series.instance.uid = "2.16.124.113543.6003.189642796.63084.16748.2599092903"

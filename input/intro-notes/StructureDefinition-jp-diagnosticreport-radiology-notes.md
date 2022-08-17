@@ -32,7 +32,7 @@ imagingStudyエレメントはCardinalityが0..1だが、放射線レポート�
 
 ### Text
 
-DiagnosticReportのドメインリソースの一つであるtextエレメントに見読可能な[narrative](https://www.hl7.org/fhir/narrative.html)データとしてレポートの所見を中心とした情報を格納する。依頼情報や患者基本情報などを含んだレポート全体のデータは別途presentedFormエレメントに保持されるが、ここではPDF等のバイナリが保存される。よってレポート内容の見読性と検索性を担保するためにtextエレメントに保存されたデータが利用される。
+DiagnosticReportのドメインリソースの一つであるtextエレメントに見読可能な[narrative](https://www.hl7.org/fhir/R4/narrative.html)データとしてレポートの所見を中心とした情報を格納する。依頼情報や患者基本情報などを含んだレポート全体のデータは別途presentedFormエレメントに保持されるが、ここではPDF等のバイナリが保存される。よってレポート内容の見読性と検索性を担保するためにtextエレメントに保存されたデータが利用される。
 
 NarrativeなtextにアクセスするためのDomainResource定義
 
@@ -106,12 +106,12 @@ Identifier のデータタイプはオーダー依頼者であるPlacerあるい
   "identifier":[{
     "type":{
       "coding":{
-        "system":"https://terminology.hl7.org/3.1.0/CodeSystem-v2-0203.html",
+        "system":"http://terminology.hl7.org/CodeSystem/v2-0203",
         "code":"PLAC"
       },
-      "value":"Placer"
+      "text":"Placer Identifier"
     },
-    "system":"urn:oid:1.2.3.4.5.6.7",
+    "system":"http://abc-hospital.local/fhir/PlacerIdentifier",
     "value":"2345234234234"
   }]
 }
@@ -124,12 +124,12 @@ Identifier のデータタイプはオーダー依頼者であるPlacerあるい
   "identifier":[{
     "type":{
       "coding":{
-        "system":"https://terminology.hl7.org/3.1.0/CodeSystem-v2-0203.html",
+        "system":"http://terminology.hl7.org/CodeSystem/v2-0203",
         "code":"FILL"
       },
-      "value":"Filler"
+      "text":"Filler Identifier"
     },
-    "system":"https://terminology.hl7.org/3.1.0/CodeSystem-v2-0203.html",
+    "system":"http://abc-hospital.local/fhir/FillerIdentifier",
     "value":"567890"
   }]
 }
@@ -139,7 +139,7 @@ DiagnosticReport_Radiology リソースではtypeエレメントを明示する�
 
 ### 時間の指定
 
-このプロファイルのリソースでは、effective[x]エレメントにはレポート作成時間を[dateTime](https://www.hl7.org/fhir/datatypes.html#dateTime)で格納する。
+このプロファイルのリソースでは、effective[x]エレメントにはレポート作成時間を[dateTime](https://www.hl7.org/fhir/R4/datatypes.html#dateTime)で格納する。
 
 ### 関連するObservation
 
@@ -181,7 +181,7 @@ DiagnosticReport リソースのインタラクション一覧の定義はユー
 | encounter | reference | オーダが発行された際の Encounter | DiagnosticReport.encounter ([Encounter][JP_Encounter]) |
 | identifier | token | レポートの identifier（識別子） | DiagnosticReport.identifier | 
 | issued | date | レポート発行日（確定日） | DiagnosticReport.issued |
-| media | reference | キー画像への参照 | DiagnosticReport.media.link ([Media](https://www.hl7.org/fhir/media.html)) | 
+| media | reference | キー画像への参照 | DiagnosticReport.media.link ([Media](https://www.hl7.org/fhir/R4/media.html)) | 
 | performer | reference | レポート確定者 | DiagnosticReport.performer ([Practitioner][JP_Practitioner]) |
 | result | reference | 関連する検査結果 (検体検査結果など) | DiagnosticReport.result ([Observation][JP_Observation_LabResult])|
 | results-interpreter | reference | 読影者 | DiagnosticReport.resultsInterpreter ([Practitioner][JP_Practitioner]) |
