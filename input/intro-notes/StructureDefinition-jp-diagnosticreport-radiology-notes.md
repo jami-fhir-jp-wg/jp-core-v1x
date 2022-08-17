@@ -82,6 +82,7 @@ NarrativeなtextにアクセスするためのDomainResource定義
     {
       "display": "CHEST CT DICOM imaging study",
       "reference": "http://someserver/some-path"
+    }
   ],
 　"conclusion": "インプレッション: ひだり肺上葉の空洞性病変。 肺腺癌を疑う。みぎ肺上葉陳旧性炎症性瘢痕。",
   "presentedForm": [{
@@ -172,20 +173,20 @@ DiagnosticReport リソースのインタラクション一覧の定義はユー
 
 | Name | Type | Description | Expression |
 | --- | --- | --- | --- |
-| based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn<br><br> ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) |
-| category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) <br> "RAD", "RX", "CT", "NMR", "NMS", "RUS", etc.<br> default = “RAD” |
-| code | token | レポート全体を示すコード | DiagnosticReport.code<br>[LOINC 18748-4](https://loinc.org/18748-4/)|
+| based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) |
+| category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) <br> "RAD", "RX", "CT", "NMR", "NMS", "RUS", etc. [ default = “RAD” ] |
+| code | token | レポート全体を示すコード | DiagnosticReport.code [LOINC 18748-4](https://loinc.org/18748-4/)(固定) |
 | conclusion | token | コード化されたレポートの conclusion (interpretation/impression) | DiagnosticReport.conclusionCode | 
 | date | date | レポート作成日 | DiagnosticReport.effectiveDate |
-| encounter | reference | オーダが発行された際の Encounter | DiagnosticReport.encounter<br><br> ([Encounter][JP_Encounter]) |
+| encounter | reference | オーダが発行された際の Encounter | DiagnosticReport.encounter ([Encounter][JP_Encounter]) |
 | identifier | token | レポートの identifier（識別子） | DiagnosticReport.identifier | 
 | issued | date | レポート発行日（確定日） | DiagnosticReport.issued |
-| media | reference | キー画像への参照 | DiagnosticReport.media.link<br><br> ([Media](https://www.hl7.org/fhir/media.html)) | 
-| performer | reference | レポート確定者 | DiagnosticReport.performer<br><br> ([Practitioner][JP_Practitioner]) |
-| result | reference | 関連する検査結果 (検体検査結果など) | DiagnosticReport.result<br><br> ([Observation][JP_Observation_LabResult])|
-| results-interpreter | reference | 読影者 | DiagnosticReport.resultsInterpreter<br><br> ([Practitioner][JP_Practitioner]) |
+| media | reference | キー画像への参照 | DiagnosticReport.media.link ([Media](https://www.hl7.org/fhir/media.html)) | 
+| performer | reference | レポート確定者 | DiagnosticReport.performer ([Practitioner][JP_Practitioner]) |
+| result | reference | 関連する検査結果 (検体検査結果など) | DiagnosticReport.result ([Observation][JP_Observation_LabResult])|
+| results-interpreter | reference | 読影者 | DiagnosticReport.resultsInterpreter ([Practitioner][JP_Practitioner]) |
 | status | token | レポートの状態 | DiagnosticReport.status |
-| subject | reference | レポートの対象となる患者 | DiagnosticReport.subject<br><br>([Patient][JP_Patient]) |
+| subject | reference | レポートの対象となる患者 | DiagnosticReport.subject ([Patient][JP_Patient]) |
 
 ### サンプル
 
@@ -195,9 +196,10 @@ DiagnosticReport リソースのインタラクション一覧の定義はユー
 
 本プロファイルそのものの定義には影響しないが、レポートの標準化に関し以下の情報が参考となる。presentedForm に収容するレポートのコンテンツを作成するレポーティングシステムにおいて、標準化に関する参考資料となる。
 
-- [RadReport](https://www.rsna.org/practice-tools/data-tools-and-standards/radreport-reporting-templates) - 放射線レポートテンプレート
-- [RadLex radiology lexicon](https://www.rsna.org/practice-tools/data-tools-and-standards/radlex-radiology-lexicon) - 放射線科語彙集
-- [RadElement](https://www.rsna.org/practice-tools/data-tools-and-standards/radelement-common-data-elements) - 放射線関連共通データエレメント
-- [IHE Radiology Technical Framework Supplement - Management of Radiology Report Templates](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_MRRT.pdf)
+- [RadReport][RadReport] - 放射線レポートテンプレート
+- [RadLex radiology lexicon][RadLex radiology lexicon] - 放射線科語彙集
+- [RadElement][RadElement] - 放射線関連共通データエレメント
+- [IHE Radiology Technical Framework Supplement - Management of Radiology Report Templates][IHE Radiology Technical Framework Supplement - Management of Radiology Report Templates]
 
 {% include markdown-link-references.md %}
+{% include external-link-reference.md %}
