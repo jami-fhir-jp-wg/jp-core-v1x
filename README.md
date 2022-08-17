@@ -6,14 +6,14 @@ FHIRのJp Core実装のための開発用レポジトリです。
 このページの実装ガイドは常に修正、追加がある改訂版開発用ページです。
 
 ## GitHubAction 自動ビルド＆デプロイ
-ビルドおよびデプロイに１０分程度時間を要します。
+ビルドおよびデプロイに２０分程度時間を要します。
 * [ビルド状況 [step1]](https://github.com/jami-fhir-jp-wg/jp-core-v1x/actions)
 * [デプロイ状況 [step2]](https://github.com/jami-fhir-jp-wg/jp-core-v1xpages/actions)
 * [ビルド結果 [step3]](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/index.html)
 
 ## 環境作成
 自端末にてIGのコンパイルまで行なう場合、下記を参考に環境を作成してください。
-* [FHIR Shorthand & IG Publiser環境作成方法](docs/enviroment.md)
+* [FHIR Shorthand & IG Publisher環境作成方法](docs/environment.md)
 
 ## コンパイル手順
 下記を実行することで、outputフォルダにIGのhtmlが作成されます。
@@ -35,7 +35,7 @@ _genonceの実行にてheep sizeのエラーが発生する場合、メモリ量
 # (初回のみ実行)IgPublisher.jarのダウンロード
 > _updatePublisher.bat
 
-# igpublisherの実行
+# IGPublisherの実行
 > _genonce.bat
 ```
 
@@ -55,7 +55,7 @@ $ git pull
 # (初回のみ実行)IgPublisher.jarのダウンロード
 $ bash _updatePublisher.sh
 
-# igpublisherの実行
+# IGPublisherの実行
 $ bash _genonce.sh
 ```
 

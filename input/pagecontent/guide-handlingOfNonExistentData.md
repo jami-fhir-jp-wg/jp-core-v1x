@@ -1,6 +1,6 @@
-FHIR®では[JSON](https://www.hl7.org/fhir/json.html#2.6.2)および[XML](https://www.hl7.org/fhir/xml.html)いずれにおいてもオブジェクトは空ではならない。リソース内にエレメントが存在している場合、そのエレメントはそのタイプに応じた何らかのプロパティか1つ以上の拡張を持つ必要がある（[2.6.2 JSON Representation of Resources](https://www.hl7.org/fhir/json.html#:~:text=Objects%20are%20never%20empty), [2.6.1 XML Representation of Resources](https://www.hl7.org/fhir/xml.html#:~:text=FHIR%20elements%20are%20never%20empty)）。string型の値は空文字列であってはならず、そのプロパティが存在するのであれば、1字以上の文字を含む必要がある（[2.24.0.1 Primitive Types](https://www.hl7.org/fhir/datatypes.html#:~:text=strings%20SHOULD%20always%20contain%20non-whitespace)）。
+FHIR®では[JSON](https://www.hl7.org/fhir/R4/json.html#2.6.2)および[XML](https://www.hl7.org/fhir/R4/xml.html)いずれにおいてもオブジェクトは空ではならない。リソース内にエレメントが存在している場合、そのエレメントはそのタイプに応じた何らかのプロパティか1つ以上の拡張を持つ必要がある（[2.6.2 JSON Representation of Resources](https://www.hl7.org/fhir/R4/json.html#:~:text=Objects%20are%20never%20empty), [2.6.1 XML Representation of Resources](https://www.hl7.org/fhir/R4/xml.html#:~:text=FHIR%20elements%20are%20never%20empty)）。string型の値は空文字列であってはならず、そのプロパティが存在するのであれば、1字以上の文字を含む必要がある（[2.24.0.1 Primitive Types](https://www.hl7.org/fhir/R4/datatypes.html#:~:text=strings%20SHOULD%20always%20contain%20non-whitespace)）。
 
-データがない場合に、[Data Absent Reason拡張](https://www.hl7.org/fhir/extension-data-absent-reason.html)を用いて、データが欠損している理由を表すことができる。
+データがない場合に、[Data Absent Reason拡張](https://www.hl7.org/fhir/R4/extension-data-absent-reason.html)を用いて、データが欠損している理由を表すことができる。
 
 JP Core の検索要求するクライアント(Requester)およびサーバ(Responder)は以下の要求を満たすこと **(SHALL)**。
 ### クライアント(Requester)
@@ -28,7 +28,7 @@ Readインタラクションの応答として、Cardinalityが１以上の 要�
 
 #### 実装ガイドに準拠するクライアントは、欠損データであることを宣言した Cardinalityが1以上のデータ要素を含むリソースインスタンスを処理できなければならない **(SHALL)**。
  **例)**
-Patient.birthDateの値に欠損情報が付与されているリソースを、要求者は処理できなければならない。なお、birthDateはdate型というprimitive typeであり、そのextensionは"_"を先頭につけたプロパティに対して設定される([2.6.2.3 JSON representation of primitive elements](https://www.hl7.org/fhir/json.html#primitive))。
+Patient.birthDateの値に欠損情報が付与されているリソースを、要求者は処理できなければならない。なお、birthDateはdate型というprimitive typeであり、そのextensionは"_"を先頭につけたプロパティに対して設定される([2.6.2.3 JSON representation of primitive elements](https://www.hl7.org/fhir/R4/json.html#primitive))。
 
 ```
 {
@@ -76,7 +76,7 @@ JP Core実装ガイドのサーバは、Cardinalityが1以上の要素の値を�
 信できなければならない **(SHALL)** 。
 
  **例)**
-患者の生年月日が不明なため、Patient.birthDateに値を保持していない場合（Patient.birthDateが必須 MustSupport）、Data Absent Reason 拡張を使用して、欠損理由（＝不明）を示す。なお、birthDateはdate型というprimitive typeであり、そのextensionは"_"を先頭につけたプロパティに対して設定される([2.6.2.3 JSON representation of primitive elements](https://www.hl7.org/fhir/json.html#primitive))。
+患者の生年月日が不明なため、Patient.birthDateに値を保持していない場合（Patient.birthDateが必須 MustSupport）、Data Absent Reason 拡張を使用して、欠損理由（＝不明）を示す。なお、birthDateはdate型というprimitive typeであり、そのextensionは"_"を先頭につけたプロパティに対して設定される([2.6.2.3 JSON representation of primitive elements](https://www.hl7.org/fhir/R4/json.html#primitive))。
 
 ```
 {

@@ -33,11 +33,11 @@ imagingStudyエレメントはCardinalityが0..1だが、放射線レポート�
 
 ### Text
 
-DiagnosticReportのドメインリソースの一つであるtextエレメントに見読可能な[narrative](http://www.hl7.org/fhir/narrative.html)データとしてレポートの所見を中心とした情報を格納する。依頼情報や患者基本情報などを含んだレポート全体のデータは別途presentedFormエレメントに保持されるが、ここではPDF等のバイナリが保存される。よってレポート内容の見読性と検索性を担保するためにtextエレメントに保存されたデータが利用される。
+DiagnosticReportのドメインリソースの一つであるtextエレメントに見読可能な[narrative](http://www.hl7.org/fhir/R4/narrative.html)データとしてレポートの所見を中心とした情報を格納する。依頼情報や患者基本情報などを含んだレポート全体のデータは別途presentedFormエレメントに保持されるが、ここではPDF等のバイナリが保存される。よってレポート内容の見読性と検索性を担保するためにtextエレメントに保存されたデータが利用される。
 
 NarrativeなtextにアクセスするためのDomainResource定義
 
-(DiagnosticReportのResourceType直下に現れる。text以外のDomainResourceの詳細については[こちら](https://www.hl7.org/fhir/domainresource.html)を参照のこと）
+(DiagnosticReportのResourceType直下に現れる。text以外のDomainResourceの詳細については[こちら](https://www.hl7.org/fhir/R4/domainresource.html)を参照のこと）
 <!-- 
 {{tree:simplifier.core.r4.resources/domainresource}} -->
 
@@ -136,7 +136,7 @@ DiagnosticReport_Radiology リソースではtypeエレメントを明示する�
 
 ### 時間の指定
 
-このプロファイルのリソースでは、effective[x]エレメントにはレポート作成時間を[dateTime](http://www.hl7.org/fhir/datatypes.html#dateTime)で格納する。
+このプロファイルのリソースでは、effective[x]エレメントにはレポート作成時間を[dateTime](http://www.hl7.org/fhir/R4/datatypes.html#dateTime)で格納する。
 
 ### 関連するObservation
 
@@ -177,7 +177,7 @@ DiagnosticReport リソースのインタラクション一覧の定義はユー
 | encounter | reference | オーダが発行された際の Encounter | DiagnosticReport.encounter<br><br> ([Encounter][JP_Encounter]) |
 | identifier | token | レポートの identifier（識別子） | DiagnosticReport.identifier | 
 | issued | date | レポート発行日（確定日） | DiagnosticReport.issued |
-| media | reference | キー画像への参照 | DiagnosticReport.media.link<br><br> ([Media](http://www.hl7.org/fhir/media.html)) | 
+| media | reference | キー画像への参照 | DiagnosticReport.media.link<br><br> ([Media](http://www.hl7.org/fhir/R4/media.html)) | 
 | performer | reference | レポート確定者 | DiagnosticReport.performer<br><br> ([Practitioner][JP_Practitioner]) |
 | result | reference | 関連する検査結果 (検体検査結果など) | DiagnosticReport.result<br><br> ([Observation][JP_Observation_LabResult])|
 | results-interpreter | reference | 読影者 | DiagnosticReport.resultsInterpreter<br><br> ([Practitioner][JP_Practitioner]) |
