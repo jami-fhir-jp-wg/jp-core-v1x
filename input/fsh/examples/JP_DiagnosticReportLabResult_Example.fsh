@@ -1,11 +1,11 @@
 Instance: jp-diagnosticreport-labresult-example-1
 InstanceOf: JP_DiagnosticReport_LabResult
-Title: "JP Core DiagnosticReport_LabResult Example 検体検査"
-Description: "検体検査"
+Title: "JP Core DiagnosticReport_LabResult Example 検体検査（血液）レポート"
+Description: "検体検査（血液）レポート"
 Usage: #example
-* contained[0] = r1
-* contained[+] = r2
-* contained[+] = r3
+* contained[0] = inner-observation-labresult-1
+* contained[+] = inner-observation-labresult-2
+* contained[+] = inner-observation-labresult-3
 * status = #final
 * identifier.system = "http://abc-hospital.local/fhir/lab/reportid"
 * identifier.value = "5234342"
@@ -21,11 +21,11 @@ Usage: #example
 * presentedForm.data = "JVBERi0xLjUNCiW1tbW1DQoxIDAgb2JqDQo8PC9UeXBlL0NhdGFsb2cvUGFnZXMgMiAwIFIvTGFuZyhqYS1KUCkgL1N0cnVjdFRyZWVSb290IDEzIDAgUi9NYXJrSW5mbzw8L01hcmtlZCB0cnVlPj4+Pg0KZW5kb2JqDQoyIDAgb2JqDQo8PC9UeXBlL1BhZ2VzL0NvdW50IDEvS2lkc1sgMyAwIFJdID4+DQplbmRvYmoNCjMgMCBvYmoN"
 * presentedForm.title = "検査結果PDFレポート"
 * effectiveDateTime = "2021-08-25T08:30:00+09:00"
-* result[0] = Reference(r1)
-* result[+] = Reference(r2)
-* result[+] = Reference(r3)
+* result[0] = Reference(Observation/inner-observation-labresult-1)
+* result[+] = Reference(Observation/inner-observation-labresult-2)
+* result[+] = Reference(Observation/inner-observation-labresult-3)
 
-Instance: r1
+Instance: inner-observation-labresult-1
 InstanceOf: JP_Observation_LabResult
 Usage: #inline
 * status = #final
@@ -40,7 +40,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+11:00"
 * specimen = Reference(Specimen/jp-specimen-example-2)
 
-Instance: r2
+Instance: inner-observation-labresult-2
 InstanceOf: JP_Observation_LabResult
 Usage: #inline
 * status = #final
@@ -56,7 +56,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+11:00"
 * specimen = Reference(Specimen/jp-specimen-example-2)
 
-Instance: r3
+Instance: inner-observation-labresult-3
 InstanceOf: JP_Observation_LabResult
 Usage: #inline
 * status = #final
