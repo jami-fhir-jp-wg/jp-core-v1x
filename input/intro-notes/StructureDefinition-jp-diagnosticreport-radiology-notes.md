@@ -36,7 +36,7 @@ DiagnosticReportのドメインリソースの一つであるtextエレメント
 
 NarrativeなtextにアクセスするためのDomainResource定義
 
-(DiagnosticReportのResourceType直下に現れる。text以外のDomainResourceの詳細については[こちら](https://www.hl7.org/fhir/domainresource.html)を参照のこと）
+(DiagnosticReportのResourceType直下に現れる。text以外のDomainResourceの詳細については[こちら](https://www.hl7.org/fhir/R4/domainresource.html)を参照のこと）
 <!-- 
 {{tree:simplifier.core.r4.resources/domainresource}} -->
 
@@ -185,6 +185,7 @@ DiagnosticReport リソースのインタラクション一覧の定義はユー
 | performer | reference | レポート確定者 | DiagnosticReport.performer ([Practitioner][JP_Practitioner]) |
 | result | reference | 関連する検査結果 (検体検査結果など) | DiagnosticReport.result ([Observation][JP_Observation_LabResult])|
 | results-interpreter | reference | 読影者 | DiagnosticReport.resultsInterpreter ([Practitioner][JP_Practitioner]) |
+
 | status | token | レポートの状態 | DiagnosticReport.status |
 | subject | reference | レポートの対象となる患者 | DiagnosticReport.subject ([Patient][JP_Patient]) |
 

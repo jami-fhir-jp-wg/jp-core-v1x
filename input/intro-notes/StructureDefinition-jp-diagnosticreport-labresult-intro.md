@@ -16,7 +16,7 @@
 
 多くの診断プロセスは、観察（Observation）と診断レポート（DiagnosticReport）を生成する手続きである点に留意する必要がある。
 
-[Observationリソース](http://www.hl7.org/fhir/observation.html)とは 対照的に、DiagnosticReportリソースには通常、いくつかの所見、画像、画像レポート、テキストおよびコード化された解釈、テンプレート化された報告書などが含まれる。検体検査レポートは、DiagnosticReportリソースを使用して表す必要がある。Observationリソースは、特定の調査のいくつかの小さな所見のまとめを提供するためにDiagnosticReportから参照される。
+[Observationリソース](http://www.hl7.org/fhir/R4/observation.html)とは 対照的に、DiagnosticReportリソースには通常、いくつかの所見、画像、画像レポート、テキストおよびコード化された解釈、テンプレート化された報告書などが含まれる。検体検査レポートは、DiagnosticReportリソースを使用して表す必要がある。Observationリソースは、特定の調査のいくつかの小さな所見のまとめを提供するためにDiagnosticReportから参照される。
 
 ## プロファイル定義
 
