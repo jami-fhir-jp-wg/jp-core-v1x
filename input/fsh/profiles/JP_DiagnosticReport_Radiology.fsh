@@ -8,12 +8,14 @@ Title: "JP Core DiagnosticReport Radiology Profile"
 Description: "このプロファイルはDiagnosticReportリソースに対して、放射線検査のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology"
 * ^status = #draft
-* . ^short = "A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports 診断レポート-依頼情報、１項目単位の結果、画像、解釈、およびフォーマットされたレポートの組み合わせ　【JP-Core仕様】画像結果レポートのプロフィール"
-* . ^definition = "The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.\r\n\r\n患者、患者のグループ、デバイス、場所、これらから派生した検体に対して実行された診断的検査の結果と解釈。レポートには、依頼情報や依頼者情報などの臨床コンテキスト（文脈）、および１項目単位の結果、画像、テキストとコード化された解釈、および診断レポートのフォーマットされた表現のいくつかの組み合わせが含まれる。\r\n\r\n【JP-Core仕様】画像結果レポートのプロフィール"
+* . ^short = "診断レポート-依頼情報、１項目単位の結果、画像、解釈、およびフォーマットされたレポートの組み合わせ　【JP-Core仕様】画像結果レポートのプロフィール"
+* . ^definition = "患者、患者のグループ、デバイス、場所、これらから派生した検体に対して実行された診断的検査の結果と解釈。レポートには、依頼情報や依頼者情報などの臨床コンテキスト（文脈）、および１項目単位の結果、画像、テキストとコード化された解釈、および診断レポートのフォーマットされた表現のいくつかの組み合わせが含まれる。\r\n\r\n【JP-Core仕様】画像結果レポートのプロフィール"
+* text ^short = "人が読める形式で提示された情報。放射線レポートの場合はレポートの所見が保持される。"
 * identifier ^definition = "実行者または他のシステムによってこのレポートに割り当てられた識別子。"
 * identifier ^comment = "通常は診断サービスプロバイダの情報システムにより設定される。\r\n\r\n【JP-Core仕様】レポート番号\r\n\r\n（放射線情報システム(RIS)による発番が想定されるが、施設によって電子カルテ等のオーダ番号を使う場合もあり得る）"
 * identifier ^requirements = "このレポートについてクエリを実行するとき、およびFHIRコンテキスト外のレポートにリンクするときにどの識別子を使用するかを知る必要がある"
-* basedOn MS
+* basedOn ^short = "検査や診断の依頼の元になったもの。通常はServiceRequestあるいはCarePlan（治験や抗がん剤投与等により検査を行うことが必須の場合、根拠となった事象を追記することは制限しない）"
+* basedOn only Reference(CarePlan or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
 * basedOn ^definition = "レポート作成サービスに対する要求の詳細"
 * basedOn ^comment = "通常は１つのリクエストに対し１つの検査結果となるが、状況によって１つのリクエストに対し複数の検査結果が要求され、複数のレポートが作成される場合もあるので注意すること。\r\n\r\n【JP-Core仕様】オーダ発生元の ServiceRequest または CarePlan への参照（多くの場合はServiceRequest（オーダ）が存在するが、オーダが発生しない検査も想定される。）"
 * basedOn ^requirements = "このエレメントによりレポートの認可をトレースしたり、レポート作成サービスに対する提案や推奨事項を追跡することができる。"
@@ -42,17 +44,19 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * issued ^definition = "このバージョンのレポートがプロバイダーに提供された日時。通常、レポートがレビューおよび検証された後になる。"
 * issued ^comment = "リソース自体の更新時間とは異なる場合がある。これは、レポートの実際のリリース時間ではなく、レコード（場合によってはセカンダリコピー）のステータスであるため。\r\n\r\n【JP-Core仕様】レポート確定日時"
 * issued ^requirements = "臨床医は、レポートがリリースされた日付を確認できる必要がある。"
-* performer MS
+* performer only Reference(JP_Practitioner)
 * performer ^definition = "レポートの発行を担当するもの。"
 * performer ^comment = "臨床診断レポートに対して責任を持つもの.\r\n\r\n【JP-Core仕様】レポート確定者\r\n\r\n（責任としては performer > resultsInterpreter という関係性）"
 * performer ^requirements = "結果に関する問い合わせがある場合は、誰に連絡を取るべきかを知る必要がある。また、データ二次分析のためにレポートの発生源を追跡する必要が生じる場合もある。"
-* resultsInterpreter MS
+* resultsInterpreter only Reference(JP_Practitioner)
 * resultsInterpreter ^definition = "レポートの結論や読影に関わる医師や組織"
 * resultsInterpreter ^comment = "必ずしも診断レポートに対して責任を持つものを示すわけでは無い。\r\n\r\n【JP-Core仕様】但し、一次読影や二次読影などの役割 (Practitioner Roll) の指定方法はペンディング"
 * resultsInterpreter ^requirements = "結果に関する問い合わせがある場合は、誰に連絡を取るべきかを知る必要がある。また、データ二次分析のためにレポートの発生源を追跡する必要が生じる場合もある。"
+* specimen ^short = "【JP-Core仕様】未使用\r\n\r\n・画像ガイド下生検で得られる検体の可能性は有り得るが、本項目は病理レポートで利用されることを想定し、放射線レポートでは特には規定しない"
 * specimen ^definition = "診断レポートの対象となる検体"
 * specimen ^comment = "【JP-Core仕様】未使用\r\n\r\n・画像ガイド下生検で得られる検体の可能性は有り得るが、本項目は病理レポートで利用されることを想定し、放射線レポートでは特には規定しない"
 * specimen ^requirements = "レポートの対象となる取集された検体についての情報をレポートできる必要がある。"
+* result ^short = "【JP-Core仕様】計測情報などの付随所見をObservationリソースとして定義できるが、該当するコードが定義できないため放射線レポートでは未定義とする。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
 * result ^definition = "診断レポートの一部となるObservationリソース"
 * result ^comment = "Observationはさらにobservationを含むことができる。\r\n\r\n【JP-Core仕様】計測情報などの付随所見をObservationリソースとして定義できるが、該当するコードが定義できないため放射線レポートでは未定義とする。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
 * result ^requirements = "結果のグループ化が任意だが、意味のある個別の結果または結果のグループをサポートする必要がある。"

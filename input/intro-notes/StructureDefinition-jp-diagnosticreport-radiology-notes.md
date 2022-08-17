@@ -199,7 +199,7 @@ DiagnosticReport リソースのインタラクション一覧の定義はユー
 - [RadReport][RadReport] - 放射線レポートテンプレート
 - [RadLex radiology lexicon][RadLex radiology lexicon] - 放射線科語彙集
 - [RadElement][RadElement] - 放射線関連共通データエレメント
-- [IHE Radiology Technical Framework Supplement - Management of Radiology Report Templates][IHE Radiology Technical Framework Supplement - Management of Radiology Report Templates]
+- [IHE Radiology Technical Framework][IHE Radiology Technical Framework] - 放射線関連テクニカルフレームワーク（放射線レポートおよびレポートテンプレートの取り扱いに関する仕様が含まれている）
 
 {% include markdown-link-references.md %}
 {% include external-link-reference.md %}

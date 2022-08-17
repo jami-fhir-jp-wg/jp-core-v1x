@@ -8,4 +8,4 @@
 [RadReport]: https://www.rsna.org/practice-tools/data-tools-and-standards/radreport-reporting-templates
 [RadLex radiology lexicon]: https://www.rsna.org/practice-tools/data-tools-and-standards/radlex-radiology-lexicon
 [RadElement]: https://www.rsna.org/practice-tools/data-tools-and-standards/radelement-common-data-elements
-[IHE Radiology Technical Framework Supplement - Management of Radiology Report Templates]: https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_MRRT.pdf
+[IHE Radiology Technical Framework]: https://www.ihe.net/resources/technical_frameworks/#radiology
