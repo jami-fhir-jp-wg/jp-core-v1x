@@ -5,7 +5,7 @@ InstanceOf: JP_ImagingStudy_Radiology
 Title: "JP Core ImagingStudy Radiology Example 放射線画像検査"
 Description: "放射線画像検査"
 Usage: #example
-* identifier.system = "http://www.acme.com/identifiers/patient"
+* identifier.system = "urn:dicom:uid"
 * identifier.value = "urn:oid:2.16.124.113543.6003.1154777499.30246.19789.3503430045"
 * status = #available
 * subject = Reference(Patient/jp-patient-example-1)
@@ -14,7 +14,7 @@ Usage: #example
 * numberOfInstances = 1
 * series.uid = "2.16.124.113543.6003.2588828330.45298.17418.2723805630"
 * series.number = 3
-* series.modality.system = "http://dicom.nema.org/resources/ontology/DCM"
+* series.modality.system = "https://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_D.html"
 * series.modality.code = #CT
 * series.description = "CT胸部スクリーニング"
 * series.numberOfInstances = 1
