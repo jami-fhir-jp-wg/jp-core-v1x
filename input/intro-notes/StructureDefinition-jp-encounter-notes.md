@@ -18,7 +18,7 @@ Encounter リソースは、次の要素を持たなければならない。
 
 JP Encounter リソースで使用される拡張は次の通りである。
 
-- [Associated Encounter](https://www.hl7.org/fhir/extension-encounter-associatedencounter.html)
+- [Associated Encounter](https://www.hl7.org/fhir/R4/extension-encounter-associatedencounter.html)
 
   - リソースで関連付けを定義しているプロパティが存在しないEncounterを参照するために利用する
 
