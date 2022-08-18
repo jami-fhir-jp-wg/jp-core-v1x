@@ -26,8 +26,10 @@ v1.0 → v1.1に変更するあたり、開発環境(Sushi & IG Publisher)を変
         * `JP_Patient` religionおよびbirthPlaceのExtensionを追加した。
         * `JP_Patient` nameをSlicingを利用せずに、参照先を`JP_HumanName`とすることのみにした。
         * `JP_Practitioner` nameをSlicingを利用せずに、参照先を`JP_HumanName`とすることのみにした。
-        * `JP_Practitioner` qualification.codeに対するバインディング対象となる免許に関するValueSet(`JP_MedicalLicenceCertificate_VS`)およびCodeSystem(`JP_MedicalLicenceCertificate_CS`)を定義した。
-
+        * `JP_Practitioner` qualification.codeに対するバインディング対象となる免許に関するValueSet(`JP_MedicalLicenseCertificate_VS`)およびCodeSystem(`JP_MedicalLicenseCertificate_CS`)を定義した。
+        * `JP_Organization`にてPrefectureNoの都道府県番号をCoding型に変更し対応するCodeSystemを作成および割り当てた。
+        * `JP_Organization`にてorganizationCategoryの点数表コードをCoding型に変更し対応するCodeSystemを作成および割り当てた。
+        
     * Medication関連
         * `JP_Immunization`プロファイルを追加した。
         * `JP_MedicationAdministration` effective[x]にPeriod型を追加した。
