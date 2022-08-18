@@ -34,11 +34,8 @@ imagingStudyエレメントはCardinalityが0..1だが、放射線レポート�
 
 DiagnosticReportのドメインリソースの一つであるtextエレメントに見読可能な[narrative](https://www.hl7.org/fhir/R4/narrative.html)データとしてレポートの所見を中心とした情報を格納する。依頼情報や患者基本情報などを含んだレポート全体のデータは別途presentedFormエレメントに保持されるが、ここではPDF等のバイナリが保存される。よってレポート内容の見読性と検索性を担保するためにtextエレメントに保存されたデータが利用される。
 
-NarrativeなtextにアクセスするためのDomainResource定義
-
 (DiagnosticReportのResourceType直下に現れる。text以外のDomainResourceの詳細については[こちら](https://www.hl7.org/fhir/R4/domainresource.html)を参照のこと）
-<!-- 
-{{tree:simplifier.core.r4.resources/domainresource}} -->
+
 
 例：
 
