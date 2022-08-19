@@ -36,7 +36,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 |医薬品|HOT9|urn:oid:1.2.392.200119.4.403.1|
 |医薬品|HOT13|	urn:oid:1.2.392.200119.4.402.1|
 |医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
-|剤形|MERIT-9(剤形)|http://jpfhir.jp/Common/CodeSystem/merit9-form|
+|剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/Common/CodeSystem/merit9-form|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
 |力価区分|電子処方箋HL7 FHIR仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
 
