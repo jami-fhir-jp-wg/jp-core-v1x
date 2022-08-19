@@ -28,14 +28,14 @@ ImagingStudy リソースはDICOM画像検査において作成された内容�
 ImagingStudyリソースはDICOMのstudy, seriesおよび画像に関連する情報を提供し、それらの情報をどのようにして取り出すか（native DICOMフォーマットで受け取るか、JPEGなどの一般的な画像情報に変換したものを受けとるかなど）を示す。ImagingStudyは一つのDICOM studyのすべての情報を網羅するために用いられる。
 
 このリソースでは32ビットのタグ（DICOMタグと呼ばれる）で示されるDICOMアトリビュート（タグ情報）をmappingするためのエレメントが用意されている。
-DICOMタグは4桁の16進数がコンマで区切られたペア（例　(0008, 103E) )として表現される。それぞれのタグ情報に関する名称と値のペアについては[DICOM Part6 Data Dictionary](http://medical.nema.org/medical/dicom/current/output/html/part06.html)に記載されている。さらに、情報体の中のタグ情報の用途については[DICOM Part 3 Information Object Definitions](http://medical.nema.org/medical/dicom/current/output/html/part03.html)に記載されている。Number of Instances in StudyなどのDICOMにおける問い合わせモデルに関する情報は[ DICOM Part 4 Annex C](http://medical.nema.org/medical/dicom/current/output/html/part04.html#chapter_C)で参照できる。
+DICOMタグは4桁の16進数がコンマで区切られたペア（例　(0008, 103E) )として表現される。それぞれのタグ情報に関する名称と値のペアについては[DICOM Part6 Data Dictionary](https://dicom.nema.org/medical/dicom/current/output/html/part06.html)に記載されている。さらに、情報体の中のタグ情報の用途については[DICOM Part 3 Information Object Definitions](https://dicom.nema.org/medical/dicom/current/output/html/part03.html)に記載されている。Number of Instances in StudyなどのDICOMにおける問い合わせモデルに関する情報は[ DICOM Part 4 Annex C](https://dicom.nema.org/medical/dicom/current/output/html/part04.html#chapter_C)で参照できる。
 
 最も単純な場合、ImagingStudyはDICOM query（例えばQIDO-RS）を行うことなく重要なDICOMタグ情報へのアクセスを提供する。一方で、DICOMの実画像情報などのインスタンスはImagingStudyリソースには保存されないため、この情報を保存するためにはDICOM WADO-RSサーバやほかのストレージ機能を利用する必要がある。
 （FHIRではREST APIを用いることが想定されており，親和性の観点からはDICOM web accessの利用が想定される。）
 
 ImagingStudyは一つのDICOM studyに対してのリファレンスであり、またそのスタディのサブセットに対する参照にも利用できる。一方で、複数のImagingStudyリソースが同じDICOM studyを参照することや，同じDICOM study内の異なるサブセット（シリーズ）を参照することもあり得る。
 
-このプロファイルでは上記のようなDICOMに関連して用いられる ImagingStudyの用途がスコープであり、ImagingStudyの情報項目の１つを取り扱う際に、必要な要件を定義している。
+上記のようなDICOMに関連して用いられるImagingStudyの用途がこのプロファイルでのスコープであり、ImagingStudyの情報項目の１つを取り扱う際に必要な要件を定義している。
 
 ## プロファイル定義
 
