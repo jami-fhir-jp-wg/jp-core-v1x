@@ -61,7 +61,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * category ^definition = "このMedicationRequest Resourceが使用される区分を示す。日本では「院外」「院内」「入院」「外来」などの区分を想定する。\r\n一般的には、外来や入院などどこでこの薬剤が投与、内服されるかを想定した区分である。\r\n処方病棟や処方した診療科をOrganization resourceで表現することが冗長である場合にはこの区分が用いられることもある。\r\n\r\nHL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicationrequest-category がデフォルトで用いられるが、日本での使用の場合持参薬をカバーする必要があり、JAHIS処方データ規約V3.0Cに記載されているMERIT-9処方オーダ表7とJHSP0007表を組み合わせて持ちいることとする。"
 * category ^comment = "薬剤が投与あるいはその他の用途で利用されると想定される場面についての区分である。"
 * category ^binding.strength = #example
-* category ^binding.description = "MedicationRequest Resourceの区分を示すコード化された概念。たとえば、どこで服薬あるいは投与されるか、治療の種別はどうかについて。FHIRでは"
+* category ^binding.description = "MedicationRequest Resourceの区分を示すコード化された概念。たとえば、どこで服薬あるいは投与されるか、治療の種別はどうかについて。"
 * priority ^definition = "このMedicationRequestオーダーの優先度。他のオーダーと比較して表現される。"
 * priority ^comment = "FHIRでは文字列の大きさが1MBを超えてはならない(SHALL NOT)。"
 * doNotPerform ^short = "要求が禁止された行為であればTrue"
