@@ -4,6 +4,7 @@ Title: "JP Core MedicalFeeScoreType Codes"
 Description: "診療報酬点数表番号"
 * ^url = $JP_MedicalFeeScoreType_CS
 * ^status = #active
+* ^caseSensitive = true
 * ^content = #complete
 * #0 "助産所"
 * #1 "医科"
