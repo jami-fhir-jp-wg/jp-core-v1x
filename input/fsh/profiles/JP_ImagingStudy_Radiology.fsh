@@ -56,9 +56,11 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * procedureCode ^short = "実施されたProcedureのコード"
 * procedureCode ^definition = "実施されたProcedureのタイプを表すコード。"
 * procedureCode ^comment = "すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係と調整前後の関係を管理するための独自の構造を提供する必要がある。\r\n\r\nエラーコードなどを記載"
-* location only Reference(JP_Location)
+* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
+* procedureCode ^binding.description = "コードは (http://playbook.radlex.org/playbook/SearchRadlexAction) から取得されるべき(SHALL)である。ただし、実施された行為のタイプにこれらのコードがなじまない場合は他のコードが利用される可能性がある。"
 * location ^short = "ImagingStudy が実施された場所"
 * location ^definition = "ImagingStudyが実施された主要な物理的な場所。"
+* location ^requirements = "イベントをレコードが保持される可能性が高い場所に結び付け、イベントの発生に関するコンテキストを提供する。 (たとえば、専用の医療環境の内外で発生した場合など。）"
 * location ^comment = "参照は、実在のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。\r\n\r\n撮影室を示すLocationリソースを参照。"
 * reasonCode ^short = "スタディが依頼された理由"
 * reasonCode ^definition = "ImagingStudyが要求された理由を示す臨床状態の説明。"
