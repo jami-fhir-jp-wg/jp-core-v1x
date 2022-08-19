@@ -6,6 +6,7 @@ Description: "後発医薬品変更不可区分のコードシステム"
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
+* #0    "変更可"
 * #1    "後発品変更不可"
 * #2    "剤形変更不可"
 * #3    "含量規格変更不可"
