@@ -1,8 +1,8 @@
 
 ### 必須要素
-次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
+次のデータ項目は必須（データが存在しなければならない）である。
 
-JP Core MedicationDispense リソースは、次の要素を持たなければならない。
+MedicationDispense リソースは、次の要素を持たなければならない。
 - status : ステータスは必須である。
 - medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない。
 - subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
@@ -11,15 +11,8 @@ JP Core MedicationDispense リソースは、次の要素を持たなければ�
 - dosageInstruction.text : フリーテキストの用法指示であり、JP Coreでは必須である。
 - dosageInstruction.timing : 服⽤タイミングを記録し、JP Coreでは必須である。dosageInstruction.timing.code.coding.code, dosageInstruction.timing.code.coding.system が必ず存在しなければならない。
 
-JP Core MedicationDispenseリソースは、次の要素をサポートしなければならない。
-- medicationCodeableConcept : 医薬品の識別情報
-- subject :患者の参照情報
-- whenHandedOver : 払い出し日時
-- quantity : 調剤量
-- dosageInstruction.timing : 服⽤タイミング
-
 ### Extensions定義
-JP Core MedicationDispense リソースで使用される拡張は次の通りである。
+JP Core MedicationDispense プロファイルで使用される拡張は次の通りである。
 
 #### JP Core MedicationDispense独自で追加されたExtension
 
@@ -29,7 +22,7 @@ JP Core MedicationDispense リソースで使用される拡張は次の通り�
 
 #### 既存のExtensionの利用
 
-JP Core MedicationDispense リソースでは、JP Core MedicationRequestプロファイルで定義された以下の拡張を使用する。
+JP Core MedicationDispense プロファイルでは、JP Core MedicationRequestプロファイルで定義された以下の拡張を使用する。
 
 |拡張|説明|URL|値の型|
 |------------|-------------|----------|-----|
