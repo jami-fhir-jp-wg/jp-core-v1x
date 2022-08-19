@@ -1,27 +1,20 @@
 
 
 ### 必須要素
-次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
+次のデータ項目は必須（データが存在しなければならない）である。
 
-JP Core MedicationRequest リソースは、次の要素を持たなければならない。
-- status : ステータスは必須であり、JP Coreでは"active"に固定される。
+MedicationRequestリソースは、次の要素を持たなければならない。
+- status : ステータスは必須である。
 - intent : 意図は必須であり、JP Coreでは"order" に固定される。
 - medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない。
 - subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
 - authoredOn : 処方依頼日時であり、JP Coreでは必須である。
 - dosageInstruction.text : フリーテキストの用法指示であり、JP Coreでは必須である。
 - dosageInstruction.timing : 服⽤タイミングを記録し、JP Coreでは必須である。dosageInstruction.timing.code.coding.code, dosageInstruction.timing.code.coding.system が必ず存在しなければならない。
-- dispenseRequest.quantity : 調剤量は必須であり、dispenseRequest.quantity.value, dispenseRequest.quantity.unit, dispenseRequest.quantity.system, dispenseRequest.quantity.code が必ず存在しなければならない 
-
-JP Core MedicationRequestリソースは、次の要素をサポートしなければならない。
-- medicationCodeableConcept : 医薬品の識別情報
-- subject :患者の参照情報
-- authoredOn : 処方依頼日時
-- dosageInstruction.timing : 服⽤タイミング
-- dispenseRequest.quantity : 調剤量
+- dispenseRequest.quantity : 調剤量は必須であり、dispenseRequest.quantity.value, dispenseRequest.quantity.unit, dispenseRequest.quantity.system, dispenseRequest.quantity.code が必ず存在しなければならない 。
 
 ### Extensions定義
-JP Core MedicationRequest リソースで使用される拡張は次の通りである。
+JP Core MedicationRequest プロファイルで使用される拡張は次の通りである。
 
 #### JP Core MedicationRequest独自で追加されたExtension
 

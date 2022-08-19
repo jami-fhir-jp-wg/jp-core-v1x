@@ -1,24 +1,22 @@
 
 ### 必須要素
-次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
+次のデータ項目は必須（データが存在しなければならない）である。
 
-MedicationAdministration リソースは、次の要素を持たなければならない。
+MedicationAdministrationリソースは、次の要素を持たなければならない。
 - status : ステータスは必須であり、JP Coreでは `completed` or `stopped` に限定される。
-- medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない。
+- medicationReference : 医薬品の識別情報は必須であり、medicationReference.referenceが必ず存在しなければならない。JP Coreでは注射の医薬品情報は単一薬剤の場合も Medicationリソースとして記述し、MedicationRequest.contained属性に内包し、medicationCodeableConceptは使用しない。
 - subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
 - effectiveDateTime : 投与実施日時であり、JP Coreでは必須である。
 
-※投与実施のユースケースにおいては、実施投与量(dose)が必須であることが望ましいが、ワーキンググループでの検討の結果、投与中止のユースケースも考慮して必須としない結論となった。
+MedicationAministrationリソースに内包されるMedicationリソースでは、次の要素を持たなければならない。
+- ingredient.itemCodeableConcept : 医薬品の識別情報であり、JP Coreでは必須である。
 
-MedicationAdministrationリソースは、次の要素をサポートしなければならない。
-- medicationCodeableConcept : 医薬品の識別情報
-- subject :患者の参照情報
-- effectiveDateTime : 投与実施日時
+※投与実施のユースケースにおいては、実施投与量(ingredient.strength)が必須であることが望ましいが、ワーキンググループでの検討の結果、投与中止のユースケースも考慮して必須としない結論となった。
 
 ### Extensions定義
-MedicationAdministration リソースで使用される拡張は次の通りである。
+JP Core MedicationAdministration Injection プロファイルで使用される拡張は次の通りである。
 
-#### JP MedicationAdministration独自で追加されたExtension
+#### JP Core MedicationAdministration Injection独自で追加されたExtension
 
 |拡張|説明|URL|値の型|
 |------------|-------------|----------|-----|
@@ -92,7 +90,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 | SHALL            | identifier    | token  | GET [base]/MedicationAdministration?identifier=http://myhospital.com/fhir/medication\|1234567890 |
 | SHOULD            | patient      | reference | GET [base]/MedicationAdministration?patient=123456   |
 | SHOULD           | patient,effective-time | reference,date  | GET [base]/MedicationAdministration?patient=123456&effective-time=eq2013-01-14 |
-| MAY           | TBD | TBD | GET [base]/MedicationAdministration?code=urn:oid:1.2.392.100495.20.2.74\|105271807  |
+| MAY           | effective-time,medication,performer,request | date,reference,reference,reference | GET [base]/MedicationAdministration?medication.ingredient-code=urn:oid:1.2.392.100495.20.2.74\|105271807  |
 
 ##### 必須検索パラメータ
 

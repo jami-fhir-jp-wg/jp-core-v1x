@@ -1,28 +1,19 @@
 
 ### 必須要素
-次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
+次のデータ項目は必須（データが存在しなければならない）である。
 
-JP Core MedicationDispense Injectionリソースは、次の要素を持たなければならない。
+MedicationDispense リソースは、次の要素を持たなければならない。
 - status : ステータスは必須である。
 - medication : 医薬品の識別情報は必須であり、medicationReference.referenceが必ず存在しなければならない。JP Coreでは注射の医薬品情報は単一薬剤の場合も Medicationリソースとして記述し、MedicationDispense.contained属性に内包し、medicationCodeableConceptは使用しない。
 - subject : 患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
 - whenHandedOver : 払い出し日時は必須である。
 
-JP Core MedicationDispense Injectionリソースに内包されるMedicationリソースでは、次の要素を持たなければならない。
+MedicationDispense リソースに内包されるMedicationリソースでは、次の要素を持たなければならない。
 - ingredient.itemCodeableConcept : 医薬品の識別情報であり、JP Coreでは必須である。
 - ingredient.strength : 医薬品の投与量であり、JP Coreでは必須である。
 
-JP Core MedicationDispense Injectionリソースは、次の要素をサポートしなければならない。
-- medication : 医薬品の識別情報と容量
-- subject :患者の参照情報
-- whenHandedOver : 払い出し日時
-
-JP Core MedicationDispense Injectionリソースに内包されるMedicationリソースでは、次の要素をサポートしなければならない。
-- ingredient.itemCodeableConcept : 医薬品の識別情報
-- ingredient.strength : 医薬品の投与量
-
 ### Extensions定義
-JP Core MedicationDispense Injectionリソースで使用される拡張は次の通りである。
+JP Core MedicationDispense Injectionプロファイルで使用される拡張は次の通りである。
 
 #### JP Core MedicationDispense Injection独自で追加されたExtension
 

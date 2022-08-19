@@ -1,9 +1,9 @@
 
 ### 必須要素
-次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
+次のデータ項目は必須（データが存在しなければならない）である。
 
-JP Core MedicationRequest Injectionリソースは、次の要素を持たなければならない。
-- status : ステータスは必須であり、JP Coreでは"active"に固定される。
+MedicationRequestリソースは、次の要素を持たなければならない。
+- status : ステータスは必須である。
 - intent : 意図は必須であり、JP Coreでは"intent" に固定される。
 - medicationReference : 医薬品の識別情報は必須であり、medicationReference.referenceが必ず存在しなければならない。JP Coreでは注射の医薬品情報は単一薬剤の場合も Medicationリソースとして記述し、MedicationRequest.contained属性に内包し、medicationCodeableConceptは使用しない。
 - subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
@@ -11,22 +11,12 @@ JP Core MedicationRequest Injectionリソースは、次の要素を持たなけ
 - dosageInstruction.text : フリーテキストの用法指示であり、JP Coreでは必須である。
 - dosageInstruction.timing : 投薬タイミングを記録し、JP Coreでは必須である。
 
-JP Core MedicationRequest Injectionリソースに内包されるMedicationリソースでは、次の要素を持たなければならない。
+MedicationRequestリソースに内包されるMedicationリソースでは、次の要素を持たなければならない。
 - ingredient.itemCodeableConcept : 医薬品の識別情報であり、JP Coreでは必須である。
 - ingredient.strength : 医薬品の投与量であり、JP Coreでは必須である。
 
-JP Core MedicationRequest Injectionリソースは、次の要素をサポートしなければならない。
-- medicationReference : 医薬品の識別情報
-- subject :患者の参照情報
-- authoredOn : 処方依頼日時
-- dosageInstruction.timing : 服⽤タイミング
-
-JP Core MedicationRequest Injectionリソースに内包されるMedicationリソースでは、次の要素をサポートしなければならない。
-- ingredient.itemCodeableConcept : 医薬品の識別情報
-- ingredient.strength : 医薬品の投与量
-
 ### Extensions定義
-JP Core MedicationRequest Injectionリソースで使用される拡張は次の通りである。
+JP Core MedicationRequest Injectionプロファイルで使用される拡張は次の通りである。
 
 #### JP Core MedicationRequest Injection 独自で追加されたExtension
 
