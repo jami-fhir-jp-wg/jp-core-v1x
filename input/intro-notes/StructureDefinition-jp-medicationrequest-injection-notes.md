@@ -64,14 +64,14 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 |医薬品|HOT9|urn:oid:1.2.392.200119.4.403.1|
 |医薬品|HOT13|urn:oid:1.2.392.200119.4.402.1|
 |医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
-|剤形|MERIT-9(剤形)|http://jpfhir.jp/Common/CodeSystem/merit9-form|
-|処方区分|MERIT-9(処方区分)|http://jpfhir.jp/Common/CodeSystem/merit9-category|
-|処方区分|JAHIS注射データ交換規約Ver.2.1C(JHSI表0001)|http://jpfhir.jp/Common/CodeSystem/JHSI0001|
+|剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/Common/CodeSystem/merit9-form|
+|処方区分|MERIT-9(処方区分)|http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category|
+|処方区分|JAHIS注射データ交換規約Ver.2.1C(JHSI表0001)|http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0001|
 |用法種別|JAMI処方・注射オーダ標準用法規格(時間的要素・機器区分コード表)|urn:oid:1.2.392.200250.2.2.20.45（仮）|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
 |力価区分|電子処方箋HL7 FHIR仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
 |用法|JAMI処方・注射オーダ標準用法規格(用法コード) |urn:oid:1.2.392.200250.2.2.20.20|
-|頓用条件|MERIT-9(頓用指示)|http://jpfhir.jp/Common/CodeSystem/merit9-asNeededCondition|
+|頓用条件|MERIT-9(頓用指示)|http://jpfhir.jp/fhir/Common/CodeSystem/merit9-asNeededCondition|
 |投与部位|JAMI処方・注射オーダ標準用法規格(部位コード)|urn:oid:1.2.392.200250.2.2.20.32|
 |投与部位|HL7 V2(HL7表0550)|http://terminology.hl7.org/CodeSystem/v2-0550|
 |投与部位(修飾子)|HL7 V2(HL7表0495)|http://terminology.hl7.org/CodeSystem/v2-0495|
@@ -79,7 +79,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 |投与方法|JAMI処方・注射オーダ標準用法規格(基本用法区分)|urn:oid:1.2.392.200250.2.2.20.30|
 |投与手技|HL7 V2(使用者定義表0165)|http://terminology.hl7.org/CodeSystem/v2-0165|
 |投与手技|JAMI処方・注射オーダ標準用法規格(用法詳細区分)|urn:oid:1.2.392.200250.2.2.20.40|
-|投与手技|JAHIS注射データ交換規約Ver.2.1C(JHSI表0003)|http://jpfhir.jp/Common/CodeSystem/JHSI0003|
+|投与手技|JAHIS注射データ交換規約Ver.2.1C(JHSI表0003)|http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0003|
 |投与経路|HL7 V2(使用者定義表0162)|http://terminology.hl7.org/CodeSystem/v2-0162|
 |入外区分|HL7 V2(HL7表0482)|http://terminology.hl7.org/CodeSystem/v2-0482|
 
@@ -409,7 +409,7 @@ HTTP/1.1 200 OK
     {
       "coding": [
         {
-          "system": "http://jpfhir.jp/Common/CodeSystem/merit9-category",
+          "system": "http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category",
           "code": "IHP",
           "display": "入院処方"
         }
@@ -418,7 +418,7 @@ HTTP/1.1 200 OK
     {
       "coding": [
         {
-          "system": "http://jpfhir.jp/Common/CodeSystem/JHSI0001",
+          "system": "http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0001",
           "code": "FTP",
           "display": "定時処方"
         }
@@ -761,7 +761,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 ```
 
 ### 頓用指示の頓用条件、頓用回数の記述方法
-例えば「疼痛時10回分」など、頓用の場合の投与条件や投与回数を表現したい場合、投与条件は dosageInstruction.timing.code 要素に CodeableConcept型で指定する。コードは、JAMI処方・注射オーダ標準用法規格の表6 イベント区分、イベント詳細区分("urn:oid:1.2.392.200250.2.2.20")を推奨するが、MERIT-9 処方オーダ 表5 頓用指示("http://jpfhir.jp/Common/CodeSystem/merit9-asNeededCondition") を使用してもよい。
+例えば「疼痛時10回分」など、頓用の場合の投与条件や投与回数を表現したい場合、投与条件は dosageInstruction.timing.code 要素に CodeableConcept型で指定する。コードは、JAMI処方・注射オーダ標準用法規格の表6 イベント区分、イベント詳細区分("urn:oid:1.2.392.200250.2.2.20")を推奨するが、MERIT-9 処方オーダ 表5 頓用指示("http://jpfhir.jp/fhir/Common/CodeSystem/merit9-asNeededCondition") を使用してもよい。
 頓用回数は、dispenseRequest要素に対して定義した拡張「JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount」を使用し、integer型で頓用回数を記載する。
 また、頓用指示の場合、dosageInstruction.asNeededBoolean に true を指定する。
 
@@ -780,7 +780,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
             "display": "疼痛時"
           },
           {
-            "system": "http://jpfhir.jp/Common/CodeSystem/merit9-asNeededCondition",
+            "system": "http://jpfhir.jp/fhir/Common/CodeSystem/merit9-asNeededCondition",
             "code": "PRNpain",
             "display": "疼痛時"
           },
@@ -868,7 +868,7 @@ HL7表0550 身体部位("http://terminology.hl7.org/CodeSystem/v2-0550")とHL7�
 ### 投与経路、投与手技の記述方法
 「静脈内」「眼内」などの投与経路は、dosageInstruction.route 要素にコードまたは文字列で指定する。使用するコード表はHL7 V2の使用者定義表0162 投薬経路を推奨し、その場合識別するURIとして、"urn:oid:2.16.840.1.113883.3.1937.777.10.5.162"を使用する。
 
-「0:静脈注射」、「1:中心静脈注射」などJAMI標準用法コードにて用法詳細区分として表現される区分（注射では「投与手技」とも呼ばれる）は、dosageInstruction.method 要素にコードまたは文字列で指定する。 用法詳細区分を識別するURIとして、"urn:oid:1.2.392.200250.2.2.20.30"を使用する。HL7 V2の使用者定義表0165("http://terminology.hl7.org/CodeSystem/v2-0165")やJAHIS注射データ交換規約のJHSI表0003 精密持続点滴("http://jpfhir.jp/Common/CodeSystem/JHSI0003)を使用してもよい。
+「0:静脈注射」、「1:中心静脈注射」などJAMI標準用法コードにて用法詳細区分として表現される区分（注射では「投与手技」とも呼ばれる）は、dosageInstruction.method 要素にコードまたは文字列で指定する。 用法詳細区分を識別するURIとして、"urn:oid:1.2.392.200250.2.2.20.30"を使用する。HL7 V2の使用者定義表0165("http://terminology.hl7.org/CodeSystem/v2-0165")やJAHIS注射データ交換規約のJHSI表0003 精密持続点滴("http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0003)を使用してもよい。
 
 ```json
 "route": {
@@ -1052,18 +1052,18 @@ HL7 FHIRでは、注射箋の中で同一の用法を持つ剤グループ(RP)�
 ```
 
 ### 処方区分
-薬剤オーダの運用上の区分である処方区分は、MERIT-9(処方区分)およびJAHIS注射データ交換規約Ver.2.1CのJHSI表0001を使用し、category要素に2種類のコードおよび文字列で指定することができる。MERIT-9(処方区分)を識別するURIとして"http://jpfhir.jp/Common/CodeSystem/merit9-category"を、JHSI表0001を識別するURIとして"http://jpfhir.jp/Common/CodeSystem/JHSI0001"を使用する。
+薬剤オーダの運用上の区分である処方区分は、MERIT-9(処方区分)およびJAHIS注射データ交換規約Ver.2.1CのJHSI表0001を使用し、category要素に2種類のコードおよび文字列で指定することができる。MERIT-9(処方区分)を識別するURIとして"http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category"を、JHSI表0001を識別するURIとして"http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0001"を使用する。
 
 ```json
 "category": [ {
   "coding": [ {
-    "system": "http://jpfhir.jp/Common/CodeSystem/merit9-category",
+    "system": "http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category",
     "code": "IHP",
     "display": "入院処方"
   } ]
 }, {
   "coding": [ {
-    "system": "http://jpfhir.jp/Common/CodeSystem/JHSI0001",
+    "system": "http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0001",
     "code": "FTP",
     "display": "定時処方"
   } ]
