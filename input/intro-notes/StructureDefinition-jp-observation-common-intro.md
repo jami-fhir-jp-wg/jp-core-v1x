@@ -7,7 +7,7 @@ Observationリソースに対する主な用途は以下の通り。
 - 目の色など、個人的な特徴
 - 喫煙歴、社会歴、家族支援、認知状態など
 
-※ 臨床所見と疾患の境界は、医療オントロジーの課題となる。一般的なガイドについては、[Observationリソースの境界](https://www.hl7.org/fhir/observation.html#bnr)および[Conditionリソースの境界](https://www.hl7.org/fhir/condition.html#bnr)のセクションを参照のこと。
+※ 臨床所見と疾患の境界は、医療オントロジーの課題となる。一般的なガイドについては、[Observationリソースの境界](https://www.hl7.org/fhir/R4/observation.html#bnr)および[Conditionリソースの境界](https://www.hl7.org/fhir/R4/condition.html#bnr)のセクションを参照のこと。
 
 ## スコープ
 Observation（検査、観察）はヘルスケアの中心的な要素であり、診断の補助、進行状況のモニタリング、基準とパターンの決定、人口統計的特性の把握に使用される。ほとんどのObservationは、メタデータを含む単純な名前/値のペアとなる。一部のObservationは、他のObservationを論理的にグループ化したり、複数の要素から構成される場合もある。
