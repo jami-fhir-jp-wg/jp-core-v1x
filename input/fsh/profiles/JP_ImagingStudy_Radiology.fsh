@@ -15,7 +15,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * identifier ^requirements = "ImagingStudyに1つ以上のシリーズ要素が存在する場合、1つのDICOMスタディUID識別子が存在する必要がある（[DICOM PS 3.3 C.7.2]（https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.2.html）を参照） 。"
 * status ^definition = "ImagingStudyの現在のステータス"
 * status ^comment = "不明(unknown)は「その他」を表すものではない。定義されたステータスの1つを適用する必要がある。不明(unknown)は、オーサリングシステムが現在のステータスを確認できない場合に使用される。\r\n\r\n【JP-Core仕様】リソースの状態。"
-* modality ^short = "実際の取得モダリティーの場合、モダリティーの全シリーズ。対応するDICOM tag: (0008, 0061) "
+* modality ^short = "実際の取得モダリティーの場合、モダリティーの全シリーズ。対応するDICOM tag: (0008, 0061)"
 * modality ^definition = "実際の取得モダリティであるすべてのseries.modality値のリスト、つまりDICOMコンテキストグループ29（値セットOID 1.2.840.10008.6.1.19）の値。"
 * modality ^comment = "コードは、列挙型またはコードリストで、SNOMED CTなどの非常に正式な定義まで、非常にカジュアルに定義できる。詳細については、HL7v3コア原則を参照のこと。\r\n\r\n・モダリティのコードを設定。\r\n\r\n・Seriesの階層の(0008,0060)を集約する、または(0008,0060)　と　(0008, 0061) のOR。但し、重複する値は1つにまとめて表現。"
 * subject only Reference(JP_Patient or Device or Group)
@@ -58,7 +58,6 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * procedureCode ^short = "実施されたProcedureのコード"
 * procedureCode ^definition = "実施されたProcedureのタイプを表すコード。"
 * procedureCode ^comment = "すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係と調整前後の関係を管理するための独自の構造を提供する必要がある。\r\n\r\nエラーコードなどを記載"
-* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
 * procedureCode ^binding.description = "コードは http://playbook.radlex.org/playbook/SearchRadlexAction から取得されるべき(SHALL)である。ただし、実施された行為のタイプにこれらのコードがなじまない場合は他のコードが利用される可能性がある。"
 * location ^short = "ImagingStudy が実施された場所"
 * location ^definition = "ImagingStudyが実施された主要な物理的な場所。"
@@ -100,12 +99,12 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.bodySite ^short = "検査した人体部位"
 * series.bodySite ^definition = "検査対象の解剖学的構造。 \r\nbodySiteは、画像化された身体部分の左右差を示している場合がある。その場合、ImagingStudy.series.lateralityのコンテンツと一致している必要がある。"
 * series.bodySite ^comment = "コードは、列挙型またはコードリストで、どの部位の検査なのかを示す。フリーではなく、DICOM定義書の中で示される語句（コード）をデフォルトとするが、JJ1017Pの小部位コードの利用を許容する。"
-* series.bodySite from https://www.jsrt.or.jp/97mi/content/jj1017.html (example)
+* series.bodySite from JP_JJ1017_SubBodySite_VS (example)
 * series.bodySite ^binding.description = "DICOM tagに設定されているコードをデフォルトとするが、JJ1017Pの小部位コードの利用を許容する。"
 * series.laterality ^short = "人体部位の左右識別"
 * series.laterality ^definition = "検査した（おそらく対になっている）解剖学的構造の左右識別。\r\n例：左膝、両方の肺、または対になっていない腹部。存在する場合は、ImagingStudy.series.bodySiteに示されている左右差情報と一致している必要がある。"
 * series.laterality ^comment = "コードは、列挙型またはコードリストで、どの部位の検査なのかを示す。フリーではなく、DICOM定義書の中で示される語句（コード）をデフォルトとするが、JJ1017Pの左右コードの利用を許容する。"
-* series.laterality from https://www.jsrt.or.jp/97mi/content/jj1017.html (example)
+* series.laterality from JP_JJ1017_Laterality_VS (example)
 * series.laterality ^binding.description = "DICOM定義書の中で示される語句（コード）をデフォルトとするが、JJ1017Pの左右コードの利用を許容する。"
 * series.specimen ^short = "画像検査をした検体"
 * series.specimen ^definition = "例えば、生検のスライド全体の画像化のために画像化された標本。通常の放射線画像検査では使用されない。（DICOMを用いた病理画像検査で用いられる）"

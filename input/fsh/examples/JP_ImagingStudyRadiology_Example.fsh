@@ -18,9 +18,8 @@ Usage: #example
 * series.modality.code = #CT
 * series.description = "CT胸部スクリーニング"
 * series.numberOfInstances = 1
-* series.bodySite.system = "http://jpfhir.jp/Common/CodeSystem/JP_ImagingStudy_BodySite_CS"
-* series.bodySite.code = #43799004
-* series.bodySite.display = "Chest"
+* series.bodySite = $JP_JJ1017_SubBodySite_CS#25 "胸部"
+* series.laterality = $JP_JJ1017_Laterality_CS#A "前側"
 * series.instance.uid = "2.16.124.113543.6003.189642796.63084.16748.2599092903"
 * series.instance.sopClass.system = #urn:ietf:rfc:3986
 * series.instance.sopClass.code = #urn:oid:1.2.840.10008.5.1.4.1.1.2
