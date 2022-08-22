@@ -61,7 +61,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * category ^definition = "このMedicationRequest Resourceが使用される区分を示す。日本では「院外」「院内」「入院」「外来」などの区分を想定する。\r\n一般的には、外来や入院などどこでこの薬剤が投与、内服されるかを想定した区分である。\r\n処方病棟や処方した診療科をOrganization resourceで表現することが冗長である場合にはこの区分が用いられることもある。\r\n\r\nHL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicationrequest-category がデフォルトで用いられるが、日本での使用の場合持参薬をカバーする必要があり、JAHIS処方データ規約V3.0Cに記載されているMERIT-9処方オーダ表7とJHSP0007表を組み合わせて持ちいることとする。"
 * category ^comment = "薬剤が投与あるいはその他の用途で利用されると想定される場面についての区分である。"
 * category ^binding.strength = #example
-* category ^binding.description = "MedicationRequest Resourceの区分を示すコード化された概念。たとえば、どこで服薬あるいは投与されるか、治療の種別はどうかについて。FHIRでは"
+* category ^binding.description = "MedicationRequest Resourceの区分を示すコード化された概念。たとえば、どこで服薬あるいは投与されるか、治療の種別はどうかについて。"
 * priority ^definition = "このMedicationRequestオーダーの優先度。他のオーダーと比較して表現される。"
 * priority ^comment = "FHIRでは文字列の大きさが1MBを超えてはならない(SHALL NOT)。"
 * doNotPerform ^short = "要求が禁止された行為であればTrue"
@@ -343,7 +343,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.route ^requirements = "治療薬剤が患者の体内に投与される生理学的な経路を特定するためのコード。"
 * dosageInstruction.route.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.route.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
-* dosageInstruction.route.coding 1..1
 * dosageInstruction.route.coding ^short = "JAMI 用法コード表投与経路区分２桁コード"
 * dosageInstruction.route.coding ^definition = "JAMI 用法コード表投与経路区分２桁コードを識別するURI。JP Coreでは必須。"
 * dosageInstruction.route.coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
@@ -463,7 +462,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.doseAndRate.type ^requirements = "このtypeに値が指定されていなければ、\"ordered\"であることが想定される。"
 * dosageInstruction.doseAndRate.type.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.doseAndRate.type.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
-* dosageInstruction.doseAndRate.type.coding 1..1
 * dosageInstruction.doseAndRate.type.coding ^short = "力価区分コード"
 * dosageInstruction.doseAndRate.type.coding ^definition = "力価区分コード"
 * dosageInstruction.doseAndRate.type.coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
@@ -813,7 +811,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * substitution.allowed[x] ^short = "後発医薬品への変更可否情報。"
 * substitution.allowed[x] ^definition = "後発医薬品への変更可否情報。"
 * substitution.allowed[x] ^comment = "代替品が許可されるかどうかは無視できないので、このエレメントはmodifierとしてラベルされる。"
-* substitution.allowed[x].coding 1..1
 * substitution.allowed[x].coding ^short = "後発品変更不可コード"
 * substitution.allowed[x].coding ^definition = "後発品変更不可コード。"
 * substitution.allowed[x].coding.system 1..

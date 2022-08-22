@@ -1,27 +1,20 @@
 
 
 ### 必須要素
-次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
+次のデータ項目は必須（データが存在しなければならない）である。
 
-JP Core MedicationRequest リソースは、次の要素を持たなければならない。
-- status : ステータスは必須であり、JP Coreでは"active"に固定される。
+MedicationRequestリソースは、次の要素を持たなければならない。
+- status : ステータスは必須である。
 - intent : 意図は必須であり、JP Coreでは"order" に固定される。
 - medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない。
 - subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
 - authoredOn : 処方依頼日時であり、JP Coreでは必須である。
 - dosageInstruction.text : フリーテキストの用法指示であり、JP Coreでは必須である。
 - dosageInstruction.timing : 服⽤タイミングを記録し、JP Coreでは必須である。dosageInstruction.timing.code.coding.code, dosageInstruction.timing.code.coding.system が必ず存在しなければならない。
-- dispenseRequest.quantity : 調剤量は必須であり、dispenseRequest.quantity.value, dispenseRequest.quantity.unit, dispenseRequest.quantity.system, dispenseRequest.quantity.code が必ず存在しなければならない 
-
-JP Core MedicationRequestリソースは、次の要素をサポートしなければならない。
-- medicationCodeableConcept : 医薬品の識別情報
-- subject :患者の参照情報
-- authoredOn : 処方依頼日時
-- dosageInstruction.timing : 服⽤タイミング
-- dispenseRequest.quantity : 調剤量
+- dispenseRequest.quantity : 調剤量は必須であり、dispenseRequest.quantity.value, dispenseRequest.quantity.unit, dispenseRequest.quantity.system, dispenseRequest.quantity.code が必ず存在しなければならない 。
 
 ### Extensions定義
-JP Core MedicationRequest リソースで使用される拡張は次の通りである。
+JP Core MedicationRequest プロファイルで使用される拡張は次の通りである。
 
 #### JP Core MedicationRequest独自で追加されたExtension
 
@@ -49,9 +42,9 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |医薬品|HOT13|urn:oid:1.2.392.200119.4.402.1|
 |医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
 |医薬品|⼀般処⽅名マスター|urn:oid:1.2.392.100495.20.1.81|
-|剤形|MERIT-9(剤形)|http://jpfhir.jp/Common/CodeSystem/merit9-form |
-|処方区分|MERIT-9(処方区分)|http://jpfhir.jp/Common/CodeSystem/merit9-category|
-|処方区分|JAHIS処方データ交換規約Ver.3.0C(JHSP表0003)|http://jpfhir.jp/Common/CodeSystem/JHSP0003|
+|剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/Common/CodeSystem/merit9-form |
+|処方区分|MERIT-9(処方区分)|http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category|
+|処方区分|JAHIS処方データ交換規約Ver.3.0C(JHSP表0007)|http://jpfhir.jp/fhir/Common/CodeSystem/JHSP0007|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
 |力価区分|処方情報HL7 FHIR記述仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
 |調剤指示|処方情報HL7 FHIR記述仕様(調剤指示)|urn:oid:1.2.392.200250.2.2.30.10|
@@ -867,14 +860,14 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 
 
 ### 処方区分
-薬剤オーダの運用上の区分である処方区分は、MERIT-9(処方区分)およびJAHIS処方データ交換規約Ver.3.0CのJHSP表0007を使用し、category要素に2種類のコードおよび文字列で指定することができる。MERIT-9(処方区分)をしきべつするURIとして"http://jpfhir.jp/Common/CodeSystem/merit9-category"を、JHSP表0007を識別するURIとして"http://jpfhir.jp/Common/CodeSystem/JHSP0003"を使用する。
+薬剤オーダの運用上の区分である処方区分は、MERIT-9(処方区分)およびJAHIS処方データ交換規約Ver.3.0CのJHSP表0007を使用し、category要素に2種類のコードおよび文字列で指定することができる。MERIT-9(処方区分)をしきべつするURIとして"http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category"を、JHSP表0007を識別するURIとして"http://jpfhir.jp/fhir/Common/CodeSystem/JHSP0007"を使用する。
 
 ```json
 "category": [
   {
     "coding": [ 
       {
-        "system": "http://jpfhir.jp/Common/CodeSystem/merit9-category",
+        "system": "http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category",
         "code": "OHP",
         "display": "外来処方"
       } 
@@ -883,7 +876,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
   {
     "coding": [ 
       {
-        "system": "http://jpfhir.jp/Common/CodeSystem/merit9-category",
+        "system": "http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category",
         "code": "OHO",
         "display": "院外処方"
       } 
