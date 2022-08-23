@@ -13,7 +13,7 @@ Usage: #example
     * code = #MTH
 * sex
   * coding[0]
-    * system = http://hl7.org/fhir/administrative-gender
+    * system = "http://hl7.org/fhir/administrative-gender"
     * code = #female
 * reasonCode[0]
   * text = "難聴"
