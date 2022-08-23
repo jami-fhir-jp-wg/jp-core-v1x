@@ -5,7 +5,7 @@ Description: "Observation（検体検査結果）で使用する項目コード"
 * ^url = $JP_ObservationLabResultCode_CS
 * ^status = #draft
 * ^caseSensitive = true
-* ^valueSet = $JP_ObservationLabResultCode_VS
+* ^valueSet = $JP_ObservationLabResult_VS
 * ^content = #not-present
 
 // * ^content = #complete

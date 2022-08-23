@@ -1,7 +1,7 @@
-ValueSet: JP_PhysicalExamCodes_VS
+ValueSet: JP_PhysicalExam_VS
 Id: jp-physicalexamcodes-vs
-Title: "JP Core Physical Exam Codes"
+Title: "JP Core Physical Exam ValueSet"
 Description: "身体所見の区分を表すコード"
-* ^url = $JP_PhysicalExamCodes_VS
+* ^url = $JP_PhysicalExam_VS
 * ^status = #draft
 * include codes from system JP_PhysicalExamCodes_CS

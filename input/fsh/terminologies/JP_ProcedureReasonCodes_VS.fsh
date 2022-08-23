@@ -1,6 +1,6 @@
 ValueSet: JP_ProcedureReasonCodes_VS
-Id: jp-procedure-reason-codes-vs
-Title: "JP Core Procedure Reason Codes"
+Id: jp-procedure-reason-vs
+Title: "JP Core Procedure Reason ValueSet"
 Description: "処置が実施された理由を示すコード"
 * ^url = $JP_ProcedureReasonCodes_VS
 * ^status = #draft

@@ -1,7 +1,7 @@
-ValueSet: JP_ObservationLabResultCode_VS
+ValueSet: JP_ObservationLabResult_VS
 Id: jp-observation-labresult-code-vs
-Title: "JP Core Observation LabResult Code"
+Title: "JP Core Observation LabResult ValueSet"
 Description: "Observation（検体検査結果）で使用する項目コード"
-* ^url = $JP_ObservationLabResultCode_VS
+* ^url = $JP_ObservationLabResult_VS
 * ^status = #draft
 * include codes from system JP_ObservationLabResultCode_CS

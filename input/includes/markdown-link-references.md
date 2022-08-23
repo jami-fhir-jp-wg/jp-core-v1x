@@ -144,7 +144,7 @@
 [JP_ProcedureReasonCodes_CS]: CodeSystem-jp-procedure-reason-codes-cs.html
 
 <!-- ValueSet -->
-[JP_AllergyIntoleranceCodes_VS]: ValueSet-jp-allergyintolerance-codes-vs.html
+[JP_AllergyIntolerance_VS]: ValueSet-jp-allergyintolerance-codes-vs.html
 [JP_ConditionSeverity_VS]: ValueSet-jp-condition-severity-vs.html
 [JP_Department_SsMix_VS]: ValueSet-jp-department-ssmix-vs.html
 [JP_MedicalFeeScoreType_VS]: ValueSet-jp-medicalfeescoretype-vs.html
@@ -161,31 +161,31 @@
 [JP_MedicationUsageJAMIAdditional_VS]: ValueSet-jp-medication-usage-jami-additional-vs.html
 [JP_MedicationUsageJAMI_VS]: ValueSet-jp-medication-usage-jami-vs.html
 [JP_ObservationBodyMeasurementCategory_VS]: ValueSet-jp-observation-bodymeasurement-category-vs.html
-[JP_ObservationBodyMeasurementCode_VS]: ValueSet-jp-observation-bodymeasurement-code-vs.html
+[JP_ObservationBodyMeasurement_VS]: ValueSet-jp-observation-bodymeasurement-code-vs.html
 [JP_ObservationBodySite_VS]: ValueSet-jp-observation-bodysite-vs.html
-[JP_ObservationLabResultCode_VS]: ValueSet-jp-observation-labresult-code-vs.html
+[JP_ObservationLabResult_VS]: ValueSet-jp-observation-labresult-code-vs.html
 [JP_ObservationMethod_VS]: ValueSet-jp-observation-method-vs.html
 [JP_ObservationPhysicalExamBodySite_VS]: ValueSet-jp-observation-physicalexam-bodysite-vs.html
 [JP_ObservationPhysicalExamMethod_VS]: ValueSet-jp-observation-physicalexam-method-vs.html
-[JP_ObservationSocialHistoryCode_VS]: ValueSet-jp-observation-socialhistory-code-vs.html
+[JP_ObservationSocialHistory_VS]: ValueSet-jp-observation-socialhistory-code-vs.html
 [JP_ObservationVitalSignsCategory_VS]: ValueSet-jp-observation-vitalsigns-category-vs.html
-[JP_ObservationVitalSignsCode_VS]: ValueSet-jp-observation-vitalsigns-code-vs.html
-[JP_PhysicalExamCodes_VS]: ValueSet-jp-physicalexamcodes-vs.html
+[JP_ObservationVitalSigns_VS]: ValueSet-jp-observation-vitalsigns-code-vs.html
+[JP_PhysicalExam_VS]: ValueSet-jp-physicalexamcodes-vs.html
 [JP_PrefectureNumber_VS]: ValueSet-jp-prefecturenumber-vs.html
 [JP_ProcedureBodySite_VS]: ValueSet-jp-procedure-body-site-vs.html
-[JP_ProcedureCategoryCodes_VS]: ValueSet-jp-procedure-category-codes-vs.html
+[JP_ProcedureCategory_VS]: ValueSet-jp-procedure-category-codes-vs.html
 [JP_ProcedureCodesMedical_VS]: ValueSet-jp-procedure-code-medical-vs.html
 [JP_ProcedureCodesSTEM7_VS]: ValueSet-jp-procedure-code-stem7-vs.html
 [JP_ProcedureCodesDental_VS]: ValueSet-jp-procedure-codes-dental-vs.html
 [JP_ProcedureCodesICHI_VS]: ValueSet-jp-procedure-codes-ichi-vs.html
 [JP_ProcedureCodesNurse_VS]: ValueSet-jp-procedure-codes-nurse-vs.html
-[JP_ProcedureConditionCodes_VS]: ValueSet-jp-procedure-condition-code-vs.html
-[JP_ProcedureDeviceActionCodes_VS]: ValueSet-jp-procedure-device-action-vs.html
+[JP_ProcedureCondition_VS]: ValueSet-jp-procedure-condition-code-vs.html
+[JP_ProcedureDeviceAction_VS]: ValueSet-jp-procedure-device-action-vs.html
 [JP_ProcedureDeviceKind_VS]: ValueSet-jp-procedure-devicekind-vs.html
-[JP_ProcedureFollowUpCodes_VS]: ValueSet-jp-procedure-followup-vs.html
+[JP_ProcedureFollowUp_VS]: ValueSet-jp-procedure-followup-vs.html
 [JP_ProcedureNotPerformedReason_VS]: ValueSet-jp-procedure-not-performed-reason-vs.html
-[JP_ProcedureOutcomeCodes_VS]: ValueSet-jp-procedure-outcome-codes-vs.html
-[JP_ProcedurePerformerRoleCodes_VS]: ValueSet-jp-procedure-performer-role-codes-vs.html
+[JP_ProcedureOutcome_VS]: ValueSet-jp-procedure-outcome-codes-vs.html
+[JP_ProcedurePerformerRole_VS]: ValueSet-jp-procedure-performer-role-codes-vs.html
 [JP_ProcedureReasonCodes_VS]: ValueSet-jp-procedure-reason-codes-vs.html
 
 <!-- Example -->

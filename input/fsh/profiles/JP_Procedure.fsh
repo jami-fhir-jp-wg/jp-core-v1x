@@ -111,7 +111,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * usedCode ^comment = "For devices actually implanted or removed, use Procedure.device.\r\n実際に埋め込まれた、または取り外されたデバイスについては、Procedure.deviceを使用すること。"
 
 * statusReason from JP_ProcedureNotPerformedReason_VS (example)
-* category from JP_ProcedureCategoryCodes_VS (example)
+* category from JP_ProcedureCategory_VS (example)
 * code from JP_ProcedureCodesMedical_VS (example)
 * code.coding ^slicing.discriminator[0].type = #value
 * code.coding ^slicing.discriminator[=].path = "system"
@@ -131,11 +131,11 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * code.coding contains ichi ..1
 * code.coding[ichi] from JP_ProcedureCodesICHI_VS (required)
 * code.coding[ichi].system = $JP_ProcedureCodesICHI_CS (exactly)
-* outcome from JP_ProcedureOutcomeCodes_VS (example)
-* performer.function from JP_ProcedurePerformerRoleCodes_VS (example)
+* outcome from JP_ProcedureOutcome_VS (example)
+* performer.function from JP_ProcedurePerformerRole_VS (example)
 * reasonCode from JP_ProcedureReasonCodes_VS (example)
 * bodySite from JP_ProcedureBodySite_VS (example)
-* complication from JP_ProcedureConditionCodes_VS (example)
-* followUp from JP_ProcedureFollowUpCodes_VS (example)
-* focalDevice.action from JP_ProcedureDeviceActionCodes_VS (preferred)
+* complication from JP_ProcedureCondition_VS (example)
+* followUp from JP_ProcedureFollowUp_VS (example)
+* focalDevice.action from JP_ProcedureDeviceAction_VS (preferred)
 * usedCode from JP_ProcedureDeviceKind_VS (example)

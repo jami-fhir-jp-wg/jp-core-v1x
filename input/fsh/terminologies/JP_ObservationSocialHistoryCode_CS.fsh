@@ -5,7 +5,7 @@ Description: "Observation（生活背景）で使用する項目コード、電�
 * ^url = $JP_ObservationSocialHistoryCode_CS
 * ^status = #draft
 * ^caseSensitive = true
-* ^valueSet = $JP_ObservationSocialHistoryCode_VS
+* ^valueSet = $JP_ObservationSocialHistory_VS
 * ^content = #complete
 
 //電子保存された診療録情報の交換のためのデータ項目セットより参照
