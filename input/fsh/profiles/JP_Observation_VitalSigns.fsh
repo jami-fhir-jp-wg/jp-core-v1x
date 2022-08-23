@@ -14,7 +14,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category 1..
 * category from JP_ObservationVitalSignsCategory_VS (preferred)
 * category ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「焦点」"
-* code from JP_ObservationVitalSigns_VS (preferred)
+* code from JP_ObservationVitalSignsCode_VS (preferred)
 * code ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「観察名称」"
 * subject 1..
 * subject only Reference(JP_Patient)

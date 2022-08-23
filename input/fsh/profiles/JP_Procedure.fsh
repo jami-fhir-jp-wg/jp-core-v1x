@@ -133,7 +133,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * code.coding[ichi].system = $JP_ProcedureCodesICHI_CS (exactly)
 * outcome from JP_ProcedureOutcome_VS (example)
 * performer.function from JP_ProcedurePerformerRole_VS (example)
-* reasonCode from JP_ProcedureReasonCodes_VS (example)
+* reasonCode from JP_ProcedureReason_VS (example)
 * bodySite from JP_ProcedureBodySite_VS (example)
 * complication from JP_ProcedureCondition_VS (example)
 * followUp from JP_ProcedureFollowUp_VS (example)

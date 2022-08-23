@@ -1,10 +1,11 @@
 CodeSystem: JP_ProcedureCodesMedical_CS
 Id: jp-procedure-codes-medical-cs
-Title: "JP Core Procedure Codes Medical"
+Title: "JP Core Procedure Codes Medical CodeSystem"
 Description: "処置のコード:医科診療行為マスタ"
 * ^url = $JP_ProcedureCodesMedical_CS
 * ^status = #draft
 * ^caseSensitive = true
+* ^valueSet = $JP_ProcedureCodesMedical_VS
 * ^content = #complete
 * ^date = "2022-08-10"
 * #111000110 "初診料"

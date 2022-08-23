@@ -1,10 +1,11 @@
 CodeSystem: JP_ProcedureCodesNurse_CS
 Id: jp-procedure-codes-nurse-cs
-Title: "JP Core Procedure Codes Nurse"
+Title: "JP Core Procedure Codes Nurse CodeSystem"
 Description: "処置のコード:看護実践用語標準マスター(看護行為)"
 * ^url = $JP_ProcedureCodesNurse_CS
 * ^status = #draft
 * ^caseSensitive = true
+* ^valueSet = $JP_ProcedureCodesNurse_VS
 * ^content = #complete
 * ^date = "2022-08-10"
 * #A001B001C001D000 "日常生活ケア・清潔ケア・入浴・"

@@ -11,7 +11,7 @@ Usage:  #example
 * period.end = "2012-03-31"
 * practitioner = Reference(Practitioner/jp-practitioner-example-male-1) "大阪 一郎"
 * organization = Reference(Organization/jp-organization-example-hospital) "健康第一病院"
-* code = $JP_PractitionerRoleCodes_CS#B12101
+* code = $JP_PractitionerRole_CS#B12101
 * location = Reference(Location/jp-location-example-examinationroom) "外来101診察室"
 * healthcareService = Reference(HealthcareService/jp-healthcareservice-example-1)
 * telecom[0].system = #phone

@@ -33,7 +33,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category ^definition = "A code that classifies the general type of observation being made.\r\n\r\n行われた検査の一般的なタイプの分類。取得、表示の際のフィルタリングに使用。"
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP-Core仕様】推奨コード表「ObservationCategoryCodes」より、本プロファイルでは「laboratory」固定とする。\r\n\r\n(social-history | vital-signs | imaging | laboratory | procedure | survey | exam | therapy | activity)"
 * category.coding ^comment = "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.\r\n\r\n【JP-Core仕様】推奨コード表「ObservationCategoryCodes」より、本プロファイルでは「laboratory」固定とする。"
-* code from JP_ObservationLabResult_VS (preferred)
+* code from JP_ObservationLabResultCode_VS (preferred)
 * code ^definition = "Describes what was observed. Sometimes this is called the observation \"name\".\r\n\r\n検査の内容の説明。検査名称。"
 * code ^comment = "*JLAC10"
 * code ^binding.description = "MEDIS 臨床検査マスター"

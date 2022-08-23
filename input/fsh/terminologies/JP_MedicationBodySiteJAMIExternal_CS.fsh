@@ -1,10 +1,11 @@
 CodeSystem: JP_MedicationBodySiteJAMIExternal_CS
 Id: jp-medication-bodysite-jami-external-cs
-Title: "JP Core Medication JAMI External Body Site Code"
+Title: "JP Core Medication JAMI External Body Site CodeSystem"
 Description: "JAMI標準用法規格表１３外用部位コードのコードシステム"
 * ^url = $JP_MedicationBodySiteJAMIExternal_CS
 * ^status = #draft
 * ^caseSensitive = true
+* ^valueSet = $JP_MedicationBodySiteJAMIExternal_VS
 * ^content = #complete
 * #010	"全身"
 * #01R	"右全身"

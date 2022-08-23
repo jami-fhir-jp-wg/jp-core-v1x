@@ -1,11 +1,11 @@
 CodeSystem: JP_ObservationLabResultCode_CS
 Id: jp-observation-labresult-code-cs
-Title: "JP Core Observation LabResult Code"
+Title: "JP Core Observation LabResult Code CodeSystem"
 Description: "Observation（検体検査結果）で使用する項目コード"
 * ^url = $JP_ObservationLabResultCode_CS
 * ^status = #draft
 * ^caseSensitive = true
-* ^valueSet = $JP_ObservationLabResult_VS
+* ^valueSet = $JP_ObservationLabResultCode_VS
 * ^content = #not-present
 
 // * ^content = #complete

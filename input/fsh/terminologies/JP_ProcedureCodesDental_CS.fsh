@@ -1,10 +1,11 @@
 CodeSystem: JP_ProcedureCodesDental_CS
 Id: jp-procedure-codes-dental-cs
-Title: "JP Core Procedure Codes Dental"
+Title: "JP Core Procedure Codes Dental CodeSystem"
 Description: "処置のコード:歯科診療行為マスタ"
 * ^url = $JP_ProcedureCodesDental_CS
 * ^status = #draft
 * ^caseSensitive = true
+* ^valueSet = $JP_ProcedureCodesDental_VS
 * ^content = #complete
 * ^date = "2022-08-10"
 * #301000110 "歯科初診料"
