@@ -1,6 +1,6 @@
 ValueSet: JP_MedicationIngredientStrengthStrengthType_VS
 Id: jp-medication-ingredientstrength-strengthtype-vs
-Title: "JP Core Medication IngredientStrength StrengthType"
+Title: "JP Core Medication IngredientStrength StrengthType ValueSet"
 Description: "力価区分"
 * ^url = $JP_MedicationIngredientStrengthStrengthType_VS
 * ^status = #draft

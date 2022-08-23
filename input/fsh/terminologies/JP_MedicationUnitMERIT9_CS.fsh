@@ -1,6 +1,6 @@
 CodeSystem: JP_MedicationUnitMERIT9_CS
 Id: jp-medication-unit-merit9-cs
-Title: "JP Core Medication MERIT9 Unit Code"
+Title: "JP Core Medication MERIT9 Unit CodeSystem"
 Description: "MERIT9医薬品単位略号のコードシステム"
 * ^url = $JP_MedicationUnitMERIT9_CS
 * ^status = #draft

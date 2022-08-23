@@ -42,7 +42,7 @@ v1.0 → v1.1に変更するあたり、開発環境(Sushi & IG Publisher)を変
     * Clinical関連
         * 説明文書の全面的な見直し。
         * `JP_FamilyMemberHistory`プロファイルを追加した。
-        * `JP_AllergyIntolerance` ValueSet `JP_AllergyIntoleranceCodes_VS`を定義し、３つのCodeSystem(`JP_JfagyFoodAllergenCodes_CS`,`JP_JfagyNonFoodNonMedicationAllergenCodes_CS`,`JP_JfagyMedicationAllergenCodes_CS`)を参照するように変更を行なった。
+        * `JP_AllergyIntolerance` ValueSet `JP_AllergyIntolerance_VS`を定義し、３つのCodeSystem(`JP_JfagyFoodAllergen_CS`,`JP_JfagyNonFoodNonMedicationAllergen_CS`,`JP_JfagyMedicationAllergen_CS`)を参照するように変更を行なった。
         
 * OperationおよびSearch Parameter
     * JP Core派生の必要条件ではなく、派生先実装ガイドにて定義するものとして、特にJP CoreのExtension(拡張)にて検索パラメータとして利用頻度の高いと思われるものを定義するようにした。
