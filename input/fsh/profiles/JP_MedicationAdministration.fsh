@@ -35,7 +35,6 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * instantiates ^definition = "A protocol, guideline, orderset, or other definition that was adhered to in whole or in part by this event.\r\n\r\nこのイベントによって全体的または部分的に順守されたプロトコル、ガイドライン、オーダーセット、またはその他の定義。"
 * partOf ^short = "Part of referenced event  親イベントへの参照"
 * partOf ^definition = "A larger event of which this particular event is a component or step.\r\n\r\nこの特定のイベントがコンポーネントまたはステップであるようなより大きな親イベント。"
-* status from http://hl7.org/fhir/ValueSet/medication-admin-status|4.0.0 (required)
 * status ^short = "completed | stopped"
 * status ^definition = "Will generally be set to show that the administration has been completed.  For some long running administrations such as infusions, it is possible for an administration to be started but not completed or it may be paused while some other process is under way.\r\n\r\n通常、管理が完了したことを示すように設定される。輸液などの長期にわたる投与では、投与を開始しても完了しない場合や、他のプロセスの進行中に一時停止する場合がある。\r\n\r\n【JP-Core仕様】　completed or stopped に限定される。"
 * status ^binding.description = "患者への投与状況"
