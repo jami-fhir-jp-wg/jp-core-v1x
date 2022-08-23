@@ -48,12 +48,6 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 ### Interaction一覧
 
-| コンフォーマンス | インタラクション                            |
-| ---------------- | ------------------------------------------- |
-| SHALL（必須）    | search-type、read                           |
-| SHOULD（推奨）   | vread、history-instance                     |
-| MAY（利用可能）  | create、update、patch、delete、history-type |
-
 #### Search Parameter一覧
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |

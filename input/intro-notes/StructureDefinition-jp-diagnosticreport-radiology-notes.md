@@ -158,12 +158,6 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 ## 利用方法
 
-### Interaction一覧
-
-DiagnosticReport リソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
-
-[DiagnosticReport共通情報プロファイル#インタラクション一覧][JP_DiagnosticReport_Common_interaction]
-
 #### 必須検索パラメータ
 
 次の検索パラメータは必須でサポートされなければならない。

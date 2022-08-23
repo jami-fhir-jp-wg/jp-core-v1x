@@ -19,12 +19,6 @@
 
 ## 利用方法
 
-### インタラクション一覧
-
-Observationリソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
-
-[Observation共通情報プロファイル#インタラクション一覧][JP_Observation_Common_interaction]
-
 ### OperationおよびSearch Parameter 一覧
 
 #### Search Parameter一覧
