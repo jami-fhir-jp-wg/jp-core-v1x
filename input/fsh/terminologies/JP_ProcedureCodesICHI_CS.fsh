@@ -6,5 +6,5 @@ Description: "処置のコード:ICHI(International Classification of Health Int
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete
-
+* ^date = "2022-08-10"
 // TODO:要実装
