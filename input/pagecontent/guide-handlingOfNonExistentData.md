@@ -2,10 +2,10 @@ FHIR®では[JSON](https://www.hl7.org/fhir/R4/json.html#2.6.2)および[XML](ht
 
 データがない場合に、[Data Absent Reason拡張](https://www.hl7.org/fhir/R4/extension-data-absent-reason.html)を用いて、データが欠損している理由を表すことができる。
 
-JP Core の検索要求するクライアント(Requester)およびサーバ(Responder)は以下の要求を満たすこと **(SHALL)**。
+JP Core の検索要求するクライアント(Requester)およびサーバ(Responder)は以下の要求を満たすこと (**SHALL**)。
 ### クライアント(Requester)
 ---
-#### 実装ガイドに準拠するクライアントは、Cardinalityが1以上が付与された要素を含むリソースを受信した場合、エラーを発生させたりアプリケーションを失敗させることなく、それらの値を処理することができなければならない **(SHALL)**。
+#### 実装ガイドに準拠するクライアントは、Cardinalityが1以上が付与された要素を含むリソースを受信した場合、エラーを発生させたりアプリケーションを失敗させることなく、それらの値を処理することができなければならない (**SHALL**)。
 
  **例)**
 Readインタラクションの応答として、Cardinalityが１以上の 要素であるPatient.maritalStatus を含むPatient リソースを受信した場合、
@@ -26,7 +26,7 @@ Readインタラクションの応答として、Cardinalityが１以上の 要�
 }, 
 ```
 
-#### 実装ガイドに準拠するクライアントは、欠損データであることを宣言した Cardinalityが1以上のデータ要素を含むリソースインスタンスを処理できなければならない **(SHALL)**。
+#### 実装ガイドに準拠するクライアントは、欠損データであることを宣言した Cardinalityが1以上のデータ要素を含むリソースインスタンスを処理できなければならない (**SHALL**)。
  **例)**
 Patient.birthDateの値に欠損情報が付与されているリソースを、要求者は処理できなければならない。なお、birthDateはdate型というprimitive typeであり、そのextensionは"_"を先頭につけたプロパティに対して設定される([2.6.2.3 JSON representation of primitive elements](https://www.hl7.org/fhir/R4/json.html#primitive))。
 
@@ -48,13 +48,13 @@ Patient.birthDateの値に欠損情報が付与されているリソースを、
 ---
 
 #### 要素の値を保持している場合
-JP Core 実装ガイドに準拠するサーバは、当該要素の値を保持している場合には、要求された検索結果のリソースのデータ要素として含めることができるべきである **(SHOULD)**。
+JP Core 実装ガイドに準拠するサーバは、当該要素の値を保持している場合には、要求された検索結果のリソースのデータ要素として含めることができるべきである (**SHOULD**)。
 
 
 #### 要素の値を保持していない場合
 
 ##### その要素のCardinalityが0を含む場合
-JP Core 実装ガイドに準拠するサーバは、Cardinalityが0を含む要素の値を保持していない場合、そのデータ要素の項目を省略してもよい **(MAY)**。
+JP Core 実装ガイドに準拠するサーバは、Cardinalityが0を含む要素の値を保持していない場合、そのデータ要素の項目を省略してもよい (**MAY**)。
 
  **例)**
 ```
@@ -69,11 +69,11 @@ Patient.telecomが欠損している場合…telecom要素は含まなくてよ�
 ```
 
 ##### その要素のCardinalityが1以上の場合
-JP Core実装ガイドのサーバは、Cardinalityが1以上の要素の値を保持していない場合、次のように、データの欠損理由を指定しなければならない **(SHALL)**。
+JP Core実装ガイドのサーバは、Cardinalityが1以上の要素の値を保持していない場合、次のように、データの欠損理由を指定しなければならない (**SHALL**)。
 
 ###### 非コード化要素の場合
 非コード化値の場合： Data Absent Reason拡張を使用して、欠損理由を送
-信できなければならない **(SHALL)** 。
+信できなければならない (**SHALL**) 。
 
  **例)**
 患者の生年月日が不明なため、Patient.birthDateに値を保持していない場合（Patient.birthDateが必須 MustSupport）、Data Absent Reason 拡張を使用して、欠損理由（＝不明）を示す。なお、birthDateはdate型というprimitive typeであり、そのextensionは"_"を先頭につけたプロパティに対して設定される([2.6.2.3 JSON representation of primitive elements](https://www.hl7.org/fhir/R4/json.html#primitive))。
