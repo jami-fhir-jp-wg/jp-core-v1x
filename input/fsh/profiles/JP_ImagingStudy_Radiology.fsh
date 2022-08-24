@@ -100,12 +100,10 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.bodySite ^short = "検査した人体部位"
 * series.bodySite ^definition = "検査対象の解剖学的構造。 \r\nbodySiteは、画像化された身体部分の左右差を示している場合がある。その場合、ImagingStudy.series.lateralityのコンテンツと一致している必要がある。"
 * series.bodySite ^comment = "コードは、列挙型またはコードリストで、どの部位の検査なのかを示す。フリーではなく、DICOM定義書の中で示される語句（コード）をデフォルトとするが、JJ1017Pの小部位コードの利用を許容する。"
-* series.bodySite from https://www.jsrt.or.jp/97mi/content/jj1017.html (example)
 * series.bodySite ^binding.description = "DICOM tagに設定されているコードをデフォルトとするが、JJ1017Pの小部位コードの利用を許容する。"
 * series.laterality ^short = "人体部位の左右識別"
 * series.laterality ^definition = "検査した（おそらく対になっている）解剖学的構造の左右識別。\r\n例：左膝、両方の肺、または対になっていない腹部。存在する場合は、ImagingStudy.series.bodySiteに示されている左右差情報と一致している必要がある。"
 * series.laterality ^comment = "コードは、列挙型またはコードリストで、どの部位の検査なのかを示す。フリーではなく、DICOM定義書の中で示される語句（コード）をデフォルトとするが、JJ1017Pの左右コードの利用を許容する。"
-* series.laterality from https://www.jsrt.or.jp/97mi/content/jj1017.html (example)
 * series.laterality ^binding.description = "DICOM定義書の中で示される語句（コード）をデフォルトとするが、JJ1017Pの左右コードの利用を許容する。"
 * series.specimen ^short = "画像検査をした検体"
 * series.specimen ^definition = "例えば、生検のスライド全体の画像化のために画像化された標本。通常の放射線画像検査では使用されない。（DICOMを用いた病理画像検査で用いられる）"
