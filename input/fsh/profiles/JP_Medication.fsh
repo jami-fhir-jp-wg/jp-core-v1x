@@ -69,6 +69,8 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * batch.expirationDate ^short = "このバッチの期限が切れるとき"
 * batch.expirationDate ^definition = "この特定のバッチの薬剤の期限が切れるとき"
 
+* form.coding from $JP_MedicationFormMERIT9_VS (preferred)
+
 // ==============================
 //   Extension 定義
 // ==============================

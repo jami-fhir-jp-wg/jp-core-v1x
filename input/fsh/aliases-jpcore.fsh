@@ -99,8 +99,10 @@ Alias: $JP_MedicationCategoryMERIT9_CS = http://jpfhir.jp/fhir/Common/CodeSystem
 Alias: $JP_MedicationCodeCommon_CS = urn:oid:1.2.392.100495.20.1.81
 Alias: $JP_MedicationCodeHOT9_CS = urn:oid:1.2.392.200119.4.403.1
 Alias: $JP_MedicationCodeYJ_CS = urn:oid:1.2.392.100495.20.1.73
+Alias: $JP_MedicationExampleLine_CS = http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationRequestDosageInstructionLine_CS
 Alias: $JP_MedicationFormMERIT9_CS = http://jpfhir.jp/fhir/Common/CodeSystem/merit9-form
 Alias: $JP_MedicationIngredientStrengthStrengthType_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationIngredientStrengthStrengthType_CS
+Alias: $JP_MedicationInstructionForDispenseJHSP0002_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JHSP0002
 Alias: $JP_MedicationMethodJAMIBasicUsage_CS = urn:oid:1.2.392.200250.2.2.20.30
 Alias: $JP_MedicationMethodJAMIDetailUsage_CS = urn:oid:1.2.392.200250.2.2.20.40
 Alias: $JP_MedicationMethodJHSI0003_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0003
@@ -108,6 +110,7 @@ Alias: $JP_MedicationSubstitutionNotAllowedReason_CS = urn:oid:1.2.392.100495.20
 Alias: $JP_MedicationUnitMERIT9_CS = urn:oid:1.2.392.100495.20.2.101
 Alias: $JP_MedicationUsageJAMIAdditional_CS = urn:oid:1.2.392.200250.2.2.20.22
 Alias: $JP_MedicationUsageJAMI_CS = urn:oid:1.2.392.200250.2.2.20.20
+
 Alias: $JP_ObservationBodyMeasurementCategory_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
 Alias: $JP_ObservationBodyMeasurementCode_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationBodyMeasurementCode_CS
 Alias: $JP_ObservationBodySite_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationBodySite_CS
@@ -136,6 +139,7 @@ Alias: $JP_ProcedureNotPerformedReason_CS = http://jpfhir.jp/fhir/Common/CodeSys
 Alias: $JP_ProcedureOutcome_CS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureOutcome_CS
 Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureReason_CS
 
+
 // ValueSet
 Alias: $JP_AllergyIntolerance_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntolerance_VS
 Alias: $JP_ConditionSeverity_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ConditionSeverity_VS
@@ -150,8 +154,10 @@ Alias: $JP_MedicationCategoryMERIT9_VS = http://jpfhir.jp/fhir/Common/ValueSet/J
 Alias: $JP_MedicationCodeCommon_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCodeCommon_VS
 Alias: $JP_MedicationCodeHOT9_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCodeHOT9_VS
 Alias: $JP_MedicationCodeYJ_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCodeYJ_VS
+Alias: $JP_MedicationExampleLine_VS = http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationRequestDosageInstructionLine_VS
 Alias: $JP_MedicationFormMERIT9_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationFormMERIT9_VS
 Alias: $JP_MedicationIngredientStrengthStrengthType_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationIngredientStrengthStrengthType_VS
+Alias: $JP_MedicationInstructionForDispenseJHSP0002_VS = http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationInstructionForDispenseJHSP0002_VS
 Alias: $JP_MedicationMethodJAMIBasicUsage_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationMethodJAMIBasicUsage_VS
 Alias: $JP_MedicationMethodJAMIDetailUsage_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS
 Alias: $JP_MedicationMethodJHSI0003_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationMethodJHSI0003_VS

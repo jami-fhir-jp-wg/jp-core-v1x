@@ -29,6 +29,9 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * identifier[orderInRp].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
 * identifier[orderInRp].period ..0
 * identifier[orderInRp].assigner ..0
+
+* dosageInstruction.doseAndRate.doseQuantity.code from $JP_MedicationUnitMERIT9_VS (preferred)
+* dosageInstruction.doseAndRate.rateRatio.numerator.code from $JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.doseAndRate.rateRatio.denominator 1..
 * dosageInstruction.doseAndRate.rateRatio.denominator ^short = "1日投与量の分母である「1日」を表す"
 * dosageInstruction.doseAndRate.rateRatio.denominator ^definition = "1日投与量の分母である「1日」を表す。"
@@ -92,3 +95,6 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * dosageInstruction.extension[device] ..0
 * dosageInstruction.extension[device] ^short = "Device"
 * dosageInstruction.extension[line] ..0
+
+* dosageInstruction.doseAndRate.type.coding from $JP_MedicationIngredientStrengthStrengthType_VS (preferred)
+* dispenseRequest.quantity.code from $JP_MedicationUnitMERIT9_VS (preferred)

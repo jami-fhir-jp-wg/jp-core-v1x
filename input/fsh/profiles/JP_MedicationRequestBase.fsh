@@ -796,6 +796,10 @@ Description: "このプロファイルはユーザは直接適用するもので
 * eventHistory ^definition = "このリソースの現在のバージョンをユーザーから見て関係していそうなキーとなる更新や状態遷移と識別される過去のバージョンのこのリソースあるいは調剤請求あるいはEvent ResourceについてのProvenance resourceへの参照。"
 * eventHistory ^comment = "このエレメントには全てのバージョンのMedicationRequestについてのProvenanceが取り込まれているわけではない。「関連する」あるいは重要と思われたものだけである。現在のバージョンのResourceに関連したProvenance resourceを含めてはならない(SHALL NOT)。（もし、Provenanceとして「関連した」変化と思われれば、後の更新の一部として取り込まれる必要があるだろう。それまでは、このバージョンを_revincludeを使ってprovenanceとして指定して直接クエリーを発行することができる。全てのProvenanceがこのRequestについての履歴を対象として持つべきである。）"
 
+* dosageInstruction.method.coding[unitDigit1] from $JP_MedicationMethodJAMIBasicUsage_VS (preferred)
+* dosageInstruction.method.coding[unitDigit2] from $JP_MedicationMethodJAMIDetailUsage_VS (preferred)
+* substitution.allowed[x] from $JP_MedicationSubstitutionNotAllowedReason_VS (preferred)
+
 // ==============================
 //   Extension 定義
 // ==============================
@@ -828,6 +832,7 @@ Description: "調剤指示。薬剤単位の調剤指示を表現するための
 * id ..0
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense" (exactly)
 * value[x] only CodeableConcept
+* valueCodeableConcept.coding from $JP_MedicationInstructionForDispenseJHSP0002_VS (preferred)
 
 Extension: JP_MedicationRequest_DosageInstruction_Device
 Id: jp-medicationrequest-dosageinstruction-device
@@ -860,6 +865,7 @@ Description: "指示ラインを格納するための拡張"
 * . ^definition = "指示ラインを格納する拡張"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line" (exactly)
 * value[x] only CodeableConcept
+* valueCodeableConcept.coding from $JP_MedicationExampleLine_VS (example)
 
 Extension: JP_MedicationRequest_DosageInstruction_PeriodOfUse
 Id: jp-medicationrequest-dosageinstruction-periodofuse

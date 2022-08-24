@@ -121,6 +121,8 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * eventHistory ^short = "A list of events of interest in the lifecycle　ライフサイクルで関心のあるイベントのリスト"
 * eventHistory ^definition = "A summary of the events of interest that have occurred, such as when the administration was verified.\r\n\r\n投与が確認されたときなど、発生した関連のあるベントのサマリー。"
 
+* dosage.dose.code from $JP_MedicationUnitMERIT9_VS (preferred)
+
 // ==============================
 //   Extension 定義
 // ==============================
@@ -227,6 +229,7 @@ Description: "依頼科を格納するための拡張"
 * ^context.expression = "MedicationAdministration"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment" (exactly)
 * value[x] only CodeableConcept
+* valueCodeableConcept.coding from $JP_Department_SsMix_VS (preferred)
 
 Extension: JP_MedicationAdministration_Requester
 Id: jp-medicationadministration-requester
