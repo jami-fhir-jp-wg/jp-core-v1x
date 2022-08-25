@@ -464,7 +464,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.doseAndRate.dose[x].value ^definition = "1回投与量"
 * dosageInstruction.doseAndRate.dose[x].unit 1..
 * dosageInstruction.doseAndRate.dose[x].system 1..
-* dosageInstruction.doseAndRate.dose[x].system = "urn:oid:1.2.392.100495.20.2.101"
+* dosageInstruction.doseAndRate.dose[x].system from "urn:oid:1.2.392.100495.20.2.101" (preferred)
 * dosageInstruction.doseAndRate.dose[x].system ^short = "医薬品単位略号を識別するOID。"
 * dosageInstruction.doseAndRate.dose[x].system ^definition = "医薬品単位略号を識別するOID。固定値。"
 * dosageInstruction.doseAndRate.dose[x].code ^short = "医薬品単位略号"
