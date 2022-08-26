@@ -461,7 +461,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.doseAndRate.dose[x] ^comment = "この量は指定された薬剤の量を指定するものであって、各有効成分の量を指定するものではない。各成分の量はMedication resourceで伝えることができる。たとえば、有効成分が375mgである錠剤を1錠投与することを伝えたい場合、Medication resourceを利用して、XYZ成分が375mg含有しているという錠剤であることを文書化することができる。あるいは1回投与量が375mgであることを伝えるのであれば、Medication resourceをつかって単にそれが錠剤であることを示せばよい。もし、ドーパミンの静注を例に挙げて、400mgのドーパミンを500mlの注射溶液に混ぜて使うことを伝えたいのであれば、それをすべてMedication resourceで伝えることができる。もし、投与について即時に伝達することを意図していない（たとえば投与速度が示されていたり、投与時期に範囲があるような場合）のであれば、たとえば1回500mlを4時間以上かけて投与する予定を伝える場合にもMedication resourceで伝えることができる。"
 * dosageInstruction.doseAndRate.dose[x].value ^short = "1回投与量"
 * dosageInstruction.doseAndRate.dose[x].value ^definition = "1回投与量"
-* dosageInstruction.doseAndRate.dose[x].system from urn:oid:1.2.392.100495.20.2.101 (preferred)
+* dosageInstruction.doseAndRate.dose[x].system from JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.doseAndRate.dose[x].system ^short = "医薬品単位略号を識別するOID。"
 * dosageInstruction.doseAndRate.dose[x].system ^definition = "医薬品単位略号を識別するOID。固定値。"
 * dosageInstruction.doseAndRate.dose[x].code ^short = "医薬品単位略号"
@@ -478,7 +478,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.doseAndRate.rate[x].numerator.comparator ..0
 * dosageInstruction.doseAndRate.rate[x].numerator.unit ^short = "投与量の単位"
 * dosageInstruction.doseAndRate.rate[x].numerator.unit ^definition = "投与量の単位。"
-* dosageInstruction.doseAndRate.rate[x].numerator.system from urn:oid:1.2.392.100495.20.2.101 (preferred)
+* dosageInstruction.doseAndRate.rate[x].numerator.system from JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.doseAndRate.rate[x].numerator.system ^short = "医薬品単位略号を識別するOID"
 * dosageInstruction.doseAndRate.rate[x].numerator.system ^definition = "医薬品単位略号を識別するOID。固定値。"
 * dosageInstruction.doseAndRate.rate[x].numerator.code ^short = "医薬品単位略号"
