@@ -71,6 +71,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * reported[x] ^short = "初期記録にはない報告"
 * reported[x] ^definition = "このレコードは元々の一次記録から報告されたものか、二次的に「報告された」資料から取り込まれたものかを示す。報告の情報源についても示される。"
 * medicationCodeableConcept only CodeableConcept
+* medicationCodeableConcept from JP_MedicationCode_VS (preferred)
 * medicationCodeableConcept ^binding.strength = #preferred
 * medicationCodeableConcept ^binding.description = "処方する製剤を表すコード。"
 * medicationCodeableConcept.coding 1..

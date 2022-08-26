@@ -6,6 +6,6 @@ Description: "医薬品HOT9コードのコードシステム"
 * ^status = #draft
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationCodeHOT9_VS
-* ^content = #not-present
+* ^content = #example
 
 // TODO:　HOT9医薬品コード追加
