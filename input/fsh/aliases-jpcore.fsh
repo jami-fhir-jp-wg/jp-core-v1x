@@ -110,7 +110,6 @@ Alias: $JP_MedicationSubstitutionNotAllowedReason_CS = urn:oid:1.2.392.100495.20
 Alias: $JP_MedicationUnitMERIT9_CS = urn:oid:1.2.392.100495.20.2.101
 Alias: $JP_MedicationUsageJAMIAdditional_CS = urn:oid:1.2.392.200250.2.2.20.22
 Alias: $JP_MedicationUsageJAMI_CS = urn:oid:1.2.392.200250.2.2.20.20
-
 Alias: $JP_ObservationBodyMeasurementCategory_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
 Alias: $JP_ObservationBodyMeasurementCode_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationBodyMeasurementCode_CS
 Alias: $JP_ObservationBodySite_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationBodySite_CS
@@ -136,14 +135,13 @@ Alias: $JP_ProcedureDeviceAction_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP
 Alias: $JP_ProcedureDeviceKind_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureDeviceKind_CS
 Alias: $JP_ProcedureFollowUp_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureFollowUp_CS
 Alias: $JP_ProcedureNotPerformedReason_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureNotPerformedReason_CS
-Alias: $JP_ProcedureOutcome_CS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureOutcome_CS
+Alias: $JP_ProcedureOutcome_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureOutcome_CS
 Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureReason_CS
-
 
 // ValueSet
 Alias: $JP_AllergyIntolerance_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntolerance_VS
 Alias: $JP_ConditionSeverity_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ConditionSeverity_VS
-Alias: $JP_Department_SsMix_VS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Department_SsMix_VS
+Alias: $JP_Department_SsMix_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_Department_SsMix_VS
 Alias: $JP_MedicalFeeScoreType_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicalFeeScoreType_VS
 Alias: $JP_MedicalLicenseCertificate_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicalLicenseCertificate_VS
 Alias: $JP_MedicationAsNeededConditionMERIT9_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationAsNeededConditionMERIT9_VS
@@ -176,9 +174,10 @@ Alias: $JP_ObservationSocialHistoryCode_VS = http://jpfhir.jp/fhir/Common/ValueS
 Alias: $JP_ObservationVitalSignsCategory_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ObservationVitalSignsCategory_VS
 Alias: $JP_ObservationVitalSignsCode_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ObservationVitalSignsCode_VS
 Alias: $JP_PhysicalExamCode_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_PhysicalExamCode_VS
+Alias: $JP_PractitionerRole_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_PractitionerRole_VS
 Alias: $JP_PrefectureNumber_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_PrefectureNumber_VS
 Alias: $JP_ProcedureBodySite_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureBodySite_VS
-Alias: $JP_ProcedureCategory_VS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCategory_VS
+Alias: $JP_ProcedureCategory_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCategory_VS
 Alias: $JP_ProcedureCodesMedical_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodesMedical_VS
 Alias: $JP_ProcedureCodesSTEM7_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodesSTEM7_VS
 Alias: $JP_ProcedureCodesDental_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureCodesDental_VS
@@ -192,5 +191,3 @@ Alias: $JP_ProcedureNotPerformedReason_VS = http://jpfhir.jp/fhir/Common/ValueSe
 Alias: $JP_ProcedureOutcome_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureOutcome_VS
 Alias: $JP_ProcedurePerformerRole_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedurePerformerRole_VS
 Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureReason_VS
-
-Alias: $JP_PractitionerRole_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_PractitionerRole_VS
