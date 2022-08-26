@@ -6,6 +6,6 @@ Description: "医薬品一般名処方コードのコードシステム"
 * ^status = #draft
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationCodeCommon_VS
-* ^content = #example
+* ^content = #fragment
 
 // TODO:　一般名処方コード追加
