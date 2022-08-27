@@ -1,10 +1,11 @@
 CodeSystem: JP_MedicationMethodJAMIDetailUsage_CS
 Id: jp-medication-method-jami-detail-usage-cs
-Title: "JP Core Medication JAMI Detail Usage Type Code"
+Title: "JP Core Medication JAMI Detail Usage Type CodeSystem"
 Description: "JAMI標準用法規格表２用法詳細区分のコードシステム"
 * ^url = $JP_MedicationMethodJAMIDetailUsage_CS
 * ^status = #draft
 * ^caseSensitive = true
+* ^valueSet = $JP_MedicationMethodJAMIDetailUsage_VS
 * ^content = #complete
 * #10	"経口"
 * #11	"舌下"
@@ -29,7 +30,7 @@ Description: "JAMI標準用法規格表２用法詳細区分のコードシス�
 * #2S	"肛門注入"
 * #2T	"膣内挿入"
 * #2U	"膀胱注入"
-* #30	"注射"
+* #30	"静脈注射"
 * #31	"中心静脈注射"
 * #32	"皮下注射"
 * #33	"筋肉内注射"

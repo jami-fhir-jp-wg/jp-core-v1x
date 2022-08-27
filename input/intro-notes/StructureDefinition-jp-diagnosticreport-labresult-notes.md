@@ -23,11 +23,6 @@ DiagnosticReportリソースは、次の要素を持たなければならない�
 
 ## 利用方法
 
-### Interaction一覧 
-DiagnosticReport リソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
-
-[DiagnosticReport共通情報プロファイル#インタラクション一覧][JP_DiagnosticReport_Common]
-
 ### OperationおよびSearch Parameter 一覧
 #### Search Parameter一覧
 

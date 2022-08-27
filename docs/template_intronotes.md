@@ -100,13 +100,6 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
 ## 利用方法
 （OperationやSearch Parameter中心に記載を行います。）
 
-### Interaction一覧
-| Conformance | Interactions |
-| ---- | ---- | 
-| SHALL | search-type, read |
-| SHOULD | vread, history-instance |
-| MAY | create, update, patch, delete, history-type |
-
 ##### 必須検索パラメータ
 次の検索パラメータは必須でサポートされなければならない。
 

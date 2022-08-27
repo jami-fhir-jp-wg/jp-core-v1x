@@ -1,10 +1,11 @@
 CodeSystem: JP_MedicationFormMERIT9_CS
 Id: jp-medication-form-merit9-cs
-Title: "JP Core Medication MERIT9 Form Code"
+Title: "JP Core Medication MERIT9 Form CodeSystem"
 Description: "MERIT9剤形コードのコードシステム"
 * ^url = $JP_MedicationFormMERIT9_CS
 * ^status = #draft
 * ^caseSensitive = true
+* ^valueSet = $JP_MedicationFormMERIT9_VS
 * ^content = #complete
 * #TAB "錠剤"
 * #CAP "カプセル剤"

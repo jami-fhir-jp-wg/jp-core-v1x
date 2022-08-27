@@ -11,7 +11,10 @@ Usage: #example
   * coding[0]
     * system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
     * code = #MTH
-* sex = #female
+* sex
+  * coding[0]
+    * system = "http://hl7.org/fhir/administrative-gender"
+    * code = #female
 * reasonCode[0]
   * text = "難聴"
 * condition[0]

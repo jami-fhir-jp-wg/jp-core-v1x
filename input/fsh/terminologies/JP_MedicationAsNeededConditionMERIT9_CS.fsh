@@ -1,10 +1,11 @@
 CodeSystem: JP_MedicationAsNeededConditionMERIT9_CS
 Id: jp-medication-as-needed-condition-merit9-cs
-Title: "JP Core Medication MERIT9 As Needed Condition Code"
+Title: "JP Core Medication MERIT9 As Needed Condition CodeSystem"
 Description: "MERIT9頓用指示コードのコードシステム"
 * ^url = $JP_MedicationAsNeededConditionMERIT9_CS
 * ^status = #draft
 * ^caseSensitive = true
+* ^valueSet = $JP_MedicationAsNeededConditionMERIT9_VS
 * ^content = #complete
 * #PRNLTs               "検査時" 
 * #PRNheadache	        "頭痛時"

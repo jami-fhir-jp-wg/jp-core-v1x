@@ -1,6 +1,6 @@
 CodeSystem: JP_MedicationSubstitutionNotAllowedReason_CS
 Id: jp-medication-substitution-not-allowed-reason-cs
-Title: "JP Core Medication Substitution Not Allowed Reason Code"
+Title: "JP Core Medication Substitution Not Allowed Reason CodeSystem"
 Description: "後発医薬品変更不可区分のコードシステム"
 * ^url = $JP_MedicationSubstitutionNotAllowedReason_CS
 * ^status = #draft

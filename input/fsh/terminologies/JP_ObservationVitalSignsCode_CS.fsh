@@ -1,6 +1,6 @@
 CodeSystem: JP_ObservationVitalSignsCode_CS
 Id: jp-observation-vitalsigns-code-cs
-Title: "JP Core Observation VitalSigns Code"
+Title: "JP Core Observation VitalSigns Code CodeSystem"
 Description: "Observation（バイタルサイン）で使用する項目コード"
 * ^url = $JP_ObservationVitalSignsCode_CS
 * ^status = #draft

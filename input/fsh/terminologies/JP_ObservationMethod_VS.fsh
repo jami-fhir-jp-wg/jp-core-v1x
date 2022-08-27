@@ -1,6 +1,6 @@
 ValueSet: JP_ObservationMethod_VS
 Id: jp-observation-method-vs
-Title: "JP Core Observation Method"
+Title: "JP Core Observation Method ValueSet"
 Description: "Observationで使用する診察方法のコード"
 * ^url = $JP_ObservationMethod_VS
 * ^status = #draft

@@ -7,10 +7,8 @@
   }
 </style>
 <!-- ページ内リンク指定 -->
-[JP_Observation_Common_interaction]: StructureDefinition-jp-observation-common.html#インタラクション一覧
 [JP_Observation_Common_Search]: StructureDefinition-jp-observation-common.html#search-parameter一覧
 [JP_Observation_Common_Operation]: StructureDefinition-jp-observation-common.html#operation一覧
-[JP_DiagnosticReport_Common_interaction]: StructureDefinition-jp-diagnosticreport-common.html#interaction一覧
 
 <!-- ImplementationGuide -->
 [FHIRJPCoreImplementationGuide]: ImplementationGuide-hl7.fhir.jp.core.html
@@ -100,9 +98,9 @@
 [JP_ConditionSeverity_CS]: CodeSystem-jp-condition-severity-cs.html
 [JP_Department_SsMix2Digits_CS]: CodeSystem-jp-department-ssmix-2digits-cs.html
 [JP_Department_SsMix3Digits_CS]: CodeSystem-jp-department-ssmix3digits-cs.html
-[JP_JfagyFoodAllergenCodes_CS]: CodeSystem-jp-jfagy-food-allergen-codes-cs.html
-[JP_JfagyMedicationAllergenCodes_CS]: CodeSystem-jp-jfagy-medication-allergen-codes-cs.html
-[JP_JfagyNonFoodNonMedicationAllergenCodes_CS]: CodeSystem-jp-jfagy-non-food-non-medication-allergen-codes-cs.html
+[JP_JfagyFoodAllergen_CS]: CodeSystem-jp-jfagy-food-allergen-codes-cs.html
+[JP_JfagyMedicationAllergen_CS]: CodeSystem-jp-jfagy-medication-allergen-codes-cs.html
+[JP_JfagyNonFoodNonMedicationAllergen_CS]: CodeSystem-jp-jfagy-non-food-non-medication-allergen-codes-cs.html
 [JP_MedicalLicenseCertificate_CS]: CodeSystem-jp-medicallicensecertificate-cs.html
 [JP_MedicationBodySiteJAMIExternal_CS]: CodeSystem-jp-medication-bodysite-jami-external-cs.html
 [JP_MedicationCodeCommon_CS]: CodeSystem-jp-medication-code-common-cs.html
@@ -125,26 +123,26 @@
 [JP_ObservationSocialHistoryCode_CS]: CodeSystem-jp-observation-socialhistory-code-cs.html
 [JP_ObservationVitalSignsCategory_CS]: CodeSystem-jp-observation-vitalsigns-category-cs.html
 [JP_ObservationVitalSignsCode_CS]: CodeSystem-jp-observation-vitalsigns-code-cs.html
-[JP_PhysicalExamCodes_CS]: CodeSystem-jp-physicalexamcodes-cs.html
-[JP_PractitionerRoleCodes_CS]: CodeSystem-jp-practitioner-role-codes-cs.html
+[JP_PhysicalExamCode_CS]: CodeSystem-jp-physicalexamcodes-cs.html
+[JP_PractitionerRole_CS]: CodeSystem-jp-practitioner-role-codes-cs.html
 [JP_PrefectureNumber_CS]: CodeSystem-jp-prefecturenumber-cs.html
 [JP_ProcedureBodySite_CS]: CodeSystem-jp-procedure-body-site-cs.html
-[JP_ProcedureCategoryCodes_CS]: CodeSystem-jp-procedure-category-codes-cs.html
+[JP_ProcedureCategory_CS]: CodeSystem-jp-procedure-category-codes-cs.html
 [JP_ProcedureCodesDental_CS]: CodeSystem-jp-procedure-codes-dental-cs.html
 [JP_ProcedureCodesICHI_CS]: CodeSystem-jp-procedure-codes-ichi-cs.html
 [JP_ProcedureCodesMedical_CS]: CodeSystem-jp-procedure-codes-medical-cs.html
 [JP_ProcedureCodesNurse_CS]: CodeSystem-jp-procedure-codes-nurse-cs.html
 [JP_ProcedureCodesSTEM7_CS]: CodeSystem-jp-procedure-codes-stem7-cs.html
-[JP_ProcedureConditionCodes_CS]: CodeSystem-jp-procedure-condition-codes-cs.html
-[JP_ProcedureDeviceActionCodes_CS]: CodeSystem-jp-procedure-device-action-codes-cs.html
+[JP_ProcedureCondition_CS]: CodeSystem-jp-procedure-condition-codes-cs.html
+[JP_ProcedureDeviceAction_CS]: CodeSystem-jp-procedure-device-action-codes-cs.html
 [JP_ProcedureDeviceKind_CS]: CodeSystem-jp-procedure-devicekind-cs.html
-[JP_ProcedureFollowUpCodes_CS]: CodeSystem-jp-procedure-followup-codes-cs.html
+[JP_ProcedureFollowUp_CS]: CodeSystem-jp-procedure-followup-codes-cs.html
 [JP_ProcedureNotPerformedReason_CS]: CodeSystem-jp-procedure-not-performed-reason-cs.html
-[JP_ProcedureOutcomeCodes_CS]: CodeSystem-jp-procedure-outcome-codes-cs.html
-[JP_ProcedureReasonCodes_CS]: CodeSystem-jp-procedure-reason-codes-cs.html
+[JP_ProcedureOutcome_CS]: CodeSystem-jp-procedure-outcome-codes-cs.html
+[JP_ProcedureReason_CS]: CodeSystem-jp-procedure-reason-codes-cs.html
 
 <!-- ValueSet -->
-[JP_AllergyIntoleranceCodes_VS]: ValueSet-jp-allergyintolerance-codes-vs.html
+[JP_AllergyIntolerance_VS]: ValueSet-jp-allergyintolerance-codes-vs.html
 [JP_ConditionSeverity_VS]: ValueSet-jp-condition-severity-vs.html
 [JP_Department_SsMix_VS]: ValueSet-jp-department-ssmix-vs.html
 [JP_MedicalFeeScoreType_VS]: ValueSet-jp-medicalfeescoretype-vs.html
@@ -170,23 +168,23 @@
 [JP_ObservationSocialHistoryCode_VS]: ValueSet-jp-observation-socialhistory-code-vs.html
 [JP_ObservationVitalSignsCategory_VS]: ValueSet-jp-observation-vitalsigns-category-vs.html
 [JP_ObservationVitalSignsCode_VS]: ValueSet-jp-observation-vitalsigns-code-vs.html
-[JP_PhysicalExamCodes_VS]: ValueSet-jp-physicalexamcodes-vs.html
+[JP_PhysicalExamCode_VS]: ValueSet-jp-physicalexamcodes-vs.html
 [JP_PrefectureNumber_VS]: ValueSet-jp-prefecturenumber-vs.html
 [JP_ProcedureBodySite_VS]: ValueSet-jp-procedure-body-site-vs.html
-[JP_ProcedureCategoryCodes_VS]: ValueSet-jp-procedure-category-codes-vs.html
+[JP_ProcedureCategory_VS]: ValueSet-jp-procedure-category-codes-vs.html
 [JP_ProcedureCodesMedical_VS]: ValueSet-jp-procedure-code-medical-vs.html
 [JP_ProcedureCodesSTEM7_VS]: ValueSet-jp-procedure-code-stem7-vs.html
 [JP_ProcedureCodesDental_VS]: ValueSet-jp-procedure-codes-dental-vs.html
 [JP_ProcedureCodesICHI_VS]: ValueSet-jp-procedure-codes-ichi-vs.html
 [JP_ProcedureCodesNurse_VS]: ValueSet-jp-procedure-codes-nurse-vs.html
-[JP_ProcedureConditionCodes_VS]: ValueSet-jp-procedure-condition-code-vs.html
-[JP_ProcedureDeviceActionCodes_VS]: ValueSet-jp-procedure-device-action-vs.html
+[JP_ProcedureCondition_VS]: ValueSet-jp-procedure-condition-code-vs.html
+[JP_ProcedureDeviceAction_VS]: ValueSet-jp-procedure-device-action-vs.html
 [JP_ProcedureDeviceKind_VS]: ValueSet-jp-procedure-devicekind-vs.html
-[JP_ProcedureFollowUpCodes_VS]: ValueSet-jp-procedure-followup-vs.html
+[JP_ProcedureFollowUp_VS]: ValueSet-jp-procedure-followup-vs.html
 [JP_ProcedureNotPerformedReason_VS]: ValueSet-jp-procedure-not-performed-reason-vs.html
-[JP_ProcedureOutcomeCodes_VS]: ValueSet-jp-procedure-outcome-codes-vs.html
-[JP_ProcedurePerformerRoleCodes_VS]: ValueSet-jp-procedure-performer-role-codes-vs.html
-[JP_ProcedureReasonCodes_VS]: ValueSet-jp-procedure-reason-codes-vs.html
+[JP_ProcedureOutcome_VS]: ValueSet-jp-procedure-outcome-codes-vs.html
+[JP_ProcedurePerformerRole_VS]: ValueSet-jp-procedure-performer-role-codes-vs.html
+[JP_ProcedureReason_VS]: ValueSet-jp-procedure-reason-codes-vs.html
 
 <!-- Example -->
 [jp-allergyintolerance-example-1]: AllergyIntolerance-jp-allergyintolerance-example-1.html

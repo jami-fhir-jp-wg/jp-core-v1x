@@ -78,14 +78,6 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
 ## 利用方法
 
-### Interaction一覧
-
-| コンフォーマンス | インタラクション                            |
-| ---------------- | ------------------------------------------- |
-| SHALL（必須）    | search-type、read                           |
-| SHOULD（推奨）   | vread、history-instance                     |
-| MAY（利用可能）  | create、update、patch、delete、history-type |
-
 #### Search Parameter一覧
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
