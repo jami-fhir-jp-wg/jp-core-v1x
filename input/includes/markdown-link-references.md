@@ -226,3 +226,5 @@
 [jp-practitioner-example-male-2]: Practitioner-jp-practitioner-example-male-2.html
 [jp-practitionerrole-example-1]: PractitionerRole-jp-practitionerrole-example-1.html
 [jp-procedure-example-1]: Procedure-jp-procedure-example-1.html
+[jp-specimen-example-1]: Specimen-jp-specimen-example-1.html
+[jp-specimen-example-2]: Specimen-jp-specimen-example-2.html
