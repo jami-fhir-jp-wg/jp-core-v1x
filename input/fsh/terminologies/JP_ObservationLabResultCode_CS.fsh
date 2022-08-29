@@ -1,14 +1,20 @@
 CodeSystem: JP_ObservationLabResultCode_CS
 Id: jp-observation-labresult-code-cs
-Title: "JP Core Observation LabResult Code"
+Title: "JP Core Observation LabResult Code CodeSystem"
 Description: "Observation（検体検査結果）で使用する項目コード"
 * ^url = $JP_ObservationLabResultCode_CS
 * ^status = #draft
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationLabResultCode_VS
-* ^content = #not-present
+* ^content = #fragment
 
-// * ^content = #complete
+* #3C020000002327101 "尿酸"
+* #2A990000001930953 "ヘモグロビン"
+* #2A990000001930954 "ヘマトクリット"
+* #2A990000001992051 "赤血球数"
+
+// TODO: Terminology Serverに登録すること。
+
 // * #1A005000000492026 "尿量_蓄尿_その他_単位時間総量"
 // * #1A010000000190111 "蛋白定性[尿]_尿(含むその他)_化学発色法_判定"
 // * #1A015000000127101 "蛋白定量[尿]_尿(含むその他)_可視吸光光度法_定量値"

@@ -1,9 +1,11 @@
 CodeSystem: JP_MedicalFeeScoreType_CS
 Id: jp-MedicalFeeScoreType-cs
-Title: "JP Core MedicalFeeScoreType Codes"
+Title: "JP Core MedicalFeeScoreType CodeSystem"
 Description: "診療報酬点数表番号"
 * ^url = $JP_MedicalFeeScoreType_CS
 * ^status = #active
+* ^caseSensitive = true
+* ^valueSet = $JP_MedicalFeeScoreType_VS
 * ^content = #complete
 * #0 "助産所"
 * #1 "医科"

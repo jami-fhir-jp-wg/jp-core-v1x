@@ -14,15 +14,20 @@ ImagingStudyリソースは、次の要素を持たなければならない。
 
 このプロファイルでは拡張定義は行っていない。
 
+## 注意事項
+
+### Mappings
+
+ImagingStudyはDICOM tagとの対応が重要である。各エレメントとDICOM tagのマッピングについては[ Resource ImagingStudy - Mappings](https://hl7.org/fhir/R4/imagingstudy-mappings.html#dicom)を参照すること。
+
+### ProcedureCode
+
+ProcedureCodeについてはRadLex lexiconに定義されているものを利用することを想定している。これは本家の仕様に基づくものである。一方で、JJ1017についてはこの利用を制限するものでは無いが、JJ1017には手技に関連する情報以外に部位情報や左右の情報を含むため、利用する場合は以下に示すbodySiteやlateralityとの整合性を確保する必要がある。
+### BodySiteとlaterality
+
+ImagingStudyのbodySiteエレメントには原則としてDICOMタグに含まれる部位情報が設定されるのが原則である。これはオーダ情報等の別の管理情報には左右や部位の間違いが含まれることがあり、実際の撮影時に修正されることがあるためである。ただし、DICOMに部位情報が含まれない場合はJJ1017Pなどのコードあるいはそのサブセットを用い指定することを許容する。ただし、lateralityエレメントとの整合性をとり、部位情報が正しいものであることを確認すること。
+
 ## 利用方法
-
-### インタラクション一覧
-
-| コンフォーマンス | インタラクション                            |
-| ---------------- | ------------------------------------------- |
-| SHALL（必須）    | search-type、read                           |
-| SHOULD（推奨）   | vread、history-instance                     |
-| MAY（利用可能）  | create、update、patch、delete、history-type |
 
 ### OperationおよびSearch Parameter 一覧
 

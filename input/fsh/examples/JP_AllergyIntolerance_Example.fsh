@@ -16,7 +16,7 @@ Usage: #example
 * criticality = #high
 * code
   * coding
-    * system = $JP_JfagyFoodAllergenCodes_CS
+    * system = $JP_JfagyFoodAllergen_CS
     * code = #J9F692300006
     * display = "小麦粉"
   * text = "こむぎこ"

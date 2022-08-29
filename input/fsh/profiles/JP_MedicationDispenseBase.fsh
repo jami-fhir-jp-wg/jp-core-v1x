@@ -25,6 +25,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * extension ^slicing.rules = #open
 * extension[preparation] ^short = "調剤結果"
 * extension[preparation] ^definition = "薬剤単位の調剤結果"
+* partOf only Reference(JP_Procedure)
 * partOf ^short = "Event that dispense is part of 親イベントへの参照"
 * partOf ^definition = "The procedure that trigger the dispense. \r\n\r\nこの調剤の契機となったProcedureリソースへの参照。"
 * status ^short = "preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | unknown"
@@ -52,6 +53,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * subject ^short = "Who received medication　投与対象患者"
 * subject ^definition = "The person or animal or group receiving the medication.\r\n\r\n投与を受ける患者"
 * subject ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
+* context only Reference(JP_Encounter or EpisodeOfCare)
 * context ^short = "Encounter / Episode associated with event　調剤ベントに関連するエンカウンターやエピソード"
 * context ^definition = "The encounter or episode of care that establishes the context for this event.\r\n\r\n調剤ベントに関連するエンカウンターやエピソードへの参照。"
 * context ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
@@ -60,9 +62,11 @@ Description: "このプロファイルはユーザは直接適用するもので
 * supportingInformation ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
 * performer ^short = "Who performed event　調剤を実施した人"
 * performer ^definition = "Indicates who or what performed the event.\r\n調剤した人を示す"
+* performer.actor only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or Device or RelatedPerson)
 * location ^short = "Where the dispense occurred　調剤実施場所"
 * location ^definition = "The principal physical location where the dispense was performed. \r\n\r\n調剤が実施された場所を示すLocationリソースへの参照。"
 * location ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
+* authorizingPrescription only Reference(JP_MedicationRequest)
 * authorizingPrescription ^short = "Medication order that authorizes the dispense　調剤を正当化する元の処方オーダ"
 * authorizingPrescription ^definition = "Indicates the medication order that is being dispensed against.\r\n調剤の元になった処方オーダを表すMedicationRequestリソースへの参照。"
 * type ^definition = "Indicates the type of dispensing event that is performed. For example, Trial Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc.\r\n実行される調剤イベントのタイプを示す。たとえば、トライアルフィル、トライアルの完了、部分フィル、緊急フィル、サンプルなどである。"
@@ -84,9 +88,11 @@ Description: "このプロファイルはユーザは直接適用するもので
 * whenHandedOver 1..
 * whenHandedOver ^short = "Medication order that authorizes the dispense　払い出された日時"
 * whenHandedOver ^definition = "The time the dispensed product was provided to the patient or their representative.\r\n\r\n必須。\r\n患者あるいはその代理人に払い出される薬剤が提供された日時。"
+* destination only Reference(JP_Location)
 * destination ^short = "Where the medication was sent　薬が送られた場所"
 * destination ^definition = "Identification of the facility/location where the medication was shipped to, as part of the dispense event.\r\n\r\n調剤イベントの一環として、薬剤が出荷された行先先の施設/場所のLocationリソースへの参照。"
 * destination ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
+* receiver only Reference(JP_Patient or JP_Practitioner)
 * receiver ^short = "Who collected the medication　 薬を受け取った人"
 * receiver ^definition = "Identifies the person who picked up the medication.  This will usually be a patient or their caregiver, but some cases exist where it can be a healthcare professional.\r\n\r\n薬を受け取った人を識別する。これは通常、患者またはその介護者だが、医療専門家になる場合もある。"
 * receiver ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
@@ -150,6 +156,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * substitution.reason ^short = "Why was substitution made　置換が実施された理由"
 * substitution.reason ^definition = "Indicates the reason for the substitution (or lack of substitution) from what was prescribed.\r\n\r\n処方されたものからの置換（または置換の欠如）の理由を示す。\r\nHL7 v3 Value Set SubstanceAdminSubstitutionReason　では以下のコードが定義されている。\r\nCT:治療継続性確保のため、FP:処方方針、 OS: 在庫欠品、  RR:代替えを義務付けまたは禁止する規制要件に従った"
 * substitution.reason ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\n\r\nすべてのターミノロジーの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係とpre-coordinationとpost-coordinationの用語関係を管理するための独自の構造を提供する必要がある。"
+* substitution.responsibleParty only Reference(JP_Practitioner or JP_PractitionerRole)
 * substitution.responsibleParty ^short = "Who is responsible for the substitution　置換責任者"
 * substitution.responsibleParty ^definition = "The person or organization that has primary responsibility for the substitution.\r\n\r\n置換の主な責任を負う個人または組織。Practitioner   PractitionerRole リソースへの参照。"
 * substitution.responsibleParty ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
@@ -176,3 +183,4 @@ Description: "薬剤単位の調剤結果"
 * value[x] only string or CodeableConcept
 * value[x] ^short = "調剤結果"
 * value[x] ^definition = "薬剤単位の調剤結果"
+* valueCodeableConcept.coding from $JP_MedicationInstructionForDispenseJHSP0002_VS (example)

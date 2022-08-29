@@ -75,6 +75,10 @@ Kebab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 NameをSpace Separator形式に変換する。(全ての項目共通)<br/>省略語は英大文字としてもよい
 ``` 
 JP Core Patient Race Extension
+
+JP Core PractitionerRole CodeSystem
+
+JP Core Observation SocialHistory Code ValueSet
 ```
 
 ### [5] ファイル配置＆命名規則
