@@ -33,6 +33,6 @@ Description: "ムコダイン錠２５０ｍｇ"
 Usage: #example
 * status = #active
 * ingredient[0].itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#103835401 "ムコダイン錠２５０ｍｇ"
-* ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#HON "錠"
-
+* ingredient[=].strength.numerator = 250 urn:oid:1.2.392.100495.20.2.101#MG "ｍｇ"
+* ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 
