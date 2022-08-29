@@ -505,7 +505,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.maxDosePerPeriod.numerator.unit ^definition = "人間にも可読な単位表現"
 * dosageInstruction.maxDosePerPeriod.numerator.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.maxDosePerPeriod.numerator.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
-* dosageInstruction.maxDosePerPeriod.numerator.system from urn:oid:1.2.392.100495.20.2.101 (preferred)
+* dosageInstruction.maxDosePerPeriod.numerator.system from JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.maxDosePerPeriod.numerator.system ^short = "コード化された単位表現を規定するシステム"
 * dosageInstruction.maxDosePerPeriod.numerator.system ^definition = "単位をコード化して表現するシステムについてのID。"
 * dosageInstruction.maxDosePerPeriod.numerator.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
@@ -530,7 +530,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.maxDosePerPeriod.denominator.unit ^definition = "人間にも可読な単位表現"
 * dosageInstruction.maxDosePerPeriod.denominator.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.maxDosePerPeriod.denominator.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
-* dosageInstruction.maxDosePerPeriod.denominator.system from urn:oid:1.2.392.100495.20.2.101 (preferred)
+* dosageInstruction.maxDosePerPeriod.denominator.system from JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.maxDosePerPeriod.denominator.system ^short = "コード化された単位表現を規定するシステム"
 * dosageInstruction.maxDosePerPeriod.denominator.system ^definition = "単位をコード化して表現するシステムについてのID。"
 * dosageInstruction.maxDosePerPeriod.denominator.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
@@ -556,7 +556,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.maxDosePerAdministration.unit ^definition = "人間にも可読な単位表現"
 * dosageInstruction.maxDosePerAdministration.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.maxDosePerAdministration.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
-* dosageInstruction.maxDosePerAdministration.system from urn:oid:1.2.392.100495.20.2.101 (preferred)
+* dosageInstruction.maxDosePerAdministration.system from JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.maxDosePerAdministration.system ^short = "コード化された単位表現を規定するシステム"
 * dosageInstruction.maxDosePerAdministration.system ^definition = "単位をコード化して表現するシステムについてのID。"
 * dosageInstruction.maxDosePerAdministration.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
@@ -582,7 +582,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.maxDosePerLifetime.unit ^definition = "人間にも可読な単位表現"
 * dosageInstruction.maxDosePerLifetime.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.maxDosePerLifetime.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
-* dosageInstruction.maxDosePerLifetime.system from urn:oid:1.2.392.100495.20.2.101 (preferred)
+* dosageInstruction.maxDosePerLifetime.system from JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.maxDosePerLifetime.system ^short = "コード化された単位表現を規定するシステム"
 * dosageInstruction.maxDosePerLifetime.system ^definition = "単位をコード化して表現するシステムについてのID。"
 * dosageInstruction.maxDosePerLifetime.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
@@ -628,7 +628,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dispenseRequest.initialFill.quantity.unit ^definition = "人間にも可読な単位表現"
 * dispenseRequest.initialFill.quantity.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dispenseRequest.initialFill.quantity.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
-* dispenseRequest.initialFill.quantity.system from urn:oid:1.2.392.100495.20.2.101 (preferred)
+* dispenseRequest.initialFill.quantity.system from JP_MedicationUnitMERIT9_VS (preferred)
 * dispenseRequest.initialFill.quantity.system ^short = "コード化された単位表現を規定するシステム"
 * dispenseRequest.initialFill.quantity.system ^definition = "単位をコード化して表現するシステムについてのID。"
 * dispenseRequest.initialFill.quantity.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
