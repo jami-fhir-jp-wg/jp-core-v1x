@@ -1,7 +1,7 @@
 Instance: jp-medication-example-1
 InstanceOf: JP_Medication
-Title: "JP Core Medication Example ホリゾン注射液"
-Description: "ホリゾン注射液"
+Title: "JP Core Medication Example ホリゾン注射液１０ｍｇ"
+Description: "ホリゾン注射液１０ｍｇ"
 Usage: #example
 * status = #active
 * ingredient.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo"
@@ -24,3 +24,15 @@ Usage: #example
 * ingredient[+].itemCodeableConcept = urn:oid:1.2.392.100495.20.2.74#108010001 "アドナ注（静脈用）５０ｍｇ／１０ｍＬ"
 * ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#AMP "アンプル"
 * ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
+
+
+Instance: jp-medication-example-3
+InstanceOf: JP_Medication
+Title: "JP Core Medication Example ムコダイン錠２５０ｍｇ"
+Description: "ムコダイン錠２５０ｍｇ"
+Usage: #example
+* status = #active
+* ingredient[0].itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#103835401 "ムコダイン錠２５０ｍｇ"
+* ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#HON "錠"
+
+

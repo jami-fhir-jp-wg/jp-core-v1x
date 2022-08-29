@@ -1,7 +1,7 @@
 Instance: jp-medicationadministration-injection-example-1
 InstanceOf: JP_MedicationAdministration_Injection
-Title: "JP Core MedicationAdministration Injection Example ワンショット静脈注射（実施）"
-Description: "ワンショット静脈注射（実施）"
+Title: "JP Core MedicationAdministration Injection Example 注射実施 ワンショット静脈注射"
+Description: "注射実施 ワンショット静脈注射"
 Usage: #example
 * contained[0] = jp-medicationadministration-injection-medication-example-1
 * contained[+] = jp-medicationadministration-injection-bodystructure-example-1
@@ -44,8 +44,8 @@ Usage: #example
 
 Instance: jp-medicationadministration-injection-example-2
 InstanceOf: JP_MedicationAdministration_Injection
-Title: "JP Core MedicationAdministration Injection Example 点滴注射（実施）"
-Description: "点滴注射（実施）"
+Title: "JP Core MedicationAdministration Injection Example 注射実施 点滴注射"
+Description: "注射実施 点滴注射"
 Usage: #example
 * contained[0] = jp-medicationadministration-injection-medication-example-2
 * contained[+] = jp-medicationadministration-injection-bodystructure-example-2
