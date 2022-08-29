@@ -15,7 +15,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * identifier ^requirements = "ImagingStudyに1つ以上のシリーズ要素が存在する場合、1つのDICOMスタディUID識別子が存在する必要がある（[DICOM PS 3.3 C.7.2]（https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.2.html）を参照） 。"
 * status ^definition = "ImagingStudyの現在のステータス"
 * status ^comment = "不明(unknown)は「その他」を表すものではない。定義されたステータスの1つを適用する必要がある。不明(unknown)は、オーサリングシステムが現在のステータスを確認できない場合に使用される。\r\n\r\n【JP-Core仕様】リソースの状態。"
-* modality ^short = "実際の取得モダリティーの場合、モダリティーの全シリーズ。対応するDICOM tag: (0008, 0061) "
+* modality ^short = "実際の取得モダリティーの場合、モダリティーの全シリーズ。対応するDICOM tag: (0008, 0061)"
 * modality ^definition = "実際の取得モダリティであるすべてのseries.modality値のリスト、つまりDICOMコンテキストグループ29（値セットOID 1.2.840.10008.6.1.19）の値。"
 * modality ^comment = "コードは、列挙型またはコードリストで、SNOMED CTなどの非常に正式な定義まで、非常にカジュアルに定義できる。詳細については、HL7v3コア原則を参照のこと。\r\n\r\n・モダリティのコードを設定。\r\n\r\n・Seriesの階層の(0008,0060)を集約する、または(0008,0060)　と　(0008, 0061) のOR。但し、重複する値は1つにまとめて表現。"
 * subject only Reference(JP_Patient or Device or Group)
