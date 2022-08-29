@@ -16,6 +16,7 @@ ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CI
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html not found by validator
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 not found by validator
 
-The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html on element % could not be resolved
-The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 on element % could not be resolved
-The valueSet reference http://playbook.radlex.org/playbook/SearchRadlexAction on element % could not be resolved
+The valueSet reference http://playbook.radlex.org/playbook/SearchRadlexAction on element ImagingStudy.procedureCode could not be resolved
+The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html on element ImagingStudy.modality could not be resolved
+The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html on element ImagingStudy.series.modality could not be resolved
+The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 on element ImagingStudy.series.instance.sopClass could not be resolved
