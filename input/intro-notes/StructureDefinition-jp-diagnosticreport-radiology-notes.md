@@ -181,7 +181,7 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 ### サンプル
 
-* [**放射線レポート**][jp-diagnosticreport-radiology-example-1]
+* [**放射線読影レポート**][jp-diagnosticreport-radiology-example-1]
 
 ## その他、参考文献・リンク等
 
