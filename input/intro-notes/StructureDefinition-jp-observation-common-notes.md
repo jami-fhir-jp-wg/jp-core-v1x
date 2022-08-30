@@ -17,14 +17,6 @@
 
 ## 利用方法
 
-### インタラクション一覧
-
-| コンフォーマンス | インタラクション                            |
-| ---------------- | ------------------------------------------- |
-| SHALL（必須）    | search-type、read                           |
-| SHOULD（推奨）   | vread、history-instance                     |
-| MAY（利用可能）  | create、update、patch、delete、history-type |
-
 ### OperationおよびSearch Parameter 一覧
 
 #### Search Parameter一覧
@@ -196,7 +188,7 @@ HTTP/1.1 200 OK
 ```
 
 ## 補足説明
-本セクションはObservationリソースを理解する上で重要となる[Observation基底仕様の「Note」セクション](https://www.hl7.org/fhir/observation.html#notes)を抜粋＆翻訳し、転記したものである。なお、本セクションではobservationを"検査"と和訳している点に留意されたい（ただし、リソース名を明確に指す場合のみObservationと表記している）。
+本セクションはObservationリソースを理解する上で重要となる[Observation基底仕様の「Note」セクション](https://www.hl7.org/fhir/R4/observation.html#notes)を抜粋＆翻訳し、転記したものである。なお、本セクションではobservationを"検査"と和訳している点に留意されたい（ただし、リソース名を明確に指す場合のみObservationと表記している）。
 
 ### 検査のプロファイリング
 最も単純な場合、リソースインスタンスはコード、値、および状態フラグだけで構成できる。他のプロパティの関連性は、検査の種類によって異なる。プロファイルは、与えられた事例に対する特定の種類の検査を記録する際の指針を提供するために作成される。Observationリソースは、大多数のシステムで記録された詳細さの度合いに焦点を当てている。ただし、特定の事例では、特定の状況に関連する追加の制約と追加の情​​報がある場合がある。こうした複雑さを追加で取り込めるように、他のリソースと同様、拡張機能が利用できる。
@@ -391,7 +383,7 @@ Observation.value[x]要素には、次のように型に応じた変数名があ
   - valueDateTime（日時）
   - valuePeriod（期間）
 
-詳細は[結果値のコードの使い方](https://www.hl7.org/fhir/observation.html#usingcodes)を参照のこと。
+詳細は[結果値のコードの使い方](https://www.hl7.org/fhir/R4/observation.html#usingcodes)を参照のこと。
 
 ほとんどの検査結果値は「不明」などの例外のために完全な論理値にならないため、論理型はめったに使用されない。
 従って、代わりにデータ型CodeableConceptを使用し、[バリューセット](http://terminology.hl7.org/ValueSet/v2-0136)からコードを選択する必要がある（これら「はい/いいえ」の概念は、表示名「true / false」または必要に応じて他の相互に排他的な用語にマッピング可能）。
@@ -434,7 +426,7 @@ effectiveDateTimeとeffectivePeriodは、検査に密接に関連する時間情
 最も一般的な検査には普遍的な参照範囲が1個だけ含まれる。参照範囲は、臨床検査や他の収縮期血圧のような検査には有用かもしれないが、「妊娠」のようなものにはほとんど関係ない。システムは患者に関する知識（例：患者固有の年齢・性別・体重・その他要因）に基づいて関連する参照範囲のみに制限できる（MAY）が、それは不可能か不適切な場合がある。複数の参照範囲があるときは常に、参照範囲 および/または 年齢属性で違いが分かるようにしなければならない（SHOULD）。
 
 ### キャンセルまたは中止された検査
-検査や検査を完了できなかった場合（例えば検体が不十分とか、医療者がオーダをキャンセルしたとか）、ステータスをキャンセルに更新し、具体的な詳細を、できればコード化された値としてdataAbsentReasonかvalueCodeableConcept要素に設定する。note要素にも同様に追加情報が付与される場合がある。[検体拒否の例](https://www.hl7.org/fhir/observation-example-unsat.html)は、"不十分な検体"という意味のコード値をdataAbsentReasonへ設定している。
+検査や検査を完了できなかった場合（例えば検体が不十分とか、医療者がオーダをキャンセルしたとか）、ステータスをキャンセルに更新し、具体的な詳細を、できればコード化された値としてdataAbsentReasonかvalueCodeableConcept要素に設定する。note要素にも同様に追加情報が付与される場合がある。[検体拒否の例](https://www.hl7.org/fhir/R4/observation-example-unsat.html)は、"不十分な検体"という意味のコード値をdataAbsentReasonへ設定している。
 
 ### 遺伝情報についての検査
 遺伝情報の報告には、DiagnosticReportリソースとObservationリソースを主に使用する。遺伝情報に関する結果の記述についての実装ガイドは[こちら](http://hl7.org/fhir/uv/genomics-reporting/index.html)を参照されたい。

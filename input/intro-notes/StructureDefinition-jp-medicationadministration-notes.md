@@ -1,6 +1,6 @@
 
 ### 必須要素
-次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
+次のデータ項目は必須（データが存在しなければならない）である。
 
 MedicationAdministration リソースは、次の要素を持たなければならない。
 - status : ステータスは必須であり、JP Coreでは `completed` or `stopped` に限定される。
@@ -10,13 +10,8 @@ MedicationAdministration リソースは、次の要素を持たなければな�
 
 ※投与実施のユースケースにおいては、実施投与量(dose)が必須であることが望ましいが、ワーキンググループでの検討の結果、投与中止のユースケースも考慮して必須としない結論となった。
 
-MedicationAdministrationリソースは、次の要素をサポートしなければならない。
-- medicationCodeableConcept : 医薬品の識別情報
-- subject :患者の参照情報
-- effectiveDateTime : 投与実施日時
-
 ### Extensions定義
-MedicationAdministration リソースで使用される拡張は次の通りである。
+JP Core MedicationAdministration プロファイルで使用される拡張は次の通りである。
 
 #### JP MedicationAdministration独自で追加されたExtension
 
@@ -67,14 +62,6 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 
 ## 利用方法
 
-### Interaction一覧
-
-| コンフォーマンス | インタラクション                            |
-| ---------------- | ------------------------------------------- |
-| SHALL（必須）    | search-type、read                           |
-| SHOULD（推奨）   | vread、history-instance                     |
-| MAY（利用可能）  | create、update、patch、delete、history-type |
-
 #### Search Parameter一覧
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
@@ -82,7 +69,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 | SHALL            | identifier    | token  | GET [base]/MedicationAdministration?identifier=http://myhospital.com/fhir/medication\|1234567890 |
 | SHOULD            | patient      | reference | GET [base]/MedicationAdministration?patient=123456   |
 | SHOULD           | patient,effective-time | reference,date  | GET [base]/MedicationAdministration?patient=123456&effective-time=eq2013-01-14 |
-| MAY           | TBD | TBD | GET [base]/MedicationAdministration?code=urn:oid:1.2.392.100495.20.2.74\|105271807  |
+| MAY           | effective-time,code,performer,request | date,token,reference,reference | GET [base]/MedicationAdministration?code=urn:oid:1.2.392.100495.20.2.74\|105271807  |
 
 ##### 必須検索パラメータ
 
@@ -220,250 +207,9 @@ HTTP/1.1 200 OK
 
 ### サンプル
 [JAHIS処方データ交換規約 Ver.3.0C](https://www.jahis.jp/standard/detail/id=564)の137ページに記載されている下記の処方実施をFHIRで表現する場合のサンプルを示す。
-```
-投与日時　2016/08/25 08:30
-Rp1
-　ムコダイン錠２５０ｍｇ　　　　　　　　１錠
-　パンスポリンＴ錠１００　１００ｍｇ　　０錠（投与中止）
-```
 
-| 項目名 | 項目値 | 備考 |
-| :--- | :--- | :--- |
-| オーダ番号 | 12345678 |
-| 依頼日 | 2016/08/25 |
-| 依頼医 | 医師 春子(123456) |
-| 依頼科 | 内科(01)  |
-| 入外区分 | 入院(I) |
-| Rp番号 | 01 |
-| 薬剤-1 | ムコダイン錠２５０ｍｇ(103835401) |
-| 投与量-1 | 1錠 |
-| 薬剤-2 | パンスポリンＴ錠１００ １００ｍｇ(110626901) |
-| 投与量-2 | 0錠 | ※投与せず
-| 投与開始日時 | 2016/08/25 08:30 |
-| 投与終了日時 | 2016/08/25 08:30 |
-| 投与者 | 看護師 夏子(20001)  |
-| 投与場所 | 09A病棟021病室4ベッド |
-| 実施更新日時 | 2016/08/25 12:03:43 |
-
-#### ムコダイン錠２５０ｍｇ（実施）
-
-<details>
-<summary><b>インスタンス例（クリックで展開）</b></summary>
-<dev>
-
-{% highlight json %}
-{
-  "resourceType": "MedicationAdministration",
-  "id": "jp-medicationadministration-example-1",
-  "meta": {
-    "profile": [
-      "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
-    ]
-  },
-  "extension": [
-    {
-      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment",
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "system": "urn:oid:1.2.392.100495.20.2.51",
-            "code": "01",
-            "display": "内科"
-          }
-        ]
-      }
-    },
-    {
-      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester",
-      "valueReference": {
-        "reference": "Practitioner/jp-practitioner-example-female-1",
-        "display": "東京 春子"
-      }
-    },
-    {
-      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn",
-      "valueDateTime": "2016-08-25T00:00:00+09:00"
-    },
-    {
-      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location",
-      "valueReference": {
-        "reference": "Location/jp-location-example-ward",
-        "display": "09A病棟 021病室 4ベッド"
-      }
-    }
-  ],
-  "identifier": [
-    {
-      "system": "http://www.example.com/fhir/order-number",
-      "value": "12345678"
-    },
-    {
-      "system": "urn:oid:1.2.392.100495.20.3.81",
-      "value": "1"
-    },
-    {
-      "system": "urn:oid:1.2.392.100495.20.3.82",
-      "value": "1"
-    }
-  ],
-  "status": "completed",
-  "category": {
-    "coding": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v2-0482",
-        "code": "I",
-        "display": "Inpatient Order"
-      }
-    ]
-  },
-  "medicationCodeableConcept": {
-    "coding": [
-      {
-        "system": "urn:oid:1.2.392.100495.20.2.74",
-        "code": "103835401",
-        "display": "ムコダイン錠２５０ｍｇ"
-      }
-    ]
-  },
-  "subject": {
-    "reference": "Patient/jp-patient-example-1"
-  },
-  "effectiveDateTime": "2016-08-25T08:30:00+09:00",
-  "performer": [
-    {
-      "function": {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/med-admin-perform-function",
-            "code": "performer",
-            "display": "Performer"
-          }
-        ]
-      },
-      "actor": {
-        "reference": "Practitioner/jp-practitioner-example-female-1",
-        "display": "福岡 花子"
-      }
-    }
-  ],
-  "request": {
-    "reference": "MedicationRequest/jp-medicationrequest-example-1"
-  },
-  "dosage": {
-    "route": {
-      "coding": [
-        {
-          "system": "urn:oid:1.2.392.200250.2.2.20.40",
-          "code": "10",
-          "display": "経口"
-        }
-      ]
-    },
-    "method": {
-      "coding": [
-        {
-          "system": "urn:oid:1.2.392.200250.2.2.20.30",
-          "code": "1",
-          "display": "内服"
-        }
-      ]
-    },
-    "dose": {
-      "value": 1,
-      "unit": "錠",
-      "system": "urn:oid:1.2.392.100495.20.2.101",
-      "code": "TAB"
-    }
-  }
-}
-{% endhighlight json %}
-</dev>
-</details>
-
-#### パンスポリンＴ錠１００ １００ｍｇ（中止）
-
-<details>
-<summary><b>インスタンス例（クリックで展開）</b></summary>
-<dev>
-
-{% highlight json %}
-{
-  "resourceType": "MedicationAdministration",
-  "id": "jp-medicationadministration-example-2",
-  "meta": {
-    "profile": [
-      "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
-    ]
-  },
-  "extension": [
-    {
-      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment",
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "system": "urn:oid:1.2.392.100495.20.2.51",
-            "code": "01",
-            "display": "内科"
-          }
-        ]
-      }
-    },
-    {
-      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester",
-      "valueReference": {
-        "reference": "Practitioner/jp-practitioner-example-male-1",
-        "display": "大阪 一郎"
-      }
-    },
-    {
-      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn",
-      "valueDateTime": "2016-08-25T00:00:00+09:00"
-    }
-  ],
-  "identifier": [
-    {
-      "system": "http://www.example.com/fhir/order-number",
-      "value": "12345678"
-    },
-    {
-      "system": "urn:oid:1.2.392.100495.20.3.81",
-      "value": "1"
-    },
-    {
-      "system": "urn:oid:1.2.392.100495.20.3.82",
-      "value": "2"
-    }
-  ],
-  "status": "stopped",
-  "category": {
-    "coding": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v2-0482",
-        "code": "I",
-        "display": "Inpatient Order"
-      }
-    ]
-  },
-  "medicationCodeableConcept": {
-    "coding": [
-      {
-        "system": "urn:oid:1.2.392.100495.20.2.74",
-        "code": "110626901",
-        "display": "パンスポリンＴ錠１００ １００ｍｇ"
-      }
-    ]
-  },
-  "subject": {
-    "reference": "Patient/jp-patient-example-1"
-  },
-  "effectiveDateTime": "2016-08-25T08:30:00+09:00",
-  "request": {
-    "reference": "MedicationRequest/jp-medicationrequest-example-2"
-  }
-}
-{% endhighlight json %}
-</dev>
-</details>
+- [**投薬実施 ムコダイン錠２５０ｍｇ**][jp-medicationadministration-example-1]
+- [**投薬中止 パンスポリンＴ錠１００ １００ｍｇ**][jp-medicationadministration-example-2]
 
 ## 注意事項
 

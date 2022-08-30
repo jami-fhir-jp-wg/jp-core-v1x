@@ -1,7 +1,7 @@
 Instance: jp-medicationrequest-injection-example-1
 InstanceOf: JP_MedicationRequest_Injection
-Title: "JP Core MedicationRequest Injection Example ワンショット静脈注射"
-Description: "ホリゾン注射液１０ｍｇ１アンプルを左腕に静脈注射"
+Title: "JP Core MedicationRequest Injection Example 注射処方指示 ワンショット静脈注射"
+Description: "注射処方指示 ホリゾン注射液１０ｍｇワンショット静脈注射"
 Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-1
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-1
@@ -13,8 +13,8 @@ Usage: #example
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
-* category[+] = http://jpfhir.jp/Common/CodeSystem/merit9-category#IHP "入院処方"
-* category[+] = http://jpfhir.jp/Common/CodeSystem/JHSI0001#FTP "定時処方"
+* category[+] = http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category#IHP "入院処方"
+* category[+] = http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0001#FTP "定時処方"
 * medicationReference = Reference(Medication/jp-medicationrequest-injection-medication-example-1)
 * subject = Reference(Patient/jp-patient-example-1)
 * authoredOn = "2016-07-01T09:28:17+09:00"
@@ -49,8 +49,8 @@ Usage: #example
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
-* category[+] = http://jpfhir.jp/Common/CodeSystem/merit9-category#IHP "入院処方"
-* category[+] = http://jpfhir.jp/Common/CodeSystem/JHSI0001#FTP "定時処方"
+* category[+] = http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category#IHP "入院処方"
+* category[+] = http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0001#FTP "定時処方"
 * medicationReference = Reference(Medication/jp-medicationrequest-injection-medication-example-2)
 * subject = Reference(Patient/jp-patient-example-1)
 * authoredOn = "2016-07-01T07:28:17+09:00"

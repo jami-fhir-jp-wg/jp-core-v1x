@@ -9,17 +9,12 @@ DiagnosticReportリソースは、次の要素を持たなければならない�
  - status︓検体検査情報項目の状態は必須である。
  - code︓このリソースは何の検体検査情報項目であるかを示すため必須である。
 
-
 #### MustSupport
 このプロファイルではMustSupportを定めていない。
-
 
 ### Extensions定義
 
 このプロファイルでは拡張定義は行っていない。
-
-
-
 
 <!--
 ## 注意事項
@@ -27,14 +22,6 @@ DiagnosticReportリソースは、次の要素を持たなければならない�
 -->
 
 ## 利用方法
-
-### Interaction一覧 
-DiagnosticReport リソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
-
-
-[DiagnosticReport共通情報プロファイル#インタラクション一覧][JP_DiagnosticReport_Common]
-
-
 
 ### OperationおよびSearch Parameter 一覧
 #### Search Parameter一覧
@@ -70,7 +57,6 @@ subjectの各検索パラメータに一致するObservationリソースを含�
 
 2. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、based-on (検査オーダの依頼科)を指定した検索をサポートすることが望ましい。（SHOULD）
 
-
 subject,based-onの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
@@ -105,252 +91,11 @@ subject,dateの各検索パラメータに一致するObservationリソースを
 このプロファイルではOperationは定義していない。
 
 ### サンプル
-```json
-{
-  "resourceType": "Bundle",
-  "id": "101",
-  "type": "collection",
-  "entry": [
-    {
-      "fullUrl": "http://abc-hospital.local/fhir/DiagnosticReport/101",
-      "resource": {
-        "resourceType": "DiagnosticReport",
-        "id": "101",
-        "identifier": [
-          {
-            "system": "http://abc-hospital.local/fhir/lab/reportid",
-            "value": "5234342"
-          }
-        ],
-        "status": "final",
-        "category": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
-                "code": "HM"
-              }
-            ]
-          }
-        ],
-        "code": {
-          "coding": [
-            {
-              "system": "http://abc-hospital.local/fhir/lab/report-type",
-              "code": "58410-2",
-              "display": "血球算定検査レポート"
-            }
-          ],
-          "text": "血球算定検査レポート"
-        },
-        "subject": {
-          "reference": "Patient/pat2"
-        },
-        "encounter": {
-          "reference": "Encounter/example"
-        },
-        "effectiveDateTime": "2011-03-04T08:30:00+11:00",
-        "issued": "2011-03-04T11:45:33+11:00",
-        "performer": [
-          {
-            "reference": "Organization/org1",
-            "display": "abc-hospital"
-          }
-        ],
-        "result": [
-          {
-            "reference": "Observation/r1"
-          },
-          {
-            "reference": "Observation/r2"
-          },
-          {
-            "reference": "Observation/r3"
-          },
-          {
-            "reference": "以降省略"
-          }
-        ],
-        "presentedForm": [
-          {
-            "contentType": "application/pdf",
-            "language": "ja-JP",
-            "data": "JVBERi0xLjQKJcfsj6IKNSAwIG9iago8PC9MZW5ndGggNiAwIFIvRmlsdGVyIC9GbGF0ZURlY29kZT4(省略)",
-            "title": "検査結果PDFレポート"
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "http://abc-hospital.local/fhir/Observation/r1",
-      "resource": {
-        "resourceType": "Observation",
-        "id": "r1",
-        "status": "final",
-        "code": {
-          "coding": [
-            {
-              "code": "123",
-              "system": "http://abc-hospital.local/fhir/Observation/localcode",
-              "display": "ヘモグロビン"
-            },
-            {
-              "code": "2A990000001930953",
-              "system": "http://jpfhir.jp/Common/ValueSet/labResult-code",
-              "display": "ヘモグロビン"
-            }
-          ],
-          "text": "ヘモグロビン"
-        },
-        "subject": {
-          "reference": "Patient/pat2"
-        },
-        "performer": [
-          {
-            "reference": "Organization/org1",
-            "display": "abc-hospital"
-          }
-        ],
-        "valueQuantity": {
-          "value": 176,
-          "unit": "g/L",
-          "system": "http://unitsofmeasure.org",
-          "code": "g/L"
-        },
-        "referenceRange": [
-          {
-            "low": {
-              "value": 135,
-              "unit": "g/L",
-              "system": "http://unitsofmeasure.org",
-              "code": "g/L"
-            },
-            "high": {
-              "value": 180,
-              "unit": "g/L",
-              "system": "http://unitsofmeasure.org",
-              "code": "g/L"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "http://abc-hospital.local/fhir/Observation/r2",
-      "resource": {
-        "resourceType": "Observation",
-        "id": "r2",
-        "status": "final",
-        "code": {
-          "coding": [
-            {
-              "code": "456",
-              "system": "http://abc-hospital.local/fhir/Observation/localcode",
-              "display": "赤血球数"
-            },
-            {
-              "code": "2A990000001992051",
-              "system": "http://jpfhir.jp/Common/ValueSet/labResult-code",
-              "display": "赤血球数"
-            }
-          ],
-          "text": "赤血球数"
-        },
-        "subject": {
-          "reference": "Patient/pat2"
-        },
-        "performer": [
-          {
-            "reference": "Organization/org1",
-            "display": "abc-hospital"
-          }
-        ],
-        "valueQuantity": {
-          "value": 5.9,
-          "unit": "10*6/uL",
-          "system": "http://unitsofmeasure.org",
-          "code": "10*6/uL"
-        },
-        "referenceRange": [
-          {
-            "low": {
-              "value": 4.2,
-              "unit": "10*6./L",
-              "system": "http://unitsofmeasure.org",
-              "code": "10*6/uL"
-            },
-            "high": {
-              "value": 6,
-              "unit": "10*6./L",
-              "system": "http://unitsofmeasure.org",
-              "code": "10*6/uL"
-            }
-          }
-        ]
-      }
-    },
-    {
-      "fullUrl": "http://abc-hospital.local/fhir/Observation/r3",
-      "resource": {
-        "resourceType": "Observation",
-        "id": "r3",
-        "status": "final",
-        "code": {
-          "coding": [
-            {
-              "code": "789",
-              "system": "http://abc-hospital.local/fhir/Observation/localcode",
-              "display": "ヘマトクリット"
-            },
-            {
-              "code": "2A990000001930954",
-              "system": "http://jpfhir.jp/Common/ValueSet/labResult-code",
-              "display": "ヘマトクリット"
-            }
-          ],
-          "text": "ヘマトクリット"
-        },
-        "subject": {
-          "reference": "Patient/pat2"
-        },
-        "performer": [
-          {
-            "reference": "Organization/org1",
-            "display": "abc-hospital"
-          }
-        ],
-        "valueQuantity": {
-          "value": 55,
-          "unit": "%"
-        },
-        "interpretation": [
-          {
-            "coding": [
-              {
-                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation",
-                "code": "H"
-              }
-            ]
-          }
-        ],
-        "referenceRange": [
-          {
-            "low": {
-              "value": 38,
-              "unit": "%"
-            },
-            "high": {
-              "value": 52,
-              "unit": "%"
-            }
-          }
-        ]
-      }
-    }
-  ]
-}
-```
+
+* [**検体検査レポート（血液）**][jp-diagnosticreport-labresult-example-1]
 
 ## その他、参考文献、リンク等
+
+なし
 
 {% include markdown-link-references.md %}

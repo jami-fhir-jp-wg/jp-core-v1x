@@ -28,20 +28,16 @@ imagingStudyエレメントはCardinalityが0..1だが、放射線レポート�
 
 本プロファイルはextensionを定義しない。
 
-
 ## 注意事項
 
 ### Text
 
-DiagnosticReportのドメインリソースの一つであるtextエレメントに見読可能な[narrative](http://www.hl7.org/fhir/narrative.html)データとしてレポートの所見を中心とした情報を格納する。依頼情報や患者基本情報などを含んだレポート全体のデータは別途presentedFormエレメントに保持されるが、ここではPDF等のバイナリが保存される。よってレポート内容の見読性と検索性を担保するためにtextエレメントに保存されたデータが利用される。
+DiagnosticReportのドメインリソースの一つであるtextエレメントに見読可能な[narrative](https://www.hl7.org/fhir/R4/narrative.html)データとしてレポートの所見を中心とした情報を格納する。依頼情報や患者基本情報などを含んだレポート全体のデータは別途presentedFormエレメントに保持されるが、ここではPDF等のバイナリが保存される。よってレポート内容の見読性と検索性を担保するためにtextエレメントに保存されたデータが利用される。
 
-NarrativeなtextにアクセスするためのDomainResource定義
-
-(DiagnosticReportのResourceType直下に現れる。text以外のDomainResourceの詳細については[こちら](https://www.hl7.org/fhir/domainresource.html)を参照のこと）
-<!-- 
-{{tree:simplifier.core.r4.resources/domainresource}} -->
+(DiagnosticReportのResourceType直下に現れる。text以外のDomainResourceの詳細については[こちら](https://www.hl7.org/fhir/R4/domainresource.html)を参照のこと）
 
 例：
+
 ```json
 {
   "resourceType": "DiagnosticReport",
@@ -53,17 +49,17 @@ NarrativeなtextにアクセスするためのDomainResource定義
   },
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>胸部造影CT</p><p>依頼目的:10月20日の単純写真でひだり肺に異常陰影あり。精査目的。</p><p>所見:</p><p>心拡大は無く、心嚢液も見られない。</p><p>胸部大動脈は蛇行があるも径は正常範囲内。ひだり椎骨動脈が大動脈弓より直接分岐している。大動脈壁に小さな石灰化がみられ動脈硬化性変化が軽度見られる。</p><p>ひだり肺上葉に2.2 x 1.5 cm大の空洞性病変を認める(Image 31/110)。壁には充実性成分を含み不整な造影濃度を示す。みぎ肺上葉に気管支拡張を伴う線状影を認めるが、こちらは炎症性瘢痕として矛盾しない。気管には異常を認めず。肺尖部に炎症後変化と思われる胸膜肥厚は見られる。胸水は認めない。</p><p>腋窩，縦郭および肺門リンパ節の腫大は認めず。甲状腺は正常範囲。</p><p>スキャン範囲内の腹部には異常を認めず。明らかな骨病変も認めない。</p><p>インプレッション:</p><ol><li><p>ひだり肺上葉の空洞性病変。肺腺癌を疑う。</p></li><li><p>みぎ肺上葉陳旧性炎症性瘢痕。<p></li></ol></div>"
+    "div": "<div xmlns=\"https://www.w3.org/1999/xhtml\"><p>胸部造影CT</p><p>依頼目的:10月20日の単純写真でひだり肺に異常陰影あり。精査目的。</p><p>所見:</p><p>心拡大は無く、心嚢液も見られない。</p><p>胸部大動脈は蛇行があるも径は正常範囲内。ひだり椎骨動脈が大動脈弓より直接分岐している。大動脈壁に小さな石灰化がみられ動脈硬化性変化が軽度見られる。</p><p>ひだり肺上葉に2.2 x 1.5 cm大の空洞性病変を認める(Image 31/110)。壁には充実性成分を含み不整な造影濃度を示す。みぎ肺上葉に気管支拡張を伴う線状影を認めるが、こちらは炎症性瘢痕として矛盾しない。気管には異常を認めず。肺尖部に炎症後変化と思われる胸膜肥厚は見られる。胸水は認めない。</p><p>腋窩，縦郭および肺門リンパ節の腫大は認めず。甲状腺は正常範囲。</p><p>スキャン範囲内の腹部には異常を認めず。明らかな骨病変も認めない。</p><p>インプレッション:</p><ol><li><p>ひだり肺上葉の空洞性病変。肺腺癌を疑う。</p></li><li><p>みぎ肺上葉陳旧性炎症性瘢痕。<p></li></ol></div>"
   },
   "identifier": [ {
     "use": "usual",
-    "system": "http://www.acme.com/identifiers/patient",
+    "system": "urn:dicom:uid",
     "value": "xxxxxxxxxxxxxxx"
   } ],
   "status": "final",
   "category": [ {
     "coding": [ {
-      "system": "http://hl7.org/fhir/v2/0074",
+      "system": "https://hl7.org/fhir/v2/0074",
       "code": "RAD"
     } ]
   } ], 
@@ -82,6 +78,7 @@ NarrativeなtextにアクセスするためのDomainResource定義
     {
       "display": "CHEST CT DICOM imaging study",
       "reference": "http://someserver/some-path"
+    }
   ],
 　"conclusion": "インプレッション: ひだり肺上葉の空洞性病変。 肺腺癌を疑う。みぎ肺上葉陳旧性炎症性瘢痕。",
   "presentedForm": [{
@@ -93,13 +90,13 @@ NarrativeなtextにアクセスするためのDomainResource定義
 }
 ```
 
-
 ### Identifier
 
 Identifier のデータタイプはオーダー依頼者であるPlacerあるいはオーダーの実施者であるFiller（HL7 Version 2 Messaging Standardにて'Placer'あるいは'Filler'として知られている）によって割り当てられた識別子を区別するために利用されるtypeエレメントを持っている。typeエレメントは以下の様に利用する。
 <br>
 
 #### Placerの場合
+
 ```json
 {
   "identifier":[{
@@ -108,14 +105,16 @@ Identifier のデータタイプはオーダー依頼者であるPlacerあるい
         "system":"http://terminology.hl7.org/CodeSystem/v2-0203",
         "code":"PLAC"
       },
-      "value":"Placer"
+      "text":"Placer Identifier"
     },
-    "system":"urn:oid:1.2.3.4.5.6.7",
+    "system":"http://abc-hospital.local/fhir/PlacerIdentifier",
     "value":"2345234234234"
   }]
 }
 ```
+
 #### Fillerの場合
+
 ```json
 {
   "identifier":[{
@@ -124,9 +123,9 @@ Identifier のデータタイプはオーダー依頼者であるPlacerあるい
         "system":"http://terminology.hl7.org/CodeSystem/v2-0203",
         "code":"FILL"
       },
-      "value":"Filler"
+      "text":"Filler Identifier"
     },
-    "system":"http://terminology.hl7.org/CodeSystem/v2-0203",
+    "system":"http://abc-hospital.local/fhir/FillerIdentifier",
     "value":"567890"
   }]
 }
@@ -136,7 +135,7 @@ DiagnosticReport_Radiology リソースではtypeエレメントを明示する�
 
 ### 時間の指定
 
-このプロファイルのリソースでは、effective[x]エレメントにはレポート作成時間を[dateTime](http://www.hl7.org/fhir/datatypes.html#dateTime)で格納する。
+このプロファイルのリソースでは、effective[x]エレメントにはレポート作成時間を[dateTime](https://www.hl7.org/fhir/R4/datatypes.html#dateTime)で格納する。
 
 ### 関連するObservation
 
@@ -158,43 +157,40 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 ## 利用方法
 
-### Interaction一覧 
-DiagnosticReport リソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
-
-[DiagnosticReport共通情報プロファイル#インタラクション一覧][JP_DiagnosticReport_Common_interaction]
-
 #### 必須検索パラメータ
 
 次の検索パラメータは必須でサポートされなければならない。
 
 | Name | Type | Description | Expression |
 | --- | --- | --- | --- |
-| based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn<br><br> ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) |
-| category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) <br> "RAD", "RX", "CT", "NMR", "NMS", "RUS", etc.<br> default = “RAD” |
-| code | token | レポート全体を示すコード | DiagnosticReport.code<br>[LOINC 18748-4](https://loinc.org/18748-4/)|
-| conclusion | token | コード化されたレポートの conclusion (interpretation/impression) | DiagnosticReport.conclusionCode | 
+| based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) |
+| category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) <br> "RAD", "RX", "CT", "NMR", "NMS", "RUS", etc. [ default = “RAD” ] |
+| code | token | レポート全体を示すコード | DiagnosticReport.code [LOINC 18748-4](https://loinc.org/18748-4/)(固定) |
+| conclusion | token | コード化されたレポートの conclusion (interpretation/impression) | DiagnosticReport.conclusionCode |
 | date | date | レポート作成日 | DiagnosticReport.effectiveDate |
-| encounter | reference | オーダが発行された際の Encounter | DiagnosticReport.encounter<br><br> ([Encounter][JP_Encounter]) |
-| identifier | token | レポートの identifier（識別子） | DiagnosticReport.identifier | 
+| encounter | reference | オーダが発行された際の Encounter | DiagnosticReport.encounter ([Encounter][JP_Encounter]) |
+| identifier | token | レポートの identifier（識別子） | DiagnosticReport.identifier |
 | issued | date | レポート発行日（確定日） | DiagnosticReport.issued |
-| media | reference | キー画像への参照 | DiagnosticReport.media.link<br><br> ([Media](http://www.hl7.org/fhir/media.html)) | 
-| performer | reference | レポート確定者 | DiagnosticReport.performer<br><br> ([Practitioner][JP_Practitioner]) |
-| result | reference | 関連する検査結果 (検体検査結果など) | DiagnosticReport.result<br><br> ([Observation][JP_Observation_LabResult])|
-| results-interpreter | reference | 読影者 | DiagnosticReport.resultsInterpreter<br><br> ([Practitioner][JP_Practitioner]) |
+| media | reference | キー画像への参照 | DiagnosticReport.media.link ([Media](https://www.hl7.org/fhir/R4/media.html)) |
+| performer | reference | レポート確定者 | DiagnosticReport.performer ([Practitioner][JP_Practitioner]) |
+| result | reference | 関連する検査結果 (検体検査結果など) | DiagnosticReport.result ([Observation][JP_Observation_LabResult])|
+| results-interpreter | reference | 読影者 | DiagnosticReport.resultsInterpreter ([Practitioner][JP_Practitioner]) |
+
 | status | token | レポートの状態 | DiagnosticReport.status |
-| subject | reference | レポートの対象となる患者 | DiagnosticReport.subject<br><br>([Patient][JP_Patient]) |
+| subject | reference | レポートの対象となる患者 | DiagnosticReport.subject ([Patient][JP_Patient]) |
 
 ### サンプル
 
-* [**放射線レポート**][jp-diagnosticreport-radiology-example-1]
+* [**放射線読影レポート**][jp-diagnosticreport-radiology-example-1]
 
 ## その他、参考文献・リンク等
 
 本プロファイルそのものの定義には影響しないが、レポートの標準化に関し以下の情報が参考となる。presentedForm に収容するレポートのコンテンツを作成するレポーティングシステムにおいて、標準化に関する参考資料となる。
 
-- [RadReport](https://www.rsna.org/practice-tools/data-tools-and-standards/radreport-reporting-templates) - 放射線レポートテンプレート
-- [RadLex radiology lexicon](https://www.rsna.org/practice-tools/data-tools-and-standards/radlex-radiology-lexicon) - 放射線科語彙集
-- [RadElement](https://www.rsna.org/practice-tools/data-tools-and-standards/radelement-common-data-elements) - 放射線関連共通データエレメント
-- [IHE Radiology Technical Framework Supplement - Management of Radiology Report Templates](https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_Suppl_MRRT.pdf)
+- [RadReport][RadReport] - 放射線レポートテンプレート
+- [RadLex radiology lexicon][RadLex radiology lexicon] - 放射線科語彙集
+- [RadElement][RadElement] - 放射線関連共通データエレメント
+- [IHE Radiology Technical Framework][IHE Radiology Technical Framework] - 放射線関連テクニカルフレームワーク（放射線レポートおよびレポートテンプレートの取り扱いに関する仕様が含まれている）
 
 {% include markdown-link-references.md %}
+{% include external-link-reference.md %}

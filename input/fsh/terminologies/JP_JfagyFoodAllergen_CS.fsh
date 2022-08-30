@@ -1,8 +1,8 @@
-CodeSystem: JP_JfagyFoodAllergenCodes_CS
-Id: jp-jfagy-food-allergen-codes-cs
-Title: "JFAGY Food Allergen Codes"
+CodeSystem: JP_JfagyFoodAllergen_CS
+Id: jp-jfagy-food-allergen-cs
+Title: "JFAGY Food Allergen CodeSystem"
 Description: "JFAGY アレルゲンコード（食品）"
-* ^url = $JP_JfagyFoodAllergenCodes_CS
+* ^url = $JP_JfagyFoodAllergen_CS
 * ^status = #draft
 * ^caseSensitive = true
 * ^content = #complete

@@ -18,19 +18,11 @@ Encounter リソースは、次の要素を持たなければならない。
 
 JP Encounter リソースで使用される拡張は次の通りである。
 
-- [Associated Encounter](https://www.hl7.org/fhir/extension-encounter-associatedencounter.html)
+- [Associated Encounter](https://www.hl7.org/fhir/R4/extension-encounter-associatedencounter.html)
 
   - リソースで関連付けを定義しているプロパティが存在しないEncounterを参照するために利用する
 
 ## 利用方法
-
-### インタラクション一覧
-
-| コンフォーマンス | インタラクション                            |
-| ---------------- | ------------------------------------------- |
-| SHALL（必須）    | search-type、read                           |
-| SHOULD（推奨）   | vread、history-instance                     |
-| MAY（利用可能）  | create、update、patch、delete、history-type |
 
 ### OperationおよびSearch Parameter 一覧
 
@@ -102,7 +94,7 @@ URL: [base]/Encounter/[id]/$everything
 
 ###### 入力パラメータ
 <!--
-<span style="color: red;">http://www.hl7.org/fhir/encounter-operation-everything.html</span>
+<span style="color: red;">http://www.hl7.org/fhir/R4/encounter-operation-everything.html</span>
 -->
 
 | 名前   | 多重度 | 型      | バインディング | プロファイル | 説明                                                         |
@@ -114,7 +106,7 @@ URL: [base]/Encounter/[id]/$everything
 
 ###### 出力パラメータ
 <!--
-<span style="color: red;">http://www.hl7.org/fhir/encounter-operation-everything.html</span>
+<span style="color: red;">http://www.hl7.org/fhir/R4/encounter-operation-everything.html</span>
 -->
 
 | 名前   | 多重度 | 型     | バインディング | プロファイル | 説明                                                         |

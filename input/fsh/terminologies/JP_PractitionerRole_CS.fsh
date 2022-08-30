@@ -1,10 +1,11 @@
-CodeSystem: JP_PractitionerRoleCodes_CS
-Id: jp-practitioner-role-codes-cs
-Title: "JP Core Practitioner Role Codes"
+CodeSystem: JP_PractitionerRole_CS
+Id: jp-practitioner-role-cs
+Title: "JP Core Practitioner Role CodeSystem"
 Description: "実施者のロール（役割）を示すコード"
-* ^url = $JP_PractitionerRoleCodes_CS
+* ^url = $JP_PractitionerRole_CS
 * ^status = #draft
 * ^caseSensitive = true
+* ^valueSet = $JP_PractitionerRole_VS
 * ^content = #complete
 // TODO: より適切なコードと用語に見直し
 * #B12101 "医師"
