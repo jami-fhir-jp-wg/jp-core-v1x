@@ -23,7 +23,7 @@ Usage:  #example
   * text = "前額部"
 * outcome
   * coding
-    * system = "http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureOutcome_CS"
+    * system = $JP_ProcedureOutcome_CS
     * code = #JPPOC001
     * display = "成功"
 * followUp

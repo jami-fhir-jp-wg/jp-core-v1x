@@ -34,7 +34,6 @@ Usage:  #example
 * notAvailable.during.end = "2017-05-20"
 * availabilityExceptions = "祝祭日やクリスマス・年末年始の休暇中は、大阪 一郎は休日です。"
 
-
 Instance: jp-healthcareservice-example-1
 InstanceOf: HealthcareService
 Title:   "HealthcareService Example 精神科外来サービス"
@@ -43,9 +42,9 @@ Usage: #inline
 * identifier.value = "HS-12"
 * active = true
 * providedBy = Reference(Organization/jp-organization-example-hospital) "健康第一病院"
-* category = http://terminology.hl7.org/3.1.0/CodeSystem/service-category#8
-* type[0] = http://terminology.hl7.org/3.1.0/CodeSystem/service-type#147
-* type[+] = http://terminology.hl7.org/3.1.0/CodeSystem/service-type#142
+* category = http://terminology.hl7.org/CodeSystem/service-category#8
+* type[0] = http://terminology.hl7.org/CodeSystem/service-type#147
+* type[+] = http://terminology.hl7.org/CodeSystem/service-type#142
 // * specialty = http://xxxx/yyyy/zzzz "Posttraumatic stress disorder"
 * location = Reference(Location/jp-location-example-examinationroom)
 * name = "PTSDに関する精神科もしくは診療内科のサービス"
