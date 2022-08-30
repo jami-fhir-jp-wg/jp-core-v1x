@@ -60,9 +60,10 @@ Description: "このプロファイルはPractitionerリソースに対して、
     narcoticPrescriptionLicenseNumber ..47 and
     medicalRegistrationNumber ..1
 * qualification[narcoticPrescriptionLicenseNumber].identifier ^short = "都道府県別 麻薬施用者免許番号"
-* qualification[narcoticPrescriptionLicenseNumber].identifier.system ^short = "麻薬施用者免許番号OIDを格納。OIDは右記のルールに従う。urn:oid:1.2.392.100495.20.3.32.[1(固定)+都道府県番号(２桁)] 詳細はCommentを参照の事"
+* qualification[narcoticPrescriptionLicenseNumber].identifier.system ^short = "麻薬施用者免許番号OIDを格納。OIDは右記のルールに従う。urn:oid:1.2.392.100495.20.3.32.[1(固定)+都道府県番号(２桁)] [詳細](#Practitioner.qualification:narcoticPrescriptionLicenseNumber.identifier.system)を確認すること"
 * qualification[narcoticPrescriptionLicenseNumber].identifier.system ^definition = "麻薬施用者免許番号OIDを格納。OIDは右記のルールに従う。urn:oid:1.2.392.100495.20.3.32.[1(固定)+都道府県番号(２桁)]"
-* qualification[narcoticPrescriptionLicenseNumber].identifier.system ^comment = "麻薬施用者免許番号OIDを格納。OIDは右記のルールに従う。urn:oid:1.2.392.100495.20.3.32.[1(固定)+都道府県番号(２桁)]。
+* qualification[narcoticPrescriptionLicenseNumber].identifier.system ^comment = "麻薬施用者免許番号OIDを格納。OIDは右記のルールに従う。urn:oid:1.2.392.100495.20.3.32.[1(固定)+都道府県番号(２桁)]。  
+都道府県毎のOIDを以下に示す。
 
 - urn:oid:1.2.392.100495.20.3.32.101(北海道)
 - urn:oid:1.2.392.100495.20.3.32.102(青森県)
@@ -117,6 +118,7 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * qualification[narcoticPrescriptionLicenseNumber].code = $JP_MedicalLicenseCertificate_CS#narcotics-practitioner (exactly)
 * qualification[narcoticPrescriptionLicenseNumber].issuer only Reference(JP_Organization)
 * qualification[narcoticPrescriptionLicenseNumber].identifier.assigner only Reference(JP_Organization)
+* qualification[medicalRegistrationNumber].identifier ^short = "医籍登録番号"
 * qualification[medicalRegistrationNumber].identifier.system = "urn:oid:1.2.392.100495.20.3.31" (exactly)
 * qualification[medicalRegistrationNumber].identifier.value ^short = "医籍登録番号"
 * qualification[medicalRegistrationNumber].identifier.value ^comment = "医籍登録番号"
