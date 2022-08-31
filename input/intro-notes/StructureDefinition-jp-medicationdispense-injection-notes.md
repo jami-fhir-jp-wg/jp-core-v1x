@@ -78,7 +78,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 | SHALL            | identifier    | token  | GET [base]/MedicationDispense?identifier=http://myhospital.com/fhir/medication\|1234567890 |
 | SHOULD            | patient      | reference | GET [base]/MedicationDispense?patient=123456   |
 | SHOULD           | patient,whenhandedover | reference,date  | GET [base]/MedicationDispense?patient=123456&whenhandedover=eq2013-01-14 |
-| MAY           | whenhandedover,whenprepared,context,code,performer| date,date,token,token,token | GET [base]/MedicationDispense?code=urn:oid:1.2.392.100495.20.2.74\|105271807  |
+| MAY           | whenhandedover,whenprepared,context,code,performer| date,date,token,token,token | GET [base]/MedicationDispense?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
 
 ##### 必須検索パラメータ
 
@@ -252,7 +252,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
         "itemCodeableConcept": {
           "coding": [
             {
-              "system": "urn:oid:1.2.392.100495.20.2.74",
+              "system": "urn:oid:1.2.392.200119.4.403.1",
               "code": "107750602",
               "display": "ソリタ－Ｔ３号輸液５００ｍＬ"
             }
@@ -277,7 +277,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
         "itemCodeableConcept": {
           "coding": [
             {
-              "system": "urn:oid:1.2.392.100495.20.2.74",
+              "system": "urn:oid:1.2.392.200119.4.403.1",
               "code": "108010001",
               "display": "アドナ注（静脈用）５０ｍｇ"
             }
