@@ -36,3 +36,7 @@ table.colsd td {
 table.dict td{
     border: none;
 }
+
+pre[class*="language-"] {
+    max-width: 1000px;
+}
