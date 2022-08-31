@@ -1,6 +1,6 @@
 CodeSystem: JP_Department_SsMix_CS
 Id: jp-department-ssmix-cs
-Title: "JP Core Department SS-MIX2 CodeSystem"
+Title: "JP Core Department SS-MIX CodeSystem"
 Description: "SS-MIX統一診療科コード"
 * ^url = $JP_Department_SsMix_CS
 * ^status = #draft
