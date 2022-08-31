@@ -20,3 +20,26 @@ Usage: #example
 * presentedForm.language = #ja
 * presentedForm.data = "/9j/"
 * presentedForm.title = "HTML Report"
+
+
+Instance: jp-diagnosticreport-radiology-example-2
+InstanceOf: JP_DiagnosticReport_Radiology
+Title: "JP Core DiagnosticReport Radiology Example 核医学レポート"
+Description: "核医学レポート"
+Usage: #example
+* identifier.use = #usual
+* identifier.system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier.value = "123456"
+* status = #final
+* category = $diagnostic-service-sectionid-cs#RAD
+* code.text = "核医学レポート"
+* subject = Reference(Patient/jp-patient-example-1)
+* effectiveDateTime = "2008-06-17"
+* issued = "2008-06-18T09:23:00+10:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1) "大阪 一郎"
+* imagingStudy.display = "肺がんが見つかったため、転移状況確認のための検査を行なった"
+* conclusion = "検査結果を見る限り、明らかながんの転移は見つからなかった"
+* presentedForm.contentType = urn:ietf:bcp:13#image/jpeg
+* presentedForm.language = #ja
+* presentedForm.data = "/9j/"
+* presentedForm.title = "HTML Report"
