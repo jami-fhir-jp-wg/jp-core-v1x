@@ -24,6 +24,9 @@ td{
 tr:last-child td{
     border-bottom:1px solid silver
 }
+tr:first-child td{
+    border-top:1px solid silver
+}
 td,th{
     padding:5px;
 }
