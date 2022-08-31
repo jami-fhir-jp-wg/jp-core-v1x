@@ -32,3 +32,7 @@ table.colsd td {
     background-color: #F9FFE6;
     border:1px solid silver
 }
+
+table.dict td{
+    border: none;
+}
