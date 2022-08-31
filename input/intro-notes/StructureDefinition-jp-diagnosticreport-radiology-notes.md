@@ -156,12 +156,6 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 ## 利用方法
 
-### Interaction一覧
-
-DiagnosticReport リソースのインタラクション一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
-
-[DiagnosticReport共通情報プロファイル#インタラクション一覧][JP_DiagnosticReport_Common_interaction]
-
 #### 必須検索パラメータ
 
 次の検索パラメータは必須でサポートされなければならない。
@@ -180,13 +174,12 @@ DiagnosticReport リソースのインタラクション一覧の定義はユー
 | performer | reference | レポート確定者 | DiagnosticReport.performer ([Practitioner][JP_Practitioner]) |
 | result | reference | 関連する検査結果 (検体検査結果など) | DiagnosticReport.result ([Observation][JP_Observation_LabResult])|
 | results-interpreter | reference | 読影者 | DiagnosticReport.resultsInterpreter ([Practitioner][JP_Practitioner]) |
-
 | status | token | レポートの状態 | DiagnosticReport.status |
 | subject | reference | レポートの対象となる患者 | DiagnosticReport.subject ([Patient][JP_Patient]) |
 
 ### サンプル
 
-* [**放射線レポート**][jp-diagnosticreport-radiology-example-1]
+* [**放射線読影レポート**][jp-diagnosticreport-radiology-example-1]
 
 ## その他、参考文献・リンク等
 

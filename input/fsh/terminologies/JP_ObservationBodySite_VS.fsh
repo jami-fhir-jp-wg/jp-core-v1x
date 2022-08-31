@@ -1,6 +1,6 @@
 ValueSet: JP_ObservationBodySite_VS
 Id: jp-observation-bodysite-vs
-Title: "JP Core Observation BodySite"
+Title: "JP Core Observation BodySite ValueSet"
 Description: "Observationで使用する身体部位のコード"
 * ^url = $JP_ObservationBodySite_VS
 * ^status = #draft

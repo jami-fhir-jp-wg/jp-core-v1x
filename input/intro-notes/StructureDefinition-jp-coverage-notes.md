@@ -18,15 +18,6 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
     - 健康保険における被保険者証番号の枝番を示す拡張。
 
 ## 利用方法
-<br>
-
-### インタラクション一覧
-
-| コンフォーマンス | インタラクション                            |
-| ---------------- | ------------------------------------------- |
-| SHALL（必須）    | search-type、read                           |
-| SHOULD（推奨）   | vread、history-instance                     |
-| MAY（利用可能）  | create、update、patch、delete、history-type |
 
 ### OperationおよびSearch Parameter 一覧
 

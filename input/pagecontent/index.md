@@ -55,10 +55,10 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
 
 #### JP Coreで定義しないProfile(プロファイル)
 次のProfileはJP Coreでは定義を行なわず、FHIR Baseをそのまま利用する。
-* [Resource](https://www.hl7.org/fhir/resource.html)
-* [DomainResource](https://www.hl7.org/fhir/domainresource.html)
-* [Binary](https://www.hl7.org/fhir/binary.html)
-* [Bundle](https://www.hl7.org/fhir/bundle.html)
+* [Resource](https://www.hl7.org/fhir/R4/resource.html)
+* [DomainResource](https://www.hl7.org/fhir/R4/domainresource.html)
+* [Binary](https://www.hl7.org/fhir/R4/binary.html)
+* [Bundle](https://www.hl7.org/fhir/R4/bundle.html)
 
 #### Extensions （拡張）
 JP Coreにて利用されるExtensionの一覧。

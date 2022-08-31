@@ -1,8 +1,8 @@
 
 ### 必須要素
-次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
+次のデータ項目は必須（データが存在しなければならない）である。
 
-JP Core MedicationDispense リソースは、次の要素を持たなければならない。
+MedicationDispense リソースは、次の要素を持たなければならない。
 - status : ステータスは必須である。
 - medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない。
 - subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
@@ -11,15 +11,8 @@ JP Core MedicationDispense リソースは、次の要素を持たなければ�
 - dosageInstruction.text : フリーテキストの用法指示であり、JP Coreでは必須である。
 - dosageInstruction.timing : 服⽤タイミングを記録し、JP Coreでは必須である。dosageInstruction.timing.code.coding.code, dosageInstruction.timing.code.coding.system が必ず存在しなければならない。
 
-JP Core MedicationDispenseリソースは、次の要素をサポートしなければならない。
-- medicationCodeableConcept : 医薬品の識別情報
-- subject :患者の参照情報
-- whenHandedOver : 払い出し日時
-- quantity : 調剤量
-- dosageInstruction.timing : 服⽤タイミング
-
 ### Extensions定義
-JP Core MedicationDispense リソースで使用される拡張は次の通りである。
+JP Core MedicationDispense プロファイルで使用される拡張は次の通りである。
 
 #### JP Core MedicationDispense独自で追加されたExtension
 
@@ -29,7 +22,7 @@ JP Core MedicationDispense リソースで使用される拡張は次の通り�
 
 #### 既存のExtensionの利用
 
-JP Core MedicationDispense リソースでは、JP Core MedicationRequestプロファイルで定義された以下の拡張を使用する。
+JP Core MedicationDispense プロファイルでは、JP Core MedicationRequestプロファイルで定義された以下の拡張を使用する。
 
 |拡張|説明|URL|値の型|
 |------------|-------------|----------|-----|
@@ -48,7 +41,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |医薬品|HOT13|urn:oid:1.2.392.200119.4.402.1|
 |医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
 |医薬品|⼀般処⽅名マスター|urn:oid:1.2.392.100495.20.1.81|
-|剤形|MERIT-9(剤形)|http://jpfhir.jp/Common/CodeSystem/merit9-form |
+|剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/Common/CodeSystem/merit9-form |
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
 |力価区分|電子処方箋HL7 FHIR仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
 |用法|JAMI処方・注射オーダ標準用法規格(用法コード)|urn:oid:1.2.392.200250.2.2.20.20|
@@ -70,14 +63,6 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 * ⼒価区分の追加（dosageInstruction.doseAndRate.typeを使用）
 
 ## 利用方法
-
-### Interaction一覧
-
-| コンフォーマンス | インタラクション                            |
-| ---------------- | ------------------------------------------- |
-| SHALL（必須）    | search-type、read                           |
-| SHOULD（推奨）   | vread、history-instance                     |
-| MAY（利用可能）  | create、update、patch、delete、history-type |
 
 #### Search Parameter一覧
 
@@ -225,186 +210,8 @@ HTTP/1.1 200 OK
 
 ### サンプル
 下記の内容の処方に従って調剤する例をFHIRで表現する場合のサンプルを示す。
-```
-Rp1 ムコダイン錠２５０ｍｇ１錠（  １日３錠)
-　　１日３回朝昼夕食後３日分
-```
 
-<details>
-<summary><b>インスタンス例（クリックで展開）</b></summary>
-<dev>
-
-{% highlight json %}
-{
-  "resourceType": "MedicationDispense",
-  "id": "jp-medicationdispense-example-1",
-  "meta": {
-    "profile": [
-      "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispense"
-    ]
-  },
-  "identifier": [
-    {
-      "system": "http://www.sample.com/fhir/medication-dispense",
-      "value": "1234567890"
-    },
-    {
-      "system": "urn:oid:1.2.392.100495.20.3.81",
-      "value": "1"
-    },
-    {
-      "system": "urn:oid:1.2.392.100495.20.3.82",
-      "value": "1"
-    }
-  ],
-  "status": "completed",
-  "category": {
-    "coding": [
-      {
-        "system": "http://terminology.hl7.org/CodeSystem/v2-0482",
-        "code": "I",
-        "display": "Inpatient Order"
-      }
-    ]
-  },
-  "medicationCodeableConcept": {
-    "coding": [
-      {
-        "system": "urn:oid:1.2.392.200119.4.403.1",
-        "code": "103835401",
-        "display": "ムコダイン錠２５０ｍｇ"
-      }
-    ]
-  },
-  "subject": {
-    "reference": "Patient/jp-patient-example-1"
-  },
-  "performer": [
-    {
-      "function": {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function",
-            "code": "packager",
-            "display": "Packager"
-          }
-        ]
-      },
-      "actor": {
-        "reference": "Practitioner/jp-practitioner-example-male-1"
-      }
-    }
-  ],
-  "quantity": {
-    "value": 9,
-    "unit": "錠",
-    "system": "urn:oid:1.2.392.100495.20.2.101",
-    "code": "TAB"
-  },
-  "whenPrepared": "2021-10-07T10:47:19+09:00",
-  "whenHandedOver": "2021-10-07T10:55:23+09:00",
-  "destination": {
-    "reference": "Location/jp-location-example-ward"
-  },
-  "note": [
-    {
-      "text": "後発品へ変更可能か依頼医のＡ医師に確認したところ、患者の希望により不可との回答あり。"
-    }
-  ],
-  "dosageInstruction": [
-    {
-      "text": "内服・経口・１日３回朝昼夕食後",
-      "timing": {
-        "code": {
-          "coding": [
-            {
-              "system": "urn:oid:1.2.392.200250.2.2.20.20",
-              "code": "1013044400000000",
-              "display": "内服・経口・１日３回朝昼夕食後"
-            }
-          ]
-        }
-      },
-      "route": {
-        "coding": [
-          {
-            "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
-            "code": "PO",
-            "display": "口"
-          }
-        ]
-      },
-      "method": {
-        "coding": [
-          {
-            "system": "urn:oid:1.2.392.200250.2.2.20.40",
-            "code": "10",
-            "display": "経口"
-          }
-        ]
-      },
-      "doseAndRate": [
-        {
-          "type": {
-            "coding": [
-              {
-                "system": "urn:oid:1.2.392.100495.20.2.22",
-                "code": "1",
-                "display": "製剤量"
-              }
-            ]
-          },
-          "doseQuantity": {
-            "value": 1,
-            "unit": "錠",
-            "system": "urn:oid:1.2.392.100495.20.2.101",
-            "code": "TAB"
-          },
-          "rateRatio": {
-            "numerator": {
-              "value": 3,
-              "unit": "錠",
-              "system": "urn:oid:1.2.392.100495.20.2.101",
-              "code": "TAB"
-            },
-            "denominator": {
-              "value": 1,
-              "unit": "日",
-              "system": "http://unitsofmeasure.org",
-              "code": "d"
-            }
-          }
-        }
-      ]
-    }
-  ],
-  "substitution": {
-    "wasSubstituted": true,
-    "type": {
-      "coding": [
-        {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution",
-          "code": "G",
-          "display": "generic composition"
-        }
-      ]
-    },
-    "reason": [
-      {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
-            "code": "RR",
-            "display": "regulatory requirement"
-          }
-        ]
-      }
-    ]
-  }
-}
-{% endhighlight json %}
-</dev>
-</details>
+- [**調剤実施 内服薬**][jp-medicationdispense-example-1]
 
 ## 注意事項
 

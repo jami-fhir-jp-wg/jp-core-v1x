@@ -6,7 +6,7 @@ Usage:  #example
 * status = #in-progress
 * category
   * coding
-    * system = "http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCategoryCodes_CS"
+    * system = "http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCategory_CS"
     * code = #JPPCC004
     * display = "外科的処置"
   * text = "創傷処置"
@@ -23,7 +23,7 @@ Usage:  #example
   * text = "前額部"
 * outcome
   * coding
-    * system = "http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureOutcomeCodes_CS"
+    * system = $JP_ProcedureOutcome_CS
     * code = #JPPOC001
     * display = "成功"
 * followUp

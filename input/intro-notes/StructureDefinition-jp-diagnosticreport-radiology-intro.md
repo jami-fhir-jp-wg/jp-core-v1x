@@ -36,7 +36,7 @@ DiagnosticReportリソースは、過去の結果（リソース内での過去�
 - [`Encounter`][JP_Encounter]
 - [`Practitioner`][JP_Practitioner]
 - [`Observation`][JP_Observation_Common]
-- [`Media`](http://www.hl7.org/fhir/media.html)
+- [`Media`](http://www.hl7.org/fhir/R4/media.html)
 - [`ImagingStudy`][JP_ImagingStudy_Radiology]
 - [`ServiceRequest`](http://hl7.org/fhir/servicerequest.html)
 
@@ -48,7 +48,7 @@ DiagnosticReportリソースは、過去の結果（リソース内での過去�
 - [身長 (`Observation`)][JP_Observation_BodyMeasurement]
 - [体重 (`Observation`)][JP_Observation_BodyMeasurement]
 - [アレルギー情報 (`AllergyIntorelance`)][JP_AllergyIntolerance]
-- [キー画像 (`media`)](http://www.hl7.org/fhir/media.html)
+- [キー画像 (`media`)](http://www.hl7.org/fhir/R4/media.html)
 - [尿素窒素（BUN）(`Observation`)][JP_Observation_LabResult]
 - [クレアチニン（Cre）(`Observation`)][JP_Observation_LabResult]
 - 感染症情報 [ (`RiskAssessment`) ](http://hl7.org/fhir/riskassessment.html) あるいは [ (`Observation`) ][JP_Observation_LabResult]

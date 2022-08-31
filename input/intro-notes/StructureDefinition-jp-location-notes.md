@@ -9,14 +9,6 @@ JP Core Location リソースで定義された拡張はない。
 
 ## 利用方法
 
-### インタラクション一覧
-
-| コンフォーマンス | インタラクション                            |
-| ---------------- | ------------------------------------------- |
-| SHALL（必須）    | search-type、read                           |
-| SHOULD（推奨）   | vread、history-instance                     |
-| MAY（利用可能）  | create、update、patch、delete、history-type |
-
 ### OperationおよびSearch Parameter 一覧
 
 #### Search Parameter一覧
@@ -24,12 +16,10 @@ JP Core Location リソースで定義された拡張はない。
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
 | SHALL            | name    | string  | GET [base]/Location?name=３南 |
-| SHALL            | address          | string | GET [base]/Location?address=〒113-0033東京都文京区本郷７丁目３−１                            |
-| SHOULD           | address-city | string  | GET [base]/Location?address-city=文京区    |
-| SHOULD           | 
-address-state | string  | GET [base]/Location?
-address-state=東京都    |
-| SHOULD           | address-postalcode | string  | GET [base]/Location?address-postalcode=1130033    |
+| SHALL            | address          | string | GET [base]/Location?address=〒113-0033東京都文京区本郷７丁目３−１ |
+| SHOULD           | address-city | string  | GET [base]/Location?address-city=文京区 |
+| SHOULD           | address-state | string  | GET [base]/Location?address-state=東京都 |
+| SHOULD           | address-postalcode | string  | GET [base]/Location?address-postalcode=1130033 |
 
 ##### 必須検索パラメータ
 

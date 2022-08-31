@@ -1,7 +1,7 @@
 Instance: jp-medicationadministration-example-1
 InstanceOf: JP_MedicationAdministration
-Title: "JP Core MedicationAdministration Example 投薬実施"
-Description: "投薬実施"
+Title: "JP Core MedicationAdministration Example 投薬実施 ムコダイン錠２５０ｍｇ"
+Description: "投薬実施 ムコダイン錠２５０ｍｇ"
 Usage: #example
 * meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment"
@@ -32,8 +32,8 @@ Usage: #example
 
 Instance: jp-medicationadministration-example-2
 InstanceOf: JP_MedicationAdministration
-Title: "JP Core MedicationAdministration Example 投薬中止"
-Description: "投薬中止"
+Title: "JP Core MedicationAdministration Example 投薬中止 パンスポリンＴ錠１００ １００ｍｇ"
+Description: "投薬中止 パンスポリンＴ錠１００ １００ｍｇ"
 Usage: #example
 * meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment"

@@ -1,6 +1,6 @@
 CodeSystem: JP_MedicationUsageJAMI_CS
 Id: jp-medication-usage-jami-cs
-Title: "JP Core Medication JAMI Usage Code"
+Title: "JP Core Medication JAMI Usage CodeSystem"
 Description: "JAMI標準用法コードのコードシステム"
 * ^url = $JP_MedicationUsageJAMI_CS
 * ^status = #draft

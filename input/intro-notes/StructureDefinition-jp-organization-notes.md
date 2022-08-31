@@ -38,15 +38,6 @@ JP Organization リソースで使用される拡張は次の通りである。
 
 ## 利用方法
 
-### インタラクション一覧
-
-| コンフォーマンス | インタラクション                            |
-| ---------------- | ------------------------------------------- |
-| SHALL（必須）    | search-type、read                           |
-| SHOULD（推奨）   | vread、history-instance                     |
-| MAY（利用可能）  | create、update、patch、delete、history-type |
-
-
 ### OperationおよびSearch Parameter 一覧
 
 ### Search Parameter一覧
