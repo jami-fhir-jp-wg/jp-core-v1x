@@ -34,7 +34,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[radiology] = $diagnostic-service-sectionid-cs#RAD (exactly)
 * code = http://loinc.org#18748-4 "Diagnostic imaging study" (exactly)
 * code ^definition = "この診断レポートを表現するコードや名称"
-* code ^comment = "すべての用語の使用がこの一般的なパターンに適合するわけではない。 場合によっては、モデルにcodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係と事前調整および事後調整を管理するための独自の構造を提供する必要がある。 \r\n\r\n【JP Core仕様】[画像診断レポート交換手順ガイドライン](https://www.jira-net.or.jp/publishing/files/jesra/JESRA_TR-0042_2018.pdf)「5.1 レポート種別コード」に記載されているLOINCコード [Diagnostic imaging study](https://loinc.org/18748-4/) を指定"
+* code ^comment = "【JP Core仕様】[画像診断レポート交換手順ガイドライン](https://www.jira-net.or.jp/publishing/files/jesra/JESRA_TR-0042_2018.pdf)「5.1 レポート種別コード」に記載されているLOINCコード [Diagnostic imaging study](https://loinc.org/18748-4/) を指定"
 * subject MS
 * subject ^definition = "レポートの対象。 必ずでは無いが、通常、これには「患者」が該当する。"
 * subject ^comment = "参照は実際のFHIRリソースへの参照であり、解決可能である必要がある。解決はURLから取得するか、または、リソースタイプが利用できる場合は絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索する。\r\n\r\n【JP Core仕様】Patient リソースを参照"
