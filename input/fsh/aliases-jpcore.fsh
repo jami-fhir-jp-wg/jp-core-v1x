@@ -84,7 +84,7 @@ Alias: $JP_Patient_KanaSort_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_P
 
 // CodeSystem
 Alias: $JP_MedicalFeeScoreType_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicalFeeScoreType_CS
-Alias: $JP_ConditionSeverity_CS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ConditionSeverity_CS
+Alias: $JP_ConditionSeverity_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ConditionSeverity_CS
 Alias: $JP_Department_SsMix_CS = urn:oid:1.2.392.100495.20.2.51
 Alias: $JP_JfagyFoodAllergen_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_JfagyFoodAllergen_CS
 Alias: $JP_JfagyMedicationAllergen_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_JfagyMedicationAllergen_CS
