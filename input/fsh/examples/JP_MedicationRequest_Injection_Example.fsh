@@ -22,8 +22,8 @@ Usage: #example
 * insurance = Reference(Coverage/jp-coverage-example-1)
 * dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device"
 * dosageInstruction.extension.valueReference = Reference(Device/jp-medicationrequest-injection-device-example-1)
-* dosageInstruction.additionalInstruction = urn:oid:1.2.392.200250.2.2.20.22#1 "ワンショット"
-* dosageInstruction.text = "ワンショット 静脈注射 静脈内 左腕"
+* dosageInstruction.additionalInstruction = urn:oid:1.2.392.200250.2.2.20.22#I1100000 "１日おき"
+* dosageInstruction.text = "静脈注射 静脈内 左腕 １日おき"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2016-07-01T10:00:00+09:00"
 * dosageInstruction.site.extension.url = "http://hl7.org/fhir/StructureDefinition/bodySite"
 * dosageInstruction.site.extension.valueReference = Reference(BodyStructure/jp-medicationrequest-injection-bodystructure-example-1)
