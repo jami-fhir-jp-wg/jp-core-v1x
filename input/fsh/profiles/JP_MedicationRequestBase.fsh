@@ -124,6 +124,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * performer ^short = "薬剤投与・管理を行った者"
 * performer ^definition = "薬物治療を実施すると予定された者。（たとえば、薬剤投与を行った者）"
 * performer ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
+* performerType from JP_PractitionerRole_VS (example)
 * performerType ^short = "薬剤投与を行った職種"
 * performerType ^definition = "薬剤の投与・管理を行った職種を示す。"
 * performerType ^comment = "Performerを示さずにこのエレメントが指定された場合は、このエレメントは薬剤の投与／管理が指定の職種でなければならないと言うことを示している。Performerと共に指定された場合は、もし指定されたPerformerが実施できない場合に薬剤投与・管理を行うものについての要件が示されたことを意味する。"
