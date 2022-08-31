@@ -106,6 +106,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * subject.identifier ^short = "文字列による参照が不明な場合の論理参照"
 * subject.identifier ^definition = "対象となるresourceへのID。FHIRサーバを経由してこの参照が指定するEntityが指定できないか、実際の位置を示す既知のIDへとResourceを変換できない場合のように、ほかのresourceを直接参照することができない場合に使われる。Reference.identifierがFHIRインスタンスである何かを実際に示している必要はないが、FHIRインスタンスとして表現されると想定される業務概念を示されなくてはらならず(SHALL)、そのインスタンスは参照先のFHIRのResource型である必要がある。"
 * subject.identifier ^comment = "IDが参照として与えられている場合には、参照を処理するシステムはIDをIDが利用される業務コンテキストがわかっているかどうか参照を解決するためにしか利用することができない。このIDはグローバル(たとえば国民ID）であることもあるが、そうでないこともある。そのため、この参照を利用する有効な機構（たとえば、データを連鎖させたり、包含させるなど）、サーバが参照を解決することができるとも期待できない。サーバは到達できなかったり、解決できないあるいは拒否されるような参照でもIDとして受け取ることができる。CapabilityStatement.rest.resource.referencePolicyを参照のこと。\r\n\r\nIDと正確な参照が共に提供されている場合は、正確な参照が優先される。Resourceを処理するアプリケーションも許容されるがIDが正確な参照と一致することを確認することは求められてない。\r\n\r\nアプリケーションは論理参照を正確な参照へとコンバートする際に、実際に示している論理参照を外したり、削除してもよい。\r\n\r\n参照はFHIRのResourceとして表現することができる構造となるように示されているが、アプリケーションが参照の対象について検索することを求めていない限り、実際にFHIR Resourceのインスタンスが存在していなくてもよい。IDを参照しているコンテンツは、どのリソースの型が限定的に許容されるか明示されていなくても論理的な制約を満たさなければならない。たとえば、薬剤処方を示すIDの型がReference(Observation|DIagnosticReport)であることは、正当化されないであろう。Reference.identifierのユースケースの一つは、FHIRの表現が存在しない場合に、(Any)を参照する型として利用するような場合である。"
+* encounter only Reference(JP_Encounter)
 * encounter ^short = "encounter/admission/stay のいずれかとして記録された診察"
 * encounter ^definition = "JP Core profileでの使用は規定されていない。\r\nこの対象となるリソース[x]が作成される間やこの記録が作成される対象のencounterは密接に関連している。"
 * encounter ^comment = "このエレメントは一般的には外来でのイベントに対応するが、診察が公式に終わる前や後にこの診察についてのコンテキストに対応して開始される活動についても対応する。もし、診療のエピソードに関連させる必要があれば、extensionとして扱われることがある。"
@@ -115,21 +116,25 @@ Description: "このプロファイルはユーザは直接適用するもので
 * authoredOn 1..
 * authoredOn ^short = "この処方オーダーが最初に記述された日"
 * authoredOn ^definition = "JP Core profileでは必須。処方指示が最初に作成された日時。秒の精度まで記録する。タイムゾーンも付与しなければならない。"
+* requester only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or RelatedPerson or Device)
 * requester ^short = "このオーダーを発行した人・物"
 * requester ^definition = "JP Core profileではこのエレメントに対する規定はない。\r\nこのオーダーを発行した責任のある人、組織、機器。"
 * requester ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
+* performer only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or Device or RelatedPerson or CareTeam)
 * performer ^short = "薬剤投与・管理を行った者"
 * performer ^definition = "薬物治療を実施すると予定された者。（たとえば、薬剤投与を行った者）"
 * performer ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * performerType ^short = "薬剤投与を行った職種"
 * performerType ^definition = "薬剤の投与・管理を行った職種を示す。"
 * performerType ^comment = "Performerを示さずにこのエレメントが指定された場合は、このエレメントは薬剤の投与／管理が指定の職種でなければならないと言うことを示している。Performerと共に指定された場合は、もし指定されたPerformerが実施できない場合に薬剤投与・管理を行うものについての要件が示されたことを意味する。"
+* recorder only Reference(JP_Practitioner or JP_PractitionerRole)
 * recorder ^short = "投薬オーダーの入力者"
 * recorder ^definition = "JP Core profileではこのエレメントに対する規定はない。\r\nたとえば口答指示や電話でのオーダーにより、他の人の代理で処方を入力した人。"
 * recorder ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * reasonCode ^short = "薬を注文するあるいは注文しない理由や適応"
 * reasonCode ^definition = "このエレメントに対するJP Coreの規定はない。\r\n薬剤をオーダーするあるいはしないことを示した理由。"
 * reasonCode ^comment = "このエレメントは病名コードであってもよい。もし、すべての条件を示す記録があって他の詳細な記録が必要であれば、reasonReferenceを使用すること。"
+* reasonReference only Reference(JP_Condition or JP_Observation_Common)
 * reasonReference ^short = "処方箋が書かれた理由について補足するCondition ResourceまたはObservation Resource"
 * reasonReference ^definition = "薬剤がなぜオーダーされたのかを説明する条件や観察。"
 * reasonReference ^comment = "薬剤オーダーの理由を示すこれは条件や観察についての参照である。もし、コードだけであればreasonCodeを使用すること。"
@@ -148,6 +153,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * courseOfTherapyType ^short = "薬剤投与の全体的なパターン"
 * courseOfTherapyType ^definition = "患者が内服する薬剤についての管理の全体的なパターンについての記載。"
 * courseOfTherapyType ^comment = "この属性は薬剤プロトコールと混同してはならない。"
+* insurance only Reference(JP_Coverage or ClaimResponse)
 * insurance ^short = "適用される保険"
 * insurance ^definition = "リクエストされたサービスについて支払いが求め裸得ることになる、保険のプランや適応範囲の拡大、事前の権限付与、かつ/または事前の判定。"
 * insurance ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
