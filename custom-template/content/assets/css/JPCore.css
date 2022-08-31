@@ -2,13 +2,33 @@
 .container {background-color: #0F9DAA;}
 .navbar-inverse {background-color: #0F9DAA;}
 
-table.colsd td {
-    background-color: #F9FFE6;
-}
-
 img[title="Japan"] 
 {
     border:1px solid #888888;
     width: 45px;
     height: 30px;
+}
+
+table{
+    border-collapse:collapse;
+    margin:10px;
+}
+th{
+    border-top:1px solid silver;
+    border-bottom:1px solid silver;
+    color:#1f1f1f;
+}
+td{
+    border-bottom:1px dashed silver
+}
+tr:last-child td{
+    border-bottom:1px solid silver
+}
+td,th{
+    padding:5px;
+}
+
+table.colsd td {
+    background-color: #F9FFE6;
+    border:1px solid silver
 }
