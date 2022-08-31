@@ -6,6 +6,6 @@ Description: "医薬品YJコードのコードシステム"
 * ^status = #draft
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationCodeYJ_VS
-* ^content = #example
+* ^content = #fragment
 
 // TODO:　YJ医薬品コード追加
