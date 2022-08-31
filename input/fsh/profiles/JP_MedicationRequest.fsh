@@ -52,22 +52,18 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * dosageInstruction.doseAndRate.rateRatio.denominator.code 1..
 * dosageInstruction.doseAndRate.rateRatio.denominator.code ^short = "「日」を表すUCUM単位コード。"
 * dosageInstruction.doseAndRate.rateRatio.denominator.code ^definition = "「日」を表すUCUM単位コード。dで固定される。"
-* dosageInstruction.doseAndRate.type 1..
 * dosageInstruction.doseAndRate.type ^short = "力価区分"
 * dosageInstruction.doseAndRate.type ^definition = "力価区分"
 * dosageInstruction.doseAndRate.type ^comment = "投与速度・量の一般的パターンに全てのターミノロジーが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。"
 * dosageInstruction.doseAndRate.type ^requirements = "このtypeに値が指定されていなければ、\"ordered\"であることが想定される。"
 * dosageInstruction.doseAndRate.type.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.doseAndRate.type.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
-* dosageInstruction.doseAndRate.type.coding 1..1
 * dosageInstruction.doseAndRate.type.coding ^short = "力価区分コード"
 * dosageInstruction.doseAndRate.type.coding ^definition = "力価区分コード"
 * dosageInstruction.doseAndRate.type.coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
 * dosageInstruction.doseAndRate.type.coding ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
 * dosageInstruction.doseAndRate.type.coding.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.doseAndRate.type.coding.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
-* dosageInstruction.doseAndRate.type.coding.system 1..
-* dosageInstruction.doseAndRate.type.coding.system = "urn:oid:1.2.392.100495.20.2.22" (exactly)
 * dosageInstruction.doseAndRate.type.coding.system ^short = "力価区分コードのコード体系を識別するURI"
 * dosageInstruction.doseAndRate.type.coding.system ^definition = "力価区分コードのコード体系を識別するURI。固定値。"
 * dosageInstruction.doseAndRate.type.coding.system ^comment = "URIはOID(urn:oid:....)やUUID(urn:uuid:....)であることもある。OIDやUUIDはHL7のOIDレジストリを参照していなければならない（SHALL)。そうでなければ、URIはHL7のFHIRのリストに挙げられている特別なURIであるか、用語集が明確な定義が参照されるべきである。"
@@ -75,7 +71,6 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * dosageInstruction.doseAndRate.type.coding.version ^short = "用語集のバージョン - もし必要であれば追加する。"
 * dosageInstruction.doseAndRate.type.coding.version ^definition = "コードが選択された際に利用されたコードシステムのバージョンである。コードの意味するところがバージョンが変わっても一貫しているように十分にメンテナンスされているコードシステムであれば、バージョンを表記する必要はないことに留意されたい。しかしながら、一貫性はなかなか保証されるものではないし、意味の一貫性が保証されていないのであればバージョンは交換されるべきである（SHOULD)。"
 * dosageInstruction.doseAndRate.type.coding.version ^comment = "ターミノロジーのバージョンが文字列としてコードシステムにより定義されていない場合は、そのバージョンが公式に公開された日付を示す（FHIRのdateフォーマットで表現される）dateを用いることが推奨されている。"
-* dosageInstruction.doseAndRate.type.coding.code 1..
 * dosageInstruction.doseAndRate.type.coding.code ^short = "力価区分コード"
 * dosageInstruction.doseAndRate.type.coding.code ^definition = "力価区分コード"
 * dosageInstruction.doseAndRate.type.coding.code ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
@@ -96,5 +91,5 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * dosageInstruction.extension[device] ^short = "Device"
 * dosageInstruction.extension[line] ..0
 
-* dosageInstruction.doseAndRate.type.coding from $JP_MedicationIngredientStrengthStrengthType_VS (preferred)
+* dosageInstruction.doseAndRate.type from $JP_MedicationIngredientStrengthStrengthType_VS (preferred)
 * dispenseRequest.quantity.code from $JP_MedicationUnitMERIT9_VS (preferred)
