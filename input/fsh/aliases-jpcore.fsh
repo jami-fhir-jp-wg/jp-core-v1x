@@ -206,3 +206,5 @@ Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_Procedu
 
 Alias: $JP_DiagnosticReportRadiologyCode_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_DiagnosticReportRadiologyCode_VS
 
+Alias: $JP_MedicationCode_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCode_VS
+

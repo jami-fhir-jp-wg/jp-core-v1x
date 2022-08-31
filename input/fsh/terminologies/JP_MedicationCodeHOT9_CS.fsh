@@ -6,6 +6,9 @@ Description: "医薬品HOT9コードのコードシステム"
 * ^status = #draft
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationCodeHOT9_VS
-* ^content = #not-present
+* ^content = #fragment
 
-// TODO:　HOT9医薬品コード追加
+// TODO: Terminology Serverに移動したら削除する　（HOT9医薬品コード追加）
+* #182110901 "コミナティ筋注"
+* #103835401 "ムコダイン錠２５０ｍｇ"
+* #110626901 "パンスポリンＴ錠１００ １００ｍｇ"
