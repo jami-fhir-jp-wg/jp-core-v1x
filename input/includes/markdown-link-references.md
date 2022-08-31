@@ -96,8 +96,7 @@
 <!-- CodeSystem -->
 [JP_MedicalFeeScoreType_CS]: CodeSystem-jp-MedicalFeeScoreType-cs.html
 [JP_ConditionSeverity_CS]: CodeSystem-jp-condition-severity-cs.html
-[JP_Department_SsMix2Digits_CS]: CodeSystem-jp-department-ssmix-2digits-cs.html
-[JP_Department_SsMix3Digits_CS]: CodeSystem-jp-department-ssmix3digits-cs.html
+[JP_Department_SsMix_CS]: CodeSystem-jp-department-ssmix-cs.html
 [JP_JfagyFoodAllergen_CS]: CodeSystem-jp-jfagy-food-allergen-cs.html
 [JP_JfagyMedicationAllergen_CS]: CodeSystem-jp-jfagy-medication-allergen-cs.html
 [JP_JfagyNonFoodNonMedicationAllergen_CS]: CodeSystem-jp-jfagy-non-food-non-medication-allergen-cs.html
@@ -159,6 +158,8 @@
 [JP_AllergyIntolerance_VS]: ValueSet-jp-allergyintolerance-vs.html
 [JP_ConditionSeverity_VS]: ValueSet-jp-condition-severity-vs.html
 [JP_Department_SsMix_VS]: ValueSet-jp-department-ssmix-vs.html
+[JP_Department_SsMix2Digits_VS]: ValueSet-jp-department-ssmix2digits-vs.html
+[JP_Department_SsMix3Digits_VS]: ValueSet-jp-department-ssmix3digits-vs.html
 [JP_MedicalFeeScoreType_VS]: ValueSet-jp-medicalfeescoretype-vs.html
 [JP_MedicalLicenseCertificate_VS]: ValueSet-jp-medicallicensecertificate-vs.html
 [JP_MedicationAsNeededConditionMERIT9_VS]: ValueSet-jp-medication-as-needed-condition-merit9-vs.html
@@ -168,6 +169,7 @@
 [JP_MedicationCategoryMERIT9_VS]: ValueSet-jp-medication-category-merit9-vs.html
 [JP_MedicationCodeCommon_VS]: ValueSet-jp-medication-code-common-vs.html
 [JP_MedicationCodeHOT9_VS]: ValueSet-jp-medication-code-hot9-vs.html
+[JP_MedicationCode_VS]: ValueSet-jp-medication-code-vs.html
 [JP_MedicationCodeYJ_VS]: ValueSet-jp-medication-code-yj-vs.html
 [JP_MedicationExampleDosageComment_VS]: ValueSet-jp-medication-example-dosagecomment-vs.html
 [JP_MedicationExampleLine_VS]: ValueSet-jp-medication-example-line-vs.html
