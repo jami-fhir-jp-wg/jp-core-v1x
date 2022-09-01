@@ -98,3 +98,5 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 
 * dosageInstruction.doseAndRate.type.coding from $JP_MedicationIngredientStrengthStrengthType_VS (preferred)
 * dispenseRequest.quantity.code from $JP_MedicationUnitMERIT9_VS (preferred)
+
+* category from $JP_MedicationCategory_VS (preferred)
