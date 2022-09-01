@@ -198,18 +198,11 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.additionalInstruction.coding ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
 * dosageInstruction.additionalInstruction.coding.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.additionalInstruction.coding.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
-* dosageInstruction.additionalInstruction.coding.system 1..
-* dosageInstruction.additionalInstruction.coding.system = "urn:oid:1.2.392.200250.2.2.20.22" (exactly)
-* dosageInstruction.additionalInstruction.coding.system ^short = "JAMI 補足用法８桁コードを識別するURI。"
-* dosageInstruction.additionalInstruction.coding.system ^definition = "JAMI 補足用法８桁コードを識別するURI"
 * dosageInstruction.additionalInstruction.coding.system ^comment = "URIはOID(urn:oid:....)やUUID(urn:uuid:....)であることもある。OIDやUUIDはHL7のOIDレジストリを参照していなければならない（SHALL)。そうでなければ、URIはHL7のFHIRのリストに挙げられている特別なURIであるか、用語集が明確な定義が参照されるべきである。"
 * dosageInstruction.additionalInstruction.coding.system ^requirements = "記号の定義の根拠が明確である必要がある。"
 * dosageInstruction.additionalInstruction.coding.version ^short = "用語集のバージョン - もし必要であれば追加する。"
 * dosageInstruction.additionalInstruction.coding.version ^definition = "コードが選択された際に利用されたコードシステムのバージョンである。コードの意味するところがバージョンが変わっても一貫しているように十分にメンテナンスされているコードシステムであれば、バージョンを表記する必要はないことに留意されたい。しかしながら、一貫性はなかなか保証されるものではないし、意味の一貫性が保証されていないのであればバージョンは交換されるべきである（SHOULD)。"
 * dosageInstruction.additionalInstruction.coding.version ^comment = "ターミノロジーのバージョンが文字列としてコードシステムにより定義されていない場合は、そのバージョンが公式に公開された日付を示す（FHIRのdateフォーマットで表現される）dateを用いることが推奨されている。"
-* dosageInstruction.additionalInstruction.coding.code 1..
-* dosageInstruction.additionalInstruction.coding.code ^short = "JAMI 補足用法コード"
-* dosageInstruction.additionalInstruction.coding.code ^definition = "JAMI 補足用法コードを指定する。"
 * dosageInstruction.additionalInstruction.coding.code ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.additionalInstruction.coding.code ^requirements = "システム内の特定のコードを参照する必要がある。"
 * dosageInstruction.additionalInstruction.coding.display ^short = "コードの表⽰名"
