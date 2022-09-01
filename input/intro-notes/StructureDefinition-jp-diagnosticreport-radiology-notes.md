@@ -156,27 +156,46 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 ## 利用方法
 
-#### 必須検索パラメータ
+#### 検索パラメータ
+
+検索パラメータの一覧である。[共通の検索パラメータ](http://hl7.org/fhir/R4/search.html#all)も利用される。
+
+| コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |
+| --- | --- | --- | --- | --- |
+| MAY | text | token | レポートの内容 | DiagnosticReport.text |
+| MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) |
+| MAY | category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) <br/> "RAD", "RX", "CT", "NMR", "NMS", "RUS", etc. [ default = “RAD” ] |
+| MAY | code | token | レポート全体を示すコード | DiagnosticReport.code [LOINC 18748-4](https://loinc.org/18748-4/)(固定) |
+| MAY | conclusion | token | コード化されたレポートの conclusion (interpretation/impression) | DiagnosticReport.conclusionCode |
+| MAY | date | date | レポート作成日 | DiagnosticReport.effectiveDate |
+| MAY | encounter | reference | オーダが発行された際の Encounter | DiagnosticReport.encounter ([Encounter][JP_Encounter]) |
+| SHALL | identifier | token | レポートの identifier（識別子） | DiagnosticReport.identifier |
+| SHOULD | issued | date | レポート発行日（確定日） | DiagnosticReport.issued |
+| MAY | media | reference | キー画像への参照 | DiagnosticReport.media.link ([Media](https://www.hl7.org/fhir/R4/media.html)) |
+| SHOULD | performer | reference | レポート確定者 | DiagnosticReport.performer ([Practitioner][JP_Practitioner]) |
+| MAY | result | reference | 関連する検査結果 (検体検査結果など) | DiagnosticReport.result ([Observation][JP_Observation_LabResult])|
+| MAY | results-interpreter | reference | 読影者 | DiagnosticReport.resultsInterpreter ([Practitioner][JP_Practitioner]) |
+| SHOULD | status | token | レポートの状態 | DiagnosticReport.status |
+| SHOULD | subject | reference | レポートの対象となる患者 | DiagnosticReport.subject ([Patient][JP_Patient]) |
+
+##### 必須検索パラメータ
 
 次の検索パラメータは必須でサポートされなければならない。
 
-| Name | Type | Description | Expression |
-| --- | --- | --- | --- |
-| based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) |
-| category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) <br/> "RAD", "RX", "CT", "NMR", "NMS", "RUS", etc. [ default = “RAD” ] |
-| code | token | レポート全体を示すコード | DiagnosticReport.code [LOINC 18748-4](https://loinc.org/18748-4/)(固定) |
-| conclusion | token | コード化されたレポートの conclusion (interpretation/impression) | DiagnosticReport.conclusionCode |
-| date | date | レポート作成日 | DiagnosticReport.effectiveDate |
-| encounter | reference | オーダが発行された際の Encounter | DiagnosticReport.encounter ([Encounter][JP_Encounter]) |
-| identifier | token | レポートの identifier（識別子） | DiagnosticReport.identifier |
-| issued | date | レポート発行日（確定日） | DiagnosticReport.issued |
-| media | reference | キー画像への参照 | DiagnosticReport.media.link ([Media](https://www.hl7.org/fhir/R4/media.html)) |
-| performer | reference | レポート確定者 | DiagnosticReport.performer ([Practitioner][JP_Practitioner]) |
-| result | reference | 関連する検査結果 (検体検査結果など) | DiagnosticReport.result ([Observation][JP_Observation_LabResult])|
-| results-interpreter | reference | 読影者 | DiagnosticReport.resultsInterpreter ([Practitioner][JP_Practitioner]) |
-| status | token | レポートの状態 | DiagnosticReport.status |
-| subject | reference | レポートの対象となる患者 | DiagnosticReport.subject ([Patient][JP_Patient]) |
+1. identifier 検索パラメータを使用して、オーダーIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（SHALL）。
 
+   ```
+   GET [base]/DiagnosticReport?identifier={system|}[code]
+   ```
+
+   例：
+
+   ```
+   GET [base]/MedicationRequest?identifier=http://myhospital.com/fhir/medication\|1234567890
+   ```
+
+   指定された識別子に一致するMedicationRequestリソースを含むBundleを検索する。
+ 
 ### サンプル
 
 * [**放射線読影レポート**][jp-diagnosticreport-radiology-example-1]
