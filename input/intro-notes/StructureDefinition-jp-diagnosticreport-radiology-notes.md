@@ -80,7 +80,7 @@ DiagnosticReportのドメインリソースの一つであるtextエレメント
       "reference": "http://someserver/some-path"
     }
   ],
-　"conclusion": "インプレッション: ひだり肺上葉の空洞性病変。 肺腺癌を疑う。みぎ肺上葉陳旧性炎症性瘢痕。",
+  "conclusion": "インプレッション: ひだり肺上葉の空洞性病変。 肺腺癌を疑う。みぎ肺上葉陳旧性炎症性瘢痕。",
   "presentedForm": [{
     "contentType": "application/jpg",
     "language": "ja", 

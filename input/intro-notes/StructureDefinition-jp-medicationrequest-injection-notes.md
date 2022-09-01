@@ -97,7 +97,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 | SHOULD            | patient      | reference | GET [base]/MedicationRequest?patient=123456   |
 | SHOULD           | patient,date | reference,date  | GET [base]/MedicationRequest?patient=123456&date=eq2013-01-14 |
 | SHOULD           | patient,authoredon | reference,date  | GET [base]/MedicationRequest?patient=123456&authoredon=eq2013-01-14 |
-| MAY           | date,authoredon,category,code,requester | date,date,token,token,token | GET [base]/MedicationRequest?code=urn:oid:1.2.392.100495.20.2.74\|105271807  |
+| MAY           | date,authoredon,category,code,requester | date,date,token,token,token | GET [base]/MedicationRequest?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
 
 ##### 必須検索パラメータ
 
@@ -239,9 +239,9 @@ HTTP/1.1 200 OK
       "resource": {
         "resourceType": "MedicationRequest",
 
-　　　　　・・・
+          ・・・
 
-　　　 },
+       },
     }
   ]
 }  
@@ -834,3 +834,5 @@ HL7 FHIRでは、注射箋の中で同一の用法を持つ剤グループ(RP)�
 1. Mike Henderson, 日本HL7協会監修、「HL7メッセージ交換」、第2版、インナービジョン社、2013年
 1. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, [http://www2.medis.or.jp/hcode/](http://www2.medis.or.jp/hcode/)
 1. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)
+
+{% include markdown-link-references.md %}

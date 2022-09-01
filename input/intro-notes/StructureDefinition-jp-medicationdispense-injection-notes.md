@@ -78,7 +78,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 | SHALL            | identifier    | token  | GET [base]/MedicationDispense?identifier=http://myhospital.com/fhir/medication\|1234567890 |
 | SHOULD            | patient      | reference | GET [base]/MedicationDispense?patient=123456   |
 | SHOULD           | patient,whenhandedover | reference,date  | GET [base]/MedicationDispense?patient=123456&whenhandedover=eq2013-01-14 |
-| MAY           | whenhandedover,whenprepared,context,code,performer| date,date,token,token,token | GET [base]/MedicationDispense?code=urn:oid:1.2.392.100495.20.2.74\|105271807  |
+| MAY           | whenhandedover,whenprepared,context,code,performer| date,date,token,token,token | GET [base]/MedicationDispense?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
 
 ##### 必須検索パラメータ
 
@@ -206,9 +206,9 @@ HTTP/1.1 200 OK
       "resource": {
         "resourceType": "MedicationDispense",
 
-　　　　　・・・
+          ・・・
 
-　　　 },
+       },
     }
   ]
 }  
@@ -234,7 +234,7 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 Medicationリソースのingredient.itemCodeableConcept要素にCodeableConcept型で各薬剤の識別情報を記述し、ingredient.strength.numerator要素に１回あたりの含有量を記述する。薬剤を識別するコードはHOT7("urn:oid:1.2.392.100495.20.2.73")、HOT9("urn:oid:1.2.392.200119.4.403.1")、YJコード("urn:oid:1.2.392.100495.20.1.73")、⼀般処⽅名マスター("urn:oid:1.2.392.100495.20.1.81")を推奨するが、ローカルコードを使用してもよい。含有量の単位コードは MERIT-9（"urn:oid:1.2.392.100495.20.2.101"）を使用する。ingredient.strength.denominatorには固定値「１回」をMERIT-9（"urn:oid:1.2.392.100495.20.2.101"）を使用して指定する。
 dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる場合には全体の容量をUCUM("http://unitsofmeasure.org")を使用してmL単位で指定する。
 
-「ソリタ－Ｔ３号輸液５００ｍＬ １本」と「アドナ注（静脈用）50mg／10mL　１アンプル」計510mLを指示する場合のインスタンス例を示す。
+「ソリタ－Ｔ３号輸液５００ｍＬ １本」と「アドナ注（静脈用）50mg／10mL  １アンプル」計510mLを指示する場合のインスタンス例を示す。
 
 ```json
 "contained": [
@@ -252,7 +252,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
         "itemCodeableConcept": {
           "coding": [
             {
-              "system": "urn:oid:1.2.392.100495.20.2.74",
+              "system": "urn:oid:1.2.392.200119.4.403.1",
               "code": "107750602",
               "display": "ソリタ－Ｔ３号輸液５００ｍＬ"
             }
@@ -277,7 +277,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
         "itemCodeableConcept": {
           "coding": [
             {
-              "system": "urn:oid:1.2.392.100495.20.2.74",
+              "system": "urn:oid:1.2.392.200119.4.403.1",
               "code": "108010001",
               "display": "アドナ注（静脈用）５０ｍｇ"
             }
@@ -486,3 +486,5 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 1. Mike Henderson, 日本HL7協会監修、「HL7メッセージ交換」、第2版、インナービジョン社、2013年
 1. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, [http://www2.medis.or.jp/hcode/](http://www2.medis.or.jp/hcode/)
 1. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)
+
+{% include markdown-link-references.md %}

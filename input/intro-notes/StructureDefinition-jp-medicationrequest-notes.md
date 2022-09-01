@@ -87,7 +87,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 | SHOULD           | patient,date | reference,date  | GET [base]/MedicationRequest?patient=123456&date=eq2013-01-14 |
 | SHOULD           | patient,authoredon | reference,date  | GET [base]/MedicationRequest?patient=123456&authoredon=eq2013-01-14 |
 | SHOULD         | patient,jp-core-startdate | date | GET [base]/MedicationRequest?patient=123456&jp-core-startdate=eq2013-03-21 |
-| MAY           | date,authoredon,category,code,requester | date,date,token,token,token | GET [base]/MedicationRequest?code=urn:oid:1.2.392.100495.20.2.74\|105271807  |
+| MAY           | date,authoredon,category,code,requester | date,date,token,token,token | GET [base]/MedicationRequest?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
 
 ##### 必須検索パラメータ
 
@@ -244,9 +244,9 @@ HTTP/1.1 200 OK
       "resource": {
         "resourceType": "MedicationRequest",
 
-　　　　　・・・
+          ・・・
 
-　　　 },
+       },
     }
   ]
 }  
@@ -1349,3 +1349,5 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
 1. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)
 1. 保健医療福祉情報システム工業会, JAHIS電子処方箋実装ガイドVer.1.2, [https://www.jahis.jp/standard/detail/id=774](https://www.jahis.jp/standard/detail/id=774)
 1. 令和２年度厚⽣労働科学特別研究事業「診療情報提供書, 電⼦処⽅箋等の電⼦化医療⽂書の相互運⽤性確保のための標準規格の開発研究」研究班, 電子処方箋HL7 FHIR記述仕様書案, [https://std.jpfhir.jp/](https://std.jpfhir.jp/)
+
+{% include markdown-link-references.md %}
