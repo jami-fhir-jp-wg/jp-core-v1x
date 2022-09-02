@@ -61,7 +61,7 @@
 
 1. 検索パラメータpatientとstatusを指定し、該当するすべてのProcedureを検索。
 
-      * OR検索のサポートを含む(例えば status={system|}[code],{system|}[code],...)
+      * OR検索のサポートを含む(例えば status={system\|}[code],{system\|}[code],...)
 
       ```
       GET [base]/Procedure?patient={reference}&status={system|}[code]{,{system|}[code],...}
@@ -75,7 +75,7 @@
 
 2. 検索パラメータpatientとcodeとdateを指定し、該当するすべてのProcedureを検索。
 
-      * OR検索のオプションのサポートを含む (例えば code={system|}[code],{system|}[code],...)
+      * OR検索のオプションのサポートを含む (例えば code={system\|}[code],{system\|}[code],...)
       * dateに対する次の比較演算子のサポートを含む:gt,lt,ge,le
       * AND検索のオプションのサポートを含む (例えばdate=[date]&date=[date]]&...)
 

@@ -44,6 +44,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * category ^short = "Type of medication usage　薬が使用される区分"
 * category ^definition = "Indicates where the medication is expected to be consumed or administered.\r\n\r\n薬が消費または投与されると予想される場所区分(入院、外来、家庭等)を示す。\r\ninpatient | outpatient | community\r\n (http://terminology.hl7.org/CodeSystem/medication-admin-category)"
 * medicationCodeableConcept only CodeableConcept
+* medicationCodeableConcept from JP_MedicationCode_VS (preferred)
 * medicationCodeableConcept ^binding.strength = #preferred
 * medicationCodeableConcept ^binding.description = "処方する製剤を表すコード。"
 * medicationCodeableConcept.coding 1..

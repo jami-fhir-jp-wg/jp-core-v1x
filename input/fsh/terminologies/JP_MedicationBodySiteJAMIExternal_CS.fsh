@@ -2,6 +2,8 @@ CodeSystem: JP_MedicationBodySiteJAMIExternal_CS
 Id: jp-medication-bodysite-jami-external-cs
 Title: "JP Core Medication JAMI External Body Site CodeSystem"
 Description: "JAMI標準用法規格表１３外用部位コードのコードシステム"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:1.2.392.200250.2.2.20.32"
 * ^url = $JP_MedicationBodySiteJAMIExternal_CS
 * ^status = #draft
 * ^caseSensitive = true

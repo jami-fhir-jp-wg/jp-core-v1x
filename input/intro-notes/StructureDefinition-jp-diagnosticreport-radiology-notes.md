@@ -80,7 +80,7 @@ DiagnosticReportのドメインリソースの一つであるtextエレメント
       "reference": "http://someserver/some-path"
     }
   ],
-　"conclusion": "インプレッション: ひだり肺上葉の空洞性病変。 肺腺癌を疑う。みぎ肺上葉陳旧性炎症性瘢痕。",
+  "conclusion": "インプレッション: ひだり肺上葉の空洞性病変。 肺腺癌を疑う。みぎ肺上葉陳旧性炎症性瘢痕。",
   "presentedForm": [{
     "contentType": "application/jpg",
     "language": "ja", 
@@ -175,7 +175,6 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 | performer | reference | レポート確定者 | DiagnosticReport.performer ([Practitioner][JP_Practitioner]) |
 | result | reference | 関連する検査結果 (検体検査結果など) | DiagnosticReport.result ([Observation][JP_Observation_LabResult])|
 | results-interpreter | reference | 読影者 | DiagnosticReport.resultsInterpreter ([Practitioner][JP_Practitioner]) |
-
 | status | token | レポートの状態 | DiagnosticReport.status |
 | subject | reference | レポートの対象となる患者 | DiagnosticReport.subject ([Patient][JP_Patient]) |
 

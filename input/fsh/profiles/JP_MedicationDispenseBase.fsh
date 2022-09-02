@@ -36,6 +36,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * category ^definition = "Indicates the type of medication dispense (for example, where the medication is expected to be consumed or administered (i.e. inpatient or outpatient)).\r\n\r\n投薬のタイプを示す（たとえば、薬剤が消費または投与されると予想される場所（つまり、入院患者または外来患者））。　入院、外来、退院、自宅など。"
 * medication[x] only CodeableConcept or Reference(JP_Medication)
 * medicationCodeableConcept only CodeableConcept
+* medicationCodeableConcept from JP_MedicationCode_VS (preferred)
 * medicationCodeableConcept.coding 1..
 * medicationCodeableConcept.coding ^short = "Code defined by a terminology system コード集で定義された医薬品コード"
 * medicationCodeableConcept.coding ^definition = "A reference to a code defined by a terminology system.\r\n\r\nコード集で定義された医薬品コードへの情報"
