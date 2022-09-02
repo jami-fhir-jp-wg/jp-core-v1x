@@ -1,6 +1,6 @@
 CodeSystem: JP_MedicationCodeCommon_CS
-Id: jp-medication-code-common-cs
-Title: "JP Core Medication Common CodeSystem"
+Id: jp-medicationcode-common-cs
+Title: "JP Core MedicationCode Common CodeSystem"
 Description: "医薬品一般名処方コードのコードシステム"
 * ^identifier[0].system = "urn:ietf:rfc:3986"
 * ^identifier[=].value = "urn:oid:1.2.392.100495.20.1.81"
