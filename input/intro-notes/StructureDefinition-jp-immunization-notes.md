@@ -399,3 +399,4 @@ MEDIS標準病名マスターの病名交換用コード("urn:oid:1.2.392.200119
 3. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, [http://www2.medis.or.jp/hcode/](http://www2.medis.or.jp/hcode/)
 4. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)
 
+{% include markdown-link-references.md %}
