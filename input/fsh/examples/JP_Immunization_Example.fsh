@@ -9,7 +9,7 @@ Usage: #example
 * patient = Reference(Patient/jp-patient-example-1)
 * occurrenceDateTime = "2021-07-01T10:30:00+09:00"
 * lotNumber = "12345678"
-* site = urn:oid:1.2.392.200250.2.2.20.32#74L "左上腕"
+* site = http://terminology.hl7.org/CodeSystem/v3-ActSite#LA "left arm"
 * doseQuantity = 0.45 'mL' "mL"
 * performer.function = http://terminology.hl7.org/CodeSystem/v2-0443#AP "Administering Provider"
 * performer.actor = Reference(Practitioner/jp-practitioner-example-male-1) "大阪 一郎"
