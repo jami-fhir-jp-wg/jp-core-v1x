@@ -61,7 +61,7 @@
 
 1. 検索パラメータpatientとstatusを指定し、該当するすべてのProcedureを検索。
 
-      * OR検索のサポートを含む(例えば status={system|}[code],{system|}[code],...)
+      * OR検索のサポートを含む(例えば status={system\|}[code],{system\|}[code],...)
 
       ```
       GET [base]/Procedure?patient={reference}&status={system|}[code]{,{system|}[code],...}
