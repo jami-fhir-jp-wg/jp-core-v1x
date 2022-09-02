@@ -32,13 +32,13 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
 |分類|CS名|URI|
 |---------|----|---------------------------|
-|医薬品|HOT7|urn:oid:1.2.392.200119.4.403.2|
-|医薬品|HOT9|urn:oid:1.2.392.200119.4.403.1|
-|医薬品|HOT13|	urn:oid:1.2.392.200119.4.402.1|
-|医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
-|剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MERIT9_Form_CS|
-|薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
-|力価区分|電子処方箋HL7 FHIR仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
+|医薬品|HOT7|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT7_CS<br/>urn:oid:1.2.392.200119.4.403.2|
+|医薬品|HOT9|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT9_CS<br/>urn:oid:1.2.392.200119.4.403.1|
+|医薬品|HOT13|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT13_CS<br/>urn:oid:1.2.392.200119.4.402.1|
+|医薬品|YJコード|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeYJ_VS<br/>urn:oid:1.2.392.100495.20.1.73|
+|剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationFormMERIT9_CS|
+|薬品単位|MERIT-9(単位）|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationUnitMERIT9_CS<br/>urn:oid:1.2.392.100495.20.2.101|
+|力価区分|電子処方箋HL7 FHIR仕様(力価区分)|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationIngredientStrengthStrengthType_CS<br/>urn:oid:1.2.392.100495.20.2.22|
 
 ### 項目の追加
 日本国内の電子カルテシステムでの注射オーダの運用に合わせ、以下の項目を追加した。

@@ -13,7 +13,7 @@ Usage: #example
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
-* category[+] = http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category#IHP "入院処方"
+* category[+] = $JP_MedicationCategoryMERIT9_CS#IHP "入院処方"
 * category[+] = http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0001#FTP "定時処方"
 * medicationReference = Reference(Medication/jp-medicationrequest-injection-medication-example-1)
 * subject = Reference(Patient/jp-patient-example-1)
@@ -49,7 +49,7 @@ Usage: #example
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
-* category[+] = http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category#IHP "入院処方"
+* category[+] = $JP_MedicationCategoryMERIT9_CS#IHP "入院処方"
 * category[+] = http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0001#FTP "定時処方"
 * medicationReference = Reference(Medication/jp-medicationrequest-injection-medication-example-2)
 * subject = Reference(Patient/jp-patient-example-1)
