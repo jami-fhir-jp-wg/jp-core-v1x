@@ -260,3 +260,4 @@ Description: "未分類コメントを格納するための拡張"
 * . ^short = "未分類コメント"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_UncategorizedComment" (exactly)
 * value[x] only string or CodeableConcept
+* valueCodeableConcept.coding from $JP_MedicationExampleUncategorizedComment_VS (example)
