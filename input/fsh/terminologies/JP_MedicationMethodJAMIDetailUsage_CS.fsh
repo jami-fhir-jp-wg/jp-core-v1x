@@ -2,6 +2,8 @@ CodeSystem: JP_MedicationMethodJAMIDetailUsage_CS
 Id: jp-medication-method-jami-detail-usage-cs
 Title: "JP Core Medication JAMI Detail Usage Type CodeSystem"
 Description: "JAMI標準用法規格表２用法詳細区分のコードシステム"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:1.2.392.200250.2.2.20.40"
 * ^url = $JP_MedicationMethodJAMIDetailUsage_CS
 * ^status = #draft
 * ^caseSensitive = true

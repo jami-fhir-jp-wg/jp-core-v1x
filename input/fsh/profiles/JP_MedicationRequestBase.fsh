@@ -101,7 +101,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * subject.reference ^definition = "対象となる患者を表すPatient resourceへの参照である。PatientリソースのfullUrl要素に指定されるUUID を指定すること\r\n一般には他のResourceが存在する場所への参照。参照はサービスのベースURLに対する相対的なものや、リソースがある場所を示す絶対的URLであることもある。参照はバージョンを指定していることもあればそうでないこともある。もし参照が、FHIRのRESTfulサーバ以外を対象としていれば、それはバージョンが指定されているべきである。分割された内部参照('#'で始まる)の場合は内部に含まれるResourceへの参照である。"
 * subject.reference ^comment = "絶対URLを使えば安定してクラウドやWeb上にスケーラブルな対応をすることができる。一方で、相対・論理参照を使えば閉鎖されたエコシステム内部に適した柔軟な対応ができる。絶対URLをはFHIRリソースのRESTfulサーバを指定するために必要となるわけではないが、より推奨される方法である。もし、URLが\"/[type]/[id]\"で構成されていれば、FHIRのRESTfulサーバへの参照を想定していると推測することもできる。"
 * subject.type ^short = "参照先の型(Patient)"
-* subject.type ^definition = "参照されるPatientが型として示される。\r\n一般的には参照の対象として予定される型。もし、Reference.typeとReference.referenceがともに指定されていて、Reference.referenceがFHIRのURLであればどちらも一致させるべきである(SHALL)。\n\r\n型はResource Definitionに対するCanonical URLであってその型も参照の対象となる。Referenceはhttp://hl7.org/fhir/StructureDefinition/に対する相対URLである。たとえば、\"Patient\"はhttp://hl7.org/fhir/StructureDefinition/Patientへの参照である。絶対URLは論理モデルにおいて、論理モデル内部での参照として飲み使用可能であり、Resourceに対しては指定できない。"
+* subject.type ^definition = "参照されるPatientが型として示される。\r\n一般的には参照の対象として予定される型。もし、Reference.typeとReference.referenceがともに指定されていて、Reference.referenceがFHIRのURLであればどちらも一致させなければならない(SHALL)。\n\r\n型はResource Definitionに対するCanonical URLであってその型も参照の対象となる。Referenceはhttp://hl7.org/fhir/StructureDefinition/に対する相対URLである。たとえば、\"Patient\"はhttp://hl7.org/fhir/StructureDefinition/Patientへの参照である。絶対URLは論理モデルにおいて、論理モデル内部での参照として飲み使用可能であり、Resourceに対しては指定できない。"
 * subject.type ^comment = "このelementは参照の対象の型を指定するためのものである。他のElementで指定されていた型であってもなくても指定することができる。場合によっては、対象の型は参照（たとえば、RESTful URL)についての調査により決定されることもあるし、参照の対象から決定されることもある。もし、参照と型のどちらもが指定されていたら、参照は指定された型を決定されるべきである(SHALL)。"
 * subject.identifier ^short = "文字列による参照が不明な場合の論理参照"
 * subject.identifier ^definition = "対象となるresourceへのID。FHIRサーバを経由してこの参照が指定するEntityが指定できないか、実際の位置を示す既知のIDへとResourceを変換できない場合のように、ほかのresourceを直接参照することができない場合に使われる。Reference.identifierがFHIRインスタンスである何かを実際に示している必要はないが、FHIRインスタンスとして表現されると想定される業務概念を示されなくてはらならず(SHALL)、そのインスタンスは参照先のFHIRのResource型である必要がある。"
@@ -198,18 +198,11 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.additionalInstruction.coding ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
 * dosageInstruction.additionalInstruction.coding.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.additionalInstruction.coding.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
-* dosageInstruction.additionalInstruction.coding.system 1..
-* dosageInstruction.additionalInstruction.coding.system = "urn:oid:1.2.392.200250.2.2.20.22" (exactly)
-* dosageInstruction.additionalInstruction.coding.system ^short = "JAMI 補足用法８桁コードを識別するURI。"
-* dosageInstruction.additionalInstruction.coding.system ^definition = "JAMI 補足用法８桁コードを識別するURI"
 * dosageInstruction.additionalInstruction.coding.system ^comment = "URIはOID(urn:oid:....)やUUID(urn:uuid:....)であることもある。OIDやUUIDはHL7のOIDレジストリを参照していなければならない（SHALL)。そうでなければ、URIはHL7のFHIRのリストに挙げられている特別なURIであるか、用語集が明確な定義が参照されるべきである。"
 * dosageInstruction.additionalInstruction.coding.system ^requirements = "記号の定義の根拠が明確である必要がある。"
 * dosageInstruction.additionalInstruction.coding.version ^short = "用語集のバージョン - もし必要であれば追加する。"
 * dosageInstruction.additionalInstruction.coding.version ^definition = "コードが選択された際に利用されたコードシステムのバージョンである。コードの意味するところがバージョンが変わっても一貫しているように十分にメンテナンスされているコードシステムであれば、バージョンを表記する必要はないことに留意されたい。しかしながら、一貫性はなかなか保証されるものではないし、意味の一貫性が保証されていないのであればバージョンは交換されるべきである（SHOULD)。"
 * dosageInstruction.additionalInstruction.coding.version ^comment = "ターミノロジーのバージョンが文字列としてコードシステムにより定義されていない場合は、そのバージョンが公式に公開された日付を示す（FHIRのdateフォーマットで表現される）dateを用いることが推奨されている。"
-* dosageInstruction.additionalInstruction.coding.code 1..
-* dosageInstruction.additionalInstruction.coding.code ^short = "JAMI 補足用法コード"
-* dosageInstruction.additionalInstruction.coding.code ^definition = "JAMI 補足用法コードを指定する。"
 * dosageInstruction.additionalInstruction.coding.code ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.additionalInstruction.coding.code ^requirements = "システム内の特定のコードを参照する必要がある。"
 * dosageInstruction.additionalInstruction.coding.display ^short = "コードの表⽰名"
