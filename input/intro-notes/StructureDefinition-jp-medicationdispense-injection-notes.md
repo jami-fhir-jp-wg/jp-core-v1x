@@ -52,7 +52,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 |投与部位|JAMI処方・注射オーダ標準用法規格(部位コード)|urn:oid:1.2.392.200250.2.2.20.32|
 |投与部位|HL7 V2(HL7表0550)|http://terminology.hl7.org/CodeSystem/v2-0550|
 |投与部位(修飾子)|HL7 V2(HL7表0495)|http://terminology.hl7.org/CodeSystem/v2-0495|
-|投与装置|HL7 V2(使用者定義表0162)|http://terminology.hl7.org/CodeSystem/v2-0162|
+|投与装置|HL7 V2(使用者定義表0164)|http://terminology.hl7.org/CodeSystem/v2-0164|
 |投与方法|JAMI処方・注射オーダ標準用法規格(基本用法区分)|urn:oid:1.2.392.200250.2.2.20.30|
 |投与手技|HL7 V2(使用者定義表0165)|http://terminology.hl7.org/CodeSystem/v2-0165|
 |投与手技|JAMI処方・注射オーダ標準用法規格(用法詳細区分)|urn:oid:1.2.392.200250.2.2.20.40|
@@ -78,7 +78,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 | SHALL            | identifier    | token  | GET [base]/MedicationDispense?identifier=http://myhospital.com/fhir/medication\|1234567890 |
 | SHOULD            | patient      | reference | GET [base]/MedicationDispense?patient=123456   |
 | SHOULD           | patient,whenhandedover | reference,date  | GET [base]/MedicationDispense?patient=123456&whenhandedover=eq2013-01-14 |
-| MAY           | whenhandedover,whenprepared,context,code,performer| date,date,token,token,token | GET [base]/MedicationDispense?code=urn:oid:1.2.392.100495.20.2.74\|105271807  |
+| MAY           | whenhandedover,whenprepared,context,code,performer| date,date,token,token,token | GET [base]/MedicationDispense?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
 
 ##### 必須検索パラメータ
 
@@ -252,7 +252,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
         "itemCodeableConcept": {
           "coding": [
             {
-              "system": "urn:oid:1.2.392.100495.20.2.74",
+              "system": "urn:oid:1.2.392.200119.4.403.1",
               "code": "107750602",
               "display": "ソリタ－Ｔ３号輸液５００ｍＬ"
             }
@@ -277,7 +277,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
         "itemCodeableConcept": {
           "coding": [
             {
-              "system": "urn:oid:1.2.392.100495.20.2.74",
+              "system": "urn:oid:1.2.392.200119.4.403.1",
               "code": "108010001",
               "display": "アドナ注（静脈用）５０ｍｇ"
             }

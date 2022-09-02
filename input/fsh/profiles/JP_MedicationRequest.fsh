@@ -90,6 +90,10 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * dosageInstruction.extension[device] ..0
 * dosageInstruction.extension[device] ^short = "Device"
 * dosageInstruction.extension[line] ..0
-
 * dosageInstruction.doseAndRate.type from $JP_MedicationIngredientStrengthStrengthType_VS (preferred)
 * dispenseRequest.quantity.code from $JP_MedicationUnitMERIT9_VS (preferred)
+* category from $JP_MedicationCategory_VS (preferred)
+* dosageInstruction.additionalInstruction from $JP_MedicationUsageJAMIAdditional_VS (preferred)
+* dosageInstruction.additionalInstruction ^short = "患者に対する補足指示や注意。たとえば、「食事と一緒に」「眠くなることがある」【JP Core仕様】JAMI 8桁補足用法コードを使用することが望ましい。"
+* dosageInstruction.additionalInstruction ^comment = "薬剤投与や調剤についての情報（たとえば、「腹膜内ポートに可能な限り迅速に注入」や「薬剤Xの直後に」）であり、dosage.textにも複製されるべきである。  
+【JP Core仕様】JAMI 8桁補足用法コードを使用することが望ましいが、ローカルコードも使用可能。"

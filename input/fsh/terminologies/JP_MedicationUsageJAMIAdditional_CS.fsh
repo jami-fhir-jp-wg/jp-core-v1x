@@ -2,6 +2,8 @@ CodeSystem: JP_MedicationUsageJAMIAdditional_CS
 Id: jp-medication-usage-jami-additional-cs
 Title: "JP Core Medication JAMI Additional Usage CodeSystem"
 Description: "JAMI標準用法規格補足用法コードのコードシステム"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:1.2.392.200250.2.2.20.22"
 * ^url = $JP_MedicationUsageJAMIAdditional_CS
 * ^status = #draft
 * ^caseSensitive = true

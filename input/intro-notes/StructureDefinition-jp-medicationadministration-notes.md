@@ -69,7 +69,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 | SHALL            | identifier    | token  | GET [base]/MedicationAdministration?identifier=http://myhospital.com/fhir/medication\|1234567890 |
 | SHOULD            | patient      | reference | GET [base]/MedicationAdministration?patient=123456   |
 | SHOULD           | patient,effective-time | reference,date  | GET [base]/MedicationAdministration?patient=123456&effective-time=eq2013-01-14 |
-| MAY           | effective-time,code,performer,request | date,token,reference,reference | GET [base]/MedicationAdministration?code=urn:oid:1.2.392.100495.20.2.74\|105271807  |
+| MAY           | effective-time,code,performer,request | date,token,reference,reference | GET [base]/MedicationAdministration?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
 
 ##### 必須検索パラメータ
 
