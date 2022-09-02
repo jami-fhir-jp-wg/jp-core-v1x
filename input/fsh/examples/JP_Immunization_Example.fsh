@@ -2,8 +2,13 @@ Instance: jp-immunization-example-1
 InstanceOf: JP_Immunization
 Title: "JP Core Immunization Example 新型コロナワクチン接種"
 Description: "新型コロナワクチン接種"
-Usage: #example
-* meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
+Usage: #Example
+* extension[0].url = $JP_Immunization_DueDateOfNextDose
+* extension[=].valueDate = "2021-10-10"
+* extension[+].url = $JP_Immunization_ManufacturedDate
+* extension[=].valueDate = "2021-03-01"
+* extension[+].url = $JP_Immunization_CertificatedDate
+* extension[=].valueDate = "2021-03-15"
 * status = #completed
 * vaccineCode = urn:oid:1.2.392.200119.4.403.1#182110901 "コミナティ筋注"
 * patient = Reference(Patient/jp-patient-example-1)
