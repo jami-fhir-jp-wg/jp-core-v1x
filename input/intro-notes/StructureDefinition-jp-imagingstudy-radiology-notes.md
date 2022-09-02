@@ -26,6 +26,8 @@ ProcedureCodeについてはRadLex lexiconに定義されているものを利�
 ### BodySiteとlaterality
 
 ImagingStudyのbodySiteエレメントには原則としてDICOMタグに含まれる部位情報が設定されるのが原則である。これはオーダ情報等の別の管理情報には左右や部位の間違いが含まれることがあり、実際の撮影時に修正されることがあるためである。ただし、DICOMに部位情報が含まれない場合はJJ1017Pなどのコードあるいはそのサブセットを用い指定することを許容する。ただし、lateralityエレメントとの整合性をとり、部位情報が正しいものであることを確認すること。
+また、DICOMではSNOMED-CTとのmappingがなされており、DICOMで定義されているSNOMED-CTのコードの利用は無償で可能となる契約がなされている。
+BodySite等でDICOMでmappingされているSNOMED-CTをCodeSystemとして利用する場合、コードに対応するdisplay textの表記にはSNOMED-CTで規定されている表記を用いること。同様にDICOMをCodeSystemとして指定する際はBody Part Examined (0018,0015)に規定されている表記を指定すること。
 
 ## 利用方法
 
