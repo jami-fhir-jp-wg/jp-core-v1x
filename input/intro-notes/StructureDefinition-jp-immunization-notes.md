@@ -1,6 +1,4 @@
 ### 必須要素
-次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
-
 JP Core Immunization リソースは、次の要素を持たなければならない。
 
 - status
@@ -8,7 +6,6 @@ JP Core Immunization リソースは、次の要素を持たなければなら�
 - patient
 - occurrence[x]
 
-JP Core Immunizationリソースは、次の要素をサポートしなければならない。
 
 ### Extensions定義
 JP Core Immunization リソースで使用される拡張は次の通りである。
@@ -202,7 +199,6 @@ HTTP/1.1 200 OK
 | 接種日時 | 2021/07/01 10:30 |
 | ロット番号 | 12345678 |
 
-ワクチン接種の上記部分をFHIR R4で記述する場合以下のようになる。
 
 <details>
 <summary><b>インスタンス例（クリックで展開）</b></summary>
@@ -444,29 +440,29 @@ MEDIS標準病名マスターの病名交換用コード("urn:oid:1.2.392.200119
 ```
 
 ### 次回接種予定日の記述方法について
-次回のワクチン接種予定日は既存のImmunization要素では記述ができないため、Immunizationリソースに対する拡張「DueDateOfNextDose」を使用してdateTime型で記述する。extension.urlには"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose"を指定する。
+次回のワクチン接種予定日は既存のImmunization要素では記述ができないため、Immunizationリソースに対する拡張「DueDateOfNextDose」を使用してdate型で記述する。extension.urlには"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose"を指定する。
 
 ```json
 "extension": [
   {
     "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose",
-    "valueDateTime": "2022-04-02"
+    "valueDate": "2022-04-02"
   }
 ]
 ```
 
 ### 製造年月日、検定年月日
-ワクチンの製造年月日、検定年月日はいずれも既存のImmunization要素では記述ができないため、Immunizationリソースに対する拡張「ManufacturedDate」「CertificatedDate」をそれぞれ使用してdateTime型で記述する。extension.urlにはそれぞれ"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate"、"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate"を指定する。
+ワクチンの製造年月日、検定年月日はいずれも既存のImmunization要素では記述ができないため、Immunizationリソースに対する拡張「ManufacturedDate」「CertificatedDate」をそれぞれ使用してdate型で記述する。extension.urlにはそれぞれ"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate"、"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate"を指定する。
 
 ```json
 "extension": [
   {
     "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate",
-    "valueDateTime": "2021-10-14"
+    "valueDate": "2021-10-14"
   },
   {
     "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate",
-    "valueDateTime": "2021-10-18"
+    "valueDate": "2021-10-18"
   }
 ]
 ```
