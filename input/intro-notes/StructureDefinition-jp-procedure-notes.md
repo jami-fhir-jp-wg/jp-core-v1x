@@ -75,7 +75,7 @@
 
 2. 検索パラメータpatientとcodeとdateを指定し、該当するすべてのProcedureを検索。
 
-      * OR検索のオプションのサポートを含む (例えば code={system|}[code],{system|}[code],...)
+      * OR検索のオプションのサポートを含む (例えば code={system\|}[code],{system\|}[code],...)
       * dateに対する次の比較演算子のサポートを含む:gt,lt,ge,le
       * AND検索のオプションのサポートを含む (例えばdate=[date]&date=[date]]&...)
 
