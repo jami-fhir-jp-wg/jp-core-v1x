@@ -70,7 +70,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * batch.expirationDate ^short = "このバッチの期限が切れるとき"
 * batch.expirationDate ^definition = "この特定のバッチの薬剤の期限が切れるとき"
 
-* form.coding from $JP_MedicationFormMERIT9_VS (preferred)
+* form from $JP_MedicationFormMERIT9_VS (preferred)
 
 // ==============================
 //   Extension 定義
@@ -79,7 +79,7 @@ Extension: JP_Medication_Ingredient_DrugNo
 Id: jp-medication-ingredient-drugno
 Title: "JP Core Medication Ingredient DrugNo Extension"
 Description: "同一剤グループ内での順番を格納する拡張"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo"
+* ^url = $JP_Medication_Ingredient_DrugNo
 * ^date = "2022-03-16"
 * ^purpose = "同一剤グループ内での順番を格納する拡張"
 * ^context.type = #element
@@ -88,20 +88,20 @@ Description: "同一剤グループ内での順番を格納する拡張"
 * . ^definition = "RP内の薬剤の連番"
 * id ^short = "RP内の薬剤の連番"
 * id ^definition = "RP内の薬剤の連番"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo" (exactly)
+* url = $JP_Medication_Ingredient_DrugNo (exactly)
 * value[x] only integer
 
 Extension: JP_Medication_IngredientStrength_StrengthType
 Id: jp-medication-ingredientstrength-strengthtype
 Title: "JP Core Medication IngredientStrength StrengthType Extension"
 Description: "投与量が製剤単位か成分単位かを格納する拡張"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"
+* ^url = $JP_Medication_IngredientStrength_StrengthType
 * ^date = "2022-03-16"
 * ^purpose = "投与量が製剤単位か成分単位かを格納する拡張"
 * ^context.type = #element
 * ^context.expression = "Medication.ingredient.strength"
 * . ^short = "力価区分"
 * . ^definition = "投与量が製剤単位か成分単位かを格納する"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType" (exactly)
+* url = $JP_Medication_IngredientStrength_StrengthType (exactly)
 * value[x] only CodeableConcept
 * value[x] from JP_MedicationIngredientStrengthStrengthType_VS (example)
