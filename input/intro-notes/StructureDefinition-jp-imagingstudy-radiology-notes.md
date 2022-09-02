@@ -35,12 +35,12 @@ ImagingStudyのbodySiteエレメントには原則としてDICOMタグに含ま�
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
- | SHOULD | subject(Patient) | reference | `GET [base]/ImagingStudy?subject=Patient/123` |
- | SHOULD | subject,modality | reference,token | `GET [base]/ImagingStudy?subject=Patient/123&modality=CT` |
- | SHOULD | subject,bodysite | reference,token | `GET [base]/ImagingStudy?subject=Patient/123&bodysite=T-15460` |
- | SHOULD | subject,started | reference,date | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-25` |
- | SHOULD | subject,started,modality,bodysite | reference,date,token,token  | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-18&modality=CT&bodysite=T-15460` |
- | SHOULD | encounter | reference  | `GET [base]/ImagingStudy?encounter=Encounter/456` |
+| SHOULD | subject(Patient) | reference | `GET [base]/ImagingStudy?subject=Patient/123` |
+| SHOULD | subject,modality | reference,token | `GET [base]/ImagingStudy?subject=Patient/123&modality=CT` |
+| SHOULD | subject,bodysite | reference,token | `GET [base]/ImagingStudy?subject=Patient/123&bodysite=T-15460` |
+| SHOULD | subject,started | reference,date | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-25` |
+| SHOULD | subject,started,modality,bodysite | reference,date,token,token  | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-18&modality=CT&bodysite=T-15460` |
+| SHOULD | encounter | reference  | `GET [base]/ImagingStudy?encounter=Encounter/456` |
 
 
 #### 操作詳細
