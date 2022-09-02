@@ -48,12 +48,11 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
 ## 利用方法
 
-Medication リソースは単体として用いられないため、検索などはMedicationRequestなどの一部として行われる。
+Medication リソースは単体として用いられないため、検索などはMedicationRequest_Injectionなどの一部として行われる。
 
 ### サンプル
-注射関係のMedicationRequest(_Injection)、MedicationDispense(_Injection)、MedicationAdministration(_Injection)リソースから参照されるサンプルを示す。
+注射関係のMedicationRequest_Injection、MedicationDispense_Injection、MedicationAdministration_Injectionリソースから参照されるサンプルを示す。
 
-- [**ムコダイン錠２５０ｍｇ**][jp-medication-example-3]
 - [**ホリゾン注射液１０ｍｇ**][jp-medication-example-1]
 - [**ソリタ－＋アドナ注**][jp-medication-example-2]
 

@@ -242,7 +242,6 @@
 [jp-location-example-ward]: Location-jp-location-example-ward.html
 [jp-medication-example-1]: Medication-jp-medication-example-1.html
 [jp-medication-example-2]: Medication-jp-medication-example-2.html
-[jp-medication-example-3]: Medication-jp-medication-example-3.html
 [jp-medicationadministration-example-1]: MedicationAdministration-jp-medicationadministration-example-1.html
 [jp-medicationadministration-example-2]: MedicationAdministration-jp-medicationadministration-example-2.html
 [jp-medicationadministration-injection-example-1]: MedicationAdministration-jp-medicationadministration-injection-example-1.html
