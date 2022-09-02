@@ -16,3 +16,5 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * dosageInstruction.extension[usageDuration] ..0
 * dosageInstruction.timing ^short = "投与タイミング"
 * dosageInstruction.timing ^definition = "投与タイミングを記録する。"
+
+* category from $JP_MedicationCategoryInjection_VS (preferred)

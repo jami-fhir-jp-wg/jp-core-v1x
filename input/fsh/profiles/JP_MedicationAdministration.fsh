@@ -44,6 +44,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * category ^short = "Type of medication usage　薬が使用される区分"
 * category ^definition = "Indicates where the medication is expected to be consumed or administered.\r\n\r\n薬が消費または投与されると予想される場所区分(入院、外来、家庭等)を示す。\r\ninpatient | outpatient | community\r\n (http://terminology.hl7.org/CodeSystem/medication-admin-category)"
 * medicationCodeableConcept only CodeableConcept
+* medicationCodeableConcept from JP_MedicationCode_VS (preferred)
 * medicationCodeableConcept ^binding.strength = #preferred
 * medicationCodeableConcept ^binding.description = "処方する製剤を表すコード。"
 * medicationCodeableConcept.coding 1..
@@ -136,6 +137,7 @@ Description: "用法コメントを格納するための拡張"
 * ^context.expression = "MedicationAdministration.dosage"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_DosageComment" (exactly)
 * value[x] only string or CodeableConcept
+* value[x] from JP_MedicationExampleDosageComment_VS (example)
 
 Extension: JP_MedicationAdministration_Dosage_LineComment
 Id: jp-medicationadministration-dosage-linecomment
@@ -147,6 +149,7 @@ Description: "ラインコメントを格納する"
 * ^context.expression = "MedicationAdministration.dosage"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_LineComment" (exactly)
 * value[x] only string or CodeableConcept
+* value[x] from JP_MedicationExampleLineComment_VS (example)
 
 Extension: JP_MedicationAdministration_DosageMethod_MethodComment
 Id: jp-medicationadministration-dosagemethod-methodcomment
@@ -160,6 +163,7 @@ Description: "手技コメントを格納するための拡張"
 * . ^definition = "手技コメントを格納するための拡張"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageMethod_MethodComment" (exactly)
 * value[x] only string or CodeableConcept
+* value[x] from JP_MedicationExampleMethodComment_VS (example)
 
 Extension: JP_MedicationAdministration_DosageRate_RateComment
 Id: jp-medicationadministration-dosagerate-ratecomment
@@ -173,6 +177,7 @@ Description: "投与速度コメントを格納するための拡張"
 * . ^definition = "投与速度コメントを格納するための拡張"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageRate_RateComment" (exactly)
 * value[x] only string or CodeableConcept
+* value[x] from JP_MedicationExampleRateComment_VS (example)
 
 Extension: JP_MedicationAdministration_DosageRoute_RouteComment
 Id: jp-medicationadministration-dosageroute-routecomment
@@ -184,6 +189,7 @@ Description: "投与経路コメントを格納するための拡張"
 * ^context.expression = "MedicationAdministration.dosage.route"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageRoute_RouteComment" (exactly)
 * value[x] only string or CodeableConcept
+* value[x] from JP_MedicationExampleRouteComment_VS (example)
 
 Extension: JP_MedicationAdministration_DosageSite_SiteComment
 Id: jp-medicationadministration-dosagesite-sitecomment
@@ -195,6 +201,7 @@ Description: "投与部位コメントを格納するための拡張"
 * ^context.expression = "MedicationAdministration.dosage.site"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageSite_SiteComment" (exactly)
 * value[x] only string or CodeableConcept
+* value[x] from JP_MedicationExampleSiteComment_VS (example)
 
 Extension: JP_MedicationAdministration_Location
 Id: jp-medicationadministration-location
@@ -253,3 +260,4 @@ Description: "未分類コメントを格納するための拡張"
 * . ^short = "未分類コメント"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_UncategorizedComment" (exactly)
 * value[x] only string or CodeableConcept
+* valueCodeableConcept.coding from $JP_MedicationExampleUncategorizedComment_VS (example)

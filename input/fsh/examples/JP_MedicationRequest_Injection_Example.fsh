@@ -1,7 +1,7 @@
 Instance: jp-medicationrequest-injection-example-1
 InstanceOf: JP_MedicationRequest_Injection
-Title: "JP Core MedicationRequest Injection Example ワンショット静脈注射"
-Description: "ホリゾン注射液１０ｍｇ１アンプルを左腕に静脈注射"
+Title: "JP Core MedicationRequest Injection Example 注射処方指示 ワンショット静脈注射"
+Description: "注射処方指示 ホリゾン注射液１０ｍｇワンショット静脈注射"
 Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-1
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-1
@@ -22,8 +22,8 @@ Usage: #example
 * insurance = Reference(Coverage/jp-coverage-example-1)
 * dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device"
 * dosageInstruction.extension.valueReference = Reference(Device/jp-medicationrequest-injection-device-example-1)
-* dosageInstruction.additionalInstruction = urn:oid:1.2.392.200250.2.2.20.22#1 "ワンショット"
-* dosageInstruction.text = "ワンショット 静脈注射 静脈内 左腕"
+* dosageInstruction.additionalInstruction = urn:oid:1.2.392.200250.2.2.20.22#I1100000 "１日おき"
+* dosageInstruction.text = "静脈注射 静脈内 左腕 １日おき"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2016-07-01T10:00:00+09:00"
 * dosageInstruction.site.extension.url = "http://hl7.org/fhir/StructureDefinition/bodySite"
 * dosageInstruction.site.extension.valueReference = Reference(BodyStructure/jp-medicationrequest-injection-bodystructure-example-1)
@@ -81,7 +81,7 @@ Usage: #inline
 * status = #active
 * ingredient.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo"
 * ingredient.extension.valueInteger = 1
-* ingredient.itemCodeableConcept = urn:oid:1.2.392.100495.20.2.74#100558502 "ホリゾン注射液１０ｍｇ"
+* ingredient.itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#100558502 "ホリゾン注射液１０ｍｇ"
 * ingredient.strength.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"
 * ingredient.strength.extension.valueCodeableConcept = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 * ingredient.strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#AMP "アンプル"
@@ -93,10 +93,10 @@ Title: "JP Core Medication Example ソリタ－＋アドナ注"
 Description: "ソリタ－＋アドナ注"
 Usage: #inline
 * status = #active
-* ingredient[0].itemCodeableConcept = urn:oid:1.2.392.100495.20.2.74#107750602 "ソリタ－Ｔ３号輸液５００ｍＬ"
+* ingredient[0].itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#107750602 "ソリタ－Ｔ３号輸液５００ｍＬ"
 * ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#HON "本"
 * ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
-* ingredient[+].itemCodeableConcept = urn:oid:1.2.392.100495.20.2.74#108010001 "アドナ注（静脈用）５０ｍｇ"
+* ingredient[+].itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#108010001 "アドナ注（静脈用）５０ｍｇ／１０ｍＬ"
 * ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#AMP "アンプル"
 * ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
 

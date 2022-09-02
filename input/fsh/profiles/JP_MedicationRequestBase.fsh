@@ -71,6 +71,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * reported[x] ^short = "初期記録にはない報告"
 * reported[x] ^definition = "このレコードは元々の一次記録から報告されたものか、二次的に「報告された」資料から取り込まれたものかを示す。報告の情報源についても示される。"
 * medicationCodeableConcept only CodeableConcept
+* medicationCodeableConcept from JP_MedicationCode_VS (preferred)
 * medicationCodeableConcept ^binding.strength = #preferred
 * medicationCodeableConcept ^binding.description = "処方する製剤を表すコード。"
 * medicationCodeableConcept.coding 1..
@@ -100,11 +101,12 @@ Description: "このプロファイルはユーザは直接適用するもので
 * subject.reference ^definition = "対象となる患者を表すPatient resourceへの参照である。PatientリソースのfullUrl要素に指定されるUUID を指定すること\r\n一般には他のResourceが存在する場所への参照。参照はサービスのベースURLに対する相対的なものや、リソースがある場所を示す絶対的URLであることもある。参照はバージョンを指定していることもあればそうでないこともある。もし参照が、FHIRのRESTfulサーバ以外を対象としていれば、それはバージョンが指定されているべきである。分割された内部参照('#'で始まる)の場合は内部に含まれるResourceへの参照である。"
 * subject.reference ^comment = "絶対URLを使えば安定してクラウドやWeb上にスケーラブルな対応をすることができる。一方で、相対・論理参照を使えば閉鎖されたエコシステム内部に適した柔軟な対応ができる。絶対URLをはFHIRリソースのRESTfulサーバを指定するために必要となるわけではないが、より推奨される方法である。もし、URLが\"/[type]/[id]\"で構成されていれば、FHIRのRESTfulサーバへの参照を想定していると推測することもできる。"
 * subject.type ^short = "参照先の型(Patient)"
-* subject.type ^definition = "参照されるPatientが型として示される。\r\n一般的には参照の対象として予定される型。もし、Reference.typeとReference.referenceがともに指定されていて、Reference.referenceがFHIRのURLであればどちらも一致させるべきである(SHALL)。\n\r\n型はResource Definitionに対するCanonical URLであってその型も参照の対象となる。Referenceはhttp://hl7.org/fhir/StructureDefinition/に対する相対URLである。たとえば、\"Patient\"はhttp://hl7.org/fhir/StructureDefinition/Patientへの参照である。絶対URLは論理モデルにおいて、論理モデル内部での参照として飲み使用可能であり、Resourceに対しては指定できない。"
+* subject.type ^definition = "参照されるPatientが型として示される。\r\n一般的には参照の対象として予定される型。もし、Reference.typeとReference.referenceがともに指定されていて、Reference.referenceがFHIRのURLであればどちらも一致させなければならない(SHALL)。\n\r\n型はResource Definitionに対するCanonical URLであってその型も参照の対象となる。Referenceはhttp://hl7.org/fhir/StructureDefinition/に対する相対URLである。たとえば、\"Patient\"はhttp://hl7.org/fhir/StructureDefinition/Patientへの参照である。絶対URLは論理モデルにおいて、論理モデル内部での参照として飲み使用可能であり、Resourceに対しては指定できない。"
 * subject.type ^comment = "このelementは参照の対象の型を指定するためのものである。他のElementで指定されていた型であってもなくても指定することができる。場合によっては、対象の型は参照（たとえば、RESTful URL)についての調査により決定されることもあるし、参照の対象から決定されることもある。もし、参照と型のどちらもが指定されていたら、参照は指定された型を決定されるべきである(SHALL)。"
 * subject.identifier ^short = "文字列による参照が不明な場合の論理参照"
 * subject.identifier ^definition = "対象となるresourceへのID。FHIRサーバを経由してこの参照が指定するEntityが指定できないか、実際の位置を示す既知のIDへとResourceを変換できない場合のように、ほかのresourceを直接参照することができない場合に使われる。Reference.identifierがFHIRインスタンスである何かを実際に示している必要はないが、FHIRインスタンスとして表現されると想定される業務概念を示されなくてはらならず(SHALL)、そのインスタンスは参照先のFHIRのResource型である必要がある。"
 * subject.identifier ^comment = "IDが参照として与えられている場合には、参照を処理するシステムはIDをIDが利用される業務コンテキストがわかっているかどうか参照を解決するためにしか利用することができない。このIDはグローバル(たとえば国民ID）であることもあるが、そうでないこともある。そのため、この参照を利用する有効な機構（たとえば、データを連鎖させたり、包含させるなど）、サーバが参照を解決することができるとも期待できない。サーバは到達できなかったり、解決できないあるいは拒否されるような参照でもIDとして受け取ることができる。CapabilityStatement.rest.resource.referencePolicyを参照のこと。\r\n\r\nIDと正確な参照が共に提供されている場合は、正確な参照が優先される。Resourceを処理するアプリケーションも許容されるがIDが正確な参照と一致することを確認することは求められてない。\r\n\r\nアプリケーションは論理参照を正確な参照へとコンバートする際に、実際に示している論理参照を外したり、削除してもよい。\r\n\r\n参照はFHIRのResourceとして表現することができる構造となるように示されているが、アプリケーションが参照の対象について検索することを求めていない限り、実際にFHIR Resourceのインスタンスが存在していなくてもよい。IDを参照しているコンテンツは、どのリソースの型が限定的に許容されるか明示されていなくても論理的な制約を満たさなければならない。たとえば、薬剤処方を示すIDの型がReference(Observation|DIagnosticReport)であることは、正当化されないであろう。Reference.identifierのユースケースの一つは、FHIRの表現が存在しない場合に、(Any)を参照する型として利用するような場合である。"
+* encounter only Reference(JP_Encounter)
 * encounter ^short = "encounter/admission/stay のいずれかとして記録された診察"
 * encounter ^definition = "JP Core profileでの使用は規定されていない。\r\nこの対象となるリソース[x]が作成される間やこの記録が作成される対象のencounterは密接に関連している。"
 * encounter ^comment = "このエレメントは一般的には外来でのイベントに対応するが、診察が公式に終わる前や後にこの診察についてのコンテキストに対応して開始される活動についても対応する。もし、診療のエピソードに関連させる必要があれば、extensionとして扱われることがある。"
@@ -114,21 +116,26 @@ Description: "このプロファイルはユーザは直接適用するもので
 * authoredOn 1..
 * authoredOn ^short = "この処方オーダーが最初に記述された日"
 * authoredOn ^definition = "JP Core profileでは必須。処方指示が最初に作成された日時。秒の精度まで記録する。タイムゾーンも付与しなければならない。"
+* requester only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or RelatedPerson or Device)
 * requester ^short = "このオーダーを発行した人・物"
 * requester ^definition = "JP Core profileではこのエレメントに対する規定はない。\r\nこのオーダーを発行した責任のある人、組織、機器。"
 * requester ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
+* performer only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or Device or RelatedPerson or CareTeam)
 * performer ^short = "薬剤投与・管理を行った者"
 * performer ^definition = "薬物治療を実施すると予定された者。（たとえば、薬剤投与を行った者）"
 * performer ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
+* performerType from JP_PractitionerRole_VS (example)
 * performerType ^short = "薬剤投与を行った職種"
 * performerType ^definition = "薬剤の投与・管理を行った職種を示す。"
 * performerType ^comment = "Performerを示さずにこのエレメントが指定された場合は、このエレメントは薬剤の投与／管理が指定の職種でなければならないと言うことを示している。Performerと共に指定された場合は、もし指定されたPerformerが実施できない場合に薬剤投与・管理を行うものについての要件が示されたことを意味する。"
+* recorder only Reference(JP_Practitioner or JP_PractitionerRole)
 * recorder ^short = "投薬オーダーの入力者"
 * recorder ^definition = "JP Core profileではこのエレメントに対する規定はない。\r\nたとえば口答指示や電話でのオーダーにより、他の人の代理で処方を入力した人。"
 * recorder ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * reasonCode ^short = "薬を注文するあるいは注文しない理由や適応"
 * reasonCode ^definition = "このエレメントに対するJP Coreの規定はない。\r\n薬剤をオーダーするあるいはしないことを示した理由。"
 * reasonCode ^comment = "このエレメントは病名コードであってもよい。もし、すべての条件を示す記録があって他の詳細な記録が必要であれば、reasonReferenceを使用すること。"
+* reasonReference only Reference(JP_Condition or JP_Observation_Common)
 * reasonReference ^short = "処方箋が書かれた理由について補足するCondition ResourceまたはObservation Resource"
 * reasonReference ^definition = "薬剤がなぜオーダーされたのかを説明する条件や観察。"
 * reasonReference ^comment = "薬剤オーダーの理由を示すこれは条件や観察についての参照である。もし、コードだけであればreasonCodeを使用すること。"
@@ -147,6 +154,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * courseOfTherapyType ^short = "薬剤投与の全体的なパターン"
 * courseOfTherapyType ^definition = "患者が内服する薬剤についての管理の全体的なパターンについての記載。"
 * courseOfTherapyType ^comment = "この属性は薬剤プロトコールと混同してはならない。"
+* insurance only Reference(JP_Coverage or ClaimResponse)
 * insurance ^short = "適用される保険"
 * insurance ^definition = "リクエストされたサービスについて支払いが求め裸得ることになる、保険のプランや適応範囲の拡大、事前の権限付与、かつ/または事前の判定。"
 * insurance ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
@@ -190,18 +198,11 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.additionalInstruction.coding ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
 * dosageInstruction.additionalInstruction.coding.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.additionalInstruction.coding.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
-* dosageInstruction.additionalInstruction.coding.system 1..
-* dosageInstruction.additionalInstruction.coding.system = "urn:oid:1.2.392.200250.2.2.20.22" (exactly)
-* dosageInstruction.additionalInstruction.coding.system ^short = "JAMI 補足用法８桁コードを識別するURI。"
-* dosageInstruction.additionalInstruction.coding.system ^definition = "JAMI 補足用法８桁コードを識別するURI"
 * dosageInstruction.additionalInstruction.coding.system ^comment = "URIはOID(urn:oid:....)やUUID(urn:uuid:....)であることもある。OIDやUUIDはHL7のOIDレジストリを参照していなければならない（SHALL)。そうでなければ、URIはHL7のFHIRのリストに挙げられている特別なURIであるか、用語集が明確な定義が参照されるべきである。"
 * dosageInstruction.additionalInstruction.coding.system ^requirements = "記号の定義の根拠が明確である必要がある。"
 * dosageInstruction.additionalInstruction.coding.version ^short = "用語集のバージョン - もし必要であれば追加する。"
 * dosageInstruction.additionalInstruction.coding.version ^definition = "コードが選択された際に利用されたコードシステムのバージョンである。コードの意味するところがバージョンが変わっても一貫しているように十分にメンテナンスされているコードシステムであれば、バージョンを表記する必要はないことに留意されたい。しかしながら、一貫性はなかなか保証されるものではないし、意味の一貫性が保証されていないのであればバージョンは交換されるべきである（SHOULD)。"
 * dosageInstruction.additionalInstruction.coding.version ^comment = "ターミノロジーのバージョンが文字列としてコードシステムにより定義されていない場合は、そのバージョンが公式に公開された日付を示す（FHIRのdateフォーマットで表現される）dateを用いることが推奨されている。"
-* dosageInstruction.additionalInstruction.coding.code 1..
-* dosageInstruction.additionalInstruction.coding.code ^short = "JAMI 補足用法コード"
-* dosageInstruction.additionalInstruction.coding.code ^definition = "JAMI 補足用法コードを指定する。"
 * dosageInstruction.additionalInstruction.coding.code ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.additionalInstruction.coding.code ^requirements = "システム内の特定のコードを参照する必要がある。"
 * dosageInstruction.additionalInstruction.coding.display ^short = "コードの表⽰名"
@@ -459,12 +460,9 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.doseAndRate.dose[x] ^short = "1回投与量"
 * dosageInstruction.doseAndRate.dose[x] ^definition = "1回投与量"
 * dosageInstruction.doseAndRate.dose[x] ^comment = "この量は指定された薬剤の量を指定するものであって、各有効成分の量を指定するものではない。各成分の量はMedication resourceで伝えることができる。たとえば、有効成分が375mgである錠剤を1錠投与することを伝えたい場合、Medication resourceを利用して、XYZ成分が375mg含有しているという錠剤であることを文書化することができる。あるいは1回投与量が375mgであることを伝えるのであれば、Medication resourceをつかって単にそれが錠剤であることを示せばよい。もし、ドーパミンの静注を例に挙げて、400mgのドーパミンを500mlの注射溶液に混ぜて使うことを伝えたいのであれば、それをすべてMedication resourceで伝えることができる。もし、投与について即時に伝達することを意図していない（たとえば投与速度が示されていたり、投与時期に範囲があるような場合）のであれば、たとえば1回500mlを4時間以上かけて投与する予定を伝える場合にもMedication resourceで伝えることができる。"
-* dosageInstruction.doseAndRate.dose[x].value 1..
 * dosageInstruction.doseAndRate.dose[x].value ^short = "1回投与量"
 * dosageInstruction.doseAndRate.dose[x].value ^definition = "1回投与量"
-* dosageInstruction.doseAndRate.dose[x].unit 1..
-* dosageInstruction.doseAndRate.dose[x].system 1..
-* dosageInstruction.doseAndRate.dose[x].system = "urn:oid:1.2.392.100495.20.2.101"
+* dosageInstruction.doseAndRate.dose[x].system from JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.doseAndRate.dose[x].system ^short = "医薬品単位略号を識別するOID。"
 * dosageInstruction.doseAndRate.dose[x].system ^definition = "医薬品単位略号を識別するOID。固定値。"
 * dosageInstruction.doseAndRate.dose[x].code ^short = "医薬品単位略号"
@@ -474,18 +472,14 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.doseAndRate.rate[x] ^definition = "単位時間内での薬剤量。JP Coreでは1日投与量を表す。"
 * dosageInstruction.doseAndRate.rate[x] ^comment = "JP Coreでは日本ではまだ一般的に利用されている一日量での処方のためにrateRatioを用いる。\r\n\r\n薬剤の詳細な投与法、提供方法を伝えるために、投与速度(rate)とdoseQuantityの両方の情報を提供することができる。もし、投与速度が変更されるようであれば、ローカルルールや制限に基づいて、全ての変更は新しいバージョンのMedicationRequestに更新された投与速度を記録するか、MedicationRequestの新しいインスタンスに新しい投与速度を記録されるようにするべきである。\r\n\r\nrateRatioとrateQuantityのいずれかを使って時間内の投与速度（たとえば100ml/hour)を指定することができる。rateQuantityを使うには、ml/hourが投与速度の単位と言うだけではなく、時間が分母として指定されているということを示しているというようなUCUM単位の文法をシステムがパース可能であることが求められる。500mlを2時間でというような投与速度指示では、rateRatioがrateQuantityで250mg/hourとするよりもセマンティクスを正確に伝えることができるかもしれない。"
 * dosageInstruction.doseAndRate.rate[x] ^requirements = "患者の体内に導入される、あるいはされた薬剤の速度を指定する。一般的には、たとえば1時間あたり100mlあるいは100ml/hrのように注射の速度を示す。たとえば、500mlを2時間でというように、単位時間あたりの速さを表現することもできる。その他、200マイクログラム/minや200マイクログラム/1分, 1 リットル/8時間のような表現もできる。しばしば、投与速度を投与総量/ 投与総時間で表ような場合に投与時間が明示される（たとえば、500ml/2時間という場合は、投与時間が2時間であることを示している）。しかしながら、投与速度で投与時間が明示されない場合（たとえば、250ml/毎時)は、timing.repeat.durationが注射の総投与時間を示すためには必要となる。"
-* dosageInstruction.doseAndRate.rate[x].numerator 1..
 * dosageInstruction.doseAndRate.rate[x].numerator ^short = "1日投与量"
 * dosageInstruction.doseAndRate.rate[x].numerator ^definition = "1日投与量"
-* dosageInstruction.doseAndRate.rate[x].numerator.value 1..
 * dosageInstruction.doseAndRate.rate[x].numerator.value ^short = "1日投与量"
 * dosageInstruction.doseAndRate.rate[x].numerator.value ^definition = "1日投与量"
 * dosageInstruction.doseAndRate.rate[x].numerator.comparator ..0
-* dosageInstruction.doseAndRate.rate[x].numerator.unit 1..
 * dosageInstruction.doseAndRate.rate[x].numerator.unit ^short = "投与量の単位"
 * dosageInstruction.doseAndRate.rate[x].numerator.unit ^definition = "投与量の単位。"
-* dosageInstruction.doseAndRate.rate[x].numerator.system 1..
-* dosageInstruction.doseAndRate.rate[x].numerator.system = "urn:oid:1.2.392.100495.20.2.101"
+* dosageInstruction.doseAndRate.rate[x].numerator.system from JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.doseAndRate.rate[x].numerator.system ^short = "医薬品単位略号を識別するOID"
 * dosageInstruction.doseAndRate.rate[x].numerator.system ^definition = "医薬品単位略号を識別するOID。固定値。"
 * dosageInstruction.doseAndRate.rate[x].numerator.code ^short = "医薬品単位略号"
@@ -512,6 +506,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.maxDosePerPeriod.numerator.unit ^definition = "人間にも可読な単位表現"
 * dosageInstruction.maxDosePerPeriod.numerator.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.maxDosePerPeriod.numerator.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
+* dosageInstruction.maxDosePerPeriod.numerator.system from JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.maxDosePerPeriod.numerator.system ^short = "コード化された単位表現を規定するシステム"
 * dosageInstruction.maxDosePerPeriod.numerator.system ^definition = "単位をコード化して表現するシステムについてのID。"
 * dosageInstruction.maxDosePerPeriod.numerator.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
@@ -536,6 +531,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.maxDosePerPeriod.denominator.unit ^definition = "人間にも可読な単位表現"
 * dosageInstruction.maxDosePerPeriod.denominator.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.maxDosePerPeriod.denominator.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
+* dosageInstruction.maxDosePerPeriod.denominator.system from JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.maxDosePerPeriod.denominator.system ^short = "コード化された単位表現を規定するシステム"
 * dosageInstruction.maxDosePerPeriod.denominator.system ^definition = "単位をコード化して表現するシステムについてのID。"
 * dosageInstruction.maxDosePerPeriod.denominator.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
@@ -561,6 +557,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.maxDosePerAdministration.unit ^definition = "人間にも可読な単位表現"
 * dosageInstruction.maxDosePerAdministration.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.maxDosePerAdministration.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
+* dosageInstruction.maxDosePerAdministration.system from JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.maxDosePerAdministration.system ^short = "コード化された単位表現を規定するシステム"
 * dosageInstruction.maxDosePerAdministration.system ^definition = "単位をコード化して表現するシステムについてのID。"
 * dosageInstruction.maxDosePerAdministration.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
@@ -586,6 +583,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.maxDosePerLifetime.unit ^definition = "人間にも可読な単位表現"
 * dosageInstruction.maxDosePerLifetime.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dosageInstruction.maxDosePerLifetime.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
+* dosageInstruction.maxDosePerLifetime.system from JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.maxDosePerLifetime.system ^short = "コード化された単位表現を規定するシステム"
 * dosageInstruction.maxDosePerLifetime.system ^definition = "単位をコード化して表現するシステムについてのID。"
 * dosageInstruction.maxDosePerLifetime.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
@@ -631,6 +629,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dispenseRequest.initialFill.quantity.unit ^definition = "人間にも可読な単位表現"
 * dispenseRequest.initialFill.quantity.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * dispenseRequest.initialFill.quantity.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
+* dispenseRequest.initialFill.quantity.system from JP_MedicationUnitMERIT9_VS (preferred)
 * dispenseRequest.initialFill.quantity.system ^short = "コード化された単位表現を規定するシステム"
 * dispenseRequest.initialFill.quantity.system ^definition = "単位をコード化して表現するシステムについてのID。"
 * dispenseRequest.initialFill.quantity.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"

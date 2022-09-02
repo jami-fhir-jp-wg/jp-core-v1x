@@ -1,7 +1,7 @@
 Instance: jp-medicationdispense-injection-example-1
 InstanceOf: JP_MedicationDispense_Injection
-Title: "JP Core MedicationDispense Injection Example 注射薬調剤実施"
-Description: "注射薬調剤実施"
+Title: "JP Core MedicationDispense Injection Example 調剤実施 注射薬"
+Description: "調剤実施 注射薬"
 Usage: #example
 * contained[0] = jp-medicationdispense-injection-medication-example-1
 * contained[+] = jp-medicationdispense-injection-bodystructure-example-1
@@ -41,7 +41,7 @@ Usage: #inline
 * status = #active
 * ingredient.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo"
 * ingredient.extension.valueInteger = 1
-* ingredient.itemCodeableConcept = urn:oid:1.2.392.100495.20.2.74#100558502 "ホリゾン注射液１０ｍｇ"
+* ingredient.itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#100558502 "ホリゾン注射液１０ｍｇ"
 * ingredient.strength.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"
 * ingredient.strength.extension.valueCodeableConcept = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 * ingredient.strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#AMP "アンプル"

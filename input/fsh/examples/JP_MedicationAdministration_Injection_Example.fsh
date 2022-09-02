@@ -1,7 +1,7 @@
 Instance: jp-medicationadministration-injection-example-1
 InstanceOf: JP_MedicationAdministration_Injection
-Title: "JP Core MedicationAdministration Injection Example ワンショット静脈注射（実施）"
-Description: "ワンショット静脈注射（実施）"
+Title: "JP Core MedicationAdministration Injection Example 注射実施 ワンショット静脈注射"
+Description: "注射実施 ワンショット静脈注射"
 Usage: #example
 * contained[0] = jp-medicationadministration-injection-medication-example-1
 * contained[+] = jp-medicationadministration-injection-bodystructure-example-1
@@ -44,8 +44,8 @@ Usage: #example
 
 Instance: jp-medicationadministration-injection-example-2
 InstanceOf: JP_MedicationAdministration_Injection
-Title: "JP Core MedicationAdministration Injection Example 点滴注射（実施）"
-Description: "点滴注射（実施）"
+Title: "JP Core MedicationAdministration Injection Example 注射実施 点滴注射"
+Description: "注射実施 点滴注射"
 Usage: #example
 * contained[0] = jp-medicationadministration-injection-medication-example-2
 * contained[+] = jp-medicationadministration-injection-bodystructure-example-2
@@ -88,7 +88,7 @@ Title: "JP Medication 薬剤　ホリゾン注射液"
 Description: "ホリゾン注射液"
 Usage: #inline
 * status = #active
-* ingredient.itemCodeableConcept = urn:oid:1.2.392.100495.20.2.74#100558502 "ホリゾン注射液１０ｍｇ"
+* ingredient.itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#100558502 "ホリゾン注射液１０ｍｇ"
 * ingredient.strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#AMP "アンプル"
 * ingredient.strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
 
@@ -98,10 +98,10 @@ Title: "JP_Medication ソリタ－＋アドナ注"
 Description: "ソリタ－＋アドナ注"
 Usage: #inline
 * status = #active
-* ingredient[0].itemCodeableConcept = urn:oid:1.2.392.100495.20.2.74#107750602 "ソリタ－Ｔ３号輸液５００ｍＬ"
+* ingredient[0].itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#107750602 "ソリタ－Ｔ３号輸液５００ｍＬ"
 * ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#HON "本"
 * ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
-* ingredient[+].itemCodeableConcept = urn:oid:1.2.392.100495.20.2.74#108010001 "アドナ注（静脈用）５０ｍｇ／１０ｍＬ"
+* ingredient[+].itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#108010001 "アドナ注（静脈用）５０ｍｇ／１０ｍＬ"
 * ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#AMP "アンプル"
 * ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
 

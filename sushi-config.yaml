@@ -94,7 +94,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   apply-copyright: 'true'
   apply-publisher: 'true'
   apply-contact: 'true'
-  apply-licese: 'true'
+  apply-license: 'true'
   apply-jurisdiction: 'true'
   show-inherited-invariants: 'true'
   usage-stats-opt-out: 'true'

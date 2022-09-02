@@ -14,6 +14,21 @@ ImagingStudyリソースは、次の要素を持たなければならない。
 
 このプロファイルでは拡張定義は行っていない。
 
+## 注意事項
+
+### Mappings
+
+ImagingStudyはDICOM tagとの対応が重要である。各エレメントとDICOM tagのマッピングについては[ Resource ImagingStudy - Mappings](https://hl7.org/fhir/R4/imagingstudy-mappings.html#dicom)を参照すること。
+
+### ProcedureCode
+
+ProcedureCodeについてはRadLex lexiconに定義されているものを利用することを想定している。これは本家の仕様に基づくものである。一方で、JJ1017についてはこの利用を制限するものでは無いが、JJ1017には手技に関連する情報以外に部位情報や左右の情報を含むため、利用する場合は以下に示すbodySiteやlateralityとの整合性を確保する必要がある。
+### BodySiteとlaterality
+
+ImagingStudyのbodySiteエレメントには原則としてDICOMタグに含まれる部位情報が設定されるのが原則である。これはオーダ情報等の別の管理情報には左右や部位の間違いが含まれることがあり、実際の撮影時に修正されることがあるためである。ただし、DICOMに部位情報が含まれない場合はJJ1017Pなどのコードあるいはそのサブセットを用い指定することを許容する。ただし、lateralityエレメントとの整合性をとり、部位情報が正しいものであることを確認すること。
+また、DICOMではSNOMED-CTとのmappingがなされており、DICOMで定義されているSNOMED-CTのコードの利用は無償で可能となる契約がなされている。
+BodySite等でDICOMでmappingされているSNOMED-CTをCodeSystemとして利用する場合、コードに対応するdisplay textの表記にはSNOMED-CTで規定されている表記を用いること。同様にDICOMをCodeSystemとして指定する際はBody Part Examined (0018,0015)に規定されている表記を指定すること。
+
 ## 利用方法
 
 ### OperationおよびSearch Parameter 一覧
@@ -22,12 +37,12 @@ ImagingStudyリソースは、次の要素を持たなければならない。
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
- | SHOULD | subject(Patient) | reference | `GET [base]/ImagingStudy?subject=Patient/123` |
- | SHOULD | subject,modality | reference,token | `GET [base]/ImagingStudy?subject=Patient/123&modality=CT` |
- | SHOULD | subject,bodysite | reference,token | `GET [base]/ImagingStudy?subject=Patient/123&bodysite=T-15460` |
- | SHOULD | subject,started | reference,date | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-25` |
- | SHOULD | subject,started,modality,bodysite | reference,date,token,token  | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-18&modality=CT&bodysite=T-15460` |
- | SHOULD | encounter | reference  | `GET [base]/ImagingStudy?encounter=Encounter/456` |
+| SHOULD | subject(Patient) | reference | `GET [base]/ImagingStudy?subject=Patient/123` |
+| SHOULD | subject,modality | reference,token | `GET [base]/ImagingStudy?subject=Patient/123&modality=CT` |
+| SHOULD | subject,bodysite | reference,token | `GET [base]/ImagingStudy?subject=Patient/123&bodysite=T-15460` |
+| SHOULD | subject,started | reference,date | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-25` |
+| SHOULD | subject,started,modality,bodysite | reference,date,token,token  | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-18&modality=CT&bodysite=T-15460` |
+| SHOULD | encounter | reference  | `GET [base]/ImagingStudy?encounter=Encounter/456` |
 
 
 #### 操作詳細

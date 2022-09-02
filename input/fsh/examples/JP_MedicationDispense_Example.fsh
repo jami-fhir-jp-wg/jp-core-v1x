@@ -1,7 +1,7 @@
 Instance: jp-medicationdispense-example-1
 InstanceOf: JP_MedicationDispense
-Title: "JP Core MedicationDispense Example 内服薬調剤実施"
-Description: "内服薬調剤実施"
+Title: "JP Core MedicationDispense Example 調剤実施 内服薬"
+Description: "調剤実施 内服薬"
 Usage: #example
 // * extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
 // * extension.valueDuration = 3 'd' "日"

@@ -65,7 +65,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 |投与部位|JAMI処方・注射オーダ標準用法規格(部位コード)|urn:oid:1.2.392.200250.2.2.20.32|
 |投与部位|HL7 V2(HL7表0550)|http://terminology.hl7.org/CodeSystem/v2-0550|
 |投与部位(修飾子)|HL7 V2(HL7表0495)|http://terminology.hl7.org/CodeSystem/v2-0495|
-|投与装置|HL7 V2(使用者定義表0162)|http://terminology.hl7.org/CodeSystem/v2-0162|
+|投与装置|HL7 V2(使用者定義表0164)|http://terminology.hl7.org/CodeSystem/v2-0164|
 |投与方法|JAMI処方・注射オーダ標準用法規格(基本用法区分)|urn:oid:1.2.392.200250.2.2.20.30|
 |投与手技|HL7 V2(使用者定義表0165)|http://terminology.hl7.org/CodeSystem/v2-0165|
 |投与手技|JAMI処方・注射オーダ標準用法規格(用法詳細区分)|urn:oid:1.2.392.200250.2.2.20.40|
@@ -97,7 +97,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 | SHOULD            | patient      | reference | GET [base]/MedicationRequest?patient=123456   |
 | SHOULD           | patient,date | reference,date  | GET [base]/MedicationRequest?patient=123456&date=eq2013-01-14 |
 | SHOULD           | patient,authoredon | reference,date  | GET [base]/MedicationRequest?patient=123456&authoredon=eq2013-01-14 |
-| MAY           | date,authoredon,category,code,requester | date,date,token,token,token | GET [base]/MedicationRequest?code=urn:oid:1.2.392.100495.20.2.74\|105271807  |
+| MAY           | date,authoredon,category,code,requester | date,date,token,token,token | GET [base]/MedicationRequest?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
 
 ##### 必須検索パラメータ
 
@@ -239,9 +239,9 @@ HTTP/1.1 200 OK
       "resource": {
         "resourceType": "MedicationRequest",
 
-　　　　　・・・
+          ・・・
 
-　　　 },
+       },
     }
   ]
 }  
@@ -250,259 +250,7 @@ HTTP/1.1 200 OK
 ### サンプル
 ホリゾン注射液１０ｍｇ１アンプルを左腕に静脈注射する処方例をFHIRで表現する場合のサンプルを示す。
 
-<details>
-<summary><b>インスタンス例（クリックで展開）</b></summary>
-<dev>
-
-{% highlight json %}
-{
-  "resourceType": "MedicationRequest",
-  "id": "jp-medicationrequest-injection-example-1",
-  "meta": {
-    "profile": [
-      "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection"
-    ]
-  },
-  "contained": [
-    {
-      "resourceType": "Medication",
-      "id": "jp-medicationrequest-injection-medication-example-1",
-      "meta": {
-        "profile": [
-          "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication"
-        ]
-      },
-      "status": "active",
-      "ingredient": [
-        {
-          "extension": [
-            {
-              "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo",
-              "valueInteger": 1
-            }
-          ],
-          "itemCodeableConcept": {
-            "coding": [
-              {
-                "system": "urn:oid:1.2.392.100495.20.2.74",
-                "code": "100558502",
-                "display": "ホリゾン注射液１０ｍｇ"
-              }
-            ]
-          },
-          "strength": {
-            "extension": [
-              {
-                "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType",
-                "valueCodeableConcept": {
-                  "coding": [
-                    {
-                      "system": "urn:oid:1.2.392.100495.20.2.22",
-                      "code": "1",
-                      "display": "製剤量"
-                    }
-                  ]
-                }
-              }
-            ],
-            "numerator": {
-              "value": 1,
-              "unit": "アンプル",
-              "system": "urn:oid:1.2.392.100495.20.2.101",
-              "code": "AMP"
-            },
-            "denominator": {
-              "value": 1,
-              "unit": "回",
-              "system": "urn:oid:1.2.392.100495.20.2.101",
-              "code": "TIME"
-            }
-          }
-        }
-      ]
-    },
-    {
-      "resourceType": "BodyStructure",
-      "id": "jp-medicationrequest-injection-bodystructure-example-1",
-      "location": {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/v2-0550",
-            "code": "ARM",
-            "display": "Arm"
-          }
-        ]
-      },
-      "locationQualifier": [
-        {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v2-0495",
-              "code": "L",
-              "display": "Left"
-            }
-          ]
-        }
-      ],
-      "patient": {
-        "reference": "Patient/jp-patient-example-1"
-      }
-    },
-    {
-      "resourceType": "Device",
-      "id": "jp-medicationrequest-injection-device-example-1",
-      "type": {
-        "coding": [
-          {
-            "system": "http://jpfhir.jp/medication/99ILL",
-            "code": "01",
-            "display": "シリンジ"
-          }
-        ]
-      }
-    }
-  ],
-  "identifier": [
-    {
-      "system": "urn:oid:1.2.392.100495.20.3.81",
-      "value": "1"
-    },
-    {
-      "system": "urn:oid:1.2.392.100495.20.3.82",
-      "value": "2"
-    },
-    {
-      "system": "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier",
-      "value": "1234567890.1.1"
-    }
-  ],
-  "status": "active",
-  "intent": "order",
-  "category": [
-    {
-      "coding": [
-        {
-          "system": "http://terminology.hl7.org/CodeSystem/v2-0482",
-          "code": "I",
-          "display": "Inpatient Order"
-        }
-      ]
-    },
-    {
-      "coding": [
-        {
-          "system": "http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category",
-          "code": "IHP",
-          "display": "入院処方"
-        }
-      ]
-    },
-    {
-      "coding": [
-        {
-          "system": "http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0001",
-          "code": "FTP",
-          "display": "定時処方"
-        }
-      ]
-    }
-  ],
-  "medicationReference": {
-    "reference": "#jp-medicationrequest-injection-medication-example-1"
-  },
-  "subject": {
-    "reference": "Patient/jp-patient-example-1"
-  },
-  "authoredOn": "2016-07-01T09:28:17+09:00",
-  "requester": {
-    "reference": "Practitioner/jp-practitioner-example-female-1"
-  },
-  "insurance": [
-    {
-      "reference": "Coverage/jp-coverage-example-1"
-    }
-  ],
-  "dosageInstruction": [
-    {
-      "extension": [
-        {
-          "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device",
-          "valueReference": {
-            "reference": "#jp-medicationrequest-injection-device-example-1"
-          }
-        }
-      ],
-      "text": "ワンショット 静脈注射 静脈内 左腕",
-      "additionalInstruction": [
-        {
-          "coding": [
-            {
-              "system": "urn:oid:1.2.392.200250.2.2.20.22",
-              "code": "1",
-              "display": "ワンショット"
-            }
-          ]
-        }
-      ],
-      "timing": {
-        "repeat": {
-          "boundsPeriod": {
-            "start": "2016-07-01T10:00:00+09:00"
-          }
-        }
-      },
-      "site": {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/bodySite",
-            "valueReference": {
-              "reference": "#jp-medicationrequest-injection-bodystructure-example-1"
-            }
-          }
-        ]
-      },
-      "route": {
-        "coding": [
-          {
-            "system": "http://jpfhir.jp/fhir/Common/CodeSystem/route-codes",
-            "code": "IV",
-            "display": "静脈内"
-          }
-        ]
-      },
-      "method": {
-        "coding": [
-          {
-            "system": "urn:oid:1.2.392.200250.2.2.20.40",
-            "code": "30",
-            "display": "静脈注射"
-          }
-        ]
-      },
-      "doseAndRate": [
-        {
-          "type": {
-            "coding": [
-              {
-                "system": "urn:oid:1.2.392.100495.20.2.22",
-                "code": "1"
-              }
-            ]
-          },
-          "doseQuantity": {
-            "value": 2,
-            "unit": "mL",
-            "system": "urn:oid:1.2.392.100495.20.2.101",
-            "code": "mL"
-          }
-        }
-      ]
-    }
-  ]
-}
-{% endhighlight json %}
-</dev>
-</details>
+-[**注射処方指示 ホリゾン注射液１０ｍｇワンショット静脈注射**][jp-medicationrequest-injection-example-1]
 
 ## 注意事項
 
@@ -1086,3 +834,5 @@ HL7 FHIRでは、注射箋の中で同一の用法を持つ剤グループ(RP)�
 1. Mike Henderson, 日本HL7協会監修、「HL7メッセージ交換」、第2版、インナービジョン社、2013年
 1. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, [http://www2.medis.or.jp/hcode/](http://www2.medis.or.jp/hcode/)
 1. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)
+
+{% include markdown-link-references.md %}

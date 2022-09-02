@@ -1,7 +1,7 @@
 Instance: jp-medicationadministration-example-1
 InstanceOf: JP_MedicationAdministration
-Title: "JP Core MedicationAdministration Example 投薬実施"
-Description: "投薬実施"
+Title: "JP Core MedicationAdministration Example 投薬実施 ムコダイン錠２５０ｍｇ"
+Description: "投薬実施 ムコダイン錠２５０ｍｇ"
 Usage: #example
 * meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment"
@@ -20,7 +20,7 @@ Usage: #example
 * identifier[=].value = "1"
 * status = #completed
 * category = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
-* medicationCodeableConcept = urn:oid:1.2.392.100495.20.2.74#103835401 "ムコダイン錠２５０ｍｇ"
+* medicationCodeableConcept = urn:oid:1.2.392.200119.4.403.1#103835401 "ムコダイン錠２５０ｍｇ"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2016-08-25T08:30:00+09:00"
 * performer.function = http://terminology.hl7.org/CodeSystem/med-admin-perform-function#performer "Performer"
@@ -32,8 +32,8 @@ Usage: #example
 
 Instance: jp-medicationadministration-example-2
 InstanceOf: JP_MedicationAdministration
-Title: "JP Core MedicationAdministration Example 投薬中止"
-Description: "投薬中止"
+Title: "JP Core MedicationAdministration Example 投薬中止 パンスポリンＴ錠１００ １００ｍｇ"
+Description: "投薬中止 パンスポリンＴ錠１００ １００ｍｇ"
 Usage: #example
 * meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment"
@@ -50,7 +50,7 @@ Usage: #example
 * identifier[=].value = "2"
 * status = #stopped
 * category = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
-* medicationCodeableConcept = urn:oid:1.2.392.100495.20.2.74#110626901 "パンスポリンＴ錠１００ １００ｍｇ"
+* medicationCodeableConcept = urn:oid:1.2.392.200119.4.403.1#110626901 "パンスポリンＴ錠１００ １００ｍｇ"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2016-08-25T08:30:00+09:00"
 * request = Reference(MedicationRequest/jp-medicationrequest-example-2)

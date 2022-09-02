@@ -1,7 +1,7 @@
 Instance: jp-medicationrequest-example-1
 InstanceOf: JP_MedicationRequest
-Title: "JP Core MedicationRequest Example 内服処方1"
-Description: "内服処方1"
+Title: "JP Core MedicationRequest Example 内服処方指示 ムコダイン錠２５０ｍｇ"
+Description: "内服処方指示 ムコダイン錠２５０ｍｇ"
 Usage: #example
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[rpNumber].value = "1"
@@ -11,7 +11,7 @@ Usage: #example
 * identifier[requestIdentifier].value = "1234567890.1.1"
 * intent = #order
 * status = #active
-* medicationCodeableConcept = urn:oid:1.2.392.200119.4.403.1#103835401 "ムコダイン錠２５０ｍｇ"
+* medicationReference = Reference(Medication/jp-medication-example-3)
 * subject = Reference(Patient/jp-patient-example-1)
 * authoredOn = "2020-04-01T12:28:17+09:00"
 * dosageInstruction.extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse"
@@ -31,8 +31,8 @@ Usage: #example
 
 Instance: jp-medicationrequest-example-2
 InstanceOf: JP_MedicationRequest
-Title: "JP Core MedicationRequest Example 内服処方2"
-Description: "内服処方2"
+Title: "JP Core MedicationRequest Example 内服処方指示 パンスポリンＴ錠１００ １００ｍｇ"
+Description: "内服処方指示 パンスポリンＴ錠１００ １００ｍｇ"
 Usage: #example
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[rpNumber].value = "2"

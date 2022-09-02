@@ -4,13 +4,23 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
+# Example Existence and Embedded HTML Warnings
 %The Implementation Guide contains no examples%
 %The string value contains text that looks like embedded HTML tags%
-%This element does not match any known slice defined in the profile%
 
+# DICOM Terminologies Existence Warnings
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html not found by validator
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html not found by validator
-ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_7010.html not found by validator
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 not found by validator
+The valueSet reference http://playbook.radlex.org/playbook/SearchRadlexAction on element ImagingStudy.procedureCode could not be resolved
+The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html on element ImagingStudy.modality could not be resolved
+The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html on element ImagingStudy.series.modality could not be resolved
+The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 on element ImagingStudy.series.instance.sopClass could not be resolved
 
+# CodeSystem Content Level #Example or #Fragment Warnings
 Error from server: Unable to provide support for code system %
+
+#  Local CodeSystems Warnings
+Code System URI 'http://abc-hospital.local/fhir/Observation/localcode' is unknown so the code cannot be validated
+Code System URI 'http://abc-hospital.local/fhir/ObservationOrder/localcode' is unknown so the code cannot be validated
+
