@@ -40,3 +40,5 @@
 ## 利用方法
 
 各ユースケースのプロファイルを参照のこと。
+
+{% include markdown-link-references.md %}
