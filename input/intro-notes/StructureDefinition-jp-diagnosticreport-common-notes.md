@@ -4,7 +4,7 @@
 
 | コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |
 | --- | --- | --- | --- | --- |
-| MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([CarePlan](https://www.hl7.org/fhir/R4/careplan.html), [MedicationRequet][JP＿MedicationRequest], [NutritionOrder](https://www.hl7.org/fhir/R4/nutritionorder.html), [ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html), [ImuunizationRecommendation](https://www.hl7.org/fhir/R4/immunizationrecommendation.html) |
+| MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([CarePlan](https://www.hl7.org/fhir/R4/careplan.html), [MedicationRequet][JP_MedicationRequest], [NutritionOrder](https://www.hl7.org/fhir/R4/nutritionorder.html), [ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html), [ImuunizationRecommendation](https://www.hl7.org/fhir/R4/immunizationrecommendation.html) |
 | MAY | category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) |
 | MAY | code | token | レポート全体を示すコード | DiagnosticReport.code |
 | MAY | conclusion | token | コード化されたレポートの conclusion (interpretation/impression) | DiagnosticReport.conclusionCode |
