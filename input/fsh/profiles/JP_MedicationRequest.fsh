@@ -30,6 +30,10 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * identifier[orderInRp].period ..0
 * identifier[orderInRp].assigner ..0
 
+* dosageInstruction.timing.code from $JP_MedicationUsageJAMI_VS (preferred)
+* dosageInstruction.timing.code ^comment = "BIDなどは「施設特有の時間」として定義される。たとえば、施設がBIDを「つねに朝7時と夕方6時」であると指定することがある。この指定が不適切であれば、BIDというコードは使うべきではない。その代わり、HL7が定義したBIDのコードではなく、その施設特有のコードで明示的に示すべきであり、構造化された表現を使うべきである（この場合、2回のイベントの時刻を指定する必要がある）。  
+【JP Core仕様】JAMI標準用法コード(16桁)を使用することが望ましいが、ローカルコードも使用可能。"
+
 * dosageInstruction.doseAndRate.doseQuantity.code from $JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.doseAndRate.rateRatio.numerator.code from $JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.doseAndRate.rateRatio.denominator 1..
