@@ -20,7 +20,7 @@
 | SHOULD | status | token | レポートの状態 | DiagnosticReport.status |
 | SHOULD | subject | reference | レポートの対象 | DiagnosticReport.subject ([Group](https://www.hl7.org/fhir/R4/group.html), [Device](https://www.hl7.org/fhir/R4/device.html), [Patient][JP_Patient], [Location][JP_location]) |
 
-##### 必須検索パラメータ
+#### 必須検索パラメータ
 
 次の検索パラメータは必須でサポートされなければならない。
 

@@ -170,7 +170,7 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 なお、検索パラメータは複合的に利用できる。詳細は[Search - Chained parameters](https://www.hl7.org/fhir/R4/search.html#chaining)を参照すること。
 
-##### 必須検索パラメータ
+#### 必須検索パラメータ
 
 次の検索パラメータは必須でサポートされなければならない。
 
