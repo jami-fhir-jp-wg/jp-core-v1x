@@ -31,6 +31,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * value[x] from $v2-0136 (required)
 * value[x] ^comment = "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.\r\n\r\n【JP Core仕様】コードに限定する"
 * value[x] ^binding.description = "Codes specifying either Yes or No used in fields containing binary answers generally user-specified."
+* value[x] ^short = "所見の有無（Y or N）を指定する"
 * bodySite from JP_ObservationPhysicalExamBodySite_VS (preferred)
 * bodySite ^comment = "ICD-11"
 * method from JP_ObservationPhysicalExamMethod_VS (preferred)
@@ -40,6 +41,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * derivedFrom only Reference(DocumentReference or ImagingStudy or Media or QuestionnaireResponse or JP_Observation_Common or MolecularSequence or JP_Observation_PhysicalExam)
 * derivedFrom ^comment = "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.\r\n\r\n【JP Core仕様】導出元の参照リソースにJP_Observation_PhysicalExamを追加"
 * component ^comment = "For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.\r\n\r\n【JP Core仕様】具体的な所見を記載する"
+* component ^short = "所見有り（valueCodeableConceptがY）の場合に、具体的な所見をコード、または文字列で記載する"
 * component.code = $JP_PhysicalExamCode_CS#detailed-physical-findings "Detailed Physical Findings" (exactly)
 * component.code from JP_PhysicalExamCode_VS (required)
 * component.code ^comment = "*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】具体的な所見を表すコード（固定値）"
