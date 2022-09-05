@@ -20,8 +20,8 @@ JP Core MedicationRequest プロファイルで使用される拡張は次の通
 
 <table class="extension_description">
   <tr>|服用開始日|服用開始日を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse|Period|
-    <th width=100px>拡張</th>
-    <th width=200px>説明</th>
+    <th>拡張</th>
+    <th>説明</th>
     <th>URL</th>
     <th>値の型</th>
   </tr>

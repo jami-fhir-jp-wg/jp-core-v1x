@@ -22,8 +22,8 @@ JP Core MedicationRequest Injectionプロファイルで使用される拡張は
 
 <table class="extension_description">
   <tr>
-    <th width=100px>拡張</th>
-    <th width=200px>説明</th>
+    <th>拡張</th>
+    <th>説明</th>
     <th>URL</th>
     <th>値の型</th>
   </tr>
@@ -59,8 +59,8 @@ JP Core MedicationRequestプロファイルで追加された以下のExtension�
 
 <table class="extension_description">
   <tr>
-    <th width=100px>拡張</th>
-    <th width=200px>説明</th>
+    <th>拡張</th>
+    <th>説明</th>
     <th>URL</th>
     <th>値の型</th>
   </tr>
@@ -81,8 +81,9 @@ JP Core MedicationRequestプロファイルで追加された以下のExtension�
 また、HL7 Internationalで定義されている以下のExtensionを利用する。
 
 <table class="extension_description">
-     <th width=100px>拡張</th>
-    <th width=200px>説明</th>
+  <tr>
+    <th>拡張</th>
+    <th>説明</th>
     <th>URL</th>
     <th>値の型</th>
   </tr>

@@ -18,8 +18,8 @@ JP Core MedicationDispense プロファイルで使用される拡張は次の�
 
 <table class="extension_description">
   <tr>
-    <th width=100px>拡張</th>
-    <th width=200px>説明</th>
+    <th>拡張</th>
+    <th>説明</th>
     <th>URL</th>
     <th>値の型</th>
   </tr>
@@ -37,8 +37,8 @@ JP Core MedicationDispense プロファイルでは、JP Core MedicationRequest�
 
 <table class="extension_description">
   <tr>
-    <th width=100px>拡張</th>
-    <th width=200px>説明</th>
+    <th>拡張</th>
+    <th>説明</th>
     <th>URL</th>
     <th>値の型</th>
   </tr>
