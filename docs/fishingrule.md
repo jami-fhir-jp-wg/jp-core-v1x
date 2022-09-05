@@ -128,6 +128,10 @@ Name形式[ **Aaa_BbbCcc_Ddd.fsh** ]に変換し、拡張子を.fshとする。<
 
 設定してもsushi-config.yamlの内容に上書きされるため記載対象としない。
 
+外部CodeSystemの利用する際(LOINC等)には、必要に応じて下記の対応を行うこと。
+- 外部CodeSystemの利用許諾等に違反しない記述にすること。
+- CodeSystemについて、JP Core側の帰属しないことを明記すること。
+
 ### [2] Cardinality
 {min}の値が0の時は、{min}を省略すること。
 ```
