@@ -160,8 +160,8 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 本プロファイルで再定義された検索パラメータの一覧である。[DiagnosticReport共通の検索パラメータ][JP_DiagnosticReport_Common]が利用されるが、重複するものについては以下の定義に従うこと。
 
-| コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |　例
-| --- | --- | --- | --- | --- |
+| コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |　例　|
+| --- | --- | --- | --- | --- | --- |
 | MAY | text | token | レポートの内容 | DiagnosticReport.text | GET [base]/DiagnosticReport?_text=(がん OR 癌) and 転移 |
 | MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) | GET [base]/DiagnosticReport?ServiceRequest/12345 |
 | MAY | category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) <br/> "RAD", "RX", "CT", "NMR", "NMS", "RUS", etc. [ default = “RAD” ] | GET [base]/DiagnosticReport?category=RAD |
