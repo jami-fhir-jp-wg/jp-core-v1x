@@ -232,6 +232,17 @@ Sliceの名称定義の際は、Camel形式(lower camelCase)とする。
 https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#item-names
 
 
+### [8] JP Core独自仕様記述
+
+リソースに関する説明文書の際にFHIR BASEの訳文とJP Core独自仕様部分の説明を明示的に分ける際には「**【JP Core仕様】**」を文のはじめに付与すること。
+
+```
+
+* identifier ^comment = "(FHIR BASEおよびその訳文)　【JP Core仕様】(JP Core独自仕様)"
+
+```
+
+
 ## リソース追加、urlもしくはid変更時の対処
 
 リソース追加、urlもしくはid変更時には必要に応じ、以下の作業を実施すること。
