@@ -242,7 +242,7 @@ https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#item-names
 
 ```
 
-## JP Core内定義した別URI,OIDを持つCodeSystemへの対応
+## CodeSystemにてJP Core内定義したURLとは別のシステム識別子（URI,OID等）を持つ場合の対応
 
 ### [1]CodeSystemの定義
 
