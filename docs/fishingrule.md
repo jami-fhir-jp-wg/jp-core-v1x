@@ -242,6 +242,60 @@ https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#item-names
 
 ```
 
+## JP Core内定義した別URI,OIDを持つCodeSystemへの対応
+
+### URLの設定
+
+JP Coreの命名規則に従ったURLを記述する。
+
+```
+[aliases-jpcore.fsh]
+Alias: $JP_MedicationCodeHOT9_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT9_CS
+```
+
+### CodeSystemのIdentifierへの追加
+
+CodeSystemに対してOIDをIdentifierに追記。推奨するOIDが複数ある場合はそのすべてを記載する。
+
+```
+[JP_MedicationCodeHOT9_CS.fsh]
+CodeSystem: JP_MedicationCodeHOT9_CS
+Id: jp-medicationcode-hot9-cs
+Title: "JP Core MedicationCode HOT9 CodeSystem"
+Description: "医薬品HOT9コードのコードシステム"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:1.2.392.200119.4.403.1"
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:1.2.392.100495.20.2.74"
+```
+
+### NamingSystemへの記載
+
+NamingSystemに対してOIDをIdentifierとJP Core URLとのマッピングを作成する。
+OIDについては念の為OID形式、URL形式の両方を登録する。
+
+```
+[namingsystems.fsh]
+Instance: jp-medicationcodehot9-namingsystem
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "JP_MedicationCodeHOT9_NamingSystem"
+* status = #active
+* kind = #codesystem
+* description = "JP Core MedicationCode HOT9 NamingSystem"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "1.2.392.200119.4.403.1"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.200119.4.403.1"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "1.2.392.100495.20.2.74"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.100495.20.2.74"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = $JP_MedicationCodeHOT9_CS
+* uniqueId[=].preferred = true
+```
+
 
 ## リソース追加、urlもしくはid変更時の対処
 
