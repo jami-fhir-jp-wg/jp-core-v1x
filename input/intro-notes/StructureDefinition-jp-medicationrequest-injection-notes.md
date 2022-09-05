@@ -39,7 +39,6 @@ JP Core MedicationRequest Injectionプロファイルで使用される拡張は
     <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device</td>
     <td>Reference (Device)</td>
   </tr>
-</table>
   <tr>
     <td>RP内薬剤番号</td>
     <td>RP内の薬剤の連番を格納する拡張</td>
@@ -52,6 +51,7 @@ JP Core MedicationRequest Injectionプロファイルで使用される拡張は
     <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Strength_StrengthType</td>
     <td>CodeableConcept</td>
   </tr>
+</table>
 
 #### 既存のExtensionの利用
 
