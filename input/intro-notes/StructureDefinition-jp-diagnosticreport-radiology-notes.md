@@ -4,16 +4,16 @@
 次のデータ項目は必須（SHALL）である。
 
 - status ：レポートの状態・進捗状況
-- category ： “RAD”をデフォルトとし、特に検査種別を含む部門指定を指定したい場合は"RUS", "RX", "CT", "NMR", "NMS", "VUS", "OUS", "CUS"などを指定する．
 - code ：レポートの種別（画像診断レポート交換手順ガイドライン「5.1 レポート種別コード」に記載されているLOINCコード "Diagnostic imaging study" を指定）
-- effectiveDateTime ： レポート作成日時
-
+  
 ### MustSupport
 
 次のデータは送信システムに存在する場合はサポートされなければならないことを意味する（Must Support）。
 
 - basedOn ： レポートあるいは画像検査のServiceRequest
+- category ： “RAD”をデフォルトとし、特に検査種別を含む部門指定を指定したい場合は"RUS", "RX", "CT", "NMR", "NMS", "VUS", "OUS", "CUS"などを指定する
 - subject ： 患者リソース(Patient)への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
+- effectiveDateTime ： レポート作成日時
 - issued ： レポート確定日時
 - performer ： Practitionerでレポートの関係者（作成者、読影者、確定者など）を列挙
 - resultInterpreter ： Practitionerでレポート確定者を示す
