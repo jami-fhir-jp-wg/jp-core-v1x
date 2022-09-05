@@ -43,7 +43,6 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * encounter ^definition = "この診断レポートが関するヘルスケアイベント。"
 * encounter ^comment = "これは通常、レポートの作成が発生するエンカウンターだが、一部のイベントはエンカウンターの正式な完了の前または後に開始される場合がある（例えば入院前の検査）。その場合でも（入院に関連して検査が行われる場合など）、エンカウンターのコンテキストに関連付けられる。\r\n\r\n【JP Core仕様】このレポートを書く切っ掛けとなる Encounterリソース（例：術前検査の場合、術前訪問） を参照"
 * encounter ^requirements = "Encounterコンテキストへのリンクが必要である"
-* effective[x] 0..1
 * effective[x] only dateTime
 * effective[x] ^definition = "観測値が関連する時間または期間。レポートの対象が患者である場合、これは通常、読影開始の時間であり、日付/時刻自体のみが提供される。"
 * effective[x] ^comment = "診断手順が患者に対して実行された場合、これは実行された時間を示す。\r\n\r\n【JP Core仕様】レポート作成日時\r\n\r\n（DateTimeを採用し、Periodは不使用）"
