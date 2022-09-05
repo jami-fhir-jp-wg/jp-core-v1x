@@ -94,7 +94,8 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    ```
    GET [base]/ImagingStudy?subject=Patient/123&bodysite=T-15460
    ```
-<br>
+<br/>
+
 
 4.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい。
 
