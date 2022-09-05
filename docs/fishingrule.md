@@ -244,7 +244,7 @@ https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#item-names
 
 ## JP Core内定義した別URI,OIDを持つCodeSystemへの対応
 
-### CodeSystemの定義
+### [1]CodeSystemの定義
 
 - URLは、JP Coreの命名規則に従ったものを記述する。(直接OIDを記載しない)
   - JP Coreで定義したリソースはURLに従って公開される予定のため。
@@ -269,7 +269,7 @@ Description: "医薬品HOT9コードのコードシステム"
 Alias: $JP_MedicationCodeHOT9_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT9_CS
 ```
 
-### NamingSystemへのマッピング情報の記載
+### [2]NamingSystemへのマッピング情報の記載
 
 - NamingSystemに対してOIDをIdentifierとJP Core URLとのマッピングを作成する。
 - OIDについては念の為OID形式、URL形式の両方を登録する。
