@@ -244,18 +244,13 @@ https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#item-names
 
 ## JP Core内定義した別URI,OIDを持つCodeSystemへの対応
 
-### URLの設定
+### CodeSystemの定義
 
-JP Coreの命名規則に従ったURLを記述する。
+- URLは、JP Coreの命名規則に従ったものを記述する。(直接OIDを記載しない)
+  - JP Coreで定義したリソースはURLに従って公開される予定のため。
+- IdentifierとしてOIDを追加する。
 
-```
-[aliases-jpcore.fsh]
-Alias: $JP_MedicationCodeHOT9_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT9_CS
-```
-
-### CodeSystemのIdentifierへの追加
-
-CodeSystemに対してOIDをIdentifierに追記。推奨するOIDが複数ある場合はそのすべてを記載する。
+CodeSystemに対してOIDが割り振られた際の記載例
 
 ```
 [JP_MedicationCodeHOT9_CS.fsh]
@@ -269,10 +264,17 @@ Description: "医薬品HOT9コードのコードシステム"
 * ^identifier[=].value = "urn:oid:1.2.392.100495.20.2.74"
 ```
 
-### NamingSystemへの記載
+```
+[aliases-jpcore.fsh]
+Alias: $JP_MedicationCodeHOT9_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT9_CS
+```
 
-NamingSystemに対してOIDをIdentifierとJP Core URLとのマッピングを作成する。
-OIDについては念の為OID形式、URL形式の両方を登録する。
+### NamingSystemへのマッピング情報の記載
+
+- NamingSystemに対してOIDをIdentifierとJP Core URLとのマッピングを作成する。
+- OIDについては念の為OID形式、URL形式の両方を登録する。
+- URLとしてのPreferredは、JP CoreのURLに付けることとする。
+- kind=#codesystemにすること点に注意すること。
 
 ```
 [namingsystems.fsh]
