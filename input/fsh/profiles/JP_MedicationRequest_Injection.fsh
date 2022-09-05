@@ -14,8 +14,12 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * . ^definition = "患者への薬の供給と注射や点滴の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。JP_MedicationRequestBaseプロファイルからの派生プロファイルである。"
 * dosageInstruction.extension[periodOfUse] ..0
 * dosageInstruction.extension[usageDuration] ..0
+
 * dosageInstruction.timing ^short = "投与タイミング"
 * dosageInstruction.timing ^definition = "投与タイミングを記録する。"
+* dosageInstruction.timing.code from $JP_MedicationUsageInjection_VS (preferred)
+* dosageInstruction.timing.code ^comment = "BIDなどは「施設特有の時間」として定義される。たとえば、施設がBIDを「つねに朝7時と夕方6時」であると指定することがある。この指定が不適切であれば、BIDというコードは使うべきではない。その代わり、HL7が定義したBIDのコードではなく、その施設特有のコードで明示的に示すべきであり、構造化された表現を使うべきである（この場合、2回のイベントの時刻を指定する必要がある）。  
+【JP Core仕様】頓用指示時にはJAMI処方・注射オーダ標準用法規格の表6 イベント区分、イベント詳細区分(“http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationAsNeededConditionJAMI_CS”)を推奨するが、MERIT-9 処方オーダ 表5 頓用指示(“http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS”) を使用してもよい。"
 
 * category from $JP_MedicationCategoryInjection_VS (preferred)
 
