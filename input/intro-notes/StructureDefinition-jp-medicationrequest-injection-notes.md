@@ -81,8 +81,7 @@ JP Core MedicationRequestプロファイルで追加された以下のExtension�
 また、HL7 Internationalで定義されている以下のExtensionを利用する。
 
 <table class="extension_description">
-  <tr>
-    <th width=100px>拡張</th>
+     <th width=100px>拡張</th>
     <th width=200px>説明</th>
     <th>URL</th>
     <th>値の型</th>
