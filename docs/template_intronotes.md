@@ -23,7 +23,6 @@
 
 sushiでコンパイルすると、fsh-generated/resources配下に変換されたリソース定義ファイルが出力されます。その中より対象となるリソースファイル名称を見つけ出し、ファイル名を特定します。
 
-
 ```
 # JP Patientの例
 
@@ -91,6 +90,27 @@ Practitionerリソースは、次の要素をサポートしなければなら�
 <!--拡張を行った場合、ここに説明を記載します-->
 
 <!--★★コメント ： JP Core Practitionerプロファイルで定義された拡張はないため例示します。拡張定義の詳細は、別ドキュメントに記述される想定です。★★-->
+
+<table  class="extension_description">
+  <tr>
+    <th width=100px>拡張</th>
+    <th width=200px>説明</th>
+    <th>URL</th>
+    <th>値の型</th>
+  </tr>
+  <tr>
+    <td>服用開始日</td>
+    <td>服用開始日を格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse</td>
+    <td>Period</td>
+  </tr>
+  <tr>
+    <td>実服用日数</td>
+    <td>実服用日数を格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration</td>
+    <td>Duration</td>
+  </tr>
+</table>
 
 JP Practitioner プロファイルで使用される拡張は次の通りである。
 

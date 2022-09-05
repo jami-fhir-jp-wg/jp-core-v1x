@@ -18,12 +18,32 @@ JP Core MedicationRequest プロファイルで使用される拡張は次の通
 
 #### JP Core MedicationRequest独自で追加されたExtension
 
-|拡張|説明|URL|値の型|
-|------------|-------------|----------|-----|
-|服用開始日|服用開始日を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse|Period|
-|実服用日数|実服用日数を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration|Duration|
-|調剤指示|薬剤単位の調剤指示を表現するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense|string or CodeableConcept|
-|頓用回数|頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount|integer|
+<table class="extension_description">
+  <tr>|服用開始日|服用開始日を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse|Period|
+    <th width=100px>拡張</th>
+    <th width=200px>説明</th>
+    <th>URL</th>
+    <th>値の型</th>
+  </tr>
+  <tr>
+    <td>実服用日数</td>
+    <td>実服用日数を格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration</td>
+    <td>Duration</td>
+  </tr>
+  <tr>
+    <td>調剤指示</td>
+    <td>薬剤単位の調剤指示を表現するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense</td>
+    <td>CodeableConcept/string</td>
+  </tr>
+  <tr>
+    <td>頓用回数</td>
+    <td>頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount</td>
+    <td>integer</td>
+  </tr>
+</table>
 
 #### 既存のExtensionの利用
 

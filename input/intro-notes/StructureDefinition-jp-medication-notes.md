@@ -15,10 +15,26 @@ Medication リソースで使用される拡張は次の通りである。
 
 #### JP Medication 独自で追加されたExtension
 
-|拡張|説明|URL|値の型|
-|------------|-------------|----------|-----|
-|RP内薬剤番号|RP内の薬剤の連番を格納する拡張|http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication_Ingredient_DrugNo|integer|
-|力価区分|投与量が製剤単位か成分単位かを格納する拡張|http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication_atIngredientStrength_StrengthType|CodeableConcept|
+<table class="extension_description">
+  <tr>
+    <th width=100px>拡張</th>
+    <th width=200px>説明</th>
+    <th>URL</th>
+    <th>値の型</th>
+  </tr>
+  <tr>
+    <td>RP内薬剤番号</td>
+    <td>RP内の薬剤の連番を格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication_Ingredient_DrugNo</td>
+    <td>integer</td>
+  </tr>
+  <tr>
+    <td>力価区分</td>
+    <td>投与量が製剤単位か成分単位かを格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication_atIngredientStrength_StrengthType</td>
+    <td>CodeableConcept</td>
+  </tr>
+</table>
 
 #### 既存のExtensionの利用
 

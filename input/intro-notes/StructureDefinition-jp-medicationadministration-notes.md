@@ -15,12 +15,32 @@ JP Core MedicationAdministration プロファイルで使用される拡張は�
 
 #### JP MedicationAdministration独自で追加されたExtension
 
-|拡張|説明|URL|値の型|
-|------------|-------------|----------|-----|
-|依頼科|依頼科を格納するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment|CodeableConcept
-|依頼医|依頼医を格納するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester|Reference(Practitioner)
-|依頼日時|依頼日時を格納するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn|DateTime
-|実施場所|実施場所を格納するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location|Reference(Location)
+<table class="extension_description">
+  <tr>
+    <th width=100px>拡張</th>
+    <th width=200px>説明</th>
+    <th>URL</th>
+    <th>値の型</th>
+  </tr>
+  <tr>
+    <td>依頼医</td>
+    <td>依頼医を格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester</td>
+    <td>Reference(Practitioner)</td>
+  </tr>
+  <tr>
+    <td>依頼日時</td>
+    <td>依頼日時を格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn</td>
+    <td>DateTime</td>
+  </tr>
+  <tr>
+    <td>実施場所</td>
+    <td>実施場所を格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location</td>
+    <td>Reference(Location)</td>
+  </tr>
+</table>
 
 #### 既存のExtensionの利用
 
@@ -196,9 +216,9 @@ HTTP/1.1 200 OK
       "resource": {
         "resourceType": "MedicationAdministration",
 
-　　　　　・・・
+          ・・・
 
-　　　 },
+       },
     }
   ]
 }  
@@ -219,7 +239,7 @@ MedicationAdministrationは薬剤をCodeableConceptとして1つまでしか持�
 
 基本的にはMedicationRequestに対応したMedicationAdministrationインスタンスを生成する。
 ただし、内服薬剤処方のMedicationRequestは複数回、複数日の服薬タイミングをまとめて1つのインスタンスで記述するが、MedicationAdministrationは1回の服薬単位の粒度でインスタンスを生成する必要がある。
-例えば、MedicationRequestの用法、投与日数が「１日３回 朝昼夕食後　１４日分」の場合、3 x 14 = 42 (x 薬剤数) の処方実施情報インスタンスが生成される。
+例えば、MedicationRequestの用法、投与日数が「１日３回 朝昼夕食後  １４日分」の場合、3 x 14 = 42 (x 薬剤数) の処方実施情報インスタンスが生成される。
 
 ### 投与実施の記述方法
 

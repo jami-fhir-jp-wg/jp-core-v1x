@@ -23,13 +23,44 @@ JP Core MedicationDispense Injectionプロファイルで使用される拡張�
 
 JP Core MedicationRequest InjectionやJP Core MedicationDispense で追加された以下のExtensionを利用する。
 
-|拡張|説明|URL|値の型|
-|------------|-------------|----------|-----|
-|指示ライン|指示ラインを格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line|CodeableConcept|
-|投与装置|投与装置を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device|Reference (Device)|
-|RP内薬剤番号|RP内の薬剤の連番を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo|integer|
-|力価区分|投与量が製剤単位か成分単位かを格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Strength_StrengthType|CodeableConcept|
-|調剤結果|薬剤単位の調剤結果|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation|CodeableConcept|
+<table class="extension_description">
+  <tr>
+    <th width=100px>拡張</th>
+    <th width=200px>説明</th>
+    <th>URL</th>
+    <th>値の型</th>
+  </tr>
+  <tr>
+    <td>指示ライン</td>
+    <td>指示ラインを格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line</td>
+    <td>CodeableConcept</td>
+  </tr>
+  <tr>
+    <td>投与装置</td>
+    <td>投与装置を格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device</td>
+    <td>Reference (Device)</td>
+  </tr>
+  <tr>
+    <td>RP内薬剤番号</td>
+    <td>RP内の薬剤の連番を格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo</td>
+    <td>integer</td>
+  </tr>
+  <tr>
+    <td>力価区分</td>
+    <td>投与量が製剤単位か成分単位かを格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Strength_StrengthType</td>
+    <td>CodeableConcept</td>
+  </tr>
+  <tr>
+    <td>調剤結果</td>
+    <td>薬剤単位の調剤結果</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation</td>
+    <td>CodeableConcept</td>
+  </tr>
+</table>
 
 
 ### 用語定義

@@ -20,28 +20,80 @@ JP Core MedicationRequest Injectionプロファイルで使用される拡張は
 
 #### JP Core MedicationRequest Injection 独自で追加されたExtension
 
-|拡張|説明|URL|値の型|
-|------------|-------------|----------|-----|
-|指示ライン|指示ラインを格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line|CodeableConcept|
-|投与装置|投与装置を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device|Reference (Device)|
-|RP内薬剤番号|RP内の薬剤の連番を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo|integer|
-|力価区分|投与量が製剤単位か成分単位かを格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Strength_StrengthType|CodeableConcept|
+<table class="extension_description">
+  <tr>
+    <th width=100px>拡張</th>
+    <th width=200px>説明</th>
+    <th>URL</th>
+    <th>値の型</th>
+  </tr>
+  <tr>
+    <td>指示ライン</td>
+    <td>指示ラインを格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line</td>
+    <td>CodeableConcept</td>
+  </tr>
+  <tr>
+    <td>投与装置</td>
+    <td>投与装置を格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device</td>
+    <td>Reference (Device)</td>
+  </tr>
+</table>
+  <tr>
+    <td>RP内薬剤番号</td>
+    <td>RP内の薬剤の連番を格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo</td>
+    <td>integer</td>
+  </tr>
+  <tr>
+    <td>力価区分</td>
+    <td>投与量が製剤単位か成分単位かを格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Strength_StrengthType</td>
+    <td>CodeableConcept</td>
+  </tr>
 
 #### 既存のExtensionの利用
 
 JP Core MedicationRequestプロファイルで追加された以下のExtensionを利用する。
 
-|拡張|説明|URL|値の型|
-|------------|-------------|----------|-----|
-|調剤指示|薬剤単位の調剤指示を表現するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense|string or CodeableConcept|
-|頓用回数|頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount|integer|
+<table class="extension_description">
+  <tr>
+    <th width=100px>拡張</th>
+    <th width=200px>説明</th>
+    <th>URL</th>
+    <th>値の型</th>
+  </tr>
+  <tr>
+    <td>調剤指示</td>
+    <td>薬剤単位の調剤指示を表現するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense</td>
+    <td>CodeableConcept/string</td>
+  </tr>
+  <tr>
+    <td>頓用回数</td>
+    <td>頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount</td>
+    <td>integer</td>
+  </tr>
+</table>
 
 また、HL7 Internationalで定義されている以下のExtensionを利用する。
 
-|拡張|説明|URL|値の型|
-|------------|-------------|----------|-----|
-|BodyStructure|薬剤の投与部位を表現するのに使用する|http://hl7.org/fhir/StructureDefinition/bodySite|Reference (BodyStructure)|
-
+<table class="extension_description">
+  <tr>
+    <th width=100px>拡張</th>
+    <th width=200px>説明</th>
+    <th>URL</th>
+    <th>値の型</th>
+  </tr>
+  <tr>
+    <td>BodyStructure</td>
+    <td>薬剤の投与部位を表現するのに使用する</td>
+    <td>http://hl7.org/fhir/StructureDefinition/bodySite</td>
+    <td>Reference (BodyStructure)</td>
+  </tr>
+</table>
 
 ### 用語定義
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS注射データ交換規約やSS-MIX2で使われている用語集を採用した。
