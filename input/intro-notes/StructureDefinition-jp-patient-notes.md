@@ -84,38 +84,38 @@ JP Patient リソースで使用される拡張は次の通りである。
 2. birthdate, name 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
 
    ```
-   GET [base]/Patient?birthdate={date}&name={string}
+   GET [base]/Patient?birthdate=eq{date}&name={string}
    ```
 
    例：
 
    ```
-   GET [base]/Patient?birthdate=2000-10-10&name=山田%20太郎
+   GET [base]/Patient?birthdate=eq2000-10-10&name=山田%20太郎
    ```
 
 
 3. birthdate, gender 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。
 
    ```
-   GET [base]/Patient?birthdate={date}&gender={code}
+   GET [base]/Patient?birthdate=eq{date}&gender={code}
    ```
 
    例：
 
    ```
-   GET [base]/Patient?birthdate=2000-10-10&gender=male
+   GET [base]/Patient?birthdate=eq2000-10-10&gender=male
    ```
 
 4. birthdate, name, gender 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
 
    ```
-   GET [base]/Patient?birthdate={date}&name={string}&gender={code}
+   GET [base]/Patient?birthdate=eq{date}&name={string}&gender={code}
    ```
 
    例：
 
    ```
-   GET [base]/Patient?birthdate=2000-10-10&name=山田%20太郎&gender=male
+   GET [base]/Patient?birthdate=eq2000-10-10&name=山田%20太郎&gender=male
    ```
 
 5. name, phone 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
@@ -151,7 +151,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 1. 複合条件として、family,given,birthdate,gender,phone,address-postalcodename の各検索パラメータを複数指定したPatientの検索をサポートすることができる（MAY）。
 
    ```
-   GET [base]/Patient??family={string}&given={string}&birthdate={date}&gender={token}&phone={token}&address-postalcode={string}
+   GET [base]/Patient??family={string}&given={string}&birthdate=eq{date}&gender={token}&phone={token}&address-postalcode={string}
    ```
 
    例：
