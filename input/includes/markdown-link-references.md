@@ -101,6 +101,7 @@
 [JP_JfagyMedicationAllergen_CS]: CodeSystem-jp-jfagy-medication-allergen-cs.html
 [JP_JfagyNonFoodNonMedicationAllergen_CS]: CodeSystem-jp-jfagy-non-food-non-medication-allergen-cs.html
 [JP_MedicalLicenseCertificate_CS]: CodeSystem-jp-medicallicensecertificate-cs.html
+[JP_MedicationAsNeededConditionJAMI_CS]: CodeSystem-jp-medication-as-needed-condition-jami-cs.html
 [JP_MedicationAsNeededConditionMERIT9_CS]: CodeSystem-jp-medication-as-needed-condition-merit9-cs.html
 [JP_MedicationBodySiteJAMIExternal_CS]: CodeSystem-jp-medication-bodysite-jami-external-cs.html
 [JP_MedicationCategoryJHSI0001_CS]: CodeSystem-jp-medication-category-jhsi0001-cs.html
@@ -121,6 +122,7 @@
 [JP_MedicationMethodJAMIBasicUsage_CS]: CodeSystem-jp-medication-method-jami-basic-usage-cs.html
 [JP_MedicationMethodJAMIDetailUsage_CS]: CodeSystem-jp-medication-method-jami-detail-usage-cs.html
 [JP_MedicationMethodJHSI0003_CS]: CodeSystem-jp-medication-method-jhsi0003-cs.html
+[JP_MedicationRouteHL70162_CS]: CodeSystem-jp-medication-route-hl70162-cs.html
 [JP_MedicationSubstitutionNotAllowedReason_CS]: CodeSystem-jp-medication-substitution-not-allowed-reason-cs.html
 [JP_MedicationUnitMERIT9_CS]: CodeSystem-jp-medication-unit-merit9-cs.html
 [JP_MedicationUsageJAMIAdditional_CS]: CodeSystem-jp-medication-usage-jami-additional-cs.html
@@ -166,6 +168,7 @@
 [JP_DiagnosticReportRadiologyCode_VS]: ValueSet-jp-diagnosticreportradiologycode-vs.html
 [JP_MedicalFeeScoreType_VS]: ValueSet-jp-medicalfeescoretype-vs.html
 [JP_MedicalLicenseCertificate_VS]: ValueSet-jp-medicallicensecertificate-vs.html
+[JP_MedicationAsNeededConditionJAMI_VS]: ValueSet-jp-medication-as-needed-condition-jami-vs.html
 [JP_MedicationAsNeededConditionMERIT9_VS]: ValueSet-jp-medication-as-needed-condition-merit9-vs.html
 [JP_MedicationBodySiteJAMIExternal_VS]: ValueSet-jp-medication-bodysite-jami-external-vs.html
 [JP_MedicationCategoryInjection_VS]: ValueSet-jp-medication-category-injection-vs.html
@@ -190,8 +193,10 @@
 [JP_MedicationMethodJAMIBasicUsage_VS]: ValueSet-jp-medication-method-jami-basic-usage-vs.html
 [JP_MedicationMethodJAMIDetailUsage_VS]: ValueSet-jp-medication-method-jami-detail-usage-vs.html
 [JP_MedicationMethodJHSI0003_VS]: ValueSet-jp-medication-method-jhsi0003-vs.html
+[JP_MedicationRouteHL70162_VS]: ValueSet-jp-medication-route-hl70162-vs.html
 [JP_MedicationSubstitutionNotAllowedReason_VS]: ValueSet-jp-medication-substitution-not-allowed-reason-vs.html
 [JP_MedicationUnitMERIT9_VS]: ValueSet-jp-medication-unit-merit9-vs.html
+[JP_MedicationUsageInjection_VS]: ValueSet-jp-medication-usage-injection-vs.html
 [JP_MedicationUsageJAMIAdditional_VS]: ValueSet-jp-medication-usage-jami-additional-vs.html
 [JP_MedicationUsageJAMI_VS]: ValueSet-jp-medication-usage-jami-vs.html
 [JP_MedicationCodeCommon_VS]: ValueSet-jp-medicationcode-common-vs.html
@@ -255,6 +260,8 @@
 [jp-department-ssmix-namingsystem]: NamingSystem-jp-department-ssmix-namingsystem.html
 [jp-medicationbodysitejamiexternal-namingsystem]: NamingSystem-jp-medicationbodysitejamiexternal-namingsystem.html
 [jp-medicationcodecommon-namingsystem]: NamingSystem-jp-medicationcodecommon-namingsystem.html
+[jp-medicationcodehot13-namingsystem]: NamingSystem-jp-medicationcodehot13-namingsystem.html
+[jp-medicationcodehot7-namingsystem]: NamingSystem-jp-medicationcodehot7-namingsystem.html
 [jp-medicationcodehot9-namingsystem]: NamingSystem-jp-medicationcodehot9-namingsystem.html
 [jp-medicationcodeyj-namingsystem]: NamingSystem-jp-medicationcodeyj-namingsystem.html
 [jp-medicationingredientstrengthstrengthtype-namingsystem]: NamingSystem-jp-medicationingredientstrengthstrengthtype-namingsystem.html
