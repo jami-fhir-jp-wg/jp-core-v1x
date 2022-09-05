@@ -49,6 +49,22 @@ Usage: #definition
 * uniqueId[=].preferred = true
 
 
+Instance: jp-medicationcodehot7-namingsystem
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "JP_MedicationCodeHOT7_NamingSystem"
+* status = #active
+* date = "2022-09-01"
+* kind = #codesystem
+* description = "JP Core MedicationCode HOT7 NamingSystem"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "1.2.392.200119.4.403.2"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.200119.4.403.2"
+* uniqueId[=].value = $JP_MedicationCodeHOT7_CS
+* uniqueId[=].preferred = true
+
+
 Instance: jp-medicationcodehot9-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition
@@ -67,6 +83,22 @@ Usage: #definition
 * uniqueId[=].value = "urn:oid:1.2.392.100495.20.2.74"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = $JP_MedicationCodeHOT9_CS
+* uniqueId[=].preferred = true
+
+
+Instance: jp-medicationcodehot13-namingsystem
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "JP_MedicationCodeHOT13_NamingSystem"
+* status = #active
+* date = "2022-09-01"
+* kind = #codesystem
+* description = "JP Core MedicationCode HOT13 NamingSystem"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "1.2.392.200119.4.402.1"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.200119.4.402.1"
+* uniqueId[=].value = $JP_MedicationCodeHOT13_CS
 * uniqueId[=].preferred = true
 
 
