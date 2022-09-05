@@ -29,7 +29,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^slicing.ordered = false
-* category contains radiology 0..1
+* category contains radiology 1..1
 * category[radiology] ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは ”RAD” をデフォルトとして設定。追加の情報については任意で設定可能。"
 * category[radiology] = $diagnostic-service-sectionid-cs#RAD (exactly)
 * code = http://loinc.org#18748-4 "Diagnostic imaging study" (exactly)
