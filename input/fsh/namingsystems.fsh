@@ -238,6 +238,38 @@ Usage: #definition
 * uniqueId[=].preferred = true
 
 
+Instance: jp-medicalfeescoretype-namingsystem
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "JP_MedicalFeeScoreType_NamingSystem"
+* status = #active
+* date = "2022-09-01"
+* kind = #codesystem
+* description = "JP Core MedicalFeeScoreType NamingSystem"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "1.2.392.100495.20.3.22"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.100495.20.3.22"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = $JP_MedicalFeeScoreType_CS
+* uniqueId[=].preferred = true
+
+Instance: jp-prefecturenumber-namingsystem
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "JP_PrefectureNumber_NamingSystem"
+* status = #active
+* date = "2022-09-01"
+* kind = #codesystem
+* description = "JP Core PrefectureNumber NamingSystem"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "1.2.392.100495.20.3.21"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.100495.20.3.21"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = $JP_PrefectureNumber_CS
+* uniqueId[=].preferred = true
+
 // template
 // Instance: xxxxxxxxxxxxxxxxxxxx-namingsystem
 // InstanceOf: NamingSystem
