@@ -2,7 +2,7 @@ Profile: JP_Immunization
 Parent: Immunization
 Id: jp-immunization
 Title: "JP Core Immunization Profile"
-Description: "このProfileはImmunizationリソースに対して日本での予防接種データを送受信するための成約を加えてものである。"
+Description: "このProfileはImmunizationリソースに対して日本での予防接種データを送受信するための制約を加えたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
 * ^status = #draft
 * ^date = "2022-02-18"
@@ -28,6 +28,7 @@ Description: "このProfileはImmunizationリソースに対して日本での�
 * status ^binding.strength = #required
 * status ^binding.description = "予防接種の現在の状態を表すコード"
 * statusReason ^short = "実施しなかった理由"
+* vaccineCode from JP_MedicationCode_Immunization_VS (preferred)
 * vaccineCode ^short = "接種されたワクチン製剤"
 * vaccineCode ^definition = "接種されたあるいは接種予定のワクチン。"
 * vaccineCode ^comment = "全てのターミノロジーがこのパターンに当てはまるわけではない。モデルによってはCodeableConceptではなく，独自構造でCodingを直接指定して文書やコーディング，その解釈や事前条件や事後条件との関連について示される。"
@@ -81,31 +82,31 @@ Extension: JP_Immunization_DueDateOfNextDose
 Id: jp-immunization-duedateofnextdose
 Title: "JP Core Immunization DueDateOfNextDose Extension"
 Description: "次回摂取予定日"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose"
+* ^url = $JP_Immunization_DueDateOfNextDose
 * ^status = #draft
 * ^context.type = #element
 * ^context.expression = "Immunization"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose" (exactly)
+* url = $JP_Immunization_DueDateOfNextDose (exactly)
 * value[x] only date
 
 Extension: JP_Immunization_CertificatedDate
 Id: jp-immunization-certificateddate
 Title: "JP Core Immunization CertificatedDate Extension"
 Description: "検定年月日"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate"
+* ^url = $JP_Immunization_CertificatedDate
 * ^status = #draft
 * ^context.type = #element
 * ^context.expression = "Immunization"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate" (exactly)
+* url = $JP_Immunization_CertificatedDate (exactly)
 * value[x] only date
 
 Extension: JP_Immunization_ManufacturedDate
 Id: jp-immunization-manufactureddate
 Title: "JP Core Immunization ManufacturedDate Extension"
 Description: "製造年月日"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate"
+* ^url = $JP_Immunization_ManufacturedDate
 * ^status = #draft
 * ^context.type = #element
 * ^context.expression = "Immunization"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate" (exactly)
+* url = $JP_Immunization_ManufacturedDate (exactly)
 * value[x] only date

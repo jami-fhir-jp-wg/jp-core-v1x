@@ -25,23 +25,7 @@ DiagnosticReportリソースは、過去の結果（リソース内での過去�
 
 ## 関連するプロファイル
 
-このプロファイルは、以下のリソースに対して定義された各プロファイルから参照される。
-
-- [`DiagnosticReport`][JP_DiagnosticReport_Radiology]
-- [`ImagingStudy`][JP_ImagingStudy_Radiology]
-
-また，このプロファイルから直接参照されるリソースは以下の通りである。
-
-- [`Patient`][JP_Patient]
-- [`Encounter`][JP_Encounter]
-- [`Practitioner`][JP_Practitioner]
-- [`Observation`][JP_Observation_Common]
-- [`Media`](http://www.hl7.org/fhir/R4/media.html)
-- [`ImagingStudy`][JP_ImagingStudy_Radiology]
-- [`ServiceRequest`](http://hl7.org/fhir/servicerequest.html)
-
-
-また，以下のリソースは関連情報として presentedForm にて参照されるレポート内に保持される可能性がある。ただし、レポートシステムの仕様に依存するため、レポートシステムでは各リソースとの相互運用性の確保に配慮することが求められる。
+以下のリソースは関連情報として presentedForm にて参照されるレポート内に保持される可能性がある。ただし、レポートシステムの仕様に依存するため、レポートシステムでは各リソースとの相互運用性の確保に配慮することが求められる。
 
 - [患者 (`Patient`)][JP_Patient]
 - [依頼医，読影医，確定医など (`Practitioner`)][JP_Practitioner]

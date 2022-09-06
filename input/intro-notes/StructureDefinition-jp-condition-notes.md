@@ -76,7 +76,7 @@
 
 2. 検索パラメータpatientとclinicalstatusを指定し、該当するすべてのConditionを検索。
 
-      * OR検索のサポートを含む(例えば clinicalstatus={system|}[code],{system|}[code],...)
+      * OR検索のサポートを含む(例えば clinicalstatus={system\|}[code],{system\|}[code],...)
       
       ```
       GET [base]/Condition?patient={reference}&clinicalstatus={system|}[code]{,{system|}[code],...}
@@ -93,7 +93,7 @@
 
 3. 検索パラメータpatientとverificationstatusを指定し、該当するすべてのConditionを検索。
 
-      * OR検索のサポートを含む(例えば verificationstatus={system|}[code],{system|}[code],...)
+      * OR検索のサポートを含む(例えば verificationstatus={system\|}[code],{system\|}[code],...)
       
       ```
       GET [base]/Condition?patient={reference}&verificationstatus={system|}[code]{,{system|}[code],...}
@@ -110,7 +110,7 @@
 
 4. 検索パラメータpatientとcategoryを指定し、該当するすべてのConditionを検索。
 
-      * OR検索のサポートを含む(例えば category={system|}[code],{system|}[code],...)
+      * OR検索のサポートを含む(例えば category={system\|}[code],{system\|}[code],...)
 
       ```
       GET [base]/Condition?patient={reference}&category={system|}[code]{,{system|}[code],...}

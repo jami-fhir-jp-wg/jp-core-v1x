@@ -11,11 +11,11 @@ JP Core の検索要求するクライアント(Requester)およびサーバ(Res
 Readインタラクションの応答として、Cardinalityが１以上の 要素であるPatient.maritalStatus を含むPatient リソースを受信した場合、
 要求者はその値をエラーなく処理しなければならない。
 
-```
+```json
  {
-    "resourceType" : "Patient",
+    "resourceType": "Patient",
     ...
-    "maritalStatus"　:　{
+    "maritalStatus": {
         "coding": [{
             "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
             "code": "M",
@@ -23,14 +23,14 @@ Readインタラクションの応答として、Cardinalityが１以上の 要�
         }]
     },
     ...
-}, 
+}
 ```
 
 #### 実装ガイドに準拠するクライアントは、欠損データであることを宣言した Cardinalityが1以上のデータ要素を含むリソースインスタンスを処理できなければならない (**SHALL**)。
  **例)**
 Patient.birthDateの値に欠損情報が付与されているリソースを、要求者は処理できなければならない。なお、birthDateはdate型というprimitive typeであり、そのextensionは"_"を先頭につけたプロパティに対して設定される([2.6.2.3 JSON representation of primitive elements](https://www.hl7.org/fhir/R4/json.html#primitive))。
 
-```
+```json
 {
     "resourceType " : "Patient",
     ...
@@ -57,8 +57,10 @@ JP Core 実装ガイドに準拠するサーバは、当該要素の値を保持
 JP Core 実装ガイドに準拠するサーバは、Cardinalityが0を含む要素の値を保持していない場合、そのデータ要素の項目を省略してもよい (**MAY**)。
 
  **例)**
-```
+
 Patient.telecomが欠損している場合…telecom要素は含まなくてよい。
+
+```json
 {
     "resourceType" : "Patient",
     ...
@@ -78,7 +80,7 @@ JP Core実装ガイドのサーバは、Cardinalityが1以上の要素の値を�
  **例)**
 患者の生年月日が不明なため、Patient.birthDateに値を保持していない場合（Patient.birthDateが必須 MustSupport）、Data Absent Reason 拡張を使用して、欠損理由（＝不明）を示す。なお、birthDateはdate型というprimitive typeであり、そのextensionは"_"を先頭につけたプロパティに対して設定される([2.6.2.3 JSON representation of primitive elements](https://www.hl7.org/fhir/R4/json.html#primitive))。
 
-```
+```json
 {
     "resourceType " : "Patient",
     ...
@@ -100,7 +102,7 @@ i. コード化値の代替となる文字情報を持っている場合は、�
  **例)**
  Patient.maritalStatus が必須要素の場合で、Patient.maritalStatus のコード値はわからないが、「既婚」という文字情報は持っている場合、CodeableConcept の text を使用する。
 
-```
+```json
 {
     "resourceType" : "Patient",
     ...
@@ -108,13 +110,14 @@ i. コード化値の代替となる文字情報を持っている場合は、�
         "text" : "既婚"
     },
     ...
-}
+},
+
 ```
 
 ii. コード化値の代替となる文字情報がない場合、バリューセットの中に例外値を表現するコードがあればその値を使用する。
 
  **例)**バリューセットに含まれる例外値を表現するコードを使用（ValueSet marital-statusには、不明な状態を表すコード[UNK]を含んでいるため、UNKを使用する）
-```
+```json
 {
     "resourceType" : "Patient",
     ...
@@ -125,7 +128,7 @@ ii. コード化値の代替となる文字情報がない場合、バリュー�
             "display": "unknown"
         }]
     },
-    …
+    ...
 }
 ```
 
@@ -133,7 +136,7 @@ iii. コード化値の代替となる文字情報がなく、バリューセッ
 
 **例)** Patient.communication.language の値が、患者に確認していないため不明の場合、Data Absent Reason拡張より「not-asked」を使用する。※Patient.communication.language は現状のJP Core Patientプロファイル案では必須ではないため、例示のためのみに使用した。
 
-```
+```json
 {
     "resourceType" : "Patient",
     ...
@@ -157,11 +160,11 @@ iii. コード化値の代替となる文字情報がなく、バリューセッ
 
  **例)** Patient.genderの値が不明の場合、 バリューセットAdministrativeGender に含まれる例外値を表すコード「unknown」を使用する。※Patient.genderは現状のJP Core Patientプロファイル案では必須ではないため、例示のために使用した。
 
-```
+```json
 {
     "resourceType" : "Patient",
     ...
     "gender": "unknown",
-    …
+    ...
 }
 ```

@@ -18,29 +18,96 @@ JP Core MedicationAdministration Injection プロファイルで使用される�
 
 #### JP Core MedicationAdministration Injection独自で追加されたExtension
 
-|拡張|説明|URL|値の型|
-|------------|-------------|----------|-----|
-|依頼科|依頼科を格納するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment|CodeableConcept
-|依頼医|依頼医を格納するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester|Reference[JP_Practitioner]
-|依頼日時|依頼日時を格納するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn|DateTime
-|実施場所|実施場所を格納するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location|Reference[JP_Location]
-|投与経路コメント|投与経路コメントを格納するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Route_RouteComment|CodeableConcept/String
-|投与部位コメント|投与部位コメントを格納するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Site_SiteComment|CodeableConcept/String
-|手技コメント|手技コメントを格納するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Method_MethodComment|CodeableConcept/String
-|ラインコメント|ラインコメントを格納するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_LineComment|CodeableConcept/String
-|投与速度コメント|投与速度コメントを格納するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Rate_RateComment|CodeableConcept/String
-|用法コメント|用法コメントを格納するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_DosageComment|CodeableConcept/String
-|未分類コメント|未分類コメントを格納するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_UncategorizedComment|CodeableConcept/String
+<table class="extension_description">
+  <tr>
+    <th>拡張</th>
+    <th>説明</th>
+    <th>URL</th>
+    <th>値の型</th>
+  </tr>
+  <tr>
+    <td>依頼医</td>
+    <td>依頼医を格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester</td>
+    <td>Reference(Practitioner)</td>
+  </tr>
+  <tr>
+    <td>依頼日時</td>
+    <td>依頼日時を格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn</td>
+    <td>DateTime</td>
+  </tr>
+  <tr>
+    <td>実施場所</td>
+    <td>実施場所を格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location</td>
+    <td>Reference(Location)</td>
+  </tr>
+  <tr>
+    <td>投与経路コメント</td>
+    <td>投与経路コメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Route_RouteComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>投与部位コメント</td>
+    <td>投与部位コメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Site_SiteComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>手技コメント</td>
+    <td>手技コメントを格納するための拡張<</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Method_MethodComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>ラインコメント</td>
+    <td>ラインコメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_LineComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>投与速度コメント</td>
+    <td>投与速度コメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Rate_RateComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>用法コメント</td>
+    <td>用法コメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_DosageComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>未分類コメント</td>
+    <td>未分類コメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_UncategorizedComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+</table>
 
 #### 既存のExtensionの利用
 
 JP_MedicationRequestInjectionで追加された以下のExtensionを利用する。
 
-|拡張|説明|URL|値の型|
-|------------|-------------|----------|-----|
-|指示ライン|指示ラインを格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line|CodeableConcept|
+<table class="extension_description">
+  <tr>
+    <th>拡張</th>
+    <th>説明</th>
+    <th>URL</th>
+    <th>値の型</th>
+  </tr>
+  <tr>
+    <td>指示ライン</td>
+    <td>指示ラインを格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line</td>
+    <td>CodeableConcept</td>
+  </tr>
+</table>
 
 ### 用語定義
+
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS処方データ交換規約やSS-MIX2で使われている用語集を採用した。
 
 HL7 V2系では用語集を識別するコーディングシステム名(以下、「CS名」）は文字列であったが、FHIRではURIを指定する必要があるため、それぞれにURIを割り当てた。以下に使用する用語集のCS名とURI表記を列記する。
@@ -82,7 +149,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 | SHALL            | identifier    | token  | GET [base]/MedicationAdministration?identifier=http://myhospital.com/fhir/medication\|1234567890 |
 | SHOULD            | patient      | reference | GET [base]/MedicationAdministration?patient=123456   |
 | SHOULD           | patient,effective-time | reference,date  | GET [base]/MedicationAdministration?patient=123456&effective-time=eq2013-01-14 |
-| MAY           | effective-time,medication,performer,request | date,reference,reference,reference | GET [base]/MedicationAdministration?medication.ingredient-code=urn:oid:1.2.392.100495.20.2.74\|105271807  |
+| MAY           | effective-time,medication,performer,request | date,reference,reference,reference | GET [base]/MedicationAdministration?medication.ingredient-code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
 
 ##### 必須検索パラメータ
 
@@ -210,9 +277,9 @@ HTTP/1.1 200 OK
       "resource": {
         "resourceType": "MedicationAdministration",
 
-　　　　　・・・
+          ・・・
 
-　　　 },
+       },
     }
   ]
 }  

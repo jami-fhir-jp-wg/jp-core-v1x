@@ -22,6 +22,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * identifier ^short = "この薬剤に関する業務用のID"
 * identifier ^definition = "この薬剤に関する業務用のID"
 * identifier ^comment = "IDとしてシリアルナンバーを使うこともできる。"
+* code from JP_MedicationCode_VS (preferred)
 * code ^short = "この薬剤を特定するコード"
 * code ^definition = "A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.\r\n\r\nこの薬剤を指定するコード。該当するコードがない場合はテキスト表記。\r\n使用法について注記：日本ではHOTコードを利用することが推奨される。一般的な薬剤コードとしてRxNorm、SNOMD CT, IDMPなど標準的な医薬品コードを使うことができる。国や地域に特有のローカルコードも使うことができ、他のコードに変換することもできる。"
 * code ^comment = "使われるコンテキストによるが、ユーザー(処方や調剤などを行った人）によって実際にコードが選択されたのであれば、coding.userSelectedはtrueとすることとなる。Codingのデータ型で説明されているように、「ユーザーインターフェース（たとえば、選択肢から特定の項目をユーザーが選択するような形式）で特定のコードをユーザーが選択したのであれば、\"userSelected\"に記録されてもよい」\r\nユーザーが選択したコードがあれば、その選択がコード変換などで優先される。そのほかのコードは代替のコードシステムか低粒度のコード（たとえば、ベンダー固有の初期値のための一般的なコード）に文字列変換変換するしかない。"
@@ -69,7 +70,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * batch.expirationDate ^short = "このバッチの期限が切れるとき"
 * batch.expirationDate ^definition = "この特定のバッチの薬剤の期限が切れるとき"
 
-* form.coding from $JP_MedicationFormMERIT9_VS (preferred)
+* form from $JP_MedicationFormMERIT9_VS (preferred)
 
 // ==============================
 //   Extension 定義
@@ -78,7 +79,7 @@ Extension: JP_Medication_Ingredient_DrugNo
 Id: jp-medication-ingredient-drugno
 Title: "JP Core Medication Ingredient DrugNo Extension"
 Description: "同一剤グループ内での順番を格納する拡張"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo"
+* ^url = $JP_Medication_Ingredient_DrugNo
 * ^date = "2022-03-16"
 * ^purpose = "同一剤グループ内での順番を格納する拡張"
 * ^context.type = #element
@@ -87,20 +88,20 @@ Description: "同一剤グループ内での順番を格納する拡張"
 * . ^definition = "RP内の薬剤の連番"
 * id ^short = "RP内の薬剤の連番"
 * id ^definition = "RP内の薬剤の連番"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo" (exactly)
+* url = $JP_Medication_Ingredient_DrugNo (exactly)
 * value[x] only integer
 
 Extension: JP_Medication_IngredientStrength_StrengthType
 Id: jp-medication-ingredientstrength-strengthtype
 Title: "JP Core Medication IngredientStrength StrengthType Extension"
 Description: "投与量が製剤単位か成分単位かを格納する拡張"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"
+* ^url = $JP_Medication_IngredientStrength_StrengthType
 * ^date = "2022-03-16"
 * ^purpose = "投与量が製剤単位か成分単位かを格納する拡張"
 * ^context.type = #element
 * ^context.expression = "Medication.ingredient.strength"
 * . ^short = "力価区分"
 * . ^definition = "投与量が製剤単位か成分単位かを格納する"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType" (exactly)
+* url = $JP_Medication_IngredientStrength_StrengthType (exactly)
 * value[x] only CodeableConcept
 * value[x] from JP_MedicationIngredientStrengthStrengthType_VS (example)
