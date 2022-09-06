@@ -6,7 +6,7 @@ Description: "医療関連免許証明に関するコードシステム。（現
 * ^status = #draft
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicalLicenseCertificate_VS
-* ^content = #fragment
+* ^content = #complete
 // TODO: 医療関連資格の追加
 * #narcotics-practitioner "麻薬施用者番号"
     "各都道府県にて管理される麻薬施用に関する免許番号"
