@@ -246,6 +246,15 @@ https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#item-names
 
 ```
 
+### [9] Detailed Descriptionsタグへの誘導
+
+Sushi & IG Publisherに変更した際に、^short, ^definition, ^commentの定義が画面を切替ながら参照する方式に替わった。
+^short の定義だけではなく、^definition, ^commentを参照してもらいたい時には【詳細参照】の語句を入れることととする。
+
+```
+* ^short = 都道府県番号、点数表コード、医療機関コードを組み合わせた施設識別コードを格納。【詳細参照】
+```
+
 ## CodeSystemにてJP Core内定義したURLとは別のシステム識別子（URI,OID等）を持つ場合の対応
 
 ### [1]CodeSystemの定義
