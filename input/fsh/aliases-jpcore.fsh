@@ -81,8 +81,6 @@ Alias: $JP_Organization_InsuranceOrganizationCategory_SP = http://jpfhir.jp/fhir
 Alias: $JP_Organization_InsuranceOrganizationNo_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationNo_SP
 Alias: $JP_Organization_PrefectureNo_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_PrefectureNo_SP
 Alias: $JP_Patient_KanaSort_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP
-
-// CodeSystem
 Alias: $JP_MedicalFeeScoreType_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicalFeeScoreType_CS
 Alias: $JP_ConditionSeverity_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ConditionSeverity_CS
 Alias: $JP_Department_SsMix_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Department_SsMix_CS
