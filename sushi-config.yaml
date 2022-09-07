@@ -126,9 +126,15 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispense_Injection
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispense
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispenseBase
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage_Prescription
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationQuantity
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRange
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequestBase
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationSimpleQuantity
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationTiming
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_BodyMeasurement
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_LabResult

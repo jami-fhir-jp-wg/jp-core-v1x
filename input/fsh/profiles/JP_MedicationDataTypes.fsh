@@ -69,19 +69,17 @@ Description: "このプロファイルはQuantity DataTypeに対して、薬剤�
 
 Profile: JP_MedicationRatio
 Parent: Ratio
-Id: jp-MedicationRatio
+Id: jp-medicationratio
 Title: "JP Core Medication Ratio DataType"
 Description: "このプロファイルはRatio DataTypeに対して、薬剤量に関する定義を行なったものである"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio"
 * ^status = #draft
 * ^date = "2022-03-16"
 * numerator only JP_MedicationQuantity
-* denominator only JP_MedicationQuantity
-
 
 Profile: JP_MedicationRange
 Parent: Range
-Id: jp-MedicationRange
+Id: jp-medicationrange
 Title: "JP Core Medication Range DataType"
 Description: "このプロファイルはRange DataTypeに対して、薬剤量の上限下限に関する定義を行なったものである"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRange"

@@ -71,13 +71,13 @@ Description: "このプロファイルはユーザは直接適用するもので
 * method.coding contains
     unitDigit1 ..1 and
     unitDigit2 ..1
-* method.coding[unitDigit1] from JP_MedicationMethodJAMIBasicUsage_VS
+* method.coding[unitDigit1] from JP_MedicationMethodJAMIBasicUsage_VS (preferred)
 * method.coding[unitDigit1].system = "urn:oid:1.2.392.200250.2.2.20.30" (exactly)
 * method.coding[unitDigit1] ^short = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コード"
 * method.coding[unitDigit1] ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コードを識別するURI。"
 * method.coding[unitDigit1] ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
 * method.coding[unitDigit1] ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
-* method.coding[unitDigit2] from JP_MedicationMethodJAMIDetailUsage_VS
+* method.coding[unitDigit2] from JP_MedicationMethodJAMIDetailUsage_VS (preferred)
 * method.coding[unitDigit2].system = "urn:oid:1.2.392.200250.2.2.20.40" (exactly)
 * method.coding[unitDigit2] ^short = "投与⽅法に対応するJAMI 用法コード表基本用法2桁コード"
 * method.coding[unitDigit2] ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法2桁コードを識別するURI。２桁コードurn:oid:1.2.392.200250.2.2.20.40"
@@ -170,8 +170,6 @@ Description: "投与開始日を格納する拡張"
 * value[x].start 1..
 * value[x].start ^short = "投与期間の開始日"
 * value[x].start ^definition = "明示された投与期間の開始日"
-
-
 
 Extension: JP_MedicationRequest_DosageInstruction_UsageDuration
 Id: jp-medicationrequest-dosageinstruction-usageduration

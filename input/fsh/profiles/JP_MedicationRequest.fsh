@@ -49,6 +49,11 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * dosageInstruction.doseAndRate.rate[x] ^requirements = "患者の体内に導入される、あるいはされた薬剤の速度を指定する。一般的には、たとえば1時間あたり100mlあるいは100ml/hrのように注射の速度を示す。たとえば、500mlを2時間でというように、単位時間あたりの速さを表現することもできる。その他、200マイクログラム/minや200マイクログラム/1分, 1 リットル/8時間のような表現もできる。しばしば、投与速度を投与総量/ 投与総時間で表ような場合に投与時間が明示される（たとえば、500ml/2時間という場合は、投与時間が2時間であることを示している）。しかしながら、投与速度で投与時間が明示されない場合（たとえば、250ml/毎時)は、timing.repeat.durationが注射の総投与時間を示すためには必要となる。"
 * dosageInstruction.doseAndRate.rate[x].numerator ^short = "1日投与量"
 * dosageInstruction.doseAndRate.rate[x].numerator ^definition = "1日投与量"
+* dosageInstruction.doseAndRate.rate[x].denominator.value = 1 (exactly)
+* dosageInstruction.doseAndRate.rate[x].denominator.system = "http://unitsofmeasure.org" (exactly)
+* dosageInstruction.doseAndRate.rate[x].denominator.code = #d (exactly)
+* dosageInstruction.doseAndRate.rate[x].denominator.unit = "日" (exactly)
+
 * dosageInstruction.doseAndRate.rate[x].denominator = 1 http://unitsofmeasure.org#d "日" (exactly)
 
 * dispenseRequest.quantity.code from $JP_MedicationUnitMERIT9_VS (preferred)

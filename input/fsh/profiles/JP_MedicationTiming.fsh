@@ -6,14 +6,17 @@ Parent: Timing
 Id: jp-medicationtiming
 Title: "JP Core Medication Timing DataType"
 Description: "このプロファイルはTiming DataTypeに対して、薬剤に関するタイミング定義を行なったものである"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationTiming"
+* ^status = #draft
+* ^date = "2022-03-16"
 * event ^short = "服用もしくは注射を行なうタイミングを示す時刻"
 * event ^definition = "服用タイミングを具体的な日時で指定する場合に使⽤する"
 * repeat ^short = "イベントが発生する時刻"
 * repeat ^definition = "イベントがスケジュールされたルールについての記述。"
 * repeat ^requirements = "スケジュールされたタイミングの多くは規則的な繰り返しで決定されている。"
-* repeat.id ^short = "エレメント間参照のためのユニークID"
-* repeat.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
 * repeat.bounds[x] only Duration or Period or Range
+* repeat.bounds[x] ^short = "服用・注射開始日から服用・注射終了日までの全日数"
+* repeat.bounds[x] ^definition = "服用・注射開始日から服用・注射終了日までの全日数。実投与日数ではないことに注意する。"
 * repeat.boundsDuration.id ..0
 * repeat.boundsDuration.value 1..
 * repeat.boundsDuration.value ^short = "投薬日数"
@@ -31,8 +34,6 @@ Description: "このプロファイルはTiming DataTypeに対して、薬剤に
 * repeat.boundsDuration.code 1..
 * repeat.boundsDuration.code ^short = "投与日数の単位"
 * repeat.boundsDuration.code ^definition = "単位コードUCUMにおける投与日数の単位。dで固定される。"
-* repeat.bounds[x] ^short = "服用・注射開始日から服用・注射終了日までの全日数"
-* repeat.bounds[x] ^definition = "服用・注射開始日から服用・注射終了日までの全日数。実投与日数ではないことに注意する。"
 * repeat.count ^short = "繰り返し服用もしくは注射回数"
 * repeat.count ^definition = "Timing仕様の全てにおいて、特定の期間に繰り返されるように指定された総回数。もし、countMaxが設定されていれば、このエレメントは許容される最低限度の回数を示す。"
 * repeat.count ^comment = "回数に上限、下限の範囲がある場合は、このcountで示される回数が起きるまでは、エレメントは範囲の中にあると解釈されるべきである。"

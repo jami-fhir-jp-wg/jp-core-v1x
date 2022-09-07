@@ -14,8 +14,6 @@
 [FHIRJPCoreImplementationGuide]: ImplementationGuide-hl7.fhir.jp.core.html
 
 <!-- StructureDefinition: Profile, DataType -->
-[JP_MedicationRange]: StructureDefinition-jp-MedicationRange.html
-[JP_MedicationRatio]: StructureDefinition-jp-MedicationRatio.html
 [JP_AllergyIntolerance]: StructureDefinition-jp-allergyintolerance.html
 [JP_CarePlan]: StructureDefinition-jp-careplan.html
 [JP_Condition]: StructureDefinition-jp-condition.html
@@ -37,6 +35,8 @@
 [JP_MedicationDispenseBase]: StructureDefinition-jp-medicationdispensebase.html
 [JP_MedicationDosage]: StructureDefinition-jp-medicationdosage.html
 [JP_MedicationQuantity]: StructureDefinition-jp-medicationquantity.html
+[JP_MedicationRange]: StructureDefinition-jp-medicationrange.html
+[JP_MedicationRatio]: StructureDefinition-jp-medicationratio.html
 [JP_MedicationRequest_Injection]: StructureDefinition-jp-medicationrequest-injection.html
 [JP_MedicationRequest]: StructureDefinition-jp-medicationrequest.html
 [JP_MedicationRequestBase]: StructureDefinition-jp-medicationrequestbase.html
