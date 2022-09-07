@@ -86,26 +86,25 @@ Description: "このプロファイルはユーザは直接適用するもので
 // doseAndRate
 * doseAndRate ^short = "薬剤の投与量"
 * doseAndRate ^definition = "薬剤が投与される量"
-// 力価
+// doseAndRate.type
 * doseAndRate.type from $JP_MedicationIngredientStrengthStrengthType_VS (preferred)
 * doseAndRate.type ^short = "力価区分"
 * doseAndRate.type ^definition = "力価区分"
 * doseAndRate.type ^comment = "投与速度・量の一般的パターンに全てのターミノロジーが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。"
 * doseAndRate.type ^requirements = "このtypeに値が指定されていなければ、\"ordered\"であることが想定される。"
-// dose
+// doseAndRate.dose[x]
 * doseAndRate.doseRange only JP_MedicationRange
 * doseAndRate.doseQuantity only JP_MedicationSimpleQuantity
-// rate
+// doseAndRate.rate[x]
 * doseAndRate.rate[x] ^short = "薬剤の投与量"
 * doseAndRate.rate[x] ^definition = "薬剤が投与される量"
 * doseAndRate.rateRatio only JP_MedicationRatio
 * doseAndRate.rateRange only JP_MedicationRange
 * doseAndRate.rateQuantity only JP_MedicationSimpleQuantity
-// maxDose
+// doseAndRate.maxDose関連
 * maxDosePerPeriod only JP_MedicationRatio
 * maxDosePerAdministration only JP_MedicationSimpleQuantity
 * maxDosePerLifetime only JP_MedicationSimpleQuantity
-
 
 // ==============================
 //   Extension 定義

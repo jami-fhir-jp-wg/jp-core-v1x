@@ -270,14 +270,14 @@ Usage: #definition
 * uniqueId[=].value = $JP_PrefectureNumber_CS
 * uniqueId[=].preferred = true
 
-Instance: jp-medicationroute-hl70162-namingsystem
+Instance: jp-medicationroute-hl7-0162-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "JP Core MedicationRoute HL70162 NamingSystem"
+* name = "JP_MedicationRoute_HL7_0162_NamingSystem"
 * status = #active
 * date = "2022-09-01"
 * kind = #codesystem
-* description = "JP_MedicationRouteHL70162_CS_NamingSystem"
+* description = "JP MedicationRouteHL7 0162 NamingSystem"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.2.34"
 * uniqueId[+].type = #uri
