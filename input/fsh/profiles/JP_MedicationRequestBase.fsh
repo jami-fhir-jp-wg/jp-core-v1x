@@ -24,9 +24,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
-* identifier[rpNumber].use ..0
-* identifier[rpNumber].type ..0
-* identifier[rpNumber].system 1..
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81" (exactly)
 * identifier[rpNumber].system ^short = "Rp番号(剤グループ番号)についてのsystem値"
 * identifier[rpNumber].system ^definition = "ここで付番されたIDがRp番号であることを明示するためにOIDとして定義された。urn:oid:1.2.392.100495.20.3.81で固定される。"
@@ -34,11 +31,8 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier[rpNumber].value ^short = "Rp番号(剤グループ番号)"
 * identifier[rpNumber].value ^definition = "Rp番号(剤グループ番号)。\"1\"など。"
 * identifier[rpNumber].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
-* identifier[rpNumber].period ..0
-* identifier[rpNumber].assigner ..0
 * identifier[requestIdentifier] ^short = "処方オーダーに対するID"
 * identifier[requestIdentifier] ^definition = "薬剤をオーダーする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。"
-* identifier[requestIdentifier].system 1..
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier" (exactly)
 * status ^definition = "JP Coreでは\"active\"に固定される。\r\nオーダーの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
 * status ^comment = "このエレメントはmodifierとされている。StatusとはこのResourceが現在妥当な状態ではないことも示すからである。"
@@ -53,7 +47,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * category ^short = "薬剤使用区分"
 * category ^definition = "このMedicationRequest Resourceが使用される区分を示す。日本では「院外」「院内」「入院」「外来」などの区分を想定する。\r\n一般的には、外来や入院などどこでこの薬剤が投与、内服されるかを想定した区分である。\r\n処方病棟や処方した診療科をOrganization resourceで表現することが冗長である場合にはこの区分が用いられることもある。\r\n\r\nHL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicationrequest-category がデフォルトで用いられるが、日本での使用の場合持参薬をカバーする必要があり、JAHIS処方データ規約V3.0Cに記載されているMERIT-9処方オーダ表7とJHSP0007表を組み合わせて持ちいることとする。"
 * category ^comment = "薬剤が投与あるいはその他の用途で利用されると想定される場面についての区分である。"
-* category ^binding.strength = #example
 * category ^binding.description = "MedicationRequest Resourceの区分を示すコード化された概念。たとえば、どこで服薬あるいは投与されるか、治療の種別はどうかについて。"
 * priority ^definition = "このMedicationRequestオーダーの優先度。他のオーダーと比較して表現される。"
 * priority ^comment = "FHIRでは文字列の大きさが1MBを超えてはならない(SHALL NOT)。"
@@ -78,20 +71,11 @@ Description: "このプロファイルはユーザは直接適用するもので
 * medicationCodeableConcept.text ^definition = "入力したユーザーが見た/選択した/発したとおりの概念および・またはユーザーが意図した概念を自然言語で表現したもの。"
 * medicationCodeableConcept.text ^comment = "textエレメントはcodingのdisplayNameエレメントと一致することがよくある。"
 * medicationReference only Reference(JP_Medication)
+* subject 1..1
 * subject only Reference(JP_Patient)
 * subject ^short = "処方箋が発行された対象(個人あるいはグループ)"
 * subject ^definition = "JP Coreでは患者を表すPatientリソースへの参照。\r\n一般には薬剤が投与される対象となる人（あるいはグループ)を表現するResourceに対するリンク。"
 * subject ^comment = "処方オーダーの対象は必須項目である。\r\n二次利用のためにどこに実際の対象がいるのかについての情報は提供されない。特定の対象に対して匿名化することも必要である。"
-* subject.reference 1..1
-* subject.reference ^short = "文字列による参照、関係、内部あるいは絶対URL"
-* subject.reference ^definition = "対象となる患者を表すPatient resourceへの参照である。PatientリソースのfullUrl要素に指定されるUUID を指定すること\r\n一般には他のResourceが存在する場所への参照。参照はサービスのベースURLに対する相対的なものや、リソースがある場所を示す絶対的URLであることもある。参照はバージョンを指定していることもあればそうでないこともある。もし参照が、FHIRのRESTfulサーバ以外を対象としていれば、それはバージョンが指定されているべきである。分割された内部参照('#'で始まる)の場合は内部に含まれるResourceへの参照である。"
-* subject.reference ^comment = "絶対URLを使えば安定してクラウドやWeb上にスケーラブルな対応をすることができる。一方で、相対・論理参照を使えば閉鎖されたエコシステム内部に適した柔軟な対応ができる。絶対URLをはFHIRリソースのRESTfulサーバを指定するために必要となるわけではないが、より推奨される方法である。もし、URLが\"/[type]/[id]\"で構成されていれば、FHIRのRESTfulサーバへの参照を想定していると推測することもできる。"
-* subject.type ^short = "参照先の型(Patient)"
-* subject.type ^definition = "参照されるPatientが型として示される。\r\n一般的には参照の対象として予定される型。もし、Reference.typeとReference.referenceがともに指定されていて、Reference.referenceがFHIRのURLであればどちらも一致させなければならない(SHALL)。\n\r\n型はResource Definitionに対するCanonical URLであってその型も参照の対象となる。Referenceはhttp://hl7.org/fhir/StructureDefinition/に対する相対URLである。たとえば、\"Patient\"はhttp://hl7.org/fhir/StructureDefinition/Patientへの参照である。絶対URLは論理モデルにおいて、論理モデル内部での参照として飲み使用可能であり、Resourceに対しては指定できない。"
-* subject.type ^comment = "このelementは参照の対象の型を指定するためのものである。他のElementで指定されていた型であってもなくても指定することができる。場合によっては、対象の型は参照（たとえば、RESTful URL)についての調査により決定されることもあるし、参照の対象から決定されることもある。もし、参照と型のどちらもが指定されていたら、参照は指定された型を決定されるべきである(SHALL)。"
-* subject.identifier ^short = "文字列による参照が不明な場合の論理参照"
-* subject.identifier ^definition = "対象となるresourceへのID。FHIRサーバを経由してこの参照が指定するEntityが指定できないか、実際の位置を示す既知のIDへとResourceを変換できない場合のように、ほかのresourceを直接参照することができない場合に使われる。Reference.identifierがFHIRインスタンスである何かを実際に示している必要はないが、FHIRインスタンスとして表現されると想定される業務概念を示されなくてはらならず(SHALL)、そのインスタンスは参照先のFHIRのResource型である必要がある。"
-* subject.identifier ^comment = "IDが参照として与えられている場合には、参照を処理するシステムはIDをIDが利用される業務コンテキストがわかっているかどうか参照を解決するためにしか利用することができない。このIDはグローバル(たとえば国民ID）であることもあるが、そうでないこともある。そのため、この参照を利用する有効な機構（たとえば、データを連鎖させたり、包含させるなど）、サーバが参照を解決することができるとも期待できない。サーバは到達できなかったり、解決できないあるいは拒否されるような参照でもIDとして受け取ることができる。CapabilityStatement.rest.resource.referencePolicyを参照のこと。\r\n\r\nIDと正確な参照が共に提供されている場合は、正確な参照が優先される。Resourceを処理するアプリケーションも許容されるがIDが正確な参照と一致することを確認することは求められてない。\r\n\r\nアプリケーションは論理参照を正確な参照へとコンバートする際に、実際に示している論理参照を外したり、削除してもよい。\r\n\r\n参照はFHIRのResourceとして表現することができる構造となるように示されているが、アプリケーションが参照の対象について検索することを求めていない限り、実際にFHIR Resourceのインスタンスが存在していなくてもよい。IDを参照しているコンテンツは、どのリソースの型が限定的に許容されるか明示されていなくても論理的な制約を満たさなければならない。たとえば、薬剤処方を示すIDの型がReference(Observation|DIagnosticReport)であることは、正当化されないであろう。Reference.identifierのユースケースの一つは、FHIRの表現が存在しない場合に、(Any)を参照する型として利用するような場合である。"
 * encounter only Reference(JP_Encounter)
 * encounter ^short = "encounter/admission/stay のいずれかとして記録された診察"
 * encounter ^definition = "JP Core profileでの使用は規定されていない。\r\nこの対象となるリソース[x]が作成される間やこの記録が作成される対象のencounterは密接に関連している。"
@@ -167,53 +151,16 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dispenseRequest.initialFill ^short = "初回の調剤詳細"
 * dispenseRequest.initialFill ^definition = "初回の薬剤払い出しでの期間や量への指示"
 * dispenseRequest.initialFill ^comment = "このエレメントを設定するときには量あるいは期間が指定されていなければならない。"
+* dispenseRequest.initialFill.quantity only JP_MedicationSimpleQuantity
 * dispenseRequest.initialFill.quantity ^short = "初回の調剤量"
 * dispenseRequest.initialFill.quantity ^definition = "初回の払い出しとして提供される薬剤の量。"
 * dispenseRequest.initialFill.quantity ^comment = "このエレメントはどのような量を表現するか定義するためにコンテキストにあわせてよく定義される。したがって、どのような単位でも利用することができる。使用されるコンテキストによってcomparatorエレメントで値が定義されることもある。"
 * dispenseRequest.initialFill.duration ^short = "初回の調剤期間"
 * dispenseRequest.initialFill.duration ^definition = "初回に行われる調剤、払い出しで予定される期間"
 * dispenseRequest.initialFill.duration ^comment = "このエレメントはどのような量を表現するか定義するためにコンテキストにあわせてよく定義される。したがって、どのような単位でも利用することができる。使用されるコンテキストによってcomparatorエレメントで値が定義されることもある。"
-* dispenseRequest.initialFill.duration.value ^short = "（精度が暗示された）数値"
-* dispenseRequest.initialFill.duration.value ^definition = "計測された量。精度を含めた値が暗示される。"
-* dispenseRequest.initialFill.duration.value ^comment = "暗示された精度については常に尊重すべきである。貨幣計算では制度に関する独自のルールがある（会計についての標準的な教科書を参照すること）。"
-* dispenseRequest.initialFill.duration.comparator ^short = "< | <= | >= | > - 値の解釈法"
-* dispenseRequest.initialFill.duration.comparator ^definition = "実際の値が計測して示された値よりも大きいのか小さいのかなど、値がどのように解釈され、表現されるのかを示している。たとえば、もし、comparatorエレメントが\"<\"であれば、実際の値は示された値よりも小さい(<)。"
-* dispenseRequest.initialFill.duration.comparator ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
-* dispenseRequest.initialFill.duration.comparator ^requirements = "計測法に制限があって値が<5ug/L や >400mg/L として示されるような場合でも値を扱えるようなフレームワークが必要である。"
-* dispenseRequest.initialFill.duration.unit ^short = "単位表現"
-* dispenseRequest.initialFill.duration.unit ^definition = "人間にも可読な単位表現"
-* dispenseRequest.initialFill.duration.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
-* dispenseRequest.initialFill.duration.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
-* dispenseRequest.initialFill.duration.system ^short = "コード化された単位表現を規定するシステム"
-* dispenseRequest.initialFill.duration.system ^definition = "単位をコード化して表現するシステムについてのID。"
-* dispenseRequest.initialFill.duration.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
-* dispenseRequest.initialFill.duration.system ^requirements = "システムによって定義される単位のコードを把握しておく必要がある。"
-* dispenseRequest.initialFill.duration.code ^short = "単位のコード化された形式"
-* dispenseRequest.initialFill.duration.code ^definition = "単位を表現するシステムで機械処理できる形式での単位。"
-* dispenseRequest.initialFill.duration.code ^comment = "UCUMが推奨されるシステムではあるが、SNOMED CT(慣用単位のために）やISO 4217を通貨のために利用することができる。コンテキストによっては特定なシステムによるコードが付加的に求められることもある。"
-* dispenseRequest.initialFill.duration.code ^requirements = "どのような形式であっても機械処理できる単位形式であることが求められる。UCUMは量についての単位を提供し、SNOMED CTは他に関心のある単位を提供する。"
 * dispenseRequest.dispenseInterval ^short = "再調剤までの最短期間"
 * dispenseRequest.dispenseInterval ^definition = "再調剤、払い出しを行う予定までの最短の期間"
 * dispenseRequest.dispenseInterval ^comment = "このエレメントはどのような量を表現するか定義するためにコンテキストにあわせてよく定義される。したがって、どのような単位でも利用することができる。使用されるコンテキストによってcomparatorエレメントで値が定義されることもある。"
-* dispenseRequest.dispenseInterval.value ^short = "（精度が暗示された）数値"
-* dispenseRequest.dispenseInterval.value ^definition = "計測された量。精度を含めた値が暗示される。"
-* dispenseRequest.dispenseInterval.value ^comment = "暗示された精度については常に尊重すべきである。貨幣計算では制度に関する独自のルールがある（会計についての標準的な教科書を参照すること）。"
-* dispenseRequest.dispenseInterval.comparator ^short = "< | <= | >= | > - 値の解釈法"
-* dispenseRequest.dispenseInterval.comparator ^definition = "実際の値が計測して示された値よりも大きいのか小さいのかなど、値がどのように解釈され、表現されるのかを示している。たとえば、もし、comparatorエレメントが\"<\"であれば、実際の値は示された値よりも小さい(<)。"
-* dispenseRequest.dispenseInterval.comparator ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
-* dispenseRequest.dispenseInterval.comparator ^requirements = "計測法に制限があって値が<5ug/L や >400mg/L として示されるような場合でも値を扱えるようなフレームワークが必要である。"
-* dispenseRequest.dispenseInterval.unit ^short = "単位表現"
-* dispenseRequest.dispenseInterval.unit ^definition = "人間にも可読な単位表現"
-* dispenseRequest.dispenseInterval.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
-* dispenseRequest.dispenseInterval.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
-* dispenseRequest.dispenseInterval.system ^short = "コード化された単位表現を規定するシステム"
-* dispenseRequest.dispenseInterval.system ^definition = "単位をコード化して表現するシステムについてのID。"
-* dispenseRequest.dispenseInterval.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
-* dispenseRequest.dispenseInterval.system ^requirements = "システムによって定義される単位のコードを把握しておく必要がある。"
-* dispenseRequest.dispenseInterval.code ^short = "単位のコード化された形式"
-* dispenseRequest.dispenseInterval.code ^definition = "単位を表現するシステムで機械処理できる形式での単位。"
-* dispenseRequest.dispenseInterval.code ^comment = "UCUMが推奨されるシステムではあるが、SNOMED CT(慣用単位のために）やISO 4217を通貨のために利用することができる。コンテキストによっては特定なシステムによるコードが付加的に求められることもある。"
-* dispenseRequest.dispenseInterval.code ^requirements = "どのような形式であっても機械処理できる単位形式であることが求められる。UCUMは量についての単位を提供し、SNOMED CTは他に関心のある単位を提供する。"
 * dispenseRequest.validityPeriod ^short = "許可された払い出し期間"
 * dispenseRequest.validityPeriod ^definition = "このエレメントは処方の有効期間（処方が失効する日）を示す。"
 * dispenseRequest.validityPeriod.start ^short = "境界を含む開始時刻"
@@ -225,70 +172,31 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dispenseRequest.numberOfRepeatsAllowed ^short = "許可されたリフィル回数"
 * dispenseRequest.numberOfRepeatsAllowed ^definition = "リフィル回数を示す整数である。患者が処方された薬を最初の払い出しから追加で受け取ることができる回数である。使用上の注意：この整数には最初の払い出しが含まれない。オーダーが「30錠に加えて3回リフィル可」であれば、このオーダーで合計で最大4回、120錠が患者に受け渡される。この数字を0とすることで，処方者がリフィルを許可しないということを明示することができる。"
 * dispenseRequest.numberOfRepeatsAllowed ^comment = "許可された払い出し回数は，最大でこの数字に1を足したものである。"
+* dispenseRequest.quantity only JP_MedicationSimpleQuantity
 * dispenseRequest.quantity ^short = "調剤量"
 * dispenseRequest.quantity ^definition = "1回の調剤で払い出される薬剤の量"
 * dispenseRequest.quantity ^comment = "このエレメントはどのような量を表現するか定義するためにコンテキストにあわせてよく定義される。したがって、どのような単位でも利用することができる。使用されるコンテキストによってcomparatorエレメントで値が定義されることもある。"
-* dispenseRequest.quantity.value 1..
-* dispenseRequest.quantity.value ^short = "調剤量"
-* dispenseRequest.quantity.value ^definition = "調剤量。精度を含めた値が暗示される。"
-* dispenseRequest.quantity.value ^comment = "暗示された精度については常に尊重すべきである。貨幣計算では制度に関する独自のルールがある（会計についての標準的な教科書を参照すること）。"
 * dispenseRequest.expectedSupplyDuration ^short = "調剤日数"
 * dispenseRequest.expectedSupplyDuration ^definition = "供給される製品が使用されるか、あるいは払い出しが想定されている時間を指定する期間。"
 * dispenseRequest.expectedSupplyDuration ^comment = "状況によっては、この属性は物理的に供給される量というよりも、想定されている期間に供給される薬剤の量を指定する数量の代わりに使われることもある。たとえば、薬剤が90日間供給される（オーダーされた量に基づいて）など。可能であれば、量も示した方がより正確になる。expectedSupplyDurationは外部要因に影響をうけることのある予測値である。"
-//
-* dispenseRequest.expectedSupplyDuration.value 1..
-* dispenseRequest.expectedSupplyDuration.value ^short = "調剤日数"
-* dispenseRequest.expectedSupplyDuration.value ^definition = "調剤日数"
-* dispenseRequest.expectedSupplyDuration.value ^comment = "暗示された精度については常に尊重すべきである。貨幣計算では制度に関する独自のルールがある（会計についての標準的な教科書を参照すること）。"
-* dispenseRequest.expectedSupplyDuration.comparator ..0
-* dispenseRequest.expectedSupplyDuration.comparator ^short = "< | <= | >= | > - 値の解釈法"
-* dispenseRequest.expectedSupplyDuration.comparator ^definition = "実際の値が計測して示された値よりも大きいのか小さいのかなど、値がどのように解釈され、表現されるのかを示している。たとえば、もし、comparatorエレメントが\"<\"であれば、実際の値は示された値よりも小さい(<)。"
-* dispenseRequest.expectedSupplyDuration.comparator ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
-* dispenseRequest.expectedSupplyDuration.comparator ^requirements = "計測法に制限があって値が<5ug/L や >400mg/L として示されるような場合でも値を扱えるようなフレームワークが必要である。"
-* dispenseRequest.expectedSupplyDuration.unit 1..
-* dispenseRequest.expectedSupplyDuration.code = #d (exactly)
-* dispenseRequest.expectedSupplyDuration.system = "http://unitsofmeasure.org" (exactly)
 * dispenseRequest.expectedSupplyDuration.unit = "日" (exactly)
-* dispenseRequest.expectedSupplyDuration.unit ^short = "調剤日数の単位"
-* dispenseRequest.expectedSupplyDuration.unit ^definition = "調剤日数の単位。「日」固定。"
-* dispenseRequest.expectedSupplyDuration.unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
-* dispenseRequest.expectedSupplyDuration.unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
-* dispenseRequest.expectedSupplyDuration.system 1..
-* dispenseRequest.expectedSupplyDuration.system ^short = "UCUM単位コードを識別するURI"
-* dispenseRequest.expectedSupplyDuration.system ^definition = "UCUM単位コードを識別するURI。固定値。"
-* dispenseRequest.expectedSupplyDuration.system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
-* dispenseRequest.expectedSupplyDuration.system ^requirements = "システムによって定義される単位のコードを把握しておく必要がある。"
-* dispenseRequest.expectedSupplyDuration.code 1..
-* dispenseRequest.expectedSupplyDuration.code ^short = "「日」を表すUCUM単位コード"
-* dispenseRequest.expectedSupplyDuration.code ^definition = "「日」を表すUCUM単位コード。固定値。"
-* dispenseRequest.expectedSupplyDuration.code ^comment = "UCUMが推奨されるシステムではあるが、SNOMED CT(慣用単位のために）やISO 4217を通貨のために利用することができる。コンテキストによっては特定なシステムによるコードが付加的に求められることもある。"
-* dispenseRequest.expectedSupplyDuration.code ^requirements = "どのような形式であっても機械処理できる単位形式であることが求められる。UCUMは量についての単位を提供し、SNOMED CTは他に関心のある単位を提供する。"
+* dispenseRequest.expectedSupplyDuration.system = "http://unitsofmeasure.org" (exactly)
+* dispenseRequest.expectedSupplyDuration.code = #d (exactly)
+* dispenseRequest.performer only Reference(JP_Organization)
 * dispenseRequest.performer ^short = "想定された払い出し薬局"
 * dispenseRequest.performer ^definition = "処方者によって指定される調剤・払い出しを行うと想定されているOrganizationを示す。\r\n\r\nIndicates the intended dispensing Organization specified by the prescriber."
 * dispenseRequest.performer ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * substitution ^short = "後発医薬品への変更可否情報"
 * substitution ^definition = "後発医薬品への変更可否情報。代替薬剤を払い出してよいかどうかを示している。代替薬剤を使用しなければいけない場合もあれば、使用しない場合もある。このブロックでは処方者の意図が示される。もし、何も指定されていなければ代替薬品を用いてもよい。"
-* substitution.id ^short = "内部エレメントを参照するためのユニークID"
-* substitution.id ^definition = "リソース内のエレメントを参照（内部参照）するためのユニークなID。空白を含まなければどのような文字列であってもよい。"
 * substitution.allowed[x] only CodeableConcept
 * substitution.allowed[x] from $JP_MedicationSubstitutionNotAllowedReason_VS (preferred)
 * substitution.allowed[x] ^short = "後発医薬品への変更可否情報。"
 * substitution.allowed[x] ^definition = "後発医薬品への変更可否情報。"
 * substitution.allowed[x] ^comment = "代替品が許可されるかどうかは無視できないので、このエレメントはmodifierとしてラベルされる。"
-* substitution.allowed[x].coding ^short = "後発品変更不可コード"
-* substitution.allowed[x].coding ^definition = "後発品変更不可コード。"
-* substitution.allowed[x].coding.system 1..
-* substitution.allowed[x].coding.system = "urn:oid:1.2.392.100495.20.2.41" (exactly)
-* substitution.allowed[x].coding.system ^short = "後発品変更不可コードを識別するURI"
-* substitution.allowed[x].coding.system ^definition = "後発品変更不可コードを識別するURI。固定値。"
-* substitution.allowed[x].coding.code 1..
-* substitution.allowed[x].coding.code ^short = "後発品変更不可コード"
-* substitution.allowed[x].coding.code ^definition = "後発品変更不可コード。"
-* substitution.allowed[x].coding.display ^short = "後発品変更不可コード表示名"
-* substitution.allowed[x].coding.display ^definition = "後発品変更不可コード表示名。"
 * substitution.reason ^short = "代替品を提供した（あるいは、しなかった）理由"
 * substitution.reason ^definition = "代替品にしなければならなかった、あるいは代替品が認められなかった理由を示す。"
 * substitution.reason ^comment = "代替品の理由を表す一般的パターンに全てのターミノロジーが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。"
+* priorPrescription only Reference(JP_MedicationRequestBase)
 * priorPrescription ^short = "前回のオーダー/処方"
 * priorPrescription ^definition = "関連する先行オーダーや処方を表現するMedicationRequest Resourceへのリンク。"
 * priorPrescription ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"

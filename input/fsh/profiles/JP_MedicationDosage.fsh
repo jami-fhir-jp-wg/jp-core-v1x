@@ -17,11 +17,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * extension[usageDuration] only JP_MedicationRequest_DosageInstruction_UsageDuration
 * extension[usageDuration] ^short = "実投与日数"
 * extension[usageDuration] ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
-* extension[device] only JP_MedicationRequest_DosageInstruction_Device
-* extension[device] ^short = "投与機器の情報"
-* extension[device] ^definition = "投与機器の情報を記述する拡張。"
-* extension[line] only JP_MedicationRequest_DosageInstruction_Line
-* extension[line] ^short = "投与ラインの情報"
 // sequence
 * sequence ^short = "服用指示の順番"
 * sequence ^definition = "どの服用指示を適応するか判断するかについての順序を示したもの"
@@ -45,9 +40,9 @@ Description: "このプロファイルはユーザは直接適用するもので
 // timing
 * timing only JP_MedicationTiming
 // asNeeded
+* asNeeded[x] only boolean
 * asNeeded[x] ^short = "「頓用」指示"
 * asNeeded[x] ^definition = "JP Coreでは頓⽤型の用法を指定する場合に”true”を指定し、そのコードを指定する場合は用法コードとして指定する。\r\nMedication(薬剤)が必要なときに指定された量とスケジュールのみで内服するか（Booleanで選択される）、内服する前提条件(CodeableConcept)を示している。"
-* asNeeded[x] from JP_MedicationAsNeededConditionMERIT9_VS (example)
 // site
 * site from $JP_MedicationBodySiteJAMIExternal_VS (preferred)
 * site ^short = "投与される身体部位"
@@ -115,7 +110,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * maxDosePerAdministration only JP_MedicationSimpleQuantity
 * maxDosePerLifetime only JP_MedicationSimpleQuantity
 
-
 Extension: JP_MedicationRequest_DosageInstruction_Device
 Id: jp-medicationrequest-dosageinstruction-device
 Title: "JP Core MedicationRequest DosageInstruction Device Extension"
@@ -181,9 +175,6 @@ Description: "隔日投与など、服用開始日から終了日までの日数
 * ^context[=].expression = "MedicationRequest.dosageInstruction"
 * ^context[+].type = #element
 * ^context[=].expression = "MedicationDispense.dosageInstruction"
-* id ..0
-* id ^short = "エレメント間参照のためのID"
-* id ^definition = "JP Coreでは使用されない。"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration" (exactly)
 * value[x] only Duration
 * value[x] ^short = "実投与日数"
@@ -191,19 +182,14 @@ Description: "隔日投与など、服用開始日から終了日までの日数
 * value[x].id ..0
 * value[x].id ^short = "エレメント間参照のためのID"
 * value[x].id ^definition = "JP Coreでは使用されない。"
-* value[x].value 1..
 * value[x].value ^short = "実投与日数"
 * value[x].value ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
-* value[x].comparator ..0
-* value[x].unit 1..
-* value[x].code = #d (exactly)
-* value[x].system = "http://unitsofmeasure.org" (exactly)
 * value[x].unit = "日" (exactly)
 * value[x].unit ^short = "実投与日数単位"
 * value[x].unit ^definition = "「日」で固定される"
-* value[x].system 1..
+* value[x].system = "http://unitsofmeasure.org" (exactly)
 * value[x].system ^short = "UCUM"
 * value[x].system ^definition = "単位コード UCUMを識別するURI。固定値。"
-* value[x].code 1..
+* value[x].code = #d (exactly)
 * value[x].code ^short = "単位コードUCUMにおける実投与日数の単位"
 * value[x].code ^definition = "単位コードUCUMにおける実投与日数の単位。dで固定される"

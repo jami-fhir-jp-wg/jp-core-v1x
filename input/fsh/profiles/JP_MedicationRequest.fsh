@@ -31,6 +31,7 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * identifier[orderInRp].assigner ..0
 
 * category from $JP_MedicationCategory_VS (preferred)
+* medication[x] only CodeableConcept
 
 * dosageInstruction.extension[device] ..0
 * dosageInstruction.extension[line] ..0
@@ -53,7 +54,3 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * dosageInstruction.doseAndRate.rate[x].denominator.system = "http://unitsofmeasure.org" (exactly)
 * dosageInstruction.doseAndRate.rate[x].denominator.code = #d (exactly)
 * dosageInstruction.doseAndRate.rate[x].denominator.unit = "日" (exactly)
-
-* dosageInstruction.doseAndRate.rate[x].denominator = 1 http://unitsofmeasure.org#d "日" (exactly)
-
-* dispenseRequest.quantity.code from $JP_MedicationUnitMERIT9_VS (preferred)
