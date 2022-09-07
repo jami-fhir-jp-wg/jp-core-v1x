@@ -10,9 +10,25 @@ Description: "処方用法に関するプロファイル"
 * ^status = #draft
 * extension[device] ..0
 * extension[line] ..0
+// timing
 * timing.code from $JP_MedicationUsageJAMI_VS (preferred)
 * timing.code ^comment = "BIDなどは「施設特有の時間」として定義される。たとえば、施設がBIDを「つねに朝7時と夕方6時」であると指定することがある。この指定が不適切であれば、BIDというコードは使うべきではない。その代わり、HL7が定義したBIDのコードではなく、その施設特有のコードで明示的に示すべきであり、構造化された表現を使うべきである（この場合、2回のイベントの時刻を指定する必要がある）。  
 【JP Core仕様】JAMI標準用法コード(16桁)を使用することが望ましいが、ローカルコードも使用可能。"
+* timing.repeat.boundsDuration.value ^short = "投薬日数"
+* timing.repeat.boundsDuration.value ^definition = "投薬日数"
+* timing.repeat.boundsDuration.comparator ..0
+* timing.repeat.boundsDuration.system = "http://unitsofmeasure.org" (exactly)
+* timing.repeat.boundsDuration.system ^short = "UCUM"
+* timing.repeat.boundsDuration.system ^definition = "単位コード UCUMを識別するURI。固定値。"
+* timing.repeat.boundsDuration.code 1..
+* timing.repeat.boundsDuration.code = #d (exactly)
+* timing.repeat.boundsDuration.code ^short = "投与日数の単位"
+* timing.repeat.boundsDuration.code ^definition = "単位コードUCUMにおける投与日数の単位。dで固定される。"
+* timing.repeat.boundsDuration.unit = "日" (exactly)
+* timing.repeat.boundsDuration.unit ^short = "投薬日数の単位"
+* timing.repeat.boundsDuration.unit ^definition = "投薬日数の単位文字列。日で固定される"
+
+// dosageAndRate
 * doseAndRate.dose[x] only SimpleQuantity
 * doseAndRate.dose[x] ^short = "1回投与量"
 * doseAndRate.dose[x] ^definition = "1回投与量"
