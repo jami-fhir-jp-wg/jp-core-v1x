@@ -11,9 +11,7 @@ Description: "このプロファイルはQuantity DataTypeに対して、薬剤�
 * ^date = "2022-03-16"
 * . ^short = "薬剤に関する数量と単位を定めたデータイプ"
 * . ^definition = "薬剤に関する数量と単位を定めたデータイプ"
-* . ^comment = "薬剤に関する数量と単位を定めている。【JP Core仕様】単位についてはMERIT9医薬品単位略号の利用を推進している。(**SHOULD**)"
-* id ^short = "エレメント間参照のためのユニークID"
-* id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
+* . ^comment = "薬剤に関する数量と単位を定めている。ValueおよびCodeを必須としている。単位についてはMERIT9医薬品単位略号の利用を推進している。(**SHOULD**)"
 * value 1..
 * value ^short = "（精度が暗示された）数値"
 * value ^definition = "計測された量。精度を含めた値が暗示される。"
@@ -46,11 +44,9 @@ Description: "このプロファイルはQuantity DataTypeに対して、薬剤�
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationSimpleQuantity"
 * ^status = #draft
 * ^date = "2022-03-16"
-* . ^short = "薬剤に関する数量と単位を定めたデータイプ"
-* . ^definition = "薬剤に関する数量と単位を定めたデータイプ"
-* . ^comment = "薬剤に関する数量と単位を定めている。【JP Core仕様】単位についてはMERIT9医薬品単位略号の利用を推進している。(**SHOULD**)"
-* id ^short = "エレメント間参照のためのユニークID"
-* id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
+* . ^short = "薬剤に関する数量と単位を定めた簡易データイプ"
+* . ^definition = "薬剤に関する数量と単位を定めた簡易データイプ"
+* . ^comment = "薬剤に関する簡易的な数量と単位を定めている。ValueおよびCodeを必須とし、comparatorは記述不可。単位についてはMERIT9医薬品単位略号の利用を推進している。(**SHOULD**)"
 * value 1..
 * value ^short = "（精度が暗示された）数値"
 * value ^definition = "計測された量。精度を含めた値が暗示される。"
@@ -75,10 +71,13 @@ Profile: JP_MedicationRatio
 Parent: Ratio
 Id: jp-medicationratio
 Title: "JP Core Medication Ratio DataType"
-Description: "このプロファイルはRatio DataTypeに対して、薬剤量に関する定義を行なったものである"
+Description: "このプロファイルはRatio DataTypeに対して、日本の薬剤単位を割り当てた派生型である。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio"
 * ^status = #draft
 * ^date = "2022-03-16"
+* . ^short = "単位時間あたり薬剤の投与量"
+* . ^definition = "単位時間あたり薬剤の投与量"
+* . ^comment = "単位時間あたり薬剤の投与量について薬剤単位をバインディングした型である。"
 * numerator only JP_MedicationQuantity
 
 Profile: JP_MedicationRange
@@ -89,5 +88,8 @@ Description: "このプロファイルはRange DataTypeに対して、薬剤量�
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRange"
 * ^status = #draft
 * ^date = "2022-03-16"
+* . ^short = "薬剤の単位指定された上限下限量"
+* . ^definition = "薬剤の単位指定された上限下限量"
+* . ^comment = "薬剤の上限量、下限量の範囲を持っている。単位指定された数量を割り当てている。"
 * low only JP_MedicationSimpleQuantity
 * high only JP_MedicationSimpleQuantity

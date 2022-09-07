@@ -30,9 +30,12 @@
 [JP_Medication]: StructureDefinition-jp-medication.html
 [JP_MedicationAdministration_Injection]: StructureDefinition-jp-medicationadministration-injection.html
 [JP_MedicationAdministration]: StructureDefinition-jp-medicationadministration.html
+[JP_MedicationAdministrationBase]: StructureDefinition-jp-medicationadministrationBase.html
 [JP_MedicationDispense_Injection]: StructureDefinition-jp-medicationdispense-injection.html
 [JP_MedicationDispense]: StructureDefinition-jp-medicationdispense.html
 [JP_MedicationDispenseBase]: StructureDefinition-jp-medicationdispensebase.html
+[JP_MedicationDosage_Injection]: StructureDefinition-jp-medicationdosage-injection.html
+[JP_MedicationDosage_Prescription]: StructureDefinition-jp-medicationdosage-prescription.html
 [JP_MedicationDosage]: StructureDefinition-jp-medicationdosage.html
 [JP_MedicationQuantity]: StructureDefinition-jp-medicationquantity.html
 [JP_MedicationRange]: StructureDefinition-jp-medicationrange.html
@@ -274,6 +277,7 @@
 [jp-medicationingredientstrengthstrengthtype-namingsystem]: NamingSystem-jp-medicationingredientstrengthstrengthtype-namingsystem.html
 [jp-medicationmethodjamibasicusage-namingsystem]: NamingSystem-jp-medicationmethodjamibasicusage-namingsystem.html
 [jp-medicationmethodjamidetailusage-namingsystem]: NamingSystem-jp-medicationmethodjamidetailusage-namingsystem.html
+[jp-medicationroute-hl70162-namingsystem]: NamingSystem-jp-medicationroute-hl70162-namingsystem.html
 [jp-medicationsubstitutionnotallowedreason-namingsystem]: NamingSystem-jp-medicationsubstitutionnotallowedreason-namingsystem.html
 [jp-medicationunitmerit9-namingsystem]: NamingSystem-jp-medicationunitmerit9-namingsystem.html
 [jp-medicationusagejami-namingsystem]: NamingSystem-jp-medicationusagejami-namingsystem.html
