@@ -13,10 +13,6 @@ Description: "このプロファイルはユーザは直接適用するもので
     JP_MedicationRequest_DosageInstruction_UsageDuration named usageDuration ..1 and
     JP_MedicationRequest_DosageInstruction_Line named line ..* and
     JP_MedicationRequest_DosageInstruction_Device named device ..*
-* extension[periodOfUse] only JP_MedicationRequest_DosageInstruction_PeriodOfUse
-* extension[usageDuration] only JP_MedicationRequest_DosageInstruction_UsageDuration
-* extension[usageDuration] ^short = "実投与日数"
-* extension[usageDuration] ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
 // sequence
 * sequence ^short = "服用指示の順番"
 * sequence ^definition = "どの服用指示を適応するか判断するかについての順序を示したもの"
