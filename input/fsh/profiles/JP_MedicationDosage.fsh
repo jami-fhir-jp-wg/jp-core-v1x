@@ -113,7 +113,7 @@ Extension: JP_MedicationRequest_DosageInstruction_Device
 Id: jp-medicationrequest-dosageinstruction-device
 Title: "JP Core MedicationRequest DosageInstruction Device Extension"
 Description: "投与装置を格納する拡張"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device"
+* ^url = $JP_MedicationRequest_DosageInstruction_Device
 * ^date = "2022-03-16"
 * ^context[0].type = #element
 * ^context[=].expression = "MedicationRequest.dosageInstruction"
@@ -121,14 +121,14 @@ Description: "投与装置を格納する拡張"
 * ^context[=].expression = "MedicationDispense.dosageInstruction"
 * . ^short = "投与装置"
 * . ^definition = "投与装置を格納する拡張"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device" (exactly)
+* url = $JP_MedicationRequest_DosageInstruction_Device (exactly)
 * value[x] only Reference(Device)
 
 Extension: JP_MedicationRequest_DosageInstruction_Line
 Id: jp-medicationrequest-dosageinstruction-line
 Title: "JP Core MedicationRequest DosageInstruction Line Extension"
 Description: "指示ラインを格納するための拡張"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line"
+* ^url = $JP_MedicationRequest_DosageInstruction_Line
 * ^date = "2022-03-16"
 * ^context[0].type = #element
 * ^context[=].expression = "MedicationRequest.dosageInstruction"
@@ -138,7 +138,7 @@ Description: "指示ラインを格納するための拡張"
 * ^context[=].expression = "MedicationAdministration.dosage"
 * . ^short = "指示ライン"
 * . ^definition = "指示ラインを格納する拡張"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line" (exactly)
+* url = $JP_MedicationRequest_DosageInstruction_Line (exactly)
 * value[x] only CodeableConcept
 * valueCodeableConcept.coding from $JP_MedicationExampleLine_VS (example)
 
@@ -146,7 +146,7 @@ Extension: JP_MedicationRequest_DosageInstruction_PeriodOfUse
 Id: jp-medicationrequest-dosageinstruction-periodofuse
 Title: "JP Core MedicationRequest DosageInstruction PeriodOfUse Extension"
 Description: "投与開始日を格納する拡張"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse"
+* ^url = $JP_MedicationRequest_DosageInstruction_PeriodOfUse
 * ^date = "2022-03-16"
 * ^purpose = "処方日とは別に明示的に投与・内服開始日を指定するため。"
 * ^context[0].type = #element
@@ -155,7 +155,7 @@ Description: "投与開始日を格納する拡張"
 * ^context[=].expression = "MedicationDispense.dosageInstruction"
 * . ^short = "投与期間の開始日を明示するための拡張"
 * . ^definition = "MedicationRequestの投与期間の開始日を明示するための拡張"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse" (exactly)
+* url = $JP_MedicationRequest_DosageInstruction_PeriodOfUse (exactly)
 * value[x] only Period
 * value[x] ^short = "投与期間を表す"
 * value[x] ^definition = "MedicationRequestに投与期間の開始日を明示するための拡張"
@@ -167,7 +167,7 @@ Extension: JP_MedicationRequest_DosageInstruction_UsageDuration
 Id: jp-medicationrequest-dosageinstruction-usageduration
 Title: "JP Core MedicationRequest DosageInstruction UsageDuration Extension"
 Description: "隔日投与など、服用開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使用する拡張"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
+* ^url = $JP_MedicationRequest_DosageInstruction_UsageDuration
 * ^date = "2022-03-16"
 * ^context[0].type = #element
 * ^context[=].expression = "MedicationRequest.dosageInstruction"
@@ -175,7 +175,7 @@ Description: "隔日投与など、服用開始日から終了日までの日数
 * ^context[=].expression = "MedicationDispense.dosageInstruction"
 * . ^short = "実投与日数"
 * . ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration" (exactly)
+* url = $JP_MedicationRequest_DosageInstruction_UsageDuration (exactly)
 * value[x] only Duration
 * value[x] ^short = "実投与日数"
 * value[x] ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
