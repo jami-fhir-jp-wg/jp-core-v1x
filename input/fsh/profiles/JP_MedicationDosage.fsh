@@ -106,6 +106,10 @@ Description: "このプロファイルはユーザは直接適用するもので
 * maxDosePerAdministration only JP_MedicationSimpleQuantity
 * maxDosePerLifetime only JP_MedicationSimpleQuantity
 
+
+// ==============================
+//   Extension 定義
+// ==============================
 Extension: JP_MedicationRequest_DosageInstruction_Device
 Id: jp-medicationrequest-dosageinstruction-device
 Title: "JP Core MedicationRequest DosageInstruction Device Extension"
@@ -176,7 +180,6 @@ Description: "隔日投与など、服用開始日から終了日までの日数
 * value[x] only Duration
 * value[x] ^short = "実投与日数"
 * value[x] ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
-* value[x].id ..0
 * value[x].id ^short = "エレメント間参照のためのID"
 * value[x].id ^definition = "JP Coreでは使用されない。"
 * value[x].value ^short = "実投与日数"
