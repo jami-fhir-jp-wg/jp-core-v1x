@@ -29,6 +29,7 @@ Code System URI 'urn:oid:1.2.392.100495.20.1.73' is unknown so the code cannot b
 Code System URI 'urn:oid:1.2.392.100495.20.1.81' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.100495.20.2.101' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.100495.20.2.22' is unknown so the code cannot be validated
+Code System URI 'urn:oid:1.2.392.100495.20.2.34' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.100495.20.2.41' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.100495.20.2.51' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.100495.20.2.74' is unknown so the code cannot be validated
