@@ -85,15 +85,15 @@ Extension: JP_Organization_InsuranceOrganizationCategory
 Id: jp-organization-insuranceorganizationcategory
 Title: "JP Core Organization InsuranceOrganizationCategory Extension"
 Description: "点数表コード１桁（医科１、歯科３）表現するためのExtension。 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory"
+* ^url = $JP_Organization_InsuranceOrganizationCategory
 * ^date = "2022-03-16"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * . ^short = "点数表コード１桁（医科1、歯科３）"
 * . ^comment = "点数表コード１桁（医科1、歯科３）。Identifier型の拡張\r\n「InsuranceOrganizationCategory」を使用する。systemには点数表番号\r\nを表すOID「1.2.392.100495.20.3.22」を指定する。"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory" (exactly)
+* url = $JP_Organization_InsuranceOrganizationCategory (exactly)
 * value[x] only Coding
-* valueCoding from JP_MedicalFeeScoreType_VS (required)
+* valueCoding from JP_MedicalFeeScoreType_VS (preferred)
 * valueCoding.system = "urn:oid:1.2.392.100495.20.3.22" (exactly)
 * valueCoding.system ^definition = "点数表番号の名前空間を識別するURIを指定。固定値。"
 * valueCoding.code ^definition = "点数表コード１桁「1：医科」、「3：歯科」、「4：調剤」、「5：老人保健施設」、「6：訪問看護ステーション」」、「0：助産所」。"
@@ -102,13 +102,13 @@ Extension: JP_Organization_InsuranceOrganizationNo
 Id: jp-organization-insuranceorganizationno
 Title: "JP Core Organization InsuranceOrganizationNo Extension"
 Description: "保険医療機関番号７桁を表現するためのExtension。 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
+* ^url = $JP_Organization_InsuranceOrganizationNo
 * ^date = "2022-03-16"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * . ^short = "保険医療機関番号７桁"
 * . ^comment = "保険医療機関番号７桁。Identifier型の拡張\r\n「InsuranceOrganizationNo」を使用する。systemには医療機関コードを\r\n表すOID「1.2.392.100495.20.3.23」を指定する。\r\n\r\n電子処方箋 H7FHIR記述仕様書案の定義をベースにしているが、URLを以下に変更している \r\nhttp://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo" (exactly)
+* url = $JP_Organization_InsuranceOrganizationNo (exactly)
 * value[x] only Identifier
 * value[x].id ..0
 * value[x].use ..0
