@@ -9,4 +9,4 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
 * ^status = #draft
 * ^date = "2022-03-16"
-* medication[x] only CodeableConcept
+* medicationReference ..0

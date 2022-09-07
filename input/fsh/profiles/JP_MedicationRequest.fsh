@@ -25,6 +25,6 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * identifier[orderInRp].value ^definition = "剤グループ内連番。"
 * identifier[orderInRp].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
 
-* category from $JP_MedicationCategory_VS (preferred)
-* medication[x] only CodeableConcept
+* category from $JP_MedicationCategory_VS (preferred) 
+* medicationReference ..0
 * dosageInstruction only JP_MedicationDosage_Prescription

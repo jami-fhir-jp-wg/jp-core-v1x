@@ -33,7 +33,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier[rpNumber].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
 * identifier[requestIdentifier] ^short = "処方オーダーに対するID"
 * identifier[requestIdentifier] ^definition = "薬剤をオーダーする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。"
-* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier" (exactly)
+* identifier[requestIdentifier].value 1..
 * status ^definition = "JP Coreでは\"active\"に固定される。\r\nオーダーの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
 * status ^comment = "このエレメントはmodifierとされている。StatusとはこのResourceが現在妥当な状態ではないことも示すからである。"
 * status ^isModifierReason = "このエレメントは modifier である。Statusエレメントが entered-in-error という正当な情報として扱うべきではない状態の値も取り得るからである。"
@@ -56,12 +56,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * doNotPerform ^isModifierReason = "このエレメントは実施すべきオーダーを否定するものであるため、このエレメントはmodifierとされている。（たとえば、この薬剤オーダーが不適切なものであったり初歩宇部着物ではない場合)"
 * reported[x] ^short = "初期記録にはない報告"
 * reported[x] ^definition = "このレコードは元々の一次記録から報告されたものか、二次的に「報告された」資料から取り込まれたものかを示す。報告の情報源についても示される。"
-* medicationCodeableConcept only CodeableConcept
-* medicationCodeableConcept from JP_MedicationCode_VS (preferred)
-* medicationCodeableConcept ^binding.strength = #preferred
-* medicationCodeableConcept ^binding.description = "処方する製剤を表すコード。"
-* medicationCodeableConcept.coding 1..
-* medicationReference only Reference(JP_Medication)
 * subject 1..1
 * subject only Reference(JP_Patient)
 * subject ^short = "処方箋が発行された対象(個人あるいはグループ)"

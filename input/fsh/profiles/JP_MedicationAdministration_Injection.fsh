@@ -23,5 +23,4 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * dosage.rateRatio.extension contains 
     JP_MedicationAdministration_DosageRate_RateComment named rateComment ..*
 * dosage.rateQuantity ^short = "【JP Core仕様】未使用"
-
-* medication[x] only Reference
+* medicationCodeableConcept ..0
