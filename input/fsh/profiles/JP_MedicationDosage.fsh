@@ -6,7 +6,7 @@ Parent: Dosage
 Id: jp-medicationdosage
 Title: "JP Core MedicationDosage Profile"
 Description: "このプロファイルはユーザは直接適用するものではなく、JP_MedicationRequestとJP_MedicationRequestInjectionの共通の親となる抽象プロファイルである。MedicationRequestリソースに対して、内服・外用薬剤処方、注射・点滴などのデータを送受信するため、JP_MedicationRequestとJP_MedicationRequestInjectionの各プロファイルの基礎となる制約と拡張のうち共通部分を定めている。"
-* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage_Prescription"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage"
 * ^status = #draft
 * extension contains
     JP_MedicationRequest_DosageInstruction_PeriodOfUse named periodOfUse ..1 and
@@ -154,7 +154,6 @@ Description: "投与開始日を格納する拡張"
 * ^context[=].expression = "MedicationRequest.dosageInstruction"
 * ^context[+].type = #element
 * ^context[=].expression = "MedicationDispense.dosageInstruction"
-* . ..1
 * . ^short = "投与期間の開始日を明示するための拡張"
 * . ^definition = "MedicationRequestの投与期間の開始日を明示するための拡張"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse" (exactly)
@@ -175,6 +174,8 @@ Description: "隔日投与など、服用開始日から終了日までの日数
 * ^context[=].expression = "MedicationRequest.dosageInstruction"
 * ^context[+].type = #element
 * ^context[=].expression = "MedicationDispense.dosageInstruction"
+* . ^short = "実投与日数"
+* . ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration" (exactly)
 * value[x] only Duration
 * value[x] ^short = "実投与日数"

@@ -63,15 +63,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * medicationCodeableConcept ^binding.strength = #preferred
 * medicationCodeableConcept ^binding.description = "処方する製剤を表すコード。"
 * medicationCodeableConcept.coding 1..
-* medicationCodeableConcept.coding ^short = "医薬品を表すコード"
-* medicationCodeableConcept.coding ^definition = "医薬品を表すコード。JP Coreでは最低1個のコードを記録しなければならない。\r\n利用できるコードは下記の通りである。\r\n医薬品コード（医薬品マスター）\r\n薬価基準収載医薬品コード\r\nYJコード\r\nHOT コード（9 桁）\r\n一般名処方マスター"
-* medicationCodeableConcept.coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。\r\n【JP Core仕様】Medication要素の説明を参照のこと。"
-* medicationCodeableConcept.coding.userSelected ^short = "このコードが直接ユーザーが指定したものであるかどうか"
-* medicationCodeableConcept.coding.userSelected ^definition = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
-* medicationCodeableConcept.coding.userSelected ^comment = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
-* medicationCodeableConcept.text ^short = "この概念のプレーンテキスト表現"
-* medicationCodeableConcept.text ^definition = "入力したユーザーが見た/選択した/発したとおりの概念および・またはユーザーが意図した概念を自然言語で表現したもの。"
-* medicationCodeableConcept.text ^comment = "textエレメントはcodingのdisplayNameエレメントと一致することがよくある。"
 * medicationReference only Reference(JP_Medication)
 * subject 1..1
 * subject only Reference(JP_Patient)

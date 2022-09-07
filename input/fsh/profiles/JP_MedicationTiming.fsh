@@ -17,21 +17,17 @@ Description: "このプロファイルはTiming DataTypeに対して、薬剤に
 * repeat.bounds[x] only Duration or Period or Range
 * repeat.bounds[x] ^short = "服用・注射開始日から服用・注射終了日までの全日数"
 * repeat.bounds[x] ^definition = "服用・注射開始日から服用・注射終了日までの全日数。実投与日数ではないことに注意する。"
-* repeat.boundsDuration.id ..0
-* repeat.boundsDuration.value 1..
+//* repeat.boundsDuration.value 1..
 * repeat.boundsDuration.value ^short = "投薬日数"
 * repeat.boundsDuration.value ^definition = "投薬日数"
 * repeat.boundsDuration.comparator ..0
-* repeat.boundsDuration.unit 1..
 * repeat.boundsDuration.code = #d (exactly)
-* repeat.boundsDuration.system = "http://unitsofmeasure.org" (exactly)
 * repeat.boundsDuration.unit = "日" (exactly)
 * repeat.boundsDuration.unit ^short = "投薬日数の単位"
 * repeat.boundsDuration.unit ^definition = "投薬日数の単位文字列。日で固定される"
-* repeat.boundsDuration.system 1..
+* repeat.boundsDuration.system = "http://unitsofmeasure.org" (exactly)
 * repeat.boundsDuration.system ^short = "UCUM"
 * repeat.boundsDuration.system ^definition = "単位コード UCUMを識別するURI。固定値。"
-* repeat.boundsDuration.code 1..
 * repeat.boundsDuration.code ^short = "投与日数の単位"
 * repeat.boundsDuration.code ^definition = "単位コードUCUMにおける投与日数の単位。dで固定される。"
 * repeat.count ^short = "繰り返し服用もしくは注射回数"
