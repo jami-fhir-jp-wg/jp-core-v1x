@@ -9,7 +9,7 @@ MedicationDispense リソースは、次の要素を持たなければならな�
 - whenHandedOver : 払い出し日時であり、JP Coreでは必須である。
 - quantity : 調剤量は必須であり、quantity.value, quantity.unit, quantity.system, quantity.code が必ず存在しなければならない 
 - dosageInstruction.text : フリーテキストの用法指示であり、JP Coreでは必須である。
-- dosageInstruction.timing : 服⽤タイミングを記録し、JP Coreでは必須である。dosageInstruction.timing.code.coding.code, dosageInstruction.timing.code.coding.system が必ず存在しなければならない。
+- dosageInstruction.timing : 服用タイミングを記録し、JP Coreでは必須である。dosageInstruction.timing.code.coding.code, dosageInstruction.timing.code.coding.system が必ず存在しなければならない。
 
 ### Extensions定義
 JP Core MedicationDispense プロファイルで使用される拡張は次の通りである。
