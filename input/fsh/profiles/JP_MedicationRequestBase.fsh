@@ -133,12 +133,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dispenseRequest.extension contains
     JP_MedicationRequest_DispenseRequest_InstructionForDispense named instructionForDispense ..* and
     JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount named expectedRepeatCount ..1
-* dispenseRequest.extension[instructionForDispense] ^short = "調剤指示"
-* dispenseRequest.extension[instructionForDispense] ^definition = "薬剤単位の調剤指示を格納する"
-* dispenseRequest.extension[instructionForDispense].value[x] ^short = "調剤指示"
-* dispenseRequest.extension[instructionForDispense].value[x] ^definition = "薬剤単位の調剤・払い出し指示"
-* dispenseRequest.extension[expectedRepeatCount] ^short = "頓用回数"
-* dispenseRequest.extension[expectedRepeatCount] ^definition = "頓用回数"
 * dispenseRequest.initialFill ^short = "初回の調剤詳細"
 * dispenseRequest.initialFill ^definition = "初回の薬剤払い出しでの期間や量への指示"
 * dispenseRequest.initialFill ^comment = "このエレメントを設定するときには量あるいは期間が指定されていなければならない。"
@@ -211,8 +205,7 @@ Description: "頓用回数"
 * ^purpose = "頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationRequest.dispenseRequest"
-* . ..1
-* . ^short = "頓用回数を表現する拡張"
+* . ^short = "頓用回数"
 * . ^definition = "頓用回数を表現する拡張"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount" (exactly)
 * value[x] 1..
@@ -228,9 +221,12 @@ Description: "調剤指示。薬剤単位の調剤指示を表現するための
 * ^date = "2022-03-16"
 * ^context.type = #element
 * ^context.expression = "MedicationRequest.dispenseRequest"
-* id ..0
+* . ^short = "調剤指示"
+* . ^definition = "薬剤単位の調剤指示を格納する"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense" (exactly)
 * value[x] only CodeableConcept
+* value[x] ^short = "調剤指示"
+* value[x] ^definition = "薬剤単位の調剤・払い出し指示"
 * valueCodeableConcept.coding from $JP_MedicationInstructionForDispenseJHSP0002_VS (preferred)
 
 
