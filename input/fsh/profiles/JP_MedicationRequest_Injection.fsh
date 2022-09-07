@@ -25,7 +25,7 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 
 * dosageInstruction.site from $JP_MedicationBodySiteJAMIExternal_VS (preferred)
 * dosageInstruction.site ^comment = "もし、BodySite resourceの属性が必要な場合(たとえば、部位の指定や別々に投与経路を設定する場合)は、[bodySite](extension-bodysite.html)の標準拡張を使うこと。要約コードや非常に正確な位置の定義へのreferenceを使用することもできる。  
-【JP Core仕様】JAMI外⽤部位３桁コードを使用することが望ましいが、ローカルコードも使用可能。"
+【JP Core仕様】JAMI外用部位３桁コードを使用することが望ましいが、ローカルコードも使用可能。"
 
 * dosageInstruction.route from $JP_MedicationRouteHL70162_VS (preferred)
 * dosageInstruction.route ^comment = "投与経路の一般的パターンに全てのターミノロジーが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。  

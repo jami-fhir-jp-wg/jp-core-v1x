@@ -227,7 +227,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.timing.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.timing.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
 * dosageInstruction.timing.event ^short = "服用タイミングを示す時刻"
-* dosageInstruction.timing.event ^definition = "服用タイミングを具体的な日時で指定する場合に使⽤する"
+* dosageInstruction.timing.event ^definition = "服用タイミングを具体的な日時で指定する場合に使用する"
 * dosageInstruction.timing.repeat ^short = "イベントが発生する時刻"
 * dosageInstruction.timing.repeat ^definition = "イベントがスケジュールされたルールについての記述。"
 * dosageInstruction.timing.repeat ^requirements = "スケジュールされたタイミングの多くは規則的な繰り返しで決定されている。"
@@ -300,9 +300,9 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dosageInstruction.timing.code ^comment = "BIDなどは「施設特有の時間」として定義される。たとえば、施設がBIDを「つねに朝7時と夕方6時」であると指定することがある。この指定が不適切であれば、BIDというコードは使うべきではない。その代わり、HL7が定義したBIDのコードではなく、その施設特有のコードで明示的に示すべきであり、構造化された表現を使うべきである（この場合、2回のイベントの時刻を指定する必要がある）。"
 * dosageInstruction.asNeeded[x] only boolean
 * dosageInstruction.asNeeded[x] ^short = "「頓用」指示"
-* dosageInstruction.asNeeded[x] ^definition = "JP Coreでは頓⽤型の用法を指定する場合に”true”を指定し、そのコードを指定する場合は用法コードとして指定する。\r\nMedication(薬剤)が必要なときに指定された量とスケジュールのみで内服するか（Booleanで選択される）、内服する前提条件(CodeableConcept)を示している。"
+* dosageInstruction.asNeeded[x] ^definition = "JP Coreでは頓用型の用法を指定する場合に”true”を指定し、そのコードを指定する場合は用法コードとして指定する。\r\nMedication(薬剤)が必要なときに指定された量とスケジュールのみで内服するか（Booleanで選択される）、内服する前提条件(CodeableConcept)を示している。"
 * dosageInstruction.site ^short = "投与される身体部位"
-* dosageInstruction.site ^definition = "投与される身体部位。外⽤薬で部位を指定する場合に使⽤する。"
+* dosageInstruction.site ^definition = "投与される身体部位。外用薬で部位を指定する場合に使用する。"
 * dosageInstruction.site ^comment = "もし、BodySite resourceの属性が必要な場合(たとえば、部位の指定や別々に投与経路を設定する場合)は、[bodySite](extension-bodysite.html)の標準拡張を使うこと。要約コードや非常に正確な位置の定義へのreferenceを使用することもできる。"
 * dosageInstruction.site.id ^short = "エレメント間参照のためのユニークID"
 * dosageInstruction.site.id ^definition = "エレメント間参照のためのユニークID。空白を含まない全ての文字を使ってもよい(MAY)。"
@@ -764,8 +764,8 @@ Description: "頓用回数"
 * ^context.type = #element
 * ^context.expression = "MedicationRequest.dispenseRequest"
 * . ..1
-* . ^short = "頓⽤回数を表現する拡張"
-* . ^definition = "頓⽤回数を表現する拡張"
+* . ^short = "頓用回数を表現する拡張"
+* . ^definition = "頓用回数を表現する拡張"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount" (exactly)
 * value[x] 1..
 * value[x] only integer
@@ -843,7 +843,7 @@ Description: "投与開始日を格納する拡張"
 Extension: JP_MedicationRequest_DosageInstruction_UsageDuration
 Id: jp-medicationrequest-dosageinstruction-usageduration
 Title: "JP Core MedicationRequest DosageInstruction UsageDuration Extension"
-Description: "隔日投与など、服用開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使⽤する拡張"
+Description: "隔日投与など、服用開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使用する拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
 * ^date = "2022-03-16"
 * ^context[0].type = #element
