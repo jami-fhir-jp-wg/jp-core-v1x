@@ -9,8 +9,8 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
 * ^status = #draft
 * ^date = "2022-03-16"
-*  ^short = "患者あるいはグループに対しての処方オーダ"
-*  ^definition = "患者への薬の供給と内服・外用薬剤処方の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。JP_MedicationRequestBaseプロファイルからの派生プロファイルである。"
+* . ^short = "患者あるいはグループに対しての処方オーダ"
+* . ^definition = "患者への薬の供給と内服・外用薬剤処方の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。JP_MedicationRequestBaseプロファイルからの派生プロファイルである。"
 * identifier contains
     orderInRp 1..1
 * identifier[orderInRp] ^short = "同一RP番号（剤グループ）での薬剤の表記順"
