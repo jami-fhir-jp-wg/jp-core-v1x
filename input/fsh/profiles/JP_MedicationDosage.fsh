@@ -38,7 +38,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 // asNeeded
 * asNeeded[x] only boolean
 * asNeeded[x] ^short = "「頓用」指示"
-* asNeeded[x] ^definition = "JP Coreでは頓用型の用法を指定する場合に”true”を指定し、そのコードを指定する場合は用法コードとして指定する。\r\nMedication(薬剤)が必要なときに指定された量とスケジュールのみで内服するか（Booleanで選択される）、内服する前提条件(CodeableConcept)を示している。"
+* asNeeded[x] ^definition = "【JP Core仕様】頓用型の用法を指定する場合に”true”を指定し、そのコードを指定する場合は用法コードとして指定する。\r\nMedication(薬剤)が必要なときに指定された量とスケジュールのみで投薬するか（Booleanで選択される）、投薬する前提条件はTiming.Code(CodeableConcept)を示している。"
 // site
 * site from $JP_MedicationBodySiteJAMIExternal_VS (preferred)
 * site ^short = "投与される身体部位"
