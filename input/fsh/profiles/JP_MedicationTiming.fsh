@@ -10,7 +10,7 @@ Description: "このプロファイルはTiming DataTypeに対して、薬剤に
 * ^status = #draft
 * ^date = "2022-03-16"
 * event ^short = "服用もしくは注射を行なうタイミングを示す時刻"
-* event ^definition = "服用タイミングを具体的な日時で指定する場合に使⽤する"
+* event ^definition = "服用タイミングを具体的な日時で指定する場合に使用する"
 * repeat ^short = "イベントが発生する時刻"
 * repeat ^definition = "イベントがスケジュールされたルールについての記述。"
 * repeat ^requirements = "スケジュールされたタイミングの多くは規則的な繰り返しで決定されている。"

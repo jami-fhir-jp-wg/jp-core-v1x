@@ -42,13 +42,13 @@ Description: "このプロファイルはユーザは直接適用するもので
 // asNeeded
 * asNeeded[x] only boolean
 * asNeeded[x] ^short = "「頓用」指示"
-* asNeeded[x] ^definition = "JP Coreでは頓⽤型の用法を指定する場合に”true”を指定し、そのコードを指定する場合は用法コードとして指定する。\r\nMedication(薬剤)が必要なときに指定された量とスケジュールのみで内服するか（Booleanで選択される）、内服する前提条件(CodeableConcept)を示している。"
+* asNeeded[x] ^definition = "JP Coreでは頓用型の用法を指定する場合に”true”を指定し、そのコードを指定する場合は用法コードとして指定する。\r\nMedication(薬剤)が必要なときに指定された量とスケジュールのみで内服するか（Booleanで選択される）、内服する前提条件(CodeableConcept)を示している。"
 // site
 * site from $JP_MedicationBodySiteJAMIExternal_VS (preferred)
 * site ^short = "投与される身体部位"
-* site ^definition = "投与される身体部位。外⽤薬で部位を指定する場合に使⽤する。"
+* site ^definition = "投与される身体部位。外用薬で部位を指定する場合に使用する。"
 * site ^comment = "もし、BodySite resourceの属性が必要な場合(たとえば、部位の指定や別々に投与経路を設定する場合)は、[bodySite](extension-bodysite.html)の標準拡張を使うこと。要約コードや非常に正確な位置の定義へのreferenceを使用することもできる。  
-【JP Core仕様】JAMI外⽤部位３桁コードを使用することが望ましいが、ローカルコードも使用可能。"
+【JP Core仕様】JAMI外用部位３桁コードを使用することが望ましいが、ローカルコードも使用可能。"
 // route
 * route from $JP_MedicationRouteHL70162_VS (preferred)
 * route ^short = "投与経路"
@@ -168,7 +168,7 @@ Description: "投与開始日を格納する拡張"
 Extension: JP_MedicationRequest_DosageInstruction_UsageDuration
 Id: jp-medicationrequest-dosageinstruction-usageduration
 Title: "JP Core MedicationRequest DosageInstruction UsageDuration Extension"
-Description: "隔日投与など、服用開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使⽤する拡張"
+Description: "隔日投与など、服用開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使用する拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
 * ^date = "2022-03-16"
 * ^context[0].type = #element

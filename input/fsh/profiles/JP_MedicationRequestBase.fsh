@@ -223,8 +223,8 @@ Description: "頓用回数"
 * ^context.type = #element
 * ^context.expression = "MedicationRequest.dispenseRequest"
 * . ..1
-* . ^short = "頓⽤回数を表現する拡張"
-* . ^definition = "頓⽤回数を表現する拡張"
+* . ^short = "頓用回数を表現する拡張"
+* . ^definition = "頓用回数を表現する拡張"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount" (exactly)
 * value[x] 1..
 * value[x] only integer
