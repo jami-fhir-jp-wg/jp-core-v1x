@@ -14,6 +14,8 @@
 [FHIRJPCoreImplementationGuide]: ImplementationGuide-hl7.fhir.jp.core.html
 
 <!-- StructureDefinition: Profile, DataType -->
+[JP_MedicationRange]: StructureDefinition-jp-MedicationRange.html
+[JP_MedicationRatio]: StructureDefinition-jp-MedicationRatio.html
 [JP_AllergyIntolerance]: StructureDefinition-jp-allergyintolerance.html
 [JP_CarePlan]: StructureDefinition-jp-careplan.html
 [JP_Condition]: StructureDefinition-jp-condition.html
@@ -33,9 +35,13 @@
 [JP_MedicationDispense_Injection]: StructureDefinition-jp-medicationdispense-injection.html
 [JP_MedicationDispense]: StructureDefinition-jp-medicationdispense.html
 [JP_MedicationDispenseBase]: StructureDefinition-jp-medicationdispensebase.html
+[JP_MedicationDosage]: StructureDefinition-jp-medicationdosage.html
+[JP_MedicationQuantity]: StructureDefinition-jp-medicationquantity.html
 [JP_MedicationRequest_Injection]: StructureDefinition-jp-medicationrequest-injection.html
 [JP_MedicationRequest]: StructureDefinition-jp-medicationrequest.html
 [JP_MedicationRequestBase]: StructureDefinition-jp-medicationrequestbase.html
+[JP_MedicationSimpleQuantity]: StructureDefinition-jp-medicationsimplequantity.html
+[JP_MedicationTiming]: StructureDefinition-jp-medicationtiming.html
 [JP_Observation_BodyMeasurement]: StructureDefinition-jp-observation-bodymeasurement.html
 [JP_Observation_Common]: StructureDefinition-jp-observation-common.html
 [JP_Observation_LabResult]: StructureDefinition-jp-observation-labresult.html
@@ -258,6 +264,7 @@
 [jp-medicationrequest-injection-example-1]: MedicationRequest-jp-medicationrequest-injection-example-1.html
 [jp-medicationrequest-injection-example-2]: MedicationRequest-jp-medicationrequest-injection-example-2.html
 [jp-department-ssmix-namingsystem]: NamingSystem-jp-department-ssmix-namingsystem.html
+[jp-medicalfeescoretype-namingsystem]: NamingSystem-jp-medicalfeescoretype-namingsystem.html
 [jp-medicationbodysitejamiexternal-namingsystem]: NamingSystem-jp-medicationbodysitejamiexternal-namingsystem.html
 [jp-medicationcodecommon-namingsystem]: NamingSystem-jp-medicationcodecommon-namingsystem.html
 [jp-medicationcodehot13-namingsystem]: NamingSystem-jp-medicationcodehot13-namingsystem.html
@@ -271,6 +278,7 @@
 [jp-medicationunitmerit9-namingsystem]: NamingSystem-jp-medicationunitmerit9-namingsystem.html
 [jp-medicationusagejami-namingsystem]: NamingSystem-jp-medicationusagejami-namingsystem.html
 [jp-medicationusagejamiadditional-namingsystem]: NamingSystem-jp-medicationusagejamiadditional-namingsystem.html
+[jp-prefecturenumber-namingsystem]: NamingSystem-jp-prefecturenumber-namingsystem.html
 [jp-observation-bodyMeasurement-example-1]: Observation-jp-observation-bodyMeasurement-example-1.html
 [jp-observation-labresult-example-1]: Observation-jp-observation-labresult-example-1.html
 [jp-observation-physicalexam-example-1]: Observation-jp-observation-physicalexam-example-1.html

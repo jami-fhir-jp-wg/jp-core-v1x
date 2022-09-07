@@ -65,3 +65,27 @@ Description: "このプロファイルはQuantity DataTypeに対して、薬剤�
 * code ^short = "単位のコード化された形式、【JP Core仕様】MERIT9医薬品単位略号マスタコードを推奨"
 * code ^definition = "単位のコード化された形式、【JP Core仕様】MERIT9医薬品単位略号マスタコードを推奨(**SHOULD**)"
 * code ^comment = "単位のコード化された形式、【JP Core仕様】MERIT9医薬品単位略号マスタコードを推奨(**SHOULD**)されるが、ローカルコード等を利用することも可能とする"
+
+
+Profile: JP_MedicationRatio
+Parent: Ratio
+Id: jp-MedicationRatio
+Title: "JP Core Medication Ratio DataType"
+Description: "このプロファイルはRatio DataTypeに対して、薬剤量に関する定義を行なったものである"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio"
+* ^status = #draft
+* ^date = "2022-03-16"
+* numerator only JP_MedicationQuantity
+* denominator only JP_MedicationQuantity
+
+
+Profile: JP_MedicationRange
+Parent: Range
+Id: jp-MedicationRange
+Title: "JP Core Medication Range DataType"
+Description: "このプロファイルはRange DataTypeに対して、薬剤量の上限下限に関する定義を行なったものである"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRange"
+* ^status = #draft
+* ^date = "2022-03-16"
+* low only JP_MedicationSimpleQuantity
+* high only JP_MedicationSimpleQuantity
