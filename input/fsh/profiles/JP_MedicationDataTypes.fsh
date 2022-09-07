@@ -31,6 +31,7 @@ Description: "このプロファイルはQuantity DataTypeに対して、薬剤�
 * system ^definition = "単位をコード化して表現するシステムについてのID。"
 * system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
 * system ^requirements = "システムによって定義される単位のコードを把握しておく必要がある。"
+* code 1..
 * code from JP_MedicationUnitMERIT9_VS (preferred)
 * code ^short = "単位のコード化された形式、【JP Core仕様】MERIT9医薬品単位略号マスタコードを推奨"
 * code ^definition = "単位のコード化された形式、【JP Core仕様】MERIT9医薬品単位略号マスタコードを推奨(**SHOULD**)"
@@ -63,6 +64,7 @@ Description: "このプロファイルはQuantity DataTypeに対して、薬剤�
 * system ^definition = "単位をコード化して表現するシステムについてのID。"
 * system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
 * system ^requirements = "システムによって定義される単位のコードを把握しておく必要がある。"
+* code 1..
 * code from JP_MedicationUnitMERIT9_VS (preferred)
 * code ^short = "単位のコード化された形式、【JP Core仕様】MERIT9医薬品単位略号マスタコードを推奨"
 * code ^definition = "単位のコード化された形式、【JP Core仕様】MERIT9医薬品単位略号マスタコードを推奨(**SHOULD**)"
