@@ -96,7 +96,7 @@ Description: "点数表コード１桁（医科１、歯科３）表現するた
 * valueCoding from JP_MedicalFeeScoreType_VS (preferred)
 * valueCoding.system = "urn:oid:1.2.392.100495.20.3.22" (exactly)
 * valueCoding.system ^definition = "点数表番号の名前空間を識別するURIを指定。固定値。"
-* valueCoding.code ^definition = "点数表コード１桁「1：医科」、「3：歯科」、「4：調剤」、「5：老人保健施設」、「6：訪問看護ステーション」」、「0：助産所」。"
+* valueCoding.code ^definition = "点数表コード１桁「1：医科」、「3：歯科」、「4：調剤」、「5：老人保健施設」、「6：訪問看護ステーション」」。"
 
 Extension: JP_Organization_InsuranceOrganizationNo
 Id: jp-organization-insuranceorganizationno
