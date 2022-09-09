@@ -15,7 +15,7 @@ Description: "このプロファイルはHumanName DataTypeに対して、患者
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
-* extension contains $iso21090-EN-representation named nameRepresentationUse 1..*
+* extension contains $iso21090-EN-representation named nameRepresentationUse 0..1
 * extension[nameRepresentationUse] ^definition = "Name Representation.\r\n\r\n名前の表現方法"
 * extension[nameRepresentationUse] ^comment = "The transcription of the name - how it is represented (for e.g. Japanese names).\r\n\r\n名前の文字起こし-表現方法（日本の名前など）。"
 * use ^definition = "Identifies the purpose for this name.\r\n\r\nこの名前の使用目的"
