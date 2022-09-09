@@ -5,11 +5,14 @@ Description: "健康保険証"
 Usage: #example
 * status = #active
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol"
-* extension[=].valueString = "1234"
+* extension[=].valueString = "１２－３４"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber"
-* extension[=].valueString = "5678"
+* extension[=].valueString = "５６７８"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber"
-* extension[=].valueString = "01"
+* extension[=].valueString = "００"
+* identifier[0].value = "\"１２－３４\",\"５６７８\",\"００\""
+* subscriberId = "\"１２－３４\",\"５６７８\""
+* dependent = "００"
 * payor = Reference(jp-organization-example-payer)
 * beneficiary = Reference(Patient/jp-patient-example-1)
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#PUBLICPOL
