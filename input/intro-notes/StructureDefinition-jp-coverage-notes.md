@@ -25,17 +25,17 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHOULD            | beneficiary   | 	reference  | GET [base]/Coverage?beneficiary=*** |
-| SHOULD            | class-type    | token | GET [base]/Coverage.class?type=****                            |
-| SHOULD           | class-value | string  | GET [base]/Coverage.class?value=***
-| SHOULD           | dependent | string  | GET [base]/Coverage?dependent=***
-| SHOULD           | identifier | token  | GET [base]/Coverage?identifier=***
-| SHOULD           | patient | reference  | GET [base]/Coverage?beneficiary=Patient/***
-| SHOULD           | payor | reference  | GET [base]/Coverage?payor=***
-| SHOULD           | policy-holder | reference  | GET [base]/Coverage?policy-holder=***
-| SHOULD           | status | token  | GET [base]/Coverage?status=***
-| SHOULD           | subscriber | reference  | GET [base]/Coverage?subscriber=***
-| SHOULD           | type | token  | GET [base]/Coverage?token=***
+| SHALL            | identifier | token  | GET [base]/Coverage?identifier=***
+| SHOULD           | beneficiary   | 	reference  | GET [base]/Coverage?beneficiary=*** |
+| SHOULD           | class-type    | token | GET [base]/Coverage.class?type=*** |
+| SHOULD           | class-value | string  | GET [base]/Coverage.class?value=*** |
+| SHOULD           | dependent | string  | GET [base]/Coverage?dependent=*** |
+| SHOULD           | patient | reference  | GET [base]/Coverage?beneficiary=Patient/*** |
+| SHOULD           | payor | reference  | GET [base]/Coverage?payor=*** |
+| SHOULD           | policy-holder | reference  | GET [base]/Coverage?policy-holder=*** |
+| SHOULD           | status | token  | GET [base]/Coverage?status=*** |
+| SHOULD           | subscriber | reference  | GET [base]/Coverage?subscriber=*** |
+| SHOULD           | type | token  | GET [base]/Coverage?token=*** |
 
 ##### 推奨検索パラメータ
 
