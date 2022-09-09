@@ -15,14 +15,35 @@
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHALL            | specialty    | token  | GET [base]/PractitionerRole?specialty=http://nucc.org/provider-taxonomy\|208D0000X |
-| SHALL            | practitioner    | token  | GET [base]/PractitionerRole?practitioner.identifier=http://hl7.org/fhir/sid/us-npi\|97860456 |
+| SHALL            | identifier    | token  | GET [base]/PractitionerRole?identifier=http://myhospital.com/fhir/PractitionerRoleid\|1234 |
+| SHOULD            | specialty    | token  | GET [base]/PractitionerRole?specialty=http://nucc.org/provider-taxonomy\|208D0000X |
+| SHOULD            | practitioner    | token  | GET [base]/PractitionerRole?practitioner.identifier=http://myhospital.com/fhir/Practitionerid\|97860456 |
 
 ##### 必須検索パラメータ
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. specialty 検索パラメータを使用して、医療者の特定の専門性によるPractitionerRoleの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、職種IDなどの識別子によるPractitionerRoleの検索をサポートしなければならない（SHALL）。
+
+   ```
+   GET [base]/PractitionerRole?identifier={system|}[code]
+   ```
+
+   例：
+
+   ```
+   GET [base]/PractitionerRole?identifier=http://myhospital.com/fhir/PractitionerRoleid|1234
+   ```
+
+   指定された識別子に一致するPractitionerRoleリソースを含むBundleを検索する。
+
+ 
+
+##### 推奨検索パラメータ
+
+次の検索パラメータをサポートすることが望ましい。
+
+1. specialty 検索パラメータを使用して、医療者の特定の専門性によるPractitionerRoleの検索をサポートすることが望ましい（SHOULD）。
 
    ```
    GET [base]/PractitionerRole?specialty={system|}[code]
@@ -38,7 +59,7 @@
 
    
 
-2. practitioner 検索パラメータを使用して、医療者の名前と識別子によるPractitionerRoleの検索をサポートしなければならない（SHALL）。
+2. practitioner 検索パラメータを使用して、医療者の名前と識別子によるPractitionerRoleの検索をサポートすることが望ましい（SHOULD）。
 
    ```
    GET [base]/PractitionerRole?practitioner={Type/}[id]
@@ -47,15 +68,12 @@
    例：
 
    ```
-   1.GET [base]/PractitionerRole?practitioner.identifier=http://hl7.org/fhir/sid/us-npi|97860456&_include=PractitionerRole:practitioner&_include=PractitionerRole?endpoint
+   1.GET [base]/PractitionerRole?practitioner.identifier=http://myhospital.com/fhir/Practitionerid|97860456&_include=PractitionerRole:practitioner&_include=PractitionerRole?endpoint
    2.GET [base]/PractitionerRole?practitioner.name=山田&_include=PractitionerRole:practitioner&_include=PractitionerRole?endpoint
    ```
 
    practitioner.nameまたはpractitioner.identifierの連結パラメータに一致するPractitionerRoleリソースを含むBundleを検索する。PractitionerRole.practitionerとPractitionerRole.endpointの_include検索をサポートすることが望ましい。（SHOULD）
 
-##### 推奨検索パラメータ
-
-推奨検索パラメータはない。
 
 ##### 追加検索パラメータ 
 

@@ -19,15 +19,9 @@ Description: "このプロファイルはCoverageリソースに対して、保�
     JP_Coverage_InsuredPersonSymbol named insuredPersonSymbol ..* and
     JP_Coverage_InsuredPersonNumber named insuredPersonNumber ..* and
     JP_Coverage_InsuredPersonSubNumber named insuredPersonSubNumber ..*
-* extension[insuredPersonSymbol] ^comment = "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.\r\n\r\n健康保険における被保険者証記号を示す拡張"
-* extension[insuredPersonSymbol].value[x] ^comment = "A stream of bytes, base64 encoded\r\n\r\n被保険者記号の文字列。"
-* extension[insuredPersonNumber] ^comment = "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.\r\n\r\n健康保険における被保険者証番号を示す拡張"
-* extension[insuredPersonNumber].value[x] ^comment = "A stream of bytes, base64 encoded\r\n\r\n被保険者番号"
-* extension[insuredPersonSubNumber] ^comment = "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.\r\n\r\n健康保険における被保険者証番号の枝番を示す拡張\r\n枝番号は2桁。"
-* extension[insuredPersonSubNumber].value[x] ^comment = "A stream of bytes, base64 encoded\r\n\r\n2桁の半角数字文字列。一桁の場合には先頭に０をつけて2桁にする。"
-* identifier ^short = "Business Identifier for the coverage　このカバレッジに割り当てられた一意の識別子。"
+* identifier ^short = "Business Identifier for the coverage　このカバレッジに割り当てられた一意の識別子。【詳細参照】"
 * identifier ^definition = "A unique identifier assigned to this coverage.\r\n\r\nこのカバレッジに割り当てられた一意の識別子。"
-* identifier ^comment = "The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatenation of the Coverage.SubscriberID and the Coverage.dependent.\r\n\r\nカバレッジのメイン（および場合によっては唯一の）識別子-多くの場合、メンバーID、証明書番号、個人の健康番号、またはケースIDと呼ばれる。 Coverage.SubscriberIDとCoverage.dependentの連結として構築できる。"
+* identifier ^comment = "The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatenation of the Coverage.SubscriberID and the Coverage.dependent.\r\n\r\nカバレッジのメイン（および場合によっては唯一の）識別子-多くの場合、メンバーID、証明書番号、個人の健康番号、またはケースIDと呼ばれる。\r\n\r\n【JP Core仕様】被保険者記号と番号と枝番を全角にした上でダブルコーテーションで囲い、カンマ区切りで連結する。\r\n\r\nルール：\"{被保険者記号}\",\"{被保険者番号}\",\"{枝番}\"\r\n\r\n例：\"１２－３４\",\"５６７８\",\"００\""
 * identifier ^requirements = "Allows coverages to be distinguished and referenced.\r\n\r\nカバレッジを区別して参照できるようにする。"
 * status ^definition = "The status of the resource instance.\r\n\r\nリソースインスタンスのステータス。"
 * status ^comment = "This element is labeled as a modifier because the status contains the code entered-in-error that marks the coverage as not currently valid.\r\n\r\nステータスには、カバレッジが現在無効であることを示すエラー入力されたコードが含まれているため、この要素は修飾子としてラベル付けされる。"
@@ -43,20 +37,21 @@ Description: "このプロファイルはCoverageリソースに対して、保�
 * policyHolder ^comment = "For example: may be an individual, corporation or the subscriber's employer.\r\n\r\n例：個人、企業、または加入者の雇用主である可能性がある。"
 * policyHolder ^requirements = "This provides employer information in the case of Worker's Compensation and other policies.\r\n\r\nこれは、労働者災害補償およびその他のポリシーの場合に雇用者情報を提供する。"
 * subscriber only Reference(JP_Patient or RelatedPerson)
-* subscriber ^short = "Subscriber to the policy　契約当事者"
+* subscriber ^short = "Subscriber to the policy　被保険者"
 * subscriber ^definition = "The party who has signed-up for or 'owns' the contractual relationship to the policy or to whom the benefit of the policy for services rendered to them or their family is due.\r\n\r\nポリシーにサインアップした、またはポリシーとの契約関係を「所有」している当事者、またはポリシーの利益が彼らまたはその家族に提供されることになっている当事者。"
 * subscriber ^comment = "May be self or a parent in the case of dependents.\r\n\r\n扶養家族の場合、自己または親である可能性がある。"
-* subscriber ^requirements = "This is the party who is entitled to the benefits under the policy.\r\n\r\nこれは、ポリシーに基づいて給付を受ける権利を有する当事者である。\r\n\r\n【JP Core仕様】公費情報で本リソースを使用する場合には、この要素に公費受給者番号を設定する。"
-* subscriberId ^short = "ID assigned to the subscriber　契約当事者に割り当てられたID"
-* subscriberId ^definition = "The insurer assigned ID for the Subscriber.\r\n\r\n契約当事者に保険者が割り当てたID"
-* subscriberId ^requirements = "The insurer requires this identifier on correspondence and claims (digital and otherwise).\r\n\r\n保険者は、連絡や請求（デジタルおよびその他）でこの識別子を要求する。\r\n保険会社は、通信および請求（デジタルおよびその他）でこの識別子を要求する。\r\n\r\n被保険者番号を全角で格納する"
+* subscriber ^requirements = "This is the party who is entitled to the benefits under the policy.\r\n\r\nこれは、ポリシーに基づいて給付を受ける権利を有する当事者である。"
+* subscriberId ^short = "ID assigned to the subscriber　被保険者に割り当てられたID"
+* subscriberId ^definition = "The insurer assigned ID for the Subscriber.\r\n\r\n被保険者に保険者が割り当てたID"
+* subscriberId ^requirements = "The insurer requires this identifier on correspondence and claims (digital and otherwise).\r\n\r\n保険者は、連絡や請求（デジタルおよびその他）でこの識別子を要求する。\r\n保険会社は、通信および請求（デジタルおよびその他）でこの識別子を要求する。\r\n\r\n【JP Core仕様】被保険者記号と番号を全角にした上でダブルコーテーションで囲い、カンマ区切りで連結する。\r\n\r\nルール：\"{被保険者記号}\",\"{被保険者番号}\"\r\n\r\n例：\"１２－３４\",\"５６７８\""
 * beneficiary only Reference(JP_Patient)
 * beneficiary ^definition = "The party who benefits from the insurance coverage; the patient when products and/or services are provided.\r\n\r\n保険適用から利益を得る当事者、製品および／またはサービスが提供される際の患者。"
 * beneficiary ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。\r\n\r\n【JP Core仕様】患者Patientリソースへの参照。"
 * beneficiary ^requirements = "This is the party who receives treatment for which the costs are reimbursed under the coverage.\r\n\r\nこれは、補償の下で費用が償還される治療を受ける側のことである。"
-* dependent ^definition = "A unique identifier for a dependent under the coverage.\r\n\r\n補償対象の被扶養者の一意の識別子。"
-* dependent ^comment = "Periodically the member number is constructed from the subscriberId and the dependent number.\r\n\r\n定期的に subscriberId と従属番号からメンバー番号を構築する。"
-* dependent ^requirements = "For some coverages a single identifier is issued to the Subscriber and then a unique dependent number is issued to each beneficiary.\r\n\r\n一部の補償では、単一の識別子が加入者に発行され、次に一意の従属番号が各受益者に発行される。\r\n一部の保険では、単一の識別子が加入者に発行され、その後、各受益者に固有の扶養番号が発行される。\r\n\r\n【JP Core仕様】医療保険で本リソースを使用する場合には、この要素に拡張 InsuredPersonSubNumberに設定した値と同じ、被保険者番号の枝番号2桁を設定する。"
+* dependent ^short = "被保険者証 枝番"
+* dependent ^definition = "A unique identifier for a dependent under the coverage.\r\n\r\n被保険者証の枝番。"
+* dependent ^comment = "Periodically the member number is constructed from the subscriberId and the dependent number.\r\n\r\n被保険者証の枝番を全角で格納する。"
+* dependent ^requirements = "For some coverages a single identifier is issued to the Subscriber and then a unique dependent number is issued to each beneficiary.\r\n\r\n一部の補償では、単一の識別子が加入者に発行され、次に一意の従属番号が各受益者に発行される。\r\n一部の保険では、単一の識別子が加入者に発行され、その後、各受益者に固有の扶養番号が発行される。\r\n\r\n【JP Core仕様】医療保険で本リソースを使用する場合には、この要素に拡張 InsuredPersonSubNumberに設定した値と同じ、被保険者番号の枝番号全角2桁を設定する。\r\n\r\n例：\"００\""
 * relationship ^short = "Beneficiary relationship to the subscriber　加入者との受益者関係"
 * relationship ^definition = "The relationship of beneficiary (patient) to the subscriber.\r\n\r\n受益者（患者）と加入者の関係。"
 * relationship ^comment = "Typically, an individual uses policies which are theirs (relationship='self') before policies owned by others.\r\n\r\n一般的に、個人は、他人が所有するポリシーよりも、自分のポリシー（relationship='self'）を使用する。"
@@ -119,37 +114,37 @@ Extension: JP_Coverage_InsuredPersonNumber
 Id: jp-coverage-insuredpersonnumber
 Title: "JP Core Coverage InsuredPersonNumber Extension"
 Description: "健康保険における被保険者証番号を示す拡張"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber"
+* ^url = $JP_Coverage_InsuredPersonNumber
 * ^date = "2022-03-16"
 * ^context.type = #element
 * ^context.expression = "Coverage"
 * . ^short = "健康保険における被保険者証番号"
-* . ^comment = "健康保険における被保険者証番号を示す拡張"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber" (exactly)
+* . ^comment = "健康保険における被保険者証番号を示す拡張。被保険者記号の全角文字列。"
+* url = $JP_Coverage_InsuredPersonNumber (exactly)
 * value[x] only string
 
 Extension: JP_Coverage_InsuredPersonSubNumber
 Id: jp-coverage-insuredpersonsubnumber
 Title: "JP Core Coverage InsuredPersonSubNumber Extension"
 Description: "健康保険における被保険者証番号の枝番を示す拡張"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber"
+* ^url = $JP_Coverage_InsuredPersonSubNumber
 * ^date = "2022-03-16"
 * ^context.type = #element
 * ^context.expression = "Coverage"
 * . ^short = "健康保険における被保険者証番号の枝番"
-* . ^comment = "健康保険における被保険者証番号の枝番を示す拡張"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber" (exactly)
+* . ^comment = "健康保険における被保険者証番号を示す拡張。2桁の全角数字文字列。一桁の場合には先頭に０をつけて2桁にする。"
+* url = $JP_Coverage_InsuredPersonSubNumber (exactly)
 * value[x] only string
 
 Extension: JP_Coverage_InsuredPersonSymbol
 Id: jp-coverage-insuredpersonsymbol
 Title: "JP Core Coverage InsuredPersonSymbol Extension"
 Description: "健康保険における被保険者証記号を示す拡張"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol"
+* ^url = $JP_Coverage_InsuredPersonSymbol
 * ^date = "2022-03-16"
 * ^context.type = #element
 * ^context.expression = "Coverage"
 * . ^short = "健康保険における被保険者証記号"
-* . ^comment = "健康保険における被保険者証記号を示す拡張"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol" (exactly)
+* . ^comment = "健康保険における被保険者証記号を示す拡張。被保険者記号の全角文字列。"
+* url = $JP_Coverage_InsuredPersonSymbol (exactly)
 * value[x] only string

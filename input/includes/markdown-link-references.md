@@ -258,6 +258,7 @@
 [jp-medicationrequest-injection-example-1]: MedicationRequest-jp-medicationrequest-injection-example-1.html
 [jp-medicationrequest-injection-example-2]: MedicationRequest-jp-medicationrequest-injection-example-2.html
 [jp-department-ssmix-namingsystem]: NamingSystem-jp-department-ssmix-namingsystem.html
+[jp-medicalfeescoretype-namingsystem]: NamingSystem-jp-medicalfeescoretype-namingsystem.html
 [jp-medicationbodysitejamiexternal-namingsystem]: NamingSystem-jp-medicationbodysitejamiexternal-namingsystem.html
 [jp-medicationcodecommon-namingsystem]: NamingSystem-jp-medicationcodecommon-namingsystem.html
 [jp-medicationcodehot13-namingsystem]: NamingSystem-jp-medicationcodehot13-namingsystem.html
@@ -271,6 +272,7 @@
 [jp-medicationunitmerit9-namingsystem]: NamingSystem-jp-medicationunitmerit9-namingsystem.html
 [jp-medicationusagejami-namingsystem]: NamingSystem-jp-medicationusagejami-namingsystem.html
 [jp-medicationusagejamiadditional-namingsystem]: NamingSystem-jp-medicationusagejamiadditional-namingsystem.html
+[jp-prefecturenumber-namingsystem]: NamingSystem-jp-prefecturenumber-namingsystem.html
 [jp-observation-bodyMeasurement-example-1]: Observation-jp-observation-bodyMeasurement-example-1.html
 [jp-observation-labresult-example-1]: Observation-jp-observation-labresult-example-1.html
 [jp-observation-physicalexam-example-1]: Observation-jp-observation-physicalexam-example-1.html
