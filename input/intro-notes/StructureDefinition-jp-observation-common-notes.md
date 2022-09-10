@@ -26,9 +26,9 @@
 
 | コンフォーマンス | パラメータ | 型 | 例 |
 | --- | --- | --- | --- |
-| MAY | subject,category,code,value-quantity | reference,token,token,quantity  | `GET [base]/Observation?subject=Patient/123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40` |
-| MAY | subject,category,code,value-quantity,date | reference,token,token,quantity,date  | `GET [base]/Observation?subject=Patient/123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31` |
-| MAY | subject,category,code,value-quantity,encounter | reference,token,token,quantity,encounter  | `GET [base]/Observation?subject=Patient/123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&encounter=Encounter/456` |
+| MAY | patient,category,code,value-quantity | reference,token,token,quantity  | `GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40` |
+| MAY | patient,category,code,value-quantity,date | reference,token,token,quantity,date  | `GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31` |
+| MAY | patient,category,code,value-quantity,encounter | reference,token,token,quantity,encounter  | `GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&encounter=456` |
 
 
 #### 操作詳細
@@ -55,16 +55,16 @@
 
 検査結果値であるエレメント=value[x].valueQuantityの実際のSearch Parameterはvalue-quantityとなる。
 
-subject,category,code,value-quantity の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
+patient,category,code,value-quantity の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
-   GET [base]/Observation?subject={reference}&category={token}&code={token}&value-quantity={quantity}
+   GET [base]/Observation?patient={reference}&category={token}&code={token}&value-quantity={quantity}
    ```
 
    例：患者123の心拍数が40超えのバイタルサインを取得したい場合
 
    ```
-   GET [base]/Observation?subject=Patient/123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40
+   GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40
    ```
 
 
@@ -72,33 +72,33 @@ subject,category,code,value-quantity の各検索パラメータに一致するO
 
 検査結果値であるエレメント=value[x].valueQuantityの実際のSearch Parameterはvalue-quantityとなり、期間指定についてはエレメントがeffective[x].effectiveDateTime または .effectivePeriod いずれの場合においてもSearch Parameterはdateとなる。
 
-subject,category,code,value-quantity,date の各検索パラメータに一致するObservationリソースを含むBundleを検索する。
+patient,category,code,value-quantity,date の各検索パラメータに一致するObservationリソースを含むBundleを検索する。
 
 
    ```
-   GET [base]/Observation?subject={reference}&category={token}&code={token}&value-quantity={quantity}&date={date}
+   GET [base]/Observation?patient={reference}&category={token}&code={token}&value-quantity={quantity}&date={date}
    ```
 
    例：患者123の心拍数が40超えかつ2020年12月31日以前のバイタルサインを取得したい場合
 
    ```
-   GET [base]/Observation?subject=Patient/123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31
+   GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31
    ```
 
 
 
 3.訪問診療等の検索：subject（= 複数のPatientリソース：母集団としての患者範囲）、category（対象カテゴリ）、code（対象項目）、value[x].valueQuantity（値条件）、encounter（= Encounterリソース：対象医療行為）での検索をサポートすることが望ましい。（MAY）
 
-subject,category,code,value-quantity,date,encounter の各検索パラメータに一致するObservationリソースを含むBundleを検索する。
+patient,category,code,value-quantity,date,encounter の各検索パラメータに一致するObservationリソースを含むBundleを検索する。
 
    ```
-   GET [base]/Observation?subject={reference}&category={token}&code={token}&value-quantity={quantity}&date={date}&&encounter={encounter}
+   GET [base]/Observation?patient={reference}&category={token}&code={token}&value-quantity={quantity}&date={date}&&encounter={encounter}
    ```
 
    例：患者123の心拍数が40超えかつ2020年12月31日以前で診療456の時のバイタルサインを取得したい場合
 
    ```
-   GET [base]/Observation?subject=Patient/123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31&encounter=Encounter/456
+   GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31&encounter=456
    ```
 
 
