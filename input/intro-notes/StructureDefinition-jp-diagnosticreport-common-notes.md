@@ -13,12 +13,12 @@
 | SHALL | identifier | token | レポートの identifier（識別子） | DiagnosticReport.identifier |
 | SHOULD | issued | date | レポート発行日（確定日） | DiagnosticReport.issued |
 | MAY | media | reference | 画像への参照 | DiagnosticReport.media.link ([Media](https://www.hl7.org/fhir/R4/media.html)) |
+| SHOULD | patient | reference | レポートの対象患者 | DiagnosticReport.subject.where(resolve() is Patient) ([Patient][JP_Patient]) |
 | SHOULD | performer | reference | レポート確定者 | DiagnosticReport.performer ([Practitioner][JP_Practitioner]) |
 | MAY | result | reference | 関連する検査結果 (検体検査結果など) | DiagnosticReport.result ([Observation][JP_Observation_LabResult])|
 | MAY | results-interpreter | reference | レポートの記述者 | DiagnosticReport.resultsInterpreter ([Practitioner][JP_Practitioner]) |
 | MAY | specimen | reference | specimenの詳細 | DiagnosticReport.Specimen ([specimen](https://www.hl7.org/fhir/R4/specimen.html))|
 | SHOULD | status | token | レポートの状態 | DiagnosticReport.status |
-| SHOULD | subject | reference | レポートの対象 | DiagnosticReport.subject ([Group](https://www.hl7.org/fhir/R4/group.html), [Device](https://www.hl7.org/fhir/R4/device.html), [Patient][JP_Patient], [Location][JP_location]) |
 
 #### 必須検索パラメータ
 

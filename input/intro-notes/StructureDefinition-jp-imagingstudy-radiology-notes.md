@@ -37,11 +37,11 @@ BodySite等でDICOMでmappingされているSNOMED-CTをCodeSystemとして利�
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHOULD | subject(Patient) | reference | `GET [base]/ImagingStudy?subject=Patient/123` |
-| SHOULD | subject,modality | reference,token | `GET [base]/ImagingStudy?subject=Patient/123&modality=CT` |
-| SHOULD | subject,bodysite | reference,token | `GET [base]/ImagingStudy?subject=Patient/123&bodysite=T-15460` |
-| SHOULD | subject,started | reference,date | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-25` |
-| SHOULD | subject,started,modality,bodysite | reference,date,token,token  | `GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-18&modality=CT&bodysite=T-15460` |
+| SHOULD | patient | reference | `GET [base]/ImagingStudy?patient=123` |
+| SHOULD | patient,modality | reference,token | `GET [base]/ImagingStudy?patient=123&modality=CT` |
+| SHOULD | patient,bodysite | reference,token | `GET [base]/ImagingStudy?patient=123&bodysite=T-15460` |
+| SHOULD | patient,started | reference,date | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-25` |
+| SHOULD | patient,started,modality,bodysite | reference,date,token,token  | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=CT&bodysite=T-15460` |
 | SHOULD | encounter | reference  | `GET [base]/ImagingStudy?encounter=Encounter/456` |
 
 
@@ -59,13 +59,13 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
 1.患者中心での検索：対象患者（= Patientリソース）を条件とした検索をサポートすることが望ましい。
 
    ```
-   GET [base]/ImagingStudy?subject={reference}
+   GET [base]/ImagingStudy?patient={reference}
    ```
 
    例：
 
    ```
-   GET [base]/ImagingStudy?subject=Patient/123
+   GET [base]/ImagingStudy?patient=123
    ```
 
 
@@ -73,26 +73,26 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
 
 
    ```
-   GET [base]/ImagingStudy?subject={reference}&modality={token}
+   GET [base]/ImagingStudy?patient={reference}&modality={token}
    ```
 
    例：
 
    ```
-   GET [base]/ImagingStudy?subject=Patient/123&modality=CT
+   GET [base]/ImagingStudy?patient=123&modality=CT
    ```
 
 3.部位中心の検索：対象患者（= Patientリソース）と撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい。
 
 
    ```
-   GET [base]/ImagingStudy?subject={reference}&bodysite={token}
+   GET [base]/ImagingStudy?patient={reference}&bodysite={token}
    ```
 
    例：
 
    ```
-   GET [base]/ImagingStudy?subject=Patient/123&bodysite=T-15460
+   GET [base]/ImagingStudy?patient=123&bodysite=T-15460
    ```
 <br/>
 
@@ -101,39 +101,39 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
 
 
    ```
-   GET [base]/ImagingStudy?subject={reference}&started={date}
+   GET [base]/ImagingStudy?patient={reference}&started={date}
    ```
 
    例：
 
    ```
-   GET [base]/ImagingStudy?subject=subject=Patient/123&data=eq2021-06-25
+   GET [base]/ImagingStudy?patient=123&started=eq2021-06-25
    ```
 
 5.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい。
 
 
    ```
-   GET [base]/ImagingStudy?subject={reference}&started={date}
+   GET [base]/ImagingStudy?patient={reference}&started={date}
    ```
 
    例：
 
    ```
-   GET [base]/ImagingStudy?subject=subject=Patient/123&data=eq2021-06-25
+   GET [base]/ImagingStudy?patient=123&started=eq2021-06-25
    ```
    
 6.複数の条件を組み合わせた検索：対象患者（= Patientリソース）、撮影の日時、撮影に使用されたモダリティ、撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい。
 
 
    ```
-   GET [base]/ImagingStudy?subject={reference}&data={date}&modality={token}&bodysite={token}
+   GET [base]/ImagingStudy?patient={reference}&started={date}&modality={token}&bodysite={token}
    ```
 
    例：
 
    ```
-   GET [base]/ImagingStudy?subject=Patient/123&data=eq2021-06-18&modality=CT&bodysite=T-15460
+   GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=CT&bodysite=T-15460
    ```
    
 7.来院情報中心の検索：来院情報（= Encounterリソース）を条件とした検索をサポートすることが望ましい。
@@ -146,7 +146,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    例：
 
    ```
-   GET [base]/ImagingStudy?encounter=Encounter/456
+   GET [base]/ImagingStudy?encounter=456
    ```
 
 ##### オプション検索パラメータ
