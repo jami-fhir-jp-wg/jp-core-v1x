@@ -190,12 +190,12 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationNo_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_PrefectureNo_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP
-    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicalFeeScoreType_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ConditionSeverity_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_Department_SsMix_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_JfagyFoodAllergen_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_JfagyMedicationAllergen_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_JfagyNonFoodNonMedicationAllergen_CS
+    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicalFeeScoreType_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicalLicenseCertificate_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationAsNeededConditionJAMI_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS
@@ -203,7 +203,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0001
     - http://jpfhir.jp/fhir/Common/CodeSystem/JHSP0007
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCategoryMERIT9_CS
-    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeYJ_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationRequestDosageInstructionLine_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageLineComment_CS
@@ -227,6 +226,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT13_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT7_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT9_CS
+    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeYJ_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationBodyMeasurementCode_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ObservationBodySite_CS
@@ -272,7 +272,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCategory_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCodeHOT13_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCodeHOT9_VS
-    - http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCodeYJ_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageComment_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationRequestDosageInstructionLine_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageLineComment_VS
@@ -297,6 +296,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCodeHOT7_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCode_Immunization_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCode_VS
+    - http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCodeYJ_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_ObservationBodyMeasurementCategory_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_ObservationBodyMeasurementCode_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_ObservationBodySite_VS

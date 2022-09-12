@@ -11,6 +11,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^short = "検体検査結果"
 * . ^definition = "Measurements and simple assertions made about a patient, device or other subject.\r\n\r\n検体検査結果の格納に使用する。"
 * . ^comment = "すべてのObservation（検査測定や観察事実）の制約プロファイル"
+* identifier ^short = "当該検査項目に対して、施設内で割り振られる一意の識別子"
 * identifier ^definition = "A unique identifier assigned to this observation.\r\n\r\nこの検査項目に割り当てられた一意の識別子。リソースの識別子やシステム的なシーケンスではなく、ビジネスID。"
 * identifier ^comment = "【JP Core仕様】当該検査項目に対して、施設内で割り振られる一意の識別子があればそれを使用する。なければ次のルールを参考に一意となる識別子を生成し設定する。\r\n\r\nアプリケーション側のデータベースにおけるフィールド長の定義については、最低64バイトを確保すること。\r\n\r\n--- 参考 ---\r\n\r\n次の項目を順にセパレータ「_(アンダースコア)」で連結し、 identifier.value に設定する。グループ項目でない場合など、該当コード／番号がない場合はセパレータを連続で連結する。各コードはローカルコードを使用し、必ず設定できること。\r\n\r\n　１．ORC-2(依頼者オーダ番号)　SS-MIX2の15桁前ゼロ形式の番号\r\n\r\n　２．OBR-4(検査項目ID)　検査セットの識別コード\r\n\r\n　３．SPM-4(検体タイプ)\r\n\r\n　４．OBX-3(検査項目)\r\n\r\n　５．OBX-4(検査副ID)・・・オプション。必要に応じて使用。\r\n\r\n形式：[ORC-2]_[OBR-4]_[SPM-4]_[OBX-3]（_[OBX-4]）"
 * identifier.use ^definition = "The purpose of this identifier.\r\n\r\nこの識別子の目的。"

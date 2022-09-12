@@ -28,9 +28,9 @@ DiagnosticReportリソースは、次の要素を持たなければならない�
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHOULD | subject,category | reference  | `GET [base]/DiagnosticReport?subject=Patient/123&category=LAB` |
-| SHOULD | subject,category,based-on | reference,reference  | `GET [base]/DiagnosticReport?subject=Patient/123&category=LAB&based-on=ServiceRequest/456` |
-| SHOULD | subject,category,date | reference,date  | `GET [base]/Observation?subject=Patient/123&category=LAB&date=le2020-12-31` |
+| SHOULD | patient,category | reference  | `GET [base]/DiagnosticReport?patient=123&category=LAB` |
+| SHOULD | patient,category,based-on | reference,reference  | `GET [base]/DiagnosticReport?patient=123&category=LAB&based-on=ServiceRequest/456` |
+| SHOULD | patient,category,date | reference,date  | `GET [base]/Observation?patient=123&category=LAB&date=le2020-12-31` |
 
 ##### 必須検索パラメータ
 
@@ -43,45 +43,45 @@ DiagnosticReportリソースは、次の要素を持たなければならない�
 1. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)を指定した検索をサポートすることが望ましい。（SHOULD）
 
 
-subjectの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
+patient,categoryの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
-   GET [base]/DiagnosticReport?subject={reference}&category={token}
+   GET [base]/DiagnosticReport?patient={reference}&category={token}
    ```
 
    例：
 
    ```
-   GET [base]/DiagnosticReport?subject=Patient/123&category=LAB
+   GET [base]/DiagnosticReport?patient=123&category=LAB
    ```
 
 2. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、based-on (検査オーダの依頼科)を指定した検索をサポートすることが望ましい。（SHOULD）
 
-subject,based-onの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
+patient,category,based-onの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
-   GET [base]/DiagnosticReport?subject={reference}&category={token}&based-on={reference}
+   GET [base]/DiagnosticReport?patient={reference}&category={token}&based-on={reference}
    ```
 
    例：
 
    ```
-   GET [base]/DiagnosticReport?subject=Patient/123&category=LAB&based-on=ServiceRequest/456
+   GET [base]/DiagnosticReport?patient=123&category=LAB&based-on=ServiceRequest/456
    ```
 
 3. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、date(レポート作成日)を指定した検索をサポートすることが望ましい。（SHOULD）
 
 
-subject,dateの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
+patient,category,dateの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
-   GET [base]/DiagnosticReport?subject={reference}&category={token}&date={date}
+   GET [base]/DiagnosticReport?patient={reference}&category={token}&date={date}
    ```
 
    例：
 
    ```
-   GET [base]/DiagnosticReport?subject=Patient/123&category=LAB&date=2021-11-08
+   GET [base]/DiagnosticReport?patient=123&category=LAB&date=2021-11-08
    ```
 
 ##### オプション検索パラメータ
