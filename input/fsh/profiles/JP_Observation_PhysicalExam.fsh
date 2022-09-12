@@ -19,7 +19,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category[exam] = $observation-category#exam
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP Core仕様】基底仕様のカテゴリ「exam」固定とする"
 * code = $JP_PhysicalExamCode_CS#physical-findings "Physical Findings" (exactly)
-* code from JP_PhysicalExamCode_VS (required)
+* code from JP_PhysicalExamCode_VS (preferred)
 * code ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】所見の有無を表すコード（固定値）"
 * subject 1..
 * subject only Reference(JP_Patient)
@@ -27,10 +27,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * encounter ^comment = "This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission laboratory tests).\r\n\r\n【JP Core仕様】診察"
 * effective[x] only dateTime or Period
 * effective[x] ^comment = "At least a date should be present unless this observation is a historical report.  For recording imprecise or \"fuzzy\" times (For example, a blood glucose measurement taken \"after breakfast\") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.\r\n\r\n【JP Core仕様】effectiveDateTime：医療者が確認した日時\r\n\r\neffectivePeriod：医療者が確認した期間"
-* value[x] only CodeableConcept
-* value[x] from $v2-0136 (required)
-* value[x] ^comment = "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.\r\n\r\n【JP Core仕様】コードに限定する"
-* value[x] ^binding.description = "Codes specifying either Yes or No used in fields containing binary answers generally user-specified."
+* valueCodeableConcept from $v2-0136 (preferred)
+* valueCodeableConcept ^short = "所見の有無（Y or N）を指定する"
 * bodySite from JP_ObservationPhysicalExamBodySite_VS (preferred)
 * bodySite ^comment = "ICD-11"
 * method from JP_ObservationPhysicalExamMethod_VS (preferred)
@@ -40,7 +38,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * derivedFrom only Reference(DocumentReference or ImagingStudy or Media or QuestionnaireResponse or JP_Observation_Common or MolecularSequence or JP_Observation_PhysicalExam)
 * derivedFrom ^comment = "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.\r\n\r\n【JP Core仕様】導出元の参照リソースにJP_Observation_PhysicalExamを追加"
 * component ^comment = "For a discussion on the ways Observations can be assembled in groups together see [Notes](observation.html#notes) below.\r\n\r\n【JP Core仕様】具体的な所見を記載する"
+* component ^short = "所見有り（valueCodeableConceptがY）の場合に、具体的な所見をコード、または文字列で記載する"
 * component.code = $JP_PhysicalExamCode_CS#detailed-physical-findings "Detailed Physical Findings" (exactly)
-* component.code from JP_PhysicalExamCode_VS (required)
+* component.code from JP_PhysicalExamCode_VS (preferred)
 * component.code ^comment = "*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】具体的な所見を表すコード（固定値）"
-* component.value[x] only CodeableConcept or string
