@@ -20,12 +20,18 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
-* category ^slicing.ordered = false
 * category contains laboratory 1..1
-* category[laboratory] = $diagnostic-service-sectionid-cs#LAB (exactly)
+* category[laboratory] = $diagnostic-service-sectionid-cs#LAB
 * category[laboratory] ^comment = "Multiple categories are allowed using various categorization schemes.   The level of granularity is defined by the category concepts in the value set. More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in DiagnosticReport.code.\r\nさまざまなカテゴリ化スキームを使用して、複数のカテゴリを使用できる。粒度のレベルは、それぞれの値セットのカテゴリの概念によって定義される。 DiagnosticReport.codeのメタデータや用語の階層を使用して、よりきめ細かいフィルタリングを実行できる。\r\n\r\n【JP Core仕様】Diagnostic Service Section Codesの\"LAB\"を使用"
-* code = http://loinc.org#11502-2 "Laboratory report" (exactly)
 * code ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\nすべてのターミのロジーの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素と事前・事後の用語作成（pre- and post-coordination）との関係を管理するための独自の構造を提供する必要がある。\r\n\r\n【JP Core仕様】LOINCの臨床検査の分類コードを割り当てる。\r\n\r\n検査レポートの利用用途に合わせて、JLAC10のコードを振っても良い。"
+* code.coding ^slicing.discriminator.type = #pattern
+* code.coding ^slicing.discriminator.path = "$this"
+* code.coding ^slicing.rules = #open
+* code.coding contains laboratoryCode 0..1
+* code.coding[laboratoryCode] = http://loinc.org#11502-2 "Laboratory report"
+* code.coding[laboratoryCode] ^short = "検体検査レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。【詳細参照】"
+* code.coding[laboratoryCode] ^definition = "検体検査レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。"
+* code.coding[laboratoryCode] ^comment = "推奨コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しない"
 * subject only Reference(JP_Patient)
 * subject ^short = "The subject of the report - usually, but not always, the patient　レポートの対象、常にではないが、通常は患者"
 * subject ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。\r\n\r\n【JP Core仕様】Patientリソースを参照"
