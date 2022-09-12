@@ -52,7 +52,7 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * qualification.period ^requirements = "Qualifications are often for a limited period of time, and can be revoked.\r\n\r\n資格は期間限定のものが多く、取り消されることもある。"
 * qualification.issuer ^definition = "Organization that regulates and issues the qualification.\r\n\r\n資格を規制し、発行する機関"
 * qualification.issuer ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は実際のFHIRリソースへの参照でなければならず、解決可能でなければならない。解決は URL からの検索、またはリソースタイプによって、絶対参照を正規の URL として扱い、ローカルのレジストリ/リポジトリで検索することで行うことができる。"
-* qualification ^slicing.discriminator.type = #value
+* qualification ^slicing.discriminator.type = #pattern
 * qualification ^slicing.discriminator.path = "code"
 * qualification ^slicing.rules = #open
 * qualification ^comment = "麻薬施用者免許番号、または医籍登録番号を格納するためのQualification/Slicing定義。\r\n\r\n麻薬施用者免許番号の場合のsystemはFixed Valueの urn:oid:1.2.392.100495.20.3.32.1[都道府県番号] を使用する。\r\n( 頭に1をつけて末尾3桁で表現する。これは北海道などの場合、都道府県番号は01になるが、OID\r\nでは先頭が0は許可されていないため、頭に1をつけて3桁で表現する)\r\nつまり麻薬施用者免許番号を発行した都道府県ごとにsystemも異なる値となる。\r\n医籍登録番号のsystemはFixed Valueの urn:oid:1.2.392.100495.20.3.31 を使用する。"
@@ -115,7 +115,7 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * qualification[narcoticPrescriptionLicenseNumber].identifier.value ^short = "都道府県別　麻薬施用者免許番号"
 * qualification[narcoticPrescriptionLicenseNumber].identifier.value ^comment = "都道府県別　麻薬施用者免許番号"
 * qualification[narcoticPrescriptionLicenseNumber].code from JP_MedicalLicenseCertificate_VS (required)
-* qualification[narcoticPrescriptionLicenseNumber].code = $JP_MedicalLicenseCertificate_CS#narcotics-practitioner (exactly)
+* qualification[narcoticPrescriptionLicenseNumber].code = $JP_MedicalLicenseCertificate_CS#narcotics-practitioner
 * qualification[narcoticPrescriptionLicenseNumber].issuer only Reference(JP_Organization)
 * qualification[narcoticPrescriptionLicenseNumber].identifier.assigner only Reference(JP_Organization)
 * qualification[medicalRegistrationNumber].identifier ^short = "医籍登録番号"
@@ -123,7 +123,7 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * qualification[medicalRegistrationNumber].identifier.value ^short = "医籍登録番号"
 * qualification[medicalRegistrationNumber].identifier.value ^comment = "医籍登録番号"
 * qualification[medicalRegistrationNumber].code from JP_MedicalLicenseCertificate_VS (required)
-* qualification[medicalRegistrationNumber].code = $JP_MedicalLicenseCertificate_CS#medical-registration (exactly)
+* qualification[medicalRegistrationNumber].code = $JP_MedicalLicenseCertificate_CS#medical-registration
 * qualification[medicalRegistrationNumber].identifier.assigner only Reference(JP_Organization)
 * qualification[medicalRegistrationNumber].issuer only Reference(JP_Organization)
 
