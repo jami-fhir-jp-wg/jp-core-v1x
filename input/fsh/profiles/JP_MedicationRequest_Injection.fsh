@@ -12,5 +12,6 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * . ^short = "患者あるいはグループに対しての注射薬剤処方オーダ"
 * . ^definition = "患者への薬の供給と注射や点滴の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。JP_MedicationRequestBaseプロファイルからの派生プロファイルである。"
 * category from $JP_MedicationCategoryInjection_VS (preferred)
-* medicationCodeableConcept ..0
+* medication[x] only Reference(Medication)
+* medicationReference only Reference(JP_Medication)
 * dosageInstruction only JP_MedicationDosage_Injection

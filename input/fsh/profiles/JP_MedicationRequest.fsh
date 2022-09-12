@@ -26,5 +26,15 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * identifier[orderInRp].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
 
 * category from $JP_MedicationCategory_VS (preferred) 
-* medicationReference ..0
+
+* medication[x] only CodeableConcept
+* medicationCodeableConcept from JP_MedicationCode_VS (preferred)
+* medicationCodeableConcept ^binding.description = "処方する製剤を表すコード。"
+* medicationCodeableConcept.coding 1..
+* medicationCodeableConcept.coding ^short = "Code defined by a terminology system コード集で定義された医薬品コード"
+* medicationCodeableConcept.coding ^definition = "A reference to a code defined by a terminology system.\r\n\r\nコード集で定義された医薬品コードへの情報"
+* medicationCodeableConcept.coding ^comment = "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.\r\n"
+* medicationCodeableConcept.coding.system 1..
+* medicationCodeableConcept.coding.code 1..
+
 * dosageInstruction only JP_MedicationDosage_Prescription
