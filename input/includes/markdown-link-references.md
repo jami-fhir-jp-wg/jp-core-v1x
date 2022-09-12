@@ -94,12 +94,12 @@
 [JP_Patient_KanaSort_SP]: SearchParameter-jp-patient-kanasort-sp.html
 
 <!-- CodeSystem -->
-[JP_MedicalFeeScoreType_CS]: CodeSystem-jp-MedicalFeeScoreType-cs.html
 [JP_ConditionSeverity_CS]: CodeSystem-jp-condition-severity-cs.html
 [JP_Department_SsMix_CS]: CodeSystem-jp-department-ssmix-cs.html
 [JP_JfagyFoodAllergen_CS]: CodeSystem-jp-jfagy-food-allergen-cs.html
 [JP_JfagyMedicationAllergen_CS]: CodeSystem-jp-jfagy-medication-allergen-cs.html
 [JP_JfagyNonFoodNonMedicationAllergen_CS]: CodeSystem-jp-jfagy-non-food-non-medication-allergen-cs.html
+[JP_MedicalFeeScoreType_CS]: CodeSystem-jp-medicalfeescoretype-cs.html
 [JP_MedicalLicenseCertificate_CS]: CodeSystem-jp-medicallicensecertificate-cs.html
 [JP_MedicationAsNeededConditionJAMI_CS]: CodeSystem-jp-medication-as-needed-condition-jami-cs.html
 [JP_MedicationAsNeededConditionMERIT9_CS]: CodeSystem-jp-medication-as-needed-condition-merit9-cs.html
@@ -107,7 +107,6 @@
 [JP_MedicationCategoryJHSI0001_CS]: CodeSystem-jp-medication-category-jhsi0001-cs.html
 [JP_MedicationCategoryJHSP0007_CS]: CodeSystem-jp-medication-category-jhsp0007-cs.html
 [JP_MedicationCategoryMERIT9_CS]: CodeSystem-jp-medication-category-merit9-cs.html
-[JP_MedicationCodeYJ_CS]: CodeSystem-jp-medication-code-yj-cs.html
 [JP_MedicationExampleDosageComment_CS]: CodeSystem-jp-medication-example-dosagecomment-cs.html
 [JP_MedicationExampleLine_CS]: CodeSystem-jp-medication-example-line-cs.html
 [JP_MedicationExampleLineComment_CS]: CodeSystem-jp-medication-example-linecomment-cs.html
@@ -131,6 +130,7 @@
 [JP_MedicationCodeHOT13_CS]: CodeSystem-jp-medicationcode-hot13-cs.html
 [JP_MedicationCodeHOT7_CS]: CodeSystem-jp-medicationcode-hot7-cs.html
 [JP_MedicationCodeHOT9_CS]: CodeSystem-jp-medicationcode-hot9-cs.html
+[JP_MedicationCodeYJ_CS]: CodeSystem-jp-medicationcode-yj-cs.html
 [JP_ObservationBodyMeasurementCategory_CS]: CodeSystem-jp-observation-bodymeasurement-category-cs.html
 [JP_ObservationBodyMeasurementCode_CS]: CodeSystem-jp-observation-bodymeasurement-code-cs.html
 [JP_ObservationBodySite_CS]: CodeSystem-jp-observation-bodysite-cs.html
@@ -178,7 +178,6 @@
 [JP_MedicationCategory_VS]: ValueSet-jp-medication-category-vs.html
 [JP_MedicationCodeHOT13_VS]: ValueSet-jp-medication-code-hot13-vs.html
 [JP_MedicationCodeHOT9_VS]: ValueSet-jp-medication-code-hot9-vs.html
-[JP_MedicationCodeYJ_VS]: ValueSet-jp-medication-code-yj-vs.html
 [JP_MedicationExampleDosageComment_VS]: ValueSet-jp-medication-example-dosagecomment-vs.html
 [JP_MedicationExampleLine_VS]: ValueSet-jp-medication-example-line-vs.html
 [JP_MedicationExampleLineComment_VS]: ValueSet-jp-medication-example-linecomment-vs.html
@@ -203,6 +202,7 @@
 [JP_MedicationCodeHOT7_VS]: ValueSet-jp-medicationcode-hot7-vs.html
 [JP_MedicationCode_Immunization_VS]: ValueSet-jp-medicationcode-immunization-vs.html
 [JP_MedicationCode_VS]: ValueSet-jp-medicationcode-vs.html
+[JP_MedicationCodeYJ_VS]: ValueSet-jp-medicationcode-yj-vs.html
 [JP_ObservationBodyMeasurementCategory_VS]: ValueSet-jp-observation-bodymeasurement-category-vs.html
 [JP_ObservationBodyMeasurementCode_VS]: ValueSet-jp-observation-bodymeasurement-code-vs.html
 [JP_ObservationBodySite_VS]: ValueSet-jp-observation-bodysite-vs.html
