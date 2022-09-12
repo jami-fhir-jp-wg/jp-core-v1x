@@ -4,16 +4,16 @@
 次のデータ項目は必須（SHALL）である。
 
 - status ：レポートの状態・進捗状況
-- category ： “RAD”をデフォルトとし、特に検査種別を含む部門指定を指定したい場合は"RUS", "RX", "CT", "NMR", "NMS", "VUS", "OUS", "CUS"などを指定する．
 - code ：レポートの種別（画像診断レポート交換手順ガイドライン「5.1 レポート種別コード」に記載されているLOINCコード "Diagnostic imaging study" を指定）
-- effectiveDateTime ： レポート作成日時
-
+  
 ### MustSupport
 
 次のデータは送信システムに存在する場合はサポートされなければならないことを意味する（Must Support）。
 
 - basedOn ： レポートあるいは画像検査のServiceRequest
+- category ： “RAD”をデフォルトとし、特に検査種別を含む部門指定を指定したい場合は"RUS", "RX", "CT", "NMR", "NMS", "VUS", "OUS", "CUS"などを指定する
 - subject ： 患者リソース(Patient)への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
+- effectiveDateTime ： レポート作成日時
 - issued ： レポート確定日時
 - performer ： Practitionerでレポートの関係者（作成者、読影者、確定者など）を列挙
 - resultInterpreter ： Practitionerでレポート確定者を示す
@@ -160,8 +160,8 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 本プロファイルで再定義された検索パラメータの一覧である。[DiagnosticReport共通の検索パラメータ][JP_DiagnosticReport_Common]が利用されるが、重複するものについては以下の定義に従うこと。
 
-| コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |　例
-| --- | --- | --- | --- | --- |
+| コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |　例　|
+| --- | --- | --- | --- | --- | --- |
 | MAY | text | token | レポートの内容 | DiagnosticReport.text | GET [base]/DiagnosticReport?_text=(がん OR 癌) and 転移 |
 | MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) | GET [base]/DiagnosticReport?ServiceRequest/12345 |
 | MAY | category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) <br/> "RAD", "RX", "CT", "NMR", "NMS", "RUS", etc. [ default = “RAD” ] | GET [base]/DiagnosticReport?category=RAD |
