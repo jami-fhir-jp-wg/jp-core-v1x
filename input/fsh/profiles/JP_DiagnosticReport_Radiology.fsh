@@ -32,9 +32,16 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category contains radiology 1..1
 * category[radiology] ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは ”RAD” をデフォルトとして設定。追加の情報については任意で設定可能。"
 * category[radiology] = $diagnostic-service-sectionid-cs#RAD
-* code from JP_DiagnosticReportRadiologyCode_VS (preferred)
 * code ^definition = "この診断レポートを表現するコードや名称"
 * code ^comment = "【JP Core仕様】[画像診断レポート交換手順ガイドライン](https://www.jira-net.or.jp/publishing/files/jesra/JESRA_TR-0042_2018.pdf)「5.1 レポート種別コード」に記載されているLOINCコード [Diagnostic imaging study](https://loinc.org/18748-4/) を指定。コードを指定できない場合はCodeableConceptを使用せずテキスト等を直接コーディングすることも許容されるが、要素間の調整と事前・事後の内容の整合性確保のために独自の構造を提供する必要があるので留意すること。"
+* code.coding ^slicing.discriminator.type = #pattern
+* code.coding ^slicing.discriminator.path = "$this"
+* code.coding ^slicing.rules = #open
+* code.coding contains radiologyReportCode 0..1
+* code.coding[radiologyReportCode] = http://loinc.org#18748-4 "Diagnostic imaging study"
+* code.coding[radiologyReportCode] ^short = "放射線レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。【詳細参照】"
+* code.coding[radiologyReportCode] ^definition = "放射線レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。"
+* code.coding[radiologyReportCode] ^comment = "推奨コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しない"
 * subject MS
 * subject ^definition = "レポートの対象。 必ずでは無いが、通常、これには「患者」が該当する。"
 * subject ^comment = "参照は実際のFHIRリソースへの参照であり、解決可能である必要がある。解決はURLから取得するか、または、リソースタイプが利用できる場合は絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索する。\r\n\r\n【JP Core仕様】Patient リソースを参照"
