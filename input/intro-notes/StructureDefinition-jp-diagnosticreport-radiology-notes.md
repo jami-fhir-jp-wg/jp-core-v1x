@@ -5,13 +5,13 @@
 
 - status ：レポートの状態・進捗状況
 - code ：レポートの種別（画像診断レポート交換手順ガイドライン「5.1 レポート種別コード」に記載されているLOINCコード "Diagnostic imaging study" を指定）
+- category ： “RAD”をデフォルトとし、特に検査種別を含む部門指定を指定したい場合は"RUS", "RX", "CT", "NMR", "NMS", "VUS", "OUS", "CUS"などを指定する。ここでは複数のコードが許容される。
   
 ### MustSupport
 
 次のデータは送信システムに存在する場合はサポートされなければならないことを意味する（Must Support）。
 
 - basedOn ： レポートあるいは画像検査のServiceRequest
-- category ： “RAD”をデフォルトとし、特に検査種別を含む部門指定を指定したい場合は"RUS", "RX", "CT", "NMR", "NMS", "VUS", "OUS", "CUS"などを指定する
 - subject ： 患者リソース(Patient)への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
 - effectiveDateTime ： レポート作成日時
 - issued ： レポート確定日時
@@ -183,7 +183,7 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
    例：
 
    ```
-   GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/medication\|1234567890
+   GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/medication|1234567890
    ```
 
    指定された識別子に一致するDiagnosticReportリソースを含むBundleを検索する。
