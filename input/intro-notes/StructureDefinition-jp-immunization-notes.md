@@ -1,6 +1,4 @@
 ### 必須要素
-次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
-
 JP Core Immunization リソースは、次の要素を持たなければならない。
 
 - status
@@ -8,7 +6,6 @@ JP Core Immunization リソースは、次の要素を持たなければなら�
 - patient
 - occurrence[x]
 
-JP Core Immunizationリソースは、次の要素をサポートしなければならない。
 
 ### Extensions定義
 JP Core Immunization リソースで使用される拡張は次の通りである。
@@ -32,9 +29,9 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 |分類|名称|URI|
 |---------|----|---------------------------|
-|ワクチン|HOT9|urn:oid:1.2.392.200119.4.403.1|
-|ワクチン|HOT13|urn:oid:1.2.392.100495.20.2.75|
-|ワクチン|YJコード|urn:oid:1.2.392.100495.20.1.73|
+|ワクチン|HOT9|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT9_CS<br/>urn:oid:1.2.392.200119.4.403.1|
+|ワクチン|HOT13|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT13_CS<br/>urn:oid:1.2.392.100495.20.2.75|
+|ワクチン|YJコード|ttp://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeYJ_VS<br/>urn:oid:1.2.392.100495.20.1.73|
 |対象疾患|MEDIS標準病名マスター病名交換用コード| urn:oid:1.2.392.200119.4.101.6|
 
 ### 項目の追加
@@ -139,19 +136,19 @@ URL: [base]/Immunization/[id]/$everything
 
 ###### 入力パラメータ
 
-| 名前   | 多重度 | 型      | バインディング | プロファイル | 説明                                                         |
-| ------ | ------ | ------- | -------------- | ------------ | ------------------------------------------------------------ |
-| start  | 0..1   | date    |                |              | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。開始日が指定されていない場合、終了日以前のすべてのレコードが対象に含まれる。 |
-| end    | 0..1   | date    |                |              | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。終了日が指定されていない場合、開始日以降のすべてのレコードが対象に含まれる。 |
-| _since | 0..1   | instant |                |              | 指定された日時以降に更新されたリソースのみが応答に含まれる。 |
-| _type  | 0..*   | code    |                |              | 応答に含むFHIRリソース型を、カンマ区切りで指定する。指定されない場合は、サーバは全てのリソース型を対象とする。 |
-| _count | 0..1   | integer |                |              | Bundleの1ページに含まれるリソース件数を指定。                |
+| 名前   | 多重度 | 型      | 説明                                                         |
+| ------ | ------ | ------- | ------------------------------------------------------------ |
+| start  | 0..1   | date    | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。開始日が指定されていない場合、終了日以前のすべてのレコードが対象に含まれる。 |
+| end    | 0..1   | date    | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。終了日が指定されていない場合、開始日以降のすべてのレコードが対象に含まれる。 |
+| _since | 0..1   | instant | 指定された日時以降に更新されたリソースのみが応答に含まれる。 |
+| _type  | 0..*   | code    | 応答に含むFHIRリソース型を、カンマ区切りで指定する。指定されない場合は、サーバは全てのリソース型を対象とする。 |
+| _count | 0..1   | integer | Bundleの1ページに含まれるリソース件数を指定。                |
 
 ###### 出力パラメータ
 
-| 名前   | 多重度 | 型     | バインディング | プロファイル | 説明                                                         |
-| ------ | ------ | ------ | -------------- | ------------ | ------------------------------------------------------------ |
-| return | 1..1   | Bundle |                |              | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
+| 名前   | 多重度 | 型     | 説明                                                         |
+| ------ | ------ | ------ | ------------------------------------------------------------ |
+| return | 1..1   | Bundle | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
 
 ###### 例
 
@@ -197,93 +194,12 @@ HTTP/1.1 200 OK
 | 接種ワクチン | コミナティ筋注 (182110901) |
 | 対象疾患 | ＣＯＶＩＤ－１９ (S9VN) |
 | 接種量 | 0.45mL |
-| 接種部位 | 左上腕 (74L) |
+| 接種部位 | Left arm (LA) |
 | 接種実施者 | 大阪 一郎 |
 | 接種日時 | 2021/07/01 10:30 |
 | ロット番号 | 12345678 |
 
-ワクチン接種の上記部分をFHIR R4で記述する場合以下のようになる。
-
-<details>
-<summary><b>インスタンス例（クリックで展開）</b></summary>
-<dev>
-
-{% highlight json %}
-{
-  "resourceType": "Immunization",
-  "id": "jp-immunization-example-1",
-  "meta": {
-    "profile": [
-      "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
-    ]
-  },
-  "status": "completed",
-  "vaccineCode": {
-    "coding": [
-      {
-        "system": "urn:oid:1.2.392.200119.4.403.1",
-        "code": "182110901",
-        "display": "コミナティ筋注"
-      }
-    ]
-  },
-  "patient": {
-    "reference": "Patient/jp-patient-example-1"
-  },
-  "occurrenceDateTime": "2021-07-01T10:30:00+09:00",
-  "lotNumber": "12345678",
-  "site": {
-    "coding": [
-      {
-        "system": "urn:oid:1.2.392.200250.2.2.20.32",
-        "code": "74L",
-        "display": "左上腕"
-      }
-    ]
-  },
-  "doseQuantity": {
-    "value": 0.45,
-    "unit": "mL",
-    "system": "http://unitsofmeasure.org",
-    "code": "mL"
-  },
-  "performer": [
-    {
-      "function": {
-        "coding": [
-          {
-            "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
-            "code": "AP",
-            "display": "Administering Provider"
-          }
-        ]
-      },
-      "actor": {
-        "reference": "Practitioner/jp-practitioner-example-male-1",
-        "display": "大阪 一郎"
-      }
-    }
-  ],
-  "protocolApplied": [
-    {
-      "targetDisease": [
-        {
-          "coding": [
-            {
-              "system": "urn:oid:1.2.392.200119.4.101.6",
-              "code": "S9VN",
-              "display": "ＣＯＶＩＤ－１９"
-            }
-          ]
-        }
-      ],
-      "doseNumberPositiveInt": 1
-    }
-  ]
-}
-{% endhighlight json %}
-</dev>
-</details>
+* [**新型コロナワクチン接種**][jp-immunization-example-1]
 
 ## 注意事項
 
@@ -444,29 +360,29 @@ MEDIS標準病名マスターの病名交換用コード("urn:oid:1.2.392.200119
 ```
 
 ### 次回接種予定日の記述方法について
-次回のワクチン接種予定日は既存のImmunization要素では記述ができないため、Immunizationリソースに対する拡張「DueDateOfNextDose」を使用してdateTime型で記述する。extension.urlには"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose"を指定する。
+次回のワクチン接種予定日は既存のImmunization要素では記述ができないため、Immunizationリソースに対する拡張「DueDateOfNextDose」を使用してdate型で記述する。extension.urlには"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose"を指定する。
 
 ```json
 "extension": [
   {
     "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose",
-    "valueDateTime": "2022-04-02"
+    "valueDate": "2022-04-02"
   }
 ]
 ```
 
 ### 製造年月日、検定年月日
-ワクチンの製造年月日、検定年月日はいずれも既存のImmunization要素では記述ができないため、Immunizationリソースに対する拡張「ManufacturedDate」「CertificatedDate」をそれぞれ使用してdateTime型で記述する。extension.urlにはそれぞれ"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate"、"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate"を指定する。
+ワクチンの製造年月日、検定年月日はいずれも既存のImmunization要素では記述ができないため、Immunizationリソースに対する拡張「ManufacturedDate」「CertificatedDate」をそれぞれ使用してdate型で記述する。extension.urlにはそれぞれ"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate"、"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate"を指定する。
 
 ```json
 "extension": [
   {
     "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate",
-    "valueDateTime": "2021-10-14"
+    "valueDate": "2021-10-14"
   },
   {
     "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate",
-    "valueDateTime": "2021-10-18"
+    "valueDate": "2021-10-18"
   }
 ]
 ```
@@ -483,3 +399,4 @@ MEDIS標準病名マスターの病名交換用コード("urn:oid:1.2.392.200119
 3. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, [http://www2.medis.or.jp/hcode/](http://www2.medis.or.jp/hcode/)
 4. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)
 
+{% include markdown-link-references.md %}

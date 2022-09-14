@@ -70,6 +70,7 @@ JP Coreにて利用されるSearch Parameter および Operationの一覧。
 JP Coreにて利用されるCodeSystem および ValueSetの一覧。
 - [CodeSystems （コードシステム）一覧](artifacts.html#terminology-code-systems)
 - [ValueSets （値セット）一覧](artifacts.html#terminology-value-sets)
+- [NamingSystems 一覧](artifacts.html#terminology-naming-systems)
 
 ### Capability Statement （機能宣言）
 JP Coreを参考に定義したCapabilityStatementの一例。
@@ -78,7 +79,6 @@ JP Coreを参考に定義したCapabilityStatementの一例。
 ### Security （セキュリティ）
 JP Core利用にあたり、考慮すべきセキュリティに関する要件を記載する。
  - [Security （セキュリティ）](security.html)
-
 
 ---
 ### Contributors：

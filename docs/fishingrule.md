@@ -128,6 +128,10 @@ Name形式[ **Aaa_BbbCcc_Ddd.fsh** ]に変換し、拡張子を.fshとする。<
 
 設定してもsushi-config.yamlの内容に上書きされるため記載対象としない。
 
+外部CodeSystemの利用する際(LOINC等)には、必要に応じて下記の対応を行うこと。
+- 外部CodeSystemの利用許諾等に違反しない記述にすること。
+- CodeSystemについて、JP Core側の帰属しないことを明記すること。
+
 ### [2] Cardinality
 {min}の値が0の時は、{min}を省略すること。
 ```
@@ -230,6 +234,82 @@ element 1.. MS
 ### [7] Sliceの名称命名規則
 Sliceの名称定義の際は、Camel形式(lower camelCase)とする。
 https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#item-names
+
+
+### [8] JP Core独自仕様記述
+
+リソースに関する説明文書の際にFHIR BASEの訳文とJP Core独自仕様部分の説明を明示的に分ける際には「**【JP Core仕様】**」を文のはじめに付与すること。
+
+```
+
+* identifier ^comment = "(FHIR BASEおよびその訳文)　【JP Core仕様】(JP Core独自仕様)"
+
+```
+
+### [9] Detailed Descriptionsタグへの誘導
+
+Sushi & IG Publisherに変更した際に、^short, ^definition, ^commentの定義が画面を切替ながら参照する方式に替わった。
+^short の定義だけではなく、^definition, ^commentを参照してもらいたい時には【詳細参照】の語句を入れることととする。
+
+```
+* ^short = 都道府県番号、点数表コード、医療機関コードを組み合わせた施設識別コードを格納。【詳細参照】
+```
+
+## CodeSystemにてJP Core内定義したURLとは別のシステム識別子（URI,OID等）を持つ場合の対応
+
+### [1]CodeSystemの定義
+
+- URLは、JP Coreの命名規則に従ったものを記述する。(直接OIDを記載しない)
+  - JP Coreで定義したリソースはURLに従って公開される予定のため。
+- IdentifierとしてOIDを追加する。
+
+CodeSystemに対してOIDが割り振られた際の記載例
+
+```
+[JP_MedicationCodeHOT9_CS.fsh]
+CodeSystem: JP_MedicationCodeHOT9_CS
+Id: jp-medicationcode-hot9-cs
+Title: "JP Core MedicationCode HOT9 CodeSystem"
+Description: "医薬品HOT9コードのコードシステム"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:1.2.392.200119.4.403.1"
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:1.2.392.100495.20.2.74"
+```
+
+```
+[aliases-jpcore.fsh]
+Alias: $JP_MedicationCodeHOT9_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT9_CS
+```
+
+### [2]NamingSystemへのマッピング情報の記載
+
+- NamingSystemに対してOIDをIdentifierとJP Core URLとのマッピングを作成する。
+- OIDについては念の為OID形式、URL形式の両方を登録する。
+- URLとしてのPreferredは、JP CoreのURLに付けることとする。
+- kind=#codesystemにすること点に注意すること。
+
+```
+[namingsystems.fsh]
+Instance: jp-medicationcodehot9-namingsystem
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "JP_MedicationCodeHOT9_NamingSystem"
+* status = #active
+* kind = #codesystem
+* description = "JP Core MedicationCode HOT9 NamingSystem"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "1.2.392.200119.4.403.1"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.200119.4.403.1"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "1.2.392.100495.20.2.74"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.100495.20.2.74"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = $JP_MedicationCodeHOT9_CS
+* uniqueId[=].preferred = true
+```
 
 
 ## リソース追加、urlもしくはid変更時の対処

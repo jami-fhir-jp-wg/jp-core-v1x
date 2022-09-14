@@ -4,16 +4,16 @@
 次のデータ項目は必須（SHALL）である。
 
 - status ：レポートの状態・進捗状況
-- category ： “RAD”をデフォルトとし、特に検査種別を含む部門指定を指定したい場合は"RUS", "RX", "CT", "NMR", "NMS", "VUS", "OUS", "CUS"などを指定する．
 - code ：レポートの種別（画像診断レポート交換手順ガイドライン「5.1 レポート種別コード」に記載されているLOINCコード "Diagnostic imaging study" を指定）
-- effectiveDateTime ： レポート作成日時
-
+- category ： “RAD”をデフォルトとし、特に検査種別を含む部門指定を指定したい場合は"RUS", "RX", "CT", "NMR", "NMS", "VUS", "OUS", "CUS"などを指定する。ここでは複数のコードが許容される。
+  
 ### MustSupport
 
 次のデータは送信システムに存在する場合はサポートされなければならないことを意味する（Must Support）。
 
 - basedOn ： レポートあるいは画像検査のServiceRequest
 - subject ： 患者リソース(Patient)への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
+- effectiveDateTime ： レポート作成日時
 - issued ： レポート確定日時
 - performer ： Practitionerでレポートの関係者（作成者、読影者、確定者など）を列挙
 - resultInterpreter ： Practitionerでレポート確定者を示す
@@ -93,7 +93,6 @@ DiagnosticReportのドメインリソースの一つであるtextエレメント
 ### Identifier
 
 Identifier のデータタイプはオーダー依頼者であるPlacerあるいはオーダーの実施者であるFiller（HL7 Version 2 Messaging Standardにて'Placer'あるいは'Filler'として知られている）によって割り当てられた識別子を区別するために利用されるtypeエレメントを持っている。typeエレメントは以下の様に利用する。
-<br>
 
 #### Placerの場合
 
@@ -157,27 +156,38 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 ## 利用方法
 
+#### 検索パラメータ
+
+本プロファイルで再定義された検索パラメータの一覧である。[DiagnosticReport共通の検索パラメータ][JP_DiagnosticReport_Common]が利用されるが、重複するものについては以下の定義に従うこと。
+
+| コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |　例　|
+| --- | --- | --- | --- | --- | --- |
+| MAY | text | token | レポートの内容 | DiagnosticReport.text | GET [base]/DiagnosticReport?_text=(がん OR 癌) and 転移 |
+| MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) | GET [base]/DiagnosticReport?ServiceRequest/12345 |
+| MAY | category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) <br/> "RAD", "RX", "CT", "NMR", "NMS", "RUS", etc. [ default = “RAD” ] | GET [base]/DiagnosticReport?category=RAD |
+| MAY | code | token | レポート全体を示すコード | DiagnosticReport.code [LOINC 18748-4](https://loinc.org/18748-4/)(固定) | GET [base]/DiagnosticReport?code=18748-4 |
+| MAY | media | reference | キー画像への参照 | DiagnosticReport.media.link ([Media](https://www.hl7.org/fhir/R4/media.html)) | GET [base]/DiagnosticReport?media/12345 |
+
+なお、検索パラメータは複合的に利用できる。詳細は[Search - Chained parameters](https://www.hl7.org/fhir/R4/search.html#chaining)を参照すること。
+
 #### 必須検索パラメータ
 
 次の検索パラメータは必須でサポートされなければならない。
 
-| Name | Type | Description | Expression |
-| --- | --- | --- | --- |
-| based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) |
-| category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) <br> "RAD", "RX", "CT", "NMR", "NMS", "RUS", etc. [ default = “RAD” ] |
-| code | token | レポート全体を示すコード | DiagnosticReport.code [LOINC 18748-4](https://loinc.org/18748-4/)(固定) |
-| conclusion | token | コード化されたレポートの conclusion (interpretation/impression) | DiagnosticReport.conclusionCode |
-| date | date | レポート作成日 | DiagnosticReport.effectiveDate |
-| encounter | reference | オーダが発行された際の Encounter | DiagnosticReport.encounter ([Encounter][JP_Encounter]) |
-| identifier | token | レポートの identifier（識別子） | DiagnosticReport.identifier |
-| issued | date | レポート発行日（確定日） | DiagnosticReport.issued |
-| media | reference | キー画像への参照 | DiagnosticReport.media.link ([Media](https://www.hl7.org/fhir/R4/media.html)) |
-| performer | reference | レポート確定者 | DiagnosticReport.performer ([Practitioner][JP_Practitioner]) |
-| result | reference | 関連する検査結果 (検体検査結果など) | DiagnosticReport.result ([Observation][JP_Observation_LabResult])|
-| results-interpreter | reference | 読影者 | DiagnosticReport.resultsInterpreter ([Practitioner][JP_Practitioner]) |
-| status | token | レポートの状態 | DiagnosticReport.status |
-| subject | reference | レポートの対象となる患者 | DiagnosticReport.subject ([Patient][JP_Patient]) |
+1. identifier 検索パラメータを使用して、オーダーIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（SHALL）。
 
+   ```
+   GET [base]/DiagnosticReport?identifier={system|}[code]
+   ```
+
+   例：
+
+   ```
+   GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/medication|1234567890
+   ```
+
+   指定された識別子に一致するDiagnosticReportリソースを含むBundleを検索する。
+ 
 ### サンプル
 
 * [**放射線読影レポート**][jp-diagnosticreport-radiology-example-1]

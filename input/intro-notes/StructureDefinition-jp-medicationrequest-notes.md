@@ -10,7 +10,7 @@ MedicationRequestリソースは、次の要素を持たなければならない
 - subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
 - authoredOn : 処方依頼日時であり、JP Coreでは必須である。
 - dosageInstruction.text : フリーテキストの用法指示であり、JP Coreでは必須である。
-- dosageInstruction.timing : 服⽤タイミングを記録し、JP Coreでは必須である。dosageInstruction.timing.code.coding.code, dosageInstruction.timing.code.coding.system が必ず存在しなければならない。
+- dosageInstruction.timing : 服用タイミングを記録し、JP Coreでは必須である。dosageInstruction.timing.code.coding.code, dosageInstruction.timing.code.coding.system が必ず存在しなければならない。
 - dispenseRequest.quantity : 調剤量は必須であり、dispenseRequest.quantity.value, dispenseRequest.quantity.unit, dispenseRequest.quantity.system, dispenseRequest.quantity.code が必ず存在しなければならない 。
 
 ### Extensions定義
@@ -18,12 +18,32 @@ JP Core MedicationRequest プロファイルで使用される拡張は次の通
 
 #### JP Core MedicationRequest独自で追加されたExtension
 
-|拡張|説明|URL|値の型|
-|------------|-------------|----------|-----|
-|服用開始日|服用開始日を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse|Period|
-|実服用日数|実服用日数を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration|Duration|
-|調剤指示|薬剤単位の調剤指示を表現するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense|string or CodeableConcept|
-|頓用回数|頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount|integer|
+<table class="extension_description">
+  <tr>|服用開始日|服用開始日を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse|Period|
+    <th>拡張</th>
+    <th>説明</th>
+    <th>URL</th>
+    <th>値の型</th>
+  </tr>
+  <tr>
+    <td>実服用日数</td>
+    <td>実服用日数を格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration</td>
+    <td>Duration</td>
+  </tr>
+  <tr>
+    <td>調剤指示</td>
+    <td>薬剤単位の調剤指示を表現するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense</td>
+    <td>CodeableConcept/string</td>
+  </tr>
+  <tr>
+    <td>頓用回数</td>
+    <td>頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount</td>
+    <td>integer</td>
+  </tr>
+</table>
 
 #### 既存のExtensionの利用
 
@@ -42,8 +62,8 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |医薬品|HOT13|urn:oid:1.2.392.200119.4.402.1|
 |医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
 |医薬品|⼀般処⽅名マスター|urn:oid:1.2.392.100495.20.1.81|
-|剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/Common/CodeSystem/merit9-form |
-|処方区分|MERIT-9(処方区分)|http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category|
+|剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationFormMERIT9_CS|
+|処方区分|MERIT-9(処方区分)|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCategoryMERIT9_CS|
 |処方区分|JAHIS処方データ交換規約Ver.3.0C(JHSP表0007)|http://jpfhir.jp/fhir/Common/CodeSystem/JHSP0007|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
 |力価区分|処方情報HL7 FHIR記述仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
@@ -51,7 +71,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |用法|JAMI処方・注射オーダ標準用法規格(用法コード)|urn:oid:1.2.392.200250.2.2.20.20|
 |用法|JAMI処方・注射オーダ標準用法規格(補足用法コード)|urn:oid:1.2.392.200250.2.2.20.22|
 |投与部位|JAMI処方・注射オーダ標準用法規格(部位コード)|urn:oid:1.2.392.200250.2.2.20.32|
-|投与経路|HL7 V2(使用者定義表0162)|http://terminology.hl7.org/CodeSystem/v2-0162|
+|投与経路|HL7 V2(使用者定義表0162)|http://jpfhir.jp/fhir/Common/CodeSystem/route-codes|
 |投与方法2桁コード|JAMI処方・注射オーダ標準用法規格(用法詳細区分)|urn:oid:1.2.392.200250.2.2.20.40|
 |入外区分|HL7 V2(HL7表0482)|http://terminology.hl7.org/CodeSystem/v2-0482|
 
@@ -509,7 +529,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 ```
 
 ### 投与方法、投与経路
-投与経路はdosageInstruction.route 要素にコードまたは文字列で指定する。使用するコード表は HL7 V2の使用者定義表0162 投薬経路を推奨し、その場合識別するURIとして、"urn:oid:2.16.840.1.113883.3.1937.777.10.5.162"を使用する。
+投与経路はdosageInstruction.route 要素にコードまたは文字列で指定する。使用するコード表は HL7 V2の使用者定義表0162 投薬経路を推奨し、その場合識別するURIとして、"http://jpfhir.jp/fhir/Common/CodeSystem/route-codes"を使用する。
 
 「A:貼付」、「B:塗布」などJAMI標準用法コードにて用法詳細区分として表現される区分は、dosageInstruction.method 要素にコードまたは文字列で指定する。 用法詳細区分を識別するURIとして、"urn:oid:1.2.392.200250.2.2.20.40"を使用する。コードを指定する場合、基本用法区分＋用法詳細区分の２桁で指定する。
 
@@ -517,7 +537,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 "route": {
   "coding": [
     {
-      "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
+      "system": "http://jpfhir.jp/fhir/Common/CodeSystem/route-codes",
       "code": "AP",
       "display": "外用"
     }
@@ -551,14 +571,14 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 
 
 ### 処方区分
-薬剤オーダの運用上の区分である処方区分は、MERIT-9(処方区分)およびJAHIS処方データ交換規約Ver.3.0CのJHSP表0007を使用し、category要素に2種類のコードおよび文字列で指定することができる。MERIT-9(処方区分)をしきべつするURIとして"http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category"を、JHSP表0007を識別するURIとして"http://jpfhir.jp/fhir/Common/CodeSystem/JHSP0007"を使用する。
+薬剤オーダの運用上の区分である処方区分は、MERIT-9(処方区分)およびJAHIS処方データ交換規約Ver.3.0CのJHSP表0007を使用し、category要素に2種類のコードおよび文字列で指定することができる。MERIT-9(処方区分)をしきべつするURIとして"http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCategoryMERIT9_CS"を、JHSP表0007を識別するURIとして"http://jpfhir.jp/fhir/Common/CodeSystem/JHSP0007"を使用する。
 
 ```json
 "category": [
   {
     "coding": [ 
       {
-        "system": "http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category",
+        "system": "http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCategoryMERIT9_CS",
         "code": "OHP",
         "display": "外来処方"
       } 
@@ -567,7 +587,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
   {
     "coding": [ 
       {
-        "system": "http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category",
+        "system": "http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCategoryMERIT9_CS",
         "code": "OHO",
         "display": "院外処方"
       } 
@@ -1348,6 +1368,6 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
 1. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, [http://www2.medis.or.jp/hcode/](http://www2.medis.or.jp/hcode/)
 1. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)
 1. 保健医療福祉情報システム工業会, JAHIS電子処方箋実装ガイドVer.1.2, [https://www.jahis.jp/standard/detail/id=774](https://www.jahis.jp/standard/detail/id=774)
-1. 令和２年度厚⽣労働科学特別研究事業「診療情報提供書, 電⼦処⽅箋等の電⼦化医療⽂書の相互運⽤性確保のための標準規格の開発研究」研究班, 電子処方箋HL7 FHIR記述仕様書案, [https://std.jpfhir.jp/](https://std.jpfhir.jp/)
+1. 令和２年度厚⽣労働科学特別研究事業「診療情報提供書, 電⼦処⽅箋等の電⼦化医療⽂書の相互運用性確保のための標準規格の開発研究」研究班, 電子処方箋HL7 FHIR記述仕様書案, [https://std.jpfhir.jp/](https://std.jpfhir.jp/)
 
 {% include markdown-link-references.md %}

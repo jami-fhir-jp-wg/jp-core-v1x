@@ -1,7 +1,7 @@
 ValueSet: JP_MedicationCodeYJ_VS
-Id: jp-medication-code-yj-vs
+Id: jp-medicationcode-yj-vs
 Title: "JP Core Medication YJ ValueSet"
-Description: "医薬品YJコードの値セット"
+Description: "個別医薬品コード(YJコード)の値セット"
 * ^url = $JP_MedicationCodeYJ_VS
 * ^status = #draft
 * include codes from system JP_MedicationCodeYJ_CS

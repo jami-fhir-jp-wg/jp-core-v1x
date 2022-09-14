@@ -30,6 +30,10 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * identifier[orderInRp].period ..0
 * identifier[orderInRp].assigner ..0
 
+* dosageInstruction.timing.code from $JP_MedicationUsageJAMI_VS (preferred)
+* dosageInstruction.timing.code ^comment = "BIDなどは「施設特有の時間」として定義される。たとえば、施設がBIDを「つねに朝7時と夕方6時」であると指定することがある。この指定が不適切であれば、BIDというコードは使うべきではない。その代わり、HL7が定義したBIDのコードではなく、その施設特有のコードで明示的に示すべきであり、構造化された表現を使うべきである（この場合、2回のイベントの時刻を指定する必要がある）。  
+【JP Core仕様】JAMI標準用法コード(16桁)を使用することが望ましいが、ローカルコードも使用可能。"
+
 * dosageInstruction.doseAndRate.doseQuantity.code from $JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.doseAndRate.rateRatio.numerator.code from $JP_MedicationUnitMERIT9_VS (preferred)
 * dosageInstruction.doseAndRate.rateRatio.denominator 1..
@@ -97,3 +101,50 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * dosageInstruction.additionalInstruction ^short = "患者に対する補足指示や注意。たとえば、「食事と一緒に」「眠くなることがある」【JP Core仕様】JAMI 8桁補足用法コードを使用することが望ましい。"
 * dosageInstruction.additionalInstruction ^comment = "薬剤投与や調剤についての情報（たとえば、「腹膜内ポートに可能な限り迅速に注入」や「薬剤Xの直後に」）であり、dosage.textにも複製されるべきである。  
 【JP Core仕様】JAMI 8桁補足用法コードを使用することが望ましいが、ローカルコードも使用可能。"
+
+* dosageInstruction.site from $JP_MedicationBodySiteJAMIExternal_VS (preferred)
+* dosageInstruction.site ^comment = "もし、BodySite resourceの属性が必要な場合(たとえば、部位の指定や別々に投与経路を設定する場合)は、[bodySite](extension-bodysite.html)の標準拡張を使うこと。要約コードや非常に正確な位置の定義へのreferenceを使用することもできる。  
+【JP Core仕様】JAMI外用部位３桁コードを使用することが望ましいが、ローカルコードも使用可能。"
+
+* dosageInstruction.route from $JP_MedicationRouteHL70162_VS (preferred)
+* dosageInstruction.route ^comment = "投与経路の一般的パターンに全てのターミノロジーが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。  
+【JP Core仕様】HL7表0162をベースにした投与経路コードを使用することが望ましいが、ローカルコードも使用可能。"
+
+* dosageInstruction.doseAndRate.dose[x] only SimpleQuantity
+* dosageInstruction.doseAndRate.dose[x] ^short = "1回投与量"
+* dosageInstruction.doseAndRate.dose[x] ^definition = "1回投与量"
+* dosageInstruction.doseAndRate.dose[x] ^comment = "この量は指定された薬剤の量を指定するものであって、各有効成分の量を指定するものではない。各成分の量はMedication resourceで伝えることができる。たとえば、有効成分が375mgである錠剤を1錠投与することを伝えたい場合、Medication resourceを利用して、XYZ成分が375mg含有しているという錠剤であることを文書化することができる。あるいは1回投与量が375mgであることを伝えるのであれば、Medication resourceをつかって単にそれが錠剤であることを示せばよい。もし、ドーパミンの静注を例に挙げて、400mgのドーパミンを500mlの注射溶液に混ぜて使うことを伝えたいのであれば、それをすべてMedication resourceで伝えることができる。もし、投与について即時に伝達することを意図していない（たとえば投与速度が示されていたり、投与時期に範囲があるような場合）のであれば、たとえば1回500mlを4時間以上かけて投与する予定を伝える場合にもMedication resourceで伝えることができる。  
+【JP Core仕様】1回の投与量を指定する。単位は医薬品単位略号を使用することが望ましい。"
+* dosageInstruction.doseAndRate.dose[x].value ^short = "1回投与量"
+* dosageInstruction.doseAndRate.dose[x].value ^definition = "1回投与量"
+* dosageInstruction.doseAndRate.dose[x].system from JP_MedicationUnitMERIT9_VS (preferred)
+* dosageInstruction.doseAndRate.dose[x].system ^short = "医薬品単位略号を識別するOID。"
+* dosageInstruction.doseAndRate.dose[x].system ^definition = "医薬品単位略号を識別するOID。固定値。"
+* dosageInstruction.doseAndRate.dose[x].code ^short = "医薬品単位略号"
+* dosageInstruction.doseAndRate.dose[x].code ^definition = "医薬品単位略号"
+
+* dosageInstruction.doseAndRate.rate[x] only Ratio
+* dosageInstruction.doseAndRate.rate[x] ^short = "単位時間内での薬剤量"
+* dosageInstruction.doseAndRate.rate[x] ^definition = "単位時間内での薬剤量。JP Coreでは1日投与量を表す。"
+* dosageInstruction.doseAndRate.rate[x] ^comment = "【JP Core仕様】日本ではまだ一般的に利用されている一日量での処方のためにrateRatioを用いる。"
+* dosageInstruction.doseAndRate.rate[x] ^requirements = "患者の体内に導入される、あるいはされた薬剤の速度を指定する。一般的には、たとえば1時間あたり100mlあるいは100ml/hrのように注射の速度を示す。たとえば、500mlを2時間でというように、単位時間あたりの速さを表現することもできる。その他、200マイクログラム/minや200マイクログラム/1分, 1 リットル/8時間のような表現もできる。しばしば、投与速度を投与総量/ 投与総時間で表ような場合に投与時間が明示される（たとえば、500ml/2時間という場合は、投与時間が2時間であることを示している）。しかしながら、投与速度で投与時間が明示されない場合（たとえば、250ml/毎時)は、timing.repeat.durationが注射の総投与時間を示すためには必要となる。"
+* dosageInstruction.doseAndRate.rate[x].numerator ^short = "1日投与量"
+* dosageInstruction.doseAndRate.rate[x].numerator ^definition = "1日投与量"
+* dosageInstruction.doseAndRate.rate[x].numerator.value ^short = "1日投与量"
+* dosageInstruction.doseAndRate.rate[x].numerator.value ^definition = "1日投与量"
+* dosageInstruction.doseAndRate.rate[x].numerator.comparator ..0
+* dosageInstruction.doseAndRate.rate[x].numerator.unit ^short = "投与量の単位"
+* dosageInstruction.doseAndRate.rate[x].numerator.unit ^definition = "投与量の単位。"
+* dosageInstruction.doseAndRate.rate[x].numerator.system from JP_MedicationUnitMERIT9_VS (preferred)
+* dosageInstruction.doseAndRate.rate[x].numerator.system ^short = "医薬品単位略号を識別するOID"
+* dosageInstruction.doseAndRate.rate[x].numerator.system ^definition = "医薬品単位略号を識別するOID。固定値。"
+* dosageInstruction.doseAndRate.rate[x].numerator.code ^short = "医薬品単位略号"
+* dosageInstruction.doseAndRate.rate[x].numerator.code ^definition = "医薬品単位略号"
+* dosageInstruction.doseAndRate.rate[x].denominator ^short = "1日"
+* dosageInstruction.doseAndRate.rate[x].denominator ^definition = "1日"
+* dosageInstruction.doseAndRate.rate[x].denominator.system = "http://unitsofmeasure.org" (exactly)
+* dosageInstruction.doseAndRate.rate[x].denominator.value = 1 (exactly)
+* dosageInstruction.doseAndRate.rate[x].denominator.unit = "日" (exactly)
+* dosageInstruction.doseAndRate.rate[x].denominator.code = #d (exactly)
+* dosageInstruction.doseAndRate.rate[x].denominator.code ^short = "「日」を表すUCUM単位コード"
+* dosageInstruction.doseAndRate.rate[x].denominator.code ^definition = "「日」を表すUCUM単位コード"

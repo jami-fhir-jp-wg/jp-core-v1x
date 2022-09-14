@@ -27,6 +27,22 @@ JP Patient リソースで使用される拡張は次の通りである。
 
   - 患者氏名(Patient.name)の漢字表記・カナ表記識別のために使用する。
 
+### 医療機関コード
+
+医療機関コードは10桁の数値で表現され、以下の記載様式を取る。
+
+- 最初の2桁 全国地方公共団体コードの都道府県コード（ISO 3166-2:JP）
+  - 都道府県ごとの番号。
+- 3桁目 点数表番号
+  - 医科は「1」。歯科は「3」。
+    - したがって、同一の病院または診療所に医科と歯科が併存する場合にはそれぞれ別のコードが与えられる。そのため、レセプトコンピュータでは一医療機関に対して医科と歯科の両方のコードを設定できるようになっている。ちなみに処方箋は発行されないが、「4」は調剤、「5」は老人保健施設、「6」は訪問看護ステーションである。
+  - 下7桁 医療機関コード
+    - 地区（2桁）+番号（4桁）+チェックディジット（1桁）で構成される。
+- 7桁の医療機関コードについて
+  - 各地域を所管する厚生労働省の地方支分部局である地方厚生局のホームページ等で確認できる
+  - 医療機関コードを持たない場合、「[9]＋当該施設の電話番号下 9 桁」を医療機関コードとして、その先頭に１をつけた11桁とする。
+
+
 ## 利用方法
 
 ### OperationおよびSearch Parameter 一覧
@@ -35,7 +51,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHALL            | identifier    | token  | GET [base]/Patient?identifier=http://myhospital.com/fhir/pid\|123456 |
+| SHALL            | identifier    | token  | GET [base]/Patient?identifier=urn:oid:1.2.392.100495.20.3.51.11312345670\|123456 |
 | SHOULD            | name          | string | GET [base]/Patient?name=山田%20太郎                            |
 | SHOULD           | birthdate,name | date,string  | GET [base]/Patient?birthdate=eq2013-01-14&name=山田%20太郎  |
 | SHOULD           | birthdate,gender | date,code  | GET [base]/Patient?birthdate=eq2013-01-14&gender=male  |
@@ -84,38 +100,38 @@ JP Patient リソースで使用される拡張は次の通りである。
 2. birthdate, name 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
 
    ```
-   GET [base]/Patient?birthdate={date}&name={string}
+   GET [base]/Patient?birthdate=eq{date}&name={string}
    ```
 
    例：
 
    ```
-   GET [base]/Patient?birthdate=2000-10-10&name=山田%20太郎
+   GET [base]/Patient?birthdate=eq2000-10-10&name=山田%20太郎
    ```
 
 
 3. birthdate, gender 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。
 
    ```
-   GET [base]/Patient?birthdate={date}&gender={code}
+   GET [base]/Patient?birthdate=eq{date}&gender={code}
    ```
 
    例：
 
    ```
-   GET [base]/Patient?birthdate=2000-10-10&gender=male
+   GET [base]/Patient?birthdate=eq2000-10-10&gender=male
    ```
 
 4. birthdate, name, gender 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
 
    ```
-   GET [base]/Patient?birthdate={date}&name={string}&gender={code}
+   GET [base]/Patient?birthdate=eq{date}&name={string}&gender={code}
    ```
 
    例：
 
    ```
-   GET [base]/Patient?birthdate=2000-10-10&name=山田%20太郎&gender=male
+   GET [base]/Patient?birthdate=eq2000-10-10&name=山田%20太郎&gender=male
    ```
 
 5. name, phone 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
@@ -151,13 +167,13 @@ JP Patient リソースで使用される拡張は次の通りである。
 1. 複合条件として、family,given,birthdate,gender,phone,address-postalcodename の各検索パラメータを複数指定したPatientの検索をサポートすることができる（MAY）。
 
    ```
-   GET [base]/Patient??family={string}&given={string}&birthdate={date}&gender={token}&phone={token}&address-postalcode={string}
+   GET [base]/Patient?family={string}&given={string}&birthdate=eq{date}&gender={token}&phone={token}&address-postalcode={string}
    ```
 
    例：
 
    ```
-   GET [base]/Patient??family=山田&given=太郎&birthdate=eq2013-01-14&gender=male&phone=111-222-3333&address-postalcode=1234567
+   GET [base]/Patient?family=山田&given=太郎&birthdate=eq2013-01-14&gender=male&phone=111-222-3333&address-postalcode=1234567
    ```
 
    family,given,birthdate,gender,phone,address-postalcodename の各検索パラメータに一致するPatientリソースを含むBundleを検索する。
@@ -195,21 +211,21 @@ URL: [base]/Patient/[id]/$everything
 
 ###### 入力パラメータ
 
-| 名前   | 多重度 | 型      | バインディング | プロファイル | 説明                                                         |
-| ------ | ------ | ------- | -------------- | ------------ | ------------------------------------------------------------ |
-| start  | 0..1   | date    |                |              | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。開始日が指定されていない場合、終了日以前のすべてのレコードが対象に含まれる。 |
-| end    | 0..1   | date    |                |              | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。終了日が指定されていない場合、開始日以降のすべてのレコードが対象に含まれる。 |
-| _since | 0..1   | instant |                |              | 指定された日時以降に更新されたリソースのみが応答に含まれる。 |
-| _type  | 0..*   | code    |                |              | 応答に含むFHIRリソース型を、カンマ区切りで指定する。指定されない場合は、サーバは全てのリソース型を対象とする。 |
-| _count | 0..1   | integer |                |              | Bundleの1ページに含まれるリソース件数を指定。                |
+| 名前   | 多重度 | 型      | 説明                                                         |
+| ------ | ------ | ------- | ------------------------------------------------------------ |
+| start  | 0..1   | date    | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。開始日が指定されていない場合、終了日以前のすべてのレコードが対象に含まれる。 |
+| end    | 0..1   | date    | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。終了日が指定されていない場合、開始日以降のすべてのレコードが対象に含まれる。 |
+| _since | 0..1   | instant | 指定された日時以降に更新されたリソースのみが応答に含まれる。 |
+| _type  | 0..*   | code    | 応答に含むFHIRリソース型を、カンマ区切りで指定する。指定されない場合は、サーバは全てのリソース型を対象とする。 |
+| _count | 0..1   | integer | Bundleの1ページに含まれるリソース件数を指定。                |
 
 
 
 ###### 出力パラメータ
 
-| 名前   | 多重度 | 型     | バインディング | プロファイル | 説明                                                         |
-| ------ | ------ | ------ | -------------- | ------------ | ------------------------------------------------------------ |
-| return | 1..1   | Bundle |                |              | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
+| 名前   | 多重度 | 型     |  説明                                                         |
+| ------ | ------ | ------ |  ------------------------------------------------------------ |
+| return | 1..1   | Bundle |  バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
 
 
 

@@ -23,13 +23,44 @@ JP Core MedicationDispense Injectionプロファイルで使用される拡張�
 
 JP Core MedicationRequest InjectionやJP Core MedicationDispense で追加された以下のExtensionを利用する。
 
-|拡張|説明|URL|値の型|
-|------------|-------------|----------|-----|
-|指示ライン|指示ラインを格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line|CodeableConcept|
-|投与装置|投与装置を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device|Reference (Device)|
-|RP内薬剤番号|RP内の薬剤の連番を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo|integer|
-|力価区分|投与量が製剤単位か成分単位かを格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Strength_StrengthType|CodeableConcept|
-|調剤結果|薬剤単位の調剤結果|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation|CodeableConcept|
+<table class="extension_description">
+  <tr>
+    <th>拡張</th>
+    <th>説明</th>
+    <th>URL</th>
+    <th>値の型</th>
+  </tr>
+  <tr>
+    <td>指示ライン</td>
+    <td>指示ラインを格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line</td>
+    <td>CodeableConcept</td>
+  </tr>
+  <tr>
+    <td>投与装置</td>
+    <td>投与装置を格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device</td>
+    <td>Reference (Device)</td>
+  </tr>
+  <tr>
+    <td>RP内薬剤番号</td>
+    <td>RP内の薬剤の連番を格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo</td>
+    <td>integer</td>
+  </tr>
+  <tr>
+    <td>力価区分</td>
+    <td>投与量が製剤単位か成分単位かを格納する拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Strength_StrengthType</td>
+    <td>CodeableConcept</td>
+  </tr>
+  <tr>
+    <td>調剤結果</td>
+    <td>薬剤単位の調剤結果</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation</td>
+    <td>CodeableConcept</td>
+  </tr>
+</table>
 
 
 ### 用語定義
@@ -44,11 +75,11 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 |医薬品|HOT9|urn:oid:1.2.392.200119.4.403.1|
 |医薬品|HOT13|urn:oid:1.2.392.200119.4.402.1|
 |医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
-|剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/Common/CodeSystem/merit9-form|
+|剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationFormMERIT9_CS|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
 |力価区分|電子処方箋HL7 FHIR仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
 |用法|JAMI処方・注射オーダ標準用法規格(用法コード) |urn:oid:1.2.392.200250.2.2.20.20|
-|頓用条件|MERIT-9(頓用指示)|http://jpfhir.jp/fhir/Common/CodeSystem/merit9-asNeededCondition|
+|頓用条件|MERIT-9(頓用指示)|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS|
 |投与部位|JAMI処方・注射オーダ標準用法規格(部位コード)|urn:oid:1.2.392.200250.2.2.20.32|
 |投与部位|HL7 V2(HL7表0550)|http://terminology.hl7.org/CodeSystem/v2-0550|
 |投与部位(修飾子)|HL7 V2(HL7表0495)|http://terminology.hl7.org/CodeSystem/v2-0495|

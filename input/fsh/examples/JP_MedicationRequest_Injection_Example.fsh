@@ -13,7 +13,7 @@ Usage: #example
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
-* category[+] = http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category#IHP "入院処方"
+* category[+] = $JP_MedicationCategoryMERIT9_CS#IHP "入院処方"
 * category[+] = http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0001#FTP "定時処方"
 * medicationReference = Reference(Medication/jp-medicationrequest-injection-medication-example-1)
 * subject = Reference(Patient/jp-patient-example-1)
@@ -31,7 +31,7 @@ Usage: #example
 * dosageInstruction.method = urn:oid:1.2.392.200250.2.2.20.40#30 "静脈注射"
 * dosageInstruction.doseAndRate.doseQuantity.value = 2
 * dosageInstruction.doseAndRate.doseQuantity.unit = "mL"
-* dosageInstruction.doseAndRate.doseQuantity.system = "urn:oid:1.2.392.100495.20.2.101"
+* dosageInstruction.doseAndRate.doseQuantity.system = "http://unitsofmeasure.org"
 * dosageInstruction.doseAndRate.doseQuantity.code = #ML
 * dosageInstruction.doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1
 
@@ -49,7 +49,7 @@ Usage: #example
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
-* category[+] = http://jpfhir.jp/fhir/Common/CodeSystem/merit9-category#IHP "入院処方"
+* category[+] = $JP_MedicationCategoryMERIT9_CS#IHP "入院処方"
 * category[+] = http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0001#FTP "定時処方"
 * medicationReference = Reference(Medication/jp-medicationrequest-injection-medication-example-2)
 * subject = Reference(Patient/jp-patient-example-1)
@@ -63,7 +63,7 @@ Usage: #example
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2016-07-01T13:00:00+09:00"
 * dosageInstruction.site.extension.url = "http://hl7.org/fhir/StructureDefinition/bodySite"
 * dosageInstruction.site.extension.valueReference = Reference(BodyStructure/jp-medicationrequest-injection-bodystructure-example-2)
-* dosageInstruction.route = http://jpfhir.jp/fhir/Common/CodeSystem/route-codes#30 "静脈注射"
+* dosageInstruction.route = http://jpfhir.jp/fhir/Common/CodeSystem/route-codes#IV "静脈内"
 * dosageInstruction.method = urn:oid:1.2.392.100495.20.2.34#3 "注射"
 * dosageInstruction.doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1
 * dosageInstruction.doseAndRate.doseQuantity.value = 510

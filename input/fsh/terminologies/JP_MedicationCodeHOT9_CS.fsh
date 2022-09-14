@@ -1,6 +1,6 @@
 CodeSystem: JP_MedicationCodeHOT9_CS
-Id: jp-medication-code-hot9-cs
-Title: "JP Core Medication HOT9 CodeSystem"
+Id: jp-medicationcode-hot9-cs
+Title: "JP Core MedicationCode HOT9 CodeSystem"
 Description: "医薬品HOT9コードのコードシステム"
 * ^identifier[0].system = "urn:ietf:rfc:3986"
 * ^identifier[=].value = "urn:oid:1.2.392.200119.4.403.1"
