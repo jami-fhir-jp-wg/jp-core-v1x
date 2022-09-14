@@ -14,10 +14,8 @@ Description: "このプロファイルはTiming DataTypeに対して、薬剤に
 * repeat ^short = "イベントが発生する時刻"
 * repeat ^definition = "イベントがスケジュールされたルールについての記述。"
 * repeat ^requirements = "スケジュールされたタイミングの多くは規則的な繰り返しで決定されている。"
-* repeat.bounds[x] only Duration or Period or Range
 * repeat.bounds[x] ^short = "服用・注射開始日から服用・注射終了日までの全日数"
 * repeat.bounds[x] ^definition = "服用・注射開始日から服用・注射終了日までの全日数。実投与日数ではないことに注意する。"
-* repeat.boundsRange only JP_MedicationRange
 * repeat.count ^short = "繰り返し服用もしくは注射回数"
 * repeat.count ^definition = "Timing仕様の全てにおいて、特定の期間に繰り返されるように指定された総回数。もし、countMaxが設定されていれば、このエレメントは許容される最低限度の回数を示す。"
 * repeat.count ^comment = "回数に上限、下限の範囲がある場合は、このcountで示される回数が起きるまでは、エレメントは範囲の中にあると解釈されるべきである。"

@@ -4,8 +4,8 @@
 Profile: JP_MedicationDosage
 Parent: JP_MedicationDosageBase
 Id: jp-medicationdosage
-Title: "JP Core MedicationDosage Profile"
-Description: "処方用法に関するプロファイル"
+Title: "JP Core MedicationDosage DataType"
+Description: "処方用法に関するDataType"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage"
 * ^status = #draft
 * extension[device] ..0

@@ -109,12 +109,9 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * dosage.dose only JP_MedicationSimpleQuantity
 * dosage.dose ^short = "Amount of medication per dose　用量あたりの投薬量"
 * dosage.dose ^definition = "The amount of the medication given at one administration event.   Use this value when the administration is essentially an instantaneous event such as a swallowing a tablet or giving an injection.\r\n\r\n1回の投与イベントで投与される薬剤の量。この値は、投与が錠剤の飲み込みや注射などの本質的に瞬間的なイベントである場合に使用する。"
-* dosage.rate[x] only Ratio or SimpleQuantity
 * dosage.rate[x] ^short = "Dose quantity per unit of time　単位時間あたりの用量"
 * dosage.rate[x] ^definition = "Identifies the speed with which the medication was or will be introduced into the patient.  Typically, the rate for an infusion e.g. 100 ml per 1 hour or 100 ml/hr.  May also be expressed as a rate per unit of time, e.g. 500 ml per 2 hours.  Other examples:  200 mcg/min or 200 mcg/1 minute; 1 liter/8 hours.\r\n\r\n薬が患者に導入された、または導入される予定の速度を識別する。\r\n通常、注入の速度。 1時間あたり100mlまたは100ml/時。単位時間あたりのレートとして表すこともできる。 2時間あたり500ml。その他の例：200mcg/分または200mcg/1分。 1リットル/8時間。"
 * dosage.rate[x] ^comment = "If the rate changes over time, and you want to capture this in MedicationAdministration, then each change should be captured as a distinct MedicationAdministration, with a specific MedicationAdministration.dosage.rate, and the date time when the rate change occurred. Typically, the MedicationAdministration.dosage.rate element is not used to convey an average rate.\r\n\r\nレートが時間の経過とともに変化し、これをMedicationAdministrationで記述する場合は、各変更を、特定のMedicationAdministration.dosage.rateと、レート変更が発生した日時を使用して、個別のMedicationAdministrationとして記述する必要がある。通常、MedicationAdministration.dosage.rate要素は、平均レートを伝達するためには使用されない。"
-* dosage.rateRatio only JP_MedicationRatio
-* dosage.rateQuantity only JP_MedicationSimpleQuantity
 * eventHistory ^short = "A list of events of interest in the lifecycle　ライフサイクルで関心のあるイベントのリスト"
 * eventHistory ^definition = "A summary of the events of interest that have occurred, such as when the administration was verified.\r\n\r\n投与が確認されたときなど、発生した関連のあるベントのサマリー。"
 

@@ -20,8 +20,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
     JP_MedicationAdministration_DosageRoute_RouteComment named routeComment ..*
 * dosage.method.extension contains 
     JP_MedicationAdministration_DosageMethod_MethodComment named methodComment ..*
-* dosage.rateRatio.extension contains 
-    JP_MedicationAdministration_DosageRate_RateComment named rateComment ..*
-* dosage.rateQuantity ^short = "【JP Core仕様】未使用"
+* dosage.rate[x] only Ratio
+* dosage.rateRatio only JP_MedicationRateRatio
 * medication[x] only Reference(Medication)
 * medicationReference only Reference(JP_Medication)
