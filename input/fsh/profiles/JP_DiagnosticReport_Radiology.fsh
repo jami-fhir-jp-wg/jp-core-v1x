@@ -16,6 +16,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * identifier ^definition = "実行者または他のシステムによってこのレポートに割り当てられた識別子。"
 * identifier ^comment = "通常は診断サービスプロバイダの情報システムにより設定される。\r\n\r\n【JP Core仕様】レポート番号\r\n\r\n（放射線情報システム(RIS)による発番が想定されるが、施設によって電子カルテ等のオーダ番号を使う場合もあり得る）"
 * identifier ^requirements = "このレポートについてクエリを実行するとき、およびFHIRコンテキスト外のレポートにリンクするときにどの識別子を使用するかを知る必要がある"
+* basedOn MS
 * basedOn ^short = "検査や診断の依頼の元になったもの。通常はServiceRequestあるいはCarePlan（治験や抗がん剤投与等により検査を行うことが必須の場合、根拠となった事象を追記することは制限しない）"
 * basedOn only Reference(CarePlan or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
 * basedOn ^definition = "レポート作成サービスに対する要求の詳細"
@@ -24,6 +25,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * status ^definition = "診断レポートの状態"
 * status ^comment = "FHIRのstringsは1MBを越えてはならない（SHALL NOT）ことに留意すること。\r\n\r\n【JP Core仕様】・診断レポートのステータス\r\n\r\n・定義通りの選択肢（例：preliminary 一次読影, final 二次読影（完了）等）を利用。"
 * status ^requirements = "診断サービスではルーチンに仮確定あるいは不完全なレポートが発生することがある。また、しばしば前に発行されたレポートが取り消されることもある。"
+* category MS
 * category ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは ”RAD” をデフォルトとして設定。追加の情報については任意で設定可能。"
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
@@ -49,6 +51,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * encounter ^definition = "この診断レポートが関するヘルスケアイベント。"
 * encounter ^comment = "これは通常、レポートの作成が発生するエンカウンターだが、一部のイベントはエンカウンターの正式な完了の前または後に開始される場合がある（例えば入院前の検査）。その場合でも（入院に関連して検査が行われる場合など）、エンカウンターのコンテキストに関連付けられる。\r\n\r\n【JP Core仕様】このレポートを書く切っ掛けとなる Encounterリソース（例：術前検査の場合、術前訪問） を参照"
 * encounter ^requirements = "Encounterコンテキストへのリンクが必要である"
+* effective[x] MS
 * effective[x] only dateTime
 * effective[x] ^definition = "観測値が関連する時間または期間。レポートの対象が患者である場合、これは通常、読影開始の時間であり、日付/時刻自体のみが提供される。"
 * effective[x] ^comment = "診断手順が患者に対して実行された場合、これは実行された時間を示す。\r\n\r\n【JP Core仕様】レポート作成日時\r\n\r\n（DateTimeを採用し、Periodは不使用）"
@@ -56,10 +59,12 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * issued ^definition = "このバージョンのレポートがプロバイダーに提供された日時。通常、レポートがレビューおよび検証された後になる。"
 * issued ^comment = "リソース自体の更新時間とは異なる場合がある。これは、レポートの実際のリリース時間ではなく、レコード（場合によってはセカンダリコピー）のステータスであるため。\r\n\r\n【JP Core仕様】レポート確定日時"
 * issued ^requirements = "臨床医は、レポートがリリースされた日付を確認できる必要がある。"
+* performer MS
 * performer only Reference(JP_Practitioner)
 * performer ^definition = "レポートの発行を担当するもの。"
 * performer ^comment = "臨床診断レポートに対して責任を持つもの.\r\n\r\n【JP Core仕様】レポート確定者\r\n\r\n（責任としては performer > resultsInterpreter という関係性）"
 * performer ^requirements = "結果に関する問い合わせがある場合は、誰に連絡を取るべきかを知る必要がある。また、データ二次分析のためにレポートの発生源を追跡する必要が生じる場合もある。"
+* resultsInterpreter MS
 * resultsInterpreter only Reference(JP_Practitioner)
 * resultsInterpreter ^definition = "レポートの結論や読影に関わる医師や組織"
 * resultsInterpreter ^comment = "必ずしも診断レポートに対して責任を持つものを示すわけでは無い。\r\n\r\n【JP Core仕様】但し、一次読影や二次読影などの役割 (Practitioner Roll) の指定方法はペンディング"
