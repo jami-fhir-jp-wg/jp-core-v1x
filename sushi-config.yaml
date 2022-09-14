@@ -130,8 +130,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispense
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispenseBase
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage_Injection
-    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage_Prescription
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosageBase
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationQuantity
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRange
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio

@@ -120,7 +120,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * note ^short = "薬剤単位の備考"
 * note ^definition = "他の属性では伝えることができなかったMedicationRequestについての付加的情報。"
 * note ^comment = "構造化されたアノテーションが内システムでは、作成者や記録時間のない一つのアノテーションで情報を伝達している。このエレメントに情報の修正を要する可能性があるためにナラティブな情報も必要としている。Annotationsには機械処理が可能で修正される（\"modifying\")情報を伝達することに使うべきではない(SHOULD NOT)。これがSHOULDである理由はユーザーの行動を強制することはほぼ不可能であるからである。"
-* dosageInstruction only JP_MedicationDosage
+* dosageInstruction only JP_MedicationDosageBase
 * dispenseRequest ^short = "調剤・払い出しについての承認事項"
 * dispenseRequest ^definition = "薬剤オーダー(MedicationRequest, Medication Prescription, Medication Orderなどとしても表現される）や薬剤オーダーとの一部としての薬剤の払い出しあるいは提供。この情報はオーダーとしてかならず伝えられるというわけではないことに注意。薬剤部門で調剤・払い出しを完了するための施設（たとえば病院）やシステムでのサポートに関する設定をしてもよい。"
 * dispenseRequest.id ^short = "内部エレメントを参照するためのユニークID"
@@ -228,3 +228,90 @@ Description: "調剤指示。薬剤単位の調剤指示を表現するための
 * valueCodeableConcept.coding from $JP_MedicationInstructionForDispenseJHSP0002_VS (preferred)
 
 
+
+// ==============================
+//   Extension 定義
+// ==============================
+Extension: JP_MedicationRequest_DosageInstruction_Device
+Id: jp-medicationrequest-dosageinstruction-device
+Title: "JP Core MedicationRequest DosageInstruction Device Extension"
+Description: "投与装置を格納する拡張"
+* ^url = $JP_MedicationRequest_DosageInstruction_Device
+* ^date = "2022-03-16"
+* ^context[0].type = #element
+* ^context[=].expression = "MedicationRequest.dosageInstruction"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationDispense.dosageInstruction"
+* . ^short = "投与装置"
+* . ^definition = "投与装置を格納する拡張"
+* url = $JP_MedicationRequest_DosageInstruction_Device (exactly)
+* value[x] only Reference(Device)
+
+Extension: JP_MedicationRequest_DosageInstruction_Line
+Id: jp-medicationrequest-dosageinstruction-line
+Title: "JP Core MedicationRequest DosageInstruction Line Extension"
+Description: "指示ラインを格納するための拡張"
+* ^url = $JP_MedicationRequest_DosageInstruction_Line
+* ^date = "2022-03-16"
+* ^context[0].type = #element
+* ^context[=].expression = "MedicationRequest.dosageInstruction"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationDispense.dosageInstruction"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationAdministration.dosage"
+* . ^short = "指示ライン"
+* . ^definition = "指示ラインを格納する拡張"
+* url = $JP_MedicationRequest_DosageInstruction_Line (exactly)
+* value[x] only CodeableConcept
+* valueCodeableConcept.coding from $JP_MedicationExampleLine_VS (example)
+
+Extension: JP_MedicationRequest_DosageInstruction_PeriodOfUse
+Id: jp-medicationrequest-dosageinstruction-periodofuse
+Title: "JP Core MedicationRequest DosageInstruction PeriodOfUse Extension"
+Description: "投与開始日を格納する拡張"
+* ^url = $JP_MedicationRequest_DosageInstruction_PeriodOfUse
+* ^date = "2022-03-16"
+* ^purpose = "処方日とは別に明示的に投与・内服開始日を指定するため。"
+* ^context[0].type = #element
+* ^context[=].expression = "MedicationRequest.dosageInstruction"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationDispense.dosageInstruction"
+* . ^short = "投与期間の開始日を明示するための拡張"
+* . ^definition = "MedicationRequestの投与期間の開始日を明示するための拡張"
+* url = $JP_MedicationRequest_DosageInstruction_PeriodOfUse (exactly)
+* value[x] only Period
+* value[x] ^short = "投与期間を表す"
+* value[x] ^definition = "MedicationRequestに投与期間の開始日を明示するための拡張"
+* value[x].start 1..
+* value[x].start ^short = "投与期間の開始日"
+* value[x].start ^definition = "明示された投与期間の開始日"
+
+Extension: JP_MedicationRequest_DosageInstruction_UsageDuration
+Id: jp-medicationrequest-dosageinstruction-usageduration
+Title: "JP Core MedicationRequest DosageInstruction UsageDuration Extension"
+Description: "隔日投与など、服用開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使用する拡張"
+* ^url = $JP_MedicationRequest_DosageInstruction_UsageDuration
+* ^date = "2022-03-16"
+* ^context[0].type = #element
+* ^context[=].expression = "MedicationRequest.dosageInstruction"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationDispense.dosageInstruction"
+* . ^short = "実投与日数"
+* . ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
+* url = $JP_MedicationRequest_DosageInstruction_UsageDuration (exactly)
+* value[x] only Duration
+* value[x] ^short = "実投与日数"
+* value[x] ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
+* value[x].id ^short = "エレメント間参照のためのID"
+* value[x].id ^definition = "JP Coreでは使用されない。"
+* value[x].value ^short = "実投与日数"
+* value[x].value ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
+* value[x].unit = "日" (exactly)
+* value[x].unit ^short = "実投与日数単位"
+* value[x].unit ^definition = "「日」で固定される"
+* value[x].system = "http://unitsofmeasure.org" (exactly)
+* value[x].system ^short = "UCUM"
+* value[x].system ^definition = "単位コード UCUMを識別するURI。固定値。"
+* value[x].code = #d (exactly)
+* value[x].code ^short = "単位コードUCUMにおける実投与日数の単位"
+* value[x].code ^definition = "単位コードUCUMにおける実投与日数の単位。dで固定される"

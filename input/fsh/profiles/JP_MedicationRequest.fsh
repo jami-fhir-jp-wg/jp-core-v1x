@@ -37,4 +37,4 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * medicationCodeableConcept.coding.system 1..
 * medicationCodeableConcept.coding.code 1..
 
-* dosageInstruction only JP_MedicationDosage_Prescription
+* dosageInstruction only JP_MedicationDosage

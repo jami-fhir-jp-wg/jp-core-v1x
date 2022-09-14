@@ -74,7 +74,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * note ^short = "Information about the dispense　調剤に関する備考"
 * note ^definition = "Extra information about the dispense that could not be conveyed in the other attributes.\r\n\r\n他の要素では伝達できなかった調剤に関する追加情報。"
 * note ^comment = "For systems that do not have structured annotations, they can simply communicate a single annotation with no author or time.  This element may need to be included in narrative because of the potential for modifying information.  *Annotations SHOULD NOT* be used to communicate \"modifying\" information that could be computable. (This is a SHOULD because enforcing user behavior is nearly impossible).\r\n\r\n構造化された注釈（アノテーション）を持たないシステムの場合、作成者や時間なしで単一の注釈を簡単に伝達できる。情報を変更する可能性があるため、この要素をナラティブに含める必要がある場合がある。 \r\n*注釈は、計算機処理れきる「変更」情報を伝達するために使用されるべきではない*。 （ユーザーの行動を強制することはほとんど不可能であるため、これはSHOULDとする）。"
-* dosageInstruction only JP_MedicationDosage
+* dosageInstruction only JP_MedicationDosageBase
 * substitution ^short = "Whether a substitution was performed on the dispense　調剤で置換が実行されたかどうか。"
 * substitution ^definition = "Indicates whether or not substitution was made as part of the dispense. In some cases, substitution will be expected but does not happen, in other cases substitution is not expected but does happen. This block explains what substitution did or did not happen and why. If nothing is specified, substitution was not done. \r\n 調剤の一部として置換が行われたかどうかを示す。場合によっては、置換が期待されるが発生しない場合もあれば、置換が予期されないが発生する場合もある。このブロックは、置換が行われたか行われなかったか、およびその理由を説明する。何も指定されていない場合、置換は行われていない。"
 * substitution.wasSubstituted ^short = "Whether a substitution was or was not performed on the dispense　調剤で置換が実行されたか、あるいはされていないかを'true'または'false'で表す。"

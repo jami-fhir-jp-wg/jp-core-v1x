@@ -20,4 +20,4 @@ Description: "このプロファイルはMedicationDispenseリソースに対し
 * medicationCodeableConcept.coding ^comment = "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.\r\n"
 * medicationCodeableConcept.coding.system 1..
 * medicationCodeableConcept.coding.code 1..
-* dosageInstruction only JP_MedicationDosage_Prescription
+* dosageInstruction only JP_MedicationDosage
