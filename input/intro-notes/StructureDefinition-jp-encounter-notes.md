@@ -30,18 +30,14 @@ JP Encounter リソースで使用される拡張は次の通りである。
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHALL            | patient    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/us-npi\|123456  |
-| SHALL            | date, patient    | token  | GET [base]/Encounter?date=http://hl7.org/fhir/sid/us-npi\20210415?patient=http://hl7.org/fhir/sid/us-npi\|123456  |
-| SHOULD           | identifier    | token  | GET [base]/Encounter?identifier=http://hl7.org/fhir/sid/us-npi\|123456 |
-| SHOULD           | class, patient    | token  | GET [base]/Encounter?class=http://hl7.org/fhir/sid/us-npi\EMER?patient=http://hl7.org/fhir/sid/us-npi\|123456  |
-| SHOULD           | patient, type    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/us-npi\|123456?type=http://hl7.org/fhir/sid/us-npi\ADMS  |
-| SHOULD           | patient, status    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/us-npi\|123456?status=http://hl7.org/fhir/sid/us-npi\arrived  |
+| SHALL            | identifier    | token  | GET [base]/Encounter?identifier=http://hl7.org/fhir/sid/jpsys\|123456 |
+| SHOULD            | patient    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456  |
+| SHOULD            | date, patient    | token  | GET [base]/Encounter?date=http://hl7.org/fhir/sid/jpsys\20210415?patient=http://hl7.org/fhir/sid/jpsys\|123456  |
+| SHOULD           | class, patient    | token  | GET [base]/Encounter?class=http://hl7.org/fhir/sid/jpsys\EMER?patient=http://hl7.org/fhir/sid/jpsys\|123456  |
+| SHOULD           | patient, type    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456?type=http://hl7.org/fhir/sid/jpsys\ADMS  |
+| SHOULD           | patient, status    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456?status=http://hl7.org/fhir/sid/jpsys\arrived  |
 
 ##### 必須検索パラメータ
-
-必須検索パラメータ(SHALL)はない。
-
-##### 推奨検索パラメータ
 
 次の検索パラメータをサポートすることが望ましい。(SHOULD)
 
@@ -54,15 +50,11 @@ JP Encounter リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Encounter?identifier=http://hl7.org/fhir/sid/us-npi|123456
+   GET [base]/Encounter?identifier=http://hl7.org/fhir/sid/jpsys|123456
    ```
 
    指定された識別子に一致するEncounterリソースを含むBundleを検索する。
    
-
-##### 追加検索パラメータ 
-
-オプション検索パラメータ(MAY)はない。
 
 #### Operation一覧
 
@@ -93,25 +85,21 @@ URL: [base]/Encounter/[id]/$everything
 
 
 ###### 入力パラメータ
-<!--
-<span style="color: red;">http://www.hl7.org/fhir/R4/encounter-operation-everything.html</span>
--->
 
-| 名前   | 多重度 | 型      | バインディング | プロファイル | 説明                                                         |
-| ------ | ------ | ------- | -------------- | ------------ | ------------------------------------------------------------ |
-| _since | 0..1   | instant |                |              | 指定された日時以降に更新されたリソースのみが応答に含まれる。 |
-| _type  | 0..*   | code    |                |              | 応答に含むFHIRリソース型を、カンマ区切りで指定する。指定されない場合は、サーバは全てのリソース型を対象とする。 |
-| _count | 0..1   | integer |                |              | Bundleの1ページに含まれるリソース件数を指定。                |
+
+
+| 名前   | 多重度 | 型      | 説明                                                         |
+| ------ | ------ | ------- | ------------------------------------------------------------ |
+| _since | 0..1   | instant | 指定された日時以降に更新されたリソースのみが応答に含まれる。 |
+| _type  | 0..*   | code    | 応答に含むFHIRリソース型を、カンマ区切りで指定する。指定されない場合は、サーバは全てのリソース型を対象とする。 |
+| _count | 0..1   | integer | Bundleの1ページに含まれるリソース件数を指定。                |
 
 
 ###### 出力パラメータ
-<!--
-<span style="color: red;">http://www.hl7.org/fhir/R4/encounter-operation-everything.html</span>
--->
 
-| 名前   | 多重度 | 型     | バインディング | プロファイル | 説明                                                         |
-| ------ | ------ | ------ | -------------- | ------------ | ------------------------------------------------------------ |
-| return | 1..1   | Bundle |                |              | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
+| 名前   | 多重度 | 型     | 説明                                                         |
+| ------ | ------ | ------ | ------------------------------------------------------------ |
+| return | 1..1   | Bundle | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
 
 
 
