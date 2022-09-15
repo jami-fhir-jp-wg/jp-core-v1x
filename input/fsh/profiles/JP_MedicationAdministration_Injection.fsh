@@ -21,6 +21,6 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * dosage.method.extension contains 
     JP_MedicationAdministration_DosageMethod_MethodComment named methodComment ..*
 * dosage.rate[x] only Ratio
-* dosage.rateRatio only JP_MedicationRateRatio
+* dosage.rateRatio only JP_MedicationRatio_DosePerPeriod
 * medication[x] only Reference(Medication)
 * medicationReference only Reference(JP_Medication)

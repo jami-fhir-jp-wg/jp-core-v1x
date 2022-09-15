@@ -97,6 +97,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * doseAndRate.rate[x] ^short = "薬剤の投与量"
 * doseAndRate.rate[x] ^definition = "薬剤が投与される量"
 // doseAndRate.maxDose関連
-* maxDosePerPeriod only JP_MedicationRatio
+* maxDosePerPeriod only JP_MedicationRatio_DosePerPeriod
 * maxDosePerAdministration only JP_MedicationSimpleQuantity
 * maxDosePerLifetime only JP_MedicationSimpleQuantity

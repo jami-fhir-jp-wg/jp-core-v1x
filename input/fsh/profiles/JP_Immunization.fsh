@@ -53,6 +53,7 @@ Description: "このProfileはImmunizationリソースに対して日本での�
 * site ^definition = "ワクチンが接種された身体部位"
 * route ^short = "ワクチンを接種した経路"
 * route ^definition = "ワクチンが体内へと接種された経路。"
+* doseQuantity only JP_MedicationSimpleQuantity
 * doseQuantity ^short = "ワクチンの投与量"
 * doseQuantity ^definition = "ワクチン製剤が接種された量"
 * performer ^short = "ワクチン接種を実施した人"

@@ -19,5 +19,5 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * medicationCodeableConcept.coding.system 1..
 * medicationCodeableConcept.coding.code 1..
 
-* dosage.rateRatio only JP_MedicationRatio
+* dosage.rateRatio only JP_MedicationRatio_DosePerPeriod
 * dosage.rateQuantity only JP_MedicationSimpleQuantity
