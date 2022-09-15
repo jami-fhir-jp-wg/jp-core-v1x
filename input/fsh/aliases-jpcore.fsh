@@ -159,6 +159,7 @@ Alias: $JP_ProcedureFollowUp_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Pro
 Alias: $JP_ProcedureNotPerformedReason_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureNotPerformedReason_CS
 Alias: $JP_ProcedureOutcome_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureOutcome_CS
 Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureReason_CS
+Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
 
 // ValueSet
 Alias: $JP_AllergyIntolerance_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntolerance_VS
@@ -231,3 +232,4 @@ Alias: $JP_ProcedureNotPerformedReason_VS = http://jpfhir.jp/fhir/Common/ValueSe
 Alias: $JP_ProcedureOutcome_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureOutcome_VS
 Alias: $JP_ProcedurePerformerRole_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedurePerformerRole_VS
 Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureReason_VS
+Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_Undefined_VS

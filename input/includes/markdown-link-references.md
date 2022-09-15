@@ -170,6 +170,7 @@
 [JP_ProcedureNotPerformedReason_CS]: CodeSystem-jp-procedure-not-performed-reason-cs.html
 [JP_ProcedureOutcome_CS]: CodeSystem-jp-procedure-outcome-cs.html
 [JP_ProcedureReason_CS]: CodeSystem-jp-procedure-reason-cs.html
+[JP_Undefined_CS]: CodeSystem-jp-undefined-cs.html
 
 <!-- ValueSet -->
 [JP_AllergyIntolerance_VS]: ValueSet-jp-allergyintolerance-vs.html
@@ -242,6 +243,7 @@
 [JP_ProcedureOutcome_VS]: ValueSet-jp-procedure-outcome-vs.html
 [JP_ProcedurePerformerRole_VS]: ValueSet-jp-procedure-performer-role-vs.html
 [JP_ProcedureReason_VS]: ValueSet-jp-procedure-reason-vs.html
+[JP_Undefined_VS]: ValueSet-jp-undefined-vs.html
 
 <!-- Example -->
 [jp-allergyintolerance-example-1]: AllergyIntolerance-jp-allergyintolerance-example-1.html
