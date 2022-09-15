@@ -3,8 +3,6 @@ InstanceOf: JP_MedicationDispense
 Title: "JP Core MedicationDispense Example 調剤実施 内服薬"
 Description: "調剤実施 内服薬"
 Usage: #example
-// * extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
-// * extension.valueDuration = 3 'd' "日"
 * identifier[0].system = "http://www.sample.com/fhir/medication-dispense"
 * identifier[=].value = "1234567890"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.81"

@@ -38,8 +38,11 @@
 [JP_MedicationDosage]: StructureDefinition-jp-medicationdosage.html
 [JP_MedicationDosageBase]: StructureDefinition-jp-medicationdosagebase.html
 [JP_MedicationQuantity]: StructureDefinition-jp-medicationquantity.html
+[JP_MedicationRange_UnitOfTime]: StructureDefinition-jp-medicationrange-unitoftime.html
 [JP_MedicationRange]: StructureDefinition-jp-medicationrange.html
-[JP_MedicationRatio]: StructureDefinition-jp-medicationratio.html
+[JP_MedicationRatio_Amount]: StructureDefinition-jp-medicationratio-amount.html
+[JP_MedicationRatio_DosePerDay]: StructureDefinition-jp-medicationratio-doseperday.html
+[JP_MedicationRatio_DosePerPeriod]: StructureDefinition-jp-medicationratio-doseperperiod.html
 [JP_MedicationRequest_Injection]: StructureDefinition-jp-medicationrequest-injection.html
 [JP_MedicationRequest]: StructureDefinition-jp-medicationrequest.html
 [JP_MedicationRequestBase]: StructureDefinition-jp-medicationrequestbase.html
@@ -174,7 +177,6 @@
 [JP_Department_SsMix_VS]: ValueSet-jp-department-ssmix-vs.html
 [JP_Department_SsMix2Digits_VS]: ValueSet-jp-department-ssmix2digits-vs.html
 [JP_Department_SsMix3Digits_VS]: ValueSet-jp-department-ssmix3digits-vs.html
-[JP_DiagnosticReportRadiologyCode_VS]: ValueSet-jp-diagnosticreportradiologycode-vs.html
 [JP_MedicalFeeScoreType_VS]: ValueSet-jp-medicalfeescoretype-vs.html
 [JP_MedicalLicenseCertificate_VS]: ValueSet-jp-medicallicensecertificate-vs.html
 [JP_MedicationAsNeededConditionJAMI_VS]: ValueSet-jp-medication-as-needed-condition-jami-vs.html
