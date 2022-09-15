@@ -27,7 +27,7 @@ Usage: #example
 * dosageInstruction.doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 * dosageInstruction.doseAndRate.doseQuantity = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 * dosageInstruction.doseAndRate.rateRatio.numerator = 3 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
-* dosageInstruction.doseAndRate.rateRatio.denominator = 1 'd' "日"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 1 'd' "Day"
 * substitution.wasSubstituted = true
 * substitution.type = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution#G "generic composition"
 * substitution.reason = http://terminology.hl7.org/CodeSystem/v3-ActReason#RR "regulatory requirement"

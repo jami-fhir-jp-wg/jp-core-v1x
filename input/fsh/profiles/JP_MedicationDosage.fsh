@@ -123,7 +123,7 @@ Description: "このプロファイルは内服用法の制約と拡張のうち
 * timing.repeat.boundsDuration.value ^short = "投薬日数"
 * timing.repeat.boundsDuration.value ^definition = "投薬日数"
 * timing.repeat.boundsDuration.comparator ..0
-* timing.repeat.boundsDuration.system = "http://unitsofmeasure.org" (exactly)
+* timing.repeat.boundsDuration.system from $units-of-time (required)
 * timing.repeat.boundsDuration.system ^short = "UCUM"
 * timing.repeat.boundsDuration.system ^definition = "単位コード UCUMを識別するURI。固定値。"
 * timing.repeat.boundsDuration.code 1..

@@ -68,7 +68,7 @@ Usage: #example
 * dosageInstruction.doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1
 * dosageInstruction.doseAndRate.doseQuantity = 510 'mL' "ミリリッター"
 * dosageInstruction.doseAndRate.rateRatio.numerator = 102 'mL' "ミリリッター"
-* dosageInstruction.doseAndRate.rateRatio.denominator = 1 'd' "日"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 1 'd' "Day"
 
 Instance: jp-medicationrequest-injection-medication-example-1
 InstanceOf: JP_Medication
