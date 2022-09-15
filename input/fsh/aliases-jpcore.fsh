@@ -147,6 +147,7 @@ Alias: $JP_ProcedureFollowUp_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Pro
 Alias: $JP_ProcedureNotPerformedReason_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureNotPerformedReason_CS
 Alias: $JP_ProcedureOutcome_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureOutcome_CS
 Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureReason_CS
+Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
 
 // ValueSet
 Alias: $JP_AllergyIntolerance_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntolerance_VS
@@ -154,7 +155,6 @@ Alias: $JP_ConditionSeverity_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_Condi
 Alias: $JP_Department_SsMix_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_Department_SsMix_VS
 Alias: $JP_Department_SsMix2Digits_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_Department_SsMix2Digits_VS
 Alias: $JP_Department_SsMix3Digits_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_Department_SsMix3Digits_VS
-Alias: $JP_DiagnosticReportRadiologyCode_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_DiagnosticReportRadiologyCode_VS
 Alias: $JP_MedicalFeeScoreType_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicalFeeScoreType_VS
 Alias: $JP_MedicalLicenseCertificate_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicalLicenseCertificate_VS
 Alias: $JP_MedicationAsNeededConditionJAMI_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationAsNeededConditionJAMI_VS
@@ -220,3 +220,4 @@ Alias: $JP_ProcedureNotPerformedReason_VS = http://jpfhir.jp/fhir/Common/ValueSe
 Alias: $JP_ProcedureOutcome_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureOutcome_VS
 Alias: $JP_ProcedurePerformerRole_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedurePerformerRole_VS
 Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureReason_VS
+Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_Undefined_VS

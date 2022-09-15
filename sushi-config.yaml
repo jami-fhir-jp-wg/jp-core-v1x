@@ -245,12 +245,12 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureNotPerformedReason_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureOutcome_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureReason_CS
+    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntolerance_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_ConditionSeverity_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_Department_SsMix_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_Department_SsMix2Digits_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_Department_SsMix3Digits_VS
-    - http://jpfhir.jp/fhir/Common/ValueSet/JP_DiagnosticReportRadiologyCode_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicalFeeScoreType_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicalLicenseCertificate_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationAsNeededConditionJAMI_VS
@@ -316,4 +316,5 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureOutcome_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedurePerformerRole_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureReason_VS
+    - http://jpfhir.jp/fhir/Common/ValueSet/JP_Undefined_VS
 
