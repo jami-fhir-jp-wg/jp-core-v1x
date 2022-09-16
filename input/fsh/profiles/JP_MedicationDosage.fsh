@@ -103,7 +103,6 @@ Description: "このプロファイルは薬剤用のDosageベースとして基
 * maxDosePerAdministration only JP_MedicationSimpleQuantity
 * maxDosePerLifetime only JP_MedicationSimpleQuantity
 
-
 // ==============================
 // (内服用)JP_MedicationDosage DataType
 // ==============================
@@ -137,8 +136,8 @@ Description: "このプロファイルは内服用法の制約と拡張のうち
 * doseAndRate.doseQuantity ^definition = "1回投与量"
 * doseAndRate.doseQuantity ^comment = "この量は指定された薬剤の量を指定するものであって、各有効成分の量を指定するものではない。各成分の量はMedication resourceで伝えることができる。たとえば、有効成分が375mgである錠剤を1錠投与することを伝えたい場合、Medication resourceを利用して、XYZ成分が375mg含有しているという錠剤であることを文書化することができる。あるいは1回投与量が375mgであることを伝えるのであれば、Medication resourceをつかって単にそれが錠剤であることを示せばよい。もし、ドーパミンの静注を例に挙げて、400mgのドーパミンを500mlの注射溶液に混ぜて使うことを伝えたいのであれば、それをすべてMedication resourceで伝えることができる。もし、投与について即時に伝達することを意図していない（たとえば投与速度が示されていたり、投与時期に範囲があるような場合）のであれば、たとえば1回500mlを4時間以上かけて投与する予定を伝える場合にもMedication resourceで伝えることができる。  
 【JP Core仕様】1回の投与量を指定する。単位は医薬品単位略号を使用することが望ましい。"
-* doseAndRate.rateRatio only JP_MedicationRatio_DosePerDay
 * doseAndRate.doseRange only JP_MedicationRange
+* doseAndRate.rateRatio only JP_MedicationRatio_DosePerDay
 
 // ==============================
 // (注射用)JP_MedicationDosage DataType
@@ -162,5 +161,6 @@ Description: "このプロファイルは注射用法の制約と拡張のうち
 * doseAndRate.doseQuantity ^definition = "1回投与量（体積）"
 * doseAndRate.doseQuantity ^comment = "この量は指定された薬剤の量を指定するものであって、各有効成分の量を指定するものではない。各成分の量はMedication resourceで伝えることができる。たとえば、有効成分が375mgである錠剤を1錠投与することを伝えたい場合、Medication resourceを利用して、XYZ成分が375mg含有しているという錠剤であることを文書化することができる。あるいは1回投与量が375mgであることを伝えるのであれば、Medication resourceをつかって単にそれが錠剤であることを示せばよい。もし、ドーパミンの静注を例に挙げて、400mgのドーパミンを500mlの注射溶液に混ぜて使うことを伝えたいのであれば、それをすべてMedication resourceで伝えることができる。もし、投与について即時に伝達することを意図していない（たとえば投与速度が示されていたり、投与時期に範囲があるような場合）のであれば、たとえば1回500mlを4時間以上かけて投与する予定を伝える場合にもMedication resourceで伝えることができる。  
 【JP Core仕様】1回の投与量（体積）を指定する。単位はUCUMを使用する。"
-* doseAndRate.rateRatio only JP_MedicationRatio_DosePerDay
 * doseAndRate.doseRange only JP_MedicationRange
+* doseAndRate.rateRatio only JP_MedicationRatio_DosePerDay
+

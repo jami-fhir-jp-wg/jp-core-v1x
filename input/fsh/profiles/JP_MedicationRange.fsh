@@ -1,5 +1,5 @@
 // ==============================
-//   DataType 定義
+// JP_MedicationRange  DataType 定義
 // ==============================
 Profile: JP_MedicationRange
 Parent: Range
@@ -17,9 +17,8 @@ Description: "このプロファイルはRange DataTypeに対して、薬剤量�
 * high only JP_MedicationSimpleQuantity
 * low ^short = "薬剤の上限量"
 
-
 // ==============================
-//   DataType 定義
+// JP_MedicationRange_UnitOfTime DataType 定義
 // ==============================
 Profile: JP_MedicationRange_UnitOfTime
 Parent: Range

@@ -1,5 +1,5 @@
 // ==============================
-//   DataType 定義
+// JP_MedicationQuantity DataType 定義
 // ==============================
 Profile: JP_MedicationQuantity
 Parent: Quantity
@@ -35,7 +35,9 @@ Description: "このプロファイルはQuantity DataTypeに対して、薬剤�
 * code ^definition = "単位のコード化された形式、【JP Core仕様】MERIT9医薬品単位略号マスタコードを推奨(**SHOULD**)"
 * code ^comment = "単位のコード化された形式、【JP Core仕様】MERIT9医薬品単位略号マスタコードを推奨(**SHOULD**)されるが、ローカルコード等を利用することも可能とする"
 
-
+// ==============================
+// JP_MedicationSimpleQuantity DataType 定義
+// ==============================
 Profile: JP_MedicationSimpleQuantity
 Parent: SimpleQuantity
 Id: jp-medicationsimplequantity

@@ -1,3 +1,6 @@
+// ==============================
+// JP_MedicationRatio_Amount DataType
+// ==============================
 Profile: JP_MedicationRatio_Amount
 Parent: Ratio
 Id: jp-medicationratio-amount
@@ -14,6 +17,9 @@ Description: "このプロファイルはRatio Amount DataTypeに対して、日
 * denominator only JP_MedicationQuantity
 * denominator ^short = "パッケージ量"
 
+// ==============================
+// JP_MedicationRatio_DosePerPeriod DataType
+// ==============================
 Profile: JP_MedicationRatio_DosePerPeriod
 Parent: Ratio
 Id: jp-medicationratio-doseperperiod
@@ -42,6 +48,9 @@ Description: "このプロファイルはRatio DataTypeに対して、日本の�
 * denominator.system ^definition = "UCUMを識別するURL。固定値。"
 * denominator.code from $units-of-time (preferred)
 
+// ==============================
+// JP_MedicationRatio_DosePerDay DataType
+// ==============================
 Profile: JP_MedicationRatio_DosePerDay
 Parent: Ratio
 Id: jp-medicationratio-doseperday
