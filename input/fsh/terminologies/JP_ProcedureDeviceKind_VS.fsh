@@ -4,4 +4,5 @@ Title: "JP Core Procedure Device Kind ValueSet"
 Description:  "処置の実施に利用された医療機器を識別する値セット"
 * ^url = $JP_ProcedureDeviceKind_VS
 * ^status = #draft
-* include codes from system JP_ProcedureDeviceKind_CS
+// * include codes from system JP_ProcedureDeviceKind_CS
+* include codes from system JP_Undefined_CS
