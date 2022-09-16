@@ -3,8 +3,6 @@ InstanceOf: JP_MedicationDispense
 Title: "JP Core MedicationDispense Example 調剤実施 内服薬"
 Description: "調剤実施 内服薬"
 Usage: #example
-// * extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration"
-// * extension.valueDuration = 3 'd' "日"
 * identifier[0].system = "http://www.sample.com/fhir/medication-dispense"
 * identifier[=].value = "1234567890"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.81"
@@ -29,7 +27,7 @@ Usage: #example
 * dosageInstruction.doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 * dosageInstruction.doseAndRate.doseQuantity = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 * dosageInstruction.doseAndRate.rateRatio.numerator = 3 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
-* dosageInstruction.doseAndRate.rateRatio.denominator = 1 'd' "日"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 1 http://unitsofmeasure.org#d "day"
 * substitution.wasSubstituted = true
 * substitution.type = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution#G "generic composition"
 * substitution.reason = http://terminology.hl7.org/CodeSystem/v3-ActReason#RR "regulatory requirement"

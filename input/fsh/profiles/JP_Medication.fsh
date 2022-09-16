@@ -26,16 +26,17 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * code ^short = "この薬剤を特定するコード"
 * code ^definition = "A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.\r\n\r\nこの薬剤を指定するコード。該当するコードがない場合はテキスト表記。\r\n使用法について注記：日本ではHOTコードを利用することが推奨される。一般的な薬剤コードとしてRxNorm、SNOMD CT, IDMPなど標準的な医薬品コードを使うことができる。国や地域に特有のローカルコードも使うことができ、他のコードに変換することもできる。"
 * code ^comment = "使われるコンテキストによるが、ユーザー(処方や調剤などを行った人）によって実際にコードが選択されたのであれば、coding.userSelectedはtrueとすることとなる。Codingのデータ型で説明されているように、「ユーザーインターフェース（たとえば、選択肢から特定の項目をユーザーが選択するような形式）で特定のコードをユーザーが選択したのであれば、\"userSelected\"に記録されてもよい」\r\nユーザーが選択したコードがあれば、その選択がコード変換などで優先される。そのほかのコードは代替のコードシステムか低粒度のコード（たとえば、ベンダー固有の初期値のための一般的なコード）に文字列変換変換するしかない。"
-* code ^binding.strength = #preferred
 * code ^binding.description = "薬品の種類を規定するコード化された概念"
 * status 1..
 * status ^definition = "JP Coreでは active で固定される。\r\n薬剤が有効に使われているかどうかを指定するコード。"
 * status ^comment = "このステータスは薬剤がローカルにあるシステム内で薬剤データベースや棚卸表で有効とされているかどうかを識別するためのものである。たとえば、薬剤システムで「ABC病院特製クリーム」といった製剤のために新しい薬剤ファイルを作成されるような場合もある。未来のある時点では、薬剤記録を作成した時にエラーが発生し、ステータスが「entered-in-error」に変化することもありうる。このステータスは薬剤が特定の処方集に記載されているかどうかを指定するためのものではない。薬剤記録が複数の処方集やカタログを参照することも可能であり、それぞれの記録が異なるステータスを持つこともある。"
 * status ^isModifierReason = "このエレメントはすべての属性の解釈によって変化する。"
+* manufacturer only Reference(JP_Organization)
 * manufacturer ^short = "製品の製造者"
 * manufacturer ^definition = "Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.\r\n\r\n医薬品の製造元の詳細を説明する。これは、医薬品の販売業者を表すことを意図したものではない。"
 * form ^definition = "製品の剤型についての説明。散剤(powder)、錠剤(tablets)、カプセル(capsule)など。"
 * form ^comment = "もし、Medication ResourceがMedicationRequest Resourceから参照された場合は、これはオーダーされた剤型である。Medication ResourceがMedicationDispense Resourceから参照された場合は、払い出された剤型である。MedicationAdministration ResourceからMedication Resourceが参照されていれば、投与された剤型である。"
+* amount only JP_MedicationRatio_Amount
 * amount ^short = "パッケージ中の薬剤の量"
 * amount ^definition = "パッケージされた製品に含まれる薬剤固有の量。たとえば、同じ力価の製品を指定すれば（たとえば、インスリングラルギン10単位/mL注射液）、この値はパッケージ内での薬剤量（たとえば、3mL, 10mLなど）を明示することになる。"
 * amount ^comment = "比率（Ratio)を表すデータ型は、量(Quantity)と共通単位を使って適切に表現できないときのみに使われるべきである。分母が\"1\"に固定されているとわかっているような場合は、量(Quantity)を比率(Ratio)の代わりに使うべきである。"
@@ -54,14 +55,12 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * ingredient.isActive ^definition = "この成分が薬剤の治療効果に影響するかどうかの指標\r\n\r\nIndication of whether this ingredient affects the therapeutic action of the drug."
 * ingredient.isActive ^requirements = "Trueであれば、この成分が薬剤の治療効果に影響がある（たとえば有効）ということを示す。\r\nFalseであれば、この成分が薬剤の治療効果に影響がない（たとえば無効）ということを示す。"
 * ingredient.strength 1..
+* ingredient.strength.extension[strengthType] only JP_Medication_IngredientStrength_StrengthType
+* ingredient.strength.extension[strengthType] ^definition = "投与量が製剤単位か成分単位かを格納する拡張"
+* ingredient.strength only JP_MedicationRatio_Amount
 * ingredient.strength ^short = "成分の活性量"
 * ingredient.strength ^definition = "この薬剤中にどの程度の物質が含まれているかを示す。たとえば、1錠あたり250mgなど。これは分子が250mgで分母が1錠である比率を表現している。"
 * ingredient.strength ^comment = "Ratioデータ型は2つの数字の関係で示され、Quantityや一般的な単位で適切に表現できない関係を表すときにのみ用いられる。分母の値が「1」で固定されているような値であれば、QuantityがRatioの代わりに用いられるべきである。"
-* ingredient.strength.extension ^slicing.discriminator.type = #value
-* ingredient.strength.extension ^slicing.discriminator.path = "url"
-* ingredient.strength.extension ^slicing.rules = #open
-* ingredient.strength.extension[strengthType] only JP_Medication_IngredientStrength_StrengthType
-* ingredient.strength.extension[strengthType] ^definition = "投与量が製剤単位か成分単位かを格納する拡張"
 * batch ^short = "分包された薬剤についての詳細な解説"
 * batch ^definition = "薬剤のパッケージ（薬品そのものではない）についての情報。"
 * batch.lotNumber ^short = "バッチのID"

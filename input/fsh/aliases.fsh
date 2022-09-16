@@ -6,6 +6,7 @@ Alias: $patient-religion = http://hl7.org/fhir/StructureDefinition/patient-relig
 Alias: $capabilityStatement-expectation = http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation
 Alias: $capabilityStatement-combination = http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination
 Alias: $encounter-associatedEncounter = http://hl7.org/fhir/StructureDefinition/encounter-associatedEncounter
+Alias: $units-of-time = http://hl7.org/fhir/ValueSet/units-of-time
 
 // hl7-terminology
 Alias: $v2-0136 = http://terminology.hl7.org/ValueSet/v2-0136

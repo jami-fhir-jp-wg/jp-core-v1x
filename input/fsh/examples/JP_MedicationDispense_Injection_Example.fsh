@@ -59,4 +59,4 @@ Usage: #inline
 Instance: jp-medicationdispense-injection-device-example-1
 InstanceOf: Device
 Usage: #inline
-* type = http://jpfhir.jp/medication/99ILL#01 "シリンジ"
+* type = http://abc-hospital.local/fhir/devide/local-device-type#01 "シリンジ"

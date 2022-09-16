@@ -6,25 +6,12 @@ Parent: MedicationDispense
 Id: jp-medicationdispensebase
 Title: "JP Core MedicationDispenseBase Profile"
 Description: "このプロファイルはユーザは直接適用するものではなく、JP_MedicationDispenseとJP_MedicationDispenseInjectionの共通の親となる抽象プロファイルである。このプロファイルはMedicationDispenseリソースに対して、内服・外用薬剤処方調剤・払い出し記録のデータを送受信するため、JP_MedicationDispenseとJP_MedicationDispenseInjectionの各プロファイルの基礎となる制約と拡張のうち共通部分を定めている。"
-// extension 参照宣言 基底拡張2個、内部拡張1個
-* extension contains JP_MedicationDispense_Preparation named preparation ..*
-* dosageInstruction.extension contains
-    JP_MedicationRequest_DosageInstruction_UsageDuration named usageDuration ..1 and
-    JP_MedicationRequest_DosageInstruction_PeriodOfUse named periodOfUse ..1 and
-    JP_MedicationRequest_DosageInstruction_Line named line ..* and
-    JP_MedicationRequest_DosageInstruction_Device named device ..*
-//
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispenseBase"
 * ^status = #draft
 * ^date = "2022-03-16"
-// * ^purpose = "このプロファイルはユーザは直接適用するものではなく、JP_MedicationDispenseとJP_MedicationDispenseInjectionの共通の親となる抽象プロファイルである。このプロファイルはMedicationDispenseリソースに対して、内服・外用薬剤処方調剤・払い出し記録のデータを送受信するため、JP_MedicationDispenseとJP_MedicationDispenseInjectionの各プロファイルの基礎となる制約と拡張のうち共通部分を定めている。"
 * . ^short = "指定された患者への薬剤の払い出し"
 * . ^definition = "指定された患者・個人へ薬剤が払い出されたか払い出される予定のものを示す。これには（供給される）提供される製品についての説明や薬剤の服用に関する指示も含まれる。薬剤払い出しは薬剤オーダーに対して薬局システムが対応した結果となる。"
-* extension ^slicing.discriminator.type = #value
-* extension ^slicing.discriminator.path = "url"
-* extension ^slicing.rules = #open
-* extension[preparation] ^short = "調剤結果"
-* extension[preparation] ^definition = "薬剤単位の調剤結果"
+* extension contains JP_MedicationDispense_Preparation named preparation ..*
 * partOf only Reference(JP_Procedure)
 * partOf ^short = "Event that dispense is part of 親イベントへの参照"
 * partOf ^definition = "The procedure that trigger the dispense. \r\n\r\nこの調剤の契機となったProcedureリソースへの参照。"
@@ -34,22 +21,10 @@ Description: "このプロファイルはユーザは直接適用するもので
 * statusReason[x] ^definition = "Indicates the reason why a dispense was not performed.\r\n\r\n調剤が実行されなかった理由を示す。"
 * category ^short = "Type of medication dispense　調剤タイプ"
 * category ^definition = "Indicates the type of medication dispense (for example, where the medication is expected to be consumed or administered (i.e. inpatient or outpatient)).\r\n\r\n投薬のタイプを示す（たとえば、薬剤が消費または投与されると予想される場所（つまり、入院患者または外来患者））。　入院、外来、退院、自宅など。"
-* medication[x] only CodeableConcept or Reference(JP_Medication)
-* medicationCodeableConcept only CodeableConcept
-* medicationCodeableConcept from JP_MedicationCode_VS (preferred)
-* medicationCodeableConcept.coding 1..
-* medicationCodeableConcept.coding ^short = "Code defined by a terminology system コード集で定義された医薬品コード"
-* medicationCodeableConcept.coding ^definition = "A reference to a code defined by a terminology system.\r\n\r\nコード集で定義された医薬品コードへの情報"
-* medicationCodeableConcept.coding ^comment = "Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true.\r\n"
-* medicationCodeableConcept.coding.system 1..
-* medicationCodeableConcept.coding.code 1..
-* medicationCodeableConcept.coding.display 1..
-* medicationReference only Reference(JP_Medication)
 * medication[x] ^short = "What medication was supplied　医薬品"
 * medication[x] ^definition = "Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.\r\n\r\n投与された薬剤を識別する。既知の薬のリストから薬を識別するコード情報を設定する。"
 * medication[x] ^comment = "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.\r\n\r\nひとつのtext要素と、複数のcoding 要素を記述できる。処方オーダ時に選択または入力し、実際に処方箋に印字される文字列を必ずtext要素に格納した上で、それをコード化した情報を1個以上のcoding 要素に記述する。\r\n\r\n厚生労働省標準であるHOT9コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。\r\n\rなお、上記のいずれの標準的コードも付番されていない医薬品や医療材料の場合には、薬機法の下で使用されているGS1標準の識別コードであるGTIN(Global Trade Item Number)の調剤包装単位（最少包装単位、個別包装単位）14桁を使用する。\r\n\rひとつの処方薬、医療材料を複数のコード体系のコードで記述してもよく、その場合にcoding 要素を繰り返して記述する。\rただし、ひとつの処方薬を複数のコードで繰り返し記述する場合には、それらのコードが指し示す処方薬、医療材料は当然同一でなければならない。\rまた、処方を発行した医療機関内でのデータ利用のために、医療機関固有コード体系によるコード（ハウスコード、ローカルコード）の記述を含めてもよいが、その場合でも上述したいずれかの標準コードを同時に記述することが必要である。"
-* medication[x].id ^short = "Unique id for inter-element referencing 要素間参照用の一意のID"
-* medication[x].id ^definition = "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.\r\n\r\nリソース内の要素の一意のID（内部参照用）。これは、スペースを含まない任意の文字列値にすることができる。"
+* subject 1..1
 * subject only Reference(JP_Patient)
 * subject ^short = "Who received medication　投与対象患者"
 * subject ^definition = "The person or animal or group receiving the medication.\r\n\r\n投与を受ける患者"
@@ -64,23 +39,21 @@ Description: "このプロファイルはユーザは直接適用するもので
 * performer ^short = "Who performed event　調剤を実施した人"
 * performer ^definition = "Indicates who or what performed the event.\r\n調剤した人を示す"
 * performer.actor only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or Device or RelatedPerson)
+* location only Reference(JP_Location)
 * location ^short = "Where the dispense occurred　調剤実施場所"
 * location ^definition = "The principal physical location where the dispense was performed. \r\n\r\n調剤が実施された場所を示すLocationリソースへの参照。"
 * location ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
-* authorizingPrescription only Reference(JP_MedicationRequest)
+* authorizingPrescription only Reference(JP_MedicationRequestBase)
 * authorizingPrescription ^short = "Medication order that authorizes the dispense　調剤を正当化する元の処方オーダ"
 * authorizingPrescription ^definition = "Indicates the medication order that is being dispensed against.\r\n調剤の元になった処方オーダを表すMedicationRequestリソースへの参照。"
 * type ^definition = "Indicates the type of dispensing event that is performed. For example, Trial Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc.\r\n実行される調剤イベントのタイプを示す。たとえば、トライアルフィル、トライアルの完了、部分フィル、緊急フィル、サンプルなどである。"
 * type ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\n\r\nすべてのターミノロジーの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係とpre-coordinationとpost-coordinationの用語関係を管理するための独自の構造を提供する必要がある。"
 * quantity 1..
+* quantity only JP_MedicationSimpleQuantity
 * quantity ^short = "払い出される薬剤の量"
 * quantity ^definition = "調剤総量。\r\nJP Coreでは必須\r\n払い出される薬剤の量。計測単位を含む。"
 * quantity ^comment = "The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator.\r\n\r\n使用状況によって、これがどのような量であるか、したがってどのような単位を使用できるかが定義される場合がかなりある。使用状況によっては、比較演算子の値も制限される場合がある。"
-* quantity.value 1..
-* quantity.unit 1..
-* quantity.system 1..
-* quantity.code 1..
-* quantity.code ^short = "単位についてのコード形式"
+* daysSupply only JP_MedicationSimpleQuantity
 * daysSupply ^short = "Amount of medication expressed as a timing amount　　タイミングとして表される投薬量"
 * daysSupply ^definition = "The amount of medication expressed as a timing amount.\r\n\r\nタイミングとして表される投薬量。すなわち、XX日分、XX回分などの数量。"
 * daysSupply ^comment = "The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator.\r\n\r\n使用状況によって、これがどのような量であるか、したがってどのような単位を使用できるかが定義される場合がかなりある。使用状況によっては、比較演算子の値も制限される場合がある。"
@@ -100,53 +73,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * note ^short = "Information about the dispense　調剤に関する備考"
 * note ^definition = "Extra information about the dispense that could not be conveyed in the other attributes.\r\n\r\n他の要素では伝達できなかった調剤に関する追加情報。"
 * note ^comment = "For systems that do not have structured annotations, they can simply communicate a single annotation with no author or time.  This element may need to be included in narrative because of the potential for modifying information.  *Annotations SHOULD NOT* be used to communicate \"modifying\" information that could be computable. (This is a SHOULD because enforcing user behavior is nearly impossible).\r\n\r\n構造化された注釈（アノテーション）を持たないシステムの場合、作成者や時間なしで単一の注釈を簡単に伝達できる。情報を変更する可能性があるため、この要素をナラティブに含める必要がある場合がある。 \r\n*注釈は、計算機処理れきる「変更」情報を伝達するために使用されるべきではない*。 （ユーザーの行動を強制することはほとんど不可能であるため、これはSHOULDとする）。"
-* dosageInstruction ^short = "How the medication is to be used by the patient or administered by the caregiver　薬が患者によってどのように使用されるか、または介護者によってどのように投与されるか"
-* dosageInstruction ^definition = "Indicates how the medication is to be used by the patient.\r\n\r\n薬が患者によってどのように使用されるか、または介護者によってどのように投与されるか。"
-* dosageInstruction ^comment = "When the dose or rate is intended to change over the entire administration period (e.g. Tapering dose prescriptions), multiple instances of dosage instructions will need to be supplied to convey the different doses/rates.\rThe pharmacist reviews the medication order prior to dispense and updates the dosageInstruction based on the actual product being dispensed.\r\n\r\n投与量または投与量が投与期間全体にわたって変更されることを意図している場合（例えば、漸減投与量処方）、異なる投与量/投与量を伝えるために投与指示の複数のインスタンスを提供する必要がある。\r\n薬剤師は、調剤する前に投薬順序を確認し、調剤される実際の製品に基づいて投薬指示を更新する。"
-* dosageInstruction.id ^short = "Unique id for inter-element referencing　要素間参照用の一意のID"
-* dosageInstruction.id ^definition = "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.\r\n\r\nリソース内の要素の一意のID（内部参照用）。これは、スペースを含まない任意の文字列値にすることができる。"
-* dosageInstruction.extension ^slicing.discriminator.type = #value
-* dosageInstruction.extension ^slicing.discriminator.path = "url"
-* dosageInstruction.extension ^slicing.rules = #open
-* dosageInstruction.extension[usageDuration] ^short = "実服用日数"
-* dosageInstruction.extension[usageDuration] ^definition = "実服用日数を格納する拡張。\r\n実服用日数（実投与日数）とは、投与期間において実際に服用（投与）が行われる実日数であり、休薬日を含まない。\r\n全期間が７日で、用法が隔日投与の場合には、１日目、３日目、５日目、７日目の４日間に服用することになるので、実服用日数は４日となる。"
-* dosageInstruction.extension[periodOfUse] ^short = "投与期間"
-* dosageInstruction.extension[periodOfUse] ^definition = "投与期間を明示的に記述する拡張。\r\nこの拡張を使用する場合には、開始日は必須。"
-* dosageInstruction.extension[device] only JP_MedicationRequest_DosageInstruction_Device
-* dosageInstruction.extension[device] ^short = "投与機器の情報"
-* dosageInstruction.extension[device] ^definition = "投与機器の情報を記述する拡張。"
-* dosageInstruction.extension[line] only JP_MedicationRequest_DosageInstruction_Line
-* dosageInstruction.extension[line] ^short = "投与ラインの情報"
-* dosageInstruction.extension[line] ^definition = "投与ラインの情報を記述する拡張。"
-* dosageInstruction.sequence ^short = "The order of the dosage instructions　投与量の指示の順序"
-* dosageInstruction.sequence ^definition = "Indicates the order in which the dosage instructions should be applied or interpreted.\r\n\r\n投与量の指示が適用または解釈されるべき順序を示す。"
-* dosageInstruction.sequence ^requirements = "If the sequence number of multiple Dosages is the same, then it is implied that the instructions are to be treated as concurrent.  If the sequence number is different, then the Dosages are intended to be sequential.\r\n\r\n複数の投与量のシーケンス番号が同じである場合、命令は同時として扱われることを意味する。シーケンス番号が異なる場合、投与量は連続するように意図される。"
-* dosageInstruction.text 1..
-* dosageInstruction.text ^short = "Free text dosage instructions e.g. SIG　  フリーテキストの投与方法の説明　SIG:用法"
-* dosageInstruction.text ^definition = "Free text dosage instructions e.g. SIG.　フリーテキストの投与方法の説明　SIG:用法\r\n\r\nフリーテキストの用法指示であり、JP Coreでは必須である。"
-* dosageInstruction.text ^requirements = "Free text dosage instructions can be used for cases where the instructions are too complex to code.  The content of this attribute does not include the name or description of the medication. When coded instructions are present, the free text instructions may still be present for display to humans taking or administering the medication. It is expected that the text instructions will always be populated.  If the dosage.timing attribute is also populated, then the dosage.text should reflect the same information as the timing.  Additional information about administration or preparation of the medication should be included as text.\r\n\r\n指示が複雑すぎてコーディングできない場合は、フリーテキストの投与指示を使用できる。この属性の内容には、薬の名前や説明は含まれない。コード化された指示が存在する場合、フリーテキストの指示は、薬を服用または投与している人間に表示するために存在している場合がある。テキストの指示は常に入力されることが期待される。 dose.timing属性も同時に入力されている場合、dosage.textはタイミングと同じ情報を反映している必要があり、薬の投与または準備に関する追加情報をテキストとして含める必要がある。"
-* dosageInstruction.additionalInstruction ^short = "Supplemental instruction or warnings to the patient - e.g. \"with meals\", \"may cause drowsiness\"　患者への補足的な指示または警告-例： 「食事と一緒に」、「眠気を引き起こす可能性がある」"
-* dosageInstruction.additionalInstruction ^definition = "Supplemental instructions to the patient on how to take the medication  (e.g. \"with meals\" or\"take half to one hour before food\") or warnings for the patient about the medication (e.g. \"may cause drowsiness\" or \"avoid exposure of skin to direct sunlight or sunlamps\").\r\n\r\n薬の服用方法に関する補足的な指示（例：「食事と一緒に」または「食事の30分から1時間前に服用」）または薬に関する患者への警告（例：「眠気を引き起こす可能性がある」または「皮膚の露出を避ける」直射日光またはサンランプ」）。"
-* dosageInstruction.patientInstruction ^short = "Patient or consumer oriented instructions　患者または消費者向けの指示"
-* dosageInstruction.patientInstruction ^definition = "Instructions in terms that are understood by the patient or consumer.\r\n\r\n患者または消費者が理解できる用語での指示。"
-* dosageInstruction.timing 1..
-* dosageInstruction.timing ^short = "When medication should be administered　投与日時"
-* dosageInstruction.timing ^definition = "When medication should be administered.　\r\n\r\n投与日時、服用タイミング。\r\nJP Coreでは必須する。dosageInstruction.timing.code.coding.code, dosageInstruction.timing.code.coding.system が必ず存在しなければならない。"
-* dosageInstruction.timing.code.coding.system 1..
-* dosageInstruction.timing.code.coding.code 1..
-* dosageInstruction.asNeeded[x] ^short = "Take \"as needed\" (for x)　「必要に応じて」（xの場合）"
-* dosageInstruction.asNeeded[x] ^definition = "Indicates whether the Medication is only taken when needed within a specific dosing schedule (Boolean option), or it indicates the precondition for taking the Medication (CodeableConcept).\r\n\r\n特定の投薬スケジュール内で必要な場合にのみ薬を服用するか（ブールオプション）、または薬を服用するための前提条件（CodeableConcept）を示す。"
-* dosageInstruction.asNeeded[x] ^comment = "Can express \"as needed\" without a reason by setting the Boolean = True.  In this case the CodeableConcept is not populated.  Or you can express \"as needed\" with a reason by including the CodeableConcept.  In this case the Boolean is assumed to be True.  If you set the Boolean to False, then the dose is given according to the schedule and is not \"prn\" or \"as needed\".\r\n\r\nブール値= Trueを設定することにより、理由なしに「必要に応じて」表現できる。この場合、CodeableConceptは設定されないか、またはCodeableConceptを含めることで、理由を付けて「必要に応じて」表現することもできる。この場合、ブール値はTrueであると見なされる。\r\nブール値をFalseに設定すると、投与量はスケジュールに従って与えられ、「prn」（ ＝as needed/as requiredの略記号）または「必要に応じて」ではない。"
-* dosageInstruction.site ^short = "Body site to administer to　投与部位"
-* dosageInstruction.site ^definition = "Body site to administer to.　\r\n投与部位（人体の部位）"
-* dosageInstruction.site ^comment = "If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.\r\n\r\nユースケースでBodySiteリソースの属性が必要な場合（たとえば、個別に識別して追跡するため）、標準の拡張機能[bodySite]（extension-bodysite.html）を使用する。要約コード、または場所の非常に正確な定義への参照、あるいはその両方である可能性がある。"
-* dosageInstruction.route ^short = "How drug should enter body　薬が身体に入る経路"
-* dosageInstruction.route ^definition = "How drug should enter body.\r\n薬が身体に入る経路\r\n\r\nHL7 V2(HL7表0162)"
-* dosageInstruction.route ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\n\r\nすべてのターミノロジーの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係とpre-coordinationとpost-coordinationの用語関係を管理するための独自の構造を提供する必要がある。"
-* dosageInstruction.route ^requirements = "A code specifying the route or physiological path of administration of a therapeutic agent into or onto a patient's body.\r\n\r\n患者の体内または体内へ​​の治療薬の投与経路または生理学的経路を指定するコード。"
-* dosageInstruction.method ^short = "Technique for administering medication　投与手技"
-* dosageInstruction.method ^definition = "Technique for administering medication.\r\n\r\n投与手技\r\nJAMI処方・注射オーダ標準用法規格(用法詳細区分)。"
-* dosageInstruction.doseAndRate ^definition = "The amount of medication administered."
+* dosageInstruction only JP_MedicationDosageBase
 * substitution ^short = "Whether a substitution was performed on the dispense　調剤で置換が実行されたかどうか。"
 * substitution ^definition = "Indicates whether or not substitution was made as part of the dispense. In some cases, substitution will be expected but does not happen, in other cases substitution is not expected but does happen. This block explains what substitution did or did not happen and why. If nothing is specified, substitution was not done. \r\n 調剤の一部として置換が行われたかどうかを示す。場合によっては、置換が期待されるが発生しない場合もあれば、置換が予期されないが発生する場合もある。このブロックは、置換が行われたか行われなかったか、およびその理由を説明する。何も指定されていない場合、置換は行われていない。"
 * substitution.wasSubstituted ^short = "Whether a substitution was or was not performed on the dispense　調剤で置換が実行されたか、あるいはされていないかを'true'または'false'で表す。"
@@ -173,14 +100,14 @@ Extension: JP_MedicationDispense_Preparation
 Id: jp-medicationdispense-preparation
 Title: "JP Core MedicationDispense Preparation Extension"
 Description: "薬剤単位の調剤結果"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation"
+* ^url = $JP_MedicationDispense_Preparation
 * ^date = "2022-03-16"
 * ^purpose = "薬剤単位の調剤結果"
 * ^context.type = #element
 * ^context.expression = "MedicationDispense"
-* . ^short = "調剤についてのExtension"
-* . ^definition = "一包化、粉砕などの処理を行った際に記載する。"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation" (exactly)
+* . ^short = "調剤結果"
+* . ^definition = "薬剤単位の調剤結果"
+* url = $JP_MedicationDispense_Preparation (exactly)
 * value[x] only string or CodeableConcept
 * value[x] ^short = "調剤結果"
 * value[x] ^definition = "薬剤単位の調剤結果"
