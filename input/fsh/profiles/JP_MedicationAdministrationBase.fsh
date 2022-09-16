@@ -130,7 +130,8 @@ Description: "用法コメントを格納するための拡張"
 * . ^definition = "用法コメントを格納するための拡張"
 * url = $JP_MedicationAdministration_Dosage_DosageComment (exactly)
 * value[x] only string or CodeableConcept
-* value[x] from JP_MedicationExampleDosageComment_VS (example)
+* valueCodeableConcept from JP_MedicationExampleDosageComment_VS (example)
+* valueString ^short = "テキスト記載"
 
 Extension: JP_MedicationAdministration_Dosage_LineComment
 Id: jp-medicationadministration-dosage-linecomment
@@ -144,7 +145,8 @@ Description: "ラインコメントを格納する"
 * . ^definition = "ラインコメントを格納するための拡張"
 * url = $JP_MedicationAdministration_Dosage_LineComment (exactly)
 * value[x] only string or CodeableConcept
-* value[x] from JP_MedicationExampleLineComment_VS (example)
+* valueCodeableConcept from JP_MedicationExampleLineComment_VS (example)
+* valueString ^short = "テキスト記載"
 
 Extension: JP_MedicationAdministration_DosageMethod_MethodComment
 Id: jp-medicationadministration-dosagemethod-methodcomment
@@ -158,7 +160,8 @@ Description: "手技コメントを格納するための拡張"
 * . ^definition = "手技コメントを格納するための拡張"
 * url = $JP_MedicationAdministration_DosageMethod_MethodComment (exactly)
 * value[x] only string or CodeableConcept
-* value[x] from JP_MedicationExampleMethodComment_VS (example)
+* valueCodeableConcept from JP_MedicationExampleMethodComment_VS (example)
+* valueString ^short = "テキスト記載"
 
 Extension: JP_MedicationAdministration_DosageRate_RateComment
 Id: jp-medicationadministration-dosagerate-ratecomment
@@ -172,7 +175,8 @@ Description: "投与速度コメントを格納するための拡張"
 * . ^definition = "投与速度コメントを格納するための拡張"
 * url = $JP_MedicationAdministration_DosageRate_RateComment (exactly)
 * value[x] only string or CodeableConcept
-* value[x] from JP_MedicationExampleRateComment_VS (example)
+* valueCodeableConcept from JP_MedicationExampleRateComment_VS (example)
+* valueString ^short = "テキスト記載"
 
 Extension: JP_MedicationAdministration_DosageRoute_RouteComment
 Id: jp-medicationadministration-dosageroute-routecomment
@@ -186,7 +190,8 @@ Description: "投与経路コメントを格納するための拡張"
 * . ^definition = "投与経路コメントを格納するための拡張"
 * url = $JP_MedicationAdministration_DosageRoute_RouteComment (exactly)
 * value[x] only string or CodeableConcept
-* value[x] from JP_MedicationExampleRouteComment_VS (example)
+* valueCodeableConcept from JP_MedicationExampleRouteComment_VS (example)
+* valueString ^short = "テキスト記載"
 
 Extension: JP_MedicationAdministration_DosageSite_SiteComment
 Id: jp-medicationadministration-dosagesite-sitecomment
@@ -200,7 +205,8 @@ Description: "投与部位コメントを格納するための拡張"
 * . ^definition = "投与部位コメントを格納するための拡張"
 * url = $JP_MedicationAdministration_DosageSite_SiteComment (exactly)
 * value[x] only string or CodeableConcept
-* value[x] from JP_MedicationExampleSiteComment_VS (example)
+* valueCodeableConcept from JP_MedicationExampleSiteComment_VS (example)
+* valueString ^short = "テキスト記載"
 
 Extension: JP_MedicationAdministration_Location
 Id: jp-medicationadministration-location
@@ -269,3 +275,5 @@ Description: "未分類コメントを格納するための拡張"
 * url = $JP_MedicationAdministration_UncategorizedComment (exactly)
 * value[x] only string or CodeableConcept
 * valueCodeableConcept from $JP_MedicationExampleUncategorizedComment_VS (example)
+* valueString ^short = "テキスト記載"
+
