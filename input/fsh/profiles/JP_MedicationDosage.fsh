@@ -93,10 +93,14 @@ Description: "このプロファイルは薬剤用のDosageベースとして基
 * doseAndRate.type ^comment = "投与速度・量の一般的パターンに全てのターミノロジーが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。"
 * doseAndRate.type ^requirements = "このtypeに値が指定されていなければ、\"ordered\"であることが想定される。"
 
-// doseAndRate.rate関連
-* doseAndRate.rate[x] ^short = "薬剤の投与量"
-* doseAndRate.rate[x] ^definition = "薬剤が投与される量"
+// doseAndRate
+// dose[x]
+// rate[x]
+* doseAndRate.rate[x] ^short = "薬剤の投与量速度"
+* doseAndRate.rate[x] ^definition = "薬剤が投与される量の速度"
 * doseAndRate.rateRange only JP_MedicationRange_UnitOfTime
+* doseAndRate.rateQuantity ^short = "投与速度(量/時間)を指定する"
+* doseAndRate.rateQuantity ^definition = "投与速度(量/時間)を指定する"
 
 // doseAndRate.maxDose関連
 * maxDosePerPeriod only JP_MedicationRatio_DosePerPeriod
@@ -132,11 +136,14 @@ Description: "このプロファイルは内服用法の制約と拡張のうち
 * timing.repeat.boundsDuration.unit ^definition = "投薬日数の単位文字列。日で固定される"
 
 // dosageAndRate
+// dose[x]
+* doseAndRate.doseQuantity only JP_MedicationSimpleQuantity
 * doseAndRate.doseQuantity ^short = "1回投与量"
 * doseAndRate.doseQuantity ^definition = "1回投与量"
 * doseAndRate.doseQuantity ^comment = "この量は指定された薬剤の量を指定するものであって、各有効成分の量を指定するものではない。各成分の量はMedication resourceで伝えることができる。たとえば、有効成分が375mgである錠剤を1錠投与することを伝えたい場合、Medication resourceを利用して、XYZ成分が375mg含有しているという錠剤であることを文書化することができる。あるいは1回投与量が375mgであることを伝えるのであれば、Medication resourceをつかって単にそれが錠剤であることを示せばよい。もし、ドーパミンの静注を例に挙げて、400mgのドーパミンを500mlの注射溶液に混ぜて使うことを伝えたいのであれば、それをすべてMedication resourceで伝えることができる。もし、投与について即時に伝達することを意図していない（たとえば投与速度が示されていたり、投与時期に範囲があるような場合）のであれば、たとえば1回500mlを4時間以上かけて投与する予定を伝える場合にもMedication resourceで伝えることができる。  
 【JP Core仕様】1回の投与量を指定する。単位は医薬品単位略号を使用することが望ましい。"
 * doseAndRate.doseRange only JP_MedicationRange
+// rate[x]
 * doseAndRate.rateRatio only JP_MedicationRatio_DosePerDay
 
 // ==============================
@@ -156,11 +163,14 @@ Description: "このプロファイルは注射用法の制約と拡張のうち
 * timing.code from $JP_MedicationUsageInjection_VS (preferred)
 * timing.code ^comment = "BIDなどは「施設特有の時間」として定義される。たとえば、施設がBIDを「つねに朝7時と夕方6時」であると指定することがある。この指定が不適切であれば、BIDというコードは使うべきではない。その代わり、HL7が定義したBIDのコードではなく、その施設特有のコードで明示的に示すべきであり、構造化された表現を使うべきである（この場合、2回のイベントの時刻を指定する必要がある）。  
 【JP Core仕様】頓用指示時にはJAMI処方・注射オーダ標準用法規格の表6 イベント区分、イベント詳細区分(“http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationAsNeededConditionJAMI_CS”)を推奨するが、MERIT-9 処方オーダ 表5 頓用指示(“http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS”) を使用してもよい。"
+// dose[x]
 * doseAndRate.doseQuantity only JP_MedicationSimpleQuantity
 * doseAndRate.doseQuantity ^short = "1回投与量（体積）"
 * doseAndRate.doseQuantity ^definition = "1回投与量（体積）"
 * doseAndRate.doseQuantity ^comment = "この量は指定された薬剤の量を指定するものであって、各有効成分の量を指定するものではない。各成分の量はMedication resourceで伝えることができる。たとえば、有効成分が375mgである錠剤を1錠投与することを伝えたい場合、Medication resourceを利用して、XYZ成分が375mg含有しているという錠剤であることを文書化することができる。あるいは1回投与量が375mgであることを伝えるのであれば、Medication resourceをつかって単にそれが錠剤であることを示せばよい。もし、ドーパミンの静注を例に挙げて、400mgのドーパミンを500mlの注射溶液に混ぜて使うことを伝えたいのであれば、それをすべてMedication resourceで伝えることができる。もし、投与について即時に伝達することを意図していない（たとえば投与速度が示されていたり、投与時期に範囲があるような場合）のであれば、たとえば1回500mlを4時間以上かけて投与する予定を伝える場合にもMedication resourceで伝えることができる。  
 【JP Core仕様】1回の投与量（体積）を指定する。単位はUCUMを使用する。"
 * doseAndRate.doseRange only JP_MedicationRange
-* doseAndRate.rateRatio only JP_MedicationRatio_DosePerDay
-
+// // rate[x]
+* doseAndRate.rateRatio only JP_MedicationRatio_DosePerPeriod
+* doseAndRate.rateQuantity ^short = "投与速度(量/時間)を指定する"
+* doseAndRate.rateQuantity ^definition = "投与速度(量/時間)を指定する"

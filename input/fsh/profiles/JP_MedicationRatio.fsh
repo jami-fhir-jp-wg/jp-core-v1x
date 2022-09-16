@@ -52,7 +52,7 @@ Description: "このプロファイルはRatio DataTypeに対して、日本の�
 // JP_MedicationRatio_DosePerDay DataType
 // ==============================
 Profile: JP_MedicationRatio_DosePerDay
-Parent: Ratio
+Parent: JP_MedicationRatio_DosePerPeriod
 Id: jp-medicationratio-doseperday
 Title: "JP Core Medication Rate Ratio DosePerDay DataType"
 Description: "このプロファイルはRatio  DataTypeに対して、日本の薬剤単位を割り当てた派生型である。単位時間内での薬剤の容量を記述する"
