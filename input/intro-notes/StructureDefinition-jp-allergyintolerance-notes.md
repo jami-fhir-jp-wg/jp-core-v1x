@@ -175,7 +175,7 @@
 
 ## 注意事項
 
-- Negated Allergies and Intolerances. [https://hl7.org/fhir/R4/allergyintolerance.html#9.1.3.3](https://hl7.org/fhir/R4/allergyintolerance.html#9.1.3.3)
+- アレルギーの否定表現についての注意。本プロファイルが継承するプロファイル（AllergyIntolerance v4.0.1）においては、既知のアレルギーがないことを表現するために「SNOMED CT: 716186003 |No known allergy (situation)|)」を用いることが例示されている。一方で、本プロファイル JP_AllergyIntolerance.codeのValue Setとして例示する「JP Core AllergyIntolerance ValueSet」には「No known allergy」等に相当する表現がない。そのため、本プロファイルを継承するプロファイルが、「JP Core AllergyIntolerance ValueSet」を利用する場合には、否定されたアレルギーを表現するために、アレルギーの有無を区別する要素を追加するなどの措置を取ることを想定している。なお、本プロファイルは「JP Core AllergyIntolerance ValueSet」の利用を要求・推奨するものではないため、他のValue Setを使う選択肢もある。参考：Negated Allergies and Intolerances. https://hl7.org/fhir/R4/allergyintolerance.html#9.1.3.3
 
 ## その他、参考文献・リンク等
 
