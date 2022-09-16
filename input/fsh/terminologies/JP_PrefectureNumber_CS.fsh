@@ -1,7 +1,7 @@
 CodeSystem: JP_PrefectureNumber_CS
 Id: jp-prefecturenumber-cs
 Title: "JP Core PrefectureNumber CodeSystem"
-Description: "都道府県番号"
+Description: "全国地方公共団体コードの都道府県コード（ISO 3166-2:JP）"
 * ^identifier[0].system = "urn:ietf:rfc:3986"
 * ^identifier[=].value = "urn:oid:1.2.392.100495.20.3.21"
 * ^url = $JP_PrefectureNumber_CS
