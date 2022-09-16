@@ -11,6 +11,9 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * ^date = "2022-03-16"
 * . ^short = "An interaction during which services are provided to the patient / 患者にサービスが提供されている間の相互作用"
 * . ^definition = "An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.\r\n\r\n医療サービスの提供または患者の健康状態の評価を目的とした、患者と医療提供者との間の相互作用。エンカウンターと表現される。\r\n\r\n【JP Core仕様】外来受診、救急受診、入院、退院、対面診察、電話診察、など。"
+* extension contains $encounter-associatedEncounter named associatedEncounter ..1
+* extension[associatedEncounter] ^short = "関連するEncounter"
+* extension[associatedEncounter] ^definition = "関連するEncounter"
 * identifier ^short = "Identifier(s) by which this encounter is known / このEncounterが知られている識別子（複数可）"
 * identifier ^definition = "Identifier(s) by which this encounter is known.\r\n\r\nこのEncounterが知られている識別子（複数可）。"
 * status ^short = "planned | arrived | triaged | in-progress | onleave | finished | cancelled + / 予定｜到着｜トリアージ｜進行中｜保留中｜終了｜キャンセル+"
