@@ -127,7 +127,7 @@ Description: "このプロファイルは内服用法の制約と拡張のうち
 * timing.repeat.boundsDuration.code = #d (exactly)
 * timing.repeat.boundsDuration.code ^short = "投与日数の単位"
 * timing.repeat.boundsDuration.code ^definition = "単位コードUCUMにおける投与日数の単位。dで固定される。"
-* timing.repeat.boundsDuration.unit = "day" (exactly)
+* timing.repeat.boundsDuration.unit = "日" (exactly)
 * timing.repeat.boundsDuration.unit ^short = "投薬日数の単位"
 * timing.repeat.boundsDuration.unit ^definition = "投薬日数の単位文字列。日で固定される"
 

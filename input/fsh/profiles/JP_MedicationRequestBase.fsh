@@ -162,7 +162,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * dispenseRequest.expectedSupplyDuration ^short = "調剤日数"
 * dispenseRequest.expectedSupplyDuration ^definition = "供給される製品が使用されるか、あるいは払い出しが想定されている時間を指定する期間。"
 * dispenseRequest.expectedSupplyDuration ^comment = "状況によっては、この属性は物理的に供給される量というよりも、想定されている期間に供給される薬剤の量を指定する数量の代わりに使われることもある。たとえば、薬剤が90日間供給される（オーダーされた量に基づいて）など。可能であれば、量も示した方がより正確になる。expectedSupplyDurationは外部要因に影響をうけることのある予測値である。"
-* dispenseRequest.expectedSupplyDuration.unit = "day" (exactly)
+* dispenseRequest.expectedSupplyDuration.unit = "日" (exactly)
 * dispenseRequest.expectedSupplyDuration.system = "http://unitsofmeasure.org" (exactly)
 * dispenseRequest.expectedSupplyDuration.code = #d (exactly)
 * dispenseRequest.performer only Reference(JP_Organization)
@@ -306,7 +306,7 @@ Description: "隔日投与など、服用開始日から終了日までの日数
 * value[x].id ^definition = "JP Coreでは使用されない。"
 * value[x].value ^short = "実投与日数"
 * value[x].value ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
-* value[x].unit = "day" (exactly)
+* value[x].unit = "日" (exactly)
 * value[x].unit ^short = "実投与日数単位"
 * value[x].unit ^definition = "「Day」で固定される"
 * value[x].system = "http://unitsofmeasure.org" (exactly)
