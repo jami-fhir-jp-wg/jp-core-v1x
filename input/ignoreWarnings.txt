@@ -23,6 +23,7 @@ Error from server: Unable to provide support for code system %
 #  Local CodeSystems Warnings
 Code System URI 'http://abc-hospital.local/fhir/Observation/localcode' is unknown so the code cannot be validated
 Code System URI 'http://abc-hospital.local/fhir/ObservationOrder/localcode' is unknown so the code cannot be validated
+Code System URI 'http://abc-hospital.local/fhir/devide/local-device-type' is unknown so the code cannot be validated
 
 # OID CodeSystem not found Warnings (only registered NamingSystem)
 Code System URI 'urn:oid:1.2.392.100495.20.1.73' is unknown so the code cannot be validated
