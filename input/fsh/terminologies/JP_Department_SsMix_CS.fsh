@@ -10,7 +10,7 @@ Description: "SS-MIX統一診療科コード"
 * ^content = #complete
 // 以下PDFより参照
 // https://www.jami.jp/jamistd/docs/SS-MIX2/SS-MIX2-V1.2c/SS-MIX2stdstrspecv12c_code.pdf
-* #2Digits "２桁診療科"
+* #2Digits "２桁診療科" "２桁体系の診療科コード体系"
   * #01 "内科"
   * #02 "精神科"
   * #03 "神経科"
@@ -98,7 +98,7 @@ Description: "SS-MIX統一診療科コード"
   * #90 "歯科"
   * #98 "医事・事務"
   * #9Z "その他"
-* #3Digits "３桁診療科"
+* #3Digits "３桁診療科"  "３桁体系の診療科コード体系"
   * #011 "第１内科"
   * #012 "第２内科"
   * #013 "第３内科"

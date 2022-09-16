@@ -7,7 +7,7 @@ Description: "個別医薬品コード(YJコード)のコードシステム"
 * ^url = $JP_MedicationCodeYJ_CS
 * ^status = #draft
 * ^caseSensitive = true
-* ^valueSet = $JP_MedicationCodeYJ_VS
+// * ^valueSet = $JP_MedicationCodeYJ_VS
 * ^content = #fragment
 
 // TODO:　YJ医薬品コード追加

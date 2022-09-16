@@ -9,7 +9,7 @@ Description: "医薬品HOT9コードのコードシステム"
 * ^url = $JP_MedicationCodeHOT9_CS
 * ^status = #draft
 * ^caseSensitive = true
-* ^valueSet = $JP_MedicationCodeHOT9_VS
+// * ^valueSet = $JP_MedicationCodeHOT9_VS
 * ^content = #fragment
 
 // TODO: Terminology Serverに移動したら削除する　（HOT9医薬品コード追加）

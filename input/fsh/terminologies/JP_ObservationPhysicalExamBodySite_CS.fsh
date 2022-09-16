@@ -5,6 +5,6 @@ Description: "Observation（身体所見）で使用する身体部位のコー�
 * ^url = $JP_ObservationPhysicalExamBodySite_CS
 * ^status = #draft
 * ^caseSensitive = true
-* ^valueSet = $JP_ObservationPhysicalExamBodySite_VS
+// * ^valueSet = $JP_ObservationPhysicalExamBodySite_VS
 * ^content = #example
 * #example "下腹部"
