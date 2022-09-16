@@ -80,7 +80,7 @@ Usage: #example
 * dosage.method = http://terminology.hl7.org/CodeSystem/v2-0165#IVP "IV Push"
 * dosage.dose = 510 'mL' "mL"
 * dosage.rateRatio.numerator = 102 'mL' "mL" 
-* dosage.rateRatio.denominator = 1 'h' "h"
+* dosage.rateRatio.denominator = 1 'h' "Hour"
 
 Instance: jp-medicationadministration-injection-medication-example-1
 InstanceOf: JP_Medication

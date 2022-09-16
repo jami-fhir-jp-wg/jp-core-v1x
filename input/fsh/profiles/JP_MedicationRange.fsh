@@ -36,7 +36,6 @@ Description: "このプロファイルはRange DataTypeに対して、薬剤量�
 * low ^short = "時間範囲（下限）"
 * low.value ^short = "時間範囲（下限）"
 * low.value ^definition = "時間範囲（下限）"
-* low.unit from $units-of-time (preferred)
 * low.unit ^short = "単位時間の単位"
 * low.system from $units-of-time (preferred)
 * low.system ^short = "UCUMを識別するURL。"
@@ -46,7 +45,6 @@ Description: "このプロファイルはRange DataTypeに対して、薬剤量�
 * high ^short = "時間範囲（上限）"
 * high.value ^short = "時間範囲（上限）"
 * high.value ^definition = "時間範囲（上限）"
-* high.unit from $units-of-time (preferred)
 * high.unit ^short = "単位時間の単位"
 * high.system from $units-of-time (preferred)
 * high.system ^short = "UCUMを識別するURL。"

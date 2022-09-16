@@ -35,7 +35,6 @@ Description: "このプロファイルはRatio DataTypeに対して、日本の�
 * denominator ^definition = "単位時間"
 * denominator.value ^short = "単位時間"
 * denominator.value ^definition = "単位時間"
-* denominator.unit from $units-of-time (preferred)
 * denominator.unit ^short = "単位時間の単位"
 * denominator.unit ^definition = "単位時間の単位。UCUMを使用する。"
 * denominator.system from $units-of-time (preferred)
@@ -46,8 +45,8 @@ Description: "このプロファイルはRatio DataTypeに対して、日本の�
 Profile: JP_MedicationRatio_DosePerDay
 Parent: Ratio
 Id: jp-medicationratio-doseperday
-Title: "JP Core Medication Rate Ratio DataType"
-Description: "このプロファイルはRatio DataTypeに対して、日本の薬剤単位を割り当てた派生型である。単位時間内での薬剤の容量（体積）を記述する"
+Title: "JP Core Medication Rate Ratio DosePerDay DataType"
+Description: "このプロファイルはRatio  DataTypeに対して、日本の薬剤単位を割り当てた派生型である。単位時間内での薬剤の容量（体積）を記述する"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_DosePerDay"
 * ^status = #draft
 * ^date = "2022-03-16"
@@ -65,11 +64,10 @@ Description: "このプロファイルはRatio DataTypeに対して、日本の�
 * denominator.value = 1 (exactly)
 * denominator.value ^short = "単位時間(１日)"
 * denominator.value ^definition = "単位時間(１日)固定"
-* denominator.unit from $units-of-time (required)
 * denominator.unit ^short = "単位時間の単位"
 * denominator.unit ^definition = "単位時間の単位。UCUMを使用する。"
-* denominator.unit = "Day" (exactly)
-* denominator.system from $units-of-time (required)
+* denominator.unit = "day" (exactly)
+* denominator.system = "http://unitsofmeasure.org" (exactly)
 * denominator.system ^short = "UCUMを識別するURL。"
 * denominator.system ^definition = "UCUMを識別するURL。固定値。"
 * denominator.code from $units-of-time (required)

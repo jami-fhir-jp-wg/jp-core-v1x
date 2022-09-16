@@ -122,11 +122,9 @@ Description: "このプロファイルは内服用法の制約と拡張のうち
 【JP Core仕様】JAMI標準用法コード(16桁)を使用することが望ましいが、ローカルコードも使用可能。"
 * timing.repeat.boundsDuration.value ^short = "投薬日数"
 * timing.repeat.boundsDuration.value ^definition = "投薬日数"
-* timing.repeat.boundsDuration.comparator ..0
-* timing.repeat.boundsDuration.system from $units-of-time (required)
+* timing.repeat.boundsDuration.system = "http://unitsofmeasure.org" (exactly)
 * timing.repeat.boundsDuration.system ^short = "UCUM"
 * timing.repeat.boundsDuration.system ^definition = "単位コード UCUMを識別するURI。固定値。"
-* timing.repeat.boundsDuration.code 1..
 * timing.repeat.boundsDuration.code = #d (exactly)
 * timing.repeat.boundsDuration.code ^short = "投与日数の単位"
 * timing.repeat.boundsDuration.code ^definition = "単位コードUCUMにおける投与日数の単位。dで固定される。"

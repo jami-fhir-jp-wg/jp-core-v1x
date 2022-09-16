@@ -54,7 +54,6 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * ingredient.isActive ^short = "有効成分の指標"
 * ingredient.isActive ^definition = "この成分が薬剤の治療効果に影響するかどうかの指標\r\n\r\nIndication of whether this ingredient affects the therapeutic action of the drug."
 * ingredient.isActive ^requirements = "Trueであれば、この成分が薬剤の治療効果に影響がある（たとえば有効）ということを示す。\r\nFalseであれば、この成分が薬剤の治療効果に影響がない（たとえば無効）ということを示す。"
-
 * ingredient.strength 1..
 * ingredient.strength.extension[strengthType] only JP_Medication_IngredientStrength_StrengthType
 * ingredient.strength.extension[strengthType] ^definition = "投与量が製剤単位か成分単位かを格納する拡張"
