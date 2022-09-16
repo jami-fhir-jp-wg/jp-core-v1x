@@ -6,7 +6,7 @@ Description: "都道府県番号"
 * ^identifier[=].value = "urn:oid:1.2.392.100495.20.3.21"
 * ^url = $JP_PrefectureNumber_CS
 * ^status = #active
-* ^valueSet = $JP_PrefectureNumber_VS
+// * ^valueSet = $JP_PrefectureNumber_VS
 * ^content = #complete
 
 * #01 "北海道"
