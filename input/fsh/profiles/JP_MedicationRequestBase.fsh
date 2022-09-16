@@ -308,7 +308,7 @@ Description: "隔日投与など、服用開始日から終了日までの日数
 * value[x].value ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
 * value[x].unit = "日" (exactly)
 * value[x].unit ^short = "実投与日数単位"
-* value[x].unit ^definition = "「Day」で固定される"
+* value[x].unit ^definition = "「日」で固定される"
 * value[x].system = "http://unitsofmeasure.org" (exactly)
 * value[x].system ^short = "UCUM"
 * value[x].system ^definition = "単位コード UCUMを識別するURI。固定値。"
