@@ -57,7 +57,7 @@ Usage: #example
 * requester = Reference(Practitioner/jp-practitioner-example-female-1)
 * insurance = Reference(Coverage/jp-coverage-example-1)
 * dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line"
-* dosageInstruction.extension.valueCodeableConcept = http://hl7fhir.jp/medication/99ILL#01 "主管"
+* dosageInstruction.extension.valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
 * dosageInstruction.text = "主管 静脈注射 左腕"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2016-07-01T08:00:00+09:00"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2016-07-01T13:00:00+09:00"
@@ -120,4 +120,4 @@ InstanceOf: Device
 Title: "Device Example シリンジ"
 Description: "シリンジ"
 Usage: #inline
-* type = http://jpfhir.jp/medication/99ILL#01 "シリンジ"
+* type = http://abc-hospital.local/fhir/devide/local-device-type#01 "シリンジ"

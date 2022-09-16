@@ -41,3 +41,4 @@ Code System URI 'urn:oid:1.2.392.200250.2.2.20.22' is unknown so the code cannot
 Code System URI 'urn:oid:1.2.392.200250.2.2.20.30' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.200250.2.2.20.32' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.200250.2.2.20.40' is unknown so the code cannot be validated
+Code System URI 'urn:oid:2.16.840.1.113883.3.1937.777.10.5.162' is unknown so the code cannot be validated
