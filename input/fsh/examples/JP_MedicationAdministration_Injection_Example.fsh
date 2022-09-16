@@ -39,7 +39,7 @@ Usage: #example
 * dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
 * dosage.method.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageMethod_MethodComment"
 * dosage.method.extension.valueString = "１分ほどかけて緩徐に行いました"
-* dosage.method = http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationMethodJAMIDetailUsage_CS#30 "静脈注射"
+* dosage.method = urn:oid:1.2.392.200250.2.2.20.30#3 "注射"
 * dosage.dose = 2 'mL' "mL"
 
 Instance: jp-medicationadministration-injection-example-2
@@ -77,7 +77,7 @@ Usage: #example
 * dosage.site.extension.url = "http://hl7.org/fhir/StructureDefinition/bodySite"
 * dosage.site.extension.valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-2) "左腕"
 * dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
-* dosage.method = http://terminology.hl7.org/CodeSystem/v2-0165#IVP "IV Push"
+* dosage.method = urn:oid:1.2.392.200250.2.2.20.40#31 "中心静脈注射"
 * dosage.dose = 510 'mL' "mL"
 * dosage.rateRatio.numerator = 102 'mL' "mL" 
 * dosage.rateRatio.denominator = 1 'h' "hour"

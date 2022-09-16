@@ -64,7 +64,7 @@ Usage: #example
 * dosageInstruction.site.extension.url = "http://hl7.org/fhir/StructureDefinition/bodySite"
 * dosageInstruction.site.extension.valueReference = Reference(BodyStructure/jp-medicationrequest-injection-bodystructure-example-2)
 * dosageInstruction.route = http://jpfhir.jp/fhir/Common/CodeSystem/route-codes#IV "静脈内"
-* dosageInstruction.method = urn:oid:1.2.392.100495.20.2.34#3 "注射"
+* dosageInstruction.method = urn:oid:1.2.392.200250.2.2.20.30#3 "注射"
 * dosageInstruction.doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1
 * dosageInstruction.doseAndRate.doseQuantity = 510 'mL' "ミリリッター"
 * dosageInstruction.doseAndRate.rateRatio.numerator = 102 'mL' "ミリリッター"
