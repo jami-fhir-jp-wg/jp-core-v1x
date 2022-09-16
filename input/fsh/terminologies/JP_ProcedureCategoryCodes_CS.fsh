@@ -1,13 +1,12 @@
 CodeSystem: JP_ProcedureCategory_CS
 Id: jp-procedure-category-cs
 Title: "JP Core Procedure Category CodeSystem"
-Description: "処置のカテゴリを示すコードのコードシステム"
+Description: "処置のカテゴリを示すコードのコードシステム（より適切なコードと用語に見直し必要）"
 * ^url = $JP_ProcedureCategory_CS
 * ^status = #draft
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureCategory_VS
 * ^content = #complete
-// TODO: より適切なコードと用語に見直し
 * #JPPCC001 "精神療法"
 * #JPPCC002 "カウンセリング"
 * #JPPCC003 "教育"
