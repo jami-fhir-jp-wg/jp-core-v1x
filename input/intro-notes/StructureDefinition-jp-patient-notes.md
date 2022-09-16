@@ -57,7 +57,7 @@ JP Patient リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Patient?identifier=http://myhospital.com/fhir/pid/us-npi|123456
+   GET [base]/Patient?identifier=urn:oid:1.2.392.100495.20.3.51.11312345670|123456
    ```
 
    指定された識別子に一致するPatientリソースを含むBundleを検索する。
