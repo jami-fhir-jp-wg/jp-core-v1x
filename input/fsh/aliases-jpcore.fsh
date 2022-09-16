@@ -148,17 +148,17 @@ Alias: $JP_PrefectureNumber_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Pref
 Alias: $JP_ProcedureBodySite_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureBodySite_CS
 Alias: $JP_ProcedureCategory_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCategory_CS
 Alias: $JP_ProcedureCodesDental_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesDental_CS
-Alias: $JP_ProcedureCodesICHI_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesICHI_CS
+Alias: $JP_ProcedureCodesICHI_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
 Alias: $JP_ProcedureCodesMedical_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesMedical_CS
 Alias: $JP_ProcedureCodesNurse_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesNurse_CS
 Alias: $JP_ProcedureCodesSTEM7_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesSTEM7_CS
-Alias: $JP_ProcedureCondition_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCondition_CS
-Alias: $JP_ProcedureDeviceAction_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureDeviceAction_CS
-Alias: $JP_ProcedureDeviceKind_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureDeviceKind_CS
-Alias: $JP_ProcedureFollowUp_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureFollowUp_CS
+Alias: $JP_ProcedureCondition_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
+Alias: $JP_ProcedureDeviceAction_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
+Alias: $JP_ProcedureDeviceKind_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
+Alias: $JP_ProcedureFollowUp_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
 Alias: $JP_ProcedureNotPerformedReason_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureNotPerformedReason_CS
 Alias: $JP_ProcedureOutcome_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureOutcome_CS
-Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureReason_CS
+Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
 Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
 
 // ValueSet
@@ -233,3 +233,12 @@ Alias: $JP_ProcedureOutcome_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_Proced
 Alias: $JP_ProcedurePerformerRole_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedurePerformerRole_VS
 Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureReason_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_Undefined_VS
+
+
+// URLをJP_Undefined_CSに変更したCS
+// Alias: $JP_ProcedureCodesICHI_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesICHI_CS
+// Alias: $JP_ProcedureCondition_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCondition_CS
+// Alias: $JP_ProcedureDeviceAction_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureDeviceAction_CS
+// Alias: $JP_ProcedureDeviceKind_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureDeviceKind_CS
+// Alias: $JP_ProcedureFollowUp_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureFollowUp_CS
+// Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureReason_CS
