@@ -25,9 +25,9 @@ Usage: #example
 * dosageInstruction.doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 * dosageInstruction.doseAndRate.doseQuantity = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 * dosageInstruction.doseAndRate.rateRatio.numerator = 3 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
-* dosageInstruction.doseAndRate.rateRatio.denominator = 1 'd' "日"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 1 http://unitsofmeasure.org#d "日"
 * dispenseRequest.quantity = 9 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
-* dispenseRequest.expectedSupplyDuration = 3 'd' "日"
+* dispenseRequest.expectedSupplyDuration = 3 http://unitsofmeasure.org#d "日"
 
 Instance: jp-medicationrequest-example-2
 InstanceOf: JP_MedicationRequest
@@ -56,6 +56,6 @@ Usage: #example
 * dosageInstruction.doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 * dosageInstruction.doseAndRate.doseQuantity = 2 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 * dosageInstruction.doseAndRate.rateRatio.numerator = 6 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
-* dosageInstruction.doseAndRate.rateRatio.denominator = 1 'd' "日"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 1 http://unitsofmeasure.org#d "日"
 * dispenseRequest.quantity = 18 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
-* dispenseRequest.expectedSupplyDuration = 3 'd' "日"
+* dispenseRequest.expectedSupplyDuration = 3 http://unitsofmeasure.org#d "日"

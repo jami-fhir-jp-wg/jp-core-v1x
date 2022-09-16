@@ -103,7 +103,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
    例：
 
    ```
-   GET [base]/MedicationAdministration?identifier=http://myhospital.com/fhir/medication\|1234567890
+   GET [base]/MedicationAdministration?identifier=http://myhospital.com/fhir/medication|1234567890
    ```
 
    指定された識別子に一致するMedicationAdministrationリソースを含むBundleを検索する。

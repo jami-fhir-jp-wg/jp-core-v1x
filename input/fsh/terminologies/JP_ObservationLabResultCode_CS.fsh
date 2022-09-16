@@ -5,8 +5,8 @@ Description: "Observation（検体検査結果）で使用する項目コード"
 * ^url = $JP_ObservationLabResultCode_CS
 * ^status = #draft
 * ^caseSensitive = true
-* ^valueSet = $JP_ObservationLabResultCode_VS
-* ^content = #fragment
+// * ^valueSet = $JP_ObservationLabResultCode_VS
+* ^content = #complete
 
 * #3C020000002327101 "尿酸"
 * #2A990000001930953 "ヘモグロビン"

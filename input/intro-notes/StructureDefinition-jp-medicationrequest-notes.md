@@ -122,7 +122,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
    例：
 
    ```
-   GET [base]/MedicationRequest?identifier=http://myhospital.com/fhir/medication\|1234567890
+   GET [base]/MedicationRequest?identifier=http://myhospital.com/fhir/medication|1234567890
    ```
 
    指定された識別子に一致するMedicationRequestリソースを含むBundleを検索する。

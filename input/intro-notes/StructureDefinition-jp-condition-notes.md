@@ -34,7 +34,7 @@
    ```
    例：
    ```
-   GET [base]/Condition?identifier=http://myhospital.com/fhir/condition\|123
+   GET [base]/Condition?identifier=http://myhospital.com/fhir/condition|123
    ```
    
    指定された識別子に一致するConditionリソースを含むBundleを検索する。

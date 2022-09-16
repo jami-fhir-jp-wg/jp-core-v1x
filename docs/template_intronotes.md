@@ -129,7 +129,7 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
     ```
    例：
     ```
-    GET [base]/Practitioner?identifier=http://hl7.org/fhir/sid/us-npi|123456
+    GET [base]/Practitioner?identifier=http://hl7.org/fhir/sid/local-practitioner-identity|123456
     ```
    指定された識別子に一致するPractitionerリソースを含むBundleを検索する。
 

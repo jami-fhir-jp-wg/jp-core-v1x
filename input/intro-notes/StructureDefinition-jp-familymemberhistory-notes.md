@@ -34,7 +34,7 @@
    ```
    例：
    ```
-   GET [base]/FamilyMemberHistory?identifier=http://myhospital.com/fhir/familymemberhistory\|123
+   GET [base]/FamilyMemberHistory?identifier=http://myhospital.com/fhir/familymemberhistory|123
    ```
 
    指定された識別子に一致するFamilyMemberHistoryリソースを含むBundleを検索する。

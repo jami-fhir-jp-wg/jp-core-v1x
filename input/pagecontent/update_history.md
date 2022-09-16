@@ -37,7 +37,9 @@ v1.0 → v1.1に変更するあたり、開発環境(Sushi & IG Publisher)を変
         * `JP_MedicationAdministration_Location` valueに対して`JP_Location`を参照するように限定した。
 
     * Diagnostic関連
-
+        * 各プロファイルの修正
+          * `Cardinality`の見直し
+          * 説明の追記
         
     * Clinical関連
         * 説明文書の全面的な見直し。

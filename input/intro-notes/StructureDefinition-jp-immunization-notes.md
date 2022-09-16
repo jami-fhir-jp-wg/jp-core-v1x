@@ -29,9 +29,9 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 |分類|名称|URI|
 |---------|----|---------------------------|
-|ワクチン|HOT9|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT9_CS<br/>urn:oid:1.2.392.200119.4.403.1|
-|ワクチン|HOT13|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT13_CS<br/>urn:oid:1.2.392.100495.20.2.75|
-|ワクチン|YJコード|ttp://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeYJ_VS<br/>urn:oid:1.2.392.100495.20.1.73|
+|ワクチン|HOT9|urn:oid:1.2.392.200119.4.403.1|
+|ワクチン|HOT13|urn:oid:1.2.392.100495.20.2.75|
+|ワクチン|YJコード|urn:oid:1.2.392.100495.20.1.73|
 |対象疾患|MEDIS標準病名マスター病名交換用コード| urn:oid:1.2.392.200119.4.101.6|
 
 ### 項目の追加

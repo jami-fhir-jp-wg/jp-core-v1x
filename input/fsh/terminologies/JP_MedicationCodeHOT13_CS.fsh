@@ -7,5 +7,5 @@ Description: "医薬品HOT13コードのコードシステム"
 * ^url = $JP_MedicationCodeHOT13_CS
 * ^status = #draft
 * ^caseSensitive = true
-* ^valueSet = $JP_MedicationCodeHOT13_VS
+// * ^valueSet = $JP_MedicationCodeHOT13_VS
 * ^content = #fragment

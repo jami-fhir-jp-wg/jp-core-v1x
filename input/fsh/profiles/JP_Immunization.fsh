@@ -17,23 +17,17 @@ Description: "このProfileはImmunizationリソースに対して日本での�
     JP_Immunization_DueDateOfNextDose named dueDateOfNextDose ..1 and
     JP_Immunization_ManufacturedDate named manufacturedDate ..1 and
     JP_Immunization_CertificatedDate named certificatedDate ..1
-* extension[dueDateOfNextDose] ^short = "次回接種予定日"
-* extension[dueDateOfNextDose] ^definition = "次回接種を予定している日、期限"
-* extension[manufacturedDate] ^short = "製造年月日"
-* extension[manufacturedDate] ^definition = "ワクチンが製造された年月日"
-* extension[certificatedDate] ^short = "検定年月日"
-* extension[certificatedDate] ^definition = "ワクチンが検定された年月日"
-
 * status ^definition = "予防接種記録の現在の状態を示すコード"
-* status ^binding.strength = #required
 * status ^binding.description = "予防接種の現在の状態を表すコード"
 * statusReason ^short = "実施しなかった理由"
 * vaccineCode from JP_MedicationCode_Immunization_VS (preferred)
 * vaccineCode ^short = "接種されたワクチン製剤"
 * vaccineCode ^definition = "接種されたあるいは接種予定のワクチン。"
 * vaccineCode ^comment = "全てのターミノロジーがこのパターンに当てはまるわけではない。モデルによってはCodeableConceptではなく，独自構造でCodingを直接指定して文書やコーディング，その解釈や事前条件や事後条件との関連について示される。"
+* patient only Reference(JP_Patient)
 * patient ^short = "予防接種を受けた人"
 * patient ^definition = "予防接種を受けた，あるいは受けなかった患者。"
+* encounter only Reference(JP_Encounter)
 * encounter ^short = "予防接種を受けた診察"
 * encounter ^definition = "患者が医療従事者から予防接種を受けた外来，入院あるいは他の対面の状態を表す。"
 * occurrence[x] ^short = "ワクチンを接種した日時"
@@ -41,8 +35,10 @@ Description: "このProfileはImmunizationリソースに対して日本での�
 * recorded ^short = "予防接種を受けた対象者の記録として最初に記載された日。"
 * reportOrigin ^short = "二次的に報告された記録の発生源を示す"
 * reportOrigin ^definition = "予防接種を実施した時に，ワクチンを接種した人以外からの報告からの情報である場合のデータの発生源。"
+* location only Reference(JP_Location)
 * location ^short = "ワクチンを接種した場所"
 * location ^definition = "接種医療機関。ワクチン接種がどこで実施されたかを表す。サービスが提供された場所。摂取された身体部位ではない。"
+* manufacturer only Reference(JP_Organization)
 * manufacturer ^short = "ワクチンメーカー"
 * manufacturer ^definition = "ワクチメーカーの名前。"
 * lotNumber ^short = "ワクチンのロット番号"
@@ -53,10 +49,12 @@ Description: "このProfileはImmunizationリソースに対して日本での�
 * site ^definition = "ワクチンが接種された身体部位"
 * route ^short = "ワクチンを接種した経路"
 * route ^definition = "ワクチンが体内へと接種された経路。"
+* doseQuantity only JP_MedicationSimpleQuantity
 * doseQuantity ^short = "ワクチンの投与量"
 * doseQuantity ^definition = "ワクチン製剤が接種された量"
 * performer ^short = "ワクチン接種を実施した人"
 * performer ^definition = "誰が予防接種を実施したかを表す。"
+* performer.actor only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization)
 * note ^short = "予防接種についての補足的記録"
 * note ^definition = "他の属性で伝達することができない予防接種に関する他の記録。"
 * reasonCode ^short = "予防接種を接種した理由"
@@ -86,6 +84,8 @@ Description: "次回摂取予定日"
 * ^status = #active
 * ^context.type = #element
 * ^context.expression = "Immunization"
+* . ^short = "次回接種予定日"
+* . ^definition = "次回接種を予定している日、期限"
 * url = $JP_Immunization_DueDateOfNextDose (exactly)
 * value[x] only date
 
@@ -97,6 +97,8 @@ Description: "検定年月日"
 * ^status = #active
 * ^context.type = #element
 * ^context.expression = "Immunization"
+* . ^short = "検定年月日"
+* . ^definition = "ワクチンが検定された年月日"
 * url = $JP_Immunization_CertificatedDate (exactly)
 * value[x] only date
 
@@ -108,5 +110,7 @@ Description: "製造年月日"
 * ^status = #active
 * ^context.type = #element
 * ^context.expression = "Immunization"
+* . ^short = "製造年月日"
+* . ^definition = "ワクチンが製造された年月日"
 * url = $JP_Immunization_ManufacturedDate (exactly)
 * value[x] only date

@@ -270,6 +270,26 @@ Usage: #definition
 * uniqueId[=].value = $JP_PrefectureNumber_CS
 * uniqueId[=].preferred = true
 
+Instance: jp-medicationroute-hl7-0162-namingsystem
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "JP_MedicationRoute_HL7_0162_NamingSystem"
+* status = #active
+* date = "2022-09-01"
+* kind = #codesystem
+* description = "JP MedicationRouteHL7 0162 NamingSystem"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "1.2.392.100495.20.2.34"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.100495.20.2.34"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "2.16.840.1.113883.3.1937.777.10.5.162"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = $JP_MedicationRouteHL70162_CS
+* uniqueId[=].preferred = true
+
 // template
 // Instance: xxxxxxxxxxxxxxxxxxxx-namingsystem
 // InstanceOf: NamingSystem

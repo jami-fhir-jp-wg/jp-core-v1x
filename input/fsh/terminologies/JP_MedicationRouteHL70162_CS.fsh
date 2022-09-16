@@ -2,6 +2,10 @@ CodeSystem: JP_MedicationRouteHL70162_CS
 Id: jp-medication-route-hl70162-cs
 Title: "JP Core Medication HL70162-based Route CodeSystem"
 Description: "HL7表0162をベースにした投与経路のコードシステム"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:1.2.392.100495.20.2.34"
+* ^identifier[+].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162"
 * ^url = $JP_MedicationRouteHL70162_CS
 * ^status = #draft
 * ^caseSensitive = true

@@ -23,20 +23,24 @@ Error from server: Unable to provide support for code system %
 #  Local CodeSystems Warnings
 Code System URI 'http://abc-hospital.local/fhir/Observation/localcode' is unknown so the code cannot be validated
 Code System URI 'http://abc-hospital.local/fhir/ObservationOrder/localcode' is unknown so the code cannot be validated
+Code System URI 'http://abc-hospital.local/fhir/devide/local-device-type' is unknown so the code cannot be validated
 
 # OID CodeSystem not found Warnings (only registered NamingSystem)
 Code System URI 'urn:oid:1.2.392.100495.20.1.73' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.100495.20.1.81' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.100495.20.2.101' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.100495.20.2.22' is unknown so the code cannot be validated
+Code System URI 'urn:oid:1.2.392.100495.20.2.34' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.100495.20.2.41' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.100495.20.2.51' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.100495.20.2.74' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.100495.20.3.21' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.100495.20.3.22' is unknown so the code cannot be validated
+Code System URI 'urn:oid:1.2.392.200119.4.101.6' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.200119.4.403.1' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.200250.2.2.20.20' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.200250.2.2.20.22' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.200250.2.2.20.30' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.200250.2.2.20.32' is unknown so the code cannot be validated
 Code System URI 'urn:oid:1.2.392.200250.2.2.20.40' is unknown so the code cannot be validated
+Code System URI 'urn:oid:2.16.840.1.113883.3.1937.777.10.5.162' is unknown so the code cannot be validated

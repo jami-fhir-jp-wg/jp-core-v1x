@@ -1,19 +1,11 @@
 
 ### 必須要素
 
-次のデータ項目は必須（データが存在しなければならない）これらは、人間が読めるように簡単に説明している。プロファイル固有の指針と例も提供されている。以下の正式なプロファイル定義では，正式な概要，定義，および用語の要件が示されている。
-
-Organization リソースは、次の要素を持たなければならない。
-
-- identifier ： 
-- status of the organization : 
-- name ： 
-- list of contact information ：
-- Endpoint information : 
+JP Core Organization リソースで定義された必須要素はない。
 
 ### Extensions定義
 
-JP Organization リソースで使用される拡張は次の通りである。
+JP Core Organization リソースで使用される拡張は次の通りである。
 
 - [JP_OrganizationCategory][JP_Organization_InsuranceOrganizationCategory]
 
@@ -36,6 +28,22 @@ JP Organization リソースで使用される拡張は次の通りである。
 | MedicalInstitutionCode | 医療機関コードを格納する | identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/insurance-medical-institution-no" を指定し、医療機関コード(10桁)を同valueに格納する。*7桁医療機関コードは異なるURIとなるので注意すること。  |
 | InsurerNumber | 健康保険組合などの保険者の保険者番号を表現する | identifier.system = "urn:oid:1.2.392.100495.20.3.61" を指定し、保険者番号を同valueに格納する。 |
 
+### 医療機関コード
+
+医療機関コードは10桁の数値で表現され、以下の記載様式を取る。
+
+- 最初の2桁 全国地方公共団体コードの都道府県コード（ISO 3166-2:JP）
+  - 都道府県ごとの番号。
+- 3桁目 点数表番号
+  - 医科は「1」。歯科は「3」。
+    - したがって、同一の病院または診療所に医科と歯科が併存する場合にはそれぞれ別のコードが与えられる。そのため、レセプトコンピュータでは一医療機関に対して医科と歯科の両方のコードを設定できるようになっている。ちなみに処方箋は発行されないが、「4」は調剤、「5」は老人保健施設、「6」は訪問看護ステーションである。
+  - 下7桁 医療機関コード
+    - 地区（2桁）+番号（4桁）+チェックディジット（1桁）で構成される。
+- 7桁の医療機関コードについて
+  - 各地域を所管する厚生労働省の地方支分部局である地方厚生局のホームページ等で確認できる
+  - 医療機関コードを持たない場合、「[9]＋当該施設の電話番号下 9 桁」を医療機関コードとして、その先頭に１をつけた11桁とする。
+
+
 ## 利用方法
 
 ### OperationおよびSearch Parameter 一覧
@@ -44,8 +52,8 @@ JP Organization リソースで使用される拡張は次の通りである。
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHOULD            | identifier    | token  | GET [base]/Organization?identifier=12345|
-| SHOULD            | name          | string | GET [base]/Organization?name=Health                            |
+| SHOULD           | identifier    | token  | GET [base]/Organization?identifier=12345|
+| SHOULD           | name          | string | GET [base]/Organization?name=Health                            |
 | SHOULD           | address | string  | GET [base]/Organization?address=Arbor
 
 #### 必須検索パラメータ
@@ -65,7 +73,7 @@ JP Organization リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Organization?identifier=http://hl7.org/fhir/sid/us-npi|123456
+   GET [base]/Organization?identifier=http://hl7.org/fhir/sid/jpsys|123456
    ```
 
    指定された識別子に一致するOrganizationリソースを含むBundleを検索する。

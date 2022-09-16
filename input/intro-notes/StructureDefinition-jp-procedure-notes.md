@@ -31,7 +31,7 @@
    ```
    例：
    ```
-   GET [base]/Procedure?identifier=http://myhospital.com/fhir/procedure\|123
+   GET [base]/Procedure?identifier=http://myhospital.com/fhir/procedure|123
    ```
    
    指定された識別子に一致するProcedureリソースを含むBundleを検索する。

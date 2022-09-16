@@ -164,7 +164,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
    例：
 
    ```
-   GET [base]/MedicationRequest?identifier=http://myhospital.com/fhir/medication\|1234567890
+   GET [base]/MedicationRequest?identifier=http://myhospital.com/fhir/medication|1234567890
    ```
 
    指定された識別子に一致するMedicationRequestリソースを含むBundleを検索する。

@@ -29,12 +29,24 @@
 [JP_Medication]: StructureDefinition-jp-medication.html
 [JP_MedicationAdministration_Injection]: StructureDefinition-jp-medicationadministration-injection.html
 [JP_MedicationAdministration]: StructureDefinition-jp-medicationadministration.html
+[JP_MedicationAdministrationBase]: StructureDefinition-jp-medicationadministrationBase.html
 [JP_MedicationDispense_Injection]: StructureDefinition-jp-medicationdispense-injection.html
 [JP_MedicationDispense]: StructureDefinition-jp-medicationdispense.html
 [JP_MedicationDispenseBase]: StructureDefinition-jp-medicationdispensebase.html
+[JP_MedicationDosage_Injection]: StructureDefinition-jp-medicationdosage-injection.html
+[JP_MedicationDosage]: StructureDefinition-jp-medicationdosage.html
+[JP_MedicationDosageBase]: StructureDefinition-jp-medicationdosagebase.html
+[JP_MedicationQuantity]: StructureDefinition-jp-medicationquantity.html
+[JP_MedicationRange_UnitOfTime]: StructureDefinition-jp-medicationrange-unitoftime.html
+[JP_MedicationRange]: StructureDefinition-jp-medicationrange.html
+[JP_MedicationRatio_Amount]: StructureDefinition-jp-medicationratio-amount.html
+[JP_MedicationRatio_DosePerDay]: StructureDefinition-jp-medicationratio-doseperday.html
+[JP_MedicationRatio_DosePerPeriod]: StructureDefinition-jp-medicationratio-doseperperiod.html
 [JP_MedicationRequest_Injection]: StructureDefinition-jp-medicationrequest-injection.html
 [JP_MedicationRequest]: StructureDefinition-jp-medicationrequest.html
 [JP_MedicationRequestBase]: StructureDefinition-jp-medicationrequestbase.html
+[JP_MedicationSimpleQuantity]: StructureDefinition-jp-medicationsimplequantity.html
+[JP_MedicationTiming]: StructureDefinition-jp-medicationtiming.html
 [JP_Observation_BodyMeasurement]: StructureDefinition-jp-observation-bodymeasurement.html
 [JP_Observation_Common]: StructureDefinition-jp-observation-common.html
 [JP_Observation_LabResult]: StructureDefinition-jp-observation-labresult.html
@@ -157,6 +169,7 @@
 [JP_ProcedureNotPerformedReason_CS]: CodeSystem-jp-procedure-not-performed-reason-cs.html
 [JP_ProcedureOutcome_CS]: CodeSystem-jp-procedure-outcome-cs.html
 [JP_ProcedureReason_CS]: CodeSystem-jp-procedure-reason-cs.html
+[JP_Undefined_CS]: CodeSystem-jp-undefined-cs.html
 
 <!-- ValueSet -->
 [JP_AllergyIntolerance_VS]: ValueSet-jp-allergyintolerance-vs.html
@@ -164,7 +177,6 @@
 [JP_Department_SsMix_VS]: ValueSet-jp-department-ssmix-vs.html
 [JP_Department_SsMix2Digits_VS]: ValueSet-jp-department-ssmix2digits-vs.html
 [JP_Department_SsMix3Digits_VS]: ValueSet-jp-department-ssmix3digits-vs.html
-[JP_DiagnosticReportRadiologyCode_VS]: ValueSet-jp-diagnosticreportradiologycode-vs.html
 [JP_MedicalFeeScoreType_VS]: ValueSet-jp-medicalfeescoretype-vs.html
 [JP_MedicalLicenseCertificate_VS]: ValueSet-jp-medicallicensecertificate-vs.html
 [JP_MedicationAsNeededConditionJAMI_VS]: ValueSet-jp-medication-as-needed-condition-jami-vs.html
@@ -230,6 +242,7 @@
 [JP_ProcedureOutcome_VS]: ValueSet-jp-procedure-outcome-vs.html
 [JP_ProcedurePerformerRole_VS]: ValueSet-jp-procedure-performer-role-vs.html
 [JP_ProcedureReason_VS]: ValueSet-jp-procedure-reason-vs.html
+[JP_Undefined_VS]: ValueSet-jp-undefined-vs.html
 
 <!-- Example -->
 [jp-allergyintolerance-example-1]: AllergyIntolerance-jp-allergyintolerance-example-1.html
@@ -267,6 +280,7 @@
 [jp-medicationingredientstrengthstrengthtype-namingsystem]: NamingSystem-jp-medicationingredientstrengthstrengthtype-namingsystem.html
 [jp-medicationmethodjamibasicusage-namingsystem]: NamingSystem-jp-medicationmethodjamibasicusage-namingsystem.html
 [jp-medicationmethodjamidetailusage-namingsystem]: NamingSystem-jp-medicationmethodjamidetailusage-namingsystem.html
+[jp-medicationroute-hl7-0162-namingsystem]: NamingSystem-jp-medicationroute-hl7-0162-namingsystem.html
 [jp-medicationsubstitutionnotallowedreason-namingsystem]: NamingSystem-jp-medicationsubstitutionnotallowedreason-namingsystem.html
 [jp-medicationunitmerit9-namingsystem]: NamingSystem-jp-medicationunitmerit9-namingsystem.html
 [jp-medicationusagejami-namingsystem]: NamingSystem-jp-medicationusagejami-namingsystem.html

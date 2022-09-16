@@ -36,7 +36,7 @@
    ```
    例：
    ```
-   GET [base]/AllergyIntolerance?identifier=http://myhospital.com/fhir/allergyintolerance\|123
+   GET [base]/AllergyIntolerance?identifier=http://myhospital.com/fhir/allergyintolerance|123
    ```
 
    指定された識別子に一致するAllergyIntoleranceリソースを含むBundleを検索する。
