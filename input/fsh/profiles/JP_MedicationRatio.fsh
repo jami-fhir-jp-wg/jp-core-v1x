@@ -24,19 +24,19 @@ Profile: JP_MedicationRatio_DosePerPeriod
 Parent: Ratio
 Id: jp-medicationratio-doseperperiod
 Title: "JP Core Medication Rate Ratio DataType"
-Description: "このプロファイルはRatio DataTypeに対して、日本の薬剤単位を割り当てた派生型である。単位時間内での薬剤の容量（体積）を記述する"
+Description: "このプロファイルはRatio DataTypeに対して、日本の薬剤単位を割り当てた派生型である。単位時間内での薬剤の容量を記述する"
 * ^status = #draft
 * ^date = "2022-03-16"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_DosePerPeriod"
-* . ^short = "単位時間内での薬剤の容量（体積）"
-* . ^definition = "単位時間内での薬剤の容量（体積）"
+* . ^short = "単位時間内での薬剤の容量"
+* . ^definition = "単位時間内での薬剤の容量"
 * numerator only JP_MedicationQuantity
-* numerator ^short = "投与量（体積）"
-* numerator ^definition = "投与量（体積）"
-* numerator.value ^short = "投与量（体積）"
-* numerator.value ^definition = "投与量（体積）"
-* numerator.unit ^short = "投与量（体積）の単位"
-* numerator.unit ^definition = "投与量（体積）の単位。"
+* numerator ^short = "投与量"
+* numerator ^definition = "投与量"
+* numerator.value ^short = "投与量"
+* numerator.value ^definition = "投与量"
+* numerator.unit ^short = "投与量の単位"
+* numerator.unit ^definition = "投与量の単位。"
 * denominator ^short = "単位時間"
 * denominator ^definition = "単位時間"
 * denominator.value ^short = "単位時間"
@@ -55,7 +55,7 @@ Profile: JP_MedicationRatio_DosePerDay
 Parent: Ratio
 Id: jp-medicationratio-doseperday
 Title: "JP Core Medication Rate Ratio DosePerDay DataType"
-Description: "このプロファイルはRatio  DataTypeに対して、日本の薬剤単位を割り当てた派生型である。単位時間内での薬剤の容量（体積）を記述する"
+Description: "このプロファイルはRatio  DataTypeに対して、日本の薬剤単位を割り当てた派生型である。単位時間内での薬剤の容量を記述する"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_DosePerDay"
 * ^status = #draft
 * ^date = "2022-03-16"
