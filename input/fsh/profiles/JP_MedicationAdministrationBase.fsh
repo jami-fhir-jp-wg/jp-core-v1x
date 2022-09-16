@@ -130,7 +130,7 @@ Description: "用法コメントを格納するための拡張"
 * . ^definition = "用法コメントを格納するための拡張"
 * url = $JP_MedicationAdministration_Dosage_DosageComment (exactly)
 * value[x] only string or CodeableConcept
-* valueCodeableConcept from JP_MedicationExampleDosageComment_VS (example)
+* value[x] from JP_MedicationExampleDosageComment_VS (example)
 
 Extension: JP_MedicationAdministration_Dosage_LineComment
 Id: jp-medicationadministration-dosage-linecomment
@@ -144,7 +144,7 @@ Description: "ラインコメントを格納する"
 * . ^definition = "ラインコメントを格納するための拡張"
 * url = $JP_MedicationAdministration_Dosage_LineComment (exactly)
 * value[x] only string or CodeableConcept
-* valueCodeableConcept from JP_MedicationExampleLineComment_VS (example)
+* value[x] from JP_MedicationExampleLineComment_VS (example)
 
 Extension: JP_MedicationAdministration_DosageMethod_MethodComment
 Id: jp-medicationadministration-dosagemethod-methodcomment
@@ -158,7 +158,7 @@ Description: "手技コメントを格納するための拡張"
 * . ^definition = "手技コメントを格納するための拡張"
 * url = $JP_MedicationAdministration_DosageMethod_MethodComment (exactly)
 * value[x] only string or CodeableConcept
-* valueCodeableConcept from JP_MedicationExampleMethodComment_VS (example)
+* value[x] from JP_MedicationExampleMethodComment_VS (example)
 
 Extension: JP_MedicationAdministration_DosageRate_RateComment
 Id: jp-medicationadministration-dosagerate-ratecomment
