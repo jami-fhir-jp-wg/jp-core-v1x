@@ -29,10 +29,9 @@ Description: "このプロファイルはConditionリソースに対して、患
 * encounter ^short = "Encounter created as part of. この患者状態の記録が作成された受療の状況（外来、入院、救急、在宅など）"
 * encounter ^definition = "The Encounter during which this Condition was created or to which the creation of this record is tightly associated.\r\n\r\nこの患者状態の記録やレコード作成に関連する受療の状況（外来、入院、救急、在宅など）"
 * onset[x] ^short = "Estimated or actual date,  date-time, or age. この患者状態のオンセット。推定もしくは実際の日付、日時、年齢。"
-* onset[x] ^definition = "Estimated or actual date or date-time  the condition began, in the opinion of the clinician.\r\n\r\n臨床医の判断における、本状態が始まったと推定される、または実際に始まった日付または日時。"
+* onset[x] ^definition = "Estimated or actual date or date-time  the condition began, in the opinion of the clinician.\r\n\r\n臨床医の判断における、本状態が始まったと推定される、または実際に始まった日または日時。"
 * onset[x] ^comment = "Age is generally used when the patient reports an age at which the Condition began to occur.\r\n\r\n年齢は一般的に、患者が症状が発生し始めた年齢を報告したケースで使用される。"
-* abatement[x] ^short = "When in resolution/remission. 治癒（解決）/寛解した時期。"
-* abatement[x] ^definition = "The date or estimated date that the condition resolved or went into remission. This is called \"abatement\" because of the many overloaded connotations associated with \"remission\" or \"resolution\" - Conditions are never really resolved, but they can abate.\r\n\r\n状態が解決した、または寛解した日付または推定日。これは、「寛解」または「治癒（解決）」のどちらかを使うには意味が重すぎることから「軽快」と呼ばれる-状態は実際には治癒していないが、軽快にすることはできる。"
+* abatement[x] ^short = "When in resolution/remission. この状態はいつ治癒／寛解／軽快したか。"
 * recordedDate ^short = "Date record was first recorded. この患者状態が初めて記録された日時。"
 * recordedDate ^definition = "The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date.\r\n\r\nこの患者状態の記録がシステムで作成された日時を表し、多くの場合、システムが生成した日付である。"
 * recorder only Reference(JP_Practitioner or JP_PractitionerRole or JP_Patient or RelatedPerson)
