@@ -26,7 +26,7 @@ Description: "このプロファイルはConditionリソースに対して、患
 * subject only Reference(JP_Patient)
 * subject ^short = "Who has the condition? 誰がこの状態を有するか。"
 * encounter only Reference(JP_Encounter)
-* encounter ^short = "Encounter created as part of. この患者状態の記録に関連する受療の状況（外来、入院、救急、在宅など）"
+* encounter ^short = "Encounter created as part of. この患者状態の記録が作成された受療の状況（外来、入院、救急、在宅など）"
 * encounter ^definition = "The Encounter during which this Condition was created or to which the creation of this record is tightly associated.\r\n\r\nこの患者状態の記録やレコード作成に関連する受療の状況（外来、入院、救急、在宅など）"
 * onset[x] ^short = "Estimated or actual date,  date-time, or age. この患者状態のオンセット。推定もしくは実際の日付、日時、年齢。"
 * onset[x] ^definition = "Estimated or actual date or date-time  the condition began, in the opinion of the clinician.\r\n\r\n臨床医の判断における、本状態が始まったと推定される、または実際に始まった日付または日時。"
