@@ -12,10 +12,10 @@ Description: "このプロファイルはConditionリソースに対して、患
 * . ^short = "Detailed information about conditions, problems or diagnoses. 患者の臨床状態、問題、または診断に関する詳細な情報。"
 * . ^definition = "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.\r\n\r\n健康上の懸念となるレベルに達した、身体的、精神的、社会的な負の状態(condition)や問題（problem／issue）、医療者による診断(diagnosis)、生じたイベント(event)、置かれている状況(situation)、臨床的概念(clinical concept)。"
 * text ^short = "Text summary of the resource, for human interpretation. このリソースを人間が解釈するためのテキスト要約。"
-* clinicalStatus ^short = "active | recurrence | relapse | inactive | remission | resolved （アクティブ｜再発｜再燃｜インアクティブ｜寛解｜完治）"
+* clinicalStatus ^short = "active | recurrence | relapse | inactive | remission | resolved （アクティブ | 再発 | 再燃 | インアクティブ | 寛解 | 完治）"
 * clinicalStatus ^definition = "The clinical status of the condition.\r\n\r\nこの患者状態の臨床的ステータス（アクティブか否かなど）"
-* category ^short = "problem-list-item | encounter-diagnosis（プロブレムリスト｜一時的な診断）"
-* verificationStatus ^short = "unconfirmed | provisional | differential | confirmed | refuted | entered-in-error（十分に確認されていない｜暫定的｜鑑別的｜十分な根拠で存在｜十分な根拠で否定｜誤記載）"
+* category ^short = "problem-list-item | encounter-diagnosis（プロブレムリスト | 一時的な診断）"
+* verificationStatus ^short = "unconfirmed | provisional | differential | confirmed | refuted | entered-in-error（十分に確認されていない | 暫定的 | 鑑別的 | 十分な根拠で存在 | 十分な根拠で否定 | 誤記載）"
 * verificationStatus ^definition = "The verification status to support the clinical status of the condition.\r\n\r\n この患者状態が存在するかどうかの検証状況。"
 * severity from JP_ConditionSeverity_VS (preferred)
 * severity ^short = "Subjective severity of condition. この患者状態の重症度。本プロファイルは、HL70421 Severity of Illness Codeで表現。"
