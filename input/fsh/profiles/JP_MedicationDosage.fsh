@@ -138,7 +138,6 @@ Description: "このプロファイルは内服用法の制約と拡張のうち
 * timing.repeat.boundsDuration.unit = "日" (exactly)
 * timing.repeat.boundsDuration.unit ^short = "投薬日数の単位"
 * timing.repeat.boundsDuration.unit ^definition = "投薬日数の単位文字列。日で固定される"
-
 // dosageAndRate
 // dose[x]
 * doseAndRate.doseQuantity only JP_MedicationSimpleQuantity
@@ -180,19 +179,17 @@ Description: "このプロファイルは注射用法の制約と拡張のうち
 * doseAndRate.rateQuantity ^definition = "投与速度(量/時間)を指定する"
 
 
-
-
 // ==============================
 //   Extension 定義
 // ==============================
 Extension: JP_MedicationDosage_DosageComment
 Id: jp-medicationdosage-dosagecomment
-Title: "JP Core MedicationAdministration Dosage DosageComment Extension"
+Title: "JP Core Medication Dosage DosageComment Extension"
 Description: "用法コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_DosageComment
 * ^date = "2022-03-16"
 * ^context.type = #element
-* ^context.expression = "MedicationAdministration.dosage"
+* ^context.expression = "Dosage"
 * . ^short = "用法コメント"
 * . ^definition = "用法コメントを格納するための拡張"
 * url = $JP_MedicationDosage_DosageComment (exactly)
@@ -202,12 +199,12 @@ Description: "用法コメントを格納するための拡張"
 
 Extension: JP_MedicationDosage_LineComment
 Id: jp-medicationdosage-linecomment
-Title: "JP Core MedicationAdministration atDosage LineComment Extension"
+Title: "JP Core Medication Dosage LineComment Extension"
 Description: "ラインコメントを格納する"
 * ^url = $JP_MedicationDosage_LineComment
 * ^date = "2022-03-16"
 * ^context.type = #element
-* ^context.expression = "MedicationAdministration.dosage"
+* ^context.expression = "Dosage"
 * . ^short = "ラインコメント"
 * . ^definition = "ラインコメントを格納するための拡張"
 * url = $JP_MedicationDosage_LineComment (exactly)
@@ -217,12 +214,12 @@ Description: "ラインコメントを格納する"
 
 Extension: JP_MedicationDosage_MethodComment
 Id: jp-medicationdosage-methodcomment
-Title: "JP Core MedicationAdministration DosageMethod MethodComment Extension"
+Title: "JP Core Medication Dosage MethodComment Extension"
 Description: "手技コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_MethodComment
 * ^date = "2022-03-16"
 * ^context.type = #element
-* ^context.expression = "MedicationAdministration.dosage.method"
+* ^context.expression = "Dosage.method"
 * . ^short = "手技コメント"
 * . ^definition = "手技コメントを格納するための拡張"
 * url = $JP_MedicationDosage_MethodComment (exactly)
@@ -232,12 +229,12 @@ Description: "手技コメントを格納するための拡張"
 
 Extension: JP_MedicationDosage_RateComment
 Id: jp-medicationdosage-ratecomment
-Title: "JP Core MedicationAdministration DosageRate RateComment Extension"
+Title: "JP Core Medication Dosage RateComment Extension"
 Description: "投与速度コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_RateComment
 * ^date = "2022-03-16"
 * ^context.type = #element
-* ^context.expression = "MedicationAdministration.dosage.rate[x]"
+* ^context.expression = "Dosage.rate[x]"
 * . ^short = "投与速度コメント"
 * . ^definition = "投与速度コメントを格納するための拡張"
 * url = $JP_MedicationDosage_RateComment (exactly)
@@ -247,12 +244,12 @@ Description: "投与速度コメントを格納するための拡張"
 
 Extension: JP_MedicationDosage_RouteComment
 Id: jp-medicationdosage-routecomment
-Title: "JP Core MedicationAdministration DosageRoute RouteComment Extension"
+Title: "JP Core Medication Dosage RouteComment Extension"
 Description: "投与経路コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_RouteComment
 * ^date = "2022-03-16"
 * ^context.type = #element
-* ^context.expression = "MedicationAdministration.dosage.route"
+* ^context.expression = "Dosage.route"
 * . ^short = "投与経路コメント"
 * . ^definition = "投与経路コメントを格納するための拡張"
 * url = $JP_MedicationDosage_RouteComment (exactly)
@@ -262,12 +259,12 @@ Description: "投与経路コメントを格納するための拡張"
 
 Extension: JP_MedicationDosage_SiteComment
 Id: jp-medicationdosage-sitecomment
-Title: "JP Core MedicationAdministration DosageSite SiteComment Extension"
+Title: "JP Core Medication Dosage SiteComment Extension"
 Description: "投与部位コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_SiteComment
 * ^date = "2022-03-16"
 * ^context.type = #element
-* ^context.expression = "MedicationAdministration.dosage.site"
+* ^context.expression = "Dosage.site"
 * . ^short = "投与部位コメント"
 * . ^definition = "投与部位コメントを格納するための拡張"
 * url = $JP_MedicationDosage_SiteComment (exactly)
