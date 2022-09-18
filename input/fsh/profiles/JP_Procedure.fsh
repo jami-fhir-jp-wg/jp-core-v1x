@@ -58,7 +58,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * performer.actor only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or RelatedPerson or Device)
 * performer ^short = "The people who performed the procedure. このプロシジャーの実施者。"
 * performer ^definition = "Limited to \"real\" people rather than equipment.\r\n医療機器ではなく「生身の人間」に限定。"
-* performer.function ^short = "	Type of performance 実施者の役割（ロール）"
+* performer.function ^short = "Type of performance 実施者の役割（ロール）"
 * performer.function ^definition = "Distinguishes the type of involvement of the performer in the procedure. For example, surgeon, anaesthetist, endoscopist.\r\nプロシジャーへの実施者の関与のタイプを区別する。たとえば、外科医、麻酔科医、内視鏡医。"
 * performer.function ^comment = "すべての用語の使用がこの一般的なパターンに当てはまるわけではない。場合によっては、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係や事前・事後の調整を管理するための独自の構造を提供するべきである。\r\n\r\n 【JP Core仕様】当面利用しない。"
 * performer.actor ^short = "The reference to the practitioner. 医療従事者への参照。"
