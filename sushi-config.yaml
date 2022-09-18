@@ -162,18 +162,18 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType
-    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_DosageComment
-    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_LineComment
-    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageMethod_MethodComment
-    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageRate_RateComment
-    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageRoute_RouteComment
-    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageSite_SiteComment
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_UncategorizedComment
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_DosageComment
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_LineComment
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_MethodComment
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_RateComment
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_RouteComment
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_SiteComment
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device
@@ -246,17 +246,17 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureBodySite_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCategory_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesDental_CS
-    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesICHI_CS
+    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesMedical_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesNurse_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesSTEM7_CS
-    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCondition_CS
-    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureDeviceAction_CS
-    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureDeviceKind_CS
-    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureFollowUp_CS
+    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
+    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
+    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
+    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureNotPerformedReason_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureOutcome_CS
-    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureReason_CS
+    - http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
     - http://jpfhir.jp/fhir/Common/CodeSystem/JP_Undefined_CS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_AllergyIntolerance_VS
     - http://jpfhir.jp/fhir/Common/ValueSet/JP_ConditionSeverity_VS

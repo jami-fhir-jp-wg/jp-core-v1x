@@ -14,16 +14,16 @@ Description: "このプロファイルはMedicationAdministrationリソースに
     JP_MedicationAdministration_UncategorizedComment named uncategorizedComment ..*
 * dosage.extension contains
     JP_MedicationRequest_DosageInstruction_Line named line ..* and
-    JP_MedicationAdministration_Dosage_LineComment named lineComment ..* and
-    JP_MedicationAdministration_Dosage_DosageComment named dosageComment ..*
+    JP_MedicationDosage_LineComment named lineComment ..* and
+    JP_MedicationDosage_DosageComment named dosageComment ..*
 * dosage.route.extension contains 
-    JP_MedicationAdministration_DosageRoute_RouteComment named routeComment ..*
+    JP_MedicationDosage_RouteComment named routeComment ..*
 * dosage.method.extension contains 
-    JP_MedicationAdministration_DosageMethod_MethodComment named methodComment ..*
+    JP_MedicationDosage_MethodComment named methodComment ..*
 * dosage.rateRatio.extension contains
-    JP_MedicationAdministration_DosageRate_RateComment named rateComment ..*
+    JP_MedicationDosage_RateComment named rateComment ..*
 * dosage.rateQuantity.extension contains
-    JP_MedicationAdministration_DosageRate_RateComment named rateComment ..*
+    JP_MedicationDosage_RateComment named rateComment ..*
 * dosage.rateRatio only JP_MedicationRatio_DosePerPeriod
 * medication[x] only Reference(Medication)
 * medicationReference only Reference(JP_Medication)

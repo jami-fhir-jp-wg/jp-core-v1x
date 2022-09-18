@@ -58,18 +58,18 @@ Alias: $JP_Immunization_DueDateOfNextDose = http://jpfhir.jp/fhir/core/Extension
 Alias: $JP_Immunization_ManufacturedDate = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate
 Alias: $JP_Medication_Ingredient_DrugNo = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo
 Alias: $JP_Medication_IngredientStrength_StrengthType = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType
-Alias: $JP_MedicationAdministration_Dosage_DosageComment = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_DosageComment
-Alias: $JP_MedicationAdministration_Dosage_LineComment = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_LineComment
-Alias: $JP_MedicationAdministration_DosageMethod_MethodComment = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageMethod_MethodComment
-Alias: $JP_MedicationAdministration_DosageRate_RateComment = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageRate_RateComment
-Alias: $JP_MedicationAdministration_DosageRoute_RouteComment = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageRoute_RouteComment
-Alias: $JP_MedicationAdministration_DosageSite_SiteComment = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DosageSite_SiteComment
 Alias: $JP_MedicationAdministration_Location = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location
 Alias: $JP_MedicationAdministration_RequestAuthoredOn = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn
 Alias: $JP_MedicationAdministration_RequestDepartment = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment
 Alias: $JP_MedicationAdministration_Requester = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester
 Alias: $JP_MedicationAdministration_UncategorizedComment = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_UncategorizedComment
 Alias: $JP_MedicationDispense_Preparation = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation
+Alias: $JP_MedicationDosage_DosageComment = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_DosageComment
+Alias: $JP_MedicationDosage_LineComment = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_LineComment
+Alias: $JP_MedicationDosage_MethodComment = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_MethodComment
+Alias: $JP_MedicationDosage_RateComment = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_RateComment
+Alias: $JP_MedicationDosage_RouteComment = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_RouteComment
+Alias: $JP_MedicationDosage_SiteComment = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_SiteComment
 Alias: $JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount
 Alias: $JP_MedicationRequest_DispenseRequest_InstructionForDispense = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense
 Alias: $JP_MedicationRequest_DosageInstruction_Device = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device
@@ -233,12 +233,3 @@ Alias: $JP_ProcedureOutcome_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_Proced
 Alias: $JP_ProcedurePerformerRole_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedurePerformerRole_VS
 Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_ProcedureReason_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/Common/ValueSet/JP_Undefined_VS
-
-
-// URLをJP_Undefined_CSに変更したCS
-// Alias: $JP_ProcedureCodesICHI_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesICHI_CS
-// Alias: $JP_ProcedureCondition_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCondition_CS
-// Alias: $JP_ProcedureDeviceAction_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureDeviceAction_CS
-// Alias: $JP_ProcedureDeviceKind_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureDeviceKind_CS
-// Alias: $JP_ProcedureFollowUp_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureFollowUp_CS
-// Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureReason_CS

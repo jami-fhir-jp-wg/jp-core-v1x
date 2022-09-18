@@ -1,6 +1,10 @@
+
 // ==============================
+//   DateType 定義
+// ==============================
+// ------------------------------
 // JP_MedicationDosageBase DataType
-// ==============================
+// ------------------------------
 Profile: JP_MedicationDosageBase
 Parent: Dosage
 Id: jp-medicationdosagebase
@@ -107,9 +111,9 @@ Description: "このプロファイルは薬剤用のDosageベースとして基
 * maxDosePerAdministration only JP_MedicationSimpleQuantity
 * maxDosePerLifetime only JP_MedicationSimpleQuantity
 
-// ==============================
+// ------------------------------
 // (内服用)JP_MedicationDosage DataType
-// ==============================
+// ------------------------------
 Profile: JP_MedicationDosage
 Parent: JP_MedicationDosageBase
 Id: jp-medicationdosage
@@ -146,9 +150,9 @@ Description: "このプロファイルは内服用法の制約と拡張のうち
 // rate[x]
 * doseAndRate.rateRatio only JP_MedicationRatio_DosePerDay
 
-// ==============================
+// ------------------------------
 // (注射用)JP_MedicationDosage DataType
-// ==============================
+// ------------------------------
 Profile: JP_MedicationDosage_Injection
 Parent: JP_MedicationDosageBase
 Id: jp-medicationdosage-injection
@@ -174,3 +178,99 @@ Description: "このプロファイルは注射用法の制約と拡張のうち
 * doseAndRate.rateRatio only JP_MedicationRatio_DosePerPeriod
 * doseAndRate.rateQuantity ^short = "投与速度(量/時間)を指定する"
 * doseAndRate.rateQuantity ^definition = "投与速度(量/時間)を指定する"
+
+
+
+
+// ==============================
+//   Extension 定義
+// ==============================
+Extension: JP_MedicationDosage_DosageComment
+Id: jp-medicationdosage-dosagecomment
+Title: "JP Core MedicationAdministration Dosage DosageComment Extension"
+Description: "用法コメントを格納するための拡張"
+* ^url = $JP_MedicationDosage_DosageComment
+* ^date = "2022-03-16"
+* ^context.type = #element
+* ^context.expression = "MedicationAdministration.dosage"
+* . ^short = "用法コメント"
+* . ^definition = "用法コメントを格納するための拡張"
+* url = $JP_MedicationDosage_DosageComment (exactly)
+* value[x] only string or CodeableConcept
+* valueCodeableConcept from JP_MedicationExampleDosageComment_VS (example)
+* valueString ^short = "テキスト記載"
+
+Extension: JP_MedicationDosage_LineComment
+Id: jp-medicationdosage-linecomment
+Title: "JP Core MedicationAdministration atDosage LineComment Extension"
+Description: "ラインコメントを格納する"
+* ^url = $JP_MedicationDosage_LineComment
+* ^date = "2022-03-16"
+* ^context.type = #element
+* ^context.expression = "MedicationAdministration.dosage"
+* . ^short = "ラインコメント"
+* . ^definition = "ラインコメントを格納するための拡張"
+* url = $JP_MedicationDosage_LineComment (exactly)
+* value[x] only string or CodeableConcept
+* valueCodeableConcept from JP_MedicationExampleLineComment_VS (example)
+* valueString ^short = "テキスト記載"
+
+Extension: JP_MedicationDosage_MethodComment
+Id: jp-medicationdosage-methodcomment
+Title: "JP Core MedicationAdministration DosageMethod MethodComment Extension"
+Description: "手技コメントを格納するための拡張"
+* ^url = $JP_MedicationDosage_MethodComment
+* ^date = "2022-03-16"
+* ^context.type = #element
+* ^context.expression = "MedicationAdministration.dosage.method"
+* . ^short = "手技コメント"
+* . ^definition = "手技コメントを格納するための拡張"
+* url = $JP_MedicationDosage_MethodComment (exactly)
+* value[x] only string or CodeableConcept
+* valueCodeableConcept from JP_MedicationExampleMethodComment_VS (example)
+* valueString ^short = "テキスト記載"
+
+Extension: JP_MedicationDosage_RateComment
+Id: jp-medicationdosage-ratecomment
+Title: "JP Core MedicationAdministration DosageRate RateComment Extension"
+Description: "投与速度コメントを格納するための拡張"
+* ^url = $JP_MedicationDosage_RateComment
+* ^date = "2022-03-16"
+* ^context.type = #element
+* ^context.expression = "MedicationAdministration.dosage.rate[x]"
+* . ^short = "投与速度コメント"
+* . ^definition = "投与速度コメントを格納するための拡張"
+* url = $JP_MedicationDosage_RateComment (exactly)
+* value[x] only string or CodeableConcept
+* valueCodeableConcept from JP_MedicationExampleRateComment_VS (example)
+* valueString ^short = "テキスト記載"
+
+Extension: JP_MedicationDosage_RouteComment
+Id: jp-medicationdosage-routecomment
+Title: "JP Core MedicationAdministration DosageRoute RouteComment Extension"
+Description: "投与経路コメントを格納するための拡張"
+* ^url = $JP_MedicationDosage_RouteComment
+* ^date = "2022-03-16"
+* ^context.type = #element
+* ^context.expression = "MedicationAdministration.dosage.route"
+* . ^short = "投与経路コメント"
+* . ^definition = "投与経路コメントを格納するための拡張"
+* url = $JP_MedicationDosage_RouteComment (exactly)
+* value[x] only string or CodeableConcept
+* valueCodeableConcept from JP_MedicationExampleRouteComment_VS (example)
+* valueString ^short = "テキスト記載"
+
+Extension: JP_MedicationDosage_SiteComment
+Id: jp-medicationdosage-sitecomment
+Title: "JP Core MedicationAdministration DosageSite SiteComment Extension"
+Description: "投与部位コメントを格納するための拡張"
+* ^url = $JP_MedicationDosage_SiteComment
+* ^date = "2022-03-16"
+* ^context.type = #element
+* ^context.expression = "MedicationAdministration.dosage.site"
+* . ^short = "投与部位コメント"
+* . ^definition = "投与部位コメントを格納するための拡張"
+* url = $JP_MedicationDosage_SiteComment (exactly)
+* value[x] only string or CodeableConcept
+* valueCodeableConcept from JP_MedicationExampleSiteComment_VS (example)
+* valueString ^short = "テキスト記載"
