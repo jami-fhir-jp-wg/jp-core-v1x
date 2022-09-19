@@ -15,7 +15,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * partOf only Reference(JP_Procedure)
 * partOf ^short = "Event that dispense is part of 親イベントへの参照"
 * partOf ^definition = "The procedure that trigger the dispense. \r\n\r\nこの調剤の契機となったProcedureリソースへの参照。"
-* status ^short = "preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | unknown"
+* status ^short = "preparation | in-progress | cancelled | on-hold | completed | entered-in-error | stopped | unknown 一連の調剤イベントの状態"
 * status ^definition = "A code specifying the state of the set of dispense events.\r\n\r\n一連の調剤イベントの状態を指定するコード。"
 * statusReason[x] ^short = "Why a dispense was not performed　調剤が実行されなかった理由"
 * statusReason[x] ^definition = "Indicates the reason why a dispense was not performed.\r\n\r\n調剤が実行されなかった理由を示す。"
@@ -46,11 +46,12 @@ Description: "このプロファイルはユーザは直接適用するもので
 * authorizingPrescription only Reference(JP_MedicationRequestBase)
 * authorizingPrescription ^short = "Medication order that authorizes the dispense　調剤を正当化する元の処方オーダ"
 * authorizingPrescription ^definition = "Indicates the medication order that is being dispensed against.\r\n調剤の元になった処方オーダを表すMedicationRequestリソースへの参照。"
+* type ^short = "実行される調剤イベント"
 * type ^definition = "Indicates the type of dispensing event that is performed. For example, Trial Fill, Completion of Trial, Partial Fill, Emergency Fill, Samples, etc.\r\n実行される調剤イベントのタイプを示す。たとえば、トライアルフィル、トライアルの完了、部分フィル、緊急フィル、サンプルなどである。"
 * type ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\n\r\nすべてのターミノロジーの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係とpre-coordinationとpost-coordinationの用語関係を管理するための独自の構造を提供する必要がある。"
 * quantity 1..
 * quantity only JP_MedicationSimpleQuantity
-* quantity ^short = "払い出される薬剤の量"
+* quantity ^short = "Trial fill, partial fill, emergency fill, etc. 払い出される薬剤の量"
 * quantity ^definition = "調剤総量。\r\nJP Coreでは必須\r\n払い出される薬剤の量。計測単位を含む。"
 * quantity ^comment = "The context of use may frequently define what kind of quantity this is and therefore what kind of units can be used. The context of use may also restrict the values for the comparator.\r\n\r\n使用状況によって、これがどのような量であるか、したがってどのような単位を使用できるかが定義される場合がかなりある。使用状況によっては、比較演算子の値も制限される場合がある。"
 * daysSupply only JP_MedicationSimpleQuantity
