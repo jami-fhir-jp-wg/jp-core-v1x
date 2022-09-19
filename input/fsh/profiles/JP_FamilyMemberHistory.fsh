@@ -7,8 +7,8 @@ Id: jp-familymemberhistory
 Title: "JP Core FamilyMemberHistory Profile"
 Description: "このプロファイルはFamilyMemberHistoryリソースに対して、データを送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory"
-* ^status = #draft
-* ^date = "2022-09-16"
+* ^status = #active
+* ^date = "2022-09-26"
 * . ^short = "Information about patient's relatives, relevant for patient. 患者の家族に関する情報のうち、患者に関連する情報（家族歴）"
 * . ^definition = "Significant health conditions for a person related to the patient relevant in the context of care for the patient.\r\n\r\n患者の診療に関連する、患者家族の疾患に関する情報。"
 * text ^short = "Text summary of the resource, for human interpretation. このリソースを人間が解釈するためのテキスト要約。"

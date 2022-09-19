@@ -3,7 +3,8 @@ Id: jp-medication-example-line-cs
 Title: "JP Core Medication Example Line CodeSystem"
 Description: "投与ラインのコードシステム例"
 * ^url = $JP_MedicationExampleLine_CS
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationExampleLine_VS
 * ^content = #complete

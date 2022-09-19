@@ -11,7 +11,8 @@ Id: jp-medicationdosagebase
 Title: "JP Core MedicationDosage Base DataType"
 Description: "このプロファイルは薬剤用のDosageベースとして基礎となる制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosageBase"
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * . ^short = "薬の服用方法・服用した方法、または服用すべき方法"
 * . ^definition = "薬の服用方法・服用した方法、または服用すべき方法"
 * extension contains JP_MedicationDosage_DosageComment named dosageComment ..*
@@ -122,7 +123,8 @@ Id: jp-medicationdosage
 Title: "JP Core MedicationDosage DataType"
 Description: "このプロファイルは内服用法の制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage"
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * extension contains
     JP_MedicationRequest_DosageInstruction_PeriodOfUse named periodOfUse ..1 and
     JP_MedicationRequest_DosageInstruction_UsageDuration named usageDuration ..1
@@ -161,7 +163,8 @@ Id: jp-medicationdosage-injection
 Title: "JP Core MedicationDosage Injection DataType"
 Description: "このプロファイルは注射用法の制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage_Injection"
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * extension contains
     JP_MedicationRequest_DosageInstruction_Line named line ..* and
     JP_MedicationRequest_DosageInstruction_Device named device ..* and
@@ -194,7 +197,8 @@ Id: jp-medicationdosage-dosagecomment
 Title: "JP Core Medication Dosage DosageComment Extension"
 Description: "用法コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_DosageComment
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
 // * ^context.type = #element
 // * ^context.expression = "Dosage"
 * . ^short = "用法コメント"
@@ -212,7 +216,8 @@ Id: jp-medicationdosage-linecomment
 Title: "JP Core Medication Dosage LineComment Extension"
 Description: "ラインコメントを格納する"
 * ^url = $JP_MedicationDosage_LineComment
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
 // * ^context.type = #element
 // * ^context.expression[0] = "Dosage"
 // * ^context.expression[+] = "MedicationAdministration.dosage"
@@ -231,7 +236,8 @@ Id: jp-medicationdosage-methodcomment
 Title: "JP Core Medication Dosage MethodComment Extension"
 Description: "手技コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_MethodComment
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
 // * ^context.type = #element
 // * ^context.expression[0] = "Dosage.method"
 // * ^context.expression[+] = "MedicationAdministration.dosage.method"
@@ -250,7 +256,8 @@ Id: jp-medicationdosage-ratecomment
 Title: "JP Core Medication Dosage RateComment Extension"
 Description: "投与速度コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_RateComment
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
 // * ^context.type = #element
 // * ^context.expression[0] = "Dosage.doseAndRate.rateRatio"
 // * ^context.expression[+] = "Dosage.doseAndRate.rateRange"
@@ -273,7 +280,8 @@ Id: jp-medicationdosage-routecomment
 Title: "JP Core Medication Dosage RouteComment Extension"
 Description: "投与経路コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_RouteComment
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
 // * ^context.type = #element
 // * ^context.expression[0] = "Dosage.route"
 // * ^context.expression[+] = "MedicationAdministration.dosage.route"
@@ -290,7 +298,8 @@ Id: jp-medicationdosage-sitecomment
 Title: "JP Core Medication Dosage SiteComment Extension"
 Description: "投与部位コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_SiteComment
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
 // * ^context.type = #element
 // * ^context.expression[0] = "Dosage.site"
 // * ^context.expression[+] = "MedicationAdministration.dosage.site"

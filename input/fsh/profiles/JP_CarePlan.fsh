@@ -5,6 +5,7 @@ Title: "JP Core CarePlan Profile"
 Description: "このプロファイルはJP Core CarePlanリソースに対する共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_CarePlan"
 * ^status = #draft
+* ^date = "2022-09-26"
 * basedOn only Reference(JP_CarePlan)
 * replaces only Reference(JP_CarePlan)
 * partOf only Reference(JP_CarePlan)

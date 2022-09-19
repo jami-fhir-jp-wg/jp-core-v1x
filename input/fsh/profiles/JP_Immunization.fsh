@@ -4,8 +4,8 @@ Id: jp-immunization
 Title: "JP Core Immunization Profile"
 Description: "このProfileはImmunizationリソースに対して日本での予防接種データを送受信するための制約を加えたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
-* ^status = #draft
-* ^date = "2022-02-18"
+* ^status = #active
+* ^date = "2022-09-26"
 // * ^purpose = "予防接種の記録を交換するために用いられる。"
 * . ^short = "予防接種"
 * . ^definition = "ワクチンを接種したときの記録，あるいは予防接種について患者や医療従事者などが報告した記録。"
@@ -81,7 +81,7 @@ Id: jp-immunization-duedateofnextdose
 Title: "JP Core Immunization DueDateOfNextDose Extension"
 Description: "次回摂取予定日"
 * ^url = $JP_Immunization_DueDateOfNextDose
-* ^status = #draft
+* ^status = #active
 * ^context.type = #element
 * ^context.expression = "Immunization"
 * . ^short = "次回接種予定日"
@@ -94,7 +94,7 @@ Id: jp-immunization-certificateddate
 Title: "JP Core Immunization CertificatedDate Extension"
 Description: "検定年月日"
 * ^url = $JP_Immunization_CertificatedDate
-* ^status = #draft
+* ^status = #active
 * ^context.type = #element
 * ^context.expression = "Immunization"
 * . ^short = "検定年月日"
@@ -107,7 +107,7 @@ Id: jp-immunization-manufactureddate
 Title: "JP Core Immunization ManufacturedDate Extension"
 Description: "製造年月日"
 * ^url = $JP_Immunization_ManufacturedDate
-* ^status = #draft
+* ^status = #active
 * ^context.type = #element
 * ^context.expression = "Immunization"
 * . ^short = "製造年月日"

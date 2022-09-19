@@ -7,8 +7,8 @@ Id: jp-encounter
 Title: "JP Core Encounter Profile"
 Description: "このプロファイルはEncounterリソースに対して、来院/入院情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter"
-* ^status = #draft
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
 * . ^short = "An interaction during which services are provided to the patient / 患者にサービスが提供されている間の相互作用"
 * . ^definition = "An interaction between a patient and healthcare provider(s) for the purpose of providing healthcare service(s) or assessing the health status of a patient.\r\n\r\n医療サービスの提供または患者の健康状態の評価を目的とした、患者と医療提供者との間の相互作用。エンカウンターと表現される。\r\n\r\n【JP Core仕様】外来受診、救急受診、入院、退院、対面診察、電話診察、など。"
 * extension contains $encounter-associatedEncounter named associatedEncounter ..1

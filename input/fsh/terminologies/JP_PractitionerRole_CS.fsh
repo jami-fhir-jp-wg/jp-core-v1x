@@ -3,7 +3,8 @@ Id: jp-practitioner-role-cs
 Title: "JP Core Practitioner Role CodeSystem"
 Description: "実施者のロール（役割・職種））を示すコード"
 * ^url = $JP_PractitionerRole_CS
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_PractitionerRole_VS
 * ^content = #complete

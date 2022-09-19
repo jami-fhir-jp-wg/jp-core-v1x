@@ -7,8 +7,8 @@ Id: jp-practitioner
 Title: "JP Core Practitioner Profile"
 Description: "このプロファイルはPractitionerリソースに対して、医療従事者のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner"
-* ^status = #draft
-* ^date = "2022-06-13"
+* ^status = #active
+* ^date = "2022-09-26"
 * . ^short = "ヘルスケアまたは関連サービスの提供に正式な責任を負う人"
 * . ^definition = "A person who is directly or indirectly involved in the provisioning of healthcare.\r\n\r\n医療の提供に直接または間接的に関与する者をいう。"
 * identifier ^definition = "An identifier that applies to this person in this role.\r\n\r\nある役割の人に適用される識別子。"

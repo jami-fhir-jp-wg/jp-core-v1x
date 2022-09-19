@@ -7,8 +7,8 @@ Id: jp-organization
 Title: "JP Core Organization Profile"
 Description: "このプロファイルはOrganizationリソースに対して、組織情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization"
-* ^status = #draft
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
 * . ^short = "A grouping of people or organizations with a common purpose/共通の目的を持った人や組織の集まり"
 * . ^definition = "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.\r\n\r\n集団行動の何らかの形での達成を目的として結成された、正式または非公式に認められた人々または組織のグループ。企業、機関、企業、部門、コミュニティグループ、医療実践グループ、支払者/保険者などが含まれる。"
 * extension ^slicing.discriminator.type = #value
@@ -87,7 +87,8 @@ Id: jp-organization-insuranceorganizationcategory
 Title: "JP Core Organization InsuranceOrganizationCategory Extension"
 Description: "点数表コード１桁（医科１、歯科３）表現するためのExtension。 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"
 * ^url = $JP_Organization_InsuranceOrganizationCategory
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * . ^short = "点数表コード１桁（医科1、歯科３）"
@@ -104,7 +105,8 @@ Id: jp-organization-insuranceorganizationno
 Title: "JP Core Organization InsuranceOrganizationNo Extension"
 Description: "保険医療機関番号７桁を表現するためのExtension。 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"
 * ^url = $JP_Organization_InsuranceOrganizationNo
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * . ^short = "保険医療機関番号７桁"
@@ -121,7 +123,8 @@ Title: "JP Core Organization PrefectureNo Extension"
 Description: """都道府県番号２桁を表現するためのExtension。
 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"""
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo"
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * . ^short = "都道府県番号2桁"

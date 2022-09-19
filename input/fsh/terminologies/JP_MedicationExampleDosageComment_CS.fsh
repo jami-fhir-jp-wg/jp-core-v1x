@@ -3,7 +3,8 @@ Id: jp-medication-example-dosagecomment-cs
 Title: "JP Medication Example DosageComment"
 Description: "注射用法コメントのコードシステム例"
 * ^url = $JP_MedicationExampleDosageComment_CS
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #example
 * #01 "鎮静目的に"

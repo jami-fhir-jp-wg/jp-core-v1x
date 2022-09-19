@@ -3,10 +3,10 @@ Id: jp-jfagy-food-allergen-cs
 Title: "JFAGY Food Allergen CodeSystem"
 Description: "JFAGY アレルゲンコード（食品）"
 * ^url = $JP_JfagyFoodAllergen_CS
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #complete
-* ^date = "2022-09-16"
 
 * #J9F000000000	"食品"
 * #J9FA00000000	"農産食品"

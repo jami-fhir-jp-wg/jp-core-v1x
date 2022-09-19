@@ -3,7 +3,8 @@ Id: jp-medication-example-methodcomment-cs
 Title: "JP Medication Example MethodComment"
 Description: "注射手技コメントのコードシステム例"
 * ^url = $JP_MedicationExampleMethodComment_CS
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #example
 * #01 "ゆっくりと"

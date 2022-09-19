@@ -3,7 +3,8 @@ Id: jp-condition-severity-cs
 Title: "JP Core Condition Severity CodeSystem"
 Description: "Conditionの重症度を示すコードシステム（HL70421 Severity of Illness Code）"
 * ^url = $JP_ConditionSeverity_CS
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ConditionSeverity_VS
 * ^content = #complete

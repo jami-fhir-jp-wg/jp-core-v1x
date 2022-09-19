@@ -3,10 +3,10 @@ Id: jp-jfagy-non-food-non-medication-allergen-cs
 Title: "JFAGY Non Food None Medication Allergen CodeSystem"
 Description: "JFAGY アレルゲンコード（非食品・非医薬品）"
 * ^url = $JP_JfagyNonFoodNonMedicationAllergen_CS
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #complete
-* ^date = "2022-09-16"
 * #J9N000000000	"非食品"
 * #J9NJ00000000	"動物"
 * #J9NJ11000000	"鳥類"

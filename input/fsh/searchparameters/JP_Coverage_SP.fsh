@@ -3,8 +3,8 @@ InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonNumber_SP"
 * name = "JP_Coverage_InsuredPersonNumber_SP"
-* status = #draft
-* date = "2022-03-23"
+* status = #active
+* date = "2022-09-26"
 * description = "CoverageリソースのInsuredPersonNumber(健康保険における被保険者証番号)に関する検索を定義する。"
 * code = #jp-insured-personnumber
 * base = #Coverage
@@ -24,8 +24,8 @@ InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSubNumber_SP"
 * name = "JP_Coverage_InsuredPersonSubNumber_SP"
-* status = #draft
-* date = "2022-03-23"
+* status = #active
+* date = "2022-09-26"
 * description = "CoverageリソースのInsuredPersonSubNumber(健康保険における被保険者証番号の枝番)に関する検索を定義する。"
 * code = #jp-insured-personsubnumber
 * base = #Coverage
@@ -46,8 +46,8 @@ InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSymbol_SP"
 * name = "JP_Coverage_InsuredPersonSymbol_SP"
-* status = #draft
-* date = "2022-03-23"
+* status = #active
+* date = "2022-09-26"
 * description = "CoverageリソースのInsuredPersonSymbol(健康保険における被保険者証記号)に関する検索を定義する。"
 * code = #jp-insured-personsymbol
 * base = #Coverage

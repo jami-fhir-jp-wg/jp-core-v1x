@@ -4,9 +4,9 @@ Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement"
 * name = "JP_Client_CapabilityStatement"
 * title = "JP Core Client CapabilityStatement"
-* status = #draft
+* status = #active
 * experimental = true
-* date = "2022-03-16"
+* date = "2022-09-26"
 * description = "JP Core Clientの期待される機能について説明する。JP Core Clientは、ローカルなユースケースやその他の文脈上の要件に基づいて、必要なデータにアクセスするために、このリストから選択することができる。"
 * kind = #requirements
 * instantiates = "http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement"

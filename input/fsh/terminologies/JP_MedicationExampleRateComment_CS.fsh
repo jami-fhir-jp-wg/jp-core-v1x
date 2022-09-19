@@ -3,7 +3,8 @@ Id: jp-medication-example-ratecomment-cs
 Title: "JP Medication Example RateComment"
 Description: "注射投与速度コメントのコードシステム例"
 * ^url = $JP_MedicationExampleRateComment_CS
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #example
 * #01 "１時間一定速度で"

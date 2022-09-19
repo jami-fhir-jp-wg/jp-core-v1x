@@ -7,8 +7,8 @@ Id: jp-medicationratio-amount
 Title: "JP Core Medication Ratio Amount DataType"
 Description: "このプロファイルはRatio Amount DataTypeに対して、日本の薬剤単位を割り当てた派生型である。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_Amount"
-* ^status = #draft
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
 * . ^short = "パッケージあたり薬剤の投与量"
 * . ^definition = "パッケージあたり薬剤の投与量"
 * . ^comment = "パッケージあたり薬剤の投与量について薬剤単位をバインディングした型である。"
@@ -25,8 +25,8 @@ Parent: Ratio
 Id: jp-medicationratio-doseperperiod
 Title: "JP Core Medication Rate Ratio DataType"
 Description: "このプロファイルはRatio DataTypeに対して、日本の薬剤単位を割り当てた派生型である。単位時間内での薬剤の容量を記述する"
-* ^status = #draft
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_DosePerPeriod"
 * . ^short = "単位時間内での薬剤の容量"
 * . ^definition = "単位時間内での薬剤の容量"
@@ -57,8 +57,8 @@ Id: jp-medicationratio-doseperday
 Title: "JP Core Medication Rate Ratio DosePerDay DataType"
 Description: "このプロファイルはRatio  DataTypeに対して、日本の薬剤単位を割り当てた派生型である。単位時間内での薬剤の容量を記述する"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_DosePerDay"
-* ^status = #draft
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
 * . ^short = "１日当たりでの薬剤の投入量"
 * . ^definition = "１日当たりでの薬剤の投入量"
 * numerator only JP_MedicationQuantity

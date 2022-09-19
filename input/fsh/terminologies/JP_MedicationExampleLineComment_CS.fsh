@@ -3,7 +3,8 @@ Id: jp-medication-example-linecomment-cs
 Title: "JP Medication Example LineComment"
 Description: "注射ラインコメントのコードシステム例"
 * ^url = $JP_MedicationExampleLineComment_CS
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #example
 * #01 "末梢キープ"

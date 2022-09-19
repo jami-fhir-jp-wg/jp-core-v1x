@@ -5,7 +5,8 @@ Description: "医薬品一般名処方コードのコードシステム"
 * ^identifier[0].system = "urn:ietf:rfc:3986"
 * ^identifier[=].value = "urn:oid:1.2.392.100495.20.1.81"
 * ^url = $JP_MedicationCodeCommon_CS
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 // * ^valueSet = $JP_MedicationCodeCommon_VS
 * ^content = #fragment

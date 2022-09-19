@@ -6,16 +6,14 @@ Parent: Medication
 Id: jp-medication
 Title: "JP Core Medication Profile"
 Description: "このプロファイルはMedicationリソースに対して、主に薬剤データを送受信するための基礎となる制約と拡張を定めたものである。"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication"
+* ^status = #active
+* ^date = "2022-09-26"
+* . ^short = "Medication Resourceの定義"
+* . ^definition = "This resource is primarily used for the identification and definition of a medication for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.\r\n\r\nこのResourceは薬剤を処方し、払い出し（調剤）、その投与を定義し、IDを付与するためにまず利用され、薬剤の使用状態を示すためにも使われる。"
 // extension 参照宣言
 * ingredient.extension contains JP_Medication_Ingredient_DrugNo named drugNo ..*
 * ingredient.strength.extension contains JP_Medication_IngredientStrength_StrengthType named strengthType ..*
-//
-* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication"
-* ^status = #draft
-* ^date = "2022-03-16"
-// * ^purpose = "このプロファイルはMedicationリソースに対して、主に薬剤データを送受信するための基礎となる制約と拡張を定めたものである。"
-* . ^short = "Medication Resourceの定義"
-* . ^definition = "This resource is primarily used for the identification and definition of a medication for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.\r\n\r\nこのResourceは薬剤を処方し、払い出し（調剤）、その投与を定義し、IDを付与するためにまず利用され、薬剤の使用状態を示すためにも使われる。"
 * id ^short = "このアーチファクトに対する論理ID"
 * id ^definition = "リソースに対するURLとして使われるリソースの論理ID。この値は一度割り当てられたら変更されることはない。"
 * id ^comment = "ResourceにIDがない時期は、create操作のためにサーバにResourceが送信されている時期だけである。"
@@ -79,7 +77,7 @@ Id: jp-medication-ingredient-drugno
 Title: "JP Core Medication Ingredient DrugNo Extension"
 Description: "同一剤グループ内での順番を格納する拡張"
 * ^url = $JP_Medication_Ingredient_DrugNo
-* ^date = "2022-03-16"
+* ^date = "2022-09-26"
 * ^purpose = "同一剤グループ内での順番を格納する拡張"
 * ^context.type = #element
 * ^context.expression = "Medication.ingredient"
@@ -95,7 +93,7 @@ Id: jp-medication-ingredientstrength-strengthtype
 Title: "JP Core Medication IngredientStrength StrengthType Extension"
 Description: "投与量が製剤単位か成分単位かを格納する拡張"
 * ^url = $JP_Medication_IngredientStrength_StrengthType
-* ^date = "2022-03-16"
+* ^date = "2022-09-26"
 * ^purpose = "投与量が製剤単位か成分単位かを格納する拡張"
 * ^context.type = #element
 * ^context.expression = "Medication.ingredient.strength"

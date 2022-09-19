@@ -3,8 +3,8 @@ InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationCategory_SP"
 * name = "JP_Organization_InsuranceOrganizationCategory_SP"
-* status = #draft
-* date = "2022-03-23"
+* status = #active
+* date = "2022-09-26"
 * description = "OrganizationリソースのInsuranceOrganizationCategory(点数表コード)に関する検索を定義する。"
 * code = #jp-insurance-organizationcategory
 * base = #Organization
@@ -24,8 +24,8 @@ InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationNo_SP"
 * name = "JP_Organization_InsuranceOrganizationNo_SP"
-* status = #draft
-* date = "2022-03-23"
+* status = #active
+* date = "2022-09-26"
 * description = "OrganizationリソースのInsuranceOrganizationNo(保険医療機関番号)に関する検索を定義する。"
 * code = #jp-insurance-organizationno
 * base = #Organization
@@ -46,8 +46,8 @@ InstanceOf: SearchParameter
 Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_PrefectureNo_SP"
 * name = "JP_Organization_PrefectureNo_SP"
-* status = #draft
-* date = "2022-03-23"
+* status = #active
+* date = "2022-09-26"
 * description = "OrganizationリソースのPrefectureNo(都道府県番号)に関する検索を定義する。"
 * code = #jp-prefectureno
 * base = #Organization

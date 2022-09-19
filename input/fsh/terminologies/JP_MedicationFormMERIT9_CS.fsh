@@ -3,7 +3,8 @@ Id: jp-medication-form-merit9-cs
 Title: "JP Core Medication MERIT9 Form CodeSystem"
 Description: "MERIT9剤形コードのコードシステム"
 * ^url = $JP_MedicationFormMERIT9_CS
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationFormMERIT9_VS
 * ^content = #complete

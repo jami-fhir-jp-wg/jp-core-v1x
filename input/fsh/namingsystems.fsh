@@ -3,7 +3,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_Department_SsMix_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP Core Department SsMix NamingSystem"
 * uniqueId[+].type = #oid
@@ -20,7 +20,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationBodySiteJAMIExternal_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP Core Medication BodySite JAMI External NamingSystem"
 * uniqueId[+].type = #oid
@@ -37,7 +37,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationCodeCommon_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP Core MedicationCode Common NamingSystem"
 * uniqueId[+].type = #oid
@@ -54,7 +54,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationCodeHOT7_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP Core MedicationCode HOT7 NamingSystem"
 * uniqueId[+].type = #oid
@@ -70,7 +70,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationCodeHOT9_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP Core MedicationCode HOT9 NamingSystem"
 * uniqueId[+].type = #oid
@@ -91,7 +91,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationCodeHOT13_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP Core MedicationCode HOT13 NamingSystem"
 * uniqueId[+].type = #oid
@@ -107,7 +107,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationCodeYJ_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP Core MedicationCode YJ NamingSystem"
 * uniqueId[+].type = #oid
@@ -124,7 +124,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationIngredientStrengthStrengthType_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP Core Medication IngredientStrength StrengthType NamingSystem"
 * uniqueId[+].type = #oid
@@ -141,7 +141,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationMethodJAMIBasicUsage_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP Core MedicationMethod JAMI BasicUsage NamingSystem"
 * uniqueId[+].type = #oid
@@ -158,7 +158,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationMethodJAMIDetailUsage_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP Core MedicationMethod JAMI DetailUsage NamingSystem"
 * uniqueId[+].type = #oid
@@ -175,7 +175,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationSubstitutionNotAllowedReason_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP Core MedicationSubstitution NotAllowedReason NamingSystem"
 * uniqueId[+].type = #oid
@@ -192,7 +192,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationUnitMERIT9_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP Core MedicationUnit MERIT9 NamingSystem"
 * uniqueId[+].type = #oid
@@ -209,7 +209,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationUsageJAMI_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP MedicationUsage JAMI NamingSystem"
 * uniqueId[+].type = #oid
@@ -226,7 +226,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationUsageJAMIAdditional_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP Core MedicationUsage JAMI Additional NamingSystem"
 * uniqueId[+].type = #oid
@@ -243,7 +243,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicalFeeScoreType_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP Core MedicalFeeScoreType NamingSystem"
 * uniqueId[+].type = #oid
@@ -259,7 +259,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_PrefectureNumber_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP Core PrefectureNumber NamingSystem"
 * uniqueId[+].type = #oid
@@ -275,7 +275,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationRoute_HL7_0162_NamingSystem"
 * status = #active
-* date = "2022-09-01"
+* date = "2022-09-26"
 * kind = #codesystem
 * description = "JP MedicationRouteHL7 0162 NamingSystem"
 * uniqueId[+].type = #oid
@@ -296,7 +296,7 @@ Usage: #definition
 // Usage: #definition
 // * name = "XXXXXXXXXXXXXXXXX_NamingSystem"
 // * status = #active
-// * date = "2022-09-01"
+// * date = "2022-09-26"
 // * kind = #codesystem
 // * description = "XXXXXXXXXXXXXXXXXXX_NamingSystem"
 // * uniqueId[+].type = #oid

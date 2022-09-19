@@ -7,8 +7,8 @@ Id: jp-practitionerrole
 Title: "JP Core PractitionerRole Profile"
 Description: "このプロファイルはPractitionerRoleリソースに対して、医療従事者役割のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_PractitionerRole"
-* ^status = #draft
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
 * . ^short = "医療従事者が関連付けられている役割/組織"
 * . ^definition = "A specific set of Roles/Locations/specialties/services that a practitioner may perform at an organization for a period of time.\r\n\r\n医療従事者が一定期間、組織で行うことができる役割／場所／専門性／サービスの特定のセット。"
 * identifier ^short = "Business Identifiers that are specific to a role/location　役割/場所に固有のビジネス識別子"

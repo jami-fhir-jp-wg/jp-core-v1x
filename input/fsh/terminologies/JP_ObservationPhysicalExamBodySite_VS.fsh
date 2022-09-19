@@ -3,5 +3,6 @@ Id: jp-observation-physicalexam-bodysite-vs
 Title: "JP Core Observation PhysicalExam BodySite ValueSet"
 Description: "Observation（身体所見）で使用する身体部位の値セット"
 * ^url = $JP_ObservationPhysicalExamBodySite_VS
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * include codes from system JP_ObservationPhysicalExamBodySite_CS

@@ -4,9 +4,9 @@ Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Server_CapabilityStatement"
 * name = "JP_Server_CapabilityStatement"
 * title = "JP Core Server CapabilityStatement"
-* status = #draft
+* status = #active
 * experimental = true
-* date = "2022-03-16"
+* date = "2022-09-26"
 * description = "JP Core Server Actorの期待される機能について説明する。\nJP Core ServerがサポートするFHIRプロファイル、OperationsおよびSearch Parametersのリストが定義されている。"
 * kind = #requirements
 * instantiates = "http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Server_CapabilityStatement"

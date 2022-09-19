@@ -3,7 +3,8 @@ Id: jp-medication-example-uncategorized-comment-cs
 Title: "JP MedicationAdministration Example Uncategorized Comment"
 Description: "注射実施未分類コメントのコードシステム例"
 * ^url = $JP_MedicationExampleUncategorizedComment_CS
-* ^status = #draft
+* ^status = #active
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #example
 * #01 "嘔気・嘔吐のため投与せず"
