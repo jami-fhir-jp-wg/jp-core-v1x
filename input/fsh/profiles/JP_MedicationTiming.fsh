@@ -9,6 +9,8 @@ Description: "このプロファイルはTiming DataTypeに対して、薬剤に
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationTiming"
 * ^status = #draft
 * ^date = "2022-03-16"
+* . ^short = "投与日時"
+* . ^definition = "投与日時"
 * event ^short = "服用もしくは注射を行なうタイミングを示す時刻"
 * event ^definition = "服用タイミングを具体的な日時で指定する場合に使用する"
 * repeat ^short = "イベントが発生する時刻"

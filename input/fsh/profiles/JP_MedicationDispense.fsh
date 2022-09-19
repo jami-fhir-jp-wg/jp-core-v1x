@@ -10,7 +10,7 @@ Description: "このプロファイルはMedicationDispenseリソースに対し
 * ^status = #draft
 * ^date = "2022-03-16"
 * . ^short = "指定された患者への薬剤の払い出し"
-* . ^definition = "指定された患者・個人へ薬剤が払い出されたか払い出される予定のものを示す。これには（供給される）提供される製品についての説明や薬剤の服用に関する指示も含まれる。薬剤払い出しは薬剤オーダーに対して薬局システムが対応した結果となる。"
+* . ^definition = "指定された患者・個人へ薬剤が払い出されたか払い出される予定のものを示す。これには（供給される）提供される製品についての説明や薬剤の服用に関する指示も含まれる。薬剤払い出しは薬剤オーダに対して薬局システムが対応した結果となる。"
 * medication[x] only CodeableConcept
 * medicationCodeableConcept from JP_MedicationCode_VS (preferred)
 * medicationCodeableConcept ^short = "コード集で定義された医薬品コード"

@@ -12,12 +12,12 @@ Title: "JP Core MedicationDosage Base DataType"
 Description: "このプロファイルは薬剤用のDosageベースとして基礎となる制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosageBase"
 * ^status = #draft
+* . ^short = "薬の服用方法・服用した方法、または服用すべき方法"
+* . ^definition = "薬の服用方法・服用した方法、または服用すべき方法"
 * extension contains JP_MedicationDosage_DosageComment named dosageComment ..*
 * route.extension contains JP_MedicationDosage_RouteComment named routeComment ..*
 * method.extension contains JP_MedicationDosage_MethodComment named methodComment ..*
-* doseAndRate.rateRatio.extension contains JP_MedicationDosage_RateComment named rateComment ..*
-* doseAndRate.rateRange.extension contains JP_MedicationDosage_RateComment named rateComment ..*
-* doseAndRate.rateQuantity.extension contains JP_MedicationDosage_RateComment named rateComment ..*
+* doseAndRate.extension contains JP_MedicationDosage_RateComment named rateComment ..*
 
 // sequence
 * sequence ^short = "服用指示の順番"

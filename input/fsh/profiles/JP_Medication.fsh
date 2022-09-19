@@ -35,7 +35,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * manufacturer ^short = "製品の製造者"
 * manufacturer ^definition = "Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.\r\n\r\n医薬品の製造元の詳細を説明する。これは、医薬品の販売業者を表すことを意図したものではない。"
 * form ^definition = "製品の剤型についての説明。散剤(powder)、錠剤(tablets)、カプセル(capsule)など。"
-* form ^comment = "もし、Medication ResourceがMedicationRequest Resourceから参照された場合は、これはオーダーされた剤型である。Medication ResourceがMedicationDispense Resourceから参照された場合は、払い出された剤型である。MedicationAdministration ResourceからMedication Resourceが参照されていれば、投与された剤型である。"
+* form ^comment = "もし、Medication ResourceがMedicationRequest Resourceから参照された場合は、これはオーダされた剤型である。Medication ResourceがMedicationDispense Resourceから参照された場合は、払い出された剤型である。MedicationAdministration ResourceからMedication Resourceが参照されていれば、投与された剤型である。"
 * amount only JP_MedicationRatio_Amount
 * amount ^short = "パッケージ中の薬剤の量"
 * amount ^definition = "パッケージされた製品に含まれる薬剤固有の量。たとえば、同じ力価の製品を指定すれば（たとえば、インスリングラルギン10単位/mL注射液）、この値はパッケージ内での薬剤量（たとえば、3mL, 10mLなど）を明示することになる。"

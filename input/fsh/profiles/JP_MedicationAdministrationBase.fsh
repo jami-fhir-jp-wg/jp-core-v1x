@@ -19,7 +19,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * identifier ^short = "External identifier 外部識別子"
 * identifier ^definition = "Identifiers associated with this Medication Administration that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.\r\n\r\nビジネスプロセスによって定義され、リソース自体への直接URL参照が適切でない場合にそれを参照するために使用される、この投薬管理に関連付けられた識別子。これらは、実行者または他のシステムによってこのリソースに割り当てられたビジネスIDであり、リソースが更新されてサーバーからサーバーに伝播される間、一定のままである。"
 * instantiates ^short = "Instantiates protocol or definition　プロトコルや定義のインスタンス化"
-* instantiates ^definition = "A protocol, guideline, orderset, or other definition that was adhered to in whole or in part by this event.\r\n\r\nこのイベントによって全体的または部分的に順守されたプロトコル、ガイドライン、オーダーセット、またはその他の定義。"
+* instantiates ^definition = "A protocol, guideline, orderset, or other definition that was adhered to in whole or in part by this event.\r\n\r\nこのイベントによって全体的または部分的に順守されたプロトコル、ガイドライン、オーダセット、またはその他の定義。"
 * partOf ^short = "Part of referenced event  親イベントへの参照"
 * partOf ^definition = "A larger event of which this particular event is a component or step.\r\n\r\nこの特定のイベントがコンポーネントまたはステップであるようなより大きな親イベント。"
 * status ^short = "completed | stopped"
