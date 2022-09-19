@@ -149,3 +149,4 @@ Description: "薬剤単位の調剤結果"
 * value[x] ^short = "調剤結果"
 * value[x] ^definition = "薬剤単位の調剤結果"
 * valueCodeableConcept from $JP_MedicationInstructionForDispenseJHSP0002_VS (example)
+* valueString ^short = "テキスト記載"
