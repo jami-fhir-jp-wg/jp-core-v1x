@@ -16,8 +16,8 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * contained ^short = "Contained, inline Resources"
 * identifier ^definition = "これは、ビジネスプロセスによって定義され、リソース自体への直接のURL参照が適切でない場合に参照するために使用される、このProcedureに関連する識別子を記録する。"
 * identifier ^comment = "これはビジネス識別子であり、リソース識別子ではない（議論参照）。識別子は1つのリソースインスタンスにのみ表示されることがベストだが、ビジネス上の慣習により、同じ識別子を持つ複数のリソースインスタンスが存在することがあるかもしれない。例えば、複数のPatientとPersonリソースインスタンスが同じ社会保険番号を共有しているかもしれない。"
-* instantiatesCanonical ^definition = "本Procedureの全部または一部を遵守するFHIR定義のプロトコル、ガイドライン、オーダーセット、その他の定義を指すURL。"
-* instantiatesUri ^definition = "本Procedure全体または一部を遵守する、外部で管理されているプロトコル、ガイドライン、オーダーセット、またはその他の定義を指すURL。"
+* instantiatesCanonical ^definition = "本Procedureの全部または一部を遵守するFHIR定義のプロトコル、ガイドライン、オーダセット、その他の定義を指すURL。"
+* instantiatesUri ^definition = "本Procedure全体または一部を遵守する、外部で管理されているプロトコル、ガイドライン、オーダセット、またはその他の定義を指すURL。"
 * basedOn only Reference(JP_CarePlan or ServiceRequest)
 * basedOn ^short = "A request for this procedure. このプロシージャの依頼情報。"
 * basedOn ^definition = "このプロシージャの依頼情報の詳細を含むリソースへの参照。"
