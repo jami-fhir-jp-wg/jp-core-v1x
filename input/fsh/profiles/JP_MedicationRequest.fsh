@@ -70,17 +70,17 @@ Description: "このプロファイルはユーザは直接適用するもので
 * subject ^comment = "処方オーダの対象は必須項目である。\r\n二次利用のためにどこに実際の対象がいるのかについての情報は提供されない。特定の対象に対して匿名化することも必要である。"
 * encounter only Reference(JP_Encounter)
 * encounter ^short = "encounter/admission/stay のいずれかとして記録された診察"
-* encounter ^definition = "JP Core profileでの使用は規定されていない。\r\nこの対象となるリソース[x]が作成される間やこの記録が作成される対象のencounterは密接に関連している。"
+* encounter ^definition = "JP Coreでの使用は規定されていない。\r\nこの対象となるリソース[x]が作成される間やこの記録が作成される対象のencounterは密接に関連している。"
 * encounter ^comment = "このエレメントは一般的には外来でのイベントに対応するが、診察が公式に終わる前や後にこの診察についてのコンテキストに対応して開始される活動についても対応する。もし、診療のエピソードに関連させる必要があれば、extensionとして扱われることがある。"
 * supportingInformation ^short = "薬剤オーダについて補助的情報"
 * supportingInformation ^definition = "薬剤をオーダするときに補助的となる追加情報（たとえば、患者の身長や体重））を含む。"
 * supportingInformation ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * authoredOn 1..
 * authoredOn ^short = "この処方オーダが最初に記述された日"
-* authoredOn ^definition = "JP Core profileでは必須。処方指示が最初に作成された日時。秒の精度まで記録する。タイムゾーンも付与しなければならない。"
+* authoredOn ^definition = "JP Coreでは必須。処方指示が最初に作成された日時。秒の精度まで記録する。タイムゾーンも付与しなければならない。"
 * requester only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or RelatedPerson or Device)
 * requester ^short = "このオーダを発行した人・物"
-* requester ^definition = "JP Core profileではこのエレメントに対する規定はない。\r\nこのオーダを発行した責任のある人、組織、機器。"
+* requester ^definition = "JP Coreではこのエレメントに対する規定はない。\r\nこのオーダを発行した責任のある人、組織、機器。"
 * requester ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * performer only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or Device or RelatedPerson or CareTeam)
 * performer ^short = "薬剤投与・管理を行った者"
@@ -92,7 +92,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * performerType ^comment = "Performerを示さずにこのエレメントが指定された場合は、このエレメントは薬剤の投与／管理が指定の職種でなければならないと言うことを示している。Performerと共に指定された場合は、もし指定されたPerformerが実施できない場合に薬剤投与・管理を行うものについての要件が示されたことを意味する。"
 * recorder only Reference(JP_Practitioner or JP_PractitionerRole)
 * recorder ^short = "投薬オーダの入力者"
-* recorder ^definition = "JP Core profileではこのエレメントに対する規定はない。\r\nたとえば口答指示や電話でのオーダにより、他の人の代理で処方を入力した人。"
+* recorder ^definition = "JP Coreではこのエレメントに対する規定はない。\r\nたとえば口答指示や電話でのオーダにより、他の人の代理で処方を入力した人。"
 * recorder ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * reasonCode ^short = "薬を注文するあるいは注文しない理由や適応"
 * reasonCode ^definition = "このエレメントに対するJP Coreの規定はない。\r\n薬剤をオーダするあるいはしないことを示した理由。"
