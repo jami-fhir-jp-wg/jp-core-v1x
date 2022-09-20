@@ -26,6 +26,7 @@
 
 | コンフォーマンス | パラメータ | 型 | 例 |
 | --- | --- | --- | --- |
+| SHALL | identifier | token  | `GET [base]/Observation?identifier=123456780 |
 | MAY | patient,category,code,value-quantity | reference,token,token,quantity  | `GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40` |
 | MAY | patient,category,code,value-quantity,date | reference,token,token,quantity,date  | `GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31` |
 | MAY | patient,category,code,value-quantity,encounter | reference,token,token,quantity,encounter  | `GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&encounter=456` |
@@ -35,10 +36,23 @@
 
 ##### 必須検索パラメータ
 
-<!--
-次の検索パラメータは必須でサポートされなければならない。（SHALL）
--->
-このプロファイルでは検索の多様性が求められるため、必須（SHALL）とする検索項目は定義していない。
+
+次の検索パラメータは必須でサポートされなければならない。
+
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（SHALL）。
+
+   ```
+   GET [base]/Observation?identifier={system|}[code]
+   ```
+
+   例：
+
+   ```
+   GET [base]/Observation?identifier=http://myhospital.com/fhir/observation-id-system|1234567890
+   ```
+
+   指定された識別子に一致するDiagnosticReportリソースを含むBundleを検索する。
+
 
 ##### 推奨検索パラメータ
 
@@ -124,25 +138,22 @@ patient,category,code,value-quantity,date,encounter の各検索パラメータ�
 - グループごとにmaxパラメータに指定された数だけ応答が返る。maxが指定されない場合は、最新の結果のみが返される。
 
 
-
 この操作の公式なURLは以下である。  
-http://hl7.org/fhir/OperationDefinition/Observation-lastn
-
+https://hl7.org/fhir/R4/operation-observation-lastn.html
 
 
 ###### 入力パラメータ
 
-| 名前   | 多重度 | 型      | バインディング | プロファイル | 説明                                                         |
-| ------ | ------ | ------- | -------------- | ------------ | ------------------------------------------------------------ |
-| max  | 0..1   | positiveInt    |                |              | max は、lastn クエリ操作のオプションの入力パラメータ。これは、各グループから返すObservationの最大数を指定するために使用される。例えば、「ある患者のすべてのバイタルサイン結果から最新の3件を取得する」というクエリの場合、max = 3となる。 |
-
+| 名前   | 多重度 | 型          | 説明                                                         |
+| ------ | ------ | ----------  | ------------------------------------------------------------ |
+| max    | 0..1   | positiveInt | max は、lastn クエリ操作のオプションの入力パラメータ。これは、各グループから返すObservationの最大数を指定するために使用される。例えば、「ある患者のすべてのバイタルサイン結果から最新の3件を取得する」というクエリの場合、max = 3となる。 |
 
 
 ###### 出力パラメータ
 
-| 名前   | 多重度 | 型     | バインディング | プロファイル | 説明                                                         |
-| ------ | ------ | ------ | -------------- | ------------ | ------------------------------------------------------------ |
-| return | 1..1   | Bundle |                |              | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
+| 名前   | 多重度 | 型     | 説明                                                         |
+| ------ | ------ | ------ | ------------------------------------------------------------ |
+| return | 1..1   | Bundle | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
 
 
 #### サンプル
