@@ -26,7 +26,7 @@
 
 | コンフォーマンス | パラメータ | 型 | 例 |
 | --- | --- | --- | --- |
-| SHALL | identifier | token  | `GET [base]/Observation?identifier=123456780 |
+| SHALL | identifier | token  | `GET [base]/Observation?identifier=http://myhospital.com/fhir/observation-id-system|1234567890` |
 | MAY | patient,category,code,value-quantity | reference,token,token,quantity  | `GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40` |
 | MAY | patient,category,code,value-quantity,date | reference,token,token,quantity,date  | `GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31` |
 | MAY | patient,category,code,value-quantity,encounter | reference,token,token,quantity,encounter  | `GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&encounter=456` |
@@ -39,10 +39,10 @@
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるObservationの検索をサポートしなければならない（SHALL）。
 
    ```
-   GET [base]/Observation?identifier={system|}[code]
+   GET [base]/Observation?identifier={token}
    ```
 
    例：
@@ -51,7 +51,7 @@
    GET [base]/Observation?identifier=http://myhospital.com/fhir/observation-id-system|1234567890
    ```
 
-   指定された識別子に一致するDiagnosticReportリソースを含むBundleを検索する。
+   指定された識別子に一致するObservationリソースを含むBundleを検索する。
 
 
 ##### 推奨検索パラメータ
@@ -106,7 +106,7 @@ patient,category,code,value-quantity,date の各検索パラメータに一致�
 patient,category,code,value-quantity,date,encounter の各検索パラメータに一致するObservationリソースを含むBundleを検索する。
 
    ```
-   GET [base]/Observation?patient={reference}&category={token}&code={token}&value-quantity={quantity}&date={date}&&encounter={encounter}
+   GET [base]/Observation?patient={reference}&category={token}&code={token}&value-quantity={quantity}&date={date}&encounter={encounter}
    ```
 
    例：患者123の心拍数が40超えかつ2020年12月31日以前で診療456の時のバイタルサインを取得したい場合
