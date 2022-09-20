@@ -115,9 +115,9 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * eventHistory ^short = "A list of events of interest in the lifecycle　ライフサイクルで関心のあるイベントのリスト"
 * eventHistory ^definition = "A summary of the events of interest that have occurred, such as when the administration was verified.\r\n\r\n投与が確認されたときなど、発生した関連のあるベントのサマリー。"
 
-//--------------------------
-// 内服
-//--------------------------
+//-------------------------------
+// 内服 JP_MedicationAdministration
+//-------------------------------
 Profile: JP_MedicationAdministration
 Parent: JP_MedicationAdministrationBase
 Id: jp-medicationadministration
@@ -133,9 +133,9 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * dosage.rateQuantity ^short = "投与速度(量/時間)を指定する"
 * dosage.rateQuantity ^definition = "投与速度(量/時間)を指定する"
 
-//--------------------------
-// 注射
-//--------------------------
+//-------------------------------
+// 注射 JP_MedicationAdministration_Injection
+//-------------------------------
 Profile: JP_MedicationAdministration_Injection
 Parent: JP_MedicationAdministrationBase
 Id: jp-medicationadministration-injection
@@ -150,15 +150,14 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * medication[x] only Reference(Medication)
 * medicationReference only Reference(JP_Medication)
 * dosage.extension contains
+    JP_MedicationDosage_DosageComment named dosageComment ..* and
     JP_MedicationDosage_Line named line ..* and
     JP_MedicationDosage_LineComment named lineComment ..* and
-    JP_MedicationDosage_DosageComment named dosageComment ..*
+    JP_MedicationDosage_RateComment named rateComment ..*
 * dosage.route.extension contains 
     JP_MedicationDosage_RouteComment named routeComment ..*
 * dosage.method.extension contains 
     JP_MedicationDosage_MethodComment named methodComment ..*
-* dosage.extension contains
-    JP_MedicationDosage_RateComment named rateComment ..*
 * dosage.rateRatio only JP_MedicationRatio_DosePerPeriod
 * dosage.rateQuantity ^short = "投与速度(流量)を指定する単位は流量を表す単位（e.g. 量/時間)を指定する"
 * dosage.rateQuantity ^definition = "投与速度(流量)を指定する単位は流量を表す単位（e.g. 量/時間)を指定する"
@@ -166,6 +165,9 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 // ==============================
 //   Extension 定義
 // ==============================
+//-------------------------------
+// JP_MedicationAdministration_Location
+//-------------------------------
 Extension: JP_MedicationAdministration_Location
 Id: jp-medicationadministration-location
 Title: "JP Core MedicationAdministration Location Extension"
@@ -181,6 +183,9 @@ Description: "実施場所を格納するための拡張"
 * value[x] only Reference(JP_Location)
 * value[x] ^short = "実施場所"
 
+//-------------------------------
+// JP_MedicationAdministration_RequestAuthoredOn
+//-------------------------------
 Extension: JP_MedicationAdministration_RequestAuthoredOn
 Id: jp-medicationadministration-requestauthoredon
 Title: "JP Core MedicationAdministration RequestAuthoredOn Extension"
@@ -195,6 +200,9 @@ Description: "依頼日時を格納するための拡張"
 * url = $JP_MedicationAdministration_RequestAuthoredOn (exactly)
 * value[x] only dateTime
 
+//-------------------------------
+// JP_MedicationAdministration_RequestDepartment
+//-------------------------------
 Extension: JP_MedicationAdministration_RequestDepartment
 Id: jp-medicationadministration-requestdepartment
 Title: "JP Core MedicationAdministration RequestDepartment Extension"
@@ -210,6 +218,9 @@ Description: "依頼科を格納するための拡張"
 * value[x] only CodeableConcept
 * valueCodeableConcept from $JP_Department_SsMix_VS (preferred)
 
+//-------------------------------
+// JP_MedicationAdministration_Requester
+//-------------------------------
 Extension: JP_MedicationAdministration_Requester
 Id: jp-medicationadministration-requester
 Title: "JP Core MedicationAdministration Requester Extension"
@@ -224,6 +235,9 @@ Description: "依頼医を格納するための拡張"
 * url = $JP_MedicationAdministration_Requester (exactly)
 * value[x] only Reference(JP_Practitioner)
 
+//-------------------------------
+// JP_MedicationAdministration_UncategorizedComment
+//-------------------------------
 Extension: JP_MedicationAdministration_UncategorizedComment
 Id: jp-medicationadministration-uncategorizedcomment
 Title: "JP Core MedicationAdministration UncategorizedComment Extension"
