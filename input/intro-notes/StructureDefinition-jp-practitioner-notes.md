@@ -38,7 +38,7 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、医療従事者番号などの識別子によるPractitionerの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、医療従事者番号などの識別子によるPractitionerの検索をサポートしなければならない（**SHALL**）。
 
    ```
    GET [base]/Practitioner?identifier={system|}[code]
@@ -54,7 +54,7 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 
    
 
-2. name 検索パラメータを使用して、任意の名前パートによる文字列検索をサポートしなければならない（SHALL）。
+2. name 検索パラメータを使用して、任意の名前パートによる文字列検索をサポートしなければならない（**SHALL**）。
 
    ```
    GET [base]/Practitioner?name=[string]
@@ -70,7 +70,7 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 
 ##### 推奨検索パラメータ
 
-推奨検索パラメータ(SHOULD)はない。
+推奨検索パラメータ(**SHOULD**)はない。
 
 ##### オプション検索パラメータ 
 

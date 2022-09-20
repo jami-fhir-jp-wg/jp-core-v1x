@@ -34,13 +34,13 @@ DiagnosticReportリソースは、次の要素を持たなければならない�
 
 ##### 必須検索パラメータ
 
-このプロファイルでは必須（SHALL）としての検索項目は定義していない。
+このプロファイルでは必須（**SHALL**）としての検索項目は定義していない。
 
 ##### 推奨検索パラメータ
 
-次の検索パラメータはサポートすることが推奨される。（SHOULD）
+次の検索パラメータはサポートすることが推奨される。（**SHOULD**）
 
-1. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)を指定した検索をサポートすることが望ましい。（SHOULD）
+1. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)を指定した検索をサポートすることが望ましい。（**SHOULD**）
 
 
 patient,categoryの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
@@ -55,7 +55,7 @@ patient,categoryの各検索パラメータに一致するObservationリソー�
    GET [base]/DiagnosticReport?patient=123&category=LAB
    ```
 
-2. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、based-on (検査オーダの依頼科)を指定した検索をサポートすることが望ましい。（SHOULD）
+2. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、based-on (検査オーダの依頼科)を指定した検索をサポートすることが望ましい。（**SHOULD**）
 
 patient,category,based-onの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
@@ -69,7 +69,7 @@ patient,category,based-onの各検索パラメータに一致するObservation�
    GET [base]/DiagnosticReport?patient=123&category=LAB&based-on=ServiceRequest/456
    ```
 
-3. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、date(レポート作成日)を指定した検索をサポートすることが望ましい。（SHOULD）
+3. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、date(レポート作成日)を指定した検索をサポートすることが望ましい。（**SHOULD**）
 
 
 patient,category,dateの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。

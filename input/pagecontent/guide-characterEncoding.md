@@ -8,7 +8,7 @@ HL7®FHIR®規格では、文字コードとしてUnicodeを用い、UTF-8で符
 FHIR JPにおいては、相互運用性確保のためUnicodeの私的領域（E000～F8FF）、補助私的領域A(FFF80～FFFFF)、補助私的領域B(10FF80～10FFFF)は利用するべきではない（**SHOULD NOT**）。とくにオープンなシステムに対して、特段の規定がない限りユーザ定義外字領域を利用したデータを送信することは避けるべきである。氏名および地名についてはIPAの[文字情報基盤事業](https://moji.or.jp/mojikiban/mjlist/)により[戸籍統一文字（約5万6千字）・住基ネット登録文字（約2万字）のUnicode化が完了して](https://www.ipa.go.jp/about/press/20171225.html)おり、外字が必要となる場面は限定される。
 
 ### 基本多言語面（Basic Multilingual Plane, BMP）外の文字や異体字セレクタ
-一部の古いプログラム・ライブラリではこれらの文字を入力するとエラーを生じてしまうものもある。しかし、BMP外の文字や異体字セレクタについても、エラーなく送受信可能であるべきであり、サーバは「[updateもしくはcreateを受け入れるときは送信された通りに受け入れ、のちにreadアクセスがあった際には同じ内容を返すべき（SHOULD）](https://www.hl7.org/fhir/R4/http.html#update)」である。
+一部の古いプログラム・ライブラリではこれらの文字を入力するとエラーを生じてしまうものもある。しかし、BMP外の文字や異体字セレクタについても、エラーなく送受信可能であるべきであり、サーバは「[updateもしくはcreateを受け入れるときは送信された通りに受け入れ、のちにreadアクセスがあった際には同じ内容を返すべき（**SHOULD**）](https://www.hl7.org/fhir/R4/http.html#update)」である。
 
 なお、Unicode6.3においてCJK互換漢字と等価なCJK統合漢字と異体字セレクタの組み合わせがStandardized Variantsに登録され、Standardized Variation Sequence(SVS)として利用可能になった。今のところ広く用いられているわけではないものの、これはUnicode上での重複符号化を生じ、主に検索の場面などで潜在的に意図しない挙動の理由となりうる。詳しくは、[文字列検索](guide-stringSearch.html)を参照のこと。
 
@@ -18,7 +18,7 @@ FHIR®において[JSONフォーマットはRFC8259に従う](https://www.hl7.or
 一方で、XMLやRDFといった他のContent Typesについて同様の定めはないが、JSONに準じて、BOMを付加してはならず（**SHALL NOT**）、解析する実装においてはエラーとせずに無視してパースしてもよい（**MAY**）とする。
 
 ### 改行コード
-FHIR®において改行コードについての規定は特に存在せず、[string型においてCR・LFを含むことができる](https://www.hl7.org/fhir/R4/datatypes.html#primitive)という記載があるのみである。他のデータと同様に「[updateもしくはcreateを受け入れるときは送信された通りに受け入れ、のちにreadアクセスがあった際には同じ内容を返すべき（SHOULD）](https://www.hl7.org/fhir/R4/http.html#update)」であり、何らかの変換がなされる場合は「[CapabilityStatementに明確に記載しなければならない（SHOULD）](https://www.hl7.org/fhir/R4/http.html#conformance-rules)」。
+FHIR®において改行コードについての規定は特に存在せず、[string型においてCR・LFを含むことができる](https://www.hl7.org/fhir/R4/datatypes.html#primitive)という記載があるのみである。他のデータと同様に「[updateもしくはcreateを受け入れるときは送信された通りに受け入れ、のちにreadアクセスがあった際には同じ内容を返すべき（**SHOULD**）](https://www.hl7.org/fhir/R4/http.html#update)」であり、何らかの変換がなされる場合は「[CapabilityStatementに明確に記載しなければならない（**SHOULD**）](https://www.hl7.org/fhir/R4/http.html#conformance-rules)」。
 
 ### Unicodeへの文字コード変換に伴う往復の保全性（round trip safety）
 この項目はFHIR®システムの範囲外であるが、影響を受けるシステムが多いと考えられ、ここに概略を記す。Shift-JIS, CP932などを用いるシステムからUnicode（UTF-8）に変換してFHIRサーバに登録し、そこからデータを受け取って再変換して用いるケースを考える。

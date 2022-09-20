@@ -170,7 +170,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationDispenseの検索をサポートすることが望ましい（SHOULD）。
+1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationDispenseの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationDispense?patient=[id]
@@ -185,7 +185,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
    リソースIDが123456の患者のMedicationDispenseリソースを含むBundleを検索する。
 
-1. patient,whenhandedover 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationDispenseの検索をサポートすることが望ましい（SHOULD）。
+1. patient,whenhandedover 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationDispenseの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationDispense?patient=[id]&whenhandedover=[date]
