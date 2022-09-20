@@ -110,7 +110,7 @@ Description: "保険医療機関番号７桁を表現するためのExtension。
 * ^context.type = #element
 * ^context.expression = "Organization"
 * . ^short = "保険医療機関番号７桁"
-* . ^comment = "保険医療機関番号７桁。Identifier型の拡張\r\n「InsuranceOrganizationNo」を使用する。systemには医療機関コードを\r\n表すOID「1.2.392.100495.20.3.23」を指定する。\r\n\r\n電子処方箋 H7FHIR記述仕様書案の定義をベースにしているが、URLを以下に変更している \r\nhttp://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
+* . ^comment = "保険医療機関番号７桁。Identifier型の拡張\r\n「InsuranceOrganizationNo」を使用する。systemには医療機関コードを\r\n表すOID「1.2.392.100495.20.3.23」を指定する。\r\n\r\n「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」の定義をベースにしているが、URLを以下に変更している \r\nhttp://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
 * url = $JP_Organization_InsuranceOrganizationNo (exactly)
 * value[x] only Identifier
 * value[x].system = "urn:oid:1.2.392.100495.20.3.23" (exactly)
