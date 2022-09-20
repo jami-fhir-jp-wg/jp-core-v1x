@@ -147,7 +147,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 |処方区分|JAHIS注射データ交換規約Ver.2.1C(JHSI表0001)|http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0001|
 |用法種別|JAMI処方・注射オーダ標準用法規格(時間的要素・機器区分コード表)|urn:oid:1.2.392.200250.2.2.20.45（仮）|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
-|力価区分|電子処方箋HL7 FHIR仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
+|力価区分|処方情報 HL7FHIR 記述仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
 |頓用条件|JAMI処方・注射オーダ標準用法規格(表6 イベント区分、イベント詳細区分)|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationAsNeededConditionJAMI_CS |
 |頓用条件|MERIT-9(頓用指示)|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS |
 |投与部位|JAMI処方・注射オーダ標準用法規格(部位コード)|urn:oid:1.2.392.200250.2.2.20.32|
