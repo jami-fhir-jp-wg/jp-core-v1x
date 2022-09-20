@@ -5,7 +5,7 @@
 
 MedicationRequestリソースは、次の要素を持たなければならない。
 - status : ステータスは必須である。
-- intent : 意図は必須であり、JP Coreでは"order" に固定される。
+- intent : 意図は必須である。
 - medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない。
 - subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
 - authoredOn : 処方依頼日時であり、JP Coreでは必須である。
