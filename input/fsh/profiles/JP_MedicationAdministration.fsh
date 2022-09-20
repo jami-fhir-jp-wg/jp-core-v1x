@@ -160,8 +160,8 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * dosage.extension contains
     JP_MedicationDosage_RateComment named rateComment ..*
 * dosage.rateRatio only JP_MedicationRatio_DosePerPeriod
-* dosage.rateQuantity ^short = "投与速度(量/時間)を指定する"
-* dosage.rateQuantity ^definition = "投与速度(量/時間)を指定する"
+* dosage.rateQuantity ^short = "投与速度(流量)を指定する単位は流量を表す単位（e.g. 量/時間)を指定する"
+* dosage.rateQuantity ^definition = "投与速度(流量)を指定する単位は流量を表す単位（e.g. 量/時間)を指定する"
 
 // ==============================
 //   Extension 定義

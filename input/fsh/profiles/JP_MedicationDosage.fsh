@@ -108,8 +108,14 @@ Description: "このプロファイルは薬剤用のDosageベースとして基
 * doseAndRate.rate[x] ^definition = "薬剤が投与される量の速度"
 // maxDose関連
 * maxDosePerPeriod only JP_MedicationRatio_DosePerPeriod
+* maxDosePerPeriod ^short = "単位時間当たりの投薬量の上限"
+* maxDosePerPeriod ^definition = "単位時間当たりの投薬量の上限"
 * maxDosePerAdministration only JP_MedicationSimpleQuantity
+* maxDosePerAdministration ^short = "1回あたりの投薬量の上限"
+* maxDosePerAdministration ^definition = "1回あたりの投薬量の上限"
 * maxDosePerLifetime only JP_MedicationSimpleQuantity
+* maxDosePerLifetime ^short = "生涯の投薬量の上限"
+* maxDosePerLifetime ^definition = "生涯の投薬量の上限"
 
 // ------------------------------
 // (内服用)JP_MedicationDosage DataType
@@ -149,6 +155,7 @@ Description: "このプロファイルは内服用法の制約と拡張のうち
 【JP Core仕様】1回の投与量を指定する。単位は医薬品単位略号を使用することが望ましい。"
 // rate[x]
 * doseAndRate.rateRatio only JP_MedicationRatio_DosePerDay
+* doseAndRate.rateRange only JP_MedicationRange_UnitOfTime
 * doseAndRate.rateQuantity ^short = "投与速度(量/時間)を指定する"
 * doseAndRate.rateQuantity ^definition = "投与速度(量/時間)を指定する"
 
@@ -180,6 +187,7 @@ Description: "このプロファイルは注射用法の制約と拡張のうち
 【JP Core仕様】1回の投与量（体積）を指定する。単位はUCUMを使用する。"
 // // rate[x]
 * doseAndRate.rateRatio only JP_MedicationRatio_DosePerPeriod
+* doseAndRate.rateRange only JP_MedicationRange_UnitOfTime
 * doseAndRate.rateQuantity ^short = "投与速度(流量)を指定する単位は流量を表す単位（e.g. 量/時間)を指定する"
 * doseAndRate.rateQuantity ^definition = "投与速度(流量)を指定する単位は流量を表す単位（e.g. 量/時間)を指定する"
 
