@@ -95,7 +95,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * eventHistory ^definition = "A summary of the events of interest that have occurred, such as when the dispense was verified.\r\n\r\n調剤が確認されたときなど、発生した対象のイベントのサマリー。"
 
 //--------------------------
-// 内服
+// 内服 JP_MedicationDispense
 //--------------------------
 Profile: JP_MedicationDispense
 Parent: JP_MedicationDispenseBase
@@ -114,7 +114,7 @@ Description: "このプロファイルはMedicationDispenseリソースに対し
 * dosageInstruction only JP_MedicationDosage
 
 //--------------------------
-// 注射
+// 注射 JP_MedicationDispense_Injection
 //--------------------------
 Profile: JP_MedicationDispense_Injection
 Parent: JP_MedicationDispenseBase

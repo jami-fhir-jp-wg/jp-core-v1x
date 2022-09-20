@@ -193,10 +193,9 @@ Description: "このプロファイルはユーザは直接適用するもので
 * eventHistory ^definition = "このリソースの現在のバージョンをユーザから見て関係していそうなキーとなる更新や状態遷移と識別される過去のバージョンのこのリソースあるいは調剤請求あるいはEvent ResourceについてのProvenance resourceへの参照。"
 * eventHistory ^comment = "このエレメントには全てのバージョンのMedicationRequestについてのProvenanceが取り込まれているわけではない。「関連する」あるいは重要と思われたものだけである。現在のバージョンのResourceに関連したProvenance resourceを含めてはならない(SHALL NOT)。（もし、Provenanceとして「関連した」変化と思われれば、後の更新の一部として取り込まれる必要があるだろう。それまでは、このバージョンを_revincludeを使ってprovenanceとして指定して直接クエリーを発行することができる。全てのProvenanceがこのRequestについての履歴を対象として持つべきである。）"
 
-
-//--------------------------
-// 内服
-//--------------------------
+//-------------------------------
+// 内服 JP_MedicationRequest
+//-------------------------------
 Profile: JP_MedicationRequest
 Parent: JP_MedicationRequestBase
 Id: jp-medicationrequest
@@ -226,9 +225,9 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * medicationCodeableConcept ^binding.description = "処方する製剤を表すコード。"
 * dosageInstruction only JP_MedicationDosage
 
-//--------------------------
-// 注射
-//--------------------------
+//-------------------------------
+// 注射 JP_MedicationRequest_Injection
+//-------------------------------
 Profile: JP_MedicationRequest_Injection
 Parent: JP_MedicationRequestBase
 Id: jp-medicationrequest-injection
@@ -249,6 +248,10 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 // ==============================
 //   Extension 定義
 // ==============================
+
+//-------------------------------
+// JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount
+//-------------------------------
 Extension: JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount
 Id: jp-medicationrequest-dispenserequest-expectedrepeatcount
 Title: "JP Core MedicationRequest DispenseRequest ExpectedRepeatCount Extension"
@@ -267,6 +270,9 @@ Description: "頓用回数"
 * value[x] ^short = "頓用回数"
 * value[x] ^definition = "頓用回数"
 
+//-------------------------------
+// JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount
+//-------------------------------
 Extension: JP_MedicationRequest_DispenseRequest_InstructionForDispense
 Id: jp-medicationrequest-dispenserequest-instructionfordispense
 Title: "JP Core MedicationRequest DispenseRequest InstructionForDispense Extension"
@@ -283,6 +289,4 @@ Description: "調剤指示。薬剤単位の調剤指示を表現するための
 * value[x] ^short = "調剤指示"
 * value[x] ^definition = "薬剤単位の調剤・払い出し指示"
 * valueCodeableConcept.coding from $JP_MedicationInstructionForDispenseJHSP0002_VS (preferred)
-
-
 
