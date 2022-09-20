@@ -130,6 +130,8 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * medicationCodeableConcept from JP_MedicationCode_VS (preferred)
 * medicationCodeableConcept ^binding.description = "処方する製剤を表すコード。"
 * dosage.rateRatio only JP_MedicationRatio_DosePerPeriod
+* dosage.rateQuantity ^short = "投与速度(量/時間)を指定する"
+* dosage.rateQuantity ^definition = "投与速度(量/時間)を指定する"
 
 //--------------------------
 // 注射
@@ -145,6 +147,8 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * . ^short = "患者への注射薬剤投与記録"
 * extension contains
     JP_MedicationAdministration_UncategorizedComment named uncategorizedComment ..*
+* medication[x] only Reference(Medication)
+* medicationReference only Reference(JP_Medication)
 * dosage.extension contains
     JP_MedicationRequest_DosageInstruction_Line named line ..* and
     JP_MedicationDosage_LineComment named lineComment ..* and
@@ -156,10 +160,8 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * dosage.extension contains
     JP_MedicationDosage_RateComment named rateComment ..*
 * dosage.rateRatio only JP_MedicationRatio_DosePerPeriod
-* medication[x] only Reference(Medication)
-* medicationReference only Reference(JP_Medication)
-
-
+* dosage.rateQuantity ^short = "投与速度(量/時間)を指定する"
+* dosage.rateQuantity ^definition = "投与速度(量/時間)を指定する"
 
 // ==============================
 //   Extension 定義
