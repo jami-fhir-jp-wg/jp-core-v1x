@@ -104,7 +104,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダーIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）。
 
    ```
    GET [base]/MedicationDispense?identifier={system|}[code]
@@ -386,7 +386,7 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 * １回量と１日量
 * 外用部位
 * RP番号、薬剤番号
-* 処方箋番号（オーダーID）
+* 処方箋番号（オーダID）
 * 投与方法、投与経路
 * 入外区分
 * 調剤指示以外の薬剤単位、RP単位のコメント

@@ -92,7 +92,7 @@ DiagnosticReportのドメインリソースの一つであるtextエレメント
 
 ### Identifier
 
-Identifier のデータタイプはオーダー依頼者であるPlacerあるいはオーダーの実施者であるFiller（HL7 Version 2 Messaging Standardにて'Placer'あるいは'Filler'として知られている）によって割り当てられた識別子を区別するために利用されるtypeエレメントを持っている。typeエレメントは以下の様に利用する。
+Identifier のデータタイプはオーダ依頼者であるPlacerあるいはオーダの実施者であるFiller（HL7 Version 2 Messaging Standardにて'Placer'あるいは'Filler'として知られている）によって割り当てられた識別子を区別するために利用されるtypeエレメントを持っている。typeエレメントは以下の様に利用する。
 
 #### Placerの場合
 
@@ -174,7 +174,7 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダーIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（SHALL）。
 
    ```
    GET [base]/DiagnosticReport?identifier={system|}[code]

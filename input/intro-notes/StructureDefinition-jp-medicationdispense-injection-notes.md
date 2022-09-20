@@ -115,7 +115,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダーIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）。
 
    ```
    GET [base]/MedicationDispense?identifier={system|}[code]
@@ -256,9 +256,9 @@ HTTP/1.1 200 OK
 ### 記述の単位について
 MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか、Medicationリソースのreferenceをもつことしかできない。したがって、複数の薬剤を同一のRp番号で表現する場合にはMedicationDispenseを繰り返すか、複数の薬剤をまとめたMedication Resourceのインスタンスを参照することとなる。ワーキンググループでの検討の結果、注射の場合は複数の薬剤をまとめたMedicationリソースのインスタンスをcontained属性に内包した上で参照することとした。
 
-１オーダー内に複数のRpがある場合には、MedicationDispenseを繰り返し、identifier属性にオーダー番号、Rp番号をそれぞれ持つことでリソース間の関係性がわかるようにする。
+１オーダ内に複数のRpがある場合には、MedicationDispenseを繰り返し、identifier属性にオーダ番号、Rp番号をそれぞれ持つことでリソース間の関係性がわかるようにする。
 
-１オーダー内にRpごとに複数の施用（投薬）を持つことができるシステムの場合は、今回の調剤に対する施用の情報をdosageInstruction要素で記述する。該当の施用の投与タイミングを dosageInstruction.timing で指定し、施用番号を dosageInstruction.sequenceで記述する。
+１オーダ内にRpごとに複数の施用（投薬）を持つことができるシステムの場合は、今回の調剤に対する施用の情報をdosageInstruction要素で記述する。該当の施用の投与タイミングを dosageInstruction.timing で指定し、施用番号を dosageInstruction.sequenceで記述する。
 
 ### 投与薬剤と調剤量の記述方法
 投与薬剤と調剤量は、RP内の薬剤が１薬剤の場合も混注などで複数の薬剤を含む場合も、すべての薬剤を記述したMedicationリソースを contained 属性に内包し、それをMedicationRequest.medicationReference属性で参照するようにする。
@@ -499,7 +499,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 調剤の基となった薬剤処方の用法などの情報は、特に記述のない限り JP Core MedicationRequest Injection と同様の記述方法とする。該当する項目としては以下のものがある。
 
 * RP番号、薬剤番号、施用番号
-* 処方箋番号（オーダーID）
+* 処方箋番号（オーダID）
 * 投与方法、投与手技、投与経路、投与ライン、投与装置
 * 入外区分
 * あいまい指示、頓用指示

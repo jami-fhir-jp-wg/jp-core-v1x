@@ -155,7 +155,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダーIDなどの識別子によるMedicationAdministrationの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationAdministrationの検索をサポートしなければならない（SHALL）。
 
    ```
    GET [base]/MedicationAdministration?identifier={system|}[code]

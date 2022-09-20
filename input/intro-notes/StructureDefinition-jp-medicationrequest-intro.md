@@ -23,7 +23,7 @@
 
 このプロファイルは内服、外用の薬剤に関するものであり、注射薬剤については対象としない。注射薬剤は、指示の仕方や指示する項目が内服、外用とは大きく異なるため、別のプロファイルとして記述することとする。
 
-また、このプロファイルのMedicationRequestリソースは薬剤の指示（オーダー）に関するものであり、調剤や払い出し、内服確認や実施記録は対象としない。それぞれ、MedicationDispense, MedicationAdministrationが対応するリソースである。
+また、このプロファイルのMedicationRequestリソースは薬剤の指示（オーダ）に関するものであり、調剤や払い出し、内服確認や実施記録は対象としない。それぞれ、MedicationDispense, MedicationAdministrationが対応するリソースである。
 
 また、療養担当則23条様式2号の処方箋形式の中で、患者情報、保険情報、処方医情報、医療機関情報などについては対象としない。それぞれ、Patient, Coverage, Practitioner, Organizationが対応するリソースである。
 
