@@ -33,7 +33,7 @@
    例：
 
    ```
-   GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/medication|1234567890
+   GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/diagnosticreport-id-system|1234567890
    ```
 
    指定された識別子に一致するDiagnosticReportリソースを含むBundleを検索する。
