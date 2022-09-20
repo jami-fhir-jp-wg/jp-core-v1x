@@ -5,7 +5,7 @@ Profile: JP_MedicationQuantity
 Parent: Quantity
 Id: jp-medicationquantity
 Title: "JP Core Medication Quantity DataType"
-Description: "このプロファイルはQuantity DataTypeに対して、薬剤量に関する定義を行なったものである"
+Description: "このデータタイプはQuantity DataTypeに対して、JP Coreにおける薬剤量に関する定義を行なったものである"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationQuantity"
 * ^status = #active
 * ^date = "2022-09-26"
@@ -42,7 +42,7 @@ Profile: JP_MedicationSimpleQuantity
 Parent: SimpleQuantity
 Id: jp-medicationsimplequantity
 Title: "JP Core Medication Quantity DataType"
-Description: "このプロファイルはQuantity DataTypeに対して、薬剤量に関する定義を行なったものである"
+Description: "このデータタイプはSimpleQuantity DataTypeに対して、JP Coreにおける薬剤量に関する定義を行なったものである"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationSimpleQuantity"
 * ^status = #active
 * ^date = "2022-09-26"

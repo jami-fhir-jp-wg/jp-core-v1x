@@ -5,7 +5,7 @@ Profile: JP_HumanName
 Parent: HumanName
 Id: jp-humanname
 Title: "JP Core HumanName DataType"
-Description: "このプロファイルはHumanName DataTypeに対して、患者のデータを送受信するための基礎となる制約と拡張を定めたものである。"
+Description: "このデータタイプはHumanName DataTypeに対して、患者データを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_HumanName"
 * ^status = #active
 * ^date = "2022-09-26"

@@ -9,7 +9,7 @@ Profile: JP_MedicationDosageBase
 Parent: Dosage
 Id: jp-medicationdosagebase
 Title: "JP Core MedicationDosage Base DataType"
-Description: "このプロファイルは薬剤用のDosageベースとして基礎となる制約と拡張のうち共通部分を定めている。"
+Description: "このデータタイプは薬剤用法のDosageベースとして基礎となる制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosageBase"
 * ^status = #active
 * ^date = "2022-09-26"
@@ -124,7 +124,7 @@ Profile: JP_MedicationDosage
 Parent: JP_MedicationDosageBase
 Id: jp-medicationdosage
 Title: "JP Core MedicationDosage DataType"
-Description: "このプロファイルは内服用法の制約と拡張のうち共通部分を定めている。"
+Description: "このデータタイプは内服用法の制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage"
 * ^status = #active
 * ^date = "2022-09-26"
@@ -166,7 +166,7 @@ Profile: JP_MedicationDosage_Injection
 Parent: JP_MedicationDosageBase
 Id: jp-medicationdosage-injection
 Title: "JP Core MedicationDosage Injection DataType"
-Description: "このプロファイルは注射用法の制約と拡張のうち共通部分を定めている。"
+Description: "このデータタイプは注射用法の制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage_Injection"
 * ^status = #active
 * ^date = "2022-09-26"

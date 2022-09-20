@@ -5,7 +5,7 @@ Profile: JP_MedicationRange
 Parent: Range
 Id: jp-medicationrange
 Title: "JP Core Medication Range DataType"
-Description: "このプロファイルはRange DataTypeに対して、薬剤量の上限下限に関する定義を行なったものである"
+Description: "このデータタイプはRange DataTypeに対して、薬剤量の上限下限に関する定義を行なったものである"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRange"
 * ^status = #active
 * ^date = "2022-09-26"
@@ -24,7 +24,7 @@ Profile: JP_MedicationRange_UnitOfTime
 Parent: Range
 Id: jp-medicationrange-unitoftime
 Title: "JP Core Medication Range DataType"
-Description: "このプロファイルはRange DataTypeに対して、薬剤量の上限下限に関する定義を行なったものである"
+Description: "このデータタイプはRange DataTypeに対して、時間の上限下限に関する定義を行なったものである"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRange_UnitOfTime"
 * ^status = #active
 * ^date = "2022-09-26"
