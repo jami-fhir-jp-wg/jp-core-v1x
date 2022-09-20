@@ -45,13 +45,13 @@ JP Core MedicationDispense プロファイルでは、JP Core MedicationRequest�
   <tr>
     <td>服用開始日</td>
     <td>服用開始日を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse</td>
     <td>Period</td>
   </tr>
   <tr>
     <td>実服用日数</td>
     <td>実服用日数を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration</td>
     <td>Duration</td>
   </tr>
 </table>
@@ -82,8 +82,8 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 療養担当則23条では、「保険医は、処方箋を交付する場合には、様式第二号若しくは第二号の二又はこれらに準ずる様式の処方箋に必要な事項を記載しなければならない。」とされており、外来処方、院内処方の区分を明示していない。
 したがって、個別のユースケースにおいては一部を省略されることも前提の上で、規格としてはこれに準拠すべきと考え、様式に収載されている以下の項目を追加した。
 
-* 服用開始日の追加（拡張「JP_MedicationRequest_DosageInstruction_PeriodOfUse」を使用）
-* 実服用日数の追加（拡張「JP_MedicationRequest_DosageInstruction_UsageDuration」を使用）
+* 服用開始日の追加（拡張「JP_MedicationDosage_PeriodOfUse」を使用）
+* 実服用日数の追加（拡張「JP_MedicationDosage_UsageDuration」を使用）
 * 調剤結果の追加（拡張「JP_MedicationDispense_Preparation」を使用）
 * 一日量処方への対応（doseInstruction.doseAndRate.rateRatioを使用）
 * RP番号、薬剤番号の追加（identifierを使用）

@@ -30,13 +30,13 @@ JP Core MedicationRequest Injectionプロファイルで使用される拡張は
   <tr>
     <td>指示ライン</td>
     <td>指示ラインを格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line</td>
     <td>CodeableConcept</td>
   </tr>
   <tr>
     <td>投与装置</td>
     <td>投与装置を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Device</td>
     <td>Reference (Device)</td>
   </tr>
   <tr>
@@ -50,6 +50,42 @@ JP Core MedicationRequest Injectionプロファイルで使用される拡張は
     <td>投与量が製剤単位か成分単位かを格納する拡張</td>
     <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Strength_StrengthType</td>
     <td>CodeableConcept</td>
+  </tr>
+  <tr>
+    <td>投与経路コメント</td>
+    <td>投与経路コメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_RouteComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>投与部位コメント</td>
+    <td>投与部位コメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_SiteComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>手技コメント</td>
+    <td>手技コメントを格納するための拡張<</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_MethodComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>ラインコメント</td>
+    <td>ラインコメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_LineComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>投与速度コメント</td>
+    <td>投与速度コメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_RateComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>用法コメント</td>
+    <td>用法コメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_DosageComment</td>
+    <td>CodeableConcept/String</td>
   </tr>
 </table>
 
@@ -129,8 +165,8 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 日本国内の電子カルテシステムでの注射オーダの運用に合わせ、以下の項目を追加した。
 
 * 指示手技の追加（dosageInstruction.methodを使用）
-* 指示ラインの追加（拡張「JP_MedicationRequest_DosageInstruction_Line」を使用）
-* 投与装置の追加（拡張「JP_MedicationRequest_DosageInstruction_Device」を使用）
+* 指示ラインの追加（拡張「JP_MedicationDosage_Line」を使用）
+* 投与装置の追加（拡張「JP_MedicationDosage_Device」を使用）
 * 調剤指示の追加（拡張「JP_MedicationRequest_DispenseRequest_InstructionForDispense」を使用）
 * 頓用回数の追加（拡張「JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount」を使用）
 * RP番号の追加（identifierを使用）
@@ -674,7 +710,7 @@ HL7表0550 身体部位("http://terminology.hl7.org/CodeSystem/v2-0550")とHL7�
 ```
 
 ### 指示ライン
-「末梢ルートメイン１」など、投与時に使用するラインを指示したい場合は、dosageInstruction要素で拡張「JP_MedicationRequest_DosageInstruction_Line」を使用し、CodeableConcept型で指定する。推奨するコードシステムはないので、ローカルコードを使用する。
+「末梢ルートメイン１」など、投与時に使用するラインを指示したい場合は、dosageInstruction要素で拡張「JP_MedicationDosage_Line」を使用し、CodeableConcept型で指定する。推奨するコードシステムはないので、ローカルコードを使用する。
 
 指示ライン「末梢ルートメイン１」をローカルコードで指定した場合のインスタンス例を示す。
 
@@ -683,7 +719,7 @@ HL7表0550 身体部位("http://terminology.hl7.org/CodeSystem/v2-0550")とHL7�
   {
     "extension": [
       {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line",
+        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line",
         "valueCodeableConcept": {
           "coding": [
             {
@@ -700,7 +736,7 @@ HL7表0550 身体部位("http://terminology.hl7.org/CodeSystem/v2-0550")とHL7�
 ```
 
 ### 投与装置の記述方法
-「シリンジポンプ」など、投与時に使用する装置を指示したい場合は、dosageInstruction要素で拡張「JP_MedicationRequest_DosageInstruction_Device」を使用し、contained 属性に内包した Deviceリソースに対するリファレンスを指定する。
+「シリンジポンプ」など、投与時に使用する装置を指示したい場合は、dosageInstruction要素で拡張「JP_MedicationDosage_Device」を使用し、contained 属性に内包した Deviceリソースに対するリファレンスを指定する。
 内包したDeviceリソースでは type属性に装置の種類をCodeableConcept型で指定する。推奨するコードシステムはないので、ローカルコードを使用する。
 HL7 V2の使用者定義表0164 投薬装置を使用してもよい。
 
@@ -726,7 +762,7 @@ HL7 V2の使用者定義表0164 投薬装置を使用してもよい。
   {
     "extension": [
       {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device",
+        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Device",
         "valueReference": {
           "reference" : "21125ef6-3566-b94a-3101-c7848866afd1",
           "type" : "Device"

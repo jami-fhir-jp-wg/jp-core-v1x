@@ -44,42 +44,6 @@ JP Core MedicationAdministration Injection プロファイルで使用される�
     <td>Reference(Location)</td>
   </tr>
   <tr>
-    <td>投与経路コメント</td>
-    <td>投与経路コメントを格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Route_RouteComment</td>
-    <td>CodeableConcept/String</td>
-  </tr>
-  <tr>
-    <td>投与部位コメント</td>
-    <td>投与部位コメントを格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Site_SiteComment</td>
-    <td>CodeableConcept/String</td>
-  </tr>
-  <tr>
-    <td>手技コメント</td>
-    <td>手技コメントを格納するための拡張<</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Method_MethodComment</td>
-    <td>CodeableConcept/String</td>
-  </tr>
-  <tr>
-    <td>ラインコメント</td>
-    <td>ラインコメントを格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_LineComment</td>
-    <td>CodeableConcept/String</td>
-  </tr>
-  <tr>
-    <td>投与速度コメント</td>
-    <td>投与速度コメントを格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Rate_RateComment</td>
-    <td>CodeableConcept/String</td>
-  </tr>
-  <tr>
-    <td>用法コメント</td>
-    <td>用法コメントを格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_DosageComment</td>
-    <td>CodeableConcept/String</td>
-  </tr>
-  <tr>
     <td>未分類コメント</td>
     <td>未分類コメントを格納するための拡張</td>
     <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_UncategorizedComment</td>
@@ -101,7 +65,7 @@ JP_MedicationRequestInjectionで追加された以下のExtensionを利用する
   <tr>
     <td>指示ライン</td>
     <td>指示ラインを格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line</td>
     <td>CodeableConcept</td>
   </tr>
 </table>
@@ -368,13 +332,13 @@ performer.actorには、医療従事者(Practitioner)、または患者(Patient)
 ```
 
 ### 実施投与ライン
-投与時に使用したラインを記述する場合は、dosage要素で拡張「JP_MedicationRequest_DosageInstruction_Line」を使用し、CodeableConcept型で指定する。推奨するコードシステムはないので、ローカルコードを使用する。
+投与時に使用したラインを記述する場合は、dosage要素で拡張「JP_MedicationDosage_Line」を使用し、CodeableConcept型で指定する。推奨するコードシステムはないので、ローカルコードを使用する。
 
 ```json
 "dosage": {
   "extension": [
     {
-      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line",
+      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line",
       "valueCodeableConcept": {
         "coding": [
           {
@@ -611,7 +575,7 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
 ```
 
 #### ラインコメント
-ラインを補足するためのコメントは、dosage要素に対して定義した拡張「JP_MedicationAdministration_Dosage_LineComment」を使用する。
+ラインを補足するためのコメントは、dosage要素に対して定義した拡張「JP_MedicationDosage_LineComment」を使用する。
 この拡張は、コメントがコード化されている場合はCodeableConcept型を使用して記述する。コード化されていない場合はString型を使用して記述する。
 複数のコメントを記述する場合は、この拡張を繰り返して記述する。
 
@@ -621,7 +585,7 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
 "dosage": {
   "extension": [
     {
-      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line",
+      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line",
       "valueCodeableConcept": {
         "coding": [
           {
@@ -633,7 +597,7 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
       }
     },
     {
-      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_LineComment",
+      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_LineComment",
       "valueString": "【仮】ラインコメントを記述する"
     }
   ]
@@ -671,7 +635,7 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
 ```
 
 #### 用法コメント
-用法を補足するためのコメントは、dosage要素に対して定義した拡張「JP_MedicationAdministration_Dosage_DosageComment」を使用する。
+用法を補足するためのコメントは、dosage要素に対して定義した拡張「JP_MedicationDosage_DosageComment」を使用する。
 この拡張は、コメントがコード化されている場合はCodeableConcept型を使用して記述する。コード化されていない場合はString型を使用して記述する。
 複数のコメントを記述する場合は、この拡張を繰り返して記述する。
 
@@ -681,7 +645,7 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
 "dosage": {
   "extension": [
     {
-      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Dosage_DosageComment",
+      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_DosageComment",
       "valueString": "痙攣が発生したため、主治医に確認の上実施しました"
     }
   ]

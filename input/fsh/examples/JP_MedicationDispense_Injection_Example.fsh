@@ -22,7 +22,7 @@ Usage: #example
 * whenPrepared = "2021-10-07T10:47:19+09:00"
 * whenHandedOver = "2021-10-07T10:55:23+09:00"
 * destination = Reference(Location/jp-location-example-ward)
-* dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device"
+* dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Device"
 * dosageInstruction.extension.valueReference = Reference(jp-medicationdispense-injection-device-example-1)
 * dosageInstruction.extension.valueReference.type = "Device"
 * dosageInstruction.additionalInstruction = urn:oid:1.2.392.200250.2.2.20.22#I1100000 "１日おき"

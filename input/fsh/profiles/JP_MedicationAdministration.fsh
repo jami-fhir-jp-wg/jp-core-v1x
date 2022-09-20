@@ -150,7 +150,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * medication[x] only Reference(Medication)
 * medicationReference only Reference(JP_Medication)
 * dosage.extension contains
-    JP_MedicationRequest_DosageInstruction_Line named line ..* and
+    JP_MedicationDosage_Line named line ..* and
     JP_MedicationDosage_LineComment named lineComment ..* and
     JP_MedicationDosage_DosageComment named dosageComment ..*
 * dosage.route.extension contains 

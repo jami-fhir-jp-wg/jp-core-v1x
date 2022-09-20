@@ -129,8 +129,8 @@ Description: "このプロファイルは内服用法の制約と拡張のうち
 * ^status = #active
 * ^date = "2022-09-26"
 * extension contains
-    JP_MedicationRequest_DosageInstruction_PeriodOfUse named periodOfUse ..1 and
-    JP_MedicationRequest_DosageInstruction_UsageDuration named usageDuration ..1
+    JP_MedicationDosage_PeriodOfUse named periodOfUse ..1 and
+    JP_MedicationDosage_UsageDuration named usageDuration ..1
 // timing
 * timing.code from $JP_MedicationUsageJAMI_VS (preferred)
 * timing.code ^comment = "BIDなどは「施設特有の時間」として定義される。たとえば、施設がBIDを「つねに朝7時と夕方6時」であると指定することがある。この指定が不適切であれば、BIDというコードは使うべきではない。その代わり、HL7が定義したBIDのコードではなく、その施設特有のコードで明示的に示すべきであり、構造化された表現を使うべきである（この場合、2回のイベントの時刻を指定する必要がある）。  
@@ -171,8 +171,8 @@ Description: "このプロファイルは注射用法の制約と拡張のうち
 * ^status = #active
 * ^date = "2022-09-26"
 * extension contains
-    JP_MedicationRequest_DosageInstruction_Line named line ..* and
-    JP_MedicationRequest_DosageInstruction_Device named device ..* and
+    JP_MedicationDosage_Line named line ..* and
+    JP_MedicationDosage_Device named device ..* and
     JP_MedicationDosage_LineComment named lineComment ..*
 * timing ^short = "投与タイミング"
 * timing ^definition = "投与タイミングを記録する。"
@@ -204,8 +204,10 @@ Description: "用法コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_DosageComment
 * ^status = #active
 * ^date = "2022-09-26"
-// * ^context.type = #element
-// * ^context.expression = "Dosage"
+* ^context[+].type = #element
+* ^context[=].expression = "Dosage"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationAdministration.dosage"
 * . ^short = "用法コメント"
 * . ^definition = "用法コメントを格納するための拡張"
 * url = $JP_MedicationDosage_DosageComment (exactly)
@@ -223,9 +225,10 @@ Description: "ラインコメントを格納する"
 * ^url = $JP_MedicationDosage_LineComment
 * ^status = #active
 * ^date = "2022-09-26"
-// * ^context.type = #element
-// * ^context.expression[0] = "Dosage"
-// * ^context.expression[+] = "MedicationAdministration.dosage"
+* ^context[+].type = #element
+* ^context[=].expression = "Dosage"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationAdministration.dosage"
 * . ^short = "ラインコメント"
 * . ^definition = "ラインコメントを格納するための拡張"
 * url = $JP_MedicationDosage_LineComment (exactly)
@@ -243,9 +246,10 @@ Description: "手技コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_MethodComment
 * ^status = #active
 * ^date = "2022-09-26"
-// * ^context.type = #element
-// * ^context.expression[0] = "Dosage.method"
-// * ^context.expression[+] = "MedicationAdministration.dosage.method"
+* ^context[+].type = #element
+* ^context[=].expression = "Dosage.method"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationAdministration.dosage.method"
 * . ^short = "手技コメント"
 * . ^definition = "手技コメントを格納するための拡張"
 * url = $JP_MedicationDosage_MethodComment (exactly)
@@ -263,13 +267,10 @@ Description: "投与速度コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_RateComment
 * ^status = #active
 * ^date = "2022-09-26"
-// * ^context.type = #element
-// * ^context.expression[0] = "Dosage.doseAndRate.rateRatio"
-// * ^context.expression[+] = "Dosage.doseAndRate.rateRange"
-// * ^context.expression[+] = "Dosage.doseAndRate.rateQuantity"
-// * ^context.expression[+] = "MedicationAdministration.dosage.doseAndRate.rateRatio"
-// * ^context.expression[+] = "MedicationAdministration.dosage.doseAndRate.rateRange"
-// * ^context.expression[+] = "MedicationAdministration.dosage.doseAndRate.rateQuantity"
+* ^context[+].type = #element
+* ^context[=].expression = "Dosage"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationAdministration.dosage.doseAndRate"
 * . ^short = "投与速度コメント"
 * . ^definition = "投与速度コメントを格納するための拡張"
 * url = $JP_MedicationDosage_RateComment (exactly)
@@ -287,9 +288,10 @@ Description: "投与経路コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_RouteComment
 * ^status = #active
 * ^date = "2022-09-26"
-// * ^context.type = #element
-// * ^context.expression[0] = "Dosage.route"
-// * ^context.expression[+] = "MedicationAdministration.dosage.route"
+* ^context[+].type = #element
+* ^context[=].expression = "Dosage.route"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationAdministration.dosage.route"
 * . ^short = "投与経路コメント"
 * . ^definition = "投与経路コメントを格納するための拡張"
 * url = $JP_MedicationDosage_RouteComment (exactly)
@@ -297,7 +299,9 @@ Description: "投与経路コメントを格納するための拡張"
 * valueCodeableConcept from JP_MedicationExampleRouteComment_VS (example)
 * valueString ^short = "テキスト記載"
 
+// ------------------------------
 // JP_MedicationDosage_SiteComment
+// ------------------------------
 Extension: JP_MedicationDosage_SiteComment
 Id: jp-medicationdosage-sitecomment
 Title: "JP Core Medication Dosage SiteComment Extension"
@@ -305,12 +309,107 @@ Description: "投与部位コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_SiteComment
 * ^status = #active
 * ^date = "2022-09-26"
-// * ^context.type = #element
-// * ^context.expression[0] = "Dosage.site"
-// * ^context.expression[+] = "MedicationAdministration.dosage.site"
+* ^context[+].type = #element
+* ^context[=].expression = "Dosage.site"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationAdministration.dosage.site"
 * . ^short = "投与部位コメント"
 * . ^definition = "投与部位コメントを格納するための拡張"
 * url = $JP_MedicationDosage_SiteComment (exactly)
 * value[x] only string or CodeableConcept
 * valueCodeableConcept from JP_MedicationExampleSiteComment_VS (example)
 * valueString ^short = "テキスト記載"
+
+// ------------------------------
+//JP_MedicationDosage_Device
+// ------------------------------
+Extension: JP_MedicationDosage_Device
+Id: jp-medicationdosage-device
+Title: "JP Core Medication Dosage Device Extension"
+Description: "投与装置を格納する拡張"
+* ^url = $JP_MedicationDosage_Device
+* ^status = #active
+* ^date = "2022-09-26"
+* ^context[0].type = #element
+* ^context[=].expression = "Dosage"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationAdministration.dosage"
+* . ^short = "投与装置"
+* . ^definition = "投与装置を格納する拡張"
+* url = $JP_MedicationDosage_Device (exactly)
+* value[x] only Reference(Device)
+
+// ------------------------------
+//JP_MedicationDosage_Line
+// ------------------------------
+Extension: JP_MedicationDosage_Line
+Id: jp-medicationdosage-line
+Title: "JP Core Medication Dosage Line Extension"
+Description: "指示ラインを格納するための拡張"
+* ^url = $JP_MedicationDosage_Line
+* ^status = #active
+* ^date = "2022-09-26"
+* ^context[0].type = #element
+* ^context[=].expression = "Dosage"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationAdministration.dosage"
+* . ^short = "指示ライン"
+* . ^definition = "指示ラインを格納する拡張"
+* url = $JP_MedicationDosage_Line (exactly)
+* value[x] only CodeableConcept
+* valueCodeableConcept.coding from $JP_MedicationExampleLine_VS (example)
+
+// ------------------------------
+//JP_MedicationDosage_PeriodOfUse
+// ------------------------------
+Extension: JP_MedicationDosage_PeriodOfUse
+Id: jp-medicationdosage-periodofuse
+Title: "JP Core Medication Dosage PeriodOfUse Extension"
+Description: "投与開始日を格納する拡張"
+* ^url = $JP_MedicationDosage_PeriodOfUse
+* ^status = #active
+* ^date = "2022-09-26"
+* ^purpose = "処方日とは別に明示的に投与・内服開始日を指定するため。"
+* ^context[+].type = #element
+* ^context[=].expression = "Dosage"
+* . ^short = "投与期間の開始日を明示するための拡張"
+* . ^definition = "MedicationRequestの投与期間の開始日を明示するための拡張"
+* url = $JP_MedicationDosage_PeriodOfUse (exactly)
+* value[x] only Period
+* value[x] ^short = "投与期間を表す"
+* value[x] ^definition = "MedicationRequestに投与期間の開始日を明示するための拡張"
+* value[x].start 1..
+* value[x].start ^short = "投与期間の開始日"
+* value[x].start ^definition = "明示された投与期間の開始日"
+
+// ------------------------------
+// JP_MedicationDosage_UsageDuration
+// ------------------------------
+Extension: JP_MedicationDosage_UsageDuration
+Id: jp-medicationdosage-usageduration
+Title: "JP Core Medication Dosage UsageDuration Extension"
+Description: "隔日投与など、服用開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使用する拡張"
+* ^url = $JP_MedicationDosage_UsageDuration
+* ^status = #active
+* ^date = "2022-09-26"
+* ^context[+].type = #element
+* ^context[=].expression = "Dosage"
+* . ^short = "実投与日数"
+* . ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
+* url = $JP_MedicationDosage_UsageDuration (exactly)
+* value[x] only Duration
+* value[x] ^short = "実投与日数"
+* value[x] ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
+* value[x].id ^short = "エレメント間参照のためのID"
+* value[x].id ^definition = "JP Coreでは使用されない。"
+* value[x].value ^short = "実投与日数"
+* value[x].value ^definition = "隔日投与などで実投与日数と処方期間が異なる場合に用いられる。"
+* value[x].unit = "日" (exactly)
+* value[x].unit ^short = "実投与日数単位"
+* value[x].unit ^definition = "「日」で固定される"
+* value[x].system = "http://unitsofmeasure.org" (exactly)
+* value[x].system ^short = "UCUM"
+* value[x].system ^definition = "単位コード UCUMを識別するURI。固定値。"
+* value[x].code = #d (exactly)
+* value[x].code ^short = "単位コードUCUMにおける実投与日数の単位"
+* value[x].code ^definition = "単位コードUCUMにおける実投与日数の単位。dで固定される"

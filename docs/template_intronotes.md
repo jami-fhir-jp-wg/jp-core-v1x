@@ -101,13 +101,13 @@ Practitionerリソースは、次の要素をサポートしなければなら�
   <tr>
     <td>服用開始日</td>
     <td>服用開始日を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse</td>
     <td>Period</td>
   </tr>
   <tr>
     <td>実服用日数</td>
     <td>実服用日数を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration</td>
     <td>Duration</td>
   </tr>
 </table>

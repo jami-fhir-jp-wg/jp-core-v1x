@@ -20,7 +20,7 @@ Usage: #example
 * authoredOn = "2016-07-01T09:28:17+09:00"
 * requester = Reference(Practitioner/jp-practitioner-example-female-1)
 * insurance = Reference(Coverage/jp-coverage-example-1)
-* dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device"
+* dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Device"
 * dosageInstruction.extension.valueReference = Reference(Device/jp-medicationrequest-injection-device-example-1)
 * dosageInstruction.additionalInstruction = urn:oid:1.2.392.200250.2.2.20.22#I1100000 "１日おき"
 * dosageInstruction.text = "静脈注射 静脈内 左腕 １日おき"
@@ -56,7 +56,7 @@ Usage: #example
 * authoredOn = "2016-07-01T07:28:17+09:00"
 * requester = Reference(Practitioner/jp-practitioner-example-female-1)
 * insurance = Reference(Coverage/jp-coverage-example-1)
-* dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line"
+* dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line"
 * dosageInstruction.extension.valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
 * dosageInstruction.text = "主管 静脈注射 左腕"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2016-07-01T08:00:00+09:00"

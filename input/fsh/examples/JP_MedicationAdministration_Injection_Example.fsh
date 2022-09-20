@@ -72,7 +72,7 @@ Usage: #example
 * performer.function = http://terminology.hl7.org/CodeSystem/med-admin-perform-function#performer "Performer"
 * performer.actor = Reference(Practitioner/jp-practitioner-example-female-1) "福岡 花子"
 * request = Reference(MedicationRequest/jp-medicationrequest-injection-example-2)
-* dosage.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line"
+* dosage.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line"
 * dosage.extension.valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
 * dosage.site.extension.url = "http://hl7.org/fhir/StructureDefinition/bodySite"
 * dosage.site.extension.valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-2) "左腕"

@@ -19,7 +19,7 @@ JP Core MedicationRequest プロファイルで使用される拡張は次の通
 #### JP Core MedicationRequest独自で追加されたExtension
 
 <table class="extension_description">
-  <tr>|服用開始日|服用開始日を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse|Period|
+  <tr>|服用開始日|服用開始日を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse|Period|
     <th>拡張</th>
     <th>説明</th>
     <th>URL</th>
@@ -28,7 +28,7 @@ JP Core MedicationRequest プロファイルで使用される拡張は次の通
   <tr>
     <td>実服用日数</td>
     <td>実服用日数を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration</td>
     <td>Duration</td>
   </tr>
   <tr>
@@ -87,8 +87,8 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 ### 項目の追加
 療養担当則23条では、「保険医は、処方箋を交付する場合には、様式第二号若しくは第二号の二又はこれらに準ずる様式の処方箋に必要な事項を記載しなければならない。」とされており、外来処方、院内処方の区分を明示していない。したがって、個別のユースケースにおいては一部を省略されることも前提の上で、規格としてはこれに準拠すべきと考え、様式に収載されている以下の項目を追加した。
 
-* 服用開始日の追加（拡張「JP_MedicationRequest_DosageInstruction_PeriodOfUse」を使用）
-* 実服用日数の追加（拡張「JP_MedicationRequest_DosageInstruction_UsageDuration」を使用）
+* 服用開始日の追加（拡張「JP_MedicationDosage_PeriodOfUse」を使用）
+* 実服用日数の追加（拡張「JP_MedicationDosage_UsageDuration」を使用）
 * 頓用回数の追加（拡張「JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount」を使用）
 * 調剤指示の追加（拡張「JP_MedicationRequest_DispenseRequest_InstructionForDispense」を使用）
 * 一日量処方への対応（doseInstruction.doseAndRate.rateRatioを使用）
@@ -284,7 +284,7 @@ HTTP/1.1 200 OK
 MedicationRequestは薬剤をCodeableConceptとして1つまでしか持つか、Medicationリソースのreferenceをもつことしかできない。したがって、複数の薬剤を同一のRp番号で表現する場合にはMedicationRequestを繰り返すか、複数の薬剤をまとめたMedication Resourceのインスタンスを参照することとなる。ワーキンググループでの検討の結果、冗長とはなるがidentifierにRp番号と薬剤番号を記録することとし、MedicationRequestを繰り返すことで表現する方法を推奨することとした。
 
 ### 服用期間、実服用日数の記述方法
-服用期間は、dosageInstruction.dosageInstruction.timing.repeat.boundsDuration要素に、Duration型を使用して記録する。本要素に指定される日数は、服用開始日から服用終了日までの全日数である。そのため、隔日投与や指定曜日の投与の場合には、服用しない日も日数に含まれることになり、処方箋に記録される実服用日数とは異なる値が記録されることとなる。服用期間とは別に実服用日数を表現したい場合には、dosageInstruction要素に対して定義した拡張「JP_MedicationRequest_DosageInstruction_UsageDuration」を使用し、Duration型で記載する。
+服用期間は、dosageInstruction.dosageInstruction.timing.repeat.boundsDuration要素に、Duration型を使用して記録する。本要素に指定される日数は、服用開始日から服用終了日までの全日数である。そのため、隔日投与や指定曜日の投与の場合には、服用しない日も日数に含まれることになり、処方箋に記録される実服用日数とは異なる値が記録されることとなる。服用期間とは別に実服用日数を表現したい場合には、dosageInstruction要素に対して定義した拡張「JP_MedicationDosage_UsageDuration」を使用し、Duration型で記載する。
 
 Timingデータ型のrepeat.boundsDuration要素を使用した服用期間のインスタンス例を示す。
 ```json
@@ -303,7 +303,7 @@ Timingデータ型のrepeat.boundsDuration要素を使用した服用期間の�
 ```json
 "extension": [
   {
-    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration",
+    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration",
     "valueDuration": {
       "value": 7,
       "unit": "日",
@@ -315,11 +315,11 @@ Timingデータ型のrepeat.boundsDuration要素を使用した服用期間の�
 ```
 
 ### 服用開始日の記述方法
-交互投与や漸増漸減などの用法で服用開始日を明示する必要がある場合には、dosageInstruction要素に対して定義した拡張「JP_MedicationRequest_DosageInstruction_PeriodOfUse」を使用し、Period型で開始日を記録する。
+交互投与や漸増漸減などの用法で服用開始日を明示する必要がある場合には、dosageInstruction要素に対して定義した拡張「JP_MedicationDosage_PeriodOfUse」を使用し、Period型で開始日を記録する。
 ```json
 "extension": [
   {
-    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse",
+    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse",
     "valuePeriod": {
       "start": "2020-04-01"
     }
@@ -620,7 +620,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     },
     "extension": [
       {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration",
+        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration",
         "valueDuration": {
           "value": 7,
           "unit": "日",
@@ -765,7 +765,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     },
     "extension": [
       {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration",
+        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration",
         "valueDuration": {
           "value": 7,
           "unit": "日",
@@ -906,7 +906,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     },
     "extension": [
       {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration",
+        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration",
         "valueDuration": {
           "value": 7,
           "unit": "日",

@@ -33,13 +33,13 @@ JP Core MedicationRequest InjectionやJP Core MedicationDispense で追加され
   <tr>
     <td>指示ライン</td>
     <td>指示ラインを格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line</td>
     <td>CodeableConcept</td>
   </tr>
   <tr>
     <td>投与装置</td>
     <td>投与装置を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Device</td>
     <td>Reference (Device)</td>
   </tr>
   <tr>
@@ -59,6 +59,42 @@ JP Core MedicationRequest InjectionやJP Core MedicationDispense で追加され
     <td>薬剤単位の調剤結果</td>
     <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation</td>
     <td>CodeableConcept</td>
+  </tr>
+  <tr>
+    <td>投与経路コメント</td>
+    <td>投与経路コメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_RouteComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>投与部位コメント</td>
+    <td>投与部位コメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_SiteComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>手技コメント</td>
+    <td>手技コメントを格納するための拡張<</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_MethodComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>ラインコメント</td>
+    <td>ラインコメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_LineComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>投与速度コメント</td>
+    <td>投与速度コメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_RateComment</td>
+    <td>CodeableConcept/String</td>
+  </tr>
+  <tr>
+    <td>用法コメント</td>
+    <td>用法コメントを格納するための拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_DosageComment</td>
+    <td>CodeableConcept/String</td>
   </tr>
 </table>
 
