@@ -77,8 +77,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * specimen ^definition = "診断レポートの対象となる検体"
 * specimen ^comment = "【JP Core仕様】未使用\r\n\r\n・画像ガイド下生検で得られる検体の可能性は有り得るが、本項目は病理レポートで利用されることを想定し、放射線レポートでは特には規定しない"
 * specimen ^requirements = "レポートの対象となる取集された検体についての情報をレポートできる必要がある。"
-* result ^short = "【JP Core仕様】計測情報などの付随所見をObservationリソースとして定義できるが、該当するコードが定義できないため放射線レポートでは未定義とする。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
-* result ^definition = "診断レポートの一部となるObservationリソース【詳細参照】"
+* result ^short = "診断レポートの一部となるObservationリソース【詳細参照】"
+* result ^definition = "【JP Core仕様】計測情報などの付随所見をObservationリソースとして定義できるが、該当するコードが定義できないため放射線レポートでは未定義とする。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
 * result ^comment = "Observationはさらにobservationを含むことができる。\r\n\r\n【JP Core仕様】計測情報などの付随所見をObservationリソースとして定義できるが、該当するコードが定義できないため放射線レポートでは未定義とする。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
 * result ^requirements = "結果のグループ化が任意だが、意味のある個別の結果または結果のグループをサポートする必要がある。"
 * imagingStudy MS

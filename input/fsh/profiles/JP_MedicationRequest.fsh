@@ -35,7 +35,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier[requestIdentifier] ^short = "処方オーダに対するID"
 * identifier[requestIdentifier] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。"
 * identifier[requestIdentifier].value 1..
-* status ^short = "オーダの現在の状態を示すコード。【JP Core仕様】\"active\"に固定される。" 
+* status ^short = "オーダの現在の状態を示すコード。【JP Core仕様】\"active\"に固定される" 
 * status ^definition = "【JP Core仕様】\"active\"に固定される。\r\nオーダの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
 * status ^comment = "このエレメントはmodifierとされている。StatusとはこのResourceが現在妥当な状態ではないことも示すからである。"
 * status ^isModifierReason = "このエレメントは modifier である。Statusエレメントが entered-in-error という正当な情報として扱うべきではない状態の値も取り得るからである。"
@@ -43,7 +43,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * statusReason ^definition = "現在のステータスの理由"
 * statusReason ^comment = "一般的には「保留(suspended)」や「中止(cancelled)」といった例外的状態を示すために持ちいられる。MedicationRequestオーダが発生した理由についてはreasonCodeに記載され、この項目は用いられない。"
 * intent = #order (exactly)
-* intent ^short = "投薬リクエストの意図。【JP Core仕様】#orderで固定とする。"
+* intent ^short = "投薬リクエストの意図。【JP Core仕様】#orderで固定とする"
 * intent ^definition = "【JP Core仕様】 \"order\" に固定される。\r\n投薬リクエストの意図 が提案(proposal)、計画(plan)、あるいは他の要求によるものかを示す。"
 * intent ^comment = "処方をオーダする場合、MedicationRequestのどの段階でオーダしたのかについて、この項目を指定することが期待される。たとえば、proposalであれば患者、関係者、医師あるいは機器からの提案として作成される。\"plan\"であれば、医師、患者、関係者そして機器からの提案として生成される。\"original-order\"は医師にしか作成できない。\r\n\r\ninstance-orderはリクエストあるいはオーダをインスタンス化する段階であり、MedicationAdministrationレコードにも使われる。\r\r\nintentはこのresourceが実際に適応される時に変化するため、このエレメントはmodifierとしてラベルされる。"
 * intent ^isModifierReason = "このエレメントは全ての記述的な属性の解釈を変える。たとえば、「リクエストすることが推奨される時間」と「リクエストすることが承認された時間」、あるいは「リクエストすることが推奨される人」と「リクエストすることが承認された人」など"
@@ -176,7 +176,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * substitution ^definition = "後発医薬品への変更可否情報。代替薬剤を払い出してよいかどうかを示している。代替薬剤を使用しなければいけない場合もあれば、使用しない場合もある。このブロックでは処方者の意図が示される。もし、何も指定されていなければ代替薬品を用いてもよい。"
 * substitution.allowed[x] only CodeableConcept
 * substitution.allowed[x] from $JP_MedicationSubstitutionNotAllowedReason_VS (preferred)
-* substitution.allowed[x] ^short = "後発医薬品への変更可否情報。"
+* substitution.allowed[x] ^short = "後発医薬品への変更可否情報"
 * substitution.allowed[x] ^definition = "後発医薬品への変更可否情報。"
 * substitution.allowed[x] ^comment = "代替品が許可されるかどうかは無視できないので、このエレメントはmodifierとしてラベルされる。"
 * substitution.reason ^short = "代替品を提供した（あるいは、しなかった）理由"

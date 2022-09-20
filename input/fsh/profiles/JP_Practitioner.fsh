@@ -22,7 +22,7 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * name ^definition = "The name(s) associated with the practitioner.\r\n\r\n医療従事者の氏名（複数の場合もある）"
 * name ^comment = "The selection of the use property should ensure that there is a single usual name specified, and others use the nickname (alias), old, or other values as appropriate.  \r\rIn general, select the value to be used in the ResourceReference.display based on this:\r\r1. There is more than 1 name\r2. Use = usual\r3. Period is current to the date of the usage\r4. Use = official\r5. Other order as decided by internal business rules.\r\n\r\nuseプロパティの選択は、指定された単一の通常の名前があることを保証しなければならず、他の値はニックネーム（別名）、旧名、または他の値を適切に使用する。\r\n\r\n一般的には、以下を基準にResourceReference.displayで使用する値を選択する。\r\n\r\n 1. There is more than 1 name（最低限1つ以上の名前があること）\r\n 2. Use = usual（useプロパティが「usual」であること）\r\n 3. Period is current to the date of the usage（有効期限は利用開始日から現在まであること）\r\n 4. Use = official（useプロパティが「official」であること\r\n 5. Other order as decided by internal business rules.（その他、内部ルールで決められた順番）\r\n\r\n医療従事者のNameの漢字カナ表記については、JP_Patient.nameで採用した方法を踏襲する。\r\nそのほか、要素の説明は、JP_Patient.nameを参照。"
 * name ^requirements = "The name(s) that a Practitioner is known by. Where there are multiple, the name that the practitioner is usually known as should be used in the display.\r\n\r\n医療従事者が知られている名前。複数ある場合は、従事者が通常知られている名前を表示に使用する。"
-* telecom ^short = "A contact detail for the practitioner (that apply to all roles)　電話番号やメールアドレスなど、従事者への詳細な連絡先。"
+* telecom ^short = "A contact detail for the practitioner (that apply to all roles)　電話番号やメールアドレスなど、従事者への詳細な連絡先"
 * telecom ^definition = "A contact detail for the practitioner, e.g. a telephone number or an email address.\r\n\r\n電話番号やメールアドレスなど、従事者への詳細な連絡先。"
 * telecom ^comment = "Person may have multiple ways to be contacted with different uses or applicable periods.  May need to have options for contacting the person urgently and to help with identification.  These typically will have home numbers, or mobile numbers that are not role specific.\r\n\r\n人は、異なる用途や適用される期間に応じて複数の連絡方法を持っている可能性がある。本人に緊急に連絡を取るためのオプションが必要な場合があり、また本人の身元確認に役立つ場合がある。これらは通常、自宅の電話番号、または役割が特定されていない携帯電話番号を持つことになる。\r\n\r\n要素の説明は、JP_Patient.telecomを参照。"
 * telecom ^requirements = "Need to know how to reach a practitioner independent to any roles the practitioner may have.\r\n\r\n医療従事者が持っているかもしれない任意の役割ごとに独立した連絡方法を知る必要がある。"
@@ -127,7 +127,7 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * qualification[medicalRegistrationNumber].identifier.assigner only Reference(JP_Organization)
 * qualification[medicalRegistrationNumber].issuer only Reference(JP_Organization)
 
-* communication ^short = "A language the practitioner can use in patient communication　医療従事者が患者とのコミュニケーションで使用できる言語。"
+* communication ^short = "A language the practitioner can use in patient communication　医療従事者が患者とのコミュニケーションで使用できる言語"
 * communication ^definition = "A language the practitioner can use in patient communication.\r\n\r\n医療従事者が患者とのコミュニケーションで使用できる言語。"
 * communication ^comment = "The structure aa-BB with this exact casing is one the most widely used notations for locale. However not all systems code this but instead have it as free text. Hence CodeableConcept instead of code as the data type.\r\n\r\nこのように正確なケーシングを持つ構造体 aa-BB は、ロケールのために最も広く使われている表記法の一つ。しかし、すべてのシステムがこれをコード化しているわけではなく、代わりにフリーテキストとしている。そのため、データ型としてはコードの代わりに CodeableConcept を使用している。"
 * communication ^requirements = "Knowing which language a practitioner speaks can help in facilitating communication with patients.\r\n\r\n医療従事者がどの言語を話すかを知ることは、患者とのコミュニケーションを円滑にするのに役立つ。"

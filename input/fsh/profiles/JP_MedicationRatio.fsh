@@ -44,7 +44,7 @@ Description: "このデータタイプはRatio DataTypeに対して、薬剤量�
 * denominator.unit ^short = "単位時間の単位"
 * denominator.unit ^definition = "単位時間の単位。UCUMを使用する。"
 * denominator.system from $units-of-time (preferred)
-* denominator.system ^short = "UCUMを識別するURL。"
+* denominator.system ^short = "UCUMを識別するURL"
 * denominator.system ^definition = "UCUMを識別するURL。固定値。"
 * denominator.code from $units-of-time (preferred)
 
@@ -77,7 +77,7 @@ Description: "このデータタイプはJP_MedicationRatio_DosePerPeriod DataTy
 * denominator.unit ^definition = "単位時間の単位。UCUMを使用する。"
 * denominator.unit = "日" (exactly)
 * denominator.system = "http://unitsofmeasure.org" (exactly)
-* denominator.system ^short = "UCUMを識別するURL。"
+* denominator.system ^short = "UCUMを識別するURL"
 * denominator.system ^definition = "UCUMを識別するURL。固定値。"
 * denominator.code from $units-of-time (required)
 * denominator.code = #d (exactly)

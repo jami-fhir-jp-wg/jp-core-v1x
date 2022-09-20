@@ -27,7 +27,7 @@ Description: "このデータタイプはHumanName DataTypeに対して、患者
 * family ^short = "Family name (often called 'Surname')　名前のうち姓の部分。ファミリ名"
 * family ^definition = "The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.\r\n\r\n家系図にリンクする名前の部分。一部の文化では、息子の家系の名前は父親の名である。"
 * family ^comment = "Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).\r\n\r\nファミリ名は、拡張子（de、nl、es関連のカルチャ）を使用して特定の部分に分解できる。"
-* given ^short = "Given names (not always 'first'). Includes middle names　名前の名の部分で、ミドルネームを含む。"
+* given ^short = "Given names (not always 'first'). Includes middle names　名前の名の部分で、ミドルネームを含む"
 * given ^definition = "Given name.\r\n\r\n名前の名の部分。"
 * given ^comment = "If only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to practical limitations.  This element is not called \"first name\" since given names do not always come first.\r\n\r\nイニシャルのみが記録されている場合は、フルネームの部分の代わりに使用できる。イニシャルは複数の名前に分けることができるが、多くの場合、実用的な制限のためではない。名が常に最初に来るとは限らないため、この要素は「first name」とは呼ばない。"
 * prefix ^short = "Parts that come before the name　名前の名の前に来る部分"
