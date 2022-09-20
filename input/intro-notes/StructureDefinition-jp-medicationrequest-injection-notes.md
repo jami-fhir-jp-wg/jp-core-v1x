@@ -210,7 +210,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationRequestの検索をサポートすることが望ましい（SHOULD）。
+1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationRequest?patient=[id]
@@ -225,7 +225,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
    リソースIDが123456の患者のMedicationRequestリソースを含むBundleを検索する。
 
-1. patient,date 検索パラメータを使用して、患者のリファレンス情報と投薬日によるMedicationRequestの検索をサポートすることが望ましい（SHOULD）。
+1. patient,date 検索パラメータを使用して、患者のリファレンス情報と投薬日によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationRequest?patient=[id]&date=[date]
@@ -240,7 +240,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
    リソースIDが123456の患者の2013-01-14に服用するMedicationRequestリソースを含むBundleを検索する。
 
-1. patient,authoredon 検索パラメータを使用して、患者のリファレンス情報と依頼日によるMedicationRequestの検索をサポートすることが望ましい（SHOULD）。
+1. patient,authoredon 検索パラメータを使用して、患者のリファレンス情報と依頼日によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationRequest?patient=[id]&authoredon=[date]

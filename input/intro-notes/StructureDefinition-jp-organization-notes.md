@@ -57,14 +57,14 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
 | SHOULD           | address | string  | GET [base]/Organization?address=Arbor
 
 #### 必須検索パラメータ
-必須検索パラメータ（SHALL）は特にない。
+必須検索パラメータ（**SHALL**）は特にない。
 
 ### 推奨検索パラメータ
 
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. identifier 検索パラメータを使用して、識別子によるOrganizationの検索をサポートすることが望ましい（SHOULD）。
+1. identifier 検索パラメータを使用して、識別子によるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/Organization?identifier={system|}[code]
@@ -78,7 +78,7 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
 
    指定された識別子に一致するOrganizationリソースを含むBundleを検索する。
    
-2. name 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（SHOULD）。
+2. name 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/Organization?name={string}
@@ -90,7 +90,7 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
    GET [base]/Organization?name=Health
    ```
 
-3. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（SHOULD）。
+3. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/Organization?address=[string]

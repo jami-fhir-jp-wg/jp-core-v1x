@@ -113,7 +113,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationAdministrationの検索をサポートすることが望ましい（SHOULD）。
+1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationAdministrationの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationAdministration?patient=[id]
@@ -128,7 +128,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 
    リソースIDが123456の患者のMedicationAdministrationリソースを含むBundleを検索する。
 
-1. patient,effective-time 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationAdministrationの検索をサポートすることが望ましい（SHOULD）。
+1. patient,effective-time 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationAdministrationの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationAdministration?patient=[id]&effective-time=[date]
