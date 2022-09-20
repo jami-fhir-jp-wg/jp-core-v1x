@@ -23,7 +23,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * code from JP_MedicationCode_VS (preferred)
 * code ^short = "この薬剤を特定するコード"
 * code ^definition = "A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.\r\n\r\nこの薬剤を指定するコード。該当するコードがない場合はテキスト表記。\r\n使用法について注記：日本ではHOTコードを利用することが推奨される。一般的な薬剤コードとしてRxNorm、SNOMD CT, IDMPなど標準的な医薬品コードを使うことができる。国や地域に特有のローカルコードも使うことができ、他のコードに変換することもできる。"
-* code ^comment = "使われるコンテキストによるが、ユーザー(処方や調剤などを行った人）によって実際にコードが選択されたのであれば、coding.userSelectedはtrueとすることとなる。Codingのデータ型で説明されているように、「ユーザーインターフェース（たとえば、選択肢から特定の項目をユーザーが選択するような形式）で特定のコードをユーザーが選択したのであれば、\"userSelected\"に記録されてもよい」\r\nユーザーが選択したコードがあれば、その選択がコード変換などで優先される。そのほかのコードは代替のコードシステムか低粒度のコード（たとえば、ベンダー固有の初期値のための一般的なコード）に文字列変換変換するしかない。"
+* code ^comment = "使われるコンテキストによるが、ユーザ(処方や調剤などを行った人）によって実際にコードが選択されたのであれば、coding.userSelectedはtrueとすることとなる。Codingのデータ型で説明されているように、「ユーザインターフェース（たとえば、選択肢から特定の項目をユーザが選択するような形式）で特定のコードをユーザが選択したのであれば、\"userSelected\"に記録されてもよい」\r\nユーザが選択したコードがあれば、その選択がコード変換などで優先される。そのほかのコードは代替のコードシステムか低粒度のコード（たとえば、ベンダー固有の初期値のための一般的なコード）に文字列変換変換するしかない。"
 * code ^binding.description = "薬品の種類を規定するコード化された概念"
 * status 1..
 * status ^definition = "JP Coreでは active で固定される。\r\n薬剤が有効に使われているかどうかを指定するコード。"

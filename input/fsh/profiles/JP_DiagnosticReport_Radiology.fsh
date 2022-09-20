@@ -53,14 +53,14 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * subject ^comment = "参照は実際のFHIRリソースへの参照であり、解決可能である必要がある。解決はURLから取得するか、または、リソースタイプが利用できる場合は絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索する。\r\n\r\n【JP Core仕様】Patient リソースを参照"
 * subject ^requirements = "対象のコンテキストが必要である。"
 * encounter ^definition = "この診断レポートが関するヘルスケアイベント。"
-* encounter ^comment = "これは通常、レポートの作成が発生するエンカウンターだが、一部のイベントはエンカウンターの正式な完了の前または後に開始される場合がある（例えば入院前の検査）。その場合でも（入院に関連して検査が行われる場合など）、エンカウンターのコンテキストに関連付けられる。\r\n\r\n【JP Core仕様】このレポートを書く切っ掛けとなる Encounterリソース（例：術前検査の場合、術前訪問） を参照"
+* encounter ^comment = "これは通常、レポートの作成が発生するEncounterだが、一部のイベントはEncounterの正式な完了の前または後に開始される場合がある（例えば入院前の検査）。その場合でも（入院に関連して検査が行われる場合など）、Encounterのコンテキストに関連付けられる。\r\n\r\n【JP Core仕様】このレポートを書く切っ掛けとなる Encounterリソース（例：術前検査の場合、術前訪問） を参照"
 * encounter ^requirements = "Encounterコンテキストへのリンクが必要である"
 * effective[x] MS
 * effective[x] only dateTime
 * effective[x] ^definition = "観測値が関連する時間または期間。レポートの対象が患者である場合、これは通常、読影開始の時間であり、日付/時刻自体のみが提供される。"
 * effective[x] ^comment = "診断手順が患者に対して実行された場合、これは実行された時間を示す。\r\n\r\n【JP Core仕様】レポート作成日時\r\n\r\n（DateTimeを採用し、Periodは不使用）"
 * issued MS
-* issued ^definition = "このバージョンのレポートがプロバイダーに提供された日時。通常、レポートがレビューおよび検証された後になる。"
+* issued ^definition = "このバージョンのレポートがプロバイダに提供された日時。通常、レポートがレビューおよび検証された後になる。"
 * issued ^comment = "リソース自体の更新時間とは異なる場合がある。これは、レポートの実際のリリース時間ではなく、レコード（場合によってはセカンダリコピー）のステータスであるため。\r\n\r\n【JP Core仕様】レポート確定日時"
 * issued ^requirements = "臨床医は、レポートがリリースされた日付を確認できる必要がある。"
 * performer MS

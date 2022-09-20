@@ -23,7 +23,7 @@ Description: "このProfileはImmunizationリソースに対して日本での�
 * vaccineCode from JP_MedicationCode_Immunization_VS (preferred)
 * vaccineCode ^short = "接種されたワクチン製剤"
 * vaccineCode ^definition = "接種されたあるいは接種予定のワクチン。"
-* vaccineCode ^comment = "全てのターミノロジーがこのパターンに当てはまるわけではない。モデルによってはCodeableConceptではなく，独自構造でCodingを直接指定して文書やコーディング，その解釈や事前条件や事後条件との関連について示される。"
+* vaccineCode ^comment = "全てのターミノロジがこのパターンに当てはまるわけではない。モデルによってはCodeableConceptではなく，独自構造でCodingを直接指定して文書やコーディング，その解釈や事前条件や事後条件との関連について示される。"
 * patient only Reference(JP_Patient)
 * patient ^short = "予防接種を受けた人"
 * patient ^definition = "予防接種を受けた，あるいは受けなかった患者。"

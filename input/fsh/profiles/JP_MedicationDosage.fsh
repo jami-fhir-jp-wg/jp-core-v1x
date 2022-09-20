@@ -56,12 +56,12 @@ Description: "このプロファイルは薬剤用のDosageベースとして基
 * route from $JP_MedicationRouteHL70162_VS (preferred)
 * route ^short = "投与経路"
 * route ^definition = "投与経路"
-* route ^comment = "投与経路の一般的パターンに全てのターミノロジーが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。  
+* route ^comment = "投与経路の一般的パターンに全てのターミノロジが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。  
 【JP Core仕様】HL7表0162をベースにした投与経路コードを使用することが望ましいが、ローカルコードも使用可能。"
 // method
 * method ^short = "投与方法"
 * method ^definition = "投与方法"
-* method ^comment = "ターミノロジーは投与する経路あるいは剤型をあらかじめ指定するために用いられる。"
+* method ^comment = "ターミノロジは投与する経路あるいは剤型をあらかじめ指定するために用いられる。"
 * method ^requirements = "コード化された値は体内に薬剤が投与される方法を示している。注射ではよく使われる。たとえば、緩徐に注入、深部に静注など。"
 * method.coding ^slicing.discriminator.type = #value
 * method.coding ^slicing.discriminator.path = "system"
@@ -84,12 +84,12 @@ Description: "このプロファイルは薬剤用のDosageベースとして基
 * method.text ^short = "投与⽅法のテキスト表現"
 * method.text ^definition = "投与⽅法のテキスト表現。コードで指定できない場合、本要素で文字列として指定してもよい。"
 * method.text ^comment = "textエレメントはcodingのdisplayNameエレメントと一致することがよくある。"
-* method.text ^requirements = "ターミノロジー由来のコードは必ずしも人間が使う言葉の全てのニュアンスを含めた正確な意味を捉えているわけではなく、適切なコードが見つからない場合もある。そのような場合でもtextエレメントは元々の意味のすべてを捉えるために使うことができる。"
+* method.text ^requirements = "ターミノロジ由来のコードは必ずしも人間が使う言葉の全てのニュアンスを含めた正確な意味を捉えているわけではなく、適切なコードが見つからない場合もある。そのような場合でもtextエレメントは元々の意味のすべてを捉えるために使うことができる。"
 // 用法テキスト表現
 * text ^short = "投与⽅法のテキスト表現"
 * text ^definition = "投与⽅法のテキスト表現。コードで指定できない場合、本要素で文字列として指定してもよい。"
 * text ^comment = "textエレメントはcodingのdisplayNameエレメントと一致することがよくある。"
-* text ^requirements = "ターミノロジー由来のコードは必ずしも人間が使う言葉の全てのニュアンスを含めた正確な意味を捉えているわけではなく、適切なコードが見つからない場合もある。そのような場合でもtextエレメントは元々の意味のすべてを捉えるために使うことができる。"
+* text ^requirements = "ターミノロジ由来のコードは必ずしも人間が使う言葉の全てのニュアンスを含めた正確な意味を捉えているわけではなく、適切なコードが見つからない場合もある。そのような場合でもtextエレメントは元々の意味のすべてを捉えるために使うことができる。"
 // doseAndRate
 * doseAndRate ^short = "薬剤の投与量"
 * doseAndRate ^definition = "薬剤が投与される量"
@@ -97,7 +97,7 @@ Description: "このプロファイルは薬剤用のDosageベースとして基
 * doseAndRate.type from $JP_MedicationIngredientStrengthStrengthType_VS (preferred)
 * doseAndRate.type ^short = "力価区分"
 * doseAndRate.type ^definition = "力価区分"
-* doseAndRate.type ^comment = "投与速度・量の一般的パターンに全てのターミノロジーが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。"
+* doseAndRate.type ^comment = "投与速度・量の一般的パターンに全てのターミノロジが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。"
 * doseAndRate.type ^requirements = "このtypeに値が指定されていなければ、\"ordered\"であることが想定される。"
 
 // doseAndRate

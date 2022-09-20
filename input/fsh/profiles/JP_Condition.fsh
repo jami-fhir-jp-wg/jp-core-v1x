@@ -20,7 +20,7 @@ Description: "このプロファイルはConditionリソースに対して、患
 * severity from JP_ConditionSeverity_VS (preferred)
 * severity ^short = "Subjective severity of condition. この患者状態の重症度。本プロファイルは、HL70421 Severity of Illness Codeで表現。"
 * severity ^definition = "A subjective assessment of the severity of the condition as evaluated by the clinician.\r\n\r\n医療者によって評価されたこの患者状態の重症度。"
-* severity ^comment = "Coding of the severity with a terminology is preferred, where possible.\r\n可能な限り、ターミノロジーを用いて重症度をコーディングすることが好ましい。\r\n\r\n 本プロファイルではHL70421 Severity of Illness Code（MI 軽度, MO 中度, SE 重度）を採用。"
+* severity ^comment = "Coding of the severity with a terminology is preferred, where possible.\r\n可能な限り、ターミノロジを用いて重症度をコーディングすることが好ましい。\r\n\r\n 本プロファイルではHL70421 Severity of Illness Code（MI 軽度, MO 中度, SE 重度）を採用。"
 * code ^short = "Identification of the condition, problem or diagnosis. この患者状態の識別コード。"
 * bodySite ^short = "Anatomical location, if relevant. もし関連するのであれば、その人体部位。"
 * subject only Reference(JP_Patient)
