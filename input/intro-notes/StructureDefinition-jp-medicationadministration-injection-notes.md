@@ -306,9 +306,9 @@ performer.actorには、医療従事者(Practitioner)、または患者(Patient)
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "http://jpfhir.jp/medication/99ILL",
+            "system": "http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationRequestDosageInstructionLine_CS",
             "code": "01",
-            "display": "主管"
+            "display": "末梢ルート"
           }
         ]
       }
@@ -475,7 +475,7 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
   "extension": [
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Route_RouteComment",
-      "valueString": "【仮】投与経路コメントを記述する"
+      "valueString": "右手に実施"
     }
   ],
   "coding": [
@@ -553,16 +553,16 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "http://jpfhir.jp/medication/99ILL",
+            "system": "http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationRequestDosageInstructionLine_CS",
             "code": "01",
-            "display": "主管"
+            "display": "末梢ルート"
           }
         ]
       }
     },
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_LineComment",
-      "valueString": "【仮】ラインコメントを記述する"
+      "valueString": "末梢キープ"
     }
   ]
 }
@@ -668,9 +668,9 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "ttp://terminology.hl7.org/CodeSystem/v2-0069",
-            "code": "801",
-            "display": "肝胆外科"
+            "system": "http://jpfhir.jp/fhir/Common/CodeSystem/JP_Department_SsMix_CS",
+            "code": "01",
+            "display": "内科"
           }
         ]
       }
