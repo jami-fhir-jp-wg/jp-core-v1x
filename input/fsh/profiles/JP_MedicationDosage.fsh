@@ -15,10 +15,6 @@ Description: "このデータタイプは薬剤用法のDosageベースとして
 * ^date = "2022-09-26"
 * . ^short = "薬の服用方法・服用した方法、または服用すべき方法"
 * . ^definition = "薬の服用方法・服用した方法、または服用すべき方法"
-* extension contains JP_MedicationDosage_DosageComment named dosageComment ..*
-* route.extension contains JP_MedicationDosage_RouteComment named routeComment ..*
-* method.extension contains JP_MedicationDosage_MethodComment named methodComment ..*
-* doseAndRate.extension contains JP_MedicationDosage_RateComment named rateComment ..*
 
 // sequence
 * sequence ^short = "服用指示の順番"
@@ -26,7 +22,7 @@ Description: "このデータタイプは薬剤用法のDosageベースとして
 * sequence ^comment = "32 bitの数値。これ以上の値であれば10進数を使うこと。"
 * sequence ^requirements = "もし、複数の服用法(Dosage)でsequenceの数値が同じであれば、その指示が同時に扱われることを示している。sequenceの数値が異なれば、服用指示(Dosage)の順番を意図している。"
 // text
-* text ^short = "フリーテキストの用法指示。"
+* text ^short = "フリーテキストの用法指示"
 * text ^definition = "JP Coreでは必須。フリーテキストの用法指示。"
 * text ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * text ^requirements = "フリーテキストでの用法指示はコード化するには複雑すぎる指示の場合には用いてもよい。この属性の文脈は薬剤の名前や説明が入っていない。コード化された指示がある場合は、フリーテキストでの指示は人間が服用あるいは投与するために表示されてもよい。テキストでの指示はつねに配置されることを想定されている。もし、dosage.timing属性も配置されていれば、dosage.textはtimingを同じ情報を反映すべきである。薬剤の投与あるいは調剤についての付加的な情報にはテキストでの説明が入っているべきである。"
@@ -171,15 +167,27 @@ Description: "このデータタイプは注射用法の制約と拡張のうち
 * ^status = #active
 * ^date = "2022-09-26"
 * extension contains
-    JP_MedicationDosage_Line named line ..* and
+    JP_MedicationDosage_DosageComment named dosageComment ..* and
     JP_MedicationDosage_Device named device ..* and
+    JP_MedicationDosage_Line named line ..* and
     JP_MedicationDosage_LineComment named lineComment ..*
 * timing ^short = "投与タイミング"
 * timing ^definition = "投与タイミングを記録する。"
 * timing.code from $JP_MedicationUsageInjection_VS (preferred)
 * timing.code ^comment = "BIDなどは「施設特有の時間」として定義される。たとえば、施設がBIDを「つねに朝7時と夕方6時」であると指定することがある。この指定が不適切であれば、BIDというコードは使うべきではない。その代わり、HL7が定義したBIDのコードではなく、その施設特有のコードで明示的に示すべきであり、構造化された表現を使うべきである（この場合、2回のイベントの時刻を指定する必要がある）。  
 【JP Core仕様】頓用指示時にはJAMI処方・注射オーダ標準用法規格の表6 イベント区分、イベント詳細区分(“http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationAsNeededConditionJAMI_CS”)を推奨するが、MERIT-9 処方オーダ 表5 頓用指示(“http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS”) を使用してもよい。"
+// site
+* site.extension contains 
+    JP_MedicationDosage_SiteComment named siteComment ..* and
+    $bodySite named bodySite ..*
+* site.extension[bodySite] ^short = "身体部位の位置に関する詳細"
+* site.extension[bodySite] ^definition = "身体部位の位置に関する詳細情報。site概念がユースケースに必要な詳細を提供しない場合に使用される。"
+// method
+* method.extension contains JP_MedicationDosage_MethodComment named methodComment ..*
+// route
+* route.extension contains JP_MedicationDosage_RouteComment named routeComment ..*
 // dose[x]
+* doseAndRate.extension contains JP_MedicationDosage_RateComment named rateComment ..*
 * doseAndRate.doseQuantity only JP_MedicationSimpleQuantity
 * doseAndRate.doseQuantity ^short = "1回投与量（体積）"
 * doseAndRate.doseQuantity ^definition = "1回投与量（体積）"

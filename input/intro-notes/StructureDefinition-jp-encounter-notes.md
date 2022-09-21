@@ -1,17 +1,10 @@
 
 ### 必須要素
 
-次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
-
-#### 必須
-
 Encounter リソースは、次の要素を持たなければならない。
 
 - status ：受診状況を示す。value set encounter-statusで定義された値から設定する必要がある。（planned/arrived/triaged/in-progress/onleave/finished/cancelled/entered-in-error/unknown）
 - class : 受診分類を示す。value set ActEncounterCodeで定義された値から設定する必要がある。（AMB/EMER/FLD/HH/IMP/ACUTE/NONAC/OBSENC/PRENC/SS/VR）
-
-#### Must Support
-このプロファイルでは MustSupport要素定義は行っていない。
 
 ### Extensions定義
 
@@ -39,9 +32,9 @@ JP Encounter リソースで使用される拡張は次の通りである。
 
 ##### 必須検索パラメータ
 
-次の検索パラメータをサポートすることが望ましい。(SHOULD)
+次の検索パラメータをサポートすることが望ましい。(**SHOULD**)
 
-1. identifier 検索パラメータを使用して、診察番号等の識別子によるEncounterの検索をサポートすることが望ましい（SHOULD）。
+1. identifier 検索パラメータを使用して、診察番号等の識別子によるEncounterの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/Encounter?identifier={system|}[code]
@@ -76,7 +69,7 @@ JP Encounter リソースに対して使用される操作は次の通りであ�
 この操作の公式なURLは以下である。
 
 ```
-http://hl7.org/fhir/OperationDefinition/Encounter-everything
+https://hl7.org/fhir/R4/operation-encounter-everything.html
 ```
 
 URL: [base]/Encounter/[id]/$everything

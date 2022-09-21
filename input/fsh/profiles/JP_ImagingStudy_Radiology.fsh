@@ -9,7 +9,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology"
 * ^status = #active
 * ^date = "2022-09-26"
-* . ^short = "DICOM画像検査で作成されたコンテンツの表現。スタディは一連のシリーズで構成され、各シリーズには、共通のコンテキストで取得または生成された一連のサービスオブジェクトペアインスタンス（SOPインスタンス-画像またはその他のデータ）が含まれる。シリーズは1つのモダリティ（X線、CT、MR、超音波など）のみだが、スタディには複数の異なるモダリティのシリーズが含まれる場合がある。"
+* . ^short = "DICOM画像検査で作成されたコンテンツの表現。スタディは一連のシリーズで構成され、各シリーズには、共通のコンテキストで取得または生成された一連のサービスオブジェクトペアインスタンス（SOPインスタンス-画像またはその他のデータ）が含まれる、シリーズは1つのモダリティ（X線、CT、MR、超音波など）のみだがスタディには複数の異なるモダリティのシリーズが含まれる場合がある"
 * identifier ^short = "スタディ全体の識別子"
 * identifier ^definition = "DICOMスタディインスタンスUIDやアクセッション番号などのImagingStudyの識別子。"
 * identifier ^comment = "DICOMスタディインスタンスUIDのエンコードについては、[Imaging Study Implementation Notes]（imagingstudy.html＃notes）の説明を参照。アクセッション番号はACSN識別子タイプを使用する必要がある。\r\n\r\n【JP-Core仕様】Study Instance UIDは必須、その他は任意。"
@@ -78,7 +78,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * description ^short = "機関生成の記述"
 * description ^definition = "スタディのイメージングマネージャの説明。実施されたスタディ（コンポーネント）の機関生成の説明または分類。"
 * description ^comment = "FHIR文字列のサイズは1MBを超えてはならないことに注意。\r\n\r\n検査に関するフリーコメント。"
-* series ^short = "個々のスタディはインスタンスの１以上のシリーズを有する。"
+* series ^short = "個々のスタディはインスタンスの１以上のシリーズを有する"
 * series ^definition = "個々のスタディは画像か他の内容の１以上のシリーズを有する。"
 * series ^comment = "シリーズ（大まかな画像のグループ）"
 * series.uid ^short = "そのシリーズに対するDICOM Series Instance UID"

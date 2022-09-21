@@ -32,7 +32,7 @@ Description: "このプロファイルはImmunizationリソースに対して日
 * encounter ^definition = "患者が医療従事者から予防接種を受けた外来，入院あるいは他の対面の状態を表す。"
 * occurrence[x] ^short = "ワクチンを接種した日時"
 * occurrence[x] ^definition = "ワクチンを接種した日あるいは接種予定だった日。"
-* recorded ^short = "予防接種を受けた対象者の記録として最初に記載された日。"
+* recorded ^short = "予防接種を受けた対象者の記録として最初に記載された日"
 * reportOrigin ^short = "二次的に報告された記録の発生源を示す"
 * reportOrigin ^definition = "予防接種を実施した時に，ワクチンを接種した人以外からの報告からの情報である場合のデータの発生源。"
 * location only Reference(JP_Location)

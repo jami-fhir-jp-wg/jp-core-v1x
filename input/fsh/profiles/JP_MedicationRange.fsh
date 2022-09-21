@@ -37,7 +37,7 @@ Description: "このデータタイプはRange DataTypeに対して、時間の�
 * low.value ^definition = "時間範囲（下限）"
 * low.unit ^short = "単位時間の単位"
 * low.system from $units-of-time (preferred)
-* low.system ^short = "UCUMを識別するURL。"
+* low.system ^short = "UCUMを識別するURL"
 * low.system ^definition = "UCUMを識別するURL。固定値。"
 * low.code from $units-of-time (preferred)
 
@@ -46,6 +46,6 @@ Description: "このデータタイプはRange DataTypeに対して、時間の�
 * high.value ^definition = "時間範囲（上限）"
 * high.unit ^short = "単位時間の単位"
 * high.system from $units-of-time (preferred)
-* high.system ^short = "UCUMを識別するURL。"
+* high.system ^short = "UCUMを識別するURL"
 * high.system ^definition = "UCUMを識別するURL。固定値。"
 * high.code from $units-of-time (preferred)
