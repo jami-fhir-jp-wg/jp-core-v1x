@@ -35,7 +35,7 @@ DiagnosticReportリソースは、過去の結果（リソース内での過去�
 - [キー画像 (`media`)](http://www.hl7.org/fhir/R4/media.html)
 - [尿素窒素（BUN）(`Observation`)][JP_Observation_LabResult]
 - [クレアチニン（Cre）(`Observation`)][JP_Observation_LabResult]
-- 感染症情報 [ (`RiskAssessment`) ](http://hl7.org/fhir/riskassessment.html) あるいは [ (`Observation`) ][JP_Observation_LabResult]
+- 感染症情報 [ (`RiskAssessment`) ](https://hl7.org/fhir/R4/riskassessment.html) あるいは [ (`Observation`) ][JP_Observation_LabResult]
 
 運用のフローに関連する TASK、Procedure 等のリソース定義についてはここでは触れない。
 ## プロファイル定義

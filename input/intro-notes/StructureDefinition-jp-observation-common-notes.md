@@ -437,6 +437,6 @@ effectiveDateTimeとeffectivePeriodは、検査に密接に関連する時間情
 検査や検査を完了できなかった場合（例えば検体が不十分とか、医療者がオーダをキャンセルしたとか）、ステータスをキャンセルに更新し、具体的な詳細を、できればコード化された値としてdataAbsentReasonかvalueCodeableConcept要素に設定する。note要素にも同様に追加情報が付与される場合がある。[検体拒否の例](https://www.hl7.org/fhir/R4/observation-example-unsat.html)は、"不十分な検体"という意味のコード値をdataAbsentReasonへ設定している。
 
 ### 遺伝情報についての検査
-遺伝情報の報告には、DiagnosticReportリソースとObservationリソースを主に使用する。遺伝情報に関する結果の記述についての実装ガイドは[こちら](http://hl7.org/fhir/uv/genomics-reporting/index.html)を参照されたい。
+遺伝情報の報告には、DiagnosticReportリソースとObservationリソースを主に使用する。遺伝情報に関する結果の記述についての実装ガイドは[こちら](https://hl7.org/fhir/uv/genomics-reporting/)を参照されたい。
 
 {% include markdown-link-references.md %}
