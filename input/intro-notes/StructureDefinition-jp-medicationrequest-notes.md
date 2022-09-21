@@ -19,8 +19,8 @@ JP Core MedicationRequest プロファイルで使用される拡張は次の通
 |拡張|説明|定義|値型|
 |:----|:----|:----|:----|
 |調剤結果|薬剤単位の調剤結果|[JP_MedicationDispense_Preparation]|CodeableConcept|
-|服用開始日|服用開始日を格納する拡張<br/>Dosage利用|[JP_MedicationDosage_PeriodOfUse]|Period|
-|実服用日数|実服用日数を格納する拡張<br/>Dosage利用|[JP_MedicationDosage_UsageDuration]|Duration|
+|服用開始日|服用開始日を格納する拡張<br/>《dosageInstruction》配下|[JP_MedicationDosage_PeriodOfUse]|Period|
+|実服用日数|実服用日数を格納する拡張<br/>《dosageInstruction》配下|[JP_MedicationDosage_UsageDuration]|Duration|
 |調剤指示|薬剤単位の調剤指示を現するための拡張|[JP_MedicationRequest_DispenseRequest_InstructionForDispense]|CodeableConcept/string|
 |頓用回数|頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張|[JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]|integer|
 

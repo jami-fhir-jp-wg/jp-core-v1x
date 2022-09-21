@@ -17,8 +17,8 @@ JP Core MedicationDispense プロファイルで使用される拡張は次の�
 |拡張|説明|定義|値型|
 |:----|:----|:----|:----|
 |調剤結果|薬剤単位の調剤結果|[JP_MedicationDispense_Preparation]|CodeableConcept|
-|服用開始日|服用開始日を格納する拡張<br/>Dosage利用|[JP_MedicationDosage_PeriodOfUse]|Period|
-|実服用日数|実服用日数を格納する拡張<br/>Dosage利用|[JP_MedicationDosage_UsageDuration]|Duration|
+|服用開始日|服用開始日を格納する拡張<br/>《dosageInstruction》配下|[JP_MedicationDosage_PeriodOfUse]|Period|
+|実服用日数|実服用日数を格納する拡張<br/>《dosageInstruction》配下|[JP_MedicationDosage_UsageDuration]|Duration|
 
 ### 用語定義
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS処方データ交換規約やSS-MIX2で使われている用語集を採用した。
