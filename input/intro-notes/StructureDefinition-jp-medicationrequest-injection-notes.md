@@ -21,24 +21,20 @@ JP Core MedicationRequest Injectionプロファイルで使用される拡張は
 |拡張|説明|定義|値型|
 |:----|:----|:----|:----|
 |調剤結果|薬剤単位の調剤結果|[JP_MedicationDispense_Preparation]|CodeableConcept|
-|RP内薬剤番号|RP内の薬剤の連番を格納する拡張<br/>《MedicationReference配下》|[JP_Medication_Ingredient_DrugNo]|integer|
-|力価区分|投与量が製剤単位か成分単位かを格納する拡張<br/>《MedicationReference配下》|[JP_Medication_IngredientStrength_StrengthType]|CodeableConcept|
+|RP内薬剤番号|RP内の薬剤の連番を格納する拡張<br/>《medicationReference配下》|[JP_Medication_Ingredient_DrugNo]|integer|
+|力価区分|投与量が製剤単位か成分単位かを格納する拡張<br/>《medicationReference配下》|[JP_Medication_IngredientStrength_StrengthType]|CodeableConcept|
 |用法コメント|用法コメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_DosageComment]|CodeableConcept/String|
 |指示ライン|指示ラインを格納する拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_Line]|CodeableConcept|
 |ラインコメント|ラインコメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_LineComment]|CodeableConcept/String|
 |投与装置|投与装置を格納する拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_Device]|Reference (Device)|
 |投与経路コメント|投与経路コメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_RouteComment]|CodeableConcept/String|
+|投与部位詳細|投与部位詳細を格納するための拡張<br/>《dosageInstruction配下》|[bodySite(hl7.org)](http://hl7.org/fhir/R4/extension-bodysite.html)|Reference (BodyStructure)|
 |投与部位コメント|投与部位コメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_SiteComment]|CodeableConcept/String|
 |手技コメント|手技コメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_MethodComment]|CodeableConcept/String|
 |投与速度コメント|投与速度コメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_RateComment]|CodeableConcept/String|
 |調剤指示|薬剤単位の調剤指示を表現するための拡張|[JP_MedicationRequest_DispenseRequest_InstructionForDispense]|CodeableConcept/string|
 |頓用回数|頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張|[JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]|integer|
 
-また、HL7 Internationalで定義されている以下のExtensionを利用する。
-
-|拡張|説明|定義|値型|
-|:----|:----|:----|:----|
-|BodyStructure|薬剤の投与部位を表現するのに使用する<br/>《dosageInstruction配下》|[bodySite](http://hl7.org/fhir/R4/extension-bodysite.html)|Reference (BodyStructure)|
 
 ### 用語定義
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS注射データ交換規約やSS-MIX2で使われている用語集を採用した。
