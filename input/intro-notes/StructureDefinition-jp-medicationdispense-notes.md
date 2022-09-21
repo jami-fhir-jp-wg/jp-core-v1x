@@ -14,47 +14,11 @@ MedicationDispense リソースは、次の要素を持たなければならな�
 ### Extensions定義
 JP Core MedicationDispense プロファイルで使用される拡張は次の通りである。
 
-#### JP Core MedicationDispense独自で追加されたExtension
-
-<table class="extension_description">
-  <tr>
-    <th>拡張</th>
-    <th>説明</th>
-    <th>URL</th>
-    <th>値の型</th>
-  </tr>
-  <tr>
-    <td>調剤結果</td>
-    <td>薬剤単位の調剤結果</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation</td>
-    <td>CodeableConcept</td>
-  </tr>
-</table>
-
-#### 既存のExtensionの利用
-
-JP Core MedicationDispense プロファイルでは、JP Core MedicationRequestプロファイルで定義された以下の拡張を使用する。
-
-<table class="extension_description">
-  <tr>
-    <th>拡張</th>
-    <th>説明</th>
-    <th>URL</th>
-    <th>値の型</th>
-  </tr>
-  <tr>
-    <td>服用開始日</td>
-    <td>服用開始日を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse</td>
-    <td>Period</td>
-  </tr>
-  <tr>
-    <td>実服用日数</td>
-    <td>実服用日数を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration</td>
-    <td>Duration</td>
-  </tr>
-</table>
+|拡張|説明|定義|値型|
+|:----|:----|:----|:----|
+|調剤結果|薬剤単位の調剤結果|[JP_MedicationDispense_Preparation]|CodeableConcept|
+|服用開始日|服用開始日を格納する拡張<br/>Dosage利用|[JP_MedicationDosage_PeriodOfUse]|Period|
+|実服用日数|実服用日数を格納する拡張<br/>Dosage利用|[JP_MedicationDosage_UsageDuration]|Duration|
 
 ### 用語定義
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS処方データ交換規約やSS-MIX2で使われている用語集を採用した。

@@ -19,14 +19,8 @@ JP Core MedicationRequest プロファイルで使用される拡張は次の通
 |拡張|説明|定義|値型|
 |:----|:----|:----|:----|
 |調剤結果|薬剤単位の調剤結果|[JP_MedicationDispense_Preparation]|CodeableConcept|
-|力価区分|投与量が製剤単位か成分単位かを格納する拡張<br/>Medication利用|[JP_Medication_IngredientStrength_StrengthType]|CodeableConcept|
 |服用開始日|服用開始日を格納する拡張<br/>Dosage利用|[JP_MedicationDosage_PeriodOfUse]|Period|
 |実服用日数|実服用日数を格納する拡張<br/>Dosage利用|[JP_MedicationDosage_UsageDuration]|Duration|
-|用法コメント|用法コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_DosageComment]|CodeableConcept/String|
-|投与経路コメント|投与経路コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_RouteComment]|CodeableConcept/String|
-|投与部位コメント|投与部位コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_SiteComment]|CodeableConcept/String|
-|手技コメント|手技コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_MethodComment]|CodeableConcept/String|
-|投与速度コメント|投与速度コメントを格納するための拡張|[JP_MedicationDosage_RateComment]|CodeableConcept/String|
 |調剤指示|薬剤単位の調剤指示を現するための拡張|[JP_MedicationRequest_DispenseRequest_InstructionForDispense]|CodeableConcept/string|
 |頓用回数|頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張|[JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]|integer|
 

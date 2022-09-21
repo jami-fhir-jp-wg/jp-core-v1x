@@ -16,59 +16,23 @@ MedicationAministrationリソースに内包されるMedicationリソースで�
 ### Extensions定義
 JP Core MedicationAdministration Injection プロファイルで使用される拡張は次の通りである。
 
-#### JP Core MedicationAdministration Injection独自で追加されたExtension
-
-<table class="extension_description">
-  <tr>
-    <th>拡張</th>
-    <th>説明</th>
-    <th>URL</th>
-    <th>値の型</th>
-  </tr>
-  <tr>
-    <td>依頼医</td>
-    <td>依頼医を格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester</td>
-    <td>Reference(Practitioner)</td>
-  </tr>
-  <tr>
-    <td>依頼日時</td>
-    <td>依頼日時を格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn</td>
-    <td>DateTime</td>
-  </tr>
-  <tr>
-    <td>実施場所</td>
-    <td>実施場所を格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location</td>
-    <td>Reference(Location)</td>
-  </tr>
-  <tr>
-    <td>未分類コメント</td>
-    <td>未分類コメントを格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_UncategorizedComment</td>
-    <td>CodeableConcept/String</td>
-  </tr>
-</table>
-
-#### 既存のExtensionの利用
-
-JP_MedicationRequestInjectionで追加された以下のExtensionを利用する。
-
-<table class="extension_description">
-  <tr>
-    <th>拡張</th>
-    <th>説明</th>
-    <th>URL</th>
-    <th>値の型</th>
-  </tr>
-  <tr>
-    <td>指示ライン</td>
-    <td>指示ラインを格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line</td>
-    <td>CodeableConcept</td>
-  </tr>
-</table>
+|拡張|説明|定義|値型|
+|:----|:----|:----|:----|
+|依頼科|依頼科を格納するための拡張|[JP_MedicationAdministration_RequestDepartment]|CodeableConcept|
+|依頼日時|依頼日時を格納するための拡張|[JP_MedicationAdministration_RequestAuthoredOn]|DateTime|
+|実施場所|実施場所を格納するための拡張|[JP_MedicationAdministration_Location]|Reference(Location)|
+|依頼医|依頼医を格納するための拡張|[JP_MedicationAdministration_Requester]|Reference(Practitioner)|
+|未分類コメント|未分類コメントを格納するための拡張|[JP_MedicationAdministration_UncategorizedComment]|CodeableConcept/String|
+|RP内薬剤番号|RP内の薬剤の連番を格納する拡張<br/>Medication利用|[JP_Medication_Ingredient_DrugNo]|integer|
+|力価区分|投与量が製剤単位か成分単位かを格納する拡張<br/>Medication利用|[JP_Medication_IngredientStrength_StrengthType]|CodeableConcept|
+|用法コメント|用法コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_DosageComment]|CodeableConcept/String|
+|投与装置|投与装置を格納する拡張<br/>Dosage利用|[JP_MedicationDosage_Device]|Reference (Device)|
+|指示ライン|指示ラインを格納する拡張<br/>Dosage利用|[JP_MedicationDosage_Line]|CodeableConcept|
+|ラインコメント|ラインコメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_LineComment]|CodeableConcept/String|
+|投与部位コメント|投与部位コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_SiteComment]|CodeableConcept/String|
+|投与経路コメント|投与経路コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_RouteComment]|CodeableConcept/String|
+|手技コメント|手技コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_MethodComment]|CodeableConcept/String|
+|投与速度コメント|投与速度コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_RateComment]|CodeableConcept/String|
 
 ### 用語定義
 
