@@ -11,6 +11,7 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * ^date = "2022-09-26"
 * . ^short = "ヘルスケアまたは関連サービスの提供に正式な責任を負う人"
 * . ^definition = "A person who is directly or indirectly involved in the provisioning of healthcare.\r\n\r\n医療の提供に直接または間接的に関与する者をいう。"
+* identifier ^short = "An identifier for the person as this agent 【詳細参照】"
 * identifier ^definition = "An identifier that applies to this person in this role.\r\n\r\nある役割の人に適用される識別子。"
 * identifier ^comment = "【JP Core仕様】IDの名前空間を表す Practitioner.identifier.systemと ID値そのものを表す Practitioner.identifier.value の組み合わせとして表現する。\r\nPractitioner.identifier.systemには、\r\n医師の場合、　urn:oid:1.2.392.100495.20.3.41.医療機関識別OID番号\r\n歯科医師の場合、urn:oid:1.2.392.100495.20.3.42.医療機関識別OID番号\r\nを使用する。\r\n医療機関識別OID番号は、医師IDの発行者である医療機関を識別するもので、保険医療機関の場合、都道府県番号２桁から始まる10桁の医療機関番号（都道府県2桁、保険点数表コード1桁、保険医療機関番号７桁を連結したもの）または、特定健診・特定保健指導機関の医療機関番号10桁の先頭に１をつけた11桁とする。\r\n医療機関コードを持たない場合、「[9]＋当該施設の電話番号下 9 桁」を医療機関コードとして、その先頭に１をつけた11桁とする。\r\n\r\n例：医療機関コード「1312345670」での医師の場合「urn:oid:1.2.392.100495.20.3.41.11312345670」\r\n\r\nなお、rn:oid:1.2.392.100495.20.3.41　の部分は、「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」表19 識別子名前空間一覧において処方医 IDに割り当てられたOIDのURL型である。\r\n\r\n地域医療連携ネットワークの地域医療従事者IDを指定する場合も同様に、地域医療従事者IDを識別する名前空間（IHE ITI PIX等で使用されるOID等）を system に使用することができる。\r\n\r\n医師、歯科医師以外の医療者のIDの名前空間を表す system 値は今後検討する。"
 * identifier ^requirements = "Often, specific identities are assigned for the agent.\r\n\r\n多くの場合、エージェントには特定の識別子が割り当てられている。"
@@ -40,7 +41,7 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * photo ^definition = "Image of the person.\r\n\r\n医療従事者の写真。"
 * photo ^comment = "When providing a summary view (for example with Observation.value[x]) Attachment should be represented with a brief display text such as \"Signed Procedure Consent\".\r\n\r\nサマリービューを提供する場合（例えば、Observation.value[x]で）、添付ファイルは \"Signed Procedure Consent \"のような簡単な表示テキストで表現されなければならない。"
 * photo ^requirements = "Many EHR systems have the capability to capture an image of patients and personnel. Fits with newer social media usage too.\r\n\r\n多くのEHRシステムは、患者や職員の画像をキャプチャする機能を持っている。新しいソーシャルメディアの利用にも対応している。"
-* qualification ^short = "Certification, licenses, or training pertaining to the provision of care　ケアの提供に関連する認定、ライセンス、またはトレーニング"
+* qualification ^short = "Certification, licenses, or training pertaining to the provision of care　ケアの提供に関連する認定、ライセンス、またはトレーニング 【詳細参照】"
 * qualification ^definition = "The official certifications, training, and licenses that authorize or otherwise pertain to the provision of care by the practitioner.  For example, a medical license issued by a medical board authorizing the practitioner to practice medicine within a certain locality.\r\n\r\n医療従事者によるケアの提供を認可する、あるいは関連する、公式の証明書、トレーニング、免許証等。\r\n例えば、医療委員会が発行した医師免許証は、認定された地域内で医療を行うことを開業医に許可するものである。"
 * qualification ^comment = "【JP Core仕様】identifierには資格番号を入力する。\r\nCodeは、v2 table 0360が例としてのっている。0360は、USER-DEFINED TABLES であるため、適切なCodeがなければ追加できる。\r\nPeriodにはその資格の開始日・終了日を入力する。（例：麻薬資格者の有効期限等の格納）\r\n\r\n医籍登録番号　Practitioner.qualification.identifier　urn:oid:1.2.392.100495.20.3.31\r\n麻薬施用者番号　Practitioner.qualification.identifier　urn:oid:1.2.392.100495.20.3.32.都道府県OID番号\r\n　　（都道府県OID番号は、都道府県番号2桁の先頭に１をつけた3桁の番号）"
 * qualification.identifier ^definition = "An identifier that applies to this person's qualification in this role.\r\n\r\nこの人物のこの役割における資格に適用される識別子。"
@@ -112,7 +113,7 @@ Description: "このプロファイルはPractitionerリソースに対して、
 - urn:oid:1.2.392.100495.20.3.32.145(宮崎県)
 - urn:oid:1.2.392.100495.20.3.32.146(鹿児島県)
 - urn:oid:1.2.392.100495.20.3.32.147(沖縄県)"
-* qualification[narcoticPrescriptionLicenseNumber].identifier.value ^short = "都道府県別　麻薬施用者免許番号"
+* qualification[narcoticPrescriptionLicenseNumber].identifier.value ^short = "都道府県別　麻薬施用者免許番号 【詳細参照】"
 * qualification[narcoticPrescriptionLicenseNumber].identifier.value ^comment = "都道府県別　麻薬施用者免許番号"
 * qualification[narcoticPrescriptionLicenseNumber].code from JP_MedicalLicenseCertificate_VS (required)
 * qualification[narcoticPrescriptionLicenseNumber].code = $JP_MedicalLicenseCertificate_CS#narcotics-practitioner
