@@ -30,10 +30,10 @@ Usage: #example
 * request = Reference(MedicationRequest/jp-medicationrequest-injection-example-1)
 * dosage.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_DosageComment"
 * dosage.extension.valueString = "痙攣が発生したため、主治医に確認の上実施しました"
-* dosage.site.extension[0].url = "http://hl7.org/fhir/StructureDefinition/bodySite"
-* dosage.site.extension[=].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-1) "右腕"
-* dosage.site.extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_SiteComment"
-* dosage.site.extension[=].valueString = "左利きのため"
+* dosage.site.extension[bodySite].url = $bodySite
+* dosage.site.extension[bodySite].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-1) "右腕"
+* dosage.site.extension[siteComment].url = $JP_MedicationDosage_SiteComment
+* dosage.site.extension[siteComment].valueString = "左利きのため"
 * dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
 * dosage.method.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_MethodComment"
 * dosage.method.extension.valueString = "１分ほどかけて緩徐に行いました"
@@ -74,8 +74,8 @@ Usage: #example
 * device = Reference(Device/jp-medicationadministration-injection-device-example-2) "IV Pump"
 * dosage.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line"
 * dosage.extension.valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
-* dosage.site.extension.url = "http://hl7.org/fhir/StructureDefinition/bodySite"
-* dosage.site.extension.valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-2) "左腕"
+* dosage.site.extension[bodySite].url = $bodySite
+* dosage.site.extension[bodySite].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-2) "左腕"
 * dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
 * dosage.method = urn:oid:1.2.392.200250.2.2.20.40#31 "中心静脈注射"
 * dosage.dose = 510 'mL' "mL"

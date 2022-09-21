@@ -22,7 +22,7 @@ Usage: #example
 * dosageInstruction.additionalInstruction = urn:oid:1.2.392.200250.2.2.20.22#I1100000 "１日おき"
 * dosageInstruction.text = "静脈注射 静脈内 左腕 １日おき"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2016-07-01T10:00:00+09:00"
-* dosageInstruction.site.extension.url = "http://hl7.org/fhir/StructureDefinition/bodySite"
+* dosageInstruction.site.extension.url = $bodySite
 * dosageInstruction.site.extension.valueReference = Reference(BodyStructure/jp-medicationrequest-injection-bodystructure-example-1)
 * dosageInstruction.route = http://jpfhir.jp/fhir/Common/CodeSystem/route-codes#IV "静脈内"
 * dosageInstruction.method = urn:oid:1.2.392.200250.2.2.20.40#30 "静脈注射"
@@ -61,7 +61,7 @@ Usage: #example
 * dosageInstruction.text = "主管 静脈注射 左腕"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2016-07-01T08:00:00+09:00"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2016-07-01T13:00:00+09:00"
-* dosageInstruction.site.extension.url = "http://hl7.org/fhir/StructureDefinition/bodySite"
+* dosageInstruction.site.extension.url = $bodySite
 * dosageInstruction.site.extension.valueReference = Reference(BodyStructure/jp-medicationrequest-injection-bodystructure-example-2)
 * dosageInstruction.route = http://jpfhir.jp/fhir/Common/CodeSystem/route-codes#IV "静脈内"
 * dosageInstruction.method = urn:oid:1.2.392.200250.2.2.20.30#3 "注射"

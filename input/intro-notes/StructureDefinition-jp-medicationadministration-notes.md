@@ -13,39 +13,10 @@ MedicationAdministration リソースは、次の要素を持たなければな�
 ### Extensions定義
 JP Core MedicationAdministration プロファイルで使用される拡張は次の通りである。
 
-#### JP MedicationAdministration独自で追加されたExtension
-
-<table class="extension_description">
-  <tr>
-    <th>拡張</th>
-    <th>説明</th>
-    <th>URL</th>
-    <th>値の型</th>
-  </tr>
-  <tr>
-    <td>依頼医</td>
-    <td>依頼医を格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester</td>
-    <td>Reference(Practitioner)</td>
-  </tr>
-  <tr>
-    <td>依頼日時</td>
-    <td>依頼日時を格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn</td>
-    <td>DateTime</td>
-  </tr>
-  <tr>
-    <td>実施場所</td>
-    <td>実施場所を格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location</td>
-    <td>Reference(Location)</td>
-  </tr>
-</table>
-
-#### 既存のExtensionの利用
-
-既存のExtensionの利用は特にない。
-
+|依頼科|依頼科を格納するための拡張|[JP_MedicationAdministration_RequestDepartment]|CodeableConcept|
+|依頼日時|依頼日時を格納するための拡張|[JP_MedicationAdministration_RequestAuthoredOn]|DateTime|
+|実施場所|実施場所を格納するための拡張|[JP_MedicationAdministration_Location]|Reference(Location)|
+|依頼医|依頼医を格納するための拡張|[JP_MedicationAdministration_Requester]|Reference(Practitioner)|
 
 ### 用語定義
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS処方データ交換規約やSS-MIX2で使われている用語集を採用した。

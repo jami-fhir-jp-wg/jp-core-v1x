@@ -5,7 +5,7 @@
 
 MedicationRequestリソースは、次の要素を持たなければならない。
 - status : ステータスは必須である。
-- intent : 意図は必須であり、JP Coreでは"order" に固定される。
+- intent : 意図は必須である。
 - medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない。
 - subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
 - authoredOn : 処方依頼日時であり、JP Coreでは必須である。
@@ -16,39 +16,13 @@ MedicationRequestリソースは、次の要素を持たなければならない
 ### Extensions定義
 JP Core MedicationRequest プロファイルで使用される拡張は次の通りである。
 
-#### JP Core MedicationRequest独自で追加されたExtension
-
-<table class="extension_description">
-  <tr>|服用開始日|服用開始日を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse|Period|
-    <th>拡張</th>
-    <th>説明</th>
-    <th>URL</th>
-    <th>値の型</th>
-  </tr>
-  <tr>
-    <td>実服用日数</td>
-    <td>実服用日数を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration</td>
-    <td>Duration</td>
-  </tr>
-  <tr>
-    <td>調剤指示</td>
-    <td>薬剤単位の調剤指示を表現するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense</td>
-    <td>CodeableConcept/string</td>
-  </tr>
-  <tr>
-    <td>頓用回数</td>
-    <td>頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount</td>
-    <td>integer</td>
-  </tr>
-</table>
-
-#### 既存のExtensionの利用
-
-既存のExtensionの利用は特にない。
-
+|拡張|説明|定義|値型|
+|:----|:----|:----|:----|
+|調剤結果|薬剤単位の調剤結果|[JP_MedicationDispense_Preparation]|CodeableConcept|
+|服用開始日|服用開始日を格納する拡張<br/>《dosageInstruction》配下|[JP_MedicationDosage_PeriodOfUse]|Period|
+|実服用日数|実服用日数を格納する拡張<br/>《dosageInstruction》配下|[JP_MedicationDosage_UsageDuration]|Duration|
+|調剤指示|薬剤単位の調剤指示を現するための拡張|[JP_MedicationRequest_DispenseRequest_InstructionForDispense]|CodeableConcept/string|
+|頓用回数|頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張|[JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]|integer|
 
 ### 用語定義
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS処方データ交換規約やSS-MIX2で使われている用語集を採用した。
@@ -77,8 +51,6 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 
 ### 制約一覧
 JP Core MedicationRequest リソースは、以下の制約を満たさなければならない。
-- status : JP Coreでは"active"に固定される。
-- intent : JP Coreでは"intent" に固定される。
 - dosageInstruction.doseAndRage.rateRatio.denominator.value : １日量を記述する場合"1"に固定される。
 - dosageInstruction.doseAndRage.rateRatio.denominator.unit : １日量を記述する場合"日"に固定される。
 - dosageInstruction.doseAndRage.rateRatio.denominator.system : １日量を記述する場合"http://unitsofmeasure.org"に固定される。

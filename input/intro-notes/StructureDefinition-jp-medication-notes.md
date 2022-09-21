@@ -2,7 +2,7 @@
 次のデータ項目は必須である。
 
 Medication リソースは、次の要素を持たなければならない。
-- status : ステータスは必須であり、JP Coreでは"active"に固定される。
+- status : ステータスは必須である。
 - ingredient.itemCodeableConcept : 医薬品の識別情報であり、JP Coreでは必須である。
 - ingredient.strength : 医薬品の投与量であり、JP Coreでは必須である。
 
@@ -13,33 +13,10 @@ Medicationリソースでは、次の要素をサポートしなければなら�
 ### Extensions定義
 Medication リソースで使用される拡張は次の通りである。
 
-#### JP Medication 独自で追加されたExtension
-
-<table class="extension_description">
-  <tr>
-    <th>拡張</th>
-    <th>説明</th>
-    <th>URL</th>
-    <th>値の型</th>
-  </tr>
-  <tr>
-    <td>RP内薬剤番号</td>
-    <td>RP内の薬剤の連番を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication_Ingredient_DrugNo</td>
-    <td>integer</td>
-  </tr>
-  <tr>
-    <td>力価区分</td>
-    <td>投与量が製剤単位か成分単位かを格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication_atIngredientStrength_StrengthType</td>
-    <td>CodeableConcept</td>
-  </tr>
-</table>
-
-#### 既存のExtensionの利用
-
-既存のExtensionで利用するものはない。
-
+|拡張|説明|定義|値型|
+|:----|:----|:----|:----|
+|RP内薬剤番号|RP内の薬剤の連番を格納する拡張|[JP_Medication_Ingredient_DrugNo]|integer|
+|力価区分|投与量が製剤単位か成分単位かを格納する拡張|[JP_Medication_IngredientStrength_StrengthType]|CodeableConcept|
 
 ### 用語定義
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS注射データ交換規約やSS-MIX2で使われている用語集を採用した。

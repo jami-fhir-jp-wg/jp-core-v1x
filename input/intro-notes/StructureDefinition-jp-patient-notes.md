@@ -1,8 +1,5 @@
 ### 必須要素
 
-次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
-
-
 Patient リソースは、次の要素を持たなければならない。
 
 - identifier ：患者を識別するための識別子は必須要素であり、identifier.value が必ず存在しなければならない。また、identifierの名前空間を表すidentifier.systemも組み合わせて、医療機関固有の患者番号を表現することが一般的である。
@@ -11,11 +8,11 @@ Patient リソースは、次の要素を持たなければならない。
 
 JP Patient リソースで使用される拡張は次の通りである。
 
-- [religion](http://hl7.org/fhir/R4/extension-patient-religion.html)
+- [religion](https://hl7.org/fhir/R4/extension-patient-religion.html)
 
   - 患者の宗教を表す。
 
-- [birthPlace](http://hl7.org/fhir/R4/extension-patient-birthplace.html)
+- [birthPlace](https://hl7.org/fhir/R4/extension-patient-birthplace.html)
 
   - 患者の生誕地を表す。Address型を使って表現するため、すべての住所情報あるいは、都道府県名のみの情報(Address.state)だけを格納するということも可能である。
 
