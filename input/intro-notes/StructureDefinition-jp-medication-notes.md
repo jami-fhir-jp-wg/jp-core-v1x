@@ -2,7 +2,7 @@
 次のデータ項目は必須である。
 
 Medication リソースは、次の要素を持たなければならない。
-- status : ステータスは必須であり、JP Coreでは"active"に固定される。
+- status : ステータスは必須である。
 - ingredient.itemCodeableConcept : 医薬品の識別情報であり、JP Coreでは必須である。
 - ingredient.strength : 医薬品の投与量であり、JP Coreでは必須である。
 
