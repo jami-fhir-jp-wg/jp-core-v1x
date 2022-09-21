@@ -1,6 +1,6 @@
 CodeSystem: JP_MedicationExampleRouteComment_CS
 Id: jp-medication-example-routecomment-cs
-Title: "JP Medication Example RouteComment"
+Title: "JP Core Medication Example RouteComment CodeSystem"
 Description: "注射投与経路コメントのコードシステム例"
 * ^url = $JP_MedicationExampleRouteComment_CS
 * ^status = #active

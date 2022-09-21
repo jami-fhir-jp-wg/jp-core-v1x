@@ -23,12 +23,13 @@ JP Core MedicationAdministration Injection プロファイルで使用される�
 |実施場所|実施場所を格納するための拡張|[JP_MedicationAdministration_Location]|Reference(Location)|
 |依頼医|依頼医を格納するための拡張|[JP_MedicationAdministration_Requester]|Reference(Practitioner)|
 |未分類コメント|未分類コメントを格納するための拡張|[JP_MedicationAdministration_UncategorizedComment]|CodeableConcept/String|
-|RP内薬剤番号|RP内の薬剤の連番を格納する拡張<br/>《MedicationReference配下》|[JP_Medication_Ingredient_DrugNo]|integer|
-|力価区分|投与量が製剤単位か成分単位かを格納する拡張<br/>《MedicationReference配下》|[JP_Medication_IngredientStrength_StrengthType]|CodeableConcept|
+|RP内薬剤番号|RP内の薬剤の連番を格納する拡張<br/>《medicationReference配下》|[JP_Medication_Ingredient_DrugNo]|integer|
+|力価区分|投与量が製剤単位か成分単位かを格納する拡張<br/>《medicationReference配下》|[JP_Medication_IngredientStrength_StrengthType]|CodeableConcept|
 |用法コメント|用法コメントを格納するための拡張|[JP_MedicationDosage_DosageComment]|CodeableConcept/String|
 |投与装置|投与装置を格納する拡張|[JP_MedicationDosage_Device]|Reference (Device)|
 |指示ライン|指示ラインを格納する拡張<|[JP_MedicationDosage_Line]|CodeableConcept|
 |ラインコメント|ラインコメントを格納するための拡張|[JP_MedicationDosage_LineComment]|CodeableConcept/String|
+|投与部位詳細|投与部位詳細を格納するための拡張<br/>《dosageInstruction配下》|[bodySite(hl7.org)](http://hl7.org/fhir/R4/extension-bodysite.html)|Reference (BodyStructure)|
 |投与部位コメント|投与部位コメントを格納するための拡張|[JP_MedicationDosage_SiteComment]|CodeableConcept/String|
 |投与経路コメント|投与経路コメントを格納するための拡張|[JP_MedicationDosage_RouteComment]|CodeableConcept/String|
 |手技コメント|手技コメントを格納するための拡張|[JP_MedicationDosage_MethodComment]|CodeableConcept/String|
@@ -306,9 +307,9 @@ performer.actorには、医療従事者(Practitioner)、または患者(Patient)
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "http://jpfhir.jp/medication/99ILL",
+            "system": "http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationRequestDosageInstructionLine_CS",
             "code": "01",
-            "display": "主管"
+            "display": "末梢ルート"
           }
         ]
       }
@@ -475,7 +476,7 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
   "extension": [
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Route_RouteComment",
-      "valueString": "【仮】投与経路コメントを記述する"
+      "valueString": "右手に実施"
     }
   ],
   "coding": [
@@ -553,16 +554,16 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "http://jpfhir.jp/medication/99ILL",
+            "system": "http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationRequestDosageInstructionLine_CS",
             "code": "01",
-            "display": "主管"
+            "display": "末梢ルート"
           }
         ]
       }
     },
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_LineComment",
-      "valueString": "【仮】ラインコメントを記述する"
+      "valueString": "末梢キープ"
     }
   ]
 }
@@ -668,9 +669,9 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "ttp://terminology.hl7.org/CodeSystem/v2-0069",
-            "code": "801",
-            "display": "肝胆外科"
+            "system": "http://jpfhir.jp/fhir/Common/CodeSystem/JP_Department_SsMix_CS",
+            "code": "01",
+            "display": "内科"
           }
         ]
       }
@@ -717,11 +718,11 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
 1. 日本医療情報学会MERIT-9研究会, 医療情報交換規約運用指針、MERIT-9 処方オーダver 1.0, [http://merit-9.mi.hama-med.ac.jp/jahis/SHOHOU.pdf](http://merit-9.mi.hama-med.ac.jp/jahis/SHOHOU.pdf)
 1. 保健医療福祉情報システム工業会, JAHISデータ交換規約（共通編）Ver.1.1, [https://www.jahis.jp/standard/detail/id=125](https://www.jahis.jp/standard/detail/id=125)
 1. 保健医療福祉情報システム工業会, JAHIS注射データ交換規約Ver.2.1C, [https://www.jahis.jp/standard/detail/id=590](https://www.jahis.jp/standard/detail/id=590)
-2. Mike Henderson, 日本HL7協会監修、「HL7メッセージ交換」、第2版、インナービジョン社、2013年
-3. 厚生労働省、保険医療機関及び保険医療養担当規則、平三〇厚労令二〇・一部改正, [https://www.mhlw.go.jp/web/t_doc?dataId=84035000&dataType=0&pageNo=1](https://www.mhlw.go.jp/web/t_doc?dataId=84035000&dataType=0&pageNo=1)
-4. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, [http://www2.medis.or.jp/hcode/](http://www2.medis.or.jp/hcode/)
-5. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)
-6. 保健医療福祉情報システム工業会, JAHIS電子処方箋実装ガイドVer.1.2, [https://www.jahis.jp/standard/detail/id=774](https://www.jahis.jp/standard/detail/id=774)
-7. 日本医療情報学会, 処方情報 HL7FHIR 記述仕様(2021年10月), [https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)
+1. Mike Henderson, 日本HL7協会監修、「HL7メッセージ交換」、第2版、インナービジョン社、2013年
+1. 厚生労働省、保険医療機関及び保険医療養担当規則、平三〇厚労令二〇・一部改正, [https://www.mhlw.go.jp/web/t_doc?dataId=84035000&dataType=0&pageNo=1](https://www.mhlw.go.jp/web/t_doc?dataId=84035000&dataType=0&pageNo=1)
+1. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, [http://www2.medis.or.jp/hcode/](http://www2.medis.or.jp/hcode/)
+1. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)
+1. 保健医療福祉情報システム工業会, JAHIS電子処方箋実装ガイドVer.1.2, [https://www.jahis.jp/standard/detail/id=774](https://www.jahis.jp/standard/detail/id=774)
+1. 日本医療情報学会, 処方情報 HL7FHIR 記述仕様(2021年10月), [https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)
 
 {% include markdown-link-references.md %}

@@ -1,6 +1,6 @@
 ValueSet: JP_MedicationExampleRouteComment_VS
 Id: jp-medication-example-routecomment-vs
-Title: "JP Medication Example RouteComment"
+Title: "JP Core Medication Example RouteComment ValueSet"
 Description: "注射投与経路コメントの値セット例"
 * ^url = $JP_MedicationExampleRouteComment_VS
 * ^status = #active

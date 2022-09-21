@@ -1,6 +1,6 @@
 ValueSet: JP_MedicationExampleDosageComment_VS
 Id: jp-medication-example-dosagecomment-vs
-Title: "JP Medication Example DosageComment"
+Title: "JP Core Medication Example DosageComment ValueSet"
 Description: "注射用法コメントの値セット例"
 * ^url = $JP_MedicationExampleDosageComment_VS
 * ^status = #active
