@@ -69,7 +69,7 @@ JP Encounter リソースに対して使用される操作は次の通りであ�
 この操作の公式なURLは以下である。
 
 ```
-http://hl7.org/fhir/OperationDefinition/Encounter-everything
+https://hl7.org/fhir/R4/operation-encounter-everything.html
 ```
 
 URL: [base]/Encounter/[id]/$everything
