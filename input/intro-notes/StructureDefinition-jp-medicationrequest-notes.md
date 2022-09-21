@@ -16,61 +16,19 @@ MedicationRequestリソースは、次の要素を持たなければならない
 ### Extensions定義
 JP Core MedicationRequest プロファイルで使用される拡張は次の通りである。
 
-
-
 |拡張|説明|定義|値型|
 |:----|:----|:----|:----|
 |調剤結果|薬剤単位の調剤結果|[JP_MedicationDispense_Preparation]|CodeableConcept|
-|RP内薬剤番号|RP内の薬剤の連番を格納する拡張<br/>MedicationReferencenにて利用|[JP_Medication_Ingredient_DrugNo]|integer|
-|用法コメント|用法コメントを格納するための拡張|[JP_MedicationDosage_DosageComment]|CodeableConcept/String|
-|力価区分|投与量が製剤単位か成分単位かを格納する拡張|[JP_Medication_IngredientStrength_StrengthType]|CodeableConcept|
-|投与経路コメント|投与経路コメントを格納するための拡張|[JP_MedicationDosage_RouteComment]|CodeableConcept/String|
-|投与部位コメント|投与部位コメントを格納するための拡張|[JP_MedicationDosage_SiteComment]|CodeableConcept/String|
-|手技コメント|手技コメントを格納するための拡張|[JP_MedicationDosage_MethodComment]|CodeableConcept/String|
+|力価区分|投与量が製剤単位か成分単位かを格納する拡張<br/>Medication利用|[JP_Medication_IngredientStrength_StrengthType]|CodeableConcept|
+|服用開始日|服用開始日を格納する拡張<br/>Dosage利用|[JP_MedicationDosage_PeriodOfUse]|Period|
+|実服用日数|実服用日数を格納する拡張<br/>Dosage利用|[JP_MedicationDosage_UsageDuration]|Duration|
+|用法コメント|用法コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_DosageComment]|CodeableConcept/String|
+|投与経路コメント|投与経路コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_RouteComment]|CodeableConcept/String|
+|投与部位コメント|投与部位コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_SiteComment]|CodeableConcept/String|
+|手技コメント|手技コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_MethodComment]|CodeableConcept/String|
 |投与速度コメント|投与速度コメントを格納するための拡張|[JP_MedicationDosage_RateComment]|CodeableConcept/String|
-|調剤指示|薬剤単位の調剤指示を表現するための拡張|[JP_MedicationRequest_DispenseRequest_InstructionForDispense]|CodeableConcept/string|
+|調剤指示|薬剤単位の調剤指示を現するための拡張|[JP_MedicationRequest_DispenseRequest_InstructionForDispense]|CodeableConcept/string|
 |頓用回数|頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張|[JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]|integer|
-
-|\|服用開始日\|服用開始日を格納する拡張\|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse\|Period\| |
-|:----|:----|:----|:----|:----|:----|
-|拡張|説明|URL|値の型|
-|-----|-------------------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------|
-|実服用日数|実服用日数を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration|Duration|
-|調剤指示|薬剤単位の調剤指示を表現するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense|CodeableConcept/string|
-|頓用回数|頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount|integer|
-
-
-<table class="extension_description">
-  <tr>|服用開始日|服用開始日を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse|Period|
-    <th>拡張</th>
-    <th>説明</th>
-    <th>URL</th>
-    <th>値の型</th>
-  </tr>
-  <tr>
-    <td>実服用日数</td>
-    <td>実服用日数を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration</td>
-    <td>Duration</td>
-  </tr>
-  <tr>
-    <td>調剤指示</td>
-    <td>薬剤単位の調剤指示を現するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense</td>
-    <td>CodeableConcept/string</td>
-  </tr>
-  <tr>
-    <td>頓用回数</td>
-    <td>頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount</td>
-    <td>integer</td>
-  </tr>
-</table>
-
-#### 既存のExtensionの利用
-
-既存のExtensionの利用は特にない。
-
 
 ### 用語定義
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS処方データ交換規約やSS-MIX2で使われている用語集を採用した。
