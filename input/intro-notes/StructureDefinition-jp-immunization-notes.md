@@ -12,11 +12,11 @@ JP Core Immunization リソースで使用される拡張は次の通りであ�
 
 #### JP Core Immunization独自で追加されたExtension
 
-|拡張|説明|URL|値の型|
-|------------|-------------|----------|-----|
-| DueDateOfNextDose | 次回接種予定日 | http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose |dateTime|
-| ManufacturedDate | 製造年月日 | http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate |dateTime |
-| CertificatedDate | 検定年月日 | http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate |dateTime |
+|拡張|説明|定義|値型|
+|:----|:----|:----|:----|
+| DueDateOfNextDose | 次回接種予定日 | [JP_Immunization_DueDateOfNextDose] |dateTime|
+| ManufacturedDate | 製造年月日 | [JP_Immunization_ManufacturedDate] |dateTime |
+| CertificatedDate | 検定年月日 | [JP_Immunization_CertificatedDate] |dateTime |
 
 #### 既存のExtensionの利用
 

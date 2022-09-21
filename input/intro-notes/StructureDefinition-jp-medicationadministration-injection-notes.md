@@ -23,16 +23,16 @@ JP Core MedicationAdministration Injection プロファイルで使用される�
 |実施場所|実施場所を格納するための拡張|[JP_MedicationAdministration_Location]|Reference(Location)|
 |依頼医|依頼医を格納するための拡張|[JP_MedicationAdministration_Requester]|Reference(Practitioner)|
 |未分類コメント|未分類コメントを格納するための拡張|[JP_MedicationAdministration_UncategorizedComment]|CodeableConcept/String|
-|RP内薬剤番号|RP内の薬剤の連番を格納する拡張<br/>Medication利用|[JP_Medication_Ingredient_DrugNo]|integer|
-|力価区分|投与量が製剤単位か成分単位かを格納する拡張<br/>Medication利用|[JP_Medication_IngredientStrength_StrengthType]|CodeableConcept|
-|用法コメント|用法コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_DosageComment]|CodeableConcept/String|
-|投与装置|投与装置を格納する拡張<br/>Dosage利用|[JP_MedicationDosage_Device]|Reference (Device)|
-|指示ライン|指示ラインを格納する拡張<br/>Dosage利用|[JP_MedicationDosage_Line]|CodeableConcept|
-|ラインコメント|ラインコメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_LineComment]|CodeableConcept/String|
-|投与部位コメント|投与部位コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_SiteComment]|CodeableConcept/String|
-|投与経路コメント|投与経路コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_RouteComment]|CodeableConcept/String|
-|手技コメント|手技コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_MethodComment]|CodeableConcept/String|
-|投与速度コメント|投与速度コメントを格納するための拡張<br/>Dosage利用|[JP_MedicationDosage_RateComment]|CodeableConcept/String|
+|RP内薬剤番号|RP内の薬剤の連番を格納する拡張<br/>《MedicationReference》配下|[JP_Medication_Ingredient_DrugNo]|integer|
+|力価区分|投与量が製剤単位か成分単位かを格納する拡張<br/>《MedicationReference》配下|[JP_Medication_IngredientStrength_StrengthType]|CodeableConcept|
+|用法コメント|用法コメントを格納するための拡張|[JP_MedicationDosage_DosageComment]|CodeableConcept/String|
+|投与装置|投与装置を格納する拡張|[JP_MedicationDosage_Device]|Reference (Device)|
+|指示ライン|指示ラインを格納する拡張<|[JP_MedicationDosage_Line]|CodeableConcept|
+|ラインコメント|ラインコメントを格納するための拡張|[JP_MedicationDosage_LineComment]|CodeableConcept/String|
+|投与部位コメント|投与部位コメントを格納するための拡張|[JP_MedicationDosage_SiteComment]|CodeableConcept/String|
+|投与経路コメント|投与経路コメントを格納するための拡張|[JP_MedicationDosage_RouteComment]|CodeableConcept/String|
+|手技コメント|手技コメントを格納するための拡張|[JP_MedicationDosage_MethodComment]|CodeableConcept/String|
+|投与速度コメント|投与速度コメントを格納するための拡張|[JP_MedicationDosage_RateComment]|CodeableConcept/String|
 
 ### 用語定義
 
