@@ -15,12 +15,12 @@ JP Core Location リソースで定義された拡張はない。
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHALL            | name    | string  | GET [base]/Location?name=３南 |
-| SHALL            | address          | string | GET [base]/Location?address=〒113-0033東京都文京区本郷７丁目３−１ |
-| SHALL            | identifier          | token | GET [base]/Location?identifier=http://myhospital.com/fhir/Locationid\|1234 |
-| SHOULD           | address-city | string  | GET [base]/Location?address-city=文京区 |
-| SHOULD           | address-state | string  | GET [base]/Location?address-state=東京都 |
-| SHOULD           | address-postalcode | string  | GET [base]/Location?address-postalcode=1130033 |
+| SHALL            | name | string | GET [base]/Location?name=３南 |
+| SHALL            | identifier | token | GET [base]/Location?identifier=http://myhospital.com/fhir/Locationid\|1234 |
+| SHOULD           | address | string | GET [base]/Location?address=東京都文京区本郷７丁目３−１ |
+| SHOULD           | address-city | string | GET [base]/Location?address-city=文京区 |
+| SHOULD           | address-state | string | GET [base]/Location?address-state=東京都 |
+| SHOULD           | address-postalcode | string | GET [base]/Location?address-postalcode=1130033 |
 
 ##### 必須検索パラメータ
 
@@ -40,25 +40,7 @@ JP Core Location リソースで定義された拡張はない。
 
    名前が一致するLocationリソースを含むBundleを取得する。
 
-   
-
-2. address 検索パラメータを使用して、住所テキストによる文字列検索をサポートしなければならない（**SHALL**）。
-
-   ```
-   GET [base]/Location?address=[string]
-   ```
-
-   例：
-
-   ```
-   GET [base]/Location?address=〒113-0033東京都文京区本郷７丁目３−１
-   ```
-
-   住所文字列が一致するLocationリソースを含むBundleを取得する。
-
-   
-
-3. identifier 検索パラメータを使用して、ロケーションIDなどの識別子によるLocationの検索をサポートしなければならない（**SHALL**）。
+2. identifier 検索パラメータを使用して、ロケーションIDなどの識別子によるLocationの検索をサポートしなければならない（**SHALL**）。
 
    ```
    GET [base]/Location?identifier={system|}[code]
@@ -78,7 +60,21 @@ JP Core Location リソースで定義された拡張はない。
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. address-city 検索パラメータを使用して、住所の市町村名によるLocationの検索をサポートすることが望ましい（**SHOULD**）。
+1. address 検索パラメータを使用して、住所テキストによる文字列検索をサポートしなければならない（**SHALL**）。
+
+   ```
+   GET [base]/Location?address=[string]
+   ```
+
+   例：
+
+   ```
+   GET [base]/Location?address=〒113-0033東京都文京区本郷７丁目３−１
+   ```
+
+   住所文字列が一致するLocationリソースを含むBundleを取得する。
+
+2. address-city 検索パラメータを使用して、住所の市町村名によるLocationの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/Location?address-city=[string]
@@ -93,7 +89,7 @@ JP Core Location リソースで定義された拡張はない。
    指定された住所の市町村名が一致するLocationリソースを含むBundleを取得する。
 
 
-2. address-state 検索パラメータを使用して、住所の都道府県名によるLocationの検索をサポートすることが望ましい（**SHOULD**）。
+3. address-state 検索パラメータを使用して、住所の都道府県名によるLocationの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/Location?address-state=[string]
@@ -108,7 +104,7 @@ JP Core Location リソースで定義された拡張はない。
    指定された住所の都道府県名が一致するLocationリソースを含むBundleを取得する。
 
 
-3. address-postalcode 検索パラメータを使用して、住所の郵便番号によるLocationの検索をサポートすることが望ましい（**SHOULD**）。
+4. address-postalcode 検索パラメータを使用して、住所の郵便番号によるLocationの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/Location?address-postalcode=[string]
