@@ -1,6 +1,6 @@
 ValueSet: JP_MedicationExampleMethodComment_VS
 Id: jp-medication-example-methodcomment-vs
-Title: "JP Medication Example MethodComment"
+Title: "JP Core Medication Example MethodComment ValueSet"
 Description: "注射手技コメントの値セット例"
 * ^url = $JP_MedicationExampleMethodComment_VS
 * ^status = #active
