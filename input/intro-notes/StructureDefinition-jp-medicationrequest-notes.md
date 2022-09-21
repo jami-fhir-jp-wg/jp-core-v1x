@@ -16,7 +16,29 @@ MedicationRequestリソースは、次の要素を持たなければならない
 ### Extensions定義
 JP Core MedicationRequest プロファイルで使用される拡張は次の通りである。
 
-#### JP Core MedicationRequest独自で追加されたExtension
+
+
+|拡張|説明|定義|値型|
+|:----|:----|:----|:----|
+|調剤結果|薬剤単位の調剤結果|[JP_MedicationDispense_Preparation]|CodeableConcept|
+|RP内薬剤番号|RP内の薬剤の連番を格納する拡張<br/>MedicationReferencenにて利用|[JP_Medication_Ingredient_DrugNo]|integer|
+|用法コメント|用法コメントを格納するための拡張|[JP_MedicationDosage_DosageComment]|CodeableConcept/String|
+|力価区分|投与量が製剤単位か成分単位かを格納する拡張|[JP_Medication_IngredientStrength_StrengthType]|CodeableConcept|
+|投与経路コメント|投与経路コメントを格納するための拡張|[JP_MedicationDosage_RouteComment]|CodeableConcept/String|
+|投与部位コメント|投与部位コメントを格納するための拡張|[JP_MedicationDosage_SiteComment]|CodeableConcept/String|
+|手技コメント|手技コメントを格納するための拡張|[JP_MedicationDosage_MethodComment]|CodeableConcept/String|
+|投与速度コメント|投与速度コメントを格納するための拡張|[JP_MedicationDosage_RateComment]|CodeableConcept/String|
+|調剤指示|薬剤単位の調剤指示を表現するための拡張|[JP_MedicationRequest_DispenseRequest_InstructionForDispense]|CodeableConcept/string|
+|頓用回数|頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張|[JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]|integer|
+
+|\|服用開始日\|服用開始日を格納する拡張\|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse\|Period\| |
+|:----|:----|:----|:----|:----|:----|
+|拡張|説明|URL|値の型|
+|-----|-------------------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------|
+|実服用日数|実服用日数を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration|Duration|
+|調剤指示|薬剤単位の調剤指示を表現するための拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense|CodeableConcept/string|
+|頓用回数|頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount|integer|
+
 
 <table class="extension_description">
   <tr>|服用開始日|服用開始日を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse|Period|
@@ -33,7 +55,7 @@ JP Core MedicationRequest プロファイルで使用される拡張は次の通
   </tr>
   <tr>
     <td>調剤指示</td>
-    <td>薬剤単位の調剤指示を表現するための拡張</td>
+    <td>薬剤単位の調剤指示を現するための拡張</td>
     <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense</td>
     <td>CodeableConcept/string</td>
   </tr>

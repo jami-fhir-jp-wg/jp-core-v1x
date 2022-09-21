@@ -28,7 +28,7 @@ Usage: #example
 * dosageInstruction.additionalInstruction = urn:oid:1.2.392.200250.2.2.20.22#I1100000 "１日おき"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2016-07-01T10:00:00+09:00"
 * dosageInstruction.text = "ワンショット 静脈注射 静脈内"
-* dosageInstruction.site.extension.url = "http://hl7.org/fhir/StructureDefinition/bodySite"
+* dosageInstruction.site.extension.url = $bodySite
 * dosageInstruction.site.extension.valueReference = Reference(jp-medicationdispense-injection-bodystructure-example-1)
 * dosageInstruction.site.extension.valueReference.type = "BodyStructure"
 * dosageInstruction.route = urn:oid:2.16.840.1.113883.3.1937.777.10.5.162#IV "静脈内"
