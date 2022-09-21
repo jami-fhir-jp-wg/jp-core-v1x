@@ -723,7 +723,7 @@ HL7表0550 身体部位("http://terminology.hl7.org/CodeSystem/v2-0550")とHL7�
         "valueCodeableConcept": {
           "coding": [
             {
-              "system": "http://sample.com/CodeSystem/MedicationRequest-line",
+              "system": "http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationRequestDosageInstructionLine_CS",
               "code": "01",
               "display": "末梢ルートメイン１"
             }

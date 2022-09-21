@@ -616,27 +616,16 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     "resourceType": "MedicationRequest",
     "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:6</li><li>プレドニン錠５ｍｇ</li><li>１日１回　朝食後　１回４錠　７日分</li></ul></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:1</li><li>プレドニン錠５ｍｇ</li><li>１日１回　朝食後　１回４錠　７日分</li></ul></div>"
     },
-    "extension": [
-      {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration",
-        "valueDuration": {
-          "value": 7,
-          "unit": "日",
-          "system": "http://unitsofmeasure.org",
-          "code": "d"
-        }
-      }
-    ],
     "identifier": [
         {
-            "system": "http://www.sample.com/fhir/medication-request",
+            "system": "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier",
             "value": "1234567890"
         },
         {
             "system": "urn:oid:1.2.392.100495.20.3.81",
-            "value": "6"
+            "value": "1"
         },
         {
             "system": "urn:oid:1.2.392.100495.20.3.82",
@@ -660,6 +649,17 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     "authoredOn": "2020-08-21T12:28:17+09:00",
     "dosageInstruction": [
       {
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration",
+            "valueDuration": {
+              "value": 7,
+              "unit": "日",
+              "system": "http://unitsofmeasure.org",
+              "code": "d"
+            }
+          }
+        ],
         "text": "内服・経口・１日１回朝食後　１回４錠　７日分",
         "timing": {
           "repeat": {
@@ -683,7 +683,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
         "route": {
           "coding": [
             {
-              "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
+              "system": "http://jpfhir.jp/fhir/Common/CodeSystem/route-codes",
               "code": "PO",
               "display": "口"
             }
@@ -761,23 +761,16 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     "resourceType": "MedicationRequest",
     "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:7</li><li>プレドニン錠５ｍｇ</li><li>１日１回　昼食後　１回２錠　７日分</li></ul></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:2</li><li>プレドニン錠５ｍｇ</li><li>１日１回　昼食後　１回２錠　７日分</li></ul></div>"
     },
-    "extension": [
-      {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration",
-        "valueDuration": {
-          "value": 7,
-          "unit": "日",
-          "system": "http://unitsofmeasure.org",
-          "code": "d"
-        }
-      }
-    ],
     "identifier": [
       {
+        "system": "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier",
+        "value": "1234567890"
+      },
+      {
         "system": "urn:oid:1.2.392.100495.20.3.81",
-        "value": "7"
+        "value": "2"
       },
       {
         "system": "urn:oid:1.2.392.100495.20.3.82",
@@ -801,6 +794,17 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     "authoredOn": "2020-08-21T12:28:17+09:00",
     "dosageInstruction": [
       {
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration",
+            "valueDuration": {
+              "value": 7,
+              "unit": "日",
+              "system": "http://unitsofmeasure.org",
+              "code": "d"
+            }
+          }
+        ],
         "text": "内服・経口・１日１回昼食後　１回２錠　７日分",
         "timing": {
           "repeat": {
@@ -824,7 +828,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
         "route": {
           "coding": [
             {
-              "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
+              "system": "http://jpfhir.jp/fhir/Common/CodeSystem/route-codes",
               "code": "PO",
               "display": "口"
             }
@@ -902,23 +906,16 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     "resourceType": "MedicationRequest",
     "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:8</li><li>プレドニン錠５ｍｇ</li><li>１日１回　夕食後　１回１錠　７日分</li></ul></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:3</li><li>プレドニン錠５ｍｇ</li><li>１日１回　夕食後　１回１錠　７日分</li></ul></div>"
     },
-    "extension": [
-      {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration",
-        "valueDuration": {
-          "value": 7,
-          "unit": "日",
-          "system": "http://unitsofmeasure.org",
-          "code": "d"
-        }
-      }
-    ],
     "identifier": [
       {
+        "system": "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier",
+        "value": "1234567890"
+      },
+      {
         "system": "urn:oid:1.2.392.100495.20.3.81",
-        "value": "8"
+        "value": "3"
       },
       {
         "system": "urn:oid:1.2.392.100495.20.3.82",
@@ -942,6 +939,17 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     "authoredOn": "2020-08-21T12:28:17+09:00",
     "dosageInstruction": [
       {
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration",
+            "valueDuration": {
+              "value": 7,
+              "unit": "日",
+              "system": "http://unitsofmeasure.org",
+              "code": "d"
+            }
+          }
+        ],
         "text": "内服・経口・１日１回夕食後　１回１錠　７日分",
         "timing": {
           "repeat": {
@@ -965,7 +973,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
         "route": {
           "coding": [
             {
-              "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
+              "system": "http://jpfhir.jp/fhir/Common/CodeSystem/route-codes",
               "code": "PO",
               "display": "口"
             }
@@ -1045,12 +1053,16 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
   "resourceType": "MedicationRequest",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:9</li>プレドニン錠５ｍｇ</ul><li>１日３回　毎食後（４錠－２錠－１錠）　７日分</li></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:4</li>プレドニン錠５ｍｇ</ul><li>１日３回　毎食後（４錠－２錠－１錠）　７日分</li></div>"
   },
   "identifier": [
     {
+      "system": "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier",
+      "value": "1234567890"
+    },
+    {
       "system": "urn:oid:1.2.392.100495.20.3.81",
-      "value": "9"
+      "value": "4"
     },
     {
       "system": "urn:oid:1.2.392.100495.20.3.82",
@@ -1126,7 +1138,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
       "route": {
         "coding": [
           {
-            "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
+            "system": "http://jpfhir.jp/fhir/Common/CodeSystem/route-codes",
             "code": "PO",
             "display": "口"
           }

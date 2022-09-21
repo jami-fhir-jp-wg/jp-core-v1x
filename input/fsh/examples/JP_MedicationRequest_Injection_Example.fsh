@@ -5,11 +5,10 @@ Description: "注射処方指示 ホリゾン注射液１０ｍｇワンショ�
 Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-1
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-1
-* contained[+] = jp-medicationrequest-injection-device-example-1
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[rpNumber].value = "1"
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
-* identifier[requestIdentifier].value = "1234567890.1.1"
+* identifier[requestIdentifier].value = "1234567890.1"
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
@@ -20,8 +19,6 @@ Usage: #example
 * authoredOn = "2016-07-01T09:28:17+09:00"
 * requester = Reference(Practitioner/jp-practitioner-example-female-1)
 * insurance = Reference(Coverage/jp-coverage-example-1)
-* dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Device"
-* dosageInstruction.extension.valueReference = Reference(Device/jp-medicationrequest-injection-device-example-1)
 * dosageInstruction.additionalInstruction = urn:oid:1.2.392.200250.2.2.20.22#I1100000 "１日おき"
 * dosageInstruction.text = "静脈注射 静脈内 左腕 １日おき"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2016-07-01T10:00:00+09:00"
@@ -37,11 +34,12 @@ Usage: #example
 
 Instance: jp-medicationrequest-injection-example-2
 InstanceOf: JP_MedicationRequest_Injection
-Title: "JP Core MedicationRequest Injection Example 点滴注射"
+Title: "JP Core MedicationRequest Injection Example 注射処方指示 点滴注射"
 Description: "点滴注射"
 Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-2
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-2
+* contained[+] = jp-medicationrequest-injection-device-example-2
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[rpNumber].value = "2"
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
@@ -56,8 +54,10 @@ Usage: #example
 * authoredOn = "2016-07-01T07:28:17+09:00"
 * requester = Reference(Practitioner/jp-practitioner-example-female-1)
 * insurance = Reference(Coverage/jp-coverage-example-1)
-* dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line"
-* dosageInstruction.extension.valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
+* dosageInstruction.extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Device"
+* dosageInstruction.extension[=].valueReference = Reference(Device/jp-medicationrequest-injection-device-example-2)
+* dosageInstruction.extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line"
+* dosageInstruction.extension[=].valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
 * dosageInstruction.text = "主管 静脈注射 左腕"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2016-07-01T08:00:00+09:00"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2016-07-01T13:00:00+09:00"
@@ -65,10 +65,9 @@ Usage: #example
 * dosageInstruction.site.extension.valueReference = Reference(BodyStructure/jp-medicationrequest-injection-bodystructure-example-2)
 * dosageInstruction.route = http://jpfhir.jp/fhir/Common/CodeSystem/route-codes#IV "静脈内"
 * dosageInstruction.method = urn:oid:1.2.392.200250.2.2.20.30#3 "注射"
-* dosageInstruction.doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1
-* dosageInstruction.doseAndRate.doseQuantity = 510 'mL' "ミリリッター"
-* dosageInstruction.doseAndRate.rateRatio.numerator = 102 'mL' "ミリリッター"
-* dosageInstruction.doseAndRate.rateRatio.denominator = 1 'd' "日"
+* dosageInstruction.doseAndRate.doseQuantity = 510 'mL' "mL"
+* dosageInstruction.doseAndRate.rateRatio.numerator = 102 'mL' "mL"
+* dosageInstruction.doseAndRate.rateRatio.denominator = 1 'h' "時間"
 
 Instance: jp-medicationrequest-injection-medication-example-1
 InstanceOf: JP_Medication
@@ -91,9 +90,13 @@ Description: "ソリタ－＋アドナ注"
 Usage: #inline
 * status = #active
 * ingredient[0].itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#107750602 "ソリタ－Ｔ３号輸液５００ｍＬ"
+* ingredient[=].strength.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"
+* ingredient[=].strength.extension.valueCodeableConcept = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 * ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#HON "本"
 * ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
 * ingredient[+].itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#108010001 "アドナ注（静脈用）５０ｍｇ／１０ｍＬ"
+* ingredient[=].strength.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"
+* ingredient[=].strength.extension.valueCodeableConcept = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 * ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#AMP "アンプル"
 * ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
 
@@ -115,9 +118,9 @@ Usage: #inline
 * locationQualifier = http://terminology.hl7.org/CodeSystem/v2-0495#R "Right"
 * patient = Reference(Patient/jp-patient-example-1)
 
-Instance: jp-medicationrequest-injection-device-example-1
+Instance: jp-medicationrequest-injection-device-example-2
 InstanceOf: Device
-Title: "Device Example シリンジ"
-Description: "シリンジ"
+Title: "Device Example 点滴ポンプ"
+Description: "点滴ポンプ"
 Usage: #inline
-* type = http://abc-hospital.local/fhir/devide/local-device-type#01 "シリンジ"
+* type = http://terminology.hl7.org/CodeSystem/v2-0164#IVP "IV Pump"

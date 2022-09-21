@@ -359,9 +359,9 @@ performer.actorには、医療従事者(Practitioner)、または患者(Patient)
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "urn:oid:1.2.392.100495.20.2.51",
-            "code": "801",
-            "display": "肝胆外科"
+            "system": "http://jpfhir.jp/fhir/Common/CodeSystem/JP_Department_SsMix_CS",
+            "code": "01",
+            "display": "内科"
           }
         ]
       }
