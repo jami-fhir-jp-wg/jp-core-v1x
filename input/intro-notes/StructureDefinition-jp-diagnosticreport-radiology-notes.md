@@ -196,10 +196,10 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 本プロファイルそのものの定義には影響しないが、レポートの標準化に関し以下の情報が参考となる。presentedForm に収容するレポートのコンテンツを作成するレポーティングシステムにおいて、標準化に関する参考資料となる。
 
-- [RadReport][RadReport] - 放射線レポートテンプレート
-- [RadLex radiology lexicon][RadLex radiology lexicon] - 放射線科語彙集
-- [RadElement][RadElement] - 放射線関連共通データエレメント
-- [IHE Radiology Technical Framework][IHE Radiology Technical Framework] - 放射線関連テクニカルフレームワーク（放射線レポートおよびレポートテンプレートの取り扱いに関する仕様が含まれている）
+1. [RadReport][RadReport] - 放射線レポートテンプレート
+1. [RadLex radiology lexicon][RadLex radiology lexicon] - 放射線科語彙集
+1. [RadElement][RadElement] - 放射線関連共通データエレメント
+1. [IHE Radiology Technical Framework][IHE Radiology Technical Framework] - 放射線関連テクニカルフレームワーク（放射線レポートおよびレポートテンプレートの取り扱いに関する仕様が含まれている）
 
 {% include markdown-link-references.md %}
 {% include external-link-reference.md %}

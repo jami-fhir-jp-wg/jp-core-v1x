@@ -107,6 +107,6 @@
 
 ## その他、参考文献・リンク等
 
-- ICHI(International Classification of Health Interventions) [https://icd.who.int/dev11/l-ichi/en](https://icd.who.int/dev11/l-ichi/en)
+1. ICHI(International Classification of Health Interventions) [https://icd.who.int/dev11/l-ichi/en](https://icd.who.int/dev11/l-ichi/en)
 
 {% include markdown-link-references.md %}
