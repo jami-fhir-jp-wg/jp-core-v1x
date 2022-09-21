@@ -69,7 +69,7 @@ JP Core Location リソースで定義された拡張はない。
    例：
 
    ```
-   GET [base]/Location?address=〒113-0033東京都文京区本郷７丁目３−１
+   GET [base]/Location?address=東京都文京区本郷７丁目３−１
    ```
 
    住所文字列が一致するLocationリソースを含むBundleを取得する。
