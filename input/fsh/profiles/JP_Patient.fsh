@@ -20,7 +20,8 @@ Description: "このプロファイルはPatientリソースに対して、患�
 * extension[religion] ^comment = "患者の宗教をValueSet(v3.ReligiousAffiliation)より選択する。輸血や食事で考慮が必要な場合がある。 
 - 1013 キリスト教
 - 1020 ヒンドゥー教
-- 1023 イスラム教  
+- 1023 イスラム教
+
 など"
 * extension[birthPlace] ^short = "患者の生誕地 【詳細参照】"
 * extension[birthPlace] ^definition = "The registered place of birth of the patient. A system may use the address.text if they don't store the birthPlace address in discrete elements.\r\n患者の登録された出生地。システムは、birthPlaceアドレスを個別の要素に格納しない場合、address.textを使用してよい。"
@@ -34,7 +35,8 @@ Description: "このプロファイルはPatientリソースに対して、患�
 - 2108-9 ヨーロッパ人
 - 2110-5 英国人
 - 2111-3 フランス人
-- 2112-1 ドイツ人  
+- 2112-1 ドイツ人
+
 など"
 * identifier 1..
 * identifier ^short = "An identifier for this patient 【詳細参照】" 
@@ -60,7 +62,8 @@ IDの種別をValueSet(Identifier Type Codes)より選択する。
 - DL : 運転免許証番号
 - PPN : パスポート番号
 - BRN : 血統登録番号
-- MR : カルテ番号  
+- MR : カルテ番号
+
 など"
 * identifier.system ^short = "The namespace for the identifier value 【詳細参照】"
 * identifier.system ^comment = "Identifier.system is always case sensitive.  
@@ -123,7 +126,7 @@ FHIRデータ型仕様に従って、以下の内容を採用する。
 - work : 職場
 - temp : 一時的
 - old : 以前の
-- mobile モバイル機器"
+- mobile : モバイル機器"
 * telecom.rank ^comment = "Note that rank does not necessarily follow the order in which the contacts are represented in the instance.\r\n\r\n連絡先の使用順序（1 = 最高）"
 * telecom.period ^comment = "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).  
 連絡先が使用されていた/されている期間"
@@ -146,9 +149,11 @@ deceasedBooleanまたはdeceasedDateTimeのどちらかに値が入る
 * address ^short = "An address for the individual　個人の住所 【詳細参照】"
 * address ^definition = "An address for the individual.\r\n個人の住所。"
 * address ^comment = "Patient may have multiple addresses with different uses or applicable periods.\r\n患者は、異なる用途または適用可能な期間で複数の住所を持っている可能性がある。\r\n\r\n【JP Core仕様】FHIRデータ型仕様に従って、以下の案とした。  
-- 住所が構造化されている場合、住所パート Address.country、Address.postalcode、Address.state、Address.city、Address.line に分割して記載する。  
-- 住所が構造化されていない場合は、Address.text に記述する。  
-- 各住所パートとtext は、両方存在してもよい。\r\n※診療文書構造化記述規約等では、streetAddressLine (FHIRではlineに対応) に指定するとなっていた。"
+- 住所が構造化されている場合、住所パート Address.country、Address.postalcode、Address.state、Address.city、Address.line に分割して記載する
+- 住所が構造化されていない場合は、Address.text に記述する
+- 各住所パートとtext は、両方存在してもよい
+
+※診療文書構造化記述規約等では、streetAddressLine (FHIRではlineに対応) に指定するとなっていた。"
 * address.use ^short = "home | work | temp | old | billing - purpose of this address　住所の用途 【詳細参照】"
 * address.use ^definition = "The purpose of this address.\r\n住所の用途"
 * address.use ^comment = "Applications can assume that an address is current unless it explicitly says that it is temporary or old.\r\n\r\n住所の用途をValueSet(AddressUse)より選択する。  
@@ -239,9 +244,10 @@ multipleBirthBooleanまたはmultipleBirthIntegerのどちらかに値が入る
 * photo ^comment = "Guidelines:  
 - Use id photos, not clinical photos.  
 - Limit dimensions to thumbnail.  
-- Keep byte count low to ease resource updates  
+- Keep byte count low to ease resource updates
+
 ガイドライン：  
-- 臨床写真ではなく、身分証明写真を使用すること  
+- 臨床写真ではなく、身分証明写真を使用すること
 - 寸法をサムネイルに制限する  
 - リソースの更新を容易にするため、バイト数を少なくすること"
 * photo ^requirements = "Many EHR systems have the capability to capture an image of the patient. Fits with newer social media usage too.\r\n\r\n多くのEHRシステムには、患者の画像をキャプチャする機能がある。より新しいソーシャルメディアの使用にも適合する。"
@@ -309,7 +315,11 @@ Jurisdictions may decide that they can profile this down to 1 if desired, or 1 p
 * link ^short = "Link to another patient resource that concerns the same actual person　事実上の同一患者をリンクする別のPatientリソース"
 * link ^definition = "Link to another patient resource that concerns the same actual patient.\r\n\r\n事実上の同一患者をリンクする別のPatientリソース。"
 * link ^comment = "There is no assumption that linked patient records have mutual links.\r\n\r\nリンクされた患者記録に相互リンクがあるという仮定はない。"
-* link ^requirements = "There are multiple use cases:   \n\n* Duplicate patient records due to the clerical errors associated with the difficulties of identifying humans consistently, and \n* Distribution of patient information across multiple servers\r\n複数のユースケースがある。\n・事務的なエラーのため、一貫して人間を特定することが困難であり患者の記録が重複している。\n・複数のサーバにわたり患者情報が配布されている。"
+* link ^requirements = "There are multiple use cases:   \n\n* Duplicate patient records due to the clerical errors associated with the difficulties of identifying humans consistently, and \n* Distribution of patient information across multiple servers
+
+複数のユースケースがある。  
+- 事務的なエラーのため一貫して人間を特定することが困難であり患者の記録が重複している
+- 複数のサーバにわたり患者情報が配布されている"
 * link ^isModifierReason = "This element is labeled as a modifier because it might not be the main Patient resource, and the referenced patient should be used instead of this Patient record. This is when the link.type value is 'replaced-by'  この要素は、メインのPatientリソースではない可能性があるため、修飾子としてラベル付けされ、このPatientレコードの代わりに参照された患者を使用する必要がある。link.type値が 'replaced-by'の場合"
 * link.other only Reference(JP_Patient or RelatedPerson)
 * link.other ^definition = "The other patient resource that the link refers to.\r\n\r\nリンクが参照する他の患者リソース。"
