@@ -4,6 +4,7 @@ Title: "JP Core Procedure Codes Medical CodeSystem"
 Description: "処置のコード:医科診療行為マスタ"
 * ^url = $JP_ProcedureCodesMedical_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureCodesMedical_VS

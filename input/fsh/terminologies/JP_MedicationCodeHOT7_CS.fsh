@@ -6,6 +6,7 @@ Description: "医薬品HOT7コードのコードシステム"
 * ^identifier[=].value = "urn:oid:1.2.392.200119.4.403.2"
 * ^url = $JP_MedicationCodeHOT7_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 // * ^valueSet = $JP_MedicationCodeHOT7_VS

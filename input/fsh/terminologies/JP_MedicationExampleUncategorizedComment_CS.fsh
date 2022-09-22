@@ -4,6 +4,7 @@ Title: "JP Core MedicationAdministration Example Uncategorized Comment CodeSyste
 Description: "注射実施未分類コメントのコードシステム例"
 * ^url = $JP_MedicationExampleUncategorizedComment_CS
 * ^status = #active
+* ^experimental = true
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #example

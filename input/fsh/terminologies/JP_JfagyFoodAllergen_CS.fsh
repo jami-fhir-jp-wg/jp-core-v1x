@@ -4,6 +4,7 @@ Title: "JFAGY Food Allergen CodeSystem"
 Description: "JFAGY アレルゲンコード（食品）"
 * ^url = $JP_JfagyFoodAllergen_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #complete

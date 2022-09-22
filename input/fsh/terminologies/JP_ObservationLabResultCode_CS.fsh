@@ -4,6 +4,7 @@ Title: "JP Core Observation LabResult Code CodeSystem"
 Description: "Observation（検体検査結果）で使用する項目コード"
 * ^url = $JP_ObservationLabResultCode_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 // * ^valueSet = $JP_ObservationLabResultCode_VS

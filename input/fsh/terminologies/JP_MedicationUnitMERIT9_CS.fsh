@@ -6,6 +6,7 @@ Description: "MERIT9医薬品単位略号のコードシステム"
 * ^identifier[=].value = "urn:oid:1.2.392.100495.20.2.101"
 * ^url = $JP_MedicationUnitMERIT9_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #complete

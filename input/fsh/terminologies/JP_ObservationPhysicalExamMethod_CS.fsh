@@ -4,6 +4,7 @@ Title: "JP Core Observation PhysicalExam Method CodeSystem"
 Description: "Observation（身体所見）で使用する診察方法のコード"
 * ^url = $JP_ObservationPhysicalExamMethod_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationPhysicalExamMethod_VS

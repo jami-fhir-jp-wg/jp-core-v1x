@@ -4,6 +4,7 @@ Title: "JP Core Observation BodyMeasurement Code CodeSystem"
 Description: "Observation（身体計測）で使用する項目コードのコードシステム"
 * ^url = $JP_ObservationBodyMeasurementCode_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationBodyMeasurementCode_VS

@@ -6,6 +6,7 @@ Description: "JAMI標準用法規格表１基本用法区分のコードシス�
 * ^identifier[=].value = "urn:oid:1.2.392.200250.2.2.20.30"
 * ^url = $JP_MedicationMethodJAMIBasicUsage_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationMethodJAMIBasicUsage_VS

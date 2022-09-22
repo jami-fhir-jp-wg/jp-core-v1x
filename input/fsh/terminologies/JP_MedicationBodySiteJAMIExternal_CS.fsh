@@ -6,6 +6,7 @@ Description: "JAMI標準用法規格表１３外用部位コードのコード�
 * ^identifier[=].value = "urn:oid:1.2.392.200250.2.2.20.32"
 * ^url = $JP_MedicationBodySiteJAMIExternal_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationBodySiteJAMIExternal_VS

@@ -4,6 +4,7 @@ Title: "JP Core Medication Example DosageComment CodeSystem"
 Description: "注射用法コメントのコードシステム例"
 * ^url = $JP_MedicationExampleDosageComment_CS
 * ^status = #active
+* ^experimental = true
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #example

@@ -6,6 +6,7 @@ Description: "JAMI標準用法コードのコードシステム"
 * ^identifier[=].value = "urn:oid:1.2.392.200250.2.2.20.20"
 * ^url = $JP_MedicationUsageJAMI_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #fragment

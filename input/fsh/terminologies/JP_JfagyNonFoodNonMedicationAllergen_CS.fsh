@@ -4,6 +4,7 @@ Title: "JFAGY Non Food None Medication Allergen CodeSystem"
 Description: "JFAGY アレルゲンコード（非食品・非医薬品）"
 * ^url = $JP_JfagyNonFoodNonMedicationAllergen_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #complete

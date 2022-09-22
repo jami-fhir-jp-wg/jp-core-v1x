@@ -4,6 +4,7 @@ Title: "JP Core Observation VitalSigns Code CodeSystem"
 Description: "Observation（バイタルサイン）で使用する項目コード"
 * ^url = $JP_ObservationVitalSignsCode_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationVitalSignsCode_VS

@@ -4,6 +4,7 @@ Title: "JP Core Medication MERIT9 Category CodeSystem"
 Description: "MERIT9処方区分コードのコードシステム"
 * ^url = $JP_MedicationCategoryMERIT9_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationCategoryMERIT9_VS

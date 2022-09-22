@@ -4,6 +4,7 @@ Title: "JP Core MedicalLicenseCertificate CodeSystem"
 Description: "医療関連免許証明に関するコードシステム。（現在作成中、今後医療系免許に関する情報追加する予定です。）"
 * ^url = $JP_MedicalLicenseCertificate_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicalLicenseCertificate_VS

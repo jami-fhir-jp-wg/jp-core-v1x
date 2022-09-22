@@ -4,6 +4,7 @@ Title: "JP Core Practitioner Role CodeSystem"
 Description: "実施者のロール（役割・職種））を示すコード"
 * ^url = $JP_PractitionerRole_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_PractitionerRole_VS

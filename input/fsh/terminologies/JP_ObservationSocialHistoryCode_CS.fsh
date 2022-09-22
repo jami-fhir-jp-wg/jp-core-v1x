@@ -4,6 +4,7 @@ Title: "JP Core Observation SocialHistory Code CodeSystem"
 Description: "Observation（生活背景）で使用する項目コード、電子保存された診療録情報の交換のためのデータ項目セット([https://www2.medis.or.jp/master/jmix/file/tab1.pdf](https://www2.medis.or.jp/master/jmix/file/tab1.pdf))にて定義される"
 * ^url = $JP_ObservationSocialHistoryCode_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationSocialHistoryCode_VS

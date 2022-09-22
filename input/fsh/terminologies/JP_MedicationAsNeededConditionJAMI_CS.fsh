@@ -4,6 +4,7 @@ Title: "JP Core Medication JAMI As Needed Condition CodeSystem"
 Description: "JAMI標準用法規格頓用指示コードのコードシステム"
 * ^url = $JP_MedicationAsNeededConditionJAMI_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationAsNeededConditionJAMI_VS

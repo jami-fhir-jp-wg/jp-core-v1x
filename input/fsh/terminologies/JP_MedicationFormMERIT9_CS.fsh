@@ -4,6 +4,7 @@ Title: "JP Core Medication MERIT9 Form CodeSystem"
 Description: "MERIT9剤形コードのコードシステム"
 * ^url = $JP_MedicationFormMERIT9_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationFormMERIT9_VS

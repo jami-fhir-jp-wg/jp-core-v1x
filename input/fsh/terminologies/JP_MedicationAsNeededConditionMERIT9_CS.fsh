@@ -4,6 +4,7 @@ Title: "JP Core Medication MERIT9 As Needed Condition CodeSystem"
 Description: "MERIT9頓用指示コードのコードシステム"
 * ^url = $JP_MedicationAsNeededConditionMERIT9_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationAsNeededConditionMERIT9_VS

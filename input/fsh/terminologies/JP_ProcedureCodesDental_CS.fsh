@@ -4,6 +4,7 @@ Title: "JP Core Procedure Codes Dental CodeSystem"
 Description: "処置のコード:歯科診療行為マスタ"
 * ^url = $JP_ProcedureCodesDental_CS
 * ^status = #active
+* ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureCodesDental_VS
