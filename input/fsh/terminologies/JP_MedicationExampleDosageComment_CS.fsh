@@ -1,6 +1,6 @@
 CodeSystem: JP_MedicationExampleDosageComment_CS
 Id: jp-medication-example-dosagecomment-cs
-Title: "JP Medication Example DosageComment"
+Title: "JP Core Medication Example DosageComment CodeSystem"
 Description: "注射用法コメントのコードシステム例"
 * ^url = $JP_MedicationExampleDosageComment_CS
 * ^status = #active

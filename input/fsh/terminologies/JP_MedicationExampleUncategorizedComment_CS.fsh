@@ -1,6 +1,6 @@
 CodeSystem: JP_MedicationExampleUncategorizedComment_CS
 Id: jp-medication-example-uncategorized-comment-cs
-Title: "JP MedicationAdministration Example Uncategorized Comment"
+Title: "JP Core MedicationAdministration Example Uncategorized Comment CodeSystem"
 Description: "注射実施未分類コメントのコードシステム例"
 * ^url = $JP_MedicationExampleUncategorizedComment_CS
 * ^status = #active
