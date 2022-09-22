@@ -20,7 +20,7 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 
 | スライシング定義名 | 目的 | 指定方法 |
 | ---------------- | ---------------- | ---------------- |   
-| DrugUserQualification | 麻薬施用者免許番号を表現する | qualification.identifier.system = "urn:oid:1.2.392.100495.20.3.32.1[都道府県番号]" を指定し、麻薬取扱免許番号を同valueに格納する。<br/> [都道府県番号](https://www.mhlw.go.jp/topics/2007/07/dl/tp0727-1d.pdf)  |
+| narcoticPrescriptionLicenseNumber | 麻薬施用者免許番号を表現する | qualification.identifier.system = "urn:oid:1.2.392.100495.20.3.32.1[都道府県番号]" を指定し、麻薬取扱免許番号を同valueに格納する。<br/> [都道府県番号](https://www.mhlw.go.jp/topics/2007/07/dl/tp0727-1d.pdf)  |
 | MedicalRegistrationNumber | 医籍登録者番号を表現する | qualification.identifier.system = "urn:oid:1.2.392.100495.20.3.31" を指定し、医籍登録者番号を同valueに格納する。 |
 
 ## 利用方法
@@ -31,7 +31,7 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHALL            | identifier    | token  | GET [base]/Practitioner?identifier=http://myhospital.com/fhir/drid\|789 |
+| SHALL            | identifier    | token  | GET [base]/Practitioner?identifier=urn:oid:1.2.392.100495.20.3.41.11312345670\|789 |
 | SHALL            | name          | string | GET [base]/Practitioner?name=山田                            |
 
 ##### 必須検索パラメータ
@@ -47,7 +47,7 @@ JP Practitioner リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Practitioner?identifier=http://myhospital.com/fhir/drid|123456
+   GET [base]/Practitioner?identifier=urn:oid:1.2.392.100495.20.3.41.11312345670|123456
    ```
 
    指定された識別子(identifier)に一致するPractitionerリソースを含むBundleを検索する。
