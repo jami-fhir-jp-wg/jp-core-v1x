@@ -89,6 +89,7 @@ Alias: $JP_Server_CapabilityStatement = http://jpfhir.jp/fhir/core/CapabilitySta
 Alias: $JP_Coverage_InsuredPersonNumber_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonNumber_SP
 Alias: $JP_Coverage_InsuredPersonSubNumber_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSubNumber_SP
 Alias: $JP_Coverage_InsuredPersonSymbol_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSymbol_SP
+Alias: $JP_MedicationRequest_Start_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationRequest_Start_SP
 Alias: $JP_Organization_InsuranceOrganizationCategory_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationCategory_SP
 Alias: $JP_Organization_InsuranceOrganizationNo_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationNo_SP
 Alias: $JP_Organization_PrefectureNo_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_PrefectureNo_SP
