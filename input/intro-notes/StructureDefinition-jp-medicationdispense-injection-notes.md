@@ -15,88 +15,20 @@ MedicationDispense リソースに内包されるMedicationリソースでは、
 ### Extensions定義
 JP Core MedicationDispense Injectionプロファイルで使用される拡張は次の通りである。
 
-#### JP Core MedicationDispense Injection独自で追加されたExtension
-
-現在JP Core MedicationDispense Injection で追加されたExtensionはない。
-
-#### 既存のExtensionの利用
-
-JP Core MedicationRequest InjectionやJP Core MedicationDispense で追加された以下のExtensionを利用する。
-
-<table class="extension_description">
-  <tr>
-    <th>拡張</th>
-    <th>説明</th>
-    <th>URL</th>
-    <th>値の型</th>
-  </tr>
-  <tr>
-    <td>指示ライン</td>
-    <td>指示ラインを格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line</td>
-    <td>CodeableConcept</td>
-  </tr>
-  <tr>
-    <td>投与装置</td>
-    <td>投与装置を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Device</td>
-    <td>Reference (Device)</td>
-  </tr>
-  <tr>
-    <td>RP内薬剤番号</td>
-    <td>RP内の薬剤の連番を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo</td>
-    <td>integer</td>
-  </tr>
-  <tr>
-    <td>力価区分</td>
-    <td>投与量が製剤単位か成分単位かを格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Strength_StrengthType</td>
-    <td>CodeableConcept</td>
-  </tr>
-  <tr>
-    <td>調剤結果</td>
-    <td>薬剤単位の調剤結果</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation</td>
-    <td>CodeableConcept</td>
-  </tr>
-  <tr>
-    <td>投与経路コメント</td>
-    <td>投与経路コメントを格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_RouteComment</td>
-    <td>CodeableConcept/String</td>
-  </tr>
-  <tr>
-    <td>投与部位コメント</td>
-    <td>投与部位コメントを格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_SiteComment</td>
-    <td>CodeableConcept/String</td>
-  </tr>
-  <tr>
-    <td>手技コメント</td>
-    <td>手技コメントを格納するための拡張<</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_MethodComment</td>
-    <td>CodeableConcept/String</td>
-  </tr>
-  <tr>
-    <td>ラインコメント</td>
-    <td>ラインコメントを格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_LineComment</td>
-    <td>CodeableConcept/String</td>
-  </tr>
-  <tr>
-    <td>投与速度コメント</td>
-    <td>投与速度コメントを格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_RateComment</td>
-    <td>CodeableConcept/String</td>
-  </tr>
-  <tr>
-    <td>用法コメント</td>
-    <td>用法コメントを格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_DosageComment</td>
-    <td>CodeableConcept/String</td>
-  </tr>
-</table>
+|拡張|説明|定義|値型|
+|:----|:----|:----|:----|
+|調剤結果|薬剤単位の調剤結果|[JP_MedicationDispense_Preparation]|CodeableConcept|
+|RP内薬剤番号|RP内の薬剤の連番を格納する拡張<br/>《medicationReference配下》|[JP_Medication_Ingredient_DrugNo]|integer|
+|力価区分|投与量が製剤単位か成分単位かを格納する拡張<br/>《medicationReference配下》|[JP_Medication_IngredientStrength_StrengthType]|CodeableConcept|
+|用法コメント|用法コメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_DosageComment]|CodeableConcept/String|
+|指示ライン|指示ラインを格納する拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_Line]|CodeableConcept|
+|ラインコメント|ラインコメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_LineComment]|CodeableConcept/String|
+|投与装置|投与装置を格納する拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_Device]|Reference (Device)|
+|投与経路コメント|投与経路コメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_RouteComment]|CodeableConcept/String|
+|投与部位詳細|投与部位詳細を格納するための拡張<br/>《dosageInstruction配下》|[bodySite(hl7.org)](http://hl7.org/fhir/R4/extension-bodysite.html)|Reference (BodyStructure)|
+|投与部位コメント|投与部位コメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_SiteComment]|CodeableConcept/String|
+|手技コメント|手技コメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_MethodComment]|CodeableConcept/String|
+|投与速度コメント|投与速度コメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_RateComment]|CodeableConcept/String|
 
 
 ### 用語定義
@@ -113,7 +45,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 |医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
 |剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationFormMERIT9_CS|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
-|力価区分|電子処方箋HL7 FHIR仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
+|力価区分|処方情報 HL7FHIR 記述仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
 |用法|JAMI処方・注射オーダ標準用法規格(用法コード) |urn:oid:1.2.392.200250.2.2.20.20|
 |頓用条件|MERIT-9(頓用指示)|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS|
 |投与部位|JAMI処方・注射オーダ標準用法規格(部位コード)|urn:oid:1.2.392.200250.2.2.20.32|
@@ -134,7 +66,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 * RP番号の追加（identifierを使用）
 * 薬剤番号（拡張「JP_Medication_Ingredient_DrugNo」を使用）
 * 施用番号の追加（dosageInstruction.sequenceを使用）
-* ⼒価区分の追加（拡張「JP_Medication_Strength_StrengthType」を使用）
+* ⼒価区分の追加（拡張「JP_Medication_IngredientStrength_StrengthType」を使用）
 
 ## 利用方法
 
@@ -170,7 +102,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationDispenseの検索をサポートすることが望ましい（SHOULD）。
+1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationDispenseの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationDispense?patient=[id]
@@ -185,7 +117,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
    リソースIDが123456の患者のMedicationDispenseリソースを含むBundleを検索する。
 
-1. patient,whenhandedover 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationDispenseの検索をサポートすることが望ましい（SHOULD）。
+1. patient,whenhandedover 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationDispenseの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationDispense?patient=[id]&whenhandedover=[date]
@@ -389,7 +321,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 ```
 
 ### 力価区分の記述方法
-用量は製剤量で記述することを基本とするが、必要に応じて原薬量指定も可能とする。この識別は、Medication.ingredient.strength要素に対して定義した拡張「JP_Medication_Strength_StrengthType」を使用する。この拡張を識別するURIとして、"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Strength_StrengthType"を使用し、値はCodeableConcept型を使用して力価区分コード（urn:oid:1.2.392.100495.20.2.22）を指定することで行い、製剤量は「1」、原薬量は「2」とする。
+用量は製剤量で記述することを基本とするが、必要に応じて原薬量指定も可能とする。この識別は、Medication.ingredient.strength要素に対して定義した拡張「JP_Medication_IngredientStrength_StrengthType」を使用する。この拡張を識別するURIとして、"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"を使用し、値はCodeableConcept型を使用して力価区分コード（urn:oid:1.2.392.100495.20.2.22）を指定することで行い、製剤量は「1」、原薬量は「2」とする。
 
 投与量「１本」を製剤量で記録したインスタンス例を示す。
 
@@ -408,7 +340,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
     "strength": {
       "extension": [
         {
-          "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Strength_StrengthType",
+          "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType",
           "valueCodeableConcept": {
             "coding": [
               {

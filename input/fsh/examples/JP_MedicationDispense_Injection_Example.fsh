@@ -5,8 +5,7 @@ Description: "調剤実施 注射薬"
 Usage: #example
 * contained[0] = jp-medicationdispense-injection-medication-example-1
 * contained[+] = jp-medicationdispense-injection-bodystructure-example-1
-* contained[+] = jp-medicationdispense-injection-device-example-1
-* identifier[0].system = "http://www.sample.com/fhir/medication-dispense"
+* identifier[0].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
 * identifier[=].value = "1234567890"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[=].value = "1"
@@ -22,13 +21,10 @@ Usage: #example
 * whenPrepared = "2021-10-07T10:47:19+09:00"
 * whenHandedOver = "2021-10-07T10:55:23+09:00"
 * destination = Reference(Location/jp-location-example-ward)
-* dosageInstruction.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Device"
-* dosageInstruction.extension.valueReference = Reference(jp-medicationdispense-injection-device-example-1)
-* dosageInstruction.extension.valueReference.type = "Device"
 * dosageInstruction.additionalInstruction = urn:oid:1.2.392.200250.2.2.20.22#I1100000 "１日おき"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2016-07-01T10:00:00+09:00"
 * dosageInstruction.text = "ワンショット 静脈注射 静脈内"
-* dosageInstruction.site.extension.url = "http://hl7.org/fhir/StructureDefinition/bodySite"
+* dosageInstruction.site.extension.url = $bodySite
 * dosageInstruction.site.extension.valueReference = Reference(jp-medicationdispense-injection-bodystructure-example-1)
 * dosageInstruction.site.extension.valueReference.type = "BodyStructure"
 * dosageInstruction.route = urn:oid:2.16.840.1.113883.3.1937.777.10.5.162#IV "静脈内"
@@ -55,8 +51,3 @@ Usage: #inline
 * location = http://terminology.hl7.org/CodeSystem/v2-0550#ARM "Arm"
 * locationQualifier = http://terminology.hl7.org/CodeSystem/v2-0495#L "Left"
 * patient = Reference(Patient/jp-patient-example-1)
-
-Instance: jp-medicationdispense-injection-device-example-1
-InstanceOf: Device
-Usage: #inline
-* type = http://abc-hospital.local/fhir/devide/local-device-type#01 "シリンジ"

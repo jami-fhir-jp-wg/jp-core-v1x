@@ -100,6 +100,7 @@
 [JP_Coverage_InsuredPersonNumber_SP]: SearchParameter-jp-coverage-insuredpersonnumber-sp.html
 [JP_Coverage_InsuredPersonSubNumber_SP]: SearchParameter-jp-coverage-insuredpersonsubnumber-sp.html
 [JP_Coverage_InsuredPersonSymbol_SP]: SearchParameter-jp-coverage-insuredpersonsymbol-sp.html
+[JP_MedicationRequest_Start_SP]: SearchParameter-jp-medicationrequest-start-sp.html
 [JP_Organization_InsuranceOrganizationCategory_SP]: SearchParameter-jp-organization-insuranceorganizationcategory-sp.html
 [JP_Organization_InsuranceOrganizationNo_SP]: SearchParameter-jp-organization-insuranceorganizationno-sp.html
 [JP_Organization_PrefectureNo_SP]: SearchParameter-jp-organization-prefectureno-sp.html

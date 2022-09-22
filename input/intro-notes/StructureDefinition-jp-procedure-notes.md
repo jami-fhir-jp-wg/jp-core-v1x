@@ -38,7 +38,7 @@
 
 ##### 推奨検索パラメータ
 
-本プロファイルに準拠するためには、以下の検索パラメータをサポートすることが推奨される（SHOULD）
+本プロファイルに準拠するためには、以下の検索パラメータをサポートすることが推奨される（**SHOULD**）
 
 1. 検索パラメータpatientとdateを指定し、該当するすべてのProcedureを検索。
 
@@ -107,6 +107,6 @@
 
 ## その他、参考文献・リンク等
 
-- ICHI(International Classification of Health Interventions) [https://icd.who.int/dev11/l-ichi/en](https://icd.who.int/dev11/l-ichi/en)
+1. ICHI(International Classification of Health Interventions) [https://icd.who.int/dev11/l-ichi/en](https://icd.who.int/dev11/l-ichi/en)
 
 {% include markdown-link-references.md %}

@@ -1,6 +1,6 @@
 ValueSet: JP_MedicationExampleRateComment_VS
 Id: jp-medication-example-ratecomment-vs
-Title: "JP Medication Example RateComment"
+Title: "JP Core Medication Example RateComment ValueSet"
 Description: "注射投与速度コメントの値セット例"
 * ^url = $JP_MedicationExampleRateComment_VS
 * ^status = #active

@@ -12,11 +12,11 @@ JP Core Immunization リソースで使用される拡張は次の通りであ�
 
 #### JP Core Immunization独自で追加されたExtension
 
-|拡張|説明|URL|値の型|
-|------------|-------------|----------|-----|
-| DueDateOfNextDose | 次回接種予定日 | http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose |dateTime|
-| ManufacturedDate | 製造年月日 | http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate |dateTime |
-| CertificatedDate | 検定年月日 | http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate |dateTime |
+|拡張|説明|定義|値型|
+|:----|:----|:----|:----|
+| DueDateOfNextDose | 次回接種予定日 | [JP_Immunization_DueDateOfNextDose] |dateTime|
+| ManufacturedDate | 製造年月日 | [JP_Immunization_ManufacturedDate] |dateTime |
+| CertificatedDate | 検定年月日 | [JP_Immunization_CertificatedDate] |dateTime |
 
 #### 既存のExtensionの利用
 
@@ -58,7 +58,7 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（**SHALL**）。
 
    ```
    GET [base]/Immunization?identifier={system|}[code]
@@ -77,7 +77,7 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. patient 検索パラメータを使用して、患者のリファレンス情報によるImmunizationの検索をサポートすることが望ましい（SHOULD）。
+1. patient 検索パラメータを使用して、患者のリファレンス情報によるImmunizationの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/Immunization?patient=[id]
@@ -92,7 +92,7 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
    リソースIDが123456の患者のImmunizationリソースを含むBundleを検索する。
 
-1. patient,date 検索パラメータを使用して、患者のリファレンス情報と接種日によるImmunizationの検索をサポートすることが望ましい（SHOULD）。
+1. patient,date 検索パラメータを使用して、患者のリファレンス情報と接種日によるImmunizationの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/Immunization?patient=[id]&date=[date]
@@ -395,8 +395,8 @@ MEDIS標準病名マスターの病名交換用コード("urn:oid:1.2.392.200119
 1. 予防接種台帳, [https://www.mhlw.go.jp/content/10906000/000588379.pdf](https://www.mhlw.go.jp/content/10906000/000588379.pdf)
 1. マイナポータル, [https://myna.go.jp/html/api/selfinfo/R4-6/B-084_R4-6.xlsx](https://myna.go.jp/html/api/selfinfo/R4-6/B-084_R4-6.xlsx)
 1. 新型コロナワクチン接種証明書アプリ, [https://www.digital.go.jp/policies/vaccinecert/faq_06](https://www.digital.go.jp/policies/vaccinecert/faq_06)
-2. Mike Henderson, 日本HL7協会監修、「HL7メッセージ交換」、第2版、インナービジョン社、2013年
-3. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, [http://www2.medis.or.jp/hcode/](http://www2.medis.or.jp/hcode/)
-4. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)
+1. Mike Henderson, 日本HL7協会監修、「HL7メッセージ交換」、第2版、インナービジョン社、2013年
+1. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, [http://www2.medis.or.jp/hcode/](http://www2.medis.or.jp/hcode/)
+1. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)
 
 {% include markdown-link-references.md %}

@@ -37,8 +37,6 @@ ObservationリソースのOperation一覧の定義はユースケースに依存
 
 ### サンプル
 
-
 * [**バイタル（呼吸数）**][jp-observation-vitalsigns-example-1]
-
 
 {% include markdown-link-references.md %}

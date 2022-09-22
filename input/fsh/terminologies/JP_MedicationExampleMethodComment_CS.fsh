@@ -1,6 +1,6 @@
 CodeSystem: JP_MedicationExampleMethodComment_CS
 Id: jp-medication-example-methodcomment-cs
-Title: "JP Medication Example MethodComment"
+Title: "JP Core Medication Example MethodComment CodeSystem"
 Description: "注射手技コメントのコードシステム例"
 * ^url = $JP_MedicationExampleMethodComment_CS
 * ^status = #active

@@ -1,6 +1,6 @@
 CodeSystem: JP_MedicationExampleRateComment_CS
 Id: jp-medication-example-ratecomment-cs
-Title: "JP Medication Example RateComment"
+Title: "JP Core Medication Example RateComment CodeSystem"
 Description: "注射投与速度コメントのコードシステム例"
 * ^url = $JP_MedicationExampleRateComment_CS
 * ^status = #active

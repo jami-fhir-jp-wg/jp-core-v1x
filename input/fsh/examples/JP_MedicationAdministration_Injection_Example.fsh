@@ -5,7 +5,6 @@ Description: "注射実施 ワンショット静脈注射"
 Usage: #example
 * contained[0] = jp-medicationadministration-injection-medication-example-1
 * contained[+] = jp-medicationadministration-injection-bodystructure-example-1
-* contained[+] = jp-medicationadministration-injection-device-example-1
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment"
 * extension[=].valueCodeableConcept = urn:oid:1.2.392.100495.20.2.51#01 "内科"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester"
@@ -14,7 +13,7 @@ Usage: #example
 * extension[=].valueDateTime = "2016-07-01T00:00:00+09:00"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location"
 * extension[=].valueReference = Reference(Location/jp-location-example-ward) "09A病棟 021病室 4ベッド"
-* identifier[0].system = "http://www.example.com/fhir/order-number"
+* identifier[0].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
 * identifier[=].value = "123456789012345.1"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[=].value = "1"
@@ -29,13 +28,12 @@ Usage: #example
 * performer.function = http://terminology.hl7.org/CodeSystem/med-admin-perform-function#performer "Performer"
 * performer.actor = Reference(Practitioner/jp-practitioner-example-male-1) "愛知 太郎"
 * request = Reference(MedicationRequest/jp-medicationrequest-injection-example-1)
-* device = Reference(Device/jp-medicationadministration-injection-device-example-1) "シリンジ"
 * dosage.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_DosageComment"
 * dosage.extension.valueString = "痙攣が発生したため、主治医に確認の上実施しました"
-* dosage.site.extension[0].url = "http://hl7.org/fhir/StructureDefinition/bodySite"
-* dosage.site.extension[=].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-1) "右腕"
-* dosage.site.extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_SiteComment"
-* dosage.site.extension[=].valueString = "左利きのため"
+* dosage.site.extension[bodySite].url = $bodySite
+* dosage.site.extension[bodySite].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-1) "右腕"
+* dosage.site.extension[siteComment].url = $JP_MedicationDosage_SiteComment
+* dosage.site.extension[siteComment].valueString = "左利きのため"
 * dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
 * dosage.method.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_MethodComment"
 * dosage.method.extension.valueString = "１分ほどかけて緩徐に行いました"
@@ -49,15 +47,16 @@ Description: "注射実施 点滴注射"
 Usage: #example
 * contained[0] = jp-medicationadministration-injection-medication-example-2
 * contained[+] = jp-medicationadministration-injection-bodystructure-example-2
+* contained[+] = jp-medicationadministration-injection-device-example-2
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment"
-* extension[=].valueCodeableConcept = urn:oid:1.2.392.100495.20.2.51#01 "内科"
+* extension[=].valueCodeableConcept = $JP_Department_SsMix_CS#01 "内科"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester"
 * extension[=].valueReference = Reference(Practitioner/jp-practitioner-example-female-1) "東京 春子"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn"
 * extension[=].valueDateTime = "2016-07-01T00:00:00+09:00"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location"
 * extension[=].valueReference = Reference(Location/jp-location-example-ward) "09A病棟 021病室 4ベッド"
-* identifier[0].system = "http://www.example.com/fhir/order-number"
+* identifier[0].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
 * identifier[=].value = "123456789012345.2"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[=].value = "2"
@@ -72,10 +71,11 @@ Usage: #example
 * performer.function = http://terminology.hl7.org/CodeSystem/med-admin-perform-function#performer "Performer"
 * performer.actor = Reference(Practitioner/jp-practitioner-example-female-1) "福岡 花子"
 * request = Reference(MedicationRequest/jp-medicationrequest-injection-example-2)
+* device = Reference(Device/jp-medicationadministration-injection-device-example-2) "IV Pump"
 * dosage.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line"
 * dosage.extension.valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
-* dosage.site.extension.url = "http://hl7.org/fhir/StructureDefinition/bodySite"
-* dosage.site.extension.valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-2) "左腕"
+* dosage.site.extension[bodySite].url = $bodySite
+* dosage.site.extension[bodySite].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-2) "左腕"
 * dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
 * dosage.method = urn:oid:1.2.392.200250.2.2.20.40#31 "中心静脈注射"
 * dosage.dose = 510 'mL' "mL"
@@ -123,7 +123,9 @@ Usage: #inline
 * locationQualifier = http://terminology.hl7.org/CodeSystem/v2-0495#L "Left"
 * patient = Reference(Patient/jp-patient-example-1)
 
-Instance: jp-medicationadministration-injection-device-example-1
+Instance: jp-medicationadministration-injection-device-example-2
 InstanceOf: Device
+Title: "Device Example 点滴ポンプ"
+Description: "点滴ポンプ"
 Usage: #inline
-* type = http://abc-hospital.local/fhir/devide/local-device-type#01 "シリンジ"
+* type = http://terminology.hl7.org/CodeSystem/v2-0164#IVP "IV Pump"

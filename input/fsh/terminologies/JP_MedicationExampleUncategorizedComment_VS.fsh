@@ -1,6 +1,6 @@
 ValueSet: JP_MedicationExampleUncategorizedComment_VS
 Id: jp-medication-example-uncategorized-comment-vs
-Title: "JP MedicationAdministration Example Uncategorized Comment"
+Title: "JP Core MedicationAdministration Example Uncategorized Comment ValueSet"
 Description: "注射実施未分類コメントの値セット例"
 * ^url = $JP_MedicationExampleUncategorizedComment_VS
 * ^status = #active

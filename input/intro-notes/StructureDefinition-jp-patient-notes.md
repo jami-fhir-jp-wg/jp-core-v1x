@@ -1,8 +1,5 @@
 ### 必須要素
 
-次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
-
-
 Patient リソースは、次の要素を持たなければならない。
 
 - identifier ：患者を識別するための識別子は必須要素であり、identifier.value が必ず存在しなければならない。また、identifierの名前空間を表すidentifier.systemも組み合わせて、医療機関固有の患者番号を表現することが一般的である。
@@ -11,11 +8,11 @@ Patient リソースは、次の要素を持たなければならない。
 
 JP Patient リソースで使用される拡張は次の通りである。
 
-- [religion](http://hl7.org/fhir/StructureDefinition/patient-religion)
+- [religion](https://hl7.org/fhir/R4/extension-patient-religion.html)
 
   - 患者の宗教を表す。
 
-- [birthPlace](http://hl7.org/fhir/StructureDefinition/patient-birthPlace)
+- [birthPlace](https://hl7.org/fhir/R4/extension-patient-birthplace.html)
 
   - 患者の生誕地を表す。Address型を使って表現するため、すべての住所情報あるいは、都道府県名のみの情報(Address.state)だけを格納するということも可能である。
 
@@ -67,7 +64,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. name 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
+1. name 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（**SHOULD**）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
 
    ```
    GET [base]/Patient?name={string}
@@ -81,7 +78,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 
 
 
-2. birthdate, name 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
+2. birthdate, name 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（**SHOULD**）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
 
    ```
    GET [base]/Patient?birthdate=eq{date}&name={string}
@@ -94,7 +91,7 @@ JP Patient リソースで使用される拡張は次の通りである。
    ```
 
 
-3. birthdate, gender 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。
+3. birthdate, gender 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/Patient?birthdate=eq{date}&gender={code}
@@ -106,7 +103,7 @@ JP Patient リソースで使用される拡張は次の通りである。
    GET [base]/Patient?birthdate=eq2000-10-10&gender=male
    ```
 
-4. birthdate, name, gender 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
+4. birthdate, name, gender 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（**SHOULD**）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
 
    ```
    GET [base]/Patient?birthdate=eq{date}&name={string}&gender={code}
@@ -118,7 +115,7 @@ JP Patient リソースで使用される拡張は次の通りである。
    GET [base]/Patient?birthdate=eq2000-10-10&name=山田%20太郎&gender=male
    ```
 
-5. name, phone 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
+5. name, phone 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（**SHOULD**）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
 
    ```
    GET [base]/Patient?name={string}&phone={token}
@@ -130,7 +127,7 @@ JP Patient リソースで使用される拡張は次の通りである。
    GET [base]/Patient?name=山田%20太郎&phone=0123456789
    ```
 
-6. name, address-postalcode 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（SHOULD）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。address-postalcodeはPatient.address.postalCode要素に対する検索パラメータであり、日本の住所表記における郵便番号をキーにして検索することを想定している。
+6. name, address-postalcode 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（**SHOULD**）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。address-postalcodeはPatient.address.postalCode要素に対する検索パラメータであり、日本の住所表記における郵便番号をキーにして検索することを想定している。
 
    ```
    GET [base]/Patient?name={string}&address-postalcode={string}
@@ -258,20 +255,10 @@ HTTP/1.1 200 OK
 
 ## その他、参考文献・リンク等
 
-・退院時サマリー規約
-[http://www.hl7.jp/library/item/HL7J-CDA-007.pdf](http://www.hl7.jp/library/item/HL7J-CDA-007.pdf)
-
-・診療情報提供書規格
-[http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf](http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf)
-
-・特定健診情報ファイル仕様
-[https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html)
-
-・SS-MIX2 標準化ストレージ 仕様書 Ver.1.2h
-[https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf](https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf)
-
-・ICSR E2B(R3)
-[https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)
-
+1. 退院時サマリー規約 [http://www.hl7.jp/library/item/HL7J-CDA-007.pdf](http://www.hl7.jp/library/item/HL7J-CDA-007.pdf)
+1. 診療情報提供書規格 [http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf](http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf)
+1. 特定健診情報ファイル仕様 [https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html)
+1. SS-MIX2 標準化ストレージ 仕様書 Ver.1.2h [https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf](https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf)
+1. ICSR E2B(R3) [https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)
 
 {% include markdown-link-references.md %}

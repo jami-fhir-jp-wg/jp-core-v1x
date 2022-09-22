@@ -143,6 +143,6 @@
 
 ## その他、参考文献・リンク等
 
-- HL70421 Severity of Illness Code ... JAHIS データ交換規約（共通編）Ver1.3 p.119 [https://www.jahis.jp/files/user/04_JAHIS%20standard/22-003_JAHIS%20データ交換規約（共通編）Ver.1.3.pdf](https://www.jahis.jp/files/user/04_JAHIS%20standard/22-003_JAHIS%20データ交換規約（共通編）Ver.1.3.pdf)
+1. HL70421 Severity of Illness Code ... JAHIS データ交換規約（共通編）Ver1.3 p.119 [https://www.jahis.jp/files/user/04_JAHIS%20standard/22-003_JAHIS%20データ交換規約（共通編）Ver.1.3.pdf](https://www.jahis.jp/files/user/04_JAHIS%20standard/22-003_JAHIS%20データ交換規約（共通編）Ver.1.3.pdf)
 
 {% include markdown-link-references.md %}

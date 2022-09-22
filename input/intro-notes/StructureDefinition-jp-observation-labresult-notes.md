@@ -40,13 +40,13 @@
 
 ##### 必須検索パラメータ
 
-このプロファイルでは必須（SHALL）としての検索項目は定義していない。
+このプロファイルでは必須（**SHALL**）としての検索項目は定義していない。
 
 ##### 推奨検索パラメータ
 
-次の検索パラメータはサポートすることが推奨される。（SHOULD）
+次の検索パラメータはサポートすることが推奨される。（**SHOULD**）
 
-1. 臨床での検索：`subject = Patient`（対象患者）、検体採取日、検査項目、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。（SHOULD）
+1. 臨床での検索：`subject = Patient`（対象患者）、検体採取日、検査項目、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。（**SHOULD**）
 
 
 patient,code,date,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
@@ -61,7 +61,7 @@ patient,code,date,based-on の各検索パラメータに一致するObservation
    GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&based-on=ServiceRequest/456
    ```
 
-2. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（数値、条件：基準値から外れている、等）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(SHOULD)
+2. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（数値、条件：基準値から外れている、等）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(**SHOULD**)
 
 patient,code,date,value-quantity,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
@@ -75,7 +75,7 @@ patient,code,date,value-quantity,based-on の各検索パラメータに一致�
    GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&value-quantity=gt40&based-on=ServiceRequest/456
    ```
 
-3. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（コード）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(SHOULD)
+3. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（コード）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(**SHOULD**)
 
 patient,code,date,value-concept,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
@@ -90,7 +90,7 @@ patient,code,date,value-concept,based-on の各検索パラメータに一致す
    ```
 
 
-4. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（文字列）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(SHOULD)
+4. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（文字列）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(**SHOULD**)
 
 patient,code,date,value-string,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
@@ -104,7 +104,7 @@ patient,code,date,value-string,based-on の各検索パラメータに一致す�
    GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&value-string=positive&based-on=ServiceRequest/456
    ```
 
-5. 研究での検索：検査項目、検査値（数値、条件：ある値以上／以下、等）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(SHOULD)
+5. 研究での検索：検査項目、検査値（数値、条件：ある値以上／以下、等）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(**SHOULD**)
 
 code,value-quantity,patient の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
@@ -118,7 +118,7 @@ code,value-quantity,patient の各検索パラメータに一致するObservatio
    GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value-quantity=gt40&patient=123
    ```
 
-6. 研究での検索：検査項目、検査値（コード）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(SHOULD)
+6. 研究での検索：検査項目、検査値（コード）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(**SHOULD**)
 
 code,value-concept,patient の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
@@ -132,7 +132,7 @@ code,value-concept,patient の各検索パラメータに一致するObservation
    GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value-concept=http://jpfhir.jp/fhir/example|1082004&patient=123
    ```
 
-5. 研究での検索：検査項目、検査値（文字列）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(SHOULD)
+5. 研究での検索：検査項目、検査値（文字列）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(**SHOULD**)
 
 code,value-string,patient の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 

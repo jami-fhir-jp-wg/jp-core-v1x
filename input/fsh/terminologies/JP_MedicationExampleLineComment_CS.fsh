@@ -1,6 +1,6 @@
 CodeSystem: JP_MedicationExampleLineComment_CS
 Id: jp-medication-example-linecomment-cs
-Title: "JP Medication Example LineComment"
+Title: "JP Core Medication Example LineComment CodeSystem"
 Description: "注射ラインコメントのコードシステム例"
 * ^url = $JP_MedicationExampleLineComment_CS
 * ^status = #active

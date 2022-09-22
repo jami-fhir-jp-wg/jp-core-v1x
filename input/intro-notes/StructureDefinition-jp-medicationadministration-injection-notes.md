@@ -16,59 +16,24 @@ MedicationAministrationリソースに内包されるMedicationリソースで�
 ### Extensions定義
 JP Core MedicationAdministration Injection プロファイルで使用される拡張は次の通りである。
 
-#### JP Core MedicationAdministration Injection独自で追加されたExtension
-
-<table class="extension_description">
-  <tr>
-    <th>拡張</th>
-    <th>説明</th>
-    <th>URL</th>
-    <th>値の型</th>
-  </tr>
-  <tr>
-    <td>依頼医</td>
-    <td>依頼医を格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester</td>
-    <td>Reference(Practitioner)</td>
-  </tr>
-  <tr>
-    <td>依頼日時</td>
-    <td>依頼日時を格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn</td>
-    <td>DateTime</td>
-  </tr>
-  <tr>
-    <td>実施場所</td>
-    <td>実施場所を格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location</td>
-    <td>Reference(Location)</td>
-  </tr>
-  <tr>
-    <td>未分類コメント</td>
-    <td>未分類コメントを格納するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_UncategorizedComment</td>
-    <td>CodeableConcept/String</td>
-  </tr>
-</table>
-
-#### 既存のExtensionの利用
-
-JP_MedicationRequestInjectionで追加された以下のExtensionを利用する。
-
-<table class="extension_description">
-  <tr>
-    <th>拡張</th>
-    <th>説明</th>
-    <th>URL</th>
-    <th>値の型</th>
-  </tr>
-  <tr>
-    <td>指示ライン</td>
-    <td>指示ラインを格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line</td>
-    <td>CodeableConcept</td>
-  </tr>
-</table>
+|拡張|説明|定義|値型|
+|:----|:----|:----|:----|
+|依頼科|依頼科を格納するための拡張|[JP_MedicationAdministration_RequestDepartment]|CodeableConcept|
+|依頼日時|依頼日時を格納するための拡張|[JP_MedicationAdministration_RequestAuthoredOn]|DateTime|
+|実施場所|実施場所を格納するための拡張|[JP_MedicationAdministration_Location]|Reference(Location)|
+|依頼医|依頼医を格納するための拡張|[JP_MedicationAdministration_Requester]|Reference(Practitioner)|
+|未分類コメント|未分類コメントを格納するための拡張|[JP_MedicationAdministration_UncategorizedComment]|CodeableConcept/String|
+|RP内薬剤番号|RP内の薬剤の連番を格納する拡張<br/>《medicationReference配下》|[JP_Medication_Ingredient_DrugNo]|integer|
+|力価区分|投与量が製剤単位か成分単位かを格納する拡張<br/>《medicationReference配下》|[JP_Medication_IngredientStrength_StrengthType]|CodeableConcept|
+|用法コメント|用法コメントを格納するための拡張|[JP_MedicationDosage_DosageComment]|CodeableConcept/String|
+|投与装置|投与装置を格納する拡張|[JP_MedicationDosage_Device]|Reference (Device)|
+|指示ライン|指示ラインを格納する拡張<|[JP_MedicationDosage_Line]|CodeableConcept|
+|ラインコメント|ラインコメントを格納するための拡張|[JP_MedicationDosage_LineComment]|CodeableConcept/String|
+|投与部位詳細|投与部位詳細を格納するための拡張<br/>《dosageInstruction配下》|[bodySite(hl7.org)](http://hl7.org/fhir/R4/extension-bodysite.html)|Reference (BodyStructure)|
+|投与部位コメント|投与部位コメントを格納するための拡張|[JP_MedicationDosage_SiteComment]|CodeableConcept/String|
+|投与経路コメント|投与経路コメントを格納するための拡張|[JP_MedicationDosage_RouteComment]|CodeableConcept/String|
+|手技コメント|手技コメントを格納するための拡張|[JP_MedicationDosage_MethodComment]|CodeableConcept/String|
+|投与速度コメント|投与速度コメントを格納するための拡張|[JP_MedicationDosage_RateComment]|CodeableConcept/String|
 
 ### 用語定義
 
@@ -84,7 +49,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
 |医薬品|⼀般処⽅名マスター|urn:oid:1.2.392.100495.20.1.81|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
-|力価区分|電子処方箋HL7 FHIR仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
+|力価区分|処方情報 HL7FHIR 記述仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
 |用法|JAMI処方・注射オーダ標準用法規格(用法コード)|urn:oid:1.2.392.200250.2.2.20.20|
 |用法|JAMI処方・注射オーダ標準用法規格(補足用法コード)|urn:oid:1.2.392.200250.2.2.20.22|
 |部位|JAMI処方・注射オーダ標準用法規格(部位コード)|urn:oid:1.2.392.200250.2.2.20.32|
@@ -138,7 +103,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationAdministrationの検索をサポートすることが望ましい（SHOULD）。
+1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationAdministrationの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationAdministration?patient=[id]
@@ -153,7 +118,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 
    リソースIDが123456の患者のMedicationAdministrationリソースを含むBundleを検索する。
 
-1. patient,effective-time 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationAdministrationの検索をサポートすることが望ましい（SHOULD）。
+1. patient,effective-time 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationAdministrationの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationAdministration?patient=[id]&effective-time=[date]
@@ -342,9 +307,9 @@ performer.actorには、医療従事者(Practitioner)、または患者(Patient)
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "http://jpfhir.jp/medication/99ILL",
+            "system": "http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationRequestDosageInstructionLine_CS",
             "code": "01",
-            "display": "主管"
+            "display": "末梢ルート"
           }
         ]
       }
@@ -511,7 +476,7 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
   "extension": [
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Route_RouteComment",
-      "valueString": "【仮】投与経路コメントを記述する"
+      "valueString": "右手に実施"
     }
   ],
   "coding": [
@@ -589,16 +554,16 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "http://jpfhir.jp/medication/99ILL",
+            "system": "http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationRequestDosageInstructionLine_CS",
             "code": "01",
-            "display": "主管"
+            "display": "末梢ルート"
           }
         ]
       }
     },
     {
       "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_LineComment",
-      "valueString": "【仮】ラインコメントを記述する"
+      "valueString": "末梢キープ"
     }
   ]
 }
@@ -704,9 +669,9 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "ttp://terminology.hl7.org/CodeSystem/v2-0069",
-            "code": "801",
-            "display": "肝胆外科"
+            "system": "http://jpfhir.jp/fhir/Common/CodeSystem/JP_Department_SsMix_CS",
+            "code": "01",
+            "display": "内科"
           }
         ]
       }
@@ -753,11 +718,11 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
 1. 日本医療情報学会MERIT-9研究会, 医療情報交換規約運用指針、MERIT-9 処方オーダver 1.0, [http://merit-9.mi.hama-med.ac.jp/jahis/SHOHOU.pdf](http://merit-9.mi.hama-med.ac.jp/jahis/SHOHOU.pdf)
 1. 保健医療福祉情報システム工業会, JAHISデータ交換規約（共通編）Ver.1.1, [https://www.jahis.jp/standard/detail/id=125](https://www.jahis.jp/standard/detail/id=125)
 1. 保健医療福祉情報システム工業会, JAHIS注射データ交換規約Ver.2.1C, [https://www.jahis.jp/standard/detail/id=590](https://www.jahis.jp/standard/detail/id=590)
-2. Mike Henderson, 日本HL7協会監修、「HL7メッセージ交換」、第2版、インナービジョン社、2013年
-3. 厚生労働省、保険医療機関及び保険医療養担当規則、平三〇厚労令二〇・一部改正, [https://www.mhlw.go.jp/web/t_doc?dataId=84035000&dataType=0&pageNo=1](https://www.mhlw.go.jp/web/t_doc?dataId=84035000&dataType=0&pageNo=1)
-4. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, [http://www2.medis.or.jp/hcode/](http://www2.medis.or.jp/hcode/)
-5. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)
-6. 保健医療福祉情報システム工業会, JAHIS電子処方箋実装ガイドVer.1.2, [https://www.jahis.jp/standard/detail/id=774](https://www.jahis.jp/standard/detail/id=774)
-7. 令和２年度厚⽣労働科学特別研究事業「診療情報提供書, 電⼦処⽅箋等の電⼦化医療⽂書の相互運用性確保のための標準規格の開発研究」研究班, 電子処方箋HL7 FHIR記述仕様書案, [https://std.jpfhir.jp/](https://std.jpfhir.jp/)
+1. Mike Henderson, 日本HL7協会監修、「HL7メッセージ交換」、第2版、インナービジョン社、2013年
+1. 厚生労働省、保険医療機関及び保険医療養担当規則、平三〇厚労令二〇・一部改正, [https://www.mhlw.go.jp/web/t_doc?dataId=84035000&dataType=0&pageNo=1](https://www.mhlw.go.jp/web/t_doc?dataId=84035000&dataType=0&pageNo=1)
+1. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, [http://www2.medis.or.jp/hcode/](http://www2.medis.or.jp/hcode/)
+1. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)
+1. 保健医療福祉情報システム工業会, JAHIS電子処方箋実装ガイドVer.1.2, [https://www.jahis.jp/standard/detail/id=774](https://www.jahis.jp/standard/detail/id=774)
+1. 日本医療情報学会, 処方情報 HL7FHIR 記述仕様(2021年10月), [https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)
 
 {% include markdown-link-references.md %}

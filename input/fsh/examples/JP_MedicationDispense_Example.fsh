@@ -3,8 +3,8 @@ InstanceOf: JP_MedicationDispense
 Title: "JP Core MedicationDispense Example 調剤実施 内服薬"
 Description: "調剤実施 内服薬"
 Usage: #example
-* identifier[0].system = "http://www.sample.com/fhir/medication-dispense"
-* identifier[=].value = "1234567890"
+* identifier[0].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier[=].value = "1234567890.1.1"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[=].value = "1"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.82"
@@ -16,6 +16,7 @@ Usage: #example
 * performer.function = http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function#packager "Packager"
 * performer.actor = Reference(Practitioner/jp-practitioner-example-male-1)
 * quantity = 9 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
+* daysSupply = 7 http://unitsofmeasure.org#d "日"
 * whenPrepared = "2021-10-07T10:47:19+09:00"
 * whenHandedOver = "2021-10-07T10:55:23+09:00"
 * destination = Reference(Location/jp-location-example-ward)
