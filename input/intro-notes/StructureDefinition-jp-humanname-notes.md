@@ -11,8 +11,9 @@ JP_HumanNameは名前の表記分類として[iso21090-EN-representation extensi
   - ABC ： アルファベット  
   日本語の氏名の場合、主にローマ字を割り当てる。ローマ字の記述方法には、ヘボン式と訓令式があるが現在決まりはないが、一般にはヘボン式のほうが利用されることが多い。このエリアを検索等に利用する場合には、規則を決めておくことをお勧めする。
 
-### Extensionが指定されない場合
-JP Coreでは国外ベンダを考慮し、[iso21090-EN-representation extension](http://hl7.org/fhir/R4/extension-iso21090-en-representation.html)の拡張は多重度0を許容している。実装ガイド作成の際は、アプリケーションの実装等やデータ収集の精度に関わる部分のため、どこまでを許容するかを検討したうえで多重度を変更するかどうかを検討すること。
+### iso21090-EN-representation extensionの多重度
+
+JP Coreでは国外ベンダを考慮し、[iso21090-EN-representation extension](http://hl7.org/fhir/R4/extension-iso21090-en-representation.html)の拡張は多重度0を許容している。実装ガイド作成の際は、アプリケーションの実装等やデータ収集の精度に関わる部分のため、どこまでを許容するかを検討した上で多重度を決定すること。
 
 ### textの区切り文字
 
