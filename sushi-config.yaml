@@ -34,7 +34,7 @@ pages:
       title: 文字コード
     guide-stringSearch.md:
       title: 検索
-    guide-terminology.md:
+    guide-precautions.md:
       title: 利用上の注意事項
     update_history.md:
       title: 更新履歴
@@ -68,7 +68,7 @@ menu:
     欠損値の扱い: guide-handlingOfNonExistentData.html
     文字コード: guide-characterEncoding.html
     文字列検索: guide-stringSearch.html
-    利用上の注意事項: guide-terminology.html
+    利用上の注意事項: guide-precautions.html
     更新履歴: update_history.html
   FHIRContents: 
     Administration: group-administration.html
