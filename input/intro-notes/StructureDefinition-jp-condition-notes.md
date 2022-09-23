@@ -18,8 +18,8 @@
 | ---------------- | -------------------------- |  --------- | ---------------------------------------------------------------------------------- |
 | SHALL            | identifier                 | token      | GET [base]/Condition?identifier=http://myhospital.com/fhir/condition\|123 |
 | SHOULD           | patient                    | reference  | GET [base]/Condition?patient=Patient/123                                        |
-| MAY              | patient,date               | reference,date | GET [base]/Condition?patient=Patient/123&date=ge2021-08-24                  |
-| MAY              | patient,clinicalstatus     | reference,code | GET [base]/Condition?patient=Patient/123&clinicalstatus=active              |
+| MAY              | patient,onset-date         | reference,date | GET [base]/Condition?patient=Patient/123&onset-date=ge2021-08-24             |
+| MAY              | patient,clinical-status     | reference,code | GET [base]/Condition?patient=Patient/123&clinical-status=active              |
 | MAY              | patient,verificationstatus | reference,code | GET [base]/Condition?patient=Patient/123&verificationstatus=confirmed       |
 | MAY              | patient,category           | reference,code | GET [base]/Condition??patient=Patient/123&category=food                  |
 
