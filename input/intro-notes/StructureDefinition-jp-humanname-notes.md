@@ -19,17 +19,17 @@ JP Coreでは国外ベンダを考慮し、[iso21090-EN-representation extension
 
 textには氏名全体を記述することにする。family, given組み合わせる場合の区切り文字は半角スペースで統一する(全角空白は利用しない)。
 
-#### 各コード
+### 表記分類ごと記述
 
-|コード|text|family|given| 備考 |
+| code | 説明 | text | family | given |
 |:--- |:--- |:--- |:--- |:--- |
 | IDE | 表意文字 | 山田 太郎 | 山田 | 太郎 |
 | SYL | 表音文字 | ヤマダ タロウ | ヤマダ | タロウ |
 | ABC | アルファベット | YAMADA TARO | YAMADA | TARO |
 
 
-#### リソースの記述例
-```
+### リソースでの記述例
+``` json
  "name" : [
     {
       "extension" : [
@@ -73,10 +73,9 @@ textには氏名全体を記述することにする。family, given組み合わ
         "TARO"
       ]
     }
-  ],
+  ]
 
 ```
 
-<br/>
 <br/>
 <br/>
