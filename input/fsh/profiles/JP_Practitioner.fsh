@@ -11,11 +11,22 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * ^date = "2022-09-26"
 * . ^short = "ヘルスケアまたは関連サービスの提供に正式な責任を負う人"
 * . ^definition = "A person who is directly or indirectly involved in the provisioning of healthcare.\r\n\r\n医療の提供に直接または間接的に関与する者をいう。"
-* identifier ^short = "An identifier for the person as this agent 【詳細参照】"
+* identifier ^short = "An identifier for the person as this agent Practitionerリソースに対する識別子【詳細参照】"
 * identifier ^definition = "An identifier that applies to this person in this role.\r\n\r\nある役割の人に適用される識別子。"
-* identifier ^comment = "【JP Core仕様】IDの名前空間を表す Practitioner.identifier.systemと ID値そのものを表す Practitioner.identifier.value の組み合わせとして表現する。\r\nPractitioner.identifier.systemには、\r\n医師の場合、　urn:oid:1.2.392.100495.20.3.41.医療機関識別OID番号  
-歯科医師の場合、urn:oid:1.2.392.100495.20.3.42.医療機関識別OID番号を使用する。  
-医師IDの発行者である医療機関を識別する「医療機関コード」については、[こちらのリンク](StructureDefinition-jp-organization.html#医療機関コード)を参照すること。医療機関識別OID番号については、医療機関コード10桁の先頭に１をつけた11桁とする。\r\n医療機関コードを持たない場合、「[9]＋当該施設の電話番号下 9 桁」を医療機関コードとして、その先頭に１をつけた11桁とする。\r\n\r\n例：医療機関コード「1312345670」での医師の場合「urn:oid:1.2.392.100495.20.3.41.11312345670」\r\n\r\nなお、rn:oid:1.2.392.100495.20.3.41　の部分は、「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」表19 識別子名前空間一覧において処方医 IDに割り当てられたOIDのURL型である。\r\n\r\n地域医療連携ネットワークの地域医療従事者IDを指定する場合も同様に、地域医療従事者IDを識別する名前空間（IHE ITI PIX等で使用されるOID等）を system に使用することができる。\r\n\r\n医師、歯科医師以外の医療者のIDの名前空間を表す system 値はまだ未定のため、空白もしくは「ドメイン名/職員ID」などの識別コードを入れること。\r\n\r\n例：http://www.abd-hospital.co.jp/practitioner-system"
+* identifier ^comment = "【JP Core仕様】IDの名前空間を表す Practitioner.identifier.systemと ID値そのものを表す Practitioner.identifier.value の組み合わせとして表現する。  
+Practitioner.identifier.systemは以下の割り当てる。
+
+- 医師の場合 : urn:oid:1.2.392.100495.20.3.41.医療機関識別OID番号  
+- 歯科医師の場合、urn:oid:1.2.392.100495.20.3.42.医療機関識別OID番号
+
+医療機関識別OID番号は患者IDの発行者である施設を識別するものであり、医療機関コード（１０桁）の先頭に１をつけた11桁とする。医療機関コード（１０桁）の詳細については[こちらのリンク](StructureDefinition-jp-organization.html#医療機関コード（１０桁）)を参照すること。  
+例：医療機関コード「1312345670」での医師の場合「urn:oid:1.2.392.100495.20.3.41.11312345670」  
+
+なお、rn:oid:1.2.392.100495.20.3.41 の部分は、「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」表19 識別子名前空間一覧において処方医 IDに割り当てられたOIDのURL型である。  
+
+地域医療連携ネットワークの地域医療従事者IDを指定する場合も同様に、地域医療従事者IDを識別する名前空間（IHE ITI PIX等で使用されるOID等）を system に使用することができる。  
+医師、歯科医師以外の医療者のIDの名前空間を表す system 値はまだ未定のため、空白もしくは「ドメイン名/PractitionerのSystem発行キー」などの識別コードを入れること。  
+例：http://www.abd-hospital.co.jp/practitioner-system"
 * identifier ^requirements = "Often, specific identities are assigned for the agent.\r\n\r\n多くの場合、エージェントには特定の識別子が割り当てられている。"
 * active ^definition = "Whether this practitioner's record is in active use.\r\n\r\nこの医療従事者の記録がアクティブに使用されているかどうかを示す。"
 * active ^comment = "If the practitioner is not in use by one organization, then it should mark the period on the PractitionerRole with an end date (even if they are active) as they may be active in another role.\r\n\r\n医療従事者がある組織で使用されていない場合、別のロールでアクティブになっている可能性があるので、(例えそれらがアクティブであっても)PractitionerRoleに有効期間を終了日でマークしておく必要がある。"
@@ -66,8 +77,7 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * qualification[narcoticPrescriptionLicenseNumber].identifier.system ^short = "麻薬施用者免許番号OIDを格納。OIDは右記のルールに従う。urn:oid:1.2.392.100495.20.3.32.[1(固定)+都道府県番号(２桁)] 【詳細参照】"
 * qualification[narcoticPrescriptionLicenseNumber].identifier.system ^definition = "麻薬施用者免許番号OIDを格納。OIDは右記のルールに従う。urn:oid:1.2.392.100495.20.3.32.[1(固定)+都道府県番号(２桁)]"
 * qualification[narcoticPrescriptionLicenseNumber].identifier.system ^comment = "麻薬施用者免許番号OIDを格納。OIDは右記のルールに従う。urn:oid:1.2.392.100495.20.3.32.[1(固定)+都道府県番号(２桁)]。  
-都道府県毎のOIDを以下に示す。
-
+都道府県毎のOIDを以下に示す。  
 - urn:oid:1.2.392.100495.20.3.32.101(北海道)
 - urn:oid:1.2.392.100495.20.3.32.102(青森県)
 - urn:oid:1.2.392.100495.20.3.32.103(岩手県)
