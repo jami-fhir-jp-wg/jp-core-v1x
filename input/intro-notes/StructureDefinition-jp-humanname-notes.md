@@ -1,6 +1,6 @@
 ## 人名表記に関する説明
 
-### 名前の表記
+### 表記分類
 
 JP_HumanNameは名前の表記分類として[iso21090-EN-representation extension](http://hl7.org/fhir/R4/extension-iso21090-en-representation.html)を0..1の多重度にて拡張として割り当てている。具体的な表記分類に利用されるコードは[valueset-name-v3-representation](http://hl7.org/fhir/R4/valueset-name-v3-representation.html)のValueSetにて３つのコードが指定されている。
 
@@ -13,11 +13,11 @@ JP_HumanNameは名前の表記分類として[iso21090-EN-representation extensi
 
 ### iso21090-EN-representation extensionの多重度
 
-JP Coreでは国外ベンダを考慮し、[iso21090-EN-representation extension](http://hl7.org/fhir/R4/extension-iso21090-en-representation.html)の拡張は多重度0を許容している。実装ガイド作成の際は、アプリケーションの実装等やデータ収集の精度に関わる部分のため、どこまでを許容するかを検討した上で多重度を決定すること。
+JP Coreでは国外ベンダを考慮し、[iso21090-EN-representation extension](http://hl7.org/fhir/R4/extension-iso21090-en-representation.html)の拡張は多重度0を許容している。実装ガイド作成の際は、アプリケーションの実装等やデータ収集の精度を考慮した上で多重度を決定すること。
 
 ### textの区切り文字
 
-textには氏名全体を記述することにする。family, given組み合わせる場合の区切り文字は半角スペースで統一する(全角空白は利用しない)。
+textには氏名全体を結合し格納する。family、given等の各組み合わせる時の区切り文字は検索時の利便性を考慮し、「半角スペース」で統一する(**SHALL**)。
 
 ### 表記分類ごと記述
 
