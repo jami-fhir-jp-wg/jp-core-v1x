@@ -44,8 +44,9 @@ Description: "このプロファイルはPatientリソースに対して、患�
 * identifier ^comment = "IDの名前空間を表す Patient.identifier.system と ID値そのものを表す Patient.identifier.value の組み合わせとして表現する。  
 Patient.identifier.system には、urn:oid:1.2.392.100495.20.3.51.医療機関識別OID番号を使用する。  
 医療機関識別OID番号は患者IDの発行者である機関の医療機関コード（１０桁）の先頭に１をつけた11桁とする。医療機関コード（１０桁）の詳細は[こちらのリンク](StructureDefinition-jp-organization.html#医療機関コード１０桁)を参照すること。  
-```例：医療機関コード「1312345670」の場合
-「urn:oid:1.2.392.100495.20.3.51.11312345670」```
+```
+例：医療機関コード「1312345670」の場合「urn:oid:1.2.392.100495.20.3.51.11312345670」
+```
 
 なお、urn:oid:1.2.392.100495.20.3.51の部分は、「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」表19 識別子名前空間一覧において医療機関等の患者IDとして割り当てられたOIDのURL型である。地域医療連携ネットワークの地域患者IDを指定する場合も同様に、地域患者IDを識別する名前空間（IHE ITI PIX等で使用されるOID等）をsystemに使用することができる。"
 * identifier ^requirements = "Patients are almost always assigned specific numerical identifiers.\r\n\r\nほとんどの場合、患者には特定の数値識別子が割り当てられる。"

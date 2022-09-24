@@ -21,14 +21,18 @@ Description: "このプロファイルはOrganizationリソースに対して、
 * extension[prefectureNo] ^short = "都道府県番号２桁を表現するExtension"
 * extension[prefectureNo] ^comment = "都道府県番号２桁。Identifier型の拡張を使用する。  
 valueには都道府県番号2桁の値を格納し、systemには都道府県番号を表すOID「1.2.392.100495.20.3.21」を指定する。"
-* extension[organizationCategory] ^short = "点数表コード１桁（医科１、歯科３、調剤４、訪問看護ステーション６）を表現するExtension【詳細参照】"
-* extension[organizationCategory] ^comment = "点数表コード１桁（医科１、歯科３、調剤４、訪問看護ステーション６）。Identifier型の拡張  
+* extension[organizationCategory] ^short = "点数表コード１桁（医科１、非保険検診施設２、歯科３、調剤４、訪問看護ステーション６）を表現するExtension【詳細参照】"
+* extension[organizationCategory] ^comment = "点数表コード１桁（医科１、非保険検診施設２、歯科３、調剤４、訪問看護ステーション６）。Identifier型の拡張  
 「OrganizationCategory」を使用する。systemには点数表番号を表すOID「1.2.392.100495.20.3.22」を指定する。"
 * extension[organizationNo] ^short = "医療機関コード（７桁）を表現するExtension【詳細参照】"
 * extension[organizationNo] ^comment = "医療機関コード（７桁）。Identifier型の拡張「InsuranceOrganizationNo」を使用する。  
-systemには医療機関コードを表すOID「1.2.392.100495.20.3.23」を指定する。  
-`医療機関コード（７桁）`の詳しい説明は、[こちらのリンク](StructureDefinition-jp-organization.html#医療機関コード１０桁)を参照すること。
-保険医療機関・薬局、訪問看護ステーション等でない場合は、本拡張は使用しない。"
+systemには医療機関コードを表すOID「1.2.392.100495.20.3.23」を指定する。
+valueには下記の値を格納する。  
+- 保険医療機関・保険薬局 : `医療機関コード（７桁）`
+- 非保険の特定健診・特定保健指導機関 : `機関コード（７桁）`
+
+医療機関コードの詳しい説明は、[こちらのリンク](StructureDefinition-jp-organization.html#医療機関コード１０桁)を参照すること。  
+なお上記に該当しない施設は、本拡張は使用しない。"
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
@@ -41,10 +45,10 @@ systemには医療機関コードを表すOID「1.2.392.100495.20.3.23」を指�
     insurerNumber ..*
 * identifier.assigner only Reference(JP_Organization)
 * identifier[medicalInstitutionCode] ^short = "施設が福祉医療関連機関である場合に利用する識別子【詳細参照】"
-* identifier[medicalInstitutionCode] ^definition = "福祉医療施設を区別するため医療機関機関コード（１０桁）を格納するためのIdentifier/Slicing定義。"  
+* identifier[medicalInstitutionCode] ^definition = "福祉医療施設を区別するため医療機関コード（１０桁）を格納するためのIdentifier/Slicing定義。"  
 * identifier[medicalInstitutionCode] ^comment = "systemはFixed Valueの```http://jpfhir.jp/fhir/Common/IdSystem/insurance-medical-institution-no```を使用する。　
 value : ```医療機関コード（１０桁）```を使用する。 
-医療機関コード（１０桁）の詳細は[こちらのリンク](StructureDefinition-jp-organization.html#医療機関機関コード１０桁)を参照すること。 "
+医療機関コード（１０桁）の詳細は[こちらのリンク](StructureDefinition-jp-organization.html#医療機関コード１０桁)を参照すること。 "
 * identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/Common/IdSystem/insurance-medical-institution-no" (exactly)
 * identifier[medicalInstitutionCode].assigner only Reference(JP_Organization)
 * identifier[insurerNumber] ^comment = "健康保険組合などの保険者の保険者番号を表現する際のIdentifier表現に使用する\r\nsystem要素には保険者番号を示すOID\"urn:oid:1.2.392.100495.20.3.61\"を指定する。"
