@@ -16,7 +16,6 @@ Usage: #definition
 * rest.mode = #client
 
 
-
 * rest.resource[+].type = #Patient
 * rest.resource[=].supportedProfile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient"
 * rest.resource[=].interaction[0].code = #create
