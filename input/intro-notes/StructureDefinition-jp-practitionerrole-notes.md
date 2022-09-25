@@ -23,7 +23,7 @@
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、職種IDなどの識別子によるPractitionerRoleの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、職種IDなどの識別子によるPractitionerRoleの検索をサポートしなければならない（**SHALL**）。
 
    ```
    GET [base]/PractitionerRole?identifier={system|}[code]
@@ -43,7 +43,7 @@
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. specialty 検索パラメータを使用して、医療者の特定の専門性によるPractitionerRoleの検索をサポートすることが望ましい（SHOULD）。
+1. specialty 検索パラメータを使用して、医療者の特定の専門性によるPractitionerRoleの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/PractitionerRole?specialty={system|}[code]
@@ -59,7 +59,7 @@
 
    
 
-2. practitioner 検索パラメータを使用して、医療者の名前と識別子によるPractitionerRoleの検索をサポートすることが望ましい（SHOULD）。
+2. practitioner 検索パラメータを使用して、医療者の名前と識別子によるPractitionerRoleの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/PractitionerRole?practitioner={Type/}[id]
@@ -72,7 +72,7 @@
    2.GET [base]/PractitionerRole?practitioner.name=山田&_include=PractitionerRole:practitioner&_include=PractitionerRole?endpoint
    ```
 
-   practitioner.nameまたはpractitioner.identifierの連結パラメータに一致するPractitionerRoleリソースを含むBundleを検索する。PractitionerRole.practitionerとPractitionerRole.endpointの_include検索をサポートすることが望ましい。（SHOULD）
+   practitioner.nameまたはpractitioner.identifierの連結パラメータに一致するPractitionerRoleリソースを含むBundleを検索する。PractitionerRole.practitionerとPractitionerRole.endpointの_include検索をサポートすることが望ましい。（**SHOULD**）
 
 
 ##### 追加検索パラメータ 
@@ -94,20 +94,10 @@ PractitionerRoleには、ここで定義されているlocationに住所が含�
 
 ## その他、参考文献・リンク等
 
-・退院時サマリー規約
-[http://www.hl7.jp/library/item/HL7J-CDA-007.pdf](http://www.hl7.jp/library/item/HL7J-CDA-007.pdf)
-
-・診療情報提供書規格
-[http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf](http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf)
-
-・特定健診情報ファイル仕様
-[https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html)
-
-・SS-MIX2 標準化ストレージ 仕様書 Ver.1.2h
-[https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf](https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf)
-
-・ICSR E2B(R3)
-[https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)
-
+1. 退院時サマリー規約 [http://www.hl7.jp/library/item/HL7J-CDA-007.pdf](http://www.hl7.jp/library/item/HL7J-CDA-007.pdf)
+1. 診療情報提供書規格 [http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf](http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf)
+1. 特定健診情報ファイル仕様 [https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html)
+1. SS-MIX2 標準化ストレージ 仕様書 Ver.1.2h [https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf](https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf)
+1. ICSR E2B(R3) [https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)
 
 {% include markdown-link-references.md %}

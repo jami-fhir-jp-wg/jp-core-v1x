@@ -2,10 +2,10 @@ Profile: JP_Immunization
 Parent: Immunization
 Id: jp-immunization
 Title: "JP Core Immunization Profile"
-Description: "このProfileはImmunizationリソースに対して日本での予防接種データを送受信するための制約を加えたものである。"
+Description: "このプロファイルはImmunizationリソースに対して日本での予防接種データを送受信するための制約を加えたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
 * ^status = #active
-* ^date = "2022-07-31"
+* ^date = "2022-09-26"
 // * ^purpose = "予防接種の記録を交換するために用いられる。"
 * . ^short = "予防接種"
 * . ^definition = "ワクチンを接種したときの記録，あるいは予防接種について患者や医療従事者などが報告した記録。"
@@ -23,7 +23,7 @@ Description: "このProfileはImmunizationリソースに対して日本での�
 * vaccineCode from JP_MedicationCode_Immunization_VS (preferred)
 * vaccineCode ^short = "接種されたワクチン製剤"
 * vaccineCode ^definition = "接種されたあるいは接種予定のワクチン。"
-* vaccineCode ^comment = "全てのターミノロジーがこのパターンに当てはまるわけではない。モデルによってはCodeableConceptではなく，独自構造でCodingを直接指定して文書やコーディング，その解釈や事前条件や事後条件との関連について示される。"
+* vaccineCode ^comment = "全てのターミノロジがこのパターンに当てはまるわけではない。モデルによってはCodeableConceptではなく，独自構造でCodingを直接指定して文書やコーディング，その解釈や事前条件や事後条件との関連について示される。"
 * patient only Reference(JP_Patient)
 * patient ^short = "予防接種を受けた人"
 * patient ^definition = "予防接種を受けた，あるいは受けなかった患者。"
@@ -32,7 +32,7 @@ Description: "このProfileはImmunizationリソースに対して日本での�
 * encounter ^definition = "患者が医療従事者から予防接種を受けた外来，入院あるいは他の対面の状態を表す。"
 * occurrence[x] ^short = "ワクチンを接種した日時"
 * occurrence[x] ^definition = "ワクチンを接種した日あるいは接種予定だった日。"
-* recorded ^short = "予防接種を受けた対象者の記録として最初に記載された日。"
+* recorded ^short = "予防接種を受けた対象者の記録として最初に記載された日"
 * reportOrigin ^short = "二次的に報告された記録の発生源を示す"
 * reportOrigin ^definition = "予防接種を実施した時に，ワクチンを接種した人以外からの報告からの情報である場合のデータの発生源。"
 * location only Reference(JP_Location)

@@ -5,7 +5,9 @@ Description: "JAMI標準用法規格補足用法コードのコードシステ�
 * ^identifier[0].system = "urn:ietf:rfc:3986"
 * ^identifier[=].value = "urn:oid:1.2.392.200250.2.2.20.22"
 * ^url = $JP_MedicationUsageJAMIAdditional_CS
-* ^status = #draft
+* ^status = #active
+* ^experimental = false
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #fragment
 * #I1100000 "１日おき"

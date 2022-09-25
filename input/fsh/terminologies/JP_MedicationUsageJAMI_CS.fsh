@@ -5,7 +5,9 @@ Description: "JAMI標準用法コードのコードシステム"
 * ^identifier[0].system = "urn:ietf:rfc:3986"
 * ^identifier[=].value = "urn:oid:1.2.392.200250.2.2.20.20"
 * ^url = $JP_MedicationUsageJAMI_CS
-* ^status = #draft
+* ^status = #active
+* ^experimental = false
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #fragment
 * #1011000090000000	"内服・経口・１日１回起床時"

@@ -5,7 +5,9 @@ Description: "医薬品HOT13コードのコードシステム"
 * ^identifier[0].system = "urn:ietf:rfc:3986"
 * ^identifier[=].value = "urn:oid:1.2.392.200119.4.402.1"
 * ^url = $JP_MedicationCodeHOT13_CS
-* ^status = #draft
+* ^status = #active
+* ^experimental = false
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 // * ^valueSet = $JP_MedicationCodeHOT13_VS
 * ^content = #fragment

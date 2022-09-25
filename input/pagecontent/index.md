@@ -8,6 +8,7 @@
 * [欠損値の扱い](guide-handlingOfNonExistentData.html)
 * [文字コード](guide-characterEncoding.html)
 * [検索](guide-stringSearch.html)
+* [利用上の注意事項](guide-precautions.html) 
 * [更新履歴](update_history.html)
 
 ### JP Core FHIRコンテンツ
@@ -82,10 +83,10 @@ JP Core利用にあたり、考慮すべきセキュリティに関する要件�
 
 ---
 ### Contributors：
-JP Coreは以下の方々、および各サーブワーキンググループのここに記載されていない多くのメンバーの献身的な活動や協力により作成されている。
+JP Coreは以下の方々、および各サーブワーキンググループのここに記載されていない多くのメンバの献身的な活動や協力により作成されている。
 * SWG1：FHIR Infrastructure
-  * リーダー：㈱ファインデックス　宮川 力
-  * サブリーダー：東京大学　三谷 知宏、㈱ケーアイエス　小西 由貴範
+  * リーダ：㈱ファインデックス　宮川 力
+  * サブリーダ：東京大学　三谷 知宏、㈱ケーアイエス　小西 由貴範
   * メンバ：（一社）保健医療福祉情報安全管理適合性評価協会　喜多 紘一、日本総合システム㈱　松本 聖、中川 雅三、安達 隆佳
 
 * SWG2：Diagnostics and Observations
@@ -100,7 +101,7 @@ JP Coreは以下の方々、および各サーブワーキンググループの�
 
 * SWG4：Clinical Module
   * リーダ：東京大学　河添 悦昌
-  * サブリーダー：山口大学　石井 博、東大病院　関 倫久
+  * サブリーダ：山口大学　石井 博、東大病院　関 倫久
   * メンバ：㈱富士通　小山内 尚、西山 喜樹、能崎 克行、東大病院　永島 里美
 
 * SWG5：Pharmacy and Medication

@@ -8,6 +8,7 @@ Title: "JP Core DiagnosticReport Radiology Profile"
 Description: "このプロファイルはDiagnosticReportリソースに対して、放射線検査のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology"
 * ^status = #active
+* ^date = "2022-09-26"
 * . ^short = "診断レポート-依頼情報、１項目単位の結果、画像、解釈、およびフォーマットされたレポートの組み合わせ　【JP Core仕様】画像結果レポートのプロフィール。【詳細参照】"
 * . ^definition = "患者、患者のグループ、デバイス、場所、これらから派生した検体に対して実行された診断的検査の結果と解釈。レポートには、依頼情報や依頼者情報などの臨床コンテキスト（文脈）、および１項目単位の結果、画像、テキストとコード化された解釈、および診断レポートのフォーマットされた表現のいくつかの組み合わせが含まれる。\r\n\r\n【JP Core仕様】画像結果レポートのプロフィール"
 * text ^short = "人が読める形式で提示された情報。放射線レポートの場合はレポートの所見が保持される。【詳細参照】"
@@ -52,14 +53,14 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * subject ^comment = "参照は実際のFHIRリソースへの参照であり、解決可能である必要がある。解決はURLから取得するか、または、リソースタイプが利用できる場合は絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索する。\r\n\r\n【JP Core仕様】Patient リソースを参照"
 * subject ^requirements = "対象のコンテキストが必要である。"
 * encounter ^definition = "この診断レポートが関するヘルスケアイベント。"
-* encounter ^comment = "これは通常、レポートの作成が発生するエンカウンターだが、一部のイベントはエンカウンターの正式な完了の前または後に開始される場合がある（例えば入院前の検査）。その場合でも（入院に関連して検査が行われる場合など）、エンカウンターのコンテキストに関連付けられる。\r\n\r\n【JP Core仕様】このレポートを書く切っ掛けとなる Encounterリソース（例：術前検査の場合、術前訪問） を参照"
+* encounter ^comment = "これは通常、レポートの作成が発生するEncounterだが、一部のイベントはEncounterの正式な完了の前または後に開始される場合がある（例えば入院前の検査）。その場合でも（入院に関連して検査が行われる場合など）、Encounterのコンテキストに関連付けられる。\r\n\r\n【JP Core仕様】このレポートを書く切っ掛けとなる Encounterリソース（例：術前検査の場合、術前訪問） を参照"
 * encounter ^requirements = "Encounterコンテキストへのリンクが必要である"
 * effective[x] MS
 * effective[x] only dateTime
 * effective[x] ^definition = "観測値が関連する時間または期間。レポートの対象が患者である場合、これは通常、読影開始の時間であり、日付/時刻自体のみが提供される。"
 * effective[x] ^comment = "診断手順が患者に対して実行された場合、これは実行された時間を示す。\r\n\r\n【JP Core仕様】レポート作成日時\r\n\r\n（DateTimeを採用し、Periodは不使用）"
 * issued MS
-* issued ^definition = "このバージョンのレポートがプロバイダーに提供された日時。通常、レポートがレビューおよび検証された後になる。"
+* issued ^definition = "このバージョンのレポートがプロバイダに提供された日時。通常、レポートがレビューおよび検証された後になる。"
 * issued ^comment = "リソース自体の更新時間とは異なる場合がある。これは、レポートの実際のリリース時間ではなく、レコード（場合によってはセカンダリコピー）のステータスであるため。\r\n\r\n【JP Core仕様】レポート確定日時"
 * issued ^requirements = "臨床医は、レポートがリリースされた日付を確認できる必要がある。"
 * performer MS
@@ -76,8 +77,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * specimen ^definition = "診断レポートの対象となる検体"
 * specimen ^comment = "【JP Core仕様】未使用\r\n\r\n・画像ガイド下生検で得られる検体の可能性は有り得るが、本項目は病理レポートで利用されることを想定し、放射線レポートでは特には規定しない"
 * specimen ^requirements = "レポートの対象となる取集された検体についての情報をレポートできる必要がある。"
-* result ^short = "【JP Core仕様】計測情報などの付随所見をObservationリソースとして定義できるが、該当するコードが定義できないため放射線レポートでは未定義とする。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
-* result ^definition = "診断レポートの一部となるObservationリソース【詳細参照】"
+* result ^short = "診断レポートの一部となるObservationリソース【詳細参照】"
+* result ^definition = "【JP Core仕様】計測情報などの付随所見をObservationリソースとして定義できるが、該当するコードが定義できないため放射線レポートでは未定義とする。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
 * result ^comment = "Observationはさらにobservationを含むことができる。\r\n\r\n【JP Core仕様】計測情報などの付随所見をObservationリソースとして定義できるが、該当するコードが定義できないため放射線レポートでは未定義とする。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
 * result ^requirements = "結果のグループ化が任意だが、意味のある個別の結果または結果のグループをサポートする必要がある。"
 * imagingStudy MS

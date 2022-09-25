@@ -15,52 +15,20 @@ MedicationDispense リソースに内包されるMedicationリソースでは、
 ### Extensions定義
 JP Core MedicationDispense Injectionプロファイルで使用される拡張は次の通りである。
 
-#### JP Core MedicationDispense Injection独自で追加されたExtension
-
-現在JP Core MedicationDispense Injection で追加されたExtensionはない。
-
-#### 既存のExtensionの利用
-
-JP Core MedicationRequest InjectionやJP Core MedicationDispense で追加された以下のExtensionを利用する。
-
-<table class="extension_description">
-  <tr>
-    <th>拡張</th>
-    <th>説明</th>
-    <th>URL</th>
-    <th>値の型</th>
-  </tr>
-  <tr>
-    <td>指示ライン</td>
-    <td>指示ラインを格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Line</td>
-    <td>CodeableConcept</td>
-  </tr>
-  <tr>
-    <td>投与装置</td>
-    <td>投与装置を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_Device</td>
-    <td>Reference (Device)</td>
-  </tr>
-  <tr>
-    <td>RP内薬剤番号</td>
-    <td>RP内の薬剤の連番を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo</td>
-    <td>integer</td>
-  </tr>
-  <tr>
-    <td>力価区分</td>
-    <td>投与量が製剤単位か成分単位かを格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Strength_StrengthType</td>
-    <td>CodeableConcept</td>
-  </tr>
-  <tr>
-    <td>調剤結果</td>
-    <td>薬剤単位の調剤結果</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation</td>
-    <td>CodeableConcept</td>
-  </tr>
-</table>
+|拡張|説明|定義|値型|
+|:----|:----|:----|:----|
+|調剤結果|薬剤単位の調剤結果|[JP_MedicationDispense_Preparation]|CodeableConcept|
+|RP内薬剤番号|RP内の薬剤の連番を格納する拡張<br/>《medicationReference配下》|[JP_Medication_Ingredient_DrugNo]|integer|
+|力価区分|投与量が製剤単位か成分単位かを格納する拡張<br/>《medicationReference配下》|[JP_Medication_IngredientStrength_StrengthType]|CodeableConcept|
+|用法コメント|用法コメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_DosageComment]|CodeableConcept/String|
+|指示ライン|指示ラインを格納する拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_Line]|CodeableConcept|
+|ラインコメント|ラインコメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_LineComment]|CodeableConcept/String|
+|投与装置|投与装置を格納する拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_Device]|Reference (Device)|
+|投与経路コメント|投与経路コメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_RouteComment]|CodeableConcept/String|
+|投与部位詳細|投与部位詳細を格納するための拡張<br/>《dosageInstruction配下》|[bodySite(hl7.org)](http://hl7.org/fhir/R4/extension-bodysite.html)|Reference (BodyStructure)|
+|投与部位コメント|投与部位コメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_SiteComment]|CodeableConcept/String|
+|手技コメント|手技コメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_MethodComment]|CodeableConcept/String|
+|投与速度コメント|投与速度コメントを格納するための拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_RateComment]|CodeableConcept/String|
 
 
 ### 用語定義
@@ -75,11 +43,11 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 |医薬品|HOT9|urn:oid:1.2.392.200119.4.403.1|
 |医薬品|HOT13|urn:oid:1.2.392.200119.4.402.1|
 |医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
-|剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationFormMERIT9_CS|
+|剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationFormMERIT9_CS|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
-|力価区分|電子処方箋HL7 FHIR仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
+|力価区分|処方情報 HL7FHIR 記述仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
 |用法|JAMI処方・注射オーダ標準用法規格(用法コード) |urn:oid:1.2.392.200250.2.2.20.20|
-|頓用条件|MERIT-9(頓用指示)|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS|
+|頓用条件|MERIT-9(頓用指示)|http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS|
 |投与部位|JAMI処方・注射オーダ標準用法規格(部位コード)|urn:oid:1.2.392.200250.2.2.20.32|
 |投与部位|HL7 V2(HL7表0550)|http://terminology.hl7.org/CodeSystem/v2-0550|
 |投与部位(修飾子)|HL7 V2(HL7表0495)|http://terminology.hl7.org/CodeSystem/v2-0495|
@@ -87,7 +55,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 |投与方法|JAMI処方・注射オーダ標準用法規格(基本用法区分)|urn:oid:1.2.392.200250.2.2.20.30|
 |投与手技|HL7 V2(使用者定義表0165)|http://terminology.hl7.org/CodeSystem/v2-0165|
 |投与手技|JAMI処方・注射オーダ標準用法規格(用法詳細区分)|urn:oid:1.2.392.200250.2.2.20.40|
-|投与手技|JAHIS注射データ交換規約Ver.2.1C(JHSI表0003)|http://jpfhir.jp/fhir/Common/CodeSystem/JHSI0003|
+|投与手技|JAHIS注射データ交換規約Ver.2.1C(JHSI表0003)|http://jpfhir.jp/fhir/core/CodeSystem/JHSI0003|
 |投与経路|HL7 V2(使用者定義表0162)|http://terminology.hl7.org/CodeSystem/v2-0162|
 |入外区分|HL7 V2(HL7表0482)|http://terminology.hl7.org/CodeSystem/v2-0482|
 
@@ -98,7 +66,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 * RP番号の追加（identifierを使用）
 * 薬剤番号（拡張「JP_Medication_Ingredient_DrugNo」を使用）
 * 施用番号の追加（dosageInstruction.sequenceを使用）
-* ⼒価区分の追加（拡張「JP_Medication_Strength_StrengthType」を使用）
+* ⼒価区分の追加（拡張「JP_Medication_IngredientStrength_StrengthType」を使用）
 
 ## 利用方法
 
@@ -115,7 +83,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダーIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）。
 
    ```
    GET [base]/MedicationDispense?identifier={system|}[code]
@@ -134,7 +102,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationDispenseの検索をサポートすることが望ましい（SHOULD）。
+1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationDispenseの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationDispense?patient=[id]
@@ -149,7 +117,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
    リソースIDが123456の患者のMedicationDispenseリソースを含むBundleを検索する。
 
-1. patient,whenhandedover 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationDispenseの検索をサポートすることが望ましい（SHOULD）。
+1. patient,whenhandedover 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationDispenseの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationDispense?patient=[id]&whenhandedover=[date]
@@ -195,19 +163,19 @@ URL: [base]/MedicationDispense/[id]/$everything
 
 ###### 入力パラメータ
 
-| 名前   | 多重度 | 型      | バインディング | プロファイル | 説明                                                         |
-| ------ | ------ | ------- | -------------- | ------------ | ------------------------------------------------------------ |
-| start  | 0..1   | date    |                |              | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。開始日が指定されていない場合、終了日以前のすべてのレコードが対象に含まれる。 |
-| end    | 0..1   | date    |                |              | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。終了日が指定されていない場合、開始日以降のすべてのレコードが対象に含まれる。 |
-| _since | 0..1   | instant |                |              | 指定された日時以降に更新されたリソースのみが応答に含まれる。 |
-| _type  | 0..*   | code    |                |              | 応答に含むFHIRリソース型を、カンマ区切りで指定する。指定されない場合は、サーバは全てのリソース型を対象とする。 |
-| _count | 0..1   | integer |                |              | Bundleの1ページに含まれるリソース件数を指定。                |
+| 名前   | 多重度 | 型      | 説明                                                         |
+| ------ | ------ | ------- | ------------------------------------------------------------ |
+| start  | 0..1   | date    | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。開始日が指定されていない場合、終了日以前のすべてのレコードが対象に含まれる。 |
+| end    | 0..1   | date    | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。終了日が指定されていない場合、開始日以降のすべてのレコードが対象に含まれる。 |
+| _since | 0..1   | instant | 指定された日時以降に更新されたリソースのみが応答に含まれる。 |
+| _type  | 0..*   | code    | 応答に含むFHIRリソース型を、カンマ区切りで指定する。指定されない場合は、サーバは全てのリソース型を対象とする。 |
+| _count | 0..1   | integer | Bundleの1ページに含まれるリソース件数を指定。                |
 
 ###### 出力パラメータ
 
-| 名前   | 多重度 | 型     | バインディング | プロファイル | 説明                                                         |
-| ------ | ------ | ------ | -------------- | ------------ | ------------------------------------------------------------ |
-| return | 1..1   | Bundle |                |              | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
+| 名前   | 多重度 | 型     | 説明                                                         |
+| ------ | ------ | ------ | ------------------------------------------------------------ |
+| return | 1..1   | Bundle | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
 
 ###### 例
 
@@ -256,9 +224,9 @@ HTTP/1.1 200 OK
 ### 記述の単位について
 MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか、Medicationリソースのreferenceをもつことしかできない。したがって、複数の薬剤を同一のRp番号で表現する場合にはMedicationDispenseを繰り返すか、複数の薬剤をまとめたMedication Resourceのインスタンスを参照することとなる。ワーキンググループでの検討の結果、注射の場合は複数の薬剤をまとめたMedicationリソースのインスタンスをcontained属性に内包した上で参照することとした。
 
-１オーダー内に複数のRpがある場合には、MedicationDispenseを繰り返し、identifier属性にオーダー番号、Rp番号をそれぞれ持つことでリソース間の関係性がわかるようにする。
+１オーダ内に複数のRpがある場合には、MedicationDispenseを繰り返し、identifier属性にオーダ番号、Rp番号をそれぞれ持つことでリソース間の関係性がわかるようにする。
 
-１オーダー内にRpごとに複数の施用（投薬）を持つことができるシステムの場合は、今回の調剤に対する施用の情報をdosageInstruction要素で記述する。該当の施用の投与タイミングを dosageInstruction.timing で指定し、施用番号を dosageInstruction.sequenceで記述する。
+１オーダ内にRpごとに複数の施用（投薬）を持つことができるシステムの場合は、今回の調剤に対する施用の情報をdosageInstruction要素で記述する。該当の施用の投与タイミングを dosageInstruction.timing で指定し、施用番号を dosageInstruction.sequenceで記述する。
 
 ### 投与薬剤と調剤量の記述方法
 投与薬剤と調剤量は、RP内の薬剤が１薬剤の場合も混注などで複数の薬剤を含む場合も、すべての薬剤を記述したMedicationリソースを contained 属性に内包し、それをMedicationRequest.medicationReference属性で参照するようにする。
@@ -353,7 +321,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 ```
 
 ### 力価区分の記述方法
-用量は製剤量で記述することを基本とするが、必要に応じて原薬量指定も可能とする。この識別は、Medication.ingredient.strength要素に対して定義した拡張「JP_Medication_Strength_StrengthType」を使用する。この拡張を識別するURIとして、"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Strength_StrengthType"を使用し、値はCodeableConcept型を使用して力価区分コード（urn:oid:1.2.392.100495.20.2.22）を指定することで行い、製剤量は「1」、原薬量は「2」とする。
+用量は製剤量で記述することを基本とするが、必要に応じて原薬量指定も可能とする。この識別は、Medication.ingredient.strength要素に対して定義した拡張「JP_Medication_IngredientStrength_StrengthType」を使用する。この拡張を識別するURIとして、"http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"を使用し、値はCodeableConcept型を使用して力価区分コード（urn:oid:1.2.392.100495.20.2.22）を指定することで行い、製剤量は「1」、原薬量は「2」とする。
 
 投与量「１本」を製剤量で記録したインスタンス例を示す。
 
@@ -372,7 +340,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
     "strength": {
       "extension": [
         {
-          "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Strength_StrengthType",
+          "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType",
           "valueCodeableConcept": {
             "coding": [
               {
@@ -499,7 +467,7 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 調剤の基となった薬剤処方の用法などの情報は、特に記述のない限り JP Core MedicationRequest Injection と同様の記述方法とする。該当する項目としては以下のものがある。
 
 * RP番号、薬剤番号、施用番号
-* 処方箋番号（オーダーID）
+* 処方箋番号（オーダID）
 * 投与方法、投与手技、投与経路、投与ライン、投与装置
 * 入外区分
 * あいまい指示、頓用指示

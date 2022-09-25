@@ -5,10 +5,10 @@ Profile: JP_HumanName
 Parent: HumanName
 Id: jp-humanname
 Title: "JP Core HumanName DataType"
-Description: "このプロファイルはHumanName DataTypeに対して、患者のデータを送受信するための基礎となる制約と拡張を定めたものである。"
+Description: "このデータタイプはHumanName DataTypeに対して、患者データを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_HumanName"
 * ^status = #active
-* ^date = "2022-07-31"
+* ^date = "2022-09-26"
 * . ^short = "Name of a human - parts and usage　人の名前情報、その一部分と使い方"
 * . ^definition = "A human's name with the ability to identify parts and usage.\r\n\r\n識別のための人の名前情報"
 * . ^comment = "Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts might or might not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely.\r\n\r\n名前が変更されたり、違っていると指摘されたり、コンテキストによって使われる名前が異なる場合がある。名前は、コンテキストに応じて重要性が異なるさまざまなタイプの部分に分割される場合があり、部分への分割は必ずしも重要ではない。個人名の場合、さまざまな部分に暗黙の意味が含まれている場合と含まれていない場合がある。さまざまな文化が名前の部分にさまざまな重要性を関連付けており、システムが世界中の名前の部分を気にする必要がある程度は大きく異なる。"
@@ -27,7 +27,7 @@ Description: "このプロファイルはHumanName DataTypeに対して、患者
 * family ^short = "Family name (often called 'Surname')　名前のうち姓の部分。ファミリ名"
 * family ^definition = "The part of a name that links to the genealogy. In some cultures (e.g. Eritrea) the family name of a son is the first name of his father.\r\n\r\n家系図にリンクする名前の部分。一部の文化では、息子の家系の名前は父親の名である。"
 * family ^comment = "Family Name may be decomposed into specific parts using extensions (de, nl, es related cultures).\r\n\r\nファミリ名は、拡張子（de、nl、es関連のカルチャ）を使用して特定の部分に分解できる。"
-* given ^short = "Given names (not always 'first'). Includes middle names　名前の名の部分で、ミドルネームを含む。"
+* given ^short = "Given names (not always 'first'). Includes middle names　名前の名の部分で、ミドルネームを含む"
 * given ^definition = "Given name.\r\n\r\n名前の名の部分。"
 * given ^comment = "If only initials are recorded, they may be used in place of the full name parts. Initials may be separated into multiple given names but often aren't due to practical limitations.  This element is not called \"first name\" since given names do not always come first.\r\n\r\nイニシャルのみが記録されている場合は、フルネームの部分の代わりに使用できる。イニシャルは複数の名前に分けることができるが、多くの場合、実用的な制限のためではない。名が常に最初に来るとは限らないため、この要素は「first name」とは呼ばない。"
 * prefix ^short = "Parts that come before the name　名前の名の前に来る部分"
@@ -38,4 +38,4 @@ Description: "このプロファイルはHumanName DataTypeに対して、患者
 * suffix ^comment = "Note that FHIR strings SHALL NOT exceed 1MB in size\r\n\r\nFHIR文字列のサイズは1MBを超えてはならないことに注意。"
 * period ^short = "Time period when name was/is in use　名前が使われる期間"
 * period ^definition = "Indicates the period of time when this name was valid for the named person.\r\n\r\nこの名前が指名された人に対して有効であった期間。"
-* period ^comment = "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](datatypes.html#Duration).\r\n\r\nPeriod（期間）は時間の範囲を指定する。使用状況は、範囲全体が適用されるか（たとえば、「患者はこの時間範囲で入院していた」）、範囲から1つの値が適用されるか（たとえば、「この2回の間に患者に投与する」）を指定する。\r\nPeriod（期間）は、Duration（時間区間＝経過時間の測定値）には使用されない。 [Duration]（datatypes.html＃Duration）を参照のこと。"
+* period ^comment = "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").\n\nPeriod is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).\r\n\r\nPeriod（期間）は時間の範囲を指定する。使用状況は、範囲全体が適用されるか（たとえば、「患者はこの時間範囲で入院していた」）、範囲から1つの値が適用されるか（たとえば、「この2回の間に患者に投与する」）を指定する。\r\nPeriod（期間）は、Duration（時間区間＝経過時間の測定値）には使用されない。 [Duration]（datatypes.html＃Duration）を参照のこと。"

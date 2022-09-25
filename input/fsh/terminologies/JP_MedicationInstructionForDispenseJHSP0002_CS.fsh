@@ -3,7 +3,9 @@ Id: jp-medication-instruction-for-dispense-jhsp0002-cs
 Title: "JP Core Medication JHSP0002 Instruction For Dispense CodeSystem"
 Description: "JAHIS処方データ交換規約Ver.3.0C JHSP表0002調剤特別指示のコードシステム"
 * ^url = $JP_MedicationInstructionForDispenseJHSP0002_CS
-* ^status = #draft
+* ^status = #active
+* ^experimental = false
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationInstructionForDispenseJHSP0002_VS
 * ^content = #complete

@@ -3,11 +3,12 @@ Id: jp-procedure-codes-nurse-cs
 Title: "JP Core Procedure Codes Nurse CodeSystem"
 Description: "処置のコード:看護実践用語標準マスター(看護行為)"
 * ^url = $JP_ProcedureCodesNurse_CS
-* ^status = #draft
+* ^status = #active
+* ^experimental = false
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureCodesNurse_VS
 * ^content = #complete
-* ^date = "2022-08-10"
 
 
 //TODO: 最終的にはコメントアウトは外すもしくはTerminologyServerへ

@@ -26,6 +26,7 @@
 
 | コンフォーマンス | パラメータ | 型 | 例 |
 | --- | --- | --- | --- |
+| SHALL | identifier | token  | `GET [base]/Observation?identifier=http://myhospital.com/fhir/observation-id-system|1234567890` |
 | MAY | patient,category,code,value-quantity | reference,token,token,quantity  | `GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40` |
 | MAY | patient,category,code,value-quantity,date | reference,token,token,quantity,date  | `GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31` |
 | MAY | patient,category,code,value-quantity,encounter | reference,token,token,quantity,encounter  | `GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&encounter=456` |
@@ -35,17 +36,27 @@
 
 ##### 必須検索パラメータ
 
-<!--
-次の検索パラメータは必須でサポートされなければならない。（SHALL）
--->
-このプロファイルでは検索の多様性が求められるため、必須（SHALL）とする検索項目は定義していない。
+
+次の検索パラメータは必須でサポートされなければならない。
+
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるObservationの検索をサポートしなければならない（**SHALL**）。
+
+   ```
+   GET [base]/Observation?identifier={token}
+   ```
+
+   例：
+
+   ```
+   GET [base]/Observation?identifier=http://myhospital.com/fhir/observation-id-system|1234567890
+   ```
+
+   指定された識別子に一致するObservationリソースを含むBundleを検索する。
+
 
 ##### 推奨検索パラメータ
 
-<!--
-次の検索パラメータはサポートすることが推奨される。（SHOULD）
--->
-このプロファイルでは検索の多様性が求められるため、推奨（SHOULD）とする検索項目は定義していない。
+このプロファイルでは検索の多様性が求められるため、推奨（**SHOULD**）とする検索項目は定義していない。
 
 ##### オプション検索パラメータ
 
@@ -92,7 +103,7 @@ patient,category,code,value-quantity,date の各検索パラメータに一致�
 patient,category,code,value-quantity,date,encounter の各検索パラメータに一致するObservationリソースを含むBundleを検索する。
 
    ```
-   GET [base]/Observation?patient={reference}&category={token}&code={token}&value-quantity={quantity}&date={date}&&encounter={encounter}
+   GET [base]/Observation?patient={reference}&category={token}&code={token}&value-quantity={quantity}&date={date}&encounter={encounter}
    ```
 
    例：患者123の心拍数が40超えかつ2020年12月31日以前で診療456の時のバイタルサインを取得したい場合
@@ -124,25 +135,22 @@ patient,category,code,value-quantity,date,encounter の各検索パラメータ�
 - グループごとにmaxパラメータに指定された数だけ応答が返る。maxが指定されない場合は、最新の結果のみが返される。
 
 
-
 この操作の公式なURLは以下である。  
-http://hl7.org/fhir/OperationDefinition/Observation-lastn
-
+https://hl7.org/fhir/R4/operation-observation-lastn.html
 
 
 ###### 入力パラメータ
 
-| 名前   | 多重度 | 型      | バインディング | プロファイル | 説明                                                         |
-| ------ | ------ | ------- | -------------- | ------------ | ------------------------------------------------------------ |
-| max  | 0..1   | positiveInt    |                |              | max は、lastn クエリ操作のオプションの入力パラメータ。これは、各グループから返すObservationの最大数を指定するために使用される。例えば、「ある患者のすべてのバイタルサイン結果から最新の3件を取得する」というクエリの場合、max = 3となる。 |
-
+| 名前   | 多重度 | 型          | 説明                                                         |
+| ------ | ------ | ----------  | ------------------------------------------------------------ |
+| max    | 0..1   | positiveInt | max は、lastn クエリ操作のオプションの入力パラメータ。これは、各グループから返すObservationの最大数を指定するために使用される。例えば、「ある患者のすべてのバイタルサイン結果から最新の3件を取得する」というクエリの場合、max = 3となる。 |
 
 
 ###### 出力パラメータ
 
-| 名前   | 多重度 | 型     | バインディング | プロファイル | 説明                                                         |
-| ------ | ------ | ------ | -------------- | ------------ | ------------------------------------------------------------ |
-| return | 1..1   | Bundle |                |              | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
+| 名前   | 多重度 | 型     | 説明                                                         |
+| ------ | ------ | ------ | ------------------------------------------------------------ |
+| return | 1..1   | Bundle | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
 
 
 #### サンプル
@@ -205,7 +213,7 @@ HTTP/1.1 200 OK
 - 検査の要素については以下のように定義される：  
 Observation.component（検査コンポーネント）、 Observation.hasMember（検査保持メンバ）、Observation.derivedFrom（検査派生元）
 
-以下の節では、使用される構造に関しての指針について述べる。何をグループ化するのかという考え方は、しばしば文脈に高く依存しており、エンドユーザーの視点にも基づくため、使用する構造の選択は、権限や組織的な訓練、文脈などによって決めるべきである。通常、プロファイリングは実装に必要になるだろう。
+以下の節では、使用される構造に関しての指針について述べる。何をグループ化するのかという考え方は、しばしば文脈に高く依存しており、エンドユーザの視点にも基づくため、使用する構造の選択は、権限や組織的な訓練、文脈などによって決めるべきである。通常、プロファイリングは実装に必要になるだろう。
 
 #### DiagnosticReport.result（検査レポート結果）
 検査レポートはオーダ（サービス要求）に直接関連している。DiagnosticReport.code（検査レポートコード）はパネルに名前を付け、グループ化要素として機能する。従来、これは臨床検査において"パネル"や"バッテリー"と呼ばれていたものである。DiagnosticReport.result（検査レポート結果）の要素は、個々の検査を参照する。いくつかの例では、検査レポートを使った検査のグループ化をグループ化の構造として示している。
@@ -423,12 +431,12 @@ Observation.value[x]要素には、次のように型に応じた変数名があ
 effectiveDateTimeとeffectivePeriodは、検査に密接に関連する時間情報である。 生物学的対象（例：人間の患者）の場合、生理学的に検査に関連する時間である。検体の検査の場合、検体収集の開始と終了を表す（24時間尿中ナトリウム等）が、収集時間が十分に短い場合は１点の時刻を指す（例：通常の静脈穿刺）。対象者から直接得た検査の場合（例：血圧、胸部X線）、こちらも多くの場合、検査プロセスの開始時間と終了時間のうち１点の時刻を指す。
 
 ### 参照範囲
-最も一般的な検査には普遍的な参照範囲が1個だけ含まれる。参照範囲は、臨床検査や他の収縮期血圧のような検査には有用かもしれないが、「妊娠」のようなものにはほとんど関係ない。システムは患者に関する知識（例：患者固有の年齢・性別・体重・その他要因）に基づいて関連する参照範囲のみに制限できる（MAY）が、それは不可能か不適切な場合がある。複数の参照範囲があるときは常に、参照範囲 および/または 年齢属性で違いが分かるようにしなければならない（SHOULD）。
+最も一般的な検査には普遍的な参照範囲が1個だけ含まれる。参照範囲は、臨床検査や他の収縮期血圧のような検査には有用かもしれないが、「妊娠」のようなものにはほとんど関係ない。システムは患者に関する知識（例：患者固有の年齢・性別・体重・その他要因）に基づいて関連する参照範囲のみに制限できる（MAY）が、それは不可能か不適切な場合がある。複数の参照範囲があるときは常に、参照範囲 および/または 年齢属性で違いが分かるようにしなければならない（**SHOULD**）。
 
 ### キャンセルまたは中止された検査
 検査や検査を完了できなかった場合（例えば検体が不十分とか、医療者がオーダをキャンセルしたとか）、ステータスをキャンセルに更新し、具体的な詳細を、できればコード化された値としてdataAbsentReasonかvalueCodeableConcept要素に設定する。note要素にも同様に追加情報が付与される場合がある。[検体拒否の例](https://www.hl7.org/fhir/R4/observation-example-unsat.html)は、"不十分な検体"という意味のコード値をdataAbsentReasonへ設定している。
 
 ### 遺伝情報についての検査
-遺伝情報の報告には、DiagnosticReportリソースとObservationリソースを主に使用する。遺伝情報に関する結果の記述についての実装ガイドは[こちら](http://hl7.org/fhir/uv/genomics-reporting/index.html)を参照されたい。
+遺伝情報の報告には、DiagnosticReportリソースとObservationリソースを主に使用する。遺伝情報に関する結果の記述についての実装ガイドは[こちら](https://hl7.org/fhir/uv/genomics-reporting/)を参照されたい。
 
 {% include markdown-link-references.md %}

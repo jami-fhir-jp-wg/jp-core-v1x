@@ -17,7 +17,7 @@ Usage: #example
 * code
   * coding
     * system = $JP_JfagyFoodAllergen_CS
-    * code = #J9F692300006
+    * code = #J9FA15000016
     * display = "小麦粉"
   * text = "こむぎこ"
 * patient

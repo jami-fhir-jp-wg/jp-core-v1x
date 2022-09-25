@@ -1,9 +1,11 @@
 CodeSystem: JP_MedicationExampleLineComment_CS
 Id: jp-medication-example-linecomment-cs
-Title: "JP Medication Example LineComment"
+Title: "JP Core Medication Example LineComment CodeSystem"
 Description: "注射ラインコメントのコードシステム例"
 * ^url = $JP_MedicationExampleLineComment_CS
-* ^status = #draft
+* ^status = #active
+* ^experimental = true
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #example
 * #01 "末梢キープ"

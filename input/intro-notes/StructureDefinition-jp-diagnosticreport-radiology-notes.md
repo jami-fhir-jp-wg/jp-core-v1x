@@ -1,7 +1,7 @@
 
 ### 必須要素
 
-次のデータ項目は必須（SHALL）である。
+次のデータ項目は必須（**SHALL**）である。
 
 - status ：レポートの状態・進捗状況
 - code ：レポートの種別（画像診断レポート交換手順ガイドライン「5.1 レポート種別コード」に記載されているLOINCコード "Diagnostic imaging study" を指定）
@@ -92,7 +92,7 @@ DiagnosticReportのドメインリソースの一つであるtextエレメント
 
 ### Identifier
 
-Identifier のデータタイプはオーダー依頼者であるPlacerあるいはオーダーの実施者であるFiller（HL7 Version 2 Messaging Standardにて'Placer'あるいは'Filler'として知られている）によって割り当てられた識別子を区別するために利用されるtypeエレメントを持っている。typeエレメントは以下の様に利用する。
+Identifier のデータタイプはオーダ依頼者であるPlacerあるいはオーダの実施者であるFiller（HL7 Version 2 Messaging Standardにて'Placer'あるいは'Filler'として知られている）によって割り当てられた識別子を区別するために利用されるtypeエレメントを持っている。typeエレメントは以下の様に利用する。
 
 #### Placerの場合
 
@@ -148,7 +148,7 @@ ImagingStudyやmediaは多少オーバーラップするが、使用される目
 
 典型的には放射線レポートはnarrativeな構成でのレポートが作成される。DiagnosticReport_Radiologyでは標準的なnarrativeリソースの表現としてXHTMLやrich text表現として（典型的にはPDF）がpresentedFormに指定される。
 
-Conclusionやコード化された診断結果は各々がレポートを構成する小さなデータであるが、これらはpresentedFormに保持されるnarrativeなデータ内に含まれると同時に、本リソースのエレメントに複製されなければならない（SHOULD)。
+Conclusionやコード化された診断結果は各々がレポートを構成する小さなデータであるが、これらはpresentedFormに保持されるnarrativeなデータ内に含まれると同時に、本リソースのエレメントに複製されなければならない（**SHOULD**)。
 
 診断レポートの所見などnarrativeなデータはDiagnosticReportのドメインリソースとして定義されているtextにも保持すること。presentedFormとの内容の重複は許容されている。presentedFormはbase64のバイナリであるため、DiagnosticReportのtextが検索性の担保に利用される．また、見読性も同時に保たれる。
 
@@ -162,7 +162,6 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 | コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |　例　|
 | --- | --- | --- | --- | --- | --- |
-| MAY | text | token | レポートの内容 | DiagnosticReport.text | GET [base]/DiagnosticReport?_text=(がん OR 癌) and 転移 |
 | MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) | GET [base]/DiagnosticReport?ServiceRequest/12345 |
 | MAY | category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) <br/> "RAD", "RX", "CT", "NMR", "NMS", "RUS", etc. [ default = “RAD” ] | GET [base]/DiagnosticReport?category=RAD |
 | MAY | code | token | レポート全体を示すコード | DiagnosticReport.code [LOINC 18748-4](https://loinc.org/18748-4/)(固定) | GET [base]/DiagnosticReport?code=18748-4 |
@@ -174,7 +173,7 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダーIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（**SHALL**）。
 
    ```
    GET [base]/DiagnosticReport?identifier={system|}[code]
@@ -196,10 +195,10 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 本プロファイルそのものの定義には影響しないが、レポートの標準化に関し以下の情報が参考となる。presentedForm に収容するレポートのコンテンツを作成するレポーティングシステムにおいて、標準化に関する参考資料となる。
 
-- [RadReport][RadReport] - 放射線レポートテンプレート
-- [RadLex radiology lexicon][RadLex radiology lexicon] - 放射線科語彙集
-- [RadElement][RadElement] - 放射線関連共通データエレメント
-- [IHE Radiology Technical Framework][IHE Radiology Technical Framework] - 放射線関連テクニカルフレームワーク（放射線レポートおよびレポートテンプレートの取り扱いに関する仕様が含まれている）
+1. [RadReport][RadReport] - 放射線レポートテンプレート
+1. [RadLex radiology lexicon][RadLex radiology lexicon] - 放射線科語彙集
+1. [RadElement][RadElement] - 放射線関連共通データエレメント
+1. [IHE Radiology Technical Framework][IHE Radiology Technical Framework] - 放射線関連テクニカルフレームワーク（放射線レポートおよびレポートテンプレートの取り扱いに関する仕様が含まれている）
 
 {% include markdown-link-references.md %}
 {% include external-link-reference.md %}

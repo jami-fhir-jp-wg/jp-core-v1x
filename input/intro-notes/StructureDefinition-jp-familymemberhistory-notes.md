@@ -4,7 +4,7 @@
 
 - patient : 本リソースを有する患者。
 - relationship : 患者と家族との関係の種類（父、母、兄弟など）
-- status : 家族歴のステータス（部分的 | 完全 | 記録エラー | 健康状態不明）
+- status : 家族歴のステータス（部分的 \| 完全 \| 記録エラー \| 健康状態不明）
 
 ### Extensions定義
 
@@ -25,7 +25,7 @@
 
 ##### 必須検索パラメータ
 
-本プロファイルに準拠するためには、以下の検索パラメータをサポートしなければならない（SHALL）
+本プロファイルに準拠するためには、以下の検索パラメータをサポートしなければならない（**SHALL**）
 
 1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりFamilyMemberHistoryを検索。
 
@@ -41,7 +41,7 @@
 
 ##### 推奨検索パラメータ
 
-1. 検索パラメータpatientとrelationshipを指定し、該当するすべてのFamilyMemberHistoryを検索。
+1. 検索パラメータpatientを指定し、該当するすべてのFamilyMemberHistoryを検索。
 
    ```
    GET [base]/FamilyMemberHistory?patient={reference}

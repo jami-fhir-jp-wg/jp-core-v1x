@@ -5,8 +5,8 @@ Usage: #definition
 * name = "JP_Client_CapabilityStatement"
 * title = "JP Core Client CapabilityStatement"
 * status = #active
-* date = "2022-07-31"
 * experimental = true
+* date = "2022-09-26"
 * description = "JP Core Clientの期待される機能について説明する。JP Core Clientは、ローカルなユースケースやその他の文脈上の要件に基づいて、必要なデータにアクセスするために、このリストから選択することができる。"
 * kind = #requirements
 * instantiates = "http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement"
@@ -16,7 +16,7 @@ Usage: #definition
 * rest.mode = #client
 
 
-* rest.resource[0].type = #Patient
+* rest.resource[+].type = #Patient
 * rest.resource[=].supportedProfile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #search-type
@@ -149,6 +149,9 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #history-type
 * rest.resource[=].referencePolicy = #resolves
 * rest.resource[=].searchRevInclude = "Provenance:target"
+* rest.resource[=].searchParam[+].name = "identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-identifier"
+* rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].name = "name"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Location-name"
 * rest.resource[=].searchParam[=].type = #string
@@ -224,6 +227,9 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #history-type
 * rest.resource[=].referencePolicy = #resolves
 * rest.resource[=].searchRevInclude = "Provenance:target"
+* rest.resource[=].searchParam[+].name = "identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-identifier"
+* rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].name = "specialty"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/PractitionerRole-specialty"
 * rest.resource[=].searchParam[=].type = #token
@@ -245,6 +251,9 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #history-type
 * rest.resource[=].referencePolicy = #resolves
 * rest.resource[=].searchRevInclude = "Provenance:target"
+* rest.resource[=].searchParam[+].name = "identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Medication-identifier"
+* rest.resource[=].searchParam[=].type = #token
 
 
 * rest.resource[+].type = #MedicationRequest
@@ -282,6 +291,9 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "requester"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationRequest-requester"
 * rest.resource[=].searchParam[=].type = #reference
+* rest.resource[=].searchParam[+].name = "jp-medication-start"
+* rest.resource[=].searchParam[=].definition = "http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationRequest_Start_SP"
+* rest.resource[=].searchParam[=].type = #date
 
 
 * rest.resource[+].type = #MedicationDispense
@@ -347,6 +359,36 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "code"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-code"
 * rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[+].name = "performer"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationAdministration-performer"
+* rest.resource[=].searchParam[=].type = #reference
+* rest.resource[=].searchParam[+].name = "request"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/MedicationAdministration-request"
+* rest.resource[=].searchParam[=].type = #reference
+
+
+* rest.resource[+].type = #Immunization
+* rest.resource[=].supportedProfile[0] = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
+* rest.resource[=].interaction[0].code = #create
+* rest.resource[=].interaction[+].code = #search-type
+* rest.resource[=].interaction[+].code = #read
+* rest.resource[=].interaction[+].code = #vread
+* rest.resource[=].interaction[+].code = #update
+* rest.resource[=].interaction[+].code = #patch
+* rest.resource[=].interaction[+].code = #delete
+* rest.resource[=].interaction[+].code = #history-instance
+* rest.resource[=].interaction[+].code = #history-type
+* rest.resource[=].referencePolicy = #resolves
+* rest.resource[=].searchRevInclude = "Provenance:target"
+* rest.resource[=].searchParam[+].name = "identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[+].name = "patient"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
+* rest.resource[=].searchParam[=].type = #reference
+* rest.resource[=].searchParam[+].name = "date"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-date"
+* rest.resource[=].searchParam[=].type = #date
 
 
 * rest.resource[+].type = #Observation
@@ -367,6 +409,9 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #history-type
 * rest.resource[=].referencePolicy = #resolves
 * rest.resource[=].searchRevInclude = "Provenance:target"
+* rest.resource[=].searchParam[+].name = "identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+* rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].name = "patient"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
 * rest.resource[=].searchParam[=].type = #reference
@@ -409,11 +454,11 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #history-type
 * rest.resource[=].referencePolicy = #resolves
 * rest.resource[=].searchRevInclude = "Provenance:target"
+* rest.resource[=].searchParam[+].name = "identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+* rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].name = "patient"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[+].name = "subject"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/ImagingStudy-subject"
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].name = "modality"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/ImagingStudy-modality"
@@ -483,12 +528,12 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "results-interpreter"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/DiagnosticReport-results-interpreter"
 * rest.resource[=].searchParam[=].type = #reference
+* rest.resource[=].searchParam[+].name = "specimen"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/DiagnosticReport-specimen"
+* rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].name = "status"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/DiagnosticReport-status"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[+].name = "subject"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/DiagnosticReport-subject"
-* rest.resource[=].searchParam[=].type = #reference
 
 
 * rest.resource[+].type = #AllergyIntolerance
@@ -504,6 +549,9 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #history-type
 * rest.resource[=].referencePolicy = #resolves
 * rest.resource[=].searchRevInclude = "Provenance:target"
+* rest.resource[=].searchParam[+].name = "identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+* rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].name = "patient"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
 * rest.resource[=].searchParam[=].type = #reference
@@ -522,6 +570,9 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "criticality"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/AllergyIntolerance-criticality"
 * rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[+].name = "type"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-type"
+* rest.resource[=].searchParam[=].type = #token
 
 
 * rest.resource[+].type = #Condition
@@ -537,6 +588,9 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #history-type
 * rest.resource[=].referencePolicy = #resolves
 * rest.resource[=].searchRevInclude = "Provenance:target"
+* rest.resource[=].searchParam[+].name = "identifier"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-identifier"
+* rest.resource[=].searchParam[=].type = #token
 * rest.resource[=].searchParam[+].name = "patient"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
 * rest.resource[=].searchParam[=].type = #reference
@@ -549,9 +603,6 @@ Usage: #definition
 * rest.resource[=].searchParam[+].name = "category"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Condition-category"
 * rest.resource[=].searchParam[=].type = #token
-* rest.resource[=].searchParam[+].name = "recorded-date"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Condition-recorded-date"
-* rest.resource[=].searchParam[=].type = #date
 * rest.resource[=].searchParam[+].name = "verification-status"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/Condition-verification-status"
 * rest.resource[=].searchParam[=].type = #token
@@ -559,27 +610,6 @@ Usage: #definition
 
 * rest.resource[+].type = #Procedure
 * rest.resource[=].supportedProfile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Procedure"
-* rest.resource[=].interaction[0].code = #create
-* rest.resource[=].interaction[+].code = #search-type
-* rest.resource[=].interaction[+].code = #read
-* rest.resource[=].interaction[+].code = #vread
-* rest.resource[=].interaction[+].code = #update
-* rest.resource[=].interaction[+].code = #patch
-* rest.resource[=].interaction[+].code = #delete
-* rest.resource[=].interaction[+].code = #history-instance
-* rest.resource[=].interaction[+].code = #history-type
-* rest.resource[=].referencePolicy = #resolves
-* rest.resource[=].searchRevInclude = "Provenance:target"
-* rest.resource[=].searchParam[+].name = "patient"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-patient"
-* rest.resource[=].searchParam[=].type = #reference
-* rest.resource[=].searchParam[+].name = "date"
-* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/clinical-date"
-* rest.resource[=].searchParam[=].type = #date
-
-
-* rest.resource[+].type = #Immunization
-* rest.resource[=].supportedProfile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
 * rest.resource[=].interaction[0].code = #create
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[+].code = #read
@@ -623,6 +653,9 @@ Usage: #definition
 * rest.resource[=].searchParam[=].type = #reference
 * rest.resource[=].searchParam[+].name = "status"
 * rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-status"
+* rest.resource[=].searchParam[=].type = #token
+* rest.resource[=].searchParam[+].name = "relationship"
+* rest.resource[=].searchParam[=].definition = "http://hl7.org/fhir/SearchParameter/FamilyMemberHistory-relationship"
 * rest.resource[=].searchParam[=].type = #token
 
 

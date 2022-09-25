@@ -5,7 +5,7 @@
 
 MedicationRequestリソースは、次の要素を持たなければならない。
 - status : ステータスは必須である。
-- intent : 意図は必須であり、JP Coreでは"order" に固定される。
+- intent : 意図は必須である。
 - medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない。
 - subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
 - authoredOn : 処方依頼日時であり、JP Coreでは必須である。
@@ -16,39 +16,13 @@ MedicationRequestリソースは、次の要素を持たなければならない
 ### Extensions定義
 JP Core MedicationRequest プロファイルで使用される拡張は次の通りである。
 
-#### JP Core MedicationRequest独自で追加されたExtension
-
-<table class="extension_description">
-  <tr>|服用開始日|服用開始日を格納する拡張|http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse|Period|
-    <th>拡張</th>
-    <th>説明</th>
-    <th>URL</th>
-    <th>値の型</th>
-  </tr>
-  <tr>
-    <td>実服用日数</td>
-    <td>実服用日数を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration</td>
-    <td>Duration</td>
-  </tr>
-  <tr>
-    <td>調剤指示</td>
-    <td>薬剤単位の調剤指示を表現するための拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense</td>
-    <td>CodeableConcept/string</td>
-  </tr>
-  <tr>
-    <td>頓用回数</td>
-    <td>頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount</td>
-    <td>integer</td>
-  </tr>
-</table>
-
-#### 既存のExtensionの利用
-
-既存のExtensionの利用は特にない。
-
+|拡張|説明|定義|値型|
+|:----|:----|:----|:----|
+|調剤結果|薬剤単位の調剤結果|[JP_MedicationDispense_Preparation]|CodeableConcept|
+|服用開始日|服用開始日を格納する拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_PeriodOfUse]|Period|
+|実服用日数|実服用日数を格納する拡張<br/>《dosageInstruction配下》|[JP_MedicationDosage_UsageDuration]|Duration|
+|調剤指示|薬剤単位の調剤指示を現するための拡張|[JP_MedicationRequest_DispenseRequest_InstructionForDispense]|CodeableConcept/string|
+|頓用回数|頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張|[JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]|integer|
 
 ### 用語定義
 HL7 FHIRの基底規格では、薬剤コードをはじめとして、剤形などでSNOMED CTが使われているが、日本ではライセンスの問題もあり普及していない。代替としてJAHIS処方データ交換規約やSS-MIX2で使われている用語集を採用した。
@@ -62,23 +36,21 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |医薬品|HOT13|urn:oid:1.2.392.200119.4.402.1|
 |医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
 |医薬品|⼀般処⽅名マスター|urn:oid:1.2.392.100495.20.1.81|
-|剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationFormMERIT9_CS|
-|処方区分|MERIT-9(処方区分)|http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCategoryMERIT9_CS|
-|処方区分|JAHIS処方データ交換規約Ver.3.0C(JHSP表0007)|http://jpfhir.jp/fhir/Common/CodeSystem/JHSP0007|
+|剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationFormMERIT9_CS|
+|処方区分|MERIT-9(処方区分)|http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCategoryMERIT9_CS|
+|処方区分|JAHIS処方データ交換規約Ver.3.0C(JHSP表0007)|http://jpfhir.jp/fhir/core/CodeSystem/JHSP0007|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
 |力価区分|処方情報HL7 FHIR記述仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
 |調剤指示|処方情報HL7 FHIR記述仕様(調剤指示)|urn:oid:1.2.392.200250.2.2.30.10|
 |用法|JAMI処方・注射オーダ標準用法規格(用法コード)|urn:oid:1.2.392.200250.2.2.20.20|
 |用法|JAMI処方・注射オーダ標準用法規格(補足用法コード)|urn:oid:1.2.392.200250.2.2.20.22|
 |投与部位|JAMI処方・注射オーダ標準用法規格(部位コード)|urn:oid:1.2.392.200250.2.2.20.32|
-|投与経路|HL7 V2(使用者定義表0162)|http://jpfhir.jp/fhir/Common/CodeSystem/route-codes|
+|投与経路|HL7 V2(使用者定義表0162)|http://jpfhir.jp/fhir/core/CodeSystem/route-codes|
 |投与方法2桁コード|JAMI処方・注射オーダ標準用法規格(用法詳細区分)|urn:oid:1.2.392.200250.2.2.20.40|
 |入外区分|HL7 V2(HL7表0482)|http://terminology.hl7.org/CodeSystem/v2-0482|
 
 ### 制約一覧
 JP Core MedicationRequest リソースは、以下の制約を満たさなければならない。
-- status : JP Coreでは"active"に固定される。
-- intent : JP Coreでは"intent" に固定される。
 - dosageInstruction.doseAndRage.rateRatio.denominator.value : １日量を記述する場合"1"に固定される。
 - dosageInstruction.doseAndRage.rateRatio.denominator.unit : １日量を記述する場合"日"に固定される。
 - dosageInstruction.doseAndRage.rateRatio.denominator.system : １日量を記述する場合"http://unitsofmeasure.org"に固定される。
@@ -87,8 +59,8 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 ### 項目の追加
 療養担当則23条では、「保険医は、処方箋を交付する場合には、様式第二号若しくは第二号の二又はこれらに準ずる様式の処方箋に必要な事項を記載しなければならない。」とされており、外来処方、院内処方の区分を明示していない。したがって、個別のユースケースにおいては一部を省略されることも前提の上で、規格としてはこれに準拠すべきと考え、様式に収載されている以下の項目を追加した。
 
-* 服用開始日の追加（拡張「JP_MedicationRequest_DosageInstruction_PeriodOfUse」を使用）
-* 実服用日数の追加（拡張「JP_MedicationRequest_DosageInstruction_UsageDuration」を使用）
+* 服用開始日の追加（拡張「JP_MedicationDosage_PeriodOfUse」を使用）
+* 実服用日数の追加（拡張「JP_MedicationDosage_UsageDuration」を使用）
 * 頓用回数の追加（拡張「JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount」を使用）
 * 調剤指示の追加（拡張「JP_MedicationRequest_DispenseRequest_InstructionForDispense」を使用）
 * 一日量処方への対応（doseInstruction.doseAndRate.rateRatioを使用）
@@ -106,14 +78,14 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 | SHOULD            | patient      | reference | GET [base]/MedicationRequest?patient=123456   |
 | SHOULD           | patient,date | reference,date  | GET [base]/MedicationRequest?patient=123456&date=eq2013-01-14 |
 | SHOULD           | patient,authoredon | reference,date  | GET [base]/MedicationRequest?patient=123456&authoredon=eq2013-01-14 |
-| SHOULD         | patient,jp-core-startdate | date | GET [base]/MedicationRequest?patient=123456&jp-core-startdate=eq2013-03-21 |
+| SHOULD         | patient,jp-medication-start | date | GET [base]/MedicationRequest?patient=123456&jp-meditation-start=eq2013-03-21 |
 | MAY           | date,authoredon,category,code,requester | date,date,token,token,token | GET [base]/MedicationRequest?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
 
 ##### 必須検索パラメータ
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダーIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）。
 
    ```
    GET [base]/MedicationRequest?identifier={system|}[code]
@@ -132,7 +104,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationRequestの検索をサポートすることが望ましい（SHOULD）。
+1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationRequest?patient=[id]
@@ -147,7 +119,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
    リソースIDが123456の患者のMedicationRequestリソースを含むBundleを検索する。
 
-1. patient,date 検索パラメータを使用して、患者のリファレンス情報と服用日によるMedicationRequestの検索をサポートすることが望ましい（SHOULD）。
+1. patient,date 検索パラメータを使用して、患者のリファレンス情報と服用日によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationRequest?patient=[id]&date=[date]
@@ -162,7 +134,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
    リソースIDが123456の患者の2013-01-14に服用するMedicationRequestリソースを含むBundleを検索する。
 
-1. patient,authoredon 検索パラメータを使用して、患者のリファレンス情報と依頼日によるMedicationRequestの検索をサポートすることが望ましい（SHOULD）。
+1. patient,authoredon 検索パラメータを使用して、患者のリファレンス情報と依頼日によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationRequest?patient=[id]&authoredon=[date]
@@ -179,7 +151,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
 ##### 追加検索パラメータ 
 
-1. patient,jp-core-startdate 検索パラメータを使用して、患者のリファレンス情報と服用開始によるMedicationRequestの検索をサポートすることが望ましい（SHOULD）。
+1. patient,jp-core-startdate 検索パラメータを使用して、患者のリファレンス情報と服用開始によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/MedicationRequest?patient=[id]&jp-core-startdate=[date]
@@ -222,19 +194,19 @@ URL: [base]/MedicationRequest/[id]/$everything
 
 ###### 入力パラメータ
 
-| 名前   | 多重度 | 型      | バインディング | プロファイル | 説明                                                         |
-| ------ | ------ | ------- | -------------- | ------------ | ------------------------------------------------------------ |
-| start  | 0..1   | date    |                |              | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。開始日が指定されていない場合、終了日以前のすべてのレコードが対象に含まれる。 |
-| end    | 0..1   | date    |                |              | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。終了日が指定されていない場合、開始日以降のすべてのレコードが対象に含まれる。 |
-| _since | 0..1   | instant |                |              | 指定された日時以降に更新されたリソースのみが応答に含まれる。 |
-| _type  | 0..*   | code    |                |              | 応答に含むFHIRリソース型を、カンマ区切りで指定する。指定されない場合は、サーバは全てのリソース型を対象とする。 |
-| _count | 0..1   | integer |                |              | Bundleの1ページに含まれるリソース件数を指定。                |
+| 名前   | 多重度 | 型      | 説明                                                         |
+| ------ | ------ | ------- | ------------------------------------------------------------ |
+| start  | 0..1   | date    | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。開始日が指定されていない場合、終了日以前のすべてのレコードが対象に含まれる。 |
+| end    | 0..1   | date    | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。終了日が指定されていない場合、開始日以降のすべてのレコードが対象に含まれる。 |
+| _since | 0..1   | instant | 指定された日時以降に更新されたリソースのみが応答に含まれる。 |
+| _type  | 0..*   | code    | 応答に含むFHIRリソース型を、カンマ区切りで指定する。指定されない場合は、サーバは全てのリソース型を対象とする。 |
+| _count | 0..1   | integer | Bundleの1ページに含まれるリソース件数を指定。                |
 
 ###### 出力パラメータ
 
-| 名前   | 多重度 | 型     | バインディング | プロファイル | 説明                                                         |
-| ------ | ------ | ------ | -------------- | ------------ | ------------------------------------------------------------ |
-| return | 1..1   | Bundle |                |              | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
+| 名前   | 多重度 | 型     | 説明                                                         |
+| ------ | ------ | ------ | ------------------------------------------------------------ |
+| return | 1..1   | Bundle | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
 
 ###### 例
 
@@ -284,7 +256,7 @@ HTTP/1.1 200 OK
 MedicationRequestは薬剤をCodeableConceptとして1つまでしか持つか、Medicationリソースのreferenceをもつことしかできない。したがって、複数の薬剤を同一のRp番号で表現する場合にはMedicationRequestを繰り返すか、複数の薬剤をまとめたMedication Resourceのインスタンスを参照することとなる。ワーキンググループでの検討の結果、冗長とはなるがidentifierにRp番号と薬剤番号を記録することとし、MedicationRequestを繰り返すことで表現する方法を推奨することとした。
 
 ### 服用期間、実服用日数の記述方法
-服用期間は、dosageInstruction.dosageInstruction.timing.repeat.boundsDuration要素に、Duration型を使用して記録する。本要素に指定される日数は、服用開始日から服用終了日までの全日数である。そのため、隔日投与や指定曜日の投与の場合には、服用しない日も日数に含まれることになり、処方箋に記録される実服用日数とは異なる値が記録されることとなる。服用期間とは別に実服用日数を表現したい場合には、dosageInstruction要素に対して定義した拡張「JP_MedicationRequest_DosageInstruction_UsageDuration」を使用し、Duration型で記載する。
+服用期間は、dosageInstruction.dosageInstruction.timing.repeat.boundsDuration要素に、Duration型を使用して記録する。本要素に指定される日数は、服用開始日から服用終了日までの全日数である。そのため、隔日投与や指定曜日の投与の場合には、服用しない日も日数に含まれることになり、処方箋に記録される実服用日数とは異なる値が記録されることとなる。服用期間とは別に実服用日数を表現したい場合には、dosageInstruction要素に対して定義した拡張「JP_MedicationDosage_UsageDuration」を使用し、Duration型で記載する。
 
 Timingデータ型のrepeat.boundsDuration要素を使用した服用期間のインスタンス例を示す。
 ```json
@@ -303,7 +275,7 @@ Timingデータ型のrepeat.boundsDuration要素を使用した服用期間の�
 ```json
 "extension": [
   {
-    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration",
+    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration",
     "valueDuration": {
       "value": 7,
       "unit": "日",
@@ -315,11 +287,11 @@ Timingデータ型のrepeat.boundsDuration要素を使用した服用期間の�
 ```
 
 ### 服用開始日の記述方法
-交互投与や漸増漸減などの用法で服用開始日を明示する必要がある場合には、dosageInstruction要素に対して定義した拡張「JP_MedicationRequest_DosageInstruction_PeriodOfUse」を使用し、Period型で開始日を記録する。
+交互投与や漸増漸減などの用法で服用開始日を明示する必要がある場合には、dosageInstruction要素に対して定義した拡張「JP_MedicationDosage_PeriodOfUse」を使用し、Period型で開始日を記録する。
 ```json
 "extension": [
   {
-    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_PeriodOfUse",
+    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse",
     "valuePeriod": {
       "start": "2020-04-01"
     }
@@ -517,7 +489,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 ]
 ```
 
-### 処方箋番号(オーダーID)の記述方法
+### 処方箋番号(オーダID)の記述方法
 処方箋を識別する番号も、同様に MedicationRequestリソースの identifier 要素で表現することができる。Identifier 型のsystem 要素には、保険医療機関番号を含む処方箋ID の名前空間を表すOID（urn:oid:1.2.392.100495.20.3.11.1[保険医療機関コード(10 桁)]）を指定する。全国で⼀意になる発番ルールにもとづく場合には "urn:oid:1.2.392.100495.20.3.11" とする。
 ```json
 "identifier": [
@@ -529,7 +501,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 ```
 
 ### 投与方法、投与経路
-投与経路はdosageInstruction.route 要素にコードまたは文字列で指定する。使用するコード表は HL7 V2の使用者定義表0162 投薬経路を推奨し、その場合識別するURIとして、"http://jpfhir.jp/fhir/Common/CodeSystem/route-codes"を使用する。
+投与経路はdosageInstruction.route 要素にコードまたは文字列で指定する。使用するコード表は HL7 V2の使用者定義表0162 投薬経路を推奨し、その場合識別するURIとして、"http://jpfhir.jp/fhir/core/CodeSystem/route-codes"を使用する。
 
 「A:貼付」、「B:塗布」などJAMI標準用法コードにて用法詳細区分として表現される区分は、dosageInstruction.method 要素にコードまたは文字列で指定する。 用法詳細区分を識別するURIとして、"urn:oid:1.2.392.200250.2.2.20.40"を使用する。コードを指定する場合、基本用法区分＋用法詳細区分の２桁で指定する。
 
@@ -537,7 +509,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 "route": {
   "coding": [
     {
-      "system": "http://jpfhir.jp/fhir/Common/CodeSystem/route-codes",
+      "system": "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
       "code": "AP",
       "display": "外用"
     }
@@ -571,14 +543,14 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 
 
 ### 処方区分
-薬剤オーダの運用上の区分である処方区分は、MERIT-9(処方区分)およびJAHIS処方データ交換規約Ver.3.0CのJHSP表0007を使用し、category要素に2種類のコードおよび文字列で指定することができる。MERIT-9(処方区分)をしきべつするURIとして"http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCategoryMERIT9_CS"を、JHSP表0007を識別するURIとして"http://jpfhir.jp/fhir/Common/CodeSystem/JHSP0007"を使用する。
+薬剤オーダの運用上の区分である処方区分は、MERIT-9(処方区分)およびJAHIS処方データ交換規約Ver.3.0CのJHSP表0007を使用し、category要素に2種類のコードおよび文字列で指定することができる。MERIT-9(処方区分)をしきべつするURIとして"http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCategoryMERIT9_CS"を、JHSP表0007を識別するURIとして"http://jpfhir.jp/fhir/core/CodeSystem/JHSP0007"を使用する。
 
 ```json
 "category": [
   {
     "coding": [ 
       {
-        "system": "http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCategoryMERIT9_CS",
+        "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCategoryMERIT9_CS",
         "code": "OHP",
         "display": "外来処方"
       } 
@@ -587,7 +559,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
   {
     "coding": [ 
       {
-        "system": "http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCategoryMERIT9_CS",
+        "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCategoryMERIT9_CS",
         "code": "OHO",
         "display": "院外処方"
       } 
@@ -616,27 +588,16 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     "resourceType": "MedicationRequest",
     "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:6</li><li>プレドニン錠５ｍｇ</li><li>１日１回　朝食後　１回４錠　７日分</li></ul></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:1</li><li>プレドニン錠５ｍｇ</li><li>１日１回　朝食後　１回４錠　７日分</li></ul></div>"
     },
-    "extension": [
-      {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration",
-        "valueDuration": {
-          "value": 7,
-          "unit": "日",
-          "system": "http://unitsofmeasure.org",
-          "code": "d"
-        }
-      }
-    ],
     "identifier": [
         {
-            "system": "http://www.sample.com/fhir/medication-request",
+            "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
             "value": "1234567890"
         },
         {
             "system": "urn:oid:1.2.392.100495.20.3.81",
-            "value": "6"
+            "value": "1"
         },
         {
             "system": "urn:oid:1.2.392.100495.20.3.82",
@@ -660,6 +621,17 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     "authoredOn": "2020-08-21T12:28:17+09:00",
     "dosageInstruction": [
       {
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration",
+            "valueDuration": {
+              "value": 7,
+              "unit": "日",
+              "system": "http://unitsofmeasure.org",
+              "code": "d"
+            }
+          }
+        ],
         "text": "内服・経口・１日１回朝食後　１回４錠　７日分",
         "timing": {
           "repeat": {
@@ -683,7 +655,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
         "route": {
           "coding": [
             {
-              "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
+              "system": "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
               "code": "PO",
               "display": "口"
             }
@@ -761,23 +733,16 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     "resourceType": "MedicationRequest",
     "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:7</li><li>プレドニン錠５ｍｇ</li><li>１日１回　昼食後　１回２錠　７日分</li></ul></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:2</li><li>プレドニン錠５ｍｇ</li><li>１日１回　昼食後　１回２錠　７日分</li></ul></div>"
     },
-    "extension": [
-      {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration",
-        "valueDuration": {
-          "value": 7,
-          "unit": "日",
-          "system": "http://unitsofmeasure.org",
-          "code": "d"
-        }
-      }
-    ],
     "identifier": [
       {
+        "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+        "value": "1234567890"
+      },
+      {
         "system": "urn:oid:1.2.392.100495.20.3.81",
-        "value": "7"
+        "value": "2"
       },
       {
         "system": "urn:oid:1.2.392.100495.20.3.82",
@@ -801,6 +766,17 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     "authoredOn": "2020-08-21T12:28:17+09:00",
     "dosageInstruction": [
       {
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration",
+            "valueDuration": {
+              "value": 7,
+              "unit": "日",
+              "system": "http://unitsofmeasure.org",
+              "code": "d"
+            }
+          }
+        ],
         "text": "内服・経口・１日１回昼食後　１回２錠　７日分",
         "timing": {
           "repeat": {
@@ -824,7 +800,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
         "route": {
           "coding": [
             {
-              "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
+              "system": "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
               "code": "PO",
               "display": "口"
             }
@@ -902,23 +878,16 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     "resourceType": "MedicationRequest",
     "text": {
       "status": "generated",
-      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:8</li><li>プレドニン錠５ｍｇ</li><li>１日１回　夕食後　１回１錠　７日分</li></ul></div>"
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:3</li><li>プレドニン錠５ｍｇ</li><li>１日１回　夕食後　１回１錠　７日分</li></ul></div>"
     },
-    "extension": [
-      {
-        "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DosageInstruction_UsageDuration",
-        "valueDuration": {
-          "value": 7,
-          "unit": "日",
-          "system": "http://unitsofmeasure.org",
-          "code": "d"
-        }
-      }
-    ],
     "identifier": [
       {
+        "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+        "value": "1234567890"
+      },
+      {
         "system": "urn:oid:1.2.392.100495.20.3.81",
-        "value": "8"
+        "value": "3"
       },
       {
         "system": "urn:oid:1.2.392.100495.20.3.82",
@@ -942,6 +911,17 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     "authoredOn": "2020-08-21T12:28:17+09:00",
     "dosageInstruction": [
       {
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration",
+            "valueDuration": {
+              "value": 7,
+              "unit": "日",
+              "system": "http://unitsofmeasure.org",
+              "code": "d"
+            }
+          }
+        ],
         "text": "内服・経口・１日１回夕食後　１回１錠　７日分",
         "timing": {
           "repeat": {
@@ -965,7 +945,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
         "route": {
           "coding": [
             {
-              "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
+              "system": "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
               "code": "PO",
               "display": "口"
             }
@@ -1045,12 +1025,16 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
   "resourceType": "MedicationRequest",
   "text": {
     "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:9</li>プレドニン錠５ｍｇ</ul><li>１日３回　毎食後（４錠－２錠－１錠）　７日分</li></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>RP:4</li>プレドニン錠５ｍｇ</ul><li>１日３回　毎食後（４錠－２錠－１錠）　７日分</li></div>"
   },
   "identifier": [
     {
+      "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
+      "value": "1234567890"
+    },
+    {
       "system": "urn:oid:1.2.392.100495.20.3.81",
-      "value": "9"
+      "value": "4"
     },
     {
       "system": "urn:oid:1.2.392.100495.20.3.82",
@@ -1126,7 +1110,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
       "route": {
         "coding": [
           {
-            "system": "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162",
+            "system": "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
             "code": "PO",
             "display": "口"
           }
@@ -1368,6 +1352,6 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
 1. 一般社団法人医療情報システム開発センター, 医薬品HOT コードマスター, [http://www2.medis.or.jp/hcode/](http://www2.medis.or.jp/hcode/)
 1. 日本医療情報学会、SS-MIX2仕様書・ガイドライン, [http://www.jami.jp/jamistd/ssmix2.php](http://www.jami.jp/jamistd/ssmix2.php)
 1. 保健医療福祉情報システム工業会, JAHIS電子処方箋実装ガイドVer.1.2, [https://www.jahis.jp/standard/detail/id=774](https://www.jahis.jp/standard/detail/id=774)
-1. 令和２年度厚⽣労働科学特別研究事業「診療情報提供書, 電⼦処⽅箋等の電⼦化医療⽂書の相互運用性確保のための標準規格の開発研究」研究班, 電子処方箋HL7 FHIR記述仕様書案, [https://std.jpfhir.jp/](https://std.jpfhir.jp/)
+1. 日本医療情報学会, 処方情報 HL7FHIR 記述仕様(2021年10月), [https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)
 
 {% include markdown-link-references.md %}

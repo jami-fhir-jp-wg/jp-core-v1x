@@ -18,8 +18,8 @@
 | ---------------- | -------------------------- |  --------- | ---------------------------------------------------------------------------------- |
 | SHALL            | identifier                 | token      | GET [base]/Condition?identifier=http://myhospital.com/fhir/condition\|123 |
 | SHOULD           | patient                    | reference  | GET [base]/Condition?patient=Patient/123                                        |
-| MAY              | patient,date               | reference,date | GET [base]/Condition?patient=Patient/123&date=ge2021-08-24                  |
-| MAY              | patient,clinicalstatus     | reference,code | GET [base]/Condition?patient=Patient/123&clinicalstatus=active              |
+| MAY              | patient,onset-date         | reference,date | GET [base]/Condition?patient=Patient/123&onset-date=ge2021-08-24             |
+| MAY              | patient,clinical-status     | reference,code | GET [base]/Condition?patient=Patient/123&clinical-status=active              |
 | MAY              | patient,verificationstatus | reference,code | GET [base]/Condition?patient=Patient/123&verificationstatus=confirmed       |
 | MAY              | patient,category           | reference,code | GET [base]/Condition??patient=Patient/123&category=food                  |
 
@@ -139,10 +139,10 @@
 
 ## 注意事項
 
-- 注意事項はない。
+- Condition.codeについての補足。現時点では、患者の状態を包括的に含む適当な日本語用語集がないと考え、基底のValue Setを継承するにとどめている。そのため、本プロファイルを継承するプロファイルがその用途に応じて、MEDIS標準病名マスタやICD-11などをCode SystemとするValue Setを独自に設定することを想定している。
 
 ## その他、参考文献・リンク等
 
-- HL70421 Severity of Illness Code ... JAHIS データ交換規約（共通編）Ver1.3 p.119 [https://www.jahis.jp/files/user/04_JAHIS%20standard/22-003_JAHIS%20データ交換規約（共通編）Ver.1.3.pdf](https://www.jahis.jp/files/user/04_JAHIS%20standard/22-003_JAHIS%20データ交換規約（共通編）Ver.1.3.pdf)
+1. HL70421 Severity of Illness Code ... JAHIS データ交換規約（共通編）Ver1.3 p.119 [https://www.jahis.jp/files/user/04_JAHIS%20standard/22-003_JAHIS%20データ交換規約（共通編）Ver.1.3.pdf](https://www.jahis.jp/files/user/04_JAHIS%20standard/22-003_JAHIS%20データ交換規約（共通編）Ver.1.3.pdf)
 
 {% include markdown-link-references.md %}

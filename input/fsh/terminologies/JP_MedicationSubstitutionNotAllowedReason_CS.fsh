@@ -5,7 +5,9 @@ Description: "後発医薬品変更不可区分のコードシステム"
 * ^identifier[0].system = "urn:ietf:rfc:3986"
 * ^identifier[=].value = "urn:oid:1.2.392.100495.20.2.41"
 * ^url = $JP_MedicationSubstitutionNotAllowedReason_CS
-* ^status = #draft
+* ^status = #active
+* ^experimental = false
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #complete
 * #0    "変更可"

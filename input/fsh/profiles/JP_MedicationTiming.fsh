@@ -5,10 +5,12 @@ Profile: JP_MedicationTiming
 Parent: Timing
 Id: jp-medicationtiming
 Title: "JP Core Medication Timing DataType"
-Description: "このプロファイルはTiming DataTypeに対して、薬剤に関するタイミング定義を行なったものである"
+Description: "このデータタイプはTiming DataTypeに対して、薬剤に関するタイミング定義を行なったものである"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationTiming"
-* ^status = #draft
-* ^date = "2022-03-16"
+* ^status = #active
+* ^date = "2022-09-26"
+* . ^short = "投与日時"
+* . ^definition = "投与日時"
 * event ^short = "服用もしくは注射を行なうタイミングを示す時刻"
 * event ^definition = "服用タイミングを具体的な日時で指定する場合に使用する"
 * repeat ^short = "イベントが発生する時刻"

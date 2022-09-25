@@ -3,11 +3,12 @@ Id: jp-procedure-codes-medical-cs
 Title: "JP Core Procedure Codes Medical CodeSystem"
 Description: "処置のコード:医科診療行為マスタ"
 * ^url = $JP_ProcedureCodesMedical_CS
-* ^status = #draft
+* ^status = #active
+* ^experimental = false
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureCodesMedical_VS
 * ^content = #complete
-* ^date = "2022-08-10"
 
 //TODO:exampleで利用してるため、コメントアウトよりコピー
 * #140000610 "創傷処置（１００ｃｍ２未満）"

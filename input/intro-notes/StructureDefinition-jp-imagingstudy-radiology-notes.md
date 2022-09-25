@@ -37,6 +37,7 @@ BodySite等でDICOMでmappingされているSNOMED-CTをCodeSystemとして利�
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
+| SHOULD | identifier | token | `GET [base]/ImagingStudy?identifier=1.2.392.9999999.2.9999.8001` |
 | SHOULD | patient | reference | `GET [base]/ImagingStudy?patient=123` |
 | SHOULD | patient,modality | reference,token | `GET [base]/ImagingStudy?patient=123&modality=CT` |
 | SHOULD | patient,bodysite | reference,token | `GET [base]/ImagingStudy?patient=123&bodysite=T-15460` |
@@ -49,12 +50,12 @@ BodySite等でDICOMでmappingされているSNOMED-CTをCodeSystemとして利�
 
 ##### 必須検索パラメータ
 
-次の検索パラメータは必須でサポートされなければならない。（SHALL）
+次の検索パラメータは必須でサポートされなければならない。（**SHALL**）
 ImagingStudyリソースでは検索の多様性が求められるため、必須としての検索項目は定義していない。
 
 ##### 推奨検索パラメータ
 
-次の検索パラメータはサポートすることが推奨される。（SHOULD）
+次の検索パラメータはサポートすることが推奨される。（**SHOULD**）
 
 1.患者中心での検索：対象患者（= Patientリソース）を条件とした検索をサポートすることが望ましい。
 

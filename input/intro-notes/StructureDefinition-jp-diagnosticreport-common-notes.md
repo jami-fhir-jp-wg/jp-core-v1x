@@ -1,6 +1,6 @@
 #### 検索パラメータ
 
-検索パラメータの一覧である。[共通の検索パラメータ](http://hl7.org/fhir/R4/search.html#all)も利用される。
+検索パラメータの一覧である。[共通の検索パラメータ](https://hl7.org/fhir/R4/search.html#all)も利用される。
 
 | コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |
 | --- | --- | --- | --- | --- |
@@ -24,7 +24,7 @@
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダーIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（**SHALL**）。
 
    ```
    GET [base]/DiagnosticReport?identifier={system|}[code]
@@ -33,7 +33,7 @@
    例：
 
    ```
-   GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/medication|1234567890
+   GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/diagnosticreport-id-system|1234567890
    ```
 
    指定された識別子に一致するDiagnosticReportリソースを含むBundleを検索する。

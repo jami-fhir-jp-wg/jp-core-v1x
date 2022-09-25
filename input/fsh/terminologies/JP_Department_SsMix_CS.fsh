@@ -5,7 +5,9 @@ Description: "SS-MIX統一診療科コード"
 * ^identifier[0].system = "urn:ietf:rfc:3986"
 * ^identifier[=].value = "urn:oid:1.2.392.100495.20.2.51"
 * ^url = $JP_Department_SsMix_CS
-* ^status = #draft
+* ^status = #active
+* ^experimental = false
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^hierarchyMeaning = #part-of
 * ^content = #complete

@@ -25,7 +25,7 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
 
 | スライシング定義名 | 目的 | 指定方法 |
 | ---------------- | ---------------- | ---------------- |   
-| MedicalInstitutionCode | 医療機関コードを格納する | identifier.system = "http://jpfhir.jp/fhir/Common/CodeSystem/insurance-medical-institution-no" を指定し、医療機関コード(10桁)を同valueに格納する。*7桁医療機関コードは異なるURIとなるので注意すること。  |
+| MedicalInstitutionCode | 医療機関コードを格納する | identifier.system = "http://jpfhir.jp/fhir/core/CodeSystem/insurance-medical-institution-no" を指定し、医療機関コード(10桁)を同valueに格納する。*7桁医療機関コードは異なるURIとなるので注意すること。  |
 | InsurerNumber | 健康保険組合などの保険者の保険者番号を表現する | identifier.system = "urn:oid:1.2.392.100495.20.3.61" を指定し、保険者番号を同valueに格納する。 |
 
 ### 医療機関コード
@@ -57,14 +57,14 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
 | SHOULD           | address | string  | GET [base]/Organization?address=Arbor
 
 #### 必須検索パラメータ
-必須検索パラメータ（SHALL）は特にない。
+必須検索パラメータ（**SHALL**）は特にない。
 
 ### 推奨検索パラメータ
 
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. identifier 検索パラメータを使用して、識別子によるOrganizationの検索をサポートすることが望ましい（SHOULD）。
+1. identifier 検索パラメータを使用して、識別子によるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/Organization?identifier={system|}[code]
@@ -78,7 +78,7 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
 
    指定された識別子に一致するOrganizationリソースを含むBundleを検索する。
    
-2. name 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（SHOULD）。
+2. name 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/Organization?name={string}
@@ -90,7 +90,7 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
    GET [base]/Organization?name=Health
    ```
 
-3. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（SHOULD）。
+3. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
 
    ```
    GET [base]/Organization?address=[string]
@@ -119,19 +119,10 @@ Operationは特にない。
 
 ## その他、参考文献、リンク等
 
-・退院時サマリー規約
-[http://www.hl7.jp/library/item/HL7J-CDA-007.pdf](http://www.hl7.jp/library/item/HL7J-CDA-007.pdf)
-
-・診療情報提供書規格
-[http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf](http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf)
-
-・特定健診情報ファイル仕様
-[https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html)
-
-・SS-MIX2 標準化ストレージ 仕様書 Ver.1.2h
-[https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf](https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf)
-
-・ICSR E2B(R3)
-[https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)
+1. 退院時サマリー規約 [http://www.hl7.jp/library/item/HL7J-CDA-007.pdf](http://www.hl7.jp/library/item/HL7J-CDA-007.pdf)
+1. 診療情報提供書規格 [http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf](http://www.hl7.jp/intro/std/HL7J-CDA-005.pdf)
+1. 特定健診情報ファイル仕様 [https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000165280.html)
+1. SS-MIX2 標準化ストレージ 仕様書 Ver.1.2h [https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf](https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_StndrdStrgSpecVer.1.2h.pdf)
+1. ICSR E2B(R3) [https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html](https://www.pmda.go.jp/int-activities/int-harmony/ich/0093.html)
 
 {% include markdown-link-references.md %}

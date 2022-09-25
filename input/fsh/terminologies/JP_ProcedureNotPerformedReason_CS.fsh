@@ -3,7 +3,9 @@ Id: jp-procedure-not-performed-reason-cs
 Title: "JP Core Procedure Not Performed Reason CodeSystem"
 Description:  "処置が実施されなかった理由、または開始された処置が完了しなかった理由を示すコード（より適切なコードと用語に見直し必要）"
 * ^url = $JP_ProcedureNotPerformedReason_CS
-* ^status = #draft
+* ^status = #active
+* ^experimental = false
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureNotPerformedReason_VS
 * ^content = #complete

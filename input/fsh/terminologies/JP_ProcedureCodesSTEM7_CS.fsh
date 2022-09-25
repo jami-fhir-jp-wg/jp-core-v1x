@@ -3,11 +3,12 @@ Id: jp-procedure-codes-stem7-cs
 Title: "JP Core Procedure Codes STEM7 CodeSystem"
 Description: "処置のコード:外保連手術基幹コード(STEM7)"
 * ^url = $JP_ProcedureCodesSTEM7_CS
-* ^status = #draft
+* ^status = #active
+* ^experimental = false
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureCodesSTEM7_VS
 * ^content = #complete
-* ^date = "2022-08-10"
 
 //TODO: 最終的にはコメントアウトは外すもしくはTerminologyServerへ
 // * #A111100 "体表・皮膚 切除 open surgery"

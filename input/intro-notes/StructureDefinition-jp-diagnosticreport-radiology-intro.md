@@ -15,7 +15,7 @@
 放射線検査レポートで取り扱う診断報告書は、検査の終了後に、検査の診断結果として提供される一連の情報である。
 この情報には、テキストレポート、画像、コード、および計測値などが含まれる。この組み合わせは、診断手順や特定の検査の結果の性質に応じて変化する。FHIRでは、レポートはドキュメント、RESTful API、メッセージングフレームワークなど、さまざまな方法で伝達することができる。これらの方法に含まれるのは、DiagnosticReportリソースそのものである。
 
-DiagnosticReportリソースは、診断レポート自体の他に、患者など対象者に関する情報を持つ。また、オーダーに関する情報や所見の詳細、画像を参照することもできる。レポートの結論は、テキスト、構造化されたコード化データ、またはPDFなどの完全に標準化された添付レポートとして表現することができる。
+DiagnosticReportリソースは、診断レポート自体の他に、患者など対象者に関する情報を持つ。また、オーダに関する情報や所見の詳細、画像を参照することもできる。レポートの結論は、テキスト、構造化されたコード化データ、またはPDFなどの完全に標準化された添付レポートとして表現することができる。
 
 もっとも典型的にはレポートの診断結果をDiagnosticReport.conclusionエレメントに保持しDiagnosticReport.presentedFormエレメントでレポート全体のデータを持つ。また、キー画像等の添付データはDiagnosticReport.mediaエレメントにMediaリソースへのリンクとして保持する。
 
@@ -35,7 +35,7 @@ DiagnosticReportリソースは、過去の結果（リソース内での過去�
 - [キー画像 (`media`)](http://www.hl7.org/fhir/R4/media.html)
 - [尿素窒素（BUN）(`Observation`)][JP_Observation_LabResult]
 - [クレアチニン（Cre）(`Observation`)][JP_Observation_LabResult]
-- 感染症情報 [ (`RiskAssessment`) ](http://hl7.org/fhir/riskassessment.html) あるいは [ (`Observation`) ][JP_Observation_LabResult]
+- 感染症情報 [ (`RiskAssessment`) ](https://hl7.org/fhir/R4/riskassessment.html) あるいは [ (`Observation`) ][JP_Observation_LabResult]
 
 運用のフローに関連する TASK、Procedure 等のリソース定義についてはここでは触れない。
 ## プロファイル定義

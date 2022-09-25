@@ -6,6 +6,8 @@ Description: "診療報酬点数区分コード"
 * ^identifier[=].value = "urn:oid:1.2.392.100495.20.3.22"
 * ^url = $JP_MedicalFeeScoreType_CS
 * ^status = #active
+* ^experimental = false
+* ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicalFeeScoreType_VS
 * ^content = #complete
