@@ -4,7 +4,7 @@ Title: "JP Core DiagnosticReport Radiology Example 放射線読影レポート"
 Description: "放射線読影レポート"
 Usage: #example
 * identifier.use = #usual
-* identifier.system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.value = "123456"
 * status = #final
 * category[radiology] = $diagnostic-service-sectionid-cs#RAD
@@ -28,7 +28,7 @@ Usage: #example
 // Description: "核医学レポート"
 // Usage: #example
 // * identifier.use = #usual
-// * identifier.system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+// * identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 // * identifier.value = "123456"
 // * status = #final
 // * category[radiology] = $diagnostic-service-sectionid-cs#RAD
