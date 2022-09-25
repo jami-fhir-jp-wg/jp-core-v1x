@@ -286,9 +286,9 @@ Usage: #definition
 * uniqueId[=].value = "2.16.840.1.113883.3.1937.777.10.5.162"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162"
-* uniqueId[=].preferred = true
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/route-codes"
+* uniqueId[=].preferred = true
 
 // template
 // Instance: xxxxxxxxxxxxxxxxxxxx-namingsystem
