@@ -5,7 +5,7 @@ Description: "調剤実施 注射薬"
 Usage: #example
 * contained[0] = jp-medicationdispense-injection-medication-example-1
 * contained[+] = jp-medicationdispense-injection-bodystructure-example-1
-* identifier[0].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier[0].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier[=].value = "1234567890"
 * identifier[+].system = "urn:oid:1.2.392.100495.20.3.81"
 * identifier[=].value = "1"

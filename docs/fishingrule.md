@@ -68,8 +68,8 @@ Kebab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 | extension | http://jpfhir.jp/fhir/core/Extension/StructureDefinition/{Name}<br/> `http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race`|
 | search<br/>parameter | http://jpfhir.jp/fhir/core/SearchParameter/{Name} <br/>`http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_Birthdate_SP` | |
 | capability<br/>statement | http://jpfhir.jp/fhir/core/CapabilityStatement/{Name} <br/>`http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement` |
-| codesystem | http://jpfhir.jp/fhir/Common/CodeSystem/{Name} <br/>`http://jpfhir.jp/fhir/Common/CodeSystem/JP_Gender_CS` |
-| valueset | http://jpfhir.jp/fhir/Common/ValueSet/{Name} <br/>`http://jpfhir.jp/fhir/Common/ValueSet/JP_Gender_VS` |
+| codesystem | http://jpfhir.jp/fhir/core/CodeSystem/{Name} <br/>`http://jpfhir.jp/fhir/core/CodeSystem/JP_Gender_CS` |
+| valueset | http://jpfhir.jp/fhir/core/ValueSet/{Name} <br/>`http://jpfhir.jp/fhir/core/ValueSet/JP_Gender_VS` |
 
 ### [4] Title命名規則
 NameをSpace Separator形式に変換する。(全ての項目共通)<br/>省略語は英大文字としてもよい
@@ -279,7 +279,7 @@ Description: "医薬品HOT9コードのコードシステム"
 
 ```
 [aliases-jpcore.fsh]
-Alias: $JP_MedicationCodeHOT9_CS = http://jpfhir.jp/fhir/Common/CodeSystem/JP_MedicationCodeHOT9_CS
+Alias: $JP_MedicationCodeHOT9_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeHOT9_CS
 ```
 
 ### [2]NamingSystemへのマッピング情報の記載

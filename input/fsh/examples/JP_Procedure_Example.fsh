@@ -6,13 +6,13 @@ Usage:  #example
 * status = #in-progress
 * category
   * coding
-    * system = "http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCategory_CS"
+    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCategory_CS"
     * code = #JPPCC004
     * display = "外科的処置"
   * text = "創傷処置"
 * code
   * coding
-    * system = "http://jpfhir.jp/fhir/Common/CodeSystem/JP_ProcedureCodesMedical_CS"
+    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesMedical_CS"
     * code = #140000610
   * text = "創傷処置（１００ｃｍ２未満）"
 * subject
