@@ -7,7 +7,6 @@ Description: "Observation（検体検査結果）で使用する項目コード"
 * ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
-// * ^valueSet = $JP_ObservationLabResultCode_VS
 * ^content = #complete
 
 * #3C020000002327101 "尿酸"
