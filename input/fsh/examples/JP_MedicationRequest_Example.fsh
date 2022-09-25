@@ -7,7 +7,7 @@ Usage: #example
 * identifier[rpNumber].value = "1"
 * identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
 * identifier[orderInRp].value = "1"
-* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.1.1"
 * intent = #order
 * status = #active
@@ -20,7 +20,7 @@ Usage: #example
 * dosageInstruction.extension[=].valueDuration = 3 'd' "日"
 * dosageInstruction.text = "内服・経口・１日３回朝昼夕食後"
 * dosageInstruction.timing.code = urn:oid:1.2.392.200250.2.2.20.20#1013044400000000 "内服・経口・１日３回朝昼夕食後"
-* dosageInstruction.route = http://jpfhir.jp/fhir/Common/CodeSystem/route-codes#PO "口"
+* dosageInstruction.route = http://jpfhir.jp/fhir/core/CodeSystem/route-codes#PO "口"
 * dosageInstruction.method = urn:oid:1.2.392.200250.2.2.20.40#10 "経口"
 * dosageInstruction.doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 * dosageInstruction.doseAndRate.doseQuantity = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
@@ -38,7 +38,7 @@ Usage: #example
 * identifier[rpNumber].value = "2"
 * identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
 * identifier[orderInRp].value = "2"
-* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/Common/IdSystem/resourceInstance-identifier"
+* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.1.2"
 * intent = #order
 * status = #active
@@ -51,7 +51,7 @@ Usage: #example
 * dosageInstruction.extension[=].valueDuration = 3 'd' "日"
 * dosageInstruction.text = "内服・経口・１日３回朝昼夕食後"
 * dosageInstruction.timing.code = urn:oid:1.2.392.200250.2.2.20.20#1013044400000000 "内服・経口・１日３回朝昼夕食後"
-* dosageInstruction.route = http://jpfhir.jp/fhir/Common/CodeSystem/route-codes#PO "口"
+* dosageInstruction.route = http://jpfhir.jp/fhir/core/CodeSystem/route-codes#PO "口"
 * dosageInstruction.method = urn:oid:1.2.392.200250.2.2.20.40#10 "経口"
 * dosageInstruction.doseAndRate.type = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
 * dosageInstruction.doseAndRate.doseQuantity = 2 urn:oid:1.2.392.100495.20.2.101#TAB "錠"

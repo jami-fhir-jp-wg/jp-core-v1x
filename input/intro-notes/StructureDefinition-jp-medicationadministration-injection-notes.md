@@ -669,7 +669,7 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "http://jpfhir.jp/fhir/Common/CodeSystem/JP_Department_SsMix_CS",
+            "system": "urn:oid:1.2.392.100495.20.2.51",
             "code": "01",
             "display": "内科"
           }

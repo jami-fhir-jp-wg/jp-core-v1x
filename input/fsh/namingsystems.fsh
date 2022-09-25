@@ -10,9 +10,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.100495.20.2.51"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.100495.20.2.51"
-* uniqueId[+].type = #uri
-* uniqueId[=].value = $JP_Department_SsMix_CS
 * uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_Department_SsMix_CS"
 
 
 Instance: jp-medicationbodysitejamiexternal-namingsystem
@@ -27,9 +27,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.200250.2.2.20.32"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.200250.2.2.20.32"
-* uniqueId[+].type = #uri
-* uniqueId[=].value = $JP_MedicationBodySiteJAMIExternal_CS
 * uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationBodySiteJAMIExternal_CS"
 
 
 Instance: jp-medicationcodecommon-namingsystem
@@ -44,9 +44,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.100495.20.1.81"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.100495.20.1.81"
-* uniqueId[+].type = #uri
-* uniqueId[=].value = $JP_MedicationCodeCommon_CS
 * uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeCommon_CS"
 
 
 Instance: jp-medicationcodehot7-namingsystem
@@ -61,9 +61,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.200119.4.403.2"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.200119.4.403.2"
-* uniqueId[=].value = $JP_MedicationCodeHOT7_CS
 * uniqueId[=].preferred = true
-
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeHOT7_CS"
 
 Instance: jp-medicationcodehot9-namingsystem
 InstanceOf: NamingSystem
@@ -77,13 +77,13 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.200119.4.403.1"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.200119.4.403.1"
+* uniqueId[=].preferred = true
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.2.74"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.100495.20.2.74"
 * uniqueId[+].type = #uri
-* uniqueId[=].value = $JP_MedicationCodeHOT9_CS
-* uniqueId[=].preferred = true
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeHOT9_CS"
 
 
 Instance: jp-medicationcodehot13-namingsystem
@@ -98,9 +98,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.200119.4.402.1"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.200119.4.402.1"
-* uniqueId[=].value = $JP_MedicationCodeHOT13_CS
 * uniqueId[=].preferred = true
-
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeHOT13_CS"
 
 Instance: jp-medicationcodeyj-namingsystem
 InstanceOf: NamingSystem
@@ -114,9 +114,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.100495.20.1.73"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.100495.20.1.73"
-* uniqueId[+].type = #uri
-* uniqueId[=].value = $JP_MedicationCodeYJ_CS
 * uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeYJ_CS"
 
 
 Instance: jp-medicationingredientstrengthstrengthtype-namingsystem
@@ -131,9 +131,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.100495.20.2.22"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.100495.20.2.22"
-* uniqueId[+].type = #uri
-* uniqueId[=].value =  $JP_MedicationIngredientStrengthStrengthType_CS
 * uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value =  "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationIngredientStrengthStrengthType_CS"
 
 
 Instance: jp-medicationmethodjamibasicusage-namingsystem
@@ -148,9 +148,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.200250.2.2.20.30"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.200250.2.2.20.30"
-* uniqueId[+].type = #uri
-* uniqueId[=].value = $JP_MedicationMethodJAMIBasicUsage_CS
 * uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationMethodJAMIBasicUsage_CS"
 
 
 Instance: jp-medicationmethodjamidetailusage-namingsystem
@@ -165,9 +165,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.200250.2.2.20.40"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.200250.2.2.20.40"
-* uniqueId[+].type = #uri
-* uniqueId[=].value = $JP_MedicationMethodJAMIDetailUsage_CS
 * uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationMethodJAMIDetailUsage_CS"
 
 
 Instance: jp-medicationsubstitutionnotallowedreason-namingsystem
@@ -182,9 +182,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.100495.20.2.41"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.100495.20.2.41"
-* uniqueId[+].type = #uri
-* uniqueId[=].value = $JP_MedicationSubstitutionNotAllowedReason_CS
 * uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationSubstitutionNotAllowedReason_CS"
 
 
 Instance: jp-medicationunitmerit9-namingsystem
@@ -199,9 +199,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.100495.20.2.101"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.100495.20.2.101"
-* uniqueId[+].type = #uri
-* uniqueId[=].value = $JP_MedicationUnitMERIT9_CS
 * uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationUnitMERIT9_CS"
 
 
 Instance: jp-medicationusagejami-namingsystem
@@ -216,9 +216,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.200250.2.2.20.20"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.200250.2.2.20.20"
-* uniqueId[+].type = #uri
-* uniqueId[=].value =  $JP_MedicationUsageJAMI_CS
 * uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value =  "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationUsageJAMI_CS"
 
 
 Instance: jp-medicationusagejamiadditional-namingsystem
@@ -233,9 +233,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.200250.2.2.20.22"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.200250.2.2.20.22"
-* uniqueId[+].type = #uri
-* uniqueId[=].value = $JP_MedicationUsageJAMIAdditional_CS
 * uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationUsageJAMIAdditional_CS"
 
 
 Instance: jp-medicalfeescoretype-namingsystem
@@ -250,9 +250,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.100495.20.3.22"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.100495.20.3.22"
-* uniqueId[+].type = #uri
-* uniqueId[=].value = $JP_MedicalFeeScoreType_CS
 * uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicalFeeScoreType_CS"
 
 Instance: jp-prefecturenumber-namingsystem
 InstanceOf: NamingSystem
@@ -266,9 +266,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.100495.20.3.21"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.100495.20.3.21"
-* uniqueId[+].type = #uri
-* uniqueId[=].value = $JP_PrefectureNumber_CS
 * uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_PrefectureNumber_CS"
 
 Instance: jp-medicationroute-hl7-0162-namingsystem
 InstanceOf: NamingSystem
@@ -286,9 +286,9 @@ Usage: #definition
 * uniqueId[=].value = "2.16.840.1.113883.3.1937.777.10.5.162"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162"
-* uniqueId[+].type = #uri
-* uniqueId[=].value = $JP_MedicationRouteHL70162_CS
 * uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/route-codes"
 
 // template
 // Instance: xxxxxxxxxxxxxxxxxxxx-namingsystem
