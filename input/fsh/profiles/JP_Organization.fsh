@@ -95,8 +95,7 @@ Description: "点数表コード１桁（医科１、歯科３）表現するた
 * . ^comment = "点数表コード１桁（医科1、歯科３）。Identifier型の拡張\r\n「InsuranceOrganizationCategory」を使用する。systemには点数表番号\r\nを表すOID「1.2.392.100495.20.3.22」を指定する。"
 * url = $JP_Organization_InsuranceOrganizationCategory (exactly)
 * value[x] only Coding
-* valueCoding from JP_MedicalFeeScoreType_VS (preferred)
-* valueCoding.system = "urn:oid:1.2.392.100495.20.3.22" (exactly)
+* valueCoding from JP_MedicalFeeScoreType_VS (extensible)
 * valueCoding.system ^definition = "点数表番号の名前空間を識別するURIを指定。固定値。"
 * valueCoding.code ^definition = "点数表コード１桁「1：医科」、「3：歯科」、「4：調剤」、「5：老人保健施設」、「6：訪問看護ステーション」」。"
 
@@ -131,7 +130,6 @@ JP Core Organizationプロファイルで利用されることを想定してい
 * . ^comment = "都道府県番号２桁。Identifier型の拡張を使用する。\r\nvalueには都道府県番号2桁の値を格納し、systemには都道府県番号を表すOID「1.2.392.100495.20.3.21」を指定する。"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo" (exactly)
 * value[x] only Coding
-* valueCoding from JP_PrefectureNumber_VS (preferred)
-* valueCoding.system = "urn:oid:1.2.392.100495.20.3.21" (exactly)
+* valueCoding from JP_PrefectureNumber_VS (extensible)
 * valueCoding.system ^definition = "都道府県番号の名前空間を識別するURIを指定"
 * valueCoding.code ^definition = "都道府県番号コード。 例）北海道　 \"01\""
