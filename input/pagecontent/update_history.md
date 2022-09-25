@@ -19,7 +19,7 @@ v1.0 → v1.1に変更するあたり、開発環境(Sushi & IG Publisher)を変
 * 概要
     * 文字検索等の説明を追加した。
     * JP Coreで定義してしていない用語の扱いについて説明を行なった。
-    
+
 * プロファイル
     * Administration関連
         * `JP_HumanName`にてtext欄の名前の区切り文字に、半角空白であることを明示した。
@@ -29,7 +29,7 @@ v1.0 → v1.1に変更するあたり、開発環境(Sushi & IG Publisher)を変
         * `JP_Practitioner` qualification.codeに対するバインディング対象となる免許に関するValueSet(`JP_MedicalLicenseCertificate_VS`)およびCodeSystem(`JP_MedicalLicenseCertificate_CS`)を定義した。
         * `JP_Organization`にてPrefectureNoの都道府県番号をCoding型に変更し対応するCodeSystemを作成および割り当てた。
         * `JP_Organization`にてorganizationCategoryの点数表コードをCoding型に変更し対応するCodeSystemを作成および割り当てた。
-
+        
     * Medication関連
         * `JP_Immunization`プロファイルを追加した。
         * `JP_MedicationAdministration` effective[x]にPeriod型を追加した。
@@ -45,7 +45,7 @@ v1.0 → v1.1に変更するあたり、開発環境(Sushi & IG Publisher)を変
         * 説明文書の全面的な見直し。
         * `JP_FamilyMemberHistory`プロファイルを追加した。
         * `JP_AllergyIntolerance` ValueSet `JP_AllergyIntolerance_VS`を定義し、３つのCodeSystem(`JP_JfagyFoodAllergen_CS`,`JP_JfagyNonFoodNonMedicationAllergen_CS`,`JP_JfagyMedicationAllergen_CS`)を参照するように変更を行なった。
-    
+        
 * OperationおよびSearch Parameter
     * JP Core派生の必要条件ではなく、派生先実装ガイドにて定義するものとして、特にJP CoreのExtension(拡張)にて検索パラメータとして利用頻度の高いと思われるものを定義するようにした。
     * [Search Parameter Registry](https://hl7.org/fhir/R4/searchparameter-registry.html)に記載されているSeach ParameterはJP Coreでは新たに定義する必用ないと判断し削除した。
