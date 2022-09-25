@@ -7,5 +7,4 @@ Description: "処置のコード:ICHI(International Classification of Health Int
 * ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
-// * ^valueSet = $JP_ProcedureCodesICHI_VS
 * ^content = #complete

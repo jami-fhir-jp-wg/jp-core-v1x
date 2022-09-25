@@ -7,5 +7,4 @@ Description:  "処置のフォローアップとして実施される処置の�
 * ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
-// * ^valueSet = $JP_ProcedureFollowUp_VS
 * ^content = #complete

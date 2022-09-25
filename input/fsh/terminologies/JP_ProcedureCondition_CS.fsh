@@ -7,5 +7,4 @@ Description: "処置中もしくは処置の後に発生した合併症を示す
 * ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
-// * ^valueSet = $JP_ProcedureCondition_VS
 * ^content = #complete
