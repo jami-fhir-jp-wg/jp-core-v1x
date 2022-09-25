@@ -9,7 +9,6 @@ Description: "医薬品一般名処方コードのコードシステム"
 * ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
-// * ^valueSet = $JP_MedicationCodeCommon_VS
 * ^content = #fragment
 
 // TODO:　一般名処方コード追加

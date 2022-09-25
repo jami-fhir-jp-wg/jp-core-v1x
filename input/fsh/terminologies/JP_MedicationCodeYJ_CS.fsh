@@ -9,7 +9,6 @@ Description: "個別医薬品コード(YJコード)のコードシステム"
 * ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
-// * ^valueSet = $JP_MedicationCodeYJ_VS
 * ^content = #fragment
 
 // TODO:　YJ医薬品コード追加

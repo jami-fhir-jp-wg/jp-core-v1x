@@ -1,7 +1,7 @@
 CodeSystem: JP_JfagyNonFoodNonMedicationAllergen_CS
 Id: jp-jfagy-non-food-non-medication-allergen-cs
 Title: "JP Core JFAGY Non Food None Medication Allergen CodeSystem"
-Description: "JFAGY アレルゲンコード（非食品・非医薬品）"
+Description: "JP Core JFAGY アレルゲンコード（非食品・非医薬品）"
 * ^url = $JP_JfagyNonFoodNonMedicationAllergen_CS
 * ^status = #active
 * ^experimental = false

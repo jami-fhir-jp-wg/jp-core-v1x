@@ -11,7 +11,6 @@ Description: "医薬品HOT9コードのコードシステム"
 * ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
-// * ^valueSet = $JP_MedicationCodeHOT9_VS
 * ^content = #fragment
 
 // TODO: Terminology Serverに移動したら削除する　（HOT9医薬品コード追加）

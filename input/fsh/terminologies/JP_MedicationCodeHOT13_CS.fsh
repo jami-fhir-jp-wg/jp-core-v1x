@@ -9,5 +9,4 @@ Description: "医薬品HOT13コードのコードシステム"
 * ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
-// * ^valueSet = $JP_MedicationCodeHOT13_VS
 * ^content = #fragment
