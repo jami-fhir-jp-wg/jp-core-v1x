@@ -26,4 +26,3 @@ Code System URI 'http://abc-hospital.local/fhir/devide/local-device-type' is unk
 
 # OID CodeSystem not found Warnings (only registered NamingSystem)
 Code System URI 'urn:oid:1.2.392.200119.4.101.6' is unknown so the code cannot be validated
-Code System URI 'urn:oid:2.16.840.1.113883.3.1937.777.10.5.162' is unknown so the code cannot be validated
