@@ -279,14 +279,14 @@ Description: "医薬品HOT9コードのコードシステム"
 
 ```
 [aliases-jpcore.fsh]
-Alias: $JP_MedicationCodeHOT9_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeHOT9_CS
+Alias: $JP_MedicationCodeHOT9_CS = urn:oid:1.2.392.200119.4.403.1
 ```
 
 ### [2]NamingSystemへのマッピング情報の記載
 
 - NamingSystemに対してOIDをIdentifierとJP Core URLとのマッピングを作成する。
 - OIDについては念の為OID形式、URL形式の両方を登録する。
-- URLとしてのPreferredは、JP CoreのURLに付けることとする。
+- URLとしてのPreferredは、OIDのURLに付けることとする。
 - kind=#codesystemにすること点に注意すること。
 
 ```
@@ -305,10 +305,10 @@ Usage: #definition
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.2.74"
 * uniqueId[+].type = #uri
+* uniqueId[=].preferred = true
 * uniqueId[=].value = "urn:oid:1.2.392.100495.20.2.74"
 * uniqueId[+].type = #uri
-* uniqueId[=].value = $JP_MedicationCodeHOT9_CS
-* uniqueId[=].preferred = true
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeHOT9_CS"
 ```
 
 
