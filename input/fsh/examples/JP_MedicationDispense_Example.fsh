@@ -3,12 +3,12 @@ InstanceOf: JP_MedicationDispense
 Title: "JP Core MedicationDispense Example 調剤実施 内服薬"
 Description: "調剤実施 内服薬"
 Usage: #example
-* identifier[0].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
-* identifier[=].value = "1234567890.1.1"
-* identifier[+].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[=].value = "1"
-* identifier[+].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[=].value = "1"
+* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].value = "1"
+* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+* identifier[orderInRp].value = "1"
+* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
+* identifier[requestIdentifier].value = "1234567890.1.1"
 * status = #completed
 * category = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
 * medicationCodeableConcept = urn:oid:1.2.392.200119.4.403.1#103835401 "ムコダイン錠２５０ｍｇ"

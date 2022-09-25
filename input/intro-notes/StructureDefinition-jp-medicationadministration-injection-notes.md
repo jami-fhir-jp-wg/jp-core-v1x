@@ -712,6 +712,14 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
 }
 ```
 
+### 薬剤処方の各種指示情報の記述方法について
+投与実施の基となった薬剤処方の用法などの情報は、特に記述のない限り JP Core MedicationRequest Injection と同様の記述方法とする。該当する項目としては以下のものがある。
+
+* RP番号、薬剤番号、施用番号
+* 処方箋番号（オーダID）
+* 投与方法、投与手技、投与経路、投与ライン、投与装置
+* 入外区分
+
 ## その他、参考文献・リンク等
 1. HL7, FHIR MedicationRequest Resource, [https://hl7.org/fhir/R4/medicationrequest.html](https://hl7.org/fhir/R4/medicationrequest.html)
 1. 保健医療福祉情報システム工業会, JAHIS 処方データ交換規約 Ver.3.0C, [https://www.jahis.jp/standard/detail/id=564](https://www.jahis.jp/standard/detail/id=564)
