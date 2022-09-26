@@ -16,8 +16,29 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * ^status = #active
 * ^date = "2022-09-26"
 * . ^short = "患者への薬剤投与記録"
-* identifier ^short = "External identifier 外部識別子"
-* identifier ^definition = "Identifiers associated with this Medication Administration that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate. They are business identifiers assigned to this resource by the performer or other systems and remain constant as the resource is updated and propagates from server to server.\r\n\r\nビジネスプロセスによって定義され、リソース自体への直接URL参照が適切でない場合にそれを参照するために使用される、この投薬管理に関連付けられた識別子。これらは、実行者または他のシステムによってこのリソースに割り当てられたビジネスIDであり、リソースが更新されてサーバからサーバに伝播される間、一定のままである。"
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier ^short = "外部から参照されるID"
+* identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。\r\n処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。\r\nこのIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
+* identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
+* identifier contains
+    rpNumber 1..1 and
+    requestIdentifier ..*
+* identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
+* identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
+* identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
+* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81" (exactly)
+* identifier[rpNumber].system ^short = "Rp番号(剤グループ番号)についてのsystem値"
+* identifier[rpNumber].system ^definition = "ここで付番されたIDがRp番号であることを明示するためにOIDとして定義された。urn:oid:1.2.392.100495.20.3.81で固定される。"
+* identifier[rpNumber].value 1..
+* identifier[rpNumber].value ^short = "Rp番号(剤グループ番号)"
+* identifier[rpNumber].value ^definition = "Rp番号(剤グループ番号)。\"1\"など。"
+* identifier[rpNumber].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
+* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier" (exactly)
+* identifier[requestIdentifier] ^short = "処方オーダに対するID(MedicationRequestからの継承)"
+* identifier[requestIdentifier] ^definition = "薬剤をオーダする単位としての処方箋に対するID。原則として投薬実施の基となったMedicationRequestのIDを設定する。"
+* identifier[requestIdentifier].value 1..
 * instantiates ^short = "Instantiates protocol or definition　プロトコルや定義のインスタンス化"
 * instantiates ^definition = "A protocol, guideline, orderset, or other definition that was adhered to in whole or in part by this event.\r\n\r\nこのイベントによって全体的または部分的に順守されたプロトコル、ガイドライン、オーダセット、またはその他の定義。"
 * partOf ^short = "Part of referenced event  親イベントへの参照"
@@ -123,6 +144,19 @@ Parent: JP_MedicationAdministrationBase
 Id: jp-medicationadministration
 Title: "JP Core MedicationAdministration Profile"
 Description: "このプロファイルはMedicationAdministrationリソースに対して、内服・外用薬剤処方投与実施情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
+* identifier contains
+    orderInRp 1..1
+* identifier[orderInRp] ^short = "同一RP番号（剤グループ）での薬剤の表記順"
+* identifier[orderInRp] ^definition = "同一剤グループでの薬剤を表記する際の順番。XML形式と異なりJSON形式の場合、表記順は項目の順序を意味しない。したがって、薬剤の記載順を別に規定する必要があるためIDを用いて表現する。"
+* identifier[orderInRp] ^comment = "同一剤グループ内での薬剤の順番を1から順の番号で示す。"
+* identifier[orderInRp].system 1..
+* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82" (exactly)
+* identifier[orderInRp].system ^short = "RP番号内（剤グループ内）の連番を示すsystem値"
+* identifier[orderInRp].system ^definition = "剤グループ内番号の名前空間を識別するURI。固定値urn:oid:1.2.392.100495.20.3.82"
+* identifier[orderInRp].value 1..
+* identifier[orderInRp].value ^short = "RP番号内（剤グループ内）の連番"
+* identifier[orderInRp].value ^definition = "剤グループ内連番。"
+* identifier[orderInRp].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
 * ^status = #active
 * ^date = "2022-09-26"
