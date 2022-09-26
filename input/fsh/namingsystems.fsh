@@ -270,6 +270,7 @@ Usage: #definition
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_PrefectureNumber_CS"
 
+
 Instance: jp-medicationroute-hl7-0162-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition
@@ -289,6 +290,41 @@ Usage: #definition
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/route-codes"
 * uniqueId[=].preferred = true
+
+
+Instance: jp-observation-jlac10-namingsystem
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "JP_Observation_JLAC10_CodeSystem"
+* status = #active
+* date = "2022-09-26"
+* kind = #codesystem
+* description = "JP Core Observation JLAC10 CodeSystem"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "1.2.392.200119.4.504"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.200119.4.504"
+* uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationLabResultCode_CS"
+
+
+Instance: jp-observation-vitalsignscode-namingsystem
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "JP_ObservationVitalSignsCode_NamingSystem"
+* status = #active
+* date = "2022-09-26"
+* kind = #codesystem
+* description = "JP Core Observation VitalSigns Code_NamingSystem"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "1.2.392.200119.4.804"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.200119.4.804"
+* uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCode_CS"
+
 
 // template
 // Instance: xxxxxxxxxxxxxxxxxxxx-namingsystem

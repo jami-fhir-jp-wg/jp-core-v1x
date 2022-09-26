@@ -2,6 +2,8 @@ CodeSystem: JP_ObservationLabResultCode_CS
 Id: jp-observation-labresult-code-cs
 Title: "JP Core Observation LabResult Code CodeSystem"
 Description: "Observation（検体検査結果）で使用する項目コード"
+* ^identifier[0].system = "urn:ietf:rfc:3986"
+* ^identifier[=].value = "urn:oid:1.2.392.200119.4.504"
 * ^url = $JP_ObservationLabResultCode_CS
 * ^status = #active
 * ^experimental = false

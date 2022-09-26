@@ -32,7 +32,11 @@ end
 def getUrl(fl)
   File.open(fl) do |f|
     hash = JSON.load(f)
-    return hash["url"].to_s 
+    url = hash["url"].to_s 
+    if(url.start_with?("urn:oid:"))
+      url = canonicalBase + "core/" + hash["resourceType"] + "/" + url.sub("urn:oid:","")
+    end
+    return url
   end
 end
 

@@ -275,7 +275,7 @@ performer.actorには、医療従事者(Practitioner)、または患者(Patient)
 ]
 ```
 
-#   実施情報
+### 実施情報
 「1:内服」、「2:外用」などJAMI標準用法コードにて基本用法区分として表現される区分は、dosage.route 要素にコードまたは文字列で指定する。基本用法区分を識別するURIとして、"urn:oid:1.2.392.200250.2.2.20.30"を使用する。
 
 「A:貼付」、「B:塗布」などJAMI標準用法コードにて用法詳細区分として表現される区分は、dosage.method 要素にコードまたは文字列で指定する。 用法詳細区分を識別するURIとして、"urn:oid:1.2.392.200250.2.2.20.40"を使用する。
@@ -357,6 +357,13 @@ performer.actorには、医療従事者(Practitioner)、または患者(Patient)
   ]
 }
 ```
+
+### 薬剤処方の各種指示情報の記述方法について
+投薬実施の基となった薬剤処方の用法などの情報は、特に記述のない限り JP Core MedicationRequest と同様の記述方法とする。該当する項目としては以下のものがある。
+
+* RP番号、薬剤番号
+* 処方箋番号（オーダID）
+* 入外区分
 
 ### 依頼日時
 投薬依頼を行なった日時を、拡張「JP_MedicationAdministrationRequestAuthoredOn」を使用して、[RFC3339](https://datatracker.ietf.org/doc/html/rfc3339)形式で記述する。
