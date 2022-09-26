@@ -43,8 +43,10 @@ Description: "このプロファイルはPatientリソースに対して、患�
 * identifier ^definition = "An identifier for this patient.\r\n\r\nこの患者の識別子。"
 * identifier ^comment = "IDの名前空間を表す Patient.identifier.system と ID値そのものを表す Patient.identifier.value の組み合わせとして表現する。  
 Patient.identifier.system には、urn:oid:1.2.392.100495.20.3.51.医療機関識別OID番号を使用する。  
-医療機関識別OID番号は患者IDの発行者である医療機関の識別するものである。保険医療機関の場合、都道府県番号２桁から始まる10桁の医療機関コードまたは、特定健診・特定保健指導機関の医療機関コード10桁の先頭に１をつけた11桁とする。医療機関コードの詳細については[こちらのリンク](StructureDefinition-jp-organization.html#医療機関コード)を参照すること。  
-例：医療機関コード「1312345670」の場合「urn:oid:1.2.392.100495.20.3.51.11312345670」  
+医療機関識別OID番号は患者IDの発行者である機関の医療機関コード（１０桁）の先頭に１をつけた11桁とする。医療機関コード（１０桁）の詳細は[こちらのリンク](StructureDefinition-jp-organization.html#医療機関コード１０桁)を参照すること。  
+```
+例：医療機関コード「1312345670」の場合「urn:oid:1.2.392.100495.20.3.51.11312345670」
+```
 
 なお、urn:oid:1.2.392.100495.20.3.51の部分は、「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」表19 識別子名前空間一覧において医療機関等の患者IDとして割り当てられたOIDのURL型である。地域医療連携ネットワークの地域患者IDを指定する場合も同様に、地域患者IDを識別する名前空間（IHE ITI PIX等で使用されるOID等）をsystemに使用することができる。"
 * identifier ^requirements = "Patients are almost always assigned specific numerical identifiers.\r\n\r\nほとんどの場合、患者には特定の数値識別子が割り当てられる。"
@@ -67,11 +69,13 @@ IDの種別をValueSet(Identifier Type Codes)より選択する。
 など"
 * identifier.system ^short = "The namespace for the identifier value 【詳細参照】"
 * identifier.system ^comment = "Identifier.system is always case sensitive.  
-IDの名前空間を表す。\r\n医療機関固有の患者ID（カルテNo）を表現する場合、system には、患者IDの発行者である医療機関を識別するuriを指定する。  
-医療機関を識別するために使用するOID について、もし適切なOID が存在しない場合で、その医療施設が保険医療機関の場合、特定健診・特定保健指導機関のルールに従い以下のルールで設定してもよい。  
-医療施設が固有のOID を持っている場合は、そのOID を指定する。医療施設が保険医療機関の場合、特定健診・特定保健指導機関の医療機関コードの OID「1.2.392.200119.6.102.」の末尾に「[1]＋医療機関コード（10 桁）」を指定する。医療機関コードを持たない場合、「[9]＋当該施設の電話番号下 9 桁」を医療機関コードとする。  
-例：医療機関コード「1312345670」の場合「1.2.392.200119.6.102.11312345670」  
-Patient.identifier.system は、uri 型のため、実際にインスタンスに設定される値は、上記の例であれば urn:oid:1.2.392.200119.6.102.11312345670 とする。"
+Patient.identifier.system には、urn:oid:1.2.392.100495.20.3.51.医療機関識別OID番号を使用する。  
+医療機関識別OID番号は患者IDの発行者である機関の医療機関コード（１０桁）の先頭に１をつけた11桁とする。医療機関コード（１０桁）の詳細は[こちらのリンク](StructureDefinition-jp-organization.html#医療機関コード１０桁)を参照すること。  
+```
+例：医療機関コード「1312345670」の場合「urn:oid:1.2.392.100495.20.3.51.11312345670」
+```
+
+なお、urn:oid:1.2.392.100495.20.3.51の部分は、「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」表19 識別子名前空間一覧において医療機関等の患者IDとして割り当てられたOIDのURL型である。地域医療連携ネットワークの地域患者IDを指定する場合も同様に、地域患者IDを識別する名前空間（IHE ITI PIX等で使用されるOID等）をsystemに使用することができる。"
 * identifier.value 1..
 * identifier.value ^short = "The value that is unique 【詳細参照】"
 * identifier.value ^comment = "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processor to be confident that non-case-sensitive processing is safe.\r\n\r\n患者を一意的に識別するID(例えば、患者IDやカルテ番号など)を設定。"
