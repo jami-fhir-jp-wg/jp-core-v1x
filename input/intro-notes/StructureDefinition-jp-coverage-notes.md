@@ -71,4 +71,6 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 
 * [**健康保険証**][jp-coverage-example-1]
 
+<br/>
+<br/>
 {% include markdown-link-references.md %}

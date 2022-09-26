@@ -45,7 +45,7 @@ BodySite等でDICOMでmappingされているSNOMED-CTをCodeSystemとして利�
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHOULD | identifier | token | `GET [base]/ImagingStudy?identifier=1.2.392.9999999.2.9999.8001` |
+| SHOULD | identifier | token | `GET [base]/ImagingStudy?identifier=urn:oid:2.16.124.999999.9999.1154777499.30246.19789.3503430045` |
 | SHOULD | patient | reference | `GET [base]/ImagingStudy?patient=123` |
 | SHOULD | patient,modality | reference,token | `GET [base]/ImagingStudy?patient=123&modality=CT` |
 | SHOULD | patient,bodysite | reference,token | `GET [base]/ImagingStudy?patient=123&bodysite=T-15460` |

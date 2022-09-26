@@ -114,20 +114,12 @@ JP Core Location リソースで定義された拡張はない。
 
 ##### 追加検索パラメータ 
 
-追加検索パラメータはない。
-
-#### Operation一覧
-
-Locationに対するOperationは定義されていない。
+追加検索パラメータは定義しない。
 
 ### サンプル
 * [**診察室**][jp-location-example-examinationroom]
 * [**手術室**][jp-location-example-ope]
 * [**病棟**][jp-location-example-ward]
-
-## 注意事項
-
-注意事項はない。
 
 ## その他、参考文献・リンク等
 
