@@ -10,9 +10,10 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * ^status = #active
 * ^date = "2022-09-26"
 * . ^short = "DICOM画像検査で作成されたコンテンツの表現。スタディは一連のシリーズで構成され、各シリーズには、共通のコンテキストで取得または生成された一連のサービスオブジェクトペアインスタンス（SOPインスタンス-画像またはその他のデータ）が含まれる、シリーズは1つのモダリティ（X線、CT、MR、超音波など）のみだがスタディには複数の異なるモダリティのシリーズが含まれる場合がある"
+* identifier MS
 * identifier ^short = "スタディ全体の識別子"
 * identifier ^definition = "DICOMスタディインスタンスUIDやアクセッション番号などのImagingStudyの識別子。"
-* identifier ^comment = "DICOMスタディインスタンスUIDのエンコードについては、[Imaging Study Implementation Notes]（imagingstudy.html＃notes）の説明を参照。アクセッション番号はACSN識別子タイプを使用する必要がある。\r\n\r\n【JP-Core仕様】Study Instance UIDは必須、その他は任意。"
+* identifier ^comment = "DICOMスタディインスタンスUIDのエンコードについては、[Imaging Study Implementation Notes]（imagingstudy.html＃notes）の説明を参照。アクセッション番号はACSN識別子タイプを使用する必要がある。\r\n\r\n【JP-Core仕様】Study Instance UIDは画像が存在する場合に必須、その他は任意。StudyInstanceUID (0020,000D)"
 * identifier ^requirements = "ImagingStudyに1つ以上のシリーズ要素が存在する場合、1つのDICOMスタディUID識別子が存在する必要がある（[DICOM PS 3.3 C.7.2]（https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.2.html）を参照） 。"
 * status ^definition = "ImagingStudyの現在のステータス"
 * status ^comment = "不明(unknown)は「その他」を表すものではない。定義されたステータスの1つを適用する必要がある。不明(unknown)は、オーサリングシステムが現在のステータスを確認できない場合に使用される。\r\n\r\n【JP-Core仕様】リソースの状態。"

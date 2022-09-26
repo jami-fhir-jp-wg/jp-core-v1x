@@ -9,6 +9,10 @@ ImagingStudyリソースは、次の要素を持たなければならない。
 - status︓検査項目情報の状態は必須である。
 - subject︓このリソースが示す検査項目が、どの患者のものかを示すため、このプロファイルでは参照するpatientリソースの定義を必須である。
 
+#### Must Supoort
+ImagingStudyリソースは該当する情報が存在する場合、次の要素を持たなければならない。
+
+- identifier：DICOM画像が存在する場合、DICOM tagのStudyInstance UID (0020,000D)が保持される必要がある。Accession Number and Issuer (0080,0050)+(0080,0051) あるいは Study ID (0020,0010)の設定も可能だが、JP CoreではStudyInstance UIDをMust Supportとし、他は任意とする（複数のidentifierの設定は可能）。
 
 ### Extension定義
 
