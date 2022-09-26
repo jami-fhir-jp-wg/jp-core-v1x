@@ -6,7 +6,8 @@ Description: "医薬品HOT9コードのコードシステム"
 * ^identifier[=].value = "urn:oid:1.2.392.200119.4.403.1"
 * ^identifier[+].system = "urn:ietf:rfc:3986"
 * ^identifier[=].value = "urn:oid:1.2.392.100495.20.2.74"
-* ^url = $JP_MedicationCodeHOT9_CS
+// * ^url = $JP_MedicationCodeHOT9_CS
+* ^url = "urn:oid:1.2.392.200119.4.403.12345"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
