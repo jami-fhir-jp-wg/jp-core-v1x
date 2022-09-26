@@ -15,11 +15,13 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * identifier ^definition = "DICOMスタディインスタンスUIDやアクセッション番号などのImagingStudyの識別子。"
 * identifier ^comment = "DICOMスタディインスタンスUIDのエンコードについては、[Imaging Study Implementation Notes]（imagingstudy.html＃notes）の説明を参照。アクセッション番号はACSN識別子タイプを使用する必要がある。\r\n\r\n【JP-Core仕様】Study Instance UIDは画像が存在する場合に必須、その他は任意。StudyInstanceUID (0020,000D)"
 * identifier ^requirements = "ImagingStudyに1つ以上のシリーズ要素が存在する場合、1つのDICOMスタディUID識別子が存在する必要がある（[DICOM PS 3.3 C.7.2]（https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.2.html）を参照） 。"
+* status MS
 * status ^definition = "ImagingStudyの現在のステータス"
 * status ^comment = "不明(unknown)は「その他」を表すものではない。定義されたステータスの1つを適用する必要がある。不明(unknown)は、オーサリングシステムが現在のステータスを確認できない場合に使用される。\r\n\r\n【JP-Core仕様】リソースの状態。"
 * modality ^short = "実際の取得モダリティーの場合、モダリティーの全シリーズ。対応するDICOM tag: (0008, 0061)"
 * modality ^definition = "実際の取得モダリティであるすべてのseries.modality値のリスト、つまりDICOMコンテキストグループ29（値セットOID 1.2.840.10008.6.1.19）の値。"
 * modality ^comment = "コードは、列挙型またはコードリストで、SNOMED CTなどの非常に正式な定義まで、非常にカジュアルに定義できる。詳細については、HL7v3コア原則を参照のこと。\r\n\r\n・モダリティのコードを設定。\r\n\r\n・Seriesの階層の(0008,0060)を集約する、または(0008,0060)　と　(0008, 0061) のOR。但し、重複する値は1つにまとめて表現。"
+* subject MS
 * subject only Reference(JP_Patient or Device or Group)
 * subject ^short = "検査対象者"
 * subject ^definition = "画像検査の対象、通常は患者。"
@@ -88,6 +90,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.number ^short = "このシリーズの数値型識別子"
 * series.number ^definition = "このシリーズの数値型識別子"
 * series.number ^comment = "32ビット数で表す。これより大きい値の場合は、10進数を使用する。\r\n\r\n上記UIDとは別に、ユーザ（または装置）が自由に決められる番号。"
+* series.modality MS
 * series.modality ^short = "シリーズが取得されたモダリティ"
 * series.modality ^definition = "シリーズが取得されたモダリティー"
 * series.modality ^comment = "コードは、列挙型またはコードリストで、SNOMED CTなどの非常に正式な定義まで、非常に柔軟に定義できる。ただしJP CoreではSNOMED CTを推奨しない。詳細については、HL7v3コア原則を参照。\r\n\r\n当該シリーズのモダリティコード。1シリーズ1モダリティ（1つのシリーズの中に複数のモダリティが混在することはない）。\r\n\r\n（参照先）\r\n\r\nftp://medical.nema.org/medical/dicom/resources/valuesets/fhir/json/CID_29.json\r\n\r\nhttps://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html"
@@ -116,12 +119,15 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.performer ^short = "シリーズの実施者"
 * series.performer ^definition = "シリーズを実施し、関係した人を示す。"
 * series.performer ^comment = "シリーズを実施した人がわからない場合は、その組織が記録される場合がある。患者または関係者は、患者自身で取得した画像の場合など、パフォーマーである可能性がある。\r\n\r\n【JP Core仕様】検査を実施した（画像を取得する操作を行った）人。\r\n\r\n　　(0008,1050)Performing Physician's Name\r\n\r\n　　(0008,1052)Performing Physician Identification Sequence\r\n\r\n　　(0008,1070)Operators' Name\r\n\r\n　　(0008,1072)Operator Identification Sequence"
+* series.performer.actor MS
 * series.performer.actor only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or CareTeam or JP_Patient or Device or RelatedPerson)
 * series.performer.actor ^comment = "【JP Core仕様】組織または撮影者"
 * series.instance ^short = "シリーズからの単一SOPインスタンス"
 * series.instance ^definition = "ひとつの画像、またはプレゼンテーションの状態など、シリーズ内の単一のSOPインスタンス。"
 * series.instance ^comment = "インスタンス（画像）単位の情報"
+* series.instance.uid MS
 * series.instance.uid ^comment = "[DICOM PS3.3 C.12.1](https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.12.html#sect_C.12.1)を参照。\r\n\r\n【JP Core仕様】画像のユニークID。DICOMタグマッピングにある値をそのまま設定。"
+* series.instance.sopClass MS
 * series.instance.sopClass ^comment = "【JP Core仕様】SOPクラスUID。DICOMタグマッピングにある値をそのまま設定。"
 * series.instance.number ^comment = "32ビット数で表す。これより大きい値の場合は、10進数を使用する。\r\n\r\n【JP Core仕様】ユーザ（または装置）が自由に決められる画像ごとの番号。DICOMタグマッピングにある値をそのまま設定。"
 * series.instance.title ^short = "インスタンスの記述"
