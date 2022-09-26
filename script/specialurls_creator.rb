@@ -58,7 +58,7 @@ p 'sushi-configの取得'
 allText = getConfingText(sushiconfigPath)
 
 p '正規表現による置換'
-regex = /\s{2}special-url:\n(\s{4}-\shttp.*\n)*/
+regex = /\s{2}special-url:\n(\s{4}-\s(http|urn:oid:).*\n)*/
 allText.gsub!(regex, sb)
 
 p 'sushi-configによる書き込み'
