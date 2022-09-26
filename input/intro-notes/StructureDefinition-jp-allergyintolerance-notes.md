@@ -181,6 +181,6 @@
 
 ## その他、参考文献・リンク等
 
-- 特になし。
+- なし。
 
 {% include markdown-link-references.md %}

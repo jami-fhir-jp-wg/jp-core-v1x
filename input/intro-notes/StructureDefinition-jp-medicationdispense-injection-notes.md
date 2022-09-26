@@ -135,6 +135,8 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
 ##### 追加検索パラメータ 
 
+追加検索パラメータは定義しない。
+
 #### Operation一覧
 
 JP Core MedicationDispense Injection リソースに対して使用される操作は次の通りである。
