@@ -117,6 +117,8 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 
 ##### 追加検索パラメータ 
 
+追加検索パラメータは定義しない。
+
 #### Operation一覧
 
 JP MedicationAdministration リソースに対して使用される操作は次の通りである。

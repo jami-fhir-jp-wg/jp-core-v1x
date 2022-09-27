@@ -25,8 +25,8 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
 
 | スライシング定義名 | 目的 | 指定方法 |
 | ---------------- | ---------------- | ---------------- |   
-| MedicalInstitutionCode | 医療機関コードを格納する | identifier.system = "http://jpfhir.jp/fhir/core/CodeSystem/insurance-medical-institution-no" を指定し、医療機関コード(10桁)を同valueに格納する。*医療機関コード(7桁)は異なるURIとなるので注意すること。  |
-| InsurerNumber | 健康保険組合などの保険者の保険者番号を表現する | identifier.system = "urn:oid:1.2.392.100495.20.3.61" を指定し、保険者番号を同valueに格納する。 |
+| medicalInstitutionCode | 医療機関コードを格納する | identifier.system = "http://jpfhir.jp/fhir/core/CodeSystem/insurance-medical-institution-no" を指定し、医療機関コード(10桁)を同valueに格納する。*医療機関コード(7桁)は異なるURIとなるので注意すること。  |
+| insurerNumber | 健康保険組合などの保険者の保険者番号を表現する | identifier.system = "urn:oid:1.2.392.100495.20.3.61" を指定し、保険者番号を同valueに格納する。 |
 
 ## 医療機関コード（１０桁）
 
@@ -123,10 +123,7 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
    ```
 
 ### オプション検索パラメータ
-オプション検索パラメータ（MAY）は特にない。   
-
-### Operation一覧
-Operationは特にない。
+オプション検索パラメータ（MAY）は定義しない。  
 
 ### サンプル  
 

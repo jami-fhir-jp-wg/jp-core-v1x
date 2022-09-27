@@ -1,8 +1,6 @@
 
 ### 必須要素
 
-次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
-
 JP Practitioner リソースには、必須要素はない。
 
 ### Extensions定義
@@ -70,15 +68,7 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 
 ##### 推奨検索パラメータ
 
-推奨検索パラメータ(**SHOULD**)はない。
-
-##### オプション検索パラメータ 
-
-オプション検索パラメータ(MAY)はない。
-
-#### Operation一覧
-
-Operationはない。
+推奨検索パラメータ(**SHOULD**)は定義しない。
 
 ### サンプル
 
@@ -86,10 +76,6 @@ Operationはない。
 * [**女性看護師**][jp-practitioner-example-female-2]
 * [**男性医師**][jp-practitioner-example-male-1]
 * [**男性看護師**][jp-practitioner-example-male-2]
-
-## 注意事項
-
-注意事項はない。
 
 ## その他、参考文献・リンク等
 

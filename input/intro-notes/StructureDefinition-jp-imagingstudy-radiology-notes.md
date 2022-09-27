@@ -3,13 +3,13 @@
 
 次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
 
-#### 必須
+#### 必須項目
 ImagingStudyリソースは、次の要素を持たなければならない。
 
 - status︓検査項目情報の状態は必須である。
 - subject︓このリソースが示す検査項目が、どの患者のものかを示すため、このプロファイルでは参照するpatientリソースの定義を必須である。
 
-#### Must Supoort
+#### Must Support
 ImagingStudyリソースは該当する情報が存在する場合、次の要素を持たなければならない。
 
 - identifier：DICOM画像が存在する場合、DICOMタグのStudyInstance UID (0020,000D)が保持される必要がある。Accession Number and Issuer (0080,0050)+(0080,0051) あるいは Study ID (0020,0010)の設定も可能だが、JP CoreではStudyInstance UIDをMust Supportとし、他は任意とする（複数のidentifierの設定は可能）。必要に応じてオーダ番号等を持つことも可能である。
@@ -45,14 +45,13 @@ BodySite等でDICOMでmappingされているSNOMED-CTをCodeSystemとして利�
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHOULD | identifier | token | `GET [base]/ImagingStudy?identifier=1.2.392.9999999.2.9999.8001` |
+| SHOULD | identifier | token | `GET [base]/ImagingStudy?identifier=urn:oid:2.16.124.999999.9999.1154777499.30246.19789.3503430045` |
 | SHOULD | patient | reference | `GET [base]/ImagingStudy?patient=123` |
 | SHOULD | patient,modality | reference,token | `GET [base]/ImagingStudy?patient=123&modality=CT` |
 | SHOULD | patient,bodysite | reference,token | `GET [base]/ImagingStudy?patient=123&bodysite=T-15460` |
 | SHOULD | patient,started | reference,date | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-25` |
 | SHOULD | patient,started,modality,bodysite | reference,date,token,token  | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=CT&bodysite=T-15460` |
 | SHOULD | encounter | reference  | `GET [base]/ImagingStudy?encounter=Encounter/456` |
-
 
 #### 操作詳細
 
@@ -80,7 +79,6 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
 
 2.モダリティ中心の検索：対象患者（= Patientリソース）と撮影に使用されたモダリティを条件とした検索をサポートすることが望ましい。
 
-
    ```
    GET [base]/ImagingStudy?patient={reference}&modality={token}
    ```
@@ -93,7 +91,6 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
 
 3.部位中心の検索：対象患者（= Patientリソース）と撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい。
 
-
    ```
    GET [base]/ImagingStudy?patient={reference}&bodysite={token}
    ```
@@ -103,11 +100,8 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    ```
    GET [base]/ImagingStudy?patient=123&bodysite=T-15460
    ```
-<br/>
-
 
 4.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい。
-
 
    ```
    GET [base]/ImagingStudy?patient={reference}&started={date}
@@ -120,7 +114,6 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    ```
 
 5.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい。
-
 
    ```
    GET [base]/ImagingStudy?patient={reference}&started={date}
