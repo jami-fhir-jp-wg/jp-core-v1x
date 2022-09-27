@@ -2,8 +2,7 @@ CodeSystem: JP_JfagyFoodAllergen_CS
 Id: jp-jfagy-food-allergen-cs
 Title: "JP Core JFAGY Food Allergen CodeSystem"
 Description: "JFAGY アレルゲンコード（食品）"
-//* ^url = $JP_JfagyFoodAllergen_CS
-* ^url = "https://jfagy"
+* ^url = $JP_JfagyFoodAllergen_CS
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
