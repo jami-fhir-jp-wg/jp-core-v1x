@@ -7,6 +7,7 @@ on:
       - 'develop'
       - 'release/**'
       - 'hotfix/**'
+      - 'feature/swg1-CodeSystem修正/**'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
