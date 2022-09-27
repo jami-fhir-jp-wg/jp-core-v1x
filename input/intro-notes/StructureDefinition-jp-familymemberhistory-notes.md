@@ -75,14 +75,8 @@
 
 - オプション検索パラメータは定義しない。
 
-
 #### サンプル
 
 * [**家族歴（母親）**][jp-familymemberhistory-example-1]
-
-
-## その他、参考文献・リンク等
-
-- なし。
 
 {% include markdown-link-references.md %}

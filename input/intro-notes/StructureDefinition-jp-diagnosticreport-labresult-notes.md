@@ -87,8 +87,4 @@ Operationは定義しない。
 
 * [**検体検査レポート（血液）**][jp-diagnosticreport-labresult-example-1]
 
-## その他、参考文献、リンク等
-
-なし
-
 {% include markdown-link-references.md %}
