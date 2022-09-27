@@ -53,7 +53,6 @@ BodySite等でDICOMでmappingされているSNOMED-CTをCodeSystemとして利�
 | SHOULD | patient,started,modality,bodysite | reference,date,token,token  | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=CT&bodysite=T-15460` |
 | SHOULD | encounter | reference  | `GET [base]/ImagingStudy?encounter=Encounter/456` |
 
-
 #### 操作詳細
 
 ##### 必須検索パラメータ
@@ -80,7 +79,6 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
 
 2.モダリティ中心の検索：対象患者（= Patientリソース）と撮影に使用されたモダリティを条件とした検索をサポートすることが望ましい。
 
-
    ```
    GET [base]/ImagingStudy?patient={reference}&modality={token}
    ```
@@ -93,7 +91,6 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
 
 3.部位中心の検索：対象患者（= Patientリソース）と撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい。
 
-
    ```
    GET [base]/ImagingStudy?patient={reference}&bodysite={token}
    ```
@@ -103,11 +100,8 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    ```
    GET [base]/ImagingStudy?patient=123&bodysite=T-15460
    ```
-<br/>
-
 
 4.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい。
-
 
    ```
    GET [base]/ImagingStudy?patient={reference}&started={date}
@@ -120,7 +114,6 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    ```
 
 5.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい。
-
 
    ```
    GET [base]/ImagingStudy?patient={reference}&started={date}
