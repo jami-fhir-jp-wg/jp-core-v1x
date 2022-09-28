@@ -3,19 +3,11 @@ name: JPCore FHIR Task
 on:
   push:
     branches: 
-      - 'main'
-      - 'develop'
-      - 'release/**'
-      - 'hotfix/**'
       - 'feature/swg1-CodeSystem修正/**'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
       - '.github/workflows/**'
-  pull_request:
-    branches:
-      - 'main'
-      - 'develop'
 jobs:
   turn:
     runs-on: ubuntu-latest
