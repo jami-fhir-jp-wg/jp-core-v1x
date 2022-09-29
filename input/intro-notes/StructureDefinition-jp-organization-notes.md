@@ -84,7 +84,7 @@
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. identifier 検索パラメータを使用して、識別子によるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
+1. identifier 検索パラメータを使用して、識別子によるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Organization?identifier={system|}[code]
@@ -98,7 +98,7 @@
 
    指定された識別子に一致するOrganizationリソースを含むBundleを検索する。
    
-2. name 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
+2. name 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Organization?name={string}
@@ -110,7 +110,7 @@
    GET [base]/Organization?name=Health
    ```
 
-3. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
+3. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Organization?address=[string]

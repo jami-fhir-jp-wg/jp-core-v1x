@@ -41,7 +41,7 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. beneficiary 検索パラメータを使用して、識別子によるCoverageの検索をサポートすることが望ましい（**SHOULD**）。
+1. beneficiary 検索パラメータを使用して、識別子によるCoverageの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Coverage?beneficiary={system|}[code]
@@ -55,7 +55,7 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 
    指定された識別子に一致するCoverageリソースを含むBundleを検索する。
    
-2. class-type 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
+2. class-type 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Coverage.class?type={token}

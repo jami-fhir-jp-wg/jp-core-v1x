@@ -39,7 +39,7 @@
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるObservationの検索をサポートしなければならない（**SHALL**）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるObservationの検索をサポートしなければならない（**SHALL**）
 
    ```
    GET [base]/Observation?identifier={token}

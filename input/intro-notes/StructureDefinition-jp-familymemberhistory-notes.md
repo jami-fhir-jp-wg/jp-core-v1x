@@ -27,7 +27,7 @@
 
 本プロファイルに準拠するためには、以下の検索パラメータをサポートしなければならない（**SHALL**）
 
-1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりFamilyMemberHistoryを検索。
+1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりFamilyMemberHistoryを検索
 
    ```
    GET [base]/FamilyMemberHistory?identifier={system|}[code]
@@ -41,7 +41,7 @@
 
 ##### 推奨検索パラメータ
 
-1. 検索パラメータpatientを指定し、該当するすべてのFamilyMemberHistoryを検索。
+1. 検索パラメータpatientを指定し、該当するすべてのFamilyMemberHistoryを検索
 
    ```
    GET [base]/FamilyMemberHistory?patient={reference}
@@ -57,7 +57,7 @@
 
 オプションとして次の検索パラメータをサポートすることができる（MAY）
 
-1. 検索パラメータpatientとstatusの組みを指定し、該当するすべてのFamilyMemberHistoryを検索。
+1. 検索パラメータpatientとstatusの組みを指定し、該当するすべてのFamilyMemberHistoryを検索
 
     * OR検索のサポートを含む(例えば status={system\|}[code],{system\|}[code],...)
       

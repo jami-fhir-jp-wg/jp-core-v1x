@@ -25,7 +25,7 @@
 
 本プロファイルに準拠するためには、以下の検索パラメータをサポートしなければならない（SHALL）
 
-1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりProcedureを検索。
+1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりProcedureを検索
 
    ```
    GET [base]/Procedure?identifier={system|}[code]
@@ -41,7 +41,7 @@
 
 本プロファイルに準拠するためには、以下の検索パラメータをサポートすることが推奨される（**SHOULD**）
 
-1. 検索パラメータpatientとdateを指定し、該当するすべてのProcedureを検索。
+1. 検索パラメータpatientとdateを指定し、該当するすべてのProcedureを検索
 
       * dateに対する次の比較演算子のサポートを含む: gt,lt,ge,le
       * AND検索のオプションのサポートを含む (例えば.date=[date]&date=[date]]&...)
@@ -60,7 +60,7 @@
 
 オプションとして次の検索パラメータをサポートすることができる（MAY）
 
-1. 検索パラメータpatientとstatusを指定し、該当するすべてのProcedureを検索。
+1. 検索パラメータpatientとstatusを指定し、該当するすべてのProcedureを検索
 
       * OR検索のサポートを含む(例えば status={system\|}[code],{system\|}[code],...)
 
@@ -74,7 +74,7 @@
    
       指定された患者およびステータスのすべてのProcedureを含むBundleを検索する。
 
-2. 検索パラメータpatientとcodeとdateを指定し、該当するすべてのProcedureを検索。
+2. 検索パラメータpatientとcodeとdateを指定し、該当するすべてのProcedureを検索
 
       * OR検索のオプションのサポートを含む (例えば code={system\|}[code],{system\|}[code],...)
       * dateに対する次の比較演算子のサポートを含む:gt,lt,ge,le

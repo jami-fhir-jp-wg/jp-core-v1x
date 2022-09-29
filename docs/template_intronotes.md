@@ -123,7 +123,7 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
 ##### 必須検索パラメータ
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、医籍登録番号などの識別子によるPractitionerの検索をサポートしなければならない（**SHALL**）。
+1. identifier 検索パラメータを使用して、医籍登録番号などの識別子によるPractitionerの検索をサポートしなければならない（**SHALL**）
     ```
     GET [base]/Practitioner?identifier={system|}[code]
     ```
@@ -134,7 +134,7 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
    指定された識別子に一致するPractitionerリソースを含むBundleを検索する。
 
 
-2. name 検索パラメータを使用して、任意の名前パートによる文字列検索をサポートしなければならない（**SHALL**）。
+2. name 検索パラメータを使用して、任意の名前パートによる文字列検索をサポートしなければならない（**SHALL**）
     ```
     GET [base]/Practitioner?name=[string]
     ```
@@ -147,7 +147,7 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
 ##### 推奨検索パラメータ
 次の検索パラメータをサポートすることが望ましい。
 
-1. communication 検索パラメータを使用して、医療従事者が使用する言語コードによるPractitionerの検索をサポートすることが望ましい（**SHOULD**）。
+1. communication 検索パラメータを使用して、医療従事者が使用する言語コードによるPractitionerの検索をサポートすることが望ましい（**SHOULD**）
     ```
     GET [base]/Practitioner?communication={system|}[code]
     ```
@@ -160,7 +160,7 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
 ##### 追加検索パラメータ 
 <!--★★コメント： US-Coreでは 基底以外の追加検索パラメータ（基底プロパティまたは拡張(Extension)に対する検索パラメータの両方を含む）についての記載がありませんが、必要と思われたので追加しました。内容は例示です。★★-->
 
-1. qualification-identifier検索パラメータを使用して、資格識別子によるPractitionerの検索をサポートしなければならない（**SHALL**）。
+1. qualification-identifier検索パラメータを使用して、資格識別子によるPractitionerの検索をサポートしなければならない（**SHALL**）
     ```
     GET [base]/Practitioner?qualification-identifier={system|}{value}
     ```
@@ -170,7 +170,7 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
     ```
    指定された識別子と資格識別子が一致するPractitionerリソースを含むBundleを検索する。
 
-2. jp-core-ethnicity検索パラメータを使用して、民族性によるPractitionerの検索をサポートすることが望ましい（**SHOULD**）。
+2. jp-core-ethnicity検索パラメータを使用して、民族性によるPractitionerの検索をサポートすることが望ましい（**SHOULD**）
     ```
     GET [base]/Practitioner?jp-core-ethnicity={system|}{code}
     ```

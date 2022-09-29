@@ -36,7 +36,7 @@
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、医療従事者番号などの識別子によるPractitionerの検索をサポートしなければならない（**SHALL**）。
+1. identifier 検索パラメータを使用して、医療従事者番号などの識別子によるPractitionerの検索をサポートしなければならない（**SHALL**）
 
    ```
    GET [base]/Practitioner?identifier={system|}[code]
@@ -52,7 +52,7 @@
 
    
 
-2. name 検索パラメータを使用して、任意の名前パートによる文字列検索をサポートしなければならない（**SHALL**）。
+2. name 検索パラメータを使用して、任意の名前パートによる文字列検索をサポートしなければならない（**SHALL**）
 
    ```
    GET [base]/Practitioner?name=[string]

@@ -29,7 +29,7 @@
 
 本プロファイルに準拠するためには、以下の検索パラメータをサポートしなければならない（**SHALL**）
 
-1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりAllergyIntoleranceを検索。
+1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりAllergyIntoleranceを検索
 
    ```
    GET [base]/AllergyIntolerance?identifier={system|}[code]
@@ -45,7 +45,7 @@
 
 本プロファイルに準拠するためには、以下の検索パラメータをサポートすることが推奨される（SHOULD）
 
-1. 検索パラメータpatientを指定し、該当するすべてのAllergyIntoleranceを検索。
+1. 検索パラメータpatientを指定し、該当するすべてのAllergyIntoleranceを検索
 
    ```
    GET [base]/AllergyIntolerance?patient={reference}
@@ -61,7 +61,7 @@
 
 オプションとして次の検索パラメータをサポートすることができる（MAY）
 
-1. 検索パラメータpatientとdateの組みを指定し、該当するすべてのAllergyIntoleranceを検索。
+1. 検索パラメータpatientとdateの組みを指定し、該当するすべてのAllergyIntoleranceを検索
 
     * dateに対する次の比較演算子のサポートを含む: gt,lt,ge,le
     * AND検索のオプションのサポートを含む (例えば.date=[date]&date=[date]]&...)
@@ -76,7 +76,7 @@
     
     指定された患者および日付のすべてのAllergyIntoleranceを含むBundleを返却する。
 
-2. 検索パラメータpatientとclinicalstatusの組みを指定し、該当するすべてのAllergyIntoleranceを検索。
+2. 検索パラメータpatientとclinicalstatusの組みを指定し、該当するすべてのAllergyIntoleranceを検索
 
     * OR検索のサポートを含む(例えば clinicalstatus={system\|}[code],{system\|}[code],...)
     
@@ -93,7 +93,7 @@
     
     指定された患者およびステータスのすべてのAllergyIntoleranceを含むBundleを返却する。
 
-3. 検索パラメータpatientとverificationstatus組みを指定し、該当するすべてのAllergyIntoleranceを検索。
+3. 検索パラメータpatientとverificationstatus組みを指定し、該当するすべてのAllergyIntoleranceを検索
 
     * OR検索のサポートを含む(例えば verificationstatus={system\|}[code],{system\|}[code],...)
     
@@ -110,7 +110,7 @@
     
     指定された患者およびステータスのすべてのAllergyIntoleranceを含むBundleを返却する。
 
-4. 検索パラメータpatientとtype組みを指定し、該当するすべてのAllergyIntoleranceを検索。
+4. 検索パラメータpatientとtype組みを指定し、該当するすべてのAllergyIntoleranceを検索
 
     * OR検索のサポートを含む(例えば type={system\|}[code],{system\|}[code],...)
     
@@ -127,7 +127,7 @@
     
     指定された患者およびステータスのすべてのAllergyIntoleranceを含むBundleを返却する。
 
-5. 検索パラメータpatientとcategory組みを指定し、該当するすべてのAllergyIntoleranceを検索。
+5. 検索パラメータpatientとcategory組みを指定し、該当するすべてのAllergyIntoleranceを検索
 
     * OR検索のサポートを含む(例えば category={system\|}[code],{system\|}[code],...)
     
@@ -144,7 +144,7 @@
   
   指定された患者およびステータスのすべてのAllergyIntoleranceを含むBundleを返却する。
 
-5. 検索パラメータpatientとcriticality組みを指定し、該当するすべてのAllergyIntoleranceを検索。
+1. 検索パラメータpatientとcriticality組みを指定し、該当するすべてのAllergyIntoleranceを検索
 
     * OR検索のサポートを含む(例えば criticality={system\|}[code],{system\|}[code],...)
     

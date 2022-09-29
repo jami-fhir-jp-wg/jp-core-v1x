@@ -64,7 +64,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
 
 次の検索パラメータはサポートすることが推奨される。（**SHOULD**）
 
-1.患者中心での検索：対象患者（= Patientリソース）を条件とした検索をサポートすることが望ましい。
+1.患者中心での検索：対象患者（= Patientリソース）を条件とした検索をサポートすることが望ましい
 
    ```
    GET [base]/ImagingStudy?patient={reference}
@@ -77,7 +77,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    ```
 
 
-2.モダリティ中心の検索：対象患者（= Patientリソース）と撮影に使用されたモダリティを条件とした検索をサポートすることが望ましい。
+2.モダリティ中心の検索：対象患者（= Patientリソース）と撮影に使用されたモダリティを条件とした検索をサポートすることが望ましい
 
    ```
    GET [base]/ImagingStudy?patient={reference}&modality={token}
@@ -89,7 +89,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    GET [base]/ImagingStudy?patient=123&modality=CT
    ```
 
-3.部位中心の検索：対象患者（= Patientリソース）と撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい。
+3.部位中心の検索：対象患者（= Patientリソース）と撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい
 
    ```
    GET [base]/ImagingStudy?patient={reference}&bodysite={token}
@@ -101,7 +101,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    GET [base]/ImagingStudy?patient=123&bodysite=T-15460
    ```
 
-4.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい。
+4.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい
 
    ```
    GET [base]/ImagingStudy?patient={reference}&started={date}
@@ -113,7 +113,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    GET [base]/ImagingStudy?patient=123&started=eq2021-06-25
    ```
 
-5.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい。
+5.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい
 
    ```
    GET [base]/ImagingStudy?patient={reference}&started={date}
@@ -125,7 +125,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    GET [base]/ImagingStudy?patient=123&started=eq2021-06-25
    ```
    
-6.複数の条件を組み合わせた検索：対象患者（= Patientリソース）、撮影の日時、撮影に使用されたモダリティ、撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい。
+6.複数の条件を組み合わせた検索：対象患者（= Patientリソース）、撮影の日時、撮影に使用されたモダリティ、撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい
 
 
    ```
@@ -138,7 +138,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=CT&bodysite=T-15460
    ```
    
-7.来院情報中心の検索：来院情報（= Encounterリソース）を条件とした検索をサポートすることが望ましい。
+7.来院情報中心の検索：来院情報（= Encounterリソース）を条件とした検索をサポートすることが望ましい
 
 
    ```

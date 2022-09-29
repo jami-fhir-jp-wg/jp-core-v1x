@@ -35,7 +35,7 @@ JP Encounter リソースで使用される拡張は次の通りである。
 
 次の検索パラメータをサポートすることが望ましい。(**SHOULD**)
 
-1. identifier 検索パラメータを使用して、診察番号等の識別子によるEncounterの検索をサポートすることが望ましい（**SHOULD**）。
+1. identifier 検索パラメータを使用して、診察番号等の識別子によるEncounterの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Encounter?identifier={system|}[code]

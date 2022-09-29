@@ -85,7 +85,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）
 
    ```
    GET [base]/MedicationRequest?identifier={system|}[code]
@@ -104,7 +104,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）。
+1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/MedicationRequest?patient=[id]
@@ -119,7 +119,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
    リソースIDが123456の患者のMedicationRequestリソースを含むBundleを検索する。
 
-1. patient,date 検索パラメータを使用して、患者のリファレンス情報と服用日によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）。
+1. patient,date 検索パラメータを使用して、患者のリファレンス情報と服用日によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/MedicationRequest?patient=[id]&date=[date]
@@ -134,7 +134,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
    リソースIDが123456の患者の2013-01-14に服用するMedicationRequestリソースを含むBundleを検索する。
 
-1. patient,authoredon 検索パラメータを使用して、患者のリファレンス情報と依頼日によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）。
+1. patient,authoredon 検索パラメータを使用して、患者のリファレンス情報と依頼日によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/MedicationRequest?patient=[id]&authoredon=[date]
@@ -151,7 +151,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
 ##### 追加検索パラメータ 
 
-1. patient,jp-core-startdate 検索パラメータを使用して、患者のリファレンス情報と服用開始によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）。
+1. patient,jp-core-startdate 検索パラメータを使用して、患者のリファレンス情報と服用開始によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/MedicationRequest?patient=[id]&jp-core-startdate=[date]

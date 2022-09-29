@@ -23,7 +23,7 @@
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、職種IDなどの識別子によるPractitionerRoleの検索をサポートしなければならない（**SHALL**）。
+1. identifier 検索パラメータを使用して、職種IDなどの識別子によるPractitionerRoleの検索をサポートしなければならない（**SHALL**）
 
    ```
    GET [base]/PractitionerRole?identifier={system|}[code]
@@ -43,7 +43,7 @@
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. specialty 検索パラメータを使用して、医療者の特定の専門性によるPractitionerRoleの検索をサポートすることが望ましい（**SHOULD**）。
+1. specialty 検索パラメータを使用して、医療者の特定の専門性によるPractitionerRoleの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/PractitionerRole?specialty={system|}[code]
@@ -59,7 +59,7 @@
 
    
 
-2. practitioner 検索パラメータを使用して、医療者の名前と識別子によるPractitionerRoleの検索をサポートすることが望ましい（**SHOULD**）。
+2. practitioner 検索パラメータを使用して、医療者の名前と識別子によるPractitionerRoleの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/PractitionerRole?practitioner={Type/}[id]

@@ -45,7 +45,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、患者番号/カルテ番号などの識別子によるPatientの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、患者番号/カルテ番号などの識別子によるPatientの検索をサポートしなければならない（SHALL）
 
    ```
    GET [base]/Patient?identifier={system|}[code]
@@ -64,7 +64,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. name 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（**SHOULD**）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
+1. name 検索パラメータを使用してPatientの検索をサポートすることが望ましい（**SHOULD**）、name検索パラメータはHumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する
 
    ```
    GET [base]/Patient?name={string}
@@ -78,7 +78,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 
 
 
-2. birthdate, name 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（**SHOULD**）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
+2. birthdate, name 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（**SHOULD**）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する
 
    ```
    GET [base]/Patient?birthdate=eq{date}&name={string}
@@ -91,7 +91,7 @@ JP Patient リソースで使用される拡張は次の通りである。
    ```
 
 
-3. birthdate, gender 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（**SHOULD**）。
+3. birthdate, gender 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Patient?birthdate=eq{date}&gender={code}
@@ -103,7 +103,7 @@ JP Patient リソースで使用される拡張は次の通りである。
    GET [base]/Patient?birthdate=eq2000-10-10&gender=male
    ```
 
-4. birthdate, name, gender 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（**SHOULD**）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
+4. birthdate, name, gender 検索パラメータを使用してPatientの検索をサポートすることが望ましい（**SHOULD**）、name検索パラメータはHumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する
 
    ```
    GET [base]/Patient?birthdate=eq{date}&name={string}&gender={code}
@@ -115,7 +115,7 @@ JP Patient リソースで使用される拡張は次の通りである。
    GET [base]/Patient?birthdate=eq2000-10-10&name=山田%20太郎&gender=male
    ```
 
-5. name, phone 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（**SHOULD**）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。
+5. name, phone 検索パラメータを使用してPatientの検索をサポートすることが望ましい（**SHOULD**）、name検索パラメータはHumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する
 
    ```
    GET [base]/Patient?name={string}&phone={token}
@@ -127,7 +127,7 @@ JP Patient リソースで使用される拡張は次の通りである。
    GET [base]/Patient?name=山田%20太郎&phone=0123456789
    ```
 
-6. name, address-postalcode 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（**SHOULD**）。name検索パラメータは、HumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する。address-postalcodeはPatient.address.postalCode要素に対する検索パラメータであり、日本の住所表記における郵便番号をキーにして検索することを想定している。
+6. name, address-postalcode 検索パラメータを使用してPatientの検索をサポートすることが望ましい（**SHOULD**）、name検索パラメータはHumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する、address-postalcodeはPatient.address.postalCode要素に対する検索パラメータであり日本の住所表記における郵便番号をキーにして検索することを想定している
 
    ```
    GET [base]/Patient?name={string}&address-postalcode={string}
@@ -145,7 +145,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 
 オプションとして次の検索パラメータをサポートすることができる。
 
-1. 複合条件として、family,given,birthdate,gender,phone,address-postalcodename の各検索パラメータを複数指定したPatientの検索をサポートすることができる（MAY）。
+1. 複合条件として、family,given,birthdate,gender,phone,address-postalcodename の各検索パラメータを複数指定したPatientの検索をサポートすることができる（MAY）
 
    ```
    GET [base]/Patient?family={string}&given={string}&birthdate=eq{date}&gender={token}&phone={token}&address-postalcode={string}
