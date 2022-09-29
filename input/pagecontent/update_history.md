@@ -62,8 +62,6 @@ v1.0.5 → v1.1.0に変更するあたり、開発環境(Sushi & IG Publisher)�
         * 各プロフィールにて、定義と一致しない説明やわりにくい説明等の見直しを行った
         * 他のプロファイルに合わせ、SearchParameterのpatientでの検索に対応した
         * 検討の終わった用語の項目対するバインディング定義を行った
-        * 
-
 
     * Clinical関連
         * 説明文書の全面的な見直し
@@ -72,7 +70,7 @@ v1.0.5 → v1.1.0に変更するあたり、開発環境(Sushi & IG Publisher)�
         
 * OperationおよびSearch Parameter
     * JP Core派生の必要条件ではなく、派生先実装ガイドにて定義するものとして、特にJP CoreのExtension(拡張)にて検索パラメータとして利用頻度の高いと思われるものを定義するようにした
-    * [Search Parameter Registry](https://hl7.org/fhir/R4/searchparameter-registry.html)に記載されているSeach ParameterはJP Coreでは新たに定義する必用ないと判断し削除した
+    * [Search Parameter Registry](https://hl7.org/fhir/R4/searchparameter-registry.html)に記載されているSeach ParameterはJP Coreでは新たに定義する必要ないと判断し削除した
     * `JP_Coverage`の被保険証関連Extension( `JP_Coverage_InsuredPersonNumber`, `JP_Coverage_InsuredPersonSubNumber`, `JP_Coverage_InsuredPersonSymbol` )に対する検索パラメータを追加した
     * `JP_Organization`の施設関連Extension( `JP_Organization_InsuranceOrganizationCategory`, `JP_Organization_InsuranceOrganizationNo`, `JP_Organization_PrefectureNo` )に対する検索パラメータの追加した
     * `JP_Patient`のカナソート用の検索パラメータを追加した
