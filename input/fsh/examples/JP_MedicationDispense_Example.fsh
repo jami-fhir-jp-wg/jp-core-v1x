@@ -1,6 +1,6 @@
 Instance: jp-medicationdispense-example-1
 InstanceOf: JP_MedicationDispense
-Title: "JP Core MedicationDispense Example 調剤実施 内服薬　"
+Title: "JP Core MedicationDispense Example 調剤実施 内服薬"
 Description: "調剤実施 内服薬"
 Usage: #example
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
