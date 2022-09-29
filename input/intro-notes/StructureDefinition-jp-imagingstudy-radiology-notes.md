@@ -6,17 +6,17 @@
 #### 必須項目
 ImagingStudyリソースは、次の要素を持たなければならない。
 
-- status︓検査項目情報の状態は必須である。
-- subject︓このリソースが示す検査項目が、どの患者のものかを示すため、このプロファイルでは参照するpatientリソースの定義を必須である。
+- status︓検査項目情報の状態は必須である
+- subject︓このリソースが示す検査項目がどの患者のものかを示すため、参照するpatientリソース定義を必須とした
 
 #### Must Support
 ImagingStudyリソースは該当する情報が存在する場合、次の要素を持たなければならない。
 
-- identifier：DICOM画像が存在する場合、DICOMタグのStudyInstance UID (0020,000D)が保持される必要がある。Accession Number and Issuer (0080,0050)+(0080,0051) あるいは Study ID (0020,0010)の設定も可能だが、JP CoreではStudyInstance UIDをMust Supportとし、他は任意とする（複数のidentifierの設定は可能）。必要に応じてオーダ番号等を持つことも可能である。
-- series.modality：DICOM画像が存在する場合、シリーズが取得されたモダリティを示す。DICOMでは必須情報となっており、DICOMタグ(0008,0060)の情報が格納される。
-- series.performer.actor：組織または撮影者を示す。具体的には実施医あるいは操作者（診療放射線技師）を示すことが多く、関連するリソースへのreferenceである。DICOMタグとは(0008, 1050) | (0008, 1052) | (0008, 1070) | (0008, 1072) にマッピングされる。
-- series.instance.uid：画像のユニークID。DICOMタグ(0008,0018)にある値をそのまま設定する。
-- series.instance.sopClass：SOPクラスUID。DICOMタグ(0008,0016)にある値をそのまま設定する。
+- identifier：DICOM画像が存在する場合、DICOMタグのStudyInstance UID (0020,000D)が保持される必要がある。Accession Number and Issuer (0080,0050)+(0080,0051) あるいは Study ID (0020,0010)の設定も可能だが、JP CoreではStudyInstance UIDをMust Supportとし、他は任意とする（複数のidentifierの設定は可能）。必要に応じてオーダ番号等を持つことも可能である
+- series.modality：DICOM画像が存在する場合シリーズが取得されたモダリティを示す、DICOMでは必須情報となっておりDICOMタグ(0008,0060)の情報が格納される
+- series.performer.actor：組織または撮影者を示す具体的には実施医あるいは操作者（診療放射線技師）を示す関連するリソースへのreferenceである、DICOMタグとは(0008, 1050) | (0008, 1052) | (0008, 1070) | (0008, 1072) にマッピングされる
+- series.instance.uid：画像のユニークID、DICOMタグ(0008,0018)にある値をそのまま設定する
+- series.instance.sopClass：SOPクラスUID、DICOMタグ(0008,0016)にある値をそのまま設定する
 
 ### Extension定義
 

@@ -2,7 +2,7 @@
 
 Patient リソースは、次の要素を持たなければならない。
 
-- identifier ：患者を識別するための識別子は必須要素であり、identifier.value が必ず存在しなければならない。また、identifierの名前空間を表すidentifier.systemも組み合わせて、医療機関固有の患者番号を表現することが一般的である。
+- identifier ：患者を識別するための識別子は必須要素でありidentifier.value が必ず存在しなければならない、またidentifierの名前空間を表すidentifier.systemも組み合わせて、医療機関固有の患者番号を表現することが一般的である
 
 ### Extensions定義
 
@@ -10,19 +10,19 @@ JP Patient リソースで使用される拡張は次の通りである。
 
 - [religion](https://hl7.org/fhir/R4/extension-patient-religion.html)
 
-  - 患者の宗教を表す。
+  - 患者の宗教を表す
 
 - [birthPlace](https://hl7.org/fhir/R4/extension-patient-birthplace.html)
 
-  - 患者の生誕地を表す。Address型を使って表現するため、すべての住所情報あるいは、都道府県名のみの情報(Address.state)だけを格納するということも可能である。
+  - 患者の生誕地を表す。Address型を使って表現するため、すべての住所情報あるいは、都道府県名のみの情報(Address.state)だけを格納するということも可能である
 
 - [JP_Patient_Race][JP_Patient_Race]
 
-  - 患者の人種に関する情報を表す。
+  - 患者の人種に関する情報を表す
 
 - [nameRepresentationUse](https://hl7.org/fhir/R4/extension-iso21090-en-representation.html)
 
-  - 患者氏名(Patient.name)の漢字表記・カナ表記識別のために使用する。
+  - 患者氏名(Patient.name)の漢字表記・カナ表記識別のために使用する
 
 ## 利用方法
 
@@ -171,7 +171,7 @@ JP Patient リソースに対して使用される操作は次の通りである
 
 - $everything：[base]/Patient/$everything , [base]/Patient/[id]/$everything
 
-  - この操作が呼び出された場合、すべての患者の、あるいは指定された特定の[id]をもつPatientに関連した全てのリソースを返す。
+  - この操作が呼び出された場合、すべての患者の、あるいは指定された特定の[id]をもつPatientに関連した全てのリソースを返す
 
 
 ##### $everything 操作

@@ -4,14 +4,14 @@
 次のデータ項目は必須（データが存在しなければならない）である。
 
 MedicationRequestリソースは、次の要素を持たなければならない。
-- status : ステータスは必須である。
-- intent : 意図は必須である。
-- medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない。
-- subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
-- authoredOn : 処方依頼日時であり、JP Coreでは必須である。
-- dosageInstruction.text : フリーテキストの用法指示であり、JP Coreでは必須である。
-- dosageInstruction.timing : 服用タイミングを記録し、JP Coreでは必須である。dosageInstruction.timing.code.coding.code, dosageInstruction.timing.code.coding.system が必ず存在しなければならない。
-- dispenseRequest.quantity : 調剤量は必須であり、dispenseRequest.quantity.value, dispenseRequest.quantity.unit, dispenseRequest.quantity.system, dispenseRequest.quantity.code が必ず存在しなければならない 。
+- status : ステータスは必須である
+- intent : 意図は必須である
+- medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない
+- subject :患者の参照情報は必須であり、subject.referenceないしsubject.identifier が必ず存在しなければならない
+- authoredOn : 処方依頼日時であり、JP Coreでは必須である
+- dosageInstruction.text : フリーテキストの用法指示であり、JP Coreでは必須である
+- dosageInstruction.timing : 服用タイミングを記録しJP Coreでは必須である、dosageInstruction.timing.code.coding.code, dosageInstruction.timing.code.coding.system が必ず存在しなければならない
+- dispenseRequest.quantity : 調剤量は必須であり、dispenseRequest.quantity.value, dispenseRequest.quantity.unit, dispenseRequest.quantity.system, dispenseRequest.quantity.code が必ず存在しなければならない 
 
 ### Extensions定義
 JP Core MedicationRequest プロファイルで使用される拡張は次の通りである。
@@ -51,10 +51,10 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 
 ### 制約一覧
 JP Core MedicationRequest リソースは、以下の制約を満たさなければならない。
-- dosageInstruction.doseAndRage.rateRatio.denominator.value : １日量を記述する場合"1"に固定される。
-- dosageInstruction.doseAndRage.rateRatio.denominator.unit : １日量を記述する場合"日"に固定される。
-- dosageInstruction.doseAndRage.rateRatio.denominator.system : １日量を記述する場合"http://unitsofmeasure.org"に固定される。
-- dosageInstruction.doseAndRage.rateRatio.denominator.code : １日量を記述する場合"d"に固定される。
+- dosageInstruction.doseAndRage.rateRatio.denominator.value : １日量を記述する場合"1"に固定される
+- dosageInstruction.doseAndRage.rateRatio.denominator.unit : １日量を記述する場合"日"に固定される
+- dosageInstruction.doseAndRage.rateRatio.denominator.system : １日量を記述する場合"http://unitsofmeasure.org"に固定される
+- dosageInstruction.doseAndRage.rateRatio.denominator.code : １日量を記述する場合"d"に固定される
 
 ### 項目の追加
 療養担当則23条では、「保険医は、処方箋を交付する場合には、様式第二号若しくは第二号の二又はこれらに準ずる様式の処方箋に必要な事項を記載しなければならない。」とされており、外来処方、院内処方の区分を明示していない。したがって、個別のユースケースにおいては一部を省略されることも前提の上で、規格としてはこれに準拠すべきと考え、様式に収載されている以下の項目を追加した。
@@ -172,7 +172,7 @@ JP MedicationRequest リソースに対して使用される操作は次の通�
 
 - $everything：[base]/MedicationRequest/[id]/$everything
 
-  - この操作が呼び出された特定のMedicationRequestに関連する全ての情報を返す。
+  - この操作が呼び出された特定のMedicationRequestに関連する全ての情報を返す
     
 
 #### Operation 詳細

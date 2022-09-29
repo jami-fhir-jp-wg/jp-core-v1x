@@ -9,15 +9,15 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
 
 - [JP_OrganizationCategory][JP_Organization_InsuranceOrganizationCategory]
 
-  - 点数表コード１桁（医科１、歯科２）の情報を表す。
+  - 点数表コード１桁（医科１、歯科２）の情報を表す
 
 - [JP_OrganizationNo][JP_Organization_InsuranceOrganizationNo]
 
-  - 保険医療機関番号７桁を表す。
+  - 保険医療機関番号７桁を表す
 
 - [JP_PrefectureNo][JP_Organization_PrefectureNo]
 
-  - 都道府県番号2桁を表す。
+  - 都道府県番号2桁を表す
 
 ### その他
 

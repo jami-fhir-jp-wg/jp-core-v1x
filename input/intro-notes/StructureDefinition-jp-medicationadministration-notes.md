@@ -3,10 +3,10 @@
 次のデータ項目は必須（データが存在しなければならない）である。
 
 MedicationAdministration リソースは、次の要素を持たなければならない。
-- status : ステータスは必須であり、JP Coreでは `completed` or `stopped` に限定される。
-- medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない。
-- subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
-- effectiveDateTime : 投与実施日時であり、JP Coreでは必須である。
+- status : ステータスは必須であり、JP Coreでは `completed` or `stopped` に限定される
+- medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない
+- subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない
+- effectiveDateTime : 投与実施日時であり、JP Coreでは必須である
 
 ※投与実施のユースケースにおいては、実施投与量(dose)が必須であることが望ましいが、ワーキンググループでの検討の結果、投与中止のユースケースも考慮して必須としない結論となった。
 
@@ -125,7 +125,7 @@ JP MedicationAdministration リソースに対して使用される操作は次�
 
 - $everything：[base]/MedicationAdministration/[id]/$everything
 
-  - この操作が呼び出された特定のMedicationAdministrationに関連する全ての情報を返す。
+  - この操作が呼び出された特定のMedicationAdministrationに関連する全ての情報を返す
     
 
 #### Operation 詳細

@@ -3,14 +3,14 @@
 次のデータ項目は必須（データが存在しなければならない）である。
 
 MedicationDispense リソースは、次の要素を持たなければならない。
-- status : ステータスは必須である。
-- medication : 医薬品の識別情報は必須であり、medicationReference.referenceが必ず存在しなければならない。JP Coreでは注射の医薬品情報は単一薬剤の場合も Medicationリソースとして記述し、MedicationDispense.contained属性に内包し、medicationCodeableConceptは使用しない。
-- subject : 患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
-- whenHandedOver : 払い出し日時は必須である。
+- status : ステータスは必須である
+- medication : 医薬品の識別情報は必須でありmedicationReference.referenceが必ず存在しなければならない、JP Coreでは注射の医薬品情報は単一薬剤の場合もMedicationリソースとして記述し、MedicationDispense.contained属性に内包しmedicationCodeableConceptは使用しない
+- subject : 患者の参照情報は必須であり、subject.referenceないしsubject.identifierが必ず存在しなければならない
+- whenHandedOver : 払い出し日時は必須である
 
 MedicationDispense リソースに内包されるMedicationリソースでは、次の要素を持たなければならない。
-- ingredient.itemCodeableConcept : 医薬品の識別情報であり、JP Coreでは必須である。
-- ingredient.strength : 医薬品の投与量であり、JP Coreでは必須である。
+- ingredient.itemCodeableConcept : 医薬品の識別情報であり、JP Coreでは必須である
+- ingredient.strength : 医薬品の投与量であり、JP Coreでは必須である
 
 ### Extensions定義
 JP Core MedicationDispense Injectionプロファイルで使用される拡張は次の通りである。
@@ -143,7 +143,7 @@ JP Core MedicationDispense Injection リソースに対して使用される操�
 
 - $everything：[base]/MedicationDispense/[id]/$everything
 
-  - この操作が呼び出された特定のMedicationDispenseに関連する全ての情報を返す。
+  - この操作が呼び出された特定のMedicationDispenseに関連する全ての情報を返す
     
 
 #### Operation 詳細

@@ -54,7 +54,7 @@ JP Encounter リソースで使用される拡張は次の通りである。
 JP Encounter リソースに対して使用される操作は次の通りである。
 
 - $everything：[base]/Encounter/[id]/$everything
-  - この操作が呼び出された特定のEncounterに関連する全ての情報を返す。
+  - この操作が呼び出された特定のEncounterに関連する全ての情報を返す
 
 #### Operation 詳細
 

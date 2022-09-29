@@ -5,7 +5,7 @@
 
 - status ：レポートの状態・進捗状況
 - code ：レポートの種別（画像診断レポート交換手順ガイドライン「5.1 レポート種別コード」に記載されているLOINCコード "Diagnostic imaging study" を指定）
-- category ： “RAD”をデフォルトとし、特に検査種別を含む部門指定を指定したい場合は"RUS", "RX", "CT", "NMR", "NMS", "VUS", "OUS", "CUS"などを指定する。ここでは複数のコードが許容される。
+- category ： “RAD”をデフォルトとし、特に検査種別を含む部門指定を指定したい場合は"RUS", "RX", "CT", "NMR", "NMS", "VUS", "OUS", "CUS"などを指定する、ここでは複数のコードが許容される
   
 ### MustSupport
 

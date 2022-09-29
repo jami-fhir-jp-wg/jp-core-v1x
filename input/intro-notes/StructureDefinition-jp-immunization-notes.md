@@ -114,7 +114,7 @@ JP Immunization リソースに対して使用される操作は次の通りで�
 
 - $everything：[base]/Immunization/[id]/$everything
 
-  - この操作が呼び出された特定のImmunizationに関連する全ての情報を返す。
+  - この操作が呼び出された特定のImmunizationに関連する全ての情報を返す
     
 
 #### Operation 詳細
