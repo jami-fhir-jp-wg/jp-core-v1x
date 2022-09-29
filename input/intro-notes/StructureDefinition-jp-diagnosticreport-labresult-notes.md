@@ -81,9 +81,6 @@ patient,category,dateの各検索パラメータに一致するObservationリソ
 
  本リソースで追加定義されたオプション検索パラメータはない。
 
-#### Operation一覧
-Operationは定義しない。
-
 ### サンプル
 
 * [**検体検査レポート（血液）**][jp-diagnosticreport-labresult-example-1]
