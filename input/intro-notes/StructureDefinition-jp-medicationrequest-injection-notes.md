@@ -3,17 +3,17 @@
 次のデータ項目は必須（データが存在しなければならない）である。
 
 MedicationRequestリソースは、次の要素を持たなければならない。
-- status : ステータスは必須である。
-- intent : 意図は必須である。
-- medicationReference : 医薬品の識別情報は必須であり、medicationReference.referenceが必ず存在しなければならない。JP Coreでは注射の医薬品情報は単一薬剤の場合も Medicationリソースとして記述し、MedicationRequest.contained属性に内包し、medicationCodeableConceptは使用しない。
-- subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
-- authoredOn : 処方依頼日時であり、JP Coreでは必須である。
-- dosageInstruction.text : フリーテキストの用法指示であり、JP Coreでは必須である。
-- dosageInstruction.timing : 投薬タイミングを記録し、JP Coreでは必須である。
+- status : ステータスは必須である
+- intent : 意図は必須である
+- medicationReference : 医薬品の識別情報は必須でありmedicationReference.referenceが必ず存在しなければならない、JP Coreでは注射の医薬品情報は単一薬剤の場合も Medicationリソースとして記述し、MedicationRequest.contained属性に内包しmedicationCodeableConceptは使用しない
+- subject :患者の参照情報は必須であり、subject.referenceないしsubject.identifierが必ず存在しなければならない
+- authoredOn : 処方依頼日時であり、JP Coreでは必須である
+- dosageInstruction.text : フリーテキストの用法指示であり、JP Coreでは必須である
+- dosageInstruction.timing : 投薬タイミングを記録し、JP Coreでは必須である
 
 MedicationRequestリソースに内包されるMedicationリソースでは、次の要素を持たなければならない。
-- ingredient.itemCodeableConcept : 医薬品の識別情報であり、JP Coreでは必須である。
-- ingredient.strength : 医薬品の投与量であり、JP Coreでは必須である。
+- ingredient.itemCodeableConcept : 医薬品の識別情報であり、JP Coreでは必須である
+- ingredient.strength : 医薬品の投与量であり、JP Coreでは必須である
 
 ### Extensions定義
 JP Core MedicationRequest Injectionプロファイルで使用される拡張は次の通りである。
@@ -96,7 +96,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）
 
    ```
    GET [base]/MedicationRequest?identifier={system|}[code]
@@ -115,7 +115,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）。
+1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/MedicationRequest?patient=[id]
@@ -130,7 +130,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
    リソースIDが123456の患者のMedicationRequestリソースを含むBundleを検索する。
 
-1. patient,date 検索パラメータを使用して、患者のリファレンス情報と投薬日によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）。
+1. patient,date 検索パラメータを使用して、患者のリファレンス情報と投薬日によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/MedicationRequest?patient=[id]&date=[date]
@@ -145,7 +145,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
    リソースIDが123456の患者の2013-01-14に服用するMedicationRequestリソースを含むBundleを検索する。
 
-1. patient,authoredon 検索パラメータを使用して、患者のリファレンス情報と依頼日によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）。
+1. patient,authoredon 検索パラメータを使用して、患者のリファレンス情報と依頼日によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/MedicationRequest?patient=[id]&authoredon=[date]
@@ -170,7 +170,7 @@ JP Core MedicationRequest Injection リソースに対して使用される操�
 
 - $everything：[base]/MedicationRequest/[id]/$everything
 
-  - この操作が呼び出された特定のMedicationRequestに関連する全ての情報を返す。
+  - この操作が呼び出された特定のMedicationRequestに関連する全ての情報を返す
     
 
 #### Operation 詳細

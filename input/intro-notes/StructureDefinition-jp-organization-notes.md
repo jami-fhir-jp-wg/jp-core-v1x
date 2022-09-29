@@ -1,23 +1,23 @@
 
 ### 必須要素
 
-JP Core Organization リソースで定義された必須要素はない。
+ 本プロファイルで定義された必須項目はない。
 
 ### Extensions定義
 
-JP Core Organization リソースで使用される拡張は次の通りである。
+ 本プロファイルで使用される拡張は次の通りである。
 
 - [JP_OrganizationCategory][JP_Organization_InsuranceOrganizationCategory]
 
-  - 点数表コード１桁（医科１、歯科２）の情報を表す。
+  - 点数表コード１桁（医科１、歯科２）の情報を表す
 
 - [JP_OrganizationNo][JP_Organization_InsuranceOrganizationNo]
 
-  - 保険医療機関番号７桁を表す。
+  - 保険医療機関番号７桁を表す
 
 - [JP_PrefectureNo][JP_Organization_PrefectureNo]
 
-  - 都道府県番号2桁を表す。
+  - 都道府県番号2桁を表す
 
 ### その他
 
@@ -84,7 +84,7 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. identifier 検索パラメータを使用して、識別子によるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
+1. identifier 検索パラメータを使用して、識別子によるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Organization?identifier={system|}[code]
@@ -98,7 +98,7 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
 
    指定された識別子に一致するOrganizationリソースを含むBundleを検索する。
    
-2. name 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
+2. name 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Organization?name={string}
@@ -110,7 +110,7 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
    GET [base]/Organization?name=Health
    ```
 
-3. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
+3. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Organization?address=[string]
@@ -123,7 +123,8 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
    ```
 
 ### オプション検索パラメータ
-オプション検索パラメータ（MAY）は定義しない。  
+
+ 本プロファイルで追加定義されたオプション検索パラメータはない。
 
 ### サンプル  
 

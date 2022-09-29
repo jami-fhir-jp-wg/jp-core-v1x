@@ -5,7 +5,7 @@
 
 - status ：レポートの状態・進捗状況
 - code ：レポートの種別（画像診断レポート交換手順ガイドライン「5.1 レポート種別コード」に記載されているLOINCコード "Diagnostic imaging study" を指定）
-- category ： “RAD”をデフォルトとし、特に検査種別を含む部門指定を指定したい場合は"RUS", "RX", "CT", "NMR", "NMS", "VUS", "OUS", "CUS"などを指定する。ここでは複数のコードが許容される。
+- category ： “RAD”をデフォルトとし、特に検査種別を含む部門指定を指定したい場合は"RUS", "RX", "CT", "NMR", "NMS", "VUS", "OUS", "CUS"などを指定する、ここでは複数のコードが許容される
   
 ### MustSupport
 
@@ -26,7 +26,7 @@ imagingStudyエレメントはCardinalityが0..1だが、放射線レポート�
 
 ### Extensions定義
 
-本プロファイルはextensionを定義しない。
+ 本プロファイルで追加定義された拡張はない。
 
 ## 注意事項
 
@@ -173,7 +173,7 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（**SHALL**）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（**SHALL**）
 
    ```
    GET [base]/DiagnosticReport?identifier={system|}[code]

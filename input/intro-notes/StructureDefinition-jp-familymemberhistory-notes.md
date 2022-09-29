@@ -2,13 +2,13 @@
 
 本プロファイルに準拠するためには、次の項目の値が存在しなければならない。
 
-- patient : 本リソースを有する患者。
+- patient : 本リソースを有する患者
 - relationship : 患者と家族との関係の種類（父、母、兄弟など）
 - status : 家族歴のステータス（部分的 \| 完全 \| 記録エラー \| 健康状態不明）
 
 ### Extensions定義
 
-- Extensions定義はない。
+ 本プロファイルで追加定義された拡張はない。
 
 ## 利用方法
 
@@ -27,7 +27,7 @@
 
 本プロファイルに準拠するためには、以下の検索パラメータをサポートしなければならない（**SHALL**）
 
-1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりFamilyMemberHistoryを検索。
+1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりFamilyMemberHistoryを検索
 
    ```
    GET [base]/FamilyMemberHistory?identifier={system|}[code]
@@ -41,7 +41,7 @@
 
 ##### 推奨検索パラメータ
 
-1. 検索パラメータpatientを指定し、該当するすべてのFamilyMemberHistoryを検索。
+1. 検索パラメータpatientを指定し、該当するすべてのFamilyMemberHistoryを検索
 
    ```
    GET [base]/FamilyMemberHistory?patient={reference}
@@ -57,7 +57,7 @@
 
 オプションとして次の検索パラメータをサポートすることができる（MAY）
 
-1. 検索パラメータpatientとstatusの組みを指定し、該当するすべてのFamilyMemberHistoryを検索。
+1. 検索パラメータpatientとstatusの組みを指定し、該当するすべてのFamilyMemberHistoryを検索
 
     * OR検索のサポートを含む(例えば status={system\|}[code],{system\|}[code],...)
       
@@ -73,7 +73,7 @@
 
 ##### オプション検索パラメータ 
 
-- オプション検索パラメータは定義しない。
+ 本プロファイルで追加定義されたオプション検索パラメータはない。
 
 #### サンプル
 

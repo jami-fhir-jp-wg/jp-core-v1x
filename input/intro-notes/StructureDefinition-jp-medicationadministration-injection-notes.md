@@ -3,13 +3,13 @@
 次のデータ項目は必須（データが存在しなければならない）である。
 
 MedicationAdministrationリソースは、次の要素を持たなければならない。
-- status : ステータスは必須であり、JP Coreでは `completed` or `stopped` に限定される。
-- medicationReference : 医薬品の識別情報は必須であり、medicationReference.referenceが必ず存在しなければならない。JP Coreでは注射の医薬品情報は単一薬剤の場合も Medicationリソースとして記述し、MedicationRequest.contained属性に内包し、medicationCodeableConceptは使用しない。
-- subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
-- effectiveDateTime : 投与実施日時であり、JP Coreでは必須である。
+- status : ステータスは必須であり、JP Coreでは `completed` or `stopped` に限定される
+- medicationReference : 医薬品の識別情報は必須でありmedicationReference.referenceが必ず存在しなければならない、JP Coreでは注射の医薬品情報は単一薬剤の場合もMedicationリソースとして記述し、MedicationRequest.contained属性に内包しmedicationCodeableConceptは使用しない
+- subject :患者の参照情報は必須でありsubject.referenceないしsubject.identifierが必ず存在しなければならない
+- effectiveDateTime : 投与実施日時であり、JP Coreでは必須である
 
 MedicationAministrationリソースに内包されるMedicationリソースでは、次の要素を持たなければならない。
-- ingredient.itemCodeableConcept : 医薬品の識別情報であり、JP Coreでは必須である。
+- ingredient.itemCodeableConcept : 医薬品の識別情報であり、JP Coreでは必須である
 
 ※投与実施のユースケースにおいては、実施投与量(ingredient.strength)が必須であることが望ましいが、ワーキンググループでの検討の結果、投与中止のユースケースも考慮して必須としない結論となった。
 
@@ -84,7 +84,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationAdministrationの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationAdministrationの検索をサポートしなければならない（SHALL）
 
    ```
    GET [base]/MedicationAdministration?identifier={system|}[code]
@@ -103,7 +103,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationAdministrationの検索をサポートすることが望ましい（**SHOULD**）。
+1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationAdministrationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/MedicationAdministration?patient=[id]
@@ -118,7 +118,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 
    リソースIDが123456の患者のMedicationAdministrationリソースを含むBundleを検索する。
 
-1. patient,effective-time 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationAdministrationの検索をサポートすることが望ましい（**SHOULD**）。
+1. patient,effective-time 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationAdministrationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/MedicationAdministration?patient=[id]&effective-time=[date]
@@ -144,7 +144,7 @@ JP MedicationAdministration リソースに対して使用される操作は次�
 
 - $everything：[base]/MedicationAdministration/[id]/$everything
 
-  - この操作が呼び出された特定のMedicationAdministrationに関連する全ての情報を返す。
+  - この操作が呼び出された特定のMedicationAdministrationに関連する全ての情報を返す
     
 
 #### Operation 詳細

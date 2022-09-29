@@ -2,15 +2,16 @@
 次のデータ項目は必須である。
 
 Medication リソースは、次の要素を持たなければならない。
-- status : ステータスは必須である。
-- ingredient.itemCodeableConcept : 医薬品の識別情報であり、JP Coreでは必須である。
-- ingredient.strength : 医薬品の投与量であり、JP Coreでは必須である。
+- status : ステータスは必須である
+- ingredient.itemCodeableConcept : 医薬品の識別情報であり、JP Coreでは必須である
+- ingredient.strength : 医薬品の投与量であり、JP Coreでは必須である
 
 Medicationリソースでは、次の要素をサポートしなければならない。
 - ingredient.itemCodeableConcept : 医薬品の識別情報
 - ingredient.strength : 医薬品の投与量
 
 ### Extensions定義
+
 Medication リソースで使用される拡張は次の通りである。
 
 |拡張|説明|定義|値型|

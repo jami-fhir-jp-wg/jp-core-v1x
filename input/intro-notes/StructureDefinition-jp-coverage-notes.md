@@ -3,19 +3,19 @@
 
 Coverage リソースは、次の要素を必ず持たなければならない。
 
-- status ： 「リソースのインスタンスの状態」を示すエレメント。
-- beneficiary : 「サービスを受ける者」を示すエレメント。Patientリソースを参照する。
-- payor ： 「負担者」を示すエレメント。Organization、Patient、RelatedPersonのいずれかを参照する。
+- status ： 「リソースのインスタンスの状態」を示すエレメント
+- beneficiary : 「サービスを受ける者」を示すエレメント、Patientリソースを参照する
+- payor ： 「負担者」を示すエレメント。Organization、Patient、RelatedPersonのいずれかを参照する
 
 ### Extensions定義
 
 JP Core Coverage プロファイルで使用される拡張は次の通りである。
 - [JP_Coverage_InsuredPersonSymbol][JP_Coverage_InsuredPersonSymbol]
-    - 健康保険における被保険者証記号を示す拡張。
+    - 健康保険における被保険者証記号を示す拡張
 - [JP_Coverage_InsuredPersonNumber][JP_Coverage_InsuredPersonNumber]
-    - 健康保険における被保険者証番号を示す拡張。
+    - 健康保険における被保険者証番号を示す拡張
 - [JP_Coverage_InsuredPersonSubNumber][JP_Coverage_InsuredPersonSubNumber]
-    - 健康保険における被保険者証番号の枝番を示す拡張。
+    - 健康保険における被保険者証番号の枝番を示す拡張
 
 ## 利用方法
 
@@ -41,7 +41,7 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. beneficiary 検索パラメータを使用して、識別子によるCoverageの検索をサポートすることが望ましい（**SHOULD**）。
+1. beneficiary 検索パラメータを使用して、識別子によるCoverageの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Coverage?beneficiary={system|}[code]
@@ -55,7 +55,7 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 
    指定された識別子に一致するCoverageリソースを含むBundleを検索する。
    
-2. class-type 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
+2. class-type 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Coverage.class?type={token}

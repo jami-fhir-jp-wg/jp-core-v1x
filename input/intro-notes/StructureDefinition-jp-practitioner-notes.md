@@ -1,16 +1,16 @@
 
 ### 必須要素
 
-JP Practitioner リソースには、必須要素はない。
+ 本プロファイルで定義された必須項目はない。
 
 ### Extensions定義
 
-JP Practitioner リソースで使用される拡張は次の通りである。
+ 本プロファイルで使用される拡張は次の通りである。
 
 #### 既存のExtensionの利用
 
 - [nameRepresentationUse](https://hl7.org/fhir/R4/extension-iso21090-en-representation.html)
-  - 医療従事者氏名(Practitioner.name)の漢字表記・カナ表記識別のために使用する。
+  - 医療従事者氏名(Practitioner.name)の漢字表記・カナ表記識別のために使用する
 
 ### その他
 
@@ -36,7 +36,7 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、医療従事者番号などの識別子によるPractitionerの検索をサポートしなければならない（**SHALL**）。
+1. identifier 検索パラメータを使用して、医療従事者番号などの識別子によるPractitionerの検索をサポートしなければならない（**SHALL**）
 
    ```
    GET [base]/Practitioner?identifier={system|}[code]
@@ -52,7 +52,7 @@ JP Practitioner リソースで使用される拡張は次の通りである。
 
    
 
-2. name 検索パラメータを使用して、任意の名前パートによる文字列検索をサポートしなければならない（**SHALL**）。
+2. name 検索パラメータを使用して、任意の名前パートによる文字列検索をサポートしなければならない（**SHALL**）
 
    ```
    GET [base]/Practitioner?name=[string]
