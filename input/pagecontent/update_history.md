@@ -17,7 +17,7 @@ v1.0.5 → v1.1.0に変更するあたり、開発環境(Sushi & IG Publisher)�
     * サンプルファイル(Example)を説明文書だけななくリソースファイルとして定義をした
     * 各リソースのIdentifier項目については、検索パラメータSHALLとして加えるように統一した
     * Diagnostic Report,Imaging Study関連を除き、Must Supportの記述を削除した  
-     DiagnosticReport, Imaging Studyはその領域での運用を想定した検討を行なったフォローが必要な項目をMust Supportとして定義を行なっている。
+     DiagnosticReport, Imaging Studyはその領域での運用を想定した検討を行い、運用上フォローが必要な項目に対してMust Supportの定義を行なっている。
     * 実装ガイドの利用側に対し制限するような仕様の見直し
         * 必要のない、Cardinalityの1..や0..0等の定義削除
         * ローカルコードを利用できるようなコードの見直し
