@@ -8,6 +8,7 @@ JP Core Immunization リソースは、次の要素を持たなければなら�
 
 
 ### Extensions定義
+
 JP Core Immunization リソースで使用される拡張は次の通りである。
 
 #### JP Core Immunization独自で追加されたExtension

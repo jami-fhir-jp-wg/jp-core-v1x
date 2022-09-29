@@ -1,11 +1,11 @@
 
 ### 必須要素
 
-JP Core Organization リソースで定義された必須要素はない。
+ 本リソースで定義された必須項目はない。
 
 ### Extensions定義
 
-JP Core Organization リソースで使用される拡張は次の通りである。
+ 本リソースで使用される拡張は次の通りである。
 
 - [JP_OrganizationCategory][JP_Organization_InsuranceOrganizationCategory]
 
@@ -123,7 +123,8 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
    ```
 
 ### オプション検索パラメータ
-オプション検索パラメータ（MAY）は定義しない。  
+
+ 本リソースで追加定義されたオプション検索パラメータはない。
 
 ### サンプル  
 

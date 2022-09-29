@@ -26,7 +26,7 @@ imagingStudyエレメントはCardinalityが0..1だが、放射線レポート�
 
 ### Extensions定義
 
-本プロファイルはextensionを定義しない。
+ 本リソースで追加定義された拡張はない。
 
 ## 注意事項
 

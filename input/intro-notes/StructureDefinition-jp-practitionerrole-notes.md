@@ -1,11 +1,11 @@
 
 ### 必須要素
 
- JP Core PractitionerRole リソースで定義された必須要素はない。
+ 本リソースで定義された必須項目はない。
 
 ### Extensions定義
 
- JP Core PractitionerRole リソースで定義された拡張はない。
+ 本リソースで追加定義された拡張はない。
 
 ## 利用方法
 

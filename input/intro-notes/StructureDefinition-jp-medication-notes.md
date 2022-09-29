@@ -11,6 +11,7 @@ Medicationリソースでは、次の要素をサポートしなければなら�
 - ingredient.strength : 医薬品の投与量
 
 ### Extensions定義
+
 Medication リソースで使用される拡張は次の通りである。
 
 |拡張|説明|定義|値型|
