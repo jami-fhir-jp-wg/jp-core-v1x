@@ -3,7 +3,7 @@ name: JPCore FHIR Task
 on:
   push:
     branches: 
-      - 'feature/swg1-CodeSystem修正/**'
+      - 'feature/swg1-CodeSystem修正'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
