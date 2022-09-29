@@ -5,7 +5,7 @@ v1.0.5 → v1.1.0に変更するあたり、開発環境(Sushi & IG Publisher)�
 内容に関する主な変更については下記のとおりである。
 
 * 全般
-    * 開発環境をSushi & IG Publisherに変更した、変更に伴う警告等に対する修正も合わせて行っている
+    * 開発環境をSushi & IG Publisherに変更し、これに伴う警告等(Error,Waring,Info)への対応行なっている
     * 全てのリソースに対して、idを割り振った
     * name, title, url等は命名規則に合わせるように見直しを行なった
     * 説明文書について、「である調」に合わせた
@@ -16,8 +16,8 @@ v1.0.5 → v1.1.0に変更するあたり、開発環境(Sushi & IG Publisher)�
     * Referenceとして定義される参照先リソースについてJP Coreで定義しているリソースは、JP Coreリソースを参照先とするように付け直した
     * サンプルファイル(Example)を説明文書だけななくリソースファイルとして定義をした
     * 各リソースのIdentifier項目については、検索パラメータSHALLとして加えるように統一した
-    * Diagnostic Report,Imaging Study関連を除き、Must Supportの記述を削除した。  
-     DiagnosticReport, Imaging Studyはその領域での運用を想定した上での検討を行ったため、運用上フォローが必要な項目としてMust Supportの定義を行なっている
+    * Diagnostic Report,Imaging Study関連を除き、Must Supportの記述を削除した  
+     DiagnosticReport, Imaging Studyはその領域での運用を想定した検討を行なったフォローが必要な項目をMust Supportとして定義を行なっている。
     * 実装ガイドの利用側に対し制限するような仕様の見直し
         * 必要のない、Cardinalityの1..や0..0等の定義削除
         * ローカルコードを利用できるようなコードの見直し
