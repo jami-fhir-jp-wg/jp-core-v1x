@@ -6,4 +6,4 @@ Description: "JAMI標準用法規格頓用指示コードの値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system $JP_MedicationAsNeededConditionJAMI_CS
+* include codes from system JP_MedicationAsNeededConditionJAMI_CS

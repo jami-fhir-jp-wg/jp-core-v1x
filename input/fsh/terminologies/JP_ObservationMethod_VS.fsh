@@ -6,4 +6,4 @@ Description: "Observationで使用する診察方法の値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system $JP_ObservationMethod_CS
+* include codes from system JP_ObservationMethod_CS

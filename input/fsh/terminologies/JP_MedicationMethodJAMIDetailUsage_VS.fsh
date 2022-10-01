@@ -6,5 +6,5 @@ Description: "JAMI標準用法規格表２用法詳細区分のの値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system $JP_MedicationMethodJAMIDetailUsage_CS
+* include codes from system JP_MedicationMethodJAMIDetailUsage_CS
 

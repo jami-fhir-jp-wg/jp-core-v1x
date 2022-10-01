@@ -6,5 +6,5 @@ Description: "JAHIS注射データ交換規約Ver.2.1C JHSI表0003精密持続�
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system $JP_MedicationMethodJHSI0003_CS
+* include codes from system JP_MedicationMethodJHSI0003_CS
 

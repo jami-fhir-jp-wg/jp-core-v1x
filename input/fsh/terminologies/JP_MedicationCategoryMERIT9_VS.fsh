@@ -6,5 +6,5 @@ Description: "MERIT9処方区分コードの値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system $JP_MedicationCategoryMERIT9_CS
+* include codes from system JP_MedicationCategoryMERIT9_CS
 

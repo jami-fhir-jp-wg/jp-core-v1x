@@ -6,4 +6,4 @@ Description: "Observationで使用する身体部位の値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system $JP_ObservationBodySite_CS
+* include codes from system JP_ObservationBodySite_CS

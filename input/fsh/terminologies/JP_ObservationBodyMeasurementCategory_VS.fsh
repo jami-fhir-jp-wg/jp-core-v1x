@@ -6,4 +6,4 @@ Description: "Observation（身体計測）カテゴリで使用する分類の�
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system $JP_ObservationBodyMeasurementCategory_CS
+* include codes from system JP_ObservationBodyMeasurementCategory_CS

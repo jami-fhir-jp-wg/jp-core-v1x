@@ -6,4 +6,4 @@ Description: "Observation（バイタルサイン）で使用する項目の値�
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system $JP_ObservationVitalSignsCode_CS
+* include codes from system JP_ObservationVitalSignsCode_CS

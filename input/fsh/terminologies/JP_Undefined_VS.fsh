@@ -6,4 +6,4 @@ Description: "未定義の値セット。使用する予定のコードシステ
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system $JP_Undefined_CS
+* include codes from system JP_Undefined_CS

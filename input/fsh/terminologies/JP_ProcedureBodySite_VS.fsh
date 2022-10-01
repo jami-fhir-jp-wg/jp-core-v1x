@@ -6,4 +6,4 @@ Description: "処置の対象となる身体部位のコード"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system $JP_ProcedureBodySite_CS
+* include codes from system JP_ProcedureBodySite_CS

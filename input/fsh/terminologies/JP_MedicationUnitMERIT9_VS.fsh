@@ -6,5 +6,5 @@ Description: "MERIT9医薬品単位略号の値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system $JP_MedicationUnitMERIT9_CS
+* include codes from system JP_MedicationUnitMERIT9_CS
 
