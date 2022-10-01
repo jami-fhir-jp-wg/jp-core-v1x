@@ -10,7 +10,8 @@ Usage: #Example
 * extension[+].url = $JP_Immunization_CertificatedDate
 * extension[=].valueDate = "2021-03-15"
 * status = #completed
-* vaccineCode = urn:oid:1.2.392.200119.4.403.1#182110901 "コミナティ筋注"
+// 110926901 ミナティ筋注
+* vaccineCode = urn:oid:1.2.392.200119.4.403.1#110926901 "コミナティ筋注"
 * patient = Reference(Patient/jp-patient-example-1)
 * occurrenceDateTime = "2021-07-01T10:30:00+09:00"
 * lotNumber = "12345678"
