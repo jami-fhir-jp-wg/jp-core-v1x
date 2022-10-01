@@ -6,4 +6,4 @@ Description: "処置が実施された理由を示す値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_ProcedureReason_CS
+* include codes from system $JP_ProcedureReason_CS

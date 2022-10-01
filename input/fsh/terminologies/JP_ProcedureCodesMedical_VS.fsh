@@ -6,4 +6,4 @@ Description: "処置のコード:医科診療行為マスタの値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_ProcedureCodesMedical_CS
+* include codes from system $JP_ProcedureCodesMedical_CS

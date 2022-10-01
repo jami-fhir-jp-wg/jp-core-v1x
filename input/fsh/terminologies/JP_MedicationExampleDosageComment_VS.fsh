@@ -6,4 +6,4 @@ Description: "注射用法コメントの値セット例"
 * ^status = #active
 * ^experimental = true
 * ^date = "2022-09-26"
-* include codes from system JP_MedicationExampleDosageComment_CS
+* include codes from system $JP_MedicationExampleDosageComment_CS

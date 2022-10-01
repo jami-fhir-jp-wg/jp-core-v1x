@@ -6,4 +6,4 @@ Description: "投与ラインの値セット例"
 * ^status = #active
 * ^experimental = true
 * ^date = "2022-09-26"
-* include codes from system JP_MedicationExampleLine_CS
+* include codes from system $JP_MedicationExampleLine_CS

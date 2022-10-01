@@ -6,5 +6,5 @@ Description: "注射用MedicationRequestで使用する用法コードの値セ�
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_MedicationAsNeededConditionJAMI_CS
-* include codes from system JP_MedicationAsNeededConditionMERIT9_CS
+* include codes from system $JP_MedicationAsNeededConditionJAMI_CS
+* include codes from system $JP_MedicationAsNeededConditionMERIT9_CS

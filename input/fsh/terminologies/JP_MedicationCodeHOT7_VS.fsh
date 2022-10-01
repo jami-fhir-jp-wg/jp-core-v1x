@@ -6,4 +6,4 @@ Description: "医薬品HOT7コードの値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_MedicationCodeHOT7_CS
+* include codes from system $JP_MedicationCodeHOT7_CS

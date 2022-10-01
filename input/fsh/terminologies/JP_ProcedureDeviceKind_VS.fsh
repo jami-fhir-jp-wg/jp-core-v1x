@@ -6,4 +6,4 @@ Description:  "処置の実施に利用された医療機器を識別する値�
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_ProcedureDeviceKind_CS
+* include codes from system $JP_ProcedureDeviceKind_CS

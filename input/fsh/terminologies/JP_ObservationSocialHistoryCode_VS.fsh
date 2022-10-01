@@ -6,4 +6,4 @@ Description: "Observation（生活背景）で使用する項目の値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_ObservationSocialHistoryCode_CS
+* include codes from system $JP_ObservationSocialHistoryCode_CS
