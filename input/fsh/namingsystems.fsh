@@ -65,6 +65,7 @@ Usage: #definition
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeHOT7_CS"
 
+/*
 Instance: jp-medicationcodehot9-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition
@@ -85,6 +86,7 @@ Usage: #definition
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeHOT9_CS"
 
+*/
 
 Instance: jp-medicationcodehot13-namingsystem
 InstanceOf: NamingSystem
