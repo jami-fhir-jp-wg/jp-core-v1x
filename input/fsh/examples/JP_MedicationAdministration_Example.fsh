@@ -50,7 +50,7 @@ Usage: #example
 * identifier[requestIdentifier].value = "1234567890.1.1"
 * status = #stopped
 * category = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
-* medicationCodeableConcept = urn:oid:1.2.392.200119.4.403.1#110926901 "パンスポリンＴ錠１００ １００ｍｇ"
+* medicationCodeableConcept = $JP_MedicationCodeHOT9_CS#110926901 "パンスポリンＴ錠１００ １００ｍｇ"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2016-08-25T08:30:00+09:00"
 * request = Reference(MedicationRequest/jp-medicationrequest-example-2)
