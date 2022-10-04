@@ -7,7 +7,7 @@ Usage: #definition
 * status = #active
 * experimental = true
 * date = "2022-09-26"
-* description = "JP Core Clientの期待される機能について説明する。JP Core Clientは、ローカルなユースケースやその他の文脈上の要件に基づいて、必要なデータにアクセスするために、このリストから選択することができる。"
+* description = "JP Core実装ガイドを利用したサイトを作成する際にクライアント側で規定するCapablityStatementのOperationsおよびSearch Parametersのリスト例を提示する。JP Core ServerがサポートするFHIRプロファイルに限定しているため、FHIR Baseのプロファイルを利用する際などは必要な項目を追記すること。"
 * kind = #requirements
 * instantiates = "http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement"
 * fhirVersion = #4.0.1
