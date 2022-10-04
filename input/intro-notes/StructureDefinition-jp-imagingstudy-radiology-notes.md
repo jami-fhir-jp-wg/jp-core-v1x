@@ -6,17 +6,17 @@
 #### 必須項目
 ImagingStudyリソースは、次の要素を持たなければならない。
 
-- status︓検査項目情報の状態は必須である。
-- subject︓このリソースが示す検査項目が、どの患者のものかを示すため、このプロファイルでは参照するpatientリソースの定義を必須である。
+- status︓検査項目情報の状態は必須である
+- subject︓このリソースが示す検査項目がどの患者のものかを示すため、参照するpatientリソース定義を必須とした
 
 #### Must Support
 ImagingStudyリソースは該当する情報が存在する場合、次の要素を持たなければならない。
 
-- identifier：DICOM画像が存在する場合、DICOMタグのStudyInstance UID (0020,000D)が保持される必要がある。Accession Number and Issuer (0080,0050)+(0080,0051) あるいは Study ID (0020,0010)の設定も可能だが、JP CoreではStudyInstance UIDをMust Supportとし、他は任意とする（複数のidentifierの設定は可能）。必要に応じてオーダ番号等を持つことも可能である。
-- series.modality：DICOM画像が存在する場合、シリーズが取得されたモダリティを示す。DICOMでは必須情報となっており、DICOMタグ(0008,0060)の情報が格納される。
-- series.performer.actor：組織または撮影者を示す。具体的には実施医あるいは操作者（診療放射線技師）を示すことが多く、関連するリソースへのreferenceである。DICOMタグとは(0008, 1050) | (0008, 1052) | (0008, 1070) | (0008, 1072) にマッピングされる。
-- series.instance.uid：画像のユニークID。DICOMタグ(0008,0018)にある値をそのまま設定する。
-- series.instance.sopClass：SOPクラスUID。DICOMタグ(0008,0016)にある値をそのまま設定する。
+- identifier：DICOM画像が存在する場合、DICOMタグのStudyInstance UID (0020,000D)が保持される必要がある。Accession Number and Issuer (0080,0050)+(0080,0051) あるいは Study ID (0020,0010)の設定も可能だが、JP CoreではStudyInstance UIDをMust Supportとし、他は任意とする（複数のidentifierの設定は可能）。必要に応じてオーダ番号等を持つことも可能である
+- series.modality：DICOM画像が存在する場合シリーズが取得されたモダリティを示す、DICOMでは必須情報となっておりDICOMタグ(0008,0060)の情報が格納される
+- series.performer.actor：組織または撮影者を示す具体的には実施医あるいは操作者（診療放射線技師）を示す関連するリソースへのreferenceである、DICOMタグとは(0008, 1050) | (0008, 1052) | (0008, 1070) | (0008, 1072) にマッピングされる
+- series.instance.uid：画像のユニークID、DICOMタグ(0008,0018)にある値をそのまま設定する
+- series.instance.sopClass：SOPクラスUID、DICOMタグ(0008,0016)にある値をそのまま設定する
 
 ### Extension定義
 
@@ -64,7 +64,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
 
 次の検索パラメータはサポートすることが推奨される。（**SHOULD**）
 
-1.患者中心での検索：対象患者（= Patientリソース）を条件とした検索をサポートすることが望ましい。
+1.患者中心での検索：対象患者（= Patientリソース）を条件とした検索をサポートすることが望ましい
 
    ```
    GET [base]/ImagingStudy?patient={reference}
@@ -77,7 +77,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    ```
 
 
-2.モダリティ中心の検索：対象患者（= Patientリソース）と撮影に使用されたモダリティを条件とした検索をサポートすることが望ましい。
+2.モダリティ中心の検索：対象患者（= Patientリソース）と撮影に使用されたモダリティを条件とした検索をサポートすることが望ましい
 
    ```
    GET [base]/ImagingStudy?patient={reference}&modality={token}
@@ -89,7 +89,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    GET [base]/ImagingStudy?patient=123&modality=CT
    ```
 
-3.部位中心の検索：対象患者（= Patientリソース）と撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい。
+3.部位中心の検索：対象患者（= Patientリソース）と撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい
 
    ```
    GET [base]/ImagingStudy?patient={reference}&bodysite={token}
@@ -101,7 +101,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    GET [base]/ImagingStudy?patient=123&bodysite=T-15460
    ```
 
-4.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい。
+4.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい
 
    ```
    GET [base]/ImagingStudy?patient={reference}&started={date}
@@ -113,7 +113,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    GET [base]/ImagingStudy?patient=123&started=eq2021-06-25
    ```
 
-5.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい。
+5.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい
 
    ```
    GET [base]/ImagingStudy?patient={reference}&started={date}
@@ -125,7 +125,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    GET [base]/ImagingStudy?patient=123&started=eq2021-06-25
    ```
    
-6.複数の条件を組み合わせた検索：対象患者（= Patientリソース）、撮影の日時、撮影に使用されたモダリティ、撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい。
+6.複数の条件を組み合わせた検索：対象患者（= Patientリソース）、撮影の日時、撮影に使用されたモダリティ、撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい
 
 
    ```
@@ -138,7 +138,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
    GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=CT&bodysite=T-15460
    ```
    
-7.来院情報中心の検索：来院情報（= Encounterリソース）を条件とした検索をサポートすることが望ましい。
+7.来院情報中心の検索：来院情報（= Encounterリソース）を条件とした検索をサポートすることが望ましい
 
 
    ```
@@ -153,11 +153,7 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
 
 ##### オプション検索パラメータ
 
-このプロファイルではオプション検索パラメータ定義は行っていない。
-
-#### Operation一覧
-
-このプロファイルではオペレーション定義は行っていない。
+ 本プロファイルで追加定義されたオプション検索パラメータはない。
 
 #### サンプル
 

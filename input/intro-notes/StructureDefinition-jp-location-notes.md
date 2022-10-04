@@ -1,11 +1,11 @@
 
 ### 必須要素
 
-JP Core Location リソースで定義された必須要素はない。
+ 本プロファイルで定義された必須項目はない。
 
 ### Extensions定義
 
-JP Core Location リソースで定義された拡張はない。
+ 本プロファイルで追加定義された拡張はない。
 
 ## 利用方法
 
@@ -26,7 +26,7 @@ JP Core Location リソースで定義された拡張はない。
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. name 検索パラメータを使用して、任意の名前パートによる文字列検索をサポートしなければならない（**SHALL**）。
+1. name 検索パラメータを使用して、任意の名前パートによる文字列検索をサポートしなければならない（**SHALL**）
 
    ```
    GET [base]/Location?name=[string]
@@ -40,7 +40,7 @@ JP Core Location リソースで定義された拡張はない。
 
    名前が一致するLocationリソースを含むBundleを取得する。
 
-2. identifier 検索パラメータを使用して、ロケーションIDなどの識別子によるLocationの検索をサポートしなければならない（**SHALL**）。
+2. identifier 検索パラメータを使用して、ロケーションIDなどの識別子によるLocationの検索をサポートしなければならない（**SHALL**）
 
    ```
    GET [base]/Location?identifier={system|}[code]
@@ -55,7 +55,7 @@ JP Core Location リソースで定義された拡張はない。
    指定された識別子に一致するLocationリソースを含むBundleを取得する。
 
 
-1. address 検索パラメータを使用して、住所テキストによる文字列検索をサポートしなければならない（**SHALL**）。
+1. address 検索パラメータを使用して、住所テキストによる文字列検索をサポートしなければならない（**SHALL**）
 
    ```
    GET [base]/Location?address=[string]
@@ -69,7 +69,7 @@ JP Core Location リソースで定義された拡張はない。
 
    住所文字列が一致するLocationリソースを含むBundleを取得する。
 
-2. address-city 検索パラメータを使用して、住所の市町村名によるLocationの検索をサポートすることが望ましい（**SHOULD**）。
+2. address-city 検索パラメータを使用して、住所の市町村名によるLocationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Location?address-city=[string]
@@ -84,7 +84,7 @@ JP Core Location リソースで定義された拡張はない。
    指定された住所の市町村名が一致するLocationリソースを含むBundleを取得する。
 
 
-3. address-state 検索パラメータを使用して、住所の都道府県名によるLocationの検索をサポートすることが望ましい（**SHOULD**）。
+3. address-state 検索パラメータを使用して、住所の都道府県名によるLocationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Location?address-state=[string]
@@ -98,7 +98,7 @@ JP Core Location リソースで定義された拡張はない。
 
    指定された住所の都道府県名が一致するLocationリソースを含むBundleを取得する。
 
-4. address-postalcode 検索パラメータを使用して、住所の郵便番号によるLocationの検索をサポートすることが望ましい（**SHOULD**）。
+4. address-postalcode 検索パラメータを使用して、住所の郵便番号によるLocationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Location?address-postalcode=[string]

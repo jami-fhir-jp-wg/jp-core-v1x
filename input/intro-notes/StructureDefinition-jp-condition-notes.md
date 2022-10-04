@@ -2,11 +2,11 @@
 
 本プロファイルに準拠するためには、次の項目の値が存在しなければならない。
 
-- subject : 本リソースを所有する患者。
+- subject : 本リソースを所有する患者
 
 ### Extensions定義
 
-- Extensions定義はない。
+ 本プロファイルで追加定義された拡張はない。
 
 ## 利用方法
 
@@ -27,7 +27,7 @@
 
 本プロファイルに準拠するためには、以下の検索パラメータをサポートしなければならない（SHALL）
 
-1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりConditionを検索。
+1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりConditionを検索
 
    ```
    GET [base]/Condition?identifier={system|}[code]
@@ -43,7 +43,7 @@
 
 本プロファイルに準拠するためには、以下の検索パラメータをサポートすることが推奨される（SHOULD）
 
-1. 検索パラメータpatientを指定し、該当するすべてのConditionを検索。
+1. 検索パラメータpatientを指定し、該当するすべてのConditionを検索
 
    ```
    GET [base]/Condition?patient={reference}
@@ -59,7 +59,7 @@
 
 オプションとして次の検索パラメータをサポートすることができる（MAY）
 
-1. 検索パラメータpatientとdateを指定し、該当するすべてのConditionを検索。
+1. 検索パラメータpatientとdateを指定し、該当するすべてのConditionを検索
 
       * dateに対する次の比較演算子のサポートを含む: gt,lt,ge,le
       * AND検索のオプションのサポートを含む (例えば.date=[date]&date=[date]]&...)
@@ -74,7 +74,7 @@
    
       指定された患者および日付のすべてのConditionを含むBundleを検索する。
 
-2. 検索パラメータpatientとclinicalstatusを指定し、該当するすべてのConditionを検索。
+2. 検索パラメータpatientとclinicalstatusを指定し、該当するすべてのConditionを検索
 
       * OR検索のサポートを含む(例えば clinicalstatus={system\|}[code],{system\|}[code],...)
       
@@ -91,7 +91,7 @@
    
       指定された患者およびステータスのすべてのConditionを含むBundleを検索する。
 
-3. 検索パラメータpatientとverificationstatusを指定し、該当するすべてのConditionを検索。
+3. 検索パラメータpatientとverificationstatusを指定し、該当するすべてのConditionを検索
 
       * OR検索のサポートを含む(例えば verificationstatus={system\|}[code],{system\|}[code],...)
       
@@ -108,7 +108,7 @@
    
       指定された患者およびステータスのすべてのConditionを含むBundleを検索する。
 
-4. 検索パラメータpatientとcategoryを指定し、該当するすべてのConditionを検索。
+4. 検索パラメータpatientとcategoryを指定し、該当するすべてのConditionを検索
 
       * OR検索のサポートを含む(例えば category={system\|}[code],{system\|}[code],...)
 
@@ -127,11 +127,7 @@
 
 ##### オプション検索パラメータ 
 
-- オプション検索パラメータはない。
-
-#### Operation一覧
-
-- Operation一覧はない。
+ 本プロファイルで追加定義されたオプション検索パラメータはない。
 
 #### サンプル
 

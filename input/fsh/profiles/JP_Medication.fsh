@@ -32,7 +32,8 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * manufacturer only Reference(JP_Organization)
 * manufacturer ^short = "製品の製造者"
 * manufacturer ^definition = "Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.\r\n\r\n医薬品の製造元の詳細を説明する。これは、医薬品の販売業者を表すことを意図したものではない。"
-* form ^definition = "製品の剤型についての説明。散剤(powder)、錠剤(tablets)、カプセル(capsule)など。"
+* form ^short = "TAB | CAP | PWD | SYR | SUP | LQD | OIT | CRM | TPE | INJ +"
+* form ^definition = "TAB | CAP | PWD | SYR | SUP | LQD | OIT | CRM | TPE | INJ + 製品の剤型についての説明。散剤、ドライシロップ(PWD)、錠剤(TAB)、カプセル(CAP)など。"
 * form ^comment = "もし、Medication ResourceがMedicationRequest Resourceから参照された場合は、これはオーダされた剤型である。Medication ResourceがMedicationDispense Resourceから参照された場合は、払い出された剤型である。MedicationAdministration ResourceからMedication Resourceが参照されていれば、投与された剤型である。"
 * amount only JP_MedicationRatio_Amount
 * amount ^short = "パッケージ中の薬剤の量"

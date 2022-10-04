@@ -1,23 +1,23 @@
 
 ### 必須要素
 
-JP Core Organization リソースで定義された必須要素はない。
+ 本プロファイルで定義された必須項目はない。
 
 ### Extensions定義
 
-JP Core Organization リソースで使用される拡張は次の通りである。
+ 本プロファイルで使用される拡張は次の通りである。
 
 - [JP_OrganizationCategory][JP_Organization_InsuranceOrganizationCategory]
 
-  - 点数表コード１桁（医科１、歯科２）の情報を表す。
+  - 点数表コード１桁（医科１、歯科２）の情報を表す
 
 - [JP_OrganizationNo][JP_Organization_InsuranceOrganizationNo]
 
-  - 保険医療機関番号７桁を表す。
+  - 保険医療機関番号７桁を表す
 
 - [JP_PrefectureNo][JP_Organization_PrefectureNo]
 
-  - 都道府県番号2桁を表す。
+  - 都道府県番号2桁を表す
 
 ### その他
 
@@ -41,7 +41,7 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
 
 - 点数表番号：１桁  
   医科は「1」、歯科は「3」、調剤「4」、訪問看護ステーション「6」が割り当たる。  
-  同一の病院または診療所に医科と歯科が併存する場合にはそれぞれ別のコードが与えられる。
+  同一の病院または診療所に医科と歯科が併存する場合など１施設にあたり２つ以上のコードが割り振られるケースが存在する。施設の主要な役割に応じて単一の点数表番号を割り当てることが望ましい(**SHOULD**)。派生する実装ガイドの利用用途（例えば診療報酬点数に関係するデータ収集など）によっては１施設に複数コードを扱わないといけないケースも存在する。１施設に対し複数の医療機関コードを扱う場合にはシステム上の考慮が多くなる点について注意が必要である。ストレージ上は１医療機関コードとしデータ出力時にコードを変換するなど、ＦＨＩＲサーバが複雑にならないような検討を行なうこと。
 - 医療機関コード（７桁）：７桁  
   コードの内部構成は、```都市区番号（２桁）＋医療機関等番号（４桁）＋検証番号（１桁）``` となっている。
 
@@ -84,7 +84,7 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. identifier 検索パラメータを使用して、識別子によるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
+1. identifier 検索パラメータを使用して、識別子によるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Organization?identifier={system|}[code]
@@ -98,7 +98,7 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
 
    指定された識別子に一致するOrganizationリソースを含むBundleを検索する。
    
-2. name 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
+2. name 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Organization?name={string}
@@ -110,7 +110,7 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
    GET [base]/Organization?name=Health
    ```
 
-3. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）。
+3. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Organization?address=[string]
@@ -123,7 +123,8 @@ JP Core Organization リソースで使用される拡張は次の通りであ�
    ```
 
 ### オプション検索パラメータ
-オプション検索パラメータ（MAY）は定義しない。  
+
+ 本プロファイルで追加定義されたオプション検索パラメータはない。
 
 ### サンプル  
 

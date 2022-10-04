@@ -3,13 +3,13 @@
 次のデータ項目は必須（データが存在しなければならない）である。
 
 MedicationDispense リソースは、次の要素を持たなければならない。
-- status : ステータスは必須である。
-- medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない。
-- subject :患者の参照情報は必須であり、subject.reference ないし subject.identifier が必ず存在しなければならない。
-- whenHandedOver : 払い出し日時であり、JP Coreでは必須である。
-- quantity : 調剤量は必須であり、quantity.value, quantity.unit, quantity.system, quantity.code が必ず存在しなければならない 
-- dosageInstruction.text : フリーテキストの用法指示であり、JP Coreでは必須である。
-- dosageInstruction.timing : 服用タイミングを記録し、JP Coreでは必須である。dosageInstruction.timing.code.coding.code, dosageInstruction.timing.code.coding.system が必ず存在しなければならない。
+- status : ステータスは必須である
+- medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない
+- subject :患者の参照情報は必須であり、subject.referenceないしsubject.identifierが必ず存在しなければならない
+- whenHandedOver : 払い出し日時であり、JP Coreでは必須である
+- quantity : 調剤量は必須であり、quantity.value, quantity.unit, quantity.system, quantity.code が必ず存在しなければならない
+- dosageInstruction.text : フリーテキストの用法指示であり、JP Coreでは必須である
+- dosageInstruction.timing : 服用タイミングを記録しJP Coreでは必須である、dosageInstruction.timing.code.coding.code, dosageInstruction.timing.code.coding.system が必ず存在しなければならない
 
 ### Extensions定義
 JP Core MedicationDispense プロファイルで使用される拡張は次の通りである。
@@ -68,7 +68,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）
 
    ```
    GET [base]/MedicationDispense?identifier={system|}[code]
@@ -87,7 +87,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationDispenseの検索をサポートすることが望ましい（**SHOULD**）。
+1. patient 検索パラメータを使用して、患者のリファレンス情報によるMedicationDispenseの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/MedicationDispense?patient=[id]
@@ -102,7 +102,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 
    リソースIDが123456の患者のMedicationDispenseリソースを含むBundleを検索する。
 
-1. patient,whenhandedover 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationDispenseの検索をサポートすることが望ましい（**SHOULD**）。
+1. patient,whenhandedover 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationDispenseの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/MedicationDispense?patient=[id]&whenhandedover=[date]
@@ -128,7 +128,7 @@ JP Core MedicationDispense リソースに対して使用される操作は次�
 
 - $everything：[base]/MedicationDispense/[id]/$everything
 
-  - この操作が呼び出された特定のMedicationDispenseに関連する全ての情報を返す。
+  - この操作が呼び出された特定のMedicationDispenseに関連する全ての情報を返す
     
 
 #### Operation 詳細

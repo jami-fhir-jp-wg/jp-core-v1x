@@ -8,6 +8,7 @@ JP Core Immunization リソースは、次の要素を持たなければなら�
 
 
 ### Extensions定義
+
 JP Core Immunization リソースで使用される拡張は次の通りである。
 
 #### JP Core Immunization独自で追加されたExtension
@@ -58,7 +59,7 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（**SHALL**）。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（**SHALL**）
 
    ```
    GET [base]/Immunization?identifier={system|}[code]
@@ -77,7 +78,7 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. patient 検索パラメータを使用して、患者のリファレンス情報によるImmunizationの検索をサポートすることが望ましい（**SHOULD**）。
+1. patient 検索パラメータを使用して、患者のリファレンス情報によるImmunizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Immunization?patient=[id]
@@ -92,7 +93,7 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
    リソースIDが123456の患者のImmunizationリソースを含むBundleを検索する。
 
-1. patient,date 検索パラメータを使用して、患者のリファレンス情報と接種日によるImmunizationの検索をサポートすることが望ましい（**SHOULD**）。
+1. patient,date 検索パラメータを使用して、患者のリファレンス情報と接種日によるImmunizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Immunization?patient=[id]&date=[date]
@@ -114,7 +115,7 @@ JP Immunization リソースに対して使用される操作は次の通りで�
 
 - $everything：[base]/Immunization/[id]/$everything
 
-  - この操作が呼び出された特定のImmunizationに関連する全ての情報を返す。
+  - この操作が呼び出された特定のImmunizationに関連する全ての情報を返す
     
 
 #### Operation 詳細

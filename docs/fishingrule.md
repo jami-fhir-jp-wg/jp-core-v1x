@@ -58,7 +58,7 @@ Kebab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 
 ### [3] 定義URL形式
 * Page部分はNameと同一とする。<br/>
-* JPCoreに関するサイト名称は **http://jpfhir.jp/fhir/core** にて統一する。
+* JPCoreに関するサイト名称は **http://jpfhir.jp/fhir/core** にて統一する
 * ただしTerminologyについては **http://jpfhir.jp/fhir/Common** とする。<br/>
 ※JPCoreに限らずいろいろな用途として利用されるため。
 
@@ -129,8 +129,8 @@ Name形式[ **Aaa_BbbCcc_Ddd.fsh** ]に変換し、拡張子を.fshとする。<
 設定してもsushi-config.yamlの内容に上書きされるため記載対象としない。
 
 外部CodeSystemの利用する際(LOINC等)には、必要に応じて下記の対応を行うこと。
-- 外部CodeSystemの利用許諾等に違反しない記述にすること。
-- CodeSystemについて、JP Core側の帰属しないことを明記すること。
+- 外部CodeSystemの利用許諾等に違反しない記述にすること
+- CodeSystemについて、JP Core側の帰属しないことを明記すること
 
 ### [2] Cardinality
 {min}の値が0の時は、{min}を省略すること。
@@ -169,14 +169,14 @@ Baseに対し、より制約を強くする（範囲を狭める）形で定義�
 (  ~  extension記載  ~  )
 ```
 #### 文中コメント記載時の注意事項
-* コメントにより理解が深まる場合のみ記載すること。
-* 以下のようなコメントは記載しないよう注意すること。
+* コメントにより理解が深まる場合のみ記載すること
+* 以下のようなコメントは記載しないよう注意すること
    1. 説明の必要のないコメント
    1. ソースと意味が重複しているコメント
    1. 追加、更新等に関するコメント
 
 ### [4] definition(定義)、comment(コメント)の記述
-* 日本語のみの記述も可とする。日本語訳が難しいために補助的に英語を付記することは問題ない。
+* 日本語のみの記述も可とする。日本語訳が難しいために補助的に英語を付記することは問題ない
 * 章構成に影響するMarkdownは利用しないこと。<br/>
 下記はいずれもHeadingの解釈されるため利用しないこと
 ```
@@ -198,7 +198,7 @@ Baseに対し、より制約を強くする（範囲を狭める）形で定義�
 ---------------
 ```
 
-* htmlタグを使う場合はxhtml形式とし、タグの開閉に気を付けること。
+* htmlタグを使う場合はxhtml形式とし、タグの開閉に気を付けること
 
 | 非推奨 | 推奨 | 備考 |
 | --- | --- | --- |
@@ -260,8 +260,8 @@ Sushi & IG Publisherに変更した際に、^short, ^definition, ^commentの定�
 ### [1]CodeSystemの定義
 
 - URLは、JP Coreの命名規則に従ったものを記述する。(直接OIDを記載しない)
-  - JP Coreで定義したリソースはURLに従って公開される予定のため。
-- IdentifierとしてOIDを追加する。
+  - JP Coreで定義したリソースはURLに従って公開される予定のため
+- IdentifierとしてOIDを追加する
 
 CodeSystemに対してOIDが割り振られた際の記載例
 
@@ -284,10 +284,10 @@ Alias: $JP_MedicationCodeHOT9_CS = urn:oid:1.2.392.200119.4.403.1
 
 ### [2]NamingSystemへのマッピング情報の記載
 
-- NamingSystemに対してOIDをIdentifierとJP Core URLとのマッピングを作成する。
-- OIDについては念の為OID形式、URL形式の両方を登録する。
-- URLとしてのPreferredは、OIDのURLに付けることとする。
-- kind=#codesystemにすること点に注意すること。
+- NamingSystemに対してOIDをIdentifierとJP Core URLとのマッピングを作成する
+- OIDについては念の為OID形式、URL形式の両方を登録する
+- URLとしてのPreferredは、OIDのURLに付けることとする
+- kind=#codesystemにすること点に注意すること
 
 ```
 [namingsystems.fsh]
@@ -315,9 +315,9 @@ Usage: #definition
 ## リソース追加、urlもしくはid変更時の対処
 
 リソース追加、urlもしくはid変更時には必要に応じ、以下の作業を実施すること。
-* sushiを実行する。
-* markdownlink_creator.rbを実行し、input/include/markdown-link-reference.mdを更新し、リンク情報を書き換える。
-* specialurls_creator.rbを実行し、sushi-config.yamlのspecial urlを書き換える。
+* sushiを実行する
+* markdownlink_creator.rbを実行し、input/include/markdown-link-reference.mdを更新し、リンク情報を書き換える
+* specialurls_creator.rbを実行し、sushi-config.yamlのspecial urlを書き換える
 
 ``` sh
 # sushi実行 fsh_generatedにjsonファイルが作成される。
@@ -331,6 +331,6 @@ $ ruby script\specialurls_creator.rb
 ```
 
 その他に下記の確認を行なうこと。
-* input/pagecontent/group-xxxx.mdに修正・追加が変更が必要か確認する。
-* input/pagecontent/index.mdの追加が必要か確認する。
-* コンパイル後各種リンクが正しく動作するかを確認する。
+* input/pagecontent/group-xxxx.mdに修正・追加が変更が必要か確認する
+* input/pagecontent/index.mdの追加が必要か確認する
+* コンパイル後各種リンクが正しく動作するかを確認する

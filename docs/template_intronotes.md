@@ -81,10 +81,10 @@ PractitionerRole リソースは、医療従事者が、特定の組織におい
 次のデータ項目は必須（データが存在しなければならない）、あるいは、データが送信システムに存在する場合はサポートされなければならないことを意味する。（Must Support）。
 
 Practitioner リソースは、次の要素を持たなければならない。
-- name ：医療従事者の氏名は必須であり、name.text が必ず存在しなければならない。
+- name ：医療従事者の氏名は必須であり、name.text が必ず存在しなければならない
 
 Practitionerリソースは、次の要素をサポートしなければならない。
-- identifier： 医籍登録番号が利用可能な場合、サポートされなければならない。
+- identifier： 医籍登録番号が利用可能な場合、サポートされなければならない
 
 ### Extensions定義
 <!--拡張を行った場合、ここに説明を記載します-->
@@ -115,7 +115,7 @@ Practitionerリソースは、次の要素をサポートしなければなら�
 JP Practitioner プロファイルで使用される拡張は次の通りである。
 
 - animalSpecies
-  - 動物をつかったヘルスケアサービスの提供を行う場合（例：がん探知犬）、動物の種を表す。
+  - 動物をつかったヘルスケアサービスの提供を行う場合（例：がん探知犬）、動物の種を表す
 
 ## 利用方法
 （OperationやSearch Parameter中心に記載を行います。）
@@ -123,7 +123,7 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
 ##### 必須検索パラメータ
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、医籍登録番号などの識別子によるPractitionerの検索をサポートしなければならない（**SHALL**）。
+1. identifier 検索パラメータを使用して、医籍登録番号などの識別子によるPractitionerの検索をサポートしなければならない（**SHALL**）
     ```
     GET [base]/Practitioner?identifier={system|}[code]
     ```
@@ -134,7 +134,7 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
    指定された識別子に一致するPractitionerリソースを含むBundleを検索する。
 
 
-2. name 検索パラメータを使用して、任意の名前パートによる文字列検索をサポートしなければならない（**SHALL**）。
+2. name 検索パラメータを使用して、任意の名前パートによる文字列検索をサポートしなければならない（**SHALL**）
     ```
     GET [base]/Practitioner?name=[string]
     ```
@@ -147,7 +147,7 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
 ##### 推奨検索パラメータ
 次の検索パラメータをサポートすることが望ましい。
 
-1. communication 検索パラメータを使用して、医療従事者が使用する言語コードによるPractitionerの検索をサポートすることが望ましい（**SHOULD**）。
+1. communication 検索パラメータを使用して、医療従事者が使用する言語コードによるPractitionerの検索をサポートすることが望ましい（**SHOULD**）
     ```
     GET [base]/Practitioner?communication={system|}[code]
     ```
@@ -160,7 +160,7 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
 ##### 追加検索パラメータ 
 <!--★★コメント： US-Coreでは 基底以外の追加検索パラメータ（基底プロパティまたは拡張(Extension)に対する検索パラメータの両方を含む）についての記載がありませんが、必要と思われたので追加しました。内容は例示です。★★-->
 
-1. qualification-identifier検索パラメータを使用して、資格識別子によるPractitionerの検索をサポートしなければならない（**SHALL**）。
+1. qualification-identifier検索パラメータを使用して、資格識別子によるPractitionerの検索をサポートしなければならない（**SHALL**）
     ```
     GET [base]/Practitioner?qualification-identifier={system|}{value}
     ```
@@ -170,7 +170,7 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
     ```
    指定された識別子と資格識別子が一致するPractitionerリソースを含むBundleを検索する。
 
-2. jp-core-ethnicity検索パラメータを使用して、民族性によるPractitionerの検索をサポートすることが望ましい（**SHOULD**）。
+2. jp-core-ethnicity検索パラメータを使用して、民族性によるPractitionerの検索をサポートすることが望ましい（**SHOULD**）
     ```
     GET [base]/Practitioner?jp-core-ethnicity={system|}{code}
     ```
@@ -186,7 +186,7 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
 
 JP Practitioner プロファイルに対して使用される操作は次の通りである。
 - $everything：[base]/Practitioner/[id]/$everything
-  - この操作が呼び出された特定のPractitionerに関連する全ての情報を返す。
+  - この操作が呼び出された特定のPractitionerに関連する全ての情報を返す
 
 #### Operation 詳細
 <!--★★コメント：内容は、例示であり、妥当性は考慮していません。★★-->
@@ -271,10 +271,10 @@ URL: [base]/Practitioner/[id]/$everything
 ## 3. markdownファイル記載時の注意事項
 
 ### 全般
-* 先頭` # `マークは章・節・句の自動採番の対象となる。動きを理解した上で利用すること。
-* 最終的にはコンパイル後の画面を見て確認すること。
+* 先頭` # `マークは章・節・句の自動採番の対象となる。動きを理解した上で利用すること
+* 最終的にはコンパイル後の画面を見て確認すること
 * 前回までにあった先頭のテーブルは自動生成するようになったため記載扶養
 
 ### 紹介文書
-* `###`を利用するとプロファイル定義の章番号がずれてしまうため`<h3>title</h3>`として記述すること。不具合解消時には修正すること。
+* `###`を利用するとプロファイル定義の章番号がずれてしまうため`<h3>title</h3>`として記述すること。不具合解消時には修正すること
 
