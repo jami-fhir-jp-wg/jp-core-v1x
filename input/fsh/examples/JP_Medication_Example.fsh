@@ -18,10 +18,10 @@ Title: "JP Core Medication Example ソリタ－＋アドナ注"
 Description: "ソリタ－＋アドナ注"
 Usage: #example
 * status = #active
-* ingredient[0].itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#107750602 "ソリタ－Ｔ３号輸液５００ｍＬ"
+* ingredient[0].itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#107750603 "ソリタ－Ｔ３号輸液５００ｍＬ"
 * ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#HON "本"
 * ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
-* ingredient[+].itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#108010001 "アドナ注（静脈用）５０ｍｇ／１０ｍＬ"
+* ingredient[+].itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#108010002 "アドナ注（静脈用）５０ｍｇ／１０ｍＬ"
 * ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#AMP "アンプル"
 * ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
 
