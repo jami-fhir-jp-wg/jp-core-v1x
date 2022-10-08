@@ -73,7 +73,7 @@ Usage: #example
 * dosage.site.extension[bodySite].url = $bodySite
 * dosage.site.extension[bodySite].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-2) "左腕"
 * dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
-* dosage.method = urn:oid:1.2.392.200250.2.2.20.40#31 "中心静脈注射"
+* dosage.method = $JP_MedicationMethodJAMIDetailUsage_CS#31 "中心静脈注射"
 * dosage.dose = 510 'mL' "mL"
 * dosage.rateRatio.numerator = 102 'mL' "mL" 
 * dosage.rateRatio.denominator = 1 'h' "hour"

@@ -24,7 +24,7 @@ Usage: #example
 * dosageInstruction.text = "内服・経口・１日３回朝昼夕食後"
 * dosageInstruction.timing.code = urn:oid:1.2.392.200250.2.2.20.20#1013044400000000 "内服・経口・１日３回朝昼夕食後"
 * dosageInstruction.route = http://jpfhir.jp/fhir/core/CodeSystem/route-codes#PO "口"
-* dosageInstruction.method = urn:oid:1.2.392.200250.2.2.20.40#10 "経口"
+* dosageInstruction.method = $JP_MedicationMethodJAMIDetailUsage_CS#10 "経口"
 * dosageInstruction.doseAndRate.type = $JP_MedicationIngredientStrengthStrengthType_CS#1 "製剤量"
 * dosageInstruction.doseAndRate.doseQuantity = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 * dosageInstruction.doseAndRate.rateRatio.numerator = 3 urn:oid:1.2.392.100495.20.2.101#TAB "錠"

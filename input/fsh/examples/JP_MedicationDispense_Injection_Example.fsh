@@ -26,7 +26,7 @@ Usage: #example
 * dosageInstruction.site.extension.valueReference = Reference(jp-medicationdispense-injection-bodystructure-example-1)
 * dosageInstruction.site.extension.valueReference.type = "BodyStructure"
 * dosageInstruction.route = http://jpfhir.jp/fhir/core/CodeSystem/route-codes#IV "静脈内"
-* dosageInstruction.method = urn:oid:1.2.392.200250.2.2.20.40#30 "静脈注射"
+* dosageInstruction.method = $JP_MedicationMethodJAMIDetailUsage_CS#30 "静脈注射"
 * dosageInstruction.doseAndRate.doseQuantity = 2 'mL' "mL"
 
 Instance: jp-medicationdispense-injection-medication-example-1

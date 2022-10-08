@@ -26,7 +26,7 @@ Usage: #example
 * performer.function = http://terminology.hl7.org/CodeSystem/med-admin-perform-function#performer "Performer"
 * performer.actor = Reference(Practitioner/jp-practitioner-example-female-1) "福岡 花子"
 * request = Reference(MedicationRequest/jp-medicationrequest-example-1)
-* dosage.route = urn:oid:1.2.392.200250.2.2.20.40#10 "経口"
+* dosage.route = $JP_MedicationMethodJAMIDetailUsage_CS#10 "経口"
 * dosage.method = $JP_MedicationMethodJAMIBasicUsage_CS#1 "内服"
 * dosage.dose = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 
