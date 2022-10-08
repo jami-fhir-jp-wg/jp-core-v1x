@@ -6,5 +6,5 @@ Description: "後発医薬品変更不可区分の値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_MedicationSubstitutionNotAllowedReason_CS
+* include codes from system $JP_MedicationSubstitutionNotAllowedReason_CS
 
