@@ -32,7 +32,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |分類|CS名|URI|
 |---------|----|---------------------------|
 |医薬品|HOT7|$JP_MedicationCodeHOT7_CS|
-|医薬品|HOT9|$JP_MedicationCodeHOT9_CS|
+|医薬品|HOT9|urn:oid:1.2.392.200119.4.403.1|
 |医薬品|HOT13|$JP_MedicationCodeHOT13_CS|
 |医薬品|YJコード| $JP_MedicationCodeYJ_CS |
 |医薬品|⼀般処⽅名マスター|urn:oid:1.2.392.100495.20.1.81|
@@ -79,7 +79,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 | SHOULD           | patient,date | reference,date  | GET [base]/MedicationRequest?patient=123456&date=eq2013-01-14 |
 | SHOULD           | patient,authoredon | reference,date  | GET [base]/MedicationRequest?patient=123456&authoredon=eq2013-01-14 |
 | SHOULD         | patient,jp-medication-start | date | GET [base]/MedicationRequest?patient=123456&jp-meditation-start=eq2013-03-21 |
-| MAY           | date,authoredon,category,code,requester | date,date,token,token,token | GET [base]/MedicationRequest?code=$JP_MedicationCodeHOT9_CS\|105271807  |
+| MAY           | date,authoredon,category,code,requester | date,date,token,token,token | GET [base]/MedicationRequest?code=urn:oid:1.2.392.200119.4.403.1|105271807  |
 
 ##### 必須検索パラメータ
 
@@ -609,7 +609,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     "medicationCodeableConcept": {
       "coding": [
         {
-          "system": "$JP_MedicationCodeHOT9_CS",
+          "system": "urn:oid:1.2.392.200119.4.403.1",
           "code": "105271807",
           "display": "プレドニン錠５ｍｇ"
         }
@@ -754,7 +754,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     "medicationCodeableConcept": {
       "coding": [
         {
-          "system": "$JP_MedicationCodeHOT9_CS",
+          "system": "urn:oid:1.2.392.200119.4.403.1",
           "code": "105271807",
           "display": "プレドニン錠５ｍｇ"
         }
@@ -899,7 +899,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
     "medicationCodeableConcept": {
       "coding": [
         {
-          "system": "$JP_MedicationCodeHOT9_CS",
+          "system": "urn:oid:1.2.392.200119.4.403.1",
           "code": "105271807",
           "display": "プレドニン錠５ｍｇ"
         }
@@ -1046,7 +1046,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
   "medicationCodeableConcept": {
     "coding": [
       {
-        "system": "$JP_MedicationCodeHOT9_CS",
+        "system": "urn:oid:1.2.392.200119.4.403.1",
         "code": "105271807",
         "display": "プレドニン錠５ｍｇ"
       }
