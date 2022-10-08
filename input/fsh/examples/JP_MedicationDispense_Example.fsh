@@ -23,7 +23,7 @@ Usage: #example
 * note.text = "後発品へ変更可能か依頼医のＡ医師に確認したところ、患者の希望により不可との回答あり。"
 * dosageInstruction.text = "内服・経口・１日３回朝昼夕食後"
 * dosageInstruction.timing.code = urn:oid:1.2.392.200250.2.2.20.20#1013044400000000 "内服・経口・１日３回朝昼夕食後"
-* dosageInstruction.route = http://jpfhir.jp/fhir/core/CodeSystem/route-codes#PO "口"
+* dosageInstruction.route = $JP_MedicationRouteHL70162_CS#PO "口"
 * dosageInstruction.method = $JP_MedicationMethodJAMIDetailUsage_CS#10 "経口"
 * dosageInstruction.doseAndRate.type = $JP_MedicationIngredientStrengthStrengthType_CS#1 "製剤量"
 * dosageInstruction.doseAndRate.doseQuantity = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
