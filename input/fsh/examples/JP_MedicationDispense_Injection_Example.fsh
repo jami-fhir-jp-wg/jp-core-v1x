@@ -38,7 +38,7 @@ Usage: #inline
 * ingredient.itemCodeableConcept = $JP_MedicationCodeHOT9_CS#100558502 "ホリゾン注射液１０ｍｇ"
 * ingredient.strength.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"
 * ingredient.strength.extension.valueCodeableConcept = $JP_MedicationIngredientStrengthStrengthType_CS#1 "製剤量"
-* ingredient.strength.numerator = 1 $JP_MedicationUnitMERIT9_CSAMP "アンプル"
+* ingredient.strength.numerator = 1 $JP_MedicationUnitMERIT9_CS#AMP "アンプル"
 * ingredient.strength.denominator = 1 $JP_MedicationUnitMERIT9_CS#TIME "回"
 
 Instance: jp-medicationdispense-injection-bodystructure-example-1

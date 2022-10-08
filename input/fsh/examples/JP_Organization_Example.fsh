@@ -16,7 +16,7 @@ Usage: #example
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo"
 * extension[=].valueCoding = $JP_PrefectureNumber_CS#13
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory"
-* extension[=].valueCoding = $JP_MedicalFeeScoreType_CS
+* extension[=].valueCoding = $JP_MedicalFeeScoreType_CS#1
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
 * extension[=].valueIdentifier.system = "urn:oid:1.2.392.100495.20.3.23"
 * extension[=].valueIdentifier.value = "1234567"
