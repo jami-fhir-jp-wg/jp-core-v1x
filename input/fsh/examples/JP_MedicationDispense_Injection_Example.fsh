@@ -19,7 +19,7 @@ Usage: #example
 * whenPrepared = "2021-10-07T10:47:19+09:00"
 * whenHandedOver = "2021-10-07T10:55:23+09:00"
 * destination = Reference(Location/jp-location-example-ward)
-* dosageInstruction.additionalInstruction = urn:oid:1.2.392.200250.2.2.20.22#I1100000 "１日おき"
+* dosageInstruction.additionalInstruction = $JP_MedicationUsageJAMIAdditional_CS#I1100000 "１日おき"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2016-07-01T10:00:00+09:00"
 * dosageInstruction.text = "ワンショット 静脈注射 静脈内"
 * dosageInstruction.site.extension.url = $bodySite

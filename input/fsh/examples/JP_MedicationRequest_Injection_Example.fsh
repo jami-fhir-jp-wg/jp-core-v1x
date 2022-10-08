@@ -19,7 +19,7 @@ Usage: #example
 * authoredOn = "2016-07-01T09:28:17+09:00"
 * requester = Reference(Practitioner/jp-practitioner-example-female-1)
 * insurance = Reference(Coverage/jp-coverage-example-1)
-* dosageInstruction.additionalInstruction = urn:oid:1.2.392.200250.2.2.20.22#I1100000 "１日おき"
+* dosageInstruction.additionalInstruction = $JP_MedicationUsageJAMIAdditional_CS#I1100000 "１日おき"
 * dosageInstruction.text = "静脈注射 静脈内 左腕 １日おき"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2016-07-01T10:00:00+09:00"
 * dosageInstruction.site.extension.url = $bodySite
