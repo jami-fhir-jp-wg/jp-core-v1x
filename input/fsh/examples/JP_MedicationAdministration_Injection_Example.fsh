@@ -35,7 +35,7 @@ Usage: #example
 * dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
 * dosage.method.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_MethodComment"
 * dosage.method.extension.valueString = "１分ほどかけて緩徐に行いました"
-* dosage.method = urn:oid:1.2.392.200250.2.2.20.30#3 "注射"
+* dosage.method = $JP_MedicationMethodJAMIBasicUsage_CS#3 "注射"
 * dosage.dose = 2 'mL' "mL"
 
 Instance: jp-medicationadministration-injection-example-2

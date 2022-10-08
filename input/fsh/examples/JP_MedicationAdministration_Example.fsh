@@ -27,7 +27,7 @@ Usage: #example
 * performer.actor = Reference(Practitioner/jp-practitioner-example-female-1) "福岡 花子"
 * request = Reference(MedicationRequest/jp-medicationrequest-example-1)
 * dosage.route = urn:oid:1.2.392.200250.2.2.20.40#10 "経口"
-* dosage.method = urn:oid:1.2.392.200250.2.2.20.30#1 "内服"
+* dosage.method = $JP_MedicationMethodJAMIBasicUsage_CS#1 "内服"
 * dosage.dose = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
 
 Instance: jp-medicationadministration-example-2

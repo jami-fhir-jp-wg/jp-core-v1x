@@ -64,7 +64,7 @@ Usage: #example
 * dosageInstruction.site.extension.url = $bodySite
 * dosageInstruction.site.extension.valueReference = Reference(BodyStructure/jp-medicationrequest-injection-bodystructure-example-2)
 * dosageInstruction.route = $JP_MedicationRouteHL70162_CS#IV "静脈内"
-* dosageInstruction.method = urn:oid:1.2.392.200250.2.2.20.30#3 "注射"
+* dosageInstruction.method = $JP_MedicationMethodJAMIBasicUsage_CS#3 "注射"
 * dosageInstruction.doseAndRate.doseQuantity = 510 'mL' "mL"
 * dosageInstruction.doseAndRate.rateRatio.numerator = 102 'mL' "mL"
 * dosageInstruction.doseAndRate.rateRatio.denominator = 1 'h' "時間"
