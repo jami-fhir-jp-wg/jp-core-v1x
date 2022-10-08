@@ -16,7 +16,7 @@ Usage: #example
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo"
 * extension[=].valueCoding = urn:oid:1.2.392.100495.20.3.21#13
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory"
-* extension[=].valueCoding = urn:oid:1.2.392.100495.20.3.22#1
+* extension[=].valueCoding = $JP_MedicalFeeScoreType_CS
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
 * extension[=].valueIdentifier.system = "urn:oid:1.2.392.100495.20.3.23"
 * extension[=].valueIdentifier.value = "1234567"
@@ -35,9 +35,9 @@ Title: "JP Core Organization Example 病院"
 Description: "健康第一病院"
 Usage: #example
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo"
-* extension[=].valueCoding = urn:oid:1.2.392.100495.20.3.21#13
+* extension[=].valueCoding = $JP_PrefectureNumber_CS#13
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory"
-* extension[=].valueCoding = urn:oid:1.2.392.100495.20.3.22#1
+* extension[=].valueCoding = $JP_MedicalFeeScoreType_CS#1
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
 * extension[=].valueIdentifier.system = "urn:oid:1.2.392.100495.20.3.23"
 * extension[=].valueIdentifier.value = "9876543"
