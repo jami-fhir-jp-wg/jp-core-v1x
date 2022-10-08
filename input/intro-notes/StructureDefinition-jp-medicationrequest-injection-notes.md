@@ -43,10 +43,10 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 
 |分類|CS名|URI|
 |---------|----|---------------------------|
-|医薬品|HOT7|$JP_MedicationCodeHOT7_CS|
+|医薬品|HOT7|urn:oid:1.2.392.200119.4.403.2|
 |医薬品|HOT9|urn:oid:1.2.392.200119.4.403.1|
-|医薬品|HOT13|$JP_MedicationCodeHOT13_CS|
-|医薬品|YJコード| $JP_MedicationCodeYJ_CS |
+|医薬品|HOT13|urn:oid:1.2.392.200119.4.402.1|
+|医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
 |剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationFormMERIT9_CS |
 |処方区分|MERIT-9(処方区分)|http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCategoryMERIT9_CS |
 |処方区分|JAHIS注射データ交換規約Ver.2.1C(JHSI表0001)|http://jpfhir.jp/fhir/core/CodeSystem/JHSI0001|
@@ -258,7 +258,7 @@ MedicationRequestは薬剤をCodeableConceptとして1つまでしか持つか�
 
 ### 投与薬剤、投与量の記述方法
 １回の投与薬剤と投与量は、RP内の薬剤が１薬剤の場合も混注などで複数の薬剤を含む場合も、すべての薬剤を記述したMedicationリソースを contained 属性に内包し、それをMedicationRequest.medicationReference属性で参照するようにする。
-Medicationリソースのingredient.itemCodeableConcept要素にCodeableConcept型で各薬剤の識別情報を記述し、ingredient.strength.numerator要素に１回あたりの含有量を記述する。薬剤を識別するコードはHOT7("urn:oid:1.2.392.100495.20.2.73")、HOT9("urn:oid:1.2.392.200119.4.403.1")、YJコード(" $JP_MedicationCodeYJ_CS ")、⼀般処⽅名マスター("urn:oid:1.2.392.100495.20.1.81")を推奨するが、ローカルコードを使用してもよい。含有量の単位コードは MERIT-9（"urn:oid:1.2.392.100495.20.2.101"）を使用する。ingredient.strength.denominatorには固定値「１回」をMERIT-9（"urn:oid:1.2.392.100495.20.2.101"）を使用して指定する。
+Medicationリソースのingredient.itemCodeableConcept要素にCodeableConcept型で各薬剤の識別情報を記述し、ingredient.strength.numerator要素に１回あたりの含有量を記述する。薬剤を識別するコードはHOT7、HOT9、YJコード、⼀般処⽅名マスターを推奨するが、ローカルコードを使用してもよい。含有量の単位コードは MERIT-9を使用する。ingredient.strength.denominatorには固定値「１回」をMERIT-9を使用して指定する。
 dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる場合には全体の容量をUCUM("http://unitsofmeasure.org")を使用してmL単位で指定する。
 
 「ソリタ－Ｔ３号輸液５００ｍＬ １本」と「アドナ注（静脈用）50mg／10mL　１アンプル」計510mLを指示する場合のインスタンス例を示す。
