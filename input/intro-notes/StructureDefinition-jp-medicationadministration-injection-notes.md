@@ -421,7 +421,7 @@ HL7表0550 身体部位("http://terminology.hl7.org/CodeSystem/v2-0550")とHL7�
 ```
 
 ### 実施投与量
-Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose に、SimpleQuantity型で記録する。単位コードには、医薬品単位略号（urn:oid:1.2.392.100495.20.2.101）を使用する。
+Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose に、SimpleQuantity型で記録する。単位コードには、医薬品単位略号を使用する。
 
 以下薬剤を混注した際の合計容量「510mL」を記述したインスタンス例を示す。
 ```

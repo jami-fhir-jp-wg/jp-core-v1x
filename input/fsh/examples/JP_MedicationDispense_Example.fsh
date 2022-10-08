@@ -15,7 +15,7 @@ Usage: #example
 * subject = Reference(Patient/jp-patient-example-1)
 * performer.function = http://terminology.hl7.org/CodeSystem/medicationdispense-performer-function#packager "Packager"
 * performer.actor = Reference(Practitioner/jp-practitioner-example-male-1)
-* quantity = 9 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
+* quantity = 9 $JP_MedicationUnitMERIT9_CS#TAB "錠"
 * daysSupply = 7 http://unitsofmeasure.org#d "日"
 * whenPrepared = "2021-10-07T10:47:19+09:00"
 * whenHandedOver = "2021-10-07T10:55:23+09:00"
@@ -26,8 +26,8 @@ Usage: #example
 * dosageInstruction.route = $JP_MedicationRouteHL70162_CS#PO "口"
 * dosageInstruction.method = $JP_MedicationMethodJAMIDetailUsage_CS#10 "経口"
 * dosageInstruction.doseAndRate.type = $JP_MedicationIngredientStrengthStrengthType_CS#1 "製剤量"
-* dosageInstruction.doseAndRate.doseQuantity = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
-* dosageInstruction.doseAndRate.rateRatio.numerator = 3 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
+* dosageInstruction.doseAndRate.doseQuantity = 1 $JP_MedicationUnitMERIT9_CS#TAB "錠"
+* dosageInstruction.doseAndRate.rateRatio.numerator = 3 $JP_MedicationUnitMERIT9_CS#TAB "錠"
 * dosageInstruction.doseAndRate.rateRatio.denominator = 1 http://unitsofmeasure.org#d "日"
 * substitution.wasSubstituted = true
 * substitution.type = http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution#G "generic composition"

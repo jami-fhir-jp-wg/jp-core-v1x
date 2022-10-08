@@ -28,7 +28,7 @@ Usage: #example
 * request = Reference(MedicationRequest/jp-medicationrequest-example-1)
 * dosage.route = $JP_MedicationMethodJAMIDetailUsage_CS#10 "経口"
 * dosage.method = $JP_MedicationMethodJAMIBasicUsage_CS#1 "内服"
-* dosage.dose = 1 urn:oid:1.2.392.100495.20.2.101#TAB "錠"
+* dosage.dose = 1 $JP_MedicationUnitMERIT9_CS#TAB "錠"
 
 Instance: jp-medicationadministration-example-2
 InstanceOf: JP_MedicationAdministration

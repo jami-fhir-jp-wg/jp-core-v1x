@@ -282,7 +282,7 @@ performer.actorには、医療従事者(Practitioner)、または患者(Patient)
 
 「A:貼付」、「B:塗布」などJAMI標準用法コードにて用法詳細区分として表現される区分は、dosage.method 要素にコードまたは文字列で指定する。 用法詳細区分を識別するURIとして、"urn:oid:1.2.392.200250.2.2.20.40"を使用する。
 
-投与量は dosage.dose に、SimpleQuantity型で記録する。単位コードには、医薬品単位略号（urn:oid:1.2.392.100495.20.2.101）を使用する。
+投与量は dosage.dose に、SimpleQuantity型で記録する。単位コードには、医薬品単位略号を使用する。
 
 ```json
 "dosage": {

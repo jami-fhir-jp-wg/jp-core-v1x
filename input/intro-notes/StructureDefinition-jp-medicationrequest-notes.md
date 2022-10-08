@@ -302,9 +302,9 @@ Timingデータ型のrepeat.boundsDuration要素を使用した服用期間の�
 ### １回量と１日量の記述方法
 2010年1月に医療ミス防止の観点から、慣例として普及していた一日量処方ではなく、1回量処方を推奨するという「内服薬処方せんの記載方法の在り方に関する検討会報告書」が厚生労働省から出された。そもそも、HL7 FHIRでは1回量処方を前提としていることから、本ワーキンググループでも、1回量処方のみの対応で良いとの意見も出た。しかし、8年経過した＝ても処方箋の8割が一日量処方を使用しているとの報告があり、システムによっては1回量処方に対応していないことから一日量処方にも対応することとした。
 
-1回量は、dosageInstruction.doseAndRate.doseQuantity要素 にSimpleQuantity型で記述する。単位コードには、医薬品単位略号（urn:oid:1.2.392.100495.20.2.101）を使用する。
+1回量は、dosageInstruction.doseAndRate.doseQuantity要素 にSimpleQuantity型で記述する。単位コードには、医薬品単位略号を使用する。
 
-また、処方期間の中で1日量が常に一定となる場合には、1回量に加えて1日量の記録も可能とし、dosageInstruction.doseAndRate.rateRatio 要素に Ratio型で記録する。Ratio型は比を扱うデータ型で、分母にあたる dosageInstruction.doseAndRate.rateRatio.denominator 要素には投与量の基準となる期間、つまり、1日量の場合は「1日」をQuantity型で指定する。単位には、単位コードUCUM（http://unitsofmeasure.org）より、「日」を表す単位コード「d」を使用する。分子にあたる dosageInstruction.doseAndRate.rateRatio.numerator要素には、1回量と同様の記法で、1日投与量をQuantity型で指定する。
+また、処方期間の中で1日量が常に一定となる場合には、1回量に加えて1日量の記録も可能とし、dosageInstruction.doseAndRate.rateRatio 要素に Ratio型で記録する。Ratio型は比を扱うデータ型で、分母にあたる dosageInstruction.doseAndRate.rateRatio.denominator 要素には投与量の基準となる期間、つまり、1日量の場合は「1日」をQuantity型で指定する。単位には、単位コードUCUMより、「日」を表す単位コード「d」を使用する。分子にあたる dosageInstruction.doseAndRate.rateRatio.numerator要素には、1回量と同様の記法で、1日投与量をQuantity型で指定する。
 
 投与量「1回1錠（1日3錠）」を記録したインスタンス例を示す。
 ```json
@@ -379,7 +379,7 @@ doseQuantityエレメントは省略可能(0..1)である。
 ```
 
 ### 調剤量の記述方法
-調剤量はdispenseRequest.quantityに、SimpleQuantity型で記録する。単位コードには、投与量と同様に医薬品単位略号（urn:oid:1.2.392.100495.20.2.101）を使用する。21錠（1日3錠×7日分）を調剤する場合のインスタンス例を以下に示す。
+調剤量はdispenseRequest.quantityに、SimpleQuantity型で記録する。単位コードには、投与量と同様に医薬品単位略号を使用する。21錠（1日3錠×7日分）を調剤する場合のインスタンス例を以下に示す。
 ```json
 "dispenseRequest": {
   "quantity": {
