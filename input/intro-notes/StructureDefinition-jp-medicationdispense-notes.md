@@ -27,10 +27,10 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 
 |分類|CS名|URI|
 |---------|----|---------------------------|
-|医薬品|HOT7|urn:oid:1.2.392.200119.4.403.2|
-|医薬品|HOT9|urn:oid:1.2.392.200119.4.403.1|
-|医薬品|HOT13|urn:oid:1.2.392.200119.4.402.1|
-|医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
+|医薬品|HOT7|$JP_MedicationCodeHOT7_CS|
+|医薬品|HOT9|$JP_MedicationCodeHOT9_CS|
+|医薬品|HOT13|$JP_MedicationCodeHOT13_CS|
+|医薬品|YJコード| $JP_MedicationCodeYJ_CS |
 |医薬品|⼀般処⽅名マスター|urn:oid:1.2.392.100495.20.1.81|
 |剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationFormMERIT9_CS |
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
@@ -62,7 +62,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 | SHALL            | identifier    | token  | GET [base]/MedicationDispense?identifier=http://myhospital.com/fhir/medication\|1234567890 |
 | SHOULD            | patient      | reference | GET [base]/MedicationDispense?patient=123456   |
 | SHOULD           | patient,whenhandedover | referenece,date  | GET [base]/MedicationDispense?patient=123456&whenhandedover=eq2013-01-14 |
-| MAY           | whenhandedover,whenprepared,context,code,performer| date,date,token,token,token | GET [base]/MedicationDispense?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
+| MAY           | whenhandedover,whenprepared,context,code,performer| date,date,token,token,token | GET [base]/MedicationDispense?code=$JP_MedicationCodeHOT9_CS\|105271807  |
 
 ##### 必須検索パラメータ
 

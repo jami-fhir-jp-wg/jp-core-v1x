@@ -43,10 +43,10 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 
 |分類|CS名|URI|
 |---------|----|---------------------------|
-|医薬品|HOT7|urn:oid:1.2.392.200119.4.403.|
-|医薬品|HOT9|urn:oid:1.2.392.200119.4.403.1|
-|医薬品|HOT13|urn:oid:1.2.392.200119.4.402.1|
-|医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
+|医薬品|HOT7|$JP_MedicationCodeHOT7_CS|
+|医薬品|HOT9|$JP_MedicationCodeHOT9_CS|
+|医薬品|HOT13|$JP_MedicationCodeHOT13_CS|
+|医薬品|YJコード| $JP_MedicationCodeYJ_CS |
 |医薬品|⼀般処⽅名マスター|urn:oid:1.2.392.100495.20.1.81|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
 |力価区分|処方情報 HL7FHIR 記述仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
@@ -78,7 +78,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 | SHALL            | identifier    | token  | GET [base]/MedicationAdministration?identifier=http://myhospital.com/fhir/medication\|1234567890 |
 | SHOULD            | patient      | reference | GET [base]/MedicationAdministration?patient=123456   |
 | SHOULD           | patient,effective-time | reference,date  | GET [base]/MedicationAdministration?patient=123456&effective-time=eq2013-01-14 |
-| MAY           | effective-time,medication,performer,request | date,reference,reference,reference | GET [base]/MedicationAdministration?medication.ingredient-code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
+| MAY           | effective-time,medication,performer,request | date,reference,reference,reference | GET [base]/MedicationAdministration?medication.ingredient-code=$JP_MedicationCodeHOT9_CS\|105271807  |
 
 ##### 必須検索パラメータ
 
@@ -229,7 +229,7 @@ MedicationAdministrationは薬剤をCodeableConceptとして1つまでしか持�
 
 ### 投与薬剤、投与量の記述方法
 １回の投与薬剤と投与量は、RP内の薬剤が１薬剤の場合も混注などで複数の薬剤を含む場合も、すべての薬剤を記述したMedicationリソースを contained 属性に内包し、それをMedicationRequest.medicationReference属性で参照するようにする。
-Medicationリソースのingredient.itemCodeableConcept要素にCodeableConcept型で各薬剤の識別情報を記述し、ingredient.strength.numerator要素に１回あたりの含有量を記述する。薬剤を識別するコードはHOT7("urn:oid:1.2.392.100495.20.2.73")、HOT9("urn:oid:1.2.392.200119.4.403.1")、YJコード("urn:oid:1.2.392.100495.20.1.73")を推奨するが、ローカルコードを使用してもよい。含有量の単位コードは MERIT-9（"urn:oid:1.2.392.100495.20.2.101"）を使用する。ingredient.strength.denominatorには固定値「１回」をMERIT-9（"urn:oid:1.2.392.100495.20.2.101"）を使用して指定する。
+Medicationリソースのingredient.itemCodeableConcept要素にCodeableConcept型で各薬剤の識別情報を記述し、ingredient.strength.numerator要素に１回あたりの含有量を記述する。薬剤を識別するコードはHOT7、HOT9、YJコードを推奨するが、ローカルコードを使用してもよい。含有量の単位コードは MERIT-9を使用する。ingredient.strength.denominatorには固定値「１回」をMERIT-9を使用して指定する。
 dosage.dose要素には、情報が得られる場合には全体の容量をUCUM(`http://unitsofmeasure.org`)を使用してmL単位で指定する。
 
 ### 投薬管理ステータス

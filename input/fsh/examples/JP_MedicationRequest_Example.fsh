@@ -11,7 +11,7 @@ Usage: #example
 * identifier[requestIdentifier].value = "1234567890.1.1"
 * intent = #order
 * status = #active
-* medicationCodeableConcept = urn:oid:1.2.392.200119.4.403.1#103835401 "ムコダイン錠２５０ｍｇ"
+* medicationCodeableConcept = $JP_MedicationCodeHOT9_CS#103835401 "ムコダイン錠２５０ｍｇ"
 * subject = Reference(Patient/jp-patient-example-1)
 * authoredOn = "2020-04-01T12:28:17+09:00"
 * dosageInstruction.extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse"
@@ -42,7 +42,7 @@ Usage: #example
 * identifier[requestIdentifier].value = "1234567890.1.2"
 * intent = #order
 * status = #active
-* medicationCodeableConcept = urn:oid:1.2.392.200119.4.403.1#110926901 "パンスポリンＴ錠１００ １００ｍｇ"
+* medicationCodeableConcept = $JP_MedicationCodeHOT9_CS#110926901 "パンスポリンＴ錠１００ １００ｍｇ"
 * subject = Reference(Patient/jp-patient-example-1)
 * authoredOn = "2020-04-01T12:28:17+09:00"
 * dosageInstruction.extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse"

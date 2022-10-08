@@ -3,7 +3,7 @@ Id: jp-medicationcode-hot13-cs
 Title: "JP Core MedicationCode HOT13 CodeSystem"
 Description: "医薬品HOT13コードのコードシステム"
 * ^identifier[0].system = "urn:ietf:rfc:3986"
-* ^identifier[=].value = "urn:oid:1.2.392.200119.4.402.1"
+* ^identifier[=].value = "$JP_MedicationCodeHOT13_CS"
 * ^url = $JP_MedicationCodeHOT13_CS
 * ^status = #active
 * ^experimental = false

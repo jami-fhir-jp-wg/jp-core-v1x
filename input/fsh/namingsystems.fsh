@@ -65,7 +65,7 @@ Usage: #definition
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeHOT7_CS"
 
-/*
+
 Instance: jp-medicationcodehot9-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition
@@ -86,7 +86,7 @@ Usage: #definition
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeHOT9_CS"
 
-*/
+
 
 Instance: jp-medicationcodehot13-namingsystem
 InstanceOf: NamingSystem
@@ -115,7 +115,7 @@ Usage: #definition
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.1.73"
 * uniqueId[+].type = #uri
-* uniqueId[=].value = "urn:oid:1.2.392.100495.20.1.73"
+* uniqueId[=].value = " $JP_MedicationCodeYJ_CS "
 * uniqueId[=].preferred = true
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeYJ_CS"

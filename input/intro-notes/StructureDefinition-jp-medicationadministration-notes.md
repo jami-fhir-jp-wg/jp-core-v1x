@@ -25,10 +25,10 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 
 |分類|CS名|URI|
 |---------|----|---------------------------|
-|医薬品|HOT7|urn:oid:1.2.392.200119.4.403.2|
-|医薬品|HOT9|urn:oid:1.2.392.200119.4.403.1|
-|医薬品|HOT13|urn:oid:1.2.392.200119.4.402.1|
-|医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
+|医薬品|HOT7|$JP_MedicationCodeHOT7_CS|
+|医薬品|HOT9|$JP_MedicationCodeHOT9_CS|
+|医薬品|HOT13|$JP_MedicationCodeHOT13_CS|
+|医薬品|YJコード| $JP_MedicationCodeYJ_CS |
 |医薬品|⼀般処⽅名マスター|urn:oid:1.2.392.100495.20.1.81|
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
 |力価区分|処方情報 HL7FHIR 記述仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
@@ -59,7 +59,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 | SHALL            | identifier    | token  | GET [base]/MedicationAdministration?identifier=http://myhospital.com/fhir/medication\|1234567890 |
 | SHOULD            | patient      | reference | GET [base]/MedicationAdministration?patient=123456   |
 | SHOULD           | patient,effective-time | reference,date  | GET [base]/MedicationAdministration?patient=123456&effective-time=eq2013-01-14 |
-| MAY           | effective-time,code,performer,request | date,token,reference,reference | GET [base]/MedicationAdministration?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
+| MAY           | effective-time,code,performer,request | date,token,reference,reference | GET [base]/MedicationAdministration?code=$JP_MedicationCodeHOT9_CS\|105271807  |
 
 ##### 必須検索パラメータ
 
