@@ -115,7 +115,7 @@ Usage: #definition
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.1.73"
 * uniqueId[+].type = #uri
-* uniqueId[=].value = " $JP_MedicationCodeYJ_CS "
+* uniqueId[=].value = "urn:oid:1.2.392.100495.20.1.73"
 * uniqueId[=].preferred = true
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeYJ_CS"
