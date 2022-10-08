@@ -14,7 +14,7 @@ Title: "JP Core Organization Example クリニック"
 Description: "太郎花子クリニック"
 Usage: #example
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo"
-* extension[=].valueCoding = urn:oid:1.2.392.100495.20.3.21#13
+* extension[=].valueCoding = $JP_PrefectureNumber_CS#13
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory"
 * extension[=].valueCoding = $JP_MedicalFeeScoreType_CS
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
