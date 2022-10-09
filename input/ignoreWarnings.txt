@@ -17,7 +17,7 @@ The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/
 The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 on element ImagingStudy.series.instance.sopClass could not be resolved
 
 # Country code system 'urn:iso:std:iso:3166' is unknown
-Code System URI 'urn:iso:std:iso:3166' is unknown so the code cannot be validated
+# Code System URI 'urn:iso:std:iso:3166' is unknown so the code cannot be validated
 
 # CodeSystem Content Level #Example or #Fragment Warnings
 Error from server: Unable to provide support for code system %
