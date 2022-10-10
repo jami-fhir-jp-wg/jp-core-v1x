@@ -6,7 +6,7 @@ Usage: #example
 * contained[0] = jp-medicationadministration-injection-medication-example-1
 * contained[+] = jp-medicationadministration-injection-bodystructure-example-1
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment"
-* extension[=].valueCodeableConcept = urn:oid:1.2.392.100495.20.2.51#01 "内科"
+* extension[=].valueCodeableConcept = urn:oid:1.2.392.200250.2.2.2#01 "内科"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester"
 * extension[=].valueReference = Reference(Practitioner/jp-practitioner-example-male-1) "大阪 一郎"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn"

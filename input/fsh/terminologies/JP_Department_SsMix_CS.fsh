@@ -3,7 +3,7 @@ Id: jp-department-ssmix-cs
 Title: "JP Core Department SS-MIX CodeSystem"
 Description: "SS-MIX統一診療科コード"
 * ^identifier[0].system = "urn:ietf:rfc:3986"
-* ^identifier[=].value = "urn:oid:1.2.392.100495.20.2.51"
+* ^identifier[=].value = "urn:oid:1.2.392.200250.2.2.2"
 * ^url = $JP_Department_SsMix_CS
 * ^status = #active
 * ^experimental = false

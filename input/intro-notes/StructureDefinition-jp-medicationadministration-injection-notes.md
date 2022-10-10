@@ -671,7 +671,7 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "urn:oid:1.2.392.100495.20.2.51",
+            "system": "urn:oid:1.2.392.200250.2.2.2",
             "code": "01",
             "display": "内科"
           }

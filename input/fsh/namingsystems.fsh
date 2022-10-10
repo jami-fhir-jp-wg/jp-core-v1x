@@ -7,9 +7,9 @@ Usage: #definition
 * kind = #codesystem
 * description = "JP Core Department SsMix NamingSystem"
 * uniqueId[+].type = #oid
-* uniqueId[=].value = "1.2.392.100495.20.2.51"
+* uniqueId[=].value = "1.2.392.200250.2.2.2"
 * uniqueId[+].type = #uri
-* uniqueId[=].value = "urn:oid:1.2.392.100495.20.2.51"
+* uniqueId[=].value = "urn:oid:1.2.392.200250.2.2.2"
 * uniqueId[=].preferred = true
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_Department_SsMix_CS"

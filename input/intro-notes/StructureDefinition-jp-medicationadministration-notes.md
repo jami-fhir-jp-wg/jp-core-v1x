@@ -332,7 +332,7 @@ performer.actorには、医療従事者(Practitioner)、または患者(Patient)
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "urn:oid:1.2.392.100495.20.2.51",
+            "system": "urn:oid:1.2.392.200250.2.2.2",
             "code": "01",
             "display": "内科"
           }
