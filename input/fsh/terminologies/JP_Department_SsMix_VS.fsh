@@ -6,7 +6,7 @@ Description: "SS-MIX統一診療科コード(２桁)の値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_Department_SsMix_CS where concept descendent-of #2Digits
+* include codes from system $JP_Department_SsMix_CS where concept descendent-of #2Digits
 
 ValueSet: JP_Department_SsMix3Digits_VS
 Id: jp-department-ssmix3digits-vs
@@ -16,7 +16,7 @@ Description: "SS-MIX統一診療科コード(３桁)の値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_Department_SsMix_CS where concept descendent-of #3Digits
+* include codes from system $JP_Department_SsMix_CS where concept descendent-of #3Digits
 
 ValueSet: JP_Department_SsMix_VS
 Id: jp-department-ssmix-vs

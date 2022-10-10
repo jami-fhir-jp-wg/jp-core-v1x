@@ -9,7 +9,7 @@ Description: "Conditionの重症度を示すコードシステム（HL70421 Seve
 * ^caseSensitive = true
 * ^valueSet = $JP_ConditionSeverity_VS
 * ^content = #complete
-* copyright = "copyright HL7 Japan (出典：HL7-0421)"
+* ^copyright = "copyright HL7 Japan (出典：HL7-0421)"
 * #MI "軽度"
 * #MO "中度"
 * #SE "重度"

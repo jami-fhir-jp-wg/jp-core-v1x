@@ -6,4 +6,4 @@ Description: "Observation（検体検査結果）で使用する項目の値セ�
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_ObservationLabResultCode_CS
+* include codes from system $JP_ObservationLabResultCode_CS

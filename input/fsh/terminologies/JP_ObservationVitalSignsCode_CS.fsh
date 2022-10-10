@@ -9,7 +9,7 @@ Description: "Observation（バイタルサイン）で使用する項目コー�
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationVitalSignsCode_VS
 * ^content = #complete
-* copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
+* ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
 // 看護実践用語標準マスターの概要＜看護行為編＞Ver. 3. 6
 * #31000001 "経皮的動脈血酸素飽和度（ＳＰＯ２）"
 * #31000525 "努力呼吸"

@@ -6,4 +6,4 @@ Description: "処置のコード:歯科診療行為マスタの値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_ProcedureCodesDental_CS
+* include codes from system $JP_ProcedureCodesDental_CS

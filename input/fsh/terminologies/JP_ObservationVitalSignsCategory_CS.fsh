@@ -9,7 +9,7 @@ Description: "Observation（バイタルサイン）で使用する分類のコ�
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationVitalSignsCategory_VS
 * ^content = #complete
-* copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
+* ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
 // 看護実践用語標準マスターの概要＜看護行為編＞Ver. 3. 6
 * #respiratory-function "呼吸機能"
 * #constrained-respiration "努力呼吸"
