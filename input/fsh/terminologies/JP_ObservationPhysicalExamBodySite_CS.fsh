@@ -7,5 +7,5 @@ Description: "Observation（身体所見）で使用する身体部位のコー�
 * ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
-* ^content = #example
+* ^content = #fragment
 * #example "下腹部"

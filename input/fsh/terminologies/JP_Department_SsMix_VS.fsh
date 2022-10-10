@@ -26,5 +26,5 @@ Description: "SS-MIX統一診療科コードの値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from valueset JP_Department_SsMix2Digits_VS
-* include codes from valueset JP_Department_SsMix3Digits_VS
+* include codes from system $JP_Department_SsMix_CS
+
