@@ -9,7 +9,7 @@ Description: "Observation（生活背景）で使用する項目コード、電�
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationSocialHistoryCode_VS
 * ^content = #complete
-* ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター”
+* ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
 //電子保存された診療録情報の交換のためのデータ項目セットより参照
 //https://www2.medis.or.jp/master/jmix/file/tab1.pdf
 * #MD0012770 "出生地" "出生地（都道府県、市町村名など）"
