@@ -229,8 +229,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/route-codes
     - urn:oid:1.2.392.100495.20.2.41
     - urn:oid:1.2.392.100495.20.2.101
+    - urn:oid:1.2.392.200250.2.2.2
     - urn:oid:1.2.392.200250.2.2.20.22
     - urn:oid:1.2.392.200250.2.2.20.20
+    - urn:oid:1.2.392.200119.4.701
     - urn:oid:1.2.392.100495.20.1.81
     - urn:oid:1.2.392.200119.4.402.1
     - urn:oid:1.2.392.200119.4.403.2
