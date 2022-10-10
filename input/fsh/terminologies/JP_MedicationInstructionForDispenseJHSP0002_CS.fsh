@@ -9,6 +9,8 @@ Description: "JAHIS処方データ交換規約Ver.3.0C JHSP表0002調剤特別�
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationInstructionForDispenseJHSP0002_VS
 * ^content = #complete
+* copyright = "Copyright Japanese  Association of Healthcare Information Systems Industry(JAHIS)  一般社団法人保健医療福祉情報システム工業会"
+
 * #A "別包指示"
 * #B "一包化指示"
 * #C "混合指示"

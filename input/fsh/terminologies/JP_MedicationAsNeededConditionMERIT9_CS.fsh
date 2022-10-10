@@ -9,6 +9,7 @@ Description: "MERIT9頓用指示コードのコードシステム(test)"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationAsNeededConditionMERIT9_VS
 * ^content = #complete
+* copyright = "Copyright Japan Association of Medical Informatics (JAMI)  一般社団法人日本医療情報学会"
 * #PRNLTs               "検査時" 
 * #PRNheadache	        "頭痛時"
 * #PRNpain	            "疼痛時"

@@ -1,7 +1,7 @@
 CodeSystem: JP_ProcedureCodesNurse_CS
 Id: jp-procedure-codes-nurse-cs
 Title: "JP Core Procedure Codes Nurse CodeSystem"
-Description: "処置のコード:看護実践用語標準マスター(看護行為)"
+Description: "処置のコード:看護実践用語標準マスター(看護行為)　1.2.392.200119.4.701"
 * ^url = $JP_ProcedureCodesNurse_CS
 * ^status = #active
 * ^experimental = false
@@ -9,7 +9,7 @@ Description: "処置のコード:看護実践用語標準マスター(看護行�
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureCodesNurse_VS
 * ^content = #complete
-
+* copyright = "Copyright MEDIS-DC 医療情報システム開発センター”
 * #A001B001C001D000 "日常生活ケア・清潔ケア・入浴・"
 * #A001B001C001D001 "日常生活ケア・清潔ケア・入浴・全介助"
 * #A001B001C001D002 "日常生活ケア・清潔ケア・入浴・部分介助"

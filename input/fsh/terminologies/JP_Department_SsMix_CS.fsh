@@ -11,6 +11,7 @@ Description: "SS-MIX統一診療科コード"
 * ^caseSensitive = true
 * ^hierarchyMeaning = #part-of
 * ^content = #complete
+* copyright = "Copyright Japan Association of Medical Informatics (JAMI)  一般社団法人日本医療情報学会"
 // 以下PDFより参照
 // https://www.jami.jp/jamistd/docs/SS-MIX2/SS-MIX2-V1.2c/SS-MIX2stdstrspecv12c_code.pdf
 * #2Digits "２桁診療科" "２桁体系の診療科コード体系"

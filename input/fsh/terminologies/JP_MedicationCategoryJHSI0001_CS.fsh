@@ -9,6 +9,7 @@ Description: "JAHIS注射データ交換規約Ver.2.1C JHSI表0001処方区分�
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationCategoryJHSI0001_VS
 * ^content = #complete
+* copyright = "Copyright Japanese  Association of Healthcare Information Systems Industry(JAHIS)  一般社団法人保健医療福祉情報システム工業会"
 * #FTP   "定時処方"
 * #EMP   "至急処方"
 * #PFP   "事後処方"

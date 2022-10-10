@@ -8,6 +8,7 @@ Description: "JP Core JFAGY アレルゲンコード（非食品・非医薬品�
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #complete
+* copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 * #J9N000000000	"非食品"
 * #J9NJ00000000	"動物"
 * #J9NJ11000000	"鳥類"

@@ -9,6 +9,7 @@ Description: "JAMI標準用法規格頓用指示コードのコードシステ�
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationAsNeededConditionJAMI_VS
 * ^content = #complete
+* copyright = "Copyright Japan Association of Medical Informatics (JAMI)  一般社団法人日本医療情報学会"
 * #11 "疼痛時"
 * #12 "頭痛時"
 * #13 "歯痛時"

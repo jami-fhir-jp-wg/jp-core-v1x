@@ -8,13 +8,9 @@ Description: "JFAGY アレルゲンコード（医薬品）"
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #complete
-
+* copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 * #YCM1115400X1027 "ラボナール注射用0.3g"
 * #YCM1115400X2023 "ラボナール注射用0.5g"
 * #YCM1115403D3043 "イソゾール注射用0.5g"
 * #YCM1115403D3051 "チトゾール注用0.5g"
 * #YCM1115403D4031 "チトゾール注用0.3g"
-* #YCM1116700X1037 "笑気ガス（住友精化）"
-* #YCM1116700X1045 "マルワ亜酸化窒素"
-* #YCM1116700X1053 "液化亜酸化窒素"
-* #YCM1116700X1061 "液化亜酸化窒素"

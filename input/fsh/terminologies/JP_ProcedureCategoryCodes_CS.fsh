@@ -9,6 +9,7 @@ Description: "処置のカテゴリを示すコードのコードシステム（
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureCategory_VS
 * ^content = #complete
+* copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 
 * #JPPCC001 "精神療法"
 * #JPPCC002 "カウンセリング"

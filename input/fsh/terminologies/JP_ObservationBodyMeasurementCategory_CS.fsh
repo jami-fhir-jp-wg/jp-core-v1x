@@ -9,7 +9,7 @@ Description: "Observation（身体計測）で使用する分類のコード"
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationBodyMeasurementCategory_VS
 * ^content = #complete
-
+* copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 * #weight "体重"
 * #height "身長"
 * #chest-circumference "胸囲"

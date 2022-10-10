@@ -9,7 +9,7 @@ Description: "処置のコード:外保連手術基幹コード(STEM7)"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureCodesSTEM7_VS
 * ^content = #complete
-
+* copyright = "厚生労働省、一般社団法人外科系学会社会保険委員会連合（外保連）"
 * #A111300 "体表・皮膚 広汎切除 open surgery"
 * #A111600 "体表・皮膚 ドレナージ・瘻造設 open surgery"
 * #A111700 "体表・皮膚 除去 open surgery"

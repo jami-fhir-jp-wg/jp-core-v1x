@@ -9,4 +9,5 @@ Description: "JAHIS処方データ交換規約Ver.3.0C JHSP表0007処方区分�
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationCategoryJHSP0007_VS
 * ^content = #complete
+* copyright = "Copyright Japanese  Association of Healthcare Information Systems Industry(JAHIS)  一般社団法人保健医療福祉情報システム工業会"
 * #BDP   "持参薬処方"

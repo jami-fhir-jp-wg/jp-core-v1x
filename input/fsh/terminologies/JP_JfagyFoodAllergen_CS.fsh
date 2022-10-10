@@ -8,7 +8,7 @@ Description: "JFAGY アレルゲンコード（食品）"
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #complete
-
+* copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 * #J9F000000000	"食品"
 * #J9FA00000000	"農産食品"
 * #J9FA11000000	"もみ"

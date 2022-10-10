@@ -9,3 +9,4 @@ Description: "Observationで使用する身体部位のコード"
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationBodySite_VS
 * ^content = #complete
+* copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"

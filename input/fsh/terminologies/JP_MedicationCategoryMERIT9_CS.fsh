@@ -9,6 +9,7 @@ Description: "MERIT9処方区分コードのコードシステム"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationCategoryMERIT9_VS
 * ^content = #complete
+* copyright = "Copyright Japan Association of Medical Informatics (JAMI)  一般社団法人日本医療情報学会"
 * #OHP   "外来処方"
 * #OHI   "院内処方"
 * #OHO   "院外処方"

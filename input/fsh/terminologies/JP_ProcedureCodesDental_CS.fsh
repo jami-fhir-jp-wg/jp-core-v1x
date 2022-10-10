@@ -9,7 +9,7 @@ Description: "処置のコード:歯科診療行為マスタ"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureCodesDental_VS
 * ^content = #complete
-
+* copyright = "社会保険診療報酬支払基金　診療行為マスタ（レセプト電算処理用）"
 * #301000110 "歯科初診料"
 * #301000210 "地域歯科診療支援病院歯科初診料"
 * #301000370 "乳幼児加算（初診）"

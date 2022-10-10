@@ -9,7 +9,7 @@ Description: "処置のコード:医科診療行為マスタ"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureCodesMedical_VS
 * ^content = #complete
-
+* copyright = "社会保険診療報酬支払基金　診療行為マスタ（レセプト電算処理用）"
 * #111000110 "初診料"
 * #111000370 "乳幼児加算（初診）"
 * #111000470 "乳幼児育児栄養指導料"

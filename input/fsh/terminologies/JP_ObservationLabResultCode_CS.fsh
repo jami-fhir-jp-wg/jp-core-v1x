@@ -1,7 +1,7 @@
 CodeSystem: JP_ObservationLabResultCode_CS
 Id: jp-observation-labresult-code-cs
 Title: "JP Core Observation LabResult Code CodeSystem"
-Description: "Observation（検体検査結果）で使用する項目コード"
+Description: "Observation（検体検査結果）で使用する項目コード  MEDIS　臨床検査マスターまとめ表17桁、JLAC10ベースのコード表、名称は合成名称"
 * ^identifier[0].system = "urn:ietf:rfc:3986"
 * ^identifier[=].value = "urn:oid:1.2.392.200119.4.504"
 * ^url = $JP_ObservationLabResultCode_CS
@@ -10,7 +10,7 @@ Description: "Observation（検体検査結果）で使用する項目コード"
 * ^date = "2022-09-26"
 * ^caseSensitive = true
 * ^content = #complete
-
+* copyright = "Copyright MEDIS-DC 医療情報システム開発センター、日本臨床検査医学会、日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 * #1A005000000492026 "尿量_蓄尿_その他_単位時間総量"
 * #1A010000000190111 "蛋白定性[尿]_尿(含むその他)_化学発色法_判定"
 * #1A015000000127101 "蛋白定量[尿]_尿(含むその他)_可視吸光光度法_定量値"

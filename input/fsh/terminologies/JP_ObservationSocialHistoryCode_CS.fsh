@@ -9,6 +9,7 @@ Description: "Observation（生活背景）で使用する項目コード、電�
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationSocialHistoryCode_VS
 * ^content = #complete
+* copyright = "Copyright Japan Association of Medical Informatics (JAMI)  一般社団法人日本医療情報学会"
 
 //電子保存された診療録情報の交換のためのデータ項目セットより参照
 //https://www2.medis.or.jp/master/jmix/file/tab1.pdf

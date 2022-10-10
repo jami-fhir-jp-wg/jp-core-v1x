@@ -1,7 +1,7 @@
 CodeSystem: JP_ObservationVitalSignsCode_CS
 Id: jp-observation-vitalsigns-code-cs
 Title: "JP Core Observation VitalSigns Code CodeSystem"
-Description: "Observation（バイタルサイン）で使用する項目コード"
+Description: "Observation（バイタルサイン）で使用する項目コード （出典：看護実践用語標準マスターの概要＜看護行為編＞Ver. 3. 6）"
 * ^url = $JP_ObservationVitalSignsCode_CS
 * ^status = #active
 * ^experimental = false
@@ -9,8 +9,7 @@ Description: "Observation（バイタルサイン）で使用する項目コー�
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationVitalSignsCode_VS
 * ^content = #complete
-
-//TODO : MEDISへ利用許可要確認
+* copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
 // 看護実践用語標準マスターの概要＜看護行為編＞Ver. 3. 6
 * #31000001 "経皮的動脈血酸素飽和度（ＳＰＯ２）"
 * #31000525 "努力呼吸"

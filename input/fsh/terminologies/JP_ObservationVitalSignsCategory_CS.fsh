@@ -1,7 +1,7 @@
 CodeSystem: JP_ObservationVitalSignsCategory_CS
 Id: jp-observation-vitalsigns-category-cs
 Title: "JP Core Observation VitalSigns Category CodeSystem"
-Description: "Observation（バイタルサイン）で使用する分類のコード"
+Description: "Observation（バイタルサイン）で使用する分類のコード　（出典：看護実践用語標準マスターの概要＜看護行為編＞Ver. 3. 6）"
 * ^url = $JP_ObservationVitalSignsCategory_CS
 * ^status = #active
 * ^experimental = false
@@ -9,9 +9,7 @@ Description: "Observation（バイタルサイン）で使用する分類のコ�
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationVitalSignsCategory_VS
 * ^content = #complete
-
-// コード体系をどうするのか。
-// TODO: 利用にはMEDISへの連絡が必要
+* copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
 // 看護実践用語標準マスターの概要＜看護行為編＞Ver. 3. 6
 * #respiratory-function "呼吸機能"
 * #constrained-respiration "努力呼吸"

@@ -9,6 +9,8 @@ Description: "MERIT9剤形コードのコードシステム"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationFormMERIT9_VS
 * ^content = #complete
+* copyright = "Copyright Japan Association of Medical Informatics (JAMI)  一般社団法人日本医療情報学会"
+
 * #TAB "錠剤"
 * #CAP "カプセル剤"
 * #PWD "散剤、ドライシロップ剤"
