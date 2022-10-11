@@ -72,17 +72,11 @@
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHOULD           | identifier    | token  | GET [base]/Organization?identifier=12345|
+| SHALL            | identifier    | token  | GET [base]/Organization?identifier=12345|
 | SHOULD           | name          | string | GET [base]/Organization?name=Health                            |
 | SHOULD           | address | string  | GET [base]/Organization?address=Arbor
 
 #### 必須検索パラメータ
-必須検索パラメータ（**SHALL**）は特にない。
-
-### 推奨検索パラメータ
-
-
-次の検索パラメータをサポートすることが望ましい。
 
 1. identifier 検索パラメータを使用して、識別子によるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
@@ -98,7 +92,11 @@
 
    指定された識別子に一致するOrganizationリソースを含むBundleを検索する。
    
-2. name 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
+### 推奨検索パラメータ
+
+次の検索パラメータをサポートすることが望ましい。
+
+1. name 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Organization?name={string}
@@ -110,7 +108,7 @@
    GET [base]/Organization?name=Health
    ```
 
-3. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
+2. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Organization?address=[string]
