@@ -1,0 +1,52 @@
+CodeSystem: JP_PractitionerRole_CS
+Id: jp-practitioner-role-cs
+Title: "JP Core Practitioner Role CodeSystem"
+Description: "実施者のロール（役割・職種））を示すコード"
+* ^url = $JP_PractitionerRole_CS
+* ^status = #active
+* ^experimental = false
+* ^date = "2022-09-26"
+* ^caseSensitive = true
+* ^valueSet = $JP_PractitionerRole_VS
+* ^content = #complete
+// TODO: レビュー受付中
+* #JPR10000 "医師"
+* #JPR10100 "研修医"
+* #JPR10101 "研修医（１年目）"
+* #JPR10102 "研修医（２年目）"
+* #JPR10200 "歯科医師"
+* #JPR10300 "非常勤医師"
+* #JPR10400 "登録医"
+* #JPR10500 "医学生"
+* #JPR20000 "看護師"
+* #JPR20001 "看護師（学生・実習生）"
+* #JPR20100 "准看護師"
+* #JPR20200 "看護助手"
+* #JPR20300 "保健師"
+* #JPR20400 "助産師"
+* #JPR20600 "介護士"
+* #JPR20700 "歯科技工士"
+* #JPR20800 "歯科衛生士"
+* #JPR30000 "薬剤師"
+* #JPR30100 "臨床検査技師"
+* #JPR30200 "診療放射線技師"
+* #JPR30300 "臨床工学技士"
+* #JPR30400 "理学療法士"
+* #JPR30500 "作業療法士"
+* #JPR30600 "言語聴覚士"
+* #JPR30700 "視能訓練士"
+* #JPR30800 "臨床心理士"
+* #JPR30900 "管理栄養士"
+* #JPR40000 "栄養士"
+* #JPR50000 "事務職"
+* #JPR50100 "医事会計"
+* #JPR50200 "診療情報管理士"
+* #JPR50300 "医療社会福祉士（ＭＳＷ）"
+* #JPR70100 "治験依頼者"
+* #JPR70200 "大学教員"
+* #JPR80100 "臨床開発モニター"
+* #JPR80200 "閲覧用"
+* #JPR90100 "他専門職"
+* #JPR90200 "その他"
+* #JPR90908 "ベンダーＳＥ"
+* #JPR90909 "システム管理者"
