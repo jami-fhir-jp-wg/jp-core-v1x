@@ -3,7 +3,7 @@ Id: jp-medicationcode-yj-cs
 Title: "JP Core Medication YJ CodeSystem"
 Description: "個別医薬品コード(YJコード)のコードシステム"
 * ^identifier[0].system = "urn:ietf:rfc:3986"
-* ^identifier[=].value = "$JP_MedicationCodeYJ_CS"
+* ^identifier[=].value = $JP_MedicationCodeYJ_CS
 * ^url = $JP_MedicationCodeYJ_CS
 * ^status = #active
 * ^experimental = false
