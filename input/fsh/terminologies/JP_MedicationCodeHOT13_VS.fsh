@@ -6,5 +6,7 @@ Description: "医薬品HOT13コードの値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
+* ^copyright = "Copyright  MEDIS-DC 医療情報システム開発センター"
+
 * include codes from system $JP_MedicationCodeHOT13_CS
 

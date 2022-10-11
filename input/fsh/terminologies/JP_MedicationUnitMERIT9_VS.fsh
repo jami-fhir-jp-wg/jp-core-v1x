@@ -6,5 +6,7 @@ Description: "MERIT9医薬品単位略号の値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
+* ^copyright = "Copyright Japan Association of Medical Informatics (JAMI)  一般社団法人日本医療情報学会"
+
 * include codes from system $JP_MedicationUnitMERIT9_CS
 

@@ -6,4 +6,6 @@ Description: "Observation（生活背景）で使用する項目の値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
+* ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
+
 * include codes from system JP_ObservationSocialHistoryCode_CS

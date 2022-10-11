@@ -6,5 +6,6 @@ Description: "JAMI標準用法規格表１基本用法区分の値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
+* ^copyright = "Copyright Japan Association of Medical Informatics (JAMI)  一般社団法人日本医療情報学会"
 * include codes from system $JP_MedicationMethodJAMIBasicUsage_CS
 

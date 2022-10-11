@@ -6,5 +6,7 @@ Description: "注射用MedicationRequestで使用する用法コードの値セ�
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
+* ^copyright = "Copyright Japan Association of Medical Informatics (JAMI)  一般社団法人日本医療情報学会"
+
 * include codes from system $JP_MedicationAsNeededConditionJAMI_CS
 * include codes from system $JP_MedicationAsNeededConditionMERIT9_CS
