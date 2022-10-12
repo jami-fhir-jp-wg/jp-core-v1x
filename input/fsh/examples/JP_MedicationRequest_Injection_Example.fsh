@@ -28,8 +28,8 @@ Usage: #example
 * dosageInstruction.method = $JP_MedicationMethodJAMIDetailUsage_CS#30 "静脈注射"
 * dosageInstruction.doseAndRate.doseQuantity.value = 2
 * dosageInstruction.doseAndRate.doseQuantity.unit = "mL"
-* dosageInstruction.doseAndRate.doseQuantity.system = "http://unitsofmeasure.org"
-* dosageInstruction.doseAndRate.doseQuantity.code = #mL
+* dosageInstruction.doseAndRate.doseQuantity.system = $JP_MedicationUnitMERIT9_CS
+* dosageInstruction.doseAndRate.doseQuantity.code = #ML
 * dosageInstruction.doseAndRate.type = $JP_MedicationIngredientStrengthStrengthType_CS#1
 
 Instance: jp-medicationrequest-injection-example-2

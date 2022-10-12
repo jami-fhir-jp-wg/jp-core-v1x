@@ -79,7 +79,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 | SHOULD           | patient,date | reference,date  | GET [base]/MedicationRequest?patient=123456&date=eq2013-01-14 |
 | SHOULD           | patient,authoredon | reference,date  | GET [base]/MedicationRequest?patient=123456&authoredon=eq2013-01-14 |
 | SHOULD         | patient,jp-medication-start | date | GET [base]/MedicationRequest?patient=123456&jp-meditation-start=eq2013-03-21 |
-| MAY           | date,authoredon,category,code,requester | date,date,token,token,token | GET [base]/MedicationRequest?code=urn:oid:1.2.392.200119.4.403.1|105271807  |
+| MAY           | date,authoredon,category,code,requester | date,date,token,token,token | GET [base]/MedicationRequest?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
 
 ##### 必須検索パラメータ
 
