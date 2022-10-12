@@ -8,4 +8,4 @@ Description: "Conditionの重症度を示す値セット"
 * ^date = "2022-09-26"
 * ^copyright = "copyright HL7 Japan (出典：HL7-0421)"
 
-* include codes from system JP_ConditionSeverity_CS
+* include codes from system $JP_ConditionSeverity_CS
