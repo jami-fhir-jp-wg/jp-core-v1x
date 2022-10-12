@@ -8,4 +8,4 @@ Description: "Observation（バイタルサイン）で使用する項目の値�
 * ^date = "2022-09-26"
 * ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
 
-* include codes from system JP_ObservationVitalSignsCode_CS
+* include codes from system $JP_ObservationVitalSignsCode_CS
