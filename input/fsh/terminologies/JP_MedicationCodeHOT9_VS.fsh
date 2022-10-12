@@ -6,5 +6,7 @@ Description: "医薬品HOT9コードの値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_MedicationCodeHOT9_CS
+* ^copyright = "Copyright  MEDIS-DC 医療情報システム開発センター"
+
+* include codes from system $JP_MedicationCodeHOT9_CS
 
