@@ -112,7 +112,8 @@ jobs:
       env:
         SSH_PORT: ${{ env.SSH_PORT_JPFHIR }}
       run: | 
-        echo $SSH_PORT
+        echo "SSH_PORT="$SSH_PORT
+        echo "env.SSH_PORT="${{ env.SSH_PORT_JPFHIR }}
         tar czf output.tgz output
         tar czf fsh-generated.tgz fsh-generated
         mkdir -p forPackageRelease/package
