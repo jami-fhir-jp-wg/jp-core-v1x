@@ -109,6 +109,8 @@ jobs:
       env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_TO_JPFHIR }}
     - name: STEP2 = prepare gtar files for upload to remote site
+      env:
+        SSH_PORT: ${{ env.SSH_PORT_JPFHIR }}
       run: | 
         tar czf output.tgz output
         tar czf fsh-generated.tgz fsh-generated
@@ -118,10 +120,10 @@ jobs:
         cd forPackageRelease
         tar czf package.tgz package
         cd ..
-        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PRIVATE_KEY_TO_JPFHIR }} r2217734@www41.onamae.ne.jp  'rm -rf /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B'
-        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PRIVATE_KEY_TO_JPFHIR }} r2217734@www41.onamae.ne.jp  'mkdir -p /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B'
-        rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PRIVATE_KEY_TO_JPFHIR }}" --delete output.tgz fsh-generated.tgz forPackageRelease/package.tgz r2217734@www41.onamae.ne.jp:/home/r2217734/public_html/jpfhir.jp/fhir/core/V1B/
-        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PRIVATE_KEY_TO_JPFHIR }} r2217734@www41.onamae.ne.jp  'cd /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B/; tar xzf output.tgz; mv output/* .; rm -rf output'
+        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p $SSH_PORT r2217734@www41.onamae.ne.jp  'rm -rf /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B'
+        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p $SSH_PORT r2217734@www41.onamae.ne.jp  'mkdir -p /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B'
+        rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p $SSH_PORT" --delete output.tgz fsh-generated.tgz forPackageRelease/package.tgz r2217734@www41.onamae.ne.jp:/home/r2217734/public_html/jpfhir.jp/fhir/core/V1B/
+        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p $SSH_PORT r2217734@www41.onamae.ne.jp  'cd /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B/; tar xzf output.tgz; mv output/* .; rm -rf output'
      
       
 
