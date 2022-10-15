@@ -112,6 +112,7 @@ jobs:
       run: 
         rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 8022" --delete ./output ./fsh-generated r2217734@www41.onamae.ne.jp:/home/r2217734/public_html/jpfhir.jp/fhir/core/V1B/ --exclude .htaccess
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 8022 r2217734@www41.onamae.ne.jp  mv /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B/output/* /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B/
+    
     - name: creating package and upload 
       run: 
         mkdir -p forPackageRelease/package
