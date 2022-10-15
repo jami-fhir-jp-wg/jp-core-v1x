@@ -102,3 +102,10 @@ jobs:
         publish_branch: pages
         publish_dir: ./output
         destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
+
+    - name: STEP1 = ssh key generate  for copying all IG files to public JAMI WG Web site 
+      run: echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
+      env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_TO_JPFHIR }}
+    - name: STEP2 = rsync remote-site-deploy
+      run: rsync -auzrv -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 8022" --delete ./output ./fsh-generated r2217734@www41.onamae.ne.jp:/home/r2217734/public_html/jpfhir.jp/fhir/core/V1B/ --exclude .htaccess
