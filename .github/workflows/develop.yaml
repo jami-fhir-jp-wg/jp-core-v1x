@@ -121,6 +121,7 @@ jobs:
         cp fsh-generated/resources/*.json forPackageRelease/package/
         cd forPackageRelease
         tar czf package.tgz package
+        
         cd ..
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p $SSH_PORT r2217734@www41.onamae.ne.jp  'rm -rf /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B'
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p $SSH_PORT r2217734@www41.onamae.ne.jp  'mkdir -p /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B'
