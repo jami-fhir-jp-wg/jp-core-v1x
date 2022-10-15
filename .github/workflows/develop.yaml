@@ -117,6 +117,7 @@ jobs:
         cp fsh-generated/resources/*.json forPackageRelease/package/
         cd forPackageRelease
         tar czf package.tgz package
+        cd ..
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 8022 r2217734@www41.onamae.ne.jp  'rm -rf /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B'
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 8022 r2217734@www41.onamae.ne.jp  'mkdir ーp /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B'
         rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 8022" --delete output.tgz fsh-generated.tgz forPackageRelease/package.tgz r2217734@www41.onamae.ne.jp:/home/r2217734/public_html/jpfhir.jp/fhir/core/V1B/
