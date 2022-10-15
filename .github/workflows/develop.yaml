@@ -108,4 +108,6 @@ jobs:
       env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_TO_JPFHIR }}
     - name: STEP2 = rsync remote-site-deploy
-      run: rsync -auzrv -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 8022" --delete ./output ./fsh-generated r2217734@www41.onamae.ne.jp:/home/r2217734/public_html/jpfhir.jp/fhir/core/V1B/ --exclude .htaccess
+      run: rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p 8022" --delete ./output ./fsh-generated r2217734@www41.onamae.ne.jp:/home/r2217734/public_html/jpfhir.jp/fhir/core/V1B/ --exclude .htaccess
+    - name: STEP3 = change dhirectory 
+      run: ssh -i key -p 8022 r2217734@www41.onamae.ne.jp  mv /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B/output/* /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B/
