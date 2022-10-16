@@ -14,19 +14,16 @@ jobs:
     strategy:
       matrix:
         ruby-version: ['3.0']
-    environment: SSH_PORT_JPFHIR
+    environment: SSH_PORT_JPFHIR 
     steps:
     - uses: actions/checkout@v2
     - name: STEP2 = prepare gtar files for upload to remote site
       run: | 
         echo "SSH_PORT="$SSH_PORT
         echo "env.SSH_PORT="${{ env.SSH_PORT_JPFHIR }}
-
-        echo "SSH_PORTsSC="$SSH_PORTsSC
-        echo "secrets.SSH_PORTsSC="${{ secrets.SSH_PORT_JPFHIR }}
+        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p $SSH_PORT r2217734@www41.onamae.ne.jp  'ls -l /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B/fsh-generated'
       env:
-        SSH_PORT: ${{ env.SSH_PORT_JPFHIR }}
-        SSH_PORTsSC: ${{ secrets.SSH_PORT_JPFHIR }}
+        SSH_PORT: ${{ secrets.SSH_PORT_JPFHIR }}
         
 
       
