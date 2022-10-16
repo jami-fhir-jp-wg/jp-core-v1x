@@ -22,6 +22,7 @@ jobs:
         echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
       env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_TO_JPFHIR }}
+          
     - name: STEP2 = prepare gtar files for upload to remote site
       run: | 
         echo "SSH_PORT="$SSH_PORT
