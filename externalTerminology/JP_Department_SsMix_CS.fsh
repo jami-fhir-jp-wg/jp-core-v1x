@@ -9,7 +9,7 @@ Description: "SS-MIX統一診療科コード"
 * ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
-* ^hierarchyMeaning = #part-of
+* ^hierarchyMeaning = #is-a
 * ^content = #complete
 * ^copyright = "Copyright Japan Association of Medical Informatics (JAMI)  一般社団法人日本医療情報学会"
 // 以下PDFより参照
