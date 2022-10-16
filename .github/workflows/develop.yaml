@@ -109,7 +109,7 @@ jobs:
         echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
       env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_TO_JPFHIR }}
-    - name: STEP2 = prepare gtar files for upload to remote site
+    - name: STEP2 = prepare gtz files for upload to remote site
       run: | 
         tar czf output.tgz output
         tar czf fsh-generated.tgz fsh-generated
@@ -119,6 +119,8 @@ jobs:
         cd forPackageRelease
         tar czf package.tgz package
         cd ..
+    - name: STEP3 = upload gtz files and  to remote site by rsync
+      run: | 
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'rm -rf ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/V1B'
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'mkdir -p ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/V1B'
         rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  --delete output.tgz fsh-generated.tgz forPackageRelease/package.tgz ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/V1B/
