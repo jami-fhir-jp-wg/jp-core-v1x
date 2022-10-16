@@ -16,7 +16,6 @@ jobs:
         ruby-version: ['3.0']
     steps:
     - uses: actions/checkout@v2
-
     - name: STEP2 = prepare gtar files for upload to remote site
       run: | 
         echo "SSH_PORT="$SSH_PORT
