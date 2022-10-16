@@ -13,8 +13,9 @@ publisher:
   name: FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)
   url: http://jpfhir.jp
   email: office@hlfhir.jp
-copyright: FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)
+copyright: Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG
 jurisdiction: 'urn:iso:std:iso:3166#JP'
+text: ''
 
 #----------------------------------------
 # ページタイトル名称設定
@@ -92,8 +93,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - fsh-generated/includes
     #- input/summaries
   path-expansion-params: '../../input/_resources/exp-params.json'
-  # no-narrative: 
-  #   - CodeSystem/*
+  no-narrative: CodeSystem/*
   active-tables: 'false'
   apply-version: 'true'
   apply-copyright: 'true'
@@ -229,8 +229,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/route-codes
     - urn:oid:1.2.392.100495.20.2.41
     - urn:oid:1.2.392.100495.20.2.101
+    - urn:oid:1.2.392.200250.2.2.2
     - urn:oid:1.2.392.200250.2.2.20.22
     - urn:oid:1.2.392.200250.2.2.20.20
+    - urn:oid:1.2.392.200119.4.701
     - urn:oid:1.2.392.100495.20.1.81
     - urn:oid:1.2.392.200119.4.402.1
     - urn:oid:1.2.392.200119.4.403.2

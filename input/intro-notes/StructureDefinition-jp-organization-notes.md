@@ -9,7 +9,7 @@
 
 - [JP_OrganizationCategory][JP_Organization_InsuranceOrganizationCategory]
 
-  - 点数表コード１桁（医科１、歯科２）の情報を表す
+  - 点数表コード１桁の情報を表す
 
 - [JP_OrganizationNo][JP_Organization_InsuranceOrganizationNo]
 
@@ -29,6 +29,9 @@
 | insurerNumber | 健康保険組合などの保険者の保険者番号を表現する | identifier.system = "urn:oid:1.2.392.100495.20.3.61" を指定し、保険者番号を同valueに格納する。 |
 
 ## 医療機関コード（１０桁）
+
+JP Coreでの医療機関コード（１０桁）のエリアに格納する値を説明する。  
+保険医療施設以外の利用等も考慮しているため、正式な医療機関コード（１０桁）の説明でないことに注意すること。
 
 ### 保険医療機関・保険薬局の場合
 医療機関コードは10桁の数値で表現され、以下の記載様式を取る。

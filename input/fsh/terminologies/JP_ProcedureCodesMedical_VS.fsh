@@ -6,4 +6,5 @@ Description: "処置のコード:医科診療行為マスタの値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_ProcedureCodesMedical_CS
+* ^copyright = "社会保険診療報酬支払基金　診療行為マスタ（レセプト電算処理用）"
+* include codes from system $JP_ProcedureCodesMedical_CS

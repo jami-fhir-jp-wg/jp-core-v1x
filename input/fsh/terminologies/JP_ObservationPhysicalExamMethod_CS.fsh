@@ -9,6 +9,8 @@ Description: "Observation（身体所見）で使用する診察方法のコー�
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationPhysicalExamMethod_VS
 * ^content = #complete
+* ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
+
 * #M001 "視診"
 * #M002 "触診"
 * #M003 "血圧計"

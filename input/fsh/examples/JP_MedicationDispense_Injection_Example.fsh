@@ -19,14 +19,14 @@ Usage: #example
 * whenPrepared = "2021-10-07T10:47:19+09:00"
 * whenHandedOver = "2021-10-07T10:55:23+09:00"
 * destination = Reference(Location/jp-location-example-ward)
-* dosageInstruction.additionalInstruction = urn:oid:1.2.392.200250.2.2.20.22#I1100000 "１日おき"
+* dosageInstruction.additionalInstruction = $JP_MedicationUsageJAMIAdditional_CS#I1100000 "１日おき"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2016-07-01T10:00:00+09:00"
 * dosageInstruction.text = "ワンショット 静脈注射 静脈内"
 * dosageInstruction.site.extension.url = $bodySite
 * dosageInstruction.site.extension.valueReference = Reference(jp-medicationdispense-injection-bodystructure-example-1)
 * dosageInstruction.site.extension.valueReference.type = "BodyStructure"
-* dosageInstruction.route = http://jpfhir.jp/fhir/core/CodeSystem/route-codes#IV "静脈内"
-* dosageInstruction.method = urn:oid:1.2.392.200250.2.2.20.40#30 "静脈注射"
+* dosageInstruction.route = $JP_MedicationRouteHL70162_CS#IV "静脈内"
+* dosageInstruction.method = $JP_MedicationMethodJAMIDetailUsage_CS#30 "静脈注射"
 * dosageInstruction.doseAndRate.doseQuantity = 2 'mL' "mL"
 
 Instance: jp-medicationdispense-injection-medication-example-1
@@ -35,11 +35,11 @@ Usage: #inline
 * status = #active
 * ingredient.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo"
 * ingredient.extension.valueInteger = 1
-* ingredient.itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#100558502 "ホリゾン注射液１０ｍｇ"
+* ingredient.itemCodeableConcept = $JP_MedicationCodeHOT9_CS#100558502 "ホリゾン注射液１０ｍｇ"
 * ingredient.strength.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"
-* ingredient.strength.extension.valueCodeableConcept = urn:oid:1.2.392.100495.20.2.22#1 "製剤量"
-* ingredient.strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#AMP "アンプル"
-* ingredient.strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
+* ingredient.strength.extension.valueCodeableConcept = $JP_MedicationIngredientStrengthStrengthType_CS#1 "製剤量"
+* ingredient.strength.numerator = 1 $JP_MedicationUnitMERIT9_CS#AMP "アンプル"
+* ingredient.strength.denominator = 1 $JP_MedicationUnitMERIT9_CS#TIME "回"
 
 Instance: jp-medicationdispense-injection-bodystructure-example-1
 InstanceOf: BodyStructure

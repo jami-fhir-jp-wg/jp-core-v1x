@@ -6,7 +6,7 @@ Usage: #example
 * contained[0] = jp-medicationadministration-injection-medication-example-1
 * contained[+] = jp-medicationadministration-injection-bodystructure-example-1
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment"
-* extension[=].valueCodeableConcept = urn:oid:1.2.392.100495.20.2.51#01 "内科"
+* extension[=].valueCodeableConcept = urn:oid:1.2.392.200250.2.2.2#01 "内科"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester"
 * extension[=].valueReference = Reference(Practitioner/jp-practitioner-example-male-1) "大阪 一郎"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn"
@@ -35,7 +35,7 @@ Usage: #example
 * dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
 * dosage.method.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_MethodComment"
 * dosage.method.extension.valueString = "１分ほどかけて緩徐に行いました"
-* dosage.method = urn:oid:1.2.392.200250.2.2.20.30#3 "注射"
+* dosage.method = $JP_MedicationMethodJAMIBasicUsage_CS#3 "注射"
 * dosage.dose = 2 'mL' "mL"
 
 Instance: jp-medicationadministration-injection-example-2
@@ -73,7 +73,7 @@ Usage: #example
 * dosage.site.extension[bodySite].url = $bodySite
 * dosage.site.extension[bodySite].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-2) "左腕"
 * dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
-* dosage.method = urn:oid:1.2.392.200250.2.2.20.40#31 "中心静脈注射"
+* dosage.method = $JP_MedicationMethodJAMIDetailUsage_CS#31 "中心静脈注射"
 * dosage.dose = 510 'mL' "mL"
 * dosage.rateRatio.numerator = 102 'mL' "mL" 
 * dosage.rateRatio.denominator = 1 'h' "hour"
@@ -84,9 +84,9 @@ Title: "JP Medication 薬剤　ホリゾン注射液"
 Description: "ホリゾン注射液"
 Usage: #inline
 * status = #active
-* ingredient.itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#100558502 "ホリゾン注射液１０ｍｇ"
-* ingredient.strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#AMP "アンプル"
-* ingredient.strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
+* ingredient.itemCodeableConcept = $JP_MedicationCodeHOT9_CS#100558502 "ホリゾン注射液１０ｍｇ"
+* ingredient.strength.numerator = 1 $JP_MedicationUnitMERIT9_CS#AMP "アンプル"
+* ingredient.strength.denominator = 1 $JP_MedicationUnitMERIT9_CS#TIME "回"
 
 Instance: jp-medicationadministration-injection-medication-example-2
 InstanceOf: JP_Medication
@@ -94,12 +94,12 @@ Title: "JP_Medication ソリタ－＋アドナ注"
 Description: "ソリタ－＋アドナ注"
 Usage: #inline
 * status = #active
-* ingredient[0].itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#107750602 "ソリタ－Ｔ３号輸液５００ｍＬ"
-* ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#HON "本"
-* ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
-* ingredient[+].itemCodeableConcept = urn:oid:1.2.392.200119.4.403.1#108010001 "アドナ注（静脈用）５０ｍｇ／１０ｍＬ"
-* ingredient[=].strength.numerator = 1 urn:oid:1.2.392.100495.20.2.101#AMP "アンプル"
-* ingredient[=].strength.denominator = 1 urn:oid:1.2.392.100495.20.2.101#TIME "回"
+* ingredient[0].itemCodeableConcept = $JP_MedicationCodeHOT9_CS#107750603 "ソリタ－Ｔ３号輸液５００ｍＬ"
+* ingredient[=].strength.numerator = 1 $JP_MedicationUnitMERIT9_CS#HON "本"
+* ingredient[=].strength.denominator = 1 $JP_MedicationUnitMERIT9_CS#TIME "回"
+* ingredient[+].itemCodeableConcept = $JP_MedicationCodeHOT9_CS#108010002 "アドナ注（静脈用）５０ｍｇ／１０ｍＬ"
+* ingredient[=].strength.numerator = 1 $JP_MedicationUnitMERIT9_CS#AMP "アンプル"
+* ingredient[=].strength.denominator = 1 $JP_MedicationUnitMERIT9_CS#TIME "回"
 
 Instance: jp-medicationadministration-injection-bodystructure-example-1
 InstanceOf: BodyStructure

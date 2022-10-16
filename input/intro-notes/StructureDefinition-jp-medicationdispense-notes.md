@@ -62,7 +62,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 | SHALL            | identifier    | token  | GET [base]/MedicationDispense?identifier=http://myhospital.com/fhir/medication\|1234567890 |
 | SHOULD            | patient      | reference | GET [base]/MedicationDispense?patient=123456   |
 | SHOULD           | patient,whenhandedover | referenece,date  | GET [base]/MedicationDispense?patient=123456&whenhandedover=eq2013-01-14 |
-| MAY           | whenhandedover,whenprepared,context,code,performer| date,date,token,token,token | GET [base]/MedicationDispense?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
+| MAY           | whenhandedover,whenprepared,context,code,performer| date,date,token,token,token | GET [base]/MedicationDispense?code=urn:oid:1.2.392.200119.4.403.1|105271807  |
 
 ##### 必須検索パラメータ
 
@@ -213,8 +213,8 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 ワーキンググループでの検討の結果、冗長とはなるがidentifierにRp番号と薬剤番号を記録することとし、MedicationDispenseを繰り返すことで表現する方法を推奨することとした。
 
 ### 調剤量の記述方法
-調剤量はquantityに、SimpleQuantity型で記録する。単位コードには、投与量と同様に医薬品単位略号（"urn:oid:1.2.392.100495.20.2.101"）を使用する。
-調剤日数を記述したい場合は、daysSupply要素にSimpleQuantity方で記述し、単位コードはUCUM("http://unitsofmeasure.org")を使用する。
+調剤量はquantityに、SimpleQuantity型で記録する。単位コードには、投与量と同様に医薬品単位略号を使用する。
+調剤日数を記述したい場合は、daysSupply要素にSimpleQuantity方で記述し、単位コードはUCUMを使用する。
 
 21錠（1日3錠×7日分）を調剤する場合のインスタンス例を以下に示す。
 
