@@ -3,7 +3,7 @@ name: JPCore FHIR Task
 on:
   push:
     branches: 
-      - 'feature/test_for_merge_CodeSystem_branch'
+      - 'develop'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
