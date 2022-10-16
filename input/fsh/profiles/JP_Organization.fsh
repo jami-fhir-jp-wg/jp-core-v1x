@@ -22,8 +22,7 @@ Description: "このプロファイルはOrganizationリソースに対して、
 * extension[prefectureNo] ^comment = "都道府県番号２桁。Identifier型の拡張を使用する。  
 valueには都道府県番号2桁の値を格納し、systemには都道府県番号を表すOID「1.2.392.100495.20.3.21」を指定する。"
 * extension[organizationCategory] ^short = "点数表コード１桁（医科１、非保険検診施設２、歯科３、調剤４、訪問看護ステーション６）を表現するExtension【詳細参照】"
-* extension[organizationCategory] ^comment = "点数表コード１桁（医科１、非保険検診施設２、歯科３、調剤４、訪問看護ステーション６）。Identifier型の拡張  
-「OrganizationCategory」を使用する。systemには点数表番号を表すOID「1.2.392.100495.20.3.22」を指定する。"
+* extension[organizationCategory] ^comment = "点数表コード１桁（医科１、非保険検診施設２、歯科３、調剤４、訪問看護ステーション６）。systemには点数表番号を表すOID「1.2.392.100495.20.3.22」を指定する。"
 * extension[organizationNo] ^short = "医療機関コード（７桁）を表現するExtension【詳細参照】"
 * extension[organizationNo] ^comment = "医療機関コード（７桁）。Identifier型の拡張「InsuranceOrganizationNo」を使用する。  
 systemには医療機関コードを表すOID「1.2.392.100495.20.3.23」を指定する。
@@ -99,14 +98,14 @@ value : ```医療機関コード（１０桁）```を使用する。
 Extension: JP_Organization_InsuranceOrganizationCategory
 Id: jp-organization-insuranceorganizationcategory
 Title: "JP Core Organization InsuranceOrganizationCategory Extension"
-Description: "点数表コード１桁（医科１、歯科３）表現するためのExtension。 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"
+Description: "点数表コード１桁を表現するためのExtension。 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"
 * ^url = $JP_Organization_InsuranceOrganizationCategory
 * ^status = #active
 * ^date = "2022-09-26"
 * ^context.type = #element
 * ^context.expression = "Organization"
-* . ^short = "点数表コード１桁（医科1、歯科３）【詳細参照】"
-* . ^comment = "点数表コード１桁（医科1、歯科３）。Identifier型の拡張\r\n「InsuranceOrganizationCategory」を使用する。systemには点数表番号\r\nを表すOID「1.2.392.100495.20.3.22」を指定する。"
+* . ^short = "点数表コード１桁【詳細参照】"
+* . ^comment = "点数表コード１桁。systemには点数表番号\r\nを表すOID「1.2.392.100495.20.3.22」を指定する。"
 * url = $JP_Organization_InsuranceOrganizationCategory (exactly)
 * value[x] only Coding
 * valueCoding from JP_MedicalFeeScoreType_VS (extensible)

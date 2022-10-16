@@ -41,7 +41,7 @@ v1.0.5 → v1.1.0に変更するあたり、開発環境(Sushi & IG Publisher)�
         * `JP_Organization`にてPrefectureNoの都道府県番号をCoding型に変更し対応するCodeSystemを作成および割り当てた
         * `JP_Organization`にてorganizationCategoryの点数表コードをCoding型に変更し対応するCodeSystemを作成および割り当てた
         * `JP_Organization`にて医療機関コードの説明を記載し、各リソースに記載されていた説明を集約した
-        * `JP_Practitioner` qualification.codeに対するバインディング対象となる免許に関するValueSet(`JP_MedicalLicenseCertificate_VS`)およびCodeSystem(`JP_MedicalLicenseCertificate_CS`)を定義した
+        * `JP_Practitioner` qualification.codeに対するバインディング対象となる免許に関するValueSet(`JP_MedicalLicenseCertificate_VS`)を定義した
         * `JP_Practitioner` qualificationに対するSlicing対象をcodeに変更し、４７都道府県のsystemの指定方法を説明文にて行なうようにした
         * `JP_PractitionerRole` codeにJP Coreで定義したProcedure Performer RoleのCodeSystemを割り当てた
 

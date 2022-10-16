@@ -5,7 +5,7 @@ Usage: #definition
 * name = "JP_Server_CapabilityStatement"
 * title = "JP Core Server CapabilityStatement"
 * status = #active
-* experimental = true
+* experimental = false
 * date = "2022-09-26"
 * description = "JP Core実装ガイドを利用したサイトを作成する際にサーバ側で規定するCapablityStatementのOperationsおよびSearch Parametersのリスト例を提示する。JP Core ServerがサポートするFHIRプロファイルに限定しているため、FHIR Baseのプロファイルを利用する際などは必要な項目を追記すること。"
 * kind = #requirements

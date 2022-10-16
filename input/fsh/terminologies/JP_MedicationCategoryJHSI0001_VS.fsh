@@ -6,5 +6,7 @@ Description: "JAHIS注射データ交換規約Ver.2.1C JHSI表0001処方区分�
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_MedicationCategoryJHSI0001_CS
+* ^copyright = "Copyright Japanese  Association of Healthcare Information Systems Industry(JAHIS)  一般社団法人保健医療福祉情報システム工業会"
+
+* include codes from system $JP_MedicationCategoryJHSI0001_CS
 

@@ -9,6 +9,7 @@ Description:  "処置が実施されなかった理由、または開始され�
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureNotPerformedReason_VS
 * ^content = #complete
+* ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 * #JPPNPR001 "処置が禁忌"
 * #JPPNPR002 "処置が適応外"
 * #JPPNPR003 "処置を拒否、または望まず"

@@ -17,7 +17,7 @@ Description: "このプロファイルはConditionリソースに対して、患
 * category ^short = "problem-list-item | encounter-diagnosis（プロブレムリスト | 一時的な診断）"
 * verificationStatus ^short = "unconfirmed | provisional | differential | confirmed | refuted | entered-in-error（十分に確認されていない | 暫定的 | 鑑別的 | 十分な根拠で存在 | 十分な根拠で否定 | 誤記載）"
 * verificationStatus ^definition = "The verification status to support the clinical status of the condition.\r\n\r\n この患者状態が存在するかどうかの検証状況。"
-* severity from JP_ConditionSeverity_VS (preferred)
+* severity from $JP_ConditionSeverity_VS (preferred)
 * severity ^short = "Subjective severity of condition. この患者状態の重症度。このプロファイルは、HL70421 Severity of Illness Codeで表現"
 * severity ^definition = "A subjective assessment of the severity of the condition as evaluated by the clinician.\r\n\r\n医療者によって評価されたこの患者状態の重症度。"
 * severity ^comment = "Coding of the severity with a terminology is preferred, where possible.\r\n可能な限り、ターミノロジを用いて重症度をコーディングすることが好ましい。\r\n\r\n このプロファイルではHL70421 Severity of Illness Code（MI 軽度, MO 中度, SE 重度）を採用。"
