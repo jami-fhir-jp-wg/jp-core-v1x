@@ -17,6 +17,11 @@ jobs:
     environment: SSH_PORT_JPFHIR 
     steps:
     - uses: actions/checkout@v2
+    - name: STEP1 = ssh key generate  for copying all IG files to public JAMI WG Web site 
+      run: | 
+        echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
+      env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_TO_JPFHIR }}
     - name: STEP2 = prepare gtar files for upload to remote site
       run: | 
         echo "SSH_PORT="$SSH_PORT
