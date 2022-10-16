@@ -27,9 +27,14 @@ jobs:
       run: | 
         echo "SSH_PORT="$SSH_PORT
         echo "secrets.SSH_PORT="${{ secrets.SSH_PORT_JPFHIR }}
-        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }} r2217734@www41.onamae.ne.jp  'ls -l /home/r2217734/public_html/jpfhir.jp/fhir/core/V1B/fsh-generated.tgz'
+        echo "secrets.JAMIWG_WEBHOST="${{ secrets.JAMIWG_WEBHOST }}
+        echo "secrets.secrets.JAMIWG_WEBPATH="${{ secrets.JAMIWG_WEBPATH }}
+        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}  'ls -l ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/V1B/fsh-generated.tgz'
       env:
         SSH_PORT: ${{ secrets.SSH_PORT_JPFHIR }}
+        JAMIWG_WEBHOST: ${{ secrets.JAMIWG_WEBHOST }}
+        JAMIWG_WEBPATH: ${{ secrets.JAMIWG_WEBPATH }}
+
         
 
       
