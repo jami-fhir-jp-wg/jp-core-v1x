@@ -7,7 +7,6 @@ Description: "投与ラインのコードシステム例"
 * ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
-* ^valueSet = $JP_MedicationExampleLine_VS
 * ^content = #fragment
 * ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 * #01 "末梢ルート"
