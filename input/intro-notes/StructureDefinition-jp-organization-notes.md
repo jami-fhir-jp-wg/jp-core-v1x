@@ -9,7 +9,7 @@
 
 - [JP_OrganizationCategory][JP_Organization_InsuranceOrganizationCategory]
 
-  - 点数表コード１桁（医科１、歯科２）の情報を表す
+  - 点数表コード１桁の情報を表す
 
 - [JP_OrganizationNo][JP_Organization_InsuranceOrganizationNo]
 
@@ -29,6 +29,9 @@
 | insurerNumber | 健康保険組合などの保険者の保険者番号を表現する | identifier.system = "urn:oid:1.2.392.100495.20.3.61" を指定し、保険者番号を同valueに格納する。 |
 
 ## 医療機関コード（１０桁）
+
+JP Coreでの医療機関コード（１０桁）のエリアに格納する値を説明する。  
+保険医療施設以外の利用等も考慮しているため、正式な医療機関コード（１０桁）の説明でないことに注意すること。
 
 ### 保険医療機関・保険薬局の場合
 医療機関コードは10桁の数値で表現され、以下の記載様式を取る。
@@ -72,17 +75,11 @@
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHOULD           | identifier    | token  | GET [base]/Organization?identifier=12345|
+| SHALL            | identifier    | token  | GET [base]/Organization?identifier=12345|
 | SHOULD           | name          | string | GET [base]/Organization?name=Health                            |
 | SHOULD           | address | string  | GET [base]/Organization?address=Arbor
 
 #### 必須検索パラメータ
-必須検索パラメータ（**SHALL**）は特にない。
-
-### 推奨検索パラメータ
-
-
-次の検索パラメータをサポートすることが望ましい。
 
 1. identifier 検索パラメータを使用して、識別子によるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
@@ -98,7 +95,11 @@
 
    指定された識別子に一致するOrganizationリソースを含むBundleを検索する。
    
-2. name 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
+### 推奨検索パラメータ
+
+次の検索パラメータをサポートすることが望ましい。
+
+1. name 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Organization?name={string}
@@ -110,7 +111,7 @@
    GET [base]/Organization?name=Health
    ```
 
-3. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
+2. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Organization?address=[string]

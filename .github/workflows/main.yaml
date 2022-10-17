@@ -1,0 +1,136 @@
+name: JPCore FHIR Task
+
+on:
+  push:
+    branches: 
+      - 'main'
+    paths:
+      - 'sushi-config.yaml'
+      - 'input/**'
+      - '.github/workflows/**'
+jobs:
+  turn:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        ruby-version: ['3.0']
+    environment: SSH_PORT_JPFHIR  # JAMI WG アップロードサイトに関するアクセス情報の環境名
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Extract branch name
+      run: |
+        if ["${{ github.event.pull_request.head.ref }}" == ""]; then
+          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+          echo "##[set-output name=branch_group;]$(echo ${GITHUB_REF#refs/heads/})"
+        else
+          echo "##[set-output name=branch;]$(echo ${{ github.event.pull_request.head.ref }})"
+          echo "##[set-output name=branch_group;]$(echo 'pullrequest')"
+        fi
+      id: extract_branch
+    
+    - name: Extract last commit date
+      shell: bash
+      run: |
+        echo "##[set-output name=date;]$(git log -1 --format="%at" | xargs -I{} date -d @{})"   
+      id: extract_date
+
+    - uses: bluwy/substitute-string-action@v1
+      id: substitute_index
+      with:
+        _input-file: input/landing_page/_index.yml
+        _format-key: '%%key%%'
+        group: ${{ steps.extract_branch.outputs.branch_group }}
+        branch: ${{ steps.extract_branch.outputs.branch }}
+        date: ${{ steps.extract_date.outputs.date }}
+        actor: ${{ github.actor }}
+        pullrequest_url: ${{ github.event.pull_request.html_url }}
+        pullrequest_title: ${{ github.event.pull_request.title }}
+        _output-file: input/landing_page/_index.yml
+
+    - name: Setup npm
+      uses: actions/setup-node@v2
+      with: 
+        check-latest: true
+
+    - name: Setup Sushi
+      run: |
+        sudo npm install -g fsh-sushi
+
+    - name: Install Jekyll
+      run: |
+        sudo apt-get install jekyll
+    
+    - name: Download Japanese translated version of hl7.fhir.core package
+      uses: wei/wget@v1
+      with:
+        args:  https://jpfhir.jp/fhir/hl7.fhir.r4.core-4.0.1.tgz
+
+    - name: Arranging hl7.fhir.core package packages
+      env:
+        PACKAGECORE: hl7.fhir.r4.core#4.0.1
+      run: | 
+        mv hl7.fhir.r4.core-4.0.1.tgz  $PACKAGECORE.tgz
+        mkdir -p /home/runner/.fhir
+        mkdir -p  /home/runner/.fhir/packages
+        mkdir -p  /home/runner/.fhir/packages/$PACKAGECORE
+        : # local cache にpackage をcopyして展開する
+        cp $PACKAGECORE.tgz /home/runner/.fhir/packages/$PACKAGECORE/$PACKAGECORE.tgz
+        tar xzf /home/runner/.fhir/packages/$PACKAGECORE/$PACKAGECORE.tgz -C /home/runner/.fhir/packages/$PACKAGECORE/
+
+    - name: Download IG Publisher
+      uses: Legion2/download-release-action@v2.1.0
+      with:
+        repository: HL7/fhir-ig-publisher
+        tag: '1.2.6'
+        path: .
+        file: publisher.jar
+   
+    - name: Run IG Publisher
+      run: | 
+        mkdir input-cache
+        mv publisher.jar ./input-cache/publisher.jar
+        unset DISPLAY
+        java  -Xmx4G -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx https://tx.jpfhir.jp:8081
+        mv ./input/landing_page/_index.yml ./output/
+
+    - name: Deploy Implementation Guide
+      if: success()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.PERSONAL_TOKEN }}
+        external_repository: jami-fhir-jp-wg/jp-core-v1xpages
+        publish_branch: pages
+        publish_dir: ./output
+        destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
+
+    - name: STEP1 = ssh key generate  for copying all IG files to public JAMI WG Web site 
+      run: | 
+        echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
+      env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_TO_JPFHIR }}
+          
+    - name: STEP2 = prepare gtz files for upload to remote site
+      run: | 
+        tar czf output.tgz output
+        tar czf fsh-generated.tgz fsh-generated
+        mkdir -p forPackageRelease/package
+        cp fsh-generated/resources/*.json forPackageRelease/package/
+        cp forPackageRelease/package.json forPackageRelease/package/package.json
+        cd forPackageRelease
+        tar czf package.tgz package
+        cd ..
+        
+    - name: STEP3 = upload gtz files and  to remote site by rsync
+      run: | 
+        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'rm -rf ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/V1B'
+        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'mkdir -p ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/V1B'
+        rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  --delete output.tgz fsh-generated.tgz forPackageRelease/package.tgz ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/V1B.dev/
+        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}   'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/V1B/; tar xzf output.tgz; mv output/* .; rm -rf output'
+      env:
+        SSH_PORT: ${{ secrets.SSH_PORT_JPFHIR }}
+        JAMIWG_WEBHOST: ${{ secrets.JAMIWG_WEBHOST }}
+        JAMIWG_WEBPATH: ${{ secrets.JAMIWG_WEBPATH }}
+
+      
+

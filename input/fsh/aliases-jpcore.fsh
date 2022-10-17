@@ -96,7 +96,7 @@ Alias: $JP_Patient_KanaSort_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_P
 
 // CodeSystem
 Alias: $JP_ConditionSeverity_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionSeverity_CS
-Alias: $JP_Department_SsMix_CS = urn:oid:1.2.392.100495.20.2.51
+Alias: $JP_Department_SsMix_CS = urn:oid:1.2.392.200250.2.2.2
 Alias: $JP_JfagyFoodAllergen_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS
 Alias: $JP_JfagyMedicationAllergen_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyMedicationAllergen_CS
 Alias: $JP_JfagyNonFoodNonMedicationAllergen_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyNonFoodNonMedicationAllergen_CS
@@ -150,7 +150,7 @@ Alias: $JP_ProcedureCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Proce
 Alias: $JP_ProcedureCodesDental_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesDental_CS
 Alias: $JP_ProcedureCodesICHI_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 Alias: $JP_ProcedureCodesMedical_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesMedical_CS
-Alias: $JP_ProcedureCodesNurse_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesNurse_CS
+Alias: $JP_ProcedureCodesNurse_CS = urn:oid:1.2.392.200119.4.701
 Alias: $JP_ProcedureCodesSTEM7_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesSTEM7_CS
 Alias: $JP_ProcedureCondition_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 Alias: $JP_ProcedureDeviceAction_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS

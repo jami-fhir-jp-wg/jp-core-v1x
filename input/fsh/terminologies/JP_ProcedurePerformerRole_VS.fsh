@@ -6,4 +6,4 @@ Description: "処置を実施した者の役割（ロール）を示す値セッ
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_PractitionerRole_CS
+* include codes from system $JP_PractitionerRole_CS

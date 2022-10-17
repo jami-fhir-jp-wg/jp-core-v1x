@@ -6,4 +6,5 @@ Description: "処置のコード:看護実践用語標準マスター(看護行�
 * ^status = #active
 * ^experimental = false
 * ^date = "2022-09-26"
-* include codes from system JP_ProcedureCodesNurse_CS
+* ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
+* include codes from system $JP_ProcedureCodesNurse_CS

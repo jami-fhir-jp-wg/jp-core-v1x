@@ -161,7 +161,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * ^status = #active
 * ^date = "2022-09-26"
 * medication[x] only CodeableConcept
-* medicationCodeableConcept from JP_MedicationCode_VS (preferred)
+* medicationCodeableConcept from $JP_MedicationCode_VS (preferred)
 * medicationCodeableConcept ^binding.description = "処方する製剤を表すコード。"
 * dosage.rateRatio only JP_MedicationRatio_DosePerPeriod
 * dosage.rateQuantity ^short = "投与速度(量/時間)を指定する"
