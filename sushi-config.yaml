@@ -15,7 +15,6 @@ publisher:
   email: office@hlfhir.jp
 copyright: Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG
 jurisdiction: 'urn:iso:std:iso:3166#JP'
-text: ''
 
 #----------------------------------------
 # ページタイトル名称設定
@@ -93,7 +92,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - fsh-generated/includes
     #- input/summaries
   path-expansion-params: '../../input/_resources/exp-params.json'
-  no-narrative: CodeSystem/*
+  # no-narrative: 
+  #  - CodeSystem/*
   active-tables: 'false'
   apply-version: 'true'
   apply-copyright: 'true'
@@ -200,18 +200,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_PrefectureNo_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionSeverity_CS
-    - urn:oid:1.2.392.100495.20.2.51
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyMedicationAllergen_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyNonFoodNonMedicationAllergen_CS
-    - urn:oid:1.2.392.100495.20.3.22
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicalLicenseCertificate_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionJAMI_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS
-    - urn:oid:1.2.392.200250.2.2.20.32
-    - http://jpfhir.jp/fhir/core/CodeSystem/JHSI0001
-    - http://jpfhir.jp/fhir/core/CodeSystem/JHSP0007
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCategoryMERIT9_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationRequestDosageInstructionLine_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageLineComment_CS
@@ -220,44 +208,15 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageRouteComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageSiteComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationUncategorizedComment_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationFormMERIT9_CS
-    - urn:oid:1.2.392.100495.20.2.22
-    - http://jpfhir.jp/fhir/core/CodeSystem/JHSP0002
-    - urn:oid:1.2.392.200250.2.2.20.30
-    - urn:oid:1.2.392.200250.2.2.20.40
-    - http://jpfhir.jp/fhir/core/CodeSystem/JHSI0003
-    - http://jpfhir.jp/fhir/core/CodeSystem/route-codes
-    - urn:oid:1.2.392.100495.20.2.41
-    - urn:oid:1.2.392.100495.20.2.101
-    - urn:oid:1.2.392.200250.2.2.2
-    - urn:oid:1.2.392.200250.2.2.20.22
-    - urn:oid:1.2.392.200250.2.2.20.20
-    - urn:oid:1.2.392.200119.4.701
-    - urn:oid:1.2.392.100495.20.1.81
-    - urn:oid:1.2.392.200119.4.402.1
-    - urn:oid:1.2.392.200119.4.403.2
-    - urn:oid:1.2.392.200119.4.403.1
-    - urn:oid:1.2.392.100495.20.1.73
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodySite_CS
-    - urn:oid:1.2.392.200119.4.504
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationMethod_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationPhysicalExamBodySite_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationPhysicalExamMethod_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS
-    - urn:oid:1.2.392.200119.4.804
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_PhysicalExamCode_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_PractitionerRole_CS
-    - urn:oid:1.2.392.100495.20.3.21
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureBodySite_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCategory_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesDental_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesMedical_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesNurse_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesSTEM7_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
@@ -282,6 +241,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategoryMERIT9_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCodeHOT13_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCodeHOT7_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCodeHOT9_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageComment_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationRequestDosageInstructionLine_VS
@@ -297,14 +257,13 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIBasicUsage_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJHSI0003_VS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationRouteHL70162_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationSubstitutionNotAllowedReason_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUsageInjection_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUsageJAMIAdditional_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUsageJAMI_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCodeCommon_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCodeHOT7_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_Immunization_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCodeYJ_VS
