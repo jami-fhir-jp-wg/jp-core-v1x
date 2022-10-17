@@ -297,7 +297,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIBasicUsage_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJHSI0003_VS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationRouteHL70162_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationSubstitutionNotAllowedReason_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUsageInjection_VS
