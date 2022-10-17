@@ -122,8 +122,8 @@ jobs:
         tar czf output.tgz output
         tar czf fsh-generated.tgz fsh-generated
         mkdir -p forPackageRelease/package
-        cp forPackageRelease/package.json forPackageRelease/package/package.json
         cp fsh-generated/resources/*.json forPackageRelease/package/
+        cp forPackageRelease/package.json forPackageRelease/package/package.json
         cd forPackageRelease
         tar czf package.tgz package
         cd ..
