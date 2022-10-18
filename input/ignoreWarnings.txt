@@ -4,10 +4,12 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
-# Example Existence and Embedded HTML Warnings
+# Example Existence Warnings
 %The Implementation Guide contains no examples%
 
-# DICOM Terminologies Existence Warnings
+# External Terminologies Existence Warnings
+Code System URI 'http://loinc.org' is unknown so the code cannot be validated
+Code System URI 'urn:ietf:rfc:3986' is unknown so the code cannot be validated
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html not found by validator
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html not found by validator
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 not found by validator
@@ -15,8 +17,6 @@ The valueSet reference http://playbook.radlex.org/playbook/SearchRadlexAction on
 The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html on element ImagingStudy.modality could not be resolved
 The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html on element ImagingStudy.series.modality could not be resolved
 The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 on element ImagingStudy.series.instance.sopClass could not be resolved
-Code System URI 'http://loinc.org' is unknown so the code cannot be validated
-Code System URI 'urn:ietf:rfc:3986' is unknown so the code cannot be validated
 
 # Country code system 'urn:iso:std:iso:3166' is unknown due to unresoloved reason
 Code System URI 'urn:iso:std:iso:3166' is unknown so the code cannot be validated
