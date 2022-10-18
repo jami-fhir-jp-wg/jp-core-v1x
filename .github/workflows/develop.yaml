@@ -116,7 +116,7 @@ jobs:
         cd forPackageRelease
         tar -czvf package.tgz package
         cd ..
-        cp package.tgz output/package.tgz
+        cp forPackageRelease/package.tgz output/package.tgz
 
     - name: Deploy Implementation Guide
       if: success()
