@@ -110,7 +110,7 @@ jobs:
       run: | 
         tar czf output.tgz output
         tar czf fsh-generated.tgz fsh-generated
-        mkdir -p forPackageRelease/package.tgz
+        mkdir -p forPackageRelease/package
         cp fsh-generated/resources/*.json forPackageRelease/package/
         cp forPackageRelease/package.json forPackageRelease/package/package.json
         cd forPackageRelease
