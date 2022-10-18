@@ -108,15 +108,15 @@ jobs:
           
     - name: STEP2 = prepare gtz files for upload to remote site
       run: | 
-        tar czf output.tgz output
         tar czf fsh-generated.tgz fsh-generated
         mkdir -p forPackageRelease/package
         cp fsh-generated/resources/*.json forPackageRelease/package/
         cp forPackageRelease/package.json forPackageRelease/package/package.json
         cd forPackageRelease
-        tar -czvf package.tgz package
+        tar czf package.tgz package
         cd ..
         cp forPackageRelease/package.tgz output/package.tgz
+        tar czf output.tgz output
 
     - name: Deploy Implementation Guide
       if: success()
