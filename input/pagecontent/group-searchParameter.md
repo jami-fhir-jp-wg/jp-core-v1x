@@ -4,6 +4,7 @@
 * [JP_Coverage_InsuredPersonNumber_SP]
 * [JP_Coverage_InsuredPersonSubNumber_SP]
 * [JP_Coverage_InsuredPersonSymbol_SP]
+* [JP_MedicationRequest_Start_SP]
 * [JP_Organization_InsuranceOrganizationCategory_SP]
 * [JP_Organization_InsuranceOrganizationNo_SP]
 * [JP_Organization_PrefectureNo_SP]

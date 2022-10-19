@@ -12,7 +12,6 @@ on:
       - '.github/workflows/**'
   pull_request:
     branches:
-      - 'main'
       - 'develop'
 jobs:
   turn:
@@ -127,8 +126,7 @@ jobs:
         publish_branch: pages
         publish_dir: ./output
         destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
-
-
+        
     - name: STEP3 = upload gtz files and  to remote site by rsync
       run: | 
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'rm -rf ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/V1B'

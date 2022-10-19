@@ -8,7 +8,7 @@ version: 1.1.0
 date: 2022-09-26
 fhirVersion: 4.0.1
 copyrightYear: 2022+
-releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)
   url: http://jpfhir.jp
