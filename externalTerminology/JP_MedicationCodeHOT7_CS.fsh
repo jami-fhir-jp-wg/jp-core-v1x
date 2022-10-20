@@ -9,5 +9,4 @@ Description: "医薬品HOT7コードのコードシステム"
 * ^experimental = false
 * ^date = "2022-09-26"
 * ^caseSensitive = true
-// * ^valueSet = $JP_MedicationCodeHOT7_VS
 * ^content = #fragment
