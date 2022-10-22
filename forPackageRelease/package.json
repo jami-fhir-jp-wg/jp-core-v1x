@@ -1,7 +1,7 @@
 {
     "name": "jp-core.r4",
     "version": "1.1.0",
-    "description": "JP-CORE V1.1.0 for release candidate",
+    "description": "JP-CORE V1.1.0 for release",
     "author": "JAMI NeXEHRS FHIR IGWG",
     "fhirVersions": [
       "4.0.1"
