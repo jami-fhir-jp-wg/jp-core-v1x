@@ -5,7 +5,7 @@ Description: "HL7表0162をベースにした投与経路の値セット"
 * ^url = $JP_MedicationRouteHL70162_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^copyright = "Copyright Japanese  Association of Healthcare Information Systems Industry(JAHIS)  一般社団法人保健医療福祉情報システム工業会"
 
 * include codes from system $JP_MedicationRouteHL70162_CS

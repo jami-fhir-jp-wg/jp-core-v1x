@@ -8,7 +8,7 @@ Title: "JP Core Location Profile"
 Description: "このプロファイルはLocationリソースに対して、所在場所のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Location"
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * . ^short = "物理的な場所の詳細情報と位置情報"
 * . ^definition = "Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.\r\n\r\nサービスが提供され、リソースとそれに関わる人たちが存在する物理的な場所の詳細情報と位置情報。"
 * identifier ^short = "Unique code or number identifying the location to its users / ユーザに場所を特定する一意のコードまたは番号"

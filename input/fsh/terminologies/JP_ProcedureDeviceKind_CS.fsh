@@ -5,6 +5,6 @@ Description:  "処置の実施に利用された医療機器を識別するコ�
 * ^url = $JP_ProcedureDeviceKind_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^caseSensitive = true
 * ^content = #complete

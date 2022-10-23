@@ -8,7 +8,7 @@ Title: "JP Core HumanName DataType"
 Description: "このデータタイプはHumanName DataTypeに対して、患者データを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_HumanName"
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * . ^short = "Name of a human - parts and usage　人の名前情報、その一部分と使い方"
 * . ^definition = "A human's name with the ability to identify parts and usage.\r\n\r\n識別のための人の名前情報"
 * . ^comment = "Names may be changed, or repudiated, or people may have different names in different contexts. Names may be divided into parts of different type that have variable significance depending on context, though the division into parts does not always matter. With personal names, the different parts might or might not be imbued with some implicit meaning; various cultures associate different importance with the name parts and the degree to which systems must care about name parts around the world varies widely.\r\n\r\n名前が変更されたり、違っていると指摘されたり、コンテキストによって使われる名前が異なる場合がある。名前は、コンテキストに応じて重要性が異なるさまざまなタイプの部分に分割される場合があり、部分への分割は必ずしも重要ではない。個人名の場合、さまざまな部分に暗黙の意味が含まれている場合と含まれていない場合がある。さまざまな文化が名前の部分にさまざまな重要性を関連付けており、システムが世界中の名前の部分を気にする必要がある程度は大きく異なる。"

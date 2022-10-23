@@ -5,5 +5,5 @@ Description: "処置のコード:ICHI(International Classification of Health Int
 * ^url = $JP_ProcedureCodesICHI_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * include codes from system JP_ProcedureCodesICHI_CS

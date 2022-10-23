@@ -8,7 +8,7 @@ Title: "JP Core ImagingStudy Radiology Profile"
 Description: "このプロファイルはImagingStudyリソースに対して、放射線検査のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology"
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * . ^short = "DICOM画像検査で作成されたコンテンツの表現。スタディは一連のシリーズで構成され、各シリーズには、共通のコンテキストで取得または生成された一連のサービスオブジェクトペアインスタンス（SOPインスタンス-画像またはその他のデータ）が含まれる、シリーズは1つのモダリティ（X線、CT、MR、超音波など）のみだがスタディには複数の異なるモダリティのシリーズが含まれる場合がある"
 * identifier MS
 * identifier ^short = "スタディ全体の識別子"

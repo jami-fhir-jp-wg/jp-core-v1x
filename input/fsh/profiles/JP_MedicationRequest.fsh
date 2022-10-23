@@ -9,7 +9,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * extension contains JP_MedicationDispense_Preparation named preparation ..*
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequestBase"
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * . ^short = "患者あるいはグループに対しての薬剤処方オーダ"
 * . ^definition = "患者への薬の供給と内服指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。"
 * identifier ^slicing.discriminator.type = #value
@@ -202,7 +202,7 @@ Title: "JP Core MedicationRequest Profile"
 Description: "このプロファイルはJP_MedicationRequestBaseリソースに対して、内服・外用薬剤処方のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * . ^short = "患者あるいはグループに対しての処方オーダ"
 * . ^definition = "患者への薬の供給と内服・外用薬剤処方の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。JP_MedicationRequestBaseプロファイルからの派生プロファイルである。"
 * identifier contains
@@ -234,7 +234,7 @@ Title: "JP Core MedicationRequest Injection Profile"
 Description: "このプロファイルはJP_MedicationRequestBaseリソースに対して、注射薬剤処方のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection"
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * . ^short = "患者あるいはグループに対しての注射薬剤処方オーダ"
 * . ^definition = "患者への薬の供給と注射や点滴の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。JP_MedicationRequestBaseプロファイルからの派生プロファイルである。"
 * category from $JP_MedicationCategoryInjection_VS (preferred)
@@ -257,7 +257,7 @@ Title: "JP Core MedicationRequest DispenseRequest ExpectedRepeatCount Extension"
 Description: "頓用回数"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount"
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^purpose = "頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationRequest.dispenseRequest"
@@ -278,7 +278,7 @@ Title: "JP Core MedicationRequest DispenseRequest InstructionForDispense Extensi
 Description: "調剤指示。薬剤単位の調剤指示を表現するための拡張"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense"
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^context.type = #element
 * ^context.expression = "MedicationRequest.dispenseRequest"
 * . ^short = "調剤指示"

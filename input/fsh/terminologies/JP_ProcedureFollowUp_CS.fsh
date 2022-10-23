@@ -5,6 +5,6 @@ Description:  "処置のフォローアップとして実施される処置の�
 * ^url = $JP_ProcedureFollowUp_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^caseSensitive = true
 * ^content = #complete

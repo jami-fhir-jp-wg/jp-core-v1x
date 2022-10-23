@@ -5,7 +5,7 @@ Description: "Observation（身体所見）で使用する身体部位のコー�
 * ^url = $JP_ObservationPhysicalExamBodySite_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^caseSensitive = true
 * ^content = #fragment
 * #example "下腹部"

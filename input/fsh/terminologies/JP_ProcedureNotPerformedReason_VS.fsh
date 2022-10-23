@@ -5,5 +5,5 @@ Description:  "処置が実施されなかった理由、または開始され�
 * ^url = $JP_ProcedureNotPerformedReason_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * include codes from system JP_ProcedureNotPerformedReason_CS

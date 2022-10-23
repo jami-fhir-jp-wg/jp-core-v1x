@@ -7,7 +7,7 @@ Description: "医薬品一般名処方コードのコードシステム"
 * ^url = $JP_MedicationCodeCommon_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^caseSensitive = true
 * ^content = #fragment
 

@@ -8,7 +8,7 @@ Title: "JP Core Coverage Profile"
 Description: "このプロファイルはCoverageリソースに対して、保険・公費のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage"
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * . ^short = "Insurance or medical plan or a payment agreement　保険または医療費支払いプラン、または合意された支払い方法"
 * . ^definition = "Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.\r\n\r\nヘルスケア製品およびサービスの償還または支払いに使用される可能性のある金融商品。 保険と自己負担の両方が含まれる。"
 * . ^comment = "The Coverage resource contains the insurance card level information, which is customary to provide on claims and other communications between providers and insurers.\r\n\r\nCoverageには、保険証レベルの情報が含まれている。これは、保険金請求やプロバイダと保険会社間のその他の通信で提供するのが通例である。"
@@ -116,7 +116,7 @@ Id: jp-coverage-insuredpersonnumber
 Title: "JP Core Coverage InsuredPersonNumber Extension"
 Description: "健康保険における被保険者証番号を示す拡張"
 * ^url = $JP_Coverage_InsuredPersonNumber
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^context.type = #element
 * ^context.expression = "Coverage"
 * . ^short = "健康保険における被保険者証番号"
@@ -129,7 +129,7 @@ Id: jp-coverage-insuredpersonsubnumber
 Title: "JP Core Coverage InsuredPersonSubNumber Extension"
 Description: "健康保険における被保険者証番号の枝番を示す拡張"
 * ^url = $JP_Coverage_InsuredPersonSubNumber
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^context.type = #element
 * ^context.expression = "Coverage"
 * . ^short = "健康保険における被保険者証番号の枝番"
@@ -142,7 +142,7 @@ Id: jp-coverage-insuredpersonsymbol
 Title: "JP Core Coverage InsuredPersonSymbol Extension"
 Description: "健康保険における被保険者証記号を示す拡張"
 * ^url = $JP_Coverage_InsuredPersonSymbol
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^context.type = #element
 * ^context.expression = "Coverage"
 * . ^short = "健康保険における被保険者証記号"

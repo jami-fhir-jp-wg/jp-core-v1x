@@ -5,7 +5,7 @@ Description: "MERIT9頓用指示コードのコードシステム(test)"
 * ^url = $JP_MedicationAsNeededConditionMERIT9_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationAsNeededConditionMERIT9_VS
 * ^content = #complete

@@ -7,7 +7,7 @@ Description: "SS-MIX統一診療科コード"
 * ^url = $JP_Department_SsMix_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * ^content = #complete
