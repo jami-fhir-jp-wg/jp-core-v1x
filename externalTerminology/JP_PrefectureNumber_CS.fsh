@@ -7,7 +7,7 @@ Description: "全国地方公共団体コードの都道府県コード（ISO 31
 * ^url = $JP_PrefectureNumber_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^caseSensitive = true
 * ^valueSet = $JP_PrefectureNumber_VS
 * ^content = #complete

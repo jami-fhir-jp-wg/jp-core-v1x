@@ -7,7 +7,7 @@ Description: "個別医薬品コード(YJコード)のコードシステム"
 * ^url = $JP_MedicationCodeYJ_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^caseSensitive = true
 * ^content = #fragment
 

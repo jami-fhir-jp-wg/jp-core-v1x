@@ -5,7 +5,7 @@ Title: "JP Core Immunization Profile"
 Description: "このプロファイルはImmunizationリソースに対して日本での予防接種データを送受信するための制約を加えたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 // * ^purpose = "予防接種の記録を交換するために用いられる。"
 * . ^short = "予防接種"
 * . ^definition = "ワクチンを接種したときの記録，あるいは予防接種について患者や医療従事者などが報告した記録。"

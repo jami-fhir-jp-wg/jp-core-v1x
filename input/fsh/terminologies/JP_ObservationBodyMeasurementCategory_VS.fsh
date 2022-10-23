@@ -5,5 +5,5 @@ Description: "Observation（身体計測）カテゴリで使用する分類の�
 * ^url = $JP_ObservationBodyMeasurementCategory_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * include codes from system JP_ObservationBodyMeasurementCategory_CS

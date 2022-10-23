@@ -7,7 +7,7 @@ Description: "力価区分"
 * ^url = $JP_MedicationIngredientStrengthStrengthType_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationIngredientStrengthStrengthType_VS
 * ^content = #complete

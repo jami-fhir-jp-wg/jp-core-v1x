@@ -5,7 +5,7 @@ Description: "処置が実施されたアウトカムを示すコードシステ
 * ^url = $JP_ProcedureOutcome_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureOutcome_VS
 * ^content = #complete

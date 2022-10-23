@@ -14,7 +14,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
     JP_MedicationAdministration_Requester named requester ..*
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministrationBase"
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * . ^short = "患者への薬剤投与記録"
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
@@ -159,7 +159,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * identifier[orderInRp].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * medication[x] only CodeableConcept
 * medicationCodeableConcept from $JP_MedicationCode_VS (preferred)
 * medicationCodeableConcept ^binding.description = "処方する製剤を表すコード。"
@@ -177,7 +177,7 @@ Title: "JP Core MedicationAdministration Injection Profile"
 Description: "このプロファイルはMedicationAdministrationリソースに対して、注射薬剤処方投与実施情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration_Injection"
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * . ^short = "患者への注射薬剤投与記録"
 * extension contains
     JP_MedicationAdministration_UncategorizedComment named uncategorizedComment ..*
@@ -210,7 +210,7 @@ Title: "JP Core MedicationAdministration Location Extension"
 Description: "実施場所を格納するための拡張"
 * ^url = $JP_MedicationAdministration_Location
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration"
 * . ^short = "実施場所"
@@ -228,7 +228,7 @@ Title: "JP Core MedicationAdministration RequestAuthoredOn Extension"
 Description: "依頼日時を格納するための拡張"
 * ^url = $JP_MedicationAdministration_RequestAuthoredOn
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration"
 * . ^short = "依頼日時"
@@ -245,7 +245,7 @@ Title: "JP Core MedicationAdministration RequestDepartment Extension"
 Description: "依頼科を格納するための拡張"
 * ^url = $JP_MedicationAdministration_RequestDepartment
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration"
 * . ^short = "依頼科"
@@ -263,7 +263,7 @@ Title: "JP Core MedicationAdministration Requester Extension"
 Description: "依頼医を格納するための拡張"
 * ^url = $JP_MedicationAdministration_Requester
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration"
 * . ^short = "依頼医"
@@ -280,7 +280,7 @@ Title: "JP Core MedicationAdministration UncategorizedComment Extension"
 Description: "未分類コメントを格納するための拡張"
 * ^url = $JP_MedicationAdministration_UncategorizedComment
 * ^status = #active
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration"
 * . ^short = "未分類コメント"

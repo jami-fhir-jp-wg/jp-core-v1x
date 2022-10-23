@@ -5,7 +5,7 @@ Description: "JAHIS注射データ交換規約Ver.2.1C JHSI表0003精密持続�
 * ^url = $JP_MedicationMethodJHSI0003_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationMethodJHSI0003_VS
 * ^content = #complete

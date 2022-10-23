@@ -106,7 +106,6 @@
 [JP_Patient_KanaSort_SP]: SearchParameter-jp-patient-kanasort-sp.html
 
 <!-- CodeSystem -->
-[JP_ConditionSeverity_CS]: CodeSystem-jp-condition-severity-cs.html
 [JP_MedicationExampleDosageComment_CS]: CodeSystem-jp-medication-example-dosagecomment-cs.html
 [JP_MedicationExampleLine_CS]: CodeSystem-jp-medication-example-line-cs.html
 [JP_MedicationExampleLineComment_CS]: CodeSystem-jp-medication-example-linecomment-cs.html

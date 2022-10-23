@@ -7,7 +7,7 @@ Description: "JAMI標準用法コードのコードシステム"
 * ^url = $JP_MedicationUsageJAMI_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^caseSensitive = true
 * ^content = #fragment
 * #1011000090000000	"内服・経口・１日１回起床時"

@@ -5,7 +5,7 @@ Description: "Observation（バイタルサイン）で使用する分類のコ�
 * ^url = $JP_ObservationVitalSignsCategory_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationVitalSignsCategory_VS
 * ^content = #complete

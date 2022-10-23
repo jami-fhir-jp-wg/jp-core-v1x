@@ -9,7 +9,7 @@ Description: "HL7表0162をベースにした投与経路のコードシステ�
 * ^url = $JP_MedicationRouteHL70162_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-09-26"
+* ^date = "2022-10-24"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationRouteHL70162_VS
 * ^content = #complete
