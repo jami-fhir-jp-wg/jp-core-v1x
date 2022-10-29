@@ -9,13 +9,13 @@ Profile: JP_MedicationRequest
 Parent: MedicationRequest
 Id: jp-medicationrequest
 Title: "JP Core MedicationRequest Profile"
-Description: "このプロファイルはJP_MedicationRequestBaseリソースに対して、内服・外用薬剤処方のデータを送受信するための基礎となる制約と拡張を定めたものである。"
+Description: "このプロファイルはMedicationRequestリソースに対して、内服・外用薬剤処方のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * extension contains JP_MedicationDispense_Preparation named preparation ..*
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
 * ^status = #active
 * ^date = "2022-10-30"
 * . ^short = "患者あるいはグループに対しての処方オーダ"
-* . ^definition = "患者への薬の供給と内服・外用薬剤処方の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。JP_MedicationRequestBaseプロファイルからの派生プロファイルである。"
+* . ^definition = "患者への薬の供給と内服・外用薬剤処方の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。MedicationRequestプロファイルからの派生プロファイルである。"
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
@@ -208,7 +208,7 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * substitution.reason ^short = "代替品を提供した（あるいは、しなかった）理由"
 * substitution.reason ^definition = "代替品にしなければならなかった、あるいは代替品が認められなかった理由を示す。"
 * substitution.reason ^comment = "代替品の理由を表す一般的パターンに全てのターミノロジが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。"
-* priorPrescription only Reference(JP_MedicationRequestBase)
+* priorPrescription only Reference(MedicationRequest)
 * priorPrescription ^short = "前回のオーダ/処方"
 * priorPrescription ^definition = "関連する先行オーダや処方を表現するMedicationRequest Resourceへのリンク。"
 * priorPrescription ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
@@ -228,13 +228,13 @@ Profile: JP_MedicationRequest_Injection
 Parent: MedicationRequest
 Id: jp-medicationrequest-injection
 Title: "JP Core MedicationRequest Injection Profile"
-Description: "このプロファイルはJP_MedicationRequestBaseリソースに対して、注射薬剤処方のデータを送受信するための基礎となる制約と拡張を定めたものである。"
+Description: "このプロファイルはMedicationRequestリソースに対して、注射薬剤処方のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * extension contains JP_MedicationDispense_Preparation named preparation ..*
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection"
 * ^status = #active
 * ^date = "2022-10-30"
 * . ^short = "患者あるいはグループに対しての注射薬剤処方オーダ"
-* . ^definition = "患者への薬の供給と注射や点滴の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。JP_MedicationRequestBaseプロファイルからの派生プロファイルである。"
+* . ^definition = "患者への薬の供給と注射や点滴の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。MedicationRequestプロファイルからの派生プロファイルである。"
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
@@ -416,7 +416,7 @@ Description: "このプロファイルはJP_MedicationRequestBaseリソースに
 * substitution.reason ^short = "代替品を提供した（あるいは、しなかった）理由"
 * substitution.reason ^definition = "代替品にしなければならなかった、あるいは代替品が認められなかった理由を示す。"
 * substitution.reason ^comment = "代替品の理由を表す一般的パターンに全てのターミノロジが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。"
-* priorPrescription only Reference(JP_MedicationRequestBase)
+* priorPrescription only Reference(MedicationRequest)
 * priorPrescription ^short = "前回のオーダ/処方"
 * priorPrescription ^definition = "関連する先行オーダや処方を表現するMedicationRequest Resourceへのリンク。"
 * priorPrescription ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
