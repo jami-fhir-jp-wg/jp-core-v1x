@@ -3,16 +3,11 @@ name: JPCore FHIR Task
 on:
   push:
     branches: 
-      - 'develop'
-      - 'release/**'
-      - 'hotfix/**'
+      - 'feature/v1.1.0-kohe*'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
       - '.github/workflows/**'
-  pull_request:
-    branches:
-      - 'develop'
 jobs:
   turn:
     runs-on: ubuntu-latest
