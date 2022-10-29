@@ -23,11 +23,12 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。\r\n処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。\r\nこのIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
 * identifier contains
-    @default 0..* and
     rpNumber 1..1 and
     orderInRp 1..1 and
     requestIdentifierCommon 0..1 and
-    requestIdentifier ..*
+    requestIdentifier 0..* and
+    @default 0..*
+
 * identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
@@ -42,19 +43,21 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[orderInRp] ^definition = "同一剤グループでの薬剤を表記する際の順番。XML形式と異なりJSON形式の場合、表記順は項目の順序を意味しない。したがって、薬剤の記載順を別に規定する必要があるためIDを用いて表現する。"
 * identifier[orderInRp] ^comment = "同一剤グループ内での薬剤の順番を1から順の番号で示す。"
 * identifier[orderInRp].system 1..
-* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82" (exactly)
 * identifier[orderInRp].system ^short = "RP番号内（剤グループ内）の連番を示すsystem値"
 * identifier[orderInRp].system ^definition = "剤グループ内番号の名前空間を識別するURI。固定値urn:oid:1.2.392.100495.20.3.82"
+* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82" (exactly)
 * identifier[orderInRp].value 1..
 * identifier[orderInRp].value ^short = "RP番号内（剤グループ内）の連番"
 * identifier[orderInRp].value ^definition = "剤グループ内連番。"
 * identifier[orderInRp].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
-* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier" (exactly)
 * identifier[requestIdentifier] ^short = "処方オーダに対するID"
 * identifier[requestIdentifier] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。"
+* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier" (exactly)
 * identifier[requestIdentifier].value 1..
 * identifier[requestIdentifierCommon].system = "urn:oid:1.2.392.100495.20.3.11" (exactly)
 * identifier[requestIdentifierCommon].value 1..
+* identifier[@default].system 0..
+* identifier[@default].value 1..
 
 * status ^short = "オーダの現在の状態を示すコード。" 
 * status ^definition = "オーダの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
@@ -246,10 +249,10 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。\r\n処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。\r\nこのIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
 * identifier contains
-    @default 0..* and
     rpNumber 1..1 and
     requestIdentifierCommon 0..1 and
-    requestIdentifier ..*
+    requestIdentifier 0..* and
+    @default 0..*
 * identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
@@ -260,12 +263,13 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[rpNumber].value ^short = "Rp番号(剤グループ番号)"
 * identifier[rpNumber].value ^definition = "Rp番号(剤グループ番号)。\"1\"など。"
 * identifier[rpNumber].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
-* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier" (exactly)
 * identifier[requestIdentifier] ^short = "処方オーダに対するID"
 * identifier[requestIdentifier] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。"
+* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier" (exactly)
 * identifier[requestIdentifier].value 1..
 * identifier[requestIdentifierCommon].system = "urn:oid:1.2.392.100495.20.3.11" (exactly)
 * identifier[requestIdentifierCommon].value 1..
+* identifier[@default]  0..*
 
 * status ^short = "オーダの現在の状態を示すコード。" 
 * status ^definition = "オーダの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
