@@ -44,7 +44,6 @@
 [JP_MedicationRatio_DosePerPeriod]: StructureDefinition-jp-medicationratio-doseperperiod.html
 [JP_MedicationRequest_Injection]: StructureDefinition-jp-medicationrequest-injection.html
 [JP_MedicationRequest]: StructureDefinition-jp-medicationrequest.html
-[JP_MedicationRequestBase]: StructureDefinition-jp-medicationrequestbase.html
 [JP_MedicationSimpleQuantity]: StructureDefinition-jp-medicationsimplequantity.html
 [JP_MedicationTiming]: StructureDefinition-jp-medicationtiming.html
 [JP_Observation_BodyMeasurement]: StructureDefinition-jp-observation-bodymeasurement.html
