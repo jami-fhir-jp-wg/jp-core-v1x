@@ -50,11 +50,15 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[orderInRp].value ^definition = "剤グループ内連番。"
 * identifier[orderInRp].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
 * identifier[requestIdentifier] ^short = "処方オーダに対するID"
-* identifier[requestIdentifier] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。"
+* identifier[requestIdentifier] ^definition = "薬剤をオーダする単位としての処方依頼に対するID。MedicationRequestは単一の薬剤でインスタンスが作成される。"
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier" (exactly)
 * identifier[requestIdentifier].value 1..
+* identifier[requestIdentifierCommon] ^short = "処方箋に対するID"
+* identifier[requestIdentifierCommon] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。system 要素には、保険医療機関番号を含む処方箋ID（urn:oid:1.2.392.100495.20.3.11.1[保険医療機関コード(10 桁)]）を指定する。全国で⼀意になる発番ルールにもとづく場合には urn:oid:1.2.392.100495.20.3.11 とする。"
 * identifier[requestIdentifierCommon].system = "urn:oid:1.2.392.100495.20.3.11" (exactly)
 * identifier[requestIdentifierCommon].value 1..
+
+
 
 * status ^short = "オーダの現在の状態を示すコード。" 
 * status ^definition = "オーダの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
@@ -261,9 +265,11 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[rpNumber].value ^definition = "Rp番号(剤グループ番号)。\"1\"など。"
 * identifier[rpNumber].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
 * identifier[requestIdentifier] ^short = "処方オーダに対するID"
-* identifier[requestIdentifier] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。"
+* identifier[requestIdentifier] ^definition = "薬剤をオーダする単位としての処方依頼に対するID。MedicationRequestは単一の薬剤でインスタンスが作成される。"
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier" (exactly)
 * identifier[requestIdentifier].value 1..
+* identifier[requestIdentifierCommon] ^short = "処方箋に対するID"
+* identifier[requestIdentifierCommon] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。system 要素には、保険医療機関番号を含む処方箋ID（urn:oid:1.2.392.100495.20.3.11.1[保険医療機関コード(10 桁)]）を指定する。全国で⼀意になる発番ルールにもとづく場合には urn:oid:1.2.392.100495.20.3.11 とする。"
 * identifier[requestIdentifierCommon].system = "urn:oid:1.2.392.100495.20.3.11" (exactly)
 * identifier[requestIdentifierCommon].value 1..
 

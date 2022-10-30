@@ -42,7 +42,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
 |力価区分|処方情報HL7 FHIR記述仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
 |調剤指示|処方情報HL7 FHIR記述仕様(調剤指示)|urn:oid:1.2.392.200250.2.2.30.10|
-|用法|JAMI処方・注射オーダ標準用法規格(用法コード)|urn:oid:1.2.392.200250.2.2.20.20|
+|用法|JAMI処方・注射オーダ標準用法規格(用法コード)|urn:oid:1.2.392.200250.2.2.20|
 |用法|JAMI処方・注射オーダ標準用法規格(補足用法コード)|urn:oid:1.2.392.200250.2.2.20.22|
 |投与部位|JAMI処方・注射オーダ標準用法規格(部位コード)|urn:oid:1.2.392.200250.2.2.20.32|
 |投与経路|HL7 V2(使用者定義表0162)|http://jpfhir.jp/fhir/core/CodeSystem/route-codes|
@@ -427,7 +427,7 @@ doseQuantityエレメントは省略可能(0..1)である。
 ```
 
 ### 外用部位の記述方法
-外用用法で部位を指定する場合は、dosageInstruction.site 要素に、CodeableConcept型で指定する。部位コードは、JAMI標準用法コード 表13 外用部位コード（"urn:oid:1.2.392.100495.20.2.33"）を使用する。
+外用用法で部位を指定する場合は、dosageInstruction.site 要素に、CodeableConcept型で指定する。部位コードは、JAMI標準用法コード 表13 外用部位コード（"urn:oid:1.2.392.200250.2.2.20.32"）を使用する。
 ```json
 "dosageInstruction": [
   {
@@ -436,7 +436,7 @@ doseQuantityエレメントは省略可能(0..1)である。
       "code": {
         "coding": [
           {
-            "system": "urn:oid:1.2.392.200250.2.2.20.20",
+            "system": "urn:oid:1.2.392.200250.2.2.20",
             "code": "2H73000000000000",
             "display": "外用・点眼・１日３回"
           }
@@ -645,7 +645,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
           "code": {
             "coding": [
               {
-                "system": "urn:oid:1.2.392.200250.2.2.20.20",
+                "system": "urn:oid:1.2.392.200250.2.2.20",
                 "code": "1011000400000000",
                 "display": "内服・経口・１日１回朝食後"
               }
@@ -790,7 +790,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
           "code": {
             "coding": [
               {
-                "system": "urn:oid:1.2.392.200250.2.2.20.20",
+                "system": "urn:oid:1.2.392.200250.2.2.20",
                 "code": "1011004000000000",
                 "display": "内服・経口・１日１回昼食後"
               }
@@ -935,7 +935,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
           "code": {
             "coding": [
               {
-                "system": "urn:oid:1.2.392.200250.2.2.20.20",
+                "system": "urn:oid:1.2.392.200250.2.2.20
                 "code": "1011040000000000",
                 "display": "内服・経口・１日１回夕食後"
               }
@@ -1100,7 +1100,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
         "code": {
           "coding": [
             {
-              "system": "urn:oid:1.2.392.200250.2.2.20.20",
+              "system": "urn:oid:1.2.392.200250.2.2.20",
               "code": "1013044400000000",
               "display": "１日３回毎食後"
             }
@@ -1189,7 +1189,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 隔日指定投与は、連続して服用する日数と、その後の連続して休薬する日数を指定する用法である。
 JAMI標準用法コードを使用する表現方法と、HL7 FHIR本来の表現方法の2種類の表現方法が可能であるが、処方情報HL7 FHIR記述仕様との整合性を考慮してJAMI標準用法コードを使用する方法を推奨する。
 
-JAMI標準用法コードを使用する表現方法では、dosageInstruction.timing.code 要素に CodeableConcept型でJAMI標準用法コード（urn:oid:1.2.392.100495.20.2.31）を指定する。さらに、dosageInstruction.timing.additionalInstruction要素に、CodeableConcept型で、JAMI標準「処方・注射オーダ標準用法規格」 8桁補足用法コード（urn:oid:1.2.392.100495.20.2.32）を指定する。詳細は、「JAMI標準 処方注射オーダ標準用法規格」規格書 8.1「日数間隔指定」 を参照のこと。
+JAMI標準用法コードを使用する表現方法では、dosageInstruction.timing.code 要素に CodeableConcept型でJAMI標準用法コード（urn:oid:1.2.392.200250.2.2.20）を指定する。さらに、dosageInstruction.timing.additionalInstruction要素に、CodeableConcept型で、JAMI標準「処方・注射オーダ標準用法規格」 8桁補足用法コード（urn:oid:1.2.392.200250.2.2.20.22）を指定する。詳細は、「JAMI標準 処方注射オーダ標準用法規格」規格書 8.1「日数間隔指定」 を参照のこと。
 
 用法「１日３回 朝昼夕食後 １回１錠 ７日分（隔日投与）」をJAMI標準用法コード、及び、補足用法コードで表現したインスタンス例を示す。
 ```json
@@ -1217,7 +1217,7 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
       "code": {
         "coding": [
           {
-            "system": "urn:oid:1.2.392.200250.2.2.20.20",
+            "system": "urn:oid:1.2.392.200250.2.2.20",
             "code": "1013044400000000 ",
             "display": "内服・経口・１日３回朝昼夕食後"
           }
@@ -1245,7 +1245,7 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
     },
     "code": {
       "coding": [ {
-        "system": "urn:oid:1.2.392.200250.2.2.20.20",
+        "system": "urn:oid:1.2.392.200250.2.2.20",
         "code": "1013044400000000 ",
         "display": "内服・経口・１日３回朝昼夕食後"
       } ]
@@ -1257,7 +1257,7 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
 曜日指定投与は、「火曜日と金曜日に服用」など、服用する曜日を指定する用法である。
 JAMI標準用法コードを使用する表現方法と、HL7 FHIR本来の表現方法の2種類の表現方法が可能であるが、処方情報HL7 FHIR記述仕様との整合性を考慮してJAMI標準用法コードを使用する方法を推奨する。
 
-JAMI標準用法コードを使用する表現方法では、dosageInstruction.timing.code 要素に CodeableConcept型でJAMI標準用法コード（urn:oid:1.2.392.100495.20.2.31）を指定する。さらに、dosageInstruction.timing.additionalInstruction要素に、CodeableConcept型で、JAMI標準「処方・注射オーダ標準用法規格」 8桁補足用法コード（urn:oid:1.2.392.100495.20.2.32）を指定する。詳細は、「JAMI標準 処方注射オーダ標準用法規格」規格書 8.2「曜日指定」 を参照のこと。
+JAMI標準用法コードを使用する表現方法では、dosageInstruction.timing.code 要素に CodeableConcept型でJAMI標準用法コード（urn:oid:1.2.392.200250.2.2.20）を指定する。さらに、dosageInstruction.timing.additionalInstruction要素に、CodeableConcept型で、JAMI標準「処方・注射オーダ標準用法規格」 8桁補足用法コード（urn:oid:1.2.392.200250.2.2.20.22）を指定する。詳細は、「JAMI標準 処方注射オーダ標準用法規格」規格書 8.2「曜日指定」 を参照のこと。
 
 曜日指定投与「１日１回 朝食後 １回１錠 （月曜日、木曜日）」を、JAMI標準用法コードで記録したインスタンス例を示す。
 ```json
@@ -1277,7 +1277,7 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
       "code": {
         "coding": [
           {
-            "system": "urn:oid:1.2.392.200250.2.2.20.20",
+            "system": "urn:oid:1.2.392.200250.2.2.20",
             "code": "1011000400000000 ",
             "display": "内服・経口・１日１回朝食後"
           }
@@ -1301,7 +1301,7 @@ JAMI標準用法コードを使用する表現方法では、dosageInstruction.t
       "code": {
         "coding": [ 
           {
-            "system": "urn:oid:1.2.392.200250.2.2.20.20",
+            "system": "urn:oid:1.2.392.200250.2.2.20",
             "code": "1011000400000000 ",
             "display": "内服・経口・１日１回朝食後"
           } 
