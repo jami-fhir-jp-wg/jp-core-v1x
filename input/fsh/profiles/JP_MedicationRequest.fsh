@@ -55,8 +55,6 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[requestIdentifier].value 1..
 * identifier[requestIdentifierCommon].system = "urn:oid:1.2.392.100495.20.3.11" (exactly)
 * identifier[requestIdentifierCommon].value 1..
-* identifier[@default].system 0..
-* identifier[@default].value 1..
 
 * status ^short = "オーダの現在の状態を示すコード。" 
 * status ^definition = "オーダの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
