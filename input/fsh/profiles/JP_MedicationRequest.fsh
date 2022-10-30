@@ -256,6 +256,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
+* identifier[rpNumber].type ..0
 * identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81" (exactly)
 * identifier[rpNumber].system ^short = "Rp番号(剤グループ番号)についてのsystem値"
 * identifier[rpNumber].system ^definition = "ここで付番されたIDがRp番号であることを明示するためにOIDとして定義された。urn:oid:1.2.392.100495.20.3.81で固定される。"
@@ -265,11 +266,14 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[rpNumber].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
 * identifier[requestIdentifier] ^short = "処方オーダに対するID"
 * identifier[requestIdentifier] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。"
+* identifier[requestIdentifier].type ..0
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier" (exactly)
 * identifier[requestIdentifier].value 1..
+* identifier[requestIdentifierCommon].type ..0
 * identifier[requestIdentifierCommon].system = "urn:oid:1.2.392.100495.20.3.11" (exactly)
 * identifier[requestIdentifierCommon].value 1..
 * identifier[@default]  0..*
+* identifier[default].type 1..
 
 * status ^short = "オーダの現在の状態を示すコード。" 
 * status ^definition = "オーダの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
