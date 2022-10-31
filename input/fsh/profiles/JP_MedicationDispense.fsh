@@ -66,7 +66,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * location ^short = "Where the dispense occurred　調剤実施場所"
 * location ^definition = "The principal physical location where the dispense was performed. \r\n\r\n調剤が実施された場所を示すLocationリソースへの参照。"
 * location ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
-* authorizingPrescription only Reference(JP_MedicationRequestBase)
 * authorizingPrescription ^short = "Medication order that authorizes the dispense　調剤を正当化する元の処方オーダ"
 * authorizingPrescription ^definition = "Indicates the medication order that is being dispensed against.\r\n調剤の元になった処方オーダを表すMedicationRequestリソースへの参照。"
 * type ^short = "実行される調剤イベント"
@@ -147,6 +146,7 @@ Description: "このプロファイルはMedicationDispenseリソースに対し
 * medicationCodeableConcept from JP_MedicationCode_VS (preferred)
 * medicationCodeableConcept ^short = "コード集で定義された医薬品コード"
 * medicationCodeableConcept ^binding.description = "処方する製剤を表すコード。"
+* authorizingPrescription only Reference(JP_MedicationRequest)
 * dosageInstruction only JP_MedicationDosage
 
 //--------------------------
@@ -164,6 +164,7 @@ Description: "このプロファイルはMedicationDispenseリソースに対し
 * . ^definition = "指定された患者・個人へ注射薬剤が払い出されたか払い出される予定のものを示す。これには（供給される）提供される製品についての説明や注射薬剤の服用に関する指示も含まれる。薬剤払い出しは注射オーダに対して薬局システムが対応した結果となる。"
 * medication[x] only Reference(Medication)
 * medicationReference only Reference(JP_Medication)
+* authorizingPrescription only Reference(JP_MedicationRequest_Injection)
 * dosageInstruction only JP_MedicationDosage_Injection
 
 // ==============================

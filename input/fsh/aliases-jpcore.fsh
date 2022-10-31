@@ -4,7 +4,6 @@ Alias: $FHIRJPCoreImplementationGuide = http://jpfhir.jp/fhir/core/Implementatio
 
 // StructureDefinition: Profile, DataType
 Alias: $JP_AllergyIntolerance = http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance
-Alias: $JP_CarePlan = http://jpfhir.jp/fhir/core/StructureDefinition/JP_CarePlan
 Alias: $JP_Condition = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition
 Alias: $JP_Coverage = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage
 Alias: $JP_DiagnosticReport_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common
@@ -34,7 +33,7 @@ Alias: $JP_MedicationRatio_DosePerDay = http://jpfhir.jp/fhir/core/StructureDefi
 Alias: $JP_MedicationRatio_DosePerPeriod = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_DosePerPeriod
 Alias: $JP_MedicationRequest_Injection = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection
 Alias: $JP_MedicationRequest = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest
-Alias: $JP_MedicationRequestBase = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequestBase
+//Alias: $JP_MedicationRequestBase = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequestBase
 Alias: $JP_MedicationSimpleQuantity = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationSimpleQuantity
 Alias: $JP_MedicationTiming = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationTiming
 Alias: $JP_Observation_BodyMeasurement = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_BodyMeasurement
@@ -127,7 +126,7 @@ Alias: $JP_MedicationRouteHL70162_CS = http://jpfhir.jp/fhir/core/CodeSystem/rou
 Alias: $JP_MedicationSubstitutionNotAllowedReason_CS = urn:oid:1.2.392.100495.20.2.41
 Alias: $JP_MedicationUnitMERIT9_CS = urn:oid:1.2.392.100495.20.2.101
 Alias: $JP_MedicationUsageJAMIAdditional_CS = urn:oid:1.2.392.200250.2.2.20.22
-Alias: $JP_MedicationUsageJAMI_CS = urn:oid:1.2.392.200250.2.2.20.20
+Alias: $JP_MedicationUsageJAMI_CS = urn:oid:1.2.392.200250.2.2.20
 Alias: $JP_MedicationCodeCommon_CS = urn:oid:1.2.392.100495.20.1.81
 Alias: $JP_MedicationCodeHOT13_CS = urn:oid:1.2.392.200119.4.402.1
 Alias: $JP_MedicationCodeHOT7_CS = urn:oid:1.2.392.200119.4.403.2

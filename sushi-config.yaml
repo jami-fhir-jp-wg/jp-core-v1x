@@ -3,12 +3,12 @@ canonical: http://jpfhir.jp/fhir/core
 name: "FHIRJPCoreImplementationGuide"
 title: "HL7 FHIR JP Core ImplementationGuide"
 description: "日本医療情報学会(JAMI) NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した日本国内におけるベースとなるJP Core実装ガイドのドラフトVer.1.1 です。"
-status: draft # draft | active | retired | unknown
-version: 1.1.0
-date: 2022-10-24
+status: active # draft | active | retired | unknown
+version: 1.1.1
+date: 2022-10-31
 fhirVersion: 4.0.1
 copyrightYear: 2022+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)
   url: http://jpfhir.jp
@@ -115,7 +115,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - '*/hl7.fhir.jp.core'
   special-url:
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance
-    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_CarePlan
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common
@@ -145,7 +144,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_DosePerPeriod
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest
-    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequestBase
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationSimpleQuantity
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationTiming
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_BodyMeasurement
@@ -199,7 +197,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationNo_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_PrefectureNo_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionSeverity_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationRequestDosageInstructionLine_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageLineComment_CS
