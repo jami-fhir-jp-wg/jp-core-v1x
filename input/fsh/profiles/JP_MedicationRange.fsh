@@ -27,7 +27,7 @@ Title: "JP Core Medication Range DataType"
 Description: "このデータタイプはRange DataTypeに対して、時間の上限下限に関する定義を行なったものである"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRange_UnitOfTime"
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2022-10-31"
 * . ^short = "範囲指定された時間の上限下限"
 * . ^definition = "範囲指定された時間の上限下限"
 * . ^comment = "時間の上限量、下限量の範囲を持っている。単位指定された数量を割り当てている。Low,Highの値は時間の単位当てはめる。"

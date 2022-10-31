@@ -26,7 +26,7 @@ Id: jp-medicationratio-doseperperiod
 Title: "JP Core Medication Rate Ratio DataType"
 Description: "このデータタイプはRatio DataTypeに対して、薬剤量／単位時間を表す比率を割り当てた制約と拡張を定めたものである。"
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2022-10-31"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_DosePerPeriod"
 * . ^short = "単位時間内での薬剤の容量"
 * . ^definition = "単位時間内での薬剤の容量"
