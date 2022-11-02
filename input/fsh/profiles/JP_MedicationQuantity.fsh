@@ -8,7 +8,7 @@ Title: "JP Core Medication Quantity DataType"
 Description: "このデータタイプはQuantity DataTypeに対して、JP Coreにおける薬剤量に関する定義を行なったものである"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationQuantity"
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2022-11-02"
 * . ^short = "薬剤に関する数量と単位を定めたデータイプ"
 * . ^definition = "薬剤に関する数量と単位を定めたデータイプ"
 * . ^comment = "薬剤に関する数量と単位を定めている。ValueおよびCodeを必須としている。単位についてはMERIT9医薬品単位略号の利用を推進している。(**SHOULD**)"
