@@ -8,7 +8,7 @@ Title: "JP Core Medication Quantity DataType"
 Description: "このデータタイプはQuantity DataTypeに対して、JP Coreにおける薬剤量に関する定義を行なったものである"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationQuantity"
 * ^status = #active
-* ^date = "2022-11-01"
+* ^date = "2022-11-02"
 * . ^short = "薬剤に関する数量と単位を定めたデータイプ"
 * . ^definition = "薬剤に関する数量と単位を定めたデータイプ"
 * . ^comment = "薬剤に関する数量と単位を定めている。ValueおよびCodeを必須としている。単位についてはMERIT9医薬品単位略号の利用を推進している。(**SHOULD**)"
@@ -24,7 +24,7 @@ Description: "このデータタイプはQuantity DataTypeに対して、JP Core
 * unit ^definition = "人間にも可読な単位表現"
 * unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
-//* system from JP_MedicationUnitMERIT9_VS (preferred)
+// * system from JP_MedicationUnitMERIT9_VS (preferred)
 * system ^short = "コード化された単位表現を規定するシステム"
 * system ^definition = "単位をコード化して表現するシステムについてのID。"
 * system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
@@ -45,7 +45,7 @@ Title: "JP Core Medication Quantity DataType"
 Description: "このデータタイプはSimpleQuantity DataTypeに対して、JP Coreにおける薬剤量に関する定義を行なったものである"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationSimpleQuantity"
 * ^status = #active
-* ^date = "2022-11-01"
+* ^date = "2022-10-24"
 * . ^short = "薬剤に関する数量と単位を定めた簡易データイプ"
 * . ^definition = "薬剤に関する数量と単位を定めた簡易データイプ"
 * . ^comment = "薬剤に関する簡易的な数量と単位を定めている。ValueおよびCodeを必須とし、comparatorは記述不可。単位についてはMERIT9医薬品単位略号の利用を推進している。(**SHOULD**)"
@@ -57,7 +57,7 @@ Description: "このデータタイプはSimpleQuantity DataTypeに対して、J
 * unit ^definition = "人間にも可読な単位表現"
 * unit ^comment = "FHIRの文字列は1MB以上の大きさとなってなはらない(SHALL NOT)。"
 * unit ^requirements = "コンテキストによってさまざまな単位の表現がある。固定された特定の表現が求められることがある。たとえば、mcgはmicrogramを表す。"
-//* system from JP_MedicationUnitMERIT9_VS (preferred)
+// * system from JP_MedicationUnitMERIT9_VS (preferred)
 * system ^short = "コード化された単位表現を規定するシステム"
 * system ^definition = "単位をコード化して表現するシステムについてのID。"
 * system ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
