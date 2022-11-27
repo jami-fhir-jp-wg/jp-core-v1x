@@ -45,7 +45,7 @@ valueには下記の値を格納する。
 * identifier.assigner only Reference(JP_Organization)
 * identifier[medicalInstitutionCode] ^short = "施設が福祉医療関連機関である場合に利用する識別子【詳細参照】"
 * identifier[medicalInstitutionCode] ^definition = "福祉医療施設を区別するため医療機関コード（１０桁）を格納するためのIdentifier/Slicing定義。"  
-* identifier[medicalInstitutionCode] ^comment = "systemはFixed Valueの```http://jpfhir.jp/fhir/Common/IdSystem/insurance-medical-institution-no```を使用する。　
+* identifier[medicalInstitutionCode] ^comment = "systemはFixed Valueの```http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no```を使用する。　
 value : ```医療機関コード（１０桁）```を使用する。 
 医療機関コード（１０桁）の詳細は[こちらのリンク](StructureDefinition-jp-organization.html#医療機関コード１０桁)を参照すること。 "
 * identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no" (exactly)
