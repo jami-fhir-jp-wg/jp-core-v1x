@@ -205,6 +205,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageRouteComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageSiteComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationUncategorizedComment_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationFeeScoreCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodySite_CS
@@ -264,6 +265,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_Immunization_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCodeYJ_VS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationFeeScoreCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodySite_VS

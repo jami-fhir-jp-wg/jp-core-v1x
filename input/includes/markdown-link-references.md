@@ -113,6 +113,7 @@
 [JP_MedicationExampleRouteComment_CS]: CodeSystem-jp-medication-example-routecomment-cs.html
 [JP_MedicationExampleSiteComment_CS]: CodeSystem-jp-medication-example-sitecomment-cs.html
 [JP_MedicationExampleUncategorizedComment_CS]: CodeSystem-jp-medication-example-uncategorized-comment-cs.html
+[JP_MedicationFeeScoreCategory_CS]: CodeSystem-jp-medicationfeescorecategory-cs.html
 [JP_ObservationBodyMeasurementCategory_CS]: CodeSystem-jp-observation-bodymeasurement-category-cs.html
 [JP_ObservationBodyMeasurementCode_CS]: CodeSystem-jp-observation-bodymeasurement-code-cs.html
 [JP_ObservationBodySite_CS]: CodeSystem-jp-observation-bodysite-cs.html
@@ -174,6 +175,7 @@
 [JP_MedicationCode_Immunization_VS]: ValueSet-jp-medicationcode-immunization-vs.html
 [JP_MedicationCode_VS]: ValueSet-jp-medicationcode-vs.html
 [JP_MedicationCodeYJ_VS]: ValueSet-jp-medicationcode-yj-vs.html
+[JP_MedicationFeeScoreCategory_VS]: ValueSet-jp-medicationfeescorecategory-cs.html
 [JP_ObservationBodyMeasurementCategory_VS]: ValueSet-jp-observation-bodymeasurement-category-vs.html
 [JP_ObservationBodyMeasurementCode_VS]: ValueSet-jp-observation-bodymeasurement-code-vs.html
 [JP_ObservationBodySite_VS]: ValueSet-jp-observation-bodysite-vs.html

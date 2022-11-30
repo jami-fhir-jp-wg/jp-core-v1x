@@ -11,9 +11,10 @@ Usage: #example
 * identifier[requestIdentifier].value = "1234567890.1"
 * status = #active
 * intent = #order
-* category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
-* category[+] = $JP_MedicationCategoryMERIT9_CS#IHP "入院処方"
-* category[+] = http://jpfhir.jp/fhir/core/CodeSystem/JHSI0001#FTP "定時処方"
+* category[medicationFeeScoreCategory] = $JP_MedicationFeeScoreCategory_CS#injection "注射"
+* category[injectionCategory] = $JP_MedicationCategoryMERIT9_CS#IHP "入院処方"
+* category[other] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
+* category[other] = http://jpfhir.jp/fhir/core/CodeSystem/JHSI0001#FTP "定時処方"
 * medicationReference = Reference(Medication/jp-medicationrequest-injection-medication-example-1)
 * subject = Reference(Patient/jp-patient-example-1)
 * authoredOn = "2016-07-01T09:28:17+09:00"
@@ -46,9 +47,10 @@ Usage: #example
 * identifier[requestIdentifier].value = "1234567890.2.1"
 * status = #active
 * intent = #order
-* category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
-* category[+] = $JP_MedicationCategoryMERIT9_CS#IHP "入院処方"
-* category[+] = http://jpfhir.jp/fhir/core/CodeSystem/JHSI0001#FTP "定時処方"
+* category[medicationFeeScoreCategory] = $JP_MedicationFeeScoreCategory_CS#injection "注射"
+* category[injectionCategory] = $JP_MedicationCategoryMERIT9_CS#IHP "入院処方"
+* category[other] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
+* category[other] = http://jpfhir.jp/fhir/core/CodeSystem/JHSI0001#FTP "定時処方"
 * medicationReference = Reference(Medication/jp-medicationrequest-injection-medication-example-2)
 * subject = Reference(Patient/jp-patient-example-1)
 * authoredOn = "2016-07-01T07:28:17+09:00"
