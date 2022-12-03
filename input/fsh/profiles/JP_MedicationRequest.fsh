@@ -81,6 +81,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
     other ..*
 * category[medicationFeeScoreCategory] = $JP_MedicationFeeScoreCategory_CS#medication "投薬"
 * category[medicationFeeScoreCategory] ^short = "プロファイルを区別するためのカテゴリ。medication固定"
+* category[medicationFeeScoreCategory] ^definition = "プロファイルを区別するためのカテゴリ。medication固定"
 * category[medicationCategory] from $JP_MedicationCategory_VS 
 * category[medicationCategory] ^short = "薬剤使用区分"
 * category[medicationCategory] ^definition = "このMedicationRequest Resourceが使用される区分を示す。日本では「院外」「院内」「入院」「外来」などの区分を想定する。\r\n一般的には、外来や入院などどこでこの薬剤が投与、内服されるかを想定した区分である。\r\n処方病棟や処方した診療科をOrganization resourceで表現することが冗長である場合にはこの区分が用いられることもある。\r\n\r\nHL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicationrequest-category がデフォルトで用いられるが、日本での使用の場合持参薬をカバーする必要があり、JAHIS処方データ規約V3.0Cに記載されているMERIT-9処方オーダ表7とJHSP0007表を組み合わせて持ちいることとする。"
@@ -306,6 +307,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 
 * category[medicationFeeScoreCategory] = $JP_MedicationFeeScoreCategory_CS#injection "注射"
 * category[medicationFeeScoreCategory] ^short = "プロファイルを区別するためのカテゴリ。injection固定"
+* category[medicationFeeScoreCategory] ^definition = "プロファイルを区別するためのカテゴリ。medication固定"
 * category[injectionCategory] from $JP_MedicationCategoryInjection_VS
 * category[injectionCategory] ^short = "薬剤使用区分"
 * category[injectionCategory] ^definition = "このMedicationRequest Resourceが使用される区分を示す。日本では「院外」「院内」「入院」「外来」などの区分を想定する。\r\n一般的には、外来や入院などどこでこの薬剤が投与、内服されるかを想定した区分である。\r\n処方病棟や処方した診療科をOrganization resourceで表現することが冗長である場合にはこの区分が用いられることもある。\r\n\r\nHL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicationrequest-category がデフォルトで用いられるが、日本での使用の場合持参薬をカバーする必要があり、JAHIS処方データ規約V3.0Cに記載されているMERIT-9処方オーダ表7とJHSP0007表を組み合わせて持ちいることとする。"

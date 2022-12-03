@@ -142,6 +142,7 @@ Description: "このプロファイルはMedicationDispenseリソースに対し
 * identifier[orderInRp].value ^short = "RP番号内（剤グループ内）の連番"
 * identifier[orderInRp].value ^definition = "剤グループ内連番。"
 * identifier[orderInRp].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
+* category.coding =  $JP_MedicationFeeScoreCategory_CS#medication "投薬"
 * medication[x] only CodeableConcept
 * medicationCodeableConcept from JP_MedicationCode_VS (preferred)
 * medicationCodeableConcept ^short = "コード集で定義された医薬品コード"
@@ -162,6 +163,7 @@ Description: "このプロファイルはMedicationDispenseリソースに対し
 * ^date = "2022-10-24"
 * . ^short = "指定された患者への注射薬剤の払い出し"
 * . ^definition = "指定された患者・個人へ注射薬剤が払い出されたか払い出される予定のものを示す。これには（供給される）提供される製品についての説明や注射薬剤の服用に関する指示も含まれる。薬剤払い出しは注射オーダに対して薬局システムが対応した結果となる。"
+* category.coding =  $JP_MedicationFeeScoreCategory_CS#injection "注射"
 * medication[x] only Reference(Medication)
 * medicationReference only Reference(JP_Medication)
 * authorizingPrescription only Reference(JP_MedicationRequest_Injection)

@@ -19,7 +19,7 @@ Usage: #example
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.1.1"
 * status = #completed
-* category = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
+* category = $JP_MedicationFeeScoreCategory_CS#medication "投薬"
 * medicationCodeableConcept = $JP_MedicationCodeHOT9_CS#103835401 "ムコダイン錠２５０ｍｇ"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2016-08-25T08:30:00+09:00"
@@ -49,7 +49,7 @@ Usage: #example
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.1.1"
 * status = #stopped
-* category = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
+* category = $JP_MedicationFeeScoreCategory_CS#medication "投薬"
 * medicationCodeableConcept = $JP_MedicationCodeHOT9_CS#110926901 "パンスポリンＴ錠１００ １００ｍｇ"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2016-08-25T08:30:00+09:00"

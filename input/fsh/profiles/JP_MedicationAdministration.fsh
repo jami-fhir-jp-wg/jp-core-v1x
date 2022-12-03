@@ -144,6 +144,8 @@ Parent: JP_MedicationAdministrationBase
 Id: jp-medicationadministration
 Title: "JP Core MedicationAdministration Profile"
 Description: "このプロファイルはMedicationAdministrationリソースに対して、内服・外用薬剤処方投与実施情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
+* ^status = #active
+* ^date = "2022-10-24"
 * identifier contains
     orderInRp 1..1
 * identifier[orderInRp] ^short = "同一RP番号（剤グループ）での薬剤の表記順"
@@ -158,8 +160,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * identifier[orderInRp].value ^definition = "剤グループ内連番。"
 * identifier[orderInRp].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
-* ^status = #active
-* ^date = "2022-10-24"
+* category.coding =  $JP_MedicationFeeScoreCategory_CS#medication "投薬"
 * medication[x] only CodeableConcept
 * medicationCodeableConcept from $JP_MedicationCode_VS (preferred)
 * medicationCodeableConcept ^binding.description = "処方する製剤を表すコード。"
@@ -181,6 +182,8 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * . ^short = "患者への注射薬剤投与記録"
 * extension contains
     JP_MedicationAdministration_UncategorizedComment named uncategorizedComment ..*
+* category from $JP_MedicationFeeScoreCategory_VS
+* category.coding =  $JP_MedicationFeeScoreCategory_CS#injection "注射"
 * medication[x] only Reference(Medication)
 * medicationReference only Reference(JP_Medication)
 * dosage.extension contains

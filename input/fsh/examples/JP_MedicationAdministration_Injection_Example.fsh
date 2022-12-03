@@ -18,7 +18,7 @@ Usage: #example
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.1"
 * status = #completed
-* category = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
+* category = $JP_MedicationFeeScoreCategory_CS#injection "注射"
 * medicationReference = Reference(Medication/jp-medicationadministration-injection-medication-example-1)
 * subject = Reference(Patient/jp-patient-example-1)
 * effectivePeriod.start = "2016-07-01T10:05:21+09:00"
@@ -59,7 +59,7 @@ Usage: #example
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.2"
 * status = #completed
-* category = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
+* category = $JP_MedicationFeeScoreCategory_CS#injection "注射"
 * medicationReference = Reference(Medication/jp-medicationadministration-injection-medication-example-2)
 * subject = Reference(Patient/jp-patient-example-1)
 * effectivePeriod.start = "2016-07-01T08:05:21+09:00"
