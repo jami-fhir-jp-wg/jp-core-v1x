@@ -30,7 +30,7 @@ valueには下記の値を格納する。
 - 保険医療機関・保険薬局 : `医療機関コード（７桁）`
 - 非保険の特定健診・特定保健指導機関 : `機関コード（７桁）`
 
-医療機関コードの詳しい説明は、[こちらのリンク](StructureDefinition-jp-organization.html#医療機関コード１０桁)を参照すること。  
+医療機関コードの詳しい説明は、Organizationプロファイルの医療機関コード１０桁の説明を参照すること。  
 なお上記に該当しない施設は、本拡張は使用しない。"
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
@@ -47,7 +47,7 @@ valueには下記の値を格納する。
 * identifier[medicalInstitutionCode] ^definition = "福祉医療施設を区別するため医療機関コード（１０桁）を格納するためのIdentifier/Slicing定義。"  
 * identifier[medicalInstitutionCode] ^comment = "systemはFixed Valueの```http://jpfhir.jp/fhir/Common/IdSystem/insurance-medical-institution-no```を使用する。　
 value : ```医療機関コード（１０桁）```を使用する。 
-医療機関コード（１０桁）の詳細は[こちらのリンク](StructureDefinition-jp-organization.html#医療機関コード１０桁)を参照すること。 "
+医療機関コード（１０桁）の詳細はOrganizationプロファイルの医療機関コード１０桁の説明を参照すること。 "
 * identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no" (exactly)
 * identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no" (exactly)
 * identifier[medicalInstitutionCode].assigner only Reference(JP_Organization)
