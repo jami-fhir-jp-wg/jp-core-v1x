@@ -14,7 +14,7 @@ publisher:
   url: http://jpfhir.jp
   email: office@hlfhir.jp
 copyright: Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG
-jurisdiction: 'urn:iso:std:iso:3166#JP'
+jurisdiction: 'urn:iso:std:iso:3166#JPN'
 
 #----------------------------------------
 # ページタイトル名称設定
