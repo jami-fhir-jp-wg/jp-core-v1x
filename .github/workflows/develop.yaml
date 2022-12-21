@@ -67,22 +67,22 @@ jobs:
       run: |
         sudo apt-get install jekyll
     
-    - name: Download Japanese translated version of hl7.fhir.core package
-      uses: wei/wget@v1
-      with:
-        args:  https://jpfhir.jp/fhir/hl7.fhir.r4.core-4.0.1.tgz
+    :- - name: Download Japanese translated version of hl7.fhir.core package
+    :-   uses: wei/wget@v1
+    :-   with:
+    :-     args:  https://jpfhir.jp/fhir/hl7.fhir.r4.core-4.0.1.tgz
 
-    - name: Arranging hl7.fhir.core package packages
-      env:
-        PACKAGECORE: hl7.fhir.r4.core#4.0.1
-      run: | 
-        mv hl7.fhir.r4.core-4.0.1.tgz  $PACKAGECORE.tgz
-        mkdir -p /home/runner/.fhir
-        mkdir -p  /home/runner/.fhir/packages
-        mkdir -p  /home/runner/.fhir/packages/$PACKAGECORE
-        : # local cache にpackage をcopyして展開する
-        cp $PACKAGECORE.tgz /home/runner/.fhir/packages/$PACKAGECORE/$PACKAGECORE.tgz
-        tar xzf /home/runner/.fhir/packages/$PACKAGECORE/$PACKAGECORE.tgz -C /home/runner/.fhir/packages/$PACKAGECORE/
+    :- - name: Arranging hl7.fhir.core package packages
+    :-   env:
+    :-     PACKAGECORE: hl7.fhir.r4.core#4.0.1
+    :-   run: | 
+    :-     mv hl7.fhir.r4.core-4.0.1.tgz  $PACKAGECORE.tgz
+    :-     mkdir -p /home/runner/.fhir
+    :-     mkdir -p  /home/runner/.fhir/packages
+    :-     mkdir -p  /home/runner/.fhir/packages/$PACKAGECORE
+    :-     : # local cache にpackage をcopyして展開する
+    :-     cp $PACKAGECORE.tgz /home/runner/.fhir/packages/$PACKAGECORE/$PACKAGECORE.tgz
+    :-     tar xzf /home/runner/.fhir/packages/$PACKAGECORE/$PACKAGECORE.tgz -C /home/runner/.fhir/packages/$PACKAGECORE/
 
     - name: Download IG Publisher
       uses: Legion2/download-release-action@v2.1.0
