@@ -46,6 +46,7 @@
 [JP_MedicationRequest]: StructureDefinition-jp-medicationrequest.html
 [JP_MedicationSimpleQuantity]: StructureDefinition-jp-medicationsimplequantity.html
 [JP_MedicationStatement]: StructureDefinition-jp-medicationstatement.html
+[JP_MedicationStatement_Injection]: StructureDefinition-jp-medicationstatement-injection.html
 [JP_MedicationTiming]: StructureDefinition-jp-medicationtiming.html
 [JP_Observation_BodyMeasurement]: StructureDefinition-jp-observation-bodymeasurement.html
 [JP_Observation_Common]: StructureDefinition-jp-observation-common.html

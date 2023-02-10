@@ -1,7 +1,7 @@
 本プロファイルは患者が服用している薬剤の記録をMedicationStatementリソースを使用して表現する。
 以下、本プロファイルのMedicationStatementリソースを「JP Core MedicationStatementリソース」と呼ぶ。
 
-服薬情報をプロファイルに組み込んだ先行事例として、以下2つのHL7FHIR記述仕様が存在しており、JP Coreとして利用できる仕様については可能な限り取り入れるようにした。ただし、拡張のURLは新たにJP Coreの命名規則に基づいて命名している。
+MedicationStatementリソースをプロファイルに組み込んだ先行事例として、以下2つのHL7FHIR記述仕様が存在しており、JP Coreとして利用できる仕様については可能な限り取り入れるようにした。ただし、拡張のURLは新たにJP Coreの命名規則に基づいて命名している。
 - [診療情報提供書 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/eReferralFHIR_v1x.pdf)
 - [退院時サマリー HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/eDischargeSummaryFHIR_v1x.pdf)
 
