@@ -126,12 +126,12 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * code.coding[medical].system = $JP_ProcedureCodesMedical_CS (exactly)
 * code.coding contains stem7 ..1
 * code.coding[stem7] from JP_ProcedureCodesSTEM7_VS (required)
-* code.coding[stem7] ^short = "STEM7 ValueSet"
+* code.coding[stem7] ^short = "STEM7 外保連手術基幹コード ValueSet"
 * code.coding[stem7].system = $JP_ProcedureCodesSTEM7_CS (exactly)
 * code.coding contains dental ..1
 * code.coding[dental] from JP_ProcedureCodesDental_VS (required)
+* code.coding[dental] ^short = "歯科診療行為マスタ ValueSet"
 * code.coding[dental].system = $JP_ProcedureCodesDental_CS (exactly)
-* code.coding[stem7] ^short = "歯科診療行為マスタ ValueSet"
 * code.coding contains nurse ..1
 * code.coding[nurse] from JP_ProcedureCodesNurse_VS (required)
 * code.coding[nurse].system = $JP_ProcedureCodesNurse_CS (exactly)
@@ -139,7 +139,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * code.coding contains ichi ..1
 * code.coding[ichi] from JP_ProcedureCodesICHI_VS (required)
 * code.coding[ichi].system = $JP_ProcedureCodesICHI_CS (exactly)
-* code.coding[ichi] ^short = "ICHI (International Classification of Health Interventions) ValueSet"
+* code.coding[ichi] ^short = "WHO ICHI (International Classification of Health Interventions) ValueSet"
 * outcome from JP_ProcedureOutcome_VS (example)
 * performer.function from JP_ProcedurePerformerRole_VS (example)
 * reasonCode from JP_ProcedureReason_VS (example)
