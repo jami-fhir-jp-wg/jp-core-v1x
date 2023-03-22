@@ -7,7 +7,7 @@
 
 - 施設内で発生するオーダをもとに実施される画像検査に対する診断レポートの保存
 - 他のリソースからの放射線検査レポートの参照<br/>
-（例：[ImagingStudyリソース][JP_ImagingStudy_Radiology]) や[ServiceRequestリソース](https://www.hl7.org/fhir/R4/servicerequest.html) のreasonReference エレメントで参照される放射線検査レポート）
+（例：[ImagingStudyリソース][JP_ImagingStudy_Radiology]） や[ServiceRequestリソース](https://www.hl7.org/fhir/R4/servicerequest.html) のreasonReference エレメントで参照される放射線検査レポート）
 
 ## スコープ
 
