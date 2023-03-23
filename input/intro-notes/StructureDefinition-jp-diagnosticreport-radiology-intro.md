@@ -37,6 +37,8 @@ DiagnosticReportリソースは、過去の結果（リソース内での過去�
 - 感染症情報 [ (`RiskAssessment`) ](https://hl7.org/fhir/R4/riskassessment.html) あるいは [ (`Observation`) ][JP_Observation_LabResult]
 
 運用のフローに関連する TASK、Procedure 等のリソース定義についてはここでは触れない。
+なお、読影医・確定医の専門医資格情報については、Practitioner.qualificationエレメントでの対応を検討している。
+
 ## プロファイル定義
 
 

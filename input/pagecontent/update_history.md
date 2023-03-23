@@ -1,3 +1,8 @@
+***v1.1.2***
+
+１）JP_DiagnosticReport_Common の StructureDefinition内のdefinitionの記述を整理した。
+２）JP_DiagnosticReport_Radiologyのcategoryおよびcodeエレメントの定義を更新した。また、読影医・確定医の専門医資格情報に関する記述を追加した。
+
 ***v1.1.1***
 
 １）JP_MedicationRequest , JP_MedicationRequest_injectionをJP_MedicationRequestBaseから派生する記述方法をやめ、それぞれにJP_MedicationRequestBaseの内容を展開した。FHIR Validatorの使用法によってはsnapshot展開時にエラーが発生することがあるため。
