@@ -13,6 +13,7 @@
 
 次のデータは送信システムに存在する場合はサポートされなければならないことを意味する（Must Support）。
 
+- _text : レポートの所見を含むnarrativeデータ
 - basedOn ： レポートあるいは画像検査のServiceRequest
 - subject ： 患者リソース(Patient)への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
 - effectiveDateTime ： レポート作成日時
@@ -24,7 +25,7 @@
 - conclusion ： 診断の結果、impression
 - presentedForm ：レポート本体（全体のイメージあるいは所見等のテキスト）
 
-imagingStudyエレメントはCardinalityが0..1だが、放射線レポートでは画像が必ず存在することから、検査実施後には必須（複数の可能性もあり）である。
+imagingStudyエレメントはCardinalityが0..*で 0 が許容されているが、放射線レポートでは画像が必ず存在することから、検査実施後には必須（複数の可能性もあり）である。
 
 ### Extensions定義
 
@@ -34,7 +35,7 @@ imagingStudyエレメントはCardinalityが0..1だが、放射線レポート�
 
 ### Text
 
-DiagnosticReportのドメインリソースの一つであるtextエレメントに見読可能な[narrative](https://www.hl7.org/fhir/R4/narrative.html)データとしてレポートの所見を中心とした情報を格納する。依頼情報や患者基本情報などを含んだレポート全体のデータは別途presentedFormエレメントに保持されるが、ここではPDF等のバイナリが保存される。よってレポート内容の見読性と検索性を担保するためにtextエレメントに保存されたデータが利用される。
+DiagnosticReportのドメインリソースの一つであるtextエレメントに見読可能な[narrative](https://www.hl7.org/fhir/R4/narrative.html)データとしてレポートの所見を中心とした情報を格納する。依頼情報や患者基本情報などを含んだレポート全体のデータは別途presentedFormエレメントに保持されるが、ここではPDF等のバイナリが保存される。よってレポート内容の見読性と検索性を担保するためにtextエレメントに保存されたデータが利用され、ここはxhtmlである事が求められる。
 
 (DiagnosticReportのResourceType直下に現れる。text以外のDomainResourceの詳細については[こちら](https://www.hl7.org/fhir/R4/domainresource.html)を参照のこと）
 
@@ -165,7 +166,7 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 | コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |　例　|
 | --- | --- | --- | --- | --- | --- |
 | MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) | GET [base]/DiagnosticReport?ServiceRequest/12345 |
-| MAY | category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) <br/> "RAD", "RX", "CT", "NMR", "NMS", "RUS", etc. [ default = “RAD” ] | GET [base]/DiagnosticReport?category=RAD |
+| MAY | category | token | レポート種別 | DiagnosticReport.category ([ValueSet]()) <br/> 第1コードは LP29684-5 (Radiology 固定) <br/>第2コード以下は複数のコードを許容し、DICOMモダリティコードが格納される | GET [base]/DiagnosticReport?category=LP29684-5&category=CT |
 | MAY | code | token | レポート全体を示すコード | DiagnosticReport.code [LOINC 18748-4](https://loinc.org/18748-4/)(固定) | GET [base]/DiagnosticReport?code=18748-4 |
 | MAY | media | reference | キー画像への参照 | DiagnosticReport.media.link ([Media](https://www.hl7.org/fhir/R4/media.html)) | GET [base]/DiagnosticReport?media/12345 |
 
