@@ -5,10 +5,10 @@ Profile: JP_DiagnosticReport_Radiology
 Parent: JP_DiagnosticReport_Common
 Id: jp-diagnosticreport-radiology
 Title: "JP Core DiagnosticReport Radiology Profile"
-Description: "このプロファイルはDiagnosticReportリソースに対して、放射線検査のデータを送受信するための制約と拡張を定めたものである。"
+Description: "このプロファイルはDiagnosticReportリソースに対して、放射線検査報告書（レポート）のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology"
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-03-23"
 * . ^short = "診断レポート-依頼情報、１項目単位の結果、画像、解釈、およびフォーマットされたレポートの組み合わせ　【JP Core仕様】画像結果レポートのプロフィール。【詳細参照】"
 * . ^definition = "患者、患者のグループ、デバイス、場所、これらから派生した検体に対して実行された診断的検査の結果と解釈。レポートには、依頼情報や依頼者情報などの臨床コンテキスト（文脈）、および１項目単位の結果、画像、テキストとコード化された解釈、および診断レポートのフォーマットされた表現のいくつかの組み合わせが含まれる。\r\n\r\n【JP Core仕様】画像結果レポートのプロフィール"
 * text ^short = "人が読める形式で提示された情報。放射線レポートの場合はレポートの所見が保持される。【詳細参照】"
@@ -37,7 +37,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category contains radiology 1..1
 * category[radiology] ^short = "レポートを作成した分野を分類するコード。【詳細参照】"
 * category[radiology] ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは ”RAD” をデフォルトとして設定。追加の情報については任意で設定可能。"
-* category[radiology] = $diagnostic-service-sectionid-cs#RAD
+* category[radiology] = $diagnostic-service-sectionid-cs#RAD //変更が必要
 * code ^definition = "この診断レポートを表現するコードや名称"
 * code ^comment = "【JP Core仕様】[画像診断レポート交換手順ガイドライン](https://www.jira-net.or.jp/publishing/files/jesra/JESRA_TR-0042_2018.pdf)「5.1 レポート種別コード」に記載されているLOINCコード [Diagnostic imaging study](https://loinc.org/18748-4/) を指定。コードを指定できない場合はCodeableConceptを使用せずテキスト等を直接コーディングすることも許容されるが、要素間の調整と事前・事後の内容の整合性確保のために独自の構造を提供する必要があるので留意すること。"
 * code.coding ^slicing.discriminator.type = #pattern
@@ -47,7 +47,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * code.coding[radiologyReportCode] = http://loinc.org#18748-4 "Diagnostic imaging study"
 * code.coding[radiologyReportCode] ^short = "放射線レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。【詳細参照】"
 * code.coding[radiologyReportCode] ^definition = "放射線レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。"
-* code.coding[radiologyReportCode] ^comment = "推奨コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しない"
+* code.coding[radiologyReportCode] ^comment = "推奨コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しないが、互換性を意識すること。"
 * subject MS
 * subject ^definition = "レポートの対象。 必ずでは無いが、通常、これには「患者」が該当する。"
 * subject ^comment = "参照は実際のFHIRリソースへの参照であり、解決可能である必要がある。解決はURLから取得するか、または、リソースタイプが利用できる場合は絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索する。\r\n\r\n【JP Core仕様】Patient リソースを参照"

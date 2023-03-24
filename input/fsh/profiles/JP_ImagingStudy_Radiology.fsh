@@ -5,10 +5,10 @@ Profile: JP_ImagingStudy_Radiology
 Parent: ImagingStudy
 Id: jp-imagingstudy-radiology
 Title: "JP Core ImagingStudy Radiology Profile"
-Description: "このプロファイルはImagingStudyリソースに対して、放射線検査のデータを送受信するための制約と拡張を定めたものである。"
+Description: "このプロファイルはImagingStudyリソースに対して、放射線検査画像のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology"
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-03-24"
 * . ^short = "DICOM画像検査で作成されたコンテンツの表現。スタディは一連のシリーズで構成され、各シリーズには、共通のコンテキストで取得または生成された一連のサービスオブジェクトペアインスタンス（SOPインスタンス-画像またはその他のデータ）が含まれる、シリーズは1つのモダリティ（X線、CT、MR、超音波など）のみだがスタディには複数の異なるモダリティのシリーズが含まれる場合がある"
 * identifier MS
 * identifier ^short = "スタディ全体の識別子"
@@ -45,9 +45,9 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * interpreter ^short = "画像の読影者"
 * interpreter ^definition = "画像の読影者"
 * interpreter ^comment = "参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。\r\n\r\n読影医"
-* endpoint ^short = "スタディにアクセスするエンドポイント"
+* endpoint ^short = "スタディにアクセスするエンドポイント（画像へのURI）"
 * endpoint ^definition = "スタディへのアクセス（クエリ、表示、取得など）を提供するネットワークサービス。 DICOMエンドポイントの使用については、実装ノートを参照。スタディレベルのエンドポイントは、同じEndpoint.connectionTypeを持つシリーズレベルのエンドポイントによってオーバーライドされない限り、スタディの各シリーズに適用される。"
-* endpoint ^comment = "典型的なエンドポイントタイプには、RESTful APIを使用してネイティブまたはレンダリング（JPG、PNGなど）形式でDICOMインスタンスを取得するために使用されるDICOMWADO-RSが含まれる。 DICOMWADO-URI。HTTPクエリベースのアプローチを使用することを除いて、ネイティブインスタンスまたはレンダリングされたインスタンスを同様に取得できる。 DICOM QIDO-RS。実際のインスタンスを取得せずに、DICOM情報のRESTfulクエリを可能にする。またはIHEInvoke Image Display（IID）。これは、イメージングWebビューアの標準的な呼び出しを提供する。\r\n\r\nDICOMのリソース位置を指定。基本的には1つ。"
+* endpoint ^comment = "典型的なエンドポイントタイプには、RESTful APIを使用してネイティブまたはレンダリング（JPG、PNGなど）形式でDICOMインスタンスを取得するために使用されるDICOM WADO-RSが含まれる。 DICOM WADO-URI。HTTPクエリベースのアプローチを使用することを除いて、ネイティブインスタンスまたはレンダリングされたインスタンスを同様に取得できる。 DICOM QIDO-RS。実際のインスタンスを取得せずに、DICOM情報のRESTfulクエリを可能にする。またはIHEInvoke Image Display（IID）。これは、イメージングWebビューアの標準的な呼び出しを提供する。\r\n\r\nDICOMのリソース位置を指定。基本的には1つ。"
 * endpoint ^requirements = "スタディまたはスタディに含まれるシリーズやインスタンスを閲覧（例：IHE’s IID profile）したり、取得（例：DICOM’s WADO-URI and WADO-RS）したりするためのアクセス方法。スタディレベルのbaseLocationは、同じタイプのシリーズレベルのbaseLocationにてオーバーライドされない限り、スタディ内の各シリーズに適用される。"
 * numberOfSeries ^short = "スタディに含まれるシリーズ数"
 * numberOfSeries ^definition = "調査のシリーズ数。指定されたこの値は、リソースの可用性、セキュリティ、またはその他の要因により、このリソースに含まれる一連の要素の数よりも大きい場合がある。系列要素が存在する場合、この要素が存在する必要がある。"
@@ -99,9 +99,9 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.description ^comment = "FHIR文字列のサイズは1MBを超えてはならないことに注意。\r\n\r\nシリーズごとにつけられるフリーコメント。"
 * series.numberOfInstances ^definition = "スタディの中のSOPインスタンスの数。指定されたこの値は、リソースの可用性、セキュリティ、またはその他の要因により、このリソースに含まれるインスタンス要素の数よりも大きい場合がある。インスタンス要素が存在する場合は、この要素が存在する必要がある。"
 * series.numberOfInstances ^comment = "32ビット数で表す。これより大きい値の場合は、10進数を使用する。\r\n\r\nシリーズに含まれる画像枚数"
-* series.endpoint ^short = "シリーズにアクセスするエンドポイント"
+* series.endpoint ^short = "シリーズにアクセスするエンドポイント（画像へのURI）"
 * series.endpoint ^definition = "シリーズへのアクセス（クエリ、表示、取得など）を提供するネットワークサービス。 DICOMエンドポイントの使用については、実装ノートを参照。シリーズレベルのエンドポイントは、同じEndpoint.connectionTypeを持つシリーズレベルのエンドポイントによってオーバーライドされない限り、スタディの各シリーズに適用される。"
-* series.endpoint ^comment = "典型的なエンドポイントタイプには、RESTful APIを使用してネイティブまたはレンダリング（JPG、PNGなど）形式でDICOMインスタンスを取得するために使用されるDICOMWADO-RSが含まれる。 DICOMWADO-URI。HTTPクエリベースのアプローチを使用することを除いて、ネイティブインスタンスまたはレンダリングされたインスタンスを同様に取得できる。 DICOM QIDO-RSは、実際のインスタンスを取得せずにDICOM情報のRESTfulクエリを可能にする。\r\n\r\nstudy階層のendpointと同じ。DICOMのリソース位置を指定。基本的には1つ。"
+* series.endpoint ^comment = "典型的なエンドポイントタイプには、RESTful APIを使用してネイティブまたはレンダリング（JPG、PNGなど）形式でDICOMインスタンスを取得するために使用されるDICOM WADO-RSが含まれる。 DICOM WADO-URI。HTTPクエリベースのアプローチを使用することを除いて、ネイティブインスタンスまたはレンダリングされたインスタンスを同様に取得できる。 DICOM QIDO-RSは、実際のインスタンスを取得せずにDICOM情報のRESTfulクエリを可能にする。\r\n\r\nstudy階層のendpointと同じ。DICOMのリソース位置を指定。基本的には1つ。"
 * series.bodySite ^short = "検査した人体部位"
 * series.bodySite ^definition = "検査対象の解剖学的構造。 \r\nbodySiteは、画像化された身体部分の左右差を示している場合がある。その場合、ImagingStudy.series.lateralityのコンテンツと一致している必要がある。"
 * series.bodySite ^comment = "コードは、列挙型またはコードリストで、どの部位の検査なのかを示す。フリーではなく、DICOM定義書の中で示される語句（コード）をデフォルトとするが、JJ1017Pの小部位コードの利用を許容する。"
