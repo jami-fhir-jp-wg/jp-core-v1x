@@ -2,6 +2,7 @@
 
 １）JP_DiagnosticReport_Common の StructureDefinition内のdefinitionの記述を整理した。
 ２）JP_DiagnosticReport_Radiologyのcategoryおよびcodeエレメントの定義を更新した。また、読影医・確定医の専門医資格情報に関する記述を追加した。
+３）JP_ImagingStudyの
 
 ***v1.1.1***
 
