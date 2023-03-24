@@ -5,7 +5,7 @@ Profile: JP_DiagnosticReport_Radiology
 Parent: JP_DiagnosticReport_Common
 Id: jp-diagnosticreport-radiology
 Title: "JP Core DiagnosticReport Radiology Profile"
-Description: "このプロファイルはDiagnosticReportリソースに対して、放射線検査のデータを送受信するための制約と拡張を定めたものである。"
+Description: "このプロファイルはDiagnosticReportリソースに対して、放射線検査報告書（レポート）のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology"
 * ^status = #active
 * ^date = "2023-03-23"
