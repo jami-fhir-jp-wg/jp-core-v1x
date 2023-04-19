@@ -1,13 +1,12 @@
 CodeSystem: JP_SimpleObservationCategory_CS
 Id: jp-simpleobservationcategory-cs
-Title: "JP Simple Observation Category CodeSystem"
-Description: "簡易Observationカテゴリ"
+Title: "JP Core Simple Observation Category CodeSystem"
+Description: "JP Coreにて定義したObservationリソースに関する分類コード"
 * ^url = $JP_SimpleObservationCategory_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-04-18"
 * ^caseSensitive = true
-* ^valueSet = $JP_ObservationBodySite_VS
 * ^content = #complete
 * ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 * #sdoh "SDOH" "健康の社会的決定要因 (Social Determinant of Health)"

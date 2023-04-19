@@ -13,8 +13,15 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^definition = "バイタルサインに関する測定と簡単な観察事実（assertion）。"
 * . ^comment = "バイタルサインに関するObservation（検査測定や観察事実）の制約プロフィール"
 * category 1..
-* category from JP_ObservationVitalSignsCategory_VS (preferred)
-* category ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「焦点」"
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category contains 
+    simpleObservation 1..1 and
+    vitalSignCategory 1..*
+* category[simpleObservation] = $JP_SimpleObservationCategory_CS#vital-signs
+* category[vitalSignCategory] from JP_ObservationVitalSignsCategory_VS (preferred)
+* category[vitalSignCategory] ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「焦点」"
 * code from JP_ObservationVitalSignsCode_VS (preferred)
 * code ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「観察名称」"
 * subject 1..
