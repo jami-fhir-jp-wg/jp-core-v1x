@@ -8,7 +8,6 @@ Description: "JP Coreにて定義したObservationリソースに関する分類
 * ^date = "2023-04-18"
 * ^caseSensitive = true
 * ^content = #complete
-* ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 * #sdoh "SDOH" "健康の社会的決定要因 (Social Determinant of Health)"
 * #functional-status "Functional Status" "機能ステータス"
 * #disability-status "Disability Status" "障害区分"
