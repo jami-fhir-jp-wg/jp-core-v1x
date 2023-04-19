@@ -65,7 +65,7 @@ jobs:
 
     - name: Install Jekyll
       run: |
-        sudo apt-get install jekyll
+        sudo apt-get install jekyll=4.2.1
     
     - name: Download IG Publisher
       uses: Legion2/download-release-action@v2.1.0
