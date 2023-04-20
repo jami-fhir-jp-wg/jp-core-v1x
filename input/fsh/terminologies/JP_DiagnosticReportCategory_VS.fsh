@@ -7,9 +7,10 @@ Description: "DiagnosticReportカテゴリ 値セット"
 * ^experimental = false
 * ^date = "2023-04-18"
 
-* include http://loinc.org#LP7839-6 "病理"
-* include http://loinc.org#LP7796-8 "内視鏡"
-* include http://loinc.org#LP29693-6 "検体検査"
-* include http://loinc.org#LP29708-2 "循環器"
-* include http://loinc.org#LP31795-1 "歯科口腔"
-* include http://loinc.org#LP7819-8 "微生物検査"
+* http://loinc.org#LP7839-6
+* http://loinc.org#LP7796-8
+* http://loinc.org#LP29693-6
+* http://loinc.org#LP29708-2
+* http://loinc.org#LP31795-1
+* http://loinc.org#LP7819-8
+
