@@ -129,7 +129,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * reasonCode ^short = "薬を注文するあるいは注文しない理由や適応"
 * reasonCode ^definition = "このエレメントに対するJP Coreの規定はない。\r\n薬剤をオーダするあるいはしないことを示した理由。"
 * reasonCode ^comment = "このエレメントは病名コードであってもよい。もし、すべての条件を示す記録があって他の詳細な記録が必要であれば、reasonReferenceを使用すること。"
-* reasonReference only Reference(JP_Condition or JP_Observation_Common)
+* reasonReference only Reference(JP_Condition or Observation)
 * reasonReference ^short = "処方箋が書かれた理由について補足するCondition ResourceまたはObservation Resource"
 * reasonReference ^definition = "薬剤がなぜオーダされたのかを説明する条件や観察。"
 * reasonReference ^comment = "薬剤オーダの理由を示すこれは条件や観察についての参照である。もし、コードだけであればreasonCodeを使用すること。"
@@ -341,7 +341,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * reasonCode ^short = "薬を注文するあるいは注文しない理由や適応"
 * reasonCode ^definition = "このエレメントに対するJP Coreの規定はない。\r\n薬剤をオーダするあるいはしないことを示した理由。"
 * reasonCode ^comment = "このエレメントは病名コードであってもよい。もし、すべての条件を示す記録があって他の詳細な記録が必要であれば、reasonReferenceを使用すること。"
-* reasonReference only Reference(JP_Condition or JP_Observation_Common)
+* reasonReference only Reference(JP_Condition or Observation)
 * reasonReference ^short = "処方箋が書かれた理由について補足するCondition ResourceまたはObservation Resource"
 * reasonReference ^definition = "薬剤がなぜオーダされたのかを説明する条件や観察。"
 * reasonReference ^comment = "薬剤オーダの理由を示すこれは条件や観察についての参照である。もし、コードだけであればreasonCodeを使用すること。"

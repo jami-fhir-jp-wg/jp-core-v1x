@@ -71,7 +71,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * reasonCode ^short = "スタディが依頼された理由"
 * reasonCode ^definition = "ImagingStudyが要求された理由を示す臨床状態の説明。"
 * reasonCode ^comment = "すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係と調整前後の関係を管理するための独自の構造を提供する必要がある。\r\n\r\nJP Coreでは未使用"
-* reasonReference only Reference(JP_Condition or JP_Observation_Common or Media or JP_DiagnosticReport_Common or DocumentReference)
+* reasonReference only Reference(JP_Condition or Observation or Media or JP_DiagnosticReport_Common or DocumentReference)
 * reasonReference ^short = "スタディが実施された理由"
 * reasonReference ^definition = "このスタディを正当化する別のリソースを示す。"
 * reasonReference ^comment = "参照は、実在のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。\r\n\r\n実施理由が書かれたDiagnosticReportリソースを参照。"
