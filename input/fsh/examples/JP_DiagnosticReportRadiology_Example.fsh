@@ -7,7 +7,7 @@ Usage: #example
 * identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.value = "123456"
 * status = #final
-* category[radiology] = $diagnostic-service-sectionid-cs#RAD
+* category[radiology] = http://loinc.org#LP29684-5
 * code = http://loinc.org#18748-4 "Diagnostic imaging study"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2008-06-17"
