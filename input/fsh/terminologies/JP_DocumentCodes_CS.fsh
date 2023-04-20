@@ -1,8 +1,8 @@
-CodeSystem: JP_Document_Codes_CS
-Id: jp-document-codes-cs
+CodeSystem: JP_DocumentCodes_CS
+Id: jp-documentcodes-cs
 Title: "JP Core Document Codes CodeSystem"
 Description: "SS MIX 標準文書コード表"
-* ^url = $JP_Document_Codes_CS
+* ^url = $JP_DocumentCodes_CS
 * ^status = #active
 * ^experimental = false
 * ^date = "2023-04-18"
