@@ -42,7 +42,7 @@ Description: "このプロファイルはConditionリソースに対して、患
 * asserter ^definition = "Individual who is making the condition statement.\r\n\r\nこの患者状態に関する情報の発生源または取得元。"
 * stage ^short = "Stage/grade, usually assessed formally. この患者状態のステージやグレード。通常は正式に評価されたもの"
 * stage ^definition = "Clinical stage or grade of a condition. May include formal severity assessments.\r\n\r\n病状の臨床病期またはグレード。正式な重症度評価を含む場合がある。"
-* stage.assessment only Reference(ClinicalImpression or JP_DiagnosticReport_Common or JP_Observation_Common)
+* stage.assessment only Reference(ClinicalImpression or JP_DiagnosticReport_Common or Observation)
 * evidence ^short = "Supporting evidence. 患者状態の存在に関する根拠"
 * evidence ^definition = "Supporting evidence / manifestations that are the basis of the Condition's verification status, such as evidence that confirmed or refuted the condition.\r\n\r\n患者状態を確認または否定した証拠など、状態の検証ステータスの裏付けとなる症状や兆候。"
 * note ^short = "Additional information about the Condition. この患者状態に関する追加情報"

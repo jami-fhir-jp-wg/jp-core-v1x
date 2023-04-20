@@ -39,7 +39,7 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 * deceased[x] ^definition = "Deceased flag or the actual or approximate age of the relative at the time of death for the family member history record.\r\n\r\n死亡したかどうかのフラグ/家族の死亡時の実年齢/おおよその年齢。"
 * reasonCode ^short = "Why was family member history performed? なぜ家族歴が聴取されたか（契機となった患者の疾患）"
 * reasonCode ^definition = "Describes why the family member history occurred in coded or textual form.\r\n\r\n家族歴を聴取する契機となった患者の疾患をコードもしくはテキストで記述（CodeableConcept)"
-* reasonReference only Reference(QuestionnaireResponse or DocumentReference or JP_AllergyIntolerance or JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)
+* reasonReference only Reference(QuestionnaireResponse or DocumentReference or JP_AllergyIntolerance or JP_Condition or Observation or JP_DiagnosticReport_Common)
 * reasonReference ^short = "Why was family member history performed? なぜ家族歴が聴取されたか（契機となったFHIRリソース）"
 * reasonReference ^definition = "Indicates a JP_Condition, JP_Observation, JP_AllergyIntolerance, or JP_QuestionnaireResponse JP_Observation_Common, or JP_DiagnosticReport_Common that justifies this family member history event.\r\n\r\nこの家族歴が聴取されたきっかけとなったFHIRリソースへの参照。"
 * note ^short = "General note about related person. この家族に関するメモ"

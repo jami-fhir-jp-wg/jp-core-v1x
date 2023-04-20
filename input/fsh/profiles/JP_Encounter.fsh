@@ -87,7 +87,7 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * reasonReference ^short = "Reason the encounter takes place (reference)　Encounterがあった理由【詳細参照】"
 * reasonReference ^definition = "Reason the encounter takes place, expressed as a code. For admissions, this can be used for a coded admission diagnosis.\r\n\r\nコードとして表現されたEncounterが起こった理由。入院の場合、これはコード化されたコード化された入院時診断に使用できる。"
 * reasonReference ^comment = "For systems that need to know which was the primary diagnosis, these will be marked with the standard extension primaryDiagnosis (which is a sequence value rather than a flag, 1 = primary diagnosis).\r\n\r\nどれが主たる診断であったかを知る必要があるシステムでは、これらは標準のエクステンションであるprimaryDiagnosis（フラグではなくシーケンス値、1 = 主たる診断）でマークされる。"
-* reasonReference only Reference(JP_Condition or JP_Procedure or JP_Observation_Common or ImmunizationRecommendation)
+* reasonReference only Reference(JP_Condition or JP_Procedure or Observation or ImmunizationRecommendation)
 * diagnosis ^short = "The list of diagnosis relevant to this encounter / このEncounterに関連する診断名のリスト【詳細参照】"
 * diagnosis ^definition = "The list of diagnosis relevant to this encounter.\r\n\r\nこのEncounterに関連する診断名のリスト"
 * diagnosis.condition only Reference(JP_Condition or JP_Procedure)

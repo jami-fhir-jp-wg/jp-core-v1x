@@ -76,7 +76,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * reasonCode ^short = "Reason administration performed　投薬が実施された理由"
 * reasonCode ^definition = "A code indicating why the medication was given.\r\n投薬が実施された理由を示すコード"
 * reasonReference ^short = "Condition or observation that supports why the medication was administered　薬が投与された理由を裏付ける状態または観察"
-* reasonReference only Reference(JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)
+* reasonReference only Reference(JP_Condition or Observation or JP_DiagnosticReport_Common)
 * reasonReference ^definition = "Condition or observation that supports why the medication was administered.\r\n\r\n薬が投与された理由を裏付ける状態または観察"
 * reasonReference ^comment = "This is a reference to a condition that is the reason for the medication request.  If only a code exists, use reasonCode.\r\n\r\nこれは、投薬要求の理由である状態への参照。コードのみが存在する場合は、reasonCodeを使用する。"
 * request ^short = "Request administration performed against　実施された元の投与依頼情報"
