@@ -1,4 +1,6 @@
 
+Alias: $JP_Loinc_Dummy_CS = http://loinc.org
+
 // ImplementationGuide
 Alias: $FHIRJPCoreImplementationGuide = http://jpfhir.jp/fhir/core/ImplementationGuide/hl7.fhir.jp.core
 
