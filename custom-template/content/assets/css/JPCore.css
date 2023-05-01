@@ -59,3 +59,12 @@ table.extension_description tr td:nth-of-type(2){
 table.extension_description tr td:nth-of-type(3){
     word-wrap: break-word;
 }
+
+pre[class*="language-"] {
+	display: block;
+	width: fit-content;
+}
+
+code[class*="language-"] {
+	white-space: pre-wrap;
+}
