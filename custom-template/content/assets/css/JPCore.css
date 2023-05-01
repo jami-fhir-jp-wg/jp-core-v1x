@@ -55,17 +55,6 @@ table.extension_description tr td:nth-of-type(3){
     word-wrap: break-word;
 }
 
-pre{
-	.json{
-		display: block;
-		width: fit-content;
-	}
-	.xml{
-		display: block;
-		width: fit-content;
-	}
-}
-
 pre.json{
 	display: block;
 	width: fit-content;	
