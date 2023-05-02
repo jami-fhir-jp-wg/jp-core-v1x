@@ -14,10 +14,10 @@ Description: "DiagnosticReportカテゴリ 値セット"
 // * http://loinc.org#LP31795-1 "歯科口腔"
 // * http://loinc.org#LP7819-8 "微生物検査"
 
-  * $JP_DocumentCodes_CS#58477-1 "肺機能検査報告書"
-  * $JP_DocumentCodes_CS#76641-0 "脳神経検査報告書"
-  * $JP_DocumentCodes_CS#77199-8 "PWV-CABI-ABI 報告書"
-  * $JP_DocumentCodes_CS#18745-0  "心カテ報告書"
-  * $JP_DocumentCodes_CS#18748-4 "画像検査報告書"
+* $JP_DocumentCodes_CS#58477-1 "肺機能検査報告書"
+* $JP_DocumentCodes_CS#76641-0 "脳神経検査報告書"
+* $JP_DocumentCodes_CS#77199-8 "PWV-CABI-ABI 報告書"
+* $JP_DocumentCodes_CS#18745-0  "心カテ報告書"
+* $JP_DocumentCodes_CS#18748-4 "画像検査報告書"
 
 
