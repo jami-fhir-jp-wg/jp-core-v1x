@@ -205,6 +205,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageRouteComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageSiteComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationUncategorizedComment_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodySite_CS
@@ -215,6 +216,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureNotPerformedReason_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureOutcome_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionSeverity_VS
