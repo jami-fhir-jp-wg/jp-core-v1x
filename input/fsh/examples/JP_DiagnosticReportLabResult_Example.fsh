@@ -9,8 +9,8 @@ Usage: #example
 * status = #final
 * identifier.system = "http://abc-hospital.local/fhir/lab/reportid"
 * identifier.value = "5234342"
-* category[laboratory] = http://loinc.org#LP29693-6
-* code = http://loinc.org#11502-2 "Laboratory report"
+* category[laboratory] = $US_Loinc_CS#LP29693-6
+* code = $US_Loinc_CS#11502-2 "Laboratory report"
 * subject = Reference(Patient/jp-patient-example-1)
 * encounter = Reference(Encounter/jp-encounter-example-1)
 * effectiveDateTime = "2021-03-04T08:30:00+11:00"
