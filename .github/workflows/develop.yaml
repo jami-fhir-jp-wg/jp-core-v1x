@@ -4,6 +4,7 @@ on:
     branches: 
       - 'develop'
       - 'release/**'
+      - 'feature/swg26**'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
