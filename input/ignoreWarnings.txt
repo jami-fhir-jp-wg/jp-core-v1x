@@ -8,7 +8,7 @@
 %The Implementation Guide contains no examples%
 
 # External Terminologies Existence Warnings
-# Code System URI 'urn:ietf:rfc:3986' is unknown so the code cannot be validated
+Code System URI 'urn:ietf:rfc:3986' is unknown so the code cannot be validated
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html not found by validator
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html not found by validator
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 not found by validator
