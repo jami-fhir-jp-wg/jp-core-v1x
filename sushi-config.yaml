@@ -118,14 +118,17 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Endoscopy
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_HumanName
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Endoscopy
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Location
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Media_Endoscopy
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration_Injection
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration
@@ -149,6 +152,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_BodyMeasurement
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_LabResult
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Microbiology
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_PhysicalExam
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_SocialHistory
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_VitalSigns
