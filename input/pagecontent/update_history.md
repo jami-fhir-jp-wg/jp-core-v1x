@@ -1,15 +1,38 @@
-***v1.1.2***
+***v1.1.2***  
+主にパブリックコメントやIssue等の指摘を受け、この対応を実施した
 
-１）JP_DiagnosticReport_Common の StructureDefinition内のdefinitionの記述を整理した。
-２）JP_DiagnosticReport_Radiologyのcategoryおよびcodeエレメントの定義を更新した。また、読影医・確定医の専門医資格情報に関する記述を追加した。
-３）JP_ImagingStudyの
+* 全般
+  * 誤字・脱字等の見直しを行なった
+  * 参照先のリンクの見直しを行なった
 
+* プロファイル
+  * Observation関連
+    * Observation派生プロファイルを検索出来るように、Categoryに検索用固定値を必須でいれることとした  
+    ※本件はv1.1.0,v1.1.1で作成したものと互換性が保たれないため注意のこと
+    * 細菌検査プロファイルの追加  
+    JP_Observation_Microbiology
+  * ImagingStudyおよびDiagnosticReport関連
+    * DiagnosticReport派生プロファイルを検索出来るように、Categoryに検索用固定値を必須でいれることとした  
+    ※本件はv1.1.0,v1.1.1で作成したものと互換性が保たれないため注意のこと  
+    * 内視鏡関連プロファイルの追加
+      * JP_ImagingStudy_EndScope
+      * JP_DiagnosticReport_EndScope
+    * JP_DiagnosticReport_Common の StructureDefinition内のdefinitionの記述を整理した
+    * JP_DiagnosticReport_Radiologyのcategoryおよびcodeエレメントの定義を更新した、また読影医・確定医の専門医資格情報に関する記述を追加した
+  * JP_Procedure関連
+    * 利用されていない未定義なCodeSystemが同一URLのまま残っていたため以下の定義を削除した
+      * JP_ProcedureCodesICHI_CS
+      * JP_ProcedureCondition_CS
+      * JP_ProcedureAction_CS
+      * JP_ProcedureKingAction_CS
+      * JP_ProcedureFollowup_CS
+      * JP_ProcedureReason_CS
+      
 ***v1.1.1***
 
-１）JP_MedicationRequest , JP_MedicationRequest_injectionをJP_MedicationRequestBaseから派生する記述方法をやめ、それぞれにJP_MedicationRequestBaseの内容を展開した。FHIR Validatorの使用法によってはsnapshot展開時にエラーが発生することがあるため。
-利用する側に影響はない。
-
-２）JP_MedicationRequest , JP_MedicationRequest_injection中の説明文、サンプル中のoid記述に誤りがあった（標準用法、補足用法、外用部位など）のを修正した。同じく説明文中のidentifierの記述を追加した。
+* Medication関連
+    * JP_MedicationRequest , JP_MedicationRequest_injectionをJP_MedicationRequestBaseから派生する記述方法をやめ、それぞれにJP_MedicationRequestBaseの内容を展開した。FHIR Validatorの使用法によってはsnapshot展開時にエラーが発生することがあるため。利用する側に影響はない
+    * JP_MedicationRequest , JP_MedicationRequest_injection中の説明文、サンプル中のoid記述に誤りがあった（標準用法、補足用法、外用部位など）のを修正した。同じく説明文中のidentifierの記述を追加した
 
 
 ***v1.1.0***
