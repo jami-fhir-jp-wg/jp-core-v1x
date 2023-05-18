@@ -19,6 +19,26 @@ JP Coreは「JAMI NeXEHRS課題研究会（正式名：次世代健康医療記�
 | **MAY** | 実装のためのオプションで、含めることも省略することもできる。 |
 
 
+### 実装ガイド定義
+#### 利用しているFHIRバージョン情報 (Cross Version Analysis)
+
+{% include cross-version-analysis.xhtml %}
+
+#### 依存関係  (Dependency Table)
+
+{% include dependency-table.xhtml %}
+
+#### グローバル公開している定義 (Globals Table)
+
+{% include globals-table.xhtml %}
+
+#### 知的財産権に関する記述（IP Statements）
+
+{% include ip-statements.xhtml %}
+
+
+
+
 ### 機械翻訳文章
 リソースの項目説明文には、FHIR Baseの説明を機械による自動翻訳したものが含まれている。そのため意味が分かりにくい翻訳や丁寧語の文体の文章が混ざっている。
 
