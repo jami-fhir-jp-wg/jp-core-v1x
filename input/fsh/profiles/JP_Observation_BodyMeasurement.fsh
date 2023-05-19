@@ -19,10 +19,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category contains 
     simpleObservation 1..1 and
     bodyMeasurementCategory 1..*
-* category[simpleObservation] = $JP_SimpleObservationCategory_CS#body-measurement 
-* category[simpleObservation].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[bodyMeasurementCategory] from JP_ObservationBodyMeasurementCategory_VS (preferred)
-* category[bodyMeasurementCategory].coding.system = $JP_ObservationBodyMeasurementCategory_CS (exactly)
+* category[simpleObservation].coding.system = $JP_SimpleObservationCategory_CS
+* category[simpleObservation].coding.code = #body-measurement
+* category[bodyMeasurementCategory].coding from JP_ObservationBodyMeasurementCategory_VS (preferred)
+* category[bodyMeasurementCategory].coding.system = $JP_ObservationBodyMeasurementCategory_CS
 * category[bodyMeasurementCategory] ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類2．身体計測の「焦点」"
 * code from JP_ObservationBodyMeasurementCode_VS (preferred)
 * code ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類2．身体計測の「観察名称」"

@@ -13,12 +13,12 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^definition = "身体所見に関する測定や簡単な観察事実"
 * . ^comment = "身体所見に関するObservation（検査測定や観察事実）の制約プロフィール"
 * category 1..
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "coding.system"
+* category ^slicing.discriminator[+].type = #value
+* category ^slicing.discriminator[=].path = "coding.system"
 * category ^slicing.rules = #open
 * category contains simpleObservation 1..1
-* category[simpleObservation] = $JP_SimpleObservationCategory_CS#exam
-* category[simpleObservation].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[simpleObservation].coding.system = $JP_SimpleObservationCategory_CS
+* category[simpleObservation].coding.code = $JP_SimpleObservationCategory_CS#exam
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP Core仕様】基底仕様のカテゴリ「exam」固定とする"
 * code ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】所見の有無を表すコード（固定値）"
 * code from JP_PhysicalExamCode_VS (preferred)
