@@ -13,8 +13,17 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^definition = "患者の身体計測に関する測定と簡単な観察事実（assertion）。"
 * . ^comment = "身体計測に関するObservation（検査測定や観察事実）の制約プロフィール"
 * category 1..
-* category from JP_ObservationBodyMeasurementCategory_VS (preferred)
-* category ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類2．身体計測の「焦点」"
+* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.path = "coding.system"
+* category ^slicing.rules = #open
+* category contains 
+    simpleObservation 1..1 and
+    bodyMeasurementCategory 1..*
+* category[simpleObservation].coding.system = $JP_SimpleObservationCategory_CS
+* category[simpleObservation].coding.code = #body-measurement
+* category[bodyMeasurementCategory].coding from JP_ObservationBodyMeasurementCategory_VS (preferred)
+* category[bodyMeasurementCategory].coding.system = $JP_ObservationBodyMeasurementCategory_CS
+* category[bodyMeasurementCategory] ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類2．身体計測の「焦点」"
 * code from JP_ObservationBodyMeasurementCode_VS (preferred)
 * code ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類2．身体計測の「観察名称」"
 * subject 1..

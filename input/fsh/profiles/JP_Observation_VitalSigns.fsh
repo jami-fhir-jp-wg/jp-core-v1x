@@ -13,8 +13,17 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^definition = "バイタルサインに関する測定と簡単な観察事実（assertion）。"
 * . ^comment = "バイタルサインに関するObservation（検査測定や観察事実）の制約プロフィール"
 * category 1..
-* category from JP_ObservationVitalSignsCategory_VS (preferred)
-* category ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「焦点」"
+* category ^slicing.discriminator[+].type = #value
+* category ^slicing.discriminator[=].path = "coding.system"
+* category ^slicing.rules = #open
+* category contains 
+    simpleObservation 1..1 and
+    vitalSignCategory 1..*
+* category[simpleObservation].coding.system = $JP_SimpleObservationCategory_CS
+* category[simpleObservation].coding.code = $JP_SimpleObservationCategory_CS#vital-signs
+* category[vitalSignCategory].coding from JP_ObservationVitalSignsCategory_VS (preferred)
+* category[vitalSignCategory].coding.system = $JP_ObservationVitalSignsCategory_CS
+* category[vitalSignCategory] ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「焦点」"
 * code from JP_ObservationVitalSignsCode_VS (preferred)
 * code ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「観察名称」"
 * subject 1..
@@ -28,3 +37,4 @@ Description: "このプロファイルはObservationリソースに対して、�
 * derivedFrom only Reference(DocumentReference or ImagingStudy or Media or QuestionnaireResponse or JP_Observation_Common or MolecularSequence or JP_Observation_VitalSigns)
 * derivedFrom ^comment = "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.\r\n\r\n【JP Core仕様】導出元の参照リソースにJP_Observation_VitalSignsを追加"
 * component.code from JP_ObservationVitalSignsCode_VS (preferred)
+ 

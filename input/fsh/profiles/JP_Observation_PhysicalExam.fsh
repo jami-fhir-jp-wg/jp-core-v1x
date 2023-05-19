@@ -13,19 +13,21 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^definition = "身体所見に関する測定や簡単な観察事実"
 * . ^comment = "身体所見に関するObservation（検査測定や観察事実）の制約プロフィール"
 * category 1..
-* category ^slicing.discriminator.type = #pattern
-* category ^slicing.discriminator.path = "$this"
+* category ^slicing.discriminator[+].type = #value
+* category ^slicing.discriminator[=].path = "coding.system"
 * category ^slicing.rules = #open
-* category contains exam 1..1
-* category[exam] = $observation-category#exam
+* category contains simpleObservation 1..1
+* category[simpleObservation].coding.system = $JP_SimpleObservationCategory_CS
+* category[simpleObservation].coding.code = $JP_SimpleObservationCategory_CS#exam
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP Core仕様】基底仕様のカテゴリ「exam」固定とする"
 * code ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】所見の有無を表すコード（固定値）"
 * code from JP_PhysicalExamCode_VS (preferred)
-* code.coding ^slicing.discriminator.type = #pattern
-* code.coding ^slicing.discriminator.path = "$this"
+* code.coding ^slicing.discriminator.type = #value
+* code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
 * code.coding contains physicalExamCode 0..1
 * code.coding[physicalExamCode] = $JP_PhysicalExamCode_CS#physical-findings "Physical Findings"
+* code.coding[physicalExamCode].system = $JP_PhysicalExamCode_CS (exactly)
 * code.coding[physicalExamCode] ^short = "身体所見項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。【詳細参照】"
 * code.coding[physicalExamCode] ^definition = "身体所見項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。"
 * code.coding[physicalExamCode] ^comment = "推奨項目コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しない"
@@ -49,11 +51,12 @@ Description: "このプロファイルはObservationリソースに対して、�
 * component ^short = "所見有り（valueCodeableConceptがY）の場合に、具体的な所見をコード、または文字列で記載する"
 * component.code from JP_PhysicalExamCode_VS (preferred)
 * component.code ^comment = "*All* code-value and  component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】具体的な所見を表すコード（固定値）"
-* component.code.coding ^slicing.discriminator.type = #pattern
-* component.code.coding ^slicing.discriminator.path = "$this"
+* component.code.coding ^slicing.discriminator.type = #value
+* component.code.coding ^slicing.discriminator.path = "system"
 * component.code.coding ^slicing.rules = #open
 * component.code.coding contains physicalExamCode 0..1
 * component.code.coding[physicalExamCode] = $JP_PhysicalExamCode_CS#detailed-physical-findings "Detailed Physical Findings"
+* component.code.coding[physicalExamCode].system = $JP_PhysicalExamCode_CS (exactly)
 * component.code.coding[physicalExamCode] ^short = "身体所見項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。【詳細参照】"
 * component.code.coding[physicalExamCode] ^definition = "身体所見項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。"
 * component.code.coding[physicalExamCode] ^comment = "推奨項目コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しない"

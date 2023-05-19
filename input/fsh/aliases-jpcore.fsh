@@ -1,4 +1,6 @@
 
+Alias: $JP_Loinc_Dummy_CS = http://loinc.org
+Alias: $US_Loinc_CS = http://loinc.org
 // ImplementationGuide
 Alias: $FHIRJPCoreImplementationGuide = http://jpfhir.jp/fhir/core/ImplementationGuide/hl7.fhir.jp.core
 
@@ -97,6 +99,7 @@ Alias: $JP_Patient_KanaSort_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_P
 // CodeSystem
 Alias: $JP_ConditionSeverity_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionSeverity_CS
 Alias: $JP_Department_SsMix_CS = urn:oid:1.2.392.200250.2.2.2
+Alias: $JP_DocumentCodes_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_CS
 Alias: $JP_JfagyFoodAllergen_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS
 Alias: $JP_JfagyMedicationAllergen_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyMedicationAllergen_CS
 Alias: $JP_JfagyNonFoodNonMedicationAllergen_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyNonFoodNonMedicationAllergen_CS
@@ -135,6 +138,7 @@ Alias: $JP_MedicationCodeYJ_CS = urn:oid:1.2.392.100495.20.1.73
 Alias: $JP_ObservationBodyMeasurementCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
 Alias: $JP_ObservationBodyMeasurementCode_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
 Alias: $JP_ObservationBodySite_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodySite_CS
+Alias: $JP_SimpleObservationCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
 Alias: $JP_ObservationLabResultCode_CS = urn:oid:1.2.392.200119.4.504
 Alias: $JP_ObservationMethod_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationMethod_CS
 Alias: $JP_ObservationPhysicalExamBodySite_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationPhysicalExamBodySite_CS
@@ -167,6 +171,7 @@ Alias: $JP_ConditionSeverity_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Conditi
 Alias: $JP_Department_SsMix_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS
 Alias: $JP_Department_SsMix2Digits_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix2Digits_VS
 Alias: $JP_Department_SsMix3Digits_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix3Digits_VS
+Alias: $JP_DiagnosticReportCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DiagnosticReportCategory_VS
 Alias: $JP_MedicalFeeScoreType_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicalFeeScoreType_VS
 Alias: $JP_MedicalLicenseCertificate_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicalLicenseCertificate_VS
 Alias: $JP_MedicationAsNeededConditionJAMI_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationAsNeededConditionJAMI_VS
@@ -232,4 +237,5 @@ Alias: $JP_ProcedureNotPerformedReason_VS = http://jpfhir.jp/fhir/core/ValueSet/
 Alias: $JP_ProcedureOutcome_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureOutcome_VS
 Alias: $JP_ProcedurePerformerRole_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedurePerformerRole_VS
 Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureReason_VS
+Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS

@@ -9,8 +9,9 @@ Usage: #example
 * status = #final
 * identifier.system = "http://abc-hospital.local/fhir/lab/reportid"
 * identifier.value = "5234342"
-* category[laboratory] = $diagnostic-service-sectionid-cs#LAB
-* code = http://loinc.org#11502-2 "Laboratory report"
+* category[+] = $JP_SimpleObservationCategory_CS#laboratory
+* category[=] = $US_Loinc_CS#LP29693-6
+* code = $US_Loinc_CS#11502-2 "Laboratory report"
 * subject = Reference(Patient/jp-patient-example-1)
 * encounter = Reference(Encounter/jp-encounter-example-1)
 * effectiveDateTime = "2021-03-04T08:30:00+11:00"
@@ -29,6 +30,7 @@ Instance: inner-observation-labresult-1
 InstanceOf: JP_Observation_LabResult
 Usage: #inline
 * status = #final
+* category[+] = $JP_SimpleObservationCategory_CS#laboratory
 * code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#123 "ヘモグロビン"
 * code.coding[+] = $JP_ObservationLabResultCode_CS#2A990000001930953
 * code.text = "ヘモグロビン"
@@ -44,6 +46,7 @@ Instance: inner-observation-labresult-2
 InstanceOf: JP_Observation_LabResult
 Usage: #inline
 * status = #final
+* category[+] = $JP_SimpleObservationCategory_CS#laboratory
 * code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#456 "赤血球数"
 * code.coding[+] = $JP_ObservationLabResultCode_CS#2A990000001992051
 * code.text = "赤血球数"
@@ -60,6 +63,7 @@ Instance: inner-observation-labresult-3
 InstanceOf: JP_Observation_LabResult
 Usage: #inline
 * status = #final
+* category[+] = $JP_SimpleObservationCategory_CS#laboratory
 * code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#789 "ヘマトクリット"
 * code.coding[+] = $JP_ObservationLabResultCode_CS#2A990000001930954
 * code.text = "ヘマトクリット"
