@@ -4,7 +4,6 @@ on:
     branches: 
       - 'develop'
       - 'release/**'
-      - 'feature/kohe-*'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
@@ -13,7 +12,7 @@ on:
     branches:
       - 'develop'
 env:
-  release_version : 1.1.1-dev-testkohe
+  release_version : 1.1.1-dev
   
 jobs:
   turn:
