@@ -1,8 +1,8 @@
-ValueSet: JP_DocumentCodes_Endscope_VS
+ValueSet: JP_DocumentCodes_Endscopy_VS
 Id: jp-DocumentCodes-Endscope-vs
-Title: "JP Core Document　Codes　Endscope ValueSet"
-Description: "Document　Codes　Endscope 値セット"
-* ^url = $JP_DocumentCodes_Endscope_VS
+Title: "JP Core Document Codes Endscopy ValueSet"
+Description: "Document Codes Endscopy 値セット"
+* ^url = $JP_DocumentCodes_Endscopy_VS
 * ^status = #active
 * ^experimental = false
 * ^date = "2023-04-18"

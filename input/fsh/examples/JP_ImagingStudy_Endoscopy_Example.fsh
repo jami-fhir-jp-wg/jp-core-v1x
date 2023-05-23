@@ -29,18 +29,18 @@ Usage: #example
 // =============================================
 //   Instanceを複数回繰り返し記載する方法要確認
 // =============================================
-* series.instance.uid = "2.16.124.113543.6003.1154777499.30246.19789.20230425001.1.1"
-* series.instance.sopClass = https://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1#1.2.840.10008.5.1.4.1.1.77.1.1 "VL Endoscopic Image Storage"
-* series.instance.number = 1
-* series.instance.uid = "2.16.124.113543.6003.1154777499.30246.19789.20230425001.1.2"
-* series.instance.sopClass = https://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1#1.2.840.10008.5.1.4.1.1.77.1.1 "VL Endoscopic Image Storage"
-* series.instance.number = 2
-* series.instance.uid = "2.16.124.113543.6003.1154777499.30246.19789.20230425001.1.3"
-* series.instance.sopClass = https://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1#1.2.840.10008.5.1.4.1.1.77.1.1 "VL Endoscopic Image Storage"
-* series.instance.number = 3
-* series.instance.uid = "2.16.124.113543.6003.1154777499.30246.19789.20230425001.1.4"
-* series.instance.sopClass = https://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1#1.2.840.10008.5.1.4.1.1.77.1.1 "VL Endoscopic Image Storage"
-* series.instance.number = 4
-* series.instance.uid = "2.16.124.113543.6003.1154777499.30246.19789.20230425001.1.5"
-* series.instance.sopClass = https://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1#1.2.840.10008.5.1.4.1.1.77.1.1 "VL Endoscopic Image Storage"
-* series.instance.number = 5
+* series.instance[+].uid = "2.16.124.113543.6003.1154777499.30246.19789.20230425001.1.1"
+* series.instance[=].sopClass = https://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1#1.2.840.10008.5.1.4.1.1.77.1.1 "VL Endoscopic Image Storage"
+* series.instance[=].number = 1
+* series.instance[+].uid = "2.16.124.113543.6003.1154777499.30246.19789.20230425001.1.2"
+* series.instance[=].sopClass = https://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1#1.2.840.10008.5.1.4.1.1.77.1.1 "VL Endoscopic Image Storage"
+* series.instance[=].number = 2
+* series.instance[+].uid = "2.16.124.113543.6003.1154777499.30246.19789.20230425001.1.3"
+* series.instance[=].sopClass = https://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1#1.2.840.10008.5.1.4.1.1.77.1.1 "VL Endoscopic Image Storage"
+* series.instance[=].number = 3
+* series.instance[+].uid = "2.16.124.113543.6003.1154777499.30246.19789.20230425001.1.4"
+* series.instance[=].sopClass = https://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1#1.2.840.10008.5.1.4.1.1.77.1.1 "VL Endoscopic Image Storage"
+* series.instance[=].number = 4
+* series.instance[+].uid = "2.16.124.113543.6003.1154777499.30246.19789.20230425001.1.5"
+* series.instance[=].sopClass = https://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1#1.2.840.10008.5.1.4.1.1.77.1.1 "VL Endoscopic Image Storage"
+* series.instance[=].number = 5
