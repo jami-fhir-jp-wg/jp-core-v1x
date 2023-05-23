@@ -24,7 +24,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category ^short = "サービスカテゴリー。【詳細参照】"
 * category ^definition = "レポートを作成した臨床分野、部門、または診断サービス（心臓病学、生化学、血液学、放射線医学など）を分類するコード。"
 * category ^comment = "これは、検索、並べ替え、および表示の目的で使用される。"
-* category from JP_DiagnosticReportCategory_VS (preferred)
+* category from $JP_DiagnosticReportCategory_VS (preferred)
 * code ^short = "この診断レポートの名前/コード。【詳細参照】"
 * code ^definition = "診断レポートを説明するコードまたは名前。"
 * code ^comment = "すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素と事前・事後の用語作成（pre- and post-coordination）との関係を管理するための独自の構造を提供する必要がある。"
