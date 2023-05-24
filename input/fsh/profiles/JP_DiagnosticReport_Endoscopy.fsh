@@ -34,8 +34,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category ^slicing.rules = #open
 * category ^slicing.ordered = false
 * category contains endoscopy 1..1
-* category[endoscopy].coding.system = $JP_DiagnosticReportCategory_CS
-* category[endoscopy].coding.code = $JP_DiagnosticReportCategory_CS#LP7796-8
+* category[endoscopy].coding.system = $US_Loinc_CS
+* category[endoscopy].coding.code = $US_Loinc_CS#LP7796-8
 * category[endoscopy].coding.display =  "内視鏡"
 * category[endoscopy] ^short = "診断レポートの分野を表すコード。"
 * category[endoscopy] ^definition = "診断レポートの分野を表すコード。"
