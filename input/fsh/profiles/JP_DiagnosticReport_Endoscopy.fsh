@@ -34,8 +34,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category ^slicing.rules = #open
 * category ^slicing.ordered = false
 * category contains endoscopy 1..1
-* category[endoscopy].coding.system = $JP_DiagnosticReportCategory_CS
-* category[endoscopy].coding.code = $JP_DiagnosticReportCategory_CS#LP7796-8
+* category[endoscopy].coding.system = $US_Loinc_CS
+* category[endoscopy].coding.code = $US_Loinc_CS#LP7796-8
 * category[endoscopy].coding.display =  "内視鏡"
 * category[endoscopy] ^short = "診断レポートの分野を表すコード。"
 * category[endoscopy] ^definition = "診断レポートの分野を表すコード。"
@@ -46,7 +46,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 //   VS名は暫定で記載。codeのBindingの記述方法がこれで良いか要確認
 // ============================================================================================
 
-* code from $JP_DocumentCodes_Endscope_VS (required)
+* code from $JP_DocumentCodes_Endscopy_VS (required)
 * code ^short = "内視鏡分野の診断レポートを分類するためのコード。"
 * code ^definition = "内視鏡分野の診断レポートを分類するためのコード。"
 * code ^comment = "Value Set：JPCore_DocumentCodeの中から適切な内視鏡分野の報告書のコードを指定する（例：「18751-8」（上部消化管内視鏡報告書））。該当する適切な報告書のコードが登録されていない場合は、「19805-1」（内視鏡検査報告書）を指定する。"
