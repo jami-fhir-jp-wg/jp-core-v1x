@@ -10,7 +10,7 @@ Usage: #example
 * identifier.value = "202304250945280001"
 * status = #completed
 * type = $media-type#image
-* modality = https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html#ES "Endoscopy"
+* modality = http://dicom.nema.org/resources/ontology/DCM#ES "Endoscopy"
 * subject = Reference(Patient/jp-patient-example-1) "東京 太郎"
 * createdDateTime = "2023-04-26"
 * height = 1080
