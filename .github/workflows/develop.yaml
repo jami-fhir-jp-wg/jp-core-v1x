@@ -118,6 +118,7 @@ jobs:
         cd ..
         cp forPackageRelease/package.tgz output/package.tgz
         tar czf output.tgz output
+        rm output/full-ig.zip
 
     - name: Deploy Implementation Guide
       if: success()
