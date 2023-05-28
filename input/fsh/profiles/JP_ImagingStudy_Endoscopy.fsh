@@ -60,7 +60,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * location ^short = "DICOM画像検査が実施された場所。"
 * location ^definition = "DICOM画像検査が実施された場所。"
 * location ^comment = "使用する場合には、JP Core Locationリソースを参照する。"
-* reasonCode from $JP_ReasonCodeJed_VS (example)
+* reasonCode from $JP_ReasonCodesJed_VS (example)
 * reasonCode ^short = "DICOM画像検査が依頼された理由を表す1つ以上のコード。"
 * reasonCode ^definition = "DICOM画像検査が依頼された理由を表す1つ以上のコード。"
 * reasonCode ^comment = "JED (Japan Endoscopy Database) Projectで定義されている検査種別については、JED基本情報用語の”検査目的”、”治療目的”のコードを使用することを強く推奨する。"

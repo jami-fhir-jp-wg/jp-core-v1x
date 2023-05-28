@@ -12,14 +12,14 @@ Usage: #example
 * modality = http://dicom.nema.org/resources/ontology/DCM#ES "Endoscopy"
 * subject = Reference(Patient/jp-patient-example-1) "山田 太郎"
 * started = "2023-04-21T15:54:32+09:00"
-* endpoint = Reference(Endpoint/jp-endpoint-example-wadors)
+* endpoint = Reference(Endpoint/endpoint-dicom-wadors-example)
 * numberOfSeries = 1
 * numberOfInstances = 5
 * series.uid = "2.16.124.113543.6003.1154777499.30246.19789.20230425001.1"
 * series.number = 1
 * series.modality = http://dicom.nema.org/resources/ontology/DCM#ES "Endoscopy"
 * series.numberOfInstances = 5
-* series.endpoint = Reference(Endpoint/jp-endpoint-example-wadors)
+* series.endpoint = Reference(endpoint-dicom-wadors-example)
 * series.instance[+].uid = "2.16.124.113543.6003.1154777499.30246.19789.20230425001.1.1"
 * series.instance[=].sopClass = urn:ietf:rfc:3986#urn:oid:1.2.840.10008.5.1.4.1.1.77.1.1
 * series.instance[=].number = 1

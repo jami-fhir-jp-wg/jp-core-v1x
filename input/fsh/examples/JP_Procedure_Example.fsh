@@ -12,7 +12,7 @@ Usage:  #example
   * text = "創傷処置"
 * code
   * coding
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesMedical_CS"
+    * system = $JP_ProcedureCodesMedical_CS
     * code = #140000610
   * text = "創傷処置（１００ｃｍ２未満）"
 * subject

@@ -109,7 +109,7 @@
 [JP_Patient_KanaSort_SP]: SearchParameter-jp-patient-kanasort-sp.html
 
 <!-- CodeSystem -->
-[JP_EndoscopyTerminologyCodeJED_CS]: CodeSystem-jp-EndoscopyTerminologyCodeJed-cs.html
+[JP_EndoscopyTerminologyCodesJED_CS]: CodeSystem-jp-EndoscopyTerminologyCodeJed-cs.html
 [JP_DocumentCodes_CS]: CodeSystem-jp-documentcodes-cs.html
 [JP_MedicationExampleDosageComment_CS]: CodeSystem-jp-medication-example-dosagecomment-cs.html
 [JP_MedicationExampleLine_CS]: CodeSystem-jp-medication-example-line-cs.html
@@ -135,7 +135,7 @@
 <!-- ValueSet -->
 [JP_ConclusionCodeJed_VS]: ValueSet-jp-ConclusionCodeJed-vs.html
 [JP_DocumentCodes_Endoscopy_VS]: ValueSet-jp-DocumentCodes-Endoscopy-vs.html
-[JP_ReasonCodeJed_VS]: ValueSet-jp-ReasonCodeJed-vs.html
+[JP_ReasonCodesJed_VS]: ValueSet-jp-ReasonCodeJed-vs.html
 [JP_AllergyIntolerance_VS]: ValueSet-jp-allergyintolerance-vs.html
 [JP_ConditionSeverity_VS]: ValueSet-jp-condition-severity-vs.html
 [JP_Department_SsMix_VS]: ValueSet-jp-department-ssmix-vs.html

@@ -39,7 +39,7 @@
 
 ### Category
 
-[JP Core Diagnostic Report Category ValueSet][jp-diagnosticreport-category-vs]の中から"Endoscopy"を表すLOINC Part Codeである`LP7796-8`を指定する。
+[JP Core Diagnostic Report Category ValueSet][JP_DiagnosticReportCategory_VS]の中から"Endoscopy"を表すLOINC Part Codeである`LP7796-8`を指定する。
 
 ### Code
 
@@ -73,9 +73,9 @@
 | コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |　例　|
 | --- | --- | --- | --- | --- | --- |
 | MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) | `GET [base]/DiagnosticReport?ServiceRequest/12345` |
-| MAY | category | token | レポート種別 | DiagnosticReport.category ([ValueSet: JPCore_DiagnosticReport_Category][jp-diagnosticreport-category]) (デフォルト：[LP7796-8](https://loinc.org/LP7796-8/)) | `GET [base]/DiagnosticReport?category=LP7796-8` |
-| MAY | code | token | レポート全体を示すコード | DiagnosticReport.code ([ValueSet: JPCore_DocumentCode][jp-documentcode])  | `GET [base]/DiagnosticReport?code=18751-8` |
-| MAY | conclusionCode | token | 内視鏡診断レポートの要約結論 | DiagnosticReport.conclusionCode ([JP Core Conclusion Code JED ValueSet][jp-conclusioncodejed-vs])  | `GET [base]/DiagnosticReport?conclusionCode/Z2B32104` |
+| MAY | category | token | レポート種別 | DiagnosticReport.category ([JP Core DiagnosticReport Category ValueSet][JP_DiagnosticReportCategory_VS]) (デフォルト：[LP7796-8](https://loinc.org/LP7796-8/)) | `GET [base]/DiagnosticReport?category=LP7796-8` |
+| MAY | code | token | レポート全体を示すコード | DiagnosticReport.code ([JP Core DocumentCodes Endoscopy ValueSet][JP_DocumentCodes_Endoscopy_VS])  | `GET [base]/DiagnosticReport?code=18751-8` |
+| MAY | conclusionCode | token | 内視鏡診断レポートの要約結論 | DiagnosticReport.conclusionCode ([JP Core Conclusion Code JED ValueSet][JP_ConclusionCodeJed_VS])  | `GET [base]/DiagnosticReport?conclusionCode/Z2B32104` |
 
 
 なお、検索パラメータは複合的に利用できる。詳細は[Search - Chained parameters](https://www.hl7.org/fhir/R4/search.html#chaining)を参照すること。

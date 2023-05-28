@@ -19,7 +19,7 @@ Usage: #example
 * performer = Reference(Practitioner/jp-practitioner-example-female-1) "東京 春子"
 * imagingStudy = Reference(ImagingStudy/jp-imagingstudy-endoscopy-example-1)
 * conclusion = "【食道】質的診断：食道裂孔ヘルニア 滑脱型。【胃】質的診断：異常所見なし、コメント：潰瘍廏痕は目立たない。【十二指腸】質的診断：異常所見なし、コメント：潰瘍廏痕は目立たない。"
-* conclusionCode = $JP_EndoscopyTerminologyCodeJED_CS#Z2B32104 "[食道裂孔ヘルニア] 滑脱型"
+* conclusionCode = $JP_EndoscopyTerminologyCodesJED_CS#Z2B32104 "[食道裂孔ヘルニア] 滑脱型"
 * presentedForm.contentType = #application/xml
 * presentedForm.language = #ja-JP
 * presentedForm.title = "上部消化管内視鏡報告書"
