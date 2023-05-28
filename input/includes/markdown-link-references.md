@@ -18,14 +18,17 @@
 [JP_Condition]: StructureDefinition-jp-condition.html
 [JP_Coverage]: StructureDefinition-jp-coverage.html
 [JP_DiagnosticReport_Common]: StructureDefinition-jp-diagnosticreport-common.html
+[JP_DiagnosticReport_Endoscopy]: StructureDefinition-jp-diagnosticreport-endoscopy.html
 [JP_DiagnosticReport_LabResult]: StructureDefinition-jp-diagnosticreport-labresult.html
 [JP_DiagnosticReport_Radiology]: StructureDefinition-jp-diagnosticreport-radiology.html
 [JP_Encounter]: StructureDefinition-jp-encounter.html
 [JP_FamilyMemberHistory]: StructureDefinition-jp-familymemberhistory.html
 [JP_HumanName]: StructureDefinition-jp-humanname.html
+[JP_ImagingStudy_Endoscopy]: StructureDefinition-jp-imagingstudy-endoscopy.html
 [JP_ImagingStudy_Radiology]: StructureDefinition-jp-imagingstudy-radiology.html
 [JP_Immunization]: StructureDefinition-jp-immunization.html
 [JP_Location]: StructureDefinition-jp-location.html
+[JP_Media_Endoscopy]: StructureDefinition-jp-media-endoscopy.html
 [JP_Medication]: StructureDefinition-jp-medication.html
 [JP_MedicationAdministration_Injection]: StructureDefinition-jp-medicationadministration-injection.html
 [JP_MedicationAdministration]: StructureDefinition-jp-medicationadministration.html
@@ -49,6 +52,7 @@
 [JP_Observation_BodyMeasurement]: StructureDefinition-jp-observation-bodymeasurement.html
 [JP_Observation_Common]: StructureDefinition-jp-observation-common.html
 [JP_Observation_LabResult]: StructureDefinition-jp-observation-labresult.html
+[JP_Observation_Microbiology]: StructureDefinition-jp-observation-microbiology.html
 [JP_Observation_PhysicalExam]: StructureDefinition-jp-observation-physicalexam.html
 [JP_Observation_SocialHistory]: StructureDefinition-jp-observation-socialhistory.html
 [JP_Observation_VitalSigns]: StructureDefinition-jp-observation-vitalsigns.html
@@ -105,6 +109,8 @@
 [JP_Patient_KanaSort_SP]: SearchParameter-jp-patient-kanasort-sp.html
 
 <!-- CodeSystem -->
+[JP_EndoscopyTerminologyCodeJED_CS]: CodeSystem-jp-EndoscopyTerminologyCodeJed-cs.html
+[JP_DocumentCodes_CS]: CodeSystem-jp-documentcodes-cs.html
 [JP_MedicationExampleDosageComment_CS]: CodeSystem-jp-medication-example-dosagecomment-cs.html
 [JP_MedicationExampleLine_CS]: CodeSystem-jp-medication-example-line-cs.html
 [JP_MedicationExampleLineComment_CS]: CodeSystem-jp-medication-example-linecomment-cs.html
@@ -121,22 +127,21 @@
 [JP_PhysicalExamCode_CS]: CodeSystem-jp-physicalexamcode-cs.html
 [JP_ProcedureBodySite_CS]: CodeSystem-jp-procedure-body-site-cs.html
 [JP_ProcedureCategory_CS]: CodeSystem-jp-procedure-category-cs.html
-[JP_ProcedureCodesICHI_CS]: CodeSystem-jp-procedure-codes-ichi-cs.html
-[JP_ProcedureCondition_CS]: CodeSystem-jp-procedure-condition-cs.html
-[JP_ProcedureDeviceAction_CS]: CodeSystem-jp-procedure-device-action-cs.html
-[JP_ProcedureDeviceKind_CS]: CodeSystem-jp-procedure-devicekind-cs.html
-[JP_ProcedureFollowUp_CS]: CodeSystem-jp-procedure-followup-cs.html
 [JP_ProcedureNotPerformedReason_CS]: CodeSystem-jp-procedure-not-performed-reason-cs.html
 [JP_ProcedureOutcome_CS]: CodeSystem-jp-procedure-outcome-cs.html
-[JP_ProcedureReason_CS]: CodeSystem-jp-procedure-reason-cs.html
+[JP_SimpleObservationCategory_CS]: CodeSystem-jp-simpleobservationcategory-cs.html
 [JP_Undefined_CS]: CodeSystem-jp-undefined-cs.html
 
 <!-- ValueSet -->
+[JP_ConclusionCodeJed_VS]: ValueSet-jp-ConclusionCodeJed-vs.html
+[JP_DocumentCodes_Endoscopy_VS]: ValueSet-jp-DocumentCodes-Endoscopy-vs.html
+[JP_ReasonCodeJed_VS]: ValueSet-jp-ReasonCodeJed-vs.html
 [JP_AllergyIntolerance_VS]: ValueSet-jp-allergyintolerance-vs.html
 [JP_ConditionSeverity_VS]: ValueSet-jp-condition-severity-vs.html
 [JP_Department_SsMix_VS]: ValueSet-jp-department-ssmix-vs.html
 [JP_Department_SsMix2Digits_VS]: ValueSet-jp-department-ssmix2digits-vs.html
 [JP_Department_SsMix3Digits_VS]: ValueSet-jp-department-ssmix3digits-vs.html
+[JP_DiagnosticReportCategory_VS]: ValueSet-jp-diagnosticreportcategory-vs.html
 [JP_MedicalFeeScoreType_VS]: ValueSet-jp-medicalfeescoretype-vs.html
 [JP_MedicalLicenseCertificate_VS]: ValueSet-jp-medicallicensecertificate-vs.html
 [JP_MedicationAsNeededConditionJAMI_VS]: ValueSet-jp-medication-as-needed-condition-jami-vs.html
@@ -202,21 +207,25 @@
 [JP_ProcedureOutcome_VS]: ValueSet-jp-procedure-outcome-vs.html
 [JP_ProcedurePerformerRole_VS]: ValueSet-jp-procedure-performer-role-vs.html
 [JP_ProcedureReason_VS]: ValueSet-jp-procedure-reason-vs.html
+[JP_SimpleObservationCategory_VS]: ValueSet-jp-simpleobservationcategory-vs.html
 [JP_Undefined_VS]: ValueSet-jp-undefined-vs.html
 
 <!-- Example -->
 [jp-allergyintolerance-example-1]: AllergyIntolerance-jp-allergyintolerance-example-1.html
 [jp-condition-example-1]: Condition-jp-condition-example-1.html
 [jp-coverage-example-1]: Coverage-jp-coverage-example-1.html
+[jp-diagnosticreport-endoscopy-example-1]: DiagnosticReport-jp-diagnosticreport-endoscopy-example-1.html
 [jp-diagnosticreport-labresult-example-1]: DiagnosticReport-jp-diagnosticreport-labresult-example-1.html
 [jp-diagnosticreport-radiology-example-1]: DiagnosticReport-jp-diagnosticreport-radiology-example-1.html
 [jp-encounter-example-1]: Encounter-jp-encounter-example-1.html
 [jp-familymemberhistory-example-1]: FamilyMemberHistory-jp-familymemberhistory-example-1.html
+[jp-imagingstudy-endoscopy-example-1]: ImagingStudy-jp-imagingstudy-endoscopy-example-1.html
 [jp-imagingstudy-radiology-example-1]: ImagingStudy-jp-imagingstudy-radiology-example-1.html
 [jp-immunization-example-1]: Immunization-jp-immunization-example-1.html
 [jp-location-example-examinationroom]: Location-jp-location-example-examinationroom.html
 [jp-location-example-ope]: Location-jp-location-example-ope.html
 [jp-location-example-ward]: Location-jp-location-example-ward.html
+[jp-media-endoscopy-example-1]: Media-jp-media-endoscopy-example-1.html
 [jp-medication-example-1]: Medication-jp-medication-example-1.html
 [jp-medication-example-2]: Medication-jp-medication-example-2.html
 [jp-medicationadministration-example-1]: MedicationAdministration-jp-medicationadministration-example-1.html

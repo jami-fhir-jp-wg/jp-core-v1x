@@ -8,7 +8,7 @@ Title: "JP Core ImagingStudy Endoscopy Profile"
 Description: "このプロファイルはImagingStudyリソースに対して、主に内視鏡検査で撮影された画像に関わるデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Endoscopy"
 * ^status = #active
-* ^date = "2023-04-20"
+* ^date = "2023-05-25"
 * . ^short = "内視鏡を使用したDICOM画像検査に関する情報。"
 * identifier MS
 * identifier ^short = "DICOM画像検査全体を一意に識別するためのID。"
@@ -55,16 +55,11 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * procedureCode ^short = "実施された処置を表すコード。"
 * procedureCode ^definition = "実施された処置を表すコード。"
 * procedureCode ^comment = "内視鏡では省略してよい。"
+* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
 * location only Reference(JP_Location)
 * location ^short = "DICOM画像検査が実施された場所。"
 * location ^definition = "DICOM画像検査が実施された場所。"
 * location ^comment = "使用する場合には、JP Core Locationリソースを参照する。"
-// ============================================================================================
-//   要更新・レビュー
-//   VS名は暫定で記載(JEDのCodeSystem、ValueSetをTerminology Serverに登録する必要がある)。
-//   ⇒この際、CodeSystemはOIDで指定
-//   reasonCodeのBindingの記述方法がこれで良いか要確認
-// ============================================================================================
 * reasonCode from $JP_ReasonCodeJed_VS (example)
 * reasonCode ^short = "DICOM画像検査が依頼された理由を表す1つ以上のコード。"
 * reasonCode ^definition = "DICOM画像検査が依頼された理由を表す1つ以上のコード。"

@@ -42,10 +42,12 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
     * [JP Core Observation SocialHistory （生活背景）プロファイル][JP_Observation_SocialHistory]
   * ImagingStudy （画像検査）
     * [JP Core ImagingStudy Radiology（放射線検査）プロファイル][JP_ImagingStudy_Radiology]
+    * [JP Core ImagingStudy Endoscopy（放射線検査）プロファイル][JP_ImagingStudy_Endoscopy]
   * DiagnosticReport （診断レポート)
     * [JP Core DiagnosticReport Common （共通）プロファイル][JP_DiagnosticReport_Common]
     * [JP Core DiagnosticReport LabResult （検体検査レポート）プロファイル][JP_DiagnosticReport_LabResult]
     * [JP Core DiagnosticReport Radiology （放射線検査レポート）プロファイル][JP_DiagnosticReport_Radiology]
+    * [JP Core DiagnosticReport Endoscopy （内視鏡レポート）プロファイル][JP_DiagnosticReport_Endoscopy]
 * [Clinicalグループ（診療）](group-clinical.html)
   * [JP Core AllergyIntolerance （アレルギー不耐症）プロファイル][JP_AllergyIntolerance]
   * [JP Core Condition （状態）プロファイル][JP_Condition]

@@ -15,8 +15,8 @@
     * DiagnosticReport派生プロファイルを検索出来るように、Categoryに検索用固定値を必須でいれることとした  
     ※本件はv1.1.0,v1.1.1で作成したものと互換性が保たれないため注意のこと  
     * 内視鏡関連プロファイルの追加
-      * JP_ImagingStudy_EndScope
-      * JP_DiagnosticReport_EndScope
+      * JP_ImagingStudy_EndoScopy
+      * JP_DiagnosticReport_EndoScopy
     * JP_DiagnosticReport_Common の StructureDefinition内のdefinitionの記述を整理した
     * JP_DiagnosticReport_Radiologyのcategoryおよびcodeエレメントの定義を更新した、また読影医・確定医の専門医資格情報に関する記述を追加した
   * JP_Procedure関連

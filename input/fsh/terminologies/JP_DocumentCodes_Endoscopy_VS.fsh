@@ -1,11 +1,11 @@
-ValueSet: JP_DocumentCodes_Endscopy_VS
-Id: jp-DocumentCodes-Endscopy-vs
-Title: "JP Core Document Codes Endscopy ValueSet"
-Description: "Document Codes Endscopy 値セット"
-* ^url = $JP_DocumentCodes_Endscopy_VS
+ValueSet: JP_DocumentCodes_Endoscopy_VS
+Id: jp-DocumentCodes-Endoscopy-vs
+Title: "JP Core Document Codes Endoscopy ValueSet"
+Description: "Document Codes Endoscopy 値セット"
+* ^url = $JP_DocumentCodes_Endoscopy_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-04-18"
+* ^date = "2023-05-25"
 
 * include codes from system $JP_DocumentCodes_CS where concept = #18751-8 "上部消化管内視鏡報告書"
 * include codes from system $JP_DocumentCodes_CS where concept = #18746-8 "下部消化管内視鏡報告書"
