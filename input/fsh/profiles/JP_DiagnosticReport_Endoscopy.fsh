@@ -93,7 +93,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * conclusion ^definition = "総合診断に相当する要約結論。"
 * conclusion ^comment = "テキストで可能な限り記載する。"
 * conclusionCode MS
-* conclusionCode from $JP_ConclusionCodeJed_VS (example)
+* conclusionCode from $JP_ConclusionCodesJed_VS (example)
 * conclusionCode ^short = "内視鏡診断レポートの要約結論を表す1つ以上のコード。"
 * conclusionCode ^definition = "内視鏡診断レポートの要約結論を表す1つ以上のコード。"
 * conclusionCode ^comment = "JED Project（https://jedproject.jges.net/）が対象とする検査種別については、指定された質的診断コードを使用することを強く推奨する。"

@@ -172,7 +172,7 @@ Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 
 // ValueSet
 Alias: $JP_AllergyIntolerance_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS
-Alias: $JP_ConclusionCodeJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodeJed_VS
+Alias: $JP_ConclusionCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
 Alias: $JP_ConditionSeverity_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionSeverity_VS
 Alias: $JP_Department_SsMix_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS
 Alias: $JP_Department_SsMix2Digits_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix2Digits_VS

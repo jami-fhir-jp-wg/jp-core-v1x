@@ -201,6 +201,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationNo_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_PrefectureNo_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_CS
+    - urn:oid:1.2.392.200270.4.1000.1
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationRequestDosageInstructionLine_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageLineComment_CS
@@ -209,8 +211,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageRouteComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageSiteComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationUncategorizedComment_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_CS
-    - urn:oid:1.2.392.200270.4.1000.1
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodySite_CS
@@ -223,10 +223,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureOutcome_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodeJed_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_Endoscopy_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCodesJed_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionSeverity_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix2Digits_VS
@@ -297,6 +296,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureOutcome_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedurePerformerRole_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureReason_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCodesJed_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
 
