@@ -8,7 +8,7 @@ Title: "JP Core DiagnosticReport Endoscopy Profile"
 Description: "このプロファイルはDiagnosticReportリソースに対して、内視鏡を使用して実施された検査、治療に関わるデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Endoscopy"
 * ^status = #active
-* ^date = "2023-04-19"
+* ^date = "2023-05-25"
 * . ^short = "内視鏡を使用して実施された検査、治療に関する診断レポート。"
 * . ^definition = "内視鏡を使用して実施された検査、治療に関する診断レポート。"
 * text ^short = "主にレポートの見読性と検索性の向上を目的に、所見を中心としたhuman-readableなnarrativeデータを格納することを推奨する。"
@@ -23,12 +23,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * status ^definition = "診断レポートのステータス。"
 * status ^comment = "「preliminary」（作成中、未確定、未承認）もしくは 「final」（作成完了、確定済、承認済）を指定する。"
 * category MS
-// ============================================================================================
-//   要更新・レビュー
-//   VS名は暫定で記載。Fixed Value：LP7796-8（Endoscopy）の記述方法がこれで良いか要確認
-// ============================================================================================
-* category ^short = "レポートを作成した分野を分類するコード。【詳細参照】"
-* category ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは ”RAD” をデフォルトとして設定。追加の情報については任意で設定可能。"
+* category ^short = "診断レポートの分野を表すコード。"
+* category ^definition = "診断レポートの分野を表すコード。"
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "coding.system"
 * category ^slicing.rules = #open
@@ -36,20 +32,14 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category contains endoscopy 1..1
 * category[endoscopy].coding.system = $US_Loinc_CS
 * category[endoscopy].coding.code = $US_Loinc_CS#LP7796-8
-* category[endoscopy].coding.display =  "内視鏡"
+* category[endoscopy].coding.display = "内視鏡"
 * category[endoscopy] ^short = "診断レポートの分野を表すコード。"
 * category[endoscopy] ^definition = "診断レポートの分野を表すコード。"
-* category[endoscopy] ^comment = "Value Set：JPCore_DiagnosticReportCategoryの中から「LP7796-8」（Endoscopy（内視鏡））を指定する。"
-
-// ============================================================================================
-//   要更新・レビュー
-//   VS名は暫定で記載。codeのBindingの記述方法がこれで良いか要確認
-// ============================================================================================
-
-* code from $JP_DocumentCodes_Endscopy_VS (required)
+* category[endoscopy] ^comment = "JP_DiagnosticReportCategory_VSの中から「LP7796-8」（Endoscopy（内視鏡））を指定する。"
+* code from $JP_DocumentCodes_Endoscopy_VS (required)
 * code ^short = "内視鏡分野の診断レポートを分類するためのコード。"
 * code ^definition = "内視鏡分野の診断レポートを分類するためのコード。"
-* code ^comment = "Value Set：JPCore_DocumentCodeの中から適切な内視鏡分野の報告書のコードを指定する（例：「18751-8」（上部消化管内視鏡報告書））。該当する適切な報告書のコードが登録されていない場合は、「19805-1」（内視鏡検査報告書）を指定する。"
+* code ^comment = "JP_DocumentCodes_Endoscopy_VSの中から適切な内視鏡分野の報告書のコードを指定する（例：「18751-8」（上部消化管内視鏡報告書））。該当する適切な報告書のコードが登録されていない場合は、「19805-1」（内視鏡検査報告書）を指定する。"
 * subject MS
 * subject only Reference(JP_Patient)
 * subject ^short = "診断レポートの対象患者に関する情報。"
@@ -96,20 +86,12 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * media.comment ^definition = "メディアに関するコメント。"
 * media.comment ^comment = "内視鏡では省略してよい。"
 * media.link MS
-* media.link only Reference(JP_Media_Endoscopy)
 * media.link ^short = "メディアの参照先。"
 * media.link ^definition = "メディアの参照先。"
-* media.link ^comment = "JP Core Media Endoscopyリソースを参照する。"
 * conclusion MS
 * conclusion ^short = "総合診断に相当する要約結論。"
 * conclusion ^definition = "総合診断に相当する要約結論。"
 * conclusion ^comment = "テキストで可能な限り記載する。"
-// ============================================================================================
-//   要更新・レビュー
-//   VS名は暫定で記載(JEDのCodeSystem、ValueSetをTerminology Serverに登録する必要がある)。
-//   ⇒この際、CodeSystemはOIDで指定
-//   conclusionCodeのBindingの記述方法がこれで良いか要確認
-// ============================================================================================
 * conclusionCode MS
 * conclusionCode from $JP_ConclusionCodeJed_VS (example)
 * conclusionCode ^short = "内視鏡診断レポートの要約結論を表す1つ以上のコード。"

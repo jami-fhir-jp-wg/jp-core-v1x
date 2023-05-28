@@ -1,19 +1,19 @@
 
 ### 必須要素
 
-次の要素は必須（SHALL）である。
+次の要素は必須（**SHALL**）である。
 - status：リソースの状態（基底のValueSetから選択：registered/available/cancelled/entered-in-error/unknown）
 - subject：JP Core Patientを参照する。
 
 #### 必須項目
-ImagingStudyリソースは、次の要素を持たなければならない。
+ImagingStudyリソースは、次の要素を持たなければならない。(**SHALL**)
 - status︓検査項目情報の状態は必須である
 - subject︓このリソースが示す検査項目がどの患者のものかを示すため、参照するpatientリソース定義を必須とした
 
 #### Must Support
 
 
-次の要素に関する情報が送信システムに存在する場合、その要素がサポートされなければならないことを意味する（Must Support）。
+次の要素に関する情報が送信システムに存在する場合、その要素がサポートされなければならないことを意味する（**Must Support**）。
 - identifier：DICOMフォーマットのデータが存在する場合、DICOMタグのStudy Instance UID（0020,000D）が保持される必要がある。
 - series.modality：DICOMフォーマットのデータが存在する場合、シリーズが取得されたモダリティを示す。DICOMでは必須情報となっており、DICOMタグ（0008,0060）の情報が格納される。内視鏡検査の場合は"ES"が指定される。
 - series.instance.uid：DICOMフォーマットのデータ（インスタンス）のユニークIDを示す。DICOMタグ（0008,0018）の情報を格納する。
@@ -42,9 +42,7 @@ ImagingStudyリソースは、次の要素を持たなければならない。
 ImagingStudyはDICOM tagとの対応が重要である。各エレメントとDICOM tagのマッピングについては[ Resource ImagingStudy - Mappings - DICOM Tag Mapping](https://hl7.org/fhir/R4/imagingstudy-mappings.html#dicom)を参照すること。
 
 ### reasonCode
-消化器内視鏡検査のDICOMフォーマットのデータを扱う際、ImagingStudy.reasonCodeには[日本消化器内視鏡学会](https://www.jges.net/)が推進する[JED (Japan Endoscopy Database) Project](https://jedproject.jges.net/)で定義されている[JED基本情報用語](https://jedproject.jges.net/about/terms-about/)の"検査目的"、"治療目的"のコード値を設定することを強く推奨する。
-
-*** JED基本情報用語のリンク先を、直接ダウンロードリンクとせず、JED用語の説明ページとしました。(龍田) ★デバッグ用注釈 (確認後削除)***
+消化器内視鏡検査のDICOMフォーマットのデータを扱う際、ImagingStudy.reasonCodeには[JP Core ReasonCode JED ValueSet][JP_ReasonCodesJed_VS]をbindした。これは [日本消化器内視鏡学会](https://www.jges.net/)が推進する[JED (Japan Endoscopy Database) Project](https://jedproject.jges.net/)で定義されている[JED用語集](https://jedproject.jges.net/about/terms-about/)のコード集であり、このうち、基本用語集の"検査目的"、"治療目的"のコード値を設定することを強く推奨する。
 
 
 ## 利用方法
@@ -80,4 +78,5 @@ ImagingStudyはDICOM tagとの対応が重要である。各エレメントとDI
 また、消化器内視鏡検査のDICOMフォーマットのデータを扱う際、ImagingStudy.reasonCodeにはJED Projectで定義されている[JED基本情報用語](https://jedproject.jges.net/about/terms-about/)の"検査目的"、"治療目的"のコード値を設定することを強く推奨する。
 
 {% include markdown-link-references.md %}
+{% include external-link-reference.md %}
 
