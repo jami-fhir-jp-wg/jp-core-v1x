@@ -1,6 +1,6 @@
 ValueSet: JP_ReasonCodesJed_VS
 Id: jp-reason-codes-jed-vs
-Title: "JP Core DiagnosticReport Endoscopy Reason Code JED ValueSet"
+Title: "JP Core ImagingStudy Endoscopy Reason Code JED ValueSet"
 Description: "日本消化器内視鏡学会が推進するJED (Japan Endoscopy Database) Projectのコード値セットのうち「検査目的」、「治療目的」に該当するコード"
 * ^url = $JP_ReasonCodesJed_VS
 * ^status = #active
