@@ -37,7 +37,6 @@ Description: "このデータタイプはTiming DataTypeに対して、薬剤に
 * repeat.frequency ^short = "期間内にイベントが発生する回数、頻度"
 * repeat.frequency ^definition = "特定の期間に繰り返して発生した行為の回数。もし、frequencyMaxが設定されていれば、このエレメントはfrequencyとして認められた下限を示す。"
 * repeat.frequency ^comment = "32ビットの数値。もし、値がそれを上回るようであればdecimalを使用する。"
-// * repeat.frequency ^meaningWhenMissing = "frequencyが指定されていなければ、期間内に1回だけイベントが発生すると想定される。しかし、システムはこれを常時特定しておく必要がある。"
 * repeat.frequencyMax ^short = "期間内にイベントが発生する最大回数、最大頻度"
 * repeat.frequencyMax ^definition = "このエレメントに値が設定されていれば、frequencyには範囲が指定されている。つまり、期間あるいは期間の範囲内に[frequency]から[frequencyMax]回繰り返されることを示している。"
 * repeat.frequencyMax ^comment = "32ビットの数値。もし、値がそれを上回るようであればdecimalを使用する。"

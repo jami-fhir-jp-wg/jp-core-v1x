@@ -92,8 +92,6 @@ Period is not used for a duration (a measure of elapsed time). See [Duration](ht
 誤って患者を登録して削除したい場合などにfalseにする"
 * active ^requirements = "Need to be able to mark a patient record as not to be used because it was created in error.  
 患者レコードが誤って作成された場合のため、使用されないレコードとしてマークできる必要がある。"
-//* active ^meaningWhenMissing = "This resource is generally assumed to be active if no value is provided for the active element  
-アクティブな要素に値が指定されていない場合、このリソースは通常アクティブであると想定される"
 * active ^isModifierReason = "This element is labelled as a modifier because it is a status element that can indicate that a record should not be treated as valid この要素は、レコードの有効・無効判定を示すステータス要素であるため、修飾子としてラベル付けされる"
 * name only JP_HumanName
 * name ^definition = "A name associated with the individual.\r\n\r\n個人に関連付けられた名前。"
