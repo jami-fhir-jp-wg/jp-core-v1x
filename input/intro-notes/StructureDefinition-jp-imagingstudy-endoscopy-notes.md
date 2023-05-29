@@ -12,7 +12,6 @@ ImagingStudyリソースは、次の要素を持たなければならない。(*
 
 #### Must Support
 
-
 次の要素に関する情報が送信システムに存在する場合、その要素がサポートされなければならないことを意味する（**Must Support**）
 - identifier : DICOMフォーマットのデータが存在する場合、DICOMタグのStudy Instance UID（0020,000D）が保持される必要がある
 - series.modality : DICOMフォーマットのデータが存在する場合、シリーズが取得されたモダリティを示す。DICOMでは必須情報となっており、DICOMタグ（0008,0060）の情報が格納される。内視鏡検査の場合は"ES"が指定される
@@ -49,9 +48,9 @@ ImagingStudyはDICOM tagとの対応が重要である。各エレメントとDI
 | コンフォーマンス | パラメータ    | 型     | 例          |
 | -------------| ----- | ------ | ----- |
 | MAY | patient | reference | `GET [base]/ImagingStudy?patient=123` |
-| MAY | patient,modality | reference,token | `GET [base]/ImagingStudy?patient=123&modality=ES` |
-| MAY | patient,started | reference,date | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-25` |
-| MAY | patient,started,modality | reference,date,token | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=ES` |
+| MAY | patient, modality | reference, token | `GET [base]/ImagingStudy?patient=123&modality=ES` |
+| MAY | patient,started | reference, date | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-25` |
+| MAY | patient, started, modality | reference, date, token | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=ES` |
 
 #### 操作詳細
 
