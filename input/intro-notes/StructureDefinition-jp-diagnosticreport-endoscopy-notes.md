@@ -4,7 +4,7 @@
 次のデータ項目は必須（**SHALL**）である。
 
 - status：レポートの状態・進捗状況
-- category：レポートを作成した臨床分野、部門、または診断サービスを分類するコード。"LP7796-8" Endoscopy 固定（Binding: JP Core Diagnostic Report Category Codes（required））
+- category：レポートを作成した臨床分野、部門、または診断サービスを分類するコード。"LP7796-8" Endoscopy 固定
 - code：レポートの種別。SS-MIX2 拡張ストレージ構成の説明と構成ガイドライン Ver1.2h（本実装ガイドライン制定時の最新版） 「別紙：標準文書コード表」の標準コード（LOINCコード）から指定
 
   
@@ -43,14 +43,14 @@
 
 ### Code
 
-[ValueSet: JPCore DocumentCode][jp-documentcode-vs] の中から適切な内視鏡分野の報告書のコードを指定する。より粒度の細かい報告書のコードを選ぶこと。
+[ValueSet: JP Core Document Codes Endoscopy ValueSet][JP_DocumentCodes_Endoscopy_VS] の中から適切な内視鏡分野の報告書のコードを指定する。より粒度の細かい報告書のコードを選ぶこと。
  - 例：上部消化管内視鏡報告書：`18751-8`
 
 該当する適切な報告書コードが登録されていない場合は、"内視鏡検査報告書"を表す`19805-1`を指定する。
 
 ### conclusionCode
 
-消化器内視鏡においては、[日本消化器内視鏡学会](https://www.jges.net/)が推進する[JED (Japan Endoscopy Database) Project](https://jedproject.jges.net/)で定義されている[JED用語](https://jedproject.jges.net/about/terms-about/)のコード値を設定することを強く推奨する。[JP Core ConclusionCode Jed Valueset][jp-conclusioncodejed-vs]として参照する。
+消化器内視鏡においては、[日本消化器内視鏡学会](https://www.jges.net/)が推進する[JED (Japan Endoscopy Database) Project](https://jedproject.jges.net/)で定義されている[JED用語](https://jedproject.jges.net/about/terms-about/)のコード値を設定することを強く推奨する。[JP Core Conclusion Code JED ValueSet][JP_ConclusionCodesJed_VS]として参照する。
 
 
 ### 時間の指定
@@ -60,7 +60,7 @@
 
 ### 参照画像
 
-レポートに添付されるキー画像が、DICOMフォーマットの場合は[ImagingStudy][jp-imagingstudy-endoscopy]リソースから参照し、非DICOMフォーマットの場合media要素のlinkから参照する。
+レポートに添付されるキー画像が、DICOMフォーマットの場合は[JP Core ImagingStudy Endoscopy Profile][JP_ImagingStudy_Endoscopy]リソースから参照し、非DICOMフォーマットの場合media要素のlinkから参照する。
 
 ## 利用方法
 
