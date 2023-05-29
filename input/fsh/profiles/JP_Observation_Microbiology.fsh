@@ -11,12 +11,19 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "coding.system"
 * category ^slicing.rules = #open
-* category contains simpleObservation 1..1
-* category[simpleObservation].coding.system = $JP_SimpleObservationCategory_CS
-* category[simpleObservation].coding.code = $JP_SimpleObservationCategory_CS#laboratory
+* category contains 
+    microbiology 1..1 and
+    loinc ..*  and
+    microbiologyCategory 0..1
+* category[microbiology] from JP_SimpleObservationCategory_VS (required)
+* category[microbiology].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[microbiology].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
+* category[loinc].coding.system = $US_Loinc_CS (exactly)
+* category[loinc].coding.code = $US_Loinc_CS#18725-2
+* category[microbiologyCategory] from JP_MicrobiologyCategory_VS (required)
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP Core仕様】\r\n日本では適切なコード体系が存在しないため、独自のバリューセットを定義する\r\nJP CoreとしてはsimpleObservationコード体系を必須とし、他のローカルコード等を使用する場合はCategory要素の2つ目以降に設定する"
-* code.coding ^slicing.discriminator.type = #pattern
-* code.coding ^slicing.discriminator.path = "$this"
+* code.coding ^slicing.discriminator.type = #value
+* code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
 * code.coding ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】\r\n[Slicing](http://hl7.org/fhir/profiling.html#slicing)を使用して複数のコード体系に対応\r\n基本方針としてカテゴリに応じた標準コードの使用を想定しているが、ローカルコードを使用してもよい"
 * code.coding contains

@@ -1,5 +1,4 @@
 
-Alias: $JP_Loinc_Dummy_CS = http://loinc.org
 Alias: $US_Loinc_CS = http://loinc.org
 // ImplementationGuide
 Alias: $FHIRJPCoreImplementationGuide = http://jpfhir.jp/fhir/core/ImplementationGuide/hl7.fhir.jp.core
@@ -217,6 +216,7 @@ Alias: $JP_MedicationCodeHOT7_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Medica
 Alias: $JP_MedicationCode_Immunization_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_Immunization_VS
 Alias: $JP_MedicationCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_VS
 Alias: $JP_MedicationCodeYJ_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCodeYJ_VS
+Alias: $JP_MicrobiologyCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MicrobiologyCategory_VS
 Alias: $JP_ObservationBodyMeasurementCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCategory_VS
 Alias: $JP_ObservationBodyMeasurementCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCode_VS
 Alias: $JP_ObservationBodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodySite_VS
