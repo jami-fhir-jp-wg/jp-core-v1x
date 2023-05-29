@@ -43,7 +43,7 @@
 
 ### Code
 
-[ValueSet: JP Core Document Codes Endoscopy ValueSet][JP_DocumentCodes_Endoscopy_VS] の中から適切な内視鏡分野の報告書のコードを指定する。より粒度の細かい報告書のコードを選ぶこと。
+[JP Core Document Codes Endoscopy ValueSet][JP_DocumentCodes_Endoscopy_VS] の中から適切な内視鏡分野の報告書のコードを指定する。より粒度の細かい報告書のコードを選ぶこと。
  - 例：上部消化管内視鏡報告書：`18751-8`
 
 該当する適切な報告書コードが登録されていない場合は、"内視鏡検査報告書"を表す`19805-1`を指定する。
