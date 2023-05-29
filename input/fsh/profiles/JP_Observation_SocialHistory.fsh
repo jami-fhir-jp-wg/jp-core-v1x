@@ -16,9 +16,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category ^slicing.discriminator[+].type = #value
 * category ^slicing.discriminator[=].path = "coding.system"
 * category ^slicing.rules = #open
-* category contains simpleObservation 1..1
-* category[simpleObservation].coding.system = $JP_SimpleObservationCategory_CS
-* category[simpleObservation].coding.code = $JP_SimpleObservationCategory_CS#social-history
+* category contains socialHistory 1..1
+* category[socialHistory] from JP_SimpleObservationCategory_VS (required)
+* category[socialHistory].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[socialHistory].coding.code = $JP_SimpleObservationCategory_CS#social-history (exactly)
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP Core仕様】基底仕様のカテゴリ「social-history」固定とする"
 * code from JP_ObservationSocialHistoryCode_VS (preferred)
 * code ^comment = "MEDISのJ-MIXの「生活背景情報」（※宗教を除く）"

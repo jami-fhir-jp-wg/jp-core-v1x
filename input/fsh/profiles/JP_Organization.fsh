@@ -49,7 +49,6 @@ valueには下記の値を格納する。
 value : ```医療機関コード（１０桁）```を使用する。 
 医療機関コード（１０桁）の詳細はOrganizationプロファイルの医療機関コード１０桁の説明を参照すること。 "
 * identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no" (exactly)
-* identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no" (exactly)
 * identifier[medicalInstitutionCode].assigner only Reference(JP_Organization)
 * identifier[insurerNumber] ^comment = "健康保険組合などの保険者の保険者番号を表現する際のIdentifier表現に使用する\r\nsystem要素には保険者番号を示すOID\"urn:oid:1.2.392.100495.20.3.61\"を指定する。"
 * identifier[insurerNumber].system = "urn:oid:1.2.392.100495.20.3.61" (exactly)
