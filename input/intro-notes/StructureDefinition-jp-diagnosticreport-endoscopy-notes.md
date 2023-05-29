@@ -3,26 +3,26 @@
 
 次のデータ項目は必須（**SHALL**）である。
 
-- status：レポートの状態・進捗状況
-- category：レポートを作成した臨床分野、部門、または診断サービスを分類するコード。"LP7796-8" Endoscopy 固定
-- code：レポートの種別。SS-MIX2 拡張ストレージ構成の説明と構成ガイドライン Ver1.2h（本実装ガイドライン制定時の最新版） 「別紙：標準文書コード表」の標準コード（LOINCコード）から指定
+- status : レポートの状態・進捗状況
+- category : レポートを作成した臨床分野、部門、または診断サービスを分類するコード。"LP7796-8" Endoscopy 固定
+- code : レポートの種別。SS-MIX2 拡張ストレージ構成の説明と構成ガイドライン Ver1.2h（本実装ガイドライン制定時の最新版） 「別紙：標準文書コード表」の標準コード（LOINCコード）から指定
 
   
 ### MustSupport
 
 次の要素に関する情報が送信システムに存在する場合、その要素がサポートされなければならないことを意味する（**Must Support**）。
 
-- basedOn：ServiceRequest（オーダを表すリソースへの参照）
-- subject：患者リソース（Patient）への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
-- effectiveDateTime：レポート作成日時
-- issued：レポート確定日時
-- performer：内視鏡検査を実施した医師
-- resultInterpreter：レポートの確定者
-- imagingStudy：レポートに添付されるキー画像の参照先（DICOMフォーマット）
-- link：レポートに添付されるキー画像の参照先（非DICOMフォーマット）
-- conclusion：総合診断としての要約結論
-- conclusionCode：内視鏡診断レポートの要約結論を表すコード
-- presentedForm：レポート本体（全体のイメージあるいは所見等のテキスト）
+- basedOn : ServiceRequest（オーダを表すリソースへの参照）
+- subject : 患者リソース（Patient）への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
+- effectiveDateTime : レポート作成日時
+- issued : レポート確定日時
+- performer : 内視鏡検査を実施した医師
+- resultInterpreter : レポートの確定者
+- imagingStudy : レポートに添付されるキー画像の参照先（DICOMフォーマット）
+- link : レポートに添付されるキー画像の参照先（非DICOMフォーマット）
+- conclusion : 総合診断としての要約結論
+- conclusionCode : 内視鏡診断レポートの要約結論を表すコード
+- presentedForm : レポート本体（全体のイメージあるいは所見等のテキスト）
 
 
 ### Extensions定義

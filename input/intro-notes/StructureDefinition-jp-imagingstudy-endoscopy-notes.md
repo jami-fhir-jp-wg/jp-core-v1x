@@ -2,23 +2,23 @@
 ### 必須要素
 
 次の要素は必須（**SHALL**）である。
-- status：リソースの状態（基底のValueSetから選択：registered/available/cancelled/entered-in-error/unknown）
-- subject：JP Core Patientを参照する。
+- status : リソースの状態（基底のValueSetから選択：registered/available/cancelled/entered-in-error/unknown）
+- subject : JP Core Patientを参照する
 
 #### 必須項目
 ImagingStudyリソースは、次の要素を持たなければならない。(**SHALL**)
-- status︓検査項目情報の状態は必須である
-- subject︓このリソースが示す検査項目がどの患者のものかを示すため、参照するpatientリソース定義を必須とした
+- status : 検査項目情報の状態は必須である
+- subject : このリソースが示す検査項目がどの患者のものかを示すため、参照するpatientリソース定義を必須とした
 
 #### Must Support
 
 
-次の要素に関する情報が送信システムに存在する場合、その要素がサポートされなければならないことを意味する（**Must Support**）。
-- identifier：DICOMフォーマットのデータが存在する場合、DICOMタグのStudy Instance UID（0020,000D）が保持される必要がある。
-- series.modality：DICOMフォーマットのデータが存在する場合、シリーズが取得されたモダリティを示す。DICOMでは必須情報となっており、DICOMタグ（0008,0060）の情報が格納される。内視鏡検査の場合は"ES"が指定される。
-- series.instance.uid：DICOMフォーマットのデータ（インスタンス）のユニークIDを示す。DICOMタグ（0008,0018）の情報を格納する。
-- series.instance.sopClass：SOPクラスUID。DICOMタグ（0008,0016）の情報を格納する。内視鏡の場合、通常以下のいずれかが指定される。
-  
+次の要素に関する情報が送信システムに存在する場合、その要素がサポートされなければならないことを意味する（**Must Support**）
+- identifier : DICOMフォーマットのデータが存在する場合、DICOMタグのStudy Instance UID（0020,000D）が保持される必要がある
+- series.modality : DICOMフォーマットのデータが存在する場合、シリーズが取得されたモダリティを示す。DICOMでは必須情報となっており、DICOMタグ（0008,0060）の情報が格納される。内視鏡検査の場合は"ES"が指定される
+- series.instance.uid : DICOMフォーマットのデータ（インスタンス）のユニークIDを示す。DICOMタグ（0008,0018）の情報を格納する
+- series.instance.sopClass : SOPクラスUID。DICOMタグ（0008,0016）の情報を格納する。内視鏡の場合、通常以下のいずれかが指定される
+
 
   |動画・静止画|SOP Class| UID |
   |---------|---------|-----|
@@ -26,11 +26,6 @@ ImagingStudyリソースは、次の要素を持たなければならない。(*
   |静止画|Secondary Capture Image Storage | 1.2.840.10008.5.1.4.1.1.7 |
   |動画|Video Endoscopic Image Storage | 1.2.840.10008.5.1.4.1.1.77.1.1.1 |
 
-  <!-- 表形式で入れてみました
-   - VL Endoscopic Image Storage：1.2.840.10008.5.1.4.1.1.77.1.1 (静止画)
-   - Secondary Capture Image Storage：1.2.840.10008.5.1.4.1.1.7 (静止画)
-   - Video Endoscopic Image Storage：1.2.840.10008.​5.​1.​4.​1.​1.77.1.​1.​1 (動画)
-  -->
 ### Extension定義
 
 このプロファイルでは拡張定義は行っていない。

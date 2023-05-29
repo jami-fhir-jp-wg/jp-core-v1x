@@ -3,10 +3,10 @@
 
 次のデータ項目は必須（**SHALL**）である。
 
-- status ：レポートの状態・進捗状況
-- code ：レポートの種別
+- status : レポートの状態・進捗状況
+- code : レポートの種別
   （画像診断レポート交換手順ガイドライン「5.1 レポート種別コード」に記載されているLOINCコード(18748-4) "Diagnostic imaging study" を指定）
-- category ： カテゴリとモダリティを表すコード
+- category : カテゴリとモダリティを表すコード
   （Radiology(LP29684-5)を第一コードとし、モダリティを示すDICOMコードを第二コードとして指定する。第二コードは複数のモダリティを許容するため、複数のコードの指定が想定される。）
   
 ### MustSupport
@@ -14,16 +14,16 @@
 次のデータは送信システムに存在する場合はサポートされなければならないことを意味する（Must Support）。
 
 - _text : レポートの所見を含むnarrativeデータ
-- basedOn ： レポートあるいは画像検査のServiceRequest
-- subject ： 患者リソース(Patient)への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
-- effectiveDateTime ： レポート作成日時
-- issued ： レポート確定日時
-- performer ： Practitionerでレポートの関係者（作成者、読影者、確定者など）を列挙
-- resultInterpreter ： Practitionerでレポート確定者を示す
-- imagingStudy ： 診断の対象となる画像
-- link ：キーイメージの参照先
-- conclusion ： 診断の結果、impression
-- presentedForm ：レポート本体（全体のイメージあるいは所見等のテキスト）
+- basedOn : レポートあるいは画像検査のServiceRequest
+- subject : 患者リソース(Patient)への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
+- effectiveDateTime : レポート作成日時
+- issued : レポート確定日時
+- performer : Practitionerでレポートの関係者（作成者、読影者、確定者など）を列挙
+- resultInterpreter : Practitionerでレポート確定者を示す
+- imagingStudy : 診断の対象となる画像
+- link : キーイメージの参照先
+- conclusion : 診断の結果、impression
+- presentedForm : レポート本体（全体のイメージあるいは所見等のテキスト）
 
 imagingStudyエレメントはCardinalityが0..*で 0 が許容されているが、放射線レポートでは画像が必ず存在することから、検査実施後には必須（複数の可能性もあり）である。
 

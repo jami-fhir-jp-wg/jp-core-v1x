@@ -3,7 +3,7 @@
 
 Encounter リソースは、次の要素を持たなければならない。
 
-- status ：受診状況を示す。value set encounter-statusで定義された値から設定する必要がある。  
+- status : 受診状況を示す。value set encounter-statusで定義された値から設定する必要がある。  
 （planned/arrived/triaged/in-progress/onleave/finished/cancelled/entered-in-error/unknown）
 - class : 受診分類を示す。value set ActEncounterCodeで定義された値から設定する必要がある。  
 （AMB/EMER/FLD/HH/IMP/ACUTE/NONAC/OBSENC/PRENC/SS/VR）
