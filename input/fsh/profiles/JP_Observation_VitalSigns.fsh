@@ -19,10 +19,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category contains 
     vitalSigns 1..1 and
     vitalSignCategory 1..*
-* category[vitalSigns].coding from JP_SimpleObservationCategory_VS (preferred)
+* category[vitalSigns] from JP_SimpleObservationCategory_VS (required)
 * category[vitalSigns].coding.system = $JP_SimpleObservationCategory_CS (exactly)
 * category[vitalSigns].coding.code = $JP_SimpleObservationCategory_CS#vital-signs (exactly)
-* category[vitalSignCategory].coding from JP_ObservationVitalSignsCategory_VS (preferred)
+* category[vitalSignCategory] from JP_ObservationVitalSignsCategory_VS (preferred)
 * category[vitalSignCategory].coding.system = $JP_ObservationVitalSignsCategory_CS (exactly)
 * category[vitalSignCategory] ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「焦点」"
 * code from JP_ObservationVitalSignsCode_VS (preferred)

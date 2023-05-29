@@ -17,7 +17,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category ^slicing.discriminator[=].path = "coding.system"
 * category ^slicing.rules = #open
 * category contains physicalExam 1..1
-* category[physicalExam].coding from JP_SimpleObservationCategory_VS (preferred)
+* category[physicalExam] from JP_SimpleObservationCategory_VS (required)
 * category[physicalExam].coding.system = $JP_SimpleObservationCategory_CS (exactly)
 * category[physicalExam].coding.code = $JP_SimpleObservationCategory_CS#exam (exactly)
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP Core仕様】基底仕様のカテゴリ「exam」固定とする"
@@ -27,6 +27,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
 * code.coding contains physicalExamCode 0..1
+* code.coding[physicalExamCode] from JP_PhysicalExamCode_VS (required)
 * code.coding[physicalExamCode].system = $JP_PhysicalExamCode_CS (exactly)
 * code.coding[physicalExamCode].code = $JP_PhysicalExamCode_CS#physical-findings  (exactly)
 * code.coding[physicalExamCode].display = "Physical Findings"
@@ -57,6 +58,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * component.code.coding ^slicing.discriminator.path = "system"
 * component.code.coding ^slicing.rules = #open
 * component.code.coding contains physicalExamCode 0..1
+* component.code.coding[physicalExamCode] from JP_PhysicalExamCode_VS (required)
 * component.code.coding[physicalExamCode].system = $JP_PhysicalExamCode_CS (exactly)
 * component.code.coding[physicalExamCode].code = $JP_PhysicalExamCode_CS#detailed-physical-findings (exactly)
 * component.code.coding[physicalExamCode].display = "Detailed Physical Findings"
