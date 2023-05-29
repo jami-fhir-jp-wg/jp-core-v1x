@@ -6,6 +6,7 @@ Description: "Document Codes Endoscopy 値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2023-05-25"
+* ^copyright = "Copyright JED-Project 一般社団法人 日本消化器内視鏡学会"
 
 * $JP_DocumentCodes_CS#18751-8 "上部消化管内視鏡報告書"
 * $JP_DocumentCodes_CS#18746-8 "下部消化管内視鏡報告書"
