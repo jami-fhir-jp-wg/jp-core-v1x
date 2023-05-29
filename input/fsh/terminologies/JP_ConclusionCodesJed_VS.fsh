@@ -1,12 +1,12 @@
-ValueSet: JP_ConclusionCodeJed_VS
-Id: jp-conclusion-code-jed-vs
-Title: "JP Core DiagnosticReport Endoscopy Conclusion Code JED ValueSet"
+ValueSet: JP_ConclusionCodesJed_VS
+Id: jp-conclusion-codes-jed-vs
+Title: "JP Core DiagnosticReport Endoscopy Conclusion Codes JED ValueSet"
 Description: "日本消化器内視鏡学会が推進するJED (Japan Endoscopy Database) Projectのコード値セットのうち主に「質的診断」に該当するコード"
-* ^url = $JP_ConclusionCodeJed_VS
+* ^url = $JP_ConclusionCodesJed_VS
 * ^status = #active
 * ^experimental = false
 * ^date = "2023-05-25"
-* ^copyright = "Copyright JED-Project、日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
+* ^copyright = "Copyright JED-Project 一般社団法人 日本消化器内視鏡学会"
 
 // =================================================
 // 部位共通

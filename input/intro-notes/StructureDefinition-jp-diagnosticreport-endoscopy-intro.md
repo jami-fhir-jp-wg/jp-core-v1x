@@ -16,8 +16,8 @@ DiagnosticReportリソースを使用して表現した内視鏡検査レポー�
 
 <h3>注記</h3>
 
-* 消化器内視鏡検査レポートについては、[日本消化器内視鏡学会](https://jges.net/)が推進する[JED (Japan Endoscopy Database) Project](https://jedproject.jges.net/)に準拠していることが強く推奨される。 
-* Non-DICOM画像を取り扱うMediaプロファイルはJP Coreで未定義のため、FHIR基底を参照されたい。
+* 消化器内視鏡検査レポートについては、[日本消化器内視鏡学会](https://jges.net/)が推進する[JED (Japan Endoscopy Database) Project](https://jedproject.jges.net/)に準拠していることが強く推奨される 
+* Non-DICOM画像を取り扱うMediaプロファイルはJP Coreで未定義のため、FHIR基底を参照されたい
 
 
 ## プロファイル定義

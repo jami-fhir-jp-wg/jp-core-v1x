@@ -10,7 +10,7 @@ Description: "日本消化器内視鏡学会が推進するJED (Japan Endoscopy 
 * ^date = "2023-05-26"
 * ^caseSensitive = true
 * ^content = #fragment  // codesystem全体ではないため。http://hl7.org/fhir/R4/valueset-codesystem-content-mode.html 
-* ^copyright = "Copyright JED-Project、日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
+* ^copyright = "Copyright JED-Project 一般社団法人 日本消化器内視鏡学会"
 
 // =================================================
 // 検査目的・治療目的

@@ -4,7 +4,7 @@ Title: "JP Core Observation LabResult Example 検体検査（尿）"
 Description: "検体検査（尿）"
 Usage: #example
 * contained[0] = jp-servicerequest-example-1
-* category[simpleObservation] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
+* category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * basedOn = Reference(ServiceRequest/jp-servicerequest-example-1)
 * code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#05104 "尿酸"
 * code.coding[+] = $JP_ObservationLabResultCode_CS#3C020000002327101

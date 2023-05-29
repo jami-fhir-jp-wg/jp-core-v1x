@@ -80,7 +80,7 @@ Usage: #example
 
 Instance: jp-medicationadministration-injection-medication-example-1
 InstanceOf: JP_Medication
-Title: "JP Medication 薬剤　ホリゾン注射液"
+Title: "JP Core Medication 薬剤　ホリゾン注射液"
 Description: "ホリゾン注射液"
 Usage: #inline
 * status = #active

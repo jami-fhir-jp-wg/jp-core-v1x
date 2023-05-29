@@ -30,13 +30,14 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category ^slicing.rules = #open
 * category ^slicing.ordered = false
 * category contains endoscopy 1..1
-* category[endoscopy].coding.system = $US_Loinc_CS
-* category[endoscopy].coding.code = $US_Loinc_CS#LP7796-8
+* category[endoscopy] from $JP_DiagnosticReportCategory_VS (required)
+* category[endoscopy].coding.system = $US_Loinc_CS (exactly)
+* category[endoscopy].coding.code = $US_Loinc_CS#LP7796-8 (exactly)
 * category[endoscopy].coding.display = "内視鏡"
 * category[endoscopy] ^short = "診断レポートの分野を表すコード。"
 * category[endoscopy] ^definition = "診断レポートの分野を表すコード。"
 * category[endoscopy] ^comment = "JP_DiagnosticReportCategory_VSの中から「LP7796-8」（Endoscopy（内視鏡））を指定する。"
-* code from $JP_DocumentCodes_Endoscopy_VS (required)
+* code from $JP_DocumentCodes_Endoscopy_VS (extensible)
 * code ^short = "内視鏡分野の診断レポートを分類するためのコード。"
 * code ^definition = "内視鏡分野の診断レポートを分類するためのコード。"
 * code ^comment = "JP_DocumentCodes_Endoscopy_VSの中から適切な内視鏡分野の報告書のコードを指定する（例：「18751-8」（上部消化管内視鏡報告書））。該当する適切な報告書のコードが登録されていない場合は、「19805-1」（内視鏡検査報告書）を指定する。"
@@ -93,7 +94,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * conclusion ^definition = "総合診断に相当する要約結論。"
 * conclusion ^comment = "テキストで可能な限り記載する。"
 * conclusionCode MS
-* conclusionCode from $JP_ConclusionCodeJed_VS (example)
+* conclusionCode from $JP_ConclusionCodesJed_VS (example)
 * conclusionCode ^short = "内視鏡診断レポートの要約結論を表す1つ以上のコード。"
 * conclusionCode ^definition = "内視鏡診断レポートの要約結論を表す1つ以上のコード。"
 * conclusionCode ^comment = "JED Project（https://jedproject.jges.net/）が対象とする検査種別については、指定された質的診断コードを使用することを強く推奨する。"

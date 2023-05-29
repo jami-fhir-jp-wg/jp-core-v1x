@@ -3,26 +3,26 @@
 
 次のデータ項目は必須（**SHALL**）である。
 
-- status：レポートの状態・進捗状況
-- category：レポートを作成した臨床分野、部門、または診断サービスを分類するコード。"LP7796-8" Endoscopy 固定（Binding: JP Core Diagnostic Report Category Codes（required））
-- code：レポートの種別。SS-MIX2 拡張ストレージ構成の説明と構成ガイドライン Ver1.2h（本実装ガイドライン制定時の最新版） 「別紙：標準文書コード表」の標準コード（LOINCコード）から指定
+- status : レポートの状態・進捗状況
+- category : レポートを作成した臨床分野、部門、または診断サービスを分類するコード。"LP7796-8" Endoscopy 固定
+- code : レポートの種別。SS-MIX2 拡張ストレージ構成の説明と構成ガイドライン Ver1.2h（本実装ガイドライン制定時の最新版） 「別紙：標準文書コード表」の標準コード（LOINCコード）から指定
 
   
 ### MustSupport
 
 次の要素に関する情報が送信システムに存在する場合、その要素がサポートされなければならないことを意味する（**Must Support**）。
 
-- basedOn：ServiceRequest（オーダを表すリソースへの参照）
-- subject：患者リソース（Patient）への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
-- effectiveDateTime：レポート作成日時
-- issued：レポート確定日時
-- performer：内視鏡検査を実施した医師
-- resultInterpreter：レポートの確定者
-- imagingStudy：レポートに添付されるキー画像の参照先（DICOMフォーマット）
-- link：レポートに添付されるキー画像の参照先（非DICOMフォーマット）
-- conclusion：総合診断としての要約結論
-- conclusionCode：内視鏡診断レポートの要約結論を表すコード
-- presentedForm：レポート本体（全体のイメージあるいは所見等のテキスト）
+- basedOn : ServiceRequest（オーダを表すリソースへの参照）
+- subject : 患者リソース（Patient）への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
+- effectiveDateTime : レポート作成日時
+- issued : レポート確定日時
+- performer : 内視鏡検査を実施した医師
+- resultInterpreter : レポートの確定者
+- imagingStudy : レポートに添付されるキー画像の参照先（DICOMフォーマット）
+- link : レポートに添付されるキー画像の参照先（非DICOMフォーマット）
+- conclusion : 総合診断としての要約結論
+- conclusionCode : 内視鏡診断レポートの要約結論を表すコード
+- presentedForm : レポート本体（全体のイメージあるいは所見等のテキスト）
 
 
 ### Extensions定義
@@ -43,14 +43,14 @@
 
 ### Code
 
-[ValueSet: JPCore DocumentCode][jp-documentcode-vs] の中から適切な内視鏡分野の報告書のコードを指定する。より粒度の細かい報告書のコードを選ぶこと。
+[JP Core Document Codes Endoscopy ValueSet][JP_DocumentCodes_Endoscopy_VS] の中から適切な内視鏡分野の報告書のコードを指定する。より粒度の細かい報告書のコードを選ぶこと。
  - 例：上部消化管内視鏡報告書：`18751-8`
 
 該当する適切な報告書コードが登録されていない場合は、"内視鏡検査報告書"を表す`19805-1`を指定する。
 
 ### conclusionCode
 
-消化器内視鏡においては、[日本消化器内視鏡学会](https://www.jges.net/)が推進する[JED (Japan Endoscopy Database) Project](https://jedproject.jges.net/)で定義されている[JED用語](https://jedproject.jges.net/about/terms-about/)のコード値を設定することを強く推奨する。[JP Core ConclusionCode Jed Valueset][jp-conclusioncodejed-vs]として参照する。
+消化器内視鏡においては、[日本消化器内視鏡学会](https://www.jges.net/)が推進する[JED (Japan Endoscopy Database) Project](https://jedproject.jges.net/)で定義されている[JED用語](https://jedproject.jges.net/about/terms-about/)のコード値を設定することを強く推奨する。[JP Core Conclusion Code JED ValueSet][JP_ConclusionCodesJed_VS]として参照する。
 
 
 ### 時間の指定
@@ -60,7 +60,7 @@
 
 ### 参照画像
 
-レポートに添付されるキー画像が、DICOMフォーマットの場合は[ImagingStudy][jp-imagingstudy-endoscopy]リソースから参照し、非DICOMフォーマットの場合media要素のlinkから参照する。
+レポートに添付されるキー画像が、DICOMフォーマットの場合は[JP Core ImagingStudy Endoscopy Profile][JP_ImagingStudy_Endoscopy]リソースから参照し、非DICOMフォーマットの場合media要素のlinkから参照する。
 
 ## 利用方法
 
@@ -75,7 +75,7 @@
 | MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) | `GET [base]/DiagnosticReport?ServiceRequest/12345` |
 | MAY | category | token | レポート種別 | DiagnosticReport.category ([JP Core DiagnosticReport Category ValueSet][JP_DiagnosticReportCategory_VS]) (デフォルト：[LP7796-8](https://loinc.org/LP7796-8/)) | `GET [base]/DiagnosticReport?category=LP7796-8` |
 | MAY | code | token | レポート全体を示すコード | DiagnosticReport.code ([JP Core DocumentCodes Endoscopy ValueSet][JP_DocumentCodes_Endoscopy_VS])  | `GET [base]/DiagnosticReport?code=18751-8` |
-| MAY | conclusionCode | token | 内視鏡診断レポートの要約結論 | DiagnosticReport.conclusionCode ([JP Core Conclusion Code JED ValueSet][JP_ConclusionCodeJed_VS])  | `GET [base]/DiagnosticReport?conclusionCode/Z2B32104` |
+| MAY | conclusionCode | token | 内視鏡診断レポートの要約結論 | DiagnosticReport.conclusionCode ([JP Core Conclusion Code JED ValueSet][JP_ConclusionCodesJed_VS])  | `GET [base]/DiagnosticReport?conclusionCode/Z2B32104` |
 
 
 なお、検索パラメータは複合的に利用できる。詳細は[Search - Chained parameters](https://www.hl7.org/fhir/R4/search.html#chaining)を参照すること。

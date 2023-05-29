@@ -109,8 +109,8 @@
 [JP_Patient_KanaSort_SP]: SearchParameter-jp-patient-kanasort-sp.html
 
 <!-- CodeSystem -->
-[JP_EndoscopyTerminologyCodesJED_CS]: CodeSystem-jp-EndoscopyTerminologyCodeJed-cs.html
 [JP_DocumentCodes_CS]: CodeSystem-jp-documentcodes-cs.html
+[JP_EndoscopyTerminologyCodesJED_CS]: CodeSystem-jp-endoscopyterminology-codes-jed-cs.html
 [JP_MedicationExampleDosageComment_CS]: CodeSystem-jp-medication-example-dosagecomment-cs.html
 [JP_MedicationExampleLine_CS]: CodeSystem-jp-medication-example-line-cs.html
 [JP_MedicationExampleLineComment_CS]: CodeSystem-jp-medication-example-linecomment-cs.html
@@ -133,10 +133,9 @@
 [JP_Undefined_CS]: CodeSystem-jp-undefined-cs.html
 
 <!-- ValueSet -->
-[JP_ConclusionCodeJed_VS]: ValueSet-jp-ConclusionCodeJed-vs.html
 [JP_DocumentCodes_Endoscopy_VS]: ValueSet-jp-DocumentCodes-Endoscopy-vs.html
-[JP_ReasonCodesJed_VS]: ValueSet-jp-ReasonCodeJed-vs.html
 [JP_AllergyIntolerance_VS]: ValueSet-jp-allergyintolerance-vs.html
+[JP_ConclusionCodesJed_VS]: ValueSet-jp-conclusion-codes-jed-vs.html
 [JP_ConditionSeverity_VS]: ValueSet-jp-condition-severity-vs.html
 [JP_Department_SsMix_VS]: ValueSet-jp-department-ssmix-vs.html
 [JP_Department_SsMix2Digits_VS]: ValueSet-jp-department-ssmix2digits-vs.html
@@ -207,6 +206,7 @@
 [JP_ProcedureOutcome_VS]: ValueSet-jp-procedure-outcome-vs.html
 [JP_ProcedurePerformerRole_VS]: ValueSet-jp-procedure-performer-role-vs.html
 [JP_ProcedureReason_VS]: ValueSet-jp-procedure-reason-vs.html
+[JP_ReasonCodesJed_VS]: ValueSet-jp-reason-codes-jed-vs.html
 [JP_SimpleObservationCategory_VS]: ValueSet-jp-simpleobservationcategory-vs.html
 [JP_Undefined_VS]: ValueSet-jp-undefined-vs.html
 
@@ -218,6 +218,7 @@
 [jp-diagnosticreport-labresult-example-1]: DiagnosticReport-jp-diagnosticreport-labresult-example-1.html
 [jp-diagnosticreport-radiology-example-1]: DiagnosticReport-jp-diagnosticreport-radiology-example-1.html
 [jp-encounter-example-1]: Encounter-jp-encounter-example-1.html
+[endpoint-dicom-wadors-example]: Endpoint-endpoint-dicom-wadors-example.html
 [jp-familymemberhistory-example-1]: FamilyMemberHistory-jp-familymemberhistory-example-1.html
 [jp-imagingstudy-endoscopy-example-1]: ImagingStudy-jp-imagingstudy-endoscopy-example-1.html
 [jp-imagingstudy-radiology-example-1]: ImagingStudy-jp-imagingstudy-radiology-example-1.html

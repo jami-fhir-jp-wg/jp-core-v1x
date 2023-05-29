@@ -4,7 +4,7 @@ Title: "JP Core Observation PhysicalExam Example 身体所見（腹痛）"
 Description: "身体所見（腹痛）"
 Usage: #example
 * status = #final
-* category[simpleObservation] = $JP_SimpleObservationCategory_CS#exam "Exam"
+* category[physicalExam] = $JP_SimpleObservationCategory_CS#exam "Exam"
 * code = $JP_PhysicalExamCode_CS#physical-findings "Physical Findings"
 * subject = Reference(Patient/jp-patient-example-1)
 * encounter = Reference(Encounter/jp-encounter-example-1)

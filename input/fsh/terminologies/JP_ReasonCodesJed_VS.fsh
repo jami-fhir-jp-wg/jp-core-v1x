@@ -1,12 +1,12 @@
 ValueSet: JP_ReasonCodesJed_VS
 Id: jp-reason-codes-jed-vs
-Title: "JP Core DiagnosticReport Endoscopy Reason Code JED ValueSet"
+Title: "JP Core ImagingStudy Endoscopy Reason Code JED ValueSet"
 Description: "日本消化器内視鏡学会が推進するJED (Japan Endoscopy Database) Projectのコード値セットのうち「検査目的」、「治療目的」に該当するコード"
 * ^url = $JP_ReasonCodesJed_VS
 * ^status = #active
 * ^experimental = false
 * ^date = "2023-05-25"
-* ^copyright = "Copyright JED-Project、日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
+* ^copyright = "Copyright JED-Project 一般社団法人 日本消化器内視鏡学会"
 
 * $JP_EndoscopyTerminologyCodesJED_CS#Z1320021 "スクリーニング"
 * $JP_EndoscopyTerminologyCodesJED_CS#Z1320022 "吐・下血"
