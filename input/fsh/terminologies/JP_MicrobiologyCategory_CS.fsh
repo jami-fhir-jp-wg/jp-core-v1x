@@ -1,7 +1,7 @@
 CodeSystem: JP_MicrobiologyCategory_CS
 Id: jp-microbiology-category-cs
 Title: "JP Core MicrobiologyCategory CodeSystem"
-Description: "細菌検査種別に関するコード"
+Description: "細菌検査カテゴリコードシステム"
 * ^url = $JP_MicrobiologyCategory_CS
 * ^status = #active
 * ^experimental = false
