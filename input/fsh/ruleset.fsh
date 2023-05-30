@@ -3,7 +3,7 @@ RuleSet: SetDefinition(name, definition)
 * {name} ^definition = {definition}
 
 RuleSet: SetDefinitionRef(name, definition)
-* {name} ^short = {definition}【詳細参照】
+* {name} ^short = "{definition}【詳細参照】"
 * {name} ^definition = {definition}
 
 RuleSet: SetComment(name, definition, comment)
