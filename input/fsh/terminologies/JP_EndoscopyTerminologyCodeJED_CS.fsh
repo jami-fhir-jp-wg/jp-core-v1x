@@ -1,7 +1,7 @@
 CodeSystem: JP_EndoscopyTerminologyCodesJED_CS
 Id: jp-endoscopyterminology-codes-jed-cs
 Title: "JP Core Endoscopy JED CodeSystem"
-Description: "日本消化器内視鏡学会が推進するJED (Japan Endoscopy Database) Projectのコード値セット"
+Description: "日本消化器内視鏡学会が推進するJED (Japan Endoscopy Database) Projectで定義されるコードシステム"
 * ^identifier[0].system = "urn:ietf:rfc:3986"
 * ^identifier[=].value = "urn:oid:1.2.392.200270.4.1000.1"
 * ^url = $JP_EndoscopyTerminologyCodesJED_CS
