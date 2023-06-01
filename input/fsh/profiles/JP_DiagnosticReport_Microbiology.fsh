@@ -28,7 +28,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[microbiology] ^comment = "Multiple categories are allowed using various categorization schemes.   The level of granularity is defined by the category concepts in the value set. More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in DiagnosticReport.code.\r\nさまざまなカテゴリ化スキームを使用して、複数のカテゴリを使用できる。粒度のレベルは、それぞれの値セットのカテゴリの概念によって定義される。 DiagnosticReport.codeのメタデータや用語の階層を使用して、よりきめ細かいフィルタリングを実行できる。\r\n\r\n【JP Core仕様】Diagnostic Service Section Codesの\"LAB\"を使用"
 * category[microbiology].coding.system = $US_Loinc_CS
 * category[microbiology].coding.code = $US_Loinc_CS#LP7819-8
-* category[microbiology].coding.text =  "微生物検査"
+* category[microbiology].coding.display = "微生物検査"
 * category ^short = "サービスカテゴリー。【詳細参照】"
 
 * code ^short = "この診断レポートの名前/コード。【詳細参照】"
@@ -59,6 +59,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * specimen ^short = "診断レポートのもとになった検体。【詳細参照】"
 * specimen ^definition = "この診断レポートのもとになった検体に関する詳細情報。"
 * specimen ^comment = "検査結果名称のコードを見れば検体情報が十分に判明するような場合には、この検体情報は冗長になる。複数の検体が関与する場合には、検査や検査グループごとに検体情報が記述されることがある。"
+* result only Reference(JP_Observation_Microbiology)
 * result ^short = "検査結果。Observationsリソースが参照される。【詳細参照】"
 * result ^definition = "診断レポートの一部となるObservationsに関する情報。"
 * result ^comment = "Observationsは階層構造を持てる。"

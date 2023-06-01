@@ -1,7 +1,6 @@
 ### 必須要素
 本プロファイルでは、次の要素を持たなければならない。
 
-Observation リソースは、次の要素を持たなければならない。
  - status : 検体検査情報項目の状態は必須である
  - code : このリソースは何の検体検査情報項目であるかを示すため必須である
 
@@ -24,12 +23,6 @@ Observation リソースは、次の要素を持たなければならない。
 | SHOULD | category, value-quantity | reference | `GET [base]?category=[category]` |
 | SHOULD | category, value-quantity, code, specimen, patient | reference | `GET [base]?category=[category]` |
 | SHOULD | patient, date, based-on | reference | `GET [base]?category=[category]` |
-
-#### Operation一覧
-
-ObservationリソースのOperation一覧の定義はユースケースに依存せず共通であるため、共通情報プロファイルに記載されている。
-
-[Observation共通情報プロファイル#Operation一覧][JP_Observation_Common_Operation]
 
 ### サンプル
 
