@@ -17,5 +17,8 @@ Alias: $patient-race-cs = http://terminology.hl7.org/CodeSystem/v3-Race
 Alias: $patient-race-vs = http://terminology.hl7.org/ValueSet/v3-Race
 Alias: $media-type = http://terminology.hl7.org/CodeSystem/media-type
 
+// dicom
+Alias: $dicom-modality = https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html
+
 // JPCor定義はaliases-jpcore.fshに記載すること
 
