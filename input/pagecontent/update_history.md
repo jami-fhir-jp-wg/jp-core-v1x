@@ -22,6 +22,8 @@
       * JP_DiagnosticReport_EndoScopy
     * JP_DiagnosticReport_Common の StructureDefinition内のdefinitionの記述を整理した
     * JP_DiagnosticReport_Radiologyのcategoryおよびcodeエレメントの定義を更新した、また読影医・確定医の専門医資格情報に関する記述を追加した
+  * Medication関連
+    * JP_MedicationRequest, JP_MedicationRequest_Injectionに対し、JP_MedicationDispense_Preparation拡張定義が誤って定義されていたため、これを削除した。
   * Terminology関連(CodeSystem、ValueSet)
     * 定義追加
       * JP Core Endoscopy JED CodeSystem
