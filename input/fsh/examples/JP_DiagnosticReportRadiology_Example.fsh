@@ -8,7 +8,7 @@ Usage: #example
 * identifier.value = "123456"
 * status = #final
 * category[radiology] = $US_Loinc_CS#LP29684-5
-* category[radiology_sub] = $dicom-modality#CT
+* category[radiology_sub] = $dicom-ontology#CT
 * code = $US_Loinc_CS#18748-4 "Diagnostic imaging study"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2008-06-17"
