@@ -48,3 +48,13 @@ Usage: #example
 * address.city = "文京区"
 * address.state = "東京都"
 * address.country = "JPN"
+
+Instance: jp-organization-example-inspection
+InstanceOf: JP_Organization
+Title: "JP Core Organization Example ＡＢＣ検査株式会社"
+Description: "ＡＢＣ検査株式会社"
+Usage: #example
+* type = http://terminology.hl7.org/CodeSystem/organization-type#team "Organizational team"
+* name = "ひまわりＡＢＣ検査株式会社健康保険組合"
+* identifier[+].system = "abc-hospital.local/fhir/Organization/localcode"
+* identifier[=].value = "000-000-000"

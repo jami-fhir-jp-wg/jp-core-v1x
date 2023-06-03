@@ -3,10 +3,20 @@ InstanceOf: JP_DiagnosticReport_Microbiology
 Title: "JP Core DiagnosticReport_Microbiology Example 一般細菌検査レポート"
 Description: "一般細菌検査レポート"
 Usage: #example
+* contained[+] = jp-servicerequest-example-1
+* contained[+] = jp-organization-example-inspection
+* contained[+] = gram-strain1
+* contained[+] = gram-strain2
+* contained[+] = gram-strain3
+* contained[+] = gram-strain4
+* contained[+] = organism-panels1
+* contained[+] = organism-panels2
+* contained[+] = organism-panels3
+* contained[+] = organism-panels4
 * identifier.use = #usual
 * identifier.system = "http://abc-hospital.local/fhir/mb/reportid"
 * identifier.value = "1234567"
-* basedOn = Reference(ServiceRequest/order1)
+* basedOn = Reference(ServiceRequest/jp-servicerequest-example-1)
 * status = #final
 * category[microbiology] = $US_Loinc_CS#LP7819-8 "微生物検査"
 * code = $US_Loinc_CS#18725-2 "Microbiology studies"
@@ -14,13 +24,13 @@ Usage: #example
 * encounter = Reference(Encounter/jp-encounter-example-1)
 * effectiveDateTime = "2021-03-04T08:30:00+11:00"
 * issued = "2021-03-04T11:45:33+11:00"
-* performer = Reference(Organization/0001-1111) "株式会社ＡＢＣ検査"
+* performer = Reference(Organization/jp-organization-example-inspection) "株式会社ＡＢＣ検査"
 * presentedForm.contentType = #application/pdf
 * presentedForm.language = #ja-JP
 * presentedForm.data = "JVBERi0xLjUNCiW1tbW1DQoxIDAgb2JqDQo8PC9UeXBlL0NhdGFsb2cvUGFnZXMgMiAwIFIvTGFuZyhqYS1KUCkgL1N0cnVjdFRyZWVSb290IDEzIDAgUi9NYXJrSW5mbzw8L01hcmtlZCB0cnVlPj4+Pg0KZW5kb2JqDQoyIDAgb2JqDQo8PC9UeXBlL1BhZ2VzL0NvdW50IDEvS2lkc1sgMyAwIFJdID4+DQplbmRvYmoNCjMgMCBvYmoN"
 * presentedForm.title = "検査結果PDFレポート"
-* resultsInterpreter = Reference(Practitioner/person1) "検査タロウ"
-* specimen = Reference(Specimen/specimen1) "喀痰"
+* resultsInterpreter = Reference(Practitioner/jp-practitioner-example-female-1) "福岡 花子"
+* specimen = Reference(Specimen/jp-specimen-example-3) "喀痰"
 * result[0] = Reference(Observation/gram-strain1)
 * result[+] = Reference(Observation/gram-strain2)
 * result[+] = Reference(Observation/gram-strain3)
