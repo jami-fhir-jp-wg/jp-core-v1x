@@ -26,8 +26,8 @@ Observation リソースに対して本プロファイルに準拠する場合�
 
 という情報要素を表現する本プロファイルを適用したObservationリソースを用意する。それぞれの層では一般微生物学検査または抗酸菌検査を実施した際に得られる以下の情報が収容されることを想定している。
 
+![](intoronotes-resources/observation_microbiology_structure.PNG)
 
-（微生物学的検査のObservation構造図をここに）
 第1層は微生物学検査で順を追って行なわれる検査種別に対応した情報が収容され、最初に施行される塗抹標本の顕微鏡による鏡検に相当するcategoryである「塗抹（Gram-stain、または AFB-stains、または Others）」と、それに引き続いて行なう培養・同定検査に相当するcategoryである「培養・同定（Organism panels）」から構成される。このうち、「塗抹（Gram-stain、または AFB-stains、または Others）」についてはこの階層で検査結果が収容され、これより下の階層は存在しない。
 
 「培養・同定（Organism panels）」は構成要素として培養・同定された各菌毎の情報を下層に持ち、一般微生物学検査では「菌名・菌量（Organism Id）」及び「薬剤感受性（Susceptibility panels）」が、抗酸菌検査ではそれらに加えて「培養結果（growth）」が下層の情報となる。
