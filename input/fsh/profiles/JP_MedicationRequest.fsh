@@ -10,7 +10,6 @@ Parent: MedicationRequest
 Id: jp-medicationrequest
 Title: "JP Core MedicationRequest Profile"
 Description: "このプロファイルはMedicationRequestリソースに対して、内服・外用薬剤処方のデータを送受信するための基礎となる制約と拡張を定めたものである。"
-* extension contains JP_MedicationDispense_Preparation named preparation ..*
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
 * ^status = #active
 * ^date = "2022-10-31"
@@ -237,7 +236,6 @@ Parent: MedicationRequest
 Id: jp-medicationrequest-injection
 Title: "JP Core MedicationRequest Injection Profile"
 Description: "このプロファイルはMedicationRequestリソースに対して、注射薬剤処方のデータを送受信するための基礎となる制約と拡張を定めたものである。"
-* extension contains JP_MedicationDispense_Preparation named preparation ..*
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection"
 * ^status = #active
 * ^date = "2022-10-31"
