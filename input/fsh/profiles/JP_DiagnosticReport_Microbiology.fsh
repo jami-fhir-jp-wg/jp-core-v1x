@@ -5,7 +5,7 @@ Profile: JP_DiagnosticReport_Microbiology
 Parent: DiagnosticReport
 Id: jp-diagnosticreport-microbiology
 Title: "JP Core DiagnosticReport Microbiology Profile"
-Description: "このプロファイルはDiagnosticReportリソースに対して、データを送受信するための細菌検査レポートの制約と拡張を定めたものである。"
+Description: "このプロファイルはDiagnosticReportリソースに対して、データを送受信するための微生物学検査レポートの制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Microbiology"
 * ^status = #active
 * ^date = "2023-03-22"
