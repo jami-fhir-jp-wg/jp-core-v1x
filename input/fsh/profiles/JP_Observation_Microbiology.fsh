@@ -7,6 +7,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * ^status = #active
 * basedOn only Reference(ServiceRequest)
 * basedOn ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n【JP Core仕様】\r\nオーダ情報（ServiceRequestリソース）"
+* status 1..1
 * category 1..
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "coding.system"
@@ -22,6 +23,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category[loinc].coding.code = $US_Loinc_CS#18725-2
 * category[microbiologyCategory] from JP_MicrobiologyCategory_VS (required)
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP Core仕様】\r\n日本では適切なコード体系が存在しないため、独自のバリューセットを定義する\r\nJP CoreとしてはsimpleObservationコード体系を必須とし、他のローカルコード等を使用する場合はCategory要素の2つ目以降に設定する"
+* code 1..1
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
@@ -36,11 +38,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * code.coding[antimicrobial-drug] ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】\r\n抗菌薬コードを表現する場合に使用する\r\nNeXEHRSで使用を定める標準コードに準じて、JANIS抗菌薬コードを採用する"
 * code.coding[jlac10] from $JP_ObservationLabResultCode_VS (required)
 * code.coding[jlac10] ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】\r\n塗抹結果、培養・同定結果を表現する場合に使用する\r\nJLAC10コードを採用する"
-* subject 1..
 * subject only Reference(JP_Patient)
 * subject ^comment = "One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.\r\n\r\n【JP Core仕様】\r\n患者（Patientリソース）"
-* encounter 1..
-* encounter ^comment = "This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission laboratory tests).\r\n\r\n【JP Core仕様】\r\n診察（Encounterリソース）"
 * effective[x] only dateTime or Period
 * effective[x] ^comment = "At least a date should be present unless this observation is a historical report.  For recording imprecise or \"fuzzy\" times (For example, a blood glucose measurement taken \"after breakfast\") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.\r\n\r\n【JP Core仕様】\r\n検体採取日"
 * value[x] only Quantity or CodeableConcept or string
