@@ -30,13 +30,15 @@ Description: "このプロファイルはObservationリソースに対して、�
 * code.coding ^slicing.rules = #open
 * code.coding ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】\r\n[Slicing](http://hl7.org/fhir/profiling.html#slicing)を使用して複数のコード体系に対応\r\n基本方針としてカテゴリに応じた標準コードの使用を想定しているが、ローカルコードを使用してもよい"
 * code.coding contains
-//    infectious-agent 0..1 and
-//    antimicrobial-drug 0..1 and
+    infectious-agent 0..1 and
+    antimicrobial-drug 0..1 and
     jlac10 0..1
-//* code.coding[infectious-agent] from $microbiology-infectious-agent (required)
-//* code.coding[infectious-agent] ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】\r\n同定菌名を表現する場合に使用する\r\nNeXEHRSで使用を定める標準コードに準じて、JANIS菌名コードを採用する"
-//* code.coding[antimicrobial-drug] from $microbiology-antimicrobial-drug (required)
-//* code.coding[antimicrobial-drug] ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】\r\n抗菌薬コードを表現する場合に使用する\r\nNeXEHRSで使用を定める標準コードに準じて、JANIS抗菌薬コードを採用する"
+* code.coding[infectious-agent] from $JP_Microbiology_InfectiousAgent_VS (required)
+* code.coding[infectious-agent].system = $JP_Microbiology_InfectiousAgent_CS (exactly)
+* code.coding[infectious-agent] ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】\r\n同定菌名を表現する場合に使用する\r\nNeXEHRSで使用を定める標準コードに準じて、JANIS菌名コードを採用する"
+* code.coding[antimicrobial-drug] from $JP_Microbiology_AntiMicrobialDrug_VS (required)
+* code.coding[antimicrobial-drug].system = $JP_Microbiology_AntiMicrobialDrug_CS (exactly)
+* code.coding[antimicrobial-drug] ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】\r\n抗菌薬コードを表現する場合に使用する\r\nNeXEHRSで使用を定める標準コードに準じて、JANIS抗菌薬コードを採用する"
 * code.coding[jlac10] from $JP_ObservationLabResultCode_VS (required)
 * code.coding[jlac10].system = $JP_ObservationLabResultCode_CS (exactly)
 * code.coding[jlac10] ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】\r\n塗抹結果、培養・同定結果を表現する場合に使用する\r\nJLAC10コードを採用する"

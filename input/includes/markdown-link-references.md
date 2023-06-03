@@ -120,7 +120,9 @@
 [JP_MedicationExampleRouteComment_CS]: CodeSystem-jp-medication-example-routecomment-cs.html
 [JP_MedicationExampleSiteComment_CS]: CodeSystem-jp-medication-example-sitecomment-cs.html
 [JP_MedicationExampleUncategorizedComment_CS]: CodeSystem-jp-medication-example-uncategorized-comment-cs.html
+[JP_Microbiology_AntiMicrobialDrug_CS]: CodeSystem-jp-microbiology-anti-microbial-drug-cs.html
 [JP_MicrobiologyCategory_CS]: CodeSystem-jp-microbiology-category-cs.html
+[JP_Microbiology_InfectiousAgent_CS]: CodeSystem-jp-microbiology-infectious-agent-cs.html
 [JP_ObservationBodyMeasurementCategory_CS]: CodeSystem-jp-observation-bodymeasurement-category-cs.html
 [JP_ObservationBodyMeasurementCode_CS]: CodeSystem-jp-observation-bodymeasurement-code-cs.html
 [JP_ObservationBodySite_CS]: CodeSystem-jp-observation-bodysite-cs.html
@@ -180,7 +182,9 @@
 [JP_MedicationCode_Immunization_VS]: ValueSet-jp-medicationcode-immunization-vs.html
 [JP_MedicationCode_VS]: ValueSet-jp-medicationcode-vs.html
 [JP_MedicationCodeYJ_VS]: ValueSet-jp-medicationcode-yj-vs.html
+[JP_Microbiology_AntiMicrobialDrug_VS]: ValueSet-jp-microbiology-anti-microbial-drug-vs.html
 [JP_MicrobiologyCategory_VS]: ValueSet-jp-microbiology-category-vs.html
+[JP_Microbiology_InfectiousAgent_VS]: ValueSet-jp-microbiology-infectious-agent-vs.html
 [JP_ObservationBodyMeasurementCategory_VS]: ValueSet-jp-observation-bodymeasurement-category-vs.html
 [JP_ObservationBodyMeasurementCode_VS]: ValueSet-jp-observation-bodymeasurement-code-vs.html
 [JP_ObservationBodySite_VS]: ValueSet-jp-observation-bodysite-vs.html
@@ -219,6 +223,7 @@
 [jp-coverage-example-1]: Coverage-jp-coverage-example-1.html
 [jp-diagnosticreport-endoscopy-example-1]: DiagnosticReport-jp-diagnosticreport-endoscopy-example-1.html
 [jp-diagnosticreport-labresult-example-1]: DiagnosticReport-jp-diagnosticreport-labresult-example-1.html
+[jp-diagnosticreport-microbiology-example-1]: DiagnosticReport-jp-diagnosticreport-microbiology-example-1.html
 [jp-diagnosticreport-radiology-example-1]: DiagnosticReport-jp-diagnosticreport-radiology-example-1.html
 [jp-encounter-example-1]: Encounter-jp-encounter-example-1.html
 [endpoint-dicom-wadors-example]: Endpoint-endpoint-dicom-wadors-example.html
@@ -268,6 +273,7 @@
 [jp-observation-vitalsigns-example-1]: Observation-jp-observation-vitalsigns-example-1.html
 [jp-organization-example-clinic]: Organization-jp-organization-example-clinic.html
 [jp-organization-example-hospital]: Organization-jp-organization-example-hospital.html
+[jp-organization-example-inspection]: Organization-jp-organization-example-inspection.html
 [jp-organization-example-payer]: Organization-jp-organization-example-payer.html
 [jp-patient-example-1]: Patient-jp-patient-example-1.html
 [jp-practitioner-example-female-1]: Practitioner-jp-practitioner-example-female-1.html

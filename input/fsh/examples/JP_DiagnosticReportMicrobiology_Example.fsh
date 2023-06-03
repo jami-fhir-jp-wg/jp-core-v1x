@@ -191,7 +191,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#organism "Organism"
-* code.coding[0] = $JANIS_Kinmei_CODE#1303
+* code.coding[0] = $JP_Microbiology_InfectiousAgent_CS#1303
 * code.text = "Staphylococcus aureus (MRSA)"
 * valueString = "2+"
 
@@ -202,7 +202,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-panels "Susceptibility panels"
-* code.coding[0] = $JANIS_Kinmei_CODE#1303
+* code.coding[0] = $JP_Microbiology_InfectiousAgent_CS#1303
 * code.text = "Staphylococcus aureus (MRSA)"
 * hasMember[0] = Reference(Observation/susceptibility-measurements1-1)
 * hasMember[+] = Reference(Observation/susceptibility-measurements1-2)
@@ -234,7 +234,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#organism "Organism"
-* code.coding[0] = $JANIS_Kinmei_CODE#1131
+* code.coding[0] = $JP_Microbiology_InfectiousAgent_CS#1131
 * code.text = "Streptococcus pneumoniae"
 * valueString = "1+"
 
@@ -245,7 +245,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-panels "Susceptibility panels"
-* code.coding[0] = $JANIS_Kinmei_CODE#1131
+* code.coding[0] = $JP_Microbiology_InfectiousAgent_CS#1131
 * code.text = "Streptococcus pneumoniae"
 * hasMember[0] = Reference(Observation/susceptibility-measurements2-1)
 * hasMember[+] = Reference(Observation/susceptibility-measurements2-2)
@@ -277,7 +277,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#organism "Organism"
-* code.coding[0] = $JANIS_Kinmei_CODE#1101
+* code.coding[0] = $JP_Microbiology_InfectiousAgent_CS#1101
 * code.text = "α-Streptococcus"
 * valueString = "1+"
 
@@ -288,7 +288,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#organism "Organism"
-* code.coding[0] = $JANIS_Kinmei_CODE#6000
+* code.coding[0] = $JP_Microbiology_InfectiousAgent_CS#6000
 * code.text = "Corynebacterium sp."
 * valueString = "少数"
 
@@ -300,7 +300,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1201 "ベンジルペニシリン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1201 "ベンジルペニシリン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-2
@@ -310,7 +310,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1216 "アンピシリン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1216 "アンピシリン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-3
@@ -320,7 +320,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1281 "スルバクタム・アンピシリン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1281 "スルバクタム・アンピシリン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-4
@@ -330,7 +330,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1266 "ピペラシリン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1266 "ピペラシリン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-5
@@ -340,7 +340,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1821 "ゲンタマイシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1821 "ゲンタマイシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
 Instance: susceptibility-measurements1-6
@@ -350,7 +350,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1816 "アミカシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1816 "アミカシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-7
@@ -360,7 +360,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1871 "アルベカシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1871 "アルベカシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
 Instance: susceptibility-measurements1-8
@@ -370,7 +370,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#2121 "ミノサイクリン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#2121 "ミノサイクリン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
 Instance: susceptibility-measurements1-9
@@ -380,7 +380,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1901 "エリスロマイシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1901 "エリスロマイシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-10
@@ -390,7 +390,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1941 "アジスロマイシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1941 "アジスロマイシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-11
@@ -400,7 +400,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1537 "セファゾリン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1537 "セファゾリン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-12
@@ -410,7 +410,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1546 "セフォチアム"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1546 "セフォチアム"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-13
@@ -420,7 +420,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1656 "セフトリアキソン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1656 "セフトリアキソン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-14
@@ -430,7 +430,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1701 "フロモキセフ"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1701 "フロモキセフ"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-15
@@ -440,7 +440,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1661 "セフタジジム"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1661 "セフタジジム"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-16
@@ -450,7 +450,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1596 "セフカペン・ピボキシル"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1596 "セフカペン・ピボキシル"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-17
@@ -460,7 +460,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#2006 "クリンダマイシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#2006 "クリンダマイシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
 Instance: susceptibility-measurements1-18
@@ -470,7 +470,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#2516 "レボフロキサシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#2516 "レボフロキサシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
 Instance: susceptibility-measurements1-19
@@ -480,7 +480,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#2601 "ホスホマイシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#2601 "ホスホマイシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-20
@@ -490,7 +490,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1401 "イミペネム・シラスタチン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1401 "イミペネム・シラスタチン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-21
@@ -500,7 +500,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1411 "メロペネム"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1411 "メロペネム"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-22
@@ -510,7 +510,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#2301 "バンコマイシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#2301 "バンコマイシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
 Instance: susceptibility-measurements2-1
@@ -520,7 +520,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1201 "ベンジルペニシリン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1201 "ベンジルペニシリン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
 Instance: susceptibility-measurements2-2
@@ -530,7 +530,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1216 "アンピシリン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1216 "アンピシリン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements2-3
@@ -540,7 +540,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1281 "スルバクタム・アンピシリン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1281 "スルバクタム・アンピシリン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements2-4
@@ -550,7 +550,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1266 "ピペラシリン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1266 "ピペラシリン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements2-5
@@ -560,7 +560,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1821 "ゲンタマイシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1821 "ゲンタマイシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements2-6
@@ -570,7 +570,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1816 "アミカシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1816 "アミカシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements2-7
@@ -580,7 +580,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1871 "アルベカシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1871 "アルベカシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements2-8
@@ -590,7 +590,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#2121 "ミノサイクリン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#2121 "ミノサイクリン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
 Instance: susceptibility-measurements2-9
@@ -600,7 +600,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1901 "エリスロマイシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1901 "エリスロマイシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
 Instance: susceptibility-measurements2-10
@@ -610,7 +610,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1941 "アジスロマイシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1941 "アジスロマイシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements2-11
@@ -620,7 +620,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1537 "セファゾリン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1537 "セファゾリン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements2-12
@@ -630,7 +630,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1546 "セフォチアム"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1546 "セフォチアム"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements2-13
@@ -640,7 +640,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1656 "セフトリアキソン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1656 "セフトリアキソン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
 Instance: susceptibility-measurements2-14
@@ -650,7 +650,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1701 "フロモキセフ"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1701 "フロモキセフ"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements2-15
@@ -660,7 +660,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1661 "セフタジジム"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1661 "セフタジジム"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements2-16
@@ -670,7 +670,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1596 "セフカペン・ピボキシル"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1596 "セフカペン・ピボキシル"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
 Instance: susceptibility-measurements2-17
@@ -680,7 +680,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#2006 "クリンダマイシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#2006 "クリンダマイシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
 Instance: susceptibility-measurements2-18
@@ -690,7 +690,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#2516 "レボフロキサシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#2516 "レボフロキサシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
 Instance: susceptibility-measurements2-19
@@ -700,7 +700,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#2601 "ホスホマイシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#2601 "ホスホマイシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements2-20
@@ -710,7 +710,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1401 "イミペネム・シラスタチン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1401 "イミペネム・シラスタチン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements2-21
@@ -720,7 +720,7 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#1411 "メロペネム"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#1411 "メロペネム"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
 Instance: susceptibility-measurements2-22
@@ -730,5 +730,5 @@ Usage: #inline
 * category[0] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[+] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[+] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[0] = $AntiMicrobialDrug_CODE#2301 "バンコマイシン"
+* code.coding[0] = $JP_Microbiology_AntiMicrobialDrug_CS#2301 "バンコマイシン"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
