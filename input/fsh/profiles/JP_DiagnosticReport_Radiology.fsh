@@ -47,9 +47,9 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[radiology_sub] from $JP_RadiologyModality_VS (required)
 * category[radiology_sub].coding.system = $dicom-ontology (exactly)
 * category[radiology_sub].coding.code 1..1
-* category[radiology_sub].coding.code ^definition = "DICOMのモダリティコードを指定"
+* category[radiology_sub].coding.code ^short = "DICOMのモダリティコードを指定"
 * category[radiology_sub].coding.display 0..1
-* category[radiology_sub].coding.display ^definition = "DICOMのモダリティコードの意味を記載（例: 超音波検査）"
+* category[radiology_sub].coding.display ^short = "DICOMのモダリティコードの意味を記載（例: 超音波検査）"
 * code ^definition = "この診断レポートを表現するコードや名称"
 * code ^comment = "【JP Core仕様】[画像診断レポート交換手順ガイドライン](https://www.jira-net.or.jp/publishing/files/jesra/JESRA_TR-0042_2018.pdf)「5.1 レポート種別コード」に記載されているLOINCコード [Diagnostic imaging study](https://loinc.org/18748-4/) を指定。コードを指定できない場合はCodeableConceptを使用せずテキスト等を直接コーディングすることも許容されるが、要素間の調整と事前・事後の内容の整合性確保のために独自の構造を提供する必要があるので留意すること。"
 * code.coding ^slicing.discriminator.type = #value
