@@ -6,4 +6,4 @@ Description: "微生物学的検査感染性物質値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2023-05-30"
-* include codes from system $JP_Microbiology_AntiMicrobialDrug_CS
+* include codes from system $JP_Microbiology_InfectiousAgent_CS
