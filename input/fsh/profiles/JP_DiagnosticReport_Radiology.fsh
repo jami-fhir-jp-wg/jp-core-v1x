@@ -34,22 +34,21 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category ^slicing.discriminator.path = "coding.system"
 * category ^slicing.rules = #open
 * category ^slicing.ordered = false
-* category contains radiology 0..1 and radiology_sub 0..*
+* category contains radiology 1..1 and radiology_sub 0..*
 * category[radiology] ^short = "レポートを作成した分野を分類するコード。【詳細参照】"
 * category[radiology] ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは第1コードとして LP29684-5 を固定値として設定。第2コード以下にDICOMModalityコードを列挙することでレポートの対象検査内容を示す。"
 * category[radiology] from $JP_DiagnosticReportCategory_VS (required)
 * category[radiology].coding.system = $US_Loinc_CS (exactly)
-* category[radiology].coding.code 1..1
+* category[radiology].coding.code 1..
 * category[radiology].coding.code = $US_Loinc_CS#LP29684-5 (exactly)
 * category[radiology].coding.display = "放射線"
 * category[radiology_sub] ^short = "レポート対象のモダリティを示すコード。【詳細参照】"
 * category[radiology_sub] ^definition = "レポート対象のモダリティを示すコード。放射線を表す第1コードのLP29684-5に続くサブカテゴリコードとして第2コード以下に保持される。複数のモダリティの組み合わせを許容するため、コードの列挙を許容する。"
 * category[radiology_sub] from $JP_RadiologyModality_VS (required)
 * category[radiology_sub].coding.system = $dicom-ontology (exactly)
-* category[radiology_sub].coding.code 1..1
+* category[radiology_sub].coding.code 1..
 * category[radiology_sub].coding.code ^short = "DICOMのモダリティコードを指定"
 * category[radiology_sub].coding.code ^definition = "DICOMのモダリティコードを指定"
-* category[radiology_sub].coding.display 0..1
 * category[radiology_sub].coding.display ^short = "DICOMのモダリティコードの意味を記載（例: 超音波検査）"
 * category[radiology_sub].coding.display ^definition = "DICOMのモダリティコードの意味を記載（例: 超音波検査）"
 * code ^definition = "この診断レポートを表現するコードや名称"
@@ -61,8 +60,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * code.coding[radiologyReportCode] ^short = "放射線レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。【詳細参照】"
 * code.coding[radiologyReportCode] ^definition = "放射線レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。"
 * code.coding[radiologyReportCode] ^comment = "推奨コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しないが、互換性を意識すること。"
-// * code.coding[radiologyReportCode].system = $US_Loinc_CS#18748-4 "Diagnostic imaging study"
 * code.coding[radiologyReportCode].system = $US_Loinc_CS (exactly)
+* code.coding[radiologyReportCode].code 1..1
 * code.coding[radiologyReportCode].code = $US_Loinc_CS#18748-4 (exactly)
 * subject MS
 * subject ^definition = "レポートの対象。 必ずでは無いが、通常、これには「患者」が該当する。"

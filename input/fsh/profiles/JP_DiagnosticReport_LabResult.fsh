@@ -25,6 +25,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[laboratory] ^comment = "Multiple categories are allowed using various categorization schemes.   The level of granularity is defined by the category concepts in the value set. More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in DiagnosticReport.code.\r\nさまざまなカテゴリ化スキームを使用して、複数のカテゴリを使用できる。粒度のレベルは、それぞれの値セットのカテゴリの概念によって定義される。 DiagnosticReport.codeのメタデータや用語の階層を使用して、よりきめ細かいフィルタリングを実行できる。\r\n\r\n【JP Core仕様】Diagnostic Service Section Codesの\"LAB\"を使用"
 * category[laboratory] from $JP_DiagnosticReportCategory_VS (required)
 * category[laboratory].coding.system = $US_Loinc_CS (exactly)
+* category[laboratory].coding.code 1..
 * category[laboratory].coding.code = $US_Loinc_CS#LP29693-6 (exactly)
 * code ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.\r\nすべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素と事前・事後の用語作成（pre- and post-coordination）との関係を管理するための独自の構造を提供する必要がある。\r\n\r\n【JP Core仕様】LOINCの臨床検査の分類コードを割り当てる。\r\n\r\n検査レポートの利用用途に合わせて、JLAC10のコードを振っても良い。"
 * code.coding ^slicing.discriminator.type = #value
@@ -35,6 +36,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * code.coding[laboratoryCode] ^definition = "検体検査レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。"
 * code.coding[laboratoryCode] ^comment = "推奨コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しない"
 * code.coding[laboratoryCode].system = $US_Loinc_CS
+* code.coding[laboratoryCode].code 1..
 * code.coding[laboratoryCode].code = $US_Loinc_CS#11502-2
 * code.coding[laboratoryCode].display = "Laboratory report"
 * subject only Reference(JP_Patient)
