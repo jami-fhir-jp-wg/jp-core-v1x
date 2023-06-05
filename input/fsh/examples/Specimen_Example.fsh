@@ -47,7 +47,7 @@ Instance: jp-specimen-example-3
 InstanceOf: Specimen
 Title: "JP Core Specimen Example 検体材料（喀痰）"
 Description: "検体材料（喀痰）"
-Usage: #inline
+Usage: #example
 * identifier.system = "http://abc-hospital.local/identifiers/collections"
 * identifier.value = "23234352358"
 * accessionIdentifier.system = "http://abc-hospital.local/specimens/2011"

@@ -61,6 +61,7 @@ Usage: #example
 * contained[+] = susceptibility-measurements2-20
 * contained[+] = susceptibility-measurements2-21
 * contained[+] = susceptibility-measurements2-22
+* contained[+] = jp-servicerequest-example-1
 * identifier.use = #usual
 * identifier.system = "http://abc-hospital.local/fhir/mb/reportid"
 * identifier.value = "1234567"
@@ -144,7 +145,7 @@ Usage: #inline
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
-* code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)"
+* code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)_喀痰_培養検査_別紙報告"
 * code.text = "培養同定(一般細菌)"
 * hasMember[0] = Reference(Observation/organism-id1)
 * hasMember[+] = Reference(Observation/susceptibility-panels1)
@@ -156,7 +157,7 @@ Usage: #inline
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
-* code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)"
+* code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)_喀痰_培養検査_別紙報告"
 * code.text = "培養同定(一般細菌)"
 * hasMember[0] = Reference(Observation/organism-id2)
 * hasMember[+] = Reference(Observation/susceptibility-panels2)
@@ -168,7 +169,7 @@ Usage: #inline
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
-* code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)"
+* code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)_喀痰_培養検査_別紙報告"
 * code.text = "培養同定(一般細菌)"
 * hasMember[0] = Reference(Observation/organism-id3)
 
@@ -179,7 +180,7 @@ Usage: #inline
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
-* code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)"
+* code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)_喀痰_培養検査_別紙報告"
 * code.text = "培養同定(一般細菌)"
 * hasMember[0] = Reference(Observation/organism-id4)
 
