@@ -21,7 +21,6 @@ Description: "このプロファイルはObservationリソースに対して、�
     vitalSignCategory 1..*
 * category[vitalSigns] from JP_SimpleObservationCategory_VS (required)
 * category[vitalSigns].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[vitalSigns].coding.code 1..
 * category[vitalSigns].coding.code = $JP_SimpleObservationCategory_CS#vital-signs (exactly)
 * category[vitalSignCategory] from JP_ObservationVitalSignsCategory_VS (preferred)
 * category[vitalSignCategory].coding.system = $JP_ObservationVitalSignsCategory_CS (exactly)
