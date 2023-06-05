@@ -41,7 +41,6 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[radiology].coding.system = $US_Loinc_CS (exactly)
 * category[radiology].coding.code 1..1
 * category[radiology].coding.code = $US_Loinc_CS#LP29684-5 (exactly)
-* category[radiology].coding.display 1..1
 * category[radiology].coding.display = "放射線"
 * category[radiology_sub] ^short = "レポート対象のモダリティを示すコード。【詳細参照】"
 * category[radiology_sub] ^definition = "レポート対象のモダリティを示すコード。放射線を表す第1コードのLP29684-5に続くサブカテゴリコードとして第2コード以下に保持される。複数のモダリティの組み合わせを許容するため、コードの列挙を許容する。"
