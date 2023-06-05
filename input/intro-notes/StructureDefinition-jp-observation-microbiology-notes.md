@@ -34,13 +34,5 @@ ObservationリソースのOperation一覧の定義はユースケースに依存
 ### サンプル
 
 
-## 注意事項
-### 微生物検査結果　培養・同定と感受性のネスト構造
-
-次のDiagnosticReportリソースの例は、関連するObservationを使用して、1レベルと2レベルのネストされた菌および感受性パネルを備えた培養・同定結果と感受性結果の例を示す。
-
-## その他、参考文献・リンク等
-
-
 
 {% include markdown-link-references.md %}
