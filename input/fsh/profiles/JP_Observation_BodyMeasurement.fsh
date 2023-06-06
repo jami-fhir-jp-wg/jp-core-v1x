@@ -21,6 +21,7 @@ Description: "このプロファイルはObservationリソースに対して、�
     bodyMeasurementCategory 1..*
 * category[bodyMeasurement].coding from $JP_SimpleObservationCategory_VS (required)
 * category[bodyMeasurement].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[bodyMeasurement].coding.code 1..
 * category[bodyMeasurement].coding.code = #body-measurement (exactly)
 * category[bodyMeasurementCategory].coding from JP_ObservationBodyMeasurementCategory_VS (preferred)
 * category[bodyMeasurementCategory].coding.system = $JP_ObservationBodyMeasurementCategory_CS

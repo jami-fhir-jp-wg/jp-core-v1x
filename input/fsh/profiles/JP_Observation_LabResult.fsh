@@ -33,6 +33,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category contains laboratory 1..1
 * category[laboratory] from JP_SimpleObservationCategory_VS (required)
 * category[laboratory].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[laboratory].coding.code 1..
 * category[laboratory].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
 * category ^definition = "A code that classifies the general type of observation being made.\r\n\r\n行われた検査の一般的なタイプの分類。取得、表示の際のフィルタリングに使用。"
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP Core仕様】推奨コード表「ObservationCategoryCodes」より、このプロファイルでは「laboratory」固定とする。\r\n\r\n(social-history | vital-signs | imaging | laboratory | procedure | survey | exam | therapy | activity)"
