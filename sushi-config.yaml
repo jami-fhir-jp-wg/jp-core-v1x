@@ -303,6 +303,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureOutcome_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedurePerformerRole_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureReason_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_RadiologyModality_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCodesJed_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS

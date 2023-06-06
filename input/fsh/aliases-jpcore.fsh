@@ -250,5 +250,7 @@ Alias: $JP_ProcedureOutcome_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Procedur
 Alias: $JP_ProcedurePerformerRole_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedurePerformerRole_VS
 Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureReason_VS
 Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
+Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
+Alias: $JP_RadiologyModality_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_RadiologyModality_VS
 Alias: $JP_ReasonCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCodesJed_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS

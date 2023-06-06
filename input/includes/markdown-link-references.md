@@ -213,6 +213,7 @@
 [JP_ProcedureOutcome_VS]: ValueSet-jp-procedure-outcome-vs.html
 [JP_ProcedurePerformerRole_VS]: ValueSet-jp-procedure-performer-role-vs.html
 [JP_ProcedureReason_VS]: ValueSet-jp-procedure-reason-vs.html
+[JP_RadiologyModality_VS]: ValueSet-jp-radiologymodality-vs.html
 [JP_ReasonCodesJed_VS]: ValueSet-jp-reason-codes-jed-vs.html
 [JP_SimpleObservationCategory_VS]: ValueSet-jp-simpleobservationcategory-vs.html
 [JP_Undefined_VS]: ValueSet-jp-undefined-vs.html

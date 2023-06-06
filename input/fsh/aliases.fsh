@@ -17,8 +17,8 @@ Alias: $patient-race-cs = http://terminology.hl7.org/CodeSystem/v3-Race
 Alias: $patient-race-vs = http://terminology.hl7.org/ValueSet/v3-Race
 Alias: $media-type = http://terminology.hl7.org/CodeSystem/media-type
 
-Alias: $JANIS_Kinmei_CODE = https://janis.mhlw.go.jp/section/master/infectiousagentcode_ver6.1_202301.xls
-Alias: $AntiMicrobialDrug_CODE = https://janis.mhlw.go.jp/section/master/antimicrobialdrugcode_ver5.2_202301.xls
+// dicom
+Alias: $dicom-ontology = http://dicom.nema.org/resources/ontology/DCM
 
 // JPCor定義はaliases-jpcore.fshに記載すること
 
