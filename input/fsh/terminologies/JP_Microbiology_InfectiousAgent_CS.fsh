@@ -8,7 +8,8 @@ Description: "微生物学的検査感染性物質コード"
 * ^date = "2023-05-30"
 * ^caseSensitive = true
 * ^content = #complete
-* ^copyright = "?????????????????????"
+* ^copyright = "厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)"
+
 * #1011 "Gram-positive cocci"
 * #1012 "Gram-positive bacilli"
 * #1013 "Gram-negative cocci"

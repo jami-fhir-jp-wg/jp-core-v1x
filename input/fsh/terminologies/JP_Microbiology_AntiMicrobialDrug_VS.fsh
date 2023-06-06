@@ -6,4 +6,5 @@ Description: "微生物学検査 抗微生物学的薬剤値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2023-05-30"
+* ^copyright = "厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)"
 * include codes from system $JP_Microbiology_AntiMicrobialDrug_CS
