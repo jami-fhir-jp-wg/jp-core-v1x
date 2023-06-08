@@ -786,7 +786,7 @@ Usage: #inline
 Instance: susceptibility-measurements2-22
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
-* status = #final*
+* status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
