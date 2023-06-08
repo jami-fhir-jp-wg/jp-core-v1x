@@ -94,6 +94,7 @@ Instance: gram-strain1
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
@@ -106,6 +107,7 @@ Instance: gram-strain2
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
@@ -118,6 +120,7 @@ Instance: gram-strain3
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
@@ -130,6 +133,7 @@ Instance: gram-strain4
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
@@ -142,6 +146,7 @@ Instance: organism-panels1
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
@@ -154,6 +159,7 @@ Instance: organism-panels2
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
@@ -166,6 +172,7 @@ Instance: organism-panels3
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
@@ -177,6 +184,7 @@ Instance: organism-panels4
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
@@ -189,6 +197,7 @@ Instance: organism-id1
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism "Organism"
@@ -199,6 +208,7 @@ Usage: #inline
 Instance: susceptibility-panels1
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
+* subject = Reference(Patient/jp-patient-example-1)
 * status = #final
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
@@ -232,6 +242,7 @@ Instance: organism-id2
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism "Organism"
@@ -243,6 +254,7 @@ Instance: susceptibility-panels2
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-panels "Susceptibility panels"
@@ -275,6 +287,7 @@ Instance: organism-id3
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism "Organism"
@@ -285,6 +298,7 @@ Usage: #inline
 Instance: organism-id4
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
+* subject = Reference(Patient/jp-patient-example-1)
 * status = #final
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
@@ -298,6 +312,7 @@ Instance: susceptibility-measurements1-1
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -309,6 +324,7 @@ Instance: susceptibility-measurements1-2
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -319,6 +335,7 @@ Instance: susceptibility-measurements1-3
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -339,6 +356,7 @@ Instance: susceptibility-measurements1-5
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -349,6 +367,7 @@ Instance: susceptibility-measurements1-6
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -359,6 +378,7 @@ Instance: susceptibility-measurements1-7
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -369,6 +389,7 @@ Instance: susceptibility-measurements1-8
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -379,6 +400,7 @@ Instance: susceptibility-measurements1-9
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -399,6 +421,7 @@ Instance: susceptibility-measurements1-11
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -409,6 +432,7 @@ Instance: susceptibility-measurements1-12
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -419,6 +443,7 @@ Instance: susceptibility-measurements1-13
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -429,6 +454,7 @@ Instance: susceptibility-measurements1-14
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -439,6 +465,7 @@ Instance: susceptibility-measurements1-15
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -449,6 +476,7 @@ Instance: susceptibility-measurements1-16
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -459,6 +487,7 @@ Instance: susceptibility-measurements1-17
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -469,6 +498,7 @@ Instance: susceptibility-measurements1-18
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -479,6 +509,7 @@ Instance: susceptibility-measurements1-19
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -489,6 +520,7 @@ Instance: susceptibility-measurements1-20
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -499,6 +531,7 @@ Instance: susceptibility-measurements1-21
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -509,6 +542,7 @@ Instance: susceptibility-measurements1-22
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -519,6 +553,7 @@ Instance: susceptibility-measurements2-1
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -529,6 +564,7 @@ Instance: susceptibility-measurements2-2
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -539,6 +575,7 @@ Instance: susceptibility-measurements2-3
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -549,6 +586,7 @@ Instance: susceptibility-measurements2-4
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -559,6 +597,7 @@ Instance: susceptibility-measurements2-5
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -569,6 +608,7 @@ Instance: susceptibility-measurements2-6
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -579,6 +619,7 @@ Instance: susceptibility-measurements2-7
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -589,6 +630,7 @@ Instance: susceptibility-measurements2-8
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -598,7 +640,9 @@ Usage: #inline
 Instance: susceptibility-measurements2-9
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
+* subject = Reference(Patient/jp-patient-example-1)
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -609,6 +653,7 @@ Instance: susceptibility-measurements2-10
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)v
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -619,6 +664,7 @@ Instance: susceptibility-measurements2-11
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -629,6 +675,7 @@ Instance: susceptibility-measurements2-12
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -639,6 +686,7 @@ Instance: susceptibility-measurements2-13
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -649,6 +697,7 @@ Instance: susceptibility-measurements2-14
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -659,6 +708,7 @@ Instance: susceptibility-measurements2-15
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -669,6 +719,7 @@ Instance: susceptibility-measurements2-16
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -679,6 +730,7 @@ Instance: susceptibility-measurements2-17
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -689,6 +741,7 @@ Instance: susceptibility-measurements2-18
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -699,6 +752,7 @@ Instance: susceptibility-measurements2-19
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -709,6 +763,7 @@ Instance: susceptibility-measurements2-20
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -719,6 +774,7 @@ Instance: susceptibility-measurements2-21
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
@@ -728,7 +784,8 @@ Usage: #inline
 Instance: susceptibility-measurements2-22
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
-* status = #final
+* status = #final*
+* subject = Reference(Patient/jp-patient-example-1)
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"

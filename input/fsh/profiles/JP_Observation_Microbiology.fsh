@@ -42,6 +42,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * code.coding[jlac10] from $JP_ObservationLabResultCode_VS (required)
 * code.coding[jlac10].system = $JP_ObservationLabResultCode_CS (exactly)
 * code.coding[jlac10] ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP Core仕様】塗抹結果、培養・同定結果を表現する場合に使用する\r\nJLAC10コードを採用する"
+* subject 1..
 * subject only Reference(JP_Patient)
 * subject ^comment = "One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.\r\n\r\n【JP Core仕様】患者（Patientリソース）"
 * effective[x] only dateTime or Period
