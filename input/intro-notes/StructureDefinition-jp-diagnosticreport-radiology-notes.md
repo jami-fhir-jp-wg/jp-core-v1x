@@ -61,11 +61,30 @@ DiagnosticReportのドメインリソースの一つであるtextエレメント
   } ],
   "status": "final",
   "category": [ {
-    "coding": [ {
-      "system": "https://hl7.org/fhir/v2/0074",
-      "code": "RAD"
-    } ]
-  } ], 
+    "coding": [
+      {
+        "system" : "http://loinc.org",
+        "code" : "LP29684-5"
+      }
+    ]
+  },
+  {
+    "coding" : [
+      {
+        "system" : "http://dicom.nema.org/resources/ontology/DCM",
+        "code" : "CT"
+      }
+    ]
+  } ],
+  "code" : {
+    "coding" : [
+      {
+        "system" : "http://loinc.org",
+        "code" : "18748-4",
+        "display" : "Diagnostic imaging study"
+      }
+    ]
+  },
   "subject": {
     "reference": "Patient/pat2"
   },
