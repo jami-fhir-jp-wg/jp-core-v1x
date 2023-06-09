@@ -51,8 +51,8 @@ BodySite等でDICOMでmappingされているSNOMED-CTをCodeSystemとして利�
 | SHOULD | patient, series.modality | reference, token | `GET [base]/ImagingStudy?patient=123&series.modality=CT` |
 | SHOULD | patient,bodysite | reference,token | `GET [base]/ImagingStudy?patient=123&bodysite=T-15460` |
 | SHOULD | patient,started | reference,date | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-25` |
-| MAY | patient,started,series.modality,bodysite | reference,date,token,token  | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&series.modality=CT&bodysite=T-15460` |
-| MAY | patient, started, series.modality | reference, date, token | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&series.modality=CT` |
+| SHOUL | patient,started,series.modality,bodysite | reference,date,token,token  | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&series.modality=CT&bodysite=T-15460` |
+| SHOULD | patient, started, series.modality | reference, date, token | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&series.modality=CT` |
 | SHOULD | encounter | reference  | `GET [base]/ImagingStudy?encounter=Encounter/456` |
 
 #### 操作詳細
