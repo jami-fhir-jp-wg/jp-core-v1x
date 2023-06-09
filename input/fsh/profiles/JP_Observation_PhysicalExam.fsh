@@ -33,7 +33,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * code.coding[physicalExamCode].code 1..
 * code.coding[physicalExamCode].code = $JP_PhysicalExamCode_CS#physical-findings  (exactly)
 * code.coding[physicalExamCode].display = "Physical Findings"
-* code.coding[physicalExamCode] ^short = "身体所見項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。【詳細参照】"
+* code.coding[physicalExamCode] ^short = "身体所見項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している【詳細参照】"
 * code.coding[physicalExamCode] ^definition = "身体所見項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。"
 * code.coding[physicalExamCode] ^comment = "推奨項目コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しない"
 * subject 1..
@@ -65,6 +65,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * component.code.coding[physicalExamCode].code 1..
 * component.code.coding[physicalExamCode].code = $JP_PhysicalExamCode_CS#detailed-physical-findings (exactly)
 * component.code.coding[physicalExamCode].display = "Detailed Physical Findings"
-* component.code.coding[physicalExamCode] ^short = "身体所見項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。【詳細参照】"
+* component.code.coding[physicalExamCode] ^short = "身体所見項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している【詳細参照】"
 * component.code.coding[physicalExamCode] ^definition = "身体所見項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。"
 * component.code.coding[physicalExamCode] ^comment = "推奨項目コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しない"

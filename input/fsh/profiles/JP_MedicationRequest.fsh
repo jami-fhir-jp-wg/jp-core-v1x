@@ -59,7 +59,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 
 
 
-* status ^short = "オーダの現在の状態を示すコード。" 
+* status ^short = "オーダの現在の状態を示すコード" 
 * status ^definition = "オーダの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
 * status ^comment = "このエレメントはmodifierとされている。StatusとはこのResourceが現在妥当な状態ではないことも示すからである。"
 * status ^isModifierReason = "このエレメントは modifier である。Statusエレメントが entered-in-error という正当な情報として扱うべきではない状態の値も取り得るからである。"
@@ -271,7 +271,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[requestIdentifierCommon].system = "urn:oid:1.2.392.100495.20.3.11" (exactly)
 * identifier[requestIdentifierCommon].value 1..
 
-* status ^short = "オーダの現在の状態を示すコード。" 
+* status ^short = "オーダの現在の状態を示すコード" 
 * status ^definition = "オーダの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
 * status ^comment = "このエレメントはmodifierとされている。StatusとはこのResourceが現在妥当な状態ではないことも示すからである。"
 * status ^isModifierReason = "このエレメントは modifier である。Statusエレメントが entered-in-error という正当な情報として扱うべきではない状態の値も取り得るからである。"
