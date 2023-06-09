@@ -6,7 +6,8 @@ Description: "DiagnosticReportカテゴリ 値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2023-04-18"
-
+* ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討  
+This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * $US_Loinc_CS#LP29684-5 "放射線"
 * $US_Loinc_CS#LP7839-6 "病理"
 * $US_Loinc_CS#LP7796-8 "内視鏡"
