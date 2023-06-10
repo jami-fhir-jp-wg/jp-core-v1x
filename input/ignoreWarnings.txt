@@ -29,4 +29,5 @@ Code System URI 'http://abc-hospital.local/fhir/ObservationOrder/localcode' is u
 Code System URI 'http://abc-hospital.local/fhir/devide/local-device-type' is unknown so the code cannot be validated
 
 # OID CodeSystem not found Warnings (only registered NamingSystem)
-Code System URI 'urn:oid:1.2.392.200119.4.101.6' is unknown so the code cannot be validated
+# The following 'urn:oid:1.2.392.200119.4.101.6' was registerd on the JPFHIR TerminologyServer 
+#Code System URI 'urn:oid:1.2.392.200119.4.101.6' is unknown so the code cannot be validated
