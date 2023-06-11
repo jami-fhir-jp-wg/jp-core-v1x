@@ -1,5 +1,4 @@
 
-Alias: $JP_Loinc_Dummy_CS = http://loinc.org
 Alias: $US_Loinc_CS = http://loinc.org
 // ImplementationGuide
 Alias: $FHIRJPCoreImplementationGuide = http://jpfhir.jp/fhir/core/ImplementationGuide/hl7.fhir.jp.core
@@ -140,6 +139,9 @@ Alias: $JP_MedicationCodeHOT13_CS = urn:oid:1.2.392.200119.4.402.1
 Alias: $JP_MedicationCodeHOT7_CS = urn:oid:1.2.392.200119.4.403.2
 Alias: $JP_MedicationCodeHOT9_CS = urn:oid:1.2.392.200119.4.403.1
 Alias: $JP_MedicationCodeYJ_CS = urn:oid:1.2.392.100495.20.1.73
+Alias: $JP_MicrobiologyCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_MicrobiologyCategory_CS
+Alias: $JP_Microbiology_AntiMicrobialDrug_CS = urn:oid:1.2.392.100495.10.3.100.5.11.5.0
+Alias: $JP_Microbiology_InfectiousAgent_CS = urn:oid:1.2.392.100495.10.3.100.5.27.4.1
 Alias: $JP_ObservationBodyMeasurementCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
 Alias: $JP_ObservationBodyMeasurementCode_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
 Alias: $JP_ObservationBodySite_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodySite_CS
@@ -216,6 +218,9 @@ Alias: $JP_MedicationCodeHOT7_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Medica
 Alias: $JP_MedicationCode_Immunization_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_Immunization_VS
 Alias: $JP_MedicationCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_VS
 Alias: $JP_MedicationCodeYJ_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCodeYJ_VS
+Alias: $JP_MicrobiologyCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MicrobiologyCategory_VS
+Alias: $JP_Microbiology_AntiMicrobialDrug_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Microbiology_AntiMicrobialDrug_VS
+Alias: $JP_Microbiology_InfectiousAgent_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Microbiology_InfectiousAgent_VS
 Alias: $JP_ObservationBodyMeasurementCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCategory_VS
 Alias: $JP_ObservationBodyMeasurementCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCode_VS
 Alias: $JP_ObservationBodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodySite_VS

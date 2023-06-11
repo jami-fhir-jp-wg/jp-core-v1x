@@ -13,7 +13,7 @@
   * DiagnosticReport （診断レポート)
     * [JP Core DiagnosticReport Common （共通）プロファイル][JP_DiagnosticReport_Common]
     * [JP Core DiagnosticReport LabResult （検体検査レポート）プロファイル][JP_DiagnosticReport_LabResult]
-    * [JP Core DiagnosticReport Microbiology （細菌検査レポート）プロファイル][JP_DiagnosticReport_Microbiology]
+    * [JP Core DiagnosticReport Microbiology （微生物学検査レポート）プロファイル][JP_DiagnosticReport_Microbiology]
     * [JP Core DiagnosticReport Radiology （放射線検査レポート）プロファイル][JP_DiagnosticReport_Radiology]
     * [JP Core DiagnosticReport Endoscopy （内視鏡レポート）プロファイル][JP_DiagnosticReport_Endoscopy]
 

@@ -11,7 +11,7 @@
     * JP_Observation_Commonのコメント見直しを行なった
     * Observation派生プロファイルを検索出来るように、Categoryに検索用固定値を必須でいれることとした  
     ※本件はv1.1.0,v1.1.1で作成したものと互換性が保たれないため注意のこと
-    * 細菌検査プロファイルの追加  
+    * 微生物学検査プロファイルの追加  
     JP_Observation_Microbiology
   * ImagingStudyおよびDiagnosticReport関連
     * JP_DiagnosticReport_Commonのコメント見直しを行なった

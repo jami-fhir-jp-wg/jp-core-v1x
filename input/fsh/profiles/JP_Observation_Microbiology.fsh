@@ -2,39 +2,65 @@ Profile: JP_Observation_Microbiology
 Parent: JP_Observation_Common
 Id: jp-observation-microbiology
 Title: "JP Core Observation Microbiology Profile"
-Description: "このプロファイルはObservationリソースに対して、細菌検査のデータを送受信するための制約と拡張を定めたものである。"
+Description: "このプロファイルはObservationリソースに対して、微生物学検査のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Microbiology"
 * ^status = #active
+* insert SetDefinition(identifier, 当該検査項目に対し施設内で割り振られる一意の識別子があればこれを使用する)
+* insert SetDefinition(basedOn, このObservationが実施されることになった依頼や計画／提案に関する情報、オーダ情報（ServiceRequest）)
 * basedOn only Reference(ServiceRequest)
-* basedOn ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n【JP仕様】\r\nオーダ情報（ServiceRequestリソース）"
-* category 1..1
-//* category from $microbiology-category (required)
-* category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP仕様】\r\n日本では適切なコード体系が存在しないため、独自のバリューセットを定義する\r\nJP Coreとしては本コード体系を必須とし、他のローカルコード等を使用する場合はCoding要素の2つ目以降に設定する"
-* code.coding ^slicing.discriminator.type = #pattern
-* code.coding ^slicing.discriminator.path = "$this"
+* basedOn ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n【JP Core仕様】オーダ情報（ServiceRequestリソース）"
+* insert SetDefinition(partOf, このObservationが親イベントの一部を成す要素であるときこの親イベントに関する情報、未使用)
+* status 1..1
+* category 1..
+* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.path = "coding.system"
+* category ^slicing.rules = #open
+* category contains 
+    microbiology 1..1 and
+    loinc ..*  and
+    microbiologyCategory ..1
+* category ^comment = "【JP Core仕様】日本では適切なコード体系が存在しないため、独自のバリューセットを定義する\r\n\r\nJP CoreとしてはsimpleObservationコード体系を必須とし、他のローカルコード等を使用する場合はCategory要素の2つ目以降に設定する"
+* insert SetDefinition(category[microbiology], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
+* category[microbiology] from JP_SimpleObservationCategory_VS (required)
+* category[microbiology].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[microbiology].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
+* insert SetDefinition(category[loinc], このObservationに関するLOINC上の分類、任意項目)
+* category[loinc].coding.system = $US_Loinc_CS (exactly)
+* category[loinc].coding.code = $US_Loinc_CS#18725-2 (exactly)
+* insert SetDefinition(category[microbiologyCategory], このObservationに関する詳細分類、JP_MicrobiologyCategory_VSより選択する、任意項目)
+* category[microbiologyCategory] from JP_MicrobiologyCategory_VS (required)
+* category[microbiologyCategory].coding.system = $JP_MicrobiologyCategory_CS (exactly)
+* code 1..
+* code.coding ^slicing.discriminator.type = #value
+* code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
-* code.coding ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP仕様】\r\n[Slicing](http://hl7.org/fhir/profiling.html#slicing)を使用して複数のコード体系に対応\r\n基本方針としてカテゴリに応じた標準コードの使用を想定しているが、ローカルコードを使用してもよい"
 * code.coding contains
-    infectious-agent 0..1 and
-    antimicrobial-drug 0..1 and
-    jlac10 0..1
-//* code.coding[infectious-agent] from $microbiology-infectious-agent (required)
-* code.coding[infectious-agent] ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP仕様】\r\n同定菌名を表現する場合に使用する\r\nNeXEHRSで使用を定める標準コードに準じて、JANIS菌名コードを採用する"
-//* code.coding[antimicrobial-drug] from $microbiology-antimicrobial-drug (required)
-* code.coding[antimicrobial-drug] ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP仕様】\r\n抗菌薬コードを表現する場合に使用する\r\nNeXEHRSで使用を定める標準コードに準じて、JANIS抗菌薬コードを採用する"
+    infectious-agent ..1 and
+    antimicrobial-drug ..1 and
+    jlac10 ..1
+* insert SetDefinitionRef(code.coding, このObservationの対象を特定するコード)
+* code.coding ^comment = "【JP Core仕様】[Slicing](http://hl7.org/fhir/R4/profiling.html#slicing)を使用して複数のコード体系に対応\r\n\r\n基本方針としてカテゴリに応じた標準コードの使用を想定しているが、ローカルコードを使用してもよい"
+* code.coding[infectious-agent] from $JP_Microbiology_InfectiousAgent_VS (required)
+* code.coding[infectious-agent].system = $JP_Microbiology_InfectiousAgent_CS (exactly)
+* insert SetDefinitionRef(code.coding[infectious-agent], 同定菌名を表現する場合に使用するコード、JANIS菌名コードを利用)
+* code.coding[infectious-agent] ^comment = "【JP Core仕様】同定菌名を表現する場合に使用する\r\nNeXEHRSで使用を定める標準コードに準じて、JANIS菌名コードを採用する"
+* code.coding[antimicrobial-drug] from $JP_Microbiology_AntiMicrobialDrug_VS (required)
+* code.coding[antimicrobial-drug].system = $JP_Microbiology_AntiMicrobialDrug_CS (exactly)
+* insert SetDefinitionRef(code.coding[antimicrobial-drug], 抗菌薬コードを表現する場合に使用するコード、JANIS抗菌薬コードを利用)
+* code.coding[antimicrobial-drug] ^definition = "抗菌薬コードを表現する場合に使用するコード、JANIS抗菌薬コードを利用"
+* code.coding[antimicrobial-drug] ^comment = "【JP Core仕様】抗菌薬コードを表現する場合に使用する\r\nNeXEHRSで使用を定める標準コードに準じて、JANIS抗菌薬コードを採用する"
 * code.coding[jlac10] from $JP_ObservationLabResultCode_VS (required)
-* code.coding[jlac10] ^comment = "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.\r\n\r\n【JP仕様】\r\n塗抹結果、培養・同定結果を表現する場合に使用する\r\nJLAC10コードを採用する"
+* code.coding[jlac10].system = $JP_ObservationLabResultCode_CS (exactly)
+* insert SetDefinitionRef(code.coding[jlac10], 塗抹結果、培養・同定結果を表現する場合に使用するコード、JLAC10を利用)
+* code.coding[jlac10] ^comment = "【JP Core仕様】塗抹結果、培養・同定結果を表現する場合に使用する\r\nJLAC10コードを採用する"
 * subject 1..
 * subject only Reference(JP_Patient)
-* subject ^comment = "One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.\r\n\r\n【JP仕様】\r\n患者（Patientリソース）"
-* encounter 1..
-* encounter ^comment = "This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter (e.g. pre-admission laboratory tests).\r\n\r\n【JP仕様】\r\n診察（Encounterリソース）"
 * effective[x] only dateTime or Period
-* effective[x] ^comment = "At least a date should be present unless this observation is a historical report.  For recording imprecise or \"fuzzy\" times (For example, a blood glucose measurement taken \"after breakfast\") use the [Timing](datatypes.html#timing) datatype which allow the measurement to be tied to regular life events.\r\n\r\n【JP仕様】\r\n検体採取日"
+* insert SetDefinition(effective[x], 取得された結果が臨床的に確定された日時、検体採取日)
+* effective[x] ^comment = "【JP Core仕様】検体採取日"
 * value[x] only Quantity or CodeableConcept or string
-* value[x] ^comment = "An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section](observation.html#notes) below.\r\n\r\n【JP仕様】\r\nvalueQuantity：同定検査の菌量（定量）、薬剤感受性結果（MIC値）を表現する場合に使用する想定\r\nvalueCodeableConcept：同定検査の菌種を表現する場合に使用する想定\r\nvalueString：塗抹結果、培養検査の週数・菌量を表現する場合に使用する想定"
-* interpretation ^comment = "Historically used for laboratory results (known as 'abnormal flag' ),  its use extends to other use cases where coded interpretations  are relevant.  Often reported as one or more simple compact codes this element is often placed adjacent to the result value in reports and flow sheets to signal the meaning/normalcy status of the result.\r\n\r\n【JP仕様】\r\n薬剤感受性結果（判定）を表現する場合に使用する想定"
-* interpretation.coding.system = "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation" (exactly)
-* interpretation.coding.system ^comment = "【JP仕様】\r\n[FHIR仕様](http://hl7.org/fhir/v3/ObservationInterpretation/cs.html)で定義されているコード体系を採用"
+* insert SetDefinitionRef(value[x], 検査によって得られた値を格納する)
+* value[x] ^comment = "【JP Core仕様】valueQuantity：同定検査の菌量（定量）、薬剤感受性結果（MIC値）を表現する場合に使用する想定\r\nvalueCodeableConcept：同定検査の菌種を表現する場合に使用する想定\r\n\r\nvalueString：塗抹結果、培養検査の週数・菌量を表現する場合に使用する想定"
+* insert SetDefinitionRef(interpretation, 高、低、正常、High、low、 normal等、薬剤感受性結果（判定）を表現する場合に使用)
+* interpretation ^comment = "【JP Core仕様】薬剤感受性結果（判定）を表現する場合に使用する想定"
 * hasMember only Reference(JP_Observation_Microbiology)
-* hasMember ^comment = "When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes](observation.html#obsgrouping) below.  Note that a system may calculate results from [QuestionnaireResponse](questionnaireresponse.html)  into a final score and represent the score as an Observation.\r\n\r\n【JP仕様】\r\n本リソースの子となるObservationリソース"
