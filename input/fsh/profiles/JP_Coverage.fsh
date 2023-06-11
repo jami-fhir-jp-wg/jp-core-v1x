@@ -19,7 +19,7 @@ Description: "このプロファイルはCoverageリソースに対して、保�
     JP_Coverage_InsuredPersonSymbol named insuredPersonSymbol ..* and
     JP_Coverage_InsuredPersonNumber named insuredPersonNumber ..* and
     JP_Coverage_InsuredPersonSubNumber named insuredPersonSubNumber ..*
-* identifier ^short = "Business Identifier for the coverage　このカバレッジに割り当てられた一意の識別子。【詳細参照】"
+* identifier ^short = "Business Identifier for the coverage　このカバレッジに割り当てられた一意の識別子【詳細参照】"
 * identifier ^definition = "A unique identifier assigned to this coverage.\r\n\r\nこのカバレッジに割り当てられた一意の識別子。"
 * identifier ^comment = "The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatenation of the Coverage.SubscriberID and the Coverage.dependent.\r\n\r\nカバレッジのメイン（および場合によっては唯一の）識別子-多くの場合、メンバID、証明書番号、個人の健康番号、またはケースIDと呼ばれる。\r\n\r\n【JP Core仕様】被保険者記号と番号と枝番を全角にした上でダブルコーテーションで囲い、カンマ区切りで連結する。\r\n\r\nルール：\"{被保険者記号}\",\"{被保険者番号}\",\"{枝番}\"\r\n\r\n例：\"１２－３４\",\"５６７８\",\"００\""
 * identifier ^requirements = "Allows coverages to be distinguished and referenced.\r\n\r\nカバレッジを区別して参照できるようにする。"

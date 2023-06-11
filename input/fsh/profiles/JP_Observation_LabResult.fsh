@@ -33,6 +33,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category contains laboratory 1..1
 * category[laboratory] from JP_SimpleObservationCategory_VS (required)
 * category[laboratory].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[laboratory].coding.code 1..
 * category[laboratory].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
 * category ^definition = "A code that classifies the general type of observation being made.\r\n\r\n行われた検査の一般的なタイプの分類。取得、表示の際のフィルタリングに使用。"
 * category ^comment = "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.\r\n\r\n【JP Core仕様】推奨コード表「ObservationCategoryCodes」より、このプロファイルでは「laboratory」固定とする。\r\n\r\n(social-history | vital-signs | imaging | laboratory | procedure | survey | exam | therapy | activity)"
@@ -71,7 +72,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * performer ^definition = "Who was responsible for asserting the observed value as \"true\".\r\n\r\n検査値を確認した責任者。検査実施責任者情報。"
 * performer ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n【JP Core仕様】検査に直接責任を負う個人(つまり検査を実行、もしくは検証した人)の識別子。"
 * value[x] only Quantity or CodeableConcept or string
-* value[x] ^short = "同じ検査項目でも、システム（施設）により、使うデータ型が異なる可能性あり。【詳細参照】"
+* value[x] ^short = "同じ検査項目でも、システム（施設）により、使うデータ型が異なる可能性あり【詳細参照】"
 * value[x] ^definition = "The information determined as a result of making the observation, if the information has a simple value.\r\n\r\n検体検査の結果として決定された情報。"
 * value[x] ^comment = "以下のデータ型はSS-MIX2では未使用のため、未使用とした。今後の議論で使用の必要性が出れば復活させる。\r\n\r\nvalueBoolean\r\n\r\nvalueInteger　：検査結果値を整数値（Integer）で定義したい場合に指定する。ただし、valueQuantityで単位付き数値を示すので、通常は使わない。　SS-MIX2／HL7 V2.5→ OBX-2＝「NW」の時の OBX-5(結果値)\r\n\r\nvalueRange\r\n\r\nvalueRatio\r\n\r\nvalueSampledData\r\n\r\nvalueTime　：検査結果値が「時間」の場合、その時間を指定する。　SS-MIX2／HL7 V2.5→ OBX-2＝「TM」の時の OBX-5(結果値)\r\n\r\nvalueDateTime　：検査結果値が「日時」の場合、その日時を指定する。　SS-MIX2／HL7 V2.5→ OBX-2＝「DT」の時の OBX-5(結果値)\r\n\r\nvaluePeriod"
 * valueQuantity ^short = "検査結果が「数値」の場合、値、単位を設定する。　SS-MIX2／HL7 V2.5→ OBX-2＝「NM」の時の OBX-5(結果値)、OBX-6(単位)【詳細参照】"

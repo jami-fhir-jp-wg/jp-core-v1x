@@ -9,39 +9,40 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology"
 * ^status = #active
 * ^date = "2023-03-23"
-* . ^short = "診断レポート-依頼情報、１項目単位の結果、画像、解釈、およびフォーマットされたレポートの組み合わせ　【JP Core仕様】画像結果レポートのプロフィール。【詳細参照】"
+* . ^short = "診断レポート-依頼情報、１項目単位の結果、画像、解釈、およびフォーマットされたレポートの組み合わせ　【JP Core仕様】画像結果レポートのプロフィール【詳細参照】"
 * . ^definition = "患者、患者のグループ、デバイス、場所、これらから派生した検体に対して実行された診断的検査の結果と解釈。レポートには、依頼情報や依頼者情報などの臨床コンテキスト（文脈）、および１項目単位の結果、画像、テキストとコード化された解釈、および診断レポートのフォーマットされた表現のいくつかの組み合わせが含まれる。\r\n\r\n【JP Core仕様】画像結果レポートのプロフィール"
-* text ^short = "人が読める形式で提示された情報。放射線レポートの場合はレポートの所見が保持される。【詳細参照】"
+* text ^short = "人が読める形式で提示された情報。放射線レポートの場合はレポートの所見が保持される【詳細参照】"
 * text ^definition = "リソースの概要を含み、リソースの内容を人間が解釈できる形で表現するために用いられる。すべての構造化データをエンコードする必要はないが、人間がテキストを読むだけで「臨床的に安全」になるように十分な詳細を含める必要がある。リソース定義は、臨床的安全性を確保するために、テキストの中でどのコンテンツを表現すべきかを定義することができる。放射線レポートでは少なくともレポートの所見が格納されることが期待される。また，検索可能な文字列が存在する部位としても利用されることを想定している。"
 * text ^comment = "放射線レポートの場合、主となる所見を表すエレメントは他のリソースエレメントには存在しない。よってこのドメインリソースを用いてレポートの少なくとも「所見」を人間が可読な状態で保持することが求められる。"
 * identifier ^definition = "実行者または他のシステムによってこのレポートに割り当てられた識別子。"
 * identifier ^comment = "通常は診断サービスプロバイダの情報システムにより設定される。\r\n\r\n【JP Core仕様】レポート番号\r\n\r\n（放射線情報システム(RIS)による発番が想定されるが、施設によって電子カルテ等のオーダ番号を使う場合もあり得る）"
 * identifier ^requirements = "このレポートについてクエリを実行するとき、およびFHIRコンテキスト外のレポートにリンクするときにどの識別子を使用するかを知る必要がある"
 * basedOn MS
-* basedOn ^short = "レポート作成サービスに対する要求の詳細。【詳細参照】"
+* basedOn ^short = "レポート作成サービスに対する要求の詳細【詳細参照】"
 * basedOn only Reference(CarePlan or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
 * basedOn ^definition = "検査や診断の依頼の元になったもの。通常はServiceRequestあるいはCarePlan（治験や抗がん剤投与等により検査を行うことが必須の場合、根拠となった事象を追記することは制限しない）"
 * basedOn ^comment = "通常は１つのリクエストに対し１つの検査結果となるが、状況によって１つのリクエストに対し複数の検査結果が要求され、複数のレポートが作成される場合もあるので注意すること。\r\n\r\n【JP Core仕様】オーダ発生元の ServiceRequest または CarePlan への参照（多くの場合はServiceRequest（オーダ）が存在するが、オーダが発生しない検査も想定される。）"
 * basedOn ^requirements = "このエレメントによりレポートの認可をトレースしたり、レポート作成サービスに対する提案や推奨事項を追跡することができる。"
-* status ^short = "診断レポートの状態。【詳細参照】"
+* status ^short = "診断レポートの状態【詳細参照】"
 * status ^definition = "診断レポートの状態。以下のいずれかが設定される。registered | partial | preliminary | final | amended | corrected | appended | cancelled | entered-in-error | unknown"
 * status ^comment = "FHIRのstringsは1MBを越えてはならない（SHALL NOT）ことに留意すること。\r\n\r\n【JP Core仕様】・診断レポートのステータス\r\n\r\n・定義通りの選択肢（例：preliminary 一次読影, final 二次読影（完了）等）を利用。"
 * status ^requirements = "診断サービスではルーチンに仮確定あるいは不完全なレポートが発生することがある。また、しばしば前に発行されたレポートが取り消されることもある。"
 * category MS
-* category ^short = "レポートを作成した分野を分類するコード。【詳細参照】"
+* category ^short = "レポートを作成した分野を分類するコード【詳細参照】"
 * category ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは ”RAD” をデフォルトとして設定。追加の情報については任意で設定可能。"
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "coding.system"
 * category ^slicing.rules = #open
 * category ^slicing.ordered = false
 * category contains radiology 1..1 and radiology_sub ..*
-* category[radiology] ^short = "レポートを作成した分野を分類するコード。【詳細参照】"
+* category[radiology] ^short = "レポートを作成した分野を分類するコード【詳細参照】"
 * category[radiology] ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは第1コードとして LP29684-5 を固定値として設定。第2コード以下にDICOMModalityコードを列挙することでレポートの対象検査内容を示す。"
 * category[radiology] from $JP_DiagnosticReportCategory_VS (required)
 * category[radiology].coding.system = $US_Loinc_CS (exactly)
+* category[radiology].coding.code 1..
 * category[radiology].coding.code = $US_Loinc_CS#LP29684-5 (exactly)
 * category[radiology].coding.display = "放射線"
-* category[radiology_sub] ^short = "レポート対象のモダリティを示すコード。【詳細参照】"
+* category[radiology_sub] ^short = "レポート対象のモダリティを示すコード【詳細参照】"
 * category[radiology_sub] ^definition = "レポート対象のモダリティを示すコード。放射線を表す第1コードのLP29684-5に続くサブカテゴリコードとして第2コード以下に保持される。複数のモダリティの組み合わせを許容するため、コードの列挙を許容する。"
 * category[radiology_sub] from $JP_RadiologyModality_VS (required)
 * category[radiology_sub].coding.system = $dicom-ontology (exactly)
@@ -55,10 +56,11 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
 * code.coding contains radiologyReportCode ..1
-* code.coding[radiologyReportCode] ^short = "放射線レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。【詳細参照】"
+* code.coding[radiologyReportCode] ^short = "放射線レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している【詳細参照】"
 * code.coding[radiologyReportCode] ^definition = "放射線レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。"
 * code.coding[radiologyReportCode] ^comment = "推奨コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しないが、互換性を意識すること。"
 * code.coding[radiologyReportCode].system = $US_Loinc_CS (exactly)
+* code.coding[radiologyReportCode].code 1..
 * code.coding[radiologyReportCode].code = $US_Loinc_CS#18748-4 (exactly)
 * subject MS
 * subject ^definition = "レポートの対象。 必ずでは無いが、通常、これには「患者」が該当する。"

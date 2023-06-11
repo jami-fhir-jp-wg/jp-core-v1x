@@ -36,62 +36,9 @@ imagingStudyエレメントはCardinalityが0..*で 0 が許容されている�
 ### Text
 
 DiagnosticReportのドメインリソースの一つであるtextエレメントに見読可能な[narrative](https://www.hl7.org/fhir/R4/narrative.html)データとしてレポートの所見を中心とした情報を格納する。依頼情報や患者基本情報などを含んだレポート全体のデータは別途presentedFormエレメントに保持されるが、ここではPDF等のバイナリが保存される。よってレポート内容の見読性と検索性を担保するためにtextエレメントに保存されたデータが利用され、ここはxhtmlである事が求められる。
+具体的な構造については [**放射線読影レポート**][jp-diagnosticreport-radiology-example-1]を参照のこと
 
 (DiagnosticReportのResourceType直下に現れる。text以外のDomainResourceの詳細については[こちら](https://www.hl7.org/fhir/R4/domainresource.html)を参照のこと）
-
-例：
-
-```json
-{
-  "resourceType": "DiagnosticReport",
-  "id": "xxxxxxxxxx",
-  "meta": {
-    "versionId": "1",
-    "lastUpdated": "2020-10-25T17:00:03.903+00:00",
-    "source": "xxxxxxxxxxxxxx"
-  },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"https://www.w3.org/1999/xhtml\"><p>胸部造影CT</p><p>依頼目的:10月20日の単純写真でひだり肺に異常陰影あり。精査目的。</p><p>所見:</p><p>心拡大は無く、心嚢液も見られない。</p><p>胸部大動脈は蛇行があるも径は正常範囲内。ひだり椎骨動脈が大動脈弓より直接分岐している。大動脈壁に小さな石灰化がみられ動脈硬化性変化が軽度見られる。</p><p>ひだり肺上葉に2.2 x 1.5 cm大の空洞性病変を認める(Image 31/110)。壁には充実性成分を含み不整な造影濃度を示す。みぎ肺上葉に気管支拡張を伴う線状影を認めるが、こちらは炎症性瘢痕として矛盾しない。気管には異常を認めず。肺尖部に炎症後変化と思われる胸膜肥厚は見られる。胸水は認めない。</p><p>腋窩，縦郭および肺門リンパ節の腫大は認めず。甲状腺は正常範囲。</p><p>スキャン範囲内の腹部には異常を認めず。明らかな骨病変も認めない。</p><p>インプレッション:</p><ol><li><p>ひだり肺上葉の空洞性病変。肺腺癌を疑う。</p></li><li><p>みぎ肺上葉陳旧性炎症性瘢痕。<p></li></ol></div>"
-  },
-  "identifier": [ {
-    "use": "usual",
-    "system": "urn:dicom:uid",
-    "value": "xxxxxxxxxxxxxxx"
-  } ],
-  "status": "final",
-  "category": [ {
-    "coding": [ {
-      "system": "https://hl7.org/fhir/v2/0074",
-      "code": "RAD"
-    } ]
-  } ], 
-  "subject": {
-    "reference": "Patient/pat2"
-  },
-  "effectiveDateTime": "2008-06-17",
-  "issued": "2008-06-18T09:23:00+10:00",
-  "performer": [
-    {
-      "reference": "Practitioner/3ad0687e-f477-468c-afd5-fcc2bf897809",
-      "display": "田中太郎"
-    }
-  ],
-  "imagingStudy": [
-    {
-      "display": "CHEST CT DICOM imaging study",
-      "reference": "http://someserver/some-path"
-    }
-  ],
-  "conclusion": "インプレッション: ひだり肺上葉の空洞性病変。 肺腺癌を疑う。みぎ肺上葉陳旧性炎症性瘢痕。",
-  "presentedForm": [{
-    "contentType": "application/jpg",
-    "language": "ja", 
-    "data":"/9j/4AAQSkZJRgABAgAAZAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxwrh/9X/xP/Z9tYV8PiQ//2Q==",
-    "title": "HTML Report"
-  }]
-}
-```
 
 ### Identifier
 
@@ -147,7 +94,7 @@ DiagnosticReport.resultエレメントには関連する検体検査計測値な
 
 ImagingStudyやmediaは多少オーバーラップするが、使用される目的が異なる。用途に応じて使い分けること。DiagnosticReportではDICOM画像への参照としてImagingStudyが利用され、キー画像としてmediaが参照される。
 
-### 診断報告書のステータス 
+### 診断報告書のステータス
 
 - 診断レポートを使用するアプリケーションでは、更新された (改訂された) レポートに注意を払い、取り消されたレポートが適切に処理されるようにする必要がある。
 - 診断レポートを提供するアプリケーションの場合、レポートはすべての個々のデータ項目が確定あるいは追加され最終的なものになるまで、ステータスを「final」としてはならない。
@@ -172,8 +119,8 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 | コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |　例　|
 | --- | --- | --- | --- | --- | --- |
 | MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) | GET [base]/DiagnosticReport?ServiceRequest/12345 |
-| MAY | category | token | レポート種別 | DiagnosticReport.category ([ValueSet]()) <br/> 第1コードは LP29684-5 (Radiology 固定) <br/>第2コード以下は複数のコードを許容し、DICOMモダリティコードが格納される | GET [base]/DiagnosticReport?category=LP29684-5&category=CT |
-| MAY | code | token | レポート全体を示すコード | DiagnosticReport.code [LOINC 18748-4](https://loinc.org/18748-4/)(固定) | GET [base]/DiagnosticReport?code=18748-4 |
+| SHOULD | category | token | レポート種別 | DiagnosticReport.category ([ValueSet]()) <br/> 第1コードは LP29684-5 (Radiology 固定) <br/>第2コード以下は複数のコードを許容し、DICOMモダリティコードが格納される | GET [base]/DiagnosticReport?category=LP29684-5&category=CT |
+| SHOULD | code | token | レポート全体を示すコード | DiagnosticReport.code [LOINC 18748-4](https://loinc.org/18748-4/)(固定) | GET [base]/DiagnosticReport?code=18748-4 |
 | MAY | media | reference | キー画像への参照 | DiagnosticReport.media.link ([Media](https://www.hl7.org/fhir/R4/media.html)) | GET [base]/DiagnosticReport?media/12345 |
 
 なお、検索パラメータは複合的に利用できる。詳細は[Search - Chained parameters](https://www.hl7.org/fhir/R4/search.html#chaining)を参照すること。
