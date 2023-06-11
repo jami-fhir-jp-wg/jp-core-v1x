@@ -14,8 +14,8 @@ Usage: #example
 * code = $US_Loinc_CS#11502-2 "Laboratory report"
 * subject = Reference(Patient/jp-patient-example-1)
 * encounter = Reference(Encounter/jp-encounter-example-1)
-* effectiveDateTime = "2021-03-04T08:30:00+11:00"
-* issued = "2021-03-04T11:45:33+11:00"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* issued = "2021-03-04T11:45:33+09:00"
 * performer = Reference(Organization/jp-organization-example-hospital) "健康第一病院"
 * presentedForm.contentType = #application/pdf
 * presentedForm.language = #ja-JP
@@ -39,7 +39,7 @@ Usage: #inline
 * valueQuantity = 176 'g/L' "g/L"
 * referenceRange.low = 135 'g/L' "g/L"
 * referenceRange.high = 180 'g/L' "g/L"
-* effectiveDateTime = "2021-03-04T08:30:00+11:00"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * specimen = Reference(Specimen/jp-specimen-example-2)
 
 Instance: inner-observation-labresult-2
@@ -55,8 +55,8 @@ Usage: #inline
 * valueQuantity = 5.9 '10*6/uL' "10*6/uL"
 * referenceRange.low = 4.2 '10*6/uL' "10*6./L"
 * referenceRange.high = 6 '10*6/uL' "10*6./L"
-* effectiveDateTime = "2021-03-04T08:30:00+11:00"
-* effectiveDateTime = "2021-03-04T08:30:00+11:00"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * specimen = Reference(Specimen/jp-specimen-example-2)
 
 Instance: inner-observation-labresult-3
@@ -72,11 +72,11 @@ Usage: #inline
 * valueQuantity.value = 55
 * valueQuantity.unit = "%"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H
-* effectiveDateTime = "2021-03-04T08:30:00+11:00"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * referenceRange.low.value = 38
 * referenceRange.low.unit = "%"
 * referenceRange.high.value = 52
 * referenceRange.high.unit = "%"
-* effectiveDateTime = "2021-03-04T08:30:00+11:00"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * specimen = Reference(Specimen/jp-specimen-example-2)
 

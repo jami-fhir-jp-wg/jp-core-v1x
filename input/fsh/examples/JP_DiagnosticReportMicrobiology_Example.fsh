@@ -71,8 +71,8 @@ Usage: #example
 * code = $US_Loinc_CS#18725-2 "Microbiology studies"
 * subject = Reference(Patient/jp-patient-example-1)
 * encounter = Reference(Encounter/jp-encounter-example-1)
-* effectiveDateTime = "2021-03-04T08:30:00+11:00"
-* issued = "2021-03-04T11:45:33+11:00"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* issued = "2021-03-04T11:45:33+09:00"
 * performer = Reference(Organization/jp-organization-example-inspection) "株式会社ＡＢＣ検査"
 * presentedForm.contentType = #application/pdf
 * presentedForm.language = #ja-JP
