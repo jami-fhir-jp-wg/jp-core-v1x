@@ -17,14 +17,27 @@ DiagnosticReportリソースは、次の要素を持たなければならない�
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHALL | identifier | token  | レポートに割り当てられた識別子 | DiagnosticReport.identifier | GET [base]/DiagnosticReport?ET [base]/Patient?identifier=http://myhosptal/observation\|123456 |
-| SHOULD | patient,category | reference  | `GET [base]/DiagnosticReport?patient=123&category=http://loinc.org\|LP29693-6` |
-| SHOULD | patient,category,based-on | reference,reference  | `GET [base]/DiagnosticReport?patient=123&category=http://loinc.org\|LP29693-6&based-on=ServiceRequest/456` |
-| SHOULD | patient,category,date | reference,date  | `GET [base]/Observation?patient=123&categoryhttp://loinc.org\|LP29693-6&date=le2020-12-31` |
+| SHALL | identifier | token  | レポートに割り当てられた識別子 | DiagnosticReport.identifier | GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/diagnosticreport-id-system\|1234567890 |
+| SHOULD | patient,category | reference  | GET [base]/DiagnosticReport?patient=123&category=http://loinc.org\|LP29693-6 |
+| SHOULD | patient,category,based-on | reference,reference  | GET [base]/DiagnosticReport?patient=123&category=http://loinc.org\|LP29693-6&based-on=ServiceRequest/456 |
+| SHOULD | patient,category,date | reference,date  | GET [base]/Observation?patient=123&categoryhttp://loinc.org\|LP29693-6&date=le2020-12-31 |
 
 ##### 必須検索パラメータ
 
-必須（**SHALL**）としての検索項目は定義しない。
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（**SHALL**）
+
+   ```
+   GET [base]/DiagnosticReport?identifier={system|}[code]
+   ```
+
+   例：
+
+   ```
+   GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/diagnosticreport-id-system|1234567890
+   ```
+
+   指定された識別子に一致するDiagnosticReportリソースを含むBundleを検索する。
+
 
 ##### 推奨検索パラメータ
 
