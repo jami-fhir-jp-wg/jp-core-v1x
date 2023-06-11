@@ -33,10 +33,8 @@
 ### 微生物検査結果　培養・同定と感受性のネスト構造
 
 次のDiagnosticReportリソースの例は、関連するObservationを使用して、1レベルと2レベルのネストされた菌および感受性パネルを備えた培養・同定結果と感受性結果の例を示す。
-<!-- ![](intoronotes-resources/observation_microbiology_structure.PNG) -->
 
-<img src="intoronotes-resources/observation_microbiology_structure.PNG" width="80%" height="80%" alt="培養・同定と感受性のネスト構造"/>
-<p/>
+![](intoronotes-resources/observation_microbiology_structure.PNG)
 
 
 ## その他、参考文献・リンク等
