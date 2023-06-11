@@ -2,15 +2,15 @@ CodeSystem: JP_Microbiology_AntiMicrobialDrug_CS
 Id: jp-microbiology-anti-microbial-drug-cs
 Title: "JP Core Microbiology AntiMicrobial Drug CodeSystem"
 Description: "微生物学的検査感染性物質コード  
-本コードは厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)で作成されているマスタを編集・加工して利用しております。"
+本コードは厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)で作成されているマスタを編集・加工して利用している"
 * ^url = $JP_Microbiology_AntiMicrobialDrug_CS
 * ^status = #active
 * ^experimental = false
 * ^date = "2023-05-30"
 * ^caseSensitive = true
 * ^content = #complete
-* ^copyright = "厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)"
-
+* ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG  
+厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)"
 * #1100 "モノバクタム系"
   * #1101 "AZT" "アズトレオナム"
   * #1106 "CRMN" "カルモナム"
@@ -47,7 +47,7 @@ Description: "微生物学的検査感染性物質コード
   * #1281 "SBT/ABPC" "スルバクタム・アンピシリン"
   * #1282 "TAZ/PIPC" "タゾバクタム・ピペラシリン"
   * #1286 "ABPC+MCIPC" "クロキサシリン・アンピシリン"
-  * #1291 "ABPC+MＤIPC" "ジクロキサシリン・アンピシリン"
+  * #1291 "ABPC+MDIPC" "ジクロキサシリン・アンピシリン"
 * #1300 "ペネム系"
   * #1301 "FRPM" "ファロペネム"
   * #1306 "RIPM-AC" "リティペネム・アコキシル"
