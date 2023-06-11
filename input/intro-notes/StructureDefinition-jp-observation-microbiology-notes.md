@@ -36,4 +36,9 @@ Diagnostic Reportのサンプルの一部に定義しているため、これを
 
 * [**一般細菌検査レポート**][jp-diagnosticreport-microbiology-example-1]
 
+
+## その他、参考文献、リンク等
+
+1. 厚生労働省院内感染対策サーベイランス事業 [https://janis.mhlw.go.jp/](https://janis.mhlw.go.jp/)
+
 {% include markdown-link-references.md %}

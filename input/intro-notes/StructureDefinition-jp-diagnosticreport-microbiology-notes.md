@@ -39,6 +39,8 @@
 
 ## その他、参考文献・リンク等
 
+1. 厚生労働省院内感染対策サーベイランス事業 [https://janis.mhlw.go.jp/](https://janis.mhlw.go.jp/)
+1. FHIR BaseのDiagnosticReport例）Micro Isolate and Sensitivities [DiagnosticReport-Examples#Micro Isolate and Sensitivities](https://hl7.org/fhir/R4/diagnosticreport-examples.html#10.3.7.1.1)
 
 
 {% include markdown-link-references.md %}
