@@ -22,13 +22,13 @@
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHOULD | patient,code,date,based-on | reference,token,date,reference  | `GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&based-on=ServiceRequest/456` |
-| SHOULD | patient,code,date,value-quantity,based-on | reference,token,date,quantity,reference  | `GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&value-quantity=gt40&based-on=ServiceRequest/456` |
-| SHOULD | patient,code,date,value-concept,based-on | reference,token,date,code,reference  | `GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&value-concept=http://jpfhir.jp/fhir/example|1082004&based-on=ServiceRequest/456` |
-| SHOULD | patient,code,date,value-string,based-on | reference,token,date,string,reference  | `GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&value-string=positive&based-on=ServiceRequest/456` |
-| SHOULD | code,value-quantity,patient | token,quantity,reference  | `GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value-quantity=gt40&patient=123` |
-| SHOULD | code,value-concept,patient | token,code,reference | `GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value-concept=http://jpfhir.jp/fhir/example|1082004&patient=123` |
-| SHOULD | code,value-string,patient | token,string,reference  | `GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value-string=positive&patient=123` |
+| SHOULD | patient,code,date,based-on | reference,token,date,reference  | GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&date=le2020-12-31&based-on=ServiceRequest/456 |
+| SHOULD | patient,code,date,value-quantity,based-on | reference,token,date,quantity,reference  | GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&date=le2020-12-31&value-quantity=gt40&based-on=ServiceRequest/456 |
+| SHOULD | patient,code,date,value-concept,based-on | reference,token,date,code,reference  | GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&date=le2020-12-31&value-concept=http://jpfhir.jp/fhir/example|1082004&based-on=ServiceRequest/456 |
+| SHOULD | patient,code,date,value-string,based-on | reference,token,date,string,reference  | GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&date=le2020-12-31&value-string=positive&based-on=ServiceRequest/456 |
+| SHOULD | code,value-quantity,patient | token,quantity,reference  | GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&value-quantity=gt40&patient=123 |
+| SHOULD | code,value-concept,patient | token,code,reference | GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&value-concept=http://jpfhir.jp/fhir/example\|1082004&patient=123 |
+| SHOULD | code,value-string,patient | token,string,reference  | GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&value-string=positive&patient=123 |
 
 
 #### 操作詳細
@@ -47,7 +47,7 @@
 patient,code,date,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
-   GET [base]/Observation?patient={reference}&code={code}}&date={date}}&based-on={reference}
+   GET [base]/Observation?patient={reference}&code={code}&date={date}&based-on={reference}
    ```
 
    例：
@@ -61,7 +61,7 @@ patient,code,date,based-on の各検索パラメータに一致するObservation
 patient,code,date,value-quantity,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
-   GET [base]/Observation?patient={reference}&code={code}}&date={date}}&value-quantity={quantity}&based-on={reference}
+   GET [base]/Observation?patient={reference}&code={code}&date={date}&value-quantity={quantity}&based-on={reference}
    ```
 
    例：
@@ -75,7 +75,7 @@ patient,code,date,value-quantity,based-on の各検索パラメータに一致�
 patient,code,date,value-concept,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
-   GET [base]/Observation?patient={reference}&code={code}}&date={date}}&value-concept={code}&based-on={reference}
+   GET [base]/Observation?patient={reference}&code={code}&date={date}&value-concept={code}&based-on={reference}
    ```
 
    例：
@@ -90,7 +90,7 @@ patient,code,date,value-concept,based-on の各検索パラメータに一致す
 patient,code,date,value-string,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
    ```
-   GET [base]/Observation?patient={reference}&code={code}}&date={date}}&value-string={string}&based-on={reference}
+   GET [base]/Observation?patient={reference}&code={code}&date={date}&value-string={string}&based-on={reference}
    ```
 
    例：
