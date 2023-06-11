@@ -18,7 +18,7 @@
 
 | コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |　例　|
 | --- | --- | --- | --- | --- | --- |
-| SHALL | identifier | token  | レポートに割り当てられた識別子 | DiagnosticReport.identifier | GET [base]/DiagnosticReport?ET [base]/Patient?identifier=http://abc.hosptal\|123456 |
+| SHALL | identifier | token  | レポートに割り当てられた識別子 | DiagnosticReport.identifier | GET [base]/DiagnosticReport?ET [base]/Patient?identifier=http://myhosptal/observation\|123456 |
 | MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) | `GET [base]/DiagnosticReport?based-on=ServiceRequest/12345` |
 | SHOULD | category | token | レポート種別 | DiagnosticReport.category ([JP Core DiagnosticReport Category ValueSet][JP_DiagnosticReportCategory_VS]) (デフォルト：[LP7819-8](https://loinc.org/LP7819-8/)) | `GET [base]/DiagnosticReport?category=LP7819-8` |
 | SHOULD | date | date | レポート作成日 | DiagnosticReport.effectiveDate |  |  |

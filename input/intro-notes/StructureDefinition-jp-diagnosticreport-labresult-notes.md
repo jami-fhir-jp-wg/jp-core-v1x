@@ -2,6 +2,7 @@
 DiagnosticReportリソースは、次の要素を持たなければならない。
 
  - status︓検体検査情報項目の状態は必須である
+ - category : レポートを作成した臨床分野、部門、または診断サービスを分類するコード。LP29693-6 "検体検査" 固定
  - code︓何の検体検査情報項目であるかを示すため必須である
 
 
@@ -16,9 +17,10 @@ DiagnosticReportリソースは、次の要素を持たなければならない�
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHOULD | patient,category | reference  | `GET [base]/DiagnosticReport?patient=123&category=LAB` |
-| SHOULD | patient,category,based-on | reference,reference  | `GET [base]/DiagnosticReport?patient=123&category=LAB&based-on=ServiceRequest/456` |
-| SHOULD | patient,category,date | reference,date  | `GET [base]/Observation?patient=123&category=LAB&date=le2020-12-31` |
+| SHALL | identifier | token  | レポートに割り当てられた識別子 | DiagnosticReport.identifier | GET [base]/DiagnosticReport?ET [base]/Patient?identifier=http://myhosptal/observation\|123456 |
+| SHOULD | patient,category | reference  | `GET [base]/DiagnosticReport?patient=123&category=http://loinc.org\|LP29693-6` |
+| SHOULD | patient,category,based-on | reference,reference  | `GET [base]/DiagnosticReport?patient=123&category=http://loinc.org\|LP29693-6&based-on=ServiceRequest/456` |
+| SHOULD | patient,category,date | reference,date  | `GET [base]/Observation?patient=123&categoryhttp://loinc.org\|LP29693-6&date=le2020-12-31` |
 
 ##### 必須検索パラメータ
 
@@ -40,7 +42,7 @@ patient,categoryの各検索パラメータに一致するObservationリソー�
    例：
 
    ```
-   GET [base]/DiagnosticReport?patient=123&category=LAB
+   GET [base]/DiagnosticReport?patient=123&http://loinc.org|LP29693-6
    ```
 
 2. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、based-on (検査オーダの依頼科)を指定した検索をサポートすることが望ましい。（**SHOULD**）
@@ -54,7 +56,7 @@ patient,category,based-onの各検索パラメータに一致するObservation�
    例：
 
    ```
-   GET [base]/DiagnosticReport?patient=123&category=LAB&based-on=ServiceRequest/456
+   GET [base]/DiagnosticReport?patient=123&category=http://loinc.org|LP29693-6&based-on=ServiceRequest/456
    ```
 
 3. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、date(レポート作成日)を指定した検索をサポートすることが望ましい。（**SHOULD**）
@@ -69,7 +71,7 @@ patient,category,dateの各検索パラメータに一致するObservationリソ
    例：
 
    ```
-   GET [base]/DiagnosticReport?patient=123&category=LAB&date=2021-11-08
+   GET [base]/DiagnosticReport?patient=123&category=http://loinc.org|LP29693-6&date=2021-11-08
    ```
 
 ##### オプション検索パラメータ
