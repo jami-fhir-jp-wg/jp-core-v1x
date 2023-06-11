@@ -73,9 +73,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * specimen ^short = "この診断レポートの検体に関する情報。【詳細参照】"
 * specimen ^definition = "この診断レポートの検体に関する情報。"
 * specimen ^comment = "内視鏡では省略してよい。"
-* result ^short = "この診断レポートの一部となるObservationに関する情報。【詳細参照】"
+* result ^short = "この診断レポートの一部となるObservationに関する情報。"
 * result ^definition = "この診断レポートの一部となるObservationに関する情報。"
-* result ^comment = "内視鏡では省略してよい。"
 * imagingStudy MS
 * imagingStudy only Reference(JP_ImagingStudy_Endoscopy)
 * imagingStudy ^short = "診断レポートに関連づけれられたDICOM画像検査に関する情報。【詳細参照】"

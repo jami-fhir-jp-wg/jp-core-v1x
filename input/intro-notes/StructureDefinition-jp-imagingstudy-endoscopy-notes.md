@@ -47,10 +47,15 @@ ImagingStudyはDICOM tagとの対応が重要である。各エレメントとDI
 
 | コンフォーマンス | パラメータ    | 型     | 例          |
 | -------------| ----- | ------ | ----- |
-| MAY | patient | reference | `GET [base]/ImagingStudy?patient=123` |
+| SHOULD | patient | reference | `GET [base]/ImagingStudy?patient=123` |
 | MAY | patient, modality | reference, token | `GET [base]/ImagingStudy?patient=123&modality=ES` |
-| MAY | patient,started | reference, date | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-25` |
+| SHOULD | patient, series.modality | reference, token | `GET [base]/ImagingStudy?patient=123&series.modality=ES` |
+| SHOULD | patient,started | reference, date | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-25` |
 | MAY | patient, started, modality | reference, date, token | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=ES` |
+| SHOULD | patient, started, series.modality | reference, date, token | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&series.modality=ES` |
+
+なお、modalityは値が入っていない可能性があるため、モダリティを内視鏡に限定して検索する場合には、series.modalityを用いた方が確実である。
+
 
 #### 操作詳細
 
