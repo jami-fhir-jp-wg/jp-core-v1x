@@ -39,6 +39,6 @@ Diagnostic Reportのサンプルの一部に定義しているため、これを
 
 ## その他、参考文献、リンク等
 
-1. 厚生労働省院内感染対策サーベイランス事業 [https://janis.mhlw.go.jp/](https://janis.mhlw.go.jp/)
+1. 厚生労働省院内感染対策サーベイランス事業 [(https://janis.mhlw.go.jp/)](https://janis.mhlw.go.jp/)
 
 {% include markdown-link-references.md %}
