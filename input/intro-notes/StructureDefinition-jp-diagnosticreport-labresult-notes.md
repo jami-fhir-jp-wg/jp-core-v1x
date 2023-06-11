@@ -20,7 +20,7 @@ DiagnosticReportリソースは、次の要素を持たなければならない�
 | SHALL | identifier | token  | レポートに割り当てられた識別子 | DiagnosticReport.identifier | GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/diagnosticreport-id-system\|1234567890 |
 | SHOULD | patient,category | reference  | GET [base]/DiagnosticReport?patient=123&category=http://loinc.org\|LP29693-6 |
 | SHOULD | patient,category,based-on | reference,reference  | GET [base]/DiagnosticReport?patient=123&category=http://loinc.org\|LP29693-6&based-on=ServiceRequest/456 |
-| SHOULD | patient,category,date | reference,date  | GET [base]/Observation?patient=123&categoryhttp://loinc.org\|LP29693-6&date=le2020-12-31 |
+| SHOULD | patient,category,date | reference,date  | GET [base]/Observation?patient=123&category=http://loinc.org\|LP29693-6&date=le2020-12-31 |
 
 ##### 必須検索パラメータ
 
