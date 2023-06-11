@@ -36,6 +36,8 @@
 <!-- ![](intoronotes-resources/observation_microbiology_structure.PNG) -->
 
 <img src="intoronotes-resources/observation_microbiology_structure.PNG" width="80%" height="80%" alt="培養・同定と感受性のネスト構造"/>
+<p/>
+
 
 ## その他、参考文献・リンク等
 
