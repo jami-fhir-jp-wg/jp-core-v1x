@@ -2,10 +2,10 @@
 本プロファイルでは、次の要素を持たなければならない。
 
  - status : 検体検査情報項目の状態は必須である
+ - category : レポートを作成した臨床分野、部門、または診断サービスを分類するコード。LP7819-8 "微生物検査" 固定
  - code : このリソースは何の検体検査情報項目であるかを示すため必須である
 
 ### Extensions定義
-
  本プロファイルで追加定義された拡張はない。
 
 ## 利用方法
@@ -16,15 +16,18 @@
 
 微生物学的検査結果ユースケースのSearch Parameter一覧は共通情報プロファイルとは異なり以下の通りである。
 
-| コンフォーマンス | パラメータ    | 型     | 例                                                           |
-| ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHALL | identifier | reference | `GET [base]/identifier?id=[id]` |
-| SHOULD | category, date, code  | reference, date, reference | `GET [base]?category=[category]` |
-| SHOULD | category, value-quantity | reference | `GET [base]?category=[category]` |
-| SHOULD | category, value-quantity, code, specimen, patient | reference | `GET [base]?category=[category]` |
-| SHOULD | patient, date, based-on | reference | `GET [base]?category=[category]` |
+| コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |　例　|
+| --- | --- | --- | --- | --- | --- |
+
+| SHALL | identifier | token  | レポートに割り当てられた識別子 |  
+| MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) | `GET [base]/DiagnosticReport?based-on=ServiceRequest/12345` |
+| SHOULD | category | token | レポート種別 | DiagnosticReport.category ([JP Core DiagnosticReport Category ValueSet][JP_DiagnosticReportCategory_VS]) (デフォルト：[LP7819-8](https://loinc.org/LP7819-8/)) | `GET [base]/DiagnosticReport?category=LP7819-8` |
+| SHOULD | date | date | レポート作成日 | DiagnosticReport.effectiveDate |
+| SHOULD | patient | reference | レポートの対象患者 | DiagnosticReport.subject.where(resolve() is Patient) ([Patient][JP_Patient]) |
 
 ### サンプル
+
+* [**一般細菌検査レポート**][jp-diagnosticreport-microbiology-example-1]
 
 
 ## 注意事項
