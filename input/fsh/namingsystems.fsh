@@ -330,11 +330,11 @@ Usage: #definition
 Instance: jp-endoscopyterminology-codes-jed-ns
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "JP Core Endoscopy Terminology Codes JED NamingSystem"
+* name = "JP_Endoscopy_TerminologyCodes_JED_NamingSystem"
 * status = #active
 * date = "2023-06-12"
 * kind = #codesystem
-* description = "日本消化器内視鏡学会が推進するJED (Japan Endoscopy Database) Projectで定義されるコードシステム NamingSystem"
+* description = "日本消化器内視鏡学会が推進するJED (Japan Endoscopy Database) Projectで定義されるコード"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.200270.4.1000.1"
 * uniqueId[+].type = #uri
@@ -346,11 +346,11 @@ Usage: #definition
 Instance: jp-microbiology-antimicrobialdrug-ns
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "JP Core Microbiology AntiMicrobial Drug NamingSystem"
+* name = "JP_Microbiology_AntiMicrobialDrug_NamingSystem"
 * status = #active
 * date = "2023-06-12"
 * kind = #codesystem
-* description = "微生物学的検査抗菌薬コード(Ver.5.2) NamingSystem
+* description = "微生物学的検査抗菌薬コード(Ver.5.2) 
 本コードは厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)で作成されているマスタを編集・加工して利用している"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.10.3.100.5.11.5.0"
@@ -363,11 +363,11 @@ Usage: #definition
 Instance: jp-microbiology-infectious-agent-ns
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "JP Core Microbiology InfectiousAgent NamingSystem"
+* name = "JP_Microbiology_InfectiousAgent_NamingSystem"
 * status = #active
 * date = "2023-06-12"
 * kind = #codesystem
-* description = "微生物学的検査感染性物質コード(Ver.6.2)NamingSystem
+* description = "微生物学的検査感染性物質コード(Ver.6.2)
 本コードは厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)で作成されているマスタを編集・加工して利用している"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.10.3.100.5.27.4.1"
