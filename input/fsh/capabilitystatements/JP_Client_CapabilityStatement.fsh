@@ -148,7 +148,6 @@ Usage: #definition
 * insert PutDefinedSearchParam(started, ImagingStudy-started, date)
 * insert PutDefinedSearchParam(encounter, /ImagingStudy-encounter, reference)
 
-
 // DiagnosticReport
 * insert SetSearchParameterType(DiagnosticReport)
 * insert SetSearchParameterSupportedProfile(JP_DiagnosticReport_Common)
@@ -206,22 +205,14 @@ Usage: #definition
 * insert PutDefinedSearchParam(status, FamilyMemberHistory-status, token)
 * insert PutDefinedSearchParam(relationship, FamilyMemberHistory-relationship, token)
 
-// // 
-// * insert SetSearchParameterResource(, )
-// * insert PutDefinedSearchParam(, , )
-// * insert PutDefinedSearchParam(, , )
-// * insert PutDefinedSearchParam(, , )
-// * insert PutDefinedSearchParam(, , )
-// * insert PutDefinedSearchParam(, , )
-// * insert PutDefinedSearchParam(, , )
-// * insert PutDefinedSearchParam(, , )
-// * insert PutDefinedSearchParam(, , )
-// * insert PutDefinedSearchParam(, , )
-// * insert PutDefinedSearchParam(, , )
-// * insert PutDefinedSearchParam(, , )
-// * insert PutDefinedSearchParam(, , )
 
 * rest.interaction[0].code = #transaction
 * rest.interaction[+].code = #batch
 * rest.interaction[+].code = #search-system
 * rest.interaction[+].code = #history-system
+
+
+
+// // 入力テンプレート
+// * insert SetSearchParameterResource(, )
+// * insert PutDefinedSearchParam(, , )
