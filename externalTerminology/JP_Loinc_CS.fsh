@@ -16,7 +16,7 @@ Description: "LOINC Japanese Transaltion subset"
 * #LP7796-8 "内視鏡"
 * #LP29693-6 "検体検査"
 * #LP29708-2 "循環器"
-* #LP31795-1 "歯科口腔"
+* #LP31759-1 "歯科口腔"
 * #LP7819-8 "微生物検査"
 
 * #9279-1 "Respiratory rate"
