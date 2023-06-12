@@ -301,7 +301,7 @@ Usage: #definition
 * status = #active
 * date = "2022-10-24"
 * kind = #codesystem
-* description = "JP Core Observation JLAC10 CodeSystem"
+* description = "JP Core Observation JLAC10 NamingSystem"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.200119.4.504"
 * uniqueId[+].type = #uri
@@ -318,7 +318,7 @@ Usage: #definition
 * status = #active
 * date = "2022-10-24"
 * kind = #codesystem
-* description = "JP Core Observation VitalSigns Code_NamingSystem"
+* description = "JP Core Observation VitalSigns Code NamingSystem"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.200119.4.804"
 * uniqueId[+].type = #uri
@@ -326,6 +326,56 @@ Usage: #definition
 * uniqueId[=].preferred = true
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCode_CS"
+
+Instance: jp-endoscopyterminology-codes-jed-namingsystem
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "JP Core Endoscopy Terminology Codes JED NamingSystem"
+* status = #active
+* date = "2023-06-12"
+* kind = #codesystem
+* description = "日本消化器内視鏡学会が推進するJED (Japan Endoscopy Database) Projectで定義されるコードシステム NamingSystem"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "1.2.392.200270.4.1000.1"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.200270.4.1000.1"
+* uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_EndoscopyTerminologyCodesJED_CS"
+
+Instance: jp-microbiology-anti-microbial-drug-namingsystem
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "JP Core Microbiology AntiMicrobial Drug NamingSystem"
+* status = #active
+* date = "2023-06-12"
+* kind = #codesystem
+* description = "微生物学的検査抗菌薬コード(Ver.5.2) NamingSystem
+本コードは厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)で作成されているマスタを編集・加工して利用している"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "1.2.392.100495.10.3.100.5.11.5.0"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.100495.10.3.100.5.11.5.0"
+* uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_Microbiology_AntiMicrobialDrug_CS"
+
+Instance: jp-microbiology-infectious-agent-namingsystem
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "JP Core Microbiology InfectiousAgent NamingSystem"
+* status = #active
+* date = "2023-06-12"
+* kind = #codesystem
+* description = "微生物学的検査感染性物質コード(Ver.6.2)NamingSystem
+本コードは厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)で作成されているマスタを編集・加工して利用している"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "1.2.392.100495.10.3.100.5.27.4.1"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.100495.10.3.100.5.27.4.1"
+* uniqueId[=].preferred = true
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_Microbiology_InfectiousAgent_CS"
 
 
 // template
@@ -341,6 +391,6 @@ Usage: #definition
 // * uniqueId[=].value = "xxxxxxxxxxxxxxxxxxxxxxxx"
 // * uniqueId[+].type = #uri
 // * uniqueId[=].value = "urn:oid:xxxxxxxxxxxxxxxxxxxxxxxxxx"
+// * uniqueId[=].preferred = true
 // * uniqueId[+].type = #uri
 // * uniqueId[=].value = $XXXXXXXXXXXXXXXXXXXXXX
-// * uniqueId[=].preferred = true
