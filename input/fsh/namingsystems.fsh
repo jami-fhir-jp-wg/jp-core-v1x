@@ -327,7 +327,7 @@ Usage: #definition
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCode_CS"
 
-Instance: jp-endoscopyterminology-codes-jed-namingsystem
+Instance: jp-endoscopyterminology-codes-jed-ns
 InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP Core Endoscopy Terminology Codes JED NamingSystem"
@@ -343,7 +343,7 @@ Usage: #definition
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_EndoscopyTerminologyCodesJED_CS"
 
-Instance: jp-microbiology-anti-microbial-drug-namingsystem
+Instance: jp-microbiology-antimicrobialdrug-ns
 InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP Core Microbiology AntiMicrobial Drug NamingSystem"
@@ -360,7 +360,7 @@ Usage: #definition
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_Microbiology_AntiMicrobialDrug_CS"
 
-Instance: jp-microbiology-infectious-agent-namingsystem
+Instance: jp-microbiology-infectious-agent-ns
 InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP Core Microbiology InfectiousAgent NamingSystem"
@@ -376,6 +376,7 @@ Usage: #definition
 * uniqueId[=].preferred = true
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_Microbiology_InfectiousAgent_CS"
+
 
 
 // template
