@@ -146,7 +146,7 @@ Usage: #definition
 * insert PutDefinedSearchParam(modality, ImagingStudy-modality, token)
 * insert PutDefinedSearchParam(bodysite, ImagingStudy-bodysite, token)
 * insert PutDefinedSearchParam(started, ImagingStudy-started, date)
-* insert PutDefinedSearchParam(encounter, /ImagingStudy-encounter, reference)
+* insert PutDefinedSearchParam(encounter, ImagingStudy-encounter, reference)
 
 // DiagnosticReport
 * insert SetSearchParameterType(DiagnosticReport)
