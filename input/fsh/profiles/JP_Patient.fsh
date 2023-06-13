@@ -76,9 +76,11 @@ Patient.identifier.system には、urn:oid:1.2.392.100495.20.3.51.医療機関�
 ```
 
 なお、urn:oid:1.2.392.100495.20.3.51の部分は、「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」表19 識別子名前空間一覧において医療機関等の患者IDとして割り当てられたOIDのURL型である。地域医療連携ネットワークの地域患者IDを指定する場合も同様に、地域患者IDを識別する名前空間（IHE ITI PIX等で使用されるOID等）をsystemに使用することができる。"
+* insert SetExampleString(identifier.system, urn:oid:1.2.392.100495.20.3.51.11312345670)
 * identifier.value 1..
 * identifier.value ^short = "The value that is unique 【詳細参照】"
 * identifier.value ^comment = "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processor to be confident that non-case-sensitive processing is safe.\r\n\r\n患者を一意的に識別するID(例えば、患者IDやカルテ番号など)を設定。"
+* insert SetExampleString(identifier.value, 123456)
 * identifier.period ^comment = "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").  
 Period is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).\r\n\r\nIDが使われていた/使われている期間。"
 * identifier.assigner only Reference(JP_Organization)
@@ -182,6 +184,7 @@ deceasedBooleanまたはdeceasedDateTimeのどちらかに値が入る
 - 郵便番号は含めない。  
 
 例：東京都文京区本郷7-3-1"
+* insert SetExampleString(address.text, 東京都文京区本郷7-3-1)
 * address.line ^short = "Street name, number, direction & P.O. Box etc.ストリート名や番地など 【詳細参照】"
 * address.line ^definition = "This component contains the house number, apartment number, street name, street direction,  P.O. Box number, delivery hints, and similar address information.\r\nこのコンポーネントには、家番号、アパート番号、通りの名前、通りの方向、P.O。が含まれる。ボックス番号、配達のヒント、および同様の住所情報など。"
 * address.line ^comment = "Note that FHIR strings SHALL NOT exceed 1MB in size\r\n１MBを超えないこと。  
@@ -192,19 +195,24 @@ deceasedBooleanまたはdeceasedDateTimeのどちらかに値が入る
 例：本郷7-3-1  
 例：大字石神９７６  
 例：藤崎町大字藤崎字西村1-2 春山荘201号室"
+* insert SetExampleString(address.line, 本郷7-3-1)
 * address.city ^short = "Name of city, town etc.　市区町村名 【詳細参照】"
 * address.city ^definition = "The name of the city, town, suburb, village or other community or delivery center.\r\n市、町、郊外、村、その他のコミュニティまたは配達センターの名前。"
 * address.city ^comment = "Note that FHIR strings SHALL NOT exceed 1MB in size\r\n１MBを超えないこと。  
 【JP Core仕様】郡市区町村部分だけを「郡」「市」「区」「町」「村」などの文字を含めて設定する。 例：文京区"
+* insert SetExampleString(address.city, 文京区)
 * address.district ^short = "District name (aka county) 【詳細参照】"
 * address.district ^comment = "District is sometimes known as county, but in some regions 'county' is used in place of city (municipality), so county name should be conveyed in city instead.\r\n【JP Core仕様】日本の住所では使用しない。"
+* insert ClearExampleString(address.district)
 * address.state ^short = "Sub-unit of country (abbreviations ok)　国の次の地区単位 【詳細参照】"
 * address.state ^definition = "Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (e.g. US 2 letter state codes).\r\n国の主権が制限されている国のサブユニット。日本の場合、都道府県名。"
 * address.state ^comment = "Note that FHIR strings SHALL NOT exceed 1MB in size\r\n１MBを超えないこと。  
 都道府県名。「都」「道」「府」「県」のそれぞれの文字を含める。 例：東京都"
+* insert SetExampleString(address.state, 東京都)
 * address.postalCode ^short = "Postal code for area 【詳細参照】"
 * address.postalCode ^comment = "Note that FHIR strings SHALL NOT exceed 1MB in size\r\n１MBを超えないこと。  
 郵便番号。日本の郵便番号の場合には3桁数字とハイフン1文字と4桁数字からなる半角８文字、または最初の3桁だけの3文字のいずれかとする。 例：113-8655"
+* insert SetExampleString(address.postalCode, 113-8655)
 * address.country ^short = "Country (e.g. can be ISO 3166 2 or 3 letter code)国名またはISO 3166コード"
 * address.country ^definition = "Country - a nation as commonly understood or generally accepted.\r\n国-一般的に理解されている、または一般的に受け入れられている国の国名かコード。"
 * address.country ^comment = "ISO 3166 3 letter codes can be used in place of a human readable country name.  
