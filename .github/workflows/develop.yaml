@@ -74,11 +74,17 @@ jobs:
         path: .
         file: publisher.jar
         
-    
-    - name: Download Jp modified version of hl7.fhir.r4.core Package
-      uses: wei/wget@v1
+    - uses: suisei-cn/actions-download-file@v1.4.0
+      id: downloadfile  # Remember to give an ID if you need the output
+      name: Download the file
       with:
-        args:  https://jpfhir.jp/fhir/hl7.fhir.r4.core-4.0.1.tgz
+        url: "https://jpfhir.jp/fhir/hl7.fhir.r4.core-4.0.1.tgz"
+        target: .
+
+    # - name: Download Jp modified version of hl7.fhir.r4.core Package
+    #   uses: wei/wget@v1
+    #   with:
+    #     args:  https://jpfhir.jp/fhir/hl7.fhir.r4.core-4.0.1.tgz
 
     - name: Prepare for using Jp modified version of hl7.fhir.r4.core Package
       env:
