@@ -14,14 +14,8 @@ RuleSet: SetDefinitionRef(name, definition)
 
 // exampleの記述
 RuleSet: SetExampleString(name, valueString)
-* {name} ^example.label = "e.g. "
+* {name} ^example.label = "Jp"
 * {name} ^example.valueString = "{valueString}"
-
-
-// exampleの記述クリア
-RuleSet: ClearExampleString(name)
-* {name} ^example.label = ""
-* {name} ^example.valueString = ""
 
 // ==============================
 //  CapabilityStatement関連
