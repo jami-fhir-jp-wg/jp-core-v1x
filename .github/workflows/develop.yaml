@@ -70,13 +70,13 @@ jobs:
       uses: Legion2/download-release-action@v2.1.0
       with:
         repository: HL7/fhir-ig-publisher
-        tag: '1.3.13'
+        tag: '1.3.16'
         path: .
         file: publisher.jar
         
-    - uses: suisei-cn/actions-download-file@v1.4.0
+    - name: Download the file
+      uses: suisei-cn/actions-download-file@v1.4.0
       id: downloadfile  # Remember to give an ID if you need the output
-      name: Download the file
       with:
         url: "https://jpfhir.jp/fhir/hl7.fhir.r4.core-4.0.1.tgz"
         target: .
