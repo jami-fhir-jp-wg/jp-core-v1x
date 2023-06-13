@@ -78,7 +78,7 @@ jobs:
       id: downloadfile  # Remember to give an ID if you need the output
       name: Download the file
       with:
-        url: https://jpfhir.jp/fhir/hl7.fhir.r4.core-4.0.1.tgz
+        url: "https://jpfhir.jp/fhir/hl7.fhir.r4.core-4.0.1.tgz"
         target: .
         auto-match: true
 
