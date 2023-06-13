@@ -76,11 +76,11 @@ Patient.identifier.system には、urn:oid:1.2.392.100495.20.3.51.医療機関�
 ```
 
 なお、urn:oid:1.2.392.100495.20.3.51の部分は、「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」表19 識別子名前空間一覧において医療機関等の患者IDとして割り当てられたOIDのURL型である。地域医療連携ネットワークの地域患者IDを指定する場合も同様に、地域患者IDを識別する名前空間（IHE ITI PIX等で使用されるOID等）をsystemに使用することができる。"
-* insert SetExampleString(identifier.system, urn:oid:1.2.392.100495.20.3.51.11312345670)
+* identifier.system ^example.label = "Jp"
+* identifier.system ^example.valueUri = "urn:oid:1.2.392.100495.20.3.51.11312345670"
 * identifier.value 1..
 * identifier.value ^short = "The value that is unique 【詳細参照】"
 * identifier.value ^comment = "If the value is a full URI, then the system SHALL be urn:ietf:rfc:3986.  The value's primary purpose is computational mapping.  As a result, it may be normalized for comparison purposes (e.g. removing non-significant whitespace, dashes, etc.)  A value formatted for human display can be conveyed using the [Rendered Value extension](extension-rendered-value.html). Identifier.value is to be treated as case sensitive unless knowledge of the Identifier.system allows the processor to be confident that non-case-sensitive processing is safe.\r\n\r\n患者を一意的に識別するID(例えば、患者IDやカルテ番号など)を設定。"
-* insert SetExampleString(identifier.value, 123456)
 * identifier.period ^comment = "A Period specifies a range of time; the context of use will specify whether the entire range applies (e.g. \"the patient was an inpatient of the hospital for this time range\") or one value from the range applies (e.g. \"give to the patient between these two times\").  
 Period is not used for a duration (a measure of elapsed time). See [Duration](http://hl7.org/fhir/R4/datatypes.html#Duration).\r\n\r\nIDが使われていた/使われている期間。"
 * identifier.assigner only Reference(JP_Organization)
@@ -203,8 +203,6 @@ deceasedBooleanまたはdeceasedDateTimeのどちらかに値が入る
 * insert SetExampleString(address.city, 文京区)
 * address.district ^short = "District name (aka county) 【詳細参照】"
 * address.district ^comment = "District is sometimes known as county, but in some regions 'county' is used in place of city (municipality), so county name should be conveyed in city instead.\r\n【JP Core仕様】日本の住所では使用しない。"
-* address.district ^example.label = "【JP Core】未使用"
-* address.district ^example.label = "　"
 * address.state ^short = "Sub-unit of country (abbreviations ok)　国の次の地区単位 【詳細参照】"
 * address.state ^definition = "Sub-unit of a country with limited sovereignty in a federally organized country. A code may be used if codes are in common use (e.g. US 2 letter state codes).\r\n国の主権が制限されている国のサブユニット。日本の場合、都道府県名。"
 * address.state ^comment = "Note that FHIR strings SHALL NOT exceed 1MB in size\r\n１MBを超えないこと。  
