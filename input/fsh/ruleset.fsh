@@ -12,11 +12,6 @@ RuleSet: SetDefinitionRef(name, definition)
 * {name} ^short = "{definition}【詳細参照】"
 * {name} ^definition = "{definition}"
 
-// exampleの記述
-RuleSet: SetExampleString(name, valueString)
-* {name} ^example.label = "e.g. "
-* {name} ^example.valueString = "{valueString}"
-
 // ==============================
 //  CapabilityStatement関連
 // ==============================
