@@ -24,21 +24,6 @@ Usage: #example
 * contained[+] = susceptibility-measurements1-5
 * contained[+] = susceptibility-measurements1-6
 * contained[+] = susceptibility-measurements1-7
-* contained[+] = susceptibility-measurements1-8
-* contained[+] = susceptibility-measurements1-9
-* contained[+] = susceptibility-measurements1-10
-* contained[+] = susceptibility-measurements1-11
-* contained[+] = susceptibility-measurements1-12
-* contained[+] = susceptibility-measurements1-13
-* contained[+] = susceptibility-measurements1-14
-* contained[+] = susceptibility-measurements1-15
-* contained[+] = susceptibility-measurements1-16
-* contained[+] = susceptibility-measurements1-17
-* contained[+] = susceptibility-measurements1-18
-* contained[+] = susceptibility-measurements1-19
-* contained[+] = susceptibility-measurements1-20
-* contained[+] = susceptibility-measurements1-21
-* contained[+] = susceptibility-measurements1-22
 * contained[+] = susceptibility-measurements2-1
 * contained[+] = susceptibility-measurements2-2
 * contained[+] = susceptibility-measurements2-3
@@ -48,19 +33,6 @@ Usage: #example
 * contained[+] = susceptibility-measurements2-7
 * contained[+] = susceptibility-measurements2-8
 * contained[+] = susceptibility-measurements2-9
-* contained[+] = susceptibility-measurements2-10
-* contained[+] = susceptibility-measurements2-11
-* contained[+] = susceptibility-measurements2-12
-* contained[+] = susceptibility-measurements2-13
-* contained[+] = susceptibility-measurements2-14
-* contained[+] = susceptibility-measurements2-15
-* contained[+] = susceptibility-measurements2-16
-* contained[+] = susceptibility-measurements2-17
-* contained[+] = susceptibility-measurements2-18
-* contained[+] = susceptibility-measurements2-19
-* contained[+] = susceptibility-measurements2-20
-* contained[+] = susceptibility-measurements2-21
-* contained[+] = susceptibility-measurements2-22
 * contained[+] = jp-servicerequest-example-1
 * identifier.use = #usual
 * identifier.system = "http://abc-hospital.local/fhir/mb/reportid"
@@ -222,21 +194,6 @@ Usage: #inline
 * hasMember[+] = Reference(Observation/susceptibility-measurements1-5)
 * hasMember[+] = Reference(Observation/susceptibility-measurements1-6)
 * hasMember[+] = Reference(Observation/susceptibility-measurements1-7)
-* hasMember[+] = Reference(Observation/susceptibility-measurements1-8)
-* hasMember[+] = Reference(Observation/susceptibility-measurements1-9)
-* hasMember[+] = Reference(Observation/susceptibility-measurements1-10)
-* hasMember[+] = Reference(Observation/susceptibility-measurements1-11)
-* hasMember[+] = Reference(Observation/susceptibility-measurements1-12)
-* hasMember[+] = Reference(Observation/susceptibility-measurements1-13)
-* hasMember[+] = Reference(Observation/susceptibility-measurements1-14)
-* hasMember[+] = Reference(Observation/susceptibility-measurements1-15)
-* hasMember[+] = Reference(Observation/susceptibility-measurements1-16)
-* hasMember[+] = Reference(Observation/susceptibility-measurements1-17)
-* hasMember[+] = Reference(Observation/susceptibility-measurements1-18)
-* hasMember[+] = Reference(Observation/susceptibility-measurements1-19)
-* hasMember[+] = Reference(Observation/susceptibility-measurements1-20)
-* hasMember[+] = Reference(Observation/susceptibility-measurements1-21)
-* hasMember[+] = Reference(Observation/susceptibility-measurements1-22)
 
 Instance: organism-id2
 InstanceOf: JP_Observation_Microbiology
@@ -269,19 +226,6 @@ Usage: #inline
 * hasMember[+] = Reference(Observation/susceptibility-measurements2-7)
 * hasMember[+] = Reference(Observation/susceptibility-measurements2-8)
 * hasMember[+] = Reference(Observation/susceptibility-measurements2-9)
-* hasMember[+] = Reference(Observation/susceptibility-measurements2-10)
-* hasMember[+] = Reference(Observation/susceptibility-measurements2-11)
-* hasMember[+] = Reference(Observation/susceptibility-measurements2-12)
-* hasMember[+] = Reference(Observation/susceptibility-measurements2-13)
-* hasMember[+] = Reference(Observation/susceptibility-measurements2-14)
-* hasMember[+] = Reference(Observation/susceptibility-measurements2-15)
-* hasMember[+] = Reference(Observation/susceptibility-measurements2-16)
-* hasMember[+] = Reference(Observation/susceptibility-measurements2-17)
-* hasMember[+] = Reference(Observation/susceptibility-measurements2-18)
-* hasMember[+] = Reference(Observation/susceptibility-measurements2-19)
-* hasMember[+] = Reference(Observation/susceptibility-measurements2-20)
-* hasMember[+] = Reference(Observation/susceptibility-measurements2-21)
-* hasMember[+] = Reference(Observation/susceptibility-measurements2-22)
 
 Instance: organism-id3
 InstanceOf: JP_Observation_Microbiology
@@ -316,66 +260,10 @@ Usage: #inline
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1201 "PCG"
-
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements1-2
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1216 "ABPC"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements1-3
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1281 "SBT/ABPC"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements1-4
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1266 "PIPC"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements1-5
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1821 "GM"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
-Instance: susceptibility-measurements1-6
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1816 "AMK"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements1-7
+Instance: susceptibility-measurements1-2
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
@@ -386,7 +274,7 @@ Usage: #inline
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1871 "ABK"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
-Instance: susceptibility-measurements1-8
+Instance: susceptibility-measurements1-3
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
@@ -397,95 +285,7 @@ Usage: #inline
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2121 "MINO"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
-Instance: susceptibility-measurements1-9
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1901 "EM"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements1-10
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1941 "AZM"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements1-11
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1537 "CEZ"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements1-12
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1546 "CTM"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements1-13
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1656 "CTRX"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements1-14
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1701 "FMOX"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements1-15
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1661 "CAZ"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements1-16
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1596 "CFPN-PI"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements1-17
+Instance: susceptibility-measurements1-4
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
@@ -496,7 +296,7 @@ Usage: #inline
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2006 "CLDM"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
-Instance: susceptibility-measurements1-18
+Instance: susceptibility-measurements1-5
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
@@ -507,7 +307,7 @@ Usage: #inline
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2516 "LVFX"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
-Instance: susceptibility-measurements1-19
+Instance: susceptibility-measurements1-6
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
@@ -518,29 +318,7 @@ Usage: #inline
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2601 "FOM"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
-Instance: susceptibility-measurements1-20
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1401 "IPM/CS"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements1-21
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1411 "MEPM"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements1-22
+Instance: susceptibility-measurements1-7
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
@@ -570,76 +348,10 @@ Usage: #inline
 * category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1216 "ABPC"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements2-3
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1281 "SBT/ABPC"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements2-4
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1266 "PIPC"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements2-5
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1821 "GM"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements2-6
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1816 "AMK"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements2-7
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1871 "ABK"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements2-8
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2121 "MINO"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
-Instance: susceptibility-measurements2-9
+Instance: susceptibility-measurements2-3
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * subject = Reference(Patient/jp-patient-example-1)
@@ -651,40 +363,7 @@ Usage: #inline
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1901 "EM"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
-Instance: susceptibility-measurements2-10
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1941 "AZM"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements2-11
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1537 "CEZ"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements2-12
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1546 "CTM"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements2-13
+Instance: susceptibility-measurements2-4
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
@@ -695,29 +374,7 @@ Usage: #inline
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1656 "CTRX"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
-Instance: susceptibility-measurements2-14
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1701 "FMOX"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements2-15
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1661 "CAZ"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements2-16
+Instance: susceptibility-measurements2-5
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
@@ -728,7 +385,7 @@ Usage: #inline
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1596 "CFPN-PI"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
-Instance: susceptibility-measurements2-17
+Instance: susceptibility-measurements2-6
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
@@ -739,7 +396,7 @@ Usage: #inline
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2006 "CLDM"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
-Instance: susceptibility-measurements2-18
+Instance: susceptibility-measurements2-7
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
@@ -750,29 +407,7 @@ Usage: #inline
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2516 "LVFX"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
-Instance: susceptibility-measurements2-19
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2601 "FOM"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements2-20
-InstanceOf: JP_Observation_Microbiology
-Usage: #inline
-* status = #final
-* subject = Reference(Patient/jp-patient-example-1)
-* category[microbiology] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[loinc] = $US_Loinc_CS#18725-2 "Microbiology studies"
-* category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
-* code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1401 "IPM/CS"
-* interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
-
-Instance: susceptibility-measurements2-21
+Instance: susceptibility-measurements2-8
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
@@ -783,7 +418,7 @@ Usage: #inline
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1411 "MEPM"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
-Instance: susceptibility-measurements2-22
+Instance: susceptibility-measurements2-9
 InstanceOf: JP_Observation_Microbiology
 Usage: #inline
 * status = #final
