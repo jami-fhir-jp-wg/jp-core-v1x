@@ -72,10 +72,10 @@
 
 | コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |　例　|
 | --- | --- | --- | --- | --- | --- |
-| MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) | `GET [base]/DiagnosticReport?based-on=ServiceRequest/12345` |
-| SHOULD | category | token | レポート種別 | DiagnosticReport.category ([JP Core DiagnosticReport Category ValueSet][JP_DiagnosticReportCategory_VS]) (デフォルト：[LP7796-8](https://loinc.org/LP7796-8/)) | `GET [base]/DiagnosticReport?category=LP7796-8` |
-| SHOULD | code | token | レポート全体を示すコード | DiagnosticReport.code ([JP Core DocumentCodes Endoscopy ValueSet][JP_DocumentCodes_Endoscopy_VS])  | `GET [base]/DiagnosticReport?code=18751-8` |
-| MAY | conclusionCode | token | 内視鏡診断レポートの要約結論 | DiagnosticReport.conclusionCode ([JP Core Conclusion Code JED ValueSet][JP_ConclusionCodesJed_VS])  | `GET [base]/DiagnosticReport?conclusionCode=Z2B32104` |
+| MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) | GET [base]/DiagnosticReport?based-on=ServiceRequest/12345 |
+| SHOULD | category | token | レポート種別 | DiagnosticReport.category ([JP Core DiagnosticReport Category ValueSet][JP_DiagnosticReportCategory_VS]) (デフォルト：[LP7796-8](https://loinc.org/LP7796-8/)) | GET [base]/DiagnosticReport?category=LP7796-8 |
+| SHOULD | code | token | レポート全体を示すコード | DiagnosticReport.code ([JP Core DocumentCodes Endoscopy ValueSet][JP_DocumentCodes_Endoscopy_VS])  | GET [base]/DiagnosticReport?code=18751-8 |
+| MAY | conclusionCode | token | 内視鏡診断レポートの要約結論 | DiagnosticReport.conclusionCode ([JP Core Conclusion Code JED ValueSet][JP_ConclusionCodesJed_VS])  | GET [base]/DiagnosticReport?conclusionCode=Z2B32104 |
 
 
 なお、検索パラメータは複合的に利用できる。詳細は[Search - Chained parameters](https://www.hl7.org/fhir/R4/search.html#chaining)を参照すること。
@@ -105,7 +105,7 @@ GET [base]/DiagnosticReport?patient=123&category=LP7796-8
 1. [JAHIS 診療文書構造化記述規約 共通編 Ver.2.0](https://www.jahis.jp/standard/detail/id=729)
 2. [JAHIS 内視鏡検査レポート構造化記述規約 Ver.1.0](https://www.jahis.jp/standard/detail/id=824)
 
-また、消化器内視鏡検査レポートについては、[日本消化器内視鏡学会](https://www.jges.net/)が推進する[JED (Japan Endoscopy Database) Project](https://jedproject.jges.net/)に準拠していることが強く推奨される。
+また、消化器内視鏡検査レポートについては、[日本消化器内視鏡学会](https://www.jges.net/)が推進する[JED (Japan Endoscopy Database) Project](https://jedproject.jges.net/)に準拠していることが強く推奨（**SHOULD**）される。
 
 {% include markdown-link-references.md %}
 {% include external-link-reference.md %}

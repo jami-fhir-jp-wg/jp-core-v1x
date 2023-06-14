@@ -24,7 +24,7 @@
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
 | SHOULD | patient,code,date,based-on | reference,token,date,reference  | GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&date=le2020-12-31&based-on=ServiceRequest/456 |
 | SHOULD | patient,code,date,value-quantity,based-on | reference,token,date,quantity,reference  | GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&date=le2020-12-31&value-quantity=gt40&based-on=ServiceRequest/456 |
-| SHOULD | patient,code,date,value-concept,based-on | reference,token,date,code,reference  | GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&date=le2020-12-31&value-concept=http://jpfhir.jp/fhir/example|1082004&based-on=ServiceRequest/456 |
+| SHOULD | patient,code,date,value-concept,based-on | reference,token,date,code,reference  | GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&date=le2020-12-31&value-concept=http://jpfhir.jp/fhir/example\|1082004&based-on=ServiceRequest/456 |
 | SHOULD | patient,code,date,value-string,based-on | reference,token,date,string,reference  | GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&date=le2020-12-31&value-string=positive&based-on=ServiceRequest/456 |
 | SHOULD | code,value-quantity,patient | token,quantity,reference  | GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&value-quantity=gt40&patient=123 |
 | SHOULD | code,value-concept,patient | token,code,reference | GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&value-concept=http://jpfhir.jp/fhir/example\|1082004&patient=123 |

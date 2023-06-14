@@ -17,7 +17,7 @@ DiagnosticReportリソースは、次の要素を持たなければならない�
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHALL | identifier | token  | レポートに割り当てられた識別子 | DiagnosticReport.identifier | GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/diagnosticreport-id-system\|1234567890 |
+| SHALL | identifier | token  |GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/diagnosticreport-id-system\|1234567890 |
 | SHOULD | patient,category | reference  | GET [base]/DiagnosticReport?patient=123&category=http://loinc.org\|LP29693-6 |
 | SHOULD | patient,category,based-on | reference,reference  | GET [base]/DiagnosticReport?patient=123&category=http://loinc.org\|LP29693-6&based-on=ServiceRequest/456 |
 | SHOULD | patient,category,date | reference,date  | GET [base]/Observation?patient=123&category=http://loinc.org\|LP29693-6&date=le2020-12-31 |
@@ -44,7 +44,6 @@ DiagnosticReportリソースは、次の要素を持たなければならない�
 次の検索パラメータはサポートすることが推奨される。（**SHOULD**）
 
 1. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)を指定した検索をサポートすることが望ましい。（**SHOULD**）
-
 
 patient,categoryの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
@@ -73,7 +72,6 @@ patient,category,based-onの各検索パラメータに一致するObservation�
    ```
 
 3. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、date(レポート作成日)を指定した検索をサポートすることが望ましい。（**SHOULD**）
-
 
 patient,category,dateの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
 
