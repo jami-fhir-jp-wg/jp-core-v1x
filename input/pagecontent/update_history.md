@@ -8,50 +8,52 @@
 
 * プロファイル
   * Observation関連
-    * JP_Observation_Commonのコメント見直しを行なった
     * Observation派生プロファイルを検索出来るように、Categoryに検索用固定値を必須でいれることとした  
     ※本件はv1.1.0,v1.1.1で作成したものと互換性が保たれないため注意のこと
-    * 微生物学検査プロファイルの追加  
-    JP_Observation_Microbiology
+    * JP_Observation_Commonのコメント見直しを行なった
+    * 微生物学検査関連プロファイルの追加  
+      * JP_Observation_Microbiology
+      * JP_DiagnosticReport_Microbiology
   * ImagingStudyおよびDiagnosticReport関連
-    * JP_DiagnosticReport_Commonのコメント見直しを行なった
     * DiagnosticReport派生プロファイルを検索出来るように、Categoryに検索用固定値を必須でいれることとした  
-    ※本件はv1.1.0,v1.1.1で作成したものと互換性が保たれないため注意のこと  
+    ※本件はv1.1.0,v1.1.1で作成したものと互換性が保たれないため注意のこと
     * 内視鏡関連プロファイルの追加
       * JP_ImagingStudy_EndoScopy
       * JP_DiagnosticReport_EndoScopy
-    * JP_DiagnosticReport_Common の StructureDefinition内のdefinitionの記述を整理した
+    * JP_DiagnosticReport_Common の shortおよびdefinitionの記述を整理した
     * JP_DiagnosticReport_Radiologyのcategoryおよびcodeエレメントの定義を更新した、また読影医・確定医の専門医資格情報に関する記述を追加した
   * Medication関連
-    * JP_MedicationRequest, JP_MedicationRequest_Injectionに対し、JP_MedicationDispense_Preparation拡張定義が誤って定義されていたため、これを削除した。
-  * Terminology関連(CodeSystem、ValueSet)
-    
-    * 定義追加  
-    プロファイル追加、ObservationおよびDiagnosticReportのCategory再定義により下記のTerminology関連プロファイルの追加を行なった
-      * JP Core Endoscopy JED CodeSystem
-      * JP Core DiagnosticReport Category ValueSet
-      * JP Core DiagnosticReport Endoscopy Conclusion Codes JED ValueSet
-      * JP Core Document Codes Endoscopy ValueSet
-      * JP Core Simple Observation Category CodeSystem
-      * JP Core Simple Observation Category ValueSet
-      * JP Core ImagingStudy Endoscopy Reason Code JED ValueSet
-      * JP Core Microbiology AntiMicrobial Drug CodeSystem
-      * JP Core Microbiology AntiMicrobial Drug ValueSet
-      * JP Core Microbiology InfectiousAgent CodeSystem
-      * JP Core Microbiology InfectiousAgent ValueSet
-      * JP Core Microbiology Category CodeSystem
-      * JP Core Microbiology Category ValueSet
-    * 定義修正  
-    コードや表記について誤りがあったため修正した
-      * JP Core Medication JAMI Additional Usage CodeSystem
-    * 定義削除  
-    下記の利用されていないCodeSystemについて削除を行なった
-      * JP_ProcedureCodesICHI_CS
-      * JP_ProcedureCondition_CS
-      * JP_ProcedureAction_CS
-      * JP_ProcedureKingAction_CS
-      * JP_ProcedureFollowup_CS
-      * JP_ProcedureReason_CS
+    * JP_MedicationRequest, JP_MedicationRequest_Injectionに対し、JP_MedicationDispense_Preparation拡張定義が誤って定義されていたため、これを削除した
+  * Patient関連
+    * プロファイルにJP Coreとしての例をExample Jp:として表示を追加した
+
+* Terminology関連(CodeSystem、ValueSet)
+  * 定義追加  
+  プロファイル追加、ObservationおよびDiagnosticReportのCategory再定義により下記のTerminology関連プロファイルの追加を行なった
+    * JP Core Endoscopy JED CodeSystem
+    * JP Core DiagnosticReport Category ValueSet
+    * JP Core DiagnosticReport Endoscopy Conclusion Codes JED ValueSet
+    * JP Core Document Codes Endoscopy ValueSet
+    * JP Core Simple Observation Category CodeSystem
+    * JP Core Simple Observation Category ValueSet
+    * JP Core ImagingStudy Endoscopy Reason Code JED ValueSet
+    * JP Core Microbiology AntiMicrobial Drug CodeSystem
+    * JP Core Microbiology AntiMicrobial Drug ValueSet
+    * JP Core Microbiology InfectiousAgent CodeSystem
+    * JP Core Microbiology InfectiousAgent ValueSet
+    * JP Core Microbiology Category CodeSystem
+    * JP Core Microbiology Category ValueSet
+  * 定義修正  
+  コードや表記について誤りがあったため修正した
+    * JP Core Medication JAMI Additional Usage CodeSystem
+  * 定義削除  
+  下記の利用されていないCodeSystemについて削除を行なった
+    * JP_ProcedureCodesICHI_CS
+    * JP_ProcedureCondition_CS
+    * JP_ProcedureAction_CS
+    * JP_ProcedureKingAction_CS
+    * JP_ProcedureFollowup_CS
+    * JP_ProcedureReason_CS
 
 ***v1.1.1***
 
