@@ -25,17 +25,27 @@
   * Medication関連
     * JP_MedicationRequest, JP_MedicationRequest_Injectionに対し、JP_MedicationDispense_Preparation拡張定義が誤って定義されていたため、これを削除した。
   * Terminology関連(CodeSystem、ValueSet)
-    * 定義追加
+    
+    * 定義追加  
+    プロファイル追加、ObservationおよびDiagnosticReportのCategory再定義により下記のTerminology関連プロファイルの追加を行なった
       * JP Core Endoscopy JED CodeSystem
       * JP Core DiagnosticReport Category ValueSet
       * JP Core DiagnosticReport Endoscopy Conclusion Codes JED ValueSet
       * JP Core Document Codes Endoscopy ValueSet
-      * JP Core Medication Oral/External Category ValueSet
       * JP Core Simple Observation Category CodeSystem
       * JP Core Simple Observation Category ValueSet
       * JP Core ImagingStudy Endoscopy Reason Code JED ValueSet
-      
-    * 定義削除
+      * JP Core Microbiology AntiMicrobial Drug CodeSystem
+      * JP Core Microbiology AntiMicrobial Drug ValueSet
+      * JP Core Microbiology InfectiousAgent CodeSystem
+      * JP Core Microbiology InfectiousAgent ValueSet
+      * JP Core Microbiology Category CodeSystem
+      * JP Core Microbiology Category ValueSet
+    * 定義修正  
+    コードや表記について誤りがあったため修正した
+      * JP Core Medication JAMI Additional Usage CodeSystem
+    * 定義削除  
+    下記の利用されていないCodeSystemについて削除を行なった
       * JP_ProcedureCodesICHI_CS
       * JP_ProcedureCondition_CS
       * JP_ProcedureAction_CS
