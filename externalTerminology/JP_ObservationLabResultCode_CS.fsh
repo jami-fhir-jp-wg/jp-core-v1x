@@ -7,7 +7,7 @@ Description: "Observation（検体検査結果）で使用する項目コード 
 * ^url = $JP_ObservationLabResultCode_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^content = #complete
 * ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター、日本臨床検査医学会、日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"

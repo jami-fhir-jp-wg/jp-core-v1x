@@ -5,7 +5,7 @@ Description: "Conditionの重症度を示すコードシステム（HL70421 Seve
 * ^url = $JP_ConditionSeverity_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ConditionSeverity_VS
 * ^content = #complete

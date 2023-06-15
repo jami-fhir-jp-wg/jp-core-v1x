@@ -5,7 +5,7 @@ Description: "処置のカテゴリを示すコードのコードシステム（
 * ^url = $JP_ProcedureCategory_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureCategory_VS
 * ^content = #complete

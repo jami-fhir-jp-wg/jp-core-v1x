@@ -5,7 +5,7 @@ Description: "日本消化器内視鏡学会が推進するJED (Japan Endoscopy 
 * ^url = $JP_ConclusionCodesJed_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-05-25"
+* ^date = "2023-06-26"
 * ^copyright = "Copyright JED-Project 一般社団法人 日本消化器内視鏡学会"
 
 // =================================================

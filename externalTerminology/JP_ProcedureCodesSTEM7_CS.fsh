@@ -5,7 +5,7 @@ Description: "処置のコード:外保連手術基幹コード(STEM7)"
 * ^url = $JP_ProcedureCodesSTEM7_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureCodesSTEM7_VS
 * ^content = #complete

@@ -5,7 +5,7 @@ Description: "処置のコード:看護実践用語標準マスター(看護行�
 * ^url = $JP_ProcedureCodesNurse_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureCodesNurse_VS
 * ^content = #complete

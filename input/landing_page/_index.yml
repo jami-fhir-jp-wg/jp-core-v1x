@@ -1,5 +1,5 @@
 name: HL7-FHIR-JP-Core-R4
-version: 1.1.1
+version: 1.1.2
 description: FHIR&reg Japanese Core Implementation Guide R4 by Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)
 last_published: %%date%%
 group: %%group%%

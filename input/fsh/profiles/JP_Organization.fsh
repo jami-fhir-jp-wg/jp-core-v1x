@@ -8,7 +8,7 @@ Title: "JP Core Organization Profile"
 Description: "このプロファイルはOrganizationリソースに対して、組織情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization"
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * . ^short = "A grouping of people or organizations with a common purpose/共通の目的を持った人や組織の集まり【詳細参照】"
 * . ^definition = "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.\r\n\r\n集団行動の何らかの形での達成を目的として結成された、正式または非公式に認められた人々または組織のグループ。企業、機関、企業、部門、コミュニティグループ、医療実践グループ、支払者/保険者などが含まれる。"
 * extension ^slicing.discriminator.type = #value
@@ -100,7 +100,7 @@ Title: "JP Core Organization InsuranceOrganizationCategory Extension"
 Description: "点数表コード１桁を表現するためのExtension。 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"
 * ^url = $JP_Organization_InsuranceOrganizationCategory
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * . ^short = "点数表コード１桁【詳細参照】"
@@ -117,7 +117,7 @@ Title: "JP Core Organization InsuranceOrganizationNo Extension"
 Description: "保険医療機関番号７桁を表現するためのExtension。 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"
 * ^url = $JP_Organization_InsuranceOrganizationNo
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * . ^short = "保険医療機関番号７桁【詳細参照】"
@@ -135,7 +135,7 @@ Description: """都道府県番号２桁を表現するためのExtension。
 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"""
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo"
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * . ^short = "都道府県番号2桁【詳細参照】"

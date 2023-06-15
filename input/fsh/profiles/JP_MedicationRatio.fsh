@@ -8,7 +8,7 @@ Title: "JP Core Medication Ratio Amount DataType"
 Description: "このデータタイプはRatio DataTypeに対して、薬剤量／パッケージ量を表す比率を割り当てた制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_Amount"
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * . ^short = "パッケージあたり薬剤の投与量"
 * . ^definition = "パッケージあたり薬剤の投与量"
 * . ^comment = "パッケージあたり薬剤の投与量について薬剤単位をバインディングした型である。"
@@ -26,7 +26,7 @@ Id: jp-medicationratio-doseperperiod
 Title: "JP Core Medication Rate Ratio DataType"
 Description: "このデータタイプはRatio DataTypeに対して、薬剤量／単位時間を表す比率を割り当てた制約と拡張を定めたものである。"
 * ^status = #active
-* ^date = "2022-10-31"
+* ^date = "2023-06-26"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_DosePerPeriod"
 * . ^short = "単位時間内での薬剤の容量"
 * . ^definition = "単位時間内での薬剤の容量"
@@ -58,7 +58,7 @@ Title: "JP Core Medication Rate Ratio DosePerDay DataType"
 Description: "このデータタイプはJP_MedicationRatio_DosePerPeriod DataTypeに対して、一日あたりの薬剤料（薬剤量／単位時間）を表す比率を割り当てた制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_DosePerDay"
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * . ^short = "１日当たりでの薬剤の投入量"
 * . ^definition = "１日当たりでの薬剤の投入量"
 * numerator only JP_MedicationQuantity

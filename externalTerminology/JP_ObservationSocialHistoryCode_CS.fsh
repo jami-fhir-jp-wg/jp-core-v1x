@@ -5,7 +5,7 @@ Description: "Observation（生活背景）で使用する項目コード、電�
 * ^url = $JP_ObservationSocialHistoryCode_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationSocialHistoryCode_VS
 * ^content = #complete

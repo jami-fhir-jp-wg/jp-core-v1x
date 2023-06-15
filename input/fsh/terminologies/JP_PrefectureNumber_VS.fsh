@@ -5,5 +5,5 @@ Description: "都道県番号値セット"
 * ^url = $JP_PrefectureNumber_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * include codes from system $JP_PrefectureNumber_CS

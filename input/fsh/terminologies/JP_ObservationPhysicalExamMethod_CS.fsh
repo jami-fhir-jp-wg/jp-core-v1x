@@ -5,7 +5,7 @@ Description: "Observation（身体所見）で使用する診察方法のコー�
 * ^url = $JP_ObservationPhysicalExamMethod_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationPhysicalExamMethod_VS
 * ^content = #complete

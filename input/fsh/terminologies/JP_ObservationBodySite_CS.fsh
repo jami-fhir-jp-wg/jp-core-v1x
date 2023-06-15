@@ -5,7 +5,7 @@ Description: "Observationで使用する身体部位のコード"
 * ^url = $JP_ObservationBodySite_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationBodySite_VS
 * ^content = #complete

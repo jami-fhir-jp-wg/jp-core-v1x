@@ -5,7 +5,7 @@ Description: "微生物学検査カテゴリコードシステム"
 * ^url = $JP_MicrobiologyCategory_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-05-30"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^content = #complete
 * #gram-stain "Gram stain"

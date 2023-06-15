@@ -5,6 +5,6 @@ Description: "処置のカテゴリを示す値セット"
 * ^url = $JP_ProcedureCategory_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * include codes from system JP_ProcedureCategory_CS
 

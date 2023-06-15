@@ -5,7 +5,7 @@ Description: "医療関連免許証明に関するコードシステム。（現
 * ^url = $JP_MedicalLicenseCertificate_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicalLicenseCertificate_VS
 * ^content = #complete

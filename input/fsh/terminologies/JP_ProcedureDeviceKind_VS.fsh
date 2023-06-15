@@ -5,5 +5,5 @@ Description:  "処置の実施に利用された医療機器を識別する値�
 * ^url = $JP_ProcedureDeviceKind_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * include codes from system $JP_ProcedureDeviceKind_CS
