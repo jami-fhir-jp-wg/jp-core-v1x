@@ -212,9 +212,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageRouteComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageSiteComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationUncategorizedComment_CS
-    - urn:oid:1.2.392.100495.10.3.100.5.11.5.0
+    - urn:oid:1.2.392.100495.10.3.100.5.11.5.2
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_MicrobiologyCategory_CS
-    - urn:oid:1.2.392.100495.10.3.100.5.27.4.1
+    - urn:oid:1.2.392.100495.10.3.100.5.27.6.1
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodySite_CS

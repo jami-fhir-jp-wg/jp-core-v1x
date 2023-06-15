@@ -4,7 +4,7 @@ Title: "JP Core Microbiology InfectiousAgent CodeSystem"
 Description: "微生物学的検査感染性物質コード  
 本コードは厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)で作成されているマスタを編集・加工して利用している"
 * ^identifier[+].system = "urn:ietf:rfc:3986"
-* ^identifier[=].value = "urn:oid:1.2.392.100495.10.3.100.5.27.4.1"
+* ^identifier[=].value = "urn:oid:1.2.392.100495.10.3.100.5.27.6.1"
 * ^url = $JP_Microbiology_InfectiousAgent_CS
 * ^status = #active
 * ^experimental = false

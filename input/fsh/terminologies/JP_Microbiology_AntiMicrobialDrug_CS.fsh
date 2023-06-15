@@ -4,7 +4,7 @@ Title: "JP Core Microbiology AntiMicrobial Drug CodeSystem"
 Description: "微生物学的検査抗菌薬コード(Ver.5.2)  
 本コードは厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)で作成されているマスタを編集・加工して利用している"
 * ^identifier[+].system = "urn:ietf:rfc:3986"
-* ^identifier[=].value = "urn:oid:1.2.392.100495.10.3.100.5.11.5.0"
+* ^identifier[=].value = "urn:oid:1.2.392.100495.10.3.100.5.11.5.2"
 * ^url = $JP_Microbiology_AntiMicrobialDrug_CS
 * ^status = #active
 * ^experimental = false

@@ -353,9 +353,9 @@ Usage: #definition
 * description = "微生物学的検査抗菌薬コード(Ver.5.2) 
 本コードは厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)で作成されているマスタを編集・加工して利用している"
 * uniqueId[+].type = #oid
-* uniqueId[=].value = "1.2.392.100495.10.3.100.5.11.5.0"
+* uniqueId[=].value = "1.2.392.100495.10.3.100.5.11.5.2"
 * uniqueId[+].type = #uri
-* uniqueId[=].value = "urn:oid:1.2.392.100495.10.3.100.5.11.5.0"
+* uniqueId[=].value = "urn:oid:1.2.392.100495.10.3.100.5.11.5.2"
 * uniqueId[=].preferred = true
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_Microbiology_AntiMicrobialDrug_CS"
@@ -370,9 +370,9 @@ Usage: #definition
 * description = "微生物学的検査感染性物質コード(Ver.6.2)
 本コードは厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)で作成されているマスタを編集・加工して利用している"
 * uniqueId[+].type = #oid
-* uniqueId[=].value = "1.2.392.100495.10.3.100.5.27.4.1"
+* uniqueId[=].value = "1.2.392.100495.10.3.100.5.27.6.1"
 * uniqueId[+].type = #uri
-* uniqueId[=].value = "urn:oid:1.2.392.100495.10.3.100.5.27.4.1"
+* uniqueId[=].value = "urn:oid:1.2.392.100495.10.3.100.5.27.6.1"
 * uniqueId[=].preferred = true
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_Microbiology_InfectiousAgent_CS"
