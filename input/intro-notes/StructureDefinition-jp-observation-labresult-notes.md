@@ -96,8 +96,7 @@ GET [base]/Observation?code={code}}&value-concept={code}&patient={reference}
 ```
 GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value-concept=http://jpfhir.jp/fhir/example|1082004&patient=123
 ```
-
-15. 研究での検索：検査項目、検査値（文字列）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(**SHOULD**)  
+1. 研究での検索：検査項目、検査値（文字列）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(**SHOULD**)  
 code,value-string,patient の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
 ```
 GET [base]/Observation?code={code}}&value-string={string}&patient={reference}
