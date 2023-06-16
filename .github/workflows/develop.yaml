@@ -81,11 +81,6 @@ jobs:
         url: "https://jpfhir.jp/fhir/hl7.fhir.r4.core-4.0.1.tgz"
         target: .
 
-    # - name: Download Jp modified version of hl7.fhir.r4.core Package
-    #   uses: wei/wget@v1
-    #   with:
-    #     args:  https://jpfhir.jp/fhir/hl7.fhir.r4.core-4.0.1.tgz
-
     - name: Prepare for using Jp modified version of hl7.fhir.r4.core Package
       env:
         JPPACKAGECORE: hl7.fhir.r4.core#4.0.1
@@ -141,7 +136,8 @@ jobs:
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'rm -rf ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}'
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'mkdir -p ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}; '
         rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  output.tgz fsh-generated.tgz forPackageRelease/package.tgz ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}/
-        rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  other/index.html other/assetsOfIndex ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/
+        # index.htmlはdevelopからは修正しない
+        # rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  other/index.html other/assetsOfIndex ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}   'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}} ; tar xzf output.tgz; mv output/* .; rm -rf output'
       env:
         SSH_PORT: ${{ secrets.SSH_PORT_JPFHIR }}
