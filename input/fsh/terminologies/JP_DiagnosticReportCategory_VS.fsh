@@ -13,5 +13,5 @@ This material contains content from LOINC (http://loinc.org). LOINC is copyright
 * $US_Loinc_CS#LP7796-8 "内視鏡"
 * $US_Loinc_CS#LP29693-6 "検体検査"
 * $US_Loinc_CS#LP29708-2 "循環器"
-* $US_Loinc_CS#LP31759-1 "歯科口腔"
+//* $US_Loinc_CS#LP31759-1 "歯科口腔"
 * $US_Loinc_CS#LP7819-8 "微生物検査"
