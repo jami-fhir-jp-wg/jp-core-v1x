@@ -64,16 +64,18 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
 
 ##### 推奨検索パラメータ
 
-次の検索パラメータはサポートすることが推奨される。（**SHOULD**）  
-1.患者中心での検索：対象患者（= Patientリソース）を条件とした検索をサポートすることが望ましい  
+
+次の検索パラメータはサポートすることが推奨される。（**SHOULD**）
+
+1. 患者中心での検索：対象患者（= Patientリソース）を条件とした検索をサポートすることが望ましい  
 ```
 GET [base]/ImagingStudy?patient={reference}
 ```
-例：
+例：  
 ```
 GET [base]/ImagingStudy?patient=123
 ```
-1.モダリティ中心の検索：対象患者（= Patientリソース）と撮影に使用されたモダリティを条件とした検索をサポートすることが望ましい （studyのモダリティはDICOMで必須で無くseriesのモダリティが必須のため、以下の例はseries.modalityを使用。FHIR JP Coreではseries.modalityに設定されているモダリティ情報をmodalityに列挙することを想定しており、その場合modalityを検索パラメータとして利用してよい（**MAY**））  
+1. モダリティ中心の検索：対象患者（= Patientリソース）と撮影に使用されたモダリティを条件とした検索をサポートすることが望ましい （studyのモダリティはDICOMで必須で無くseriesのモダリティが必須のため、以下の例はseries.modalityを使用。FHIR JP Coreではseries.modalityに設定されているモダリティ情報をmodalityに列挙することを想定しており、その場合modalityを検索パラメータとして利用してよい（**MAY**））  
 ```
 GET [base]/ImagingStudy?patient={reference}&series.modality={token}
 ```
@@ -81,7 +83,7 @@ GET [base]/ImagingStudy?patient={reference}&series.modality={token}
 ```
 GET [base]/ImagingStudy?patient=123&series.modality=CT
 ```
-1.部位中心の検索：対象患者（= Patientリソース）と撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい  
+1. 部位中心の検索：対象患者（= Patientリソース）と撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい  
 ```
 GET [base]/ImagingStudy?patient={reference}&bodysite={token}
 ```
@@ -89,7 +91,7 @@ GET [base]/ImagingStudy?patient={reference}&bodysite={token}
 ```
 GET [base]/ImagingStudy?patient=123&bodysite=T-15460
 ```
-1.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい  
+1. 日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい  
 ```
 GET [base]/ImagingStudy?patient={reference}&started={date}
 ```
@@ -97,7 +99,7 @@ GET [base]/ImagingStudy?patient={reference}&started={date}
 ```
 GET [base]/ImagingStudy?patient=123&started=eq2021-06-25
 ```
-1.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい  
+1. 日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい  
 ```
 GET [base]/ImagingStudy?patient={reference}&started={date}
 ```
@@ -105,7 +107,7 @@ GET [base]/ImagingStudy?patient={reference}&started={date}
 ```
 GET [base]/ImagingStudy?patient=123&started=eq2021-06-25
 ```
-1.複数の条件を組み合わせた検索：対象患者（= Patientリソース）、撮影の日時、撮影に使用されたモダリティ、撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい  
+1. 複数の条件を組み合わせた検索：対象患者（= Patientリソース）、撮影の日時、撮影に使用されたモダリティ、撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい  
 ```
 GET [base]/ImagingStudy?patient={reference}&started={date}&series.modality={token}&bodysite={token}
 ```
@@ -113,7 +115,7 @@ GET [base]/ImagingStudy?patient={reference}&started={date}&series.modality={toke
 ```
 GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&series.modality=CT&bodysite=T-15460
 ```
-1.来院情報中心の検索：来院情報（= Encounterリソース）を条件とした検索をサポートすることが望ましい  
+1. 来院情報中心の検索：来院情報（= Encounterリソース）を条件とした検索をサポートすることが望ましい  
 ```
 GET [base]/ImagingStudy?encounter={reference}
 ```
