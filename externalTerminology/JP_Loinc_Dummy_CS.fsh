@@ -5,7 +5,7 @@ Description: "仮Loinc表"
 * ^url = $JP_Loinc_Dummy_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-04-18"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * ^content = #complete

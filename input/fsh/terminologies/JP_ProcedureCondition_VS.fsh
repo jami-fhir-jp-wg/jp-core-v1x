@@ -5,5 +5,5 @@ Description: "処置中もしくは処置の後に発生した合併症を示す
 * ^url = $JP_ProcedureCondition_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * include codes from system $JP_ProcedureCondition_CS

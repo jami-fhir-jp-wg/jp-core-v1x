@@ -7,6 +7,6 @@ Description: "医薬品HOT7コードのコードシステム"
 * ^url = $JP_MedicationCodeHOT7_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^content = #fragment

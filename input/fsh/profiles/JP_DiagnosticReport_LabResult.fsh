@@ -8,7 +8,7 @@ Title: "JP Core DiagnosticReport LabResult Profile"
 Description: "このプロファイルはDiagnosticReportリソースに対して、検体検査結果のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult"
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * . ^short = "A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports　診断レポート-依頼情報、１項目単位の結果、画像、解釈、およびフォーマットされたレポートの組み合わせ　【JP Core仕様】検体検査結果レポートのプロフィール"
 * . ^definition = "The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports.\r\n\r\n患者、患者のグループ、デバイス、場所、これらから派生した検体に対して実行された診断的検査の結果と解釈。レポートには、依頼情報や依頼者情報などの臨床コンテキスト（文脈）、および１項目単位の結果、画像、テキストとコード化された解釈、および診断レポートのフォーマットされた表現のいくつかの組み合わせが含まれる。\r\nわせ　\r\n【JP Core仕様】検体検査結果レポートのプロフィール"
 * identifier ^short = "Business identifier for report　レポートを識別するビジネス識別子"

@@ -5,7 +5,7 @@ Description: "MERIT9剤形コードの値セット"
 * ^url = $JP_MedicationFormMERIT9_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^copyright = "Copyright Japan Association of Medical Informatics (JAMI)  一般社団法人日本医療情報学会"
 
 * include codes from system $JP_MedicationFormMERIT9_CS

@@ -5,7 +5,7 @@ Description: "実施者のロール（役割・職種））を示すコード"
 * ^url = $JP_PractitionerRole_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_PractitionerRole_VS
 * ^content = #complete

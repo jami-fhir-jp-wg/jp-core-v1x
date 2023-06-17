@@ -5,7 +5,7 @@ Description: "アレルギー・不耐症に関連するアレルゲン値セッ
 * ^url = $JP_AllergyIntolerance_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * include codes from system $JP_JfagyFoodAllergen_CS
 * include codes from system $JP_JfagyNonFoodNonMedicationAllergen_CS
 * include codes from system $JP_JfagyMedicationAllergen_CS

@@ -5,7 +5,7 @@ Description: "医薬品一般名処方コードの値セット"
 * ^url = $JP_MedicationCodeCommon_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^copyright = "Copyright 厚生労働省"
 
 * include codes from system $JP_MedicationCodeCommon_CS

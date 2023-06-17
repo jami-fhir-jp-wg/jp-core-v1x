@@ -130,19 +130,16 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（**SHALL**）
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（**SHALL**）  
+```
+GET [base]/DiagnosticReport?identifier={system|}[code]
+```
+例：
+```
+GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/diagnosticreport-id-system|1234567890
+```
 
-   ```
-   GET [base]/DiagnosticReport?identifier={system|}[code]
-   ```
-
-   例：
-
-   ```
-   GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/diagnosticreport-id-system|1234567890
-   ```
-
-   指定された識別子に一致するDiagnosticReportリソースを含むBundleを検索する。
+指定された識別子に一致するDiagnosticReportリソースを含むBundleを検索する。
  
 ### サンプル
 

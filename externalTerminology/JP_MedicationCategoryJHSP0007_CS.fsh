@@ -5,7 +5,7 @@ Description: "JAHIS処方データ交換規約Ver.3.0C JHSP表0007処方区分�
 * ^url = $JP_MedicationCategoryJHSP0007_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationCategoryJHSP0007_VS
 * ^content = #complete

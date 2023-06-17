@@ -5,5 +5,5 @@ Description: "微生物学検査カテゴリ値セット"
 * ^url = $JP_MicrobiologyCategory_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * include codes from system $JP_MicrobiologyCategory_CS

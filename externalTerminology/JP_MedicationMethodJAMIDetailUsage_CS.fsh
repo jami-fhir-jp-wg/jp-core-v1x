@@ -7,7 +7,7 @@ Description: "JAMI標準用法規格表２用法詳細区分のコードシス�
 * ^url = $JP_MedicationMethodJAMIDetailUsage_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicationMethodJAMIDetailUsage_VS
 * ^content = #complete

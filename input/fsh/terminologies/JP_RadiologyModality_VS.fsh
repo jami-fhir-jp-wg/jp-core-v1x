@@ -5,7 +5,7 @@ Description: "放射線モダリテに対する 値セット"
 * ^url = $JP_RadiologyModality_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-06-01"
+* ^date = "2023-06-26"
 
 * $dicom-ontology#AR "Autorefraction"
 //* $dicom-ontology#ASMT "Content Assessment Result"

@@ -7,7 +7,7 @@ Description: "診療報酬点数区分コード"
 * ^url = $JP_MedicalFeeScoreType_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_MedicalFeeScoreType_VS
 * ^content = #complete

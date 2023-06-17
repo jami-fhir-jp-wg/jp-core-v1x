@@ -5,7 +5,7 @@ Description: "処置のコード:医科診療行為マスタ"
 * ^url = $JP_ProcedureCodesMedical_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureCodesMedical_VS
 * ^content = #complete

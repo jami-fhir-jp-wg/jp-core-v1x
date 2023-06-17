@@ -25,65 +25,45 @@ DiagnosticReportリソースは、次の要素を持たなければならない�
 ##### 必須検索パラメータ
 
 1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（**SHALL**）
-
-   ```
-   GET [base]/DiagnosticReport?identifier={system|}[code]
-   ```
-
-   例：
-
-   ```
-   GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/diagnosticreport-id-system|1234567890
-   ```
-
-   指定された識別子に一致するDiagnosticReportリソースを含むBundleを検索する。
-
+```
+GET [base]/DiagnosticReport?identifier={system|}[code]
+```
+例：
+```
+GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/diagnosticreport-id-system|1234567890
+```
+指定された識別子に一致するDiagnosticReportリソースを含むBundleを検索する。
 
 ##### 推奨検索パラメータ
-
 次の検索パラメータはサポートすることが推奨される。（**SHOULD**）
 
-1. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)を指定した検索をサポートすることが望ましい。（**SHOULD**）
-
+1. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)を指定した検索をサポートすることが望ましい。（**SHOULD**）  
 patient,categoryの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
-
-   ```
-   GET [base]/DiagnosticReport?patient={reference}&category={token}
-   ```
-
-   例：
-
-   ```
-   GET [base]/DiagnosticReport?patient=123&http://loinc.org|LP29693-6
-   ```
-
-2. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、based-on (検査オーダの依頼科)を指定した検索をサポートすることが望ましい。（**SHOULD**）
-
-patient,category,based-onの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
-
-   ```
-   GET [base]/DiagnosticReport?patient={reference}&category={token}&based-on={reference}
-   ```
-
-   例：
-
-   ```
-   GET [base]/DiagnosticReport?patient=123&category=http://loinc.org|LP29693-6&based-on=ServiceRequest/456
-   ```
-
-3. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、date(レポート作成日)を指定した検索をサポートすることが望ましい。（**SHOULD**）
-
-patient,category,dateの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
-
-   ```
-   GET [base]/DiagnosticReport?patient={reference}&category={token}&date={date}
-   ```
-
-   例：
-
-   ```
-   GET [base]/DiagnosticReport?patient=123&category=http://loinc.org|LP29693-6&date=2021-11-08
-   ```
+```
+GET [base]/DiagnosticReport?patient={reference}&category={token}
+```
+例：
+```
+GET [base]/DiagnosticReport?patient=123&http://loinc.org|LP29693-6
+```
+1. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、based-on (検査オーダの依頼科)を指定した検索をサポートすることが望ましい。（**SHOULD**）  
+patient,category,based-onの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
+```
+GET [base]/DiagnosticReport?patient={reference}&category={token}&based-on={reference}
+```
+例：
+```
+GET [base]/DiagnosticReport?patient=123&category=http://loinc.org|LP29693-6&based-on=ServiceRequest/456
+```
+1. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、date(レポート作成日)を指定した検索をサポートすることが望ましい。（**SHOULD**）  
+patient,category,dateの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
+```
+GET [base]/DiagnosticReport?patient={reference}&category={token}&date={date}
+```
+例：
+```
+GET [base]/DiagnosticReport?patient=123&category=http://loinc.org|LP29693-6&date=2021-11-08
+```
 
 ##### オプション検索パラメータ
 

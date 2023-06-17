@@ -5,5 +5,5 @@ Description:  "処置の実施中に機器に起こった変化を示す値セ�
 * ^url = $JP_ProcedureDeviceAction_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * include codes from system $JP_ProcedureDeviceAction_CS

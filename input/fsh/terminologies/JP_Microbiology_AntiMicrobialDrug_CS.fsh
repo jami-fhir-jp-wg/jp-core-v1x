@@ -8,7 +8,7 @@ Description: "微生物学的検査抗菌薬コード(Ver.5.2)
 * ^url = $JP_Microbiology_AntiMicrobialDrug_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-05-30"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^content = #complete
 * ^hierarchyMeaning = #is-a

@@ -5,7 +5,7 @@ Description: "LOINC Japanese Transaltion subset"
 * ^url = $US_Loinc_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-05-04"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * ^content = #complete

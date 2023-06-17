@@ -5,7 +5,7 @@ Description: "Observation（バイタルサイン）で使用する項目コー�
 * ^url = $JP_ObservationVitalSignsCode_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationVitalSignsCode_VS
 * ^content = #complete
