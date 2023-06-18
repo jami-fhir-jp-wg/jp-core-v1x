@@ -22,14 +22,14 @@
     これにあわせて検索例やExample等を修正した  
     ※本件はv1.1.0, v1.1.1で作成したものと互換性が保たれないため注意のこと
     * 内視鏡関連プロファイルの追加
-      * `JP_DiagnosticReport_EndoScopy`
+      * `JP_DiagnosticReport_Endoscopy`
     * 微生物学検査関連プロファイルの追加    
       * `JP_DiagnosticReport_Microbiology`
     * `JP_DiagnosticReport_Common` の shortおよびdefinitionの記述を整理した
     * `JP_DiagnosticReport_Radiology`のcategoryおよびcodeエレメントの定義を更新した、また読影医・確定医の専門医資格情報に関する記述を追加した
   * ImagingStudy
     * 内視鏡関連プロファイルの追加
-      * `JP_ImagingStudy_EndoScopy`  
+      * `JP_ImagingStudy_Endoscopy`  
     * `JP_ImagingStudy_Radiology`の説明を見直し、進捗に関する記述の追加やSearchParameterの要求レベル等を修正した、またExampleのテキストエリアの見直した
   * Medication
     * `JP_MedicationRequest`, `JP_MedicationRequest_Injection`に対し、`JP_MedicationDispense_Preparation`拡張定義が誤って定義されていたため、これを削除した
