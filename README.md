@@ -64,6 +64,7 @@ $ bash _genonce.sh
 * [プロファイル説明用Markdown記載ルール](docs/template_intronotes.md)
 * [github 利用ルール](docs/githubflow.md)
 * [文書記載ルール](docs/ig_rules.md)
+* [バージョンリリース時注意事項](docs/for-release.md)
 
 ## 資料・学習用サイト等
 * [FHIR Shorthand FSH School(外部リンク)](https://fshschool.org/)
