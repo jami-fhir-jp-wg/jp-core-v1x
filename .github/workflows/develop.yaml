@@ -16,7 +16,8 @@ env:
   
 jobs:
   turn:
-    runs-on: LargerRunnerGroupforJPCore
+    runs-on:
+      group: LargerRunnerGroupforJPCore
     strategy:
       matrix:
         ruby-version: ['3.0']
