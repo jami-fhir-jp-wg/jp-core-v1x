@@ -47,12 +47,11 @@ BodySite等でDICOMでmappingされているSNOMED-CTをCodeSystemとして利�
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
 | SHOULD | identifier | token | `GET [base]/ImagingStudy?identifier=urn:oid:2.16.124.999999.9999.1154777499.30246.19789.3503430045` |
 | SHOULD | patient | reference | `GET [base]/ImagingStudy?patient=123` |
-| MAY | patient,modality | reference,token | `GET [base]/ImagingStudy?patient=123&modality=CT` |
-| SHOULD | patient, series.modality | reference, token | `GET [base]/ImagingStudy?patient=123&series.modality=CT` |
+| SHOULD | patient,modality | reference,token | `GET [base]/ImagingStudy?patient=123&modality=CT` |
 | SHOULD | patient,bodysite | reference,token | `GET [base]/ImagingStudy?patient=123&bodysite=T-15460` |
 | SHOULD | patient,started | reference,date | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-25` |
-| SHOULD | patient,started,series.modality,bodysite | reference,date,token,token  | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&series.modality=CT&bodysite=T-15460` |
-| SHOULD | patient, started, series.modality | reference, date, token | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&series.modality=CT` |
+| SHOULD | patient,started,modality,bodysite | reference,date,token,token  | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=CT&bodysite=T-15460` |
+| SHOULD | patient, started, modality | reference, date, token | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=CT` |
 | SHOULD | encounter | reference  | `GET [base]/ImagingStudy?encounter=Encounter/456` |
 
 #### 操作詳細
@@ -75,13 +74,14 @@ GET [base]/ImagingStudy?patient={reference}
 ```
 GET [base]/ImagingStudy?patient=123
 ```
-1. モダリティ中心の検索：対象患者（= Patientリソース）と撮影に使用されたモダリティを条件とした検索をサポートすることが望ましい （studyのモダリティはDICOMで必須で無くseriesのモダリティが必須のため、以下の例はseries.modalityを使用。FHIR JP Coreではseries.modalityに設定されているモダリティ情報をmodalityに列挙することを想定しており、その場合modalityを検索パラメータとして利用してよい（**MAY**））  
+1. モダリティ中心の検索：対象患者（= Patientリソース）と撮影に使用されたモダリティを条件とした検索をサポートすることが望ましい  
+なお検索パラメターmodalityは[定義済み検索パラメーター](https://www.hl7.org/fhir/R4/searchparameter-registry.html)にseries.modalityを対象として定義されているため、ImagingStudy.modalityを対象としていないことに注意すること  
 ```
-GET [base]/ImagingStudy?patient={reference}&series.modality={token}
+GET [base]/ImagingStudy?patient={reference}&modality={token}
 ```
 例：
 ```
-GET [base]/ImagingStudy?patient=123&series.modality=CT
+GET [base]/ImagingStudy?patient=123&modality=CT
 ```
 1. 部位中心の検索：対象患者（= Patientリソース）と撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい  
 ```
@@ -108,12 +108,13 @@ GET [base]/ImagingStudy?patient={reference}&started={date}
 GET [base]/ImagingStudy?patient=123&started=eq2021-06-25
 ```
 1. 複数の条件を組み合わせた検索：対象患者（= Patientリソース）、撮影の日時、撮影に使用されたモダリティ、撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい  
+なお検索パラメターmodalityは[定義済み検索パラメーター](https://www.hl7.org/fhir/R4/searchparameter-registry.html)にseries.modalityを対象として定義されているため、ImagingStudy.modalityを対象としていないことに注意すること  
 ```
-GET [base]/ImagingStudy?patient={reference}&started={date}&series.modality={token}&bodysite={token}
+GET [base]/ImagingStudy?patient={reference}&started={date}&modality={token}&bodysite={token}
 ```
 例：
 ```
-GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&series.modality=CT&bodysite=T-15460
+GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=CT&bodysite=T-15460
 ```
 1. 来院情報中心の検索：来院情報（= Encounterリソース）を条件とした検索をサポートすることが望ましい  
 ```
