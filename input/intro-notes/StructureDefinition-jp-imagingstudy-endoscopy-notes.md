@@ -53,6 +53,7 @@ ImagingStudyはDICOM tagとの対応が重要である。各エレメントとDI
 | SHOULD | patient, started, modality | reference, date, token | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=ES` |
 
 なお検索パラメターmodalityは[定義済み検索パラメーター](https://www.hl7.org/fhir/R4/searchparameter-registry.html)にseries.modalityを対象として定義されているため、ImagingStudy.modalityを対象としていないことに注意すること。
+またImagingStudy.modalityには値が入っていない可能性がある点にも留意すること。
 
 #### 操作詳細
 
