@@ -1,5 +1,5 @@
 ValueSet: JP_DocumentCodes_Endoscopy_VS
-Id: jp-DocumentCodes-Endoscopy-vs
+Id: jp-documentCodes-endoscopy-vs
 Title: "JP Core Document Codes Endoscopy ValueSet"
 Description: "Document Codes Endoscopy 値セット"
 * ^url = $JP_DocumentCodes_Endoscopy_VS

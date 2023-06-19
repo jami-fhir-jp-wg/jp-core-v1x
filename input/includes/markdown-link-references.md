@@ -137,7 +137,6 @@
 [JP_Undefined_CS]: CodeSystem-jp-undefined-cs.html
 
 <!-- ValueSet -->
-[JP_DocumentCodes_Endoscopy_VS]: ValueSet-jp-DocumentCodes-Endoscopy-vs.html
 [JP_AllergyIntolerance_VS]: ValueSet-jp-allergyintolerance-vs.html
 [JP_ConclusionCodesJed_VS]: ValueSet-jp-conclusion-codes-jed-vs.html
 [JP_ConditionSeverity_VS]: ValueSet-jp-condition-severity-vs.html
@@ -145,6 +144,8 @@
 [JP_Department_SsMix2Digits_VS]: ValueSet-jp-department-ssmix2digits-vs.html
 [JP_Department_SsMix3Digits_VS]: ValueSet-jp-department-ssmix3digits-vs.html
 [JP_DiagnosticReportCategory_VS]: ValueSet-jp-diagnosticreportcategory-vs.html
+[JP_DocumentCodes_Endoscopy_VS]: ValueSet-jp-documentCodes-endoscopy-vs.html
+[JP_DocumentCodes_DiagnosticReport_VS]: ValueSet-jp-documentcodes-diagnosticreport-vs.html
 [JP_MedicalFeeScoreType_VS]: ValueSet-jp-medicalfeescoretype-vs.html
 [JP_MedicalLicenseCertificate_VS]: ValueSet-jp-medicallicensecertificate-vs.html
 [JP_MedicationAsNeededConditionJAMI_VS]: ValueSet-jp-medication-as-needed-condition-jami-vs.html
@@ -249,6 +250,7 @@
 [jp-medicationrequest-injection-example-1]: MedicationRequest-jp-medicationrequest-injection-example-1.html
 [jp-medicationrequest-injection-example-2]: MedicationRequest-jp-medicationrequest-injection-example-2.html
 [jp-department-ssmix-namingsystem]: NamingSystem-jp-department-ssmix-namingsystem.html
+[jp-endoscopyterminology-codes-jed-ns]: NamingSystem-jp-endoscopyterminology-codes-jed-ns.html
 [jp-medicalfeescoretype-namingsystem]: NamingSystem-jp-medicalfeescoretype-namingsystem.html
 [jp-medicationbodysitejamiexternal-namingsystem]: NamingSystem-jp-medicationbodysitejamiexternal-namingsystem.html
 [jp-medicationcodecommon-namingsystem]: NamingSystem-jp-medicationcodecommon-namingsystem.html
@@ -264,6 +266,8 @@
 [jp-medicationunitmerit9-namingsystem]: NamingSystem-jp-medicationunitmerit9-namingsystem.html
 [jp-medicationusagejami-namingsystem]: NamingSystem-jp-medicationusagejami-namingsystem.html
 [jp-medicationusagejamiadditional-namingsystem]: NamingSystem-jp-medicationusagejamiadditional-namingsystem.html
+[jp-microbiology-antimicrobialdrug-ns]: NamingSystem-jp-microbiology-antimicrobialdrug-ns.html
+[jp-microbiology-infectious-agent-ns]: NamingSystem-jp-microbiology-infectious-agent-ns.html
 [jp-observation-jlac10-namingsystem]: NamingSystem-jp-observation-jlac10-namingsystem.html
 [jp-observation-vitalsignscode-namingsystem]: NamingSystem-jp-observation-vitalsignscode-namingsystem.html
 [jp-prefecturenumber-namingsystem]: NamingSystem-jp-prefecturenumber-namingsystem.html
@@ -285,3 +289,4 @@
 [jp-procedure-example-1]: Procedure-jp-procedure-example-1.html
 [jp-specimen-example-1]: Specimen-jp-specimen-example-1.html
 [jp-specimen-example-2]: Specimen-jp-specimen-example-2.html
+[jp-specimen-example-3]: Specimen-jp-specimen-example-3.html
