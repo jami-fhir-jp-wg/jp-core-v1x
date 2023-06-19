@@ -67,7 +67,7 @@ pre.xml{
 
 pre[class*="language-"] {
 	display: block;
-	width: fit-content;
+	width: 100%;
 }
 
 code[class*="language-"] {
