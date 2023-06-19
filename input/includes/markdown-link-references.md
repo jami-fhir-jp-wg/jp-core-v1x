@@ -144,7 +144,7 @@
 [JP_Department_SsMix2Digits_VS]: ValueSet-jp-department-ssmix2digits-vs.html
 [JP_Department_SsMix3Digits_VS]: ValueSet-jp-department-ssmix3digits-vs.html
 [JP_DiagnosticReportCategory_VS]: ValueSet-jp-diagnosticreportcategory-vs.html
-[JP_DocumentCodes_Endoscopy_VS]: ValueSet-jp-documentCodes-endoscopy-vs.html
+[JP_DocumentCodes_Endoscopy_VS]: ValueSet-jp-documentcodes-endoscopy-vs.html
 [JP_DocumentCodes_DiagnosticReport_VS]: ValueSet-jp-documentcodes-diagnosticreport-vs.html
 [JP_MedicalFeeScoreType_VS]: ValueSet-jp-medicalfeescoretype-vs.html
 [JP_MedicalLicenseCertificate_VS]: ValueSet-jp-medicallicensecertificate-vs.html

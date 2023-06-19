@@ -17,17 +17,17 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category ^slicing.discriminator.path = "coding.system"
 * category ^slicing.rules = #open
 * category contains 
+    laboratory 1..1 and
     microbiology 1..1 and
-    loinc ..*  and
     microbiologyCategory ..1
 * category ^comment = "【JP Core仕様】日本では適切なコード体系が存在しないため、独自のバリューセットを定義する\r\n\r\nJP CoreとしてはsimpleObservationコード体系を必須とし、他のローカルコード等を使用する場合はCategory要素の2つ目以降に設定する"
-* insert SetDefinition(category[microbiology], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
-* category[microbiology] from JP_SimpleObservationCategory_VS (required)
-* category[microbiology].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[microbiology].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
-* insert SetDefinition(category[loinc], このObservationに関するLOINC上の分類、任意項目)
-* category[loinc].coding.system = $US_Loinc_CS (exactly)
-* category[loinc].coding.code = $US_Loinc_CS#18725-2 (exactly)
+* insert SetDefinition(category[laboratory], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
+* category[laboratory] from JP_SimpleObservationCategory_VS (required)
+* category[laboratory].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[laboratory].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
+* insert SetDefinition(category[microbiology], このObservationに関するLOINC上の分類、任意項目)
+* category[microbiology].coding.system = $US_Loinc_CS (exactly)
+* category[microbiology].coding.code = $US_Loinc_CS#18725-2 (exactly)
 * insert SetDefinition(category[microbiologyCategory], このObservationに関する詳細分類、JP_MicrobiologyCategory_VSより選択する、任意項目)
 * category[microbiologyCategory] from JP_MicrobiologyCategory_VS (required)
 * category[microbiologyCategory].coding.system = $JP_MicrobiologyCategory_CS (exactly)
