@@ -36,12 +36,12 @@ JP Coreは「JAMI NeXEHRS課題研究会（正式名：次世代健康医療記�
 
 {% include ip-statements.xhtml %}
 
-
-
+**IP Statementsに関する注意事項**
+本IP StatementはIG Publisherにて機械的に出力されたものである。SNOMEDについてはJP Coreとしては利用しておらず、FHIR BASEの定義による影響を受けていることに注意すること。
+Note that this IP Statement is mechanically output by IG Publisher, and that SNOMED is not used as JP Core, but is affected by the definition of FHIR BASE.
 
 ### 機械翻訳文章
 リソースの項目説明文には、FHIR Baseの説明を機械による自動翻訳したものが含まれている。そのため意味が分かりにくい翻訳や丁寧語の文体の文章が混ざっている。
-
 
 ### 質問先
 ---
