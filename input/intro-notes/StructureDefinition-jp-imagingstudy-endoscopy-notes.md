@@ -52,8 +52,7 @@ ImagingStudyはDICOM tagとの対応が重要である。各エレメントとDI
 | SHOULD | patient,started | reference, date | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-25` |
 | SHOULD | patient, started, modality | reference, date, token | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=ES` |
 
-なお、modalityは値が入っていない可能性があるため、モダリティを内視鏡に限定して検索する場合には、series.modalityを用いた方が確実である。
-
+なお、ImagingStudyはmodalityを検索対象とする場合、標準でseries.modalityを検索する仕様となっている。modalityエレメントはDICOMのstudyのmodalityに相当するものであるため、内容が含まれていないことが想定されるため、標準の検索対象でない点に注意すること。
 
 #### 操作詳細
 
