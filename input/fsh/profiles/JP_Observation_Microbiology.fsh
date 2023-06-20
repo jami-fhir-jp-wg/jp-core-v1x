@@ -26,10 +26,11 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category[laboratory].coding.system = $JP_SimpleObservationCategory_CS (exactly)
 * category[laboratory].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
 * insert SetDefinition(category[microbiology], このObservationに関するLOINC上の分類、任意項目)
+* category[microbiology] from $JP_ObservationCategory_Microbiology_VS (preferred)
 * category[microbiology].coding.system = $US_Loinc_CS (exactly)
 * category[microbiology].coding.code = $US_Loinc_CS#18725-2 (exactly)
 * insert SetDefinition(category[microbiologyCategory], このObservationに関する詳細分類、JP_MicrobiologyCategory_VSより選択する、任意項目)
-* category[microbiologyCategory] from JP_MicrobiologyCategory_VS (required)
+* category[microbiologyCategory] from $JP_MicrobiologyCategory_VS (required)
 * category[microbiologyCategory].coding.system = $JP_MicrobiologyCategory_CS (exactly)
 * code 1..
 * code.coding ^slicing.discriminator.type = #value

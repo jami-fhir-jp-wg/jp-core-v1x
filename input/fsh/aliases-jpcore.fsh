@@ -222,6 +222,7 @@ Alias: $JP_MedicationCodeYJ_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Medicati
 Alias: $JP_MicrobiologyCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MicrobiologyCategory_VS
 Alias: $JP_Microbiology_AntiMicrobialDrug_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Microbiology_AntiMicrobialDrug_VS
 Alias: $JP_Microbiology_InfectiousAgent_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Microbiology_InfectiousAgent_VS
+Alias: $JP_ObservationCategory_Microbiology_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationCategory_Microbiology_VS
 Alias: $JP_ObservationBodyMeasurementCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCategory_VS
 Alias: $JP_ObservationBodyMeasurementCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCode_VS
 Alias: $JP_ObservationBodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodySite_VS
