@@ -112,7 +112,6 @@ jobs:
     - name: STEP2 = prepare gtz files for upload to remote site
       run: | 
         tar czf fsh-generated.tgz fsh-generated
-        rm fsh-generated/CodeSystem*loinc*.json
         mkdir -p forPackageRelease/package
         cp fsh-generated/resources/*.json forPackageRelease/package/
         cp forPackageRelease/package.json forPackageRelease/package/package.json
