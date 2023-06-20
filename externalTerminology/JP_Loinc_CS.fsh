@@ -2,7 +2,7 @@ CodeSystem: JP_Loinc_CS
 Id: jp-loinc-cs
 Title: "JP Loinc alternative CodeSystem"
 Description: "LOINC Japanese Transaltion subset"
-* ^url = $US_Loinc_CS
+* ^url = $JP_Loinc_CS
 * ^status = #active
 * ^experimental = false
 * ^date = "2023-06-26"
