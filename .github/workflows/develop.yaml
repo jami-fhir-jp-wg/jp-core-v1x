@@ -16,8 +16,7 @@ env:
   
 jobs:
   turn:
-    runs-on:
-      group: LargerRunnerGroupforJPCore
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         ruby-version: ['3.0']
