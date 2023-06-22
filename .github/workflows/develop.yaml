@@ -4,6 +4,7 @@ on:
     branches: 
       - 'develop'
       - 'release/**'
+      - '.github/workflows/**''
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
