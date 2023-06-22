@@ -4,10 +4,10 @@ on:
     branches:
       - 'develop'
       - 'release/**'
-      - '.github/workflows/**'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
+      - '.github/workflows/**'
   pull_request:
     branches:
       - 'develop'
