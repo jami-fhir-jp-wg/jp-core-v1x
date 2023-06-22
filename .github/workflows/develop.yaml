@@ -120,6 +120,8 @@ jobs:
         cp forPackageRelease/package.tgz output/package.tgz
         tar czf output.tgz output
         rm output/full-ig.zip
+        rm output/expansions.json
+        rm output/expansions.xml
 
     - name: Deploy Implementation Guide
       if: success()
