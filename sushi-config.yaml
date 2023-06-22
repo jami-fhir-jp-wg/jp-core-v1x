@@ -116,7 +116,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - json
   no-validate:
     - '*/hl7.fhir.jp.core'
-    - 'loinc.org'
+  no-inactive-codes: 'true'
   logging:
     - init
     - progress
