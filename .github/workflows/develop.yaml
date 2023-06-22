@@ -21,7 +21,6 @@ jobs:
     strategy:
       matrix:
         ruby-version: ['3.0']
-        java: ['17']
     environment: SSH_PORT_JPFHIR  # JAMI WG アップロードサイトに関するアクセス情報の環境名
     steps:
     - uses: actions/checkout@v2
