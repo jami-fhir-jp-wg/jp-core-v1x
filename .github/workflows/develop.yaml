@@ -1,10 +1,10 @@
-name: JPCore FHIR Task develop 
+name: JPCore FHIR Task develop
 on:
   push:
-    branches: 
+    branches:
       - 'develop'
       - 'release/**'
-      - '.github/workflows/**''
+      - '.github/workflows/**'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
