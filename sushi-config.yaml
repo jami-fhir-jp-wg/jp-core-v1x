@@ -94,6 +94,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   path-expansion-params: '../../input/_resources/exp-params.json'
   # no-narrative: 
   #  - CodeSystem/*
+  path:
+    txCache: 'txCache'
   active-tables: 'false'
   apply-version: 'true'
   apply-copyright: 'true'
