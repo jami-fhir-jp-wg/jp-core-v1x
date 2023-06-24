@@ -35,8 +35,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:fc934fbb-791b-4b29-87da-9b53645a89d9",
-    "timestamp" : "2023-06-24T12:35:20+09:00",
+    "identifier" : "urn:uuid:02e4e043-a6f4-496b-97df-80e1489b8d66",
+    "timestamp" : "2023-06-24T14:20:44+09:00",
     "total" : 7,
     "parameter" : [{
       "name" : "offset",

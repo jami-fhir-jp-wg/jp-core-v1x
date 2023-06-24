@@ -229,16 +229,20 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:4800b3ac-1597-49f4-bbc4-8d0d4119e991",
-    "timestamp" : "2023-06-24T12:29:13+09:00",
+    "identifier" : "urn:uuid:bf57f12f-e249-4482-a9c3-2074362e870d",
+    "timestamp" : "2023-06-24T05:17:14.615Z",
     "total" : 54,
     "parameter" : [{
-      "name" : "offset",
-      "valueInteger" : 0
+      "name" : "limitedExpansion",
+      "valueBoolean" : true
     },
     {
-      "name" : "count",
-      "valueInteger" : 0
+      "name" : "excludeNested",
+      "valueBoolean" : true
+    },
+    {
+      "name" : "version",
+      "valueUri" : "http://dicom.nema.org/resources/ontology/DCM|2023.1.20230123"
     }],
     "contains" : [{
       "system" : "http://dicom.nema.org/resources/ontology/DCM",

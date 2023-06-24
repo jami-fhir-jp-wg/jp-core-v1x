@@ -7,7 +7,10 @@
   "id" : "exp-params"
 }}####
 v: {
-  "display" : "a"
+  "display" : "a",
+  "code" : "a",
+  "system" : "http://unitsofmeasure.org",
+  "version" : "2.0.1"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -18,7 +21,10 @@ v: {
   "id" : "exp-params"
 }}####
 v: {
-  "display" : "mL"
+  "display" : "mL",
+  "code" : "mL",
+  "system" : "http://unitsofmeasure.org",
+  "version" : "2.0.1"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -29,7 +35,10 @@ v: {
   "id" : "exp-params"
 }}####
 v: {
-  "display" : "h"
+  "display" : "h",
+  "code" : "h",
+  "system" : "http://unitsofmeasure.org",
+  "version" : "2.0.1"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -40,7 +49,10 @@ v: {
   "id" : "exp-params"
 }}####
 v: {
-  "display" : "d"
+  "display" : "d",
+  "code" : "d",
+  "system" : "http://unitsofmeasure.org",
+  "version" : "2.0.1"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -51,7 +63,10 @@ v: {
   "id" : "exp-params"
 }}####
 v: {
-  "display" : "g/L"
+  "display" : "g/L",
+  "code" : "g/L",
+  "system" : "http://unitsofmeasure.org",
+  "version" : "2.0.1"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -62,7 +77,10 @@ v: {
   "id" : "exp-params"
 }}####
 v: {
-  "display" : "10*6/uL"
+  "display" : "10*6/uL",
+  "code" : "10*6/uL",
+  "system" : "http://unitsofmeasure.org",
+  "version" : "2.0.1"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -73,7 +91,10 @@ v: {
   "id" : "exp-params"
 }}####
 v: {
-  "display" : "mL"
+  "display" : "mL",
+  "code" : "mL",
+  "system" : "http://unitsofmeasure.org",
+  "version" : "2.0.1"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -84,7 +105,10 @@ v: {
   "id" : "exp-params"
 }}####
 v: {
-  "display" : "h"
+  "display" : "h",
+  "code" : "h",
+  "system" : "http://unitsofmeasure.org",
+  "version" : "2.0.1"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
@@ -95,6 +119,9 @@ v: {
   "id" : "exp-params"
 }}####
 v: {
-  "display" : "d"
+  "display" : "d",
+  "code" : "d",
+  "system" : "http://unitsofmeasure.org",
+  "version" : "2.0.1"
 }
 -------------------------------------------------------------------------------------

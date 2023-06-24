@@ -13,8 +13,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:818a6984-eae9-41ab-bb46-c0bca639bd0f",
-    "timestamp" : "2023-06-24T12:35:16+09:00",
+    "identifier" : "urn:uuid:162f72fa-b911-43ad-bbfe-22155d8d3572",
+    "timestamp" : "2023-06-24T14:20:42+09:00",
     "total" : 23,
     "parameter" : [{
       "name" : "offset",
@@ -181,8 +181,8 @@ e: {
   "resourceType" : "ValueSet",
   "status" : "active",
   "expansion" : {
-    "identifier" : "urn:uuid:78d9a6f0-2b42-4dcf-9598-e8f061412f37",
-    "timestamp" : "2023-06-24T12:35:58+09:00",
+    "identifier" : "urn:uuid:04ae67d8-e03a-4699-9eda-c9c23423f819",
+    "timestamp" : "2023-06-24T14:21:13+09:00",
     "total" : 23,
     "parameter" : [{
       "name" : "offset",
