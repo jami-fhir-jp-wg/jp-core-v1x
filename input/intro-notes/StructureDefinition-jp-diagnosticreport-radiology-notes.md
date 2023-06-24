@@ -5,7 +5,7 @@
 
 - status : レポートの状態・進捗状況
 - code : レポートの種別
-  （画像診断レポート交換手順ガイドライン「5.1 レポート種別コード」に記載されているLOINCコード(18748-4) "Diagnostic imaging study" を指定）
+  （[JP Core Document Codes Diagnostic][JP_DocumentCodes_DiagnosticReport_VS]に記載されているLOINCコード(18748-4) "Diagnostic imaging study" を指定）
 - category : カテゴリとモダリティを表すコード
   （Radiology(LP29684-5)を第一コードとし、モダリティを示すDICOMコードを第二コードとして指定する。第二コードは複数のモダリティを許容するため、複数のコードの指定が想定される。）
   
@@ -39,6 +39,13 @@ DiagnosticReportのドメインリソースの一つであるtextエレメント
 具体的な構造については [**放射線読影レポート**][jp-diagnosticreport-radiology-example-1]を参照のこと
 
 (DiagnosticReportのResourceType直下に現れる。text以外のDomainResourceの詳細については[こちら](https://www.hl7.org/fhir/R4/domainresource.html)を参照のこと）
+
+### CategoryとCode
+
+Codeエレメントは一つの値のみが許容される。一方でIVR等の手技で血管造影検査と超音波検査あるいはCT検査が併用されることがあるように、放射線画像検査では複数のモダリティと組み合わせた複合的な検査治療手技が構成されることがある。すべての組み合わせのコードを準備あるいは列挙することは困難であるため、本バージョンの実装ガイドでは放射線検査に対する画像診断レポートにはCodeに 18748-4（画像検査報告書）を指定することを原則としている。
+Codeエレメントに利用されるコードとして[JP Core Document Codes Diagnostic][JP_DocumentCodes_DiagnosticReport_VS]	に定義されるコードシステムが用意されているが、粒度の細かいコードはSS-MIX2等で既に定義されているデータとの後方互換を保つ目的で用意されている点に留意が必要である。
+
+Codeエレメントで複合的要素を表現できない点を考慮し、Categoryエレメントにて、複数のモダリティコードを指定できるように設計している点をあわせて確認すること。
 
 ### Identifier
 
