@@ -5,7 +5,6 @@ on:
     branches: 
       - 'develop'
       - 'release/**'
-      - 'feature/**-build'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
