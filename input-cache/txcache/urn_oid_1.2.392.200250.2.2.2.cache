@@ -1,4 +1,76 @@
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.200250.2.2.2",
+  "code" : "2Digits"
+}, "valueSet" :null, "langs":"[en-US, en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "severity" : "error",
+  "error" : "Error from server: Fatal:Invalid url parameter value: maximum required = 1, but found 2.\r\n",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.200250.2.2.2",
+  "code" : "3Digits"
+}, "valueSet" :null, "langs":"[en-US, en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "severity" : "error",
+  "error" : "Error from server: Fatal:Invalid url parameter value: maximum required = 1, but found 2.\r\n",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.200250.2.2.2",
+  "code" : "01"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS--0", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.200250.2.2.2",
+  "code" : "01",
+  "display" : "内科"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.200250.2.2.2",
+  "code" : "01"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "内科"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.200250.2.2.2",
+  "code" : "01",
+  "display" : "内科"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "内科"
+}
+-------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -9,12 +81,1944 @@
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.2"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS", "version": "1.1.0a"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.2"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:2d98f961-adf4-4f5b-bfa7-d04caca4f2e7",
+    "timestamp" : "2023-06-24T12:35:04+09:00",
+    "total" : 320,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "01",
+      "display" : "内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "02",
+      "display" : "精神科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "03",
+      "display" : "神経科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04",
+      "display" : "神経内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "05",
+      "display" : "呼吸器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "06",
+      "display" : "消化器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "07",
+      "display" : "胃腸科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "08",
+      "display" : "循環器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "09",
+      "display" : "小児科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "10",
+      "display" : "外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "11",
+      "display" : "整形外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "12",
+      "display" : "形成外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "13",
+      "display" : "美容外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "14",
+      "display" : "脳神経外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "15",
+      "display" : "呼吸器外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "16",
+      "display" : "心臓血管外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "17",
+      "display" : "小児外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "18",
+      "display" : "皮膚泌尿器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "19",
+      "display" : "皮膚科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "20",
+      "display" : "泌尿器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "21",
+      "display" : "性病科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "22",
+      "display" : "肛門科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "23",
+      "display" : "産婦人科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "24",
+      "display" : "産科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "25",
+      "display" : "婦人科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "26",
+      "display" : "眼科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "27",
+      "display" : "耳鼻咽喉科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "28",
+      "display" : "気管食道科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "30",
+      "display" : "放射線科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "31",
+      "display" : "麻酔科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "33",
+      "display" : "心療内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "34",
+      "display" : "アレルギー科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "35",
+      "display" : "リウマチ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "36",
+      "display" : "リハビリテーション科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "37",
+      "display" : "病理診断科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "38",
+      "display" : "臨床検査科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "39",
+      "display" : "救急科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "40",
+      "display" : "遺伝科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "41",
+      "display" : "血液内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "42",
+      "display" : "血液腫瘍内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "43",
+      "display" : "血液透析科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "44",
+      "display" : "健診科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "45",
+      "display" : "呼吸器内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "46",
+      "display" : "在宅診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "47",
+      "display" : "腫瘍診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "48",
+      "display" : "腎臓内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "49",
+      "display" : "睡眠診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "50",
+      "display" : "精神神経科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "51",
+      "display" : "総合診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "52",
+      "display" : "内視鏡診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "53",
+      "display" : "内分泌・代謝科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54",
+      "display" : "膠原病科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "70",
+      "display" : "消化器内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "71",
+      "display" : "内分泌内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "72",
+      "display" : "代謝内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73",
+      "display" : "糖尿病内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "74",
+      "display" : "腎臓・内分泌内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "75",
+      "display" : "感染症科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "76",
+      "display" : "漢方科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "77",
+      "display" : "老年科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "78",
+      "display" : "血管外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "79",
+      "display" : "血管内治療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7A",
+      "display" : "消化器外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B",
+      "display" : "上部消化管外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7C",
+      "display" : "下部消化管外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "80",
+      "display" : "肝胆膵外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "81",
+      "display" : "移植外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "82",
+      "display" : "乳腺外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "83",
+      "display" : "緩和ケア科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "84",
+      "display" : "集中治療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "85",
+      "display" : "遺伝子診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86",
+      "display" : "顎口腔診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "87",
+      "display" : "輸血診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "88",
+      "display" : "予防医学診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "89",
+      "display" : "予防接種科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8A",
+      "display" : "先端医療開発診療"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8B",
+      "display" : "分子診療・細胞治療"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8C",
+      "display" : "特殊外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8D",
+      "display" : "手術部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8E",
+      "display" : "薬剤部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8G",
+      "display" : "栄養指導科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8H",
+      "display" : "看護部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8J",
+      "display" : "地域医療連携部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8K",
+      "display" : "治験センター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90",
+      "display" : "歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "98",
+      "display" : "医事・事務"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "9Z",
+      "display" : "その他"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "011",
+      "display" : "第１内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "012",
+      "display" : "第２内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "013",
+      "display" : "第３内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "014",
+      "display" : "第４内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "018",
+      "display" : "一般内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "01A",
+      "display" : "被爆放射線医療内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "021",
+      "display" : "精神科・心の診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "022",
+      "display" : "精神科デイケア"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04A",
+      "display" : "てんかん科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04B",
+      "display" : "もの忘れ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04C",
+      "display" : "高次脳機能障害科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04D",
+      "display" : "頭痛外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04E",
+      "display" : "脳卒中外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "051",
+      "display" : "呼吸器・アレルギー科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "052",
+      "display" : "呼吸器・感染症内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "05A",
+      "display" : "せき外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "05B",
+      "display" : "禁煙外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "061",
+      "display" : "肝臓内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "062",
+      "display" : "肝胆膵科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "063",
+      "display" : "膵臓内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "064",
+      "display" : "胆道・膵臓内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "06A",
+      "display" : "肝臓病科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "06B",
+      "display" : "脂肪肝外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "07A",
+      "display" : "炎症性腸疾患外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "07B",
+      "display" : "ピロリ菌外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "081",
+      "display" : "循環器内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "082",
+      "display" : "冠動脈疾患治療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "083",
+      "display" : "リンパ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "091",
+      "display" : "小児科周産母子"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "092",
+      "display" : "新生児科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "093",
+      "display" : "小児循環器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "094",
+      "display" : "小児神経科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "095",
+      "display" : "未熟児センター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "096",
+      "display" : "ＮＩＣＵ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "097",
+      "display" : "ＧＣＵ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "09A",
+      "display" : "成長発達外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "101",
+      "display" : "第１外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "102",
+      "display" : "第２外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "103",
+      "display" : "第３外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "105",
+      "display" : "一般外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "106",
+      "display" : "総合外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "107",
+      "display" : "病態外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "10A",
+      "display" : "被爆放射線医療外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "111",
+      "display" : "整形外科・脊椎外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "112",
+      "display" : "脊椎外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "113",
+      "display" : "ロコモティブ外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "114",
+      "display" : "人工関節センター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "115",
+      "display" : "装具外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "116",
+      "display" : "アスリート診療"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "117",
+      "display" : "スポーツ医学"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "119",
+      "display" : "関節外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "11A",
+      "display" : "手外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "121",
+      "display" : "形成外科・美容外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "122",
+      "display" : "再建外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "141",
+      "display" : "脳腫瘍科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "162",
+      "display" : "心臓外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "163",
+      "display" : "胸部外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "164",
+      "display" : "循環器外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "165",
+      "display" : "心臓・人工臓器外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "171",
+      "display" : "小児外科（周産母子）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "191",
+      "display" : "皮膚科・レーザ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "192",
+      "display" : "紫外線外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "201",
+      "display" : "泌尿器科・男性科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "202",
+      "display" : "コンチネンス外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "221",
+      "display" : "ストマケア外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "230",
+      "display" : "産科婦人科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "231",
+      "display" : "女性外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "241",
+      "display" : "助産師外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "251",
+      "display" : "不妊内分泌科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "252",
+      "display" : "周産科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "253",
+      "display" : "周産期母性科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "254",
+      "display" : "婦人周産期科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "255",
+      "display" : "腹腔鏡外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "25A",
+      "display" : "女性科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "25B",
+      "display" : "女性外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "25C",
+      "display" : "女性診療科・産科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "261",
+      "display" : "眼科・視覚矯正科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "262",
+      "display" : "白内障外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "263",
+      "display" : "コンタクトレンズ外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "264",
+      "display" : "ドライアイ外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "265",
+      "display" : "ぶどう膜炎外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "266",
+      "display" : "角膜・眼アレルギー外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "267",
+      "display" : "網膜疾患外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "26A",
+      "display" : "角膜移植部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "271",
+      "display" : "耳鼻咽喉科・神経耳科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "272",
+      "display" : "耳鼻咽喉・頭頸部外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "273",
+      "display" : "困難気道外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "274",
+      "display" : "頭頸部科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "301",
+      "display" : "放射線部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "302",
+      "display" : "放射線診断科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "303",
+      "display" : "放射線画像診断・ＩＶＲ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "304",
+      "display" : "核医学科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "30B",
+      "display" : "放射線治療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "30C",
+      "display" : "Ｘ線科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "311",
+      "display" : "麻酔・疼痛・緩和医療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "312",
+      "display" : "麻酔科蘇生科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "313",
+      "display" : "麻酔・疼痛科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "31A",
+      "display" : "ペインクリニック科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "331",
+      "display" : "心身医学科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "332",
+      "display" : "心の内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "333",
+      "display" : "こどものこころ診療"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "334",
+      "display" : "小児精神科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "34A",
+      "display" : "環境医学外来（アレルギー科）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "34B",
+      "display" : "アレルギー内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "34C",
+      "display" : "アレルギー・免疫内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "34D",
+      "display" : "アレルギー・リウマチ内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "35A",
+      "display" : "リウマチ内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "35B",
+      "display" : "内分泌・リウマチ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "361",
+      "display" : "言語療法科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "362",
+      "display" : "股体不自由リハビリテーション科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "363",
+      "display" : "内部障害リハビリテーション科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "364",
+      "display" : "理学療法科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "365",
+      "display" : "物理療法内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "391",
+      "display" : "救命救急センター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "392",
+      "display" : "内科系救急科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "393",
+      "display" : "救急外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "394",
+      "display" : "外科系救急科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "398",
+      "display" : "初期診療・救急科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "41C",
+      "display" : "血液免疫科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "41D",
+      "display" : "血液科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "421",
+      "display" : "無菌治療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "431",
+      "display" : "血液浄化療法部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "432",
+      "display" : "透析治療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "471",
+      "display" : "腫瘍内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "472",
+      "display" : "化学療法部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "473",
+      "display" : "小児腫瘍科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "474",
+      "display" : "精神腫瘍外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "475",
+      "display" : "免疫療法外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "476",
+      "display" : "脳腫瘍診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "48D",
+      "display" : "腎不全科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "48E",
+      "display" : "腎移植科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "491",
+      "display" : "睡眠時無呼吸症候群外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "51A",
+      "display" : "予診科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "51B",
+      "display" : "初診科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "51G",
+      "display" : "総合内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "521",
+      "display" : "光学医療診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "53A",
+      "display" : "内分泌・代謝内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54A",
+      "display" : "膠原病内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54B",
+      "display" : "膠原病・アレルギ—内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54C",
+      "display" : "膠原病・アレルギ—・リウマチ内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54D",
+      "display" : "免疫・膠原病・感染症科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54E",
+      "display" : "膠原病・リウマチ内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54F",
+      "display" : "膠原病・感染症内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54G",
+      "display" : "免疫・膠原病内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "70A",
+      "display" : "消化管内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "72A",
+      "display" : "骨粗鬆症外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "731",
+      "display" : "糖尿病科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73B",
+      "display" : "糖尿病・代謝内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73C",
+      "display" : "糖尿病・内分泌内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73D",
+      "display" : "糖尿病・代謝・内分泌内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73F",
+      "display" : "肝臓・糖尿病・内分泌内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73G",
+      "display" : "糖尿病・栄養内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "74A",
+      "display" : "腎・高血圧・脳血管科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "74B",
+      "display" : "腎・高血圧・内分泌科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "74C",
+      "display" : "腎臓・内分泌代謝内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "751",
+      "display" : "感染症内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "752",
+      "display" : "総合感染症科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "753",
+      "display" : "感染症管理治療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "754",
+      "display" : "感染制御部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "761",
+      "display" : "漢方内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "762",
+      "display" : "和漢診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "771",
+      "display" : "老年病内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "772",
+      "display" : "老人科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "79A",
+      "display" : "脳血管内治療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7A1",
+      "display" : "消化管外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B1",
+      "display" : "食道外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B2",
+      "display" : "食道・胃腸外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B3",
+      "display" : "胃・食道外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B4",
+      "display" : "胃腸外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B5",
+      "display" : "胃外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7C1",
+      "display" : "大腸外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7C2",
+      "display" : "大腸・肛門外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "801",
+      "display" : "肝胆外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "802",
+      "display" : "肝胆膵・移植外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "811",
+      "display" : "移植・再建・内視鏡外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "812",
+      "display" : "人工臓器移植外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "813",
+      "display" : "移植診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "814",
+      "display" : "骨バンク"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "821",
+      "display" : "乳腺内分泌外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "822",
+      "display" : "乳腺・甲状腺外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "823",
+      "display" : "乳腺・内分泌外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "824",
+      "display" : "ブレストセンター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "831",
+      "display" : "緩和ケア相談"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "832",
+      "display" : "緩和医療"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "833",
+      "display" : "地域包括緩和ケア"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "851",
+      "display" : "ゲノム診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "861",
+      "display" : "顎口腔外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "862",
+      "display" : "顎顔面再建科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "863",
+      "display" : "顎機能科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "864",
+      "display" : "顎検査科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "865",
+      "display" : "顎歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "866",
+      "display" : "顔面口腔外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "867",
+      "display" : "顔面外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86A",
+      "display" : "口腔診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86D",
+      "display" : "口腔総合診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86E",
+      "display" : "口腔画像診断科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86F",
+      "display" : "口腔機能回復科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86G",
+      "display" : "口腔診断科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86H",
+      "display" : "口腔言語科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "882",
+      "display" : "保健診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "883",
+      "display" : "メディカルフィットネス"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8D2",
+      "display" : "デイ・サージェリー"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8E1",
+      "display" : "薬剤情報部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8E2",
+      "display" : "臨床薬理内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "901",
+      "display" : "歯科顎口腔外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "902",
+      "display" : "歯科口腔外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "903",
+      "display" : "矯正歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "904",
+      "display" : "歯周科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "905",
+      "display" : "歯内治療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "906",
+      "display" : "小児歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "907",
+      "display" : "障害歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "908",
+      "display" : "クラウン補綴科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "909",
+      "display" : "特殊歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90A",
+      "display" : "虫歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90B",
+      "display" : "医学支援歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90C",
+      "display" : "全身管理歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90D",
+      "display" : "総合歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90E",
+      "display" : "保存修復歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90F",
+      "display" : "予防歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90G",
+      "display" : "咬合修復科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90H",
+      "display" : "審美歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90J",
+      "display" : "義歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90K",
+      "display" : "義歯補綴科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90L",
+      "display" : "インプラント歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90M",
+      "display" : "高齢歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90N",
+      "display" : "小児咬合障害科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90P",
+      "display" : "歯科麻酔科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90R",
+      "display" : "歯科X線科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90S",
+      "display" : "健康歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90T",
+      "display" : "歯科予診"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "981",
+      "display" : "病歴部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "982",
+      "display" : "事務"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "983",
+      "display" : "医療社会福祉部"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
@@ -32,12 +2036,1944 @@ e: {
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.2"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix2Digits_VS", "version": "1.1.0a"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.2"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:c6cd5d34-b55f-4c62-93b3-53484ae0db95",
+    "timestamp" : "2023-06-24T12:35:06+09:00",
+    "total" : 320,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "01",
+      "display" : "内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "02",
+      "display" : "精神科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "03",
+      "display" : "神経科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04",
+      "display" : "神経内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "05",
+      "display" : "呼吸器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "06",
+      "display" : "消化器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "07",
+      "display" : "胃腸科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "08",
+      "display" : "循環器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "09",
+      "display" : "小児科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "10",
+      "display" : "外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "11",
+      "display" : "整形外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "12",
+      "display" : "形成外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "13",
+      "display" : "美容外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "14",
+      "display" : "脳神経外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "15",
+      "display" : "呼吸器外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "16",
+      "display" : "心臓血管外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "17",
+      "display" : "小児外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "18",
+      "display" : "皮膚泌尿器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "19",
+      "display" : "皮膚科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "20",
+      "display" : "泌尿器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "21",
+      "display" : "性病科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "22",
+      "display" : "肛門科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "23",
+      "display" : "産婦人科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "24",
+      "display" : "産科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "25",
+      "display" : "婦人科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "26",
+      "display" : "眼科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "27",
+      "display" : "耳鼻咽喉科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "28",
+      "display" : "気管食道科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "30",
+      "display" : "放射線科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "31",
+      "display" : "麻酔科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "33",
+      "display" : "心療内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "34",
+      "display" : "アレルギー科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "35",
+      "display" : "リウマチ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "36",
+      "display" : "リハビリテーション科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "37",
+      "display" : "病理診断科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "38",
+      "display" : "臨床検査科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "39",
+      "display" : "救急科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "40",
+      "display" : "遺伝科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "41",
+      "display" : "血液内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "42",
+      "display" : "血液腫瘍内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "43",
+      "display" : "血液透析科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "44",
+      "display" : "健診科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "45",
+      "display" : "呼吸器内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "46",
+      "display" : "在宅診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "47",
+      "display" : "腫瘍診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "48",
+      "display" : "腎臓内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "49",
+      "display" : "睡眠診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "50",
+      "display" : "精神神経科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "51",
+      "display" : "総合診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "52",
+      "display" : "内視鏡診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "53",
+      "display" : "内分泌・代謝科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54",
+      "display" : "膠原病科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "70",
+      "display" : "消化器内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "71",
+      "display" : "内分泌内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "72",
+      "display" : "代謝内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73",
+      "display" : "糖尿病内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "74",
+      "display" : "腎臓・内分泌内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "75",
+      "display" : "感染症科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "76",
+      "display" : "漢方科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "77",
+      "display" : "老年科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "78",
+      "display" : "血管外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "79",
+      "display" : "血管内治療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7A",
+      "display" : "消化器外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B",
+      "display" : "上部消化管外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7C",
+      "display" : "下部消化管外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "80",
+      "display" : "肝胆膵外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "81",
+      "display" : "移植外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "82",
+      "display" : "乳腺外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "83",
+      "display" : "緩和ケア科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "84",
+      "display" : "集中治療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "85",
+      "display" : "遺伝子診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86",
+      "display" : "顎口腔診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "87",
+      "display" : "輸血診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "88",
+      "display" : "予防医学診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "89",
+      "display" : "予防接種科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8A",
+      "display" : "先端医療開発診療"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8B",
+      "display" : "分子診療・細胞治療"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8C",
+      "display" : "特殊外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8D",
+      "display" : "手術部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8E",
+      "display" : "薬剤部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8G",
+      "display" : "栄養指導科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8H",
+      "display" : "看護部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8J",
+      "display" : "地域医療連携部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8K",
+      "display" : "治験センター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90",
+      "display" : "歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "98",
+      "display" : "医事・事務"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "9Z",
+      "display" : "その他"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "011",
+      "display" : "第１内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "012",
+      "display" : "第２内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "013",
+      "display" : "第３内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "014",
+      "display" : "第４内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "018",
+      "display" : "一般内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "01A",
+      "display" : "被爆放射線医療内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "021",
+      "display" : "精神科・心の診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "022",
+      "display" : "精神科デイケア"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04A",
+      "display" : "てんかん科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04B",
+      "display" : "もの忘れ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04C",
+      "display" : "高次脳機能障害科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04D",
+      "display" : "頭痛外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04E",
+      "display" : "脳卒中外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "051",
+      "display" : "呼吸器・アレルギー科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "052",
+      "display" : "呼吸器・感染症内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "05A",
+      "display" : "せき外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "05B",
+      "display" : "禁煙外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "061",
+      "display" : "肝臓内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "062",
+      "display" : "肝胆膵科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "063",
+      "display" : "膵臓内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "064",
+      "display" : "胆道・膵臓内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "06A",
+      "display" : "肝臓病科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "06B",
+      "display" : "脂肪肝外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "07A",
+      "display" : "炎症性腸疾患外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "07B",
+      "display" : "ピロリ菌外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "081",
+      "display" : "循環器内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "082",
+      "display" : "冠動脈疾患治療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "083",
+      "display" : "リンパ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "091",
+      "display" : "小児科周産母子"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "092",
+      "display" : "新生児科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "093",
+      "display" : "小児循環器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "094",
+      "display" : "小児神経科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "095",
+      "display" : "未熟児センター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "096",
+      "display" : "ＮＩＣＵ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "097",
+      "display" : "ＧＣＵ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "09A",
+      "display" : "成長発達外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "101",
+      "display" : "第１外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "102",
+      "display" : "第２外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "103",
+      "display" : "第３外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "105",
+      "display" : "一般外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "106",
+      "display" : "総合外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "107",
+      "display" : "病態外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "10A",
+      "display" : "被爆放射線医療外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "111",
+      "display" : "整形外科・脊椎外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "112",
+      "display" : "脊椎外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "113",
+      "display" : "ロコモティブ外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "114",
+      "display" : "人工関節センター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "115",
+      "display" : "装具外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "116",
+      "display" : "アスリート診療"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "117",
+      "display" : "スポーツ医学"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "119",
+      "display" : "関節外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "11A",
+      "display" : "手外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "121",
+      "display" : "形成外科・美容外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "122",
+      "display" : "再建外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "141",
+      "display" : "脳腫瘍科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "162",
+      "display" : "心臓外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "163",
+      "display" : "胸部外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "164",
+      "display" : "循環器外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "165",
+      "display" : "心臓・人工臓器外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "171",
+      "display" : "小児外科（周産母子）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "191",
+      "display" : "皮膚科・レーザ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "192",
+      "display" : "紫外線外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "201",
+      "display" : "泌尿器科・男性科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "202",
+      "display" : "コンチネンス外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "221",
+      "display" : "ストマケア外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "230",
+      "display" : "産科婦人科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "231",
+      "display" : "女性外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "241",
+      "display" : "助産師外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "251",
+      "display" : "不妊内分泌科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "252",
+      "display" : "周産科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "253",
+      "display" : "周産期母性科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "254",
+      "display" : "婦人周産期科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "255",
+      "display" : "腹腔鏡外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "25A",
+      "display" : "女性科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "25B",
+      "display" : "女性外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "25C",
+      "display" : "女性診療科・産科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "261",
+      "display" : "眼科・視覚矯正科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "262",
+      "display" : "白内障外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "263",
+      "display" : "コンタクトレンズ外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "264",
+      "display" : "ドライアイ外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "265",
+      "display" : "ぶどう膜炎外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "266",
+      "display" : "角膜・眼アレルギー外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "267",
+      "display" : "網膜疾患外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "26A",
+      "display" : "角膜移植部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "271",
+      "display" : "耳鼻咽喉科・神経耳科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "272",
+      "display" : "耳鼻咽喉・頭頸部外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "273",
+      "display" : "困難気道外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "274",
+      "display" : "頭頸部科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "301",
+      "display" : "放射線部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "302",
+      "display" : "放射線診断科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "303",
+      "display" : "放射線画像診断・ＩＶＲ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "304",
+      "display" : "核医学科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "30B",
+      "display" : "放射線治療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "30C",
+      "display" : "Ｘ線科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "311",
+      "display" : "麻酔・疼痛・緩和医療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "312",
+      "display" : "麻酔科蘇生科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "313",
+      "display" : "麻酔・疼痛科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "31A",
+      "display" : "ペインクリニック科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "331",
+      "display" : "心身医学科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "332",
+      "display" : "心の内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "333",
+      "display" : "こどものこころ診療"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "334",
+      "display" : "小児精神科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "34A",
+      "display" : "環境医学外来（アレルギー科）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "34B",
+      "display" : "アレルギー内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "34C",
+      "display" : "アレルギー・免疫内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "34D",
+      "display" : "アレルギー・リウマチ内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "35A",
+      "display" : "リウマチ内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "35B",
+      "display" : "内分泌・リウマチ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "361",
+      "display" : "言語療法科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "362",
+      "display" : "股体不自由リハビリテーション科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "363",
+      "display" : "内部障害リハビリテーション科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "364",
+      "display" : "理学療法科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "365",
+      "display" : "物理療法内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "391",
+      "display" : "救命救急センター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "392",
+      "display" : "内科系救急科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "393",
+      "display" : "救急外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "394",
+      "display" : "外科系救急科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "398",
+      "display" : "初期診療・救急科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "41C",
+      "display" : "血液免疫科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "41D",
+      "display" : "血液科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "421",
+      "display" : "無菌治療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "431",
+      "display" : "血液浄化療法部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "432",
+      "display" : "透析治療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "471",
+      "display" : "腫瘍内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "472",
+      "display" : "化学療法部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "473",
+      "display" : "小児腫瘍科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "474",
+      "display" : "精神腫瘍外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "475",
+      "display" : "免疫療法外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "476",
+      "display" : "脳腫瘍診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "48D",
+      "display" : "腎不全科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "48E",
+      "display" : "腎移植科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "491",
+      "display" : "睡眠時無呼吸症候群外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "51A",
+      "display" : "予診科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "51B",
+      "display" : "初診科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "51G",
+      "display" : "総合内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "521",
+      "display" : "光学医療診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "53A",
+      "display" : "内分泌・代謝内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54A",
+      "display" : "膠原病内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54B",
+      "display" : "膠原病・アレルギ—内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54C",
+      "display" : "膠原病・アレルギ—・リウマチ内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54D",
+      "display" : "免疫・膠原病・感染症科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54E",
+      "display" : "膠原病・リウマチ内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54F",
+      "display" : "膠原病・感染症内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54G",
+      "display" : "免疫・膠原病内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "70A",
+      "display" : "消化管内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "72A",
+      "display" : "骨粗鬆症外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "731",
+      "display" : "糖尿病科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73B",
+      "display" : "糖尿病・代謝内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73C",
+      "display" : "糖尿病・内分泌内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73D",
+      "display" : "糖尿病・代謝・内分泌内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73F",
+      "display" : "肝臓・糖尿病・内分泌内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73G",
+      "display" : "糖尿病・栄養内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "74A",
+      "display" : "腎・高血圧・脳血管科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "74B",
+      "display" : "腎・高血圧・内分泌科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "74C",
+      "display" : "腎臓・内分泌代謝内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "751",
+      "display" : "感染症内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "752",
+      "display" : "総合感染症科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "753",
+      "display" : "感染症管理治療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "754",
+      "display" : "感染制御部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "761",
+      "display" : "漢方内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "762",
+      "display" : "和漢診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "771",
+      "display" : "老年病内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "772",
+      "display" : "老人科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "79A",
+      "display" : "脳血管内治療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7A1",
+      "display" : "消化管外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B1",
+      "display" : "食道外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B2",
+      "display" : "食道・胃腸外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B3",
+      "display" : "胃・食道外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B4",
+      "display" : "胃腸外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B5",
+      "display" : "胃外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7C1",
+      "display" : "大腸外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7C2",
+      "display" : "大腸・肛門外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "801",
+      "display" : "肝胆外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "802",
+      "display" : "肝胆膵・移植外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "811",
+      "display" : "移植・再建・内視鏡外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "812",
+      "display" : "人工臓器移植外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "813",
+      "display" : "移植診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "814",
+      "display" : "骨バンク"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "821",
+      "display" : "乳腺内分泌外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "822",
+      "display" : "乳腺・甲状腺外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "823",
+      "display" : "乳腺・内分泌外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "824",
+      "display" : "ブレストセンター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "831",
+      "display" : "緩和ケア相談"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "832",
+      "display" : "緩和医療"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "833",
+      "display" : "地域包括緩和ケア"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "851",
+      "display" : "ゲノム診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "861",
+      "display" : "顎口腔外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "862",
+      "display" : "顎顔面再建科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "863",
+      "display" : "顎機能科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "864",
+      "display" : "顎検査科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "865",
+      "display" : "顎歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "866",
+      "display" : "顔面口腔外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "867",
+      "display" : "顔面外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86A",
+      "display" : "口腔診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86D",
+      "display" : "口腔総合診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86E",
+      "display" : "口腔画像診断科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86F",
+      "display" : "口腔機能回復科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86G",
+      "display" : "口腔診断科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86H",
+      "display" : "口腔言語科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "882",
+      "display" : "保健診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "883",
+      "display" : "メディカルフィットネス"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8D2",
+      "display" : "デイ・サージェリー"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8E1",
+      "display" : "薬剤情報部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8E2",
+      "display" : "臨床薬理内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "901",
+      "display" : "歯科顎口腔外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "902",
+      "display" : "歯科口腔外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "903",
+      "display" : "矯正歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "904",
+      "display" : "歯周科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "905",
+      "display" : "歯内治療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "906",
+      "display" : "小児歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "907",
+      "display" : "障害歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "908",
+      "display" : "クラウン補綴科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "909",
+      "display" : "特殊歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90A",
+      "display" : "虫歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90B",
+      "display" : "医学支援歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90C",
+      "display" : "全身管理歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90D",
+      "display" : "総合歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90E",
+      "display" : "保存修復歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90F",
+      "display" : "予防歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90G",
+      "display" : "咬合修復科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90H",
+      "display" : "審美歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90J",
+      "display" : "義歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90K",
+      "display" : "義歯補綴科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90L",
+      "display" : "インプラント歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90M",
+      "display" : "高齢歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90N",
+      "display" : "小児咬合障害科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90P",
+      "display" : "歯科麻酔科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90R",
+      "display" : "歯科X線科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90S",
+      "display" : "健康歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90T",
+      "display" : "歯科予診"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "981",
+      "display" : "病歴部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "982",
+      "display" : "事務"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "983",
+      "display" : "医療社会福祉部"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
@@ -55,104 +3991,1943 @@ e: {
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.2"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix3Digits_VS", "version": "1.1.0a"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.2"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS", "version": "1.1.0"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.2"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix2Digits_VS", "version": "1.1.0"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.2"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix3Digits_VS", "version": "1.1.0"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.2"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200250.2.2.2",
-  "code" : "2Digits"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "The code '2Digits' is not valid in the system 'urn:oid:1.2.392.200250.2.2.2'. (from https://tx.jpfhir.jp:8081)",
-  "class" : "UNKNOWN"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200250.2.2.2",
-  "code" : "3Digits"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "The code '3Digits' is not valid in the system 'urn:oid:1.2.392.200250.2.2.2'. (from https://tx.jpfhir.jp:8081)",
-  "class" : "UNKNOWN"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200250.2.2.2",
-  "code" : "01"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS--0", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS", "version": "1.1.1"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.2"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix2Digits_VS", "version": "1.1.1"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.2"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix3Digits_VS", "version": "1.1.1"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.2"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200250.2.2.2",
-  "code" : "01"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS--0", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: そのようなホストは不明です。 (tx.fhir.org)' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200250.2.2.2",
-  "code" : "01"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS--0", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS", "version": "1.1.2"}####
-e: {
-  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix2Digits_VS", "version": "1.1.2"}####
-e: {
-  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix3Digits_VS", "version": "1.1.2"}####
-e: {
-  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:79573890-4ac4-41fe-8977-4534c698ae3e",
+    "timestamp" : "2023-06-24T12:35:08+09:00",
+    "total" : 320,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "01",
+      "display" : "内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "02",
+      "display" : "精神科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "03",
+      "display" : "神経科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04",
+      "display" : "神経内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "05",
+      "display" : "呼吸器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "06",
+      "display" : "消化器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "07",
+      "display" : "胃腸科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "08",
+      "display" : "循環器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "09",
+      "display" : "小児科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "10",
+      "display" : "外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "11",
+      "display" : "整形外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "12",
+      "display" : "形成外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "13",
+      "display" : "美容外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "14",
+      "display" : "脳神経外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "15",
+      "display" : "呼吸器外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "16",
+      "display" : "心臓血管外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "17",
+      "display" : "小児外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "18",
+      "display" : "皮膚泌尿器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "19",
+      "display" : "皮膚科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "20",
+      "display" : "泌尿器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "21",
+      "display" : "性病科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "22",
+      "display" : "肛門科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "23",
+      "display" : "産婦人科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "24",
+      "display" : "産科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "25",
+      "display" : "婦人科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "26",
+      "display" : "眼科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "27",
+      "display" : "耳鼻咽喉科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "28",
+      "display" : "気管食道科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "30",
+      "display" : "放射線科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "31",
+      "display" : "麻酔科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "33",
+      "display" : "心療内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "34",
+      "display" : "アレルギー科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "35",
+      "display" : "リウマチ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "36",
+      "display" : "リハビリテーション科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "37",
+      "display" : "病理診断科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "38",
+      "display" : "臨床検査科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "39",
+      "display" : "救急科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "40",
+      "display" : "遺伝科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "41",
+      "display" : "血液内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "42",
+      "display" : "血液腫瘍内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "43",
+      "display" : "血液透析科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "44",
+      "display" : "健診科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "45",
+      "display" : "呼吸器内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "46",
+      "display" : "在宅診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "47",
+      "display" : "腫瘍診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "48",
+      "display" : "腎臓内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "49",
+      "display" : "睡眠診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "50",
+      "display" : "精神神経科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "51",
+      "display" : "総合診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "52",
+      "display" : "内視鏡診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "53",
+      "display" : "内分泌・代謝科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54",
+      "display" : "膠原病科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "70",
+      "display" : "消化器内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "71",
+      "display" : "内分泌内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "72",
+      "display" : "代謝内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73",
+      "display" : "糖尿病内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "74",
+      "display" : "腎臓・内分泌内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "75",
+      "display" : "感染症科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "76",
+      "display" : "漢方科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "77",
+      "display" : "老年科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "78",
+      "display" : "血管外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "79",
+      "display" : "血管内治療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7A",
+      "display" : "消化器外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B",
+      "display" : "上部消化管外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7C",
+      "display" : "下部消化管外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "80",
+      "display" : "肝胆膵外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "81",
+      "display" : "移植外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "82",
+      "display" : "乳腺外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "83",
+      "display" : "緩和ケア科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "84",
+      "display" : "集中治療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "85",
+      "display" : "遺伝子診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86",
+      "display" : "顎口腔診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "87",
+      "display" : "輸血診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "88",
+      "display" : "予防医学診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "89",
+      "display" : "予防接種科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8A",
+      "display" : "先端医療開発診療"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8B",
+      "display" : "分子診療・細胞治療"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8C",
+      "display" : "特殊外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8D",
+      "display" : "手術部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8E",
+      "display" : "薬剤部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8G",
+      "display" : "栄養指導科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8H",
+      "display" : "看護部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8J",
+      "display" : "地域医療連携部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8K",
+      "display" : "治験センター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90",
+      "display" : "歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "98",
+      "display" : "医事・事務"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "9Z",
+      "display" : "その他"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "011",
+      "display" : "第１内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "012",
+      "display" : "第２内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "013",
+      "display" : "第３内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "014",
+      "display" : "第４内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "018",
+      "display" : "一般内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "01A",
+      "display" : "被爆放射線医療内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "021",
+      "display" : "精神科・心の診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "022",
+      "display" : "精神科デイケア"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04A",
+      "display" : "てんかん科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04B",
+      "display" : "もの忘れ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04C",
+      "display" : "高次脳機能障害科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04D",
+      "display" : "頭痛外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "04E",
+      "display" : "脳卒中外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "051",
+      "display" : "呼吸器・アレルギー科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "052",
+      "display" : "呼吸器・感染症内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "05A",
+      "display" : "せき外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "05B",
+      "display" : "禁煙外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "061",
+      "display" : "肝臓内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "062",
+      "display" : "肝胆膵科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "063",
+      "display" : "膵臓内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "064",
+      "display" : "胆道・膵臓内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "06A",
+      "display" : "肝臓病科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "06B",
+      "display" : "脂肪肝外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "07A",
+      "display" : "炎症性腸疾患外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "07B",
+      "display" : "ピロリ菌外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "081",
+      "display" : "循環器内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "082",
+      "display" : "冠動脈疾患治療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "083",
+      "display" : "リンパ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "091",
+      "display" : "小児科周産母子"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "092",
+      "display" : "新生児科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "093",
+      "display" : "小児循環器科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "094",
+      "display" : "小児神経科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "095",
+      "display" : "未熟児センター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "096",
+      "display" : "ＮＩＣＵ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "097",
+      "display" : "ＧＣＵ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "09A",
+      "display" : "成長発達外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "101",
+      "display" : "第１外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "102",
+      "display" : "第２外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "103",
+      "display" : "第３外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "105",
+      "display" : "一般外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "106",
+      "display" : "総合外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "107",
+      "display" : "病態外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "10A",
+      "display" : "被爆放射線医療外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "111",
+      "display" : "整形外科・脊椎外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "112",
+      "display" : "脊椎外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "113",
+      "display" : "ロコモティブ外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "114",
+      "display" : "人工関節センター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "115",
+      "display" : "装具外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "116",
+      "display" : "アスリート診療"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "117",
+      "display" : "スポーツ医学"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "119",
+      "display" : "関節外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "11A",
+      "display" : "手外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "121",
+      "display" : "形成外科・美容外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "122",
+      "display" : "再建外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "141",
+      "display" : "脳腫瘍科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "162",
+      "display" : "心臓外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "163",
+      "display" : "胸部外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "164",
+      "display" : "循環器外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "165",
+      "display" : "心臓・人工臓器外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "171",
+      "display" : "小児外科（周産母子）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "191",
+      "display" : "皮膚科・レーザ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "192",
+      "display" : "紫外線外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "201",
+      "display" : "泌尿器科・男性科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "202",
+      "display" : "コンチネンス外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "221",
+      "display" : "ストマケア外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "230",
+      "display" : "産科婦人科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "231",
+      "display" : "女性外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "241",
+      "display" : "助産師外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "251",
+      "display" : "不妊内分泌科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "252",
+      "display" : "周産科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "253",
+      "display" : "周産期母性科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "254",
+      "display" : "婦人周産期科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "255",
+      "display" : "腹腔鏡外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "25A",
+      "display" : "女性科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "25B",
+      "display" : "女性外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "25C",
+      "display" : "女性診療科・産科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "261",
+      "display" : "眼科・視覚矯正科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "262",
+      "display" : "白内障外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "263",
+      "display" : "コンタクトレンズ外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "264",
+      "display" : "ドライアイ外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "265",
+      "display" : "ぶどう膜炎外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "266",
+      "display" : "角膜・眼アレルギー外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "267",
+      "display" : "網膜疾患外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "26A",
+      "display" : "角膜移植部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "271",
+      "display" : "耳鼻咽喉科・神経耳科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "272",
+      "display" : "耳鼻咽喉・頭頸部外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "273",
+      "display" : "困難気道外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "274",
+      "display" : "頭頸部科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "301",
+      "display" : "放射線部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "302",
+      "display" : "放射線診断科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "303",
+      "display" : "放射線画像診断・ＩＶＲ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "304",
+      "display" : "核医学科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "30B",
+      "display" : "放射線治療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "30C",
+      "display" : "Ｘ線科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "311",
+      "display" : "麻酔・疼痛・緩和医療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "312",
+      "display" : "麻酔科蘇生科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "313",
+      "display" : "麻酔・疼痛科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "31A",
+      "display" : "ペインクリニック科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "331",
+      "display" : "心身医学科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "332",
+      "display" : "心の内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "333",
+      "display" : "こどものこころ診療"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "334",
+      "display" : "小児精神科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "34A",
+      "display" : "環境医学外来（アレルギー科）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "34B",
+      "display" : "アレルギー内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "34C",
+      "display" : "アレルギー・免疫内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "34D",
+      "display" : "アレルギー・リウマチ内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "35A",
+      "display" : "リウマチ内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "35B",
+      "display" : "内分泌・リウマチ科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "361",
+      "display" : "言語療法科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "362",
+      "display" : "股体不自由リハビリテーション科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "363",
+      "display" : "内部障害リハビリテーション科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "364",
+      "display" : "理学療法科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "365",
+      "display" : "物理療法内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "391",
+      "display" : "救命救急センター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "392",
+      "display" : "内科系救急科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "393",
+      "display" : "救急外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "394",
+      "display" : "外科系救急科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "398",
+      "display" : "初期診療・救急科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "41C",
+      "display" : "血液免疫科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "41D",
+      "display" : "血液科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "421",
+      "display" : "無菌治療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "431",
+      "display" : "血液浄化療法部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "432",
+      "display" : "透析治療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "471",
+      "display" : "腫瘍内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "472",
+      "display" : "化学療法部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "473",
+      "display" : "小児腫瘍科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "474",
+      "display" : "精神腫瘍外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "475",
+      "display" : "免疫療法外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "476",
+      "display" : "脳腫瘍診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "48D",
+      "display" : "腎不全科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "48E",
+      "display" : "腎移植科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "491",
+      "display" : "睡眠時無呼吸症候群外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "51A",
+      "display" : "予診科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "51B",
+      "display" : "初診科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "51G",
+      "display" : "総合内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "521",
+      "display" : "光学医療診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "53A",
+      "display" : "内分泌・代謝内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54A",
+      "display" : "膠原病内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54B",
+      "display" : "膠原病・アレルギ—内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54C",
+      "display" : "膠原病・アレルギ—・リウマチ内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54D",
+      "display" : "免疫・膠原病・感染症科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54E",
+      "display" : "膠原病・リウマチ内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54F",
+      "display" : "膠原病・感染症内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "54G",
+      "display" : "免疫・膠原病内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "70A",
+      "display" : "消化管内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "72A",
+      "display" : "骨粗鬆症外来"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "731",
+      "display" : "糖尿病科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73B",
+      "display" : "糖尿病・代謝内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73C",
+      "display" : "糖尿病・内分泌内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73D",
+      "display" : "糖尿病・代謝・内分泌内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73F",
+      "display" : "肝臓・糖尿病・内分泌内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "73G",
+      "display" : "糖尿病・栄養内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "74A",
+      "display" : "腎・高血圧・脳血管科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "74B",
+      "display" : "腎・高血圧・内分泌科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "74C",
+      "display" : "腎臓・内分泌代謝内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "751",
+      "display" : "感染症内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "752",
+      "display" : "総合感染症科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "753",
+      "display" : "感染症管理治療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "754",
+      "display" : "感染制御部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "761",
+      "display" : "漢方内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "762",
+      "display" : "和漢診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "771",
+      "display" : "老年病内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "772",
+      "display" : "老人科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "79A",
+      "display" : "脳血管内治療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7A1",
+      "display" : "消化管外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B1",
+      "display" : "食道外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B2",
+      "display" : "食道・胃腸外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B3",
+      "display" : "胃・食道外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B4",
+      "display" : "胃腸外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7B5",
+      "display" : "胃外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7C1",
+      "display" : "大腸外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "7C2",
+      "display" : "大腸・肛門外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "801",
+      "display" : "肝胆外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "802",
+      "display" : "肝胆膵・移植外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "811",
+      "display" : "移植・再建・内視鏡外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "812",
+      "display" : "人工臓器移植外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "813",
+      "display" : "移植診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "814",
+      "display" : "骨バンク"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "821",
+      "display" : "乳腺内分泌外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "822",
+      "display" : "乳腺・甲状腺外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "823",
+      "display" : "乳腺・内分泌外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "824",
+      "display" : "ブレストセンター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "831",
+      "display" : "緩和ケア相談"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "832",
+      "display" : "緩和医療"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "833",
+      "display" : "地域包括緩和ケア"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "851",
+      "display" : "ゲノム診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "861",
+      "display" : "顎口腔外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "862",
+      "display" : "顎顔面再建科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "863",
+      "display" : "顎機能科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "864",
+      "display" : "顎検査科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "865",
+      "display" : "顎歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "866",
+      "display" : "顔面口腔外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "867",
+      "display" : "顔面外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86A",
+      "display" : "口腔診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86D",
+      "display" : "口腔総合診療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86E",
+      "display" : "口腔画像診断科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86F",
+      "display" : "口腔機能回復科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86G",
+      "display" : "口腔診断科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "86H",
+      "display" : "口腔言語科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "882",
+      "display" : "保健診療部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "883",
+      "display" : "メディカルフィットネス"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8D2",
+      "display" : "デイ・サージェリー"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8E1",
+      "display" : "薬剤情報部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "8E2",
+      "display" : "臨床薬理内科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "901",
+      "display" : "歯科顎口腔外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "902",
+      "display" : "歯科口腔外科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "903",
+      "display" : "矯正歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "904",
+      "display" : "歯周科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "905",
+      "display" : "歯内治療科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "906",
+      "display" : "小児歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "907",
+      "display" : "障害歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "908",
+      "display" : "クラウン補綴科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "909",
+      "display" : "特殊歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90A",
+      "display" : "虫歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90B",
+      "display" : "医学支援歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90C",
+      "display" : "全身管理歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90D",
+      "display" : "総合歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90E",
+      "display" : "保存修復歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90F",
+      "display" : "予防歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90G",
+      "display" : "咬合修復科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90H",
+      "display" : "審美歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90J",
+      "display" : "義歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90K",
+      "display" : "義歯補綴科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90L",
+      "display" : "インプラント歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90M",
+      "display" : "高齢歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90N",
+      "display" : "小児咬合障害科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90P",
+      "display" : "歯科麻酔科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90R",
+      "display" : "歯科X線科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90S",
+      "display" : "健康歯科"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "90T",
+      "display" : "歯科予診"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "981",
+      "display" : "病歴部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "982",
+      "display" : "事務"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.2",
+      "version" : "1.1.0a",
+      "code" : "983",
+      "display" : "医療社会福祉部"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

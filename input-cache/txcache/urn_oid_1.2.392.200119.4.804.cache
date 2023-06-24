@@ -1,4 +1,38 @@
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.200119.4.804",
+  "code" : "31001369"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCode_VS--0", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.200119.4.804",
+  "code" : "31001369",
+  "display" : "呼吸数"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCode_VS", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.200119.4.804",
+  "code" : "31001369"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "呼吸数"
+}
+-------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -9,54 +43,1643 @@
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200119.4.804"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCode_VS", "version": "1.1.0a"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200119.4.804"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCode_VS", "version": "1.1.0"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200119.4.804"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200119.4.804",
-  "code" : "31001369"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCode_VS--0", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCode_VS", "version": "1.1.1"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200119.4.804"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200119.4.804",
-  "code" : "31001369"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCode_VS--0", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: tx.fhir.org' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200119.4.804",
-  "code" : "31001369"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCode_VS--0", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCode_VS", "version": "1.1.2"}####
-e: {
-  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:9bcc50c1-347f-4dc4-90c2-6c38d50c1978",
+    "timestamp" : "2023-06-24T12:36:43+09:00",
+    "total" : 270,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000001",
+      "display" : "経皮的動脈血酸素飽和度（ＳＰＯ２）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000525",
+      "display" : "努力呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000526",
+      "display" : "シーソー呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000527",
+      "display" : "鼻翼呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000528",
+      "display" : "浅表呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000529",
+      "display" : "肩呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000530",
+      "display" : "陥没呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000531",
+      "display" : "ヒュージョーンズ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000533",
+      "display" : "呼吸数の異常"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000534",
+      "display" : "呼吸の深さの異常"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000535",
+      "display" : "呼吸リズム異常"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000537",
+      "display" : "口すぼめ呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000538",
+      "display" : "喘鳴"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000541",
+      "display" : "呼吸音減弱"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000542",
+      "display" : "呼吸音減弱（患側）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000543",
+      "display" : "呼気延長"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000546",
+      "display" : "あえぎ呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000547",
+      "display" : "呼吸狭窄音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000549",
+      "display" : "睡眠時無呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000550",
+      "display" : "睡眠時無呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000552",
+      "display" : "周期性呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000553",
+      "display" : "失調性呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000554",
+      "display" : "無呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000564",
+      "display" : "呼気喘鳴"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000573",
+      "display" : "動悸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000575",
+      "display" : "不整脈"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000576",
+      "display" : "不整脈"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000577",
+      "display" : "不整脈の種類"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000578",
+      "display" : "不整脈の種類"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000579",
+      "display" : "ＳＴ変化"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000595",
+      "display" : "心拍数"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000596",
+      "display" : "心拍リズム不整"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000597",
+      "display" : "心雑音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000598",
+      "display" : "心雑音の種類"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000599",
+      "display" : "心尖拍動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000605",
+      "display" : "起立性低血圧"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000620",
+      "display" : "体表面皮膚温（前額部）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000621",
+      "display" : "体表面皮膚温（胸部）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000622",
+      "display" : "体表面皮膚温（左手掌部）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000623",
+      "display" : "体表面皮膚温（右手掌部）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000624",
+      "display" : "体表面皮膚温（左足底部）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31000625",
+      "display" : "体表面皮膚温（右足底部）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001222",
+      "display" : "低血糖症状"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001234",
+      "display" : "傾眠"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001238",
+      "display" : "失見当識"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001246",
+      "display" : "鎮静スコア（Ｒａｍｓａｙ Ｓｃｏｒｅ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001254",
+      "display" : "意識障害"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001266",
+      "display" : "胎児心拍数基線"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001368",
+      "display" : "体温"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001369",
+      "display" : "呼吸数"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001390",
+      "display" : "脈拍数"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001551",
+      "display" : "体温（スワンガンズ深部体温モニター）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001552",
+      "display" : "胎児心拍数"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001589",
+      "display" : "動脈触知（切断断端部）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001613",
+      "display" : "動脈触知（ドプラー）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001620",
+      "display" : "意識評価（ＧＣＳ－Ｅ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001621",
+      "display" : "意識評価（ＧＣＳ－Ｍ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001622",
+      "display" : "意識評価（ＧＣＳ－Ｖ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001623",
+      "display" : "意識評価（ＧＣＳ－合計）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001657",
+      "display" : "意識評価（ＪＣＳ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001658",
+      "display" : "努力呼吸の種類"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001659",
+      "display" : "下顎呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001683",
+      "display" : "肺雑音（右）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001684",
+      "display" : "肺雑音（左）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001685",
+      "display" : "肺雑音（右上葉）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001686",
+      "display" : "肺雑音（右中葉）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001687",
+      "display" : "肺雑音（右下葉）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001688",
+      "display" : "肺雑音（左上葉）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001689",
+      "display" : "肺雑音（左下葉）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001848",
+      "display" : "収縮期血圧"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001849",
+      "display" : "拡張期血圧"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001952",
+      "display" : "心電図モニター波形"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001953",
+      "display" : "Ａｆ（心房細動）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001954",
+      "display" : "Ａｆ（心房細動）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001955",
+      "display" : "ＡＦ（心房粗動）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001956",
+      "display" : "ＡＦ（心房粗動）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001957",
+      "display" : "ＶＦ（心室粗動）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001958",
+      "display" : "ＶＦ（心室粗動）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001959",
+      "display" : "Ｖｆ（心室細動）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001960",
+      "display" : "Ｖｆ（心室細動）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001961",
+      "display" : "ＶＴ（心室性頻拍）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001962",
+      "display" : "ＶＴ（心室性頻拍）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001963",
+      "display" : "ＰＳＶＴ（発作性上室性頻拍）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001964",
+      "display" : "ＰＳＶＴ（発作性上室性頻拍）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001965",
+      "display" : "ＰＶＣ（心室性期外収縮）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001966",
+      "display" : "ＰＶＣ（心室性期外収縮）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001967",
+      "display" : "ＰＶＣ（心室性期外収縮）回数"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001968",
+      "display" : "ＰＶＣ（心室性期外収縮）連発"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001969",
+      "display" : "ＰＡＣ（心房性期外収縮）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001970",
+      "display" : "洞停止"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001971",
+      "display" : "二段脈"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001972",
+      "display" : "三段脈"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001973",
+      "display" : "ＲｏｎＴ現象"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001974",
+      "display" : "ＲｏｎＴ現象"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001975",
+      "display" : "ＷＰＷ症候群"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001976",
+      "display" : "第１度房室ブロック"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001977",
+      "display" : "第２度（モビッツＩ）房室ブロック"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001978",
+      "display" : "第２度（モビッツⅡ）房室ブロック"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001979",
+      "display" : "第３度房室ブロック"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001980",
+      "display" : "洞性不整脈"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001981",
+      "display" : "洞室ブロック"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001982",
+      "display" : "補充収縮"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001983",
+      "display" : "房室接合部性期外収縮"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001989",
+      "display" : "動脈触知（左後脛骨動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001990",
+      "display" : "動脈触知（右後脛骨動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001991",
+      "display" : "動脈触知（左大腿動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001992",
+      "display" : "動脈触知（右大腿動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001993",
+      "display" : "動脈触知（左膝窩動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001994",
+      "display" : "動脈触知（右膝窩動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001995",
+      "display" : "動脈触知（左上腕動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001996",
+      "display" : "動脈触知（右上腕動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001997",
+      "display" : "動脈触知（左頚動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31001998",
+      "display" : "動脈触知（右頚動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002248",
+      "display" : "胎児心拍数基線細変動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002258",
+      "display" : "胎児心音聴取部位"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002364",
+      "display" : "血圧（動脈血）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002365",
+      "display" : "血圧"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002366",
+      "display" : "血圧（右下肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002367",
+      "display" : "血圧（左下肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002368",
+      "display" : "血圧（左上肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002369",
+      "display" : "血圧（右上肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002370",
+      "display" : "血圧（非観血的モニター）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002477",
+      "display" : "肺雑音の種類"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002478",
+      "display" : "肺雑音の種類"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002823",
+      "display" : "一過性多呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002824",
+      "display" : "分時換気量"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002825",
+      "display" : "１回換気量"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002826",
+      "display" : "副雑音（右）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002827",
+      "display" : "副雑音（左）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002828",
+      "display" : "副雑音（右上葉）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002829",
+      "display" : "副雑音（右中葉）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002830",
+      "display" : "副雑音（右下葉）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002831",
+      "display" : "副雑音（左上葉）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002832",
+      "display" : "副雑音（左下葉）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002833",
+      "display" : "副雑音の種類"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002834",
+      "display" : "副雑音の種類"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002835",
+      "display" : "肺音の種類"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002836",
+      "display" : "高調性連続性ラ音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002837",
+      "display" : "低調性連続性ラ音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002838",
+      "display" : "高調性連続音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002839",
+      "display" : "低調性連続音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002840",
+      "display" : "粗い断続性ラ音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002841",
+      "display" : "細かい断続性ラ音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002842",
+      "display" : "粗い断続音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002843",
+      "display" : "細かい断続音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002844",
+      "display" : "笛声音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002845",
+      "display" : "いびき音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002846",
+      "display" : "水泡音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002847",
+      "display" : "捻髪音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002848",
+      "display" : "胸膜摩擦音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002854",
+      "display" : "体表面皮膚温（右上肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002855",
+      "display" : "体表面皮膚温（左上肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002856",
+      "display" : "体表面皮膚温（右下肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002857",
+      "display" : "体表面皮膚温（左下肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002866",
+      "display" : "自発呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002874",
+      "display" : "動脈触知（内顆）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002875",
+      "display" : "動脈触知（右内顆）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002876",
+      "display" : "動脈触知（左内顆）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002883",
+      "display" : "直腸温"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002884",
+      "display" : "口腔温"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002885",
+      "display" : "膀胱温"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002886",
+      "display" : "食道温"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002887",
+      "display" : "腋窩温"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002888",
+      "display" : "肺動脈温"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002889",
+      "display" : "鼓膜温"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002903",
+      "display" : "胎児心拍数一過性変動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002904",
+      "display" : "胎児の状態（ＣＴＧ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31002954",
+      "display" : "過呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31003288",
+      "display" : "動脈触知（後脛骨動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31003289",
+      "display" : "動脈触知（大腿動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31003290",
+      "display" : "動脈触知（膝窩動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31003291",
+      "display" : "動脈触知（上腕動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31003292",
+      "display" : "動脈触知（頚動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31003952",
+      "display" : "動脈血酸素飽和度（ＳＡＯ２）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31003953",
+      "display" : "混合静脈血酸素飽和度（ＳＶＯ２）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31003954",
+      "display" : "肺動脈圧（ＰＡＰ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31003955",
+      "display" : "平均肺動脈圧（МＰＡＰ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31003956",
+      "display" : "肺動脈楔入圧（ＰＣＷＰ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31003957",
+      "display" : "平均血圧（観血的モニター）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31003958",
+      "display" : "平均血圧（非観血的モニター）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31003959",
+      "display" : "血圧（観血的モニター）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31004100",
+      "display" : "多呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31004101",
+      "display" : "頻呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31004102",
+      "display" : "徐呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31004103",
+      "display" : "チェーンストークス呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31004104",
+      "display" : "ビオー呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31004105",
+      "display" : "クスマウル呼吸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31005022",
+      "display" : "皮弁皮膚温"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31005195",
+      "display" : "鎮静スコア（ＲＡＳＳ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006062",
+      "display" : "気管呼吸音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006063",
+      "display" : "気管支呼吸音（右）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006064",
+      "display" : "気管支呼吸音（左）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006065",
+      "display" : "肺胞呼吸音（右）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006066",
+      "display" : "肺胞呼吸音（左）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006067",
+      "display" : "肺胞呼吸音（右上葉）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006068",
+      "display" : "肺胞呼吸音（右中葉）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006069",
+      "display" : "肺胞呼吸音（右下葉）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006070",
+      "display" : "肺胞呼吸音（左上葉）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006071",
+      "display" : "肺胞呼吸音（左下葉）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006125",
+      "display" : "収縮期血圧（右下肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006126",
+      "display" : "拡張期血圧（右下肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006127",
+      "display" : "収縮期血圧（左下肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006128",
+      "display" : "拡張期血圧（左下肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006129",
+      "display" : "収縮期血圧（左上肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006130",
+      "display" : "拡張期血圧（左上肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006131",
+      "display" : "収縮期血圧（右上肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006132",
+      "display" : "拡張期血圧（右上肢）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006133",
+      "display" : "収縮期血圧（動脈血）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006134",
+      "display" : "拡張期血圧（動脈血）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006135",
+      "display" : "収縮期血圧（非観血的モニター）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006136",
+      "display" : "拡張期血圧（非観血的モニター）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006137",
+      "display" : "収縮期血圧（観血的モニター）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006138",
+      "display" : "拡張期血圧（観血的モニター）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006139",
+      "display" : "収縮期血圧（立位）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006140",
+      "display" : "拡張期血圧（立位）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006141",
+      "display" : "収縮期血圧（座位）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006142",
+      "display" : "拡張期血圧（座位）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006143",
+      "display" : "収縮期血圧（臥位）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006144",
+      "display" : "拡張期血圧（臥位）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006272",
+      "display" : "肺雑音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006273",
+      "display" : "副雑音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006274",
+      "display" : "肺胞呼吸音"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006356",
+      "display" : "胎児心拍数（ドプラー）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006357",
+      "display" : "第１胎児心拍数"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006358",
+      "display" : "第１胎児心拍数（ドプラー）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006359",
+      "display" : "第１胎児心拍数基線"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006360",
+      "display" : "第１胎児心拍数基線細変動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006361",
+      "display" : "第１胎児心音聴取部位"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006362",
+      "display" : "第１胎児心拍数一過性変動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006363",
+      "display" : "第１胎児の状態（ＣＴＧ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006364",
+      "display" : "第１胎児胎動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006365",
+      "display" : "第２胎児心拍数"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006366",
+      "display" : "第２胎児心拍数（ドプラー）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006367",
+      "display" : "第２胎児心拍数基線"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006368",
+      "display" : "第２胎児心拍数基線細変動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006369",
+      "display" : "第２胎児心音聴取部位"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006370",
+      "display" : "第２胎児心拍数一過性変動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006371",
+      "display" : "第２胎児の状態（ＣＴＧ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006372",
+      "display" : "第２胎児胎動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006373",
+      "display" : "第３胎児心拍数"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006374",
+      "display" : "第３胎児心拍数（ドプラー）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006375",
+      "display" : "第３胎児心拍数基線"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006376",
+      "display" : "第３胎児心拍数基線細変動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006377",
+      "display" : "第３胎児心音聴取部位"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006378",
+      "display" : "第３胎児心拍数一過性変動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006379",
+      "display" : "第３胎児の状態（ＣＴＧ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006380",
+      "display" : "第３胎児胎動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006381",
+      "display" : "第４胎児心拍数"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006382",
+      "display" : "第４胎児心拍数（ドプラー）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006383",
+      "display" : "第４胎児心拍数基線"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006384",
+      "display" : "第４胎児心拍数基線細変動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006385",
+      "display" : "第４胎児心音聴取部位"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006386",
+      "display" : "第４胎児心拍数一過性変動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006387",
+      "display" : "第４胎児の状態（ＣＴＧ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006388",
+      "display" : "第４胎児胎動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006389",
+      "display" : "第５胎児心拍数"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006390",
+      "display" : "第５胎児心拍数（ドプラー）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006391",
+      "display" : "第５胎児心拍数基線"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006392",
+      "display" : "第５胎児心拍数基線細変動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006393",
+      "display" : "第５胎児心音聴取部位"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006394",
+      "display" : "第５胎児心拍数一過性変動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006395",
+      "display" : "第５胎児の状態（ＣＴＧ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006396",
+      "display" : "第５胎児胎動"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006466",
+      "display" : "血圧（立位）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006467",
+      "display" : "血圧（座位）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006468",
+      "display" : "血圧（臥位）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006469",
+      "display" : "収縮期肺動脈圧（ＰＡＰ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006470",
+      "display" : "拡張期肺動脈圧（ＰＡＰ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006707",
+      "display" : "動脈触知（右尺骨動脈）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200119.4.804",
+      "version" : "1.1.0a",
+      "code" : "31006708",
+      "display" : "動脈触知（左尺骨動脈）"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

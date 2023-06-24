@@ -1,4 +1,62 @@
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+  "code" : "MD0012920"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationSocialHistoryCode_VS--0", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+  "code" : "MD0012920",
+  "display" : "喫煙指数"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationSocialHistoryCode_VS", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+  "code" : "MD0012920"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "喫煙指数"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+  "code" : "MD0012910",
+  "display" : "通算喫煙年数"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "通算喫煙年数"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+  "code" : "MD0012900",
+  "display" : "１日の喫煙本数"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "１日の喫煙本数"
+}
+-------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -9,54 +67,173 @@
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationSocialHistoryCode_VS", "version": "1.1.0a"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationSocialHistoryCode_VS", "version": "1.1.0"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
-  "code" : "MD0012920"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationSocialHistoryCode_VS--0", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationSocialHistoryCode_VS", "version": "1.1.1"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
-  "code" : "MD0012920"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationSocialHistoryCode_VS--0", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: tx.fhir.org' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
-  "code" : "MD0012920"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationSocialHistoryCode_VS--0", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationSocialHistoryCode_VS", "version": "1.1.2"}####
-e: {
-  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:852c44f9-a173-4cfc-9353-797e67fc89d0",
+    "timestamp" : "2023-06-24T12:36:39+09:00",
+    "total" : 25,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012770",
+      "display" : "出生地"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012780",
+      "display" : "主な居住地歴"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012790",
+      "display" : "家庭環境"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012800",
+      "display" : "学業歴"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012810",
+      "display" : "職業歴"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012820",
+      "display" : "化学物質.取り扱い歴"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012830",
+      "display" : "放射線物質.取り扱い歴"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012840",
+      "display" : "騒音環境"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012850",
+      "display" : "海外渡航歴"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012860",
+      "display" : "常用薬剤歴"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012870",
+      "display" : "喫煙歴.有無"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012880",
+      "display" : "現在の喫煙.有無"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012890",
+      "display" : "喫煙種類区分"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012900",
+      "display" : "１日の喫煙本数"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012910",
+      "display" : "通算喫煙年数"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012920",
+      "display" : "喫煙指数"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012930",
+      "display" : "飲酒歴.有無"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012940",
+      "display" : "現在の飲酒.有無"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012950",
+      "display" : "飲酒の種類区分"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012960",
+      "display" : "１日の飲酒量"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012970",
+      "display" : "通算飲酒年数"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012980",
+      "display" : "嗜好品"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0012990",
+      "display" : "生活習慣"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0013000",
+      "display" : "性格"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationSocialHistoryCode_CS",
+      "version" : "1.1.0a",
+      "code" : "MD0013020",
+      "display" : "趣味"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

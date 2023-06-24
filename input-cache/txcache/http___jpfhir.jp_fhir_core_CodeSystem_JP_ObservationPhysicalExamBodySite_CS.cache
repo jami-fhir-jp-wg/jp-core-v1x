@@ -9,26 +9,29 @@
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationPhysicalExamBodySite_CS"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationPhysicalExamBodySite_VS", "version": "1.1.0a"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationPhysicalExamBodySite_CS"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationPhysicalExamBodySite_VS", "version": "1.1.0"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationPhysicalExamBodySite_CS"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationPhysicalExamBodySite_VS", "version": "1.1.1"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationPhysicalExamBodySite_CS"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationPhysicalExamBodySite_VS", "version": "1.1.2"}####
-e: {
-  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:64bd3e90-f75a-4ac6-8e1b-fbef96b0436b",
+    "timestamp" : "2023-06-24T12:36:37+09:00",
+    "total" : 1,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationPhysicalExamBodySite_CS",
+      "version" : "1.1.0a",
+      "code" : "fragment",
+      "display" : "下腹部"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

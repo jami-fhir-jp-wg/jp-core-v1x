@@ -1,4 +1,72 @@
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+  "code" : "PO"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS--0", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+  "code" : "PO",
+  "display" : "口"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+  "code" : "PO"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "口"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+  "code" : "IV"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS--0", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+  "code" : "IV",
+  "display" : "静脈内"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+  "code" : "IV"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "静脈内"
+}
+-------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -9,89 +77,305 @@
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/route-codes"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationRouteHL70162_VS", "version": "1.1.0a"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/route-codes"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS", "version": "1.1.0a"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/route-codes"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS", "version": "1.1.0"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/route-codes"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
-  "code" : "PO"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS--0", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
-  "code" : "IV"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS--0", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error from server: Fatal:[Unknown ValueSet: http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS--0|1.1.0.]\r\n",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS", "version": "1.1.1"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/route-codes"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
-  "code" : "PO"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS--0", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: tx.fhir.org' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
-  "code" : "IV"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS--0", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: tx.fhir.org' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
-  "code" : "PO"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS--0", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
-  "code" : "IV"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS--0", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS", "version": "1.1.2"}####
-e: {
-  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:85573365-3e22-474b-8b25-319e34d22e25",
+    "timestamp" : "2023-06-24T12:35:53+09:00",
+    "total" : 47,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "AP",
+      "display" : "外用"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "B",
+      "display" : "頬"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "DT",
+      "display" : "歯"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "EP",
+      "display" : "硬膜外"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "ET",
+      "display" : "気管内チューブ"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "NT",
+      "display" : "鼻気管内チューブ"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "GTT",
+      "display" : "消化器官"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "GU",
+      "display" : "GU洗浄"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "IMR",
+      "display" : "浸透"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "IA",
+      "display" : "動脈内"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "IB",
+      "display" : "滑液包内"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "IC",
+      "display" : "心臓内"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "ICV",
+      "display" : "子宮内"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "ID",
+      "display" : "皮膚内"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "IH",
+      "display" : "吸入"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "IHA",
+      "display" : "肝内動脈"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "IM",
+      "display" : "筋肉内"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "IN",
+      "display" : "鼻腔内"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "IO",
+      "display" : "眼内"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "IP",
+      "display" : "腹腔内"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "IS",
+      "display" : "滑液包内"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "IT",
+      "display" : "鞘内"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "IU",
+      "display" : "子宮内"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "IV",
+      "display" : "静脈内"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "MTH",
+      "display" : "口／喉"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "MM",
+      "display" : "粘膜"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "NS",
+      "display" : "鼻側"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "NG",
+      "display" : "経口径内腔"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "NP",
+      "display" : "鼻のプロング"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "OP",
+      "display" : "眼"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "OT",
+      "display" : "耳"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "OTH",
+      "display" : "その他／さまざま"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "PF",
+      "display" : "灌流"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "PO",
+      "display" : "口"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "PR",
+      "display" : "直腸"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "RM",
+      "display" : "リブリーザーマスク"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "SD",
+      "display" : "湿性包帯"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "SC",
+      "display" : "皮下"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "SL",
+      "display" : "舌下"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "TP",
+      "display" : "局所"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "TRA",
+      "display" : "気管切開"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "TD",
+      "display" : "経皮性"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "TL",
+      "display" : "経舌"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "UR",
+      "display" : "尿道"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "VG",
+      "display" : "膣"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "VM",
+      "display" : "換気マスク"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
+      "version" : "1.0.0",
+      "code" : "WND",
+      "display" : "創傷"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

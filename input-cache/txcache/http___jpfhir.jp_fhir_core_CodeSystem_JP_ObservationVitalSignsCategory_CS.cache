@@ -1,4 +1,50 @@
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+  "code" : "respiratory-function"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCategory_VS--0", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+  "code" : "respiratory-function",
+  "display" : "呼吸機能"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCategory_VS", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+  "code" : "respiratory-function"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "呼吸機能"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+  "code" : "respiratory-function",
+  "display" : "呼吸機能"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "呼吸機能"
+}
+-------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -9,54 +55,155 @@
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCategory_VS", "version": "1.1.0a"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCategory_VS", "version": "1.1.0"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
-  "code" : "respiratory-function"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCategory_VS--0", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCategory_VS", "version": "1.1.1"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
-  "code" : "respiratory-function"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCategory_VS--0", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: そのようなホストは不明です。 (tx.fhir.org)' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
-  "code" : "respiratory-function"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCategory_VS--0", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCategory_VS", "version": "1.1.2"}####
-e: {
-  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:940449a7-e947-4f9f-8566-48f98a46873e",
+    "timestamp" : "2023-06-24T12:36:41+09:00",
+    "total" : 22,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "respiratory-function",
+      "display" : "呼吸機能"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "constrained-respiration",
+      "display" : "努力呼吸"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "respiratory-abnormality",
+      "display" : "呼吸異常"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "pulsation",
+      "display" : "動悸"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "arrhythmia",
+      "display" : "不整脈"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "ecg-waveform",
+      "display" : "心電図波形"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "cardiac-function",
+      "display" : "心機能"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "blood-pressure",
+      "display" : "血圧"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "body-surface-skin-temperature",
+      "display" : "体表面皮膚温"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "signs-symptoms",
+      "display" : "徴候・症状"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "sleep",
+      "display" : "睡眠"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "disorientation",
+      "display" : "失見当識"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "consciousness-evaluation",
+      "display" : "意識評価"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "disturbance-of-consciousness",
+      "display" : "意識障害"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "fetal-cardiac-function",
+      "display" : "胎児心機能"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "temperature",
+      "display" : "体温"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "pulse-rate",
+      "display" : "脈拍数"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "artery-palpating",
+      "display" : "動脈触知"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "ventilation",
+      "display" : "換気"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "fetal-condition",
+      "display" : "胎児の状態"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "tracheal-breath-sound",
+      "display" : "気管呼吸音"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS",
+      "version" : "1.1.0a",
+      "code" : "alveolar-breath-sound",
+      "display" : "肺胞呼吸音"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

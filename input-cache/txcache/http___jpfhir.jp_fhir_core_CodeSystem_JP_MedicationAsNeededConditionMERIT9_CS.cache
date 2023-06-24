@@ -9,26 +9,329 @@
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:818a6984-eae9-41ab-bb46-c0bca639bd0f",
+    "timestamp" : "2023-06-24T12:35:16+09:00",
+    "total" : 23,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNLTs",
+      "display" : "検査時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNheadache",
+      "display" : "頭痛時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNpain",
+      "display" : "疼痛時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNteeth pain",
+      "display" : "歯痛時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNfever",
+      "display" : "発熱時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNfebrile",
+      "display" : "発熱時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNchest pain",
+      "display" : "胸痛時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNabdominal pain",
+      "display" : "腹痛時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNinsomnia",
+      "display" : "不眠時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNanxiety",
+      "display" : "不安時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNnervous",
+      "display" : "いらいら時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNdizziness",
+      "display" : "めまい時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNvertigo",
+      "display" : "めまい時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNitching",
+      "display" : "かゆいとき"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNattack",
+      "display" : "発作時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNcostipation",
+      "display" : "便秘時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNdiarrhea",
+      "display" : "下痢時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNvommiting",
+      "display" : "嘔吐時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNcough",
+      "display" : "咳き込み時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNhungry",
+      "display" : "空腹時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNhigh BP",
+      "display" : "血圧上昇時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNauria",
+      "display" : "亡尿時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNpolyuria",
+      "display" : "多尿時"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationAsNeededConditionMERIT9_VS", "version": "1.1.0a"}####
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS"
+    }]
+  }
+}}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationAsNeededConditionMERIT9_VS", "version": "1.1.0"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationAsNeededConditionMERIT9_VS", "version": "1.1.1"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationAsNeededConditionMERIT9_VS", "version": "1.1.2"}####
-e: {
-  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:78d9a6f0-2b42-4dcf-9598-e8f061412f37",
+    "timestamp" : "2023-06-24T12:35:58+09:00",
+    "total" : 23,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNLTs",
+      "display" : "検査時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNheadache",
+      "display" : "頭痛時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNpain",
+      "display" : "疼痛時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNteeth pain",
+      "display" : "歯痛時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNfever",
+      "display" : "発熱時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNfebrile",
+      "display" : "発熱時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNchest pain",
+      "display" : "胸痛時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNabdominal pain",
+      "display" : "腹痛時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNinsomnia",
+      "display" : "不眠時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNanxiety",
+      "display" : "不安時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNnervous",
+      "display" : "いらいら時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNdizziness",
+      "display" : "めまい時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNvertigo",
+      "display" : "めまい時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNitching",
+      "display" : "かゆいとき"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNattack",
+      "display" : "発作時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNcostipation",
+      "display" : "便秘時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNdiarrhea",
+      "display" : "下痢時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNvommiting",
+      "display" : "嘔吐時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNcough",
+      "display" : "咳き込み時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNhungry",
+      "display" : "空腹時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNhigh BP",
+      "display" : "血圧上昇時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNauria",
+      "display" : "亡尿時"
+    },
+    {
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS",
+      "version" : "1.1.0a",
+      "code" : "PRNpolyuria",
+      "display" : "多尿時"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

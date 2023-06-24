@@ -2,20 +2,13 @@
 {"code" : {
   "system" : "http://abc-hospital.local/fhir/Observation/localcode",
   "code" : "abc-local-456"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+}, "valueSet" :null, "langs":"[en-US, en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
 v: {
   "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: Failed to connect to tx.fhir.org/104.196.166.17:80' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://abc-hospital.local/fhir/Observation/localcode",
-  "code" : "abc-local-456"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Attempt to use Terminology server when no Terminology server is available",
+  "error" : "Error from server: Fatal:Invalid url parameter value: maximum required = 1, but found 2.\r\n",
   "class" : "SERVER_ERROR"
 }
 -------------------------------------------------------------------------------------

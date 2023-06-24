@@ -1,4 +1,73 @@
 -------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+  "code" : "10",
+  "display" : "経口"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "経口"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+  "code" : "31",
+  "display" : "中心静脈注射"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "中心静脈注射"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+  "code" : "31"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS--0", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+  "code" : "10"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS--0", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+  "code" : "30",
+  "display" : "静脈注射"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "静脈注射"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+  "code" : "30"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS--0", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -9,114 +78,341 @@
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.20.40"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS", "version": "1.1.0a"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.20.40"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS", "version": "1.1.0"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.20.40"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200250.2.2.20.40",
-  "code" : "31"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS--0", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200250.2.2.20.40",
-  "code" : "10"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS--0", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error from server: Fatal:[Unknown ValueSet: http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS--0|1.1.0.]\r\n",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200250.2.2.20.40",
-  "code" : "30"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS--0", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error from server: Fatal:[Unknown ValueSet: http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS--0|1.1.0.]\r\n",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS", "version": "1.1.1"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.20.40"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200250.2.2.20.40",
-  "code" : "31"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS--0", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: tx.fhir.org' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200250.2.2.20.40",
-  "code" : "10"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS--0", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: そのようなホストは不明です。 (tx.fhir.org)' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200250.2.2.20.40",
-  "code" : "30"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS--0", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: tx.fhir.org' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200250.2.2.20.40",
-  "code" : "31"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS--0", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200250.2.2.20.40",
-  "code" : "10"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS--0", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.200250.2.2.20.40",
-  "code" : "30"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS--0", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS", "version": "1.1.2"}####
-e: {
-  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:26465c0a-493b-4643-a028-30684dff4ab7",
+    "timestamp" : "2023-06-24T12:35:49+09:00",
+    "total" : 53,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "10",
+      "display" : "経口"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "11",
+      "display" : "舌下"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "12",
+      "display" : "バッカル"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "13",
+      "display" : "経口内塗布"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2A",
+      "display" : "貼付"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2B",
+      "display" : "塗布"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2C",
+      "display" : "湿布"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2D",
+      "display" : "撒布"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2E",
+      "display" : "噴霧"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2F",
+      "display" : "消毒"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2G",
+      "display" : "点耳"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2H",
+      "display" : "点眼"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2J",
+      "display" : "点鼻"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2K",
+      "display" : "うがい"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2L",
+      "display" : "吸入"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2M",
+      "display" : "トローチ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2N",
+      "display" : "膀胱洗浄"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2P",
+      "display" : "鼻腔内洗浄"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2Q",
+      "display" : "浣腸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2R",
+      "display" : "肛門挿入"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2S",
+      "display" : "肛門注入"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2T",
+      "display" : "膣内挿入"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "2U",
+      "display" : "膀胱注入"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "30",
+      "display" : "静脈注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "31",
+      "display" : "中心静脈注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "32",
+      "display" : "皮下注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "33",
+      "display" : "筋肉内注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "34",
+      "display" : "皮内注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "35",
+      "display" : "動脈注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3A",
+      "display" : "硬膜外注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3B",
+      "display" : "脳脊髄腔注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3C",
+      "display" : "骨髄内注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3D",
+      "display" : "関節腔内注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3E",
+      "display" : "腱鞘内注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3F",
+      "display" : "腱鞘周囲注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3G",
+      "display" : "硝子体内注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3H",
+      "display" : "結膜下注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3J",
+      "display" : "テノン氏のう内注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3K",
+      "display" : "耳茸内注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3L",
+      "display" : "咽頭注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3M",
+      "display" : "胸腔内注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3N",
+      "display" : "痔核注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3P",
+      "display" : "角膜内注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3Q",
+      "display" : "球後注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3R",
+      "display" : "腹腔内注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "3Z",
+      "display" : "局所・病巣内注射"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "40",
+      "display" : "腹膜透析"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "41",
+      "display" : "気管内注入"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "42",
+      "display" : "涙のう内注入"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "43",
+      "display" : "鼓室内注入"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "44",
+      "display" : "滑液囊穿刺後の注入"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "45",
+      "display" : "腹腔内注入"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.40",
+      "version" : "1.0.0",
+      "code" : "4Z",
+      "display" : "病巣内注入"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

@@ -1,24 +1,4 @@
 -------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://dicom.nema.org/resources/ontology/DCM",
-  "code" : "CT"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Computed Tomography",
-  "code" : "CT",
-  "system" : "http://dicom.nema.org/resources/ontology/DCM"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "http://dicom.nema.org/resources/ontology/DCM",
-  "code" : "CT"
-}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "display" : "Computed Tomography",
-  "code" : "CT",
-  "system" : "http://dicom.nema.org/resources/ontology/DCM"
-}
--------------------------------------------------------------------------------------
 {"hierarchical" : false, "valueSet" :{
   "resourceType" : "ValueSet",
   "compose" : {
@@ -245,6 +225,293 @@ v: {
   }
 }}####
 e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:4800b3ac-1597-49f4-bbc4-8d0d4119e991",
+    "timestamp" : "2023-06-24T12:29:13+09:00",
+    "total" : 54,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "AR",
+      "display" : "Autorefraction"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "AU",
+      "display" : "Basic Voice Audio"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "BDUS",
+      "display" : "Ultrasound Bone Densitometry"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "BI",
+      "display" : "Biomagnetic Imaging"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "BMD",
+      "display" : "Bone Mineral Densitometry"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "CR",
+      "display" : "Computed Radiography"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "CT",
+      "display" : "Computed Tomography"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "DG",
+      "display" : "Diaphanography"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "DX",
+      "display" : "Digital Radiography"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "ECG",
+      "display" : "Electrocardiography"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "EPS",
+      "display" : "Cardiac Electrophysiology"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "ES",
+      "display" : "Endoscopy"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "GM",
+      "display" : "General Microscopy"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "HC",
+      "display" : "Hard Copy"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "HD",
+      "display" : "Hemodynamic Waveform"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "IO",
+      "display" : "Intra-oral Radiography"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "IVOCT",
+      "display" : "Intravascular Optical Coherence Tomography"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "IVUS",
+      "display" : "Intravascular Ultrasound"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "KER",
+      "display" : "Keratometry"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "KO",
+      "display" : "Key Object Selection"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "LEN",
+      "display" : "Lensometry"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "LS",
+      "display" : "Laser Scan"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "MG",
+      "display" : "Mammography"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "MR",
+      "display" : "Magnetic Resonance"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "NM",
+      "display" : "Nuclear Medicine"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "OAM",
+      "display" : "Ophthalmic Axial Measurements"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "OCT",
+      "display" : "Optical Coherence Tomography"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "OP",
+      "display" : "Ophthalmic Photography"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "OPM",
+      "display" : "Ophthalmic Mapping"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "OPT",
+      "display" : "Ophthalmic Tomography"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "OPV",
+      "display" : "Ophthalmic Visual Field"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "OSS",
+      "display" : "Optical Surface Scanner"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "OT",
+      "display" : "Other"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "PR",
+      "display" : "Presentation State"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "PT",
+      "display" : "Positron emission tomography"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "PX",
+      "display" : "Panoramic X-Ray"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "REG",
+      "display" : "Registration"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "RF",
+      "display" : "Radiofluoroscopy"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "RG",
+      "display" : "Radiographic imaging"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "RTDOSE",
+      "display" : "RT Dose"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "RTIMAGE",
+      "display" : "RT Image"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "RTPLAN",
+      "display" : "RT Plan"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "RTRECORD",
+      "display" : "RT Treatment Record"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "RTSTRUCT",
+      "display" : "RT Structure Set"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "SEG",
+      "display" : "Segmentation"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "SM",
+      "display" : "Slide Microscopy"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "SMR",
+      "display" : "Stereometric Relationship"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "SR",
+      "display" : "Structured Report Document"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "SRF",
+      "display" : "Subjective Refraction"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "TG",
+      "display" : "Thermography"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "US",
+      "display" : "Ultrasound"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "VA",
+      "display" : "Visual Acuity"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "XA",
+      "display" : "X-Ray Angiography"
+    },
+    {
+      "system" : "http://dicom.nema.org/resources/ontology/DCM",
+      "code" : "XC",
+      "display" : "External-camera Photography"
+    }]
+  }
+},
   "error" : ""
 }
 -------------------------------------------------------------------------------------

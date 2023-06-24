@@ -2,11 +2,34 @@
 {"code" : {
   "system" : "urn:oid:1.2.392.100495.20.3.21",
   "code" : "13"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+}, "valueSet" :null, "langs":"[en-US, en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
 v: {
-  "severity" : "error",
-  "error" : "Error reading Http Response: Error parsing JSON source: Unexpected char '<' in json stream at Line 1 (path=[null])",
-  "class" : "SERVER_ERROR"
+  "display" : "東京都"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.100495.20.3.21",
+  "code" : "13"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "東京都"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.100495.20.3.21",
+  "code" : "13"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_PrefectureNumber_VS--0", "version": "1.1.2", "langs":"[]", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"CHECK_MEMERSHIP_ONLY", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
@@ -19,54 +42,305 @@ v: {
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.100495.20.3.21"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_PrefectureNumber_VS", "version": "1.1.0a"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.100495.20.3.21"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_PrefectureNumber_VS", "version": "1.1.0"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.100495.20.3.21"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.100495.20.3.21",
-  "code" : "13"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_PrefectureNumber_VS--0", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_PrefectureNumber_VS", "version": "1.1.1"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.100495.20.3.21"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.100495.20.3.21",
-  "code" : "13"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_PrefectureNumber_VS--0", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: tx.fhir.org' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.100495.20.3.21",
-  "code" : "13"
-}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_PrefectureNumber_VS--0", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_PrefectureNumber_VS", "version": "1.1.2"}####
-e: {
-  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:efd07ac8-64b6-42f6-9f7f-065bf111db3c",
+    "timestamp" : "2023-06-24T12:36:47+09:00",
+    "total" : 47,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "01",
+      "display" : "北海道"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "02",
+      "display" : "青森県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "03",
+      "display" : "岩手県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "04",
+      "display" : "宮城県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "05",
+      "display" : "秋田県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "06",
+      "display" : "山形県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "07",
+      "display" : "福島県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "08",
+      "display" : "茨城県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "09",
+      "display" : "栃木県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "10",
+      "display" : "群馬県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "11",
+      "display" : "埼玉県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "12",
+      "display" : "千葉県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "13",
+      "display" : "東京都"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "14",
+      "display" : "神奈川県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "15",
+      "display" : "新潟県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "16",
+      "display" : "富山県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "17",
+      "display" : "石川県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "18",
+      "display" : "福井県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "19",
+      "display" : "山梨県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "20",
+      "display" : "長野県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "21",
+      "display" : "岐阜県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "22",
+      "display" : "静岡県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "23",
+      "display" : "愛知県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "24",
+      "display" : "三重県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "25",
+      "display" : "滋賀県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "26",
+      "display" : "京都府"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "27",
+      "display" : "大阪府"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "28",
+      "display" : "兵庫県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "29",
+      "display" : "奈良県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "30",
+      "display" : "和歌山県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "31",
+      "display" : "鳥取県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "32",
+      "display" : "島根県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "33",
+      "display" : "岡山県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "34",
+      "display" : "広島県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "35",
+      "display" : "山口県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "36",
+      "display" : "徳島県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "37",
+      "display" : "香川県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "38",
+      "display" : "愛媛県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "39",
+      "display" : "高知県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "40",
+      "display" : "福岡県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "41",
+      "display" : "佐賀県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "42",
+      "display" : "長崎県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "43",
+      "display" : "熊本県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "44",
+      "display" : "大分県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "45",
+      "display" : "宮崎県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "46",
+      "display" : "鹿児島県"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.3.21",
+      "version" : "0.1.0",
+      "code" : "47",
+      "display" : "沖縄県"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

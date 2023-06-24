@@ -9,26 +9,1841 @@
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.20.32"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationBodySiteJAMIExternal_VS", "version": "1.1.0a"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.20.32"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationBodySiteJAMIExternal_VS", "version": "1.1.0"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.20.32"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationBodySiteJAMIExternal_VS", "version": "1.1.1"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200250.2.2.20.32"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationBodySiteJAMIExternal_VS", "version": "1.1.2"}####
-e: {
-  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:0f086831-be5b-483c-a73c-9d15e0533d5c",
+    "timestamp" : "2023-06-24T12:35:18+09:00",
+    "total" : 303,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "010",
+      "display" : "全身"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "120",
+      "display" : "頭皮"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "12L",
+      "display" : "左頭皮"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "12R",
+      "display" : "右頭皮"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "130",
+      "display" : "頭部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "13L",
+      "display" : "左頭部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "13R",
+      "display" : "右頭部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "140",
+      "display" : "頭頂部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "150",
+      "display" : "後頭部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "15L",
+      "display" : "左後頭部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "15R",
+      "display" : "右後頭部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "210",
+      "display" : "ひたい"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "21L",
+      "display" : "左ひたい"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "21R",
+      "display" : "右ひたい"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "220",
+      "display" : "顔"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "22B",
+      "display" : "両顔"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "22L",
+      "display" : "左顔"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "22R",
+      "display" : "右顔"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "230",
+      "display" : "まゆ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "23B",
+      "display" : "両まゆ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "23L",
+      "display" : "左まゆ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "23R",
+      "display" : "右まゆ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "240",
+      "display" : "まゆのまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "24B",
+      "display" : "両まゆのまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "24L",
+      "display" : "左まゆのまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "24R",
+      "display" : "右まゆのまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "250",
+      "display" : "まぶた"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "25B",
+      "display" : "両まぶた"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "25L",
+      "display" : "左まぶた"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "25R",
+      "display" : "右まぶた"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "260",
+      "display" : "眼"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "26B",
+      "display" : "両眼"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "26L",
+      "display" : "左眼"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "26R",
+      "display" : "右眼"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "270",
+      "display" : "目のまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "27B",
+      "display" : "両目のまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "27L",
+      "display" : "左目のまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "27R",
+      "display" : "右目のまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "310",
+      "display" : "頬"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "31B",
+      "display" : "両頬"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "31L",
+      "display" : "左頬"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "31R",
+      "display" : "右頬"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "320",
+      "display" : "鼻"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "32L",
+      "display" : "左鼻"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "32R",
+      "display" : "右鼻"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "330",
+      "display" : "鼻のまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "33L",
+      "display" : "左鼻のまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "33R",
+      "display" : "右鼻のまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "340",
+      "display" : "鼻の下"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "34L",
+      "display" : "左鼻の下"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "34R",
+      "display" : "右鼻の下"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "350",
+      "display" : "鼻腔内"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "35B",
+      "display" : "両鼻腔内"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "35L",
+      "display" : "左鼻腔内"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "35R",
+      "display" : "右鼻腔内"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "420",
+      "display" : "耳"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "42B",
+      "display" : "両耳"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "42L",
+      "display" : "左耳"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "42R",
+      "display" : "右耳"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "430",
+      "display" : "耳たぶ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "43B",
+      "display" : "両耳たぶ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "43L",
+      "display" : "左耳たぶ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "43R",
+      "display" : "右耳たぶ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "440",
+      "display" : "耳のうしろ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "44B",
+      "display" : "両耳のうしろ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "44L",
+      "display" : "左耳のうしろ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "44R",
+      "display" : "右耳のうしろ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "450",
+      "display" : "耳のまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "45B",
+      "display" : "両耳のまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "45L",
+      "display" : "左耳のまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "45R",
+      "display" : "右耳のまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "460",
+      "display" : "耳の中"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "46B",
+      "display" : "両耳の中"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "46L",
+      "display" : "左耳の中"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "46R",
+      "display" : "右耳の中"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "520",
+      "display" : "口"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "530",
+      "display" : "口のまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "540",
+      "display" : "口唇"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "550",
+      "display" : "口腔内"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "55L",
+      "display" : "左口腔内"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "55R",
+      "display" : "右口腔内"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "560",
+      "display" : "口腔内ほほの内側"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "56B",
+      "display" : "両口腔内ほほの内側"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "56L",
+      "display" : "左口腔内ほほの内側"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "56R",
+      "display" : "右口腔内ほほの内側"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "570",
+      "display" : "口腔内上あご部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "57B",
+      "display" : "両口腔内上あご部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "57L",
+      "display" : "左口腔内上あご部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "57R",
+      "display" : "右口腔内上あご部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "580",
+      "display" : "上歯茎部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "58B",
+      "display" : "両上歯茎部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "58L",
+      "display" : "左上歯茎部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "58R",
+      "display" : "右上歯茎部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "590",
+      "display" : "下歯茎部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "59B",
+      "display" : "両下歯茎部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "59L",
+      "display" : "左下歯茎部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "59R",
+      "display" : "右下歯茎部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "5A0",
+      "display" : "舌"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "5AL",
+      "display" : "左舌"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "5AR",
+      "display" : "右舌"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "5B0",
+      "display" : "舌の裏側"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "5BL",
+      "display" : "左舌の裏側"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "5BR",
+      "display" : "右舌の裏側"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "610",
+      "display" : "喉の奥"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "61L",
+      "display" : "左喉の奥"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "61R",
+      "display" : "右喉の奥"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "620",
+      "display" : "扁桃腺部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "62B",
+      "display" : "両扁桃腺部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "62L",
+      "display" : "左扁桃腺部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "62R",
+      "display" : "右扁桃腺部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "630",
+      "display" : "下あご"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "63L",
+      "display" : "左下あご"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "63R",
+      "display" : "右下あご"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "640",
+      "display" : "首"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "64B",
+      "display" : "両首"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "64L",
+      "display" : "左首"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "64R",
+      "display" : "右首"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "650",
+      "display" : "うなじ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "65L",
+      "display" : "左うなじ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "65R",
+      "display" : "右うなじ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "710",
+      "display" : "肩"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "71B",
+      "display" : "両肩"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "71L",
+      "display" : "左肩"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "71R",
+      "display" : "右肩"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "720",
+      "display" : "上肢"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "72B",
+      "display" : "両上肢"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "72L",
+      "display" : "左上肢"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "72R",
+      "display" : "右上肢"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "730",
+      "display" : "腕"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "73B",
+      "display" : "両腕"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "73L",
+      "display" : "左腕"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "73R",
+      "display" : "右腕"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "740",
+      "display" : "上腕"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "74B",
+      "display" : "両上腕"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "74L",
+      "display" : "左上腕"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "74R",
+      "display" : "右上腕"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "750",
+      "display" : "前腕"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "75B",
+      "display" : "両前腕"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "75L",
+      "display" : "左前腕"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "75R",
+      "display" : "右前腕"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "760",
+      "display" : "ひじ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "76B",
+      "display" : "両ひじ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "76L",
+      "display" : "左ひじ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "76R",
+      "display" : "右ひじ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "770",
+      "display" : "手"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "77B",
+      "display" : "両手"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "77L",
+      "display" : "左手"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "77R",
+      "display" : "右手"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "780",
+      "display" : "手の甲"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "78B",
+      "display" : "両手の甲"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "78L",
+      "display" : "左手の甲"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "78R",
+      "display" : "右手の甲"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "790",
+      "display" : "手のひら"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "79B",
+      "display" : "両手のひら"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "79L",
+      "display" : "左手のひら"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "79R",
+      "display" : "右手のひら"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7A0",
+      "display" : "手の指"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7AB",
+      "display" : "両手の指"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7AL",
+      "display" : "左手の指"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7AR",
+      "display" : "右手の指"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7B0",
+      "display" : "手の指の間"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7BB",
+      "display" : "両手の指の間"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7BL",
+      "display" : "左手の指の間"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7BR",
+      "display" : "右手の指の間"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7C0",
+      "display" : "手の爪"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7CB",
+      "display" : "両手の爪"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7CL",
+      "display" : "左手の爪"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7CR",
+      "display" : "右手の爪"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7D0",
+      "display" : "手足"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7DB",
+      "display" : "両手足"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7DL",
+      "display" : "左手足"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "7DR",
+      "display" : "右手足"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "810",
+      "display" : "体幹部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "81L",
+      "display" : "左体幹部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "81R",
+      "display" : "右体幹部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "820",
+      "display" : "背中"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "82L",
+      "display" : "左背中"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "82R",
+      "display" : "右背中"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "830",
+      "display" : "上背部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "83L",
+      "display" : "左上背部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "83R",
+      "display" : "右上背部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "840",
+      "display" : "脇の下"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "84B",
+      "display" : "両脇の下"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "84L",
+      "display" : "左脇の下"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "84R",
+      "display" : "右脇の下"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "850",
+      "display" : "全胸部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "85L",
+      "display" : "左胸部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "85R",
+      "display" : "右胸部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "860",
+      "display" : "乳房"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "86B",
+      "display" : "両乳房"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "86L",
+      "display" : "左乳房"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "86R",
+      "display" : "右乳房"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "870",
+      "display" : "乳房まわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "87B",
+      "display" : "両乳房まわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "87L",
+      "display" : "左乳房まわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "87R",
+      "display" : "右乳房まわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "880",
+      "display" : "乳首"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "88B",
+      "display" : "両乳首"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "88L",
+      "display" : "左乳首"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "88R",
+      "display" : "右乳首"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "890",
+      "display" : "上腹部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "89L",
+      "display" : "左上腹部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "89R",
+      "display" : "右上腹部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8A0",
+      "display" : "下腹部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8AL",
+      "display" : "左下腹部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8AR",
+      "display" : "右下腹部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8B0",
+      "display" : "へそ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8C0",
+      "display" : "へそのまわり"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8D0",
+      "display" : "臀部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8DB",
+      "display" : "両臀部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8DL",
+      "display" : "左臀部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8DR",
+      "display" : "右臀部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8E0",
+      "display" : "陰のう"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8EB",
+      "display" : "両陰のう"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8EL",
+      "display" : "左陰のう"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8ER",
+      "display" : "右陰のう"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8F0",
+      "display" : "陰部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8FL",
+      "display" : "左陰部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8FR",
+      "display" : "右陰部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8G0",
+      "display" : "股間部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8GL",
+      "display" : "左股間部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8GR",
+      "display" : "右股間部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8H0",
+      "display" : "肛門部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "8J0",
+      "display" : "肛門周囲"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "910",
+      "display" : "下肢"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "91B",
+      "display" : "両下肢"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "91L",
+      "display" : "左下肢"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "91R",
+      "display" : "右下肢"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "920",
+      "display" : "ふともも"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "92B",
+      "display" : "両ふともも"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "92L",
+      "display" : "左ふともも"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "92R",
+      "display" : "右ふともも"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "930",
+      "display" : "ふともも後ろ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "93B",
+      "display" : "両ふともも後ろ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "93L",
+      "display" : "左ふともも後ろ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "93R",
+      "display" : "右ふともも後ろ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "940",
+      "display" : "ふとももとすね"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "94B",
+      "display" : "両ふとももとすね"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "94L",
+      "display" : "左ふとももとすね"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "94R",
+      "display" : "右ふとももとすね"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "950",
+      "display" : "膝"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "95B",
+      "display" : "両膝"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "95L",
+      "display" : "左膝"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "95R",
+      "display" : "右膝"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "960",
+      "display" : "膝のうら"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "96B",
+      "display" : "両膝のうら"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "96L",
+      "display" : "左膝のうら"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "96R",
+      "display" : "右膝のうら"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "970",
+      "display" : "すね"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "97B",
+      "display" : "両すね"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "97L",
+      "display" : "左すね"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "97R",
+      "display" : "右すね"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "980",
+      "display" : "ふくらはぎ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "98B",
+      "display" : "両ふくらはぎ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "98L",
+      "display" : "左ふくらはぎ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "98R",
+      "display" : "右ふくらはぎ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "990",
+      "display" : "くるぶし"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "99B",
+      "display" : "両くるぶし"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "99L",
+      "display" : "左くるぶし"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "99R",
+      "display" : "右くるぶし"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9A0",
+      "display" : "かかと"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9AB",
+      "display" : "両かかと"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9AL",
+      "display" : "左かかと"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9AR",
+      "display" : "右かかと"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9B0",
+      "display" : "足"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9BB",
+      "display" : "両足"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9BL",
+      "display" : "左足"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9BR",
+      "display" : "右足"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9C0",
+      "display" : "足の裏"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9CB",
+      "display" : "両足の裏"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9CL",
+      "display" : "左足の裏"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9CR",
+      "display" : "右足の裏"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9D0",
+      "display" : "足の甲"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9DB",
+      "display" : "両足の甲"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9DL",
+      "display" : "左足の甲"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9DR",
+      "display" : "右足の甲"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9E0",
+      "display" : "足のゆび"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9EB",
+      "display" : "両足のゆび"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9EL",
+      "display" : "左足のゆび"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9ER",
+      "display" : "右足のゆび"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9F0",
+      "display" : "足のゆびの間"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9FB",
+      "display" : "両足のゆびの間"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9FL",
+      "display" : "左足のゆびの間"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9FR",
+      "display" : "右足のゆびの間"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9G0",
+      "display" : "足の爪"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9GB",
+      "display" : "両足の爪"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9GL",
+      "display" : "左足の爪"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "9GR",
+      "display" : "右足の爪"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "A10",
+      "display" : "かゆい所"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "A1B",
+      "display" : "両かゆい所"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "A1L",
+      "display" : "左かゆい所"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "A1R",
+      "display" : "右かゆい所"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "A20",
+      "display" : "カサカサした所"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "A30",
+      "display" : "じくじくした所"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "A40",
+      "display" : "ひどい所"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "A50",
+      "display" : "褥瘡部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "A60",
+      "display" : "発赤部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "A70",
+      "display" : "発疹部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "A80",
+      "display" : "ストマ部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "A90",
+      "display" : "カテ挿入部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "AA0",
+      "display" : "患部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "AAL",
+      "display" : "左患部"
+    },
+    {
+      "system" : "urn:oid:1.2.392.200250.2.2.20.32",
+      "version" : "1.0.0",
+      "code" : "AAR",
+      "display" : "右患部"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------

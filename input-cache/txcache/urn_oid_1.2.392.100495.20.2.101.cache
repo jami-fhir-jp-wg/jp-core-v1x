@@ -2,51 +2,100 @@
 {"code" : {
   "system" : "urn:oid:1.2.392.100495.20.2.101",
   "code" : "AMP"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+}, "valueSet" :null, "langs":"[en-US, en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
 v: {
-  "severity" : "error",
-  "error" : "Error reading Http Response: Error parsing JSON source: Unexpected char '<' in json stream at Line 1 (path=[null])",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.100495.20.2.101",
-  "code" : "KAI"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error reading Http Response: Error parsing JSON source: Unexpected char '<' in json stream at Line 1 (path=[null])",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.100495.20.2.101",
-  "code" : "HON"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error reading Http Response: Error parsing JSON source: Unexpected char '<' in json stream at Line 1 (path=[null])",
-  "class" : "SERVER_ERROR"
-}
--------------------------------------------------------------------------------------
-{"code" : {
-  "system" : "urn:oid:1.2.392.100495.20.2.101",
-  "code" : "TAB"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
-v: {
-  "severity" : "error",
-  "error" : "Error reading Http Response: Error parsing JSON source: Unexpected char '<' in json stream at Line 1 (path=[null])",
-  "class" : "SERVER_ERROR"
+  "display" : "アンプル"
 }
 -------------------------------------------------------------------------------------
 {"code" : {
   "system" : "urn:oid:1.2.392.100495.20.2.101",
   "code" : "TIME"
-}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+}, "valueSet" :null, "langs":"[en-US, en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
 v: {
-  "severity" : "error",
-  "error" : "Attempt to use Terminology server when no Terminology server is available",
-  "class" : "SERVER_ERROR"
+  "display" : "回"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.100495.20.2.101",
+  "code" : "HON"
+}, "valueSet" :null, "langs":"[en-US, en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "本"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.100495.20.2.101",
+  "code" : "TAB"
+}, "valueSet" :null, "langs":"[en-US, en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "錠"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.100495.20.2.101",
+  "code" : "AMP"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "アンプル"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.100495.20.2.101",
+  "code" : "TIME"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "回"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.100495.20.2.101",
+  "code" : "HON"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "本"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.100495.20.2.101",
+  "code" : "TAB"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "錠"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:oid:1.2.392.100495.20.2.101",
+  "code" : "ML"
+}, "valueSet" :null, "langs":"[en]", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "displayWarningMode":"false", "versionFlexible":"true", "profile": {
+  "resourceType" : "Parameters",
+  "id" : "exp-params"
+}}####
+v: {
+  "display" : "ｍＬ"
 }
 -------------------------------------------------------------------------------------
 {"hierarchical" : true, "valueSet" :{
@@ -59,26 +108,407 @@ v: {
   }
 }}####
 e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.100495.20.2.101"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.0a"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.100495.20.2.101"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.0"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.100495.20.2.101"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.1"}####
-e: {
-  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.100495.20.2.101"
-}
--------------------------------------------------------------------------------------
-{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.2"}####
-e: {
-  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:7c86c84e-43b6-4894-8f64-88802dfd6c1d",
+    "timestamp" : "2023-06-24T12:35:57+09:00",
+    "total" : 64,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "PART",
+      "display" : "分"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "TIME",
+      "display" : "回"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "KIND",
+      "display" : "種"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "BOX",
+      "display" : "箱"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "ROLL",
+      "display" : "巻"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "SHT",
+      "display" : "枚"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "HON",
+      "display" : "本"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "PAIR",
+      "display" : "組"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "SET",
+      "display" : "セット"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "KO",
+      "display" : "個"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "TEAR",
+      "display" : "裂"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "DIR",
+      "display" : "方向"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "TROC",
+      "display" : "トローチ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "AMP",
+      "display" : "アンプル"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "CAP",
+      "display" : "カプセル"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "TAB",
+      "display" : "錠"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "PILL",
+      "display" : "丸"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "PCK",
+      "display" : "包"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "BTL",
+      "display" : "瓶"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "BAG",
+      "display" : "袋"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "BTLB",
+      "display" : "瓶（袋）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "TUBE",
+      "display" : "管"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "SYRG",
+      "display" : "シリンジ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "DOSE",
+      "display" : "回分"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "TEST",
+      "display" : "テスト分"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "GCYL",
+      "display" : "ガラス筒"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "RODT",
+      "display" : "桿錠"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "UNT",
+      "display" : "単位"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "TTUN",
+      "display" : "万単位"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "FEET",
+      "display" : "フィート"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "DROP",
+      "display" : "滴"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "MG",
+      "display" : "ｍｇ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "G",
+      "display" : "ｇ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "KG",
+      "display" : "ｋｇ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "CC",
+      "display" : "ｃｃ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "ML",
+      "display" : "ｍＬ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "L",
+      "display" : "Ｌ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "MLV",
+      "display" : "ｍＬＶ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "VIL",
+      "display" : "バイアル"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "CM",
+      "display" : "ｃｍ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "CM2",
+      "display" : "ｃｍ２"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "M",
+      "display" : "ｍ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "MCCI",
+      "display" : "μＣｉ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "MCI",
+      "display" : "ｍＣｉ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "MCG",
+      "display" : "μｇ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "BKR",
+      "display" : "管（瓶）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "PIPE",
+      "display" : "筒"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "GBQ",
+      "display" : "ＧＢｑ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "MGBQ",
+      "display" : "ＭＢｑ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "KIT",
+      "display" : "キット"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "IUNT",
+      "display" : "国際単位"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "PAT",
+      "display" : "患者当り"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "ATM",
+      "display" : "気圧"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "CAN",
+      "display" : "缶"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "OPE",
+      "display" : "手術当り"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "VSL",
+      "display" : "容器"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "MLG",
+      "display" : "ｍＬ（ｇ）"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "BLST",
+      "display" : "ブリスター"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "SHET",
+      "display" : "シート"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "CST",
+      "display" : "カセット"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "TUNT",
+      "display" : "千単位"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "TTIU",
+      "display" : "万国際単位"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "MEQ",
+      "display" : "ｍEｑ"
+    },
+    {
+      "system" : "urn:oid:1.2.392.100495.20.2.101",
+      "version" : "0.1.0",
+      "code" : "MCL",
+      "display" : "μＬ"
+    }]
+  }
+},
+  "error" : ""
 }
 -------------------------------------------------------------------------------------
