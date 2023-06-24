@@ -32,3 +32,39 @@ e: {
   "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
 }
 -------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JHSP0007"
+    }]
+  }
+}}####
+e: {
+  "valueSet" : {
+  "resourceType" : "ValueSet",
+  "status" : "active",
+  "expansion" : {
+    "identifier" : "urn:uuid:acf4655d-8276-4a72-bbe8-b4370b6fed45",
+    "timestamp" : "2023-06-24T14:57:54+09:00",
+    "total" : 1,
+    "parameter" : [{
+      "name" : "offset",
+      "valueInteger" : 0
+    },
+    {
+      "name" : "count",
+      "valueInteger" : 0
+    }],
+    "contains" : [{
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JHSP0007",
+      "version" : "1.1.0a",
+      "code" : "BDP",
+      "display" : "持参薬処方"
+    }]
+  }
+},
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
