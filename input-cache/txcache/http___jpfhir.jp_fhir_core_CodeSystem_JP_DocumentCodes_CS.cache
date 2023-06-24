@@ -1,0 +1,38 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : false, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_CS",
+      "concept" : [{
+        "code" : "18751-8",
+        "display" : "上部消化管内視鏡報告書"
+      },
+      {
+        "code" : "18746-8",
+        "display" : "下部消化管内視鏡報告書"
+      },
+      {
+        "code" : "28018-0",
+        "display" : "小腸内視鏡報告書"
+      },
+      {
+        "code" : "28016-4",
+        "display" : "ERCP 報告書"
+      },
+      {
+        "code" : "18744-3",
+        "display" : "気管支鏡検査報告書"
+      },
+      {
+        "code" : "19805-1",
+        "display" : "内視鏡検査報告書"
+      }]
+    }]
+  }
+}}####
+e: {
+  "error" : ""
+}
+-------------------------------------------------------------------------------------

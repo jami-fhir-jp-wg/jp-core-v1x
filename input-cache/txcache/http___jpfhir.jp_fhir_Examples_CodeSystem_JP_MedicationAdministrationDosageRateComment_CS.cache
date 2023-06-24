@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "valueSet" :{
+  "resourceType" : "ValueSet",
+  "compose" : {
+    "inactive" : true,
+    "include" : [{
+      "system" : "http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageRateComment_CS"
+    }]
+  }
+}}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageRateComment_CS"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageRateComment_VS", "version": "1.1.0a"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageRateComment_CS"
+}
+-------------------------------------------------------------------------------------

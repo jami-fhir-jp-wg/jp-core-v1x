@@ -1,0 +1,639 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:iso:std:iso:3166",
+  "code" : "JP"
+}, "url": "http://hl7.org/fhir/ValueSet/jurisdiction", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Japan",
+  "code" : "JP",
+  "system" : "urn:iso:std:iso:3166"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "ja"
+}, "url": "http://hl7.org/fhir/ValueSet/languages", "version": "4.0.1", "lang":"ja", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Japanese",
+  "code" : "ja",
+  "system" : "urn:ietf:bcp:47"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:iso:std:iso:3166",
+  "code" : "JP"
+}, "url": "http://hl7.org/fhir/ValueSet/jurisdiction", "version": "4.0.1", "lang":"ja", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Japan",
+  "code" : "JP",
+  "system" : "urn:iso:std:iso:3166"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "json"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "json",
+  "code" : "json",
+  "system" : "urn:ietf:bcp:13"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "xml"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "xml",
+  "code" : "xml",
+  "system" : "urn:ietf:bcp:13"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:iso:std:iso:3166",
+  "code" : "JP"
+}, "url": "http://hl7.org/fhir/ValueSet/jurisdiction", "version": "4.3.0-snapshot1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Japan",
+  "code" : "JP",
+  "system" : "urn:iso:std:iso:3166"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "ja"
+}, "url": "http://hl7.org/fhir/ValueSet/languages", "version": "4.3.0-snapshot1", "lang":"ja", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Japanese",
+  "code" : "ja",
+  "system" : "urn:ietf:bcp:47"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:iso:std:iso:3166",
+  "code" : "JP"
+}, "url": "http://hl7.org/fhir/ValueSet/jurisdiction", "version": "4.3.0-snapshot1", "lang":"ja", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Japan",
+  "code" : "JP",
+  "system" : "urn:iso:std:iso:3166"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "json"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.3.0-snapshot1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "json",
+  "code" : "json",
+  "system" : "urn:ietf:bcp:13"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "xml"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.3.0-snapshot1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "xml",
+  "code" : "xml",
+  "system" : "urn:ietf:bcp:13"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:iso:std:iso:3166",
+  "code" : "JP"
+}, "url": "http://hl7.org/fhir/ValueSet/jurisdiction", "version": "4.6.0", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Japan",
+  "code" : "JP",
+  "system" : "urn:iso:std:iso:3166"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:iso:std:iso:3166",
+  "code" : "JP"
+}, "url": "http://hl7.org/fhir/ValueSet/jurisdiction", "version": "4.6.0", "lang":"ja", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Japan",
+  "code" : "JP",
+  "system" : "urn:iso:std:iso:3166"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "application/jpg"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error reading Http Response: Error parsing JSON source: Unexpected char '<' in json stream at Line 1 (path=[null])",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "ja"
+}, "url": "http://hl7.org/fhir/ValueSet/languages", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error reading Http Response: Error parsing JSON source: Unexpected char '<' in json stream at Line 1 (path=[null])",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "image/jpeg"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "image/jpeg",
+  "code" : "image/jpeg",
+  "system" : "urn:ietf:bcp:13"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "application/fhir+xml"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "application/fhir+xml",
+  "code" : "application/fhir+xml",
+  "system" : "urn:ietf:bcp:13"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "application/pdf"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "application/pdf",
+  "code" : "application/pdf",
+  "system" : "urn:ietf:bcp:13"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "ja-JP"
+}, "url": "http://hl7.org/fhir/ValueSet/languages", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "The code provided (urn:ietf:bcp:47#ja-JP) is not valid in the value set 'CommonLanguages' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/Common/ValueSet/JP_MedicationCode_VS", "version": "1.1.0a"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.100495.20.1.81"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "9279-1",
+  "display" : "Respiratory rate"
+}, "url": "http://jpfhir.jp/fhir/Common/ValueSet/JP_ObservationVitalSignsCode_VS", "version": "1.1.0a", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Respiratory rate",
+  "code" : "9279-1",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "9279-1",
+  "display" : "Respiratory rate"
+}, "url": "http://jpfhir.jp/fhir/Common/ValueSet/JP_ObservationVitalSignsCode_VS", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Respiratory rate",
+  "code" : "9279-1",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "h"
+}, "url": "http://hl7.org/fhir/ValueSet/units-of-time", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "小时",
+  "code" : "h",
+  "system" : "http://unitsofmeasure.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "http://unitsofmeasure.org"
+}, "url": "http://hl7.org/fhir/ValueSet/units-of-time", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error processing Unit: 'http://unitsofmeasure.org': The unit \"http\" is unknown at character 1; The code \"http://unitsofmeasure.org\" is not valid in the system http://unitsofmeasure.org; The code provided (http://unitsofmeasure.org#http://unitsofmeasure.org) is not valid in the value set 'UnitsOfTime' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "日"
+}, "url": "http://hl7.org/fhir/ValueSet/units-of-time", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error processing Unit_ \"日\": unexpected character \"日\" at position 1; The code \"日\" is not valid in the system http://unitsofmeasure.org; The code provided (http://unitsofmeasure.org#日) is not valid in the value set 'UnitsOfTime' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "d"
+}, "url": "http://hl7.org/fhir/ValueSet/units-of-time", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "天",
+  "code" : "d",
+  "system" : "http://unitsofmeasure.org"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "Day"
+}, "url": "http://hl7.org/fhir/ValueSet/units-of-time", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error processing Unit: 'Day': The unit \"Day\" is unknown at character 1; The code \"Day\" is not valid in the system http://unitsofmeasure.org; The code provided (http://unitsofmeasure.org#Day) is not valid in the value set 'UnitsOfTime' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "Hour"
+}, "url": "http://hl7.org/fhir/ValueSet/units-of-time", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error processing Unit: 'Hour': The unit \"Hour\" is unknown at character 1; The code \"Hour\" is not valid in the system http://unitsofmeasure.org; The code provided (http://unitsofmeasure.org#Hour) is not valid in the value set 'UnitsOfTime' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "day"
+}, "url": "http://hl7.org/fhir/ValueSet/units-of-time", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error processing Unit: 'day': The unit \"day\" is unknown at character 1; The code \"day\" is not valid in the system http://unitsofmeasure.org; The code provided (http://unitsofmeasure.org#day) is not valid in the value set 'UnitsOfTime' (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "9279-1",
+  "display" : "Respiratory rate"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCode_VS", "version": "1.1.0a", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Respiratory rate",
+  "code" : "9279-1",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_Immunization_VS", "version": "1.1.0a"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200119.4.403.1"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_VS", "version": "1.1.0a"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200119.4.403.1"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "urn:iso:std:iso:3166",
+  "code" : "JPN"
+}, "url": "http://hl7.org/fhir/ValueSet/jurisdiction", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Japan",
+  "code" : "JPN",
+  "system" : "urn:iso:std:iso:3166"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS", "version": "1.1.0a"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategoryInjeciton_VS", "version": "1.1.0a"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCategoryMERIT9_CS"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategory_VS", "version": "1.1.0a"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCategoryMERIT9_CS"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUsageInjection_VS", "version": "1.1.0a"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionJAMI_CS"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "9279-1",
+  "display" : "Respiratory rate"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCode_VS", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Respiratory rate",
+  "code" : "9279-1",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS", "version": "1.1.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategoryInjeciton_VS", "version": "1.1.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCategoryMERIT9_CS"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategory_VS", "version": "1.1.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCategoryMERIT9_CS"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUsageInjection_VS", "version": "1.1.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionJAMI_CS"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_Immunization_VS", "version": "1.1.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200119.4.402.1"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_VS", "version": "1.1.0"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.100495.20.1.81"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "http://unitsofmeasure.org"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "mL"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error from server: Fatal:[Unknown ValueSet: http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS|1.1.0.]\r\n",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "urn:oid:1.2.392.100495.20.2.101"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error from server: Fatal:[Unknown ValueSet: http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS|1.1.0.]\r\n",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "AMP"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error from server: Fatal:[Unknown ValueSet: http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS|1.1.0.]\r\n",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "TIME"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error from server: Fatal:[Unknown ValueSet: http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS|1.1.0.]\r\n",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "HON"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error from server: Fatal:[Unknown ValueSet: http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS|1.1.0.]\r\n",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "TAB"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error from server: Fatal:[Unknown ValueSet: http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS|1.1.0.]\r\n",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "d"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error from server: Fatal:[Unknown ValueSet: http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS|1.1.0.]\r\n",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "ML"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.0", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error from server: Fatal:[Unknown ValueSet: http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS|1.1.0.]\r\n",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://loinc.org",
+  "code" : "9279-1",
+  "display" : "Respiratory rate"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCode_VS", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"NO_MEMBERSHIP_CHECK", "versionFlexible":"true"}####
+v: {
+  "display" : "Respiratory rate",
+  "code" : "9279-1",
+  "system" : "http://loinc.org"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS", "version": "1.1.1"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategoryInjeciton_VS", "version": "1.1.1"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCategoryMERIT9_CS"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategory_VS", "version": "1.1.1"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCategoryMERIT9_CS"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUsageInjection_VS", "version": "1.1.1"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionJAMI_CS"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_Immunization_VS", "version": "1.1.1"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.200119.4.402.1"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_VS", "version": "1.1.1"}####
+e: {
+  "error" : "Error from server: Unable to provide support for code system urn:oid:1.2.392.100495.20.1.81"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "mL"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error performing tx5 operation 'validate-code: tx.fhir.org' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "AMP"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error performing tx5 operation 'validate-code: tx.fhir.org' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "TIME"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error performing tx5 operation 'validate-code: tx.fhir.org' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "HON"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error performing tx5 operation 'validate-code: tx.fhir.org' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "TAB"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error performing tx5 operation 'validate-code: tx.fhir.org' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "d"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error performing tx5 operation 'validate-code: tx.fhir.org' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "ML"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Error performing tx5 operation 'validate-code: tx.fhir.org' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "application/xml"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Local Error: Unable to resolve system urn:ietf:bcp:13. Server Error: Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "application/dicom"
+}, "url": "http://hl7.org/fhir/ValueSet/mimetypes", "version": "4.0.1", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Local Error: Unable to resolve system urn:ietf:bcp:13. Server Error: Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "mL"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Local Error: Unable to resolve system urn:oid:1.2.392.100495.20.2.101. Server Error: Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "AMP"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Local Error: Unable to resolve system urn:oid:1.2.392.100495.20.2.101. Server Error: Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "TIME"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Local Error: Unable to resolve system urn:oid:1.2.392.100495.20.2.101. Server Error: Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "HON"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Local Error: Unable to resolve system urn:oid:1.2.392.100495.20.2.101. Server Error: Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "TAB"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Local Error: Unable to resolve system urn:oid:1.2.392.100495.20.2.101. Server Error: Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "d"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Local Error: Unable to resolve system urn:oid:1.2.392.100495.20.2.101. Server Error: Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "code" : "ML"
+}, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS", "version": "1.1.2", "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"true", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "severity" : "error",
+  "error" : "Local Error: Unable to resolve system urn:oid:1.2.392.100495.20.2.101. Server Error: Error performing tx5 operation 'validate-code: Failed to connect to tx.jpfhir.jp/111.171.221.80:8081' (parameters = \"\")",
+  "class" : "SERVER_ERROR"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS", "version": "1.1.2"}####
+e: {
+  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategoryInjeciton_VS", "version": "1.1.2"}####
+e: {
+  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategory_VS", "version": "1.1.2"}####
+e: {
+  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUsageInjection_VS", "version": "1.1.2"}####
+e: {
+  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_Immunization_VS", "version": "1.1.2"}####
+e: {
+  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+}
+-------------------------------------------------------------------------------------
+{"hierarchical" : true, "url": "http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_VS", "version": "1.1.2"}####
+e: {
+  "error" : "Cannot invoke \"org.hl7.fhir.r5.model.ValueSet.hasUrl()\" because \"result\" is null"
+}
+-------------------------------------------------------------------------------------

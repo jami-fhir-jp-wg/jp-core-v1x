@@ -1,0 +1,73 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/service-type",
+  "code" : "Psychiatric",
+  "display" : "Psychiatric"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "code" : "Psychiatric",
+  "system" : "http://terminology.hl7.org/CodeSystem/service-type",
+  "severity" : "warning",
+  "error" : "The system \"Psychiatric\" http://terminology.hl7.org/CodeSystem/service-type was found but did not contain enough information to properly validate the code (mode = example); The display \"Psychiatric\" is not a valid display for the code {http://terminology.hl7.org/CodeSystem/service-type}Psychiatric - should be one of [] (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/service-type",
+  "code" : "#Psychology",
+  "display" : "Psychology"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "code" : "#Psychology",
+  "system" : "http://terminology.hl7.org/CodeSystem/service-type",
+  "severity" : "warning",
+  "error" : "The system \"Psychology\" http://terminology.hl7.org/CodeSystem/service-type was found but did not contain enough information to properly validate the code (mode = example); The display \"Psychology\" is not a valid display for the code {http://terminology.hl7.org/CodeSystem/service-type}#Psychology - should be one of [] (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/service-type",
+  "code" : "147"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Physical Fitness Testing",
+  "code" : "147",
+  "system" : "http://terminology.hl7.org/CodeSystem/service-type",
+  "severity" : "warning",
+  "error" : "The system \"\" http://terminology.hl7.org/CodeSystem/service-type was found but did not contain enough information to properly validate the code (mode = example) (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/service-type",
+  "code" : "142"
+}, "valueSet" :null, "lang":"en-US", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Psychology",
+  "code" : "142",
+  "system" : "http://terminology.hl7.org/CodeSystem/service-type",
+  "severity" : "warning",
+  "error" : "The system \"\" http://terminology.hl7.org/CodeSystem/service-type was found but did not contain enough information to properly validate the code (mode = example) (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/service-type",
+  "code" : "147"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Physical Fitness Testing",
+  "code" : "147",
+  "system" : "http://terminology.hl7.org/CodeSystem/service-type",
+  "severity" : "warning",
+  "error" : "The system \"\" http://terminology.hl7.org/CodeSystem/service-type was found but did not contain enough information to properly validate the code (mode = example) (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://terminology.hl7.org/CodeSystem/service-type",
+  "code" : "142"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"true", "guessSystem":"false", "valueSetMode":"ALL_CHECKS", "versionFlexible":"true"}####
+v: {
+  "display" : "Psychology",
+  "code" : "142",
+  "system" : "http://terminology.hl7.org/CodeSystem/service-type",
+  "severity" : "warning",
+  "error" : "The system \"\" http://terminology.hl7.org/CodeSystem/service-type was found but did not contain enough information to properly validate the code (mode = example) (from http://tx.fhir.org/r4)"
+}
+-------------------------------------------------------------------------------------
