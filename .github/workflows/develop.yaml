@@ -97,6 +97,7 @@ jobs:
         
     - name: Run IG Publisher
       run: | 
+        mkdir input-cache
         mv publisher.jar ./input-cache/publisher.jar
         unset DISPLAY
         # java  -Xmx4G -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx https://tx.jpfhir.jp:8081
