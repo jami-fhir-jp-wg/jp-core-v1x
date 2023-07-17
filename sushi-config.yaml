@@ -15,6 +15,11 @@ publisher:
   email: office@hlfhir.jp
 copyright: Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG
 jurisdiction: 'urn:iso:std:iso:3166#JP'
+dependencies:
+  jpfhir-terminology:
+# to avoid warning message "The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole"
+    uri: http://jpfhir.jp/fhir/jpfhir-terminology
+    version: 1.1.1
 
 #----------------------------------------
 # ページタイトル名称設定
@@ -114,6 +119,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - json
   no-validate:
     - '*/hl7.fhir.jp.core'
+  no-usage-check: 'true'
+  i18n-default-lang: 'ja'
   special-url:
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition
@@ -280,6 +287,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodySite_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationCategory_Microbiology_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationLabResultCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationMethod_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationPhysicalExamBodySite_VS
