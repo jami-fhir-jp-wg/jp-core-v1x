@@ -82,7 +82,7 @@ jobs:
         url: "https://jpfhir.jp/fhir/fhir_dotFHIR_packages.tgz"
         target: .
 
-    - name: Prepare for using all dependent pacjages including Jp modified version of hl7.fhir.r4.core Package 
+    - name: Prepare for using all dependent packages including Jp modified version of hl7.fhir.r4.core Package 
       env:
         JPPACKAGECORE: fhir_dotFHIR_packages.tgz
       run: |
