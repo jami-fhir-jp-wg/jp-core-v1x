@@ -16,6 +16,11 @@ The valueSet reference http://playbook.radlex.org/playbook/SearchRadlexAction on
 The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html on element ImagingStudy.modality could not be resolved
 The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html on element ImagingStudy.series.modality could not be resolved
 The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 on element ImagingStudy.series.instance.sopClass could not be resolved
+ValueSet http://dicom%
+
+# Wrong Display Name
+Wrong Display Name%
+No valid Display Names found%
 
 # Country code system 'urn:iso:std:iso:3166' is unknown due to unresoloved reason
 Code System URI 'urn:iso:std:iso:3166' is unknown so the code cannot be validated

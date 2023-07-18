@@ -172,6 +172,6 @@
 ## 注意事項
 
 - 例えば、患者に「既知のアレルギー・なし」が記録されている状態で、新規に「カニアレルギー・あり」の記録を追加する際には「既知のアレルギー・なし」の記録を削除すべきである。同様に、患者に「カニアレルギー・あり」が記録されている状態で「既知のアレルギー・なし」を記録しようとした際には、システムはこの矛盾を検出するべきである。
-- アレルギーの否定を表現する方法について。本プロファイルが継承するプロファイル（AllergyIntolerance R4.0.1）では「既知のアレルギー・なし」を表現するために、No known allergy（SNOMED-CT:716186003）等を用いることが例示されている。一方で、本プロファイルの要素であるcodeのバインド先として例示する[JP Core AllergyIntolerance Value Set][JP_AllergyIntolerance_VS]には「既知のアレルギー・なし」等に相当する表現がない。そのため、本プロファイルを継承するプロファイルが、[JP Core AllergyIntolerance Value Set][JP_AllergyIntolerance_VS]を利用する場合には、否定されたアレルギーを表現するために、アレルギーの有無を区別する要素を追加するなどの措置を取ることを想定している。なお、本プロファイルはこのValue Setの利用を要求・推奨するものではないため、他のValue Setを使う選択肢もある。
+- アレルギーの否定を表現する方法について。本プロファイルが継承するプロファイル（AllergyIntolerance R4.0.1）では「既知のアレルギー・なし」を表現するために、No known allergy（SNOMED-CT:716186003）等を用いることが例示されている。一方で、本プロファイルの要素であるcodeのバインド先として例示するJP Core AllergyIntolerance Value Setには「既知のアレルギー・なし」等に相当する表現がない。そのため、本プロファイルを継承するプロファイルが、JP Core AllergyIntolerance Value Setを利用する場合には、否定されたアレルギーを表現するために、アレルギーの有無を区別する要素を追加するなどの措置を取ることを想定している。なお、本プロファイルはこのValue Setの利用を要求・推奨するものではないため、他のValue Setを使う選択肢もある。
 - いずれについても詳細は、[Negated Allergies and Intolerances](https://hl7.org/fhir/R4/allergyintolerance.html#9.1.3.3)を参照のこと。
 {% include markdown-link-references.md %}
