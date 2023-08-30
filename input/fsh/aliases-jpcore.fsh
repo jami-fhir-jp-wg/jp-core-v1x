@@ -180,6 +180,7 @@ Alias: $JP_Department_SsMix_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Departme
 Alias: $JP_Department_SsMix2Digits_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix2Digits_VS
 Alias: $JP_Department_SsMix3Digits_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix3Digits_VS
 Alias: $JP_DiagnosticReportCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DiagnosticReportCategory_VS
+Alias: $JP_DocumentCodes_VS = http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_VS
 Alias: $JP_DocumentCodes_DiagnosticReport_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_DiagnosticReport_VS
 Alias: $JP_DocumentCodes_Endoscopy_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_Endoscopy_VS
 Alias: $JP_MedicalFeeScoreType_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicalFeeScoreType_VS
