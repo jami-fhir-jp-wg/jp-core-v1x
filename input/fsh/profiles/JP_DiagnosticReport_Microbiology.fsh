@@ -27,7 +27,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[microbiology] from $JP_DiagnosticReportCategory_VS (required)
 * category[microbiology] ^comment = "Multiple categories are allowed using various categorization schemes.   The level of granularity is defined by the category concepts in the value set. More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in DiagnosticReport.code.\r\nさまざまなカテゴリ化スキームを使用して、複数のカテゴリを使用できる。粒度のレベルは、それぞれの値セットのカテゴリの概念によって定義される。 DiagnosticReport.codeのメタデータや用語の階層を使用して、よりきめ細かいフィルタリングを実行できる。\r\n\r\n【JP Core仕様】Diagnostic Service Section Codesの\"LAB\"を使用"
 * category[microbiology].coding.system = $US_Loinc_CS (exactly)
-* category[microbiology].coding.code = $US_Loinc_CS#LP7819-8 (exactly)
+* category[microbiology].coding.code = LP7819-8 (exactly)
 * category[microbiology].coding.display = "微生物検査"
 * code 1..
 * insert SetDefinitionRef(code, 診断レポートを説明するコードまたは名前)

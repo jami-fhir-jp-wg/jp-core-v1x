@@ -36,7 +36,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * code.coding[laboratoryCode] ^definition = "検体検査レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。"
 * code.coding[laboratoryCode] ^comment = "推奨コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しない"
 * code.coding[laboratoryCode].system = $JP_DocumentCodes_CS
-* code.coding[laboratoryCode].code = $JP_DocumentCodes_CS#11502-2
+* code.coding[laboratoryCode].code = #11502-2
 * code.coding[laboratoryCode].display = "Laboratory report"
 * subject only Reference(JP_Patient)
 * subject ^short = "The subject of the report - usually, but not always, the patient　レポートの対象、常にではないが、通常は患者"
