@@ -11,7 +11,7 @@ Usage: #example
 * identifier.value = "5234342"
 * category[+] = $JP_SimpleObservationCategory_CS#laboratory
 * category[=] = $US_Loinc_CS#LP29693-6
-* code = $US_Loinc_CS#11502-2 "Laboratory report"
+* code = $JP_DocumentCodes_CS#11502-2 "Laboratory report"
 * subject = Reference(Patient/jp-patient-example-1)
 * encounter = Reference(Encounter/jp-encounter-example-1)
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
