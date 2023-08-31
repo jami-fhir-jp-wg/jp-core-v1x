@@ -4,6 +4,7 @@ name: "FHIRJPCoreImplementationGuide"
 title: "HL7 FHIR JP Core ImplementationGuide"
 description: "日本医療情報学会(JAMI) NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した日本国内におけるベースとなるJP Core実装ガイドのドラフトVer.1.1.2 です。"
 status: active # draft | active | retired | unknown
+
 version: 1.1.2
 date: 2023-06-26
 fhirVersion: 4.0.1
