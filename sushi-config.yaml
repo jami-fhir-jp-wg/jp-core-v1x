@@ -20,6 +20,7 @@ dependencies:
 # to avoid warning message "The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole"
     uri: http://jpfhir.jp/fhir/jpfhir-terminology
     version: 1.1.1
+    
 #----------------------------------------
 # ページタイトル名称設定
 #----------------------------------------
