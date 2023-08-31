@@ -11,7 +11,7 @@ Usage: #example
 * identifier.value = "123456"
 * status = #final
 * category = $US_Loinc_CS#LP7796-8 "内視鏡"
-* code = $JP_DocumentCodes_CS#18751-8 "上部消化管内視鏡報告書"
+* code.coding = $JP_DocumentCodes_CS#18751-8 "上部消化管内視鏡報告書"
 * subject = Reference(Patient/jp-patient-example-1) "山田 太郎"
 * effectiveDateTime = "2023-04-26"
 * issued = "2023-04-26T09:23:00+09:00"

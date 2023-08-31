@@ -61,7 +61,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * code.coding[radiologyReportCode] ^comment = "推奨コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しないが、互換性を意識すること。"
 * code.coding[radiologyReportCode].system = $JP_DocumentCodes_CS (exactly)
 * code.coding[radiologyReportCode].code 1..
-* code.coding[radiologyReportCode].code = $JP_DocumentCodes_CS#18748-4 (exactly)
+* code.coding[radiologyReportCode].code = #18748-4 (exactly)
+* code.coding[radiologyReportCode].display = "画像検査報告書"
 * subject MS
 * subject ^definition = "レポートの対象。 必ずでは無いが、通常、これには「患者」が該当する。"
 * subject ^comment = "参照は実際のFHIRリソースへの参照であり、解決可能である必要がある。解決はURLから取得するか、または、リソースタイプが利用できる場合は絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索する。\r\n\r\n【JP Core仕様】Patient リソースを参照"

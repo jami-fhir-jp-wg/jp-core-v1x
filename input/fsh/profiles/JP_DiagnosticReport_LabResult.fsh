@@ -37,7 +37,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * code.coding[laboratoryCode] ^comment = "推奨コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しない"
 * code.coding[laboratoryCode].system = $JP_DocumentCodes_CS
 * code.coding[laboratoryCode].code = #11502-2
-* code.coding[laboratoryCode].display = "Laboratory report"
+* code.coding[laboratoryCode].display = "検体検査報告書"
 * subject only Reference(JP_Patient)
 * subject ^short = "The subject of the report - usually, but not always, the patient　レポートの対象、常にではないが、通常は患者"
 * subject ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolvable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。\r\n\r\n【JP Core仕様】Patientリソースを参照"
