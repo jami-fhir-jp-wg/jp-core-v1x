@@ -42,7 +42,7 @@ Usage: #example
 * basedOn = Reference(ServiceRequest/jp-servicerequest-example-1)
 * status = #final
 * category[microbiology] = $US_Loinc_CS#LP7819-8 "微生物検査"
-* code.coding = $JP_DocumentCodes_CS#18725-2 "Microbiology studies (set)"
+* code = $JP_DocumentCodes_CS#18725-2 "Microbiology studies (set)"
 * subject = Reference(Patient/jp-patient-example-1)
 * encounter = Reference(Encounter/jp-encounter-example-1)
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
