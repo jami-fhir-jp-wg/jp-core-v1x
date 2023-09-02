@@ -109,7 +109,7 @@ jobs:
         mkdir -p /home/runner/.fhir
         ls -l ./*.tgz
         mv $JPPACKAGECOREtgz /home/runner/.fhir/
-        mkfir -p /home/runner/.fhir/work
+        mkdir -p /home/runner/.fhir/work
         mv $JPTerminologyCOREtgz /home/runner/.fhir/work
         mv $JPTerminologyCOREPtgz /home/runner/.fhir/work/JPTerminologyCOREtgz
         ls -l /home/runner/.fhir/work/*.tgz
