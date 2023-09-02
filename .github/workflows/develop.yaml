@@ -85,13 +85,22 @@ jobs:
 
     - name: Prepare for using all dependent packages including Jp modified version of hl7.fhir.r4.core Package 
       env:
-        JPPACKAGECORE: fhir_dotFHIR_packages.tgz
+        JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
+        JPTerminologyCOREdir: jpfhirTerminology#1.1.1.tgz
+        JPTerminologyCOREtgz: jpfhirTerminology#1.1.1
       run: |
         mkdir -p /home/runner/.fhir
-        mv $JPPACKAGECORE /home/runner/.fhir/
+        mv $JPPACKAGECOREtgz /home/runner/.fhir/
+        mv $JPTerminologyCOREtgz /home/runner/.fhir/work
         cd /home/runner/.fhir
-        tar xzf /home/runner/.fhir/$JPPACKAGECORE 
-        ls -l /home/runner/.fhir/packages/
+        tar xzf /home/runner/.fhir/$JPPACKAGECOREtgz
+        tar xzf /home/runner/.fhir/work/$JPTerminologyCOREtgz
+        cd /home/runner/.fhir
+        mkdir -p packages/$JPTerminologyCOREdir
+        mv /home/runner/.fhir/work/package /home/runner/.fhir/packages/$JPTerminologyCOREdir
+        ls -l /home/runner/.fhir
+        ls -l /home/runner/.fhir/packages
+        ls -l /home/runner/.fhir/packages/$JPTerminologyCOREdir
         
     - name: Run IG Publisher
       run: | 
