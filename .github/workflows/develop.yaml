@@ -75,14 +75,21 @@ jobs:
         tag: 'latest'
         path: .
         file: publisher.jar
-        
+    
     - name: Download the file
       uses: suisei-cn/actions-download-file@v1.4.0
       id: downloadfile  # Remember to give an ID if you need the output
       with:
         url: "https://jpfhir.jp/fhir/fhir_dotFHIR_packages.tgz"
         target: .
-
+        
+    - name: Download the file
+      uses: suisei-cn/actions-download-file@v1.4.0
+      id: downloadfile2  # Remember to give an ID if you need the output
+      with:
+        url: "https://jpfhir.jp/fhir/core/terminology/jpfhirTerminology#1.1.1.tgz"
+        target: .    
+  
     - name: Prepare for using all dependent packages including Jp modified version of hl7.fhir.r4.core Package 
       env:
         JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
