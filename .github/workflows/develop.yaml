@@ -111,7 +111,8 @@ jobs:
         mv $JPPACKAGECOREtgz /home/runner/.fhir/
         mkfir -p /home/runner/.fhir/work
         mv $JPTerminologyCOREtgz /home/runner/.fhir/work
-        mv $JPTerminologyCOREPtgz /home/runner/.fhir/work
+        mv $JPTerminologyCOREPtgz /home/runner/.fhir/work/JPTerminologyCOREtgz
+        ls -l /home/runner/.fhir/work/*.tgz
         cd /home/runner/.fhir
         tar xzf /home/runner/.fhir/$JPPACKAGECOREtgz
         tar xzf /home/runner/.fhir/work/$JPTerminologyCOREtgz
