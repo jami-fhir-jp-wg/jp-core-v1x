@@ -82,7 +82,7 @@ jobs:
       with:
         url: "https://jpfhir.jp/fhir/fhir_dotFHIR_packages.tgz"
         target: .
-        
+
     - name: Download the file
       uses: suisei-cn/actions-download-file@v1.4.0
       id: downloadfile2  # Remember to give an ID if you need the output
@@ -97,6 +97,7 @@ jobs:
         JPTerminologyCOREtgz: jpfhirTerminology#1.1.1
       run: |
         mkdir -p /home/runner/.fhir
+        ls -l ./*.tgz
         mv $JPPACKAGECOREtgz /home/runner/.fhir/
         mv $JPTerminologyCOREtgz /home/runner/.fhir/work
         cd /home/runner/.fhir
