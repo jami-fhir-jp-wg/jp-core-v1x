@@ -110,7 +110,7 @@ jobs:
         ls -l ./*.tgz
         mv $JPPACKAGECOREtgz /home/runner/.fhir/
         mkdir -p /home/runner/.fhir/work
-        mv $JPTerminologyCOREPtgz /home/runner/.fhir/work/JPTerminologyCOREtgz
+        mv $JPTerminologyCOREPtgz /home/runner/.fhir/work/$JPTerminologyCOREtgz
         ls -l /home/runner/.fhir/work/*.tgz
         cd /home/runner/.fhir
         tar xzf /home/runner/.fhir/$JPPACKAGECOREtgz
