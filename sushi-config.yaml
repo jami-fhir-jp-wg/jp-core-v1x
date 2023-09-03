@@ -61,6 +61,7 @@ pages:
   download.md:
     title: ダウンロード
 
+
 #-----------------------------------------
 # メニュー設定
 #-----------------------------------------
@@ -285,6 +286,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
     - http://loinc.org
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_Loinc_CS
     - urn:oid:1.2.392.200119.4.101.6
     - urn:oid:1.2.392.200119.4.101.2
     - urn:oid:1.2.392.200119.4.201.2

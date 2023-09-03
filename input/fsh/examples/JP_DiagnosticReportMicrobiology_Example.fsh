@@ -35,13 +35,13 @@ Usage: #example
 * contained[+] = susceptibility-measurements2-9
 * contained[+] = jp-servicerequest-example-1
 * text.status = #additional
-* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><h2><span title='Codes: {http://loinc.org 18725-2}'>Microbiology studies</span> (<span title='Codes: {http://loinc.org LP7819-8}'>微生物検査</span>) </h2><table class='grid'><tr><td>Subject</td><td>山田 太郎 male, DoB: 1970-01-01 ( id: 00000010)</td></tr><tr><td>When For</td><td>2021-03-04 08:30:00+09:00</td></tr><tr><td>Reported</td><td>2021-03-04 11:45:33+09:00</td></tr><tr><td>Identifier:</td><td> id: 1234567 (use: USUAL)</td></tr></table><p><b>Report Details</b></p><table class='grid' border='1'><tr><th>Category</th><th>Code</th><th>Value</th><th>Category</th><th>Code</th><th>Value</th><th>Category</th><th>Code</th><th>Interpretation</th></tr><tr><td rowspan='4'>Gram stain</td><td>白血球</td><td>1+</td><td rowspan='4' colspan='6'></td></tr><tr><td>上皮細胞</td><td>少数</td></tr><tr><td>グラム陽性球菌（GPC）</td><td>1+</td></tr><tr><td>グラム陽性桿菌（GPR）</td><td>少数</td></tr><tr><td rowspan='48'>Organism panels</td><td rowspan='48'>培養同定(一般細菌)</td><td rowspan='48'></td><td rowspan='4'>Organism</td><td>α-Streptococcus</td><td>1+</td><td rowspan='4' colspan='3'></td></tr><tr><td>Corynebacterium spp.</td><td>少数</td></tr><tr><td>Staphylococcus aureus (MRSA)</td><td>2+</td></tr><tr><td>Streptococcus pneumoniae</td><td>1+</td></tr><tr><td rowspan='7'>Susceptibility panels</td><td rowspan='7'>Staphylococcus aureus (MRSA)</td><td rowspan='7'></td><td rowspan='7'>Susceptibility measurements</td><td>GM</td><td>Resistant</td></tr><tr><td>ABK</td><td>Susceptible</td></tr><tr><td>MINO</td><td>Resistant</td></tr><tr><td>CLDM</td><td>Resistant</td></tr><tr><td>LVFX</td><td>Resistant</td></tr><tr><td>FOM</td><td>Intermediate</td></tr><tr><td>VCM</td><td>Susceptible</td></tr><tr><td rowspan='9'>Susceptibility panels</td><td rowspan='9'>Streptococcus pneumoniae</td><td rowspan='9'></td><td rowspan='9'>Susceptibility measurements</td><td>PCG</td><td>Susceptible</td></tr><tr><td>MINO</td><td>Resistant</td></tr><tr><td>EM</td><td>Resistant</td></tr><tr><td>CTRX</td><td>Susceptible</td></tr><tr><td>CFPN-PI</td><td>Susceptible</td></tr><tr><td>CLDM</td><td>Resistant</td></tr><tr><td>LVFX</td><td>Susceptible</td></tr><tr><td>MEPM</td><td>Susceptible</td></tr><tr><td>VCM</td><td>Susceptible</td></tr></table></div>"
+* text.div = "<div xmlns='http://www.w3.org/1999/xhtml'><h2><span title='Codes: {http://jpfhir/fhir/core/CodeSystem/loinc.org 18725-2}'>Microbiology studies</span> (<span title='Codes: {http://jpfhir/fhir/core/CodeSystem/loinc.org LP7819-8}'>微生物検査</span>) </h2><table class='grid'><tr><td>Subject</td><td>山田 太郎 male, DoB: 1970-01-01 ( id: 00000010)</td></tr><tr><td>When For</td><td>2021-03-04 08:30:00+09:00</td></tr><tr><td>Reported</td><td>2021-03-04 11:45:33+09:00</td></tr><tr><td>Identifier:</td><td> id: 1234567 (use: USUAL)</td></tr></table><p><b>Report Details</b></p><table class='grid' border='1'><tr><th>Category</th><th>Code</th><th>Value</th><th>Category</th><th>Code</th><th>Value</th><th>Category</th><th>Code</th><th>Interpretation</th></tr><tr><td rowspan='4'>Gram stain</td><td>白血球</td><td>1+</td><td rowspan='4' colspan='6'></td></tr><tr><td>上皮細胞</td><td>少数</td></tr><tr><td>グラム陽性球菌（GPC）</td><td>1+</td></tr><tr><td>グラム陽性桿菌（GPR）</td><td>少数</td></tr><tr><td rowspan='48'>Organism panels</td><td rowspan='48'>培養同定(一般細菌)</td><td rowspan='48'></td><td rowspan='4'>Organism</td><td>α-Streptococcus</td><td>1+</td><td rowspan='4' colspan='3'></td></tr><tr><td>Corynebacterium spp.</td><td>少数</td></tr><tr><td>Staphylococcus aureus (MRSA)</td><td>2+</td></tr><tr><td>Streptococcus pneumoniae</td><td>1+</td></tr><tr><td rowspan='7'>Susceptibility panels</td><td rowspan='7'>Staphylococcus aureus (MRSA)</td><td rowspan='7'></td><td rowspan='7'>Susceptibility measurements</td><td>GM</td><td>Resistant</td></tr><tr><td>ABK</td><td>Susceptible</td></tr><tr><td>MINO</td><td>Resistant</td></tr><tr><td>CLDM</td><td>Resistant</td></tr><tr><td>LVFX</td><td>Resistant</td></tr><tr><td>FOM</td><td>Intermediate</td></tr><tr><td>VCM</td><td>Susceptible</td></tr><tr><td rowspan='9'>Susceptibility panels</td><td rowspan='9'>Streptococcus pneumoniae</td><td rowspan='9'></td><td rowspan='9'>Susceptibility measurements</td><td>PCG</td><td>Susceptible</td></tr><tr><td>MINO</td><td>Resistant</td></tr><tr><td>EM</td><td>Resistant</td></tr><tr><td>CTRX</td><td>Susceptible</td></tr><tr><td>CFPN-PI</td><td>Susceptible</td></tr><tr><td>CLDM</td><td>Resistant</td></tr><tr><td>LVFX</td><td>Susceptible</td></tr><tr><td>MEPM</td><td>Susceptible</td></tr><tr><td>VCM</td><td>Susceptible</td></tr></table></div>"
 * identifier.use = #usual
 * identifier.system = "http://abc-hospital.local/fhir/mb/reportid"
 * identifier.value = "1234567"
 * basedOn = Reference(ServiceRequest/jp-servicerequest-example-1)
 * status = #final
-* category[microbiology] = $US_Loinc_CS#LP7819-8 "微生物検査"
+* category[microbiology] = $JP_Loinc_CS#LP7819-8 "微生物検査"
 * code = $JP_DocumentCodes_CS#18725-2 "Microbiology studies (set)"
 * subject = Reference(Patient/jp-patient-example-1)
 * encounter = Reference(Encounter/jp-encounter-example-1)
@@ -70,7 +70,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "微生物学検査"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
 * code.coding[+] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
 * code.coding[+] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z1 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義1(白血球)"
@@ -83,7 +83,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
 * code.coding[+] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
 * code.coding[+] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z2 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義2(上皮細胞)"
@@ -96,7 +96,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
 * code.coding[+] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
 * code.coding[+] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z3 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義3(グラム陽性球菌（GPC）)"
@@ -109,7 +109,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
 * code.coding[+] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
 * code.coding[+] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z4 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義4(グラム陽性桿菌（GPR）)"
@@ -122,7 +122,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)_喀痰_培養検査"
 * code.text = "培養同定(一般細菌)"
@@ -135,7 +135,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)_喀痰_培養検査"
 * code.text = "培養同定(一般細菌)"
@@ -148,7 +148,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)_喀痰_培養検査"
 * code.text = "培養同定(一般細菌)"
@@ -160,7 +160,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)_喀痰_培養検査"
 * code.text = "培養同定(一般細菌)"
@@ -173,7 +173,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism "Organism"
 * code.coding[infectious-agent] = $JP_Microbiology_InfectiousAgent_CS#1303
 * code.text = "Staphylococcus aureus (MRSA)"
@@ -185,7 +185,7 @@ Usage: #inline
 * subject = Reference(Patient/jp-patient-example-1)
 * status = #final
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-panels "Susceptibility panels"
 * code.coding[infectious-agent] = $JP_Microbiology_InfectiousAgent_CS#1303
 * code.text = "Staphylococcus aureus (MRSA)"
@@ -203,7 +203,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism "Organism"
 * code.coding[infectious-agent] = $JP_Microbiology_InfectiousAgent_CS#1131
 * code.text = "Streptococcus pneumoniae"
@@ -215,7 +215,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-panels "Susceptibility panels"
 * code.coding[infectious-agent] = $JP_Microbiology_InfectiousAgent_CS#1131
 * code.text = "Streptococcus pneumoniae"
@@ -235,7 +235,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism "Organism"
 * code.coding[infectious-agent] = $JP_Microbiology_InfectiousAgent_CS#1101
 * code.text = "α-Streptococcus"
@@ -247,7 +247,7 @@ Usage: #inline
 * subject = Reference(Patient/jp-patient-example-1)
 * status = #final
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism "Organism"
 * code.coding[infectious-agent] = $JP_Microbiology_InfectiousAgent_CS#6000
 * code.text = "Corynebacterium sp."
@@ -260,7 +260,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1821 "GM"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
@@ -271,7 +271,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1871 "ABK"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
@@ -282,7 +282,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2121 "MINO"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
@@ -293,7 +293,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2006 "CLDM"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
@@ -304,7 +304,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2516 "LVFX"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
@@ -315,7 +315,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2601 "FOM"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
@@ -326,7 +326,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2301 "VCM"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
@@ -337,7 +337,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1201 "PCG"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
@@ -348,7 +348,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2121 "MINO"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
@@ -360,7 +360,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1901 "EM"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
@@ -371,7 +371,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1656 "CTRX"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
@@ -382,7 +382,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1596 "CFPN-PI"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
@@ -393,7 +393,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2006 "CLDM"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
@@ -404,7 +404,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2516 "LVFX"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
@@ -415,7 +415,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1411 "MEPM"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
@@ -426,7 +426,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $US_Loinc_CS#18725-2 "Microbiology studies (set)"
+* category[microbiology] = $JP_Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2301 "VCM"
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"

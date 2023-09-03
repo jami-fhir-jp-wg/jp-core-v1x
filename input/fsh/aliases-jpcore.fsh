@@ -1,5 +1,7 @@
 
 Alias: $US_Loinc_CS = http://loinc.org
+Alias: $JP_Loinc_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Loinc_CS
+
 // ImplementationGuide
 Alias: $FHIRJPCoreImplementationGuide = http://jpfhir.jp/fhir/core/ImplementationGuide/hl7.fhir.jp.core
 

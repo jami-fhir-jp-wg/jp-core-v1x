@@ -8,7 +8,7 @@ Description: "Document Codes DiagnosticReport 値セット"
 * ^date = "2023-06-26"
 
 //* include codes from system $JP_DocumentCodes_CS where concept descendent-of #47045-0
-//* $US_Loinc_CS#LP29684-5 "放射線"
+//* $JP_Loinc_CS#LP29684-5 "放射線"
 // * $JP_DocumentCodes_CS#47045-0 "報告書"
 * $JP_DocumentCodes_CS#28010-7 "心電図報告書"
 * $JP_DocumentCodes_CS#12132-7 "超音波検査報告書"
