@@ -101,10 +101,8 @@ jobs:
         mkdir -p /home/runner/.fhir/work
         mv $JPTerminologyCOREPtgz /home/runner/.fhir/work/$JPTerminologyCOREPtgz
         cd /home/runner/.fhir
-        ls -l $JPTerminologyCOREPtgz
-        tar xzf $JPPACKAGECOREtgz　
+        tar xzf $JPPACKAGECOREtgz
         cd /home/runner/.fhir/work
-        ls -l  
         tar xzf $JPTerminologyCOREPtgz
         cd /home/runner/.fhir
         mkdir -p packages/$JPTerminologyCOREdir
