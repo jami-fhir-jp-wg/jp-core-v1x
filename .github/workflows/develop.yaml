@@ -1,5 +1,4 @@
 name: JPCore FHIR Task develop
-
 on:
   push:
     branches: 
@@ -78,31 +77,23 @@ jobs:
     
     - name: Download the file
       uses: suisei-cn/actions-download-file@v1.4.0
-      id: downloadfile  # Remember to give an ID if you need the output
+      id: downloadfile1
       with:
         url: "https://jpfhir.jp/fhir/fhir_dotFHIR_packages.tgz"
         target: .
 
     - name: Download the file
       uses: suisei-cn/actions-download-file@v1.4.0
-      id: downloadfile2  # Remember to give an ID if you need the output
+      id: downloadfile2
       with:
-        url: "https://jpfhir.jp/fhir/core/terminology/jpfhirTerminology#1.1.1.tgz"
-        target: .    
-  
-
-    - name: Download the file
-      uses: suisei-cn/actions-download-file@v1.4.0
-      id: downloadfile3  # Remember to give an ID if you need the output
-      with:
-        url: "https://jpfhir.jp/fhir/core/terminology/jpfhirTerminology-1.1.1.tgz"
+        url: "https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology-1.1.1.tgz"
         target: .    
     
     - name: Prepare for using all dependent packages including Jp modified version of hl7.fhir.r4.core Package 
       env:
         JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
-        JPTerminologyCOREdir: jpfhirTerminology#1.1.1
-        JPTerminologyCOREPtgz: jpfhirTerminology-1.1.1.tgz
+        JPTerminologyCOREdir: jpfhir-terminology#1.1.1
+        JPTerminologyCOREPtgz: jpfhir-terminology-1.1.1.tgz
 
       run: |
         mkdir -p /home/runner/.fhir
@@ -110,7 +101,7 @@ jobs:
         mkdir -p /home/runner/.fhir/work
         mv $JPTerminologyCOREPtgz /home/runner/.fhir/work/$JPTerminologyCOREPtgz
         cd /home/runner/.fhir
-        tar xzf $JPPACKAGECOREtgz
+        tar xzf $JPPACKAGECOREtgz　
         cd /home/runner/.fhir/work
         tar xzf $JPTerminologyCOREPtgz
         cd /home/runner/.fhir
