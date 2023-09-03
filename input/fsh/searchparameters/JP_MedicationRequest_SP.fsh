@@ -9,7 +9,7 @@ Usage: #definition
 * code = #jp-medication-start
 * base = #MedicationRequest
 * type = #date
-* expression = "MedicationRequest.dosageInstruction.extension('http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse').valuePeriod.start"
+* expression = "MedicationRequest.dosageInstruction.extension('http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse').value.as(Period).start"
 * xpath = "f:MedicationRequest/f:dosageInstruction/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse']/f:valuePeriod/f:start"
 * xpathUsage = #normal
 * comparator[0] = #eq
