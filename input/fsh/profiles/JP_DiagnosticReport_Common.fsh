@@ -19,7 +19,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * insert SetDefinitionRef(basedOn, 元になった検査や診断の依頼に関する情報)
 * basedOn ^comment = "通常、１結果ごとに１つの検査依頼があるが、状況によっては、複数の検査要求に対して１レポートがある場合がある。また１つの検査依頼に対して複数のレポートが作成される場合もあることに注意。"
 * insert SetDefinition(status, 診断レポートのステータス)
-* category from $JP_DiagnosticReportCategory_VS (preferred)
+//* category from $JP_DiagnosticReportCategory_VS (preferred)
 * insert SetDefinitionRef(category, 診断レポートを作成した臨床分野、部門、または診断サービス（心臓病学、生化学、血液学、放射線医学など）を分類するコード)
 * category ^comment = "これは、検索、並べ替え、および表示の目的で使用される。"
 * code from $JP_DocumentCodes_DiagnosticReport_VS (preferred)
