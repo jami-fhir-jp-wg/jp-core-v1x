@@ -19,12 +19,6 @@ dependencies:
   jpfhir-terminology:
     uri: http://jpfhir.jp/fhir/jpfhir-terminology
     version: 1.1.1
-  hl7.terminology:
-    uri: http://terminology.hl7.org
-    version: 5.2.0
-  hl7.terminology.r4:
-    uri: http://terminology.hl7.org
-    version: 5.2.0
 
 #----------------------------------------
 # ページタイトル名称設定
