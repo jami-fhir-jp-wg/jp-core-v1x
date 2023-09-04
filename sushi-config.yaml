@@ -17,10 +17,15 @@ copyright: Copyright FHIR Japanese implementation research working group in Japa
 jurisdiction: urn:iso:std:iso:3166#JP
 dependencies:
   jpfhir-terminology:
-# to avoid warning message "The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole"
     uri: http://jpfhir.jp/fhir/jpfhir-terminology
     version: 1.1.1
-    
+  hl7.terminology:
+    uri: http://terminology.hl7.org
+    version: 5.2.0
+  hl7.terminology.r4:
+    uri: http://terminology.hl7.org
+    version: 5.2.0
+
 #----------------------------------------
 # ページタイトル名称設定
 #----------------------------------------
