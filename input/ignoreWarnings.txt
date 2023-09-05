@@ -10,8 +10,8 @@
 # External Terminologies Existence Warnings
 # 下記のurn:iso:std:iso:3166関連警告はなぜ出るかわからないが実害はない
 The definition for the Code System with URI 'urn:iso:std:iso:3166' doesnt provide any codes so the code cannot be validated
-#　下記の警告は、たぶんIG生成時にはLoingコードの末尾を自動省略しているためと思われる
-Unable to validate code without using server because: Resolved system http://loinc.org (v3.0.1), but the definition is not complete
+#　下記の警告は、たぶんIG生成時にはLoincコードの末尾を自動省略しているためと思われる
+#Unable to validate code without using server because: Resolved system http://loinc.org (v3.0.1), but the definition is not complete
 
 # DICOM関係
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html not found by validator

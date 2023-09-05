@@ -9,9 +9,9 @@ Usage: #example
 * identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.value = "123456"
 * status = #final
-* category[radiology] = $JP_Loinc_CS#LP29684-5
+* category[radiology] = $Loinc_CS#LP29684-5
 * category[radiology_sub] = $dicom-ontology#CT
-* code = $JP_Loinc_CS#18748-4 "Diagnostic imaging study"
+* code = $Loinc_CS#18748-4 "Diagnostic imaging study"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2008-06-17"
 * issued = "2008-06-18T09:23:00+09:00"

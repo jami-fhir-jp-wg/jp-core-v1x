@@ -31,9 +31,9 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category ^slicing.ordered = false
 * category contains endoscopy 1..1
 * category[endoscopy] from $JP_DiagnosticReportCategory_VS (required)
-* category[endoscopy].coding.system = $JP_Loinc_CS (exactly)
+* category[endoscopy].coding.system = $Loinc_CS (exactly)
 * category[endoscopy].coding.code 1..
-* category[endoscopy].coding.code = $JP_Loinc_CS#LP7796-8 (exactly)
+* category[endoscopy].coding.code = $Loinc_CS#LP7796-8 (exactly)
 * category[endoscopy].coding.display = "内視鏡"
 * category[endoscopy] ^short = "診断レポートの分野を表すコード。【詳細参照】"
 * category[endoscopy] ^definition = "診断レポートの分野を表すコード。"
