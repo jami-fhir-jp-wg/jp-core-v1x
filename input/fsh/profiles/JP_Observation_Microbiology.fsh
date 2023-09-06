@@ -35,7 +35,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * code 1..
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
-* code.coding ^slicing.rules = #closed
+* code.coding ^slicing.rules = #open
 * code.coding contains
     infectious-agent ..1 and
     antimicrobial-drug ..1 and
