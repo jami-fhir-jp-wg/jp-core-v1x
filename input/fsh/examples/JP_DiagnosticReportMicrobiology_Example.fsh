@@ -72,8 +72,8 @@ Usage: #inline
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[microbiology] = $Loinc_CS#18725-2 "微生物学検査"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
-* code.coding[+] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
-* code.coding[+] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z1 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義1(白血球)"
+* code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
+* code.coding[@default] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z1 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義1(白血球)"
 * code.text = "白血球"
 * valueString = "1+"
 
@@ -85,8 +85,8 @@ Usage: #inline
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
-* code.coding[+] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
-* code.coding[+] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z2 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義2(上皮細胞)"
+* code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
+* code.coding[@default] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z2 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義2(上皮細胞)"
 * code.text = "上皮細胞"
 * valueString = "少数"
 
@@ -98,8 +98,8 @@ Usage: #inline
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
-* code.coding[+] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
-* code.coding[+] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z3 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義3(グラム陽性球菌（GPC）)"
+* code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
+* code.coding[@default] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z3 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義3(グラム陽性球菌（GPC）)"
 * code.text = "グラム陽性球菌（GPC）"
 * valueString = "1+"
 
@@ -111,8 +111,8 @@ Usage: #inline
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
-* code.coding[+] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
-* code.coding[+] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z4 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義4(グラム陽性桿菌（GPR）)"
+* code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
+* code.coding[@default] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z4 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義4(グラム陽性桿菌（GPR）)"
 * code.text = "グラム陽性桿菌（GPR）"
 * valueString = "少数"
 
