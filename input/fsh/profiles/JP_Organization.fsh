@@ -40,11 +40,9 @@ valueには下記の値を格納する。
 * identifier ^requirements = "Organizations are known by a variety of ids. Some institutions maintain several, and most collect identifiers for exchange with other organizations concerning the organization.\r\n\r\n組織は様々な ID で知られている。いくつかの機関では複数のIDを保持しており、ほとんどの機関では、組織に関する他の組織との交換のためにIDを収集している。"
 * identifier ^comment = "福祉医療関連施設と保険者組織はSlicingについてはJP Coreにて定義を行なっているため、定義に従いデータを格納すること。それ以外の組織については、利用する際には必要に応じて識別子を定義を行なうこと。"
 * identifier contains
-    @default 0..* and
     medicalInstitutionCode ..* and
     insurerNumber ..*
 * identifier.assigner only Reference(JP_Organization)
-* identifier[@default].system 1..1
 * identifier[medicalInstitutionCode] ^short = "施設が福祉医療関連機関である場合に利用する識別子【詳細参照】"
 * identifier[medicalInstitutionCode] ^definition = "福祉医療施設を区別するため医療機関コード（１０桁）を格納するためのIdentifier/Slicing定義。"  
 * identifier[medicalInstitutionCode] ^comment = "systemはFixed Valueの```http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no```を使用する。　

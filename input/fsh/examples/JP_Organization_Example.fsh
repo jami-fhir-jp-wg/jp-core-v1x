@@ -56,5 +56,5 @@ Description: "ＡＢＣ検査株式会社"
 Usage: #example
 * type = http://terminology.hl7.org/CodeSystem/organization-type#team "Organizational team"
 * name = "ひまわりＡＢＣ検査株式会社健康保険組合"
-* identifier[@default].system = "http://abc-hospital.local/fhir/Organization/localcode"
-* identifier[@default].value = "000-000-000"
+* identifier[+].system = "http://abc-hospital.local/fhir/Organization/localcode"
+* identifier[=].value = "000-000-000"
