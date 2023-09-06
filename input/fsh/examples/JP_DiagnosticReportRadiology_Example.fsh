@@ -11,7 +11,7 @@ Usage: #example
 * status = #final
 * category[radiology] = $Loinc_CS#LP29684-5
 * category[radiology_sub] = $dicom-ontology#CT
-* code = $Loinc_CS#18748-4 "Diagnostic imaging study"
+* code = $JP_DocumentCodes_CS#18748-4 "画像検査報告書"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2008-06-17"
 * issued = "2008-06-18T09:23:00+09:00"

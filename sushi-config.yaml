@@ -1,5 +1,5 @@
 id: hl7.fhir.jp.core
-canonical: http://jpfhir.jp/fhir/core/ImplementationGuide-hl7.fhir.jp.core
+canonical: http://jpfhir.jp/fhir/core/
 name: "FHIRJPCoreImplementationGuide"
 title: "HL7 FHIR JP Core ImplementationGuide"
 description: "日本医療情報学会(JAMI) NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した日本国内におけるベースとなるJP Core実装ガイドのドラフトVer.1.1.2 です。"
@@ -17,7 +17,7 @@ copyright: Copyright FHIR Japanese implementation research working group in Japa
 jurisdiction: urn:iso:std:iso:3166#JP
 dependencies:
   jpfhir-terminology:
-    uri: http://jpfhir.jp/fhir/jpfhir-terminology/ImplementationGuide-jp-fhir-terminology
+    uri: http://jpfhir.jp/fhir/jpfhir-terminology/
     version: 1.1.1
 
 #----------------------------------------
