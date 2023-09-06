@@ -228,9 +228,8 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * dosage.method.extension contains JP_MedicationDosage_MethodComment named methodComment ..*
 * insert MedicationAdministrationBaseRules_dosageMethod2Dose
 * insert MedicationAdministrationBaseRules_dosageRateX
-//--以下２行を追加（2023.9.6)
+//--以下１行を追加（2023.9.6)
 * dosage.rateRatio only JP_MedicationRatio_DosePerPeriod
-* dosage.rateRange only JP_MedicationRange_UnitOfTime
 
 * dosage.rateQuantity ^short = "投与速度(流量)を指定する単位は流量を表す単位（e.g. 量/時間)を指定する"
 * dosage.rateQuantity ^definition = "投与速度(流量)を指定する単位は流量を表す単位（e.g. 量/時間)を指定する"
