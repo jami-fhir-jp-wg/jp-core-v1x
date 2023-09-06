@@ -35,11 +35,13 @@ Description: "このプロファイルはObservationリソースに対して、�
 * code 1..
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
-* code.coding ^slicing.rules = #open
+* code.coding ^slicing.rules = #close
 * code.coding contains
+    @deafult 0..* and
     infectious-agent ..1 and
     antimicrobial-drug ..1 and
     jlac10 ..1
+* code.coding[@default].system 1..1
 * insert SetDefinitionRef(code.coding, このObservationの対象を特定するコード)
 * code.coding ^comment = "【JP Core仕様】[Slicing](http://hl7.org/fhir/R4/profiling.html#slicing)を使用して複数のコード体系に対応\r\n\r\n基本方針としてカテゴリに応じた標準コードの使用を想定しているが、ローカルコードを使用してもよい"
 * code.coding[infectious-agent] from $JP_Microbiology_InfectiousAgent_VS (required)
