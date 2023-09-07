@@ -7,4 +7,4 @@ Description: "微生物学検査カテゴリ値セット"
 * ^experimental = false
 * ^date = "2023-06-26"
 
-* $US_Loinc_CS#18725-2 "微生物学検査"
+* $Loinc_CS#18725-2 "微生物学検査"

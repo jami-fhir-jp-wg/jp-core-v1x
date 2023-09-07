@@ -1,10 +1,10 @@
 name: JPCore FHIR Task develop
-
 on:
   push:
     branches: 
       - 'develop'
       - 'release/**'
+      - 'feature/ext*'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
@@ -74,24 +74,39 @@ jobs:
         tag: 'latest'
         path: .
         file: publisher.jar
-        
+    
     - name: Download the file
       uses: suisei-cn/actions-download-file@v1.4.0
-      id: downloadfile  # Remember to give an ID if you need the output
+      id: downloadfile1
       with:
         url: "https://jpfhir.jp/fhir/fhir_dotFHIR_packages.tgz"
         target: .
 
+    - name: Download the file
+      uses: suisei-cn/actions-download-file@v1.4.0
+      id: downloadfile2
+      with:
+        url: "https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology-1.1.1.tgz"
+        target: .    
+    
     - name: Prepare for using all dependent packages including Jp modified version of hl7.fhir.r4.core Package 
       env:
-        JPPACKAGECORE: fhir_dotFHIR_packages.tgz
+        JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
+        JPTerminologyCOREdir: jpfhir-terminology#1.1.1
+        JPTerminologyCOREPtgz: jpfhir-terminology-1.1.1.tgz
       run: |
         mkdir -p /home/runner/.fhir
-        mv $JPPACKAGECORE /home/runner/.fhir/
+        mv $JPPACKAGECOREtgz /home/runner/.fhir/
+        mkdir -p /home/runner/.fhir/work
+        mv $JPTerminologyCOREPtgz /home/runner/.fhir/work/$JPTerminologyCOREPtgz
         cd /home/runner/.fhir
-        tar xzf /home/runner/.fhir/$JPPACKAGECORE 
-        ls -l /home/runner/.fhir/packages/
-        
+        tar xzf $JPPACKAGECOREtgz
+        cd /home/runner/.fhir/work
+        tar xzf $JPTerminologyCOREPtgz
+        cd /home/runner/.fhir
+        mkdir -p packages/$JPTerminologyCOREdir
+        mv /home/runner/.fhir/work/package /home/runner/.fhir/packages/$JPTerminologyCOREdir
+         
     - name: Run IG Publisher
       run: | 
         mkdir input-cache
@@ -99,7 +114,7 @@ jobs:
         unset DISPLAY
         # java  -Xmx4G -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx https://tx.jpfhir.jp:8081
         # java  -Xmx12G -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx https://ustx.jpfhir.jp/
-        java  -Xmx12G -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx n/a
+        java  -Xmx12G -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx n/a -no-network
         mv ./input/landing_page/_index.yml ./output/
 
     - name: STEP1 = ssh key generate  for copying all IG files to public JAMI WG Web site 

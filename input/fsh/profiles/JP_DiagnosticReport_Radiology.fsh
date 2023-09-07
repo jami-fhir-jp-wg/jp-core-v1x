@@ -38,9 +38,9 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[radiology] ^short = "レポートを作成した分野を分類するコード【詳細参照】"
 * category[radiology] ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは第1コードとして LP29684-5 を固定値として設定。第2コード以下にDICOMModalityコードを列挙することでレポートの対象検査内容を示す。"
 * category[radiology] from $JP_DiagnosticReportCategory_VS (required)
-* category[radiology].coding.system = $US_Loinc_CS (exactly)
+* category[radiology].coding.system = $Loinc_CS (exactly)
 * category[radiology].coding.code 1..
-* category[radiology].coding.code = $US_Loinc_CS#LP29684-5 (exactly)
+* category[radiology].coding.code = $Loinc_CS#LP29684-5 (exactly)
 * category[radiology].coding.display = "放射線"
 * category[radiology_sub] ^short = "レポート対象のモダリティを示すコード【詳細参照】"
 * category[radiology_sub] ^definition = "レポート対象のモダリティを示すコード。放射線を表す第1コードのLP29684-5に続くサブカテゴリコードとして第2コード以下に保持される。複数のモダリティの組み合わせを許容するため、コードの列挙を許容する。"
@@ -61,7 +61,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * code.coding[radiologyReportCode] ^comment = "推奨コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しないが、互換性を意識すること。"
 * code.coding[radiologyReportCode].system = $JP_DocumentCodes_CS (exactly)
 * code.coding[radiologyReportCode].code 1..
-* code.coding[radiologyReportCode].code = $JP_DocumentCodes_CS#18748-4 (exactly)
+* code.coding[radiologyReportCode].code = #18748-4 (exactly)
+* code.coding[radiologyReportCode].display = "画像検査報告書"
 * subject MS
 * subject ^definition = "レポートの対象。 必ずでは無いが、通常、これには「患者」が該当する。"
 * subject ^comment = "参照は実際のFHIRリソースへの参照であり、解決可能である必要がある。解決はURLから取得するか、または、リソースタイプが利用できる場合は絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索する。\r\n\r\n【JP Core仕様】Patient リソースを参照"

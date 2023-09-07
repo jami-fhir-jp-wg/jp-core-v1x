@@ -1,0 +1,320 @@
+id: hl7.fhir.jp.core
+canonical: http://jpfhir.jp/fhir/core
+
+name: "FHIRJPCoreImplementationGuide"
+title: "HL7 FHIR JP Core ImplementationGuide"
+description: "日本医療情報学会(JAMI) NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した日本国内におけるベースとなるJP Core実装ガイドのドラフトVer.1.1.2 です。"
+status: active # draft | active | retired | unknown
+version: 1.1.2
+date: 2023-06-26
+fhirVersion: 4.0.1
+copyrightYear: 2022+
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+publisher:
+  name: FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)
+  url: http://jpfhir.jp
+  email: office@hlfhir.jp
+copyright: Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG
+jurisdiction: 'urn:iso:std:iso:3166#JP'
+dependencies:
+  jpfhir-terminology:
+# to avoid warning message "The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole"
+    uri: http://jpfhir.jp/fhir/jpfhir-terminology
+    version: 1.1.1
+#----------------------------------------
+# ページタイトル名称設定
+#----------------------------------------
+pages:
+  index.md:
+    title: HL7 FHIR JP Core 実装ガイド
+  guidance.md:
+    title: ガイダンス
+    guide-general.md:
+      title: 総合ガイダンス
+    guide-mustSupportCardinality.md:
+      title: Must SupportとCardinality(多重度)のルール
+    guide-handlingOfNonExistentData.md:
+      title: 欠損値（データが存在しない場合）の扱い
+    guide-characterEncoding.md:
+      title: 文字コード
+    guide-stringSearch.md:
+      title: 検索
+    guide-precautions.md:
+      title: 利用上の注意事項
+    update_history.md:
+      title: 更新履歴
+  group-fhircontents.md:
+    title: FHIR Contents List
+    group-administration.md:
+      title: Administration Group
+    group-medication.md:
+      title: Medication Group
+    group-diagnostic.md:
+      title: Diagnostic Group
+    group-clinical.md:
+      title: Clinical Group
+    group-capabilityStatement.md:
+      title: CapabilityStatement
+    group-searchParameter.md:
+      title: Search Parameter
+  security.md:
+    title: セキュリティ
+  download.md:
+    title: ダウンロード
+
+#-----------------------------------------
+# メニュー設定
+#-----------------------------------------
+menu:
+  FHIRJP: index.html
+  Guidances: 
+    総合ガイダンス: guide-general.html
+    MustSupportとCardinality: guide-mustSupportCardinality.html
+    欠損値の扱い: guide-handlingOfNonExistentData.html
+    文字コード: guide-characterEncoding.html
+    文字列検索: guide-stringSearch.html
+    利用上の注意事項: guide-precautions.html
+    更新履歴: update_history.html
+  FHIRContents: 
+    Administration: group-administration.html
+    Medication: group-medication.html
+    Diagnostic: group-diagnostic.html
+    Clinical: group-clinical.html
+  Security: security.html
+  Artifacts: artifacts.html
+  Download: download.html
+
+#-----------------------------------------
+# IG 外部パラメータ設定
+#-----------------------------------------
+parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  path-resource:
+    - input/resources
+    - fsh-generated/resources
+  path-pages:
+    - input/pagecontent
+    - input/intro-notes
+    - fsh-generated/includes
+    #- input/summaries
+  path-expansion-params: '../../input/_resources/exp-params.json'
+  no-narrative: 
+    - CodeSystem/*
+  active-tables: 'false'
+  apply-version: 'true'
+  apply-copyright: 'true'
+  apply-publisher: 'true'
+  apply-contact: 'true'
+  apply-license: 'true'
+  apply-jurisdiction: 'true'
+  show-inherited-invariants: 'true'
+  usage-stats-opt-out: 'true'
+  display-warnings: 'true'
+  excludexml: 'false'
+  excludejsn: 'false'
+  excludettl: 'true'
+  excludemap: 'true'
+  excludeexample: 'true'
+  generate: #what does this do - todo: remove and see
+    - xml
+    - json
+  no-validate:
+    - '*/hl7.fhir.jp.core'
+  no-usage-check: 'true'
+  i18n-default-lang: 'ja'
+  special-url:
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Endoscopy
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Microbiology
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_HumanName
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Endoscopy
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Location
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Media_Endoscopy
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration_Injection
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministrationBase
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispense_Injection
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispense
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispenseBase
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage_Injection
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosageBase
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationQuantity
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRange_UnitOfTime
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRange
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_Amount
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_DosePerDay
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_DosePerPeriod
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationSimpleQuantity
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationTiming
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_BodyMeasurement
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_LabResult
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Microbiology
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_PhysicalExam
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_SocialHistory
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_VitalSigns
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_PractitionerRole
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Procedure
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_UncategorizedComment
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Device
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_DosageComment
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_LineComment
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_MethodComment
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_RateComment
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_RouteComment
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_SiteComment
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race
+    - http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement
+    - http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Server_CapabilityStatement
+    - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonNumber_SP
+    - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSubNumber_SP
+    - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSymbol_SP
+    - http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationRequest_Start_SP
+    - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationCategory_SP
+    - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationNo_SP
+    - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_PrefectureNo_SP
+    - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_CS
+    - urn:oid:1.2.392.200270.4.1000.1
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageComment_CS
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationRequestDosageInstructionLine_CS
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageLineComment_CS
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageMethodComment_CS
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageRateComment_CS
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageRouteComment_CS
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageSiteComment_CS
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationUncategorizedComment_CS
+    - urn:oid:1.2.392.100495.10.3.100.5.11.5.2
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_MicrobiologyCategory_CS
+    - urn:oid:1.2.392.100495.10.3.100.5.27.6.1
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodySite_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationMethod_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationPhysicalExamMethod_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_PhysicalExamCode_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureBodySite_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCategory_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureNotPerformedReason_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureOutcome_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionSeverity_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix2Digits_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix3Digits_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DiagnosticReportCategory_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_Endoscopy_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_DiagnosticReport_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicalFeeScoreType_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicalLicenseCertificate_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationAsNeededConditionJAMI_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationAsNeededConditionMERIT9_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationBodySiteJAMIExternal_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategoryInjeciton_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategoryJHSI0001_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategoryJHSP0007_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategoryMERIT9_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategory_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCodeHOT13_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCodeHOT7_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCodeHOT9_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageComment_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationRequestDosageInstructionLine_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageLineComment_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageMethodComment_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageRateComment_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageRouteComment_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageSiteComment_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationUncategorizedComment_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationFormMERIT9_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationIngredientStrengthStrengthType_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationInstructionForDispenseJHSP0002_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIBasicUsage_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJAMIDetailUsage_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJHSI0003_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationSubstitutionNotAllowedReason_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUsageInjection_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUsageJAMIAdditional_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUsageJAMI_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCodeCommon_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_Immunization_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCodeYJ_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_Microbiology_AntiMicrobialDrug_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MicrobiologyCategory_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_Microbiology_InfectiousAgent_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCategory_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCode_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodySite_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationCategory_Microbiology_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationLabResultCode_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationMethod_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationPhysicalExamBodySite_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationPhysicalExamMethod_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationSocialHistoryCode_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCategory_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCode_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_PhysicalExamCode_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_PractitionerRole_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_PrefectureNumber_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureBodySite_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCategory_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCodesMedical_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCodesSTEM7_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCodesDental_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCodesICHI_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCodesNurse_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCondition_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureDeviceAction_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureDeviceKind_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureFollowUp_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureNotPerformedReason_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureOutcome_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedurePerformerRole_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureReason_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_RadiologyModality_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCodesJed_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
+

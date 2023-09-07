@@ -8,7 +8,13 @@
 %The Implementation Guide contains no examples%
 
 # External Terminologies Existence Warnings
+# 下記のurn:iso:std:iso:3166関連警告はなぜ出るかわからないが実害はない
+The definition for the Code System with URI 'urn:iso:std:iso:3166' doesnt provide any codes so the code cannot be validated
+
+# Uniform Reource Locator はValidation不要
 Code System URI 'urn:ietf:rfc:3986' is unknown so the code cannot be validated
+
+# DICOM関係
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html not found by validator
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html not found by validator
 ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 not found by validator
