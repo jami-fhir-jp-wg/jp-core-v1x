@@ -3,8 +3,8 @@
 //Alias: $JP_Loinc_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Loinc_CS
 Alias: $Loinc_CS = http://loinc.org
 
-// ImplementationGuide
-Alias: $FHIRJPCoreImplementationGuide = http://jpfhir.jp/fhir/core/ImplementationGuide/hl7.fhir.jp.core
+// ImplementationGuid
+Alias: $FHIRJPCoreImplementationGuide = http://jpfhir.jp/fhir/core/ImplementationGuide/jpfhir.jp.core
 
 // StructureDefinition: Profile, DataType
 Alias: $JP_AllergyIntolerance = http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance

@@ -11,7 +11,7 @@
 [JP_Observation_Common_Operation]: StructureDefinition-jp-observation-common.html#operation一覧
 
 <!-- ImplementationGuide -->
-[FHIRJPCoreImplementationGuide]: ImplementationGuide-hl7.fhir.jp.core.html
+[FHIRJPCoreImplementationGuide]: ImplementationGuide-jpfhir.jp.core.html
 
 <!-- StructureDefinition: Profile, DataType -->
 [JP_AllergyIntolerance]: StructureDefinition-jp-allergyintolerance.html
@@ -126,39 +126,20 @@
 [JP_ObservationBodyMeasurementCategory_CS]: CodeSystem-jp-observation-bodymeasurement-category-cs.html
 [JP_ObservationBodyMeasurementCode_CS]: CodeSystem-jp-observation-bodymeasurement-code-cs.html
 [JP_ObservationBodySite_CS]: CodeSystem-jp-observation-bodysite-cs.html
-[JP_ObservationMethod_CS]: CodeSystem-jp-observation-method-cs.html
-[JP_ObservationPhysicalExamMethod_CS]: CodeSystem-jp-observation-physicalexam-method-cs.html
 [JP_PhysicalExamCode_CS]: CodeSystem-jp-physicalexamcode-cs.html
 [JP_ProcedureBodySite_CS]: CodeSystem-jp-procedure-body-site-cs.html
-[JP_ProcedureCategory_CS]: CodeSystem-jp-procedure-category-cs.html
 [JP_ProcedureNotPerformedReason_CS]: CodeSystem-jp-procedure-not-performed-reason-cs.html
 [JP_ProcedureOutcome_CS]: CodeSystem-jp-procedure-outcome-cs.html
 [JP_SimpleObservationCategory_CS]: CodeSystem-jp-simpleobservationcategory-cs.html
 [JP_Undefined_CS]: CodeSystem-jp-undefined-cs.html
 
 <!-- ValueSet -->
-[JP_AllergyIntolerance_VS]: ValueSet-jp-allergyintolerance-vs.html
 [JP_ConclusionCodesJed_VS]: ValueSet-jp-conclusion-codes-jed-vs.html
 [JP_ConditionSeverity_VS]: ValueSet-jp-condition-severity-vs.html
-[JP_Department_SsMix_VS]: ValueSet-jp-department-ssmix-vs.html
-[JP_Department_SsMix2Digits_VS]: ValueSet-jp-department-ssmix2digits-vs.html
-[JP_Department_SsMix3Digits_VS]: ValueSet-jp-department-ssmix3digits-vs.html
 [JP_DiagnosticReportCategory_VS]: ValueSet-jp-diagnosticreportcategory-vs.html
-[JP_DocumentCodes_Endoscopy_VS]: ValueSet-jp-documentcodes-endoscopy-vs.html
 [JP_DocumentCodes_DiagnosticReport_VS]: ValueSet-jp-documentcodes-diagnosticreport-vs.html
-[JP_MedicalFeeScoreType_VS]: ValueSet-jp-medicalfeescoretype-vs.html
+[JP_DocumentCodes_Endoscopy_VS]: ValueSet-jp-documentcodes-endoscopy-vs.html
 [JP_MedicalLicenseCertificate_VS]: ValueSet-jp-medicallicensecertificate-vs.html
-[JP_MedicationAsNeededConditionJAMI_VS]: ValueSet-jp-medication-as-needed-condition-jami-vs.html
-[JP_MedicationAsNeededConditionMERIT9_VS]: ValueSet-jp-medication-as-needed-condition-merit9-vs.html
-[JP_MedicationBodySiteJAMIExternal_VS]: ValueSet-jp-medication-bodysite-jami-external-vs.html
-[JP_MedicationCategoryInjection_VS]: ValueSet-jp-medication-category-injection-vs.html
-[JP_MedicationCategoryJHSI0001_VS]: ValueSet-jp-medication-category-jhsi0001-vs.html
-[JP_MedicationCategoryJHSP0007_VS]: ValueSet-jp-medication-category-jhsp0007-vs.html
-[JP_MedicationCategoryMERIT9_VS]: ValueSet-jp-medication-category-merit9-vs.html
-[JP_MedicationCategory_VS]: ValueSet-jp-medication-category-vs.html
-[JP_MedicationCodeHOT13_VS]: ValueSet-jp-medication-code-hot13-vs.html
-[JP_MedicationCodeHOT7_VS]: ValueSet-jp-medication-code-hot7-vs.html
-[JP_MedicationCodeHOT9_VS]: ValueSet-jp-medication-code-hot9-vs.html
 [JP_MedicationExampleDosageComment_VS]: ValueSet-jp-medication-example-dosagecomment-vs.html
 [JP_MedicationExampleLine_VS]: ValueSet-jp-medication-example-line-vs.html
 [JP_MedicationExampleLineComment_VS]: ValueSet-jp-medication-example-linecomment-vs.html
@@ -167,45 +148,17 @@
 [JP_MedicationExampleRouteComment_VS]: ValueSet-jp-medication-example-routecomment-vs.html
 [JP_MedicationExampleSiteComment_VS]: ValueSet-jp-medication-example-sitecomment-vs.html
 [JP_MedicationExampleUncategorizedComment_VS]: ValueSet-jp-medication-example-uncategorized-comment-vs.html
-[JP_MedicationFormMERIT9_VS]: ValueSet-jp-medication-form-merit9-vs.html
-[JP_MedicationIngredientStrengthStrengthType_VS]: ValueSet-jp-medication-ingredientstrength-strengthtype-vs.html
 [JP_MedicationInstructionForDispenseJHSP0002_VS]: ValueSet-jp-medication-instruction-for-dispense-jhsp0002-vs.html
-[JP_MedicationMethodJAMIBasicUsage_VS]: ValueSet-jp-medication-method-jami-basic-usage-vs.html
-[JP_MedicationMethodJAMIDetailUsage_VS]: ValueSet-jp-medication-method-jami-detail-usage-vs.html
-[JP_MedicationMethodJHSI0003_VS]: ValueSet-jp-medication-method-jhsi0003-vs.html
-[JP_MedicationRouteHL70162_VS]: ValueSet-jp-medication-route-hl70162-vs.html
-[JP_MedicationSubstitutionNotAllowedReason_VS]: ValueSet-jp-medication-substitution-not-allowed-reason-vs.html
-[JP_MedicationUnitMERIT9_VS]: ValueSet-jp-medication-unit-merit9-vs.html
-[JP_MedicationUsageInjection_VS]: ValueSet-jp-medication-usage-injection-vs.html
-[JP_MedicationUsageJAMIAdditional_VS]: ValueSet-jp-medication-usage-jami-additional-vs.html
-[JP_MedicationUsageJAMI_VS]: ValueSet-jp-medication-usage-jami-vs.html
-[JP_MedicationCodeCommon_VS]: ValueSet-jp-medicationcode-common-vs.html
-[JP_MedicationCode_Immunization_VS]: ValueSet-jp-medicationcode-immunization-vs.html
-[JP_MedicationCode_VS]: ValueSet-jp-medicationcode-vs.html
-[JP_MedicationCodeYJ_VS]: ValueSet-jp-medicationcode-yj-vs.html
 [JP_Microbiology_AntiMicrobialDrug_VS]: ValueSet-jp-microbiology-anti-microbial-drug-vs.html
+[JP_ObservationCategory_Microbiology_VS]: ValueSet-jp-microbiology-category-laboratory-vs.html
 [JP_MicrobiologyCategory_VS]: ValueSet-jp-microbiology-category-vs.html
 [JP_Microbiology_InfectiousAgent_VS]: ValueSet-jp-microbiology-infectious-agent-vs.html
 [JP_ObservationBodyMeasurementCategory_VS]: ValueSet-jp-observation-bodymeasurement-category-vs.html
 [JP_ObservationBodyMeasurementCode_VS]: ValueSet-jp-observation-bodymeasurement-code-vs.html
 [JP_ObservationBodySite_VS]: ValueSet-jp-observation-bodysite-vs.html
-[JP_ObservationLabResultCode_VS]: ValueSet-jp-observation-labresult-code-vs.html
-[JP_ObservationMethod_VS]: ValueSet-jp-observation-method-vs.html
-[JP_ObservationPhysicalExamBodySite_VS]: ValueSet-jp-observation-physicalexam-bodysite-vs.html
-[JP_ObservationPhysicalExamMethod_VS]: ValueSet-jp-observation-physicalexam-method-vs.html
-[JP_ObservationSocialHistoryCode_VS]: ValueSet-jp-observation-socialhistory-code-vs.html
-[JP_ObservationVitalSignsCategory_VS]: ValueSet-jp-observation-vitalsigns-category-vs.html
-[JP_ObservationVitalSignsCode_VS]: ValueSet-jp-observation-vitalsigns-code-vs.html
 [JP_PhysicalExamCode_VS]: ValueSet-jp-physicalexamcode-vs.html
-[JP_PractitionerRole_VS]: ValueSet-jp-practitionerrole-vs.html
-[JP_PrefectureNumber_VS]: ValueSet-jp-prefecturenumber-vs.html
 [JP_ProcedureBodySite_VS]: ValueSet-jp-procedure-body-site-vs.html
-[JP_ProcedureCategory_VS]: ValueSet-jp-procedure-category-vs.html
-[JP_ProcedureCodesMedical_VS]: ValueSet-jp-procedure-code-medical-vs.html
-[JP_ProcedureCodesSTEM7_VS]: ValueSet-jp-procedure-code-stem7-vs.html
-[JP_ProcedureCodesDental_VS]: ValueSet-jp-procedure-codes-dental-vs.html
 [JP_ProcedureCodesICHI_VS]: ValueSet-jp-procedure-codes-ichi-vs.html
-[JP_ProcedureCodesNurse_VS]: ValueSet-jp-procedure-codes-nurse-vs.html
 [JP_ProcedureCondition_VS]: ValueSet-jp-procedure-condition-vs.html
 [JP_ProcedureDeviceAction_VS]: ValueSet-jp-procedure-device-action-vs.html
 [JP_ProcedureDeviceKind_VS]: ValueSet-jp-procedure-devicekind-vs.html

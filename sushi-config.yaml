@@ -1,4 +1,4 @@
-id: hl7.fhir.jp.core
+id: jpfhir.jp.core
 canonical: http://jpfhir.jp/fhir/core
 name: "FHIRJPCoreImplementationGuide"
 title: "HL7 FHIR JP Core ImplementationGuide"
@@ -19,7 +19,6 @@ dependencies:
   jpfhir-terminology:
     uri: http://jpfhir.jp/fhir/jpfhir-terminology/
     version: 1.1.1
-
 #----------------------------------------
 # ページタイトル名称設定
 #----------------------------------------
@@ -117,7 +116,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - xml
     - json
   no-validate:
-    - '*/hl7.fhir.jp.core'
+    - '*/jpfhir.jp.core'
   no-usage-check: 'true'
   i18n-default-lang: 'ja'
   special-url:
