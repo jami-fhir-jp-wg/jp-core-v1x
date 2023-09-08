@@ -22,7 +22,6 @@ jobs:
     environment: SSH_PORT_JPFHIR  # JAMI WG アップロードサイトに関するアクセス情報の環境名
     steps:
     - uses: actions/checkout@v2
-
     - name: Extract branch name
       run: |
         if ["${{ github.event.pull_request.head.ref }}" == ""]; then
@@ -66,45 +65,70 @@ jobs:
       run: |
         sudo apt-get install jekyll
     
-    # - name: Download Japanese translated version of hl7.fhir.core package
-    #   uses: wei/wget@v1
-    #   with:
-    #     args:  https://jpfhir.jp/fhir/hl7.fhir.r4.core-4.0.1.tgz
-
-    - name: Download the file
-      uses: suisei-cn/actions-download-file@v1.4.0
-      id: downloadfile  # Remember to give an ID if you need the output
-      with:
-        url: "https://jpfhir.jp/fhir/hl7.fhir.r4.core-4.0.1.tgz"
-        target: .
-      
-    - name: Arranging hl7.fhir.core package packages
-      env:
-        PACKAGECORE: hl7.fhir.r4.core#4.0.1
-      run: | 
-        mv hl7.fhir.r4.core-4.0.1.tgz  $PACKAGECORE.tgz
-        mkdir -p /home/runner/.fhir
-        mkdir -p  /home/runner/.fhir/packages
-        mkdir -p  /home/runner/.fhir/packages/$PACKAGECORE
-        : # local cache にpackage をcopyして展開する
-        cp $PACKAGECORE.tgz /home/runner/.fhir/packages/$PACKAGECORE/$PACKAGECORE.tgz
-        tar xzf /home/runner/.fhir/packages/$PACKAGECORE/$PACKAGECORE.tgz -C /home/runner/.fhir/packages/$PACKAGECORE/
-
     - name: Download IG Publisher
       uses: Legion2/download-release-action@v2.1.0
       with:
         repository: HL7/fhir-ig-publisher
-        tag: '1.3.13'
+        tag: 'latest'
         path: .
         file: publisher.jar
-   
+
+    - name: Download the file
+      uses: suisei-cn/actions-download-file@v1.4.0
+      id: downloadfile1
+      with:
+        url: "https://jpfhir.jp/fhir/fhir_dotFHIR_packages.tgz"
+        target: .
+  
+    - name: Download the file
+      uses: suisei-cn/actions-download-file@v1.4.0
+      id: downloadfile2
+      with:
+        url: "https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology-1.1.1.tgz"
+        target: .    
+      
+    - name: Prepare for using all dependent packages including Jp modified version of hl7.fhir.r4.core Package 
+      env:
+        JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
+        JPTerminologyCOREdir: jpfhir-terminology#1.1.1
+        JPTerminologyCOREPtgz: jpfhir-terminology-1.1.1.tgz
+      run: |
+        mkdir -p /home/runner/.fhir
+        mv $JPPACKAGECOREtgz /home/runner/.fhir/
+        mkdir -p /home/runner/.fhir/work
+        mv $JPTerminologyCOREPtgz /home/runner/.fhir/work/$JPTerminologyCOREPtgz
+        cd /home/runner/.fhir
+        tar xzf $JPPACKAGECOREtgz
+        cd /home/runner/.fhir/work
+        tar xzf $JPTerminologyCOREPtgz
+        cd /home/runner/.fhir
+        mkdir -p packages/$JPTerminologyCOREdir
+        mv /home/runner/.fhir/work/package /home/runner/.fhir/packages/$JPTerminologyCOREdir
+    
     - name: Run IG Publisher
       run: | 
         mkdir input-cache
         mv publisher.jar ./input-cache/publisher.jar
         unset DISPLAY
-        java  -Xmx4G -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx https://tx.jpfhir.jp:8081
+
+
+        java  -Xmx12G -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx n/a
         mv ./input/landing_page/_index.yml ./output/
+
+
+    - name: replace url of html files referring simplifier.net package
+      run:  |
+        : # https://simplifier.net/resolve?scope=jp-core.r4@1.1.1-snap&amp;canonical=http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common"
+        : #   ↓
+        : # https://jpfhir.jp/fhir/core/1.1.1/StructureDefinition-jp-observation-common.html
+        : # https://simplifier.net/resolve?canonical=http%3A%2F%2Fjpfhir.jp%2Ffhir%2Fcore%2FValueSet%2FJP_MedicationSubstitutionNotAllowedReason_VS&scope=jpfhir-terminology@1.1.1
+        cd output
+        for file in *.html
+        do
+          python ../script/replaceUrls.py $file >$file".2.html"
+          mv $file".2.html" $file
+        done
+        cd ..
 
     - name: STEP1 = ssh key generate  for copying all IG files to public JAMI WG Web site 
       run: | 
@@ -123,8 +147,11 @@ jobs:
         cd ..
         cp forPackageRelease/package.tgz output/package.tgz
         tar czf output.tgz output
+        rm output/full-ig.zip
+        rm output/expansions.json
+        rm output/expansions.xml
 
-    - name: Deploy Implementation Guide
+        - name: Deploy Implementation Guide
       if: success()
       uses: peaceiris/actions-gh-pages@v3
       with:
