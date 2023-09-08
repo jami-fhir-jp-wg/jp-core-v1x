@@ -3,7 +3,7 @@
 //Alias: $JP_Loinc_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Loinc_CS
 Alias: $Loinc_CS = http://loinc.org
 
-// ImplementationGuide
+// ImplementationGuid
 Alias: $FHIRJPCoreImplementationGuide = http://jpfhir.jp/fhir/core/ImplementationGuide/jpfhir.jp.core
 
 // StructureDefinition: Profile, DataType
