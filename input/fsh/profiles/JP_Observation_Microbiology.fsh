@@ -9,7 +9,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(identifier, 当該検査項目に対し施設内で割り振られる一意の識別子があればこれを使用する)
 * insert SetDefinition(basedOn, このObservationが実施されることになった依頼や計画／提案に関する情報、オーダ情報（ServiceRequest）)
 * basedOn only Reference(ServiceRequest)
-* basedOn ^comment = "References SHALL be a reference to an actual FHIR resource, and SHALL be resolveable (allowing for access control, temporary unavailability, etc.). Resolution can be either by retrieval from the URL, or, where applicable by resource type, by treating an absolute reference as a canonical URL and looking it up in a local registry/repository.\r\n\r\n【JP Core仕様】オーダ情報（ServiceRequestリソース）"
+* basedOn ^comment = "【JP Core仕様】オーダ情報（ServiceRequestリソース）"
 * insert SetDefinition(partOf, このObservationが親イベントの一部を成す要素であるときこの親イベントに関する情報、未使用)
 * status 1..1
 * category 1..
@@ -25,13 +25,17 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category[laboratory] from JP_SimpleObservationCategory_VS (required)
 * category[laboratory].coding.system = $JP_SimpleObservationCategory_CS (exactly)
 * category[laboratory].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
+
 * insert SetDefinition(category[microbiology], このObservationに関するLOINC上の分類、任意項目)
 * category[microbiology] from $JP_ObservationCategory_Microbiology_VS (preferred)
 * category[microbiology].coding.system = $Loinc_CS (exactly)
 * category[microbiology].coding.code = $Loinc_CS#18725-2 (exactly)
+* category[microbiology].coding.display = "Microbiology studies (set)"
+
 * insert SetDefinition(category[microbiologyCategory], このObservationに関する詳細分類、JP_MicrobiologyCategory_VSより選択する、任意項目)
 * category[microbiologyCategory] from $JP_MicrobiologyCategory_VS (required)
 * category[microbiologyCategory].coding.system = $JP_MicrobiologyCategory_CS (exactly)
+
 * code 1..
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
@@ -46,15 +50,18 @@ Description: "このプロファイルはObservationリソースに対して、�
 * code.coding[infectious-agent].system = $JP_Microbiology_InfectiousAgent_CS (exactly)
 * insert SetDefinitionRef(code.coding[infectious-agent], 同定菌名を表現する場合に使用するコード、JANIS菌名コードを利用)
 * code.coding[infectious-agent] ^comment = "【JP Core仕様】同定菌名を表現する場合に使用する\r\nNeXEHRSで使用を定める標準コードに準じて、JANIS菌名コードを採用する"
+
 * code.coding[antimicrobial-drug] from $JP_Microbiology_AntiMicrobialDrug_VS (required)
 * code.coding[antimicrobial-drug].system = $JP_Microbiology_AntiMicrobialDrug_CS (exactly)
 * insert SetDefinitionRef(code.coding[antimicrobial-drug], 抗菌薬コードを表現する場合に使用するコード、JANIS抗菌薬コードを利用)
 * code.coding[antimicrobial-drug] ^definition = "抗菌薬コードを表現する場合に使用するコード、JANIS抗菌薬コードを利用"
 * code.coding[antimicrobial-drug] ^comment = "【JP Core仕様】抗菌薬コードを表現する場合に使用する\r\nNeXEHRSで使用を定める標準コードに準じて、JANIS抗菌薬コードを採用する"
+
 * code.coding[jlac10] from $JP_ObservationLabResultCode_VS (required)
 * code.coding[jlac10].system = $JP_ObservationLabResultCode_CS (exactly)
 * insert SetDefinitionRef(code.coding[jlac10], 塗抹結果、培養・同定結果を表現する場合に使用するコード、JLAC10を利用)
 * code.coding[jlac10] ^comment = "【JP Core仕様】塗抹結果、培養・同定結果を表現する場合に使用する\r\nJLAC10コードを採用する"
+
 * subject 1..
 * subject only Reference(JP_Patient)
 * effective[x] only dateTime or Period
