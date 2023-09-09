@@ -76,7 +76,7 @@ value : ```医療機関コード（１０桁）```を使用する。
 * telecom.system ^short = "phone | fax | email | pager | url | sms | other 【JP_Patient.telecomを参照。】"
 * telecom.system ^comment = "連絡先の種別をValueSet(ContactPointSystem)より選択する。  　- phone : 電話　- fax : Fax 　- email : 電子メール　- pager : ポケットベル　- url : 電話、ファックス、ポケットベル、または電子メールアドレスではなく、URLとして表される連絡先。これはWebサイト、ブログ、Skype、Twitter、Facebookなどのさまざまな機関または個人の連絡先を対象としている。電子メールアドレスには使用しないこと。　- sms : SMSメッセージの送信に使用できる連絡先（携帯電話、一部の固定電話など）  　- other : 電話、Fax、ポケットベル、または電子メールアドレスではなく、URLとして表現できない連絡先。例：内部メールアドレス。これは、URLとして表現できる連絡先（Skype、Twitter、Facebookなど）には使用しないこと。"
 * telecom.value ^comment = "連絡先の番号やメールアドレス"
-* telecom.use ^short = " work | temp | old | mobile - 連絡先の用途等 【JP_Patient.telecomを参照。】homeは使用しないこと。"
+* telecom.use ^short = "work | temp | old | mobile - 連絡先の用途等 【JP_Patient.telecomを参照。】homeは使用しないこと。"
 * telecom.use ^comment = "患者の連絡先の種別をValueSet(ContactPointUse)より選択する。  一時的なものまたは古いものであると明示しない限り、連絡先が最新とみなされる。
 　- work : 職場
 　- temp : 一時的
@@ -90,7 +90,7 @@ value : ```医療機関コード（１０桁）```を使用する。
 * address ^comment = "組織は、用途や適用期間が異なる複数の住所を持っている場合がある。使用コード「home」は使用しないこと。"
 * address ^requirements = "連絡、請求、または報告のために、組織のアドレスを追跡する必要がある場合がある。"
 
-* address.use ^short = " work | temp | old | billing - purpose of this address　住所の用途 【JP_Patient.address参照】使用コード「home」は使用しない。"
+* address.use ^short = "work | temp | old | billing - purpose of this address　住所の用途 【JP_Patient.address参照】使用コード「home」は使用しない。"
 * address.use ^definition = "The purpose of this address.\r\n住所の用途"
 * address.use ^comment = "住所の用途をValueSet(AddressUse)より選択する。  
 - work : 職場
