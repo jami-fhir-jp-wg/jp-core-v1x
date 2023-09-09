@@ -72,10 +72,79 @@ value : ```医療機関コード（１０桁）```を使用する。
 * telecom ^definition = "組織の連絡先詳細"
 * telecom ^comment = "使用コード「home」は使用しないこと。これらの連絡先は、組織に雇用されている人や組織を代表する人の連絡先ではなく、組織自体の公式な連絡先であることに注意すること。"
 * telecom ^requirements = "組織のヒューマンコンタクト。"
+
+* telecom.system ^short = "phone | fax | email | pager | url | sms | other 【JP_Patient.telecomを参照。】"
+* telecom.system ^comment = "連絡先の種別をValueSet(ContactPointSystem)より選択する。  　- phone : 電話　- fax : Fax 　- email : 電子メール　- pager : ポケットベル　- url : 電話、ファックス、ポケットベル、または電子メールアドレスではなく、URLとして表される連絡先。これはWebサイト、ブログ、Skype、Twitter、Facebookなどのさまざまな機関または個人の連絡先を対象としている。電子メールアドレスには使用しないこと。　- sms : SMSメッセージの送信に使用できる連絡先（携帯電話、一部の固定電話など）  　- other : 電話、Fax、ポケットベル、または電子メールアドレスではなく、URLとして表現できない連絡先。例：内部メールアドレス。これは、URLとして表現できる連絡先（Skype、Twitter、Facebookなど）には使用しないこと。"
+* telecom.value ^comment = "連絡先の番号やメールアドレス"
+* telecom.use ^short = " work | temp | old | mobile - 連絡先の用途等 【JP_Patient.telecomを参照。】homeは使用しないこと。"
+* telecom.use ^comment = "患者の連絡先の種別をValueSet(ContactPointUse)より選択する。  一時的なものまたは古いものであると明示しない限り、連絡先が最新とみなされる。
+　- work : 職場
+　- temp : 一時的
+　- old : 以前の
+　- mobile : モバイル機器"
+* telecom.rank ^comment = "連絡先の使用順序（1 = 最高）"
+* telecom.period ^comment = "連絡先が使用されていた/されている期間"
+
 * address ^short = "組織の住所【詳細参照】"
 * address ^definition = "組織の住所"
 * address ^comment = "組織は、用途や適用期間が異なる複数の住所を持っている場合がある。使用コード「home」は使用しないこと。"
 * address ^requirements = "連絡、請求、または報告のために、組織のアドレスを追跡する必要がある場合がある。"
+
+* address.use ^short = " work | temp | old | billing - purpose of this address　住所の用途 【JP_Patient.address参照】使用コード「home」は使用しない。"
+* address.use ^definition = "The purpose of this address.\r\n住所の用途"
+* address.use ^comment = "住所の用途をValueSet(AddressUse)より選択する。  
+- work : 職場
+- temp : 一時的
+- old : 以前の
+- billing : 請求書、インボイス、領収書などの送付用"
+* address.type ^short = "postal | physical | both 【JP_Patient.address参照】"
+* address.type ^definition = "住所（訪問できる住所）と郵送先住所（私書箱や気付住所など）を区別する。ほとんどのアドレスは両方。"
+* address.type ^comment = "住所の種類をValueSet(AddressType)より選択する。  
+- postal : 郵送先 - 私書箱、気付の住所
+- physical : 訪れることのできる物理的な住所
+- both : postalとphysicalの両方"
+* address.text ^short = "住所のテキスト表現 【JP_Patient.address参照】"
+* address.text ^definition = "表示するアドレス全体を指定する  
+例：郵便ラベル。これは、特定の部品の代わりに、または特定の部品と同様に提供される場合がある。"
+* address.text ^comment = "テキスト表現とパーツの両方を提供できる。アドレスを更新するアプリケーションは、テキストとパーツの両方が存在する場合、パーツにないコンテンツはテキストに含まれないようにする必要がある。  
+- 住所を(都道府県や市町村などに)分離して管理していない場合は、textに入れる。  
+- 住所を(都道府県や市町村などに)分離して管理している場合でも、まとめてtextに入れること。  
+- 郵便番号は含めない。  
+
+例：東京都文京区本郷7-3-1"
+* insert SetExampleString(address.text, 東京都文京区本郷7-3-1)
+* address.line ^short = "ストリート名や番地など 【JP_Patient.address参照】"
+* address.line ^definition = "このコンポーネントには、家番号、アパート番号、通りの名前、通りの方向、P.O。が含まれる。ボックス番号、配達のヒント、および同様の住所情報など。"
+* address.line ^comment = "【JP Core仕様】state要素とcity要素で表現しなかったそのあとの住所部分を番地以降の部分も含めてすべていれる。  
+英数字は半角でも全角でもよい。文字列の前後および途中に空白文字を含めないこと。  
+繰り返し要素が許されているので、区切りを表現したい場合には、複数要素に分けて格納してもよい。  
+
+例：本郷7-3-1  
+例：大字石神９７６  
+例：藤崎町大字藤崎字西村1-2 春山荘201号室"
+* insert SetExampleString(address.line, 本郷7-3-1)
+* address.city ^short = "市区町村名 【JP_Patient.address参照】"
+* address.city ^definition = "n市、町、郊外、村、その他のコミュニティまたは配達センターの名前。"
+* address.city ^comment = "１MBを超えないこと。  【JP Core仕様】郡市区町村部分だけを「郡」「市」「区」「町」「村」などの文字を含めて設定する。 例：文京区"
+* insert SetExampleString(address.city, 文京区)
+* address.district ^short = "地区名 【JP_Patient.address参照】"
+* address.district ^comment = "【JP Core仕様】日本の住所では使用しない。"
+* address.state ^short = "国の次の地区単位 【JP_Patient.address参照】"
+* address.state ^definition = "国の主権が制限されている国のサブユニット。日本の場合、都道府県名。"
+* address.state ^comment = "１MBを超えないこと。  都道府県名。「都」「道」「府」「県」のそれぞれの文字を含める。 例：東京都"
+* insert SetExampleString(address.state, 東京都)
+* address.postalCode ^short = "郵便番号 【JP_Patient.address参照】"
+* address.postalCode ^comment = "郵便番号。日本の郵便番号の場合には3桁数字とハイフン1文字と4桁数字からなる半角８文字、または最初の3桁だけの3文字のいずれかとする。 例：113-8655"
+* insert SetExampleString(address.postalCode, 113-8655)
+* address.country ^short = "国名またはISO 3166コード　(ISO 3166 2 or 3文字こーど)"
+* address.country ^definition = "国-一般的に理解されている、または一般的に受け入れられている国の国名かコード。"
+* address.country ^comment = "ISO 3166 3文字コードは、人間が読める国名の代わりに使用する。  ISO 3166の2文字または3文字のコード.  日本であれば、jpまたはjpn"
+* address.period ^short = "住所が使用されていた（いる）期間"
+* address.period ^definition = "住所が使用されていた（いる）期間"
+* address.period ^comment = "住所が使用されていた/されている期間。 期間は時間の範囲を指定する。使用状況はその期間全体に適用されるか、範囲から1つの値が適用される。  期間は、時間間隔（経過時間の測定値）には使用されない。"
+
+
+
 * partOf only Reference(JP_Organization)
 * partOf ^short = "【詳細参照】"
 * partOf ^definition = "この組織が一部を構成する組織"
