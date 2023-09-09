@@ -20,15 +20,13 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * insert SetDefinition(status, 診断レポートのステータス)
 * category 1..
 * category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "coding.system"
+* category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains microbiology 1..1
 * insert SetDefinitionRef(category, 診断レポートを作成した臨床分野、部門、または診断サービスを分類するコード。微生物検査では、LoincコードのLP7819-8 微生物検査/MICRO を使用する。)
-//* category[microbiology] from $JP_DiagnosticReportCategory_VS (required)
 * category[microbiology] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP7819-8 (微生物検査/MICRO)を使用する。"
-* category[microbiology].coding.system = $Loinc_CS (exactly)
-* category[microbiology].coding.code = #LP7819-8 (exactly)
-* category[microbiology].coding.display = "微生物検査"
+* category[microbiology] from $JP_DiagnosticReportCategory_VS (required)
+* category[microbiology] = $Loinc_CS#LP7819-8  "微生物検査" (exactly)
 
 * code = $JP_DocumentCodes_CS#18725-2 "微生物学的検査報告書"
 * insert SetDefinitionRef(code, 診断レポート種別「微生物学的検査報告書」を表す文書コード)

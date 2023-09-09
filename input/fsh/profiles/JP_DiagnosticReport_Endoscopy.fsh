@@ -26,18 +26,16 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category ^short = "診断レポートの分野を表すコード。"
 * category ^definition = "診断レポートの分野を表すコード。"
 * category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "coding.system"
+* category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^slicing.ordered = false
 * category contains endoscopy 1..1
-* category[endoscopy] from $JP_DiagnosticReportCategory_VS (required)
-* category[endoscopy].coding.system = $Loinc_CS (exactly)
-* category[endoscopy].coding.code 1..
-* category[endoscopy].coding.code = $Loinc_CS#LP7796-8 (exactly)
-* category[endoscopy].coding.display = "内視鏡"
 * category[endoscopy] ^short = "診断レポートの分野を表すコード。【詳細参照】"
 * category[endoscopy] ^definition = "診断レポートの分野を表すコード。"
 * category[endoscopy] ^comment = "JP_DiagnosticReportCategory_VSの中から「LP7796-8」（Endoscopy（内視鏡））を指定する。"
+* category[endoscopy] from $JP_DiagnosticReportCategory_VS (required)
+* category[endoscopy] = $Loinc_CS#LP7796-8 "内視鏡" (exactly)
+
 * code from $JP_DocumentCodes_Endoscopy_VS (extensible)
 * code ^short = "内視鏡分野の診断レポートを分類するためのコード。【詳細参照】"
 * code ^definition = "内視鏡分野の診断レポートを分類するためのコード。"

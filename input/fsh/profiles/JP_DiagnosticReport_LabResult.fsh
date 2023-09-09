@@ -19,16 +19,14 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * status ^comment = "有れば：ORC-5\r\n\r\nもしくは\r\n\r\n無ければ：OBR-25(\"F\")のAND結果\r\n\r\n　例：全部\"F\"なら\"F\"、それ以外の場合は要検討\r\n\r\n設定する値は、DiagnosticReportStatus（コード）から1つ選ぶ\r\n\r\nコード体系：HL7 Table 0038のコードと定義"
 * category 1..
 * category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "coding.system"
+* category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains laboratory 1..1
 * insert SetDefinitionRef(category, 診断レポートを作成した臨床分野、部門、または診断サービスを分類するコード。検体査では、LoincコードのLP29693-6 検体検査/LAB を使用する。)
 * category[laboratory] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP29693-6(検体検査/LAB)を使用する。"
 * category[laboratory] from $JP_DiagnosticReportCategory_VS (required)
-* category[laboratory].coding.system = $Loinc_CS (exactly)
-* category[laboratory].coding.code 1..
-* category[laboratory].coding.code = $Loinc_CS#LP29693-6 (exactly)
-* category[laboratory].coding.display = "検体検査"
+* category[laboratory] = $Loinc_CSLP29693-6 "検体検査" (exactly)
+
 * code ^comment = ""
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
