@@ -19,7 +19,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * status 1..
 * insert SetDefinition(status, 診断レポートのステータス)
 * category 1..
-* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.type = #pattern
+// #patternでなく#valueでよいはずだが、#valueだと警告"For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance"が出る。
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains microbiology 1..1
