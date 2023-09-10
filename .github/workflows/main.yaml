@@ -154,7 +154,7 @@ jobs:
         rm output/expansions.json
         rm output/expansions.xml
 
-        - name: Deploy Implementation Guide
+    - name: Deploy Implementation Guide
       if: success()
       uses: peaceiris/actions-gh-pages@v3
       with:
