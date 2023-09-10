@@ -5,11 +5,10 @@ on:
     branches: 
       - 'main'
       - 'hotfix/**'
-
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
-      - '.github/workflows/**'
+      - '.github/workflows/main.yaml'
 env:
   release_version : 1.1.2
   
