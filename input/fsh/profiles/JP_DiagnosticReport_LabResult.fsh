@@ -26,7 +26,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * insert SetDefinitionRef(category, 診断レポートを作成した臨床分野、部門、または診断サービスを分類するコード。検体査では、LoincコードのLP29693-6 検体検査/LAB を使用する。)
 * category[laboratory] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP29693-6(検体検査/LAB)を使用する。"
 * category[laboratory] from $JP_DiagnosticReportCategory_VS (required)
-* category[laboratory] = $Loinc_CS#LP29693-6 "検体検査" (exactly)
+//* category[laboratory] = $Loinc_CS#LP29693-6 "検体検査" (exactly)
+* category[laboratory] = $Loinc_CS#LP29693-6
 
 * code ^comment = ""
 * code.coding ^slicing.discriminator.type = #value
