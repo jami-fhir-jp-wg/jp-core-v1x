@@ -18,7 +18,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * status ^definition = "診断レポートのステータス。"
 * status ^comment = "有れば：ORC-5\r\n\r\nもしくは\r\n\r\n無ければ：OBR-25(\"F\")のAND結果\r\n\r\n　例：全部\"F\"なら\"F\"、それ以外の場合は要検討\r\n\r\n設定する値は、DiagnosticReportStatus（コード）から1つ選ぶ\r\n\r\nコード体系：HL7 Table 0038のコードと定義"
 * category 1..
-* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.type = #value
 // #patternでなく#valueでよいはずだが、#valueだと警告"For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance"が出る。
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
@@ -30,6 +30,16 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[laboratory] = $Loinc_CS#LP29693-6
 
 * code ^comment = ""
+
+//* code ^slicing.discriminator.type = #value
+//* code ^slicing.discriminator.path = "$this"
+//* code ^slicing.rules = #open
+//* code contains laboratoryCode 0..1
+//* code[laboratoryCode].system = $JP_DocumentCodes_CS
+//* code[laboratoryCode].code = #11502-2
+//* code[laboratoryCode].display = "検体検査報告書"
+
+
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
