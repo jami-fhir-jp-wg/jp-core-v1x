@@ -42,7 +42,7 @@ Usage: #example
 * basedOn = Reference(ServiceRequest/jp-servicerequest-example-1)
 * status = #final
 * category[microbiology] = $Loinc_CS#LP7819-8 "微生物検査"
-* code = $JP_DocumentCodes_CS#18725-2 "Microbiology studies (set)"
+* code = $JP_DocumentCodes_CS#18725-2 "微生物学的検査報告書"
 * subject = Reference(Patient/jp-patient-example-1)
 * encounter = Reference(Encounter/jp-encounter-example-1)
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
@@ -70,7 +70,7 @@ Usage: #inline
 * status = #final
 * subject = Reference(Patient/jp-patient-example-1)
 * category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory "Laboratory"
-* category[microbiology] = $Loinc_CS#18725-2 "微生物学検査"
+* category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
 * code.coding[+] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z1 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義1(白血球)"

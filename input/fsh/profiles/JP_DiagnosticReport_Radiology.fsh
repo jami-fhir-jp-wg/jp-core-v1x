@@ -31,25 +31,26 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category ^short = "レポートを作成した分野を分類するコード【詳細参照】"
 * category ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは ”RAD” をデフォルトとして設定。追加の情報については任意で設定可能。"
 * category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "coding.system"
+// #patternでなく#valueでよいはずだが、#valueだと警告"For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance"が出る。
+* category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^slicing.ordered = false
 * category contains radiology 1..1 and radiology_sub ..*
+
 * category[radiology] ^short = "レポートを作成した分野を分類するコード【詳細参照】"
 * category[radiology] ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは第1コードとして LP29684-5 を固定値として設定。第2コード以下にDICOMModalityコードを列挙することでレポートの対象検査内容を示す。"
 * category[radiology] from $JP_DiagnosticReportCategory_VS (required)
-* category[radiology].coding.system = $Loinc_CS (exactly)
-* category[radiology].coding.code 1..
-* category[radiology].coding.code = $Loinc_CS#LP29684-5 (exactly)
-* category[radiology].coding.display = "放射線"
+//* category[radiology] = $Loinc_CS#LP29684-5  "放射線" (exactly)
+* category[radiology] = $Loinc_CS#LP29684-5
+
 * category[radiology_sub] ^short = "レポート対象のモダリティを示すコード【詳細参照】"
 * category[radiology_sub] ^definition = "レポート対象のモダリティを示すコード。放射線を表す第1コードのLP29684-5に続くサブカテゴリコードとして第2コード以下に保持される。複数のモダリティの組み合わせを許容するため、コードの列挙を許容する。"
 * category[radiology_sub] from $JP_RadiologyModality_VS (required)
-* category[radiology_sub].coding.system = $dicom-ontology (exactly)
 * category[radiology_sub].coding.code ^short = "DICOMのモダリティコードを指定"
 * category[radiology_sub].coding.code ^definition = "DICOMのモダリティコードを指定"
 * category[radiology_sub].coding.display ^short = "DICOMのモダリティコードの意味を記載（例: 超音波検査）"
 * category[radiology_sub].coding.display ^definition = "DICOMのモダリティコードの意味を記載（例: 超音波検査）"
+
 * code ^definition = "この診断レポートを表現するコードや名称"
 * code ^comment = "【JP Core仕様】[画像診断レポート交換手順ガイドライン](https://www.jira-net.or.jp/publishing/files/jesra/JESRA_TR-0042_2018.pdf)「5.1 レポート種別コード」に記載されているLOINCコード [Diagnostic imaging study](https://loinc.org/18748-4/) を指定。コードを指定できない場合はCodeableConceptを使用せずテキスト等を直接コーディングすることも許容されるが、要素間の調整と事前・事後の内容の整合性確保のために独自の構造を提供する必要があるので留意すること。"
 * code.coding ^slicing.discriminator.type = #value

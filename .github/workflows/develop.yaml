@@ -4,11 +4,11 @@ on:
     branches: 
       - 'develop'
       - 'release/**'
-      - 'feature/ext*'
+      - 'feature/kohe*'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
-      - '.github/workflows/**'
+      - '.github/workflows/develop.yaml'
   pull_request:
     branches:
       - 'develop'
@@ -24,6 +24,7 @@ jobs:
     environment: SSH_PORT_JPFHIR  # JAMI WG アップロードサイトに関するアクセス情報の環境名
     steps:
     - uses: actions/checkout@v2
+
     - name: Extract branch name
       run: |
         if ["${{ github.event.pull_request.head.ref }}" == ""]; then

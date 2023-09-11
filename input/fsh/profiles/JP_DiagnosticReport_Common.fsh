@@ -22,9 +22,13 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 //* category from $JP_DiagnosticReportCategory_VS (preferred)
 * insert SetDefinitionRef(category, 診断レポートを作成した臨床分野、部門、または診断サービス（心臓病学、生化学、血液学、放射線医学など）を分類するコード)
 * category ^comment = "これは、検索、並べ替え、および表示の目的で使用される。"
+* insert SetDefinition(category.coding.system, カテゴリーコードシステムの識別URL)
+* insert SetDefinition(category.coding.code, カテゴリーコード)
+* insert SetDefinition(category.coding.display, カテゴリー表示名)
+
 * code from $JP_DocumentCodes_DiagnosticReport_VS (preferred)
 * insert SetDefinitionRef(code, 診断レポートを説明するコードまたは名前)
-* code ^comment = "すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素と事前・事後の用語作成（pre- and post-coordination）との関係を管理するための独自の構造を提供する必要がある。"
+* code ^comment = ""
 * subject only Reference(JP_Patient or Group or Device or JP_Location)
 * insert SetDefinitionRef(subject, 診断レポートの対象患者に関する情報)
 * subject ^comment = "レポートの対象、通常、Patientリソースへの参照。ただし、他のさまざまなソースから収集された検体を対象とすることもある。参照は内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
