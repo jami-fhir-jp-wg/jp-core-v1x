@@ -34,17 +34,16 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category contains laboratory 1..1
 * insert SetDefinition(category.coding, 検査結果のコード化されたカテゴリー)
 
+* category ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「laboratory」固定とする。\r\n\r\n(social-history | vital-signs | imaging | laboratory | procedure | survey | exam | therapy | activity)"
+* category.coding ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「laboratory」固定とする。"
+
 * category[laboratory] from JP_SimpleObservationCategory_VS (required)
 * insert SetDefinition(category[laboratory], 検体検査では、http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS のコード表から\"laboratory\"を設定する。)
 * insert SetDefinition(category[laboratory].coding.system, 検体検査では、http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS のコード表を使用する。)
-* category[laboratory] = $JP_SimpleObservationCategory_CS (exactly)
-
-* insert SetDefinition(category[laboratory].coding.code, 検体検査を表すコード\"laboratory\"を設定する）
+* category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory (exactly)
 * category[laboratory].coding.code 1..
-* category[laboratory].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
+* insert SetDefinition(category[laboratory].coding.code, 検体検査を表すコード laboratory を設定する。)
 
-* category ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「laboratory」固定とする。\r\n\r\n(social-history | vital-signs | imaging | laboratory | procedure | survey | exam | therapy | activity)"
-* category.coding ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「laboratory」固定とする。"
 * code from $JP_ObservationLabResultCode_VS (preferred)
 * code ^definition = "検査の内容の説明。検査名称。"
 * code ^comment = "*JLAC10"
