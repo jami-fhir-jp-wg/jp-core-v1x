@@ -20,9 +20,11 @@ Description: "このプロファイルはObservationリソースに対して、�
 * partOf ^comment = "ObservationをEncounterにencounter要素を使ってリンクする。もうひとつ別のObservationを参照することについては、以降にあるt [Notes](observation.html#obsgrouping)　をガイダンスとして参照のこと。"
 * insert SetDefinitionRef(status, 結果の状態)
 * status ^comment = "このリソースは現在有効でないというマークをするコードを含んでいるため、この要素はモディファイアー（修飾的要素）として位置づけられている。"
+
+* insert SetDefinition(category, 行われた検査の一般的なタイプの分類。JP Core Observation Common Profileの【詳細説明】を参照のこと。)
 * category from $JP_SimpleObservationCategory_VS (preferred)
 * insert SetDefinitionRef(category, このObservationを分類するコード)
-* category ^comment = "必要なカテゴリ値セットに加えて、この要素を使用すると、所有者のカテゴリの定義に基づいたさまざまなカテゴリ化スキームが可能になり、複数のカテゴリを一度に効果的に使用できる。粒度のレベルは、値セットのカテゴリの概念によって定義される。"
+* category ^comment = "階層的にカテゴリーを設定することで粒度のレベルを概念定義できる。"
 * insert SetDefinitionRef(code, このObservationの対象を特定するコード)
 * code ^comment = "observationの意味を正しく理解するには、すべてのcode-valueペアと、さらに存在する場合にはcomponent.code-component.valueのペアが、考慮される必要がある。"
 * subject only Reference(JP_Patient or Group or Device or JP_Location)

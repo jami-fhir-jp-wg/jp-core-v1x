@@ -17,6 +17,72 @@
 
 ## 利用方法
 
+### 派生プロファイルと対応するcategory要素の記述方法
+
+#### 検体検査結果
+
+プロファイル ：[JP Core Observation LabResult （検体検査）プロファイル][JP_Observation_LabResult]
+　　URL :　http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_LabResult
+
+第１カテゴリー　必須<br>
+category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS"][JP_SimpleObservationCategory_CS]
+category.code = "laboratory"　固定値
+category.display = "Laboratory"　固定値
+
+##### 細菌検査結果
+
+プロファイル ：[JP Core Observation Microbiology （微生物学検査結果）プロファイル][JP_Observation_Microbiology]
+　　URL :　http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Microbiology
+
+第１カテゴリー　必須<br>
+検体検査結果と同一。
+
+第２カテゴリー　必須<br>
+category.system = "http://loinc.org"
+category.code = "18725-2"　固定値
+category.display = "Microbiology studies (set)"　固定値
+
+第３カテゴリー：微生物学検査カテゴリコード　任意<br>
+ (JP Core MicrobiologyCategory ValueSet)
+category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_MicrobiologyCategory_CS”][JP_MicrobiologyCategory_CS]
+から選択する。（例："gram-stain"）
+
+##### 身体所見
+
+プロファイル ：[JP Core Observation PhysicalExam Profile （身体所見）プロファイル][JP_Observation_PhysicalExam]
+　　URL :　http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_PhysicalExam
+
+第１カテゴリー　必須<br>
+category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS"][JP_SimpleObservationCategory_CS]
+category.code = "exam"　固定値
+category.display = "Exam"　固定値
+
+##### 生活背景(SocialHistory)
+
+プロファイル ：[JP Core Observation SocialHistory Profile （生活背景）プロファイル][JP_Observation_SocialHistory]
+　　URL :　http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_SocialHistory
+
+第１カテゴリー　必須<br>
+category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS"][JP_SimpleObservationCategory_CS]
+category.code = "social-history"　固定値
+category.display = "Social History"　固定値
+
+##### バイタルサイン
+
+プロファイル ：[JP Core Observation VitalSigns Profile （バイタルサイン）プロファイル][JP_Observation_VitalSigns]
+　　URL :　http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_VitalSigns
+
+第１カテゴリー　必須<br>
+category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS"][JP_SimpleObservationCategory_CS]
+category.code = "vital-signs"　固定値
+category.display = "vital-signs"　固定値
+
+第２カテゴリー　必須<br>
+(JP Core ObservationVitalSignsCategory ValueSet)
+category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS"][JP_ObservationVitalSignsCategory_CS]
+から選択する。（例："blood-pressure"）
+
+
 ### OperationおよびSearch Parameter 一覧
 
 #### Search Parameter一覧

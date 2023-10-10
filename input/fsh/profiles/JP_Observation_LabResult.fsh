@@ -27,17 +27,24 @@ Description: "このプロファイルはObservationリソースに対して、�
 * status ^definition = "結果値の状態。"
 * status ^comment = "【JP Core仕様】v2.5の「F」に相当する値は「final」であるが、ここでは 必須コード表「ObservationStatus」より、全てのコード値を使用可とする。\r\n\r\n(registered | preliminary | final | amended |   corrected | cancelled | entered-in-error | unknown)"
 * category 1..
+
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "coding.system"
 * category ^slicing.rules = #open
 * category contains laboratory 1..1
+* insert SetDefinition(category.coding, 検査結果のコード化されたカテゴリー)
+
 * category[laboratory] from JP_SimpleObservationCategory_VS (required)
-* category[laboratory].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* insert SetDefinition(category[laboratory], 検体検査では、http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS のコード表から\"laboratory\"を設定する。)
+* insert SetDefinition(category[laboratory].coding.system, 検体検査では、http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS のコード表を使用する。)
+* category[laboratory]= $JP_SimpleObservationCategory_CS (exactly)
+
+* insert SetDefinition(category[laboratory].coding.code, 検体検査を表すコード\"laboratory\"を設定する）
 * category[laboratory].coding.code 1..
 * category[laboratory].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
-* category ^definition = "行われた検査の一般的なタイプの分類。取得、表示の際のフィルタリングに使用。"
-* category ^comment = "【JP Core仕様】推奨コード表「ObservationCategoryCodes」より、このプロファイルでは「laboratory」固定とする。\r\n\r\n(social-history | vital-signs | imaging | laboratory | procedure | survey | exam | therapy | activity)"
-* category.coding ^comment = "【JP Core仕様】推奨コード表「ObservationCategoryCodes」より、このプロファイルでは「laboratory」固定とする。"
+
+* category ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「laboratory」固定とする。\r\n\r\n(social-history | vital-signs | imaging | laboratory | procedure | survey | exam | therapy | activity)"
+* category.coding ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「laboratory」固定とする。"
 * code from $JP_ObservationLabResultCode_VS (preferred)
 * code ^definition = "検査の内容の説明。検査名称。"
 * code ^comment = "*JLAC10"
