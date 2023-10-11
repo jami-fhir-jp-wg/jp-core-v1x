@@ -8,6 +8,13 @@
 ### Extensions定義
  本プロファイルで追加定義された拡張はない。
 
+### 制約一覧
+本プロファイルでは、以下の制約を満たさなければならない。
+
+|id|レベル|位置|説明|式|
+|---|---|---|---|---|
+|1|Warning|DiagnosticReport.result.reference|微生物検査の場合（categoryが'Microbiology'）.referenceが存在する必要がある。|DiagnosticReport.category.code='MB' implies DiagnosticReport.result.reference.exists()|
+
 ## 利用方法
 
 ### OperationおよびSearch Parameter 一覧
