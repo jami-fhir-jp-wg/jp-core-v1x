@@ -25,7 +25,7 @@
 　　URL :　http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_LabResult<br>
 
 第１カテゴリー　必須<br>
-category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS"][JP_SimpleObservationCategory_CS]<br><br>
+category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS"][JP_SimpleObservationCategory_CS]<br>
 category.code = "laboratory"　固定値<br>
 category.display = "Laboratory"　固定値<br>
 
@@ -44,7 +44,7 @@ category.display = "Microbiology studies (set)"　固定値<br>
 
 第３カテゴリー：微生物学検査カテゴリコード　任意<br>
  (JP Core MicrobiologyCategory ValueSet)<br>
-category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_MicrobiologyCategory_CS”]<br>[JP_MicrobiologyCategory_CS]<br>
+category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_MicrobiologyCategory_CS”][JP_MicrobiologyCategory_CS]<br>
 から選択する。（例："gram-stain"）<br>
 
 #### 身体所見
@@ -53,7 +53,7 @@ category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_MicrobiologyCategor
 　　URL :　http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_PhysicalExam<br>
 
 第１カテゴリー　必須<br>
-category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS"]<br>[JP_SimpleObservationCategory_CS]<br>
+category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS"][JP_SimpleObservationCategory_CS]<br>
 category.code = "exam"　固定値<br>
 category.display = "Exam"　固定値<br>
 
@@ -63,7 +63,7 @@ category.display = "Exam"　固定値<br>
 　　URL :　http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_SocialHistory<br>
 
 第１カテゴリー　必須<br>
-category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS"]<br>[JP_SimpleObservationCategory_CS]<br>
+category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS"][JP_SimpleObservationCategory_CS]<br>
 category.code = "social-history"　固定値<br>
 category.display = "Social History"　固定値<br>
 
@@ -73,13 +73,13 @@ category.display = "Social History"　固定値<br>
 　　URL :　http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_VitalSigns<br>
 
 第１カテゴリー　必須<br>
-category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS"]<br>[JP_SimpleObservationCategory_CS]<br>
+category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS"][JP_SimpleObservationCategory_CS]<br>
 category.code = "vital-signs"　固定値<br>
-category.display = "vital-signs"　固定値<br>
+category.display = "Vital-signs"　固定値<br>
 
 第２カテゴリー　必須<br>
 (JP Core ObservationVitalSignsCategory ValueSet)<br>
-category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS"]<br>[JP_ObservationVitalSignsCategory_CS]<br>
+category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSignsCategory_CS"][JP_ObservationVitalSignsCategory_CS]<br>
 から選択する。（例："blood-pressure"）<br>
 
 
