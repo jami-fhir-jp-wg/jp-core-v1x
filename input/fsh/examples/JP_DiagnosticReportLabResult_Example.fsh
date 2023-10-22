@@ -29,7 +29,7 @@ Instance: inner-observation-labresult-1
 InstanceOf: JP_Observation_LabResult
 Usage: #inline
 * status = #final
-* category[+] = $JP_SimpleObservationCategory_CS#laboratory
+* category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory
 * code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#123 "ヘモグロビン"
 * code.coding[+] = $JP_ObservationLabResultCode_CS#2A990000001930953
 * code.text = "ヘモグロビン"
@@ -45,7 +45,7 @@ Instance: inner-observation-labresult-2
 InstanceOf: JP_Observation_LabResult
 Usage: #inline
 * status = #final
-* category[+] = $JP_SimpleObservationCategory_CS#laboratory
+* category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory
 * code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#456 "赤血球数"
 * code.coding[+] = $JP_ObservationLabResultCode_CS#2A990000001992051
 * code.text = "赤血球数"
@@ -62,7 +62,7 @@ Instance: inner-observation-labresult-3
 InstanceOf: JP_Observation_LabResult
 Usage: #inline
 * status = #final
-* category[+] = $JP_SimpleObservationCategory_CS#laboratory
+* category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory
 * code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#789 "ヘマトクリット"
 * code.coding[+] = $JP_ObservationLabResultCode_CS#2A990000001930954
 * code.text = "ヘマトクリット"
