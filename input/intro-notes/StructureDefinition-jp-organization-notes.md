@@ -114,7 +114,7 @@ JP Coreでの医療機関コード（１０桁）のエリアに格納する値�
 2. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
-   GET [base]/Organization?address=[string]
+   GET [base]/Organization?address={string}
    ```
 
    例：

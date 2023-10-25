@@ -25,11 +25,11 @@ JP Encounter リソースで使用される拡張は次の通りである。
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
 | SHALL            | identifier    | token  | GET [base]/Encounter?identifier=http://hl7.org/fhir/sid/jpsys\|123456 |
-| SHOULD            | patient    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456  |
-| SHOULD            | date, patient    | token  | GET [base]/Encounter?date=eq2021-04-15?patient=http://hl7.org/fhir/sid/jpsys\|123456  |
-| SHOULD           | class, patient    | token  | GET [base]/Encounter?class=http://terminology.hl7.org/CodeSystem/v3-ActCode\|EMER?patient=http://hl7.org/fhir/sid/jpsys\|123456  |
-| SHOULD           | patient, type    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456&type=http://terminology.hl7.org/CodeSystem/encounter-type\|ADMS |
-| SHOULD           | patient, status    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456?status=arrived  |
+| SHOULD           | patient    | reference  | GET [base]/Encounter?patient=Patient/123456 |
+| SHOULD           | date, patient    | date, reference  | GET [base]/Encounter?date=eq2021-04-15&patient=Patient/123456  |
+| SHOULD           | class, patient    | token, reference  | GET [base]/Encounter?class=http://terminology.hl7.org/CodeSystem/v3-ActCode\|EMER&patient=Patient/123456  |
+| SHOULD           | patient, type    | reference, token  | GET [base]/Encounter?patient=Patient/123456&type=http://terminology.hl7.org/CodeSystem/encounter-type\|ADMS |
+| SHOULD           | patient, status    | reference, token  | GET [base]/Encounter?patient=Patient/123456&status=arrived  |
 
 ##### 必須検索パラメータ
 
@@ -62,7 +62,7 @@ JP Encounter リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456
+   GET [base]/Encounter?patient=Patient/123456
    ```
 
    指定されたpatientに一致するEncounterリソースを含むBundleを検索する。
@@ -77,7 +77,7 @@ JP Encounter リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Encounter?date=eq2021-04-15?patient=http://hl7.org/fhir/sid/jpsys\|123456
+   GET [base]/Encounter?date=eq2021-04-15&patient=Patient/123456
    ```
 
    指定されたdate,patientに一致するEncounterリソースを含むBundleを検索する。
@@ -92,7 +92,7 @@ JP Encounter リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Encounter?class=http://terminology.hl7.org/CodeSystem/v3-ActCode\|EMER?patient=http://hl7.org/fhir/sid/jpsys\|123456 
+   GET [base]/Encounter?class=http://terminology.hl7.org/CodeSystem/v3-ActCode\|EMER&patient=Patient/123456 
    ```
 
    指定されたclass,patientに一致するEncounterリソースを含むBundleを検索する。
@@ -106,7 +106,7 @@ JP Encounter リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456?type=http://terminology.hl7.org/CodeSystem/encounter-type\|ADMS 
+   GET [base]/Encounter?patient=Patient/123456&type=http://terminology.hl7.org/CodeSystem/encounter-type\|ADMS 
    ```
 
    指定されたpatient, typeに一致するEncounterリソースを含むBundleを検索する。
@@ -121,7 +121,7 @@ JP Encounter リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456?status=arrive 
+   GET [base]/Encounter?patientPatient/123456&status=arrive 
    ```
 
    指定されたpatient, statusに一致するEncounterリソースを含むBundleを検索する。

@@ -53,9 +53,9 @@
    
 
 2. name 検索パラメータを使用して、任意の名前パートによる文字列検索をサポートしなければならない（**SHALL**）
-
+S
    ```
-   GET [base]/Practitioner?name=[string]
+   GET [base]/Practitioner?name={string}
    ```
 
    例：

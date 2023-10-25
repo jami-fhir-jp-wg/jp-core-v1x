@@ -29,7 +29,7 @@
 1. name 検索パラメータを使用して、任意の名前パートによる文字列検索をサポートしなければならない（**SHALL**）
 
    ```
-   GET [base]/Location?name=[string]
+   GET [base]/Location?name={string}
    ```
 
    例：
@@ -59,10 +59,10 @@
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. address 検索パラメータを使用して、住所テキストによる文字列検索をサポートしなければならない（**SHOULD**）
+1. address 検索パラメータを使用して、住所テキストによる文字列検索をサポートすることが望ましい（**SHOULD**）
 
    ```
-   GET [base]/Location?address=[string]
+   GET [base]/Location?address={string}
    ```
 
    例：
@@ -76,7 +76,7 @@
 1. address-city 検索パラメータを使用して、住所の市町村名によるLocationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
-   GET [base]/Location?address-city=[string]
+   GET [base]/Location?address-city={string}
    ```
 
    例：
@@ -91,7 +91,7 @@
 1. address-state 検索パラメータを使用して、住所の都道府県名によるLocationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
-   GET [base]/Location?address-state=[string]
+   GET [base]/Location?address-state={string}
    ```
 
    例：
@@ -105,7 +105,7 @@
 1. address-postalcode 検索パラメータを使用して、住所の郵便番号によるLocationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
-   GET [base]/Location?address-postalcode=[string]
+   GET [base]/Location?address-postalcode={string}
    ```
 
    例：
