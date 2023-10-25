@@ -40,7 +40,7 @@
 
    名前が一致するLocationリソースを含むBundleを取得する。
 
-2. identifier 検索パラメータを使用して、ロケーションIDなどの識別子によるLocationの検索をサポートしなければならない（**SHALL**）
+1. identifier 検索パラメータを使用して、ロケーションIDなどの識別子によるLocationの検索をサポートしなければならない（**SHALL**）
 
    ```
    GET [base]/Location?identifier={system|}[code]
@@ -55,7 +55,11 @@
    指定された識別子に一致するLocationリソースを含むBundleを取得する。
 
 
-1. address 検索パラメータを使用して、住所テキストによる文字列検索をサポートしなければならない（**SHALL**）
+##### 推奨検索パラメータ
+
+次の検索パラメータをサポートすることが望ましい。
+
+1. address 検索パラメータを使用して、住所テキストによる文字列検索をサポートしなければならない（**SHOULD**）
 
    ```
    GET [base]/Location?address=[string]
@@ -69,7 +73,7 @@
 
    住所文字列が一致するLocationリソースを含むBundleを取得する。
 
-2. address-city 検索パラメータを使用して、住所の市町村名によるLocationの検索をサポートすることが望ましい（**SHOULD**）
+1. address-city 検索パラメータを使用して、住所の市町村名によるLocationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Location?address-city=[string]
@@ -84,7 +88,7 @@
    指定された住所の市町村名が一致するLocationリソースを含むBundleを取得する。
 
 
-3. address-state 検索パラメータを使用して、住所の都道府県名によるLocationの検索をサポートすることが望ましい（**SHOULD**）
+1. address-state 検索パラメータを使用して、住所の都道府県名によるLocationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Location?address-state=[string]
@@ -98,7 +102,7 @@
 
    指定された住所の都道府県名が一致するLocationリソースを含むBundleを取得する。
 
-4. address-postalcode 検索パラメータを使用して、住所の郵便番号によるLocationの検索をサポートすることが望ましい（**SHOULD**）
+1. address-postalcode 検索パラメータを使用して、住所の郵便番号によるLocationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
    GET [base]/Location?address-postalcode=[string]

@@ -27,8 +27,8 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
 | SHALL            | identifier | token  | GET [base]/Coverage?identifier=***
 | SHOULD           | beneficiary   | 	reference  | GET [base]/Coverage?beneficiary=*** |
-| SHOULD           | class-type    | token | GET [base]/Coverage.class?type=*** |
-| SHOULD           | class-value | string  | GET [base]/Coverage.class?value=*** |
+| SHOULD           | class-type    | token | GET [base]/Coverage?class-type=*** |
+| SHOULD           | class-value | string  | GET [base]/Coverage?class-value=*** |
 | SHOULD           | dependent | string  | GET [base]/Coverage?dependent=*** |
 | SHOULD           | patient | reference  | GET [base]/Coverage?beneficiary=Patient/*** |
 | SHOULD           | payor | reference  | GET [base]/Coverage?payor=*** |
@@ -36,6 +36,22 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 | SHOULD           | status | token  | GET [base]/Coverage?status=*** |
 | SHOULD           | subscriber | reference  | GET [base]/Coverage?subscriber=*** |
 | SHOULD           | type | token  | GET [base]/Coverage?token=*** |
+
+##### 必須検索パラメータ
+
+1. identifier 検索パラメータを使用して、識別子によるCoverageの検索をサポートしなければならない（**SHALL**）
+
+   ```
+   GET [base]/Coverage?identifier={system|}[code]
+   ```
+
+   例：
+
+   ```
+   GET [base]/Coverage?identifier=http://abchosptal.co.jp/coverage/idsys|123456
+   ```
+
+   指定された識別子に一致するCoverageリソースを含むBundleを検索する。
 
 ##### 推奨検索パラメータ
 
@@ -55,17 +71,137 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 
    指定された識別子に一致するCoverageリソースを含むBundleを検索する。
    
-2. class-type 検索パラメータを使用して、言語コードによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
+1. class-type 検索パラメータを使用して、言語コードによるCoverageの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
-   GET [base]/Coverage.class?type={token}
+   GET [base]/Coverage?class-type={token}
    ```
 
    例：
 
    ```
-   GET [base]/Coverageclass?type=*****
+   GET [base]/Coverage?class-type=*****
    ```
+
+   指定されたclass-typeに一致するCoverageリソースを含むBundleを検索する。
+
+
+1. class-value 検索パラメータを使用して、言語コードによるCoverageの検索をサポートすることが望ましい（**SHOULD**）
+
+   ```
+   GET [base]/Coverage?class-value={string}
+   ```
+
+   例：
+
+   ```
+   GET [base]/Coverage?class-value=*****
+   ```
+
+   指定されたclass-valueに一致するCoverageリソースを含むBundleを検索する。
+
+
+1. dependent 検索パラメータを使用して、言語コードによるCoverageの検索をサポートすることが望ましい（**SHOULD**）
+
+   ```
+   GET [base]/Coverage?dependent={string}
+   ```
+
+   例：
+
+   ```
+   GET [base]/Coverage?dependent=*****
+   ```
+
+   指定されたdependentに一致するCoverageリソースを含むBundleを検索する。
+
+1. patient 検索パラメータを使用して、言語コードによるCoverageの検索をサポートすることが望ましい（**SHOULD**）
+
+   ```
+   GET [base]/Coverage?patient={reference}
+   ```
+
+   例：
+
+   ```
+   GET [base]/Coverage?patient=*****
+   ```
+
+   指定されたpatientに一致するCoverageリソースを含むBundleを検索する。
+
+1. payor 検索パラメータを使用して、言語コードによるCoverageの検索をサポートすることが望ましい（**SHOULD**）
+
+   ```
+   GET [base]/Coverage?payor={reference}
+   ```
+
+   例：
+
+   ```
+   GET [base]/Coverage?payor=*****
+   ```
+
+   指定されたpayorに一致するCoverageリソースを含むBundleを検索する。
+
+1. policy-holder 検索パラメータを使用して、言語コードによるCoverageの検索をサポートすることが望ましい（**SHOULD**）
+
+   ```
+   GET [base]/Coverage?policy-holder={reference}
+   ```
+
+   例：
+
+   ```
+   GET [base]/Coverage?policy-holder=*****
+   ```
+
+   指定されたpolicy-holderに一致するCoverageリソースを含むBundleを検索する。
+
+
+1. status 検索パラメータを使用して、言語コードによるCoverageの検索をサポートすることが望ましい（**SHOULD**）
+
+   ```
+   GET [base]/Coverage?status={token}
+   ```
+
+   例：
+
+   ```
+   GET [base]/Coverage?status=*****
+   ```
+
+   指定されたstatusに一致するCoverageリソースを含むBundleを検索する。
+
+
+1. subscriber 検索パラメータを使用して、言語コードによるCoverageの検索をサポートすることが望ましい（**SHOULD**）
+
+   ```
+   GET [base]/Coverage?subscriber={reference}
+   ```
+
+   例：
+
+   ```
+   GET [base]/Coverage?subscriber=*****
+   ```
+
+   指定された識subscriberに一致するCoverageリソースを含むBundleを検索する。
+
+
+1. type 検索パラメータを使用して、言語コードによるCoverageの検索をサポートすることが望ましい（**SHOULD**）
+
+   ```
+   GET [base]/Coverage?type={string}
+   ```
+
+   例：
+
+   ```
+   GET [base]/Coverage?type=*****
+   ```
+
+   指定されたtypeに一致するCoverageリソースを含むBundleを検索する。
+
 
 ### サンプル
 

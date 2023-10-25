@@ -26,16 +26,14 @@ JP Encounter リソースで使用される拡張は次の通りである。
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
 | SHALL            | identifier    | token  | GET [base]/Encounter?identifier=http://hl7.org/fhir/sid/jpsys\|123456 |
 | SHOULD            | patient    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456  |
-| SHOULD            | date, patient    | token  | GET [base]/Encounter?date=http://hl7.org/fhir/sid/jpsys\20210415?patient=http://hl7.org/fhir/sid/jpsys\|123456  |
-| SHOULD           | class, patient    | token  | GET [base]/Encounter?class=http://hl7.org/fhir/sid/jpsys\EMER?patient=http://hl7.org/fhir/sid/jpsys\|123456  |
-| SHOULD           | patient, type    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456?type=http://hl7.org/fhir/sid/jpsys\ADMS  |
-| SHOULD           | patient, status    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456?status=http://hl7.org/fhir/sid/jpsys\arrived  |
+| SHOULD            | date, patient    | token  | GET [base]/Encounter?date=eq2021-04-15?patient=http://hl7.org/fhir/sid/jpsys\|123456  |
+| SHOULD           | class, patient    | token  | GET [base]/Encounter?class=http://terminology.hl7.org/CodeSystem/v3-ActCode\|EMER?patient=http://hl7.org/fhir/sid/jpsys\|123456  |
+| SHOULD           | patient, type    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456&type=http://terminology.hl7.org/CodeSystem/encounter-type\|ADMS |
+| SHOULD           | patient, status    | token  | GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456?status=arrived  |
 
 ##### 必須検索パラメータ
 
-次の検索パラメータをサポートすることが望ましい。(**SHOULD**)
-
-1. identifier 検索パラメータを使用して、診察番号等の識別子によるEncounterの検索をサポートすることが望ましい（**SHOULD**）
+1. identifier 検索パラメータを使用して、診察番号等の識別子によるEncounterの検索をサポートしなければならない（**SHALL**）
 
    ```
    GET [base]/Encounter?identifier={system|}[code]
@@ -48,6 +46,90 @@ JP Encounter リソースで使用される拡張は次の通りである。
    ```
 
    指定された識別子に一致するEncounterリソースを含むBundleを検索する。
+
+
+
+##### 推奨検索パラメータ
+
+次の検索パラメータをサポートすることが望ましい。
+
+1. patient 検索パラメータを使用して、識別子によるEncounterの検索をサポートすることが望ましい（**SHOULD**）
+
+   ```
+   GET [base]/Encounter?patient={reference}
+   ```
+
+   例：
+
+   ```
+   GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456
+   ```
+
+   指定されたpatientに一致するEncounterリソースを含むBundleを検索する。
+   
+
+1. date, patient  検索パラメータを使用して、識別子によるEncounterの検索をサポートすることが望ましい（**SHOULD**）
+
+   ```
+   GET [base]/Encounter?date={date}&patient={reference}
+   ```
+
+   例：
+
+   ```
+   GET [base]/Encounter?date=eq2021-04-15?patient=http://hl7.org/fhir/sid/jpsys\|123456
+   ```
+
+   指定されたdate,patientに一致するEncounterリソースを含むBundleを検索する。
+
+
+1. class, patient  検索パラメータを使用して、識別子によるEncounterの検索をサポートすることが望ましい（**SHOULD**）
+
+   ```
+   GET [base]/Encounter?class={token}&patient={reference}
+   ```
+
+   例：
+
+   ```
+   GET [base]/Encounter?class=http://terminology.hl7.org/CodeSystem/v3-ActCode\|EMER?patient=http://hl7.org/fhir/sid/jpsys\|123456 
+   ```
+
+   指定されたclass,patientに一致するEncounterリソースを含むBundleを検索する。
+
+1. patient, type  検索パラメータを使用して、識別子によるEncounterの検索をサポートすることが望ましい（**SHOULD**）
+
+   ```
+   GET [base]/Encounter?patient={reference}&type={token}
+   ```
+
+   例：
+
+   ```
+   GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456?type=http://terminology.hl7.org/CodeSystem/encounter-type\|ADMS 
+   ```
+
+   指定されたpatient, typeに一致するEncounterリソースを含むBundleを検索する。
+
+
+1. patient, status  検索パラメータを使用して、識別子によるEncounterの検索をサポートすることが望ましい（**SHOULD**）
+
+   ```
+   GET [base]/Encounter?patient={reference}&status={token}
+   ```
+
+   例：
+
+   ```
+   GET [base]/Encounter?patient=http://hl7.org/fhir/sid/jpsys\|123456?status=arrive 
+   ```
+
+   指定されたpatient, statusに一致するEncounterリソースを含むBundleを検索する。
+
+##### 必須検索パラメータ
+
+次の検索パラメータをサポートすることが望ましい。(**SHOULD**)
+
 
 #### Operation一覧
 
