@@ -50,13 +50,10 @@ JP Patient リソースで使用される拡張は次の通りである。
    ```
    GET [base]/Patient?identifier={system|}[code]
    ```
-
    例：
-
    ```
    GET [base]/Patient?identifier=urn:oid:1.2.392.100495.20.3.51.11312345670|123456
    ```
-
    指定された識別子に一致するPatientリソースを含むBundleを検索する。
 
 
@@ -64,14 +61,13 @@ JP Patient リソースで使用される拡張は次の通りである。
 
 次の検索パラメータをサポートすることが望ましい。
 
-1. name 検索パラメータを使用してPatientの検索をサポートすることが望ましい（**SHOULD**）、name検索パラメータはHumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する
-
+1. name 検索パラメータを使用してPatientの検索をサポートすることが望ましい（**SHOULD**）、name検索パラメータはHumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する 
    ```
    GET [base]/Patient?name={string}
    ```
-
+   
    例：
-
+   
    ```
    GET [base]/Patient?name=山田%20太郎
    ```
@@ -120,9 +116,9 @@ JP Patient リソースで使用される拡張は次の通りである。
    ```
    GET [base]/Patient?name={string}&phone={token}
    ```
-
+   
    例：
-
+   
    ```
    GET [base]/Patient?name=山田%20太郎&phone=0123456789
    ```
@@ -138,7 +134,6 @@ JP Patient リソースで使用される拡張は次の通りである。
    ```
    GET [base]/Patient?name=山田%20太郎&address-postalcode=1234567
    ```
-
 
 
 ##### オプション検索パラメータ
