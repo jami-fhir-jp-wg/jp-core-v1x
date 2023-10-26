@@ -40,8 +40,11 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(category[laboratory], 検体検査では、http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS のコード表から\"laboratory\"を設定する。)
 * insert SetDefinition(category[laboratory].coding.system, 検体検査では、http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS のコード表を使用する。)
 * insert SetDefinition(category[laboratory].coding.code, 検体検査を表すコード laboratory を設定する。)
-* category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory (exactly)
+
+* category[laboratory] from JP_SimpleObservationCategory_VS (required)
+* category[laboratory].coding.system = $JP_SimpleObservationCategory_CS (exactly)
 * category[laboratory].coding 1..1
+* category[laboratory].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
 * category[laboratory].coding.system 1..1
 * category[laboratory].coding.code 1..1
 
