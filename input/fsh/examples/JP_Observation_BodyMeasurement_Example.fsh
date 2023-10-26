@@ -9,6 +9,7 @@ Usage: #example
 * code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#abc-local-456
 * code.coding[+] = $JP_ObservationBodyMeasurementCode_CS#31000296
 * effectiveDateTime = "2021-10-19T10:00:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueQuantity.unit = "kg"
 * valueQuantity.value = 63.5
 * status = #final

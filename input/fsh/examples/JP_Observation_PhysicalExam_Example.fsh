@@ -9,6 +9,7 @@ Usage: #example
 * subject = Reference(Patient/jp-patient-example-1)
 * encounter = Reference(Encounter/jp-encounter-example-1)
 * effectiveDateTime = "2021-07-09T17:00:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v2-0532#Y "Yes"
 //TODO: コーディング不明のためTextで回避
 * bodySite.text = "下腹部"
