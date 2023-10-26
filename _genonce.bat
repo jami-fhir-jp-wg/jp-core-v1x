@@ -10,7 +10,7 @@ GOTO igpublish
 
 :isonline
 ECHO We're online
-SET txoption=-tx https://tx.jpfhir.jp:8081 
+REM SET txoption=-tx https://tx.jpfhir.jp:8081 
 
 :igpublish
 
