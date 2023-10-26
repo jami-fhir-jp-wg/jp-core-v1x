@@ -121,6 +121,17 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   no-usage-check: 'true'
   i18n-default-lang: 'ja'
   special-url:
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Binary
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_CarePlan
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Consent
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Device
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DeviceUseStatement
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DocumentReference
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_RelatedPerson
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchStudy
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchSubject
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage
@@ -209,6 +220,65 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationNo_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_PrefectureNo_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_CS
+    - urn:oid:1.2.392.200270.4.1000.1
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageComment_CS
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationRequestDosageInstructionLine_CS
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageLineComment_CS
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageMethodComment_CS
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageRateComment_CS
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageRouteComment_CS
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageSiteComment_CS
+    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationUncategorizedComment_CS
+    - urn:oid:1.2.392.100495.10.3.100.5.11.5.2
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_MicrobiologyCategory_CS
+    - urn:oid:1.2.392.100495.10.3.100.5.27.6.1
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodySite_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_PhysicalExamCode_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureBodySite_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureNotPerformedReason_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureOutcome_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionSeverity_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DiagnosticReportCategory_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_DiagnosticReport_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_Endoscopy_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicalLicenseCertificate_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageComment_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationRequestDosageInstructionLine_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageLineComment_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageMethodComment_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageRateComment_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageRouteComment_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageSiteComment_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationUncategorizedComment_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationInstructionForDispenseJHSP0002_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_Microbiology_AntiMicrobialDrug_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationCategory_Microbiology_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_MicrobiologyCategory_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_Microbiology_InfectiousAgent_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCategory_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCode_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodySite_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_PhysicalExamCode_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureBodySite_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCodesICHI_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCondition_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureDeviceAction_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureDeviceKind_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureFollowUp_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureNotPerformedReason_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureOutcome_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedurePerformerRole_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureReason_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_RadiologyModality_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCodesJed_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
     - urn:iso:std:iso:3166-2
     - urn:iso:std:iso:3166-3
     - urn:iso:std:iso:3166-N
