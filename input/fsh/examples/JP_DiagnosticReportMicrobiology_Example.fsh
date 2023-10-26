@@ -75,6 +75,8 @@ Usage: #inline
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
 * code.coding[+] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z1 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義1(白血球)"
 * code.text = "白血球"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "1+"
 
 Instance: gram-strain2
@@ -88,6 +90,8 @@ Usage: #inline
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
 * code.coding[+] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z2 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義2(上皮細胞)"
 * code.text = "上皮細胞"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "少数"
 
 Instance: gram-strain3
@@ -101,6 +105,8 @@ Usage: #inline
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
 * code.coding[+] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z3 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義3(グラム陽性球菌（GPC）)"
 * code.text = "グラム陽性球菌（GPC）"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "1+"
 
 Instance: gram-strain4
@@ -114,6 +120,8 @@ Usage: #inline
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
 * code.coding[+] = http://abc-hospital.local/fhir/Observation/localcode#6A0100000061704Z4 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義4(グラム陽性桿菌（GPR）)"
 * code.text = "グラム陽性桿菌（GPR）"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "少数"
 
 Instance: organism-panels1
@@ -126,6 +134,8 @@ Usage: #inline
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)_喀痰_培養検査"
 * code.text = "培養同定(一般細菌)"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * hasMember[0] = Reference(Observation/organism-id1)
 * hasMember[+] = Reference(Observation/susceptibility-panels1)
 
@@ -139,6 +149,8 @@ Usage: #inline
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)_喀痰_培養検査"
 * code.text = "培養同定(一般細菌)"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * hasMember[0] = Reference(Observation/organism-id2)
 * hasMember[+] = Reference(Observation/susceptibility-panels2)
 
@@ -152,6 +164,8 @@ Usage: #inline
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)_喀痰_培養検査"
 * code.text = "培養同定(一般細菌)"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * hasMember[0] = Reference(Observation/organism-id3)
 
 Instance: organism-panels4
@@ -164,6 +178,8 @@ Usage: #inline
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism-panels "Organism panels"
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6B010000006174149 "培養同定(一般細菌)_喀痰_培養検査"
 * code.text = "培養同定(一般細菌)"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * hasMember[0] = Reference(Observation/organism-id4)
 
 // ----- 第2階層 ----- //
@@ -177,6 +193,8 @@ Usage: #inline
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism "Organism"
 * code.coding[infectious-agent] = $JP_Microbiology_InfectiousAgent_CS#1303
 * code.text = "Staphylococcus aureus (MRSA)"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "2+"
 
 Instance: susceptibility-panels1
@@ -189,6 +207,8 @@ Usage: #inline
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-panels "Susceptibility panels"
 * code.coding[infectious-agent] = $JP_Microbiology_InfectiousAgent_CS#1303
 * code.text = "Staphylococcus aureus (MRSA)"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * hasMember[0] = Reference(Observation/susceptibility-measurements1-1)
 * hasMember[+] = Reference(Observation/susceptibility-measurements1-2)
 * hasMember[+] = Reference(Observation/susceptibility-measurements1-3)
@@ -207,6 +227,8 @@ Usage: #inline
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism "Organism"
 * code.coding[infectious-agent] = $JP_Microbiology_InfectiousAgent_CS#1131
 * code.text = "Streptococcus pneumoniae"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "1+"
 
 Instance: susceptibility-panels2
@@ -219,6 +241,8 @@ Usage: #inline
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-panels "Susceptibility panels"
 * code.coding[infectious-agent] = $JP_Microbiology_InfectiousAgent_CS#1131
 * code.text = "Streptococcus pneumoniae"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * hasMember[0] = Reference(Observation/susceptibility-measurements2-1)
 * hasMember[+] = Reference(Observation/susceptibility-measurements2-2)
 * hasMember[+] = Reference(Observation/susceptibility-measurements2-3)
@@ -239,6 +263,8 @@ Usage: #inline
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism "Organism"
 * code.coding[infectious-agent] = $JP_Microbiology_InfectiousAgent_CS#1101
 * code.text = "α-Streptococcus"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "1+"
 
 Instance: organism-id4
@@ -251,6 +277,8 @@ Usage: #inline
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#organism "Organism"
 * code.coding[infectious-agent] = $JP_Microbiology_InfectiousAgent_CS#6000
 * code.text = "Corynebacterium sp."
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "少数"
 
 // ----- 第3階層 ----- //
@@ -263,6 +291,8 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1821 "GM"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
 Instance: susceptibility-measurements1-2
@@ -274,6 +304,8 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1871 "ABK"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
 Instance: susceptibility-measurements1-3
@@ -285,6 +317,8 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2121 "MINO"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
 Instance: susceptibility-measurements1-4
@@ -296,6 +330,8 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2006 "CLDM"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
 Instance: susceptibility-measurements1-5
@@ -307,6 +343,8 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2516 "LVFX"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
 Instance: susceptibility-measurements1-6
@@ -318,6 +356,8 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2601 "FOM"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
 
 Instance: susceptibility-measurements1-7
@@ -329,6 +369,8 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2301 "VCM"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
 Instance: susceptibility-measurements2-1
@@ -340,6 +382,8 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1201 "PCG"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
 Instance: susceptibility-measurements2-2
@@ -351,6 +395,8 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2121 "MINO"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
 Instance: susceptibility-measurements2-3
@@ -363,6 +409,8 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1901 "EM"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
 Instance: susceptibility-measurements2-4
@@ -374,6 +422,8 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1656 "CTRX"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
 Instance: susceptibility-measurements2-5
@@ -385,6 +435,8 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1596 "CFPN-PI"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
 Instance: susceptibility-measurements2-6
@@ -396,6 +448,8 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2006 "CLDM"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
 
 Instance: susceptibility-measurements2-7
@@ -407,6 +461,8 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2516 "LVFX"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
 Instance: susceptibility-measurements2-8
@@ -418,6 +474,8 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#1411 "MEPM"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
 
 Instance: susceptibility-measurements2-9
@@ -429,4 +487,6 @@ Usage: #inline
 * category[microbiology] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[microbiologyCategory] = $JP_MicrobiologyCategory_CS#susceptibility-measurements "Susceptibility measurements"
 * code.coding[antimicrobial-drug] = $JP_Microbiology_AntiMicrobialDrug_CS#2301 "VCM"
+* effectiveDateTime = "2021-03-04T08:30:00+09:00"
+* performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
