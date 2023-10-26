@@ -126,11 +126,6 @@ JP Encounter リソースで使用される拡張は次の通りである。
 
    指定されたpatient, statusに一致するEncounterリソースを含むBundleを検索する。
 
-##### 必須検索パラメータ
-
-次の検索パラメータをサポートすることが望ましい。(**SHOULD**)
-
-
 #### Operation一覧
 
 JP Encounter リソースに対して使用される操作は次の通りである。
