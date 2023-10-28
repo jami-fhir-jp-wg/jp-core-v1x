@@ -350,7 +350,7 @@ Usage: #definition
 * status = #active
 * date = "2023-06-26"
 * kind = #codesystem
-* description = "微生物学的検査抗菌薬コード(Ver.5.2) 
+* description = "微生物学的検査抗菌薬コード(Ver.5.2)  
 本コードは厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)で作成されているマスタを編集・加工して利用している"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.10.3.100.5.11.5.2"

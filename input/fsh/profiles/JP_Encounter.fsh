@@ -10,21 +10,24 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * ^status = #active
 * ^date = "2023-06-26"
 * . ^short = "患者にサービスが提供されている間の相互作用"
-* . ^definition = "医療サービスの提供または患者の健康状態の評価を目的とした、患者と医療提供者との間の相互作用。Encounterと表現される。\r\n\r\n【JP Core仕様】外来受診、救急受診、入院、退院、対面診察、電話診察、など。"
+* . ^definition = "医療サービスの提供または患者の健康状態の評価を目的とした、患者と医療提供者との間の相互作用。Encounterと表現される。  
+【JP Core仕様】外来受診、救急受診、入院、退院、対面診察、電話診察、など。"
 * extension contains $encounter-associatedEncounter named associatedEncounter ..1
 * extension[associatedEncounter] ^short = "関連するEncounter"
 * extension[associatedEncounter] ^definition = "関連するEncounter"
 * identifier ^short = "このEncounterが知られている識別子（複数可）【詳細参照】"
 * identifier ^definition = "このEncounterが知られている識別子（複数可）。"
 * status ^short = "planned | arrived | triaged | in-progress | onleave | finished | cancelled + / 予定｜到着｜トリアージ｜進行中｜保留中｜終了｜キャンセル+【詳細参照】"
-* status ^definition = "planned | arrived | triaged | in-progress | onleave | finished | cancelled +.\r\n\r\n予定｜到着｜トリアージ｜進行中｜保留中｜終了｜キャンセル+."
+* status ^definition = "planned | arrived | triaged | in-progress | onleave | finished | cancelled +.  
+予定｜到着｜トリアージ｜進行中｜保留中｜終了｜キャンセル+."
 * status ^comment = "内部のビジネス・ルールは、ステータス(およびクラス)間で発生する可能性のある適切な遷移を検出することに注意すること。"
 * status ^isModifierReason = "この要素は、リソースを有効なものとして扱うべきではないことを意味する status entered-in-error を含む status 要素であるため、修飾子としてラベル付けされる。"
 * statusHistory ^short = "過去のEncounterのステータス一覧【詳細参照】"
 * statusHistory ^definition = "ステータス履歴(status History)は、リソースの歴史的なバージョンを読み込んだり、サーバに保存させたりすることなく、Encounterリソースがステータス履歴を含むことを可能にする。"
 * statusHistory ^comment = "現在のステータスは、ステータスの履歴ではなく、常にリソースの現在のバージョンにある。"
 * statusHistory.status ^short = "planned | arrived | triaged | in-progress | onleave | finished | cancelled + / 予定｜到着｜トリアージ｜進行中｜保留中｜終了｜キャンセル+."
-* statusHistory.status ^definition = "planned | arrived | triaged | in-progress | onleave | finished | cancelled +.\r\n\r\n予定｜到着｜トリアージ｜進行中｜保留中｜終了｜キャンセル+."
+* statusHistory.status ^definition = "planned | arrived | triaged | in-progress | onleave | finished | cancelled +.  
+予定｜到着｜トリアージ｜進行中｜保留中｜終了｜キャンセル+."
 * statusHistory.status ^comment = "文字列のサイズは 1MB を超えてはならないことに注意すること。"
 * statusHistory.period ^short = "そのエピソードが指定された状態になっていた時間"
 * statusHistory.period ^definition = "そのエピソードが指定された状態になっていた時間。"
@@ -35,7 +38,8 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * classHistory ^short = "過去のEncounter classのリスト【詳細参照】"
 * classHistory ^definition = "クラスの履歴は、リソースの履歴を経由することなく、Encounterの遷移を追跡することを可能にする。これは、入院患者が緊急時にEncounterした後、入院患者のシナリオに移行する場合に使用される。このようにして、新しいEncounterを再開しないようにすることで、検査/診断結果がより簡単に患者を追跡することができ、再処理を必要とせず、救急から入院への退院の際に紛失したりキャンセルされたりすることがないことを保証する。"
 * classHistory.class ^short = "inpatient | outpatient | ambulatory | emergency + / 入院｜外来｜外来｜救急＋"
-* classHistory.class ^definition = "inpatient | outpatient | ambulatory | emergency +.\r\n\r\n入院｜外来｜外来｜救急＋。"
+* classHistory.class ^definition = "inpatient | outpatient | ambulatory | emergency +.  
+入院｜外来｜外来｜救急＋。"
 * classHistory.class ^comment = "コードは列挙やコードリストの中で非常にカジュアルに定義されることもあれば、SNOMED CTのような非常にフォーマルな定義まである- 詳細はHL7 v3コア・プリンシプルを参照すること。"
 * classHistory.period ^short = "指定されたクラスにエピソードがあった時間"
 * classHistory.period ^definition = "指定されたクラスにエピソードがあった時間。"

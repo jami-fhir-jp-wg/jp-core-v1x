@@ -26,7 +26,8 @@ Description: "このプロファイルはLocationリソースに対して、所�
 * alias ^short = "その場所が過去に知られていた、または以前から知られていた別名のリスト"
 * alias ^definition = "その場所が過去に知られていた、または以前から知られていた別名のリスト"
 * alias ^comment = "エイリアス/歴史的な名前に関連付けられた日付はない。これは、名前がいつ使用されたかを追跡するためではなく、古い名前でも場所を特定できるように検索を支援するためのものである。"
-* alias ^requirements = "「時間の経過とともに、場所や組織は多くの変化を遂げ、さまざまな名前で知られるようになる。\r\n場所が知られている以前の名前を知っていることを検索することは非常に役に立つ。」"
+* alias ^requirements = "「時間の経過とともに、場所や組織は多くの変化を遂げ、さまざまな名前で知られるようになる。  
+場所が知られている以前の名前を知っていることを検索することは非常に役に立つ。」"
 * description ^short = "名前以外の場所を識別するための詳細情報として表示できる場所に関する追加の詳細"
 * description ^definition = "場所の説明。場所の検索や参照に役立つ。"
 * description ^comment = "FHIR文字列はサイズが1MBを超えてはならないことに注意すること"
@@ -72,7 +73,8 @@ Description: "このプロファイルはLocationリソースに対して、所�
 * partOf ^requirements = "位置情報、表示、識別のためには、他のどの場所の内部にどの場所があるかを知ることが重要である。"
 * hoursOfOperation ^short = "この場所は通常、1週間のうち何日/時間帯に営業している"
 * hoursOfOperation ^definition = "この場所が週に何日あるいは何時間オープンしているか。"
-* hoursOfOperation ^comment = "この種の情報は、一般的にディレクトリやウェブサイトに掲載されており、施設が利用可能な時間帯を顧客に通知している。\r\nその場所の特定のサービスは、その場所の時間よりも短い（または長い）独自の時間を持っている場合がある。"
+* hoursOfOperation ^comment = "この種の情報は、一般的にディレクトリやウェブサイトに掲載されており、施設が利用可能な時間帯を顧客に通知している。  
+その場所の特定のサービスは、その場所の時間よりも短い（または長い）独自の時間を持っている場合がある。"
 * hoursOfOperation.daysOfWeek ^short = "mon | tue | wed | thu | fri | sat | sun / 月｜火｜水｜木｜金｜土｜日"
 * hoursOfOperation.daysOfWeek ^definition = "開始時刻と終了時刻の間に利用可能な曜日を示す。"
 * hoursOfOperation.daysOfWeek ^comment = "FHIR文字列のサイズは1MBを超えてはならないことに注意すること。"
@@ -83,7 +85,8 @@ Description: "このプロファイルはLocationリソースに対して、所�
 * hoursOfOperation.closingTime ^short = "場所が閉まる時間"
 * hoursOfOperation.closingTime ^definition = "場所が閉まる時間"
 * availabilityExceptions ^short = "利用可能の例外についての説明"
-* availabilityExceptions ^definition = "場所が私たちのものを開くときの説明は、通常、例えば、祝日の可用性とは異なる。\r\n営業時間に詳細な通常のサイトの利用可能性のすべての可能性のある例外を簡潔に説明する。"
+* availabilityExceptions ^definition = "場所が私たちのものを開くときの説明は、通常、例えば、祝日の可用性とは異なる。  
+営業時間に詳細な通常のサイトの利用可能性のすべての可能性のある例外を簡潔に説明する。"
 * endpoint ^short = "場所のために運営されているサービスへのアクセスを提供する技術的なエンドポイント"
 * endpoint ^definition = "場所のために運営されているサービスへのアクセスを提供する技術的なエンドポイント。"
 * endpoint ^comment = "参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"

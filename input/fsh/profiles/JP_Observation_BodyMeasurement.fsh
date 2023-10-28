@@ -16,7 +16,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "coding.system"
 * category ^slicing.rules = #open
-* category contains 
+* category contains
     bodyMeasurement 1..1 and
     bodyMeasurementCategory 1..*
 * category[bodyMeasurement].coding from $JP_SimpleObservationCategory_VS (required)
@@ -33,7 +33,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * subject ^comment = "【JP Core仕様】患者"
 * encounter ^comment = "【JP Core仕様】診察"
 * effective[x] only dateTime or Period
-* effective[x] ^comment = "【JP Core仕様】effectiveDateTime：医療者が確認した日時\r\n\r\neffectivePeriod：医療者が確認した期間"
+* effective[x] ^comment = "【JP Core仕様】effectiveDateTime：医療者が確認した日時  
+effectivePeriod：医療者が確認した期間"
 * hasMember only Reference(JP_Observation_Common or QuestionnaireResponse or MolecularSequence or JP_Observation_BodyMeasurement)
 * hasMember ^comment = "【JP Core仕様】関連する参照リソースにJP_Observation_BodyMeasurementを追加"
 * derivedFrom only Reference(DocumentReference or ImagingStudy or Media or QuestionnaireResponse or JP_Observation_Common or MolecularSequence or JP_Observation_BodyMeasurement)

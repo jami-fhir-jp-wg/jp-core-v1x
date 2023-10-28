@@ -28,7 +28,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * subject only Reference(JP_Patient)
 * subject ^comment = "【JP Core仕様】患者"
 * effective[x] only dateTime or Period
-* effective[x] ^comment = "【JP Core仕様】effectiveDateTime：医療者が確認した日時\r\n\r\neffectivePeriod：医療者が確認した期間"
+* effective[x] ^comment = "【JP Core仕様】effectiveDateTime：医療者が確認した日時  
+effectivePeriod：医療者が確認した期間"
 * value[x] only Quantity or CodeableConcept or string
 * value[x] ^comment = "【JP Core仕様】文字列、コード、数値に限定する"
 * derivedFrom only Reference(DocumentReference or ImagingStudy or Media or QuestionnaireResponse or JP_Observation_Common or MolecularSequence or JP_Observation_SocialHistory)

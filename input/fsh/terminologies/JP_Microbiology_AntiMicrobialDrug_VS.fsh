@@ -1,7 +1,7 @@
 ValueSet: JP_Microbiology_AntiMicrobialDrug_VS
 Id: jp-microbiology-anti-microbial-drug-vs
 Title: "JP Core Microbiology AntiMicrobial Drug ValueSet"
-Description: "微生物学検査 抗微生物学的薬剤値セット 
+Description: "微生物学検査 抗微生物学的薬剤値セット  
 本コードは厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)で作成されているマスタを編集・加工して利用している"
 * ^url = $JP_Microbiology_AntiMicrobialDrug_VS
 * ^status = #active

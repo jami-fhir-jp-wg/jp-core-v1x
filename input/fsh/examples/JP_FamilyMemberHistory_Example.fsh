@@ -19,7 +19,7 @@ Usage: #example
   * text = "難聴"
 * condition[0]
   * code
-    * text = "糖尿病" 
+    * text = "糖尿病"
 * condition[1]
   * code
-    * text = "難聴" 
+    * text = "難聴"

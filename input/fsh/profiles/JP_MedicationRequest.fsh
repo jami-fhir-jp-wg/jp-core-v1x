@@ -19,7 +19,9 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier ^short = "外部から参照されるID"
-* identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。\r\n処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。\r\nこのIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
+* identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。  
+処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。  
+このIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
 * identifier contains
     rpNumber 1..1 and
@@ -59,7 +61,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 
 
 
-* status ^short = "オーダの現在の状態を示すコード" 
+* status ^short = "オーダの現在の状態を示すコード"
 * status ^definition = "オーダの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
 * status ^comment = "このエレメントはmodifierとされている。StatusとはこのResourceが現在妥当な状態ではないことも示すからである。"
 * status ^isModifierReason = "このエレメントは modifier である。Statusエレメントが entered-in-error という正当な情報として扱うべきではない状態の値も取り得るからである。"
@@ -68,18 +70,30 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * statusReason ^comment = "一般的には「保留(suspended)」や「中止(cancelled)」といった例外的状態を示すために持ちいられる。MedicationRequestオーダが発生した理由についてはreasonCodeに記載され、この項目は用いられない。"
 * intent ^short = "投薬指示の意図"
 * intent ^definition = "投薬指示の意図 が提案(proposal)、計画(plan)、あるいは他の要求によるものかを示す。"
-* intent ^comment = "処方をオーダする場合、MedicationRequestのどの段階でオーダしたのかについて、この項目を指定することが期待される。たとえば、proposalであれば患者、関係者、医師あるいは機器からの提案として作成される。\"plan\"であれば、医師、患者、関係者そして機器からの提案として生成される。\"original-order\"は医師にしか作成できない。\r\n\r\ninstance-orderはリクエストあるいはオーダをインスタンス化する段階であり、MedicationAdministrationレコードにも使われる。\r\r\nintentはこのresourceが実際に適応される時に変化するため、このエレメントはmodifierとしてラベルされる。"
+* intent ^comment = "処方をオーダする場合、MedicationRequestのどの段階でオーダしたのかについて、この項目を指定することが期待される。たとえば、proposalであれば患者、関係者、医師あるいは機器からの提案として作成される。\"plan\"であれば、医師、患者、関係者そして機器からの提案として生成される。\"original-order\"は医師にしか作成できない。  
+instance-orderはリクエストあるいはオーダをインスタンス化する段階であり、MedicationAdministrationレコードにも使われる。  
+intentはこのresourceが実際に適応される時に変化するため、このエレメントはmodifierとしてラベルされる。"
 * intent ^isModifierReason = "このエレメントは全ての記述的な属性の解釈を変える。たとえば、「リクエストすることが推奨される時間」と「リクエストすることが承認された時間」、あるいは「リクエストすることが推奨される人」と「リクエストすることが承認された人」など"
 
 * category ^short = "薬剤使用区分"
-* category ^definition = "このMedicationRequest Resourceが使用される区分を示す。日本では「院外」「院内」「入院」「外来」などの区分を想定する。\r\n一般的には、外来や入院などどこでこの薬剤が投与、内服されるかを想定した区分である。\r\n処方病棟や処方した診療科をOrganization resourceで表現することが冗長である場合にはこの区分が用いられることもある。\r\n\r\nHL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicationrequest-category がデフォルトで用いられるが、日本での使用の場合持参薬をカバーする必要があり、JAHIS処方データ規約V3.0Cに記載されているMERIT-9処方オーダ表7とJHSP0007表を組み合わせて持ちいることとする。"
+* category ^definition = "このMedicationRequest Resourceが使用される区分を示す。日本では「院外」「院内」「入院」「外来」などの区分を想定する。  
+一般的には、外来や入院などどこでこの薬剤が投与、内服されるかを想定した区分である。  
+処方病棟や処方した診療科をOrganization resourceで表現することが冗長である場合にはこの区分が用いられることもある。  
+HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicationrequest-category がデフォルトで用いられるが、日本での使用の場合持参薬をカバーする必要があり、JAHIS処方データ規約V3.0Cに記載されているMERIT-9処方オーダ表7とJHSP0007表を組み合わせて持ちいることとする。"
 * category ^comment = "薬剤が投与あるいはその他の用途で利用されると想定される場面についての区分である。"
 * category ^binding.description = "MedicationRequest Resourceの区分を示すコード化された概念。たとえば、どこで服薬あるいは投与されるか、治療の種別はどうかについて。"
-* category from $JP_MedicationCategory_VS (preferred) 
+* category from $JP_MedicationCategory_VS (preferred)
 
 * medication[x] ^short = "What medication was supplied　医薬品"
-* medication[x] ^definition = "Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.\r\n\r\n投与された薬剤を識別する。既知の薬のリストから薬を識別するコード情報を設定する。"
-* medication[x] ^comment = "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.\r\n\r\nひとつのtext要素と、複数のcoding 要素を記述できる。処方オーダ時に選択または入力し、実際に処方箋に印字される文字列を必ずtext要素に格納した上で、それをコード化した情報を1個以上のcoding 要素に記述する。\r\n\r\n厚生労働省標準であるHOT9コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。\r\n\rなお、上記のいずれの標準的コードも付番されていない医薬品や医療材料の場合には、薬機法の下で使用されているGS1標準の識別コードであるGTIN(Global Trade Item Number)の調剤包装単位（最少包装単位、個別包装単位）14桁を使用する。\r\n\rひとつの処方薬、医療材料を複数のコード体系のコードで記述してもよく、その場合にcoding 要素を繰り返して記述する。\rただし、ひとつの処方薬を複数のコードで繰り返し記述する場合には、それらのコードが指し示す処方薬、医療材料は当然同一でなければならない。\rまた、処方を発行した医療機関内でのデータ利用のために、医療機関固有コード体系によるコード（ハウスコード、ローカルコード）の記述を含めてもよいが、その場合でも上述したいずれかの標準コードを同時に記述することが必要である。"
+* medication[x] ^definition = "Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.  
+投与された薬剤を識別する。既知の薬のリストから薬を識別するコード情報を設定する。"
+* medication[x] ^comment = "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.  
+ひとつのtext要素と、複数のcoding 要素を記述できる。処方オーダ時に選択または入力し、実際に処方箋に印字される文字列を必ずtext要素に格納した上で、それをコード化した情報を1個以上のcoding 要素に記述する。  
+厚生労働省標準であるHOT9コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。  
+なお、上記のいずれの標準的コードも付番されていない医薬品や医療材料の場合には、薬機法の下で使用されているGS1標準の識別コードであるGTIN(Global Trade Item Number)の調剤包装単位（最少包装単位、個別包装単位）14桁を使用する。  
+ひとつの処方薬、医療材料を複数のコード体系のコードで記述してもよく、その場合にcoding 要素を繰り返して記述する。  
+ただし、ひとつの処方薬を複数のコードで繰り返し記述する場合には、それらのコードが指し示す処方薬、医療材料は当然同一でなければならない。  
+また、処方を発行した医療機関内でのデータ利用のために、医療機関固有コード体系によるコード（ハウスコード、ローカルコード）の記述を含めてもよいが、その場合でも上述したいずれかの標準コードを同時に記述することが必要である。"
 * medication[x] only CodeableConcept
 
 * medicationCodeableConcept from JP_MedicationCode_VS (preferred)
@@ -97,11 +111,14 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * subject 1..1
 * subject only Reference(JP_Patient)
 * subject ^short = "処方箋が発行された対象(個人あるいはグループ)"
-* subject ^definition = "JP Coreでは患者を表すPatientリソースへの参照。\r\n一般には薬剤が投与される対象となる人（あるいはグループ)を表現するResourceに対するリンク。"
-* subject ^comment = "処方オーダの対象は必須項目である。\r\n二次利用のためにどこに実際の対象がいるのかについての情報は提供されない。特定の対象に対して匿名化することも必要である。"
+* subject ^definition = "JP Coreでは患者を表すPatientリソースへの参照。  
+一般には薬剤が投与される対象となる人（あるいはグループ)を表現するResourceに対するリンク。"
+* subject ^comment = "処方オーダの対象は必須項目である。  
+二次利用のためにどこに実際の対象がいるのかについての情報は提供されない。特定の対象に対して匿名化することも必要である。"
 * encounter only Reference(JP_Encounter)
 * encounter ^short = "encounter/admission/stay のいずれかとして記録された診察"
-* encounter ^definition = "JP Coreでの使用は規定されていない。\r\nこの対象となるリソース[x]が作成される間やこの記録が作成される対象のencounterは密接に関連している。"
+* encounter ^definition = "JP Coreでの使用は規定されていない。  
+この対象となるリソース[x]が作成される間やこの記録が作成される対象のencounterは密接に関連している。"
 * encounter ^comment = "このエレメントは一般的には外来でのイベントに対応するが、診察が公式に終わる前や後にこの診察についてのコンテキストに対応して開始される活動についても対応する。もし、診療のエピソードに関連させる必要があれば、extensionとして扱われることがある。"
 * supportingInformation ^short = "薬剤オーダについて補助的情報"
 * supportingInformation ^definition = "薬剤をオーダするときに補助的となる追加情報（たとえば、患者の身長や体重））を含む。"
@@ -111,7 +128,8 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * authoredOn ^definition = "JP Coreでは必須。処方指示が最初に作成された日時。秒の精度まで記録する。タイムゾーンも付与しなければならない。"
 * requester only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or RelatedPerson or Device)
 * requester ^short = "このオーダを発行した人・物"
-* requester ^definition = "JP Coreではこのエレメントに対する規定はない。\r\nこのオーダを発行した責任のある人、組織、機器。"
+* requester ^definition = "JP Coreではこのエレメントに対する規定はない。  
+このオーダを発行した責任のある人、組織、機器。"
 * requester ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * performer only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or Device or RelatedPerson or CareTeam)
 * performer ^short = "薬剤投与・管理を行った者"
@@ -123,10 +141,12 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * performerType ^comment = "Performerを示さずにこのエレメントが指定された場合は、このエレメントは薬剤の投与／管理が指定の職種でなければならないと言うことを示している。Performerと共に指定された場合は、もし指定されたPerformerが実施できない場合に薬剤投与・管理を行うものについての要件が示されたことを意味する。"
 * recorder only Reference(JP_Practitioner or JP_PractitionerRole)
 * recorder ^short = "投薬オーダの入力者"
-* recorder ^definition = "JP Coreではこのエレメントに対する規定はない。\r\nたとえば口答指示や電話でのオーダにより、他の人の代理で処方を入力した人。"
+* recorder ^definition = "JP Coreではこのエレメントに対する規定はない。  
+たとえば口答指示や電話でのオーダにより、他の人の代理で処方を入力した人。"
 * recorder ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * reasonCode ^short = "薬を注文するあるいは注文しない理由や適応"
-* reasonCode ^definition = "このエレメントに対するJP Coreの規定はない。\r\n薬剤をオーダするあるいはしないことを示した理由。"
+* reasonCode ^definition = "このエレメントに対するJP Coreの規定はない。  
+薬剤をオーダするあるいはしないことを示した理由。"
 * reasonCode ^comment = "このエレメントは病名コードであってもよい。もし、すべての条件を示す記録があって他の詳細な記録が必要であれば、reasonReferenceを使用すること。"
 * reasonReference only Reference(JP_Condition or JP_Observation_Common)
 * reasonReference ^short = "処方箋が書かれた理由について補足するCondition ResourceまたはObservation Resource"
@@ -203,7 +223,8 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * dispenseRequest.expectedSupplyDuration.code = #d (exactly)
 * dispenseRequest.performer only Reference(JP_Organization)
 * dispenseRequest.performer ^short = "想定された払い出し薬局"
-* dispenseRequest.performer ^definition = "処方者によって指定される調剤・払い出しを行うと想定されているOrganizationを示す。\r\n\r\nIndicates the intended dispensing Organization specified by the prescriber."
+* dispenseRequest.performer ^definition = "処方者によって指定される調剤・払い出しを行うと想定されているOrganizationを示す。  
+Indicates the intended dispensing Organization specified by the prescriber."
 * dispenseRequest.performer ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * substitution ^short = "後発医薬品への変更可否情報"
 * substitution ^definition = "後発医薬品への変更可否情報。代替薬剤を払い出してよいかどうかを示している。代替薬剤を使用しなければいけない場合もあれば、使用しない場合もある。このブロックでは処方者の意図が示される。もし、何も指定されていなければ代替薬品を用いてもよい。"
@@ -245,7 +266,9 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier ^short = "外部から参照されるID"
-* identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。\r\n処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。\r\nこのIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
+* identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。  
+処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。  
+このIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
 * identifier contains
     rpNumber 1..1 and
@@ -271,7 +294,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[requestIdentifierCommon].system = "urn:oid:1.2.392.100495.20.3.11" (exactly)
 * identifier[requestIdentifierCommon].value 1..
 
-* status ^short = "オーダの現在の状態を示すコード" 
+* status ^short = "オーダの現在の状態を示すコード"
 * status ^definition = "オーダの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
 * status ^comment = "このエレメントはmodifierとされている。StatusとはこのResourceが現在妥当な状態ではないことも示すからである。"
 * status ^isModifierReason = "このエレメントは modifier である。Statusエレメントが entered-in-error という正当な情報として扱うべきではない状態の値も取り得るからである。"
@@ -280,22 +303,31 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * statusReason ^comment = "一般的には「保留(suspended)」や「中止(cancelled)」といった例外的状態を示すために持ちいられる。MedicationRequestオーダが発生した理由についてはreasonCodeに記載され、この項目は用いられない。"
 * intent ^short = "投薬指示の意図"
 * intent ^definition = "投薬指示の意図 が提案(proposal)、計画(plan)、あるいは他の要求によるものかを示す。"
-* intent ^comment = "処方をオーダする場合、MedicationRequestのどの段階でオーダしたのかについて、この項目を指定することが期待される。たとえば、proposalであれば患者、関係者、医師あるいは機器からの提案として作成される。\"plan\"であれば、医師、患者、関係者そして機器からの提案として生成される。\"original-order\"は医師にしか作成できない。\r\n\r\ninstance-orderはリクエストあるいはオーダをインスタンス化する段階であり、MedicationAdministrationレコードにも使われる。\r\r\nintentはこのresourceが実際に適応される時に変化するため、このエレメントはmodifierとしてラベルされる。"
+* intent ^comment = "処方をオーダする場合、MedicationRequestのどの段階でオーダしたのかについて、この項目を指定することが期待される。たとえば、proposalであれば患者、関係者、医師あるいは機器からの提案として作成される。\"plan\"であれば、医師、患者、関係者そして機器からの提案として生成される。\"original-order\"は医師にしか作成できない。  
+instance-orderはリクエストあるいはオーダをインスタンス化する段階であり、MedicationAdministrationレコードにも使われる。  
+intentはこのresourceが実際に適応される時に変化するため、このエレメントはmodifierとしてラベルされる。"
 * intent ^isModifierReason = "このエレメントは全ての記述的な属性の解釈を変える。たとえば、「リクエストすることが推奨される時間」と「リクエストすることが承認された時間」、あるいは「リクエストすることが推奨される人」と「リクエストすることが承認された人」など"
-
 * category ^short = "薬剤使用区分"
-* category ^definition = "このMedicationRequest Resourceが使用される区分を示す。日本では「院外」「院内」「入院」「外来」などの区分を想定する。\r\n一般的には、外来や入院などどこでこの薬剤が投与、内服されるかを想定した区分である。\r\n処方病棟や処方した診療科をOrganization resourceで表現することが冗長である場合にはこの区分が用いられることもある。\r\n\r\nHL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicationrequest-category がデフォルトで用いられるが、日本での使用の場合持参薬をカバーする必要があり、JAHIS処方データ規約V3.0Cに記載されているMERIT-9処方オーダ表7とJHSP0007表を組み合わせて持ちいることとする。"
+* category ^definition = "このMedicationRequest Resourceが使用される区分を示す。日本では「院外」「院内」「入院」「外来」などの区分を想定する。  
+一般的には、外来や入院などどこでこの薬剤が投与、内服されるかを想定した区分である。  
+処方病棟や処方した診療科をOrganization resourceで表現することが冗長である場合にはこの区分が用いられることもある。  
+HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicationrequest-category がデフォルトで用いられるが、日本での使用の場合持参薬をカバーする必要があり、JAHIS処方データ規約V3.0Cに記載されているMERIT-9処方オーダ表7とJHSP0007表を組み合わせて持ちいることとする。"
 * category ^comment = "薬剤が投与あるいはその他の用途で利用されると想定される場面についての区分である。"
 * category ^binding.description = "MedicationRequest Resourceの区分を示すコード化された概念。たとえば、どこで服薬あるいは投与されるか、治療の種別はどうかについて。"
 * category from $JP_MedicationCategoryInjection_VS (preferred)
 
 * medication[x] ^short = "What medication was supplied　医薬品"
-* medication[x] ^definition = "Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.\r\n\r\n投与された薬剤を識別する。既知の薬のリストから薬を識別するコード情報を設定する。"
-* medication[x] ^comment = "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.\r\n\r\nひとつのtext要素と、複数のcoding 要素を記述できる。処方オーダ時に選択または入力し、実際に処方箋に印字される文字列を必ずtext要素に格納した上で、それをコード化した情報を1個以上のcoding 要素に記述する。\r\n\r\n厚生労働省標準であるHOT9コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。\r\n\rなお、上記のいずれの標準的コードも付番されていない医薬品や医療材料の場合には、薬機法の下で使用されているGS1標準の識別コードであるGTIN(Global Trade Item Number)の調剤包装単位（最少包装単位、個別包装単位）14桁を使用する。\r\n\rひとつの処方薬、医療材料を複数のコード体系のコードで記述してもよく、その場合にcoding 要素を繰り返して記述する。\rただし、ひとつの処方薬を複数のコードで繰り返し記述する場合には、それらのコードが指し示す処方薬、医療材料は当然同一でなければならない。\rまた、処方を発行した医療機関内でのデータ利用のために、医療機関固有コード体系によるコード（ハウスコード、ローカルコード）の記述を含めてもよいが、その場合でも上述したいずれかの標準コードを同時に記述することが必要である。"
+* medication[x] ^definition = "Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.  
+投与された薬剤を識別する。既知の薬のリストから薬を識別するコード情報を設定する。"
+* medication[x] ^comment = "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.  
+ひとつのtext要素と、複数のcoding 要素を記述できる。処方オーダ時に選択または入力し、実際に処方箋に印字される文字列を必ずtext要素に格納した上で、それをコード化した情報を1個以上のcoding 要素に記述する。  
+厚生労働省標準であるHOT9コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。  
+なお、上記のいずれの標準的コードも付番されていない医薬品や医療材料の場合には、薬機法の下で使用されているGS1標準の識別コードであるGTIN(Global Trade Item Number)の調剤包装単位（最少包装単位、個別包装単位）14桁を使用する。  
+ひとつの処方薬、医療材料を複数のコード体系のコードで記述してもよく、その場合にcoding 要素を繰り返して記述する。  
+ただし、ひとつの処方薬を複数のコードで繰り返し記述する場合には、それらのコードが指し示す処方薬、医療材料は当然同一でなければならない。  
+また、処方を発行した医療機関内でのデータ利用のために、医療機関固有コード体系によるコード（ハウスコード、ローカルコード）の記述を含めてもよいが、その場合でも上述したいずれかの標準コードを同時に記述することが必要である。"
 * medication[x] only Reference(Medication)
-
 * medicationReference only Reference(JP_Medication)
-
 * priority ^short = "オーダの優先度"
 * priority ^definition = "このMedicationRequestオーダの優先度。他のオーダと比較して表現される。"
 * priority ^comment = "FHIRでは文字列の大きさが1MBを超えてはならない(SHALL NOT)。"
@@ -308,11 +340,14 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * subject 1..1
 * subject only Reference(JP_Patient)
 * subject ^short = "処方箋が発行された対象(個人あるいはグループ)"
-* subject ^definition = "JP Coreでは患者を表すPatientリソースへの参照。\r\n一般には薬剤が投与される対象となる人（あるいはグループ)を表現するResourceに対するリンク。"
-* subject ^comment = "処方オーダの対象は必須項目である。\r\n二次利用のためにどこに実際の対象がいるのかについての情報は提供されない。特定の対象に対して匿名化することも必要である。"
+* subject ^definition = "JP Coreでは患者を表すPatientリソースへの参照。  
+一般には薬剤が投与される対象となる人（あるいはグループ)を表現するResourceに対するリンク。"
+* subject ^comment = "処方オーダの対象は必須項目である。  
+二次利用のためにどこに実際の対象がいるのかについての情報は提供されない。特定の対象に対して匿名化することも必要である。"
 * encounter only Reference(JP_Encounter)
 * encounter ^short = "encounter/admission/stay のいずれかとして記録された診察"
-* encounter ^definition = "JP Coreでの使用は規定されていない。\r\nこの対象となるリソース[x]が作成される間やこの記録が作成される対象のencounterは密接に関連している。"
+* encounter ^definition = "JP Coreでの使用は規定されていない。  
+この対象となるリソース[x]が作成される間やこの記録が作成される対象のencounterは密接に関連している。"
 * encounter ^comment = "このエレメントは一般的には外来でのイベントに対応するが、診察が公式に終わる前や後にこの診察についてのコンテキストに対応して開始される活動についても対応する。もし、診療のエピソードに関連させる必要があれば、extensionとして扱われることがある。"
 * supportingInformation ^short = "薬剤オーダについて補助的情報"
 * supportingInformation ^definition = "薬剤をオーダするときに補助的となる追加情報（たとえば、患者の身長や体重））を含む。"
@@ -322,7 +357,8 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * authoredOn ^definition = "JP Coreでは必須。処方指示が最初に作成された日時。秒の精度まで記録する。タイムゾーンも付与しなければならない。"
 * requester only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or RelatedPerson or Device)
 * requester ^short = "このオーダを発行した人・物"
-* requester ^definition = "JP Coreではこのエレメントに対する規定はない。\r\nこのオーダを発行した責任のある人、組織、機器。"
+* requester ^definition = "JP Coreではこのエレメントに対する規定はない。  
+このオーダを発行した責任のある人、組織、機器。"
 * requester ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * performer only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or Device or RelatedPerson or CareTeam)
 * performer ^short = "薬剤投与・管理を行った者"
@@ -334,10 +370,12 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * performerType ^comment = "Performerを示さずにこのエレメントが指定された場合は、このエレメントは薬剤の投与／管理が指定の職種でなければならないと言うことを示している。Performerと共に指定された場合は、もし指定されたPerformerが実施できない場合に薬剤投与・管理を行うものについての要件が示されたことを意味する。"
 * recorder only Reference(JP_Practitioner or JP_PractitionerRole)
 * recorder ^short = "投薬オーダの入力者"
-* recorder ^definition = "JP Coreではこのエレメントに対する規定はない。\r\nたとえば口答指示や電話でのオーダにより、他の人の代理で処方を入力した人。"
+* recorder ^definition = "JP Coreではこのエレメントに対する規定はない。  
+たとえば口答指示や電話でのオーダにより、他の人の代理で処方を入力した人。"
 * recorder ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * reasonCode ^short = "薬を注文するあるいは注文しない理由や適応"
-* reasonCode ^definition = "このエレメントに対するJP Coreの規定はない。\r\n薬剤をオーダするあるいはしないことを示した理由。"
+* reasonCode ^definition = "このエレメントに対するJP Coreの規定はない。  
+薬剤をオーダするあるいはしないことを示した理由。"
 * reasonCode ^comment = "このエレメントは病名コードであってもよい。もし、すべての条件を示す記録があって他の詳細な記録が必要であれば、reasonReferenceを使用すること。"
 * reasonReference only Reference(JP_Condition or JP_Observation_Common)
 * reasonReference ^short = "処方箋が書かれた理由について補足するCondition ResourceまたはObservation Resource"
@@ -414,7 +452,8 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * dispenseRequest.expectedSupplyDuration.code = #d (exactly)
 * dispenseRequest.performer only Reference(JP_Organization)
 * dispenseRequest.performer ^short = "想定された払い出し薬局"
-* dispenseRequest.performer ^definition = "処方者によって指定される調剤・払い出しを行うと想定されているOrganizationを示す。\r\n\r\nIndicates the intended dispensing Organization specified by the prescriber."
+* dispenseRequest.performer ^definition = "処方者によって指定される調剤・払い出しを行うと想定されているOrganizationを示す。  
+Indicates the intended dispensing Organization specified by the prescriber."
 * dispenseRequest.performer ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * substitution ^short = "後発医薬品への変更可否情報"
 * substitution ^definition = "後発医薬品への変更可否情報。代替薬剤を払い出してよいかどうかを示している。代替薬剤を使用しなければいけない場合もあれば、使用しない場合もある。このブロックでは処方者の意図が示される。もし、何も指定されていなければ代替薬品を用いてもよい。"

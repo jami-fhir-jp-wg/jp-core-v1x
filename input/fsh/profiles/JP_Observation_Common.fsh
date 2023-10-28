@@ -20,7 +20,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * partOf ^comment = "ObservationをEncounterにencounter要素を使ってリンクする。もうひとつ別のObservationを参照することについては、以降にあるt [Notes](observation.html#obsgrouping)　をガイダンスとして参照のこと。"
 * insert SetDefinitionRef(status, 結果の状態)
 * status ^comment = "このリソースは現在有効でないというマークをするコードを含んでいるため、この要素はモディファイアー（修飾的要素）として位置づけられている。"
-
 * insert SetDefinition(category, 行われた検査の一般的なタイプの分類。JP Core Observation Common Profileの【詳細説明】を参照のこと。)
 * category from $JP_SimpleObservationCategory_VS (preferred)
 * insert SetDefinitionRef(category, このObservationを分類するコード)
@@ -50,7 +49,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * interpretation ^requirements = "一部の結果、特に数値結果については、結果の意義を完全に理解するためには解釈コードが必要である。"
 * insert SetDefinitionRef(note, このObservationに関するコメント)
 * note ^comment = "観察（結果）に関する一般的な記述、重要な、予期しない、または信頼できない結果値に関する記述、またはその解釈に関連する場合はそのソースに関する情報が含まれる場合がある。"
-* note ^requirements = "Need to be able to provide free text additional information.\r\nフリーテキストの追加情報を提供できる必要がある。"
+* note ^requirements = "Need to be able to provide free text additional information.  
+フリーテキストの追加情報を提供できる必要がある。"
 * insert SetDefinition(bodySite, 対象となった身体部位)
 * insert SetDefinition(method, このObservationの実施方法)
 * insert SetDefinitionRef(specimen, このObservationに使われた検体/標本に関する情報)

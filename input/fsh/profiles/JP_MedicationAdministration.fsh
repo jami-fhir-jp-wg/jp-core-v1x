@@ -6,7 +6,8 @@ RuleSet: MedicationAdministrationBaseRules_subject2note
 * subject ^comment = "参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
 * context only Reference(JP_Encounter or EpisodeOfCare)
 * context ^short = "Encounter、または一部として実施されるケアエピソード"
-* context ^definition = "投薬が行われた患者と医療提供者の間の訪問、入院、またはその他の接触。\r\n受診情報や入院情報を表すEncounterへの参照。"
+* context ^definition = "投薬が行われた患者と医療提供者の間の訪問、入院、またはその他の接触。  
+受診情報や入院情報を表すEncounterへの参照。"
 * context ^comment = "参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
 * supportingInformation ^short = "投与をサポートする追加情報"
 * supportingInformation ^definition = "薬の投与をサポートする追加情報（たとえば、患者の身長や体重）。"
@@ -27,18 +28,21 @@ RuleSet: MedicationAdministrationBaseRules_subject2note
 * request ^short = "実施された元の投与依頼情報"
 * request ^definition = "投与を実行する元になった投与指示や権限への参照情報。"
 * request ^comment = "これは、orderまたはinstance-orderのいずれかであるMedicationRequestへの参照。インテントが他の値である場合は、MedicationRequestsを参照しないこと。"
-* request ^requirements = "これは、インテント（意図）がorderまたはinstance-orderのいずれかであるMedicationRequestへの参照である。\r\nインテントが他の値である場合は、MedicationRequestsを参照しないこと。"
+* request ^requirements = "これは、インテント（意図）がorderまたはinstance-orderのいずれかであるMedicationRequestへの参照である。  
+インテントが他の値である場合は、MedicationRequestsを参照しないこと。"
 * device ^short = "投与に使用されるデバイス"
 * device ^definition = "患者に薬を投与する際に使用されるデバイスへの参照。たとえば、特定の輸液ポンプ。"
 * device ^comment = "参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
 * note ^short = "投与に関する備考情報"
-* note ^definition = "構造化された注釈情報がないシステムの場合、この要素によって作成者や作成時刻情報なしで単一の注釈を簡単に伝達できる。投与情報に付帯する潜在的な情報や修飾的な情報を伝えるために、この要素に叙述的な記述でそれらを含める必要がある場合がある。 \r\n*注釈は、計算可能な「変更」情報を伝達するために使用されるべきではない*。 （ユーザの行動を強制することはほとんど不可能であるため、これはSHOULDである）。"
+* note ^definition = "構造化された注釈情報がないシステムの場合、この要素によって作成者や作成時刻情報なしで単一の注釈を簡単に伝達できる。投与情報に付帯する潜在的な情報や修飾的な情報を伝えるために、この要素に叙述的な記述でそれらを含める必要がある場合がある。   
+*注釈は、計算可能な「変更」情報を伝達するために使用されるべきではない*。 （ユーザの行動を強制することはほとんど不可能であるため、これはSHOULDである）。"
 
 RuleSet: MedicationAdministrationBaseRules_dosageText
 * dosage ^short = "薬の服用方法の詳細"
 * dosage ^definition = "投薬量情報の詳細を説明する。線量、率、場所、ルートなど。"
 * dosage.text ^short = "フリーテキストの投与方法の説明　SIG:用法"
-* dosage.text ^definition = "フリーテキストの投与量用法は、投与される投与量や用法が複雑すぎてコーディングできない場合に使用できる。コード化された投与量や用法が存在する場合、フリーテキストの投与量や用法は、人間に表示するためにまだ存在している可能性がある。\r\n投与量や用法のこの指示は、実際に投与される薬の投与量や用法を反映する必要がある。"
+* dosage.text ^definition = "フリーテキストの投与量用法は、投与される投与量や用法が複雑すぎてコーディングできない場合に使用できる。コード化された投与量や用法が存在する場合、フリーテキストの投与量や用法は、人間に表示するためにまだ存在している可能性がある。  
+投与量や用法のこの指示は、実際に投与される薬の投与量や用法を反映する必要がある。"
 
 RuleSet: MedicationAdministrationBaseRules_dosageSite
 * dosage.site from $JP_MedicationBodySiteJAMIExternal_VS (preferred)
@@ -86,7 +90,8 @@ RuleSet: MedicationAdministrationBaseRules_dosageMethod2Dose
 
 RuleSet: MedicationAdministrationBaseRules_dosageRateX
 * dosage.rate[x] ^short = "単位時間あたりの用量"
-* dosage.rate[x] ^definition = "薬が患者に導入された、または導入される予定の速度を識別する。\r\n通常、注入の速度。 1時間あたり100mlまたは100ml/時。単位時間あたりのレートとして表すこともできる。 2時間あたり500ml。その他の例：200mcg/分または200mcg/1分。 1リットル/8時間。"
+* dosage.rate[x] ^definition = "薬が患者に導入された、または導入される予定の速度を識別する。  
+通常、注入の速度。 1時間あたり100mlまたは100ml/時。単位時間あたりのレートとして表すこともできる。 2時間あたり500ml。その他の例：200mcg/分または200mcg/1分。 1リットル/8時間。"
 * dosage.rate[x] ^comment = "レートが時間の経過とともに変化し、これをMedicationAdministrationで記述する場合は、各変更を、特定のMedicationAdministration.dosage.rateと、レート変更が発生した日時を使用して、個別のMedicationAdministrationとして記述する必要がある。通常、MedicationAdministration.dosage.rate要素は、平均レートを伝達するためには使用されない。"
 
 RuleSet: MedicationAdministrationBaseRules_eventHistory
@@ -115,7 +120,9 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier ^short = "外部から参照されるID"
-* identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。\r\n処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。\r\nこのIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
+* identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。  
+処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。  
+このIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
 * identifier contains
     rpNumber 1..1 and
@@ -139,7 +146,8 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * partOf ^short = "親イベントへの参照"
 * partOf ^definition = "この特定のイベントがコンポーネントまたはステップであるようなより大きな親イベント。"
 * status ^short = "completed | stopped"
-* status ^definition = "通常、管理が完了したことを示すように設定される。輸液などの長期にわたる投与では、投与を開始しても完了しない場合や、他のプロセスの進行中に一時停止する場合がある。\r\n\r\n【JP Core仕様】　completed or stopped に限定される。"
+* status ^definition = "通常、管理が完了したことを示すように設定される。輸液などの長期にわたる投与では、投与を開始しても完了しない場合や、他のプロセスの進行中に一時停止する場合がある。  
+【JP Core仕様】　completed or stopped に限定される。"
 * status ^binding.description = "患者への投与状況"
 * statusReason ^short = "実施されていない理由"
 * statusReason ^definition = "投与が実施されていない理由を示すコード"
@@ -149,8 +157,12 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 
 * medication[x] ^short = "医薬品"
 * medication[x] ^definition = "投与された薬剤を識別する。既知の薬のリストから薬を識別するコード情報を設定する。"
-* medication[x] ^comment = "ひとつのtext要素と、複数のcoding 要素を記述できる。処方オーダ時に選択または入力し、実際に処方箋に印字される文字列を必ずtext要素に格納した上で、それをコード化した情報を1個以上のcoding 要素に記述する。\r\n\r\n厚生労働省標準であるHOT9コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。\r\n\rなお、上記のいずれの標準的コードも付番されていない医薬品や医療材料の場合には、薬機法の下で使用されているGS1標準の識別コードであるGTIN(Global Trade Item Number)の調剤包装単位（最少包装単位、個別包装単位）14桁を使用する。\r\n\rひとつの処方薬、医療材料を複数のコード体系のコードで記述してもよく、その場合にcoding 要素を繰り返して記述する。\rただし、ひとつの処方薬を複数のコードで繰り返し記述する場合には、それらのコードが指し示す処方薬、医療材料は当然同一でなければならない。\rまた、処方を発行した医療機関内でのデータ利用のために、医療機関固有コード体系によるコード（ハウスコード、ローカルコード）の記述を含めてもよいが、その場合でも上述したいずれかの標準コードを同時に記述することが必要である。"
-
+* medication[x] ^comment = "ひとつのtext要素と、複数のcoding 要素を記述できる。処方オーダ時に選択または入力し、実際に処方箋に印字される文字列を必ずtext要素に格納した上で、それをコード化した情報を1個以上のcoding 要素に記述する。  
+厚生労働省標準であるHOT9コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。  
+なお、上記のいずれの標準的コードも付番されていない医薬品や医療材料の場合には、薬機法の下で使用されているGS1標準の識別コードであるGTIN(Global Trade Item Number)の調剤包装単位（最少包装単位、個別包装単位）14桁を使用する。  
+ひとつの処方薬、医療材料を複数のコード体系のコードで記述してもよく、その場合にcoding 要素を繰り返して記述する。  
+ただし、ひとつの処方薬を複数のコードで繰り返し記述する場合には、それらのコードが指し示す処方薬、医療材料は当然同一でなければならない。  
+また、処方を発行した医療機関内でのデータ利用のために、医療機関固有コード体系によるコード（ハウスコード、ローカルコード）の記述を含めてもよいが、その場合でも上述したいずれかの標準コードを同時に記述することが必要である。"
 
 //-------------------------------
 // 内服 JP_MedicationAdministration
@@ -218,7 +230,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 
 * insert MedicationAdministrationBaseRules_dosageText
 * insert MedicationAdministrationBaseRules_dosageSite
-* dosage.site.extension contains 
+* dosage.site.extension contains
     $bodySite named bodySite ..* and
     JP_MedicationDosage_SiteComment named siteComment ..*
 
@@ -251,7 +263,8 @@ Description: "実施場所を格納するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration"
 * . ^short = "実施場所"
-* . ^definition = "実施場所を格納するための拡張。\r\n実施場所を記述した  Locationリソースへの参照。"
+* . ^definition = "実施場所を格納するための拡張。  
+実施場所を記述した  Locationリソースへの参照。"
 * url = $JP_MedicationAdministration_Location (exactly)
 * value[x] only Reference(JP_Location)
 * value[x] ^short = "実施場所"
@@ -304,7 +317,8 @@ Description: "依頼医を格納するための拡張"
 * ^context.type = #element
 * ^context.expression = "MedicationAdministration"
 * . ^short = "依頼医"
-* . ^definition = "依頼医を格納するための拡張。\r\n依頼医を記述した Practitioner  リソースへの参照。"
+* . ^definition = "依頼医を格納するための拡張。  
+依頼医を記述した Practitioner  リソースへの参照。"
 * url = $JP_MedicationAdministration_Requester (exactly)
 * value[x] only Reference(JP_Practitioner)
 

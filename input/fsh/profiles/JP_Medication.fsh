@@ -10,7 +10,8 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * ^status = #active
 * ^date = "2023-06-26"
 * . ^short = "Medication Resourceの定義"
-* . ^definition = "This resource is primarily used for the identification and definition of a medication for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.\r\n\r\nこのResourceは薬剤を処方し、払い出し（調剤）、その投与を定義し、IDを付与するためにまず利用され、薬剤の使用状態を示すためにも使われる。"
+* . ^definition = "This resource is primarily used for the identification and definition of a medication for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.  
+このResourceは薬剤を処方し、払い出し（調剤）、その投与を定義し、IDを付与するためにまず利用され、薬剤の使用状態を示すためにも使われる。"
 // extension 参照宣言
 * ingredient.extension contains JP_Medication_Ingredient_DrugNo named drugNo ..*
 * ingredient.strength.extension contains JP_Medication_IngredientStrength_StrengthType named strengthType ..*
@@ -22,8 +23,11 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * identifier ^comment = "IDとしてシリアルナンバーを使うこともできる。"
 * code from $JP_MedicationCode_VS (preferred)
 * code ^short = "この薬剤を特定するコード"
-* code ^definition = "A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.\r\n\r\nこの薬剤を指定するコード。該当するコードがない場合はテキスト表記。\r\n使用法について注記：日本ではHOTコードを利用することが推奨される。一般的な薬剤コードとしてRxNorm、SNOMD CT, IDMPなど標準的な医薬品コードを使うことができる。国や地域に特有のローカルコードも使うことができ、他のコードに変換することもできる。"
-* code ^comment = "使われるコンテキストによるが、ユーザ(処方や調剤などを行った人）によって実際にコードが選択されたのであれば、coding.userSelectedはtrueとすることとなる。Codingのデータ型で説明されているように、「ユーザインターフェース（たとえば、選択肢から特定の項目をユーザが選択するような形式）で特定のコードをユーザが選択したのであれば、\"userSelected\"に記録されてもよい」\r\nユーザが選択したコードがあれば、その選択がコード変換などで優先される。そのほかのコードは代替のコードシステムか低粒度のコード（たとえば、ベンダー固有の初期値のための一般的なコード）に文字列変換変換するしかない。"
+* code ^definition = "A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.  
+この薬剤を指定するコード。該当するコードがない場合はテキスト表記。  
+使用法について注記：日本ではHOTコードを利用することが推奨される。一般的な薬剤コードとしてRxNorm、SNOMD CT, IDMPなど標準的な医薬品コードを使うことができる。国や地域に特有のローカルコードも使うことができ、他のコードに変換することもできる。"
+* code ^comment = "使われるコンテキストによるが、ユーザ(処方や調剤などを行った人）によって実際にコードが選択されたのであれば、coding.userSelectedはtrueとすることとなる。Codingのデータ型で説明されているように、「ユーザインターフェース（たとえば、選択肢から特定の項目をユーザが選択するような形式）で特定のコードをユーザが選択したのであれば、\"userSelected\"に記録されてもよい」  
+ユーザが選択したコードがあれば、その選択がコード変換などで優先される。そのほかのコードは代替のコードシステムか低粒度のコード（たとえば、ベンダー固有の初期値のための一般的なコード）に文字列変換変換するしかない。"
 * code ^binding.description = "薬品の種類を規定するコード化された概念"
 * status 1..
 * status ^definition = "薬剤が有効に使われているかどうかを指定するコード。"
@@ -31,7 +35,8 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * status ^isModifierReason = "このエレメントはすべての属性の解釈によって変化する。"
 * manufacturer only Reference(JP_Organization)
 * manufacturer ^short = "製品の製造者"
-* manufacturer ^definition = "Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.\r\n\r\n医薬品の製造元の詳細を説明する。これは、医薬品の販売業者を表すことを意図したものではない。"
+* manufacturer ^definition = "Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.  
+医薬品の製造元の詳細を説明する。これは、医薬品の販売業者を表すことを意図したものではない。"
 * form ^short = "TAB | CAP | PWD | SYR | SUP | LQD | OIT | CRM | TPE | INJ +"
 * form ^definition = "TAB | CAP | PWD | SYR | SUP | LQD | OIT | CRM | TPE | INJ + 製品の剤型についての説明。散剤、ドライシロップ(PWD)、錠剤(TAB)、カプセル(CAP)など。"
 * form ^comment = "もし、Medication ResourceがMedicationRequest Resourceから参照された場合は、これはオーダされた剤型である。Medication ResourceがMedicationDispense Resourceから参照された場合は、払い出された剤型である。MedicationAdministration ResourceからMedication Resourceが参照されていれば、投与された剤型である。"
@@ -51,8 +56,10 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * ingredient.item[x] ^comment = "すべての用語集はこの一般的な様式を満たさない。場合によっては、情報モデルとしてCodeableConceptや直接Codingを使うべきではなく、テキストやコード、翻訳や事前条件と事後条件でのエレメントの関係などを示すことも適切ではない。"
 * ingredient.item[x] ^requirements = "成分は物質（たとえば、アモキシシリン）や、他の薬剤（たとえば、Glaxal Baseなどの合成製品）を参照されることもある。"
 * ingredient.isActive ^short = "有効成分の指標"
-* ingredient.isActive ^definition = "この成分が薬剤の治療効果に影響するかどうかの指標\r\n\r\nIndication of whether this ingredient affects the therapeutic action of the drug."
-* ingredient.isActive ^requirements = "Trueであれば、この成分が薬剤の治療効果に影響がある（たとえば有効）ということを示す。\r\nFalseであれば、この成分が薬剤の治療効果に影響がない（たとえば無効）ということを示す。"
+* ingredient.isActive ^definition = "この成分が薬剤の治療効果に影響するかどうかの指標  
+Indication of whether this ingredient affects the therapeutic action of the drug."
+* ingredient.isActive ^requirements = "Trueであれば、この成分が薬剤の治療効果に影響がある（たとえば有効）ということを示す。  
+Falseであれば、この成分が薬剤の治療効果に影響がない（たとえば無効）ということを示す。"
 * ingredient.strength 1..
 * ingredient.strength.extension[strengthType] only JP_Medication_IngredientStrength_StrengthType
 * ingredient.strength.extension[strengthType] ^definition = "投与量が製剤単位か成分単位かを格納する拡張"

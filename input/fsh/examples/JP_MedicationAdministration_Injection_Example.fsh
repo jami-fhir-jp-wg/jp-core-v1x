@@ -75,7 +75,7 @@ Usage: #example
 * dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
 * dosage.method = $JP_MedicationMethodJAMIDetailUsage_CS#31 "中心静脈注射"
 * dosage.dose = 510 'mL' "mL"
-* dosage.rateRatio.numerator = 102 'mL' "mL" 
+* dosage.rateRatio.numerator = 102 'mL' "mL"
 * dosage.rateRatio.denominator = 1 'h' "hour"
 
 Instance: jp-medicationadministration-injection-medication-example-1

@@ -14,7 +14,16 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^comment = "すべてのObservation（検査測定や観察事実）の制約プロファイル"
 * identifier ^short = "当該検査項目に対して、施設内で割り振られる一意の識別子"
 * identifier ^definition = "この検査項目に割り当てられた一意の識別子。リソースの識別子やシステム的なシーケンスではなく、ビジネスID。"
-* identifier ^comment = "【JP Core仕様】当該検査項目に対して、施設内で割り振られる一意の識別子があればそれを使用する。なければ次のルールを参考に一意となる識別子を生成し設定する。\r\n\r\nアプリケーション側のデータベースにおけるフィールド長の定義については、最低64バイトを確保すること。\r\n\r\n--- 参考 ---\r\n\r\n次の項目を順にセパレータ「_(アンダースコア)」で連結し、 identifier.value に設定する。グループ項目でない場合など、該当コード／番号がない場合はセパレータを連続で連結する。各コードはローカルコードを使用し、必ず設定できること。\r\n\r\n　１．ORC-2(依頼者オーダ番号)　SS-MIX2の15桁前ゼロ形式の番号\r\n\r\n　２．OBR-4(検査項目ID)　検査セットの識別コード\r\n\r\n　３．SPM-4(検体タイプ)\r\n\r\n　４．OBX-3(検査項目)\r\n\r\n　５．OBX-4(検査副ID)・・・オプション。必要に応じて使用。\r\n\r\n形式：[ORC-2]_[OBR-4]_[SPM-4]_[OBX-3]（_[OBX-4]）"
+* identifier ^comment = "【JP Core仕様】当該検査項目に対して、施設内で割り振られる一意の識別子があればそれを使用する。なければ次のルールを参考に一意となる識別子を生成し設定する。  
+アプリケーション側のデータベースにおけるフィールド長の定義については、最低64バイトを確保すること。  
+--- 参考 ---  
+次の項目を順にセパレータ「_(アンダースコア)」で連結し、 identifier.value に設定する。グループ項目でない場合など、該当コード／番号がない場合はセパレータを連続で連結する。各コードはローカルコードを使用し、必ず設定できること。  
+　１．ORC-2(依頼者オーダ番号)　SS-MIX2の15桁前ゼロ形式の番号  
+　２．OBR-4(検査項目ID)　検査セットの識別コード  
+　３．SPM-4(検体タイプ)  
+　４．OBX-3(検査項目)  
+　５．OBX-4(検査副ID)・・・オプション。必要に応じて使用。  
+形式：[ORC-2]_[OBR-4]_[SPM-4]_[OBX-3]（_[OBX-4]）"
 * identifier.use ^definition = "この識別子の目的。"
 * identifier.use ^comment = "アプリケーションは、identifierが一時的であると明示的に述べられない限り、永続的であると想定できる。"
 * identifier.system ^comment = ""
@@ -25,7 +34,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * partOf ^definition = "このリソースが一部として、あるいは手順の一つとして含まれるより大きなイベント。"
 * partOf ^comment = "【JP Core仕様】当面は使用しない。"
 * status ^definition = "結果値の状態。"
-* status ^comment = "【JP Core仕様】v2.5の「F」に相当する値は「final」であるが、ここでは 必須コード表「ObservationStatus」より、全てのコード値を使用可とする。\r\n\r\n(registered | preliminary | final | amended |   corrected | cancelled | entered-in-error | unknown)"
+* status ^comment = "【JP Core仕様】v2.5の「F」に相当する値は「final」であるが、ここでは 必須コード表「ObservationStatus」より、全てのコード値を使用可とする。  
+(registered | preliminary | final | amended |   corrected | cancelled | entered-in-error | unknown)"
 * category 1..
 
 * category ^slicing.discriminator.type = #value
@@ -34,7 +44,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category contains laboratory 1..1
 * insert SetDefinition(category.coding, コード化されたカテゴリー)
 
-* category[laboratory] ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「laboratory」固定とする。\r\n\r\n(social-history | vital-signs | imaging | laboratory | procedure | survey | exam | therapy | activity)"
+* category[laboratory] ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「laboratory」固定とする。  
+(social-history | vital-signs | imaging | laboratory | procedure | survey | exam | therapy | activity)"
 * category[laboratory].coding ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「laboratory」固定とする。"
 
 * insert SetDefinition(category[laboratory], 検体検査では、http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS のコード表から\"laboratory\"を設定する。)
@@ -54,9 +65,12 @@ Description: "このプロファイルはObservationリソースに対して、�
 * code ^binding.description = "MEDIS 臨床検査マスター"
 * code.coding 1..
 * code.coding ^definition = "コード体系によって定義されたコードへの参照。"
-* code.coding ^comment = "【JP Core仕様】SS-MIX2にならい、標準コード、ローカルコードの2つを設定可能とし、いずれか一方は必須とする。さらにJLAC10とJLAC11などの複数の標準コードも設定できるよう、上限は設けない。\r\n\r\n標準コード、ローカルコードの2つまで格納可。順不同。\r\nSS-MIX2だとCWE.1 ～CWE.3に標準コード、CWE.4～CWE.6にローカルコード、など（順不同）。"
+* code.coding ^comment = "【JP Core仕様】SS-MIX2にならい、標準コード、ローカルコードの2つを設定可能とし、いずれか一方は必須とする。さらにJLAC10とJLAC11などの複数の標準コードも設定できるよう、上限は設けない。  
+標準コード、ローカルコードの2つまで格納可。順不同。  
+SS-MIX2だとCWE.1 ～CWE.3に標準コード、CWE.4～CWE.6にローカルコード、など（順不同）。"
 * code.coding.system ^definition = "コード体系。"
-* code.coding.system ^comment = "【JP Core仕様】標準コードの場合、JLAC10を表すURIを設定。\r\n\r\nURIは本WGで定義する。"
+* code.coding.system ^comment = "【JP Core仕様】標準コードの場合、JLAC10を表すURIを設定。  
+URIは本WGで定義する。"
 * code.coding.version ^comment = "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date."
 * code.coding.code ^comment = "Note that FHIR strings SHALL NOT exceed 1MB in size"
 * code.coding.display ^comment = "Note that FHIR strings SHALL NOT exceed 1MB in size"
@@ -64,7 +78,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * code.coding.userSelected ^comment = "【JP Core仕様】当面は未使用とする。"
 * code.text 1..
 * code.text ^definition = "コードの表示名。報告書などに記載する場合に使用する表示名。コードを複数指定した場合(標準コード、ローカルコード)、その一般的な表現。"
-* code.text ^comment = "【JP Core仕様】このプロファイルでは、表示名として必須とする。\r\n\r\n多くの場合、coding.display と同一になるが、coding.display に異なる複数の表現が格納される場合を想定し、code間で共通の表現として必須とする。"
+* code.text ^comment = "【JP Core仕様】このプロファイルでは、表示名として必須とする。  
+多くの場合、coding.display と同一になるが、coding.display に異なる複数の表現が格納される場合を想定し、code間で共通の表現として必須とする。"
 * subject 1..
 * subject only Reference(JP_Patient)
 * subject ^definition = "検体検査の対象となる患者。"
@@ -72,11 +87,14 @@ Description: "このプロファイルはObservationリソースに対して、�
 * focus ^definition = "患者当人ではなく、患者の胎児、親、ドナーなどの検査、観察の場合、その対象を示す。"
 * focus ^comment = "【JP Core仕様】当面は未使用とする。"
 * encounter ^definition = "この検査が行われるヘルスケアイベント。医療提供者と患者の接点。"
-* encounter ^comment = "【JP Core仕様】入院外来の区別や所在場所、担当診療科の情報に使用する。\r\n\r\n※このプロファイルの用途では通常は必須と考えられるが、ユースケースにより使用されない場合を考慮し、1..1に制約しない。"
+* encounter ^comment = "【JP Core仕様】入院外来の区別や所在場所、担当診療科の情報に使用する。  
+※このプロファイルの用途では通常は必須と考えられるが、ユースケースにより使用されない場合を考慮し、1..1に制約しない。"
 * effective[x] 1..
 * effective[x] only dateTime or Period or Timing
 * effective[x] ^definition = "検体検査の場合は、検体採取日時。"
-* effective[x] ^comment = "【JP Core仕様】このプロファイルでは、検体採取日時を設定し、必須とする。\r\n\r\neffectiveInstant\r\n\r\ninstant型はイベント発生のログ時間であり、未使用とする。"
+* effective[x] ^comment = "【JP Core仕様】このプロファイルでは、検体採取日時を設定し、必須とする。  
+effectiveInstant  
+instant型はイベント発生のログ時間であり、未使用とする。"
 * issued ^definition = "この情報の発生日時。システム時刻であり、人が報告する時刻ではないことに注意。このリソースの発生時間と同じになる場合がある。"
 * issued ^comment = "【JP Core仕様】検査結果が**システムにより**Observationリソースに格納または更新された日時。"
 * performer ^definition = "検査値を確認した責任者。検査実施責任者情報。"
@@ -84,17 +102,39 @@ Description: "このプロファイルはObservationリソースに対して、�
 * value[x] only Quantity or CodeableConcept or string
 * value[x] ^short = "同じ検査項目でも、システム（施設）により、使うデータ型が異なる可能性あり【詳細参照】"
 * value[x] ^definition = "検体検査の結果として決定された情報。"
-* value[x] ^comment = "以下のデータ型はSS-MIX2では未使用のため、未使用とした。今後の議論で使用の必要性が出れば復活させる。\r\n\r\nvalueBoolean\r\n\r\nvalueInteger　：検査結果値を整数値（Integer）で定義したい場合に指定する。ただし、valueQuantityで単位付き数値を示すので、通常は使わない。　SS-MIX2／HL7 V2.5→ OBX-2＝「NW」の時の OBX-5(結果値)\r\n\r\nvalueRange\r\n\r\nvalueRatio\r\n\r\nvalueSampledData\r\n\r\nvalueTime　：検査結果値が「時間」の場合、その時間を指定する。　SS-MIX2／HL7 V2.5→ OBX-2＝「TM」の時の OBX-5(結果値)\r\n\r\nvalueDateTime　：検査結果値が「日時」の場合、その日時を指定する。　SS-MIX2／HL7 V2.5→ OBX-2＝「DT」の時の OBX-5(結果値)\r\n\r\nvaluePeriod"
+* value[x] ^comment = "以下のデータ型はSS-MIX2では未使用のため、未使用とした。今後の議論で使用の必要性が出れば復活させる。  
+valueBoolean  
+valueInteger ： 検査結果値を整数値（Integer）で定義したい場合に指定する。ただし、valueQuantityで単位付き数値を示すので、通常は使わない。　SS-MIX2／HL7 V2.5→ OBX-2＝「NW」の時の OBX-5(結果値)  
+valueRange  
+valueRatio  
+valueSampledData  
+valueTime ： 検査結果値が「時間」の場合、その時間を指定する。　SS-MIX2／HL7 V2.5→ OBX-2＝「TM」の時の OBX-5(結果値)  
+valueDateTime ： 検査結果値が「日時」の場合、その日時を指定する。　SS-MIX2／HL7 V2.5→ OBX-2＝「DT」の時の OBX-5(結果値)  
+valuePeriod"
 * valueQuantity ^short = "検査結果が「数値」の場合、値、単位を設定する。　SS-MIX2／HL7 V2.5→ OBX-2＝「NM」の時の OBX-5(結果値)、OBX-6(単位)【詳細参照】"
-* valueQuantity ^comment = "valueQuantity.value　：結果値（数値）を定義。　SS-MIX2／HL7 V2.5：OBX-5(結果値)\r\n\r\nvalueQuantity.comparator　：QuantityComparator Value setから設定。　SS-MIX2／HL7 V2.5→ 検体検査結果メッセージでは未使用となっているデータ型だが、SN型のSN.1(比較演算子)が該当する。検査値の「0未満」の場合の「未満」などに相当するコードを設定。\r\n\r\nvalueQuantity.unit　：.systemで示す単位のValue setの文字列を指定。　SS-MIX2／HL7 V2.5→ OBX-6(単位) CWE.2 テキスト\r\n\r\nvalueQuantity.system　：単位のValue set名を指定。　SS-MIX2／HL7 V2.5→ OBX-6(単位) CWE.3 コード体系 HL7では「ISO+」だが、ローカルコード99zzzのHL7標準の「ISO+」が示すOID、ローカルコードの場合はOIDを別途取得必要\r\n\r\nvalueQuantity.code　：.systemで示す単位のValue setのコードを指定。　SS-MIX2／HL7 V2.5→ OBX-6(単位) CWE.1 識別子"
+* valueQuantity ^comment = "valueQuantity.value　：結果値（数値）を定義。　SS-MIX2／HL7 V2.5：OBX-5(結果値)  
+valueQuantity.comparator ： QuantityComparator Value setから設定。　SS-MIX2／HL7 V2.5→ 検体検査結果メッセージでは未使用となっているデータ型だが、SN型のSN.1(比較演算子)が該当する。検査値の「0未満」の場合の「未満」などに相当するコードを設定。  
+valueQuantity.unit ： systemで示す単位のValue setの文字列を指定。　SS-MIX2／HL7 V2.5→ OBX-6(単位) CWE.2 テキスト  
+valueQuantity.system ： 単位のValue set名を指定。　SS-MIX2／HL7 V2.5→ OBX-6(単位) CWE.3 コード体系 HL7では「ISO+」だが、ローカルコード99zzzのHL7標準の「ISO+」が示すOID、ローカルコードの場合はOIDを別途取得必要  
+valueQuantity.code ： systemで示す単位のValue setのコードを指定。　SS-MIX2／HL7 V2.5→ OBX-6(単位) CWE.1 識別子"
 * valueCodeableConcept ^short = "検査結果が「コード値」の場合、コード、テキスト、コードのValue setを定義する。　SS-MIX2／HL7 V2.5→ OBX-2＝「CWE」の時の OBX-5(結果値)【詳細参照】"
-* valueCodeableConcept ^comment = "valueCodeableConcept.coding　：ローカルコードと国際標準コードなど複数指定できる。　SS-MIX2／HL7 V2.5→ CWEは正規コード＋代替コードの2種類登録可能。\r\n\r\nvalueCodeableConcept.coding.system　：対象のValue set名を指定。　SS-MIX2／HL7 V2.5→ CWE.3 or 6 コード体系。対象コードの OIDを設定\r\n\r\nvalueCodeableConcept.coding.version　：対象のValue setのバージョンを指定。　SS-MIX2／HL7 V2.5→ CWE.7 コード体系バージョン ID valueCodeableConcept.coding.code　：対象のValue setのコードを指定。　SS-MIX2／HL7 V2.5→ CWE.1 or 4 識別子。対象コードシステムのコード\r\n\r\nvalueCodeableConcept.coding.display　：対象のValue setのテキストを指定。　SS-MIX2／HL7 V2.5→ CWE.2 or 5 テキスト。対象コードの名称\r\n\r\nvalueCodeableConcept.coding.userselected　：未使用。\r\n\r\nvalueCodeableConcept.text　：コードが示す意味を指定する。通常は.coding.displayの値を指定するが、複数ある場合は適宜編集すること。　SS-MIX2／HL7 V2.5→ CWE.2 テキスト。coding.display と同じ。"
+* valueCodeableConcept ^comment = "valueCodeableConcept.coding　：ローカルコードと国際標準コードなど複数指定できる。　SS-MIX2／HL7 V2.5→ CWEは正規コード＋代替コードの2種類登録可能。  
+valueCodeableConcept.coding.system ： 対象のValue set名を指定。　SS-MIX2／HL7 V2.5→ CWE.3 or 6 コード体系。対象コードの OIDを設定  
+valueCodeableConcept.coding.version ： 対象のValue setのバージョンを指定。　SS-MIX2／HL7 V2.5→ CWE.7 コード体系バージョン ID valueCodeableConcept.coding.code　：対象のValue setのコードを指定。　SS-MIX2／HL7 V2.5→ CWE.1 or 4 識別子。対象コードシステムのコード  
+valueCodeableConcept.coding.display ： 対象のValue setのテキストを指定。　SS-MIX2／HL7 V2.5→ CWE.2 or 5 テキスト。対象コードの名称  
+valueCodeableConcept.coding.userselected ： 未使用。  
+valueCodeableConcept.text ： コードが示す意味を指定する。通常は.coding.displayの値を指定するが、複数ある場合は適宜編集すること。　SS-MIX2／HL7 V2.5→ CWE.2 テキスト。coding.display と同じ。"
 * valueString ^short = "検査結果値が「文字列」の場合、その文字列を指定する。SS-MIX2／HL7 V2.5→ OBX-2＝「ST」の時の OBX-5(結果値)"
 * dataAbsentReason ^definition = "検査結果値が欠落している理由。"
-* dataAbsentReason ^comment = "【JP Core仕様】SS-MIX2で未使用だが、valueの欠落時に使用する必要があり、重要な項目である。\r\n\r\n制約「obs-6」に示す通り、valueが存在する場合、当該項目は存在してはならない。\r\n\r\ntextのみでの使用は基本的に不可とし、必ずcodingを設定すること。\r\n\r\n(unknown |   asked-unknown |   temp-unknown |   not-asked |   asked-declined | masked | not-applicable | unsupported | as-text | error |   not-a-number |   negative-infinity |   positive-infinity | not-performed | not-permitted)"
+* dataAbsentReason ^comment = "【JP Core仕様】SS-MIX2で未使用だが、valueの欠落時に使用する必要があり、重要な項目である。  
+制約「obs-6」に示す通り、valueが存在する場合、当該項目は存在してはならない。  
+textのみでの使用は基本的に不可とし、必ずcodingを設定すること。  
+(unknown |   asked-unknown |   temp-unknown |   not-asked |   asked-declined | masked | not-applicable | unsupported | as-text | error |   not-a-number |   negative-infinity |   positive-infinity | not-performed | not-permitted)"
 * interpretation ^short = "High, low, normal, etc. 高、低、正常など"
 * interpretation ^definition = "検査結果値の、（高、低、正常）といったカテゴリー評価。結果報告書に記載されることもある情報。"
-* interpretation ^comment = "【JP Core仕様】拡張可コード表「ObservationInterpretationCodes」を使用する。\r\n\r\nコード表が大きいため、下記参照。\r\n\r\nhttps://www.hl7.org/fhir/R4/valueset-observation-interpretation.html"
+* interpretation ^comment = "【JP Core仕様】拡張可コード表「ObservationInterpretationCodes」を使用する。  
+コード表が大きいため、下記参照。  
+https://www.hl7.org/fhir/R4/valueset-observation-interpretation.html"
 * interpretation ^requirements = "特に数値結果については、結果の重要性を完全に理解するために解釈を必要とする場合がある。"
 * note ^definition = "検査、あるいは結果に関するコメント。フリーテキストの追加情報として使用可能。"
 * note ^comment = "May include general statements about the observation, or statements about significant, unexpected or unreliable results values, or information about its source when relevant to its interpretation."
@@ -105,8 +145,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * bodySite ^comment = "【JP Core仕様】当面は未使用とする。"
 * method ^short = "実施の方法"
 * method ^definition = "検体検査の検査方法、測定方法。"
-* method ^comment = "Observation.code の code から測定方法が暗黙的でない場合にのみ使用する。\r\n\r\n【JP Core仕様】Observation.code に JLAC10コードを使用する場合、測定方法コードが含まれているため method は使用しない。Observation.code から測定方法が判明しない場合や、実際の測定方法が異なる場合に使用することになるが、現状では運用が困難と想定されるため、当面は未使用とする。"
-* method ^requirements = "In some cases, method can impact results and is thus used for determining whether results can be compared or determining significance of results.\r\n\r\n場合により、測定方法は結果に影響を与える可能性があるため、結果を比較できるかどうかを判断したり、結果の重要性を判断したりするために使用される。"
+* method ^comment = "Observation.code の code から測定方法が暗黙的でない場合にのみ使用する。  
+【JP Core仕様】Observation.code に JLAC10コードを使用する場合、測定方法コードが含まれているため method は使用しない。Observation.code から測定方法が判明しない場合や、実際の測定方法が異なる場合に使用することになるが、現状では運用が困難と想定されるため、当面は未使用とする。"
+* method ^requirements = "In some cases, method can impact results and is thus used for determining whether results can be compared or determining significance of results.  
+場合により、測定方法は結果に影響を与える可能性があるため、結果を比較できるかどうかを判断したり、結果の重要性を判断したりするために使用される。"
 * specimen 1..
 * specimen ^definition = "この検査に使用された検体（標本）。"
 * specimen ^comment = "【JP Core仕様】検体検査プロファイルでは必須とする。"

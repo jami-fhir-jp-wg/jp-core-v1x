@@ -41,7 +41,8 @@ Description: "このデータタイプは薬剤用法のDosageベースとして
 // asNeeded
 * asNeeded[x] only boolean
 * asNeeded[x] ^short = "「頓用」指示"
-* asNeeded[x] ^definition = "【JP Core仕様】頓用型の用法を指定する場合に”true”を指定し、そのコードを指定する場合は用法コードとして指定する。\r\nMedication(薬剤)が必要なときに指定された量とスケジュールのみで投薬するか（Booleanで選択される）、投薬する前提条件はTiming.Code(CodeableConcept)を示している。"
+* asNeeded[x] ^definition = "【JP Core仕様】頓用型の用法を指定する場合に”true”を指定し、そのコードを指定する場合は用法コードとして指定する。  
+Medication(薬剤)が必要なときに指定された量とスケジュールのみで投薬するか（Booleanで選択される）、投薬する前提条件はTiming.Code(CodeableConcept)を示している。"
 // site
 * site from $JP_MedicationBodySiteJAMIExternal_VS (preferred)
 * site ^short = "投与される身体部位"
@@ -177,7 +178,7 @@ Description: "このデータタイプは注射用法の制約と拡張のうち
 * timing.code ^comment = "BIDなどは「施設特有の時間」として定義される。たとえば、施設がBIDを「つねに朝7時と夕方6時」であると指定することがある。この指定が不適切であれば、BIDというコードは使うべきではない。その代わり、HL7が定義したBIDのコードではなく、その施設特有のコードで明示的に示すべきであり、構造化された表現を使うべきである（この場合、2回のイベントの時刻を指定する必要がある）。  
 【JP Core仕様】頓用指示時にはJAMI処方・注射オーダ標準用法規格の表6 イベント区分、イベント詳細区分(“http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionJAMI_CS”)を推奨するが、MERIT-9 処方オーダ 表5 頓用指示(“http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS”) を使用してもよい。"
 // site
-* site.extension contains 
+* site.extension contains
     JP_MedicationDosage_SiteComment named siteComment ..* and
     $bodySite named bodySite ..*
 * site.extension[bodySite] ^short = "身体部位の位置に関する詳細"

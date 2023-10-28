@@ -10,6 +10,7 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 * ^status = #active
 * ^date = "2023-06-26"
 * . ^short = "Information about patient's relatives, relevant for patient. 患者の家族に関する情報のうち、患者に関連する情報（家族歴）"
-* . ^definition = "Significant health conditions for a person related to the patient relevant in the context of care for the patient.\r\n\r\n患者の診療に関連する、患者家族の疾患に関する情報。"
+* . ^definition = "Significant health conditions for a person related to the patient relevant in the context of care for the patient.  
+患者の診療に関連する、患者家族の疾患に関する情報。"
 * patient only Reference(JP_Patient)
 * reasonReference only Reference(QuestionnaireResponse or DocumentReference or JP_AllergyIntolerance or JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)

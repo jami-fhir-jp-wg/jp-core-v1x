@@ -41,7 +41,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * subject ^comment = "【JP Core仕様】患者"
 * encounter ^comment = "【JP Core仕様】診察"
 * effective[x] only dateTime or Period
-* effective[x] ^comment = "【JP Core仕様】effectiveDateTime：医療者が確認した日時\r\n\r\neffectivePeriod：医療者が確認した期間"
+* effective[x] ^comment = "【JP Core仕様】effectiveDateTime：医療者が確認した日時  
+effectivePeriod：医療者が確認した期間"
 * valueCodeableConcept from $v2-0136 (preferred)
 * valueCodeableConcept ^short = "所見の有無（Y or N）を指定する"
 * bodySite from JP_ObservationPhysicalExamBodySite_VS (preferred)
