@@ -71,7 +71,7 @@ JP Coreでの医療機関コード（１０桁）のエリアに格納する値�
 
 ### OperationおよびSearch Parameter 一覧
 
-### Search Parameter一覧
+#### Search Parameter一覧
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
@@ -79,9 +79,9 @@ JP Coreでの医療機関コード（１０桁）のエリアに格納する値�
 | SHOULD           | name          | string | GET [base]/Organization?name=Health                            |
 | SHOULD           | address | string  | GET [base]/Organization?address=Arbor
 
-#### 必須検索パラメータ
+##### 必須検索パラメータ
 
-1. identifier 検索パラメータを使用して、識別子によるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
+1. identifier 検索パラメータを使用して、識別子によるOrganizationの検索をサポートしなければならない（**SHALL**）
 
    ```
    GET [base]/Organization?identifier={system|}[code]
@@ -95,7 +95,7 @@ JP Coreでの医療機関コード（１０桁）のエリアに格納する値�
 
    指定された識別子に一致するOrganizationリソースを含むBundleを検索する。
    
-### 推奨検索パラメータ
+##### 推奨検索パラメータ
 
 次の検索パラメータをサポートすることが望ましい。
 
@@ -114,7 +114,7 @@ JP Coreでの医療機関コード（１０桁）のエリアに格納する値�
 2. address 検索パラメータを使用して、addressによるOrganizationの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
-   GET [base]/Organization?address=[string]
+   GET [base]/Organization?address={string}
    ```
 
    例：
@@ -123,7 +123,7 @@ JP Coreでの医療機関コード（１０桁）のエリアに格納する値�
    GET [base]/Organization?address=Arbor
    ```
 
-### オプション検索パラメータ
+##### オプション検索パラメータ
 
  本プロファイルで追加定義されたオプション検索パラメータはない。
 

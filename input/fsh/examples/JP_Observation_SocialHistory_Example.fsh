@@ -3,7 +3,7 @@ InstanceOf: JP_Observation_SocialHistory
 Title: "JP Core Observation SocialHistory Example 社会的背景（喫煙）"
 Description: "喫煙に関する項目"
 Usage: #example
-* category[socialHistory] = $observation-category#social-history
+* category[socialHistory] = $JP_SimpleObservationCategory_CS#social-history "Social History"
 * subject = Reference(Patient/jp-patient-example-1)
 * code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#abc-local-456 "ブリンクマン指数"
 * code.coding[+] = $JP_ObservationSocialHistoryCode_CS#MD0012920 "喫煙指数"

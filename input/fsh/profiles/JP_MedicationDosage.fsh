@@ -12,7 +12,7 @@ Title: "JP Core MedicationDosage Base DataType"
 Description: "このデータタイプは薬剤用法のDosageベースとして基礎となる制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosageBase"
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * . ^short = "薬の服用方法・服用した方法、または服用すべき方法"
 * . ^definition = "薬の服用方法・服用した方法、または服用すべき方法"
 
@@ -41,7 +41,8 @@ Description: "このデータタイプは薬剤用法のDosageベースとして
 // asNeeded
 * asNeeded[x] only boolean
 * asNeeded[x] ^short = "「頓用」指示"
-* asNeeded[x] ^definition = "【JP Core仕様】頓用型の用法を指定する場合に”true”を指定し、そのコードを指定する場合は用法コードとして指定する。\r\nMedication(薬剤)が必要なときに指定された量とスケジュールのみで投薬するか（Booleanで選択される）、投薬する前提条件はTiming.Code(CodeableConcept)を示している。"
+* asNeeded[x] ^definition = "【JP Core仕様】頓用型の用法を指定する場合に”true”を指定し、そのコードを指定する場合は用法コードとして指定する。  
+Medication(薬剤)が必要なときに指定された量とスケジュールのみで投薬するか（Booleanで選択される）、投薬する前提条件はTiming.Code(CodeableConcept)を示している。"
 // site
 * site from $JP_MedicationBodySiteJAMIExternal_VS (preferred)
 * site ^short = "投与される身体部位"
@@ -123,7 +124,7 @@ Title: "JP Core MedicationDosage DataType"
 Description: "このデータタイプは内服用法の制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage"
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * extension contains
     JP_MedicationDosage_PeriodOfUse named periodOfUse ..1 and
     JP_MedicationDosage_UsageDuration named usageDuration ..1
@@ -165,7 +166,7 @@ Title: "JP Core MedicationDosage Injection DataType"
 Description: "このデータタイプは注射用法の制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage_Injection"
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * extension contains
     JP_MedicationDosage_DosageComment named dosageComment ..* and
     JP_MedicationDosage_Device named device ..* and
@@ -177,7 +178,7 @@ Description: "このデータタイプは注射用法の制約と拡張のうち
 * timing.code ^comment = "BIDなどは「施設特有の時間」として定義される。たとえば、施設がBIDを「つねに朝7時と夕方6時」であると指定することがある。この指定が不適切であれば、BIDというコードは使うべきではない。その代わり、HL7が定義したBIDのコードではなく、その施設特有のコードで明示的に示すべきであり、構造化された表現を使うべきである（この場合、2回のイベントの時刻を指定する必要がある）。  
 【JP Core仕様】頓用指示時にはJAMI処方・注射オーダ標準用法規格の表6 イベント区分、イベント詳細区分(“http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionJAMI_CS”)を推奨するが、MERIT-9 処方オーダ 表5 頓用指示(“http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationAsNeededConditionMERIT9_CS”) を使用してもよい。"
 // site
-* site.extension contains 
+* site.extension contains
     JP_MedicationDosage_SiteComment named siteComment ..* and
     $bodySite named bodySite ..*
 * site.extension[bodySite] ^short = "身体部位の位置に関する詳細"
@@ -211,7 +212,7 @@ Title: "JP Core Medication Dosage DosageComment Extension"
 Description: "用法コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_DosageComment
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage"
 * ^context[+].type = #element
@@ -232,7 +233,7 @@ Title: "JP Core Medication Dosage LineComment Extension"
 Description: "ラインコメントを格納する"
 * ^url = $JP_MedicationDosage_LineComment
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage"
 * ^context[+].type = #element
@@ -253,7 +254,7 @@ Title: "JP Core Medication Dosage MethodComment Extension"
 Description: "手技コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_MethodComment
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage.method"
 * ^context[+].type = #element
@@ -274,7 +275,7 @@ Title: "JP Core Medication Dosage RateComment Extension"
 Description: "投与速度コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_RateComment
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage"
 * ^context[+].type = #element
@@ -295,7 +296,7 @@ Title: "JP Core Medication Dosage RouteComment Extension"
 Description: "投与経路コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_RouteComment
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage.route"
 * ^context[+].type = #element
@@ -316,7 +317,7 @@ Title: "JP Core Medication Dosage SiteComment Extension"
 Description: "投与部位コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_SiteComment
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage.site"
 * ^context[+].type = #element
@@ -337,7 +338,7 @@ Title: "JP Core Medication Dosage Device Extension"
 Description: "投与装置を格納する拡張"
 * ^url = $JP_MedicationDosage_Device
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^context[0].type = #element
 * ^context[=].expression = "Dosage"
 * ^context[+].type = #element
@@ -356,7 +357,7 @@ Title: "JP Core Medication Dosage Line Extension"
 Description: "指示ラインを格納するための拡張"
 * ^url = $JP_MedicationDosage_Line
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^context[0].type = #element
 * ^context[=].expression = "Dosage"
 * ^context[+].type = #element
@@ -376,7 +377,7 @@ Title: "JP Core Medication Dosage PeriodOfUse Extension"
 Description: "投与開始日を格納する拡張"
 * ^url = $JP_MedicationDosage_PeriodOfUse
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^purpose = "処方日とは別に明示的に投与・内服開始日を指定するため。"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage"
@@ -399,7 +400,7 @@ Title: "JP Core Medication Dosage UsageDuration Extension"
 Description: "隔日投与など、服用開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使用する拡張"
 * ^url = $JP_MedicationDosage_UsageDuration
 * ^status = #active
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage"
 * . ^short = "実投与日数"

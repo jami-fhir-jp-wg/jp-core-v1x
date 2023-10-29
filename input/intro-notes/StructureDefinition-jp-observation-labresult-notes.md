@@ -22,13 +22,13 @@
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHOULD | patient,code,date,based-on | reference,token,date,reference  | `GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&based-on=ServiceRequest/456` |
-| SHOULD | patient,code,date,value-quantity,based-on | reference,token,date,quantity,reference  | `GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&value-quantity=gt40&based-on=ServiceRequest/456` |
-| SHOULD | patient,code,date,value-concept,based-on | reference,token,date,code,reference  | `GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&value-concept=http://jpfhir.jp/fhir/example|1082004&based-on=ServiceRequest/456` |
-| SHOULD | patient,code,date,value-string,based-on | reference,token,date,string,reference  | `GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&value-string=positive&based-on=ServiceRequest/456` |
-| SHOULD | code,value-quantity,patient | token,quantity,reference  | `GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value-quantity=gt40&patient=123` |
-| SHOULD | code,value-concept,patient | token,code,reference | `GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value-concept=http://jpfhir.jp/fhir/example|1082004&patient=123` |
-| SHOULD | code,value-string,patient | token,string,reference  | `GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value-string=positive&patient=123` |
+| SHOULD | patient,code,date,based-on | reference,token,date,reference  | GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&date=le2020-12-31&based-on=ServiceRequest/456 |
+| SHOULD | patient,code,date,value-quantity,based-on | reference,token,date,quantity,reference  | GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&date=le2020-12-31&value-quantity=gt40&based-on=ServiceRequest/456 |
+| SHOULD | patient,code,date,value-concept,based-on | reference,token,date,code,reference  | GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&date=le2020-12-31&value-concept=http://jpfhir.jp/fhir/example\|1082004&based-on=ServiceRequest/456 |
+| SHOULD | patient,code,date,value-string,based-on | reference,token,date,string,reference  | GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&date=le2020-12-31&value-string=positive&based-on=ServiceRequest/456 |
+| SHOULD | code,value-quantity,patient | token,quantity,reference  | GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&value-quantity=gt40&patient=123 |
+| SHOULD | code,value-concept,patient | token,code,reference | GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&value-concept=http://jpfhir.jp/fhir/example\|1082004&patient=123 |
+| SHOULD | code,value-string,patient | token,string,reference  | GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504\|9A610000000000000&value-string=positive&patient=123 |
 
 
 #### 操作詳細
@@ -41,107 +41,70 @@
 
 次の検索パラメータはサポートすることが推奨される。（**SHOULD**）
 
-1. 臨床での検索：`subject = Patient`（対象患者）、検体採取日、検査項目、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。（**SHOULD**）
+1. 臨床での検索：`subject = Patient`（対象患者）、検体採取日、検査項目、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。（**SHOULD**）  
+patient,code,date,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
+```
+GET [base]/Observation?patient={reference}&code={code}&date={date}&based-on={reference}
+```
+例：  
+```
+GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&based-on=ServiceRequest/456
+```
+1. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（数値、条件：基準値から外れている、等）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(**SHOULD**)  
+patient,code,date,value-quantity,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
+```
+GET [base]/Observation?patient={reference}&code={code}&date={date}&value-quantity={quantity}&based-on={reference}
+```
+例：  
+```
+GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&value-quantity=gt40&based-on=ServiceRequest/456
+```
 
-
-patient,code,date,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
-
-   ```
-   GET [base]/Observation?patient={reference}&code={code}}&date={date}}&based-on={reference}
-   ```
-
-   例：
-
-   ```
-   GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&based-on=ServiceRequest/456
-   ```
-
-2. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（数値、条件：基準値から外れている、等）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(**SHOULD**)
-
-patient,code,date,value-quantity,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
-
-   ```
-   GET [base]/Observation?patient={reference}&code={code}}&date={date}}&value-quantity={quantity}&based-on={reference}
-   ```
-
-   例：
-
-   ```
-   GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&value-quantity=gt40&based-on=ServiceRequest/456
-   ```
-
-3. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（コード）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(**SHOULD**)
-
-patient,code,date,value-concept,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
-
-   ```
-   GET [base]/Observation?patient={reference}&code={code}}&date={date}}&value-concept={code}&based-on={reference}
-   ```
-
-   例：
-
-   ```
-   GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&value-concept=http://jpfhir.jp/fhir/example|1082004&based-on=ServiceRequest/456
-   ```
-
-
-4. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（文字列）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(**SHOULD**)
-
-patient,code,date,value-string,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
-
-   ```
-   GET [base]/Observation?patient={reference}&code={code}}&date={date}}&value-string={string}&based-on={reference}
-   ```
-
-   例：
-
-   ```
-   GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&value-string=positive&based-on=ServiceRequest/456
-   ```
-
-5. 研究での検索：検査項目、検査値（数値、条件：ある値以上／以下、等）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(**SHOULD**)
-
-code,value-quantity,patient の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
-
-   ```
-   GET [base]/Observation?code={code}}&value-quantity={quantity}&patient={reference}&
-   ```
-
-   例：
-
-   ```
-   GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value-quantity=gt40&patient=123
-   ```
-
-6. 研究での検索：検査項目、検査値（コード）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(**SHOULD**)
-
-code,value-concept,patient の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
-
-   ```
-   GET [base]/Observation?code={code}}&value-concept={code}&patient={reference}
-   ```
-
-   例：
-
-   ```
-   GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value-concept=http://jpfhir.jp/fhir/example|1082004&patient=123
-   ```
-
-5. 研究での検索：検査項目、検査値（文字列）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(**SHOULD**)
-
-code,value-string,patient の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。
-
-   ```
-   GET [base]/Observation?code={code}}&value-string={string}&patient={reference}
-   ```
-
-   例：
-
-   ```
-   GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value-string=positive&patient=123
-   ```
-
-
+1. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（コード）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(**SHOULD**)  
+patient,code,date,value-concept,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
+```
+GET [base]/Observation?patient={reference}&code={code}&date={date}&value-concept={code}&based-on={reference}
+```
+例：
+```
+GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&value-concept=http://jpfhir.jp/fhir/example|1082004&based-on=ServiceRequest/456
+```
+1. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（文字列）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(**SHOULD**)  
+patient,code,date,value-string,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
+```
+GET [base]/Observation?patient={reference}&code={code}&date={date}&value-string={string}&based-on={reference}
+```
+例：
+```
+GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000000000&date=le2020-12-31&value-string=positive&based-on=ServiceRequest/456  
+```
+1. 研究での検索：検査項目、検査値（数値、条件：ある値以上／以下、等）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(**SHOULD**)  
+code,value-quantity,patient の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
+```
+GET [base]/Observation?code={code}}&value-quantity={quantity}&patient={reference}
+```
+例：  
+```
+GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value-quantity=gt40&patient=123
+```
+1. 研究での検索：検査項目、検査値（コード）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(**SHOULD**)  
+code,value-concept,patient の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
+```
+GET [base]/Observation?code={code}}&value-concept={code}&patient={reference}
+```
+例：  
+```
+GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value-concept=http://jpfhir.jp/fhir/example|1082004&patient=123
+```
+1. 研究での検索：検査項目、検査値（文字列）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(**SHOULD**)  
+code,value-string,patient の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
+```
+GET [base]/Observation?code={code}}&value-string={string}&patient={reference}
+```
+例：  
+```
+GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value-string=positive&patient=123
+```
 
 ##### オプション検索パラメータ
 

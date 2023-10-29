@@ -11,7 +11,7 @@ Usage: #example
   * coding[0]
     * system = "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"
     * code = #confirmed
-* type = #allergy 
+* type = #allergy
 * category = #food
 * criticality = #high
 * code
@@ -24,7 +24,7 @@ Usage: #example
   * reference = "Patient/jp-patient-example-1"
   * display = "山田 太郎"
 * onsetDateTime = "2022-08-01"
-* recordedDate = "2022-08-03" 
+* recordedDate = "2022-08-03"
 * reaction
   * manifestation
     * text = "じん麻疹"

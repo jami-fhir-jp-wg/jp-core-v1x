@@ -5,5 +5,5 @@ Description: "処置が実施されたアウトカムを示す値セット"
 * ^url = $JP_ProcedureOutcome_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * include codes from system JP_ProcedureOutcome_CS

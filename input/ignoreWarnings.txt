@@ -8,21 +8,27 @@
 %The Implementation Guide contains no examples%
 
 # External Terminologies Existence Warnings
-Code System URI 'http://loinc.org' is unknown so the code cannot be validated
+# 下記のurn:iso:std:iso:3166関連警告はなぜ出るかわからないが実害はない
+The definition for the Code System with URI 'urn:iso:std:iso:3166' doesnt provide any codes so the code cannot be validated
+
+# Uniform Reource Locator はValidation不要
 Code System URI 'urn:ietf:rfc:3986' is unknown so the code cannot be validated
-ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html not found by validator
-ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html not found by validator
-ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 not found by validator
+
+# ベストプラクティス
+Rule dom-6%
+
+# DICOM関係
 The valueSet reference http://playbook.radlex.org/playbook/SearchRadlexAction on element ImagingStudy.procedureCode could not be resolved
 The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html on element ImagingStudy.modality could not be resolved
 The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html on element ImagingStudy.series.modality could not be resolved
 The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 on element ImagingStudy.series.instance.sopClass could not be resolved
+ValueSet http://dicom%
 
-# Country code system 'urn:iso:std:iso:3166' is unknown due to unresoloved reason
-Code System URI 'urn:iso:std:iso:3166' is unknown so the code cannot be validated
+# Wrong Display Name
+Wrong Display Name%
 
 # CodeSystem Content Level #Example or #Fragment Warnings
-Error from server: Unable to provide support for code system %
+#  Error from server: Unable to provide support for code system %
 
 #  Local CodeSystems Warnings
 Code System URI 'http://abc-hospital.local/fhir/Observation/localcode' is unknown so the code cannot be validated
@@ -30,4 +36,5 @@ Code System URI 'http://abc-hospital.local/fhir/ObservationOrder/localcode' is u
 Code System URI 'http://abc-hospital.local/fhir/devide/local-device-type' is unknown so the code cannot be validated
 
 # OID CodeSystem not found Warnings (only registered NamingSystem)
-Code System URI 'urn:oid:1.2.392.200119.4.101.6' is unknown so the code cannot be validated
+# The following 'urn:oid:1.2.392.200119.4.101.6' was registerd on the JPFHIR TerminologyServer 
+# Code System URI 'urn:oid:1.2.392.200119.4.101.6' is unknown so the code cannot be validated

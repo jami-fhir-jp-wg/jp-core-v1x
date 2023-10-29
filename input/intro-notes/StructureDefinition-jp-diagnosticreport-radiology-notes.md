@@ -3,26 +3,29 @@
 
 次のデータ項目は必須（**SHALL**）である。
 
-- status ：レポートの状態・進捗状況
-- code ：レポートの種別（画像診断レポート交換手順ガイドライン「5.1 レポート種別コード」に記載されているLOINCコード "Diagnostic imaging study" を指定）
-- category ： “RAD”をデフォルトとし、特に検査種別を含む部門指定を指定したい場合は"RUS", "RX", "CT", "NMR", "NMS", "VUS", "OUS", "CUS"などを指定する、ここでは複数のコードが許容される
+- status : レポートの状態・進捗状況
+- code : レポートの種別
+  （[JP Core Document Codes Diagnostic][JP_DocumentCodes_DiagnosticReport_VS]に記載されているLOINCコード(18748-4) "Diagnostic imaging study" を指定）
+- category : カテゴリとモダリティを表すコード
+  （Radiology(LP29684-5)を第一コードとし、モダリティを示すDICOMコードを第二コードとして指定する。第二コードは複数のモダリティを許容するため、複数のコードの指定が想定される。）
   
 ### MustSupport
 
 次のデータは送信システムに存在する場合はサポートされなければならないことを意味する（Must Support）。
 
-- basedOn ： レポートあるいは画像検査のServiceRequest
-- subject ： 患者リソース(Patient)への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
-- effectiveDateTime ： レポート作成日時
-- issued ： レポート確定日時
-- performer ： Practitionerでレポートの関係者（作成者、読影者、確定者など）を列挙
-- resultInterpreter ： Practitionerでレポート確定者を示す
-- imagingStudy ： 診断の対象となる画像
-- link ：キーイメージの参照先
-- conclusion ： 診断の結果、impression
-- presentedForm ：レポート本体（全体のイメージあるいは所見等のテキスト）
+- _text : レポートの所見を含むnarrativeデータ
+- basedOn : レポートあるいは画像検査のServiceRequest
+- subject : 患者リソース(Patient)への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
+- effectiveDateTime : レポート作成日時
+- issued : レポート確定日時
+- performer : Practitionerでレポートの関係者（作成者、読影者、確定者など）を列挙
+- resultInterpreter : Practitionerでレポート確定者を示す
+- imagingStudy : 診断の対象となる画像
+- link : キーイメージの参照先
+- conclusion : 診断の結果、impression
+- presentedForm : レポート本体（全体のイメージあるいは所見等のテキスト）
 
-imagingStudyエレメントはCardinalityが0..1だが、放射線レポートでは画像が必ず存在することから、検査実施後には必須（複数の可能性もあり）である。しかし、検査実施前などのstatusによっては0もあることから、とりあえずMustSupportのままとする。将来的な議論の結果によっては、cardinalityを変更する可能性がある。
+imagingStudyエレメントはCardinalityが0..*で 0 が許容されているが、放射線レポートでは画像が必ず存在することから、検査実施後には必須（複数の可能性もあり）である。
 
 ### Extensions定義
 
@@ -32,63 +35,17 @@ imagingStudyエレメントはCardinalityが0..1だが、放射線レポート�
 
 ### Text
 
-DiagnosticReportのドメインリソースの一つであるtextエレメントに見読可能な[narrative](https://www.hl7.org/fhir/R4/narrative.html)データとしてレポートの所見を中心とした情報を格納する。依頼情報や患者基本情報などを含んだレポート全体のデータは別途presentedFormエレメントに保持されるが、ここではPDF等のバイナリが保存される。よってレポート内容の見読性と検索性を担保するためにtextエレメントに保存されたデータが利用される。
+DiagnosticReportのドメインリソースの一つであるtextエレメントに見読可能な[narrative](https://www.hl7.org/fhir/R4/narrative.html)データとしてレポートの所見を中心とした情報を格納する。依頼情報や患者基本情報などを含んだレポート全体のデータは別途presentedFormエレメントに保持されるが、ここではPDF等のバイナリが保存される。よってレポート内容の見読性と検索性を担保するためにtextエレメントに保存されたデータが利用され、ここはxhtmlである事が求められる。
+具体的な構造については [**放射線読影レポート**][jp-diagnosticreport-radiology-example-1]を参照のこと
 
 (DiagnosticReportのResourceType直下に現れる。text以外のDomainResourceの詳細については[こちら](https://www.hl7.org/fhir/R4/domainresource.html)を参照のこと）
 
-例：
+### CategoryとCode
 
-```json
-{
-  "resourceType": "DiagnosticReport",
-  "id": "xxxxxxxxxx",
-  "meta": {
-    "versionId": "1",
-    "lastUpdated": "2020-10-25T17:00:03.903+00:00",
-    "source": "xxxxxxxxxxxxxx"
-  },
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"https://www.w3.org/1999/xhtml\"><p>胸部造影CT</p><p>依頼目的:10月20日の単純写真でひだり肺に異常陰影あり。精査目的。</p><p>所見:</p><p>心拡大は無く、心嚢液も見られない。</p><p>胸部大動脈は蛇行があるも径は正常範囲内。ひだり椎骨動脈が大動脈弓より直接分岐している。大動脈壁に小さな石灰化がみられ動脈硬化性変化が軽度見られる。</p><p>ひだり肺上葉に2.2 x 1.5 cm大の空洞性病変を認める(Image 31/110)。壁には充実性成分を含み不整な造影濃度を示す。みぎ肺上葉に気管支拡張を伴う線状影を認めるが、こちらは炎症性瘢痕として矛盾しない。気管には異常を認めず。肺尖部に炎症後変化と思われる胸膜肥厚は見られる。胸水は認めない。</p><p>腋窩，縦郭および肺門リンパ節の腫大は認めず。甲状腺は正常範囲。</p><p>スキャン範囲内の腹部には異常を認めず。明らかな骨病変も認めない。</p><p>インプレッション:</p><ol><li><p>ひだり肺上葉の空洞性病変。肺腺癌を疑う。</p></li><li><p>みぎ肺上葉陳旧性炎症性瘢痕。<p></li></ol></div>"
-  },
-  "identifier": [ {
-    "use": "usual",
-    "system": "urn:dicom:uid",
-    "value": "xxxxxxxxxxxxxxx"
-  } ],
-  "status": "final",
-  "category": [ {
-    "coding": [ {
-      "system": "https://hl7.org/fhir/v2/0074",
-      "code": "RAD"
-    } ]
-  } ], 
-  "subject": {
-    "reference": "Patient/pat2"
-  },
-  "effectiveDateTime": "2008-06-17",
-  "issued": "2008-06-18T09:23:00+10:00",
-  "performer": [
-    {
-      "reference": "Practitioner/3ad0687e-f477-468c-afd5-fcc2bf897809",
-      "display": "田中太郎"
-    }
-  ],
-  "imagingStudy": [
-    {
-      "display": "CHEST CT DICOM imaging study",
-      "reference": "http://someserver/some-path"
-    }
-  ],
-  "conclusion": "インプレッション: ひだり肺上葉の空洞性病変。 肺腺癌を疑う。みぎ肺上葉陳旧性炎症性瘢痕。",
-  "presentedForm": [{
-    "contentType": "application/jpg",
-    "language": "ja", 
-    "data":"/9j/4AAQSkZJRgABAgAAZAxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxwrh/9X/xP/Z9tYV8PiQ//2Q==",
-    "title": "HTML Report"
-  }]
-}
-```
+Codeエレメントは一つの値のみが許容される。一方でIVR等の手技で血管造影検査と超音波検査あるいはCT検査が併用されることがあるように、放射線画像検査では複数のモダリティと組み合わせた複合的な検査治療手技が構成されることがある。すべての組み合わせのコードを準備あるいは列挙することは困難であるため、本バージョンの実装ガイドでは放射線検査に対する画像診断レポートにはCodeに 18748-4（画像検査報告書）を指定することを原則としている。
+Codeエレメントに利用されるコードとして[JP Core Document Codes Diagnostic][JP_DocumentCodes_DiagnosticReport_VS]	に定義されるコードシステムが用意されているが、粒度の細かいコードはSS-MIX2等で既に定義されているデータとの後方互換を保つ目的で用意されている点に留意が必要である。
+
+Codeエレメントで複合的要素を表現できない点を考慮し、Categoryエレメントにて、複数のモダリティコードを指定できるように設計している点をあわせて確認すること。
 
 ### Identifier
 
@@ -144,6 +101,12 @@ DiagnosticReport.resultエレメントには関連する検体検査計測値な
 
 ImagingStudyやmediaは多少オーバーラップするが、使用される目的が異なる。用途に応じて使い分けること。DiagnosticReportではDICOM画像への参照としてImagingStudyが利用され、キー画像としてmediaが参照される。
 
+### 診断報告書のステータス
+
+- 診断レポートを使用するアプリケーションでは、更新された (改訂された) レポートに注意を払い、取り消されたレポートが適切に処理されるようにする必要がある。
+- 診断レポートを提供するアプリケーションの場合、レポートはすべての個々のデータ項目が確定あるいは追加され最終的なものになるまで、ステータスを「final」としてはならない。
+- 以前の最終リリース後にレポートが取り下げられた場合は、ステータスコードを「entered-in-error (入力済みエラー)」という概念に置き換え、結論/コメント(提供されている場合)およびテキスト(_text)の説明に「このレポートは取り下げられました」などの記述を追加して、DiagnosticReportおよび関連するObservationを撤回する必要がある。撤回の理由をテキストで明示しても良い。
+
 ### レポートの内容
 
 典型的には放射線レポートはnarrativeな構成でのレポートが作成される。DiagnosticReport_Radiologyでは標準的なnarrativeリソースの表現としてXHTMLやrich text表現として（典型的にはPDF）がpresentedFormに指定される。
@@ -162,9 +125,10 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 | コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |　例　|
 | --- | --- | --- | --- | --- | --- |
+| SHALL | identifier | token  | レポートに割り当てられた識別子 | DiagnosticReport.identifier | GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/diagnosticreport-id-system\|1234567890 |
 | MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) | GET [base]/DiagnosticReport?ServiceRequest/12345 |
-| MAY | category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) <br/> "RAD", "RX", "CT", "NMR", "NMS", "RUS", etc. [ default = “RAD” ] | GET [base]/DiagnosticReport?category=RAD |
-| MAY | code | token | レポート全体を示すコード | DiagnosticReport.code [LOINC 18748-4](https://loinc.org/18748-4/)(固定) | GET [base]/DiagnosticReport?code=18748-4 |
+| SHOULD | category | token | レポート種別 | DiagnosticReport.category ([ValueSet]()) <br/> 第1コードは LP29684-5 (Radiology 固定) <br/>第2コード以下は複数のコードを許容し、DICOMモダリティコードが格納される | GET [base]/DiagnosticReport?category=LP29684-5&category=CT |
+| SHOULD | code | token | レポート全体を示すコード | DiagnosticReport.code [LOINC 18748-4](https://loinc.org/18748-4/)(固定) | GET [base]/DiagnosticReport?code=18748-4 |
 | MAY | media | reference | キー画像への参照 | DiagnosticReport.media.link ([Media](https://www.hl7.org/fhir/R4/media.html)) | GET [base]/DiagnosticReport?media/12345 |
 
 なお、検索パラメータは複合的に利用できる。詳細は[Search - Chained parameters](https://www.hl7.org/fhir/R4/search.html#chaining)を参照すること。
@@ -173,19 +137,16 @@ Conclusionやコード化された診断結果は各々がレポートを構成�
 
 次の検索パラメータは必須でサポートされなければならない。
 
-1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（**SHALL**）
+1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（**SHALL**）  
+```
+GET [base]/DiagnosticReport?identifier={system|}[code]
+```
+例：
+```
+GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/diagnosticreport-id-system|1234567890
+```
 
-   ```
-   GET [base]/DiagnosticReport?identifier={system|}[code]
-   ```
-
-   例：
-
-   ```
-   GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/medication|1234567890
-   ```
-
-   指定された識別子に一致するDiagnosticReportリソースを含むBundleを検索する。
+指定された識別子に一致するDiagnosticReportリソースを含むBundleを検索する。
  
 ### サンプル
 

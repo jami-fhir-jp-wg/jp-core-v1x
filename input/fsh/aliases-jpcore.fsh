@@ -1,20 +1,27 @@
 
-// ImplementationGuide
-Alias: $FHIRJPCoreImplementationGuide = http://jpfhir.jp/fhir/core/ImplementationGuide/hl7.fhir.jp.core
+//Alias: $US_Loinc_CS = http://loinc.org
+//Alias: $JP_Loinc_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Loinc_CS
+Alias: $Loinc_CS = http://loinc.org
+
+// ImplementationGuid
+Alias: $FHIRJPCoreImplementationGuide = http://jpfhir.jp/fhir/core/ImplementationGuide/jpfhir.jp.core
 
 // StructureDefinition: Profile, DataType
 Alias: $JP_AllergyIntolerance = http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance
 Alias: $JP_Condition = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition
 Alias: $JP_Coverage = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage
 Alias: $JP_DiagnosticReport_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common
+Alias: $JP_DiagnosticReport_Endoscopy = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Endoscopy
 Alias: $JP_DiagnosticReport_LabResult = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult
 Alias: $JP_DiagnosticReport_Radiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology
 Alias: $JP_Encounter = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter
 Alias: $JP_FamilyMemberHistory = http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory
 Alias: $JP_HumanName = http://jpfhir.jp/fhir/core/StructureDefinition/JP_HumanName
+Alias: $JP_ImagingStudy_Endoscopy = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Endoscopy
 Alias: $JP_ImagingStudy_Radiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology
 Alias: $JP_Immunization = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization
 Alias: $JP_Location = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Location
+Alias: $JP_Media_Endoscopy = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Media_Endoscopy
 Alias: $JP_Medication = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication
 Alias: $JP_MedicationAdministration_Injection = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration_Injection
 Alias: $JP_MedicationAdministration = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration
@@ -33,12 +40,12 @@ Alias: $JP_MedicationRatio_DosePerDay = http://jpfhir.jp/fhir/core/StructureDefi
 Alias: $JP_MedicationRatio_DosePerPeriod = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_DosePerPeriod
 Alias: $JP_MedicationRequest_Injection = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection
 Alias: $JP_MedicationRequest = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest
-//Alias: $JP_MedicationRequestBase = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequestBase
 Alias: $JP_MedicationSimpleQuantity = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationSimpleQuantity
 Alias: $JP_MedicationTiming = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationTiming
 Alias: $JP_Observation_BodyMeasurement = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_BodyMeasurement
 Alias: $JP_Observation_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common
 Alias: $JP_Observation_LabResult = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_LabResult
+Alias: $JP_Observation_Microbiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Microbiology
 Alias: $JP_Observation_PhysicalExam = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_PhysicalExam
 Alias: $JP_Observation_SocialHistory = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_SocialHistory
 Alias: $JP_Observation_VitalSigns = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_VitalSigns
@@ -95,8 +102,11 @@ Alias: $JP_Organization_PrefectureNo_SP = http://jpfhir.jp/fhir/core/SearchParam
 Alias: $JP_Patient_KanaSort_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP
 
 // CodeSystem
+Alias: $JP_ConclusionCodeJed_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConclusionCodeJed_CS
 Alias: $JP_ConditionSeverity_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionSeverity_CS
 Alias: $JP_Department_SsMix_CS = urn:oid:1.2.392.200250.2.2.2
+Alias: $JP_DocumentCodes_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_CS
+Alias: $JP_EndoscopyTerminologyCodesJED_CS = urn:oid:1.2.392.200270.4.1000.1
 Alias: $JP_JfagyFoodAllergen_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS
 Alias: $JP_JfagyMedicationAllergen_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyMedicationAllergen_CS
 Alias: $JP_JfagyNonFoodNonMedicationAllergen_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyNonFoodNonMedicationAllergen_CS
@@ -132,9 +142,13 @@ Alias: $JP_MedicationCodeHOT13_CS = urn:oid:1.2.392.200119.4.402.1
 Alias: $JP_MedicationCodeHOT7_CS = urn:oid:1.2.392.200119.4.403.2
 Alias: $JP_MedicationCodeHOT9_CS = urn:oid:1.2.392.200119.4.403.1
 Alias: $JP_MedicationCodeYJ_CS = urn:oid:1.2.392.100495.20.1.73
+Alias: $JP_MicrobiologyCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_MicrobiologyCategory_CS
+Alias: $JP_Microbiology_AntiMicrobialDrug_CS = urn:oid:1.2.392.100495.10.3.100.5.11.5.2
+Alias: $JP_Microbiology_InfectiousAgent_CS = urn:oid:1.2.392.100495.10.3.100.5.27.6.1
 Alias: $JP_ObservationBodyMeasurementCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
 Alias: $JP_ObservationBodyMeasurementCode_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
 Alias: $JP_ObservationBodySite_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodySite_CS
+Alias: $JP_SimpleObservationCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
 Alias: $JP_ObservationLabResultCode_CS = urn:oid:1.2.392.200119.4.504
 Alias: $JP_ObservationMethod_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationMethod_CS
 Alias: $JP_ObservationPhysicalExamBodySite_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationPhysicalExamBodySite_CS
@@ -163,10 +177,15 @@ Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 
 // ValueSet
 Alias: $JP_AllergyIntolerance_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS
+Alias: $JP_ConclusionCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
 Alias: $JP_ConditionSeverity_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionSeverity_VS
 Alias: $JP_Department_SsMix_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS
 Alias: $JP_Department_SsMix2Digits_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix2Digits_VS
 Alias: $JP_Department_SsMix3Digits_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix3Digits_VS
+Alias: $JP_DiagnosticReportCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DiagnosticReportCategory_VS
+Alias: $JP_DocumentCodes_VS = http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_VS
+Alias: $JP_DocumentCodes_DiagnosticReport_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_DiagnosticReport_VS
+Alias: $JP_DocumentCodes_Endoscopy_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_Endoscopy_VS
 Alias: $JP_MedicalFeeScoreType_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicalFeeScoreType_VS
 Alias: $JP_MedicalLicenseCertificate_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicalLicenseCertificate_VS
 Alias: $JP_MedicationAsNeededConditionJAMI_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationAsNeededConditionJAMI_VS
@@ -204,6 +223,10 @@ Alias: $JP_MedicationCodeHOT7_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Medica
 Alias: $JP_MedicationCode_Immunization_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_Immunization_VS
 Alias: $JP_MedicationCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCode_VS
 Alias: $JP_MedicationCodeYJ_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCodeYJ_VS
+Alias: $JP_MicrobiologyCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MicrobiologyCategory_VS
+Alias: $JP_Microbiology_AntiMicrobialDrug_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Microbiology_AntiMicrobialDrug_VS
+Alias: $JP_Microbiology_InfectiousAgent_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Microbiology_InfectiousAgent_VS
+Alias: $JP_ObservationCategory_Microbiology_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationCategory_Microbiology_VS
 Alias: $JP_ObservationBodyMeasurementCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCategory_VS
 Alias: $JP_ObservationBodyMeasurementCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCode_VS
 Alias: $JP_ObservationBodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodySite_VS
@@ -232,4 +255,8 @@ Alias: $JP_ProcedureNotPerformedReason_VS = http://jpfhir.jp/fhir/core/ValueSet/
 Alias: $JP_ProcedureOutcome_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureOutcome_VS
 Alias: $JP_ProcedurePerformerRole_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedurePerformerRole_VS
 Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureReason_VS
+Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
+Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
+Alias: $JP_RadiologyModality_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_RadiologyModality_VS
+Alias: $JP_ReasonCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCodesJed_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS

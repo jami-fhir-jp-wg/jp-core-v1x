@@ -5,5 +5,5 @@ Description: "医療関連免許証明に関する値セット"
 * ^url = $JP_MedicalLicenseCertificate_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * include codes from system $JP_MedicalLicenseCertificate_CS

@@ -19,9 +19,29 @@ JP Coreは「JAMI NeXEHRS課題研究会（正式名：次世代健康医療記�
 | **MAY** | 実装のためのオプションで、含めることも省略することもできる。 |
 
 
+### 実装ガイド定義
+#### 利用しているFHIRバージョン情報 (Cross Version Analysis)
+
+{% include cross-version-analysis.xhtml %}
+
+#### 依存関係  (Dependency Table)
+
+{% include dependency-table.xhtml %}
+
+#### グローバル公開している定義 (Globals Table)
+
+{% include globals-table.xhtml %}
+
+#### 知的財産権に関する記述（IP Statements）
+
+{% include ip-statements.xhtml %}
+
+**IP Statementsに関する注意事項**
+本IP StatementはIG Publisherにて機械的に出力されたものである。SNOMEDについてはJP Coreとしては利用しておらず、FHIR BASEの定義による影響を受けていることに注意すること。
+Note that this IP Statement is mechanically output by IG Publisher, and that SNOMED is not used as JP Core, but is affected by the definition of FHIR BASE.
+
 ### 機械翻訳文章
 リソースの項目説明文には、FHIR Baseの説明を機械による自動翻訳したものが含まれている。そのため意味が分かりにくい翻訳や丁寧語の文体の文章が混ざっている。
-
 
 ### 質問先
 ---

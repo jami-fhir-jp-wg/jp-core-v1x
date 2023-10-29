@@ -1,9 +1,74 @@
+***v1.1.2***  
+パブリックコメントやIssue等の指摘を中心に不具合やわかりにくい点について改善を行った。また内視鏡検査および微生物学的検査関連のプロファイルを新規に追加した。主な変更点は以下のとおりである。
+
+* 全般
+  * 実装ガイドの依存関係利用しているライセンス等の情報を総合ガイダンスのページに追加した
+  * 誤字・脱字等の見直しを行なった
+  * 参照先リンクに一部の間違いがあったためこれを訂正した
+  * 「である」調に一部なっていないものがあったため訂正した
+  * Exampleにある時間を日本時間ベースに修正
+  * Slicing定義タイプがpatternからvalueへ変更可能なものはvalueを使うように変更した
+
+* プロファイル関連
+  * Observation
+    * Observation派生プロファイルを区別出来るようにCategoryにプロファイル毎に固定値を必須でいれることとした  
+    これにあわせて検索例やExample等を修正した  
+    ※本件はv1.1.0, v1.1.1で作成したものと互換性が保たれないため注意のこと
+    * 微生物学検査関連プロファイルの追加    
+      * `JP_Observation_Microbiology`
+    * `JP_Observation_Common`のshort, definition等のコメントをわかりやすいように修正した
+  * DiagnosticReport
+    * DiagnosticReport派生プロファイルを区別出来るように、Categoryにプロファイル毎に固定値を必須でいれることとした  
+    これにあわせて検索例やExample等を修正した  
+    ※本件はv1.1.0, v1.1.1で作成したものと互換性が保たれないため注意のこと
+    * 内視鏡関連プロファイルの追加
+      * `JP_DiagnosticReport_Endoscopy`
+    * 微生物学検査関連プロファイルの追加    
+      * `JP_DiagnosticReport_Microbiology`
+    * `JP_DiagnosticReport_Common` の shortおよびdefinitionの記述を整理した
+    * `JP_DiagnosticReport_Radiology`のcategoryおよびcodeエレメントの定義を更新した、また読影医・確定医の専門医資格情報に関する記述を追加した
+  * ImagingStudy
+    * 内視鏡関連プロファイルの追加
+      * `JP_ImagingStudy_Endoscopy`  
+    * `JP_ImagingStudy_Radiology`の説明を見直し、進捗に関する記述の追加やSearchParameterの要求レベル等を修正した、またExampleのテキストエリアの見直した
+  * Medication
+    * `JP_MedicationRequest`, `JP_MedicationRequest_Injection`に対し、`JP_MedicationDispense_Preparation`拡張定義が誤って定義されていたため、これを削除した
+  * Patient
+    * プロファイルにJP Coreとしての例をExample Jp:として表示を追加した
+
+* Terminology関連
+  * 定義追加  
+  プロファイル追加、ObservationおよびDiagnosticReportのCategory再定義により下記のTerminology関連プロファイルの追加を行なった
+    * JP Core Endoscopy JED CodeSystem
+    * JP Core DiagnosticReport Category ValueSet
+    * JP Core DiagnosticReport Endoscopy Conclusion Codes JED ValueSet
+    * JP Core Document Codes Endoscopy ValueSet
+    * JP Core Simple Observation Category CodeSystem
+    * JP Core Simple Observation Category ValueSet
+    * JP Core ImagingStudy Endoscopy Reason Code JED ValueSet
+    * JP Core Microbiology AntiMicrobial Drug CodeSystem
+    * JP Core Microbiology AntiMicrobial Drug ValueSet
+    * JP Core Microbiology InfectiousAgent CodeSystem
+    * JP Core Microbiology InfectiousAgent ValueSet
+    * JP Core Microbiology Category CodeSystem
+    * JP Core Microbiology Category ValueSet
+  * 定義修正  
+  コードや表記について誤りがあったため修正した
+    * JP Core Medication JAMI Additional Usage CodeSystem
+  * 定義削除  
+  下記の利用されていないCodeSystemについて削除を行なった
+    * JP_ProcedureCodesICHI_CS
+    * JP_ProcedureCondition_CS
+    * JP_ProcedureAction_CS
+    * JP_ProcedureKingAction_CS
+    * JP_ProcedureFollowup_CS
+    * JP_ProcedureReason_CS
+
 ***v1.1.1***
 
-１）JP_MedicationRequest , JP_MedicationRequest_injectionをJP_MedicationRequestBaseから派生する記述方法をやめ、それぞれにJP_MedicationRequestBaseの内容を展開した。FHIR Validatorの使用法によってはsnapshot展開時にエラーが発生することがあるため。
-利用する側に影響はない。
-
-２）JP_MedicationRequest , JP_MedicationRequest_injection中の説明文、サンプル中のoid記述に誤りがあった（標準用法、補足用法、外用部位など）のを修正した。同じく説明文中のidentifierの記述を追加した。
+* Medication関連
+    * JP_MedicationRequest , JP_MedicationRequest_injectionをJP_MedicationRequestBaseから派生する記述方法をやめ、それぞれにJP_MedicationRequestBaseの内容を展開した。FHIR Validatorの使用法によってはsnapshot展開時にエラーが発生することがあるため。利用する側に影響はない
+    * JP_MedicationRequest , JP_MedicationRequest_injection中の説明文、サンプル中のoid記述に誤りがあった（標準用法、補足用法、外用部位など）のを修正した。同じく説明文中のidentifierの記述を追加した
 
 
 ***v1.1.0***

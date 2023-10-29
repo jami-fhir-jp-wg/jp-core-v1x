@@ -12,11 +12,11 @@ ImagingStudyリソースは、次の要素を持たなければならない。
 #### Must Support
 ImagingStudyリソースは該当する情報が存在する場合、次の要素を持たなければならない。
 
-- identifier：DICOM画像が存在する場合、DICOMタグのStudyInstance UID (0020,000D)が保持される必要がある。Accession Number and Issuer (0080,0050)+(0080,0051) あるいは Study ID (0020,0010)の設定も可能だが、JP CoreではStudyInstance UIDをMust Supportとし、他は任意とする（複数のidentifierの設定は可能）。必要に応じてオーダ番号等を持つことも可能である
-- series.modality：DICOM画像が存在する場合シリーズが取得されたモダリティを示す、DICOMでは必須情報となっておりDICOMタグ(0008,0060)の情報が格納される
-- series.performer.actor：組織または撮影者を示す具体的には実施医あるいは操作者（診療放射線技師）を示す関連するリソースへのreferenceである。DICOMタグの(0008, 1050) \| (0008, 1052) \| (0008, 1070) \| (0008, 1072) とマッピングされる
-- series.instance.uid：画像のユニークID、DICOMタグ(0008,0018)にある値をそのまま設定する
-- series.instance.sopClass：SOPクラスUID、DICOMタグ(0008,0016)にある値をそのまま設定する
+- identifier : DICOM画像が存在する場合、DICOMタグのStudyInstance UID (0020,000D)が保持される必要がある。Accession Number and Issuer (0080,0050)+(0080,0051) あるいは Study ID (0020,0010)の設定も可能だが、JP CoreではStudyInstance UIDをMust Supportとし、他は任意とする（複数のidentifierの設定は可能）。必要に応じてオーダ番号等を持つことも可能である
+- series.modality : DICOM画像が存在する場合シリーズが取得されたモダリティを示す、DICOMでは必須情報となっておりDICOMタグ(0008,0060)の情報が格納される
+- series.performer.actor : 組織または撮影者を示す具体的には実施医あるいは操作者（診療放射線技師）を示す関連するリソースへのreferenceである。DICOMタグの(0008, 1050) \| (0008, 1052) \| (0008, 1070) \| (0008, 1072) とマッピングされる
+- series.instance.uid : 画像のユニークID、DICOMタグ(0008,0018)にある値をそのまま設定する
+- series.instance.sopClass : SOPクラスUID、DICOMタグ(0008,0016)にある値をそのまま設定する
 
 ### Extension定義
 
@@ -51,6 +51,7 @@ BodySite等でDICOMでmappingされているSNOMED-CTをCodeSystemとして利�
 | SHOULD | patient,bodysite | reference,token | `GET [base]/ImagingStudy?patient=123&bodysite=T-15460` |
 | SHOULD | patient,started | reference,date | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-25` |
 | SHOULD | patient,started,modality,bodysite | reference,date,token,token  | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=CT&bodysite=T-15460` |
+| SHOULD | patient, started, modality | reference, date, token | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=CT` |
 | SHOULD | encounter | reference  | `GET [base]/ImagingStudy?encounter=Encounter/456` |
 
 #### 操作詳細
@@ -62,94 +63,67 @@ ImagingStudyリソースでは検索の多様性が求められるため、必�
 
 ##### 推奨検索パラメータ
 
+
 次の検索パラメータはサポートすることが推奨される。（**SHOULD**）
 
-1.患者中心での検索：対象患者（= Patientリソース）を条件とした検索をサポートすることが望ましい
-
-   ```
-   GET [base]/ImagingStudy?patient={reference}
-   ```
-
-   例：
-
-   ```
-   GET [base]/ImagingStudy?patient=123
-   ```
-
-
-2.モダリティ中心の検索：対象患者（= Patientリソース）と撮影に使用されたモダリティを条件とした検索をサポートすることが望ましい
-
-   ```
-   GET [base]/ImagingStudy?patient={reference}&modality={token}
-   ```
-
-   例：
-
-   ```
-   GET [base]/ImagingStudy?patient=123&modality=CT
-   ```
-
-3.部位中心の検索：対象患者（= Patientリソース）と撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい
-
-   ```
-   GET [base]/ImagingStudy?patient={reference}&bodysite={token}
-   ```
-
-   例：
-
-   ```
-   GET [base]/ImagingStudy?patient=123&bodysite=T-15460
-   ```
-
-4.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい
-
-   ```
-   GET [base]/ImagingStudy?patient={reference}&started={date}
-   ```
-
-   例：
-
-   ```
-   GET [base]/ImagingStudy?patient=123&started=eq2021-06-25
-   ```
-
-5.日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい
-
-   ```
-   GET [base]/ImagingStudy?patient={reference}&started={date}
-   ```
-
-   例：
-
-   ```
-   GET [base]/ImagingStudy?patient=123&started=eq2021-06-25
-   ```
-   
-6.複数の条件を組み合わせた検索：対象患者（= Patientリソース）、撮影の日時、撮影に使用されたモダリティ、撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい
-
-
-   ```
-   GET [base]/ImagingStudy?patient={reference}&started={date}&modality={token}&bodysite={token}
-   ```
-
-   例：
-
-   ```
-   GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=CT&bodysite=T-15460
-   ```
-   
-7.来院情報中心の検索：来院情報（= Encounterリソース）を条件とした検索をサポートすることが望ましい
-
-
-   ```
-   GET [base]/ImagingStudy?encounter={reference}
-   ```
-
-   例：
-
-   ```
-   GET [base]/ImagingStudy?encounter=456
-   ```
+1. 患者中心での検索：対象患者（= Patientリソース）を条件とした検索をサポートすることが望ましい  
+```
+GET [base]/ImagingStudy?patient={reference}
+```
+例：  
+```
+GET [base]/ImagingStudy?patient=123
+```
+1. モダリティ中心の検索：対象患者（= Patientリソース）と撮影に使用されたモダリティを条件とした検索をサポートすることが望ましい  
+なお検索パラメターmodalityは[定義済み検索パラメーター](https://www.hl7.org/fhir/R4/searchparameter-registry.html)にseries.modalityを対象として定義されているため、ImagingStudy.modalityを対象としていないことに注意すること  
+```
+GET [base]/ImagingStudy?patient={reference}&modality={token}
+```
+例：
+```
+GET [base]/ImagingStudy?patient=123&modality=CT
+```
+1. 部位中心の検索：対象患者（= Patientリソース）と撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい  
+```
+GET [base]/ImagingStudy?patient={reference}&bodysite={token}
+```
+例：
+```
+GET [base]/ImagingStudy?patient=123&bodysite=T-15460
+```
+1. 日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい  
+```
+GET [base]/ImagingStudy?patient={reference}&started={date}
+```
+例：
+```
+GET [base]/ImagingStudy?patient=123&started=eq2021-06-25
+```
+1. 日付中心の検索：対象患者（= Patientリソース）と撮影の日時を条件とした検索をサポートすることが望ましい  
+```
+GET [base]/ImagingStudy?patient={reference}&started={date}
+```
+例：
+```
+GET [base]/ImagingStudy?patient=123&started=eq2021-06-25
+```
+1. 複数の条件を組み合わせた検索：対象患者（= Patientリソース）、撮影の日時、撮影に使用されたモダリティ、撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい  
+なお検索パラメターmodalityは[定義済み検索パラメーター](https://www.hl7.org/fhir/R4/searchparameter-registry.html)にseries.modalityを対象として定義されているため、ImagingStudy.modalityを対象としていないことに注意すること  
+```
+GET [base]/ImagingStudy?patient={reference}&started={date}&modality={token}&bodysite={token}
+```
+例：
+```
+GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=CT&bodysite=T-15460
+```
+1. 来院情報中心の検索：来院情報（= Encounterリソース）を条件とした検索をサポートすることが望ましい  
+```
+GET [base]/ImagingStudy?encounter={reference}
+```
+例：
+```
+GET [base]/ImagingStudy?encounter=456
+```
 
 ##### オプション検索パラメータ
 

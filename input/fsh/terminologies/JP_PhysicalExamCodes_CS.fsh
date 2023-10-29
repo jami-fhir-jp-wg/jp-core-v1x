@@ -5,7 +5,7 @@ Description: "身体所見の区分を表すコード"
 * ^url = $JP_PhysicalExamCode_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2022-10-24"
+* ^date = "2023-06-26"
 * ^caseSensitive = true
 * ^valueSet = $JP_PhysicalExamCode_VS
 * ^content = #complete

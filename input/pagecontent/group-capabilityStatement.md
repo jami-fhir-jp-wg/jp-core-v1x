@@ -7,10 +7,10 @@ JP Coreを派生したサイトでは、アクタ毎にこれらの機能定義�
 データ受け渡し等を行う場合、送受信の両方のアクタについてCapability Statementを記載とすることが出来る。一般的にServer側へのCapabilityStatement定義され、Client側は必要に応じて記載する。役割やデータの受け渡しのフローにより、アクタが複数になる場合、それぞれのアクタにてCapability Statementの記載を検討する。
 
 #### 対象プロファイル(Profile)
-ユースケースより対象となるプロファイル(Profile)を洗い出しを行ないます。JP Coreで定義されているプロファイル場合は、これを優先して利用する。JP Coreで定義されていないプロファイルについても記載することは可能であり、FHIR BASEを初めてとして、他のImplementation Guideより適切なプロファイルを選択する。
+ユースケースより対象となるプロファイル(Profile)を洗い出しを行なう。JP Coreで定義されているプロファイル場合は、これを優先して利用する。JP Coreで定義されていないプロファイルについても記載することは可能であり、FHIR BASEを初めてとして、他のImplementation Guideより適切なプロファイルを選択する。
 
 #### インタラクション
-各プロファイル(Profile)に対して、どのようなインタラクションを提供するかを決定します。
+各プロファイル(Profile)に対して、どのようなインタラクションを提供するかを決定する。
 
 | インタラクション| 説明 |
 |---|---|
@@ -21,13 +21,13 @@ JP Coreを派生したサイトでは、アクタ毎にこれらの機能定義�
 |update| 新規作成,更新 |
 |patch| 更新 |
 |delete| 削除 |
-|history-instance| 特定のリソースの変更履歴を取得します。 |
-|history-type| 特定のタイプのすべてのリソースの変更履歴を取得します。 |
+|history-instance| 特定のリソースの変更履歴を取得する。 |
+|history-type| 特定のタイプのすべてのリソースの変更履歴を取得する。 |
 
 ### 検索パラメータ(Search Parameter)定義
 #### 対象検索パラメータの列挙
-FHIR BASEにある定義済み検索パラメータ([Defined Search Parameters](https://fhir-ru.github.io/searchparameter-registry.html))や[JP Coreで定義された検索パラメータ](group-searchParameter.html)の中より、適合するものがないかを確認しあればこれを採用します。
-もし適合するものが見つからない場合、独自にSearch Parameterを定義した上で追加します。
+FHIR BASEにある定義済み検索パラメータ([Defined Search Parameters](https://www.hl7.org/fhir/R4/searchparameter-registry.html))や[JP Coreで定義された検索パラメータ](group-searchParameter.html)の中より、適合するものがないかを確認しあればこれを採用する。
+もし適合するものが見つからない場合、独自にSearch Parameterを定義した上で追加する。
 
 ## Capability Statementの実装例
 * ユースケース<br/>
