@@ -14,7 +14,6 @@ on:
       - 'develop'
 env:
   release_version : 1.1.2-dev
-  
 jobs:
   turn:
     runs-on: ubuntu-latest
@@ -153,7 +152,6 @@ jobs:
         rm output/full-ig.zip
         rm output/expansions.json
         rm output/expansions.xml
-
     - name: Deploy Implementation Guide
       if: success()
       uses: peaceiris/actions-gh-pages@v3
