@@ -8,7 +8,7 @@ Title: "JP Core MedicationDispenseBase Profile"
 Description: "このプロファイルはユーザは直接適用するものではなく、JP_MedicationDispenseとJP_MedicationDispenseInjectionの共通の親となる抽象プロファイルである。このプロファイルはMedicationDispenseリソースに対して、内服・外用薬剤処方調剤・払い出し記録のデータを送受信するため、JP_MedicationDispenseとJP_MedicationDispenseInjectionの各プロファイルの基礎となる制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispenseBase"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * . ^short = "指定された患者への薬剤の払い出し"
 * . ^definition = "指定された患者・個人へ薬剤が払い出されたか払い出される予定のものを示す。これには（供給される）提供される製品についての説明や薬剤の服用に関する指示も含まれる。薬剤払い出しは薬剤オーダに対して薬局システムが対応した結果となる。"
 * identifier ^slicing.discriminator.type = #value
@@ -147,7 +147,7 @@ Title: "JP Core MedicationDispense Profile"
 Description: "このプロファイルはMedicationDispenseリソースに対して、内服・外用薬剤処方調剤・払い出し記録のデータを送受信するための基礎となる制約と拡張を定めたものである。JP_MedicationDispenseBaseプロファイルからの派生プロファイルである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispense"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * . ^short = "指定された患者への薬剤の払い出し"
 * . ^definition = "指定された患者・個人へ薬剤が払い出されたか払い出される予定のものを示す。これには（供給される）提供される製品についての説明や薬剤の服用に関する指示も含まれる。薬剤払い出しは薬剤オーダに対して薬局システムが対応した結果となる。"
 * identifier contains
@@ -180,7 +180,7 @@ Title: "JP Core MedicationDispense Injection Profile"
 Description: "このプロファイルはMedicationDispenseリソースに対して、注射薬剤処方調剤・払い出し記録のデータを送受信するための基礎となる制約と拡張を定めたものである。JP_MedicationDispenseBaseプロファイルからの派生プロファイルである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispense_Injection"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * . ^short = "指定された患者への注射薬剤の払い出し"
 * . ^definition = "指定された患者・個人へ注射薬剤が払い出されたか払い出される予定のものを示す。これには（供給される）提供される製品についての説明や注射薬剤の服用に関する指示も含まれる。薬剤払い出しは注射オーダに対して薬局システムが対応した結果となる。"
 * medication[x] only Reference(Medication)
@@ -197,7 +197,7 @@ Title: "JP Core MedicationDispense Preparation Extension"
 Description: "薬剤単位の調剤結果"
 * ^url = $JP_MedicationDispense_Preparation
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^purpose = "薬剤単位の調剤結果"
 * ^context.type = #element
 * ^context.expression = "MedicationDispense"

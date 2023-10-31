@@ -8,7 +8,7 @@ Title: "JP Core ImagingStudy Endoscopy Profile"
 Description: "このプロファイルはImagingStudyリソースに対して、主に内視鏡検査で撮影された画像に関わるデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Endoscopy"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * . ^short = "内視鏡を使用したDICOM画像検査に関する情報"
 * identifier MS
 * identifier ^short = "DICOM画像検査全体を一意に識別するためのID【詳細参照】"

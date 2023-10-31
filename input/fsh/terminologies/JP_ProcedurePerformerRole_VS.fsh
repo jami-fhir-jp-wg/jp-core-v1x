@@ -5,5 +5,5 @@ Description: "処置を実施した者の役割（ロール）を示す値セッ
 * ^url = $JP_ProcedurePerformerRole_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * include codes from system $JP_PractitionerRole_CS

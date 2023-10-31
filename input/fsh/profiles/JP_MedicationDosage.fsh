@@ -12,7 +12,7 @@ Title: "JP Core MedicationDosage Base DataType"
 Description: "このデータタイプは薬剤用法のDosageベースとして基礎となる制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosageBase"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * . ^short = "薬の服用方法・服用した方法、または服用すべき方法"
 * . ^definition = "薬の服用方法・服用した方法、または服用すべき方法"
 
@@ -124,7 +124,7 @@ Title: "JP Core MedicationDosage DataType"
 Description: "このデータタイプは内服用法の制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * extension contains
     JP_MedicationDosage_PeriodOfUse named periodOfUse ..1 and
     JP_MedicationDosage_UsageDuration named usageDuration ..1
@@ -166,7 +166,7 @@ Title: "JP Core MedicationDosage Injection DataType"
 Description: "このデータタイプは注射用法の制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosage_Injection"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * extension contains
     JP_MedicationDosage_DosageComment named dosageComment ..* and
     JP_MedicationDosage_Device named device ..* and
@@ -212,7 +212,7 @@ Title: "JP Core Medication Dosage DosageComment Extension"
 Description: "用法コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_DosageComment
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage"
 * ^context[+].type = #element
@@ -233,7 +233,7 @@ Title: "JP Core Medication Dosage LineComment Extension"
 Description: "ラインコメントを格納する"
 * ^url = $JP_MedicationDosage_LineComment
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage"
 * ^context[+].type = #element
@@ -254,7 +254,7 @@ Title: "JP Core Medication Dosage MethodComment Extension"
 Description: "手技コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_MethodComment
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage.method"
 * ^context[+].type = #element
@@ -275,7 +275,7 @@ Title: "JP Core Medication Dosage RateComment Extension"
 Description: "投与速度コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_RateComment
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage"
 * ^context[+].type = #element
@@ -296,7 +296,7 @@ Title: "JP Core Medication Dosage RouteComment Extension"
 Description: "投与経路コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_RouteComment
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage.route"
 * ^context[+].type = #element
@@ -317,7 +317,7 @@ Title: "JP Core Medication Dosage SiteComment Extension"
 Description: "投与部位コメントを格納するための拡張"
 * ^url = $JP_MedicationDosage_SiteComment
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage.site"
 * ^context[+].type = #element
@@ -338,7 +338,7 @@ Title: "JP Core Medication Dosage Device Extension"
 Description: "投与装置を格納する拡張"
 * ^url = $JP_MedicationDosage_Device
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^context[0].type = #element
 * ^context[=].expression = "Dosage"
 * ^context[+].type = #element
@@ -357,7 +357,7 @@ Title: "JP Core Medication Dosage Line Extension"
 Description: "指示ラインを格納するための拡張"
 * ^url = $JP_MedicationDosage_Line
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^context[0].type = #element
 * ^context[=].expression = "Dosage"
 * ^context[+].type = #element
@@ -377,7 +377,7 @@ Title: "JP Core Medication Dosage PeriodOfUse Extension"
 Description: "投与開始日を格納する拡張"
 * ^url = $JP_MedicationDosage_PeriodOfUse
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^purpose = "処方日とは別に明示的に投与・内服開始日を指定するため。"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage"
@@ -400,7 +400,7 @@ Title: "JP Core Medication Dosage UsageDuration Extension"
 Description: "隔日投与など、服用開始日から終了日までの日数と実投与日数が異なる場合に、実投与日数を明⽰したい場合に使用する拡張"
 * ^url = $JP_MedicationDosage_UsageDuration
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^context[+].type = #element
 * ^context[=].expression = "Dosage"
 * . ^short = "実投与日数"

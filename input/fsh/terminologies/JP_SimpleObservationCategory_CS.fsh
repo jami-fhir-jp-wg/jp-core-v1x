@@ -5,7 +5,7 @@ Description: "JP Coreにて定義したObservationリソースに関する分類
 * ^url = $JP_SimpleObservationCategory_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^caseSensitive = true
 * ^content = #complete
 * #sdoh "SDOH" "健康の社会的決定要因 (Social Determinant of Health)"

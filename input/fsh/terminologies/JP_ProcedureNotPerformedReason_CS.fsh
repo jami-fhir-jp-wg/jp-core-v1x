@@ -5,7 +5,7 @@ Description:  "処置が実施されなかった理由、または開始され�
 * ^url = $JP_ProcedureNotPerformedReason_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureNotPerformedReason_VS
 * ^content = #complete

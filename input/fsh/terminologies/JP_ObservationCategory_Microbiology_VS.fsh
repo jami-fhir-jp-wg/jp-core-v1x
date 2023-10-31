@@ -5,6 +5,6 @@ Description: "微生物学検査カテゴリ値セット"
 * ^url = $JP_ObservationCategory_Microbiology_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 
 * $Loinc_CS#18725-2 "微生物学検査"
