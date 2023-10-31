@@ -92,7 +92,7 @@ JP Encounter リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Encounter?class=http://terminology.hl7.org/CodeSystem/v3-ActCode\|EMER&patient=Patient/123456 
+   GET [base]/Encounter?class=http://terminology.hl7.org/CodeSystem/v3-ActCode|EMER&patient=Patient/123456 
    ```
 
    指定されたclass,patientに一致するEncounterリソースを含むBundleを検索する。
@@ -106,7 +106,7 @@ JP Encounter リソースで使用される拡張は次の通りである。
    例：
 
    ```
-   GET [base]/Encounter?patient=Patient/123456&type=http://terminology.hl7.org/CodeSystem/encounter-type\|ADMS 
+   GET [base]/Encounter?patient=Patient/123456&type=http://terminology.hl7.org/CodeSystem/encounter-type|ADMS 
    ```
 
    指定されたpatient, typeに一致するEncounterリソースを含むBundleを検索する。
