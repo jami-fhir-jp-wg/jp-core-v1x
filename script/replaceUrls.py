@@ -14,7 +14,6 @@ with open(sys.argv[1], "r") as f:
     for line in f:
 #        sys.stderr.write(line)
 # 次のようなパターンを見つけて、canonical= 値の部分だけに置き換える：https://simplifier.net/resolve?canonical=http%3A%2F%2Fjpfhir.jp%2Ffhir%2Fcore%2FValueSet%2FJP_MedicationSubstitutionNotAllowedReason_VS&scope=jpfhir-terminology@1.1.1
-
         if "https://simplifier.net/resolve?" in line:
             m1 = re.finditer('https:\/\/simplifier\.net\/resolve\?scope=(.*?)&amp;canonical=',line)
             m2 = re.finditer('https:\/\/simplifier\.net\/resolve\?canonical=(.*?)&amp;scope=(.*?)"',line)
@@ -39,8 +38,8 @@ with open(sys.argv[1], "r") as f:
                     scope = mm.group(2)
                     line = line.replace('https://simplifier.net/resolve?scope='+canonical+'&amp;amp;scope=','', 1)
             else:
-                print(line)
+                print(line,'')
                 continue
-            print(line)
+            print(line,'')
         else:
-            print(line)
+            print(line,'')

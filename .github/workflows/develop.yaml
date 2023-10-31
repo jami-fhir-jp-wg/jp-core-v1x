@@ -132,10 +132,6 @@ jobs:
         done
         cd ..
 
-    - name: remove_multiline
-      run:  |
-        ruby script/remove_multiline.rb
-
     - name: STEP1 = ssh key generate  for copying all IG files to public JAMI WG Web site 
       run: | 
         echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
