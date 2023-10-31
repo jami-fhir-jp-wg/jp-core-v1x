@@ -1,4 +1,4 @@
 kramdown:
   toc_levels:    1..3
-  hard_wrap: true
-  
+  hard_wrap: false
+  remove_line_breaks_for_cjk: false
