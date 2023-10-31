@@ -38,8 +38,8 @@ with open(sys.argv[1], "r") as f:
                     scope = mm.group(2)
                     line = line.replace('https://simplifier.net/resolve?scope='+canonical+'&amp;amp;scope=','', 1)
             else:
-                print(line,'')
+                print(line, end="")
                 continue
-            print(line,'')
+            print(line, end="")
         else:
-            print(line,'')
+            print(line, end="")
