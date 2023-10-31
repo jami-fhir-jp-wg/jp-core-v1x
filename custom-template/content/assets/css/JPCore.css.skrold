@@ -1,0 +1,75 @@
+#segment-footer > 
+.container {background-color: #0F9DAA;}
+.navbar-inverse {background-color: #0F9DAA;}
+
+/* 国旗の装飾 */
+img[title="Japan"] 
+{
+    border:1px solid #888888;
+    width: 45px;
+    height: 30px;
+}
+
+/* テーブル全般（主にmarkdown） */
+table{
+    border-collapse:collapse;
+    margin:10px;
+}
+th{
+    border-top:1px solid silver;
+    border-bottom:1px solid silver;
+    color:#1f1f1f;
+}
+td{
+    border-bottom:1px dashed silver
+}
+tr:last-child td{
+    border-bottom:1px solid silver
+}
+tr:first-child td{
+    border-top:1px solid silver
+}
+td,th{
+    padding:5px;
+}
+
+/* 先頭プロファイルサマリ情報（黄色部分） */
+table.colsd td {
+    background-color: #F9FFE6;
+    border:1px solid silver
+}
+
+/* Detailed Descriptionsタグの枠線 */
+table.dict td{
+    border: none;
+}
+
+/* 用語集テーブル */
+table.extension_description tr td:nth-of-type(1){
+    min-width: 100px;
+}
+table.extension_description tr td:nth-of-type(2){
+    min-width: 200px;
+}
+table.extension_description tr td:nth-of-type(3){
+    word-wrap: break-word;
+}
+
+pre.json{
+	display: block;
+	width: fit-content;	
+}
+
+pre.xml{
+	display: block;
+	width: fit-content;	
+}
+
+pre[class*="language-"] {
+	display: block;
+	width: 100%;
+}
+
+code[class*="language-"] {
+	white-space: pre-wrap;
+}

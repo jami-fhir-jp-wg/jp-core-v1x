@@ -1,0 +1,12 @@
+{
+  "name": "jpfhir.jp.core.ig-template",
+  "type": "fhir.template",
+  "license": "CC0-1.0",
+  "description": "FHIR JpCore IG Template",
+  "author": "https://jpfhir.jp",
+  "canonical": "https://jpfhir.jp/core/templates/jpfhir.jp.core.ig-template",
+  "base": "fhir.base.template",
+  "dependencies": {
+    "fhir.base.template": "current"
+  }
+}
