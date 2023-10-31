@@ -8,6 +8,9 @@
   * 「である」調に一部なっていないものがあったため訂正した
   * Exampleにある時間を日本時間ベースに修正
   * Slicing定義タイプがpatternからvalueへ変更可能なものはvalueを使うように変更した
+  * Administration関連のSearchParameterの必須・推奨に関する記述を見直した
+  * Binary,CarePlan,Consent,Device,DocumentReference,MedicationStatement,RelatedPerson,ResearchStudy,ResearchSubject,ServiceRequest,Specimen参照される可能性の高いリソースに対してからの定義を用意した  
+  今後JP Coreに実装すべき要件が発生した際に影響を考慮したたため
 
 * プロファイル関連
   * Observation
@@ -33,8 +36,6 @@
     * `JP_ImagingStudy_Radiology`の説明を見直し、進捗に関する記述の追加やSearchParameterの要求レベル等を修正した、またExampleのテキストエリアの見直した
   * Medication
     * `JP_MedicationRequest`, `JP_MedicationRequest_Injection`に対し、`JP_MedicationDispense_Preparation`拡張定義が誤って定義されていたため、これを削除した
-  * Patient
-    * プロファイルにJP Coreとしての例をExample Jp:として表示を追加した
 
 * Terminology関連
   * 定義追加  
@@ -63,6 +64,8 @@
     * JP_ProcedureKingAction_CS
     * JP_ProcedureFollowup_CS
     * JP_ProcedureReason_CS
+* セキュリティ関連  
+医療情報システムの安全管理に関するガイドラインが第6.0版に公開にあわせ見直しを行った
 
 ***v1.1.1***
 
