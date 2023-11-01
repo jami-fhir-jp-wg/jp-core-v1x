@@ -15,9 +15,9 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * extension contains $encounter-associatedEncounter named associatedEncounter ..1
 * extension[associatedEncounter] ^short = "関連するEncounter"
 * extension[associatedEncounter] ^definition = "関連するEncounter"
-* identifier ^short = "このEncounterが知られている識別子（複数可）【詳細参照】"
+* identifier ^short = "このEncounterが知られている識別子（複数可）"
 * identifier ^definition = "このEncounterが知られている識別子（複数可）。"
-* status ^short = "planned | arrived | triaged | in-progress | onleave | finished | cancelled + / 予定｜到着｜トリアージ｜進行中｜保留中｜終了｜キャンセル+【詳細参照】"
+* status ^short = "planned | arrived | triaged | in-progress | onleave | finished | cancelled + / 予定｜到着｜トリアージ｜進行中｜保留中｜終了｜キャンセル+"
 * status ^definition = "planned | arrived | triaged | in-progress | onleave | finished | cancelled +.  
 予定｜到着｜トリアージ｜進行中｜保留中｜終了｜キャンセル+."
 * status ^comment = "内部のビジネス・ルールは、ステータス(およびクラス)間で発生する可能性のある適切な遷移を検出することに注意すること。"
