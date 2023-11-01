@@ -144,7 +144,6 @@ FHIRデータ型仕様に従って、以下の内容を採用する。
 　- 郵便番号は含めない。  
 　  
 例：東京都文京区本郷7-3-1"
-* insert SetExampleString(address.text, 東京都文京区本郷7-3-1)
 * address.line ^short = "ストリート名や番地など 【詳細参照】"
 * address.line ^definition = "このコンポーネントには、家番号、アパート番号、通りの名前、通りの方向、P.O。が含まれる。ボックス番号、配達のヒント、および同様の住所情報など。"
 * address.line ^comment = "【JP Core仕様】state要素とcity要素で表現しなかったそのあとの住所部分を番地以降の部分も含めてすべていれる。  
@@ -154,20 +153,16 @@ FHIRデータ型仕様に従って、以下の内容を採用する。
 例：本郷7-3-1  
 例：大字石神９７６  
 例：藤崎町大字藤崎字西村1-2 春山荘201号室"
-* insert SetExampleString(address.line, 本郷7-3-1)
 * address.city ^short = "市区町村名 【詳細参照】"
 * address.city ^definition = "n市、町、郊外、村、その他のコミュニティまたは配達センターの名前。"
 * address.city ^comment = "１MBを超えないこと。  【JP Core仕様】郡市区町村部分だけを「郡」「市」「区」「町」「村」などの文字を含めて設定する。 例：文京区"
-* insert SetExampleString(address.city, 文京区)
 * address.district ^short = "地区名 【詳細参照】"
 * address.district ^comment = "【JP Core仕様】日本の住所では使用しない。"
 * address.state ^short = "国の次の地区単位 【詳細参照】"
 * address.state ^definition = "国の主権が制限されている国のサブユニット。日本の場合、都道府県名。"
 * address.state ^comment = "１MBを超えないこと。  都道府県名。「都」「道」「府」「県」のそれぞれの文字を含める。 例：東京都"
-* insert SetExampleString(address.state, 東京都)
 * address.postalCode ^short = "郵便番号 【詳細参照】"
 * address.postalCode ^comment = "郵便番号。日本の郵便番号の場合には3桁数字とハイフン1文字と4桁数字からなる半角８文字、または最初の3桁だけの3文字のいずれかとする。 例：113-8655"
-* insert SetExampleString(address.postalCode, 113-8655)
 * address.country ^short = "国名またはISO 3166コード　(ISO 3166 2 or 3文字こーど)"
 * address.country ^definition = "国-一般的に理解されている、または一般的に受け入れられている国の国名かコード。"
 * address.country ^comment = "ISO 3166 3文字コードは、人間が読める国名の代わりに使用する。  ISO 3166の2文字または3文字のコード.  日本であれば、jpまたはjpn"
