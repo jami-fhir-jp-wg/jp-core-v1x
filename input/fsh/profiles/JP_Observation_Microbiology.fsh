@@ -5,7 +5,7 @@ Title: "JP Core Observation Microbiology Profile"
 Description: "このプロファイルはObservationリソースに対して、微生物学検査のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Microbiology"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * insert SetDefinition(identifier, 当該検査項目に対し施設内で割り振られる一意の識別子があればこれを使用する)
 * insert SetDefinition(basedOn, このObservationが実施されることになった依頼や計画／提案に関する情報、オーダ情報（ServiceRequest）)
 * basedOn only Reference(ServiceRequest)

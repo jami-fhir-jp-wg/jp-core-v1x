@@ -8,7 +8,7 @@ Title: "JP Core Procedure Profile"
 Description: "このプロファイルはProcedureリソースに対して、患者に対する医療的な処置のデータを送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Procedure"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * . ^short = "Procedureリソース"
 * . ^definition = "患者に対して、または患者のために実行されているか実行されたアクション。これは、手術のような身体的介入、または長期サービス、カウンセリング、催眠療法のような低侵襲性である可能性がある。"
 * text ^short = "このリソースを人間が解釈するためのテキスト要約"

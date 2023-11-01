@@ -5,6 +5,6 @@ Description: "未定義のコードシステム。使用する予定のコード
 * ^url = $JP_Undefined_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^caseSensitive = true
 * ^content = #complete

@@ -8,7 +8,7 @@ Title: "JP Core Medication Timing DataType"
 Description: "このデータタイプはTiming DataTypeに対して、薬剤に関するタイミング定義を行なったものである"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationTiming"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * . ^short = "投与日時"
 * . ^definition = "投与日時"
 * event ^short = "服用もしくは注射を行なうタイミングを示す時刻"

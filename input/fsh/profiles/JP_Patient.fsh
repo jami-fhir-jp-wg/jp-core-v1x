@@ -8,7 +8,7 @@ Title: "JP Core Patient Profile"
 Description: "このプロファイルはPatientリソースに対して、患者のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * . ^short = "医療サービスを受けている個人または動物に関する情報"
 * . ^definition = "ケアまたはその他の健康関連サービスを受けている個人または動物に関する人口統計およびその他の管理情報。"
 * extension contains
@@ -285,7 +285,7 @@ Title: "JP Core Patient Race Extension"
 Description: "人種(Race)に関する情報を格納するためのExtension。"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^context.type = #element
 * ^context.expression = "Patient"
 * . ^short = "人種に関する情報"
