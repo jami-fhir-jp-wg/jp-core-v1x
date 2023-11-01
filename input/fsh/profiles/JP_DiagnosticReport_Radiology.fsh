@@ -48,7 +48,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[radiology] ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは第1コードとして LP29684-5 を固定値として設定。第2コード以下にDICOMModalityコードを列挙することでレポートの対象検査内容を示す。"
 * category[radiology] from $JP_DiagnosticReportCategory_VS (required)
 //* category[radiology] = $Loinc_CS#LP29684-5  "放射線" (exactly)
-* category[radiology] = $Loinc_CS#LP29684-5
+* category[radiology].coding.system = $Loinc_CS (exactly)
+* category[radiology].coding.code = $Loinc_CS#LP29684-5 (exactly)
 
 * category[radiology_sub] ^short = "レポート対象のモダリティを示すコード【詳細参照】"
 * category[radiology_sub] ^definition = "レポート対象のモダリティを示すコード。放射線を表す第1コードのLP29684-5に続くサブカテゴリコードとして第2コード以下に保持される。複数のモダリティの組み合わせを許容するため、コードの列挙を許容する。"

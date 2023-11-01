@@ -29,7 +29,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[microbiology] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP7819-8 (微生物検査/MICRO)を使用する。"
 * category[microbiology] from $JP_DiagnosticReportCategory_VS (required)
 //* category[microbiology] = $Loinc_CS#LP7819-8  "微生物検査" (exactly)
-* category[microbiology] = $Loinc_CS#LP7819-8
+* category[microbiology].coding.system = $Loinc_CS (exactly)
+* category[microbiology].coding.code = $Loinc_CS#LP7819-8 (exactly)
 
 * code = $JP_DocumentCodes_CS#18725-2 "微生物学的検査報告書"
 * insert SetDefinitionRef(code, 診断レポート種別「微生物学的検査報告書」を表す文書コード)
