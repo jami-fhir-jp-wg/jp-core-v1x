@@ -163,9 +163,14 @@ Alias: $JP_PractitionerRole_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Practi
 Alias: $JP_PrefectureNumber_CS = urn:oid:1.2.392.100495.20.3.21
 Alias: $JP_ProcedureBodySite_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureBodySite_CS
 Alias: $JP_ProcedureCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCategory_CS
-Alias: $JP_ProcedureCodesDental_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesDental_CS
 Alias: $JP_ProcedureCodesICHI_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
-Alias: $JP_ProcedureCodesMedical_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesMedical_CS
+
+//Alias: $JP_ProcedureCodesDental_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesDental_CS
+Alias: $JP_ProcedureCodesDental_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterH-dentalProcedure
+
+//Alias: $JP_ProcedureCodesMedical_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesMedical_CS
+Alias: $JP_ProcedureCodesMedical_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterS-medicalProcedure
+
 Alias: $JP_ProcedureCodesNurse_CS = urn:oid:1.2.392.200119.4.701
 Alias: $JP_ProcedureCodesSTEM7_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesSTEM7_CS
 Alias: $JP_ProcedureCondition_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
