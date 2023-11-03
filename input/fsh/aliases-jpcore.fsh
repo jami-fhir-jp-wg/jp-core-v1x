@@ -102,6 +102,8 @@ Alias: $JP_Organization_PrefectureNo_SP = http://jpfhir.jp/fhir/core/SearchParam
 Alias: $JP_Patient_KanaSort_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP
 
 // CodeSystem
+Alias: $JAMI__MedicationMethodDetailDeviceInjection_CS = urn:oid:1.2.392.200250.2.2.20.45
+Alias: $JP_DiseaseICD10_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/ICD10-2013-full
 Alias: $JP_ConclusionCodeJed_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConclusionCodeJed_CS
 Alias: $JP_ConditionSeverity_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionSeverity_CS
 Alias: $JP_Department_SsMix_CS = urn:oid:1.2.392.200250.2.2.2
@@ -176,6 +178,8 @@ Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefin
 Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 
 // ValueSet
+Alias: $JAMI__MedicationMethodDetailDeviceInjection_VS = http://jami.jp/ValueSet/MedicationMethodDetailDeviceInjection_VS
+Alias: $JP_DiseaseICD10_CS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/ICD10-2013-full_VS
 Alias: $JP_AllergyIntolerance_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS
 Alias: $JP_ConclusionCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
 Alias: $JP_ConditionSeverity_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionSeverity_VS
