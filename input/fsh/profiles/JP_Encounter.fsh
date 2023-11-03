@@ -8,16 +8,16 @@ Title: "JP Core Encounter Profile"
 Description: "このプロファイルはEncounterリソースに対して、来院/入院情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * . ^short = "患者にサービスが提供されている間の相互作用"
 * . ^definition = "医療サービスの提供または患者の健康状態の評価を目的とした、患者と医療提供者との間の相互作用。Encounterと表現される。  
 【JP Core仕様】外来受診、救急受診、入院、退院、対面診察、電話診察、など。"
 * extension contains $encounter-associatedEncounter named associatedEncounter ..1
 * extension[associatedEncounter] ^short = "関連するEncounter"
 * extension[associatedEncounter] ^definition = "関連するEncounter"
-* identifier ^short = "このEncounterが知られている識別子（複数可）【詳細参照】"
+* identifier ^short = "このEncounterが知られている識別子（複数可）"
 * identifier ^definition = "このEncounterが知られている識別子（複数可）。"
-* status ^short = "planned | arrived | triaged | in-progress | onleave | finished | cancelled + / 予定｜到着｜トリアージ｜進行中｜保留中｜終了｜キャンセル+【詳細参照】"
+* status ^short = "planned | arrived | triaged | in-progress | onleave | finished | cancelled + / 予定｜到着｜トリアージ｜進行中｜保留中｜終了｜キャンセル+"
 * status ^definition = "planned | arrived | triaged | in-progress | onleave | finished | cancelled +.  
 予定｜到着｜トリアージ｜進行中｜保留中｜終了｜キャンセル+."
 * status ^comment = "内部のビジネス・ルールは、ステータス(およびクラス)間で発生する可能性のある適切な遷移を検出することに注意すること。"

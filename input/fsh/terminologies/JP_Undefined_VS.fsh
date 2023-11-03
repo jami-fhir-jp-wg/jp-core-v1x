@@ -5,5 +5,5 @@ Description: "未定義の値セット。使用する予定のコードシステ
 * ^url = $JP_Undefined_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * include codes from system JP_Undefined_CS

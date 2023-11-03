@@ -5,7 +5,7 @@ Title: "JP Core Observation Microbiology Profile"
 Description: "このプロファイルはObservationリソースに対して、微生物学検査のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Microbiology"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * insert SetDefinition(identifier, 当該検査項目に対し施設内で割り振られる一意の識別子があればこれを使用する)
 * insert SetDefinition(basedOn, このObservationが実施されることになった依頼や計画／提案に関する情報、オーダ情報（ServiceRequest）)
 * basedOn only Reference(ServiceRequest)
@@ -45,25 +45,25 @@ JP CoreとしてはsimpleObservationコード体系を必須とし、他のロ�
     infectious-agent ..1 and
     antimicrobial-drug ..1 and
     jlac10 ..1
-* insert SetDefinitionRef(code.coding, このObservationの対象を特定するコード)
+* insert SetDefinition(code.coding, このObservationの対象を特定するコード)
 * code.coding ^comment = "【JP Core仕様】[Slicing](http://hl7.org/fhir/R4/profiling.html#slicing)を使用して複数のコード体系に対応  
 基本方針としてカテゴリに応じた標準コードの使用を想定しているが、ローカルコードを使用してもよい"
 * code.coding[infectious-agent] from $JP_Microbiology_InfectiousAgent_VS (required)
 * code.coding[infectious-agent].system = $JP_Microbiology_InfectiousAgent_CS (exactly)
-* insert SetDefinitionRef(code.coding[infectious-agent], 同定菌名を表現する場合に使用するコード、JANIS菌名コードを利用)
+* insert SetDefinition(code.coding[infectious-agent], 同定菌名を表現する場合に使用するコード、JANIS菌名コードを利用)
 * code.coding[infectious-agent] ^comment = "【JP Core仕様】同定菌名を表現する場合に使用する  
 NeXEHRSで使用を定める標準コードに準じて、JANIS菌名コードを採用する"
 
 * code.coding[antimicrobial-drug] from $JP_Microbiology_AntiMicrobialDrug_VS (required)
 * code.coding[antimicrobial-drug].system = $JP_Microbiology_AntiMicrobialDrug_CS (exactly)
-* insert SetDefinitionRef(code.coding[antimicrobial-drug], 抗菌薬コードを表現する場合に使用するコード、JANIS抗菌薬コードを利用)
+* insert SetDefinition(code.coding[antimicrobial-drug], 抗菌薬コードを表現する場合に使用するコード、JANIS抗菌薬コードを利用)
 * code.coding[antimicrobial-drug] ^definition = "抗菌薬コードを表現する場合に使用するコード、JANIS抗菌薬コードを利用"
 * code.coding[antimicrobial-drug] ^comment = "【JP Core仕様】抗菌薬コードを表現する場合に使用する  
 NeXEHRSで使用を定める標準コードに準じて、JANIS抗菌薬コードを採用する"
 
 * code.coding[jlac10] from $JP_ObservationLabResultCode_VS (required)
 * code.coding[jlac10].system = $JP_ObservationLabResultCode_CS (exactly)
-* insert SetDefinitionRef(code.coding[jlac10], 塗抹結果、培養・同定結果を表現する場合に使用するコード、JLAC10を利用)
+* insert SetDefinition(code.coding[jlac10], 塗抹結果、培養・同定結果を表現する場合に使用するコード、JLAC10を利用)
 * code.coding[jlac10] ^comment = "【JP Core仕様】塗抹結果、培養・同定結果を表現する場合に使用する  
 JLAC10コードを採用する"
 
@@ -73,10 +73,10 @@ JLAC10コードを採用する"
 * insert SetDefinition(effective[x], 取得された結果が臨床的に確定された日時、検体採取日)
 * effective[x] ^comment = "【JP Core仕様】検体採取日"
 * value[x] only Quantity or CodeableConcept or string
-* insert SetDefinitionRef(value[x], 検査によって得られた値を格納する)
+* insert SetDefinition(value[x], 検査によって得られた値を格納する)
 * value[x] ^comment = "【JP Core仕様】valueQuantity：同定検査の菌量（定量）、薬剤感受性結果（MIC値）を表現する場合に使用する想定  
 valueCodeableConcept ： 同定検査の菌種を表現する場合に使用する想定  
 valueString ： 塗抹結果、培養検査の週数・菌量を表現する場合に使用する想定"
-* insert SetDefinitionRef(interpretation, 高、低、正常、High、low、 normal等、薬剤感受性結果（判定）を表現する場合に使用)
+* insert SetDefinition(interpretation, 高、低、正常、High、low、 normal等、薬剤感受性結果（判定）を表現する場合に使用)
 * interpretation ^comment = "【JP Core仕様】薬剤感受性結果（判定）を表現する場合に使用する想定"
 * hasMember only Reference(JP_Observation_Microbiology)

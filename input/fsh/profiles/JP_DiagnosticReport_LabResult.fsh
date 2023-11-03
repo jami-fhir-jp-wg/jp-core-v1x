@@ -8,7 +8,7 @@ Title: "JP Core DiagnosticReport LabResult Profile"
 Description: "このプロファイルはDiagnosticReportリソースに対して、検体検査結果のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * . ^short = "診断レポート-依頼情報、１項目単位の結果、画像、解釈、およびフォーマットされたレポートの組み合わせ　【JP Core仕様】検体検査結果レポートのプロフィール"
 * . ^definition = "患者、患者のグループ、デバイス、場所、これらから派生した検体に対して実行された診断的検査の結果と解釈。レポートには、依頼情報や依頼者情報などの臨床コンテキスト（文脈）、および１項目単位の結果、画像、テキストとコード化された解釈、および診断レポートのフォーマットされた表現のいくつかの組み合わせが含まれる。  
 【JP Core仕様】検体検査結果レポートのプロフィール"
@@ -32,10 +32,11 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains laboratory 1..1
-* insert SetDefinitionRef(category, 診断レポートを作成した臨床分野、部門、または診断サービスを分類するコード。検体査では、LoincコードのLP29693-6 検体検査/LAB を使用する。)
+* insert SetDefinition(category, 診断レポートを作成した臨床分野、部門、または診断サービスを分類するコード。検体査では、LoincコードのLP29693-6 検体検査/LAB を使用する。)
 * category[laboratory] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP29693-6(検体検査/LAB)を使用する。"
 * category[laboratory] from $JP_DiagnosticReportCategory_VS (required)
-* category[laboratory] = $Loinc_CS#LP29693-6
+* category[laboratory].coding.system = $Loinc_CS (exactly)
+* category[laboratory].coding.code = $Loinc_CS#LP29693-6 (exactly)
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open

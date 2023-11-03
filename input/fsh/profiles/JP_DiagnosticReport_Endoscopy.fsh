@@ -8,7 +8,7 @@ Title: "JP Core DiagnosticReport Endoscopy Profile"
 Description: "このプロファイルはDiagnosticReportリソースに対して、内視鏡を使用して実施された検査、治療に関わるデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Endoscopy"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * . ^short = "内視鏡を使用して実施された検査、治療に関する診断レポート。"
 * . ^definition = "内視鏡を使用して実施された検査、治療に関する診断レポート。"
 * text ^short = "主にレポートの見読性と検索性の向上を目的に、所見を中心としたhuman-readableなnarrativeデータを格納することを推奨する。【詳細参照】"
@@ -36,7 +36,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[endoscopy] ^comment = "JP_DiagnosticReportCategory_VSの中から「LP7796-8」（Endoscopy（内視鏡））を指定する。"
 * category[endoscopy] from $JP_DiagnosticReportCategory_VS (required)
 //* category[endoscopy] = $Loinc_CS#LP7796-8 "内視鏡" (exactly)
-* category[endoscopy] = $Loinc_CS#LP7796-8
+* category[endoscopy].coding.system = $Loinc_CS (exactly)
+* category[endoscopy].coding.code = $Loinc_CS#LP7796-8 (exactly)
 
 * code from $JP_DocumentCodes_Endoscopy_VS (extensible)
 * code ^short = "内視鏡分野の診断レポートを分類するためのコード。【詳細参照】"

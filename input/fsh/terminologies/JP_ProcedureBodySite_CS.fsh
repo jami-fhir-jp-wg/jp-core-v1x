@@ -5,7 +5,7 @@ Description: "処置の対象となる身体部位のコード（今後用語を
 * ^url = $JP_ProcedureBodySite_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * ^caseSensitive = true
 * ^valueSet = $JP_ProcedureBodySite_VS
 * ^content = #complete

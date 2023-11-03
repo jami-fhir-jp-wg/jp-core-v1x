@@ -8,7 +8,7 @@ Title: "JP Core DiagnosticReport Radiology Profile"
 Description: "このプロファイルはDiagnosticReportリソースに対して、放射線検査報告書（レポート）のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2023-10-31"
 * . ^short = "診断レポート-依頼情報、１項目単位の結果、画像、解釈、およびフォーマットされたレポートの組み合わせ　【JP Core仕様】画像結果レポートのプロフィール【詳細参照】"
 * . ^definition = "患者、患者のグループ、デバイス、場所、これらから派生した検体に対して実行された診断的検査の結果と解釈。レポートには、依頼情報や依頼者情報などの臨床コンテキスト（文脈）、および１項目単位の結果、画像、テキストとコード化された解釈、および診断レポートのフォーマットされた表現のいくつかの組み合わせが含まれる。  
 【JP Core仕様】画像結果レポートのプロフィール"
@@ -48,11 +48,13 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[radiology] ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは第1コードとして LP29684-5 を固定値として設定。第2コード以下にDICOMModalityコードを列挙することでレポートの対象検査内容を示す。"
 * category[radiology] from $JP_DiagnosticReportCategory_VS (required)
 //* category[radiology] = $Loinc_CS#LP29684-5  "放射線" (exactly)
-* category[radiology] = $Loinc_CS#LP29684-5
+* category[radiology].coding.system = $Loinc_CS (exactly)
+* category[radiology].coding.code = $Loinc_CS#LP29684-5 (exactly)
 
 * category[radiology_sub] ^short = "レポート対象のモダリティを示すコード【詳細参照】"
 * category[radiology_sub] ^definition = "レポート対象のモダリティを示すコード。放射線を表す第1コードのLP29684-5に続くサブカテゴリコードとして第2コード以下に保持される。複数のモダリティの組み合わせを許容するため、コードの列挙を許容する。"
 * category[radiology_sub] from $JP_RadiologyModality_VS (required)
+* category[radiology_sub].coding.system = $dicom-ontology (exactly)
 * category[radiology_sub].coding.code ^short = "DICOMのモダリティコードを指定"
 * category[radiology_sub].coding.code ^definition = "DICOMのモダリティコードを指定"
 * category[radiology_sub].coding.display ^short = "DICOMのモダリティコードの意味を記載（例: 超音波検査）"
