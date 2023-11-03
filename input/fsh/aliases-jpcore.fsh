@@ -179,7 +179,7 @@ Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 
 // ValueSet
 Alias: $JAMI__MedicationMethodDetailDeviceInjection_VS = http://jami.jp/ValueSet/MedicationMethodDetailDeviceInjection_VS
-Alias: $JP_DiseaseICD10_CS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/ICD10-2013-full_VS
+Alias: $JP_DiseaseICD10_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/ICD10-2013-full_VS
 Alias: $JP_AllergyIntolerance_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS
 Alias: $JP_ConclusionCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
 Alias: $JP_ConditionSeverity_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionSeverity_VS
