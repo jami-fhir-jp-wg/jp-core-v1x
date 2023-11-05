@@ -138,7 +138,7 @@ jobs:
         done
         cd ..
 
-    - name: prepare gtz files for upload to remote site
+    - name: make symblic link from canonilca url to local file
       run: | 
         ruby ./script/create_symbolic_link_from_file2url.rb
         cat makeSymbolicLink.bash
@@ -168,6 +168,7 @@ jobs:
         rm output/full-ig.zip
         rm output/expansions.json
         rm output/expansions.xml
+
     - name: Deploy Implementation Guide
       if: success()
       uses: peaceiris/actions-gh-pages@v3
@@ -177,6 +178,7 @@ jobs:
         publish_branch: pages
         publish_dir: ./output
         destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
+
     - name: STEP3 generate snapshot package using sushi -s command       
       run: | 
         rm -rf fsh-generated
@@ -189,7 +191,7 @@ jobs:
         tar czf package-snap.tgz package
         
 
-    - name: STEP3 generate snapshot package using sushi -s command       
+    - name: STEP4 generate snapshot package using sushi -s command       
       run: | 
         rm -rf fsh-generated
         sushi -s .
@@ -200,7 +202,7 @@ jobs:
         cd forPackageRelease/snapshot
         tar czf package-snap.tgz package
 
-    - name: STEP4 = upload gtz files and  to remote site by rsync
+    - name: STEP5 = upload gtz files and  to remote site by rsync
       run: | 
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'rm -rf ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}'
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'mkdir -p ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}; '

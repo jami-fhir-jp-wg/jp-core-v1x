@@ -138,6 +138,17 @@ jobs:
         done
         cd ..
 
+    - name: make symblic link from canonilca url to local file
+      run: | 
+        ruby ./script/create_symbolic_link_from_file2url.rb
+        cat makeSymbolicLink.bash
+        cd output
+        source ../makeSymbolicLink.bash
+        ls -l
+        cd ..
+        tar czf output.tgz output
+  
+  
     - name: STEP1 = ssh key generate  for copying all IG files to public JAMI WG Web site 
       run: | 
         echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
@@ -168,6 +179,7 @@ jobs:
         publish_branch: pages
         publish_dir: ./output
         destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
+        
     - name: STEP3 generate snapshot package using sushi -s command       
       run: | 
         rm -rf fsh-generated
