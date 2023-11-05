@@ -112,6 +112,7 @@ jobs:
         sed 's/version: 1.0.0-temp/version: ${{ env.release_version }}/g' sushi-config.yaml > sushi-config-temp.yaml
         mv sushi-config-temp.yaml sushi-config.yaml
 
+        
     - name: Run IG Publisher
       run: | 
         mkdir input-cache
