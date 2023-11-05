@@ -6,7 +6,7 @@ on:
       - 'main'
       - 'hotfix/**'
     paths:
-      - 'sushi-config.yaml'
+      - 'sushi-config-forMain.yaml'
       - 'input/**'
       - '.github/workflows/main.yaml'
   pull_request:
@@ -107,7 +107,11 @@ jobs:
         cd /home/runner/.fhir
         mkdir -p packages/$JPTerminologyCOREdir
         mv /home/runner/.fhir/work/package /home/runner/.fhir/packages/$JPTerminologyCOREdir
-    
+
+    - name: apply the version of sushi-config.yaml
+      run: |
+        cp sushi-config-forMain.yaml   sushi-config.yaml
+
     - name: Run IG Publisher
       run: | 
         mkdir input-cache
