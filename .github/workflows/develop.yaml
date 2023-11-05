@@ -132,6 +132,16 @@ jobs:
         done
         cd ..
 
+    - name: prepare gtz files for upload to remote site
+      run: | 
+        ruby ./script/create_symbolic_link_from_file2url.rb
+        cat makeSymbolicLink.bash
+        cd output
+        source ../makeSymbolicLink.bash
+        ls -l
+        cd ..
+        tar czf output.tgz output
+
     - name: STEP1 = ssh key generate  for copying all IG files to public JAMI WG Web site 
       run: | 
         echo "$SSH_PRIVATE_KEY" > key && chmod 600 key

@@ -18,9 +18,9 @@ DiagnosticReportリソースは、次の要素を持たなければならない�
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
 | SHALL | identifier | token  |GET [base]/DiagnosticReport?identifier=http://myhospital.com/fhir/diagnosticreport-id-system\|1234567890 |
-| SHOULD | patient,category | reference  | GET [base]/DiagnosticReport?patient=123&category=http://jpfhir/fhir/core/CodeSystem/loinc.org\|LP29693-6 |
-| SHOULD | patient,category,based-on | reference,reference  | GET [base]/DiagnosticReport?patient=123&category=http://jpfhir/fhir/core/CodeSystem/loinc.org\|LP29693-6&based-on=ServiceRequest/456 |
-| SHOULD | patient,category,date | reference,date  | GET [base]/Observation?patient=123&category=http://jpfhir/fhir/core/CodeSystem/loinc.org\|LP29693-6&date=le2020-12-31 |
+| SHOULD | patient,category | reference  | GET [base]/DiagnosticReport?patient=123&category=http://loinc.org\|LP29693-6 |
+| SHOULD | patient,category,based-on | reference,reference  | GET [base]/DiagnosticReport?patient=123&category=http://loinc.org\|LP29693-6&based-on=ServiceRequest/456 |
+| SHOULD | patient,category,date | reference,date  | GET [base]/Observation?patient=123&category=http://loinc.org\|LP29693-6&date=le2020-12-31 |
 
 ##### 必須検索パラメータ
 
@@ -44,7 +44,7 @@ GET [base]/DiagnosticReport?patient={reference}&category={token}
 ```
 例：
 ```
-GET [base]/DiagnosticReport?patient=123&http://jpfhir/fhir/core/CodeSystem/loinc.org|LP29693-6
+GET [base]/DiagnosticReport?patient=123&http://loinc.org|LP29693-6
 ```
 1. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、based-on (検査オーダの依頼科)を指定した検索をサポートすることが望ましい。（**SHOULD**）  
 patient,category,based-onの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
@@ -53,7 +53,7 @@ GET [base]/DiagnosticReport?patient={reference}&category={token}&based-on={refer
 ```
 例：
 ```
-GET [base]/DiagnosticReport?patient=123&category=http://jpfhir/fhir/core/CodeSystem/loinc.org|LP29693-6&based-on=ServiceRequest/456
+GET [base]/DiagnosticReport?patient=123&category=http://loinc.org|LP29693-6&based-on=ServiceRequest/456
 ```
 1. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、date(レポート作成日)を指定した検索をサポートすることが望ましい。（**SHOULD**）  
 patient,category,dateの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
@@ -62,7 +62,7 @@ GET [base]/DiagnosticReport?patient={reference}&category={token}&date={date}
 ```
 例：
 ```
-GET [base]/DiagnosticReport?patient=123&category=http://jpfhir/fhir/core/CodeSystem/loinc.org|LP29693-6&date=2021-11-08
+GET [base]/DiagnosticReport?patient=123&category=http://loinc.org|LP29693-6&date=2021-11-08
 ```
 
 ##### オプション検索パラメータ
