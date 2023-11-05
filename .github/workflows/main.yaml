@@ -107,7 +107,12 @@ jobs:
         cd /home/runner/.fhir
         mkdir -p packages/$JPTerminologyCOREdir
         mv /home/runner/.fhir/work/package /home/runner/.fhir/packages/$JPTerminologyCOREdir
-    
+
+    - name: apply the version of sushi-config.yaml
+      run: |
+        sed 's/version: 1.0.0-temp/version: ${{ env.release_version }}/g' sushi-config.yaml > sushi-config-temp.yaml
+        mv sushi-config-temp.yaml sushi-config.yaml  
+
     - name: Run IG Publisher
       run: | 
         mkdir input-cache

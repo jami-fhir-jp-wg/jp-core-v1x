@@ -93,9 +93,9 @@ category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSig
 | コンフォーマンス | パラメータ | 型 | 例 |
 | --- | --- | --- | --- |
 | SHALL | identifier | token  | GET [base]/Observation?identifier=http://myhospital.com/fhir/observation-id-system\|1234567890 |
-| MAY | patient,category,code,value-quantity | reference,token,token,quantity  | GET [base]/Observation?patient=123&category=vital-signs&code=http://jpfhir/fhir/core/CodeSystem/loinc.org\|8867-4&value-quantity=gt40 |
-| MAY | patient,category,code,value-quantity,date | reference,token,token,quantity,date  | GET [base]/Observation?patient=123&category=vital-signs&code=http://jpfhir/fhir/core/CodeSystem/loinc.org\|8867-4&value-quantity=gt40&date=le2020-12-31 |
-| MAY | patient,category,code,value-quantity,encounter | reference,token,token,quantity,encounter  | GET [base]/Observation?patient=123&category=vital-signs&code=http://jpfhir/fhir/core/CodeSystem/loinc.org\|8867-4&value-quantity=gt40&encounter=456 |
+| MAY | patient,category,code,value-quantity | reference,token,token,quantity  | GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org\|8867-4&value-quantity=gt40 |
+| MAY | patient,category,code,value-quantity,date | reference,token,token,quantity,date  | GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org\|8867-4&value-quantity=gt40&date=le2020-12-31 |
+| MAY | patient,category,code,value-quantity,encounter | reference,token,token,quantity,encounter  | GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org\|8867-4&value-quantity=gt40&encounter=456 |
 
 
 #### 操作詳細
@@ -141,7 +141,7 @@ patient,category,code,value-quantity の各検索パラメータに一致するO
    例：患者123の心拍数が40超えのバイタルサインを取得したい場合
 
    ```
-   GET [base]/Observation?patient=123&category=vital-signs&code=http://jpfhir/fhir/core/CodeSystem/loinc.org|8867-4&value-quantity=gt40
+   GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40
    ```
 
 
@@ -159,7 +159,7 @@ patient,category,code,value-quantity,date の各検索パラメータに一致�
    例：患者123の心拍数が40超えかつ2020年12月31日以前のバイタルサインを取得したい場合
 
    ```
-   GET [base]/Observation?patient=123&category=vital-signs&code=http://jpfhir/fhir/core/CodeSystem/loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31
+   GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31
    ```
 
 
@@ -175,7 +175,7 @@ patient,category,code,value-quantity,date,encounter の各検索パラメータ�
    例：患者123の心拍数が40超えかつ2020年12月31日以前で診療456の時のバイタルサインを取得したい場合
 
    ```
-   GET [base]/Observation?patient=123&category=vital-signs&code=http://jpfhir/fhir/core/CodeSystem/loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31&encounter=456
+   GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org|8867-4&value-quantity=gt40&date=le2020-12-31&encounter=456
    ```
 
 
@@ -340,7 +340,7 @@ Observation.hasMember（検査保持メンバ）と Observation.derivedFrom（�
  "code": {
   "coding": [
    {
-    "system": "http://jpfhir/fhir/core/CodeSystem/loinc.org",
+    "system": "http://loinc.org",
     "code": "74076-1",
     "display": "関与する薬物または物質"
    }
@@ -350,7 +350,7 @@ Observation.hasMember（検査保持メンバ）と Observation.derivedFrom（�
  "valueCodeableConcept": {
   "coding": [
    {
-    "system": "http://jpfhir/fhir/core/CodeSystem/loinc.org",
+    "system": "http://loinc.org",
     "code": " LA20343-2",
     "display": "その他の物質: 特定が必要"
    }
@@ -404,7 +404,7 @@ Observation.codeとObservation.valueの異なる組み合わせを使用して�
 "code": {
  "coding": [
   {
-   "system": "http://jpfhir/fhir/core/CodeSystem/loinc.org",
+   "system": "http://loinc.org",
    "code": "6689-4",
    "display": "血糖値[質量/体積]--食後2時間値"
   }
@@ -424,12 +424,12 @@ Observation.codeとObservation.valueの異なる組み合わせを使用して�
 "code": {
  "coding": [
   {
-   "system": "http://jpfhir/fhir/core/CodeSystem/loinc.org",
+   "system": "http://loinc.org",
    "code": "59408-5",
    "display": "パルスオキシメータによる動脈血酸素飽和度"
   },
   {
-   "system": "http://jpfhir/fhir/core/CodeSystem/loinc.org",
+   "system": "http://loinc.org",
    "code": "20564-1",
    "display": "血中酸素飽和度"
   }

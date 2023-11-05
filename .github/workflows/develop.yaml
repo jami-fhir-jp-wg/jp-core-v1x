@@ -107,6 +107,12 @@ jobs:
         mkdir -p packages/$JPTerminologyCOREdir
         mv /home/runner/.fhir/work/package /home/runner/.fhir/packages/$JPTerminologyCOREdir
          
+    - name: apply the version of sushi-config.yaml
+      run: |
+        sed 's/version: 1.0.0-temp/version: ${{ env.release_version }}/g' sushi-config.yaml > sushi-config-temp.yaml
+        mv sushi-config-temp.yaml sushi-config.yaml
+
+        
     - name: Run IG Publisher
       run: | 
         mkdir input-cache
@@ -131,6 +137,16 @@ jobs:
           mv $file".2.html" $file
         done
         cd ..
+
+    - name: prepare gtz files for upload to remote site
+      run: | 
+        ruby ./script/create_symbolic_link_from_file2url.rb
+        cat makeSymbolicLink.bash
+        cd output
+        source ../makeSymbolicLink.bash
+        ls -l
+        cd ..
+        tar czf output.tgz output
 
     - name: STEP1 = ssh key generate  for copying all IG files to public JAMI WG Web site 
       run: | 
