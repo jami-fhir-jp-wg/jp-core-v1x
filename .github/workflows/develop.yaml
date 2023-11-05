@@ -6,7 +6,7 @@ on:
       - 'release/**'
 
     paths:
-      - 'sushi-config-forDevelop.yaml'
+      - 'sushi-config.yaml'
       - 'input/**'
       - '.github/workflows/develop.yaml'
   pull_request:
@@ -109,7 +109,8 @@ jobs:
          
     - name: apply the version of sushi-config.yaml
       run: |
-        cp sushi-config-forDevelop.yaml   sushi-config.yaml
+        sed 's/version: 1.0.0-temp/version: ${{ env.release_version }}/g' sushi-config.yaml > sushi-config-temp.yaml
+        mv sushi-config-temp.yaml sushi-config.yaml
 
     - name: Run IG Publisher
       run: | 
