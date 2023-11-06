@@ -20,5 +20,8 @@ Alias: $media-type = http://terminology.hl7.org/CodeSystem/media-type
 // dicom
 Alias: $dicom-ontology = http://dicom.nema.org/resources/ontology/DCM
 
+// loinc
+Alias: $Loinc_CS = http://loinc.org
+
 // JPCor定義はaliases-jpcore.fshに記載すること
 
