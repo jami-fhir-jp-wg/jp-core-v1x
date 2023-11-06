@@ -177,17 +177,6 @@ jobs:
         publish_branch: pages
         publish_dir: ./output
         destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
-    - name: STEP3 generate snapshot package using sushi -s command       
-      run: | 
-        rm -rf fsh-generated
-        sushi -s .
-        mv fsh-generated fsh-generated-snap
-        mkdir -p forPackageRelease/snapshot/package/
-        cp fsh-generated-snap/resources/*.json forPackageRelease/snapshot/package/
-        cp forPackageRelease/package-${{ env.release_version}}-snap.json forPackageRelease/snapshot/package/package.json
-        cd forPackageRelease/snapshot
-        tar czf package-snap.tgz package
-        
 
     - name: STEP3 generate snapshot package using sushi -s command       
       run: | 
