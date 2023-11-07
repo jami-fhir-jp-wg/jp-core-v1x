@@ -1,6 +1,5 @@
 .DS_Store
-.index.json
-.index.db
+
 Thumbs.db
 /fsh-generated
 /fsh-generated-renamed
@@ -21,4 +20,6 @@ Thumbs.db
 
 # for vscode
 /.vscode
+.index.json
+.index.db
 
