@@ -169,7 +169,7 @@ jobs:
         rm output/expansions.json
         rm output/expansions.xml
 
-    - name: Deploy Implementation Guide
+    - name: STEP3 = Deploy Implementation Guide
       if: success()
       uses: peaceiris/actions-gh-pages@v3
       with:
@@ -179,19 +179,7 @@ jobs:
         publish_dir: ./output
         destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
 
-    - name: STEP3 generate snapshot package using sushi -s command       
-      run: | 
-        rm -rf fsh-generated
-        sushi -s .
-        mv fsh-generated fsh-generated-snap
-        mkdir -p forPackageRelease/snapshot/package/
-        cp fsh-generated-snap/resources/*.json forPackageRelease/snapshot/package/
-        cp forPackageRelease/package-${{ env.release_version}}-snap.json forPackageRelease/snapshot/package/package.json
-        cd forPackageRelease/snapshot
-        tar czf package-snap.tgz package
-        
-
-    - name: STEP4 generate snapshot package using sushi -s command       
+    - name: STEP4 = generate snapshot package using sushi -s command       
       run: | 
         rm -rf fsh-generated
         sushi -s .
