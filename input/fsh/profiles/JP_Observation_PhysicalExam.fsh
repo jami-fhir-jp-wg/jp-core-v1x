@@ -20,7 +20,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category[physicalExam] from JP_SimpleObservationCategory_VS (required)
 * category[physicalExam].coding.system = $JP_SimpleObservationCategory_CS (exactly)
 * category[physicalExam].coding.code 1..
-* category[physicalExam] = $JP_SimpleObservationCategory_CS#exam (exactly)
+* category[physicalExam].coding.code = $JP_SimpleObservationCategory_CS#exam (exactly)
 * category ^comment = "【JP Core仕様】基底仕様のカテゴリ「exam」固定とする"
 * code ^comment = "【JP Core仕様】所見の有無を表すコード（固定値）"
 * code from JP_PhysicalExamCode_VS (preferred)
