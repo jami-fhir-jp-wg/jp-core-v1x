@@ -14,13 +14,13 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^comment = "身体所見に関するObservation（検査測定や観察事実）の制約プロフィール"
 * category 1..
 * category ^slicing.discriminator[+].type = #value
-* category ^slicing.discriminator[=].path = "coding.system"
+* category ^slicing.discriminator[=].path = "$this"
 * category ^slicing.rules = #open
 * category contains physicalExam 1..1
 * category[physicalExam] from JP_SimpleObservationCategory_VS (required)
 * category[physicalExam].coding.system = $JP_SimpleObservationCategory_CS (exactly)
 * category[physicalExam].coding.code 1..
-* category[physicalExam].coding.code = $JP_SimpleObservationCategory_CS#exam (exactly)
+* category[physicalExam] = $JP_SimpleObservationCategory_CS#exam (exactly)
 * category ^comment = "【JP Core仕様】基底仕様のカテゴリ「exam」固定とする"
 * code ^comment = "【JP Core仕様】所見の有無を表すコード（固定値）"
 * code from JP_PhysicalExamCode_VS (preferred)
@@ -58,7 +58,7 @@ effectivePeriod：医療者が確認した期間"
 * component.code from JP_PhysicalExamCode_VS (preferred)
 * component.code ^comment = "【JP Core仕様】具体的な所見を表すコード（固定値）"
 * component.code.coding ^slicing.discriminator.type = #value
-* component.code.coding ^slicing.discriminator.path = "system"
+* component.code.coding ^slicing.discriminator.path = "$this"
 * component.code.coding ^slicing.rules = #open
 * component.code.coding contains physicalExamCode 0..1
 * component.code.coding[physicalExamCode] from JP_PhysicalExamCode_VS (required)

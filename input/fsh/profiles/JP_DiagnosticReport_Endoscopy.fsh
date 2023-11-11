@@ -37,6 +37,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[endoscopy] from $JP_DiagnosticReportCategory_VS (required)
 //* category[endoscopy] = $Loinc_CS#LP7796-8 "内視鏡" (exactly)
 * category[endoscopy].coding.system = $Loinc_CS (exactly)
+* category[endoscopy].coding.code 1..
 * category[endoscopy].coding.code = $Loinc_CS#LP7796-8 (exactly)
 
 * code from $JP_DocumentCodes_Endoscopy_VS (extensible)
