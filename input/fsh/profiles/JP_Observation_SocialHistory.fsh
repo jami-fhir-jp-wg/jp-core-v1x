@@ -14,7 +14,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^comment = "生活背景に関するObservation（収集したり観察した事実など）の制約プロフィール"
 * category 1..
 * category ^slicing.discriminator[+].type = #value
-* category ^slicing.discriminator[=].path = "coding.system"
+* category ^slicing.discriminator[=].path = "$this"
 * category ^slicing.rules = #open
 * category contains socialHistory 1..1
 * category[socialHistory] from JP_SimpleObservationCategory_VS (required)

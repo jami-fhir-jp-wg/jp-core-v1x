@@ -36,6 +36,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[laboratory] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP29693-6(検体検査/LAB)を使用する。"
 * category[laboratory] from $JP_DiagnosticReportCategory_VS (required)
 * category[laboratory].coding.system = $Loinc_CS (exactly)
+* category[laboratory].coding.code 1..
 * category[laboratory].coding.code = $Loinc_CS#LP29693-6 (exactly)
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
@@ -44,8 +45,9 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * code.coding[laboratoryCode] ^short = "検体検査レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している【詳細参照】"
 * code.coding[laboratoryCode] ^definition = "検体検査レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。"
 * code.coding[laboratoryCode] ^comment = "推奨コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しない"
-* code.coding[laboratoryCode].system = $JP_DocumentCodes_CS
-* code.coding[laboratoryCode].code = #11502-2
+* code.coding[laboratoryCode].system = $JP_DocumentCodes_CS (exactly)
+* code.coding[laboratoryCode].code 1..
+* code.coding[laboratoryCode].code = $JP_DocumentCodes_CS#11502-2 (exactly)
 * code.coding[laboratoryCode].display = "検体検査報告書"
 * subject only Reference(JP_Patient)
 * subject ^short = "レポートの対象、常にではないが、通常は患者"

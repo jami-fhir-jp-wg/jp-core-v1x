@@ -14,7 +14,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^comment = "身体所見に関するObservation（検査測定や観察事実）の制約プロフィール"
 * category 1..
 * category ^slicing.discriminator[+].type = #value
-* category ^slicing.discriminator[=].path = "coding.system"
+* category ^slicing.discriminator[=].path = "$this"
 * category ^slicing.rules = #open
 * category contains physicalExam 1..1
 * category[physicalExam] from JP_SimpleObservationCategory_VS (required)

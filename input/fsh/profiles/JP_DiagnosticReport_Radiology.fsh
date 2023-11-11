@@ -49,6 +49,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[radiology] from $JP_DiagnosticReportCategory_VS (required)
 //* category[radiology] = $Loinc_CS#LP29684-5  "放射線" (exactly)
 * category[radiology].coding.system = $Loinc_CS (exactly)
+* category[radiology].coding.code 1..
 * category[radiology].coding.code = $Loinc_CS#LP29684-5 (exactly)
 
 * category[radiology_sub] ^short = "レポート対象のモダリティを示すコード【詳細参照】"

@@ -18,7 +18,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category ^slicing.rules = #open
 * category contains
     vitalSigns 1..1 and
-    vitalSignCategory 1..*
+    vitalSignCategory 0..*
 * category[vitalSigns] from JP_SimpleObservationCategory_VS (required)
 * category[vitalSigns].coding.system = $JP_SimpleObservationCategory_CS (exactly)
 * category[vitalSigns].coding.code 1..
