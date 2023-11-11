@@ -58,7 +58,7 @@ effectivePeriod：医療者が確認した期間"
 * component.code from JP_PhysicalExamCode_VS (preferred)
 * component.code ^comment = "【JP Core仕様】具体的な所見を表すコード（固定値）"
 * component.code.coding ^slicing.discriminator.type = #value
-* component.code.coding ^slicing.discriminator.path = "$this"
+* component.code.coding ^slicing.discriminator.path = "system"
 * component.code.coding ^slicing.rules = #open
 * component.code.coding contains physicalExamCode 0..1
 * component.code.coding[physicalExamCode] from JP_PhysicalExamCode_VS (required)
