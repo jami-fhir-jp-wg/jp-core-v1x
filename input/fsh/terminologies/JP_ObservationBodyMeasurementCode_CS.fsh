@@ -1,17 +1,15 @@
 CodeSystem: JP_ObservationBodyMeasurementCode_CS
 Id: jp-observation-bodymeasurement-code-cs
 Title: "JP Core Observation BodyMeasurement Code CodeSystem"
-Description: "Observation（身体計測）で使用する項目コードのコードシステム"
+Description: "Observation（身体計測）で使用する項目コードのコードシステム　（出典：看護実践用語標準マスターの概要＜看護行為編＞Ver. 3. 6）"
 * ^url = $JP_ObservationBodyMeasurementCode_CS
 * ^status = #active
 * ^experimental = false
-
 * ^date = "2023-11-11"
-
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationBodyMeasurementCode_VS
 * ^content = #complete
-* ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
+* ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
 * #31000296 "体重" "体重(Kg)"
 * #31000297 "体重" "体重(g)"
 * #31000298 "身長"

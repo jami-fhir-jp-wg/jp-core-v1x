@@ -1,7 +1,7 @@
 CodeSystem: JP_ObservationBodyMeasurementCategory_CS
 Id: jp-observation-bodymeasurement-category-cs
 Title: "JP Core Observation BodyMeasurement Category CodeSystem"
-Description: "Observation（身体計測）で使用する分類のコード"
+Description: "Observation（身体計測）で使用する分類のコード　（出典：看護実践用語標準マスターの概要＜看護行為編＞Ver. 3. 6）"
 * ^url = $JP_ObservationBodyMeasurementCategory_CS
 * ^status = #active
 * ^experimental = false
@@ -9,7 +9,7 @@ Description: "Observation（身体計測）で使用する分類のコード"
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationBodyMeasurementCategory_VS
 * ^content = #complete
-* ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
+* ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
 * #weight "体重"
 * #height "身長"
 * #chest-circumference "胸囲"
