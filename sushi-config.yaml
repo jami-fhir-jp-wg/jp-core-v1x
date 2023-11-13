@@ -6,7 +6,7 @@ description: "日本医療情報学会(JAMI) NeXEHRS課題研究会「HL7®FHIR�
 status: active # draft | active | retired | unknown
 
 version: 1.0.0-temp #-- Action のyaml中で release-version文字列に置き換える
-date: 2023-11-05
+date: 2023-11-11
 
 fhirVersion: 4.0.1
 copyrightYear: 2022+
@@ -21,6 +21,7 @@ dependencies:
   jpfhir-terminology:
     uri: http://jpfhir.jp/fhir/jpfhir-terminology/
     version: 1.1.1
+    
 #----------------------------------------
 # ページタイトル名称設定
 #----------------------------------------

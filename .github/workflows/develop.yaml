@@ -1,10 +1,11 @@
+
 name: JPCore FHIR Task develop
 on:
   push:
     branches: 
       - 'develop'
       - 'release/**'
-
+      - 'feature/kohe**'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'

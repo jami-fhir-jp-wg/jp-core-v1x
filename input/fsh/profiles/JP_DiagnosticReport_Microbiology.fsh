@@ -30,6 +30,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[microbiology] from $JP_DiagnosticReportCategory_VS (required)
 //* category[microbiology] = $Loinc_CS#LP7819-8  "微生物検査" (exactly)
 * category[microbiology].coding.system = $Loinc_CS (exactly)
+* category[microbiology].coding.code 1..
 * category[microbiology].coding.code = $Loinc_CS#LP7819-8 (exactly)
 
 * code = $JP_DocumentCodes_CS#18725-2 "微生物学的検査報告書"
