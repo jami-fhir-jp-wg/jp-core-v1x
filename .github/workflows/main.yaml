@@ -1,5 +1,4 @@
-name: JPCore FHIR Task
-
+name: JPCore FHIR main Task
 on:
   push:
     branches: 
@@ -14,7 +13,6 @@ on:
       - 'main'
 env:
   release_version : 1.1.2
-  
 jobs:
   turn:
     runs-on: ubuntu-latest
@@ -75,7 +73,6 @@ jobs:
         tag: 'latest'
         path: .
         file: publisher.jar
-
         
     - name: Download the file
       uses: suisei-cn/actions-download-file@v1.4.0
@@ -119,8 +116,6 @@ jobs:
         mkdir input-cache
         mv publisher.jar ./input-cache/publisher.jar
         unset DISPLAY
-
-
         java  -Xmx12G -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx n/a
         mv ./input/landing_page/_index.yml ./output/
 
@@ -139,7 +134,7 @@ jobs:
         done
         cd ..
 
-    - name: make symblic link from canonilca url to local file
+    - name: make symbolic link from canonical url to local file
       run: | 
         ruby ./script/create_symbolic_link_from_file2url.rb
         cat makeSymbolicLink.bash
@@ -148,7 +143,6 @@ jobs:
         ls -l
         cd ..
         tar czf output.tgz output
-  
   
     - name: STEP1 = ssh key generate  for copying all IG files to public JAMI WG Web site 
       run: | 
@@ -163,15 +157,13 @@ jobs:
         cp fsh-generated/resources/*.json forPackageRelease/package/
         cp forPackageRelease/package-${{ env.release_version}}-diff.json forPackageRelease/package/package.json
         cd forPackageRelease
-        tar czf package.tgz package
+        tar czf jp-core.r4-${{ env.release_version}}.tgz package
         cd ..
-        cp forPackageRelease/package.tgz output/package.tgz
-        tar czf output.tgz output
         rm output/full-ig.zip
         rm output/expansions.json
         rm output/expansions.xml
 
-    - name: Deploy Implementation Guide
+    - name: STEP3 = Deploy Implementation Guide
       if: success()
       uses: peaceiris/actions-gh-pages@v3
       with:
@@ -181,7 +173,7 @@ jobs:
         publish_dir: ./output
         destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
         
-    - name: STEP3 generate snapshot package using sushi -s command       
+    - name: STEP4 = generate snapshot package using sushi -s command       
       run: | 
         rm -rf fsh-generated
         sushi -s .
@@ -190,13 +182,14 @@ jobs:
         cp fsh-generated-snap/resources/*.json forPackageRelease/snapshot/package/
         cp forPackageRelease/package-${{ env.release_version}}-snap.json forPackageRelease/snapshot/package/package.json
         cd forPackageRelease/snapshot
-        tar czf package-snap.tgz package
+        tar czf jp-core.r4-${{ env.release_version}}-snap.tgz package
+        cd ../..
 
-    - name: STEP4 = upload gtz files and  to remote site by rsync
+    - name: STEP5 = upload gtz files and  to remote site by rsync
       run: | 
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'rm -rf ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}'
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'mkdir -p ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}; '
-        rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  output.tgz fsh-generated.tgz forPackageRelease/package.tgz forPackageRelease/snapshot/package-snap.tgz ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}/
+        rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  output.tgz fsh-generated.tgz forPackageRelease/jp-core.r4-${{ env.release_version}}.tgz forPackageRelease/snapshot/jp-core.r4-${{ env.release_version}}-snap.tgz ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}/
         # index.htmlはdevelopからは修正しない
         rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  other/index.html other/assetsOfIndex ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}   'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}} ; tar xzf output.tgz; mv output/* .; rm -rf output'
@@ -204,5 +197,3 @@ jobs:
         SSH_PORT: ${{ secrets.SSH_PORT_JPFHIR }}
         JAMIWG_WEBHOST: ${{ secrets.JAMIWG_WEBHOST }}
         JAMIWG_WEBPATH: ${{ secrets.JAMIWG_WEBPATH }}
-        
-        
