@@ -108,8 +108,8 @@ jobs:
          
     - name: apply the version of sushi-config.yaml
       run: |
-        sed 's/version: 1.0.0-temp/version: ${{ env.release_version }}/g' sushi-config.yaml > sushi-config-temp.yaml
-        mv sushi-config-temp.yaml sushi-config.yaml
+        sed -i 's/releaseLabel: release/releaseLabel: : ${{ env.release_version }}/g' sushi-config.yaml
+        sed -i 's/version: 1.0.0-temp/version: ci-build/g' sushi-config.yaml
         
     - name: Run IG Publisher
       run: | 
