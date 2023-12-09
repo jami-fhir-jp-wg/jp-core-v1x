@@ -14,8 +14,16 @@
 [FHIRJPCoreImplementationGuide]: ImplementationGuide-jpfhir.jp.core.html
 
 <!-- StructureDefinition: Profile, DataType -->
+[JP_Binary]: StructureDefinition-JP-Binary.html
+[JP_Device]: StructureDefinition-JP-Device.html
+[JP_DocumentReference]: StructureDefinition-JP-DocumentReference.html
+[JP_RelatedPerson]: StructureDefinition-JP-RelatedPerson.html
+[JP_ServiceRequest]: StructureDefinition-JP-ServiceRequest.html
+[JP_Specimen]: StructureDefinition-JP-Specimen.html
 [JP_AllergyIntolerance]: StructureDefinition-jp-allergyintolerance.html
+[JP_CarePlan]: StructureDefinition-jp-careplan.html
 [JP_Condition]: StructureDefinition-jp-condition.html
+[JP_Consent]: StructureDefinition-jp-consent.html
 [JP_Coverage]: StructureDefinition-jp-coverage.html
 [JP_DiagnosticReport_Common]: StructureDefinition-jp-diagnosticreport-common.html
 [JP_DiagnosticReport_Endoscopy]: StructureDefinition-jp-diagnosticreport-endoscopy.html

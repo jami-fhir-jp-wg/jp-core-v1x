@@ -56,6 +56,9 @@ $ cd jp-core-v1x
 $ git fetch
 $ git pull
 
+# (初回＋更新時のみ実行)TerminologyServerのPackageを入手
+> bash _updateTx.sh
+
 # (初回のみ実行)IgPublisher.jarのダウンロード
 $ bash _updatePublisher.sh
 
