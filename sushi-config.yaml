@@ -8,6 +8,9 @@ status: active # draft | active | retired | unknown
 version: 1.0.0-temp #-- Action のyaml中で release-version文字列に置き換える
 date: 2023-11-11
 
+
+
+
 fhirVersion: 4.0.1
 copyrightYear: 2022+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
