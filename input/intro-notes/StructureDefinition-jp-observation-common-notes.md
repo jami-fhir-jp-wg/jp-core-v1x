@@ -318,7 +318,7 @@ Observation.hasMember（検査保持メンバ）と Observation.derivedFrom（�
     "display": "尿酸(UA)"
    }
   ],
-  "text": "検査項目コード"
+  "text": "尿酸"
  }
 ```
 
