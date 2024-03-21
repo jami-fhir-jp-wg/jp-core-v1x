@@ -119,6 +119,6 @@ ObservationリソースのOperation一覧の定義はユースケースに依存
 
 ### サンプル
 
-* [**検体検査（尿）**][jp-observation-labresult-example-1]
+* [**検体検査（尿酸）**][jp-observation-labresult-example-1]
 
 {% include markdown-link-references.md %}
