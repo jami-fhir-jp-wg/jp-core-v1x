@@ -1,20 +1,20 @@
 <!-- -*- coding: utf-8-unix -*-)-->
 
-# <a href="#HL7協会への質問" name="HL7協会への質問">HL7協会への質問 ◆</a>
+# <a href="#HL7協会への確認事項" name="HL7協会への確認事項">HL7協会への確認事項 ◆</a>
 
-（項目の順番に意味はありません）。
+* 項目の順番に意味はありません。
+* 以下はR4に基づいていますが、R4B以降で仕様記述が変わっているかの確認も必要と思われます。
+
 
 ## <a href="#1." name="1.">1. ◆</a>Update as Create操作におけるmeta/versionId
 
 FHIRサーバは、Update as Create操作でClientが指定した
 リソースIDのリソースをコピーできますが、meta/versionIdはコピー先で書き換えるように
-指定されているようにみえます。バージョンつきリファレンスもふくめてグラフ構造を
-コピーする
+指定されているようにみえます。
 
-[FHIR仕様)](https://hl7.org/fhir/r4/resource.html#Meta:~:text=On%20the%20RESTful%20API%3A%20On%20receiving%20a%20write%20operation%2C%20the%20server%20SHALL%20update%20this%20item%20to%20the%20current%20value%2C%20or%20remove%20it.)には、
-「RESTful APIにおける書き込み操作では、FHIRサーバは受信したmeta/versionIdを自らの管理する値に書き換えるか、（historyを扱わないサーバでは）削除するかすべきである。」という意味と思われる記述があります。
+([FHIR仕様)](https://hl7.org/fhir/r4/resource.html#Meta:~:text=On%20the%20RESTful%20API%3A%20On%20receiving%20a%20write%20operation%2C%20the%20server%20SHALL%20update%20this%20item%20to%20the%20current%20value%2C%20or%20remove%20it.)には「RESTful APIにおける書き込み操作では、FHIRサーバは受信したmeta/versionIdを自らの管理する値に書き換えるか、（historyを扱わないサーバでは）削除するかすべきである。」という意味と思われる記述があります。これに従うとコピーしたときにversionIdを保存することができません。
 
-* FHIRの設計では、versionIdを指定したリファレンスをもつグラフ構造を異なるFHIRサーバ間でコピーする方法としてどのようなものを想定していますか。
+* FHIRの設計では、versionIdを指定したリファレンスをもつグラフ構造を異なるFHIRサーバ間でコピーする方法としてどのような方法を想定していますか。
 
 【FHIRガイド内の記述】
 

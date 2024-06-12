@@ -30,7 +30,7 @@ FHIR仕様を使ったシステムの実現・利用については次のよう�
 ## <a href="#FHIR仕様の解釈" name="FHIR仕様の解釈">FHIR仕様の解釈 ◆</a>
 
 * [URLのエンコーディング](url.md)
-* [リソースのコピーとLogical IDの管理](logicalId.md)
+* [Logical IDの管理とリソースのコピー](logicalId.md)
 * Provenanceリソースを伴うコピー
 * 細かい仕様の確認
     * Token型検索におけるCase-sensitivity
