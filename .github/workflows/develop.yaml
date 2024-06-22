@@ -54,8 +54,9 @@ jobs:
         _output-file: input/landing_page/_index.yml
 
     - name: Setup npm
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with: 
+        cache: npm
         check-latest: true
 
     - name: Setup Sushi
