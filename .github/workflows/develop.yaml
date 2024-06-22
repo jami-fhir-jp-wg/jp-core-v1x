@@ -166,7 +166,7 @@ jobs:
 
     - name: STEP3 = Deploy Implementation Guide
       if: success()
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@v4
       with:
         personal_token: ${{ secrets.PERSONAL_TOKEN }}
         external_repository: jami-fhir-jp-wg/jp-core-v1xpages
