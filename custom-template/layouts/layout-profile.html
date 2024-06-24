@@ -32,7 +32,7 @@
 </p>
 {% endif %}
 
-<br/>
+
 <!-- insert intro if present -->
 {% include fragment-intro.html type='{{[type]}}' id='{{[id]}}' %}
 
@@ -42,24 +42,18 @@
   <a name="profile"> </a>
   <h3 id="profile">プロファイル詳細</h3>
   <p>
-    <a href="{{site.data.fhir.path}}profiling.html#presentation">Description of Profiles, Differentials, Snapshots and how the different presentations work</a>.
+    <a href="http://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#structure-definitions">Description of Profiles, Differentials, Snapshots and how the different presentations work</a>.
   </p>
   <div id="tabs">
     <ul>
       <li>
-        <a href="#tabs-summ">Text Summary</a>
-      </li>
-      <li>
         <a href="#tabs-diff">Differential Table</a>
       </li>
       <li>
+        <a href="#tabs-key">Key Elements Table</a>
+      </li>
+      <li>
         <a href="#tabs-snap">Snapshot Table</a>
-      </li>
-      <li>
-        <a href="#tabs-terminology-bindings-view">Terminology Bindings</a>
-      </li>
-      <li>
-        <a href="#tabs-constraints-view">Constraints</a>
       </li>
 {% unless excludexml == 'y' %}
 <!--      <li>
@@ -77,25 +71,52 @@
       </li>-->
 {% endunless %}
       <li>
+        <a href="#tabs-summ">Statistics/References</a>
+      </li>
+      <li>
         <a href="#tabs-all">All</a>
       </li>
     </ul>
-    <a name="tabs-summ"> </a>
-    <div id="tabs-summ">
-      <div id="tbl-summ">
-        <p>This structure is derived from <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}}</a>
-        </p>
-        <div id="tbl-summ-inner">
-          <a name="summary"> </a>
-          {%include StructureDefinition-{{[id]}}-summary.xhtml%}
-        </div>
-      </div>
-    </div>
     <a name="tabs-diff"> </a>
     <div id="tabs-diff">
       <div id="tbl-diff">
+        <p>This structure is derived from <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}}</a>
+        </p>
         <div id="tbl-diff-inner">
           {%include StructureDefinition-{{[id]}}-diff.xhtml%}
+          <a name="tx"> </a>
+          <!--Terminology Bindings heading in the fragment -->
+          {%include StructureDefinition-{{[id]}}-tx-diff.xhtml%}
+        
+          {% capture invariantsdiff %}
+            {% include StructureDefinition-{{[id]}}-inv-diff.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariantsdiff.size <= 218 %}
+            <a name="inv"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-{{[id]}}-inv-diff.xhtml %}
+          {% endunless%}
+        </div>
+      </div>
+    </div>
+    <a name="tabs-key"> </a>
+    <div id="tabs-key">
+      <div id="tbl-key">
+        <div id="tbl-key-inner">
+          {%include StructureDefinition-{{[id]}}-snapshot-by-key.xhtml%}
+          <!--Terminology Bindings heading in the fragment -->
+          {%include StructureDefinition-{{[id]}}-tx-key.xhtml%}
+        
+          {% capture invariantskey %}
+            {% include StructureDefinition-{{[id]}}-inv-key.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariantskey.size <= 218 %}
+            <a name="inv"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-{{[id]}}-inv-key.xhtml %}
+          {% endunless%}
         </div>
       </div>
     </div>
@@ -104,29 +125,18 @@
       <div id="tbl-snap">
         <div id="tbl-snap-inner">
           {%include StructureDefinition-{{[id]}}-snapshot.xhtml%}
-        </div>
-      </div>
-    </div>
-    <a name="terminology-bindings-view"> </a>
-    <div id="tabs-terminology-bindings-view">
-      <div id="tbl-terminology-bindings-view">
-        <div id="terminology-bindings-view-inner">
           <!--Terminology Bindings heading in the fragment -->
-          <p>
-            <b>Terminology Bindings</b>
-          </p>
           {%include StructureDefinition-{{[id]}}-tx.xhtml%}
-        </div>
-      </div>
-    </div>
-    <a name="constraints-view"> </a>
-    <div id="tabs-constraints-view">
-      <div id="tbl-constraints-view">
-        <div id="constraints-view-inner">
-          <p>
-            <b>Constraints</b>
-          </p>
-          {%include StructureDefinition-{{[id]}}-inv.xhtml%}
+        
+          {% capture invariants %}
+            {% include StructureDefinition-{{[id]}}-inv.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariants.size <= 218 %}
+            <a name="inv"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-{{[id]}}-inv.xhtml %}
+          {% endunless%}
         </div>
       </div>
     </div>
@@ -160,21 +170,59 @@
       </div>
     </div>-->
 {% endunless %}
-    <a name="tabs-all"> </a>
-    <div id="tabs-all">
-      <div id="all-summ">
+    <a name="tabs-summ"> </a>
+    <div id="tabs-summ">
+      <div id="tbl-summ">
         <p>This structure is derived from <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}}</a>
         </p>
-        <div id="all-summ-inner">
+        <div id="tbl-summ-inner">
+          <a name="summary"> </a>
           {%include StructureDefinition-{{[id]}}-summary.xhtml%}
         </div>
       </div>
+    </div>
+    <a name="tabs-all"> </a>
+    <div id="tabs-all">
       <div id="all-tbl-diff">
         <p>
           <b>Differential View</b>
         </p>
+        <p>This structure is derived from <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}}</a>
+        </p>
         <div id="all-tbl-diff-inner">
           {%include StructureDefinition-{{[id]}}-diff.xhtml%}
+          <!--Terminology Bindings heading in the fragment -->
+          {%include StructureDefinition-{{[id]}}-tx-diff.xhtml%}
+        
+          {% capture invariantsdiff %}
+            {% include StructureDefinition-{{[id]}}-inv-diff.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariantsdiff.size <= 218 %}
+            <a name="inv"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-{{[id]}}-inv-diff.xhtml %}
+          {% endunless%}
+        </div>
+      </div>
+      <div id="all-tbl-key">
+        <p>
+          <b>Key Elements View</b>
+        </p>
+        <div id="all-tbl-key-inner">
+          {%include StructureDefinition-{{[id]}}-snapshot-by-key.xhtml%}
+          <!--Terminology Bindings heading in the fragment -->
+          {%include StructureDefinition-{{[id]}}-tx-key.xhtml%}
+        
+          {% capture invariantskey %}
+            {% include StructureDefinition-{{[id]}}-inv-key.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariantskey.size <= 218 %}
+            <a name="inv"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-{{[id]}}-inv-key.xhtml %}
+          {% endunless%}
         </div>
       </div>
       <div id="all-tbl-snap">
@@ -183,6 +231,18 @@
         </p>
         <div id="all-tbl-snap-inner">
           {%include StructureDefinition-{{[id]}}-snapshot.xhtml%}
+          <!--Terminology Bindings heading in the fragment -->
+          {%include StructureDefinition-{{[id]}}-tx.xhtml%}
+        
+          {% capture invariants %}
+            {% include StructureDefinition-{{[id]}}-inv.xhtml %}
+          {% endcapture %}
+          <!-- 218 is size of empty table -->
+          {% unless invariants.size <= 218 %}
+            <a name="inv"> </a>
+            <!--Constraints  heading in the fragment -->
+            {% include StructureDefinition-{{[id]}}-inv.xhtml %}
+          {% endunless%}
         </div>
       </div>
 {% unless excludexml == 'y' %}
@@ -215,18 +275,12 @@
         </div>
       </div>-->
 {% endunless %}
-      <div id="all-tbl-terminology-bindings-view-inner">
-        <!--Terminology Bindings heading in the fragment -->
-        <p>
-          <b>Terminology Bindings</b>
+      <div id="all-summ">
+        <p>This structure is derived from <a href="{{site.data.structuredefinitions['{{[id]}}'].basepath}}">{{site.data.structuredefinitions['{{[id]}}'].basename}}</a>
         </p>
-        {%include StructureDefinition-{{[id]}}-tx.xhtml%}
-      </div>
-      <div id="all-tbl-constraints-view-inner">
-        <p>
-          <b>Constraints</b>
-        </p>
-        {%include StructureDefinition-{{[id]}}-inv.xhtml%}
+        <div id="all-summ-inner">
+          {%include StructureDefinition-{{[id]}}-summary.xhtml%}
+        </div>
       </div>
     </div>
   </div>
@@ -242,9 +296,7 @@
 
 <!-- insert notes if present -->
 {% include fragment-notes.html type='{{[type]}}' id='{{[id]}}' %}
-<br/>
-<br/>
+
 </div>
 {% assign includetabscripts = 'true' %}
 {% include fragment-pageend.html %}
-

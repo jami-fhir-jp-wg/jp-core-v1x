@@ -29,13 +29,7 @@
     });
   </script>
 {% endif %}
-  <script type="text/javascript">
-    $(document).ready(function(){
-      if(window.location.hash != "") {
-          $('a[href="' + window.location.hash + '"]').click()
-      }
-    });
-  </script>
+  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/window-hash.js"> </script>
   <a name="bottom"> </a>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->
@@ -92,11 +86,8 @@
   <script type="text/javascript" src="{{site.data.info.assets}}assets/js/anchor.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
   <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
-  <script>anchors.options.visible = 'hover'
-anchors.add()</script>
+  <script type="text/javascript" src="{{site.data.info.assets}}assets/js/anchor-hover.js"> </script>
   
-{% include fragment-feedback_form.html %}
-
   <!-- Analytics Below
   ================================================== -->
   </body>
