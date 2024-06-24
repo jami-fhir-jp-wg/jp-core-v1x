@@ -1,7 +1,7 @@
 {
   "name": "jp-core.r4",
-  "version": "1.1.2",
-  "description": "JP-CORE V1.1.2 differential package for release",
+  "version": "1.2.0",
+  "description": "JP-CORE V1.2.0 snapshot package for release",
   "author": "JAMI NeXEHRS FHIR IGWG",
   "fhirVersions": [
     "4.0.1"
