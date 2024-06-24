@@ -23,6 +23,8 @@ The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/
 The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html on element ImagingStudy.series.modality could not be resolved
 The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 on element ImagingStudy.series.instance.sopClass could not be resolved
 ValueSet http://dicom%
+!!ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1が見つかりません
+
 
 # Wrong Display Name
 Wrong Display Name%
@@ -34,6 +36,10 @@ Wrong Display Name%
 Code System URI 'http://abc-hospital.local/fhir/Observation/localcode' is unknown so the code cannot be validated
 Code System URI 'http://abc-hospital.local/fhir/ObservationOrder/localcode' is unknown so the code cannot be validated
 Code System URI 'http://abc-hospital.local/fhir/devide/local-device-type' is unknown so the code cannot be validated
+
+The link '#inner-observation-labresult-1' for "ヘモグロビン" cannot be resolved (valid targets: [project-logo, segment-header, project-nav, publish-box, bottom, segment-post-footer, ig-status, top, root, example-diagnosticreport-jp-core-diagnosticreport_labresult-example-検体検査（血液）レポート, stripe, segment-footer, 検体検査報告書-検体検査, segment-navbar, segment-content, segment-breadcrumb])
+The link '#inner-observation-labresult-2' for "赤血球数" cannot be resolved (valid targets: [project-logo, segment-header, project-nav, publish-box, bottom, segment-post-footer, ig-status, top, root, example-diagnosticreport-jp-core-diagnosticreport_labresult-example-検体検査（血液）レポート, stripe, segment-footer, 検体検査報告書-検体検査, segment-navbar, segment-content, segment-breadcrumb])
+The link '#inner-observation-labresult-3' for "ヘマトクリット" cannot be resolved (valid targets: [project-logo, segment-header, project-nav, publish-box, bottom, segment-post-footer, ig-status, top, root, example-diagnosticreport-jp-core-diagnosticreport_labresult-example-検体検査（血液）レポート, stripe, segment-footer, 検体検査報告書-検体検査, segment-navbar, segment-content, segment-breadcrumb])
 
 # OID CodeSystem not found Warnings (only registered NamingSystem)
 # The following 'urn:oid:1.2.392.200119.4.101.6' was registerd on the JPFHIR TerminologyServer 
