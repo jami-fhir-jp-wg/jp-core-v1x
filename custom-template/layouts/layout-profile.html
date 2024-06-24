@@ -56,6 +56,9 @@
         <a href="#tabs-snap">Snapshot Table</a>
       </li>
       <li>
+        <a href="#tabs-key">Key Elements Table</a>
+      </li>
+      <li>
         <a href="#tabs-terminology-bindings-view">Terminology Bindings</a>
       </li>
       <li>
@@ -104,6 +107,14 @@
       <div id="tbl-snap">
         <div id="tbl-snap-inner">
           {%include StructureDefinition-{{[id]}}-snapshot.xhtml%}
+        </div>
+      </div>
+    </div>
+    <a name="tabs-key"> </a>
+    <div id="tabs-key">
+      <div id="tbl-key">
+        <div id="tbl-key-inner">
+          {%include StructureDefinition-{{[id]}}-snapshot-by-key.xhtml%}
         </div>
       </div>
     </div>
@@ -183,6 +194,15 @@
         </p>
         <div id="all-tbl-snap-inner">
           {%include StructureDefinition-{{[id]}}-snapshot.xhtml%}
+        </div>
+      </div>
+      <div id="all-tbl-key">
+        <p>
+          <b>Key Elements View</b>
+        </p>
+        <div id="all-tbl-key-inner">
+          {%include StructureDefinition-{{[id]}}-snapshot-by-key.xhtml%}on-{{[id]}}-inv-key.xhtml %}
+
         </div>
       </div>
 {% unless excludexml == 'y' %}
