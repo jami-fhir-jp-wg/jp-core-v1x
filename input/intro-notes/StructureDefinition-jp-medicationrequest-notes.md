@@ -150,17 +150,17 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
 ##### 追加検索パラメータ 
 
-1. patient,jp-core-startdate 検索パラメータを使用して、患者のリファレンス情報と服用開始によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）
+1. patient,jp-medication-start 検索パラメータを使用して、患者のリファレンス情報と服用開始によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
-   GET [base]/MedicationRequest?patient=[id]&jp-core-startdate=[date]
-   GET [base]/MedicationRequest?patient=[url]&jp-core-startdate=[date]
+   GET [base]/MedicationRequest?patient=[id]&jp-medication-start=[date]
+   GET [base]/MedicationRequest?patient=[url]&jp-medication-start=[date]
    ```
 
    例：
 
    ```
-   GET [base]/MedicationRequest?patient=123456&jp-core-startdate=eq2013-03-21
+   GET [base]/MedicationRequest?patient=123456&jp-medication-start=eq2013-03-21
    ```
 
    リソースIDが123456の患者の2013-03-21に服用を開始するMedicationRequestリソースを含むBundleを検索する。
