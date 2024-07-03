@@ -112,10 +112,10 @@
 
 4. 検索パラメータpatientとtype組みを指定し、該当するすべてのAllergyIntoleranceを検索
 
-    * OR検索のサポートを含む(例えば type={system\|}[token],{system\|}[token],...)
+    * OR検索のサポートを含む(例えば type=[token],{[token],...)
     
     ```
-    GET [base]/AllergyIntolerance?patient={reference}&type={system|}[token]{,{system|}[token],...}
+    GET [base]/AllergyIntolerance?patient={reference}&type=[token]{,[token],...}
     ```
     例：
     ```
@@ -129,10 +129,10 @@
 
 5. 検索パラメータpatientとcategory組みを指定し、該当するすべてのAllergyIntoleranceを検索
 
-    * OR検索のサポートを含む(例えば category={system\|}[token],{system\|}[token],...)
+    * OR検索のサポートを含む(例えば category=[token],[token],...)
     
     ```
-    GET [base]/AllergyIntolerance?patient={reference}&category={system|}[token]{,{system|}[token],...}
+    GET [base]/AllergyIntolerance?patient={reference}&category=[token]{,[token],...}
     ```
     例：
     ```
@@ -146,10 +146,10 @@
 
 1. 検索パラメータpatientとcriticality組みを指定し、該当するすべてのAllergyIntoleranceを検索
 
-    * OR検索のサポートを含む(例えば criticality={system\|}[token],{system\|}[token],...)
+    * OR検索のサポートを含む(例えば criticality=[token],[token],...)
     
       ```
-      GET [base]/AllergyIntolerance?patient={reference}&criticality={system|}[token]{,{system|}[token],...}
+      GET [base]/AllergyIntolerance?patient={reference}&criticality=[token]{,[token],...}
       ```
       例：
       ```

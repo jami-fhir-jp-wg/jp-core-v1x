@@ -62,10 +62,10 @@
 
 1. 検索パラメータpatientとstatusを指定し、該当するすべてのProcedureを検索
 
-      * OR検索のサポートを含む(例えば status={system\|}[token],{system\|}[token],...)
+      * OR検索のサポートを含む(例えば status=[token],[token],...)
 
       ```
-      GET [base]/Procedure?patient={reference}&status={system|}[token]{,{system|}[token],...}
+      GET [base]/Procedure?patient={reference}&status=[token]{,[token],...}
       ```
       例：
       ```

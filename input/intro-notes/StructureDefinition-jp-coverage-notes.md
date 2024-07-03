@@ -26,7 +26,7 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
 | SHALL            | identifier | token  | GET [base]/Coverage?identifier=***
-| SHOULD           | beneficiary   | 	reference  | GET [base]/Coverage?beneficiary=*** |
+| SHOULD           | beneficiary   | reference  | GET [base]/Coverage?beneficiary=*** |
 | SHOULD           | class-type    | token | GET [base]/Coverage?class-type=*** |
 | SHOULD           | class-value | string  | GET [base]/Coverage?class-value=*** |
 | SHOULD           | dependent | string  | GET [base]/Coverage?dependent=*** |
@@ -60,7 +60,7 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 1. beneficiary 検索パラメータを使用して、識別子によるCoverageの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
-   GET [base]/Coverage?beneficiary={system|}[token]
+   GET [base]/Coverage?beneficiary=[reference]
    ```
 
    例：
