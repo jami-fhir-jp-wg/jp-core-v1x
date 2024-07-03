@@ -20,7 +20,7 @@
 | SHOULD           | patient       | reference  | GET [base]/AllergyIntolerance?patient=Patient/123 |
 | MAY              | patient,date  | reference,date | GET [base]/AllergyIntolerance?patient=Patient/123&date=ge2021-08-24 |
 | MAY              | patient,clinicalstatus | reference,code | GET [base]/AllergyIntolerance?patient=Patient/123&clinicalstatus=active |
-| MAY              | patient,verificationstatus | reference,code | GET [base]/AllergyIntolerance?patient=Patient/123&verificationstatus=confirmed |
+| MAY              | patient,verification-status | reference,token | GET [base]/AllergyIntolerance?patient=Patient/123&verification-status=confirmed |
 | MAY              | patient,type | reference,code | GET [base]/AllergyIntolerance?patient=Patient/123&type=allergy |
 | MAY              | patient,category | reference,code | GET [base]/AllergyIntolerance?patient=Patient/123&category=food |
 | MAY              | patient,criticality | reference,code | GET [base]/AllergyIntolerance?patient=Patient/123&criticality=high |
@@ -93,19 +93,19 @@
     
     指定された患者およびステータスのすべてのAllergyIntoleranceを含むBundleを返却する。
 
-3. 検索パラメータpatientとverificationstatus組みを指定し、該当するすべてのAllergyIntoleranceを検索
+3. 検索パラメータpatientとverification-status組みを指定し、該当するすべてのAllergyIntoleranceを検索
 
-    * OR検索のサポートを含む(例えば verificationstatus={system\|}[code],{system\|}[code],...)
+    * OR検索のサポートを含む(例えば verification-status={system\|}[token],{system\|}[token],...)
     
     ```
-    GET [base]/AllergyIntolerance?patient={reference}&verificationstatus={system|}[code]{,{system|}[code],...}
+    GET [base]/AllergyIntolerance?patient={reference}&verification-status={system|}[token]{,{system|}[token],...}
     ```
     例：
     ```
-    GET [base]/AllergyIntolerance?patient=Patient/123&verificationstatus=confirmed
+    GET [base]/AllergyIntolerance?patient=Patient/123&verification-status=confirmed
     ```
     ```
-    GET [base]/AllergyIntolerance?patient=Patient/123&verificationstatus=http://hl7.org/fhir/ValueSet/allergyintoleranceverification|confirmed
+    GET [base]/AllergyIntolerance?patient=Patient/123&verification-status=http://hl7.org/fhir/ValueSet/allergyintoleranceverification|confirmed
     ```
     
     指定された患者およびステータスのすべてのAllergyIntoleranceを含むBundleを返却する。

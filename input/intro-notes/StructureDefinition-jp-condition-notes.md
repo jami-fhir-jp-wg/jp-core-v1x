@@ -20,7 +20,7 @@
 | SHOULD           | patient                    | reference  | GET [base]/Condition?patient=Patient/123                                        |
 | MAY              | patient,onset-date         | reference,date | GET [base]/Condition?patient=Patient/123&onset-date=ge2021-08-24             |
 | MAY              | patient,clinical-status     | reference,code | GET [base]/Condition?patient=Patient/123&clinical-status=active              |
-| MAY              | patient,verificationstatus | reference,code | GET [base]/Condition?patient=Patient/123&verificationstatus=confirmed       |
+| MAY              | patient,verification-status | reference,token | GET [base]/Condition?patient=Patient/123&verification-status=confirmed       |
 | MAY              | patient,category           | reference,code | GET [base]/Condition??patient=Patient/123&category=food                  |
 
 ##### 必須検索パラメータ
@@ -91,19 +91,19 @@
    
       指定された患者およびステータスのすべてのConditionを含むBundleを検索する。
 
-3. 検索パラメータpatientとverificationstatusを指定し、該当するすべてのConditionを検索
+3. 検索パラメータpatientとverification-statusを指定し、該当するすべてのConditionを検索
 
-      * OR検索のサポートを含む(例えば verificationstatus={system\|}[code],{system\|}[code],...)
+      * OR検索のサポートを含む(例えば verification-status={system\|}[token],{system\|}[token],...)
       
       ```
-      GET [base]/Condition?patient={reference}&verificationstatus={system|}[code]{,{system|}[code],...}
+      GET [base]/Condition?patient={reference}&verification-status={system|}[token]{,{system|}[token],...}
       ```
       例：
       ```
-      GET [base]/Condition?patient=Patient/123&verificationstatus=confirmed
+      GET [base]/Condition?patient=Patient/123&verification-status=confirmed
       ```
       ```
-      GET [base]/Condition?patient=Patient/123&verificationstatus=http://hl7.org/fhir/ValueSet/condition-ver-status|confirmed
+      GET [base]/Condition?patient=Patient/123&verification-status=http://hl7.org/fhir/ValueSet/condition-ver-status|confirmed
       ```
    
       指定された患者およびステータスのすべてのConditionを含むBundleを検索する。
