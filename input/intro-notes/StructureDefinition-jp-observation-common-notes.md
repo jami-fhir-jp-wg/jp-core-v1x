@@ -95,7 +95,7 @@ category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationVitalSig
 | SHALL | identifier | token  | GET [base]/Observation?identifier=http://myhospital.com/fhir/observation-id-system\|1234567890 |
 | MAY | patient,category,code,value-quantity | reference,token,token,quantity  | GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org\|8867-4&value-quantity=gt40 |
 | MAY | patient,category,code,value-quantity,date | reference,token,token,quantity,date  | GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org\|8867-4&value-quantity=gt40&date=le2020-12-31 |
-| MAY | patient,category,code,value-quantity,encounter | reference,token,token,quantity,encounter  | GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org\|8867-4&value-quantity=gt40&encounter=456 |
+| MAY | patient,category,code,value-quantity,encounter | reference,token,token,quantity,reference  | GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org\|8867-4&value-quantity=gt40&encounter=456 |
 
 
 #### 操作詳細
@@ -169,7 +169,7 @@ patient,category,code,value-quantity,date の各検索パラメータに一致�
 patient,category,code,value-quantity,date,encounter の各検索パラメータに一致するObservationリソースを含むBundleを検索する。
 
    ```
-   GET [base]/Observation?patient={reference}&category={token}&code={token}&value-quantity={quantity}&date={date}&encounter={encounter}
+   GET [base]/Observation?patient={reference}&category={token}&code={token}&value-quantity={quantity}&date={date}&encounter={reference}
    ```
 
    例：患者123の心拍数が40超えかつ2020年12月31日以前で診療456の時のバイタルサインを取得したい場合
