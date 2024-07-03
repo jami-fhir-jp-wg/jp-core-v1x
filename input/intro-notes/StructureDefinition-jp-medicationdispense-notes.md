@@ -71,7 +71,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）
 
    ```
-   GET [base]/MedicationDispense?identifier={system|}[code]
+   GET [base]/MedicationDispense?identifier={system|}[token]
    ```
 
    例：

@@ -87,7 +87,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）
 
    ```
-   GET [base]/MedicationRequest?identifier={system|}[code]
+   GET [base]/MedicationRequest?identifier={system|}[token]
    ```
 
    例：

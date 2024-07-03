@@ -43,7 +43,7 @@
 1. identifier 検索パラメータを使用して、ロケーションIDなどの識別子によるLocationの検索をサポートしなければならない（**SHALL**）
 
    ```
-   GET [base]/Location?identifier={system|}[code]
+   GET [base]/Location?identifier={system|}[token]
    ```
 
    例：

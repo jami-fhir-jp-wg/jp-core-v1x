@@ -39,7 +39,7 @@ SS-MIX2等からのデータ移行における互換性担保のためにCT検�
 1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（**SHALL**）
 
    ```
-   GET [base]/DiagnosticReport?identifier={system|}[code]
+   GET [base]/DiagnosticReport?identifier={system|}[token]
    ```
 
    例：

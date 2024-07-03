@@ -44,7 +44,7 @@
 1. 臨床での検索：`subject = Patient`（対象患者）、検体採取日、検査項目、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。（**SHOULD**）  
 patient,code,date,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
 ```
-GET [base]/Observation?patient={reference}&code={code}&date={date}&based-on={reference}
+GET [base]/Observation?patient={reference}&code={token}&date={date}&based-on={reference}
 ```
 例：  
 ```
@@ -53,7 +53,7 @@ GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000
 1. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（数値、条件：基準値から外れている、等）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(**SHOULD**)  
 patient,code,date,value-quantity,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
 ```
-GET [base]/Observation?patient={reference}&code={code}&date={date}&value-quantity={quantity}&based-on={reference}
+GET [base]/Observation?patient={reference}&code={token}&date={date}&value-quantity={quantity}&based-on={reference}
 ```
 例：  
 ```
@@ -72,7 +72,7 @@ GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000
 1. 臨床（NST）での検索：`subject = Patient`（対象患者）、検査項目、検査値（文字列）、`basedOn = ServiceRequest`（検査オーダの依頼科）を指定した検索をサポートすることが望ましい。(**SHOULD**)  
 patient,code,date,value-string,based-on の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
 ```
-GET [base]/Observation?patient={reference}&code={code}&date={date}&value-string={string}&based-on={reference}
+GET [base]/Observation?patient={reference}&code={token}&date={date}&value-string={string}&based-on={reference}
 ```
 例：
 ```
@@ -81,7 +81,7 @@ GET [base]/Observation?patient=123&code=urn:oid:1.2.392.200119.4.504|9A610000000
 1. 研究での検索：検査項目、検査値（数値、条件：ある値以上／以下、等）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(**SHOULD**)  
 code,value-quantity,patient の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
 ```
-GET [base]/Observation?code={code}}&value-quantity={quantity}&patient={reference}
+GET [base]/Observation?code={token}}&value-quantity={quantity}&patient={reference}
 ```
 例：  
 ```
@@ -99,7 +99,7 @@ GET [base]/Observation?code=urn:oid:1.2.392.200119.4.504|9A610000000000000&value
 1. 研究での検索：検査項目、検査値（文字列）、`subject = Patient`（対象患者で絞る場合あり）を指定した検索をサポートすることが望ましい。(**SHOULD**)  
 code,value-string,patient の各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
 ```
-GET [base]/Observation?code={code}}&value-string={string}&patient={reference}
+GET [base]/Observation?code={token}}&value-string={string}&patient={reference}
 ```
 例：  
 ```

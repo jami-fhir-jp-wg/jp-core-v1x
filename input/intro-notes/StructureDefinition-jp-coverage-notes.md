@@ -42,7 +42,7 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 1. identifier 検索パラメータを使用して、識別子によるCoverageの検索をサポートしなければならない（**SHALL**）
 
    ```
-   GET [base]/Coverage?identifier={system|}[code]
+   GET [base]/Coverage?identifier={system|}[token]
    ```
 
    例：
@@ -60,7 +60,7 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 1. beneficiary 検索パラメータを使用して、識別子によるCoverageの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
-   GET [base]/Coverage?beneficiary={system|}[code]
+   GET [base]/Coverage?beneficiary={system|}[token]
    ```
 
    例：

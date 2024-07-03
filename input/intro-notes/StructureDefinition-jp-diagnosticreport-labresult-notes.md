@@ -26,7 +26,7 @@ DiagnosticReportリソースは、次の要素を持たなければならない�
 
 1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（**SHALL**）
 ```
-GET [base]/DiagnosticReport?identifier={system|}[code]
+GET [base]/DiagnosticReport?identifier={system|}[token]
 ```
 例：
 ```

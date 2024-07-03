@@ -28,7 +28,7 @@
 1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりProcedureを検索
 
    ```
-   GET [base]/Procedure?identifier={system|}[code]
+   GET [base]/Procedure?identifier={system|}[token]
    ```
    例：
    ```
@@ -62,10 +62,10 @@
 
 1. 検索パラメータpatientとstatusを指定し、該当するすべてのProcedureを検索
 
-      * OR検索のサポートを含む(例えば status={system\|}[code],{system\|}[code],...)
+      * OR検索のサポートを含む(例えば status={system\|}[token],{system\|}[token],...)
 
       ```
-      GET [base]/Procedure?patient={reference}&status={system|}[code]{,{system|}[code],...}
+      GET [base]/Procedure?patient={reference}&status={system|}[token]{,{system|}[token],...}
       ```
       例：
       ```
@@ -76,12 +76,12 @@
 
 2. 検索パラメータpatientとcodeとdateを指定し、該当するすべてのProcedureを検索
 
-      * OR検索のオプションのサポートを含む (例えば code={system\|}[code],{system\|}[code],...)
+      * OR検索のオプションのサポートを含む (例えば code={system\|}[token],{system\|}[token],...)
       * dateに対する次の比較演算子のサポートを含む:gt,lt,ge,le
       * AND検索のオプションのサポートを含む (例えばdate=[date]&date=[date]]&...)
 
       ```
-      GET [base]/Procedure?patient={reference}&code={system|}[code]{,{system|}[code],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}
+      GET [base]/Procedure?patient={reference}&code={system|}[token]{,{system|}[token],...}&date={gt|lt|ge|le}[date]{&date={gt|lt|ge|le}[date]&...}
       ```
       例：
       ```

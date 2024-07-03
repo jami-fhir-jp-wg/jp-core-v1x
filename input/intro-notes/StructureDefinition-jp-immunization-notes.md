@@ -62,7 +62,7 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（**SHALL**）
 
    ```
-   GET [base]/Immunization?identifier={system|}[code]
+   GET [base]/Immunization?identifier={system|}[token]
    ```
 
    例：

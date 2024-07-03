@@ -125,7 +125,7 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
 
 1. identifier 検索パラメータを使用して、医籍登録番号などの識別子によるPractitionerの検索をサポートしなければならない（**SHALL**）
     ```
-    GET [base]/Practitioner?identifier={system|}[code]
+    GET [base]/Practitioner?identifier={system|}[token]
     ```
    例：
     ```
@@ -149,7 +149,7 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
 
 1. communication 検索パラメータを使用して、医療従事者が使用する言語コードによるPractitionerの検索をサポートすることが望ましい（**SHOULD**）
     ```
-    GET [base]/Practitioner?communication={system|}[code]
+    GET [base]/Practitioner?communication={system|}[token]
     ```
    例：
     ```
@@ -172,7 +172,7 @@ JP Practitioner プロファイルで使用される拡張は次の通りであ�
 
 2. jp-core-ethnicity検索パラメータを使用して、民族性によるPractitionerの検索をサポートすることが望ましい（**SHOULD**）
     ```
-    GET [base]/Practitioner?jp-core-ethnicity={system|}{code}
+    GET [base]/Practitioner?jp-core-ethnicity={system|}{token}
     ```
    例：
     ```
@@ -208,7 +208,7 @@ URL: [base]/Practitioner/[id]/$everything
 | start  | 0..1   | date    |                |              | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。開始日が指定されていない場合、終了日以前のすべてのレコードが対象に含まれる。 |
 | end    | 0..1   | date    |                |              | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。終了日が指定されていない場合、開始日以降のすべてのレコードが対象に含まれる。 |
 | ＿since | 0..1   | instant |                |              | 指定された日時以降に更新されたリソースのみが応答に含まれる。 |
-| ＿type  | 0..＊ | code    |                |              | 応答に含むFHIRリソース型を、カンマ区切りで指定する。指定されない場合は、サーバは全てのリソース型を対象とする。 |
+| ＿type  | 0..＊ | token    |                |              | 応答に含むFHIRリソース型を、カンマ区切りで指定する。指定されない場合は、サーバは全てのリソース型を対象とする。 |
 | ＿count | 0..1   | integer |                |              | Bundleの1ページに含まれるリソース件数を指定。                |
 
 ###### 出力パラメータ

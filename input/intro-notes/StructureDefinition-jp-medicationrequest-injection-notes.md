@@ -98,7 +98,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）
 
    ```
-   GET [base]/MedicationRequest?identifier={system|}[code]
+   GET [base]/MedicationRequest?identifier={system|}[token]
    ```
 
    例：

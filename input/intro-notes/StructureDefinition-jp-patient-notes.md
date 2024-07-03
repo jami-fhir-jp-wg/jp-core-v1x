@@ -48,7 +48,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 1. identifier 検索パラメータを使用して、患者番号/カルテ番号などの識別子によるPatientの検索をサポートしなければならない（SHALL）
 
    ```
-   GET [base]/Patient?identifier={system|}[code]
+   GET [base]/Patient?identifier={system|}[token]
    ```
    例：
    ```

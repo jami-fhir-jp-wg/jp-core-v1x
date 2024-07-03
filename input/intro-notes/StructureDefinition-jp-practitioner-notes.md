@@ -39,7 +39,7 @@
 1. identifier 検索パラメータを使用して、医療従事者番号などの識別子によるPractitionerの検索をサポートしなければならない（**SHALL**）
 
    ```
-   GET [base]/Practitioner?identifier={system|}[code]
+   GET [base]/Practitioner?identifier={system|}[token]
    ```
 
    例：

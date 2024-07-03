@@ -84,7 +84,7 @@ JP Coreでの医療機関コード（１０桁）のエリアに格納する値�
 1. identifier 検索パラメータを使用して、識別子によるOrganizationの検索をサポートしなければならない（**SHALL**）
 
    ```
-   GET [base]/Organization?identifier={system|}[code]
+   GET [base]/Organization?identifier={system|}[token]
    ```
 
    例：
