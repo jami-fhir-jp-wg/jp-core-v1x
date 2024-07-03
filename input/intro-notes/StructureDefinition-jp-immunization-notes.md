@@ -53,7 +53,7 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 | SHALL            | identifier    | token  | GET [base]/Immunization?identifier=http://myhospital.com/fhir/immunization\|1234567890 |
 | SHOULD            | patient      | reference | GET [base]/Immunization?patient=123456   |
 | SHOULD           | patient,date | reference,date  | GET [base]/Immunization?patient=123456&date=eq2013-01-14 |
-| MAY           | date,lot-number | date,string | GET [base]/Immunization?date=eq2013-01-14  |
+| MAY           | date,lot-number | date,string | GET [base]/Immunization?date=eq2013-01-14&lot-number=FF3620 |
 
 ##### 必須検索パラメータ
 
