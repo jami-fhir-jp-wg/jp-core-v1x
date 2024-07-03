@@ -21,7 +21,7 @@
 | SHALL            | identifier           | token               | GET [base]/FamilyMemberHistory?identifier=http://myhospital.com/fhir/gamilymemberhistory\|123 |
 | SHOULD           | patient              | reference           | GET [base]/FamilyMemberHistory?patient=Patient/123           |
 | MAY              | patient,relationship | reference,reference | GET [base]/FamilyMemberHistory?patient=Patient/123&relationship=FAMMEMB |
-| MAY              | patient,status       | reference,code      | GET [base]/FamilyMemberHistory?patient=Patient/123&status=completed     |
+| MAY              | patient,status       | reference,token      | GET [base]/FamilyMemberHistory?patient=Patient/123&status=completed     |
 
 ##### 必須検索パラメータ
 
@@ -30,7 +30,7 @@
 1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりFamilyMemberHistoryを検索
 
    ```
-   GET [base]/FamilyMemberHistory?identifier={system|}[code]
+   GET [base]/FamilyMemberHistory?identifier={system|}[token]
    ```
    例：
    ```
@@ -59,10 +59,10 @@
 
 1. 検索パラメータpatientとstatusの組みを指定し、該当するすべてのFamilyMemberHistoryを検索
 
-    * OR検索のサポートを含む(例えば status={system\|}[code],{system\|}[code],...)
+    * OR検索のサポートを含む(例えば status=[token],[token],...)
       
       ```
-      GET [base]/FamilyMemberHistory?patient={reference}&status={system|}[code]{,{system|}[code],...}
+      GET [base]/FamilyMemberHistory?patient={reference}&status=[token]{,[token],...}
       ```
       例：
       ```

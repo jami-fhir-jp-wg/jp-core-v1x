@@ -78,7 +78,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 | SHOULD           | patient,date | reference,date  | GET [base]/MedicationRequest?patient=123456&date=eq2013-01-14 |
 | SHOULD           | patient,authoredon | reference,date  | GET [base]/MedicationRequest?patient=123456&authoredon=eq2013-01-14 |
 | SHOULD         | patient,jp-medication-start | date | GET [base]/MedicationRequest?patient=123456&jp-meditation-start=eq2013-03-21 |
-| MAY           | date,authoredon,category,code,requester | date,date,token,token,token | GET [base]/MedicationRequest?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
+| MAY           | date,authoredon,category,code,requester | date,date,token,token,reference | GET [base]/MedicationRequest?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
 
 ##### 必須検索パラメータ
 
@@ -87,7 +87,7 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（SHALL）
 
    ```
-   GET [base]/MedicationRequest?identifier={system|}[code]
+   GET [base]/MedicationRequest?identifier={system|}[token]
    ```
 
    例：
@@ -150,17 +150,17 @@ JP Core MedicationRequest リソースは、以下の制約を満たさなけれ
 
 ##### 追加検索パラメータ 
 
-1. patient,jp-core-startdate 検索パラメータを使用して、患者のリファレンス情報と服用開始によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）
+1. patient,jp-medication-start 検索パラメータを使用して、患者のリファレンス情報と服用開始によるMedicationRequestの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
-   GET [base]/MedicationRequest?patient=[id]&jp-core-startdate=[date]
-   GET [base]/MedicationRequest?patient=[url]&jp-core-startdate=[date]
+   GET [base]/MedicationRequest?patient=[id]&jp-medication-start=[date]
+   GET [base]/MedicationRequest?patient=[url]&jp-medication-start=[date]
    ```
 
    例：
 
    ```
-   GET [base]/MedicationRequest?patient=123456&jp-core-startdate=eq2013-03-21
+   GET [base]/MedicationRequest?patient=123456&jp-medication-start=eq2013-03-21
    ```
 
    リソースIDが123456の患者の2013-03-21に服用を開始するMedicationRequestリソースを含むBundleを検索する。

@@ -68,7 +68,7 @@ MedicationAdministrationリソースでは、依頼元のMedicationRequestリソ
 1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationAdministrationの検索をサポートしなければならない（SHALL）
 
    ```
-   GET [base]/MedicationAdministration?identifier={system|}[code]
+   GET [base]/MedicationAdministration?identifier={system|}[token]
    ```
 
    例：

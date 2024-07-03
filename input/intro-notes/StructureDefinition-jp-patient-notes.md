@@ -35,8 +35,8 @@ JP Patient リソースで使用される拡張は次の通りである。
 | SHALL            | identifier    | token  | GET [base]/Patient?identifier=urn:oid:1.2.392.100495.20.3.51.11312345670\|123456 |
 | SHOULD            | name          | string | GET [base]/Patient?name=山田%20太郎                            |
 | SHOULD           | birthdate,name | date,string  | GET [base]/Patient?birthdate=eq2013-01-14&name=山田%20太郎  |
-| SHOULD           | birthdate,gender | date,code  | GET [base]/Patient?birthdate=eq2013-01-14&gender=male  |
-| SHOULD           | birthdate,name,gender | date,string,code  | GET [base]/Patient?birthdate=eq2013-01-14&name=山田%20太郎&gender=male  |
+| SHOULD           | birthdate,gender | date,token  | GET [base]/Patient?birthdate=eq2013-01-14&gender=male  |
+| SHOULD           | birthdate,name,gender | date,string,token  | GET [base]/Patient?birthdate=eq2013-01-14&name=山田%20太郎&gender=male  |
 | SHOULD           | name,phone | string,token  | GET [base]/Patient?name=山田%20太郎&phone=111-222-3333  |
 | SHOULD           | name,address-postalcode | string,string  | GET [base]/Patient?name=山田%20太郎&address-postalcode=1234567  |
 | MAY           | family,given,birthdate,gender,phone,address-postalcode | string,string,date,token,token,string  | GET [base]/Patient?family=山田&given=太郎&birthdate=eq2013-01-14&gender=male&phone=111-222-3333&address-postalcode=1234567  |
@@ -48,7 +48,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 1. identifier 検索パラメータを使用して、患者番号/カルテ番号などの識別子によるPatientの検索をサポートしなければならない（SHALL）
 
    ```
-   GET [base]/Patient?identifier={system|}[code]
+   GET [base]/Patient?identifier={system|}[token]
    ```
    例：
    ```
@@ -90,7 +90,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 3. birthdate, gender 検索パラメータを使用して、Patientの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
-   GET [base]/Patient?birthdate=eq{date}&gender={code}
+   GET [base]/Patient?birthdate=eq{date}&gender={token}
    ```
 
    例：
@@ -102,7 +102,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 4. birthdate, name, gender 検索パラメータを使用してPatientの検索をサポートすることが望ましい（**SHOULD**）、name検索パラメータはHumanNameの文字列フィールド（family、give、prefix、suffix、および/またはtextを含む）のいずれかに一致するPatientリソースを検索する
 
    ```
-   GET [base]/Patient?birthdate=eq{date}&name={string}&gender={code}
+   GET [base]/Patient?birthdate=eq{date}&name={string}&gender={token}
    ```
 
    例：
