@@ -12,7 +12,7 @@
 The definition for the Code System with URI 'urn:iso:std:iso:3166' doesnt provide any codes so the code cannot be validated
 
 # Uniform Reource Locator はValidation不要
-A definition for CodeSystem 'urn:ietf:rfc:3986' could not be found, so the code cannot be validated
+#A definition for CodeSystem 'urn:ietf:rfc:3986' could not be found, so the code cannot be validated
 
 # Code System URI 'urn:ietf:rfc:3986' is unknown so the code cannot be validated
 
