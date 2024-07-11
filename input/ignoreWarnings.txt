@@ -9,6 +9,7 @@
 
 # External Terminologies Existence Warnings
 Wrong Display Name%
+No valid Display Names found for % in the language en
 
 # ベストプラクティス
 Rule dom-6%
