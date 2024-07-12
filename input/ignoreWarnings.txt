@@ -7,6 +7,7 @@
 # Example Warnings
 %The Implementation Guide contains no examples%
 Invalid element name inside a paragraph in the XHTML ('ul')
+This element does not match any known slice defined in the profile%
 
 # External Terminologies Existence Warnings
 Wrong Display Name%
