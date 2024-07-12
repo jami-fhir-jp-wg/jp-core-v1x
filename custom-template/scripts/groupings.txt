@@ -1,3 +1,11 @@
+<grouping xmlns="http://hl7.org/fhir" id="-req-actordefinition">
+  <name value="Requirements: Actor Definitions"/>
+  <description value="以下のアーティファクト（生成物）は、この実装ガイドの対象となるユースケースの一部として相互作用する個人および／またはシステムのタイプを定義する。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-req-requirements">
+  <name value="Requirements: Formal Requirements"/>
+  <description value="以下のアーティファクト（生成物）には、実施ガイドに準拠したシステムが満たすべき特定の要件が記述されている。"/>
+</grouping>
 <grouping xmlns="http://hl7.org/fhir" id="-dyn-capabilitystatement">
   <name value="Behavior: Capability Statements"/>
   <description value="以下のアーティファクト（生成物）は、実装ガイドに準拠するために、さまざまなタイプのシステムに期待される特定の機能（Capability）を定義している。実装ガイドに準拠するシステムは、次の1つ以上の機能ステートメント（Capability Statement）への準拠を宣言することが期待される。この実装ガイド(JP Core)では、派生先で期待される機能（Capability Statement）の定義ではなく、派生先での実装ガイドの作成する際の参考例を提示している点に注意すること。"/>
@@ -13,6 +21,26 @@
 <grouping xmlns="http://hl7.org/fhir" id="-dyn-searchparameter">
   <name value="Behavior: Search Parameters"/>
   <description value="これらは、RESTfulサーバーを検索できるプロパティを定義します。また、関連リソースの並べ替えや組み込みにも使用できる。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-ka-activitydefinition">
+  <name value="Knowledge Artifacts: Activity Definitions"/>
+  <description value="これらは、この実装ガイドのコンテンツの一部として実行できるアクティビティを定義する。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-ka-plandefinition">
+  <name value="Knowledge Artifacts: Plan Definitions"/>
+  <description value="これらは、この実装ガイドのコンテンツの一部としてワークフロー、ルール、戦略、またはプロトコルを定義する。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-ka-library">
+  <name value="Knowledge Artifacts: Libraries"/>
+  <description value="これらは、この実装ガイドのコンテンツの一部として、ロジック、アセットコレクション、およびその他のライブラリを定義する。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-ka-measure">
+  <name value="Knowledge Artifacts: Measure"/>
+  <description value="これらは、この実装ガイドのコンテンツの一部としてメジャー（Measure）を定義する。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-ka-library">
+  <name value="Knowledge Artifacts: Libraries"/>
+  <description value="Tこれらは、この実装ガイドのコンテンツの一部として、ロジック、アセットコレクション、その他のライブラリを定義しています。"/>
 </grouping>
 <grouping xmlns="http://hl7.org/fhir" id="-str-graphdefinition">
   <name value="Structures: Graph Definitions"/>
@@ -62,21 +90,13 @@
   <name value="Terminology: Concept Maps"/>
   <description value="これらは、この実装ガイドに準拠するシステムでの、ふたつのコードシステム（CodeSystem）間でのコンセプト対応表（Concept Map）を定義する。"/>
 </grouping>
-<grouping xmlns="http://hl7.org/fhir" id="-ka-activitydefinition">
-  <name value="Knowledge Artifacts: Activity Definitions"/>
-  <description value="これらは、この実装ガイドのコンテンツの一部として実行できるアクティビティを定義する。"/>
+<grouping xmlns="http://hl7.org/fhir" id="-test-testplan">
+  <name value="Testing Artifacts: TestPlans"/>
+  <description value="これらのテスト計画は、本実装ガイドのテストカバレッジを検証するために利用できる。"/>
 </grouping>
-<grouping xmlns="http://hl7.org/fhir" id="-ka-plandefinition">
-  <name value="Knowledge Artifacts: Plan Definitions"/>
-  <description value="これらは、この実装ガイドのコンテンツの一部としてワークフロー、ルール、戦略、またはプロトコルを定義する。"/>
-</grouping>
-<grouping xmlns="http://hl7.org/fhir" id="-ka-library">
-  <name value="Knowledge Artifacts: Libraries"/>
-  <description value="これらは、この実装ガイドのコンテンツの一部として、ロジック、アセットコレクション、およびその他のライブラリを定義する。"/>
-</grouping>
-<grouping xmlns="http://hl7.org/fhir" id="-ka-measure">
-  <name value="Knowledge Artifacts: Measure"/>
-  <description value="これらは、この実装ガイドのコンテンツの一部としてメジャー（Measure）を定義する。"/>
+<grouping xmlns="http://hl7.org/fhir" id="-test-testscript">
+  <name value="Testing Artifacts: TestScripts"/>
+  <description value="Tこれらのテスト定義は、システムがこの実装ガイドに準拠していることを検証するために、FHIRテストエンジンで利用可能です。"/>
 </grouping>
 <grouping xmlns="http://hl7.org/fhir" id="-ex-examplescenario">
   <name value="Example: Example Scenarios"/>
@@ -85,6 +105,10 @@
 <grouping xmlns="http://hl7.org/fhir" id="-ex-example">
   <name value="Example: Example Instances"/>
   <description value="これらは、この実装ガイドに準拠するシステムによって生成および消費されるデータがどのように見えるかを示すインスタンスの例である。"/>
+</grouping>
+<grouping xmlns="http://hl7.org/fhir" id="-ex-examplesup">
+  <name value="Example: Example Supporting Instances"/>
+  <description value="これらは、この実装ガイドでは規定されていないが、IGで定義されている他の例をサポートするために必要なインスタンス例である。"/>
 </grouping>
 <grouping xmlns="http://hl7.org/fhir" id="-other">
   <name value="Other"/>
