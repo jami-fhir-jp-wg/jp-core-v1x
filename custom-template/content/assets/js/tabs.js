@@ -4,7 +4,7 @@ try {
 }
 
 if (!currentTabIndex)
-  currentTabIndex = '0';
+  currentTabIndex = '2';
 
 $( '#tabs' ).tabs({
   active: currentTabIndex,
@@ -18,3 +18,4 @@ $( '#tabs' ).tabs({
     }
   }
 });
+ 
