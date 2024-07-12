@@ -4,12 +4,12 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
-# Example Existence Warnings
+# Example Warnings
 %The Implementation Guide contains no examples%
+Invalid element name inside a paragraph in the XHTML ('ul')
 
 # External Terminologies Existence Warnings
 Wrong Display Name%
-No valid Display Names found for % in the language en
 
 # ベストプラクティス
 Rule dom-6%
@@ -24,6 +24,3 @@ Reference to draft CodeSystem %
 #  Local CodeSystems Warnings
 A definition for CodeSystem 'http://abc-hospital.local/fhir/Observation/localcode' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://abc-hospital.local/fhir/ObservationOrder/localcode' could not be found, so the code cannot be validated
-
-
-# OID CodeSystem not found Warnings (only registered NamingSystem)
