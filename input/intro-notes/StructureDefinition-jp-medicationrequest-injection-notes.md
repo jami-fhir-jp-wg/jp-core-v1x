@@ -181,7 +181,7 @@ JP Core MedicationRequest Injection リソースに対して使用される操�
 この操作の公式なURLは以下である。
 
 ```
-http://hl7.jp/fhir/OperationDefinition/MedicationRequest-everything
+http://jpfhir.jp/fhir/core/OperationDefinition/Medications-everything
 ```
 
 URL: [base]/MedicationRequest/[id]/$everything

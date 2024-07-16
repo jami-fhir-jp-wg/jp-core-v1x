@@ -127,7 +127,7 @@ JP Immunization リソースに対して使用される操作は次の通りで�
 この操作の公式なURLは以下である。
 
 ```
-http://hl7.jp/fhir/OperationDefinition/Immunization-everything
+http://jpfhir.jp/fhir/core/OperationDefinition/Medications-everything
 ```
 
 URL: [base]/Immunization/[id]/$everything

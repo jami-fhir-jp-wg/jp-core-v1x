@@ -137,7 +137,7 @@ JP MedicationAdministration リソースに対して使用される操作は次�
 この操作の公式なURLは以下である。
 
 ```
-http://hl7.jp/fhir/OperationDefinition/MedicationAdministration-everything
+http://jpfhir.jp/fhir/core/OperationDefinition/Medications-everything
 ```
 
 URL: [base]/MedicationAdministration/[id]/$everything
