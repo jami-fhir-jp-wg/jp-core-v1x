@@ -35,7 +35,7 @@ SET /p dterm="download packeges of terminology? (Y/N) "
 IF NOT %dterm:Y=Y%==Y (
     GOTO end
 )
-SET dltermurl=https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology-1.1.1.tgz
+SET dltermurl=https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.1.1.tgz
 SET localterm=.\\temp\\jpfhir-terminology-1.1.1.tgz
 set term_dir=%fhir_dir%\\packages\\jpfhir-terminology#1.1.1
 
