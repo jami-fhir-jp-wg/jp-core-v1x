@@ -191,6 +191,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race
+    - http://jpfhir.jp/fhir/core/OperationDefinition/jp-medications-everything
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonNumber_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSubNumber_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSymbol_SP
