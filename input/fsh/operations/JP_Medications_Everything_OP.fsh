@@ -1,13 +1,14 @@
-Instance: jp-medications-everything
+Instance: jp-medications-everything-op
 InstanceOf: OperationDefinition
 Usage: #definition
-* url = "http://jpfhir.jp/fhir/core/OperationDefinition/Medications-everything"
+Description: "本OperationはMedication関連リソースに対するクエリに利用するものである。"
+* url = "http://jpfhir.jp/fhir/core/OperationDefinition/JP_Medications_Everything_Op"
 * name = "JP_Medications_Everything_OP"
 * status = #draft
 * kind = #operation
 * date = "2024-08-01"
 * code = #everything
-* comment = "この操作が呼び出された特定のMedicationRequestリソースに関連する全ての情報を返す。応答は\"searchset\"タイプのBundleリソースである。サーバは少なくとも識別された対象リソースコンパートメントに含まれる全てのリソースと、それらから参照されるすべてのリソースを返すことが望ましい。"
+* comment = "この操作が呼び出された特定のMedication関連リソースに対する全ての情報を返す。応答は\"searchset\"タイプのBundleリソースである。サーバは少なくとも識別された対象リソースコンパートメントに含まれる全てのリソースと、それらから参照されるすべてのリソースを返すことが望ましい。"
 * resource[0] = #Immunization
 * resource[+] = #MedicationAdministration
 * resource[+] = #MedicationDispense
@@ -15,7 +16,19 @@ Usage: #definition
 * system = false
 * type = false
 * instance = true
-* parameter[0].name = #_since
+* parameter[0].name = #start
+* parameter[=].use = #in
+* parameter[=].min = 0
+* parameter[=].max = "1"
+* parameter[=].documentation = "特定の日付範囲で提供されたケアに関連する全ての記録を意味する。開始日が指定されていない場合、終了日以前のすべてのレコードが対象に含まれる。"
+* parameter[=].type = #date
+* parameter[+].name = #end
+* parameter[=].use = #in
+* parameter[=].min = 0
+* parameter[=].max = "1"
+* parameter[=].documentation = "特定の日付範囲で提供されたケアに関連する全ての記録を意味する。終了日が指定されていない場合、開始日以降のすべてのレコードが対象に含まれる。"
+* parameter[=].type = #date
+* parameter[+].name = #_since
 * parameter[=].use = #in
 * parameter[=].min = 0
 * parameter[=].max = "1"
@@ -39,15 +52,3 @@ Usage: #definition
 * parameter[=].max = "1"
 * parameter[=].documentation = "バンドルのタイプは”searchset”である。この操作の結果は、リソースとして直接返される。"
 * parameter[=].type = #Bundle
-* parameter[+].name = #start
-* parameter[=].use = #in
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].documentation = "特定の日付範囲で提供されたケアに関連する全ての記録を意味する。開始日が指定されていない場合、終了日以前のすべてのレコードが対象に含まれる。"
-* parameter[=].type = #date
-* parameter[+].name = #end
-* parameter[=].use = #in
-* parameter[=].min = 0
-* parameter[=].max = "1"
-* parameter[=].documentation = "特定の日付範囲で提供されたケアに関連する全ての記録を意味する。終了日が指定されていない場合、開始日以降のすべてのレコードが対象に含まれる。"
-* parameter[=].type = #date

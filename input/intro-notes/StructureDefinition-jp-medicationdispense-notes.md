@@ -140,7 +140,7 @@ JP Core MedicationDispense リソースに対して使用される操作は次�
 この操作の公式なURLは以下である。
 
 ```
-http://jpfhir.jp/fhir/core/OperationDefinition/Medications-everything
+http://jpfhir.jp/fhir/core/OperationDefinition/JP_Medications_Everything_Op
 ```
 
 URL: [base]/MedicationDispense/[id]/$everything
