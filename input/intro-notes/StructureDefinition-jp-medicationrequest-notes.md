@@ -183,7 +183,7 @@ JP MedicationRequest リソースに対して使用される操作は次の通�
 この操作の公式なURLは以下である。
 
 ```
-http://jpfhir.jp/fhir/core/OperationDefinition/JP_Medications_Everything_Op
+http://jpfhir.jp/fhir/core/OperationDefinition/JP_Medications_Everything_OP
 ```
 
 URL: [base]/MedicationRequest/[id]/$everything

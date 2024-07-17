@@ -155,7 +155,7 @@ JP Core MedicationDispense Injection リソースに対して使用される操�
 この操作の公式なURLは以下である。
 
 ```
-http://jpfhir.jp/fhir/core/OperationDefinition/JP_Medications_Everything_Op
+http://jpfhir.jp/fhir/core/OperationDefinition/JP_Medications_Everything_OP
 ```
 
 URL: [base]/MedicationDispense/[id]/$everything

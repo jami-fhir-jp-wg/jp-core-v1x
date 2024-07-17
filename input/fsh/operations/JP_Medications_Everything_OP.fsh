@@ -2,7 +2,7 @@ Instance: jp-medications-everything-op
 InstanceOf: OperationDefinition
 Usage: #definition
 Description: "本OperationはMedication関連リソースに対するクエリに利用するものである。"
-* url = "http://jpfhir.jp/fhir/core/OperationDefinition/JP_Medications_Everything_Op"
+* url = "http://jpfhir.jp/fhir/core/OperationDefinition/JP_Medications_Everything_OP"
 * name = "JP_Medications_Everything_OP"
 * status = #draft
 * kind = #operation
