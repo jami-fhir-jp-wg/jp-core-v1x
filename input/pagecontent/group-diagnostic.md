@@ -1,4 +1,6 @@
 ### Profiles
+  * ServiceRequest （オーダ）
+    * [JP Core ServiceRequest Common (共通)　プロファイル][JP_ServiceRequest_Common]
   * Observation （検査）
     * [JP Core Observation Common （共通）プロファイル][JP_Observation_Common]
     * [JP Core Observation LabResult （検体検査結果）プロファイル][JP_Observation_LabResult]
