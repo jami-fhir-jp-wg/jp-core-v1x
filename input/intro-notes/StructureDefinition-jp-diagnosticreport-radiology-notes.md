@@ -21,6 +21,7 @@
 - performer : Practitionerでレポートの関係者（作成者、読影者、確定者など）を列挙
 - resultInterpreter : Practitionerでレポート確定者を示す
 - imagingStudy : 診断の対象となる画像
+- result ： 所見(findings)や診断の結果(impression) を示すObservationリソースへの参照。
 - link : キーイメージの参照先
 - conclusion : 診断の結果、impression
 - presentedForm : レポート本体（全体のイメージあるいは所見等のテキスト）
@@ -39,6 +40,8 @@ DiagnosticReportのドメインリソースの一つであるtextエレメント
 具体的な構造については [**放射線読影レポート**][jp-diagnosticreport-radiology-example-1]を参照のこと
 
 (DiagnosticReportのResourceType直下に現れる。text以外のDomainResourceの詳細については[こちら](https://www.hl7.org/fhir/R4/domainresource.html)を参照のこと）
+
+また、所見(findings)や診断の結果(impression)は対応するObservationリソースに内容が保持されるので、全文検索等の目的で構造化された情報を利用する場合はこれらを参照すること。
 
 ### CategoryとCode
 
@@ -95,7 +98,7 @@ DiagnosticReport_Radiology リソースではtypeエレメントを明示する�
 
 ### 関連するObservation
 
-DiagnosticReport.resultエレメントには関連する検体検査計測値などをしめすObservationリソースを含むことができる。
+DiagnosticReport.resultエレメントには所見(findings)や診断の結果(impression)を示すObservationリソースが含まれるが、加えて関連する検体検査や画像上の計測値などをしめすObservationリソースを含むことができる。
 
 ### 参照画像
 
@@ -113,7 +116,7 @@ ImagingStudyやmediaは多少オーバーラップするが、使用される目
 
 Conclusionやコード化された診断結果は各々がレポートを構成する小さなデータであるが、これらはpresentedFormに保持されるnarrativeなデータ内に含まれると同時に、本リソースのエレメントに複製されなければならない（**SHOULD**)。
 
-診断レポートの所見などnarrativeなデータはDiagnosticReportのドメインリソースとして定義されているtextにも保持すること。presentedFormとの内容の重複は許容されている。presentedFormはbase64のバイナリであるため、DiagnosticReportのtextが検索性の担保に利用される．また、見読性も同時に保たれる。
+診断レポートの所見などnarrativeなデータはDiagnosticReportのドメインリソースとして定義されているtextにも保持すること。presentedFormとの内容の重複は許容されている。presentedFormはbase64のバイナリであるため、DiagnosticReportのtextが見読性の担保に利用される。検索についてはサーバ仕様によりドメインリソースであるtextは検索対象として利用できないことがあるので、resultエレメントに指定されるObservationリソースの内容を対象として考慮すること。
 
 診断レポートの分野はAIによる診断補助やレポートの構造化を含め様々な変革がもたらされている。そのため、上記仕様は現時点でのリソース展開の例示であり、将来的に変更される可能性がある。
 
