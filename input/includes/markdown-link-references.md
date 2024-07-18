@@ -19,7 +19,7 @@
 [JP_DocumentReference]: StructureDefinition-JP-DocumentReference.html
 [JP_RelatedPerson]: StructureDefinition-JP-RelatedPerson.html
 [JP_ServiceRequest]: StructureDefinition-JP-ServiceRequest.html
-[JP_ServiceRequest_Common]: StructureDefinition-JP-ServiceRequest-Common.html
+[JP_ServiceRequest_Common]: StructureDefinition-JP-servicerequest-common.html
 [JP_Specimen]: StructureDefinition-JP-Specimen.html
 [JP_AllergyIntolerance]: StructureDefinition-jp-allergyintolerance.html
 [JP_CarePlan]: StructureDefinition-jp-careplan.html
