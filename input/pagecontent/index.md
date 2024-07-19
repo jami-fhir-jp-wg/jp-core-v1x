@@ -55,6 +55,9 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
   * [JP Core Condition （状態）プロファイル][JP_Condition]
   * [JP Core Procedure （処置）プロファイル][JP_Procedure]
   * [JP Core FamilyMemberHistory（家族歴）プロファイル][JP_FamilyMemberHistory]
+* [Workflowグループ](group-workflow.html)
+  * ServiceRequest (サービスリクエスト)
+    * [JP Core ServiceRequest Common (共通) プロファイル][JP_ServiceRequest_Common]
 
 #### JP Coreで定義しないProfile(プロファイル)
 次のProfileはJP Coreでは定義を行なわず、FHIR Baseをそのまま利用する。
