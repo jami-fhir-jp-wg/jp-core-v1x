@@ -11,6 +11,7 @@ on:
   pull_request:
     branches:
       - 'develop'
+      - 'release/**'
 env:
   release_version : 1.2.0-dev
 jobs:
@@ -38,6 +39,8 @@ jobs:
       shell: bash
       run: |
         echo "date=$(git log -1 --format="%at" | xargs -I{} date -d @{})" >> $GITHUB_OUTPUT
+        title_temp=$(echo ${{ github.event.pull_request.title }} | sed 's/\[/【/g; s/\]/】/g; s/\:/：/g; s/\-/－/g')
+        echo "encoded_pullrequest_title=$title_temp" >> $GITHUB_ENV
       id: extract_date
 
     - uses: bluwy/substitute-string-action@v1
@@ -50,7 +53,7 @@ jobs:
         date: ${{ steps.extract_date.outputs.date }}
         actor: ${{ github.actor }}
         pullrequest_url: ${{ github.event.pull_request.html_url }}
-        pullrequest_title: ${{ github.event.pull_request.title }}
+        pullrequest_title: ${{ env.encoded_pullrequest_title }}
         _output-file: input/landing_page/_index.yml
 
     - name: Setup npm
