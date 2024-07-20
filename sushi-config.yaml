@@ -306,7 +306,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationUncategorizedComment_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationInstructionForDispenseJHSP0002_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationRequestDosageInstructionLine_VS
-    - http://loinc.org    
+    - http://loinc.org
     - http://unitsofmeasure.org
     - http://www.mhlw.go.jp/toukei/sippei/2013/ICD10-JP
     - urn:ietf:bcp:13
