@@ -14,7 +14,7 @@ FHIRのJp Core実装のための開発用レポジトリです。
 | [v1.1.2](https://jpfhir.jp/fhir/core/1.1.2/index.html)  | 4.0.1 | https://github.com/jami-fhir-jp-wg/jp-core-v1x/releases/tag/v1.1.2 (編集不可) | リリース済 | 現行リリースの最新バージョン | 
 | [v1.1.1](https://jpfhir.jp/fhir/core/1.1.1/index.html)  | 4.0.1 | https://github.com/jami-fhir-jp-wg/jp-core-v1x/releases/tag/v1.1.1 (編集不可) | リリース済 | v1.1.0からの不具合修正バージョン<p/>Patch version to V1.1.0<p/>リリース済のため編集不可　|
 | [v1.1.0](https://jpfhir.jp/fhir/core/1.1.0/index.html)  | 4.0.1 | https://github.com/jami-fhir-jp-wg/jp-core-v1x/releases/tag/v1.1.0 (編集不可) | リリース済 | 開発環境のSushi&IG Publisherへの移行ver1.0.5のブラッシュアップ実施<p/>IG publisher version from V1.0.5 |
-| [v1.0.5](https://jpfhir.jp/jpcorev1ig/index.html)  | 4.0.1 | 無 | リリース済<p/>編集不可 | 初期バージョン<p/>Initial release<p/>現在サポート対象外 | 
+| [v1.0.5](https://jpfhir.jp/jpcorev1ig/index.html)  | 4.0.1 | 旧開発環境で開発されたたため、ソースファイル非公開 | リリース済<p/>編集不可 | 初期バージョン<p/>Initial release<p/>現在サポート対象外 | 
 ## GitHubAction 自動ビルド＆デプロイ
 ビルドおよびデプロイに２０分程度時間を要します。
 * [ビルド状況 [step1]](https://github.com/jami-fhir-jp-wg/jp-core-v1x/actions)
