@@ -1,10 +1,20 @@
-# FHIR JPCore ver1.1用　開発用サイト
+# FHIR JPCore ver1.x用　開発用サイト
 FHIRのJp Core実装のための開発用レポジトリです。
 
 # 注意事項
-このドキュメントは日本医療情報学会NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した実装ガイドのドラフトVer.1.1 です。このバージョンは日本HL7協会による承認を受けていません。今後、予告なく内容に変更があります。実装や利用は全て自己責任で行ってください。
-このページの実装ガイドは常に修正、追加がある改訂版開発用ページです。
+このドキュメントは日本医療情報学会NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した実装ガイドのVer.1.x.x系を作成しているレポジトリです。本レポジトリは開発時の編集用途として使用しています、正式にはhttps://jpfhir.jp/fhir/core/index.htmlにて公開されている内容をご確認ください。今後、予告なく内容に変更があります。実装や利用は全て自己責任で行ってください。
 
+
+## 編集先レポジトリ
+編集先は
+| JPCore ver | BASE Ver|対象レポジトリ | 状況 | コメント | 
+| - | - | - | - | - |
+| v2.0.0  | 4.3.0 | https://github.com/jami-fhir-jp-wg/fhir-jp-core-r4 | 開発中 | リリース時期未定<p/>影響点の大きな修正はを本バージョンに投入する。Base verがR4.3.0であることに送付します。|
+| v1.2.0  | 4.0.1 | https://github.com/jami-fhir-jp-wg/jp-core-v1x | 開発中 | 2025年秋リリース予定<p/>不具合修正や影響の少ないリソース追加はこちらで実施する |
+| [v1.1.2](https://jpfhir.jp/fhir/core/1.1.2/index.html)  | 4.0.1 | https://github.com/jami-fhir-jp-wg/jp-core-v1x/releases/tag/v1.1.2 | リリース済 | 現行リリースの最新バージョン| 
+| [v1.1.1](https://jpfhir.jp/fhir/core/1.1.1/index.html)  | 4.0.1 | https://github.com/jami-fhir-jp-wg/jp-core-v1x/releases/tag/v1.1.1 | リリース済 | v1.1.0からの不具合修正バージョン<p/>Patch version to V1.1.0　|
+| [v1.1.0](https://jpfhir.jp/fhir/core/1.1.0/index.html)  | 4.0.1 | https://github.com/jami-fhir-jp-wg/jp-core-v1x/releases/tag/v1.1.0 | リリース済 | 開発環境のSushi&IG Publisherへの移行ver1.0.5のブラッシュアップ実施<p/>IG publisher version from V1.0.5 |
+| [v1.0.5](https://jpfhir.jp/jpcorev1ig/index.html)  | 4.0.1 | 無 | リリース済 | 初期バージョン<p/>Initial release<p/>現在サポート対象外| 
 ## GitHubAction 自動ビルド＆デプロイ
 ビルドおよびデプロイに２０分程度時間を要します。
 * [ビルド状況 [step1]](https://github.com/jami-fhir-jp-wg/jp-core-v1x/actions)
