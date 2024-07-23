@@ -6,13 +6,13 @@
 | ServiceRequest.intent |  | [Required](http://hl7.org/fhir/R4/terminologies.html#required) | [intent](http://hl7.org/fhir/R4/valueset-request-intent.html) |
 | ServiceRequest.category |  | [Example](http://hl7.org/fhir/R4/terminologies.html#example) | [ServiceRequestCategoryCodes](http://hl7.org/fhir/R4/valueset-servicerequest-category.html) |
 | ServiceRequest.priority |  | [Required](http://hl7.org/fhir/R4/terminologies.html#required) | [RequestPriority](http://hl7.org/fhir/R4/valueset-request-priority.html) |
-| ServiceRequest.code |  | [Example](http://hl7.org/fhir/R4/terminologies.html#example) | [ProcedureCodes(SNOMEDCT)](http://hl7.org/fhir/R4/valueset-procedure-code.html) |
+| ServiceRequest.code |  | [Example](http://hl7.org/fhir/R4/terminologies.html#example) | [JP Core Procedure Codes Medical ValueSet](https://jpfhir.jp/fhir/core/terminology/ig/ValueSet-JP_ProcedureCodesMedical_VS) |
 | ServiceRequest.orderDetail |  | [Example](http://hl7.org/fhir/R4/terminologies.html#example) | [ServiceRequestOrderDetailsCodes](http://hl7.org/fhir/R4/valueset-servicerequest-orderdetail.html) |
 | ServiceRequest.asNeeded[x] |  | [Example](http://hl7.org/fhir/R4/terminologies.html#example) | [SNOMEDCTMedicationAsNeededReasonCodes](http://hl7.org/fhir/R4/valueset-medication-as-needed-reason.html) |
 | ServiceRequest.performerType |  | [Example](http://hl7.org/fhir/R4/terminologies.html#example) | [ActionParticipantRole](http://terminology.hl7.org/3.1.0/ValueSet-action-participant-role.html) |
 | ServiceRequest.locationCode |  | [Example](http://hl7.org/fhir/R4/terminologies.html#example) | [ServiceDeliveryLocationRoleType](http://terminology.hl7.org/3.1.0/ValueSet-v3-ServiceDeliveryLocationRoleType.html) |
-| ServiceRequest.reasonCode |  | [Example](http://hl7.org/fhir/R4/terminologies.html#example) | [ProcedureReasonCodes](http://hl7.org/fhir/R4/valueset-procedure-reason.html) |
-| ServiceRequest.bodySite |  | [Example](http://hl7.org/fhir/R4/terminologies.html#example) | [SNOMEDCTBodyStructures](http://hl7.org/fhir/R4/valueset-body-site.html) |
+| ServiceRequest.reasonCode |  | [Example](http://hl7.org/fhir/R4/terminologies.html#example) | [JP Core Procedure Reason ValueSet](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/jpcore-r4/feature/swg2_servicerequest/ValueSet-jp-procedure-reason-vs.html) |
+| ServiceRequest.bodySite |  | [Example](http://hl7.org/fhir/R4/terminologies.html#example) | [JP Core Procedure BodySite ValueSet](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/jpcore-r4/feature/swg2_servicerequest/ValueSet-jp-procedure-body-site-vs.html) |
 
 
 ### Constraints
@@ -24,13 +24,13 @@
 
 ### Notes
 
-- 多くのサービスリクエストは検体、体の部位やシステムを指定する必要がある。しかし、血清グルコース、胸部Ｘ線写真などのように、これらの情報はcode要素に組み込まれている。また、specimen要素やbodysite要素もこれらを指定するために使われる。
+- 多くのサービスリクエストは検体、体の部位やシステムを指定する必要がある。しかし、血清グルコース、胸部Ｘ線写真などでは、これらの情報はcode要素に組み込まれている。また、specimen要素やbodysite要素もこれらを指定するために使われる。
 - 既にある検体へ検査をオーダする場合にだけ、ServiceRequestリソースはSpecimenリソースを参照する。逆に、未採集の検体と一緒にサービスリクエストが最初に作成された時は、SpecimenリソースはServiceRequestリソースを参照する。
 - reasonCode要素は多くの場合、保険請求を目的としている。また、reasonCode要素はsupportingInfo要素で言及されたリソースに関連し、処置や診断調査がどのように行われるか、あるいは全く行われないかどうかを決定するために使用される。
 - ServiceRequestはWorkflowモジュールの1つであり、その相互運用は高度なFHIRアクティビティであり、各リソースの高度な標準化が前提とされる。そのため、本バージョンでは日本語訳のみとし、参考情報として作成している。
 - また、R5では下記の変更点がある。
 
-| 要素 | R4、R4からの変更点 |
+| 要素 | R4、R4Bからの変更点 |
 | --- | --- |
 | ServiceRequest.code | - CodeableConceptから、CodeableReferenceへ型が変更 |
 | ServiceRequest.orderDetail | CodeableConceptから、BackboneElementへ型が変更 |
