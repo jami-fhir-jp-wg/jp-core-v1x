@@ -6,8 +6,6 @@ Description:    "JP-ServiceRequest-Common"
 * ^status = #active
 * ^date = "2024-07-18"
 * meta.lastUpdated 0.. MS
-* . ^short = "実施すべきサービス"
-* . ^definition = "診断調査、治療、または実行する操作などのサービス要求の記録。"
 * identifier ^short = "このリクエストに割り当てられた識別子"
 * identifier ^definition ="注文者、受取人、注文フルフィルラーによってこのリクエストに割り当てられた識別子"
 * basedOn ^short = "リクエストが達成するもの"
