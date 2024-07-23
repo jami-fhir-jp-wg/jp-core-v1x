@@ -2,9 +2,9 @@
 
 ### Scope and Usage
 
-このServiceRequestリソースはFHIRにおけるワークフロー管理を構成するリソース群（Request, Event, Definition）のRequestに相当する。 － [WorkFlow](http://hl7.org/fhir/R4B/workflow.html)を参照のこと。
+このServiceRequestリソースはFHIRにおけるワークフロー管理を構成するリソース群（Request, Event, Definition）のRequestに相当する。 － [WorkFlow](http://hl7.org/fhir/R4/workflow.html)を参照のこと。
 
-ServiceRequestリソースは患者に対し立案・実施されるリクエストの記録で、処置や診断、もしくは他のサービス（その内容はServiceRequest.intentエレメントの値によって区別される）に関するものを示す。処置・行為は、[Procedure](http://hl7.org/fhir/R4B/procedure.html)リソースまたは[DiagnosticReport](http://hl7.org/fhir/R4B/diagnosticreport.html)リソースを導出し、次いで通常は１つ以上のDiagnostic Medicine Module（例：[Observation](http://hl7.org/fhir/R4B/observation.html)リソース）を参照する。参照されるObservationリソースは手順の実行状況や対象患者の治療・管理に関連する観察、 画像、所見などに関連する文書を要約したものになる。また、このリソースは、患者が他の医療機関に転院あるいは紹介される場合の情報共有にも使われる。具体的には、診察やセカンドオピニオンを受けたい場合や、健康上の問題の短期的な管理や長期的な治療を必要とする場合の情報共有に使われることがある。
+ServiceRequestリソースは患者に対し立案・実施されるリクエストの記録で、処置や診断、もしくは他のサービス（その内容はServiceRequest.intentエレメントの値によって区別される）に関するものを示す。処置・行為は、[Procedure](http://hl7.org/fhir/R4/procedure.html)リソースまたは[DiagnosticReport](http://hl7.org/fhir/R4/diagnosticreport.html)リソースを導出し、次いで通常は１つ以上のDiagnostic Medicine Module（例：[Observation](http://hl7.org/fhir/R4/observation.html)リソース）を参照する。参照されるObservationリソースは手順の実行状況や対象患者の治療・管理に関連する観察、 画像、所見などに関連する文書を要約したものになる。また、このリソースは、患者が他の医療機関に転院あるいは紹介される場合の情報共有にも使われる。具体的には、診察やセカンドオピニオンを受けたい場合や、健康上の問題の短期的な管理や長期的な治療を必要とする場合の情報共有に使われることがある。
 
 * 診断検査
 * 内視鏡検査
@@ -22,20 +22,20 @@ ServiceRequestリソースは患者に対し立案・実施されるリクエス
 
 処置は医療従事者だけでなく、友人、親戚、場合によっては患者自身で実施される。
 
-ServiceRequestリソースの主な目的は、ある患者（獣医学の患畜も含まれる）の処置のオーダリングのサポートである。しかし、ヘルスケア関連の業務には、被験者のグループや医療機器、さらには建物内部の配管や水の集まる場所などの環境に対する診断調査なども含まれ、ServiceRequestリソースはこれらのユースケースのすべてをサポートする点を認識する必要がある。サービス・リクエストは、臨床医によってオーダリングシステム（CPOEシステム）に入力されたオーダと同様に、患者の臨床記録やケアの記録に基づいて作成された臨床判断支援システム（CDSシステム） による提案も表現する。[CarePlan](http://hl7.org/fhir/R4B/careplan.html)リソースで参照される計画された処置を表す場合にもこのリソースによって表現される。
+ServiceRequestリソースの主な目的は、ある患者（獣医学の患畜も含まれる）の処置のオーダリングのサポートである。しかし、ヘルスケア関連の業務には、被験者のグループや医療機器、さらには建物内部の配管や水の集まる場所などの環境に対する診断調査なども含まれ、ServiceRequestリソースはこれらのユースケースのすべてをサポートする点を認識する必要がある。サービス・リクエストは、臨床医によってオーダリングシステム（CPOEシステム）に入力されたオーダと同様に、患者の臨床記録やケアの記録に基づいて作成された臨床判断支援システム（CDSシステム） による提案も表現する。[CarePlan](http://hl7.org/fhir/R4/careplan.html)リソースで参照される計画された処置を表す場合にもこのリソースによって表現される。
 
 このリソースが用いられる一般的なワークフローは、臨床システムでのサービスリクエストの作成である。サービスリクエストは、おそらくは中継されて、処置を実施する部門（例えば手術部門、生理機能検査部門、臨床検査部門、画像診断検査部門、理学療法部門など）のシステムとやり取りされる。サービスリクエストを受けた部門はリクエストを受諾した後、処置を実施し、実施されたリクエストを参照するレポートを発行する。
 
-ServiceRequestリソースが要求できる手技は1つに限定される。ワークフローが複数の処置を同時に要求した場合は、複数のServiceRequestインスタンスが作成される。これらのインスタンスはワークフローの要求により異なった方法でリンクされる。詳しくは、[Request pattern](http://hl7.org/fhir/R4B/request.html)を参照のこと。
+ServiceRequestリソースが要求できる手技は1つに限定される。ワークフローが複数の処置を同時に要求した場合は、複数のServiceRequestインスタンスが作成される。これらのインスタンスはワークフローの要求により異なった方法でリンクされる。詳しくは、[Request pattern](http://hl7.org/fhir/R4/request.html)を参照のこと。
 
 ### Boundaries and Relationships
 
-ServiceRequestリソースは実施されるサービスの立案、オーダの記録であり、結果として、[Procedure](http://hl7.org/fhir/R4B/procedure.html)、[Observation](http://hl7.org/fhir/R4B/observation.html)、[DiagnosticReport](http://hl7.org/fhir/R4B/diagnosticreport.html)、[ImagingStudy](http://hl7.org/fhir/R4B/imagingstudy.html)など、関連するリソースが作られる。ServiceRequestリソースと対照的に、[Task](http://hl7.org/fhir/R4B/task.html)リソースは計画から結果までを網羅し、完了するまでの実施状況を追跡する。つまり、レコードに対して実行するタスクのリクエストや追跡、または実施過程の一部として施行すべき手順のチェックリストに対する追跡など、「管理的」なアクションを目的とする。ServiceRequestリソースは、Taskリソースの作成のきっかけになる高レベルの認可でもあり、また、Taskリソースが達成しようとしている「リクエスト」リソースにもなる。
+ServiceRequestリソースは実施されるサービスの立案、オーダの記録であり、結果として、[Procedure](http://hl7.org/fhir/R4/procedure.html)、[Observation](http://hl7.org/fhir/R4/observation.html)、[DiagnosticReport](http://hl7.org/fhir/R4/diagnosticreport.html)、[ImagingStudy](http://hl7.org/fhir/R4/imagingstudy.html)など、関連するリソースが作られる。ServiceRequestリソースと対照的に、[Task](http://hl7.org/fhir/R4/task.html)リソースは計画から結果までを網羅し、完了するまでの実施状況を追跡する。つまり、レコードに対して実行するタスクのリクエストや追跡、または実施過程の一部として施行すべき手順のチェックリストに対する追跡など、「管理的」なアクションを目的とする。ServiceRequestリソースは、Taskリソースの作成のきっかけになる高レベルの認可でもあり、また、Taskリソースが達成しようとしている「リクエスト」リソースにもなる。
 
-ServiceRequestリソースは[CommunicationRequest](http://hl7.org/fhir/R4B/communicationrequest.html)リソースとも関連する。CommunicationRequestリソースは単に情報を公表する。一方で、ServiceRequestリソースは、トレーニングやカウンセリングの一環として情報を要求する場合に使われ、例えば、患者の理解度を確認したり、患者の精神状態を変化させようとするために使われる。あるワークフローでは両方のリソースが存在する。例えば、CommunicationRequestを受けて、医師はServiceRequestをオーダするかもしれない。
+ServiceRequestリソースは[CommunicationRequest](http://hl7.org/fhir/R4/communicationrequest.html)リソースとも関連する。CommunicationRequestリソースは単に情報を公表する。一方で、ServiceRequestリソースは、トレーニングやカウンセリングの一環として情報を要求する場合に使われ、例えば、患者の理解度を確認したり、患者の精神状態を変化させようとするために使われる。あるワークフローでは両方のリソースが存在する。例えば、CommunicationRequestを受けて、医師はServiceRequestをオーダするかもしれない。
 
 ### References
 
-このリソースは [Appointment](http://hl7.org/fhir/R4B/appointment.html#Appointment), [BiologicallyDerivedProduct](http://hl7.org/fhir/R4B/biologicallyderivedproduct.html#BiologicallyDerivedProduct), [CarePlan](http://hl7.org/fhir/R4B/careplan.html#CarePlan), [Claim](http://hl7.org/fhir/R4B/claim.html#Claim), [DeviceUseStatement](http://hl7.org/fhir/R4B/deviceusestatement.html#DeviceUseStatement), [DiagnosticReport](http://hl7.org/fhir/R4B/diagnosticreport.html#DiagnosticReport), [Encounter](http://hl7.org/fhir/R4B/encounter.html#Encounter), [EpisodeOfCare](http://hl7.org/fhir/R4B/episodeofcare.html#EpisodeOfCare), [ExplanationOfBenefit](http://hl7.org/fhir/R4B/explanationofbenefit.html#ExplanationOfBenefit),[Goal](http://hl7.org/fhir/R4B/goal.html#Goal), [ImagingStudy](http://hl7.org/fhir/R4B/imagingstudy.html#ImagingStudy), [Media](http://hl7.org/fhir/R4B/media.html#Media), [MedicationRequest](http://hl7.org/fhir/R4B/medicationrequest.html#MedicationRequest), [MedicationStatement](http://hl7.org/fhir/R4B/medicationstatement.html#MedicationStatement), [Observation](http://hl7.org/fhir/R4B/observation.html#Observation), [Procedure](http://hl7.org/fhir/R4B/procedure.html#Procedure), [QuestionnaireResponse](http://hl7.org/fhir/R4B/questionnaireresponse.html#QuestionnaireResponse), [Specimen](http://hl7.org/fhir/R4B/specimen.html#Specimen)などのリソースとServiceRequest自身から参照される。
+このリソースは [Appointment](http://hl7.org/fhir/R4/appointment.html#Appointment), [BiologicallyDerivedProduct](http://hl7.org/fhir/R4/biologicallyderivedproduct.html#BiologicallyDerivedProduct), [CarePlan](http://hl7.org/fhir/R4/careplan.html#CarePlan), [Claim](http://hl7.org/fhir/R4/claim.html#Claim), [DeviceUseStatement](http://hl7.org/fhir/R4/deviceusestatement.html#DeviceUseStatement), [DiagnosticReport](http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport), [Encounter](http://hl7.org/fhir/R4/encounter.html#Encounter), [EpisodeOfCare](http://hl7.org/fhir/R4/episodeofcare.html#EpisodeOfCare), [ExplanationOfBenefit](http://hl7.org/fhir/R4/explanationofbenefit.html#ExplanationOfBenefit),[Goal](http://hl7.org/fhir/R4/goal.html#Goal), [ImagingStudy](http://hl7.org/fhir/R4/imagingstudy.html#ImagingStudy), [Media](http://hl7.org/fhir/R4/media.html#Media), [MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html#MedicationRequest), [MedicationStatement](http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement), [Observation](http://hl7.org/fhir/R4/observation.html#Observation), [Procedure](http://hl7.org/fhir/R4/procedure.html#Procedure), [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse), [Specimen](http://hl7.org/fhir/R4/specimen.html#Specimen)などのリソースとServiceRequest自身から参照される。
 
-このリソースは[Request](http://hl7.org/fhir/R4B/request.html#Request)パターンを実装する。
+このリソースは[Request](http://hl7.org/fhir/R4/request.html#Request)パターンを実装する。
