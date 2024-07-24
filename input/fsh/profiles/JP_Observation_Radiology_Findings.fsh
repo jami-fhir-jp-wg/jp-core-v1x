@@ -8,7 +8,7 @@ Title: "JP Core Observation Common Profile"
 Description: "このプロファイルはObservationリソースに対して、データを送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Radiology_Findings"
 * ^status = #active
-* ^date = "2024-7-18"
+* ^date = "2024-07-18"
 * . ^short = "画像診断レポートの所見（findings）"
 * . ^definition = "放射線画像検査に対する画像診断レポートの所見の内容（findings）。"
 * . ^comment = "画像診断レポートの所見（findings）に対応するObservationプロファイル"
