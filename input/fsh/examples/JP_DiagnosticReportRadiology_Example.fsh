@@ -16,6 +16,9 @@ Usage: #example
 * effectiveDateTime = "2008-06-17"
 * issued = "2008-06-18T09:23:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1) "大阪 一郎"
+* resultsInterpreter = Reference(Practitioner/jp-practitioner-example-female-1) "東京 春子"
+* result[0] = Reference(Observation/jp-observation-radiology-findings-example-1)
+* result[+] = Reference(Observation/jp-observation-radiology-impression-example-1)
 * imagingStudy.display = "CHEST CT DICOM imaging study"
 * imagingStudy = Reference(ImagingStudy/jp-imagingstudy-radiology-example-1)
 * conclusion = "インプレッション: ひだり肺上葉の空洞性病変。 肺腺癌を疑う。みぎ肺上葉陳旧性炎症性瘢痕。"
