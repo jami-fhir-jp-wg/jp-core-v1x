@@ -17,8 +17,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * partOf only Reference(JP_ImagingStudy_Radiology)
 * partOf ^comment = "このObservation（インプレッション）が生成される元になった画像検査"
 * category from $JP_SimpleObservationCategory_VS (required)
-* category.coding.code = "imaging"
-* category.coding.display = "Imaging"
 * category ^comment = "このObservationを分類するコード。(imaging)が指定される。"
 //* code = $Loinc_CS#19005-8  "Radiology Imaging study [Impression] (narrative)" (exactly)
 * code.coding.system = $Loinc_CS (exactly)
