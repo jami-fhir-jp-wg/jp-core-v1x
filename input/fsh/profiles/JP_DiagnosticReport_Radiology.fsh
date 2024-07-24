@@ -117,7 +117,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * result ^short = "診断レポートの一部となるObservationリソース【詳細参照】"
 * result ^definition = "【JP Core仕様】所見(findings)や診断の結果(impression)を示すObservationリソースへの参照。この他、計測情報などの付随所見をObservationリソースとして定義できる。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
 * result ^comment = "Observationはさらにobservationを含むことができる。  
-【JP Core仕様】計測情報などの付随所見をObservationリソースとして定義できるが、該当するコードが定義できないため放射線レポートでは未定義とする。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
+【JP Core仕様】所見(findings)や診断の結果(impression)を示すObservationリソース以外では、計測情報などの付随所見をObservationリソースとして定義できるが、ユースケースに依存するためJP Coreでは未定義とする。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
 * result ^requirements = "結果のグループ化が任意だが、意味のある個別の結果または結果のグループをサポートする必要がある。"
 * imagingStudy MS
 * imagingStudy only Reference(JP_ImagingStudy_Radiology)
