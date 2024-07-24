@@ -63,6 +63,8 @@
 [JP_Observation_LabResult]: StructureDefinition-jp-observation-labresult.html
 [JP_Observation_Microbiology]: StructureDefinition-jp-observation-microbiology.html
 [JP_Observation_PhysicalExam]: StructureDefinition-jp-observation-physicalexam.html
+[JP_Observation_Radiology_Findings]: StructureDefinition-jp-observation-radiology-findings.html
+[JP_Observation_Radiology_Impression]: StructureDefinition-jp-observation-radiology-impression.html
 [JP_Observation_SocialHistory]: StructureDefinition-jp-observation-socialhistory.html
 [JP_Observation_VitalSigns]: StructureDefinition-jp-observation-vitalsigns.html
 [JP_Organization]: StructureDefinition-jp-organization.html

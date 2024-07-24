@@ -16,12 +16,13 @@ Description: "このプロファイルはObservationリソースに対して、�
 * basedOn ^comment = "このObservationが生成されることになった画像検査に関するオーダ情報"
 * partOf only Reference(JP_ImagingStudy_Radiology)
 * partOf ^comment = "このObservation（所見）が生成される元になった画像検査"
-* category from $JP_SimpleObservationCategory_VS (preferred)
+* category from $JP_SimpleObservationCategory_VS (required)
+* category.coding.code = "imaging"
+* category.coding.display = "Imaging"
 * category ^comment = "このObservationを分類するコード。(imaging)が指定される。"
-//* category = $Loinc_CS#18782-3  "Radiology Study observation (narrative)" (exactly)
-* category.coding.system = $Loinc_CS (exactly)
-* category.coding.code 1..
-* category.coding.code = $Loinc_CS#18782-3 (exactly)
+//* code = $Loinc_CS#18782-3  "Radiology Study observation (narrative)" (exactly)
+* code.coding.system = $Loinc_CS (exactly)
+* code.coding.code = $Loinc_CS#18782-3 (exactly)
 * code ^comment = "observation(所見)を表すLOINCコード。18782-3, Radiology Study observation (narrative)が指定される。"
 * subject only Reference(JP_Patient)
 * subject ^comment = "このObservationの対象となる患者。"
