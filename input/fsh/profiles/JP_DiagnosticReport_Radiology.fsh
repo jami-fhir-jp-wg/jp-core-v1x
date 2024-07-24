@@ -113,7 +113,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * specimen ^comment = "【JP Core仕様】未使用  
 ・画像ガイド下生検で得られる検体の可能性は有り得るが、本項目は病理レポートで利用されることを想定し、放射線レポートでは特には規定しない"
 * specimen ^requirements = "レポートの対象となる取集された検体についての情報をレポートできる必要がある。"
-* result Reference(JP_Observation_Radiology_Findings or JP_Observation_Radiology_Impression)
+* result only Reference(JP_Observation_Radiology_Findings or JP_Observation_Radiology_Impression)
 * result ^short = "診断レポートの一部となるObservationリソース【詳細参照】"
 * result ^definition = "【JP Core仕様】所見(findings)や診断の結果(impression)を示すObservationリソースへの参照。この他、計測情報などの付随所見をObservationリソースとして定義できる。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
 * result ^comment = "Observationはさらにobservationを含むことができる。  
