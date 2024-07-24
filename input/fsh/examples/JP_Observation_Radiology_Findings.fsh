@@ -6,7 +6,8 @@ Usage: #example
 * status = #final
 //* basedOn only Reference(ServiceRequest)
 //* partOf only Reference(JP_ImagingStudy_Radiology)
-* category = $JP_SimpleObservationCategory_CS#imaging "Imaging"
+* category = $JP_SimpleObservationCategory_CS#imaging
+* category.coding.display = "Imaging"
 * category.text = "Imaging"
 //* code = $Loinc_CS#18782-3  "Radiology Study observation (narrative)" (exactly)
 * code = $Loinc_CS#18782-3 "所見"
