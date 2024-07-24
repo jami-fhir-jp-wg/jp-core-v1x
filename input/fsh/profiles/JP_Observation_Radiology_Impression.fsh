@@ -4,8 +4,8 @@
 Profile: JP_Observation_Radiology_Impression
 Parent: Observation
 Id: jp-observation-radiology-impression
-Title: "JP Core Observation Common Profile"
-Description: "このプロファイルはObservationリソースに対して、データを送受信するための共通の制約と拡張を定めたものである。"
+Title: "JP Core Observation Radiology Impression Profile"
+Description: "このプロファイルはDiagnosticReport_Radiologyリソースに関連する画像診断報告書の「インプレッション」データを送受信するための共通の制約と拡張を定めたものである"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Radiology_impression"
 * ^status = #active
 * ^date = "2024-07-18"
