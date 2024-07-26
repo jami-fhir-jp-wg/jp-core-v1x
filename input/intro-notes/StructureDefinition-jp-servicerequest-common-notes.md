@@ -1,4 +1,4 @@
-## Terminology Bindings
+## 用語の関係
 
 | Path | Definition | Type | Reference |
 | --- | --- | --- | --- |
