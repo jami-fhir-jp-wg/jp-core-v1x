@@ -1,4 +1,4 @@
-### Terminology Bindings
+## Terminology Bindings
 
 | Path | Definition | Type | Reference |
 | --- | --- | --- | --- |
@@ -15,14 +15,14 @@
 | ServiceRequest.bodySite |  | [Example](http://hl7.org/fhir/R4/terminologies.html#example) | [JP Core Procedure BodySite ValueSet](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/jpcore-r4/feature/swg2_servicerequest/ValueSet-jp-procedure-body-site-vs.html) |
 
 
-### Constraints
+## 制約
 
 | id | Level | Location | Description | Expression |
 | --- | --- | --- | --- | --- |
 | prr-1 | Rule | (base) | code要素がある時にだけ、orderDetail要素は存在 | orderDetail.empty() or code.exists |
 
 
-### Notes
+## 補遺
 
 - 多くのサービスリクエストは検体、体の部位やシステムを指定する必要がある。しかし、血清グルコース、胸部Ｘ線写真などでは、これらの情報はcode要素に組み込まれている。また、specimen要素やbodysite要素もこれらを指定するために使われる。
 - 既にある検体へ検査をオーダする場合にだけ、ServiceRequestリソースはSpecimenリソースを参照する。逆に、未採集の検体と一緒にサービスリクエストが最初に作成された時は、SpecimenリソースはServiceRequestリソースを参照する。
@@ -50,7 +50,7 @@
 | ServiceRequest.reasonCode | 削除（reason要素へ移行）|
 | ServiceRequest.reasonReference | 削除 (reason要素へ移行) |
 
-### Search Parameters
+## 検索パラメータ
 
 このリソースの検索パラメータ。基本のパラメータも適用される。詳細は[Searching](http://hl7.org/fhir/R4/search.html)を参照。
 

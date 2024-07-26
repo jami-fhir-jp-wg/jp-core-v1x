@@ -1,6 +1,6 @@
-# ServiceRequest v1.1
+本プロファイル説明は、患者に対し立案・実施されるリクエストの記録で、処置や診断、もしくは他のサービスのために用いられるFHIR ServiceRequestリソースを使用するにあたっての、最低限の制約を記述したものである。
 
-### Scope and Usage
+## スコープ
 
 このServiceRequestリソースはFHIRにおけるワークフロー管理を構成するリソース群（Request, Event, Definition）のRequestに相当する。 － [WorkFlow](http://hl7.org/fhir/R4/workflow.html)を参照のこと。
 
@@ -22,20 +22,24 @@ ServiceRequestリソースは患者に対し立案・実施されるリクエス
 
 処置は医療従事者だけでなく、友人、親戚、場合によっては患者自身で実施される。
 
-ServiceRequestリソースの主な目的は、ある患者（獣医学の患畜も含まれる）の処置のオーダリングのサポートである。しかし、ヘルスケア関連の業務には、被験者のグループや医療機器、さらには建物内部の配管や水の集まる場所などの環境に対する診断調査なども含まれ、ServiceRequestリソースはこれらのユースケースのすべてをサポートする点を認識する必要がある。サービス・リクエストは、臨床医によってオーダリングシステム（CPOEシステム）に入力されたオーダと同様に、患者の臨床記録やケアの記録に基づいて作成された臨床判断支援システム（CDSシステム） による提案も表現する。[CarePlan](http://hl7.org/fhir/R4/careplan.html)リソースで参照される計画された処置を表す場合にもこのリソースによって表現される。
+ServiceRequestリソースの主な目的は、ある患者（獣医学の患畜も含まれる）の処置のオーダリングのサポートである。しかし、ヘルスケア関連の業務には、被験者のグループや医療機器、さらには建物内部の配管や水の集まる場所などの環境に対する診断調査なども含まれ、ServiceRequestリソースはこれらのユースケースのすべてをサポートする点を認識する必要がある。サービスリクエストは、医師等によってオーダリングシステム（CPOEシステム）に入力されたオーダと同様に、患者の臨床記録やケアの記録に基づいて作成された臨床判断支援システム（CDSシステム） による提案も表現する。[CarePlan](http://hl7.org/fhir/R4/careplan.html)リソースで参照される計画された処置を表す場合にもこのリソースによって表現される。
 
-このリソースが用いられる一般的なワークフローは、臨床システムでのサービスリクエストの作成である。サービスリクエストは、おそらくは中継されて、処置を実施する部門（例えば手術部門、生理機能検査部門、臨床検査部門、画像診断検査部門、理学療法部門など）のシステムとやり取りされる。サービスリクエストを受けた部門はリクエストを受諾した後、処置を実施し、実施されたリクエストを参照するレポートを発行する。
+このリソースが用いられる一般的なワークフローは、臨床システムでのサービスリクエストの作成である。サービスリクエストは、処置を実施する部門（例えば手術部門、生理機能検査部門、臨床検査部門、画像診断検査部門、理学療法部門など）のシステム（エージェントなど）からアクセスされたり、交換される。。サービスリクエストを受けた部門はリクエストを受諾した後、処置を実施し、実施されたリクエストを参照するレポートを発行する。
 
-ServiceRequestリソースが要求できる手技は1つに限定される。ワークフローが複数の処置を同時に要求した場合は、複数のServiceRequestインスタンスが作成される。これらのインスタンスはワークフローの要求により異なった方法でリンクされる。詳しくは、[Request pattern](http://hl7.org/fhir/R4/request.html)を参照のこと。
+ServiceRequestリソースが要求できる処置は1つに限定される。ワークフローが複数の処置を同時に要求した場合は、複数のServiceRequestインスタンスが作成される。これらのインスタンスはワークフローの要求により異なった方法でリンクされる。詳しくは、[Request pattern](http://hl7.org/fhir/R4/request.html)を参照のこと。
 
-### Boundaries and Relationships
+## 関連するリソースとの関係性
 
-ServiceRequestリソースは実施されるサービスの立案、オーダの記録であり、結果として、[Procedure](http://jpfhir.jp/fhir/core/StructureDefinition/JP_Procedure.html)、[Observation](http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common.html)、[DiagnosticReport][http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common.html]、[ImagingStudy](http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology.html)など、関連するリソースが作られる。ServiceRequestリソースと対照的に、[Task](http://hl7.org/fhir/R4/task.html)リソースは計画から結果までを網羅し、完了するまでの実施状況を追跡する。つまり、レコードに対して実行するタスクのリクエストや追跡、または実施過程の一部として施行すべき手順のチェックリストに対する追跡など、「管理的」なアクションを目的とする。ServiceRequestリソースは、Taskリソースの作成のきっかけになる高レベルの認可でもあり、また、Taskリソースが達成しようとしている「リクエスト」リソースにもなる。
+ServiceRequestリソースは実施されるサービスの立案、オーダの記録であり、結果として、[Procedure](http://jpfhir.jp/fhir/core/StructureDefinition/JP_Procedure.html)、[Observation](http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common.html)、[DiagnosticReport](http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common.html)、[ImagingStudy](http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology.html)など、関連するリソースが作られる。ServiceRequestリソースと対照的に、[Task](http://hl7.org/fhir/R4/task.html)リソースは計画から結果までを網羅し、完了するまでの実施状況を追跡する。つまり、レコードに対して実行するタスクのリクエストや追跡、または実施過程の一部として施行すべき手順のチェックリストに対する追跡など、「管理的」なアクションを目的とする。ServiceRequestリソースは、Taskリソースを作成する上位のトリガーでもあり、Taskリソースが達成しようとしているRequestリソースにもなる。
 
-ServiceRequestリソースは[CommunicationRequest](http://hl7.org/fhir/R4/communicationrequest.html)リソースとも関連する。CommunicationRequestリソースは単に情報を公表する。一方で、ServiceRequestリソースは、トレーニングやカウンセリングの一環として情報を要求する場合に使われ、例えば、患者の理解度を確認したり、患者の精神状態を変化させようとするために使われる。あるワークフローでは両方のリソースが存在する。例えば、CommunicationRequestを受けて、医師はServiceRequestをオーダするかもしれない。
+ServiceRequestリソースは[CommunicationRequest](http://hl7.org/fhir/R4/communicationrequest.html)リソースとも関連する。CommunicationRequestリソースは単に情報を開示するRequestリソースである。一方で、ServiceRequestリソースは、トレーニングやカウンセリングの一環として情報を要求する場合に使われ、例えば、患者の理解度を確認したり、患者の精神状態を変化させようとするために使われる。あるワークフローでは両方のリソースが存在する。例えば、CommunicationRequestを受けて、医師はServiceRequestをオーダするかもしれない。
 
-### References
+### リファレンス
 
 このリソースは [Appointment](http://hl7.org/fhir/R4/appointment.html#Appointment), [BiologicallyDerivedProduct](http://hl7.org/fhir/R4/biologicallyderivedproduct.html#BiologicallyDerivedProduct), [CarePlan](http://hl7.org/fhir/R4/careplan.html#CarePlan), [Claim](http://hl7.org/fhir/R4/claim.html#Claim), [DeviceUseStatement](http://hl7.org/fhir/R4/deviceusestatement.html#DeviceUseStatement), [DiagnosticReport](http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common.html), [Encounter](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/jpcore-r4/feature/swg2_servicerequest/StructureDefinition-jp-encounter.html), [EpisodeOfCare](http://hl7.org/fhir/R4/episodeofcare.html#EpisodeOfCare), [ExplanationOfBenefit](http://hl7.org/fhir/R4/explanationofbenefit.html#ExplanationOfBenefit),[Goal](http://hl7.org/fhir/R4/goal.html#Goal), [ImagingStudy](http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology.html), [Media](http://hl7.org/fhir/R4/media.html#Media), [MedicationRequest](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/jpcore-r4/feature/swg2_servicerequest/StructureDefinition-jp-medicationrequest.html), [MedicationStatement](http://hl7.org/fhir/R4/medicationstatement.html#MedicationStatement), [Observation](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/jpcore-r4/feature/swg2_servicerequest/StructureDefinition-jp-observation-common.html), [Procedure](https://jami-fhir-jp-wg.github.io/jp-core-v1xpages/jpcore-r4/feature/swg2_servicerequest/StructureDefinition-jp-procedure.html), [QuestionnaireResponse](http://hl7.org/fhir/R4/questionnaireresponse.html#QuestionnaireResponse), [Specimen](http://hl7.org/fhir/R4/specimen.html#Specimen)などのリソースとServiceRequest自身から参照される。
 
 このリソースは[Request](http://hl7.org/fhir/R4/request.html#Request)パターンを実装する。
+
+## プロファイル定義
+
+{% include markdown-link-references.md %}
