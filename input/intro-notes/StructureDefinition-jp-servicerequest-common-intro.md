@@ -1,5 +1,3 @@
-本プロファイル説明は、患者に対し立案・実施されるリクエストの記録で、処置や診断、もしくは他のサービスのために用いられるFHIR ServiceRequestリソースを使用するにあたっての、最低限の制約を記述したものである。
-
 ## スコープ
 
 このServiceRequestリソースはFHIRにおけるワークフロー管理を構成するリソース群（Request, Event, Definition）のRequestに相当する。 － [WorkFlow](http://hl7.org/fhir/R4/workflow.html)を参照のこと。

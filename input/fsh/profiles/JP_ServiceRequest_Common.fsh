@@ -1,7 +1,7 @@
 Profile: JP_ServiceRequest_Common
 Parent:	ServiceRequest
 Id: jp-servicerequest-common
-Description:    "JP-ServiceRequest-Common"
+Description:    "本プロファイル説明は、患者に対し立案・実施されるリクエストの記録で、処置や診断、もしくは他のサービスのために用いられるFHIR ServiceRequestリソースを使用するにあたっての、最低限の制約を記述したものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common"
 * ^status = #active
 * ^date = "2024-07-18"
