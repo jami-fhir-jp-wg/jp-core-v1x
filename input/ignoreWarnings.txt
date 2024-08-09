@@ -19,7 +19,7 @@ ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_C
 ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1' not found
 
 # CodeSystem
-A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
+# A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
 
 #  Local CodeSystems Warnings
 A definition for CodeSystem 'http://abc-hospital.local/fhir/Observation/localcode' could not be found, so the code cannot be validated
