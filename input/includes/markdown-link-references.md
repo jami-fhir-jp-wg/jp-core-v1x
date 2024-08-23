@@ -57,6 +57,8 @@
 [JP_MedicationRequest_Injection]: StructureDefinition-jp-medicationrequest-injection.html
 [JP_MedicationRequest]: StructureDefinition-jp-medicationrequest.html
 [JP_MedicationSimpleQuantity]: StructureDefinition-jp-medicationsimplequantity.html
+[JP_MedicationStatement]: StructureDefinition-jp-medicationstatement.html
+[JP_MedicationStatement_Injection]: StructureDefinition-jp-medicationstatement-injection.html
 [JP_MedicationTiming]: StructureDefinition-jp-medicationtiming.html
 [JP_Observation_BodyMeasurement]: StructureDefinition-jp-observation-bodymeasurement.html
 [JP_Observation_Common]: StructureDefinition-jp-observation-common.html
@@ -210,6 +212,8 @@
 [jp-medicationrequest-example-2]: MedicationRequest-jp-medicationrequest-example-2.html
 [jp-medicationrequest-injection-example-1]: MedicationRequest-jp-medicationrequest-injection-example-1.html
 [jp-medicationrequest-injection-example-2]: MedicationRequest-jp-medicationrequest-injection-example-2.html
+[jp-medicationstatement-example-1]: MedicationStatement-jp-medicationstatement-example-1.html
+[jp-medicationstatement-injection-example-1]: MedicationStatement-jp-medicationstatement-injection-example-1.html
 [jp-department-ssmix-namingsystem]: NamingSystem-jp-department-ssmix-namingsystem.html
 [jp-endoscopyterminology-codes-jed-ns]: NamingSystem-jp-endoscopyterminology-codes-jed-ns.html
 [jp-medicalfeescoretype-namingsystem]: NamingSystem-jp-medicalfeescoretype-namingsystem.html
