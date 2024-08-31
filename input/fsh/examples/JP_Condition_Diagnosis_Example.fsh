@@ -6,11 +6,11 @@ Usage: #example
 * extension[0]
   * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseaseOutcome"
   * valueCodeableConcept
-    * coding[1]
+    * coding[0]
       * system = "http://terminology.sample.com/CodeSystem/disease-outcome"
       * code = #2
       * display = "寛解"
-    * coding[2]
+    * coding[1]
       * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseOutcomeJHSD0006_CS"
       * code = #M
       * display = "寛解"
