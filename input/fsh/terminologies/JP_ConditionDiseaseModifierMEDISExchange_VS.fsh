@@ -6,7 +6,7 @@ Description: "MEDIS ICD10対応標準病名マスター(修飾語交換用コー
 * ^status = #active
 * ^experimental = false
 * ^date = "2023-08-05"
-* ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
+* ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
 
 // 現状はMEDIS交換用コードのコードシステムをそのまま使用する
 * include codes from system $JP_ConditionDiseaseModifierMEDISExchange_CS

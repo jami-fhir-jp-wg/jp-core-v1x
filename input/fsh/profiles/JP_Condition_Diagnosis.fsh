@@ -14,6 +14,8 @@ Description: "このプロファイルはConditionリソースに対して、患
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
+* extension contains
+    JP_Condition_DiseaseOutcome named diseaseOutcome ..1
 //* category MS
 //* category ^short = "病名の分類を表すコード。"
 //* category ^definition = "病名の分類を表すコード。"
@@ -31,39 +33,39 @@ Description: "このプロファイルはConditionリソースに対して、患
 * clinicalStatus ^short = "active | recurrence | relapse | inactive | remission | resolved （アクティブ | 再発 | 再燃 | インアクティブ | 寛解 | 完治）【詳細参照】"
 * clinicalStatus ^definition = "The clinical status of the condition.\r\n\r\nこの患者状態の臨床的ステータス（アクティブか否かなど）"
 * clinicalStatus ^comment = "診断の場合、転帰区分を指定するのに使用する。使用する場合、ConditionClinicalStatusCodesは必須で、それ以外にHL7表0241、JHSD表0006、レセプト電算システム転帰区分コードが使用できる。"
-* clinicalStatus.coding ^slicing.discriminator.type = #value
-* clinicalStatus.coding ^slicing.discriminator.path = "system"
-* clinicalStatus.coding ^slicing.rules = #open
-* clinicalStatus.coding ^slicing.ordered = false
-* clinicalStatus.coding contains
+// * clinicalStatus.coding ^slicing.discriminator.type = #value
+// * clinicalStatus.coding ^slicing.discriminator.path = "system"
+// * clinicalStatus.coding ^slicing.rules = #open
+// * clinicalStatus.coding ^slicing.ordered = false
+// * clinicalStatus.coding contains
 //    clinical 1..1 and
-    hl70241 0..1 and
-    jhsd0006 0..1 and
-    receipt 0..1
+    // hl70241 0..1 and
+    // jhsd0006 0..1 and
+    // receipt 0..1
 //* clinicalStatus.coding[clinical] from http://hl7.org/fhir/ValueSet/condition-clinical (required)
 //* clinicalStatus.coding[clinical].system = http://terminology.hl7.org/CodeSystem/condition-clinical (exactly)
 //* clinicalStatus.coding[clinical].code 1..
 //* clinicalStatus.coding[clinical] ^short = "Condition Clinical Status Codes。【詳細参照】"
 //* clinicalStatus.coding[clinical] ^definition = "HL7表0241で定義されているコード。"
 //* clinicalStatus.coding[clinical] ^comment = "JP_ConditionDiseaseOutcomeHL70241_VSの中から適切なコードを指定する。"
-* clinicalStatus.coding[hl70241] from $JP_ConditionDiseaseOutcomeHL70241_VS (required)
-* clinicalStatus.coding[hl70241].system = $JP_ConditionDiseaseOutcomeHL70241_CS (exactly)
-* clinicalStatus.coding[hl70241].code 1..
-* clinicalStatus.coding[hl70241] ^short = "HL7表0241。【詳細参照】"
-* clinicalStatus.coding[hl70241] ^definition = "HL7表0241で定義されているコード。"
-* clinicalStatus.coding[hl70241] ^comment = "JP_ConditionDiseaseOutcomeHL70241_VSの中から適切なコードを指定する。"
-* clinicalStatus.coding[jhsd0006] from $JP_ConditionDiseaseOutcomeJHSD0006_VS (required)
-* clinicalStatus.coding[jhsd0006].system = $JP_ConditionDiseaseOutcomeJHSD0006_CS (exactly)
-* clinicalStatus.coding[jhsd0006].code 1..
-* clinicalStatus.coding[jhsd0006] ^short = "JHSD表0006。【詳細参照】"
-* clinicalStatus.coding[jhsd0006] ^definition = "JHSD表0006で定義されているコード。"
-* clinicalStatus.coding[jhsd0006] ^comment = "JP_ConditionDiseaseOutcomeJHSD0006_VSの中から適切なコードを指定する。"
-* clinicalStatus.coding[receipt] from $JP_ConditionDiseaseOutcomeReceipt_VS (required)
-* clinicalStatus.coding[receipt].system = $JP_ConditionDiseaseOutcomeReceipt_CS (exactly)
-* clinicalStatus.coding[receipt].code 1..
-* clinicalStatus.coding[receipt] ^short = "レセプト電算システム転帰区分コード。【詳細参照】"
-* clinicalStatus.coding[receipt] ^definition = "レセプト電算システムで定義されている転帰区分コード。"
-* clinicalStatus.coding[receipt] ^comment = "JP_ConditionDiseaseOutcomeReceipt_VSの中から適切なコードを指定する。"
+// * clinicalStatus.coding[hl70241] from $JP_ConditionDiseaseOutcomeHL70241_VS (required)
+// * clinicalStatus.coding[hl70241].system = $JP_ConditionDiseaseOutcomeHL70241_CS (exactly)
+// * clinicalStatus.coding[hl70241].code 1..
+// * clinicalStatus.coding[hl70241] ^short = "HL7表0241。【詳細参照】"
+// * clinicalStatus.coding[hl70241] ^definition = "HL7表0241で定義されているコード。"
+// * clinicalStatus.coding[hl70241] ^comment = "JP_ConditionDiseaseOutcomeHL70241_VSの中から適切なコードを指定する。"
+// * clinicalStatus.coding[jhsd0006] from $JP_ConditionDiseaseOutcomeJHSD0006_VS (required)
+// * clinicalStatus.coding[jhsd0006].system = $JP_ConditionDiseaseOutcomeJHSD0006_CS (exactly)
+// * clinicalStatus.coding[jhsd0006].code 1..
+// * clinicalStatus.coding[jhsd0006] ^short = "JHSD表0006。【詳細参照】"
+// * clinicalStatus.coding[jhsd0006] ^definition = "JHSD表0006で定義されているコード。"
+// * clinicalStatus.coding[jhsd0006] ^comment = "JP_ConditionDiseaseOutcomeJHSD0006_VSの中から適切なコードを指定する。"
+// * clinicalStatus.coding[receipt] from $JP_ConditionDiseaseOutcomeReceipt_VS (required)
+// * clinicalStatus.coding[receipt].system = $JP_ConditionDiseaseOutcomeReceipt_CS (exactly)
+// * clinicalStatus.coding[receipt].code 1..
+// * clinicalStatus.coding[receipt] ^short = "レセプト電算システム転帰区分コード。【詳細参照】"
+// * clinicalStatus.coding[receipt] ^definition = "レセプト電算システムで定義されている転帰区分コード。"
+// * clinicalStatus.coding[receipt] ^comment = "JP_ConditionDiseaseOutcomeReceipt_VSの中から適切なコードを指定する。"
 * verificationStatus ^short = "unconfirmed | provisional | differential | confirmed | refuted | entered-in-error（十分に確認されていない | 暫定的 | 鑑別的 | 十分な根拠で存在 | 十分な根拠で否定 | 誤記載）。【詳細参照】"
 * verificationStatus ^definition = "The verification status to support the clinical status of the condition.\r\n\r\n この患者状態が存在するかどうかの検証状況。"
 * verificationStatus ^comment = "疑い病名を指定するのに使用する。疑い病名の場合は 'unconfirmed'を、確定病名の場合は'confirmed'をそれぞれ指定する。"
@@ -123,6 +125,50 @@ Description: "このプロファイルはConditionリソースに対して、患
 // ==============================
 //   Extension 定義
 // ==============================
+//-------------------------------
+// JP_Condition_DiseaseOutcome
+//-------------------------------
+Extension: JP_Condition_DiseaseOutcome
+Id: jp-condition-disease-outcome
+Title: "JP Core Disease Outcome Extension"
+Description: "病名の転帰を格納するための拡張"
+* ^url = $JP_Condition_DiseaseOutcome
+* ^status = #active
+* ^date = "2024-08-31"
+* ^context.type = #element
+* ^context.expression = "Condition"
+* . ^short = "病名転帰"
+* . ^definition = "病名の転帰を格納するための拡張。\r\n病名の転帰をCodeableConcept型で記述する。"
+* url = $JP_Condition_DiseaseOutcome (exactly)
+* value[x] only CodeableConcept
+* value[x] ^short = "病名転帰"
+* valueCodeableConcept.coding ^slicing.discriminator.type = #value
+* valueCodeableConcept.coding ^slicing.discriminator.path = "system"
+* valueCodeableConcept.coding ^slicing.rules = #open
+* valueCodeableConcept.coding ^slicing.ordered = false
+* valueCodeableConcept.coding contains
+    hl70241 0..1 and
+    jhsd0006 0..1 and
+    receipt 0..1
+* valueCodeableConcept.coding[hl70241] from $JP_ConditionDiseaseOutcomeHL70241_VS (required)
+* valueCodeableConcept.coding[hl70241].system = $JP_ConditionDiseaseOutcomeHL70241_CS (exactly)
+* valueCodeableConcept.coding[hl70241].code 1..
+* valueCodeableConcept.coding[hl70241] ^short = "HL7表0241。【詳細参照】"
+* valueCodeableConcept.coding[hl70241] ^definition = "HL7表0241で定義されているコード。"
+* valueCodeableConcept.coding[hl70241] ^comment = "JP_ConditionDiseaseOutcomeHL70241_VSの中から適切なコードを指定する。"
+* valueCodeableConcept.coding[jhsd0006] from $JP_ConditionDiseaseOutcomeJHSD0006_VS (required)
+* valueCodeableConcept.coding[jhsd0006].system = $JP_ConditionDiseaseOutcomeJHSD0006_CS (exactly)
+* valueCodeableConcept.coding[jhsd0006].code 1..
+* valueCodeableConcept.coding[jhsd0006] ^short = "JHSD表0006。【詳細参照】"
+* valueCodeableConcept.coding[jhsd0006] ^definition = "JHSD表0006で定義されているコード。"
+* valueCodeableConcept.coding[jhsd0006] ^comment = "JP_ConditionDiseaseOutcomeJHSD0006_VSの中から適切なコードを指定する。"
+* valueCodeableConcept.coding[receipt] from $JP_ConditionDiseaseOutcomeReceipt_VS (required)
+* valueCodeableConcept.coding[receipt].system = $JP_ConditionDiseaseOutcomeReceipt_CS (exactly)
+* valueCodeableConcept.coding[receipt].code 1..
+* valueCodeableConcept.coding[receipt] ^short = "レセプト電算システム転帰区分コード。【詳細参照】"
+* valueCodeableConcept.coding[receipt] ^definition = "レセプト電算システムで定義されている転帰区分コード。"
+* valueCodeableConcept.coding[receipt] ^comment = "JP_ConditionDiseaseOutcomeReceipt_VSの中から適切なコードを指定する。"
+
 //-------------------------------
 // JP_Condition_DiseasePrefixModifier
 //-------------------------------

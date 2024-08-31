@@ -3,6 +3,18 @@ InstanceOf: JP_Condition_Diagnosis
 Title: "JP Core Condition Diagnosis Example 病名（過敏性大腸炎の初期疾患）"
 Description: "過敏性大腸炎の初期疾患の例"
 Usage: #example
+* extension[0]
+    * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseaseOutcome"
+    * valueCodeableConcept
+      * coding[1]
+        * system = "http://terminology.sample.com/CodeSystem/disease-outcome"
+        * code = #2
+        * display = "寛解"
+      * coding[2]
+        * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseOutcomeJHSD0006_CS"
+        * code = #M
+        * display = "寛解"
+      * text = "寛解"
 *  identifier
   * system = "http://terminology.sample.com/IdSystem/disease/1311234567"
   * value = "123456789012345"
@@ -11,15 +23,6 @@ Usage: #example
     * system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
     * code = #remission
     * display = "Remission"
-  * coding[1]
-    * system = "http://terminology.sample.com/CodeSystem/disease-outcome"
-    * code = #2
-    * display = "寛解"
-  * coding[2]
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseOutcomeJHSD0006_CS"
-    * code = #M
-    * display = "寛解"
-  * text = "寛解"
 *  verificationStatus
   *  coding[0]
     *  system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"

@@ -67,6 +67,7 @@ Alias: $JP_Coverage_InsuredPersonSubNumber = http://jpfhir.jp/fhir/core/Extensio
 Alias: $JP_Coverage_InsuredPersonSymbol = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol
 Alias: $JP_Condition_DiseasePrefixModifier = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePrefixModifier
 Alias: $JP_Condition_DiseasePostfixModifier = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePostfixModifier
+Alias: $JP_Condition_DiseaseOutcome = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseaseOutcome
 Alias: $JP_Immunization_CertificatedDate = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate
 Alias: $JP_Immunization_DueDateOfNextDose = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose
 Alias: $JP_Immunization_ManufacturedDate = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate
