@@ -16,6 +16,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
+    JP_MedicationDispense_Preparation named preparation ..* and
     JP_MedicationDispense_RpNumber named rpNumber ..1
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
@@ -31,7 +32,6 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier[requestIdentifier] ^short = "処方オーダに対するID(MedicationRequestからの継承)"
 * identifier[requestIdentifier] ^definition = "薬剤をオーダする単位としての処方箋に対するID。原則として調剤の基となったMedicationRequestのIDを設定する。"
 * identifier[requestIdentifier].value 1..
-* extension contains JP_MedicationDispense_Preparation named preparation ..*
 * partOf only Reference(JP_Procedure)
 * partOf ^short = "親イベントへの参照"
 * partOf ^definition = "この調剤の契機となったProcedureリソースへの参照。"
