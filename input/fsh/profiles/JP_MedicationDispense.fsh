@@ -207,7 +207,7 @@ Extension: JP_MedicationDispense_DrugNumber
 Id: jp-medicationdiepense-drug-number
 Title: "JP Core MedicationDiepense DrugNumber Extension"
 Description: "同一RP番号（剤グループ）での薬剤の連番"
-* ^url = $JP_MedicationAdministration_DrugNumber
+* ^url = $JP_MedicationDispense_DrugNumber
 * ^status = #active
 * ^date = "2024-09-06"
 * ^purpose = "薬剤番号を格納する拡張"
