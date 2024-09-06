@@ -246,7 +246,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * extension ^slicing.discriminator.path = "url"
 * extension ^slicing.rules = #open
 * extension contains
-    JP_MedicationRequest_RpNumber named rpNumber ..1 and
+    JP_MedicationRequest_RpNumber named rpNumber ..1
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
