@@ -3,7 +3,7 @@ InstanceOf: JP_MedicationDispense_Injection
 Title: "JP Core MedicationDispense Injection Example 調剤実施 注射薬"
 Description: "調剤実施 注射薬"
 Usage: #example
-* extension[=].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_RpNumber"
+* extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_RpNumber"
 * extension[=].valueInteger = 1
 * contained[0] = jp-medicationdispense-injection-medication-example-1
 * contained[+] = jp-medicationdispense-injection-bodystructure-example-1
