@@ -3,10 +3,10 @@ InstanceOf: JP_MedicationRequest
 Title: "JP Core MedicationRequest Example 内服処方指示 ムコダイン錠２５０ｍｇ"
 Description: "内服処方指示 ムコダイン錠２５０ｍｇ"
 Usage: #example
-* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[rpNumber].value = "1"
-* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
-* identifier[orderInRp].value = "1"
+* extension[=].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_RpNumber"
+* extension[=].valueInteger = 1
+* extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DrugNumber"
+* extension[=].valueInteger = 1
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.1.1"
 * intent = #order

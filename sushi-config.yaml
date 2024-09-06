@@ -169,11 +169,15 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_DrugNumber
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RpNumber
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_UncategorizedComment
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_DrugNumber
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_RpNumber
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_Preparation
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Device
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_DosageComment
@@ -187,6 +191,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DrugNumber
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_RpNumber
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo

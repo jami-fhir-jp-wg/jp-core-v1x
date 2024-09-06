@@ -107,11 +107,15 @@ Id: jp-medicationadministrationBase
 Title: "JP Core MedicationAdministrationBase Profile"
 Description: "このプロファイルはMedicationAdministrationリソースに対して、投薬実施情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 // extension 参照宣言
+* extension ^slicing.discriminator.type = #value
+* extension ^slicing.discriminator.path = "url"
+* extension ^slicing.rules = #open
 * extension contains
     JP_MedicationAdministration_RequestDepartment named requestDepartment ..1 and
     JP_MedicationAdministration_RequestAuthoredOn named requestAuthoredOn ..1 and
     JP_MedicationAdministration_Location named location ..1   and
-    JP_MedicationAdministration_Requester named requester ..*
+    JP_MedicationAdministration_Requester named requester ..* and
+    JP_MedicationAdministration_RpNumber named rpNumber ..1
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministrationBase"
 * ^status = #active
 * ^date = "2023-10-31"
@@ -175,21 +179,8 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
 * ^status = #active
 * ^date = "2023-10-31"
-
-* identifier contains
-    orderInRp 1..1
-* identifier[orderInRp] ^short = "同一RP番号（剤グループ）での薬剤の表記順"
-* identifier[orderInRp] ^definition = "同一剤グループでの薬剤を表記する際の順番。XML形式と異なりJSON形式の場合、表記順は項目の順序を意味しない。したがって、薬剤の記載順を別に規定する必要があるためIDを用いて表現する。"
-* identifier[orderInRp] ^comment = "同一剤グループ内での薬剤の順番を1から順の番号で示す。"
-* identifier[orderInRp].system 1..
-* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82" (exactly)
-* identifier[orderInRp].system ^short = "RP番号内（剤グループ内）の連番を示すsystem値"
-* identifier[orderInRp].system ^definition = "剤グループ内番号の名前空間を識別するURI。固定値urn:oid:1.2.392.100495.20.3.82"
-* identifier[orderInRp].value 1..
-* identifier[orderInRp].value ^short = "RP番号内（剤グループ内）の連番"
-* identifier[orderInRp].value ^definition = "剤グループ内連番。"
-* identifier[orderInRp].value ^comment = "value は string型であり、数値はゼロサプレス、つまり、'01'でなく'1'と指定すること。"
-
+* extension contains
+    JP_MedicationAdministration_DrugNumber named drugNumber ..1
 
 * medication[x] only CodeableConcept
 * medicationCodeableConcept from $JP_MedicationCode_VS (preferred)
@@ -250,6 +241,48 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 // ==============================
 //   Extension 定義
 // ==============================
+//-------------------------------
+// JP_MedicationAdministration_RpNumber
+//-------------------------------
+Extension: JP_MedicationAdministration_RpNumber
+Id: jp-medicationadministration-rp-number
+Title: "JP Core MedicationAdministration RpNumber Extension"
+Description: "処方箋内部の剤グループとしてのRp番号"
+* ^url = $JP_MedicationAdministration_RpNumber
+* ^status = #active
+* ^date = "2024-09-06"
+* ^purpose = "Rp番号を格納する拡張"
+* ^context.type = #element
+* ^context.expression = "MedicationAdministration"
+* . ^short = "Rp番号"
+* . ^definition = "Rp番号"
+* url = $JP_MedicationAdministration_RpNumber (exactly)
+* value[x] 1..
+* value[x] only integer
+* value[x] ^short = "Rp番号"
+* value[x] ^definition = "Rp番号"
+
+//-------------------------------
+// JP_MedicationAdministration_DrugNumber
+//-------------------------------
+Extension: JP_MedicationAdministration_DrugNumber
+Id: jp-medicationadministration-drug-number
+Title: "JP Core MedicationAdministration DrugNumber Extension"
+Description: "同一RP番号（剤グループ）での薬剤の連番"
+* ^url = $JP_MedicationAdministration_DrugNumber
+* ^status = #active
+* ^date = "2024-09-06"
+* ^purpose = "薬剤番号を格納する拡張"
+* ^context.type = #element
+* ^context.expression = "MedicationAdministration"
+* . ^short = "薬剤番号"
+* . ^definition = "薬剤番号を表現する拡張"
+* url = $JP_MedicationAdministration_DrugNumber (exactly)
+* value[x] 1..
+* value[x] only integer
+* value[x] ^short = "薬剤番号"
+* value[x] ^definition = "RP番号内（剤グループ内）の薬剤の連番"
+
 //-------------------------------
 // JP_MedicationAdministration_Location
 //-------------------------------

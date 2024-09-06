@@ -3,10 +3,10 @@ InstanceOf: JP_MedicationRequest_Injection
 Title: "JP Core MedicationRequest Injection Example 注射処方指示 ワンショット静脈注射"
 Description: "注射処方指示 ホリゾン注射液１０ｍｇワンショット静脈注射"
 Usage: #example
+* extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_RpNumber"
+* extension[=].valueInteger = 1
 * contained[0] = jp-medicationrequest-injection-medication-example-1
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-1
-* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[rpNumber].value = "1"
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.1"
 * status = #active
@@ -37,11 +37,11 @@ InstanceOf: JP_MedicationRequest_Injection
 Title: "JP Core MedicationRequest Injection Example 注射処方指示 点滴注射"
 Description: "点滴注射"
 Usage: #example
+* extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_RpNumber"
+* extension[=].valueInteger = 2
 * contained[0] = jp-medicationrequest-injection-medication-example-2
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-2
 * contained[+] = jp-medicationrequest-injection-device-example-2
-* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[rpNumber].value = "2"
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.2.1"
 * status = #active
