@@ -239,6 +239,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_DosePerPeriod
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationStatement
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationStatement_Injection
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationSimpleQuantity
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationTiming
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_BodyMeasurement
