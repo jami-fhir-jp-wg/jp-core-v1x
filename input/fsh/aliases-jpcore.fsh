@@ -1,4 +1,4 @@
-// ImplementationGuid
+// ImplementationGuide
 Alias: $FHIRJPCoreImplementationGuide = http://jpfhir.jp/fhir/core/ImplementationGuide/jpfhir.jp.core
 
 // StructureDefinition: Profile, DataType
@@ -6,6 +6,7 @@ Alias: $JP_AllergyIntolerance = http://jpfhir.jp/fhir/core/StructureDefinition/J
 Alias: $JP_Binary = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Binary
 Alias: $JP_CarePlan = http://jpfhir.jp/fhir/core/StructureDefinition/JP_CarePlan
 Alias: $JP_Condition = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition
+Alias: $JP_Condition_Diagnosis = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition_Diagnosis
 
 Alias: $JP_Consent = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Consent
 Alias: $JP_Coverage = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage
@@ -66,6 +67,9 @@ Alias: $JP_Specimen = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen
 Alias: $JP_Coverage_InsuredPersonNumber = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber
 Alias: $JP_Coverage_InsuredPersonSubNumber = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber
 Alias: $JP_Coverage_InsuredPersonSymbol = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol
+Alias: $JP_Condition_DiseasePrefixModifier = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePrefixModifier
+Alias: $JP_Condition_DiseasePostfixModifier = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePostfixModifier
+Alias: $JP_Condition_DiseaseOutcome = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseaseOutcome
 Alias: $JP_Immunization_CertificatedDate = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate
 Alias: $JP_Immunization_DueDateOfNextDose = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose
 Alias: $JP_Immunization_ManufacturedDate = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate
@@ -112,6 +116,17 @@ Alias: $JP_Patient_KanaSort_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_P
 Alias: $JAMI__MedicationMethodDetailDeviceInjection_CS = urn:oid:1.2.392.200250.2.2.20.45
 Alias: $JP_ConclusionCodeJed_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConclusionCodeJed_CS
 Alias: $JP_ConditionSeverity_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionSeverity_CS
+Alias: $JP_ConditionDiseaseCodeICD10_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeICD10_CS
+Alias: $JP_ConditionDiseaseCodeICD11_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeICD11_CS
+Alias: $JP_ConditionDiseaseCodeMEDISRecordNo_CS = urn:oid:1.2.392.200119.4.101.2
+Alias: $JP_ConditionDiseaseCodeMEDISExchange_CS = urn:oid:1.2.392.200119.4.101.6
+Alias: $JP_ConditionDiseaseCodeReceipt_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeReceipt_CS
+Alias: $JP_ConditionDiseaseModifierMEDISRecordNo_CS = urn:oid:1.2.392.200119.4.201.2
+Alias: $JP_ConditionDiseaseModifierMEDISExchange_CS = urn:oid:1.2.392.200119.4.201.5
+Alias: $JP_ConditionDiseaseModifierReceipt_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseModifierReceipt_CS
+Alias: $JP_ConditionDiseaseOutcomeHL70241_CS = http://jpfhir.jp/fhir/core/CodeSystem/HL70241
+Alias: $JP_ConditionDiseaseOutcomeJHSD0006_CS = http://jpfhir.jp/fhir/core/CodeSystem/JHSD0006
+Alias: $JP_ConditionDiseaseOutcomeReceipt_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseOutcomeReceipt_CS
 Alias: $JP_Department_SsMix_CS = urn:oid:1.2.392.200250.2.2.2
 Alias: $JP_DiseaseICD10_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/ICD10-2013-full
 Alias: $JP_DocumentCodes_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_CS
@@ -189,6 +204,18 @@ Alias: $JAMI__MedicationMethodDetailDeviceInjection_VS = http://jami.jp/ValueSet
 Alias: $JP_AllergyIntolerance_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS
 Alias: $JP_ConclusionCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
 Alias: $JP_ConditionSeverity_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionSeverity_VS
+Alias: $JP_ConditionDiseaseCodeICD10_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeICD10_VS
+Alias: $JP_ConditionDiseaseCodeICD11_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeICD11_VS
+Alias: $JP_ConditionDiseaseCodeMEDISExchange_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeMEDISExchange_VS
+Alias: $JP_ConditionDiseaseCodeMEDISRecordNo_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeMEDISRecordNo_VS
+Alias: $JP_ConditionDiseaseCodeReceipt_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeReceipt_VS
+Alias: $JP_ConditionDiseaseModifierMEDISExchange_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseModifierMEDISExchange_VS
+Alias: $JP_ConditionDiseaseModifierMEDISRecordNo_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseModifierMEDISRecordNo_VS
+Alias: $JP_ConditionDiseaseModifierReceipt_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseModifierReceipt_VS
+Alias: $JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS
+Alias: $JP_ConditionDiseaseOutcomeHL70241_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeHL70241_VS
+Alias: $JP_ConditionDiseaseOutcomeJHSD0006_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeJHSD0006_VS
+Alias: $JP_ConditionDiseaseOutcomeReceipt_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeReceipt_VS
 Alias: $JP_Department_SsMix2Digits_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix2Digits_VS
 Alias: $JP_Department_SsMix3Digits_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix3Digits_VS
 Alias: $JP_Department_SsMix_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS
