@@ -19,8 +19,7 @@ dependencies:
   jpfhir-terminology:
     uri: http://jpfhir.jp/fhir/jpfhir-terminology/
     version: 1.2.1
-    {% include fragment-feedback_form.html %}
-
+    
 #----------------------------------------
 # ページタイトル名称設定
 #----------------------------------------
