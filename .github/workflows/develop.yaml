@@ -1,4 +1,4 @@
-name: JPCore FHIR Task develop
+name: JPCore FHIR Task develop v1.1.2-CSalias
 on:
   push:
     branches: 
