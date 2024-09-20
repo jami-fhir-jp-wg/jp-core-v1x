@@ -20,7 +20,7 @@ jurisdiction: urn:iso:std:iso:3166#JP "Japan"
 dependencies:
   jpfhir-terminology:
     uri: http://jpfhir.jp/fhir/jpfhir-terminology/ImplementationGuide/
-    version: 1.1.1
+    version: 1.2.1
     
 #----------------------------------------
 # ページタイトル名称設定
