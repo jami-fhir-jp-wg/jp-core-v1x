@@ -332,7 +332,7 @@ performer.actorには、医療従事者(Practitioner)、または患者(Patient)
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "urn:oid:1.2.392.200250.2.2.2",
+            "system": "http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment",
             "code": "01",
             "display": "内科"
           }

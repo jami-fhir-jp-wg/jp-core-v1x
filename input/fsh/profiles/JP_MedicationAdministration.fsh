@@ -132,7 +132,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
 * identifier[rpNumber].system = $JP_Medication_RPGroupNumber (exactly)
 * identifier[rpNumber].system ^short = "Rp番号(剤グループ番号)についてのsystem値"
-* identifier[rpNumber].system ^definition = "ここで付番されたIDがRp番号であることを明示するためにOIDとして定義された。urn:oid:1.2.392.100495.20.3.81で固定される。"
+* identifier[rpNumber].system ^definition = "ここで付番されたIDがRp番号であることを明示するためにOID-urlとして定義された。http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumberで固定される。"
 * identifier[rpNumber].value 1..
 * identifier[rpNumber].value ^short = "Rp番号(剤グループ番号)"
 * identifier[rpNumber].value ^definition = "Rp番号(剤グループ番号)。\"1\"など。"

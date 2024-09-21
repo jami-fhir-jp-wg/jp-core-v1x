@@ -338,7 +338,7 @@ performer.actorには、医療従事者(Practitioner)、または患者(Patient)
 ```
 
 ### 実施投与部位
-投与部位を指定する場合は、dosage.site 要素に、CodeableConcept型で指定する。部位コードは、JAMI標準用法コード 表13 外用部位コード（"urn:oid:1.2.392.100495.20.2.33"）を推奨する。
+投与部位を指定する場合は、dosage.site 要素に、CodeableConcept型で指定する。部位コードは、JAMI標準用法コード 表13 外用部位コード（"http://jami.jp/CodeSystem/MedicationBodySiteExternal"）を推奨する。
 HL7表0550 身体部位("http://terminology.hl7.org/CodeSystem/v2-0550")とHL7表0495 身体部位修飾子("http://terminology.hl7.org/CodeSystem/v2-0495")を組み合わせて使用してもよいが、その場合は拡張「BodyStructure」を使用する。
 この拡張は BodyStructureリソースを参照することができるので、location 要素にHL7表0550 身体部位("http://terminology.hl7.org/CodeSystem/v2-0550")のコードを、locationQualifier 要素に
 身体部位修飾子("http://terminology.hl7.org/CodeSystem/v2-0495")のコードをそれぞれ指定したBodyStructureリソースをMedicationRequestリソースのcontained属性に内包し、それをExtension.valueReference 要素で参照するようにする。
@@ -351,7 +351,7 @@ HL7表0550 身体部位("http://terminology.hl7.org/CodeSystem/v2-0550")とHL7�
     "site": {
       "coding": [
         {
-          "system": "urn:oid:1.2.392.100495.20.2.33",
+          "system": "http://jami.jp/CodeSystem/MedicationBodySiteExternal",
           "code": "73L",
           "display": "左腕"
         }
@@ -671,7 +671,7 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
       "valueCodeableConcept": {
         "coding": [
           {
-            "system": "urn:oid:1.2.392.200250.2.2.2",
+            "system": "http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment",
             "code": "01",
             "display": "内科"
           }

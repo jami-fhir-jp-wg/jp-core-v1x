@@ -40,7 +40,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |処方区分|JAHIS処方データ交換規約Ver.3.0C(JHSP表0007)|http://jpfhir.jp/fhir/core/CodeSystem/JHSP0007|
 |薬品単位|MERIT-9(単位）|http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationUnitMERIT9Code|
 |力価区分|処方情報HL7 FHIR記述仕様(力価区分)|http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationIngredientStrengthType|
-|調剤指示|処方情報HL7 FHIR記述仕様(調剤指示)|urn:oid:1.2.392.200250.2.2.30.10|
+|調剤指示|処方情報HL7 FHIR記述仕様(調剤指示)|http://jami.jp/CodeSystem/DrugDispensePreparationMethod|
 |用法|JAMI処方・注射オーダ標準用法規格(用法コード)|http://jami.jp/CodeSystem/MedicationUsage|
 |用法|JAMI処方・注射オーダ標準用法規格(補足用法コード)|http://jami.jp/CodeSystem/MedicationUsageAdditional|
 |投与部位|JAMI処方・注射オーダ標準用法規格(部位コード)|http://jami.jp/CodeSystem/MedicationBodySiteExternal|
@@ -398,7 +398,7 @@ doseQuantityエレメントは省略可能(0..1)である。
 
 ### 調剤指示の記述方法
 単一の薬剤に対する調剤指示は、dispenseRequest要素に対して定義した拡張「InstructionForDispense」を使用する。この拡張は、CodeableConcept型を使用して、コード化された指示ないしテキストによる指示を記録できる。両方を併記してもよい。テキストによる指示を記録する場合は text要素を使用する。一つの薬剤に対して、複数の指示を記録する場合には、この拡張を、拡張単位で繰り返して記録する。 
-調剤指示で使用するコードは、処方情報HL7 FHIR記述仕様(調剤指示)("urn:oid:1.2.392.200250.2.2.30.10")を推奨する。
+調剤指示で使用するコードは、処方情報HL7 FHIR記述仕様(調剤指示)("http://jami.jp/CodeSystem/DrugDispensePreparationMethod")を推奨する。
 
 薬剤単位の調剤指示を表すインスタンス例を示す。
 ```json
@@ -416,7 +416,7 @@ doseQuantityエレメントは省略可能(0..1)である。
         "coding": [
           {
             "code": "C",
-            "system": "urn:oid:1.2.392.200250.2.2.30.10",
+            "system": "http://jami.jp/CodeSystem/DrugDispensePreparationMethod",
             "display": "粉砕指示"
           }
         ]
@@ -474,11 +474,11 @@ doseQuantityエレメントは省略可能(0..1)である。
 ```
 
 ### RP番号、薬剤番号の記述方法
-HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)は、剤単位に個別のMedicationRequestリソースに展開される。このとき、剤グループの番号（RP番号と呼ぶ）と、同一剤グループ内での順番は、いずれも MedicationRequestリソースの identifier で表現することができる。RP番号を識別するURIとして、"urn:oid:1.2.392.100495.20.3.81"を使用する。同一剤グループ内での順番を識別するURIとして、"http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicationAdministrationIndex"を使用する。value は 文字列型であり、数値はゼロサプレス、つまり、"01"でなく"1"と指定すること。
+HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)は、剤単位に個別のMedicationRequestリソースに展開される。このとき、剤グループの番号（RP番号と呼ぶ）と、同一剤グループ内での順番は、いずれも MedicationRequestリソースの identifier で表現することができる。RP番号を識別するURIとして、"http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumber"を使用する。同一剤グループ内での順番を識別するURIとして、"http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicationAdministrationIndex"を使用する。value は 文字列型であり、数値はゼロサプレス、つまり、"01"でなく"1"と指定すること。
 ```json
 "identifier": [
   {
-    "system": "urn:oid:1.2.392.100495.20.3.81",
+    "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumber",
     "value": "1"
   },
   {
@@ -595,7 +595,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
             "value": "1234567890"
         },
         {
-            "system": "urn:oid:1.2.392.100495.20.3.81",
+            "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumber",
             "value": "1"
         },
         {
@@ -740,7 +740,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
         "value": "1234567890"
       },
       {
-        "system": "urn:oid:1.2.392.100495.20.3.81",
+        "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumber",
         "value": "2"
       },
       {
@@ -885,7 +885,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
         "value": "1234567890"
       },
       {
-        "system": "urn:oid:1.2.392.100495.20.3.81",
+        "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumber",
         "value": "3"
       },
       {
@@ -1032,7 +1032,7 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
       "value": "1234567890"
     },
     {
-      "system": "urn:oid:1.2.392.100495.20.3.81",
+      "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumber",
       "value": "4"
     },
     {

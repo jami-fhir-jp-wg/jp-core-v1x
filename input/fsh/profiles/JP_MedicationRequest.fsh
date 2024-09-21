@@ -34,7 +34,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
 * identifier[rpNumber].system = $JP_Medication_RPGroupNumber (exactly)
 * identifier[rpNumber].system ^short = "Rp番号(剤グループ番号)についてのsystem値"
-* identifier[rpNumber].system ^definition = "ここで付番されたIDがRp番号であることを明示するためにOIDとして定義された。urn:oid:1.2.392.100495.20.3.81で固定される。"
+* identifier[rpNumber].system ^definition = "ここで付番されたIDがRp番号であることを明示するためにOID-urlとして定義された。http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumberで固定される。"
 * identifier[rpNumber].value 1..
 * identifier[rpNumber].value ^short = "Rp番号(剤グループ番号)"
 * identifier[rpNumber].value ^definition = "Rp番号(剤グループ番号)。\"1\"など。"
@@ -280,7 +280,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
 * identifier[rpNumber].system = $JP_Medication_RPGroupNumber (exactly)
 * identifier[rpNumber].system ^short = "Rp番号(剤グループ番号)についてのsystem値"
-* identifier[rpNumber].system ^definition = "ここで付番されたIDがRp番号であることを明示するためにOIDとして定義された。urn:oid:1.2.392.100495.20.3.81で固定される。"
+* identifier[rpNumber].system ^definition = "ここで付番されたIDがRp番号であることを明示するためにOID-urlとして定義された。http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumberで固定される。"
 * identifier[rpNumber].value 1..
 * identifier[rpNumber].value ^short = "Rp番号(剤グループ番号)"
 * identifier[rpNumber].value ^definition = "Rp番号(剤グループ番号)。\"1\"など。"
@@ -291,7 +291,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[requestIdentifier].value 1..
 * identifier[requestIdentifierCommon] ^short = "処方箋に対するID"
 * identifier[requestIdentifierCommon] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。system 要素には、保険医療機関番号を含む処方箋ID（urn:oid:1.2.392.100495.20.3.11.1[保険医療機関コード(10 桁)]）を指定する。全国で⼀意になる発番ルールにもとづく場合には urn:oid:1.2.392.100495.20.3.11 とする。"
-* identifier[requestIdentifierCommon].system = "urn:oid:1.2.392.100495.20.3.11" (exactly)
+* identifier[requestIdentifierCommon].system = "$JP_IdSystem_PrescriptionDocumentID" (exactly)
 * identifier[requestIdentifierCommon].value 1..
 
 * status ^short = "オーダの現在の状態を示すコード"

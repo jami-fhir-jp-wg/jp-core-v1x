@@ -31,7 +31,16 @@ Alias: $JP_Medication_RPGroupNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/M
 Alias: $JP_MedicationAdministrationIndex = http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicationAdministrationIndex //urn:oid:1.2.392.100495.20.3.82 RP内番号
 
 // 
-Alias: $JP_IdSystemInsurerNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber // urn:oid:1.2.392.100495.20.3.61
-Alias: $JP_IdSystemMedicalOrganizationID  = http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicalOrganizationID // urn:oid:1.2.392.100495.20.3.23
-
+Alias: $JP_IdSystem_InsurerNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber // urn:oid:1.2.392.100495.20.3.61
+Alias: $JP_IdSystem_MedicalOrganizationID  = http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicalOrganizationID // urn:oid:1.2.392.100495.20.3.23
+$JP_IdSystem_PrescriptionDocumentID
 Alias: $JP_IdSystemMedicalRegistrationNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/medicalRegistrationNumber // urn:oid:1.2.392.100495.20.3.31	
+Alias: $JP_IdSystem_MedicalRegistrationNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/medicalRegistrationNumber // urn:oid:1.2.392.100495.20.3.31	
+Alias: $JP_IdSystem_InsuredPersonSymbol  = $http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsuredPersonSymbol
+Alias: $JP_IdSystem_PrescriptionDocumentID  = urn:oid:1.2.392.100495.20.3.11
+Alias: $JP_IdSystem_MedicationDispenseDocumentID  = $http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicationDispenseDocumentID
+Alias: $JP_IdSystem_pharmacistRegistrationNumber  = $http://jpfhir.jp/fhir/core/mhlw/IdSystem/pharmacistRegistrationNumber
+Alias: $JP_IdSystem_InsuredPersonNumber  = $http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsuredPersonNumber
+Alias: $JP_IdSystem_InsuredPersonSubnumber  = $http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsuredPersonSubnumber
+Alias: $JP_IdSystem_PublicPayerNumber  = $http://jpfhir.jp/fhir/core/mhlw/IdSystem/PublicPayerNumber
+Alias: $JP_IdSystem_PublicInsuredPersonNumber  = $http://jpfhir.jp/fhir/core/mhlw/IdSystem/PublicInsuredPersonNumber

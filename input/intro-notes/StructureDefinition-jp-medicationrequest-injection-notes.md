@@ -692,12 +692,12 @@ HL7 V2の使用者定義表0164 投薬装置を使用してもよい。
 ```
 
 ### RP番号、薬剤番号、施用番号の記述方法
-HL7 FHIRでは、注射箋の中で同一の用法を持つ剤グループ(RP)は、剤単位に個別のMedicationRequestリソースに展開される。このとき、剤グループの番号（RP番号と呼ぶ）と、同一剤グループ内での順番は、いずれも MedicationRequestリソースの identifier で表現することができる。RP番号を識別するURIとして、"urn:oid:1.2.392.100495.20.3.81"を使用する。同一剤グループ内での順番を識別するURIとして、"http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicationAdministrationIndex"を使用する。value は 文字列型であり、数値はゼロサプレス、つまり、"01"でなく"1"と指定すること。
+HL7 FHIRでは、注射箋の中で同一の用法を持つ剤グループ(RP)は、剤単位に個別のMedicationRequestリソースに展開される。このとき、剤グループの番号（RP番号と呼ぶ）と、同一剤グループ内での順番は、いずれも MedicationRequestリソースの identifier で表現することができる。RP番号を識別するURIとして、"http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumber"を使用する。同一剤グループ内での順番を識別するURIとして、"http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicationAdministrationIndex"を使用する。value は 文字列型であり、数値はゼロサプレス、つまり、"01"でなく"1"と指定すること。
 
 ```json
 "identifier": [
   {
-    "system": "urn:oid:1.2.392.100495.20.3.81",
+    "system": "http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumber",
     "value": "1"
   },
   {

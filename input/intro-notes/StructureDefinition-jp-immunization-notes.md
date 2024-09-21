@@ -31,7 +31,7 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 |分類|名称|URI|
 |---------|----|---------------------------|
 |ワクチン|HOT9|http://medis.or.jp/CodeSystem/master-HOT9|
-|ワクチン|HOT13|urn:oid:1.2.392.100495.20.2.75|
+|ワクチン|HOT13|http://medis.or.jp/CodeSystem/master-HOT13|
 |ワクチン|YJコード|http://capstandard.jp/CodeSystem/YJ-code|
 |対象疾患|MEDIS標準病名マスター病名交換用コード|http://medis.or.jp/CodeSystem/master-disease-exCode|
 
@@ -214,7 +214,7 @@ Immunizationはワクチンを vaccineCodeとして1つまでしか持つこと�
 "vaccineCode": {
   "coding":  [
     {
-      "system": "urn:oid:1.2.392.100495.20.2.75",
+      "system": "http://medis.or.jp/CodeSystem/master-HOT13",
       "code": "1820201040101",
       "display": "インフルエンザHAワクチン「第一三共」1mL"
     }

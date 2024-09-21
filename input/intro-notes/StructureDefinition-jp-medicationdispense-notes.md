@@ -310,7 +310,7 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
 単一の薬剤に対する調剤結果は、MedicationDispenseに対して定義した拡張「JP_MedicationDispense_Preparation」を使用する。
 この拡張は、CodeableConcept型を使用してテキストによる指示とコードによる指示のどちらかを記述することができる。
 一つの薬剤に対して、複数の指示を記録する場合には、この拡張を、拡張単位で繰り返して記録する。 
-調剤結果で使用するコードは、処方情報 HL7FHIR 記述仕様(調剤指示)("urn:oid:1.2.392.200250.2.2.30.10")を推奨する。
+調剤結果で使用するコードは、処方情報 HL7FHIR 記述仕様(調剤指示)("http://jami.jp/CodeSystem/DrugDispensePreparationMethod")を推奨する。
 
 薬剤単位の調剤結果を表すインスタンス例を示す。
 ```json
@@ -321,7 +321,7 @@ MedicationDispenseは薬剤をCodeableConceptとして1つまでしか持つか�
       "coding": [
         {
           "code": "C",
-          "system": "urn:oid:1.2.392.200250.2.2.30.10",
+          "system": "http://jami.jp/CodeSystem/DrugDispensePreparationMethod",
           "display": "粉砕指示"
         }
       ]
