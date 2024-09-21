@@ -32,3 +32,4 @@ Alias: $JP_MedicationAdministrationIndex = http://jpfhir.jp/fhir/core/mhlw/IdSys
 
 // 
 Alias: $JP_IdystsmInsurerNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber // urn:oid:1.2.392.100495.20.3.61
+Alias: $JP_IdystsmMedicalOrganizationID  = http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicalOrganizationID // urn:oid:1.2.392.100495.20.3.23

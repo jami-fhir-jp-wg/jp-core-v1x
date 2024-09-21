@@ -52,7 +52,7 @@ value : ```医療機関コード（１０桁）```を使用する。
 * identifier[medicalInstitutionCode].assigner only Reference(JP_Organization)
 * identifier[insurerNumber] ^comment = "健康保険組合などの保険者の保険者番号を表現する際のIdentifier表現に使用する  
 system要素には保険者番号を示すOID\" http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber\"を指定する。"
-* identifier[insurerNumber].system = "$JP_IdystsmInsurerNumber" (exactly)
+* identifier[insurerNumber].system = $JP_IdystsmInsurerNumber (exactly)
 * identifier[insurerNumber].assigner only Reference(JP_Organization)
 * active ^short = "組織の記録がまだ有効に使われているかどうか【詳細参照】"
 * active ^definition = "このアクティブフラグは、組織を一時的に閉鎖したり、工事中であることを示すために使用されることを意図していない。代わりに、組織内の場所(複数可)は、中断されたステータスを持っている必要がある。一時停止の理由の詳細が必要な場合は、この要素の拡張子を使用する必要がある。  
@@ -200,7 +200,7 @@ Description: "保険医療機関番号７桁を表現するためのExtension。
 http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
 * url = $JP_Organization_InsuranceOrganizationNo (exactly)
 * value[x] only Identifier
-* value[x].system = "urn:oid:1.2.392.100495.20.3.23" (exactly)
+* value[x].system = $JP_IdystsmMedicalOrganizationID  (exactly)
 * value[x].system ^definition = "保険医療機関コードの名前空間を識別するURIを指定。固定値。"
 * value[x].value ^definition = "保険医療機関番号７桁。半角数字で７桁固定。"
 
