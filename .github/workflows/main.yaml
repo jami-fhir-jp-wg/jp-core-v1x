@@ -3,17 +3,16 @@ name: JPCore FHIR Task
 on:
   push:
     branches: 
-      - 'main'
-      - 'hotfix/**'
+      - 'v1.1.2-CSalias'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
       - '.github/workflows/main.yaml'
   pull_request:
     branches:
-      - 'main'
+      - 'v1.1.2-CSalias'
 env:
-  release_version : 1.1.2
+  release_version : 1.1.2-url
   
 jobs:
   turn:
@@ -181,7 +180,7 @@ jobs:
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'mkdir -p ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}; '
         rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  output.tgz fsh-generated.tgz forPackageRelease/package.tgz forPackageRelease/snapshot/package-snap.tgz ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}/
         # index.htmlはdevelopからは修正しない
-        sync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  other/index.html other/assetsOfIndex ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/
+        sync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  other/index.html other/assetsOfIndex ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}/
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}   'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}} ; tar xzf output.tgz; mv output/* .; rm -rf output'
       env:
         SSH_PORT: ${{ secrets.SSH_PORT_JPFHIR }}
