@@ -5,7 +5,7 @@ Description: "内服処方指示 ムコダイン錠２５０ｍｇ"
 Usage: #example
 * identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "1"
-* identifier[orderInRp].system = "$JP_MedicationAdministrationIndex "
+* identifier[orderInRp].system = $JP_MedicationAdministrationIndex
 * identifier[orderInRp].value = "1"
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.1.1"
@@ -36,7 +36,7 @@ Description: "内服処方指示 パンスポリンＴ錠１００ １００ｍ�
 Usage: #example
 * identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "2"
-* identifier[orderInRp].system = "$JP_MedicationAdministrationIndex "
+* identifier[orderInRp].system = $JP_MedicationAdministrationIndex
 * identifier[orderInRp].value = "2"
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.1.2"

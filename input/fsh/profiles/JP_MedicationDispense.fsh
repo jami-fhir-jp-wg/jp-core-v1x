@@ -156,7 +156,7 @@ Description: "このプロファイルはMedicationDispenseリソースに対し
 * identifier[orderInRp] ^definition = "同一剤グループでの薬剤を表記する際の順番。XML形式と異なりJSON形式の場合、表記順は項目の順序を意味しない。したがって、薬剤の記載順を別に規定する必要があるためIDを用いて表現する。"
 * identifier[orderInRp] ^comment = "同一剤グループ内での薬剤の順番を1から順の番号で示す。"
 * identifier[orderInRp].system 1..
-* identifier[orderInRp].system = "$JP_MedicationAdministrationIndex " (exactly)
+* identifier[orderInRp].system = $JP_MedicationAdministrationIndex (exactly)
 * identifier[orderInRp].system ^short = "RP番号内（剤グループ内）の連番を示すsystem値"
 * identifier[orderInRp].system ^definition = "剤グループ内番号の名前空間を識別するURI。固定値 http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicationAdministrationIndex"
 * identifier[orderInRp].value 1..

@@ -33,7 +33,7 @@ Alias: $JP_MedicationAdministrationIndex = http://jpfhir.jp/fhir/core/mhlw/IdSys
 // 
 Alias: $JP_IdSystem_InsurerNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber // urn:oid:1.2.392.100495.20.3.61
 Alias: $JP_IdSystem_MedicalOrganizationID  = http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicalOrganizationID // urn:oid:1.2.392.100495.20.3.23
-$JP_IdSystem_PrescriptionDocumentID
+
 Alias: $JP_IdSystemMedicalRegistrationNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/medicalRegistrationNumber // urn:oid:1.2.392.100495.20.3.31	
 Alias: $JP_IdSystem_MedicalRegistrationNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/medicalRegistrationNumber // urn:oid:1.2.392.100495.20.3.31	
 Alias: $JP_IdSystem_InsuredPersonSymbol  = $http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsuredPersonSymbol
