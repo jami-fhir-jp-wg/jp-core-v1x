@@ -32,7 +32,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHALL            | identifier    | token  | GET [base]/Patient?identifier=urn:oid:1.2.392.100495.20.3.51.11312345670\|123456 |
+| SHALL            | identifier    | token  | GET [base]/Patient?identifier=urn:oid:1.2.392.100495.20.3.51.医療機関OID番号11桁\|123456 |
 | SHOULD            | name          | string | GET [base]/Patient?name=山田%20太郎                            |
 | SHOULD           | birthdate,name | date,string  | GET [base]/Patient?birthdate=eq2013-01-14&name=山田%20太郎  |
 | SHOULD           | birthdate,gender | date,code  | GET [base]/Patient?birthdate=eq2013-01-14&gender=male  |
