@@ -32,7 +32,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
-* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81" (exactly)
+* identifier[rpNumber].system = $JP_Medication_RPGroupNumber (exactly)
 * identifier[rpNumber].system ^short = "Rp番号(剤グループ番号)についてのsystem値"
 * identifier[rpNumber].system ^definition = "ここで付番されたIDがRp番号であることを明示するためにOIDとして定義された。urn:oid:1.2.392.100495.20.3.81で固定される。"
 * identifier[rpNumber].value 1..
@@ -44,8 +44,8 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[orderInRp] ^comment = "同一剤グループ内での薬剤の順番を1から順の番号で示す。"
 * identifier[orderInRp].system 1..
 * identifier[orderInRp].system ^short = "RP番号内（剤グループ内）の連番を示すsystem値"
-* identifier[orderInRp].system ^definition = "剤グループ内番号の名前空間を識別するURI。固定値urn:oid:1.2.392.100495.20.3.82"
-* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82" (exactly)
+* identifier[orderInRp].system ^definition = "剤グループ内番号の名前空間を識別するURI。固定値 http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicationAdministrationIndex"
+* identifier[orderInRp].system = "$JP_MedicationAdministrationIndex " (exactly)
 * identifier[orderInRp].value 1..
 * identifier[orderInRp].value ^short = "RP番号内（剤グループ内）の連番"
 * identifier[orderInRp].value ^definition = "剤グループ内連番。"
@@ -278,7 +278,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
-* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81" (exactly)
+* identifier[rpNumber].system = $JP_Medication_RPGroupNumber (exactly)
 * identifier[rpNumber].system ^short = "Rp番号(剤グループ番号)についてのsystem値"
 * identifier[rpNumber].system ^definition = "ここで付番されたIDがRp番号であることを明示するためにOIDとして定義された。urn:oid:1.2.392.100495.20.3.81で固定される。"
 * identifier[rpNumber].value 1..

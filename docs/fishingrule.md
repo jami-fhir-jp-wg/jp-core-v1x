@@ -272,14 +272,14 @@ Id: jp-medicationcode-hot9-cs
 Title: "JP Core MedicationCode HOT9 CodeSystem"
 Description: "医薬品HOT9コードのコードシステム"
 * ^identifier[0].system = "urn:ietf:rfc:3986"
-* ^identifier[=].value = "urn:oid:1.2.392.200119.4.403.1"
+* ^identifier[=].value = "http://medis.or.jp/CodeSystem/master-HOT9"
 * ^identifier[+].system = "urn:ietf:rfc:3986"
-* ^identifier[=].value = "urn:oid:1.2.392.100495.20.2.74"
+* ^identifier[=].value = "urn:oid:1.2.392.200119.4.403.1"
 ```
 
 ```
 [aliases-jpcore.fsh]
-Alias: $JP_MedicationCodeHOT9_CS = urn:oid:1.2.392.200119.4.403.1
+Alias: $JP_MedicationCodeHOT9_CS = http://medis.or.jp/CodeSystem/master-HOT9 
 ```
 
 ### [2]NamingSystemへのマッピング情報の記載
@@ -301,7 +301,7 @@ Usage: #definition
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.200119.4.403.1"
 * uniqueId[+].type = #uri
-* uniqueId[=].value = "urn:oid:1.2.392.200119.4.403.1"
+* uniqueId[=].value = "http://medis.or.jp/CodeSystem/master-HOT9 "
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.2.74"
 * uniqueId[+].type = #uri

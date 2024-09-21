@@ -5,7 +5,7 @@ Description: "ひまわり健康保険組合"
 Usage: #example
 * type = http://terminology.hl7.org/CodeSystem/organization-type#pay "Payer"
 * name = "ひまわり健康保険組合"
-* identifier[insurerNumber].system = "urn:oid:1.2.392.100495.20.3.61"
+* identifier[insurerNumber].system = "$JP_IdystsmInsurerNumber"
 * identifier[insurerNumber].value = "7654321"
 
 Instance: jp-organization-example-clinic

@@ -51,8 +51,8 @@ value : ```医療機関コード（１０桁）```を使用する。
 * identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no" (exactly)
 * identifier[medicalInstitutionCode].assigner only Reference(JP_Organization)
 * identifier[insurerNumber] ^comment = "健康保険組合などの保険者の保険者番号を表現する際のIdentifier表現に使用する  
-system要素には保険者番号を示すOID\"urn:oid:1.2.392.100495.20.3.61\"を指定する。"
-* identifier[insurerNumber].system = "urn:oid:1.2.392.100495.20.3.61" (exactly)
+system要素には保険者番号を示すOID\" http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber\"を指定する。"
+* identifier[insurerNumber].system = "$JP_IdystsmInsurerNumber" (exactly)
 * identifier[insurerNumber].assigner only Reference(JP_Organization)
 * active ^short = "組織の記録がまだ有効に使われているかどうか【詳細参照】"
 * active ^definition = "このアクティブフラグは、組織を一時的に閉鎖したり、工事中であることを示すために使用されることを意図していない。代わりに、組織内の場所(複数可)は、中断されたステータスを持っている必要がある。一時停止の理由の詳細が必要な場合は、この要素の拡張子を使用する必要がある。  

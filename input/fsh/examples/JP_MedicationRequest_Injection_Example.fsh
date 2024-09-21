@@ -5,7 +5,7 @@ Description: "注射処方指示 ホリゾン注射液１０ｍｇワンショ�
 Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-1
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-1
-* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "1"
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.1"
@@ -40,7 +40,7 @@ Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-2
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-2
 * contained[+] = jp-medicationrequest-injection-device-example-2
-* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "2"
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.2.1"
