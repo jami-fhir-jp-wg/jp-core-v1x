@@ -24,7 +24,7 @@ dependencies:
 #----------------------------------------
 pages:
   index.md:
-    title: HL7 FHIR JP Core 実装ガイド
+    title: HL7 FHIR JP Core 実装ガイド（電子カルテ情報共有サービス対応版）
   guidance.md:
     title: ガイダンス
     guide-general.md:
