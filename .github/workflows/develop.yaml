@@ -145,24 +145,13 @@ jobs:
         cp fsh-generated/resources/*.json forPackageRelease/package/
         cp forPackageRelease/package-${{ env.release_version}}-diff.json forPackageRelease/package/package.json
         cd forPackageRelease
-        tar czf package.tgz package
+        tar czf jp-core.r4-${{ env.release_version}}.tgz package
         cd ..
         cp forPackageRelease/package.tgz output/package.tgz
         tar czf output.tgz output
         rm output/full-ig.zip
         rm output/expansions.json
         rm output/expansions.xml
-    - name: STEP3 generate snapshot package using sushi -s command       
-      run: | 
-        rm -rf fsh-generated
-        sushi -s .
-        mv fsh-generated fsh-generated-snap
-        mkdir -p forPackageRelease/snapshot/package/
-        cp fsh-generated-snap/resources/*.json forPackageRelease/snapshot/package/
-        cp forPackageRelease/package-${{ env.release_version}}-snap.json forPackageRelease/snapshot/package/package.json
-        cd forPackageRelease/snapshot
-        tar czf jp-core.r4-${{ env.release_version}}.tgz package
-        
 
     - name: STEP3 generate snapshot package using sushi -s command       
       run: | 
