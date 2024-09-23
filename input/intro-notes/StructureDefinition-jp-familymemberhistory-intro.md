@@ -1,3 +1,5 @@
+{% include url-version-headerNote.md %}
+
 本プロファイルは、JP_FamilyMemberHistoryリソースの記録・更新・検索を行う上で、準拠するべき必須となる要素や、サポートすべき拡張、用語、検索パラメータを定義する。
 
 ## スコープ

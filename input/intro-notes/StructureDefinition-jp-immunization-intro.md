@@ -1,3 +1,5 @@
+{% include url-version-headerNote.md %}
+
 本プロファイルはワクチン接種情報をImmunizationリソースを使用して表現する。
 以下、本プロファイルのImmunizationリソースを「JP Core Immunizationリソース」と呼ぶ。
 
