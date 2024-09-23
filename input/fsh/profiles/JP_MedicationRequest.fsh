@@ -56,7 +56,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[requestIdentifier].value 1..
 * identifier[requestIdentifierCommon] ^short = "処方箋に対するID"
 * identifier[requestIdentifierCommon] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。system 要素には、保険医療機関番号を含む処方箋ID（urn:oid:1.2.392.100495.20.3.11.1[保険医療機関コード(10 桁)]）を指定する。全国で⼀意になる発番ルールにもとづく場合には urn:oid:1.2.392.100495.20.3.11 とする。"
-* identifier[requestIdentifierCommon].system = "urn:oid:1.2.392.100495.20.3.11" (exactly)
+* identifier[requestIdentifierCommon].system = $JP_IdSystem_PrescriptionDocumentID (exactly)
 * identifier[requestIdentifierCommon].value 1..
 
 
