@@ -3,14 +3,14 @@ name: JPCore FHIR Task
 on:
   push:
     branches: 
-      - 'v1.1.2-CSalias'
+      - 'v1.1.2-URL'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
       - '.github/workflows/main.yaml'
   pull_request:
     branches:
-      - 'v1.1.2-CSalias'
+      - 'v1.1.2-URL'
 env:
   release_version : 1.1.2-url
   
