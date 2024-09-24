@@ -1,6 +1,6 @@
 <br/>
 
-<h3>この電子カルテ情報共有サービス対応 V1.1.2-url 版</h3>
+<h3>電子カルテ情報共有サービス対応 V1.1.2-url 版について</h3>
 このV1.1.2-url 版は、CodeSystemのシステムURIをOID形式からhttp:で始まるURL形式に変更したバージョンです。
 例）OID形式：urn:oid:1.2.392.10495.x.y.z<br/>
 　→　 http:で始まるURL形式: http://jpfhir/fhire/core/CodeSystem/.....
