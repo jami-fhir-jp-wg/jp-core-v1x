@@ -1,9 +1,9 @@
 このドキュメントは日本医療情報学会NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した実装ガイドのVer.1.1.2である。実装や利用は全て自己責任で行なうこと。 <br/>
-<h3>この電子カルテ情報共有サービス対応 V1.1.3-url 版</h3>
-このV1.1.3-url 版は、CodeSystemのシステムURIをOID形式からhttp:で始まるURL形式に変更したバージョンです。
+<h3>この電子カルテ情報共有サービス対応 V1.1.2-url 版</h3>
+このV1.1.2-url 版は、CodeSystemのシステムURIをOID形式からhttp:で始まるURL形式に変更したバージョンです。
 例）OID形式：urn:oid:1.2.392.10495.x.y.z<br/>
 　→　 http:で始まるURL形式: http://jpfhir/fhire/core/CodeSystem/.....
-<br/>電子カルテ情報共有サービスの実装ガイドではこのJP-Core v1.1.3-url版を参照しています。
+<br/>電子カルテ情報共有サービスの実装ガイドではこのJP-Core v1.1.2-url版を参照しています。
 通常版は<a href="https://jpfhir.jp/fhir/core/1.1.2/index.html">こちらを参照</a>ください。
 
 ### 概要
