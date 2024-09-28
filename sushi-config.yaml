@@ -5,7 +5,7 @@ title: "HL7 FHIR JP Core ImplementationGuide"
 description: "日本医療情報学会(JAMI) NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した日本国内におけるベースとなるJP Core実装ガイドのドラフトVer.1.1.3(url版) です。"
 status: active # draft | active | retired | unknown
 version: 1.1.3-url
-date: 2024-09-24
+date: 2024-09-28
 fhirVersion: 4.0.1
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -18,7 +18,7 @@ jurisdiction: urn:iso:std:iso:3166#JP
 dependencies:
   jpfhir-terminology.r4:
     uri: http://jpfhir.jp/fhir/jpfhir-terminology/
-    version: 1.2.1-url
+    version: 1.2.3-url
 
 #----------------------------------------
 # ページタイトル名称設定
