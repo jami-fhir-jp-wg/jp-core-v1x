@@ -121,6 +121,12 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - '*/jpfhir.jp.core'
   no-usage-check: 'true'
   i18n-default-lang: 'ja'
+  # logging:
+  #   - tx #tx: Messages describing the use of the terminology server (for debugging)
+  #   - html #html: Log when validating an html page (troubleshooting only - leave off)
+  #   - generate #generate: Log when producing an individual resource (troubleshooting only - leave off)
+  #   - init #init: Messages describing the start up process (for debugging)
+  #   - progress #progress: Overall progress messages
   special-url:
     - http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes
     - http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement
