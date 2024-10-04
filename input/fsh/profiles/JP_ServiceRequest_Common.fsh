@@ -8,7 +8,6 @@ Title: "JP Core ServiceRequest Common Profile"
 Description: "本プロファイル説明は、患者に対し立案・実施されるリクエストの記録で、行為や診断、もしくは他のサービスのために用いられるFHIR ServiceRequestリソースを使用するにあたっての、最低限の制約を記述したものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common"
 * ^status = #active
-* ^exprimental = #true
 * ^date = "2024-09-18"
 * . ^short = "サービスリクエスト"
 * . ^definition = "診断のための検査、治療、手術などのサービスリクエストの記録"
@@ -27,10 +26,10 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 //
 * basedOn ^short = "リクエストするリソースへの参照"
 * basedOn ^definition = "このリクエストによって実施すべき計画、提案、オーダの詳細（への参照）"
-* basedOn.type = Reference(CarePlan or JP_ServiceRequest or JP_MedicationRequest)
+* basedOn only Reference(CarePlan or JP_ServiceRequest or JP_MedicationRequest)
 // 
 * replaces ^short = "完了または終了したService Requestリソースの代替（への参照）"
-* replaces.type = Reference(JP_ServiceRequest)
+* replaces only Reference(JP_ServiceRequest)
 //
 * requisition ^short = "サービスリクエストの複合ID（別名 グループID）"
 * requisition ^definition = "一人の発注者によっておおよそ同時に署名されたサービスリクエストの全てに共通する識別子で、複合、またはグループIDを表現する。"
@@ -57,7 +56,7 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 // 
 * doNotPerform ^short = "値が真の時、サービスや処置は実施不可"
 * doNotPerform ^definition = "要求された特定のサービス（例、手技、診断のための検査、また検査パネル）の識別子"
-* doNotPerform ^meaningIfMissing = "値がない時は、正のリクエストとなる。例 「実施せよ」"
+* doNotPerform ^meaningWhenMissing = "値がない時は、正のリクエストとなる。例 「実施せよ」"
 * doNotPerform ^comment =  "一般的には、コードと時間枠のみであるが、時には体の部位や実施者などの修飾語を追加して、禁止範囲を狭められる。code要素とdoNotPerform要素がともに否定を含む場合、禁止を強化することになり、二重否定解釈をしてはならない。"
 // 
 * code ^short = "リクエストの内容を示すコード"
@@ -69,25 +68,25 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * orderDetail ^definition = "リクエストの提供方法に関する追加の詳細および指示。例えば、尿道カテーテルのサービスリクエストには、外部または留置カテーテルのリクエストの詳細があり、包帯のサービスリクエストには、包帯の適用方法を指定する追加の指示が必要な場合もある。"
 * orderDetail ^comment = "リクエストされたサービス提供の指示についての医療記録からの情報については、supportingInformation要素を使用。"
 // * orderDetail obeys prr-1
-* orderDetail form http://hl7.org/fhir/ValueSet/servicerequest-orderdetail (example)
+* orderDetail from http://hl7.org/fhir/ValueSet/servicerequest-orderdetail (example)
 //
-* quantity ^short = "サービスの量"
-* quantity ^definition = "リクエストされるサービスの量。数量（例:1500ドルの住宅改造）、比率（例:1ヶ月に20回の半日訪問）、または範囲（例:1分間に2.0～1.8Gy）。"
-* quantity ^comment = "サービスリクエスト時に、項目とは別に数を指定する必要がある。"
+* quantity[x] ^short = "サービスの量"
+* quantity[x] ^definition = "リクエストされるサービスの量。数量（例:1500ドルの住宅改造）、比率（例:1ヶ月に20回の半日訪問）、または範囲（例:1分間に2.0～1.8Gy）。"
+* quantity[x] ^comment = "サービスリクエスト時に、項目とは別に数を指定する必要がある。"
 //
 * subject ^short = "サービスリクエストの対象（個人または集団）"
 * subject ^definition = "サービスが実行される対象（人または物）。多くは患者だが、動物、集団（人または動物）、透析器のような装置、また場所（点家的には環境調査）も対象となる。"
-* subject.type = Reference(JP_Patient or JP_Location)
+* subject only Reference(JP_Patient or JP_Location)
 //
 * encounter ^short = "サービスがリクエストされる診療時の場面"
 * encounter ^definition = "サービスがリクエストされる医療背景についての追加情報を提供する診療時の場面"
-* encounter = Reference(JP_Encounter)
+* encounter only Reference(JP_Encounter)
 //
-* occurrence ^short = "サービスを実施すべき日時"
-* occurence ^definition = "リクエストされたサービスを実施すべき日時"
+* occurrence[x] ^short = "サービスを実施すべき日時"
+* occurrence[x] ^definition = "リクエストされたサービスを実施すべき日時"
 //
-* asNeeded ^short = "前提条件"
-* asNeeded ^definition = "CodeableConceptが存在する場合、そのサービスを行うための前提条件を示す。例えば、「痛み」、「再発時」など。"
+* asNeeded[x] ^short = "前提条件"
+* asNeeded[x] ^definition = "CodeableConceptが存在する場合、そのサービスを行うための前提条件を示す。例えば、「痛み」、「再発時」など。"
 //
 * authoredOn ^short = "リクエストの署名日時"
 * authoredOn ^definition = "リクエストが有効化された日時"
@@ -95,7 +94,7 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * requester ^short = "サービスを要求した人または物（要求者、発注者）"
 * requester ^definition = "リクエストを開始し、その有効化に責任を持つ個人"
 * requester ^comment = "伝言をする者ではなく、署名者。この要素は、Provenanceリソースを通じて管理される委任を扱うことを意図していない。"
-* requester = Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or JP_RelatedPerson or JP_Device)
+* requester only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or JP_RelatedPerson or JP_Device)
 //
 * performerType ^short = "実施者の役割"
 * performerType ^definition = "リクエストされたサービスの実施者の役割"
@@ -104,7 +103,7 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * performer ^short = "サービスの実施者"
 * performer ^definition = "リクエストされたサービスを行うために望ましい実施者。例えば、外科医、皮膚病理医、内視鏡医など。"
 * performer ^comment = "実施者が複数の場合、順番に関係なく、優先順位のない実施者のリストとして解釈される。優先順位が必要な場合は、request.performerOrder 拡張を使用する。実施者のグループ（例えば、医師Aと医師B）を表すには、CareTeamを使用する。"
-* performer = Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or JP_Device or JP_RelatedPerson or CareTeam)
+* performer only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or JP_Device or JP_RelatedPerson or CareTeam)
 //
 * locationCode ^short = "リクエストされた場所"
 * locationCode ^definition = "実際に行為が行われるべき好ましい場所を、コード化またはフリーテキスト形式で記述。例：自宅や介護施設など。"
@@ -112,7 +111,7 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 //
 * locationReference ^short = "リクエストされた場所（参照）"
 * locationReference ^definition = "実際に行為が行われるべき好ましい場所（複数可）への参照。例：自宅や介護施設など。"
-* locationReference = Reference(JP_Location)
+* locationReference only Reference(JP_Location)
 //
 * reasonCode ^short = "行為やサービスの説明・理由"
 * reasonCode ^definition = "このサービスがリクエストされる理由についての説明または根拠をコード化またはテキスト化したもの。しばしば（保険）請求を目的とされる。supportingInfoで参照されるリソースに関連する場合がある。"
@@ -121,11 +120,11 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * reasonReference ^short = "行為やサービスの説明・理由（参照）"
 * reasonReference ^definition = "このサービスが要求される理由の正当性を提供する他のリソースを示す。supportingInfoで参照されるリソースに関連する場合がある。"
 * reasonReference ^comment = "この要素は照会理由を表し、サービスがどのように実行されるか、あるいは全く実行されないかどうかを決定するために使用される。可能な限り具体的にするために、ObservationやConditionリソースへの参照が可能であれば使用されるべきである。また、DiagnosticReport を参照する場合は、DiagnosticReport.conclusion および/または DiagnosticReport.conclusionCode を参照する必要がある。DocumentReference への参照を使用する場合、ターゲット文書は、このサービス要求の関連理由を提供する明確な所見言語を含んでいなければならない。CTスキャンの例に示すように、データが自由記述（符号化されていない）の場合、 ServiceRequest.reasonCodeにCodeableConcept.text要素を使用する。"
-* reasonReference = Reference(JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common or DocumentReference)
+* reasonReference only Reference(JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common or DocumentReference)
 //
 * insurance ^short = "関連する保険情報"
 * insurance ^definition = "リクエストされたサービスを提供するために必要な保険プラン、適用範囲拡大、事前承認、および/または事前決定がある。"
-* insurance = Reference(JP_Coverage or ClaimResponse)
+* insurance only Reference(JP_Coverage or ClaimResponse)
 //
 * supportingInfo ^short = "追加の補助的な臨床情報（別名 オーダエントリー時の質問 Ask at Order Entry question; AOEs）"
 * supportingInfo ^definition = "サービスやその解釈に影響を与える可能性のある、患者や検体に関する追加の臨床情報。この情報には、診断、臨床所見、その他の観察が含まれる。検査のオーダでは、一般的に「オーダエントリー時の質問（AOEs）」と呼ばれ ている。これには、オーダを完了するために必要な文脈や裏付けとなる情報を提供するために、実施者が明示的に要求した観察が含まれる。例えば、血液ガス測定のための吸入酸素量の報告などである。"
@@ -134,7 +133,7 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * specimen ^short = "検体"
 * specimen ^definition = "検査で使用する１つ以上の検体"
 * specimen ^comment = "多くの診断的行為は検体を必要とするが、リクエスト自体は実際には検体に関するものではない。この要素は、診断検査が既に存在する検体に対してリクエストされ、適用される検体を参照するためのものである。逆に、検体が未知の時に最初にリクエストが入力された場合、SpecimenリソースがServiceRequestリソースを参照する。"
-* specimen = Reference(JP_Specimen)
+* specimen only Reference(JP_Specimen)
 //
 * bodySite ^short = "体の部位（別名 場所）"
 * bodySite ^definition = "行為を実施すべき解剖学的部位。目標とする場所。"
@@ -149,7 +148,7 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 //
 * relevantHistory ^short = "リソースの履歴（バージョン管理）"
 * relevantHistory ^definition = "このリクエストの履歴で重要なもの"
-* relevantHistory ^comment = "この要素はには、ServiceRequestのProvenanceの全てのバージョンではなく、重要と思われたものだけ含められる。現在のバージョンのリソースに関連したProvenanceリソースを含めてはならない（SHALL NOT）。（もし、Provenanceとして重要な変化と思われれば、以降の更新の一部として追加すべきである。それまでは、"_revinclude"を使って指定されたProvenanceのバージョンを直接クエリーできる。全てのProvenanceはこのRequestの履歴を対象とすべきである。）"
+* relevantHistory ^comment = "この要素はには、ServiceRequestのProvenanceの全てのバージョンではなく、重要と思われたものだけ含められる。現在のバージョンのリソースに関連したProvenanceリソースを含めてはならない（SHALL NOT）。（もし、Provenanceとして重要な変化と思われれば、以降の更新の一部として追加すべきである。それまでは、'_revinclude'を使って指定されたProvenanceのバージョンを直接クエリーできる。全てのProvenanceはこのRequestの履歴を対象とすべきである。）"
 
 
 // Invariant: prr-1
