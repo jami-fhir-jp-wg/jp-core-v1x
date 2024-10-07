@@ -26,10 +26,10 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 //
 * basedOn ^short = "リクエストするリソースへの参照"
 * basedOn ^definition = "このリクエストによって実施すべき計画、提案、オーダの詳細（への参照）"
-* basedOn only Reference(CarePlan or JP_ServiceRequest or JP_MedicationRequest)
+* basedOn only Reference(CarePlan or JP_ServiceRequest_Common or JP_MedicationRequest)
 // 
 * replaces ^short = "完了または終了したService Requestリソースの代替（への参照）"
-* replaces only Reference(JP_ServiceRequest)
+* replaces only Reference(JP_ServiceRequest_Common)
 //
 * requisition ^short = "サービスリクエストの複合ID（別名 グループID）"
 * requisition ^definition = "一人の発注者によっておおよそ同時に署名されたサービスリクエストの全てに共通する識別子で、複合、またはグループIDを表現する。"
