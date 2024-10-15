@@ -51,12 +51,13 @@ RuleSet: SetSearchParameterInteraction
 
 
 // 定義済み検索パラメーターの追加
-RuleSet: PutDefinedSearchParam(name, param-name, type)
-* insert PutSearchParam({name}, http://hl7.org/fhir/SearchParameter/{param-name}, {type})
+RuleSet: PutDefinedSearchParam(expectation, name, param-name, type)
+* insert PutSearchParam({expectation}, {name}, http://hl7.org/fhir/SearchParameter/{param-name}, {type})
 
 // 検索パラメーターの追加
-RuleSet: PutSearchParam(name, definition, type)
-* rest.resource[=].searchParam[+].name = "{name}"
+RuleSet: PutSearchParam(expectation,name, definition, type)
+* rest.resource[=].searchParam[+].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].searchParam[=].extension.valueCode = #{expectation}
+* rest.resource[=].searchParam[=].name = "{name}"
 * rest.resource[=].searchParam[=].definition = "{definition}"
 * rest.resource[=].searchParam[=].type = #{type}
-
