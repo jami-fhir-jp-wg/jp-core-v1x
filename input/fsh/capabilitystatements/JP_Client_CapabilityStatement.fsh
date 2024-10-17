@@ -17,6 +17,11 @@ Usage: #definition
 
 // Patient
 * insert SetSearchParameterResource(Patient, JP_Patient)
+* rest.resource[=].operation.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].operation.extension.valueCode = #SHOULD
+* rest.resource[=].operation.name = "everything"
+* rest.resource[=].operation.definition = "http://hl7.org/fhir/OperationDefinition/Patient-everything"
+* rest.resource[=].operation.documentation = "この操作が呼び出された場合、すべての患者の、あるいは指定された特定の[id]をもつPatientに関連した全てのリソースを返す。"
 * insert PutCombination2(SHOULD, birthdate, name)
 * insert PutCombination2(SHOULD, birthdate, gender)
 * insert PutCombination3(SHOULD, birthdate, name, gender)
@@ -48,6 +53,11 @@ Usage: #definition
 
 // Encounter
 * insert SetSearchParameterResource(Encounter, JP_Encounter)
+* rest.resource[=].operation.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].operation.extension.valueCode = #SHOULD
+* rest.resource[=].operation.name = "everything"
+* rest.resource[=].operation.definition = "http://hl7.org/fhir/OperationDefinition/Encounter-everything"
+* rest.resource[=].operation.documentation = "この操作は、この操作が呼び出された特定のEncounterリソースに関連する全ての情報を返す。"
 * insert PutCombination2(SHOULD, date, patient)
 * insert PutCombination2(SHOULD, class, patient)
 * insert PutCombination2(SHOULD, patient, type)
@@ -138,6 +148,11 @@ Usage: #definition
 // Observation
 //TODO: 要確認commonにすべてを記述すべきでは。
 * insert SetSearchParameterType(Observation)
+* rest.resource[=].operation.extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].operation.extension.valueCode = #SHOULD
+* rest.resource[=].operation.name = "lastn"
+* rest.resource[=].operation.definition = "http://hl7.org/fhir/OperationDefinition/Observation-lastn"
+* rest.resource[=].operation.documentation = "オペレーションはある条件に基づく最新、または最新からn件の検査結果/測定結果等を取得するという一般的なニーズを満たすためのオペレーションである。"
 * insert SetSearchParameterSupportedProfile(JP_Observation_Common)
 * insert SetSearchParameterSupportedProfile(JP_Observation_LabResult)
 * insert SetSearchParameterSupportedProfile(JP_Observation_Microbiology)
