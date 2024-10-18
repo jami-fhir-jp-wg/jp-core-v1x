@@ -16,6 +16,7 @@ Alias: $diagnostic-service-sectionid-cs = http://terminology.hl7.org/CodeSystem/
 Alias: $patient-race-cs = http://terminology.hl7.org/CodeSystem/v3-Race
 Alias: $patient-race-vs = http://terminology.hl7.org/ValueSet/v3-Race
 Alias: $media-type = http://terminology.hl7.org/CodeSystem/media-type
+Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 
 // dicom
 Alias: $dicom-ontology = http://dicom.nema.org/resources/ontology/DCM
