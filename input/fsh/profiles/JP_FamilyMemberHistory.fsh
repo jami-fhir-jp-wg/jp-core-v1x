@@ -14,4 +14,4 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 患者の診療に関連する、患者家族の疾患に関する情報。"
 * patient only Reference(JP_Patient)
 * reasonReference only Reference(QuestionnaireResponse or DocumentReference or JP_AllergyIntolerance or JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)
-* relationship from $JP_FamilyMemberHistory_VS (example)
+* relationship from $JP_FamilyMember_VS (example)
