@@ -120,7 +120,7 @@ study階層のidentifierと同じ概念。(0020,000E)にseries固有のUIDが付
 * series.modality ^definition = "シリーズが取得されたモダリティー"
 * series.modality ^comment = "JP CoreではDICOMのモダリティコードを利用する。SNOMED CTは推奨しない。  
 （参照先）   
-http://jpfhir.jp/fhir/core/ValueSet/JP_DICOMModality_VS"
+http://jpfhir.jp/fhir/core/ValueSet/JP_DICOMModality_VS.html"
 * series.description ^short = "シリーズの人間可読な形式での短い要約記述"
 * series.description ^definition = "シリーズの記述。"
 * series.description ^comment = "FHIR文字列のサイズは1MBを超えてはならないことに注意。  
