@@ -1,6 +1,6 @@
-ValueSet: JP_FamilyMemberHistory_VS
-Id: jp-family-member-history-vs
-Title: "JP Core Family Member History ValueSet"
+ValueSet: JP_FamilyMember_VS
+Id: jp-family-member-vs
+Title: "JP Core Family Member ValueSet"
 Description: "家族関係における対象となる両者の続柄"
 * ^url = $JP_FamilyMember_VS
 * ^status = #active
