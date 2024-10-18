@@ -8,7 +8,7 @@ Description: "家族関係における対象となる両者の続柄"
 * ^date = "2024-10-18"
 * ^copyright = "This material derives from the HL7 Terminology THO. THO is copyright ©1989+ Health Level Seven International and is made available under the CC0 designation. For more licensing information."
 * ^publisher = "一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装ワーキンググループ"
-* include codes from system $HL7_v3_RoleCode where concept is-a FAMMEMB
+* include codes from system http://terminology.hl7.org/CodeSystem/v3-RoleCode where concept is-a FAMMEMB
 
 Alias: $HL7_v3_RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 
