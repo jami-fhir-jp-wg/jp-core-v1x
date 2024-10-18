@@ -238,8 +238,8 @@
 [jp-observation-bodyMeasurement-example-1]: Observation-jp-observation-bodyMeasurement-example-1.html
 [jp-observation-labresult-example-1]: Observation-jp-observation-labresult-example-1.html
 [jp-observation-physicalexam-example-1]: Observation-jp-observation-physicalexam-example-1.html
-[jp-observation-radiology-findings-example-1]: DiagnosticReport-jp-observation-radiology-findings-example-1.html
-[jp-observation-radiology-impression-example-1]: DiagnosticReport-jp-observation-radiology-impression-example-1.html
+[jp-observation-radiology-findings-example-1]: Observation-jp-observation-radiology-findings-example-1.html
+[jp-observation-radiology-impression-example-1]: Observation-jp-observation-radiology-impression-example-1.html
 [jp-observation-socialhistory-example-1]: Observation-jp-observation-socialhistory-example-1.html
 [jp-observation-vitalsigns-example-1]: Observation-jp-observation-vitalsigns-example-1.html
 [jp-organization-example-clinic]: Organization-jp-organization-example-clinic.html
