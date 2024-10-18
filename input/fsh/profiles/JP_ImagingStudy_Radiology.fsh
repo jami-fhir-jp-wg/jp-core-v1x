@@ -13,7 +13,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * identifier MS
 * identifier ^short = "スタディ全体の識別子"
 * identifier ^definition = "DICOMスタディインスタンスUIDやアクセッション番号などのImagingStudyの識別子。"
-* identifier ^comment = "DICOMスタディインスタンスUIDのエンコードについては、[Imaging Study Implementation Notes]（imagingstudy.html＃notes）の説明を参照。アクセッション番号はACSN識別子タイプを使用する必要がある。  
+* identifier ^comment = "DICOMスタディインスタンスUIDのエンコードについては、[Imaging Study Implementation Notes]（imagingstudy.html#notes）の説明を参照。アクセッション番号はACSN識別子タイプを使用する必要がある。  
 【JP-Core仕様】Study Instance UIDは画像が存在する場合に必須、その他は任意。StudyInstanceUID (0020,000D)"
 * identifier ^requirements = "ImagingStudyに1つ以上のシリーズ要素が存在する場合、1つのDICOMスタディUID識別子が存在する必要がある（[DICOM PS 3.3 C.7.2]（https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.2.html）を参照） 。"
 * status MS
@@ -22,7 +22,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 【JP-Core仕様】リソースの状態。"
 * modality ^short = "実際の取得モダリティーの場合、モダリティーの全シリーズ。対応するDICOM tag: (0008, 0061)"
 * modality ^definition = "実際の取得モダリティであるすべてのseries.modality値のリスト、つまりDICOMコンテキストグループ29（値セットOID 1.2.840.10008.6.1.19）の値。"
-* modality ^comment = "コードは、列挙型またはコードリストで、SNOMED CTなどの非常に正式な定義まで、非常にカジュアルに定義できる。詳細については、HL7v3コア原則を参照のこと。  
+* modality ^comment = "コードは、列挙型またはコードリストで、DICOMのモダリティコードを利用する。  
 ・モダリティのコードを設定。  
 ・Seriesの階層の(0008,0060)を集約する、または(0008,0060)　と　(0008, 0061) のOR。但し、重複する値は1つにまとめて表現。"
 * subject MS
@@ -118,11 +118,9 @@ study階層のidentifierと同じ概念。(0020,000E)にseries固有のUIDが付
 * series.modality MS
 * series.modality ^short = "シリーズが取得されたモダリティ"
 * series.modality ^definition = "シリーズが取得されたモダリティー"
-* series.modality ^comment = "コードは、列挙型またはコードリストで、SNOMED CTなどの非常に正式な定義まで、非常に柔軟に定義できる。ただしJP CoreではSNOMED CTを推奨しない。詳細については、HL7v3コア原則を参照。  
-当該シリーズのモダリティコード。1シリーズ1モダリティ（1つのシリーズの中に複数のモダリティが混在することはない）。  
-（参照先）  
-ftp://medical.nema.org/medical/dicom/resources/valuesets/fhir/json/CID_29.json  
-https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html"
+* series.modality ^comment = "JP CoreではDICOMのモダリティコードを利用する。SNOMED CTは推奨しない。  
+（参照先）   
+http://jpfhir.jp/fhir/core/ValueSet/JP_DICOMModality_VS"
 * series.description ^short = "シリーズの人間可読な形式での短い要約記述"
 * series.description ^definition = "シリーズの記述。"
 * series.description ^comment = "FHIR文字列のサイズは1MBを超えてはならないことに注意。  
