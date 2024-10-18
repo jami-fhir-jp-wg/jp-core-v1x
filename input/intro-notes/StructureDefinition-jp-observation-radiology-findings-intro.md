@@ -15,8 +15,8 @@
 放射線画像診断報告書では所見の他にImpressionが記述されるが、これらは個別のObservationリソースとして表現される。したがって、原則として検査レポート本体に相当するJP Core DiagnosticReport Radiologyの.resultエレメントには所見を表すJP Core Observation Radiology FindingsとJP Core Observation Radiology Impressionが対で含まれることになる。
 
 <!-- 
-![](intoronotes-resources/observation_endoscopy_structure.png) -->
-<img src="intoronotes-resources/observation_endoscopy_structure.png" width="100%" alt="内視鏡Observationの構造"/>
+![](intoronotes-resources/observation_radiology_structure.png) -->
+<img src="intoronotes-resources/observation_radiology_structure.png" width="100%" alt="放射線画像診断報告書Observationの構造"/>
 
 ## プロファイル定義
 
