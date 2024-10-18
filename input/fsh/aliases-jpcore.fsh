@@ -224,6 +224,7 @@ Alias: $JP_DiseaseICD10_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/ICD10-2013
 Alias: $JP_DocumentCodes_DiagnosticReport_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_DiagnosticReport_VS
 Alias: $JP_DocumentCodes_Endoscopy_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_Endoscopy_VS
 Alias: $JP_DocumentCodes_VS = http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_VS
+Alias: $JP_FamilyMember_VS = http://jpfhir.jp/fhir/core/CodeSystem/JP_FamilyMember_VS
 Alias: $JP_MedicalFeeScoreType_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicalFeeScoreType_VS
 Alias: $JP_MedicalLicenseCertificate_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicalLicenseCertificate_VS
 Alias: $JP_MedicationAsNeededConditionJAMI_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationAsNeededConditionJAMI_VS
