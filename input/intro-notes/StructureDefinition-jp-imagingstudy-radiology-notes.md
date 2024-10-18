@@ -42,10 +42,11 @@ BodySite等でDICOMでmappingされているSNOMED-CTをCodeSystemとして利�
 ### OperationおよびSearch Parameter 一覧
 
 #### Search Parameter一覧
+代表的な検索パラメータを示す。ここに例示されない複合検索が必要となることも想定されるため、ユースケースに応じ適宜拡張すること。
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHOULD | identifier | token | `GET [base]/ImagingStudy?identifier=urn:oid:2.16.124.999999.9999.1154777499.30246.19789.3503430045` |
+| SHALL | identifier | token | `GET [base]/ImagingStudy?identifier=urn:oid:2.16.124.999999.9999.1154777499.30246.19789.3503430045` |
 | SHOULD | patient | reference | `GET [base]/ImagingStudy?patient=123` |
 | SHOULD | patient,modality | reference,token | `GET [base]/ImagingStudy?patient=123&modality=CT` |
 | SHOULD | patient,bodysite | reference,token | `GET [base]/ImagingStudy?patient=123&bodysite=T-15460` |

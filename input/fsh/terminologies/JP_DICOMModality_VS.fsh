@@ -1,8 +1,8 @@
-ValueSet: JP_RadiologyModality_VS
-Id: jp-radiologymodality-vs
-Title: "JP Core Radiology Modality ValueSet"
+ValueSet: JP_DICOMModality_VS
+Id: jp-DICOMmodality-vs
+Title: "JP Core DICOM Modality ValueSet"
 Description: "放射線モダリテに対する 値セット"
-* ^url = $JP_RadiologyModality_VS
+* ^url = $JP_DICOMModality_VS
 * ^status = #active
 * ^experimental = false
 * ^date = "2023-10-31"
