@@ -245,6 +245,7 @@ Alias: $JP_ObservationLabResultCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_
 Alias: $JP_ObservationMethod_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationMethod_VS
 Alias: $JP_ObservationPhysicalExamBodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationPhysicalExamBodySite_VS
 Alias: $JP_ObservationPhysicalExamMethod_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationPhysicalExamMethod_VS
+Alias: $JP_ObservationRadiologyCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationRadiologyCode_VS
 Alias: $JP_ObservationSocialHistoryCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationSocialHistoryCode_VS
 Alias: $JP_ObservationVitalSignsCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCategory_VS
 Alias: $JP_ObservationVitalSignsCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationVitalSignsCode_VS
