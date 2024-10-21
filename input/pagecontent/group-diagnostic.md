@@ -7,7 +7,7 @@
     * [JP Core Observation BodyMeasurement （身体計測）プロファイル][JP_Observation_BodyMeasurement]
     * [JP Core Observation PhysicalExam （身体所見）プロファイル][JP_Observation_PhysicalExam]
     * [JP Core Observation SocialHistory （生活背景）プロファイル][JP_Observation_SocialHistory]
-    JP Core Observation Radiology (放射線画像検査)
+  * JP Core Observation Radiology (放射線画像検査)
       * [JP Core Observation Radiology Findings (放射線画像検査所見）プロファイル][JP_Observation_Radiology_Findings]
       * [JP Core Observation Radiology Impression (放射線画像検査インプレッション)プロファイル][JP_Observation_Radiology_Impression]
   * ImagingStudy （画像検査）
