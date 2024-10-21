@@ -86,6 +86,7 @@ Usage: #inline
 * status = #active
 * ingredient.itemCodeableConcept = $JP_MedicationCodeHOT9_CS#100558502 "ホリゾン注射液１０ｍｇ"
 * ingredient.strength.numerator = 1 $JP_MedicationUnitMERIT9_CS#AMP "アンプル"
+* ingredient.strength.denominator = 1 $JP_MedicationUnitMERIT9_CS#TIME "回"
 
 Instance: jp-medicationadministration-injection-medication-example-2
 InstanceOf: JP_Medication
@@ -95,8 +96,10 @@ Usage: #inline
 * status = #active
 * ingredient[0].itemCodeableConcept = $JP_MedicationCodeHOT9_CS#107750603 "ソリタ－Ｔ３号輸液５００ｍＬ"
 * ingredient[=].strength.numerator = 1 $JP_MedicationUnitMERIT9_CS#HON "本"
+* ingredient[=].strength.denominator = 1 $JP_MedicationUnitMERIT9_CS#TIME "回"
 * ingredient[+].itemCodeableConcept = $JP_MedicationCodeHOT9_CS#108010002 "アドナ注（静脈用）５０ｍｇ／１０ｍＬ"
 * ingredient[=].strength.numerator = 1 $JP_MedicationUnitMERIT9_CS#AMP "アンプル"
+* ingredient[=].strength.denominator = 1 $JP_MedicationUnitMERIT9_CS#TIME "回"
 
 Instance: jp-medicationadministration-injection-bodystructure-example-1
 InstanceOf: BodyStructure
