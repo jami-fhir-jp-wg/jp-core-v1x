@@ -195,7 +195,7 @@ Usage: #definition
 * insert PutCombination3(SHOULD, patient, started, modality)
 * insert PutCombination4(SHOULD, patient, started, modality, bodysite)
 * insert SetSearchParameterInteraction
-* insert PutDefinedSearchParam(SHOULD, identifier, clinical-identifier, token)
+* insert PutDefinedSearchParam(SHALL, identifier, clinical-identifier, token)
 * insert PutDefinedSearchParam(SHOULD, patient, clinical-patient, reference)
 * insert PutDefinedSearchParam(SHOULD, encounter, ImagingStudy-encounter, reference)
 * insert PutDefinedSearchParam(MAY, modality, ImagingStudy-modality, token)
