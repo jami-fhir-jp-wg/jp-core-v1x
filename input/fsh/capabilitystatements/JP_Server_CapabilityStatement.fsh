@@ -144,6 +144,7 @@ Usage: #definition
 * insert PutDefinedSearchParam(SHALL, identifier, clinical-identifier, token)
 * insert PutDefinedSearchParam(SHOULD, patient, clinical-patient, reference)
 * insert PutDefinedSearchParam(MAY, date, clinical-date, date)
+* insert PutDefinedSearchParam(MAY, lot-number, Immunization-lot-number, string)
 
 // Observation
 //TODO: 要確認commonにすべてを記述すべきでは。
