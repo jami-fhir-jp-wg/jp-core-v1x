@@ -66,6 +66,8 @@
 [JP_Observation_LabResult]: StructureDefinition-jp-observation-labresult.html
 [JP_Observation_Microbiology]: StructureDefinition-jp-observation-microbiology.html
 [JP_Observation_PhysicalExam]: StructureDefinition-jp-observation-physicalexam.html
+[JP_Observation_Radiology_Findings]: StructureDefinition-jp-observation-radiology-findings.html
+[JP_Observation_Radiology_Impression]: StructureDefinition-jp-observation-radiology-impression.html
 [JP_Observation_SocialHistory]: StructureDefinition-jp-observation-socialhistory.html
 [JP_Observation_VitalSigns]: StructureDefinition-jp-observation-vitalsigns.html
 [JP_Organization]: StructureDefinition-jp-organization.html
@@ -168,6 +170,7 @@
 [JP_ObservationBodyMeasurementCategory_VS]: ValueSet-jp-observation-bodymeasurement-category-vs.html
 [JP_ObservationBodyMeasurementCode_VS]: ValueSet-jp-observation-bodymeasurement-code-vs.html
 [JP_ObservationBodySite_VS]: ValueSet-jp-observation-bodysite-vs.html
+[JP_ObservationRadiologyCode_VS]: ValueSet-jp-observation-radiology-code-vs.html
 [JP_PhysicalExamCode_VS]: ValueSet-jp-physicalexamcode-vs.html
 [JP_ProcedureBodySite_VS]: ValueSet-jp-procedure-body-site-vs.html
 [JP_ProcedureCodesICHI_VS]: ValueSet-jp-procedure-codes-ichi-vs.html
@@ -240,6 +243,8 @@
 [jp-observation-bodyMeasurement-example-1]: Observation-jp-observation-bodyMeasurement-example-1.html
 [jp-observation-labresult-example-1]: Observation-jp-observation-labresult-example-1.html
 [jp-observation-physicalexam-example-1]: Observation-jp-observation-physicalexam-example-1.html
+[jp-observation-radiology-findings-example-1]: Observation-jp-observation-radiology-findings-example-1.html
+[jp-observation-radiology-impression-example-1]: Observation-jp-observation-radiology-impression-example-1.html
 [jp-observation-socialhistory-example-1]: Observation-jp-observation-socialhistory-example-1.html
 [jp-observation-vitalsigns-example-1]: Observation-jp-observation-vitalsigns-example-1.html
 [jp-organization-example-clinic]: Organization-jp-organization-example-clinic.html
