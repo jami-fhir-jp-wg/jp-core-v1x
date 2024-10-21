@@ -35,4 +35,4 @@ Usage: #example
 *  recordedDate = "2022-08-01"
 *  evidence[0]
   *  code[0]
-    * text = "下血"
+    *  text = "下血"

@@ -19,8 +19,8 @@ copyright: Copyright FHIR Japanese implementation research working group in Japa
 jurisdiction: urn:iso:std:iso:3166#JP "Japan"
 dependencies:
   jpfhir-terminology:
-    uri: http://jpfhir.jp/fhir/jpfhir-terminology/
-    version: 1.1.1
+    uri: http://jpfhir.jp/fhir/jpfhir-terminology/ImplementationGuide/
+    version: 1.2.1
     
 #----------------------------------------
 # ページタイトル名称設定
@@ -121,15 +121,29 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - '*/jpfhir.jp.core'
   no-usage-check: 'true'
   i18n-default-lang: 'ja'
+  # logging:
+  #   - tx #tx: Messages describing the use of the terminology server (for debugging)
+  #   - html #html: Log when validating an html page (troubleshooting only - leave off)
+  #   - generate #generate: Log when producing an individual resource (troubleshooting only - leave off)
+  #   - init #init: Messages describing the start up process (for debugging)
+  #   - progress #progress: Overall progress messages
   special-url:
     - http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes
     - http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement
     - http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Server_CapabilityStatement
+    - http://jpfhir.jp/fhir/core/CodeSystem/HL70241
+    - http://jpfhir.jp/fhir/core/CodeSystem/JHSD0006
     - http://jpfhir.jp/fhir/core/CodeSystem/JHSI0001
     - http://jpfhir.jp/fhir/core/CodeSystem/JHSI0003
     - http://jpfhir.jp/fhir/core/CodeSystem/JHSP0002
     - http://jpfhir.jp/fhir/core/CodeSystem/JHSP0007
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionSeverity_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseModifierReceipt_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeICD10_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeICD11_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeReceipt_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseOutcomeReceipt_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseModifierReceipt_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyMedicationAllergen_CS
@@ -161,6 +175,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/route-codes
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePrefixModifier
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePostfixModifier
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseaseOutcome
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol
@@ -203,6 +220,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Binary
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_CarePlan
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition_Diagnosis
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Consent
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Device
@@ -239,6 +257,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRatio_DosePerPeriod
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationStatement
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationStatement_Injection
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationSimpleQuantity
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationTiming
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_BodyMeasurement
@@ -259,6 +279,18 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeMEDISExchange_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeMEDISRecordNo_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeICD10_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeICD11_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeReceipt_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeHL70241_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeJHSD0006_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeReceipt_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseModifierMEDISExchange_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseModifierMEDISRecordNo_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseModifierReceipt_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionSeverity_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DiagnosticReportCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_DiagnosticReport_VS
@@ -306,7 +338,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationUncategorizedComment_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationInstructionForDispenseJHSP0002_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationRequestDosageInstructionLine_VS
-    - http://loinc.org    
+    - http://loinc.org
     - http://unitsofmeasure.org
     - http://www.mhlw.go.jp/toukei/sippei/2013/ICD10-JP
     - urn:ietf:bcp:13
@@ -340,6 +372,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - urn:oid:1.2.392.200119.4.101.2
     - urn:oid:1.2.392.200119.4.101.6
     - urn:oid:1.2.392.200119.4.201.2
+    - urn:oid:1.2.392.200119.4.201.5
     - urn:oid:1.2.392.200119.4.402.1
     - urn:oid:1.2.392.200119.4.403.1
     - urn:oid:1.2.392.200119.4.403.2

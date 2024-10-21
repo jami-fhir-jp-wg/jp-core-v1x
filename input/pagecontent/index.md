@@ -31,6 +31,8 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
   * [JP Core MedicationDispense Injection （注射薬剤処方調剤・払い出し記録）プロファイル][JP_MedicationDispense_Injection]
   * [JP Core MedicationAdministration （内服・外用薬剤投与実施情報）プロファイル][JP_MedicationAdministration]
   * [JP Core MedicationAdministration Injection （注射薬剤投与実施情報）プロファイル][JP_MedicationAdministration_Injection]
+  * [JP Core MedicationStatement （内服・外用薬剤服薬情報）プロファイル][JP_MedicationStatement]
+  * [JP Core MedicationStatement Injection （注射薬剤服薬情報）プロファイル][JP_MedicationStatement_Injection]
   * [JP Core Immunization （予防接種記録）プロファイル][JP_Immunization]
 * [Diagnosticグループ （診断）](group-diagnostic.html)
   * Observation （検査）
@@ -56,6 +58,7 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
 * [Clinicalグループ（診療）](group-clinical.html)
   * [JP Core AllergyIntolerance （アレルギー不耐症）プロファイル][JP_AllergyIntolerance]
   * [JP Core Condition （状態）プロファイル][JP_Condition]
+    * [JP Core Condition Diagnosis (診断) プロファイル][JP_Condition_Diagnosis]
   * [JP Core Procedure （処置）プロファイル][JP_Procedure]
   * [JP Core FamilyMemberHistory（家族歴）プロファイル][JP_FamilyMemberHistory]
 
