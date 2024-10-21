@@ -8,7 +8,7 @@
 - code : レポートの種別
   （[JP Core Document Codes Diagnostic][JP_DocumentCodes_DiagnosticReport_VS]に記載されているLOINCコード(18748-4) "Diagnostic imaging study" を指定）
 - category : カテゴリとモダリティを表すコード
-  （Radiology(LP29684-5)を第一コードとし、モダリティを示すDICOMコードを第二コードとして指定する。第二コードは複数のモダリティを許容するため、複数のコードの指定が想定される。）
+  （Radiology(LP29684-5)を第一コードとし、モダリティを示すDICOMコード[JP Core DICOM Modality Codes][JP_DICOMModaliy_VS]を第二コードとして指定する。第二コードは複数のモダリティを許容するため、複数のコードの指定が想定される。）
   
 ### MustSupport
 
