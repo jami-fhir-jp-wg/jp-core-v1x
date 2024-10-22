@@ -41,7 +41,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * form ^definition = "TAB | CAP | PWD | SYR | SUP | LQD | OIT | CRM | TPE | INJ + 製品の剤型についての説明。散剤、ドライシロップ(PWD)、錠剤(TAB)、カプセル(CAP)など。"
 * form ^comment = "もし、Medication ResourceがMedicationRequest Resourceから参照された場合は、これはオーダされた剤型である。Medication ResourceがMedicationDispense Resourceから参照された場合は、払い出された剤型である。MedicationAdministration ResourceからMedication Resourceが参照されていれば、投与された剤型である。"
 * amount only JP_MedicationRatio_Amount
-* amount ^short = "パッケージ中の薬剤の量"
+* amount ^short = "パッケージ中の薬剤の量"      
 * amount ^definition = "パッケージされた製品に含まれる薬剤固有の量。たとえば、同じ力価の製品を指定すれば（たとえば、インスリングラルギン10単位/mL注射液）、この値はパッケージ内での薬剤量（たとえば、3mL, 10mLなど）を明示することになる。"
 * amount ^comment = "比率（Ratio)を表すデータ型は、量(Quantity)と共通単位を使って適切に表現できないときのみに使われるべきである。分母が\"1\"に固定されているとわかっているような場合は、量(Quantity)を比率(Ratio)の代わりに使うべきである。"
 * ingredient ^short = "薬効がある、あるいは薬効を伴わない成分"
