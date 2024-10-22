@@ -13,7 +13,7 @@ gencont_sh_url=$scriptdlroot/_gencontinuous.sh
 gen_sh_url=$scriptdlroot/_genonce.sh
 update_sh_url=$scriptdlroot/_updatePublisher.sh
 
-skipPrompts=false
+skipPrompts=true
 FORCE=false
 
 if ! type "curl" > /dev/null; then

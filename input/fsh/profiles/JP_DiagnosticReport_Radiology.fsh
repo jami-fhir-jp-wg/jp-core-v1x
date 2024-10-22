@@ -54,7 +54,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 
 * category[radiology_sub] ^short = "レポート対象のモダリティを示すコード【詳細参照】"
 * category[radiology_sub] ^definition = "レポート対象のモダリティを示すコード。放射線を表す第1コードのLP29684-5に続くサブカテゴリコードとして第2コード以下に保持される。複数のモダリティの組み合わせを許容するため、コードの列挙を許容する。"
-* category[radiology_sub] from $JP_RadiologyModality_VS (required)
+* category[radiology_sub] from $JP_DICOMModality_VS (required)
 * category[radiology_sub].coding.system = $dicom-ontology (exactly)
 * category[radiology_sub].coding.code ^short = "DICOMのモダリティコードを指定"
 * category[radiology_sub].coding.code ^definition = "DICOMのモダリティコードを指定"
@@ -113,10 +113,11 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * specimen ^comment = "【JP Core仕様】未使用  
 ・画像ガイド下生検で得られる検体の可能性は有り得るが、本項目は病理レポートで利用されることを想定し、放射線レポートでは特には規定しない"
 * specimen ^requirements = "レポートの対象となる取集された検体についての情報をレポートできる必要がある。"
+* result only Reference(JP_Observation_Radiology_Findings or JP_Observation_Radiology_Impression or JP_Observation_Common)
 * result ^short = "診断レポートの一部となるObservationリソース【詳細参照】"
-* result ^definition = "【JP Core仕様】計測情報などの付随所見をObservationリソースとして定義できるが、該当するコードが定義できないため放射線レポートでは未定義とする。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
+* result ^definition = "【JP Core仕様】所見(findings)や診断の結果(impression)を示すObservationリソースへの参照。この他、計測情報などの付随所見をObservationリソースとして定義できる。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
 * result ^comment = "Observationはさらにobservationを含むことができる。  
-【JP Core仕様】計測情報などの付随所見をObservationリソースとして定義できるが、該当するコードが定義できないため放射線レポートでは未定義とする。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
+【JP Core仕様】所見(findings)や診断の結果(impression)を示すObservationリソース以外では、計測情報などの付随所見をObservationリソースとして定義できるが、ユースケースに依存するためJP Coreでは未定義とする。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"
 * result ^requirements = "結果のグループ化が任意だが、意味のある個別の結果または結果のグループをサポートする必要がある。"
 * imagingStudy MS
 * imagingStudy only Reference(JP_ImagingStudy_Radiology)

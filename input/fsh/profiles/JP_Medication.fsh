@@ -41,7 +41,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * form ^definition = "TAB | CAP | PWD | SYR | SUP | LQD | OIT | CRM | TPE | INJ + 製品の剤型についての説明。散剤、ドライシロップ(PWD)、錠剤(TAB)、カプセル(CAP)など。"
 * form ^comment = "もし、Medication ResourceがMedicationRequest Resourceから参照された場合は、これはオーダされた剤型である。Medication ResourceがMedicationDispense Resourceから参照された場合は、払い出された剤型である。MedicationAdministration ResourceからMedication Resourceが参照されていれば、投与された剤型である。"
 * amount only JP_MedicationRatio_Amount
-* amount ^short = "パッケージ中の薬剤の量"
+* amount ^short = "パッケージ中の薬剤の量"      
 * amount ^definition = "パッケージされた製品に含まれる薬剤固有の量。たとえば、同じ力価の製品を指定すれば（たとえば、インスリングラルギン10単位/mL注射液）、この値はパッケージ内での薬剤量（たとえば、3mL, 10mLなど）を明示することになる。"
 * amount ^comment = "比率（Ratio)を表すデータ型は、量(Quantity)と共通単位を使って適切に表現できないときのみに使われるべきである。分母が\"1\"に固定されているとわかっているような場合は、量(Quantity)を比率(Ratio)の代わりに使うべきである。"
 * ingredient ^short = "薬効がある、あるいは薬効を伴わない成分"
@@ -66,7 +66,8 @@ Falseであれば、この成分が薬剤の治療効果に影響がない（た
 * ingredient.strength only JP_MedicationRatio_Amount
 * ingredient.strength ^short = "成分の活性量"
 * ingredient.strength ^definition = "この薬剤中にどの程度の物質が含まれているかを示す。たとえば、1錠あたり250mgなど。これは分子が250mgで分母が1錠である比率を表現している。"
-* ingredient.strength ^comment = "Ratioデータ型は2つの数字の関係で示され、Quantityや一般的な単位で適切に表現できない関係を表すときにのみ用いられる。分母の値が「1」で固定されているような値であれば、QuantityがRatioの代わりに用いられるべきである。"
+* ingredient.strength ^comment = "1回に使用される薬剤料を示すため、denominatorは1回に固定される。"
+* ingredient.strength.denominator = 1 $JP_MedicationUnitMERIT9_VS#TIME "回" (exactly)
 * batch ^short = "分包された薬剤についての詳細な解説"
 * batch ^definition = "薬剤のパッケージ（薬品そのものではない）についての情報。"
 * batch.lotNumber ^short = "バッチのID"
