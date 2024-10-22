@@ -62,7 +62,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * referenceRange ^requirements = "どの値が「正常」と見なされるかを知ることは、特定の結果の意義を評価するのに役立つ。さまざまなコンテキストに対応するため複数の参照範囲を提供できる必要がある。"
 * hasMember only Reference(JP_Observation_Common or QuestionnaireResponse or MolecularSequence)
 * insert SetDefinition(hasMember, このObservationに関連する子リソースに関する情報。このObservationに関連する/属するパネル検査や検査セットなどのObservationグループ)
-* hasMember ^comment = "この要素を使用する場合、observationには通常、値または関連するリソースのセットのいじれかを含む。その両方を含む場合もある。複数のobservationをグループに一緒にまとめる方法については、以下の[メモ]（observation.html＃obsgrouping）を参照せよ。システムは、[QuestionnaireResponse]（questionnaireresponse.html）からの結果を計算して最終スコアにし、そのスコアをobservationとして表す場合があることに注意。"
+* hasMember ^comment = "この要素を使用する場合、observationには通常、値または関連するリソースのセットのいずれかを含む。その両方を含む場合もある。複数のobservationをグループに一緒にまとめる方法については、以下の[メモ]（observation.html＃obsgrouping）を参照せよ。システムは、[QuestionnaireResponse]（questionnaireresponse.html）からの結果を計算して最終スコアにし、そのスコアをobservationとして表す場合があることに注意。"
 * derivedFrom only Reference(DocumentReference or ImagingStudy or Media or QuestionnaireResponse or JP_Observation_Common or MolecularSequence)
 * insert SetDefinition(derivedFrom, このObservationの結果の導出元に関する情報。例えば、画像検査から取得された結果となる場合その導出元となる画像検査結果を示すImagingStudyリソース)
 * derivedFrom ^comment = "この要素にリストされているすべての参照の選択肢は、派生値の元のデータなる可能性のある臨床観察やその他の測定値を表すことができる。最も一般的な参照先は、別のobservationである。observationをグループに一緒にまとめる方法については、以下の[メモ]（observation.html＃obsgrouping）を参照すること。"
