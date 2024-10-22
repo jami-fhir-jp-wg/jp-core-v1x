@@ -67,7 +67,7 @@ Falseであれば、この成分が薬剤の治療効果に影響がない（た
 * ingredient.strength ^short = "成分の活性量"
 * ingredient.strength ^definition = "この薬剤中にどの程度の物質が含まれているかを示す。たとえば、1錠あたり250mgなど。これは分子が250mgで分母が1錠である比率を表現している。"
 * ingredient.strength ^comment = "1回に使用される薬剤料を示すため、denominatorは1回に固定される。"
-* ingredient.strength.denominator = 1 $JP_MedicationUnitMERIT9_VS#TIME "回"
+* ingredient.strength.denominator = 1 $JP_MedicationUnitMERIT9_VS#TIME "回" (exactly)
 * batch ^short = "分包された薬剤についての詳細な解説"
 * batch ^definition = "薬剤のパッケージ（薬品そのものではない）についての情報。"
 * batch.lotNumber ^short = "バッチのID"
