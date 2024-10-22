@@ -50,13 +50,49 @@ RuleSet: SetSearchParameterInteraction
 * rest.resource[=].searchRevInclude = "Provenance:target"
 
 
+
 // 定義済み検索パラメーターの追加
-RuleSet: PutDefinedSearchParam(name, param-name, type)
-* insert PutSearchParam({name}, http://hl7.org/fhir/SearchParameter/{param-name}, {type})
+RuleSet: PutDefinedSearchParam(expectation, name, param-name, type)
+* insert PutSearchParam({expectation}, {name}, http://hl7.org/fhir/SearchParameter/{param-name}, {type})
 
 // 検索パラメーターの追加
-RuleSet: PutSearchParam(name, definition, type)
-* rest.resource[=].searchParam[+].name = "{name}"
+RuleSet: PutSearchParam(expectation,name, definition, type)
+* rest.resource[=].searchParam[+].extension[+].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].searchParam[=].extension[=].valueCode = #{expectation}
+* rest.resource[=].searchParam[=].name = "{name}"
 * rest.resource[=].searchParam[=].definition = "{definition}"
 * rest.resource[=].searchParam[=].type = #{type}
 
+
+// 検索パラメーターの結合
+RuleSet: InitializeCombination(expectation)
+* rest.resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension.valueCode = #{expectation}
+
+RuleSet: PutCombination6(expectation, param1, param2 ,param3, param4, param5, param6)
+* insert PutCombination5({expectation}, {param1}, {param2} , {param3}, {param4}, {param5})
+* insert PutCombinationParameter({param6})
+
+RuleSet: PutCombination5(expectation, param1, param2 ,param3, param4, param5)
+* insert PutCombination4({expectation}, {param1}, {param2} , {param3}, {param4})
+* insert PutCombinationParameter({param5})
+
+RuleSet: PutCombination4(expectation, param1, param2 ,param3, param4)
+* insert PutCombination3({expectation}, {param1}, {param2} , {param3} )
+* insert PutCombinationParameter({param4})
+
+RuleSet: PutCombination3(expectation, param1, param2, param3)
+* insert PutCombination2({expectation}, {param1}, {param2})
+* insert PutCombinationParameter({param3})
+
+RuleSet: PutCombination2(expectation, param1, param2)
+* rest.resource[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
+* rest.resource[=].extension[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].extension[=].valueCode = #{expectation}
+* insert PutCombinationParameter({param1})
+* insert PutCombinationParameter({param2})
+
+
+RuleSet: PutCombinationParameter(param1)
+* rest.resource[=].extension[=].extension[+].url = "required"
+* rest.resource[=].extension[=].extension[=].valueString = "{param1}"
