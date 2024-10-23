@@ -6,6 +6,7 @@ Description: "放射線モダリテに対する 値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2023-10-31"
+* ^copyright = "DICOM® is the registered trademark of the National Electrical Manufacturers Association for its Standards publications relating to digital communications of medical information. "
 
 * $dicom-ontology#AR "Autorefraction"
 //* $dicom-ontology#ASMT "Content Assessment Result"

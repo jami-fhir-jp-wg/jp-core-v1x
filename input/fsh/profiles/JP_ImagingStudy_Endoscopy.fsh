@@ -9,6 +9,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Endoscopy"
 * ^status = #active
 * ^date = "2023-10-31"
+* ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG. DICOM® is the registered trademark of the National Electrical Manufacturers Association for its Standards publications relating to digital communications of medical information."
 * . ^short = "内視鏡を使用したDICOM画像検査に関する情報"
 * identifier MS
 * identifier ^short = "DICOM画像検査全体を一意に識別するためのID【詳細参照】"
