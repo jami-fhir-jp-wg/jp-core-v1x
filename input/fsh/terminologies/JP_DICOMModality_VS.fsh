@@ -1,5 +1,5 @@
 ValueSet: JP_DICOMModality_VS
-Id: jp-DICOMmodality-vs
+Id: jp-dicommodality-vs
 Title: "JP Core DICOM Modality ValueSet"
 Description: "放射線モダリテに対する 値セット"
 * ^url = $JP_DICOMModality_VS
