@@ -10,7 +10,6 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * ^status = #active
 * ^date = "2023-10-31"
 * . ^short = "DICOM画像検査で作成されたコンテンツの表現。スタディは一連のシリーズで構成され、各シリーズには、共通のコンテキストで取得または生成された一連のサービスオブジェクトペアインスタンス（SOPインスタンス-画像またはその他のデータ）が含まれる、シリーズは1つのモダリティ（X線、CT、MR、超音波など）のみだがスタディには複数の異なるモダリティのシリーズが含まれる場合がある"
-* ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG. DICOM® is the registered trademark of the National Electrical Manufacturers Association for its Standards publications relating to digital communications of medical information."
 * identifier MS
 * identifier ^short = "スタディ全体の識別子"
 * identifier ^definition = "DICOMスタディインスタンスUIDやアクセッション番号などのImagingStudyの識別子。"
