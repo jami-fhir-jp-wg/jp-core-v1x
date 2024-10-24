@@ -42,13 +42,12 @@ BodySite等でDICOMでmappingされているSNOMED-CTをCodeSystemとして利�
 ### OperationおよびSearch Parameter 一覧
 
 #### Search Parameter一覧
-代表的な検索パラメータを示す。ここに例示されない検索項目であっても HL7.org FHIR R4 で定義されている検索項目に加え、複合検索が必要となることも想定されるため、ユースケースに応じ適宜拡張すること。
+代表的な検索パラメータを示す。ここに例示されない検索項目であっても[Common Parameters](https://www.hl7.org/fhir/R4/search.html#all)および[オリジナルの定義](https://www.hl7.org/fhir/R4/imagingstudy.html#search)でサポートされているものは対象とすること。また、複合検索が必要となることも想定されるため、ユースケースに応じ適宜拡張すること。
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
 | SHALL | identifier | token | `GET [base]/ImagingStudy?identifier=urn:oid:2.16.124.999999.9999.1154777499.30246.19789.3503430045` |
 | SHALL | status | token | `GET [base]/ImagingStudy?status=available`	|
-| SHOULD | modality, series.modality | token | `GET [base]/ImagingStudy?modality=CT` `GET [base]/ImagingStudy?series.modality=CT` |
 | SHOULD | patient | reference | `GET [base]/ImagingStudy?patient=123` |
 | SHOULD | patient,modality | reference,token | `GET [base]/ImagingStudy?patient=123&modality=CT` |
 | SHOULD | patient,bodysite | reference,token | `GET [base]/ImagingStudy?patient=123&bodysite=T-15460` |
@@ -62,7 +61,10 @@ BodySite等でDICOMでmappingされているSNOMED-CTをCodeSystemとして利�
 ##### 必須検索パラメータ
 
 次の検索パラメータは必須でサポートされなければならない。（**SHALL**）
-ImagingStudyリソースでは検索の多様性が求められるため、必須としての検索項目は定義していない。
+ImagingStudyリソースでは検索の多様性が求められるため、多くは推奨検索パラメータとしているが、以下は必須のサポートとする。
+
+- identifier
+- status
 
 ##### 推奨検索パラメータ
 
