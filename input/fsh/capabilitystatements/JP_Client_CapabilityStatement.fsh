@@ -146,7 +146,6 @@ Usage: #definition
 * insert PutDefinedSearchParam(MAY, date, clinical-date, date)
 * insert PutDefinedSearchParam(MAY, lot-number, Immunization-lot-number, string)
 
-
 // Observation
 //TODO: 要確認commonにすべてを記述すべきでは。
 * insert SetSearchParameterType(Observation)
@@ -196,6 +195,7 @@ Usage: #definition
 * insert PutCombination4(SHOULD, patient, started, modality, bodysite)
 * insert SetSearchParameterInteraction
 * insert PutDefinedSearchParam(SHALL, identifier, clinical-identifier, token)
+* insert PutDefinedSearchParam(SHALL, status, ImagingStudy-status, token)
 * insert PutDefinedSearchParam(SHOULD, patient, clinical-patient, reference)
 * insert PutDefinedSearchParam(SHOULD, encounter, ImagingStudy-encounter, reference)
 * insert PutDefinedSearchParam(MAY, modality, ImagingStudy-modality, token)

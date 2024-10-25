@@ -11,8 +11,8 @@ Usage: #definition
 * kind = #requirements
 * instantiates = "http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Server_CapabilityStatement"
 * fhirVersion = #4.0.1
-* format[0] = #xml
-* format[+] = #json
+* format[0] = #json
+* format[+] = #xml
 * rest.mode = #server
 
 // Patient
@@ -194,7 +194,8 @@ Usage: #definition
 * insert PutCombination3(SHOULD, patient, started, modality)
 * insert PutCombination4(SHOULD, patient, started, modality, bodysite)
 * insert SetSearchParameterInteraction
-* insert PutDefinedSearchParam(SHOULD, identifier, clinical-identifier, token)
+* insert PutDefinedSearchParam(SHALL, identifier, clinical-identifier, token)
+* insert PutDefinedSearchParam(SHALL, status, ImagingStudy-status, token)
 * insert PutDefinedSearchParam(SHOULD, patient, clinical-patient, reference)
 * insert PutDefinedSearchParam(SHOULD, encounter, ImagingStudy-encounter, reference)
 * insert PutDefinedSearchParam(MAY, modality, ImagingStudy-modality, token)
