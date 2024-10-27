@@ -1,4 +1,4 @@
-***v1.1.2-url***  
+***v1.1.2-clins***  
 
  CLINS用のパッケージとするため、CodeSystemの識別子をOID形式からURL形式に変更した（一部はOID形式のまま）。これに伴い、依存パッケージをjpfhir-terminology.r4-1.2.3-url.tgzに改訂した。
 
