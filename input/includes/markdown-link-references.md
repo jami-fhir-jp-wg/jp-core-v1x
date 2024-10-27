@@ -150,7 +150,7 @@
 [JP_ConclusionCodesJed_VS]: ValueSet-jp-conclusion-codes-jed-vs.html
 [JP_ConditionSeverity_VS]: ValueSet-jp-condition-severity-vs.html
 [JP_DiagnosticReportCategory_VS]: ValueSet-jp-diagnosticreportcategory-vs.html
-[JP_DICOMModality_VS]: ValueSet-jp-DICOMmodality-vs.html
+[JP_DICOMModality_VS]: ValueSet-jp-dicommodality-vs.html
 [JP_DocumentCodes_DiagnosticReport_VS]: ValueSet-jp-documentcodes-diagnosticreport-vs.html
 [JP_DocumentCodes_Endoscopy_VS]: ValueSet-jp-documentcodes-endoscopy-vs.html
 [JP_MedicalLicenseCertificate_VS]: ValueSet-jp-medicallicensecertificate-vs.html
