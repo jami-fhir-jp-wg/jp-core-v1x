@@ -15,16 +15,19 @@
 
 <!-- StructureDefinition: Profile, DataType -->
 [JP_Binary]: StructureDefinition-JP-Binary.html
+[JP_CarePlan]: StructureDefinition-JP-CarePlan.html
+[JP_Consent]: StructureDefinition-JP-Consent.html
 [JP_Device]: StructureDefinition-JP-Device.html
+[JP_DeviceUseStatement]: StructureDefinition-JP-DeviceUseStatement.html
 [JP_DocumentReference]: StructureDefinition-JP-DocumentReference.html
 [JP_RelatedPerson]: StructureDefinition-JP-RelatedPerson.html
+[JP_ResearchStudy]: StructureDefinition-JP-ResearchStudy.html
+[JP_ResearchSubject]: StructureDefinition-JP-ResearchSubject.html
 [JP_ServiceRequest]: StructureDefinition-JP-ServiceRequest.html
 [JP_Specimen]: StructureDefinition-JP-Specimen.html
 [JP_AllergyIntolerance]: StructureDefinition-jp-allergyintolerance.html
-[JP_CarePlan]: StructureDefinition-jp-careplan.html
-[JP_Condition]: StructureDefinition-jp-condition.html
 [JP_Condition_Diagnosis]: StructureDefinition-jp-condition-diagnosis.html
-[JP_Consent]: StructureDefinition-jp-consent.html
+[JP_Condition]: StructureDefinition-jp-condition.html
 [JP_Coverage]: StructureDefinition-jp-coverage.html
 [JP_DiagnosticReport_Common]: StructureDefinition-jp-diagnosticreport-common.html
 [JP_DiagnosticReport_Endoscopy]: StructureDefinition-jp-diagnosticreport-endoscopy.html
@@ -58,8 +61,8 @@
 [JP_MedicationRequest_Injection]: StructureDefinition-jp-medicationrequest-injection.html
 [JP_MedicationRequest]: StructureDefinition-jp-medicationrequest.html
 [JP_MedicationSimpleQuantity]: StructureDefinition-jp-medicationsimplequantity.html
-[JP_MedicationStatement]: StructureDefinition-jp-medicationstatement.html
 [JP_MedicationStatement_Injection]: StructureDefinition-jp-medicationstatement-injection.html
+[JP_MedicationStatement]: StructureDefinition-jp-medicationstatement.html
 [JP_MedicationTiming]: StructureDefinition-jp-medicationtiming.html
 [JP_Observation_BodyMeasurement]: StructureDefinition-jp-observation-bodymeasurement.html
 [JP_Observation_Common]: StructureDefinition-jp-observation-common.html
@@ -77,6 +80,9 @@
 [JP_Procedure]: StructureDefinition-jp-procedure.html
 
 <!-- StructureDefinition: Extension -->
+[JP_Condition_DiseaseOutcome]: StructureDefinition-jp-condition-disease-outcome.html
+[JP_Condition_DiseasePostfixModifier]: StructureDefinition-jp-condition-disease-postfix-modifier.html
+[JP_Condition_DiseasePrefixModifier]: StructureDefinition-jp-condition-disease-prefix-modifier.html
 [JP_Coverage_InsuredPersonNumber]: StructureDefinition-jp-coverage-insuredpersonnumber.html
 [JP_Coverage_InsuredPersonSubNumber]: StructureDefinition-jp-coverage-insuredpersonsubnumber.html
 [JP_Coverage_InsuredPersonSymbol]: StructureDefinition-jp-coverage-insuredpersonsymbol.html
@@ -123,6 +129,16 @@
 [JP_Patient_KanaSort_SP]: SearchParameter-jp-patient-kanasort-sp.html
 
 <!-- CodeSystem -->
+[JP_ConditionDiseaseCodeICD10_CS]: CodeSystem-jp-condition-disease-code-icd10-cs.html
+[JP_ConditionDiseaseCodeMEDISExchange_CS]: CodeSystem-jp-condition-disease-code-medis-exchange-cs.html
+[JP_ConditionDiseaseCodeMEDISRecordNo_CS]: CodeSystem-jp-condition-disease-code-medis-record-no-cs.html
+[JP_ConditionDieaseCodeReceipt_CS]: CodeSystem-jp-condition-disease-code-receipt-cs.html
+[JP_ConditionDiseaseModifierMEDISExchange_CS]: CodeSystem-jp-condition-disease-modifier-medis-exchange-cs.html
+[JP_ConditionDiseaseModifierMEDISRecordNo_CS]: CodeSystem-jp-condition-disease-modifier-medis-record-no-cs.html
+[JP_ConditionDieaseModifierReceipt_CS]: CodeSystem-jp-condition-disease-modifier-receipt-cs.html
+[JP_ConditionDieaseOutcomeHL70241_CS]: CodeSystem-jp-condition-disease-outcome-hl70241-cs.html
+[JP_ConditionDieaseOutcomeJHSD0006_CS]: CodeSystem-jp-condition-disease-outcome-jhsd0006-cs.html
+[JP_ConditionDieaseOutcomeReceipt_CS]: CodeSystem-jp-condition-disease-outcome-receipt-cs.html
 [JP_DocumentCodes_CS]: CodeSystem-jp-documentcodes-cs.html
 [JP_EndoscopyTerminologyCodesJED_CS]: CodeSystem-jp-endoscopyterminology-codes-jed-cs.html
 [JP_MedicationExampleDosageComment_CS]: CodeSystem-jp-medication-example-dosagecomment-cs.html
@@ -147,7 +163,19 @@
 [JP_Undefined_CS]: CodeSystem-jp-undefined-cs.html
 
 <!-- ValueSet -->
+[JP_ObservationRadiologyCode_VS]: ValueSet-jp-ObservationRadiologyCode-vs.html
 [JP_ConclusionCodesJed_VS]: ValueSet-jp-conclusion-codes-jed-vs.html
+[JP_ConditionDiseaseCodeICD10_VS]: ValueSet-jp-condition-disease-code-icd10-vs.html
+[JP_ConditionDiseaseCodeMEDISExchange_VS]: ValueSet-jp-condition-disease-code-medis-exchange-vs.html
+[JP_ConditionDiseaseCodeMEDISRecordNo_VS]: ValueSet-jp-condition-disease-code-medis-record-no-vs.html
+[JP_ConditionDiseaseCodeReceipt_VS]: ValueSet-jp-condition-disease-code-receipt-vs.html
+[JP_ConditionDiseaseModifierMEDISExchange_VS]: ValueSet-jp-condition-disease-modifier-medis-exchange-vs.html
+[JP_ConditionDiseaseModifierMEDISRecordNo_VS]: ValueSet-jp-condition-disease-modifier-medis-record-no-vs.html
+[JP_ConditionDiseaseModifierReceipt_VS]: ValueSet-jp-condition-disease-modifier-receipt-vs.html
+[JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS]: ValueSet-jp-condition-disease-outcome-hl70241-jhsd0006-vs.html
+[JP_ConditionDiseaseOutcomeHL70241_VS]: ValueSet-jp-condition-disease-outcome-hl70241-vs.html
+[JP_ConditionDiseaseOutcomeJHSD0006_VS]: ValueSet-jp-condition-disease-outcome-jhsd0006-vs.html
+[JP_ConditionDiseaseOutcomeReceipt_VS]: ValueSet-jp-condition-disease-outcome-receipt-vs.html
 [JP_ConditionSeverity_VS]: ValueSet-jp-condition-severity-vs.html
 [JP_DiagnosticReportCategory_VS]: ValueSet-jp-diagnosticreportcategory-vs.html
 [JP_DICOMModality_VS]: ValueSet-jp-dicommodality-vs.html
@@ -162,7 +190,6 @@
 [JP_MedicationExampleRouteComment_VS]: ValueSet-jp-medication-example-routecomment-vs.html
 [JP_MedicationExampleSiteComment_VS]: ValueSet-jp-medication-example-sitecomment-vs.html
 [JP_MedicationExampleUncategorizedComment_VS]: ValueSet-jp-medication-example-uncategorized-comment-vs.html
-[JP_MedicationInstructionForDispenseJHSP0002_VS]: ValueSet-jp-medication-instruction-for-dispense-jhsp0002-vs.html
 [JP_Microbiology_AntiMicrobialDrug_VS]: ValueSet-jp-microbiology-anti-microbial-drug-vs.html
 [JP_ObservationCategory_Microbiology_VS]: ValueSet-jp-microbiology-category-laboratory-vs.html
 [JP_MicrobiologyCategory_VS]: ValueSet-jp-microbiology-category-vs.html
@@ -170,7 +197,6 @@
 [JP_ObservationBodyMeasurementCategory_VS]: ValueSet-jp-observation-bodymeasurement-category-vs.html
 [JP_ObservationBodyMeasurementCode_VS]: ValueSet-jp-observation-bodymeasurement-code-vs.html
 [JP_ObservationBodySite_VS]: ValueSet-jp-observation-bodysite-vs.html
-[JP_ObservationRadiologyCode_VS]: ValueSet-jp-observation-radiology-code-vs.html
 [JP_PhysicalExamCode_VS]: ValueSet-jp-physicalexamcode-vs.html
 [JP_ProcedureBodySite_VS]: ValueSet-jp-procedure-body-site-vs.html
 [JP_ProcedureCodesICHI_VS]: ValueSet-jp-procedure-codes-ichi-vs.html
@@ -188,6 +214,7 @@
 
 <!-- Example -->
 [jp-allergyintolerance-example-1]: AllergyIntolerance-jp-allergyintolerance-example-1.html
+[jp-condition-diagnosis-example-1]: Condition-jp-condition-diagnosis-example-1.html
 [jp-condition-example-1]: Condition-jp-condition-example-1.html
 [jp-coverage-example-1]: Coverage-jp-coverage-example-1.html
 [jp-diagnosticreport-endoscopy-example-1]: DiagnosticReport-jp-diagnosticreport-endoscopy-example-1.html
