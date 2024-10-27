@@ -9,8 +9,8 @@ Usage: #definition
 * code = #jp-insurance-organizationcategory
 * base = #Organization
 * type = #token
-* expression = "Organization.extension.where(url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory').value.as(code)"
-* xpath = "f:Organization/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory']/f:valueCoding/f:code"
+* expression = "Organization.extension('http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory').value.ofType(Coding)"
+* xpath = "f:Organization/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory']/f:valueCoding"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
@@ -30,8 +30,8 @@ Usage: #definition
 * code = #jp-insurance-organizationno
 * base = #Organization
 * type = #token
-* expression = "Organization.extension.where(url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo').value.as(code)"
-* xpath = "f:Organization/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo']/f:valueCoding/f:code"
+* expression = "Organization.extension('http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo').value.ofType(Identifier)"
+* xpath = "f:Organization/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo']/f:valueIdentifier"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
@@ -52,8 +52,8 @@ Usage: #definition
 * code = #jp-prefectureno
 * base = #Organization
 * type = #token
-* expression = "Organization.extension.where(url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo').value.as(code)"
-* xpath = "f:Organization/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo']/f:valueCoding/f:code"
+* expression = "Organization.extension('http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo').value.ofType(Coding)"
+* xpath = "f:Organization/f:extension[@url='http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo']/f:valueCoding"
 * xpathUsage = #normal
 * multipleOr = true
 * multipleOr.extension.url = $capabilityStatement-expectation
