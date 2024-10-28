@@ -135,6 +135,7 @@ Description: "このProfileは服薬状況を示すものであり，診療情�
 * medication[x] only Reference(Medication)
 
 * medicationReference only Reference(JP_Medication)
+* medicationReference ^definition = "医薬品の識別情報は必須でありmedicationReference.referenceが必ず存在しなければならない、JP Coreでは注射の医薬品情報は単一薬剤の場合も Medicationリソースとして記述し、medicationCodeableConceptは使用しない。参照するMedicationリソースは、MedicationRequest.contained属性に内包することが望ましいが、外部参照としても良い。"
 
 * subject only Reference(JP_Patient)
 * subject ^short = "処方箋が発行された患者に対する参照"

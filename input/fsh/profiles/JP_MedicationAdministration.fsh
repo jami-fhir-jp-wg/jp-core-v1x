@@ -219,7 +219,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
     JP_MedicationAdministration_UncategorizedComment named uncategorizedComment ..*
 * medication[x] only Reference(Medication)
 * medicationReference only Reference(JP_Medication)
-
+* medicationReference ^definition = "医薬品の識別情報は必須でありmedicationReference.referenceが必ず存在しなければならない、JP Coreでは注射の医薬品情報は単一薬剤の場合も Medicationリソースとして記述し、medicationCodeableConceptは使用しない。参照するMedicationリソースは、MedicationRequest.contained属性に内包することが望ましいが、外部参照としても良い。"
 
 * dosage.extension contains
     JP_MedicationDosage_DosageComment named dosageComment ..* and
