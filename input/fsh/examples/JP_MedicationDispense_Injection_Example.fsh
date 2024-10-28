@@ -3,10 +3,10 @@ InstanceOf: JP_MedicationDispense_Injection
 Title: "JP Core MedicationDispense Injection Example 調剤実施 注射薬"
 Description: "調剤実施 注射薬"
 Usage: #example
-* extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDispense_RpNumber"
-* extension[=].valueInteger = 1
 * contained[0] = jp-medicationdispense-injection-medication-example-1
 * contained[+] = jp-medicationdispense-injection-bodystructure-example-1
+* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].value = "1"
 * identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier[requestIdentifier].value = "1234567890.1"
 * status = #completed
