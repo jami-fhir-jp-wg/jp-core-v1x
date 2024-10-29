@@ -15,7 +15,7 @@
 
 | 要素 | R4、R4Bからの変更点 |
 | --- | --- |
-| ServiceRequest.code | - CodeableConceptから、CodeableReferenceへ型が変更 |
+| ServiceRequest.code | CodeableConceptから、CodeableReferenceへ型が変更 |
 | ServiceRequest.orderDetail | CodeableConceptから、BackboneElementへ型が変更 |
 | ServiceRequest.orderDetail.parameterFocus | 追加 |
 | ServiceRequest.orderDetail.parameter | 必須の要素として追加 |
@@ -26,7 +26,7 @@
 | ServiceRequest.reason | 追加 |
 | ServiceRequest.supportingInfo | Reference(Resource)から、CodeableReferenceへ変更 |
 | ServiceRequest.bodyStructure | 追加 |
-| ServiceRequest.patientInstruction |　stringから、BackboneElementへ型が変更となり、Cardinalityが、"0..*"へ |
+| ServiceRequest.patientInstruction | stringから、BackboneElementへ型が変更となり、Cardinalityが、"0..*"へ |
 | ServiceRequest.patientInstruction.instruction[x] | 追加 |
 | ServiceRequest.locationCode | 削除 |
 | ServiceRequest.locationReference | 削除 |
