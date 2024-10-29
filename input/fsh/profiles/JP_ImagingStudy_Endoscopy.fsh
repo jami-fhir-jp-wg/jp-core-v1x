@@ -16,6 +16,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * identifier ^comment = "Study Instance UIDの値を指定する。"
 * status ^short = "DICOM画像検査のステータス"
 * status ^definition = "DICOM画像検査のステータス。"
+* modality from $JP_DICOMModality_VS (required)
 * modality ^short = "DICOM画像検査で使用された撮影装置（モダリティ）【詳細参照】"
 * modality ^definition = "DICOM画像検査で使用された撮影装置（モダリティ）。"
 * modality ^comment = "内視鏡を表すモダリティコード”ES”を指定する。複数モダリティを使用した場合には、該当するモダリティコードを並記する。"
@@ -81,6 +82,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.number ^short = "Series Instance UIDとは別に、ユーザー（または装置）が自由に決められるシリーズ番号"
 * series.number ^definition = "Series Instance UIDとは別に、ユーザー（または装置）が自由に決められるシリーズ番号。"
 * series.modality MS
+* series.modality from $JP_DICOMModality_VS (required)
 * series.modality ^short = "このシリーズが取得された撮影装置（モダリティ）【詳細参照】"
 * series.modality ^definition = "このシリーズが取得された撮影装置（モダリティ）。"
 * series.modality ^comment = "内視鏡を表すモダリティコード”ES”を指定する。1シリーズ1モダリティで、1つのシリーズの中に複数のモダリティが混在することはない。"

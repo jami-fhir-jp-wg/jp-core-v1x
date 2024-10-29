@@ -11,7 +11,6 @@ Description: "このプロファイルはMediaリソースに対して、主に�
 * ^date = "2023-10-31"
 * . ^short = "内視鏡検査で取得または使用される画像、映像、音声に関わる情報。"
 * . ^definition = "内視鏡検査で取得または使用される画像、映像、音声に関わる情報。"
-* identifier MS
 * identifier ^short = "製品またはシステムが管理する、施設内で画像（JPEG等）、映像（MPEG等）、音声ファイルなどのメディアを一意に識別するためのID。"
 * identifier ^definition = "製品またはシステムが管理する、施設内で画像（JPEG等）、映像（MPEG等）、音声ファイルなどのメディアを一意に識別するためのID。"
 * basedOn ^short = "他のシステムから依頼されたオーダ情報。"
@@ -26,13 +25,13 @@ Description: "このプロファイルはMediaリソースに対して、主に�
 * type ^short = "メディアの種類。"
 * type ^definition = "メディアの種類。"
 * type ^comment = "使用する場合は、メディアの種類を image, video, audio から選択する。"
+* modality from $JP_DICOMModality_VS (preferred)
 * modality ^short = "メディアを取得・撮影した装置（モダリティ）。"
 * modality ^definition = "メディアを取得・撮影した装置（モダリティ）。"
-* modality ^comment = "使用する場合、ImagingStudy同様”ES”を指定する。"
+* modality ^comment = "使用する場合、ImagingStudy同様”ES”を指定することが望ましい。"
 * view ^short = "メディアのイメージングビュー（例：横方向、前後方向など）。"
 * view ^definition = "メディアのイメージングビュー（例：横方向、前後方向など）。"
 * view ^comment = "内視鏡では省略してよい。将来的にニーズが出てきた場合には検討する。"
-* subject MS
 * subject only Reference(JP_Patient)
 * subject ^short = "メディアの対象患者に関する情報。"
 * subject ^definition = "メディアの対象患者に関する情報。"
@@ -47,6 +46,7 @@ Description: "このプロファイルはMediaリソースに対して、主に�
 * issued ^short = "DiagnosticReportのStatusがFinalになった日時（レポート確定日時）。"
 * issued ^definition = "DiagnosticReportのStatusがFinalになった日時（レポート確定日時）。"
 * issued ^comment = "内視鏡では、mediaが示すデータが単独でリソース化されることはない前提。"
+* operator only Reference(JP_Practitioner)
 * operator ^short = "内視鏡検査の実施医。"
 * operator ^definition = "内視鏡検査の実施医。"
 * operator ^comment = "内視鏡検査実施医の情報が入っているリソースを参照する。"
