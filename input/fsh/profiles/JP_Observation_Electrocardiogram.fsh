@@ -81,17 +81,17 @@ Description: "このプロファイルはObservationリソースに対して、�
 Extension: JP_Observation_Electrocardiogram_NumberOfLeed
 Id: jp-obsrevation-electrocardiogram-numberofleed
 Title: "JP Core Observation Electrocardiogram NumberOfLeed Extention"
-Description: "心電図検査を実施した"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount"
+Description: "心電図検査を実施したときに使った誘導の数を示すExtension"
+* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_NumberOfLeed"
 * ^status = #active
-* ^date = "2023-10-31"
-* ^purpose = "頓用の場合など調剤量を錠数ではなく回数で表現したい場合の回数を格納する拡張"
+* ^date = "2024-10-31"
+* ^purpose = "心電図検査で仕様する誘導の数を記録するために用いられる。"
 * ^context.type = #element
-* ^context.expression = "MedicationRequest.dispenseRequest"
-* . ^short = "頓用回数"
-* . ^definition = "頓用回数を表現する拡張"
+* ^context.expression = "Observation"
+* . ^short = "誘導の数"
+* . ^definition = "心電図検査で試用した誘導の数を記録するための拡張"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount" (exactly)
-* value[x] 1..
+* value[x] 0..1
 * value[x] only integer
-* value[x] ^short = "頓用回数"
-* value[x] ^definition = "頓用回数"
+* value[x] ^short = "誘導の数"
+* value[x] ^definition = "心電図検査を実施したときに試用した誘導の数"
