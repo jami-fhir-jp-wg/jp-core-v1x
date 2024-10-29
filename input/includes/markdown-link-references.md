@@ -23,9 +23,6 @@
 [JP_RelatedPerson]: StructureDefinition-JP-RelatedPerson.html
 [JP_ResearchStudy]: StructureDefinition-JP-ResearchStudy.html
 [JP_ResearchSubject]: StructureDefinition-JP-ResearchSubject.html
-[JP_ServiceRequest]: StructureDefinition-JP-ServiceRequest.html
-[JP_ServiceRequest_Common]: StructureDefinition-jp-servicerequest-common.html
-[JP_Specimen]: StructureDefinition-JP-Specimen.html
 [JP_AllergyIntolerance]: StructureDefinition-jp-allergyintolerance.html
 [JP_Condition_Diagnosis]: StructureDefinition-jp-condition-diagnosis.html
 [JP_Condition]: StructureDefinition-jp-condition.html
@@ -67,6 +64,7 @@
 [JP_MedicationTiming]: StructureDefinition-jp-medicationtiming.html
 [JP_Observation_BodyMeasurement]: StructureDefinition-jp-observation-bodymeasurement.html
 [JP_Observation_Common]: StructureDefinition-jp-observation-common.html
+[JP_Observation_Endoscopy]: StructureDefinition-jp-observation-endoscopy.html
 [JP_Observation_LabResult]: StructureDefinition-jp-observation-labresult.html
 [JP_Observation_Microbiology]: StructureDefinition-jp-observation-microbiology.html
 [JP_Observation_PhysicalExam]: StructureDefinition-jp-observation-physicalexam.html
@@ -79,6 +77,8 @@
 [JP_Practitioner]: StructureDefinition-jp-practitioner.html
 [JP_PractitionerRole]: StructureDefinition-jp-practitionerrole.html
 [JP_Procedure]: StructureDefinition-jp-procedure.html
+[JP_ServiceRequest_Common]: StructureDefinition-jp-servicerequest-common.html
+[JP_Specimen_Common]: StructureDefinition-jp-specimen-common.html
 
 <!-- StructureDefinition: Extension -->
 [JP_Condition_DiseaseOutcome]: StructureDefinition-jp-condition-disease-outcome.html
@@ -155,7 +155,6 @@
 [JP_Microbiology_InfectiousAgent_CS]: CodeSystem-jp-microbiology-infectious-agent-cs.html
 [JP_ObservationBodyMeasurementCategory_CS]: CodeSystem-jp-observation-bodymeasurement-category-cs.html
 [JP_ObservationBodyMeasurementCode_CS]: CodeSystem-jp-observation-bodymeasurement-code-cs.html
-[JP_ObservationBodySite_CS]: CodeSystem-jp-observation-bodysite-cs.html
 [JP_PhysicalExamCode_CS]: CodeSystem-jp-physicalexamcode-cs.html
 [JP_ProcedureBodySite_CS]: CodeSystem-jp-procedure-body-site-cs.html
 [JP_ProcedureNotPerformedReason_CS]: CodeSystem-jp-procedure-not-performed-reason-cs.html
@@ -181,6 +180,7 @@
 [JP_DICOMModality_VS]: ValueSet-jp-dicommodality-vs.html
 [JP_DocumentCodes_DiagnosticReport_VS]: ValueSet-jp-documentcodes-diagnosticreport-vs.html
 [JP_DocumentCodes_Endoscopy_VS]: ValueSet-jp-documentcodes-endoscopy-vs.html
+[JP_ObservationCategory_Endoscopy_VS]: ValueSet-jp-endoscopy-category-vs.html
 [JP_MedicalLicenseCertificate_VS]: ValueSet-jp-medicallicensecertificate-vs.html
 [JP_MedicationExampleDosageComment_VS]: ValueSet-jp-medication-example-dosagecomment-vs.html
 [JP_MedicationExampleLine_VS]: ValueSet-jp-medication-example-line-vs.html
@@ -196,7 +196,8 @@
 [JP_Microbiology_InfectiousAgent_VS]: ValueSet-jp-microbiology-infectious-agent-vs.html
 [JP_ObservationBodyMeasurementCategory_VS]: ValueSet-jp-observation-bodymeasurement-category-vs.html
 [JP_ObservationBodyMeasurementCode_VS]: ValueSet-jp-observation-bodymeasurement-code-vs.html
-[JP_ObservationBodySite_VS]: ValueSet-jp-observation-bodysite-vs.html
+[JP_ObservationEndoscopyCode_VS]: ValueSet-jp-observation-endoscopy-code-vs.html
+[JP_ObservationEndoscopyValueJed_VS]: ValueSet-jp-observation-endoscoy-value-jed-vs.html
 [JP_ObservationRadiologyCode_VS]: ValueSet-jp-observation-radiology-code-vs.html
 [JP_PhysicalExamCode_VS]: ValueSet-jp-physicalexamcode-vs.html
 [JP_ProcedureBodySite_VS]: ValueSet-jp-procedure-body-site-vs.html
@@ -219,6 +220,7 @@
 [jp-condition-example-1]: Condition-jp-condition-example-1.html
 [jp-coverage-example-1]: Coverage-jp-coverage-example-1.html
 [jp-diagnosticreport-endoscopy-example-1]: DiagnosticReport-jp-diagnosticreport-endoscopy-example-1.html
+[jp-diagnosticreport-endoscopy-example-2]: DiagnosticReport-jp-diagnosticreport-endoscopy-example-2.html
 [jp-diagnosticreport-labresult-example-1]: DiagnosticReport-jp-diagnosticreport-labresult-example-1.html
 [jp-diagnosticreport-microbiology-example-1]: DiagnosticReport-jp-diagnosticreport-microbiology-example-1.html
 [jp-diagnosticreport-radiology-example-1]: DiagnosticReport-jp-diagnosticreport-radiology-example-1.html
@@ -269,6 +271,12 @@
 [jp-observation-vitalsignscode-namingsystem]: NamingSystem-jp-observation-vitalsignscode-namingsystem.html
 [jp-prefecturenumber-namingsystem]: NamingSystem-jp-prefecturenumber-namingsystem.html
 [jp-observation-bodyMeasurement-example-1]: Observation-jp-observation-bodyMeasurement-example-1.html
+[jp-observation-endoscopy-example-diagnosis-1]: Observation-jp-observation-endoscopy-example-diagnosis-1.html
+[jp-observation-endoscopy-example-diagnosis-2]: Observation-jp-observation-endoscopy-example-diagnosis-2.html
+[jp-observation-endoscopy-example-findings-1a]: Observation-jp-observation-endoscopy-example-findings-1a.html
+[jp-observation-endoscopy-example-findings-1b]: Observation-jp-observation-endoscopy-example-findings-1b.html
+[jp-observation-endoscopy-example-findings-2a]: Observation-jp-observation-endoscopy-example-findings-2a.html
+[jp-observation-endoscopy-example-findings-2b]: Observation-jp-observation-endoscopy-example-findings-2b.html
 [jp-observation-labresult-example-1]: Observation-jp-observation-labresult-example-1.html
 [jp-observation-physicalexam-example-1]: Observation-jp-observation-physicalexam-example-1.html
 [jp-observation-radiology-findings-example-1]: Observation-jp-observation-radiology-findings-example-1.html

@@ -143,7 +143,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_MicrobiologyCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodySite_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_PhysicalExamCode_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureBodySite_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureNotPerformedReason_CS
@@ -254,9 +253,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_RelatedPerson
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchStudy
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchSubject
-    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common
-    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeICD10_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeMEDISExchange_VS
@@ -280,7 +278,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MicrobiologyCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCode_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationCategory_Endoscopy_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationCategory_Microbiology_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationEndoscopyCode_VS
