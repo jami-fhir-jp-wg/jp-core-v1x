@@ -55,6 +55,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(method, このObservationの実施方法)
 * insert SetDefinition(specimen, このObservationに使われた検体/標本に関する情報)
 * specimen ^comment = "`Observation.code`にあるコードで暗黙的に示されない場合にのみ使用する必要がある。検体自体の観察は行われない。観察（観測、検査）対象者に対して実施されるが、多くの場合には対象者から得られた検体に対して実施される。検体が奥の場合に関わるが、それらは常に追跡され、明示的に報告されるとは限らないことに注意すること。またobservationリソースは、検体を明示的に記述するような状況下（診断レポートなど）で使用される場合があることに注意。"
+* specimen only Reference(JP_Specimen_Common)
 * insert SetDefinition(device, このObservationでデータを得るために使われた測定機器に関する情報)
 * device ^comment = "これは、結果の送信に関与するデバイス（ゲートウェイなど）を表すことを意図したものではない。そのようなデバイスは、必要に応じてProvenanceリソースを使用して文書化する。"
 * insert SetDefinition(referenceRange, 基準範囲との比較による結果の解釈方法のガイダンス)
