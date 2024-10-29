@@ -235,6 +235,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationTiming
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_BodyMeasurement
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Endoscopy
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_LabResult
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Microbiology
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_PhysicalExam
@@ -251,6 +252,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchStudy
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchSubject
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeICD10_VS
@@ -276,7 +278,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodySite_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationCategory_Endoscopy_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationCategory_Microbiology_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationEndoscopyCode_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationEndoscopyValueJed_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationRadiologyCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_PhysicalExamCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureBodySite_VS
