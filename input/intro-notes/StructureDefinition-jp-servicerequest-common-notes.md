@@ -40,12 +40,12 @@
 | コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |
 | ---- | ---- | ---- | ---- | ---- |
 | SHALL | identifier | [token](http://hl7.org/fhir/R4/search.html#token) | 業務ID | ServiceRequest.identifier |
-| SHALL | intent | [token](http://hl7.org/fhir/R4/search.html#token) | proposal \| plan \| directive \| order \| original-order \| reflex-order \| filler-order \|
+| SHALL | intent | [token](http://hl7.org/fhir/R4/search.html#token) | 用途 | ServiceRequest.intent |
 | SHALL | subject | [reference](http://hl7.org/fhir/R4/search.html#reference) | 対象者 | ServiceRequest.subject ( [Group](http://hl7.org/fhir/R4/group.html), [Device](http://hl7.org/fhir/R4/device.html), [Patient](http://hl7.org/fhir/R4/patient.html), [Location](http://hl7.org/fhir/R4/location.html)) |
 | SHOULD | performer | [reference](http://hl7.org/fhir/R4/search.html#reference) | サービスの実施者 | ServiceRequest.performer ([Practitioner](http://hl7.org/fhir/R4/practitioner.html), [Organization](http://hl7.org/fhir/R4/organization.html), [CareTeam](http://hl7.org/fhir/R4/careteam.html), [Device](http://hl7.org/fhir/R4/device.html), [Patient](http://hl7.org/fhir/R4/patient.html), [HealthcareService](http://hl7.org/fhir/R4/healthcareservice.html), [PractitionerRole](http://hl7.org/fhir/R4/practitionerrole.html), [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)) |
 | SHOULD | occurrence | [date](http://hl7.org/fhir/R4/search.html#date) | サービスの実施日 | ServiceRequest.occurrence |
 | SHOULD | patient | [reference](http://hl7.org/fhir/R4/search.html#reference) | 患者による検索 | ServiceRequest.subject.where(resolve() is Patient) ([Patient](http://hl7.org/fhir/R4/patient.html)) |
-| SHALL | status | [token](http://hl7.org/fhir/R4/search.html#token) | draft \| active \| on-hold \| revoked \| completed \| entered-in-error \| unknown | ServiceRequest.status |
+| SHALL | status | [token](http://hl7.org/fhir/R4/search.html#token) | ServiceRequest.status |
 | SHOULD | requester | [reference](http://hl7.org/fhir/R4/search.html#reference) | サービスをリクエストした人・物 | ServiceRequest.requester ([Practitioner](http://hl7.org/fhir/R4/practitioner.html), [Organization](http://hl7.org/fhir/R4/organization.html), [Device](http://hl7.org/fhir/R4/device.html), [Patient](http://hl7.org/fhir/R4/patient.html),  [PractitionerRole](http://hl7.org/fhir/R4/practitionerrole.html), [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)) |
 | MAY | authored | [date](http://hl7.org/fhir/R4/search.html#date) | 署名された日 | ServiceRequest.authoredOn |
 | MAY | based-on | [reference](http://hl7.org/fhir/R4/search.html#reference) | 実施すべき対象 | ServiceRequest.basedOn ([CarePlan](http://hl7.org/fhir/R4/careplan.html), [MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html), [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)) |
