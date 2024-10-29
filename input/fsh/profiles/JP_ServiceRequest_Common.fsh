@@ -56,7 +56,6 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 // 
 * doNotPerform ^short = "値が真の時、サービスや処置は実施不可"
 * doNotPerform ^definition = "要求された特定のサービス（例、手技、診断のための検査、また検査パネル）の識別子"
-* doNotPerform ^meaningWhenMissing = "値がない時は、正のリクエストとなる。例 「実施せよ」"
 * doNotPerform ^comment =  "一般的には、コードと時間枠のみであるが、時には体の部位や実施者などの修飾語を追加して、禁止範囲を狭められる。code要素とdoNotPerform要素がともに否定を含む場合、禁止を強化することになり、二重否定解釈をしてはならない。"
 // 
 * code ^short = "リクエストの内容を示すコード"
