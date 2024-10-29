@@ -38,7 +38,7 @@
 このリソースの検索パラメータ。基本のパラメータも適用される。詳細は[Searching](http://hl7.org/fhir/R4/search.html)を参照。
 
 | コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |
-| --- | --- | --- | --- | --- |
+| ---- | ---- | ---- | ---- | ---- |
 | SHALL | identifier | [token](http://hl7.org/fhir/R4/search.html#token) | 業務ID | ServiceRequest.identifier |
 | SHALL | intent | [token](http://hl7.org/fhir/R4/search.html#token) | proposal \| plan \| directive \| order \| original-order \| reflex-order \| filler-order \|
 | SHALL | subject | [reference](http://hl7.org/fhir/R4/search.html#reference) | 対象者 | ServiceRequest.subject ( [Group](http://hl7.org/fhir/R4/group.html), [Device](http://hl7.org/fhir/R4/device.html), [Patient](http://hl7.org/fhir/R4/patient.html), [Location](http://hl7.org/fhir/R4/location.html)) |
@@ -54,9 +54,9 @@
 | MAY | code | [token](http://hl7.org/fhir/R4/search.html#token) | リクエスト・オーダされる内容のコード | ServiceRequest.code |
 | MAY | encounter | [reference](http://hl7.org/fhir/R4/search.html#reference) | サービスリクエストが作成された場面 | ServiceRequest.encounter ([Encounter](http://hl7.org/fhir/R4/encounter.html)) |
 | MAY | instantiates-canonical | [reference](http://hl7.org/fhir/R4/search.html#reference) | FHIRのプロトコールや定義への参照 | ServiceRequest.instantiatesCanonical ([PlanDefinition](http://hl7.org/fhir/R4/plandefinition.html), [ActivityDefinition](http://hl7.org/fhir/R4/activitydefinition.html)) |
-| MAY | instantiates-uri | [uri](http://hl7.org/fhir/R4/search.html#uri) | 外部のプロトコールや定義への参照 | ServiceRequest.instantiatesUri | instance-order \| option | ServiceRequest.intent ||
+| MAY | instantiates-uri | [uri](http://hl7.org/fhir/R4/search.html#uri) | 外部のプロトコールや定義への参照 | ServiceRequest.instantiatesUri | instance-order \| option | ServiceRequest.intent |
 | MAY | performer-type | [token](http://hl7.org/fhir/R4/search.html#token) | サービスの実施者の職種 | ServiceRequest.performerType |
-| MAY | priority | [token](http://hl7.org/fhir/R4/search.html#token) | routine \| urgent \| asap \| stat | ServiceRequest.priority ||
+| MAY | priority | [token](http://hl7.org/fhir/R4/search.html#token) | routine \| urgent \| asap \| stat | ServiceRequest.priority |
 | MAY | replaces | [reference](http://hl7.org/fhir/R4/search.html#reference) | 代替のサービスリクエスト | ServiceRequest.replaces ([ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)) |
 | MAY | requisition | [token](http://hl7.org/fhir/R4/search.html#token) | 複合ID | ServiceRequest.requisition |
 | MAY | specimen | [token](http://hl7.org/fhir/R4/search.html#reference) | 検体 | ServiceRequest.specimen ([Specimen](http://hl7.org/fhir/R4/specimen.html)) |
