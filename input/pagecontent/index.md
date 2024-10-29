@@ -47,6 +47,8 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
         * [JP Core Observation Radiology Findings (放射線画像検査所見）プロファイル)][JP_Observation_Radiology_Findings]
         * [JP Core Observation Radiology Impression (放射線画像検査インプレッション)プロファイル][JP_Observation_Radiology_Impression]
       * [JP Core Observation Endoscopy （内視鏡検査）プロファイル][JP_Observation_Endoscopy]
+  * Specimen （検体）
+    * [JP Core Specimen Common （共通）プロファイル][JP_Specimen_Common]
   * ImagingStudy （画像検査）
     * [JP Core ImagingStudy Radiology（放射線検査）プロファイル][JP_ImagingStudy_Radiology]
     * [JP Core ImagingStudy Endoscopy（内視鏡検査）プロファイル][JP_ImagingStudy_Endoscopy]
