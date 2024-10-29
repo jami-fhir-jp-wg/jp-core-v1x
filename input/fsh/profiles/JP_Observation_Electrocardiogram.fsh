@@ -21,11 +21,12 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(status, 結果の状態)
 * status ^comment = "このリソースは現在有効でないというマークをするコードを含んでいるため、この要素はモディファイアー（修飾的要素）として位置づけられている。"
 * insert SetDefinition(category, 行われた検査の一般的なタイプの分類。JP Core Observation Common Profileの【詳細説明】を参照のこと。)
-* category from $JP_Observation_Electrocardiogram_VS (preferred)
-* insert SetDefinition(category, このObservationを分類するコード)
-* category ^comment = "心電図の分類に関する階層的にカテゴリーを設定することで粒度のレベルを概念定義できる。"
-* insert SetDefinition(code, このObservationの対象を特定するコード)
-* code ^comment = "observationの意味を正しく理解するには、すべてのcode-valueペアと、さらに存在する場合にはcomponent.code-component.valueのペアが、考慮される必要がある。"
+* category from $JP_SimpleObservationCategory_VS (required)
+* insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には procedure が指定される。)
+* category ^comment = "心電図検査は procedure に分類されている。"
+* insert SetDefinition(code, 心電図検査を示すコード)
+* code.coding.code = $Loinc_CS#11524-6 (preferred)
+* code ^comment = "心電図検査(EKG Study)を示すLOINCコード 11524-6 を割り当てることを推奨する"
 * subject only Reference(JP_Patient or Group or Device or JP_Location)
 * insert SetDefinition(subject, このObservationの対象となる患者や患者群、機器、場所に関する情報)
 * subject ^comment = "この要素は1..1のcardinalityになるはずと考えられる。この要素が欠損値になる唯一の状況は、対象患者が不明なデバイスによって観察が行われるケースである。この場合、観察は何らかのコンテキスト/チャネルマッチング技術を介して患者にマッチングされる必要があり、患者にマッチングされれば、その時点で本要素を更新する必要がある。"
@@ -45,6 +46,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 //* insert SetDefinition(dataAbsentReason, このObservationのvalue[x]要素に期待される結果が存在しなかった場合、その理由)
 * dataAbsentReason ^comment = "ヌル値または例外値は、FHIRオブザベーションで2つの方法で表すことができる。 1つの方法は、それらを値セットに含めて、値の例外を表す方法である。たとえば、血清学的検査の測定値は、「検出された」、「検出されなかった」、「決定的でない」、または「検体が不十分」である可能性がある。別の方法は、実際の観測にvalue要素を使用し、明示的なdataAbsentReason要素を使用して例外的な値を記録することである。たとえば、測定が完了しなかった場合、dataAbsentReasonコード「error」を使用できる。この場合には、観測値は、報告する値がある場合にのみ報告される可能性があることに注意する必要がある。たとえば、差分セルカウント値は> 0の場合にのみ報告される場合がある。これらのオプションのため、nullまたは例外値の一般的な観測値を解釈するにはユースケースの合意が必要である。"
 * insert SetDefinition(interpretation, 心電図所見)
+* interpretation.code from $JP_Obervation_Electrocardigoram_InterpretationCS (example)
 * interpretation ^comment = "心電図所見については、ミネソタコードを元に学会や検査機器ベンダーが用語集を作成している。必要に応じてそれらのコードを仕様することを推奨する。"
 * interpretation ^requirements = "心電図所見についてのコード集を別途提示する。"
 * insert SetDefinition(note, このObservationに関するコメント)
@@ -69,6 +71,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(component, この心電図検査で測定された一連の結果。)
 * component ^comment = "心電図に関する一連の測定結果をまとめるためにコンポーネントを使用する。"
 * component ^requirements = "この心電図検査で行われる一連の測定値をまとめるものであり、負荷心電図など複数の心電図検査を一連の検査として行った場合は別Observationインスタンスとして記録される。"
+* component.code from $Loinc_CS (preffered)
+* component.code ^comment = "心電図の各検査項目についてはLOINCなどの特定の用語集を利用することが推奨される。"
 
 
 // ==============================
@@ -76,21 +80,21 @@ Description: "このプロファイルはObservationリソースに対して、�
 // ==============================
 
 //-------------------------------
-// JP_Observation_Electrocardiogram_NumberOfLeed
+// JP_Observation_Electrocardiogram_NumberOfLead
 //-------------------------------
-Extension: JP_Observation_Electrocardiogram_NumberOfLeed
-Id: jp-obsrevation-electrocardiogram-numberofleed
+Extension: JP_Observation_Electrocardiogram_NumberOfLead
+Id: jp-obsrevation-electrocardiogram-numberoflead
 Title: "JP Core Observation Electrocardiogram NumberOfLeed Extention"
 Description: "心電図検査を実施したときに使った誘導の数を示すExtension"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_NumberOfLeed"
+* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_NumberOfLead"
 * ^status = #active
 * ^date = "2024-10-31"
 * ^purpose = "心電図検査で仕様する誘導の数を記録するために用いられる。"
 * ^context.type = #element
-* ^context.expression = "Observation"
+* ^context.expression = "Observation.lead"
 * . ^short = "誘導の数"
 * . ^definition = "心電図検査で試用した誘導の数を記録するための拡張"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount" (exactly)
+* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_NumberOfLead" (exactly)
 * value[x] 0..1
 * value[x] only integer
 * value[x] ^short = "誘導の数"
