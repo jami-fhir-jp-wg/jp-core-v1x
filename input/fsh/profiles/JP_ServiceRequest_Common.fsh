@@ -11,6 +11,7 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * ^date = "2024-09-18"
 * . ^short = "サービスリクエスト"
 * . ^definition = "診断のための検査、治療、手術などのサービスリクエストの記録"
+* meta.lastUpdated 0.. MS
 //
 * identifier ^short = "サービスリクエストを識別する業務ID。"
 * identifier ^definition = "リクエストの発注者、受注者、サービスの実施者によるインスタンスに割り当てられた識別子。"
