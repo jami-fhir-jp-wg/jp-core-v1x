@@ -45,7 +45,7 @@
 | SHOULD | performer | [reference](http://hl7.org/fhir/R4/search.html#reference) | サービスの実施者 | ServiceRequest.performer ([Practitioner](http://hl7.org/fhir/R4/practitioner.html), [Organization](http://hl7.org/fhir/R4/organization.html), [CareTeam](http://hl7.org/fhir/R4/careteam.html), [Device](http://hl7.org/fhir/R4/device.html), [Patient](http://hl7.org/fhir/R4/patient.html), [HealthcareService](http://hl7.org/fhir/R4/healthcareservice.html), [PractitionerRole](http://hl7.org/fhir/R4/practitionerrole.html), [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)) |
 | SHOULD | occurrence | [date](http://hl7.org/fhir/R4/search.html#date) | サービスの実施日 | ServiceRequest.occurrence |
 | SHOULD | patient | [reference](http://hl7.org/fhir/R4/search.html#reference) | 患者による検索 | ServiceRequest.subject.where(resolve() is Patient) ([Patient](http://hl7.org/fhir/R4/patient.html)) |
-| SHALL | status | [token](http://hl7.org/fhir/R4/search.html#token) | ServiceRequest.status |
+| SHALL | status | [token](http://hl7.org/fhir/R4/search.html#token) | サービスの状態（ステータス） | ServiceRequest.status |
 | SHOULD | requester | [reference](http://hl7.org/fhir/R4/search.html#reference) | サービスをリクエストした人・物 | ServiceRequest.requester ([Practitioner](http://hl7.org/fhir/R4/practitioner.html), [Organization](http://hl7.org/fhir/R4/organization.html), [Device](http://hl7.org/fhir/R4/device.html), [Patient](http://hl7.org/fhir/R4/patient.html),  [PractitionerRole](http://hl7.org/fhir/R4/practitionerrole.html), [RelatedPerson](http://hl7.org/fhir/R4/relatedperson.html)) |
 | MAY | authored | [date](http://hl7.org/fhir/R4/search.html#date) | 署名された日 | ServiceRequest.authoredOn |
 | MAY | based-on | [reference](http://hl7.org/fhir/R4/search.html#reference) | 実施すべき対象 | ServiceRequest.basedOn ([CarePlan](http://hl7.org/fhir/R4/careplan.html), [MedicationRequest](http://hl7.org/fhir/R4/medicationrequest.html), [ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)) |
@@ -54,9 +54,9 @@
 | MAY | code | [token](http://hl7.org/fhir/R4/search.html#token) | リクエスト・オーダされる内容のコード | ServiceRequest.code |
 | MAY | encounter | [reference](http://hl7.org/fhir/R4/search.html#reference) | サービスリクエストが作成された場面 | ServiceRequest.encounter ([Encounter](http://hl7.org/fhir/R4/encounter.html)) |
 | MAY | instantiates-canonical | [reference](http://hl7.org/fhir/R4/search.html#reference) | FHIRのプロトコールや定義への参照 | ServiceRequest.instantiatesCanonical ([PlanDefinition](http://hl7.org/fhir/R4/plandefinition.html), [ActivityDefinition](http://hl7.org/fhir/R4/activitydefinition.html)) |
-| MAY | instantiates-uri | [uri](http://hl7.org/fhir/R4/search.html#uri) | 外部のプロトコールや定義への参照 | ServiceRequest.instantiatesUri | instance-order \| option | ServiceRequest.intent |
+| MAY | instantiates-uri | [uri](http://hl7.org/fhir/R4/search.html#uri) | 外部のプロトコールや定義への参照 | ServiceRequest.instantiatesUri |
 | MAY | performer-type | [token](http://hl7.org/fhir/R4/search.html#token) | サービスの実施者の職種 | ServiceRequest.performerType |
-| MAY | priority | [token](http://hl7.org/fhir/R4/search.html#token) | routine \| urgent \| asap \| stat | ServiceRequest.priority |
+| MAY | priority | [token](http://hl7.org/fhir/R4/search.html#token) | サービスの優先度 | ServiceRequest.priority |
 | MAY | replaces | [reference](http://hl7.org/fhir/R4/search.html#reference) | 代替のサービスリクエスト | ServiceRequest.replaces ([ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)) |
 | MAY | requisition | [token](http://hl7.org/fhir/R4/search.html#token) | 複合ID | ServiceRequest.requisition |
 | MAY | specimen | [token](http://hl7.org/fhir/R4/search.html#reference) | 検体 | ServiceRequest.specimen ([Specimen](http://hl7.org/fhir/R4/specimen.html)) |
