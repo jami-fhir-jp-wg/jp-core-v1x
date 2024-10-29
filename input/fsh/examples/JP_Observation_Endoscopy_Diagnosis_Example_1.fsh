@@ -18,7 +18,7 @@ Usage: #example
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueCodeableConcept
   * coding
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationEndoscopyValueJed_VS"
+    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationEndoscopyValueJed_CS"
     * code = #Z2L30301
     * display = "[Tumor] Adenoma / Early Colorectal Cancer"
   * text = "[腫瘍] 腺腫・早期大腸癌"

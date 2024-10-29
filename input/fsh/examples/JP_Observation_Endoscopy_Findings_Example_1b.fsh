@@ -18,7 +18,7 @@ Usage: #example
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueCodeableConcept
   * coding
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationEndoscopyValueJed_VS"
+    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationEndoscopyValueJed_CS"
     * code = #Z2L20301
     * display = "[Colon Macroscopic Classification] Type0-Is(p) (Semipedunculated Type)"
   * text = "[大腸 肉眼型1] Is(p)"

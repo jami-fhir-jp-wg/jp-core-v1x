@@ -18,7 +18,7 @@ Usage: #example
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueCodeableConcept
   * coding
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationEndoscopyValueJed_VS"
+    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationEndoscopyValueJed_CS"
     * code = #Z2L20305
     * display = "[Colon Macroscopic Classification] Type0-IIa (Superficial Elevated Type)"
   * text = "[大腸 肉眼型1] IIa"
