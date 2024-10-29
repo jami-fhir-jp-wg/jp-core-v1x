@@ -64,7 +64,7 @@ Alias: $JP_PractitionerRole = http://jpfhir.jp/fhir/core/StructureDefinition/JP_
 Alias: $JP_Procedure = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Procedure
 Alias: $JP_RelatedPerson = http://jpfhir.jp/fhir/core/StructureDefinition/JP_RelatedPerson
 Alias: $JP_ServiceRequest_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common
-Alias: $JP_Specimen = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen
+Alias: $JP_Specimen_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
 
 // StructureDefinition: Extension
 Alias: $JP_Coverage_InsuredPersonNumber = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber

@@ -133,7 +133,7 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * specimen ^short = "検体"
 * specimen ^definition = "検査で使用する１つ以上の検体"
 * specimen ^comment = "多くの診断的行為は検体を必要とするが、リクエスト自体は実際には検体に関するものではない。この要素は、診断検査が既に存在する検体に対してリクエストされ、適用される検体を参照するためのものである。逆に、検体が未知の時に最初にリクエストが入力された場合、SpecimenリソースがServiceRequestリソースを参照する。"
-* specimen only Reference(JP_Specimen)
+* specimen only Reference(JP_Specimen_Common)
 //
 * bodySite ^short = "体の部位（別名 場所）"
 * bodySite ^definition = "行為を実施すべき解剖学的部位。目標とする場所。"
