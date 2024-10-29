@@ -54,6 +54,8 @@ pages:
       title: Diagnostic Group
     group-clinical.md:
       title: Clinical Group
+    group-workflow.md:
+      title: Workflow Group
     group-capabilityStatement.md:
       title: CapabilityStatement
     group-searchParameter.md:
@@ -80,6 +82,7 @@ menu:
     Medication: group-medication.html
     Diagnostic: group-diagnostic.html
     Clinical: group-clinical.html
+    workflow: group-workflow.html
   Security: security.html
   Artifacts: artifacts.html
   Download: download.html
