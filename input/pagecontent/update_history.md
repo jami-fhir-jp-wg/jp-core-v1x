@@ -1,4 +1,41 @@
-***v1.1.2***  
+***v1.2.0***
+
+* 全般
+  * 誤字・脱字等の見直しを行なった
+  * JP CoreにMustSupportが定義されており、記述の矛盾について見直しを行った
+  * Copyrightの記述について見直しを行った
+  
+* プロファイル関連
+  * Administration
+    * `JP_Coverage`にて被保険者番号の記述を追加した
+  * Observation
+    * `JP_Observation_Radiology_Findings`プロファイルおよび`JP_Observation_Radiology_Impression`プロファイルを追加した
+    * `JP_Observation_Electrocardiogram`プロファイルを追加した
+    * `JP_Observation_VitalSigns`プロファイルのcategoryに対する`JP_SimpleObservationCategory_CS`に対する多重度を1..*から0..*に変更した
+  * DiagnosticReport
+    * `JP_DiagnosticReport_Radiology`プロファイルのcategoryに対するバインド対象を`JP_DICOMModality_VS`に変更した
+    * `JP_DiagnosticReport_Radiology`プロファイルで保持する`JP_Observation_Radiology_Findings`および`JP_Observation_Radiology_Impression`について説明記述を加えた
+  * ImagingStudy
+    * `JP_ImagingStudy_Radiology`プロファイルのseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した
+  * Medication
+    * `JP_MedicationStatement`プロファイルおよび `JP_MedicationStatement_Injection`プロファイルを追加した
+    * `JP_MedicationRequest_Injection`プロファイル, `JP_MedicationDispense_Injection`プロファイル, `JP_MedicationAdministration_Injection`プロファイル, `JP_MedicationStatement_Injection`プロファイルに関するmedicationの参照に関する記述を付加した
+    * `JP_Medication`プロファイルのingredient.strength.denominatorを１回に固定した
+    * 不要なOperation($everything)に関するの記述を削除した
+  * Clinical
+    * `JP_Condition_Diagnosis`プロファイルを追加した
+* Terminology関連
+  * `JP_ObservationBodyMeasurementCode_CS`の記述の不具合を修正した 
+  * 病名マスタ(MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`,MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`,レセプト電算用傷病名マスタ`JP_ConditionDiseaseCodeReceipt_CS`)のマスタを追加した
+* SearchParameterおよびOperationについて
+  * SearchParameterの記述不具合（型指定やSearchParameterRegistryとの違い）について修正した
+  * JP Coreで作成したSearchParameterのexpressionのFHIRPath記述の不具合ついて修正した
+  * CapabilityStatementのConformanceの指定、複数パラメータの指定を行った
+  * CapabilityStatementのOperation定義を追加した
+  * `JP_ImagingStudy_Radiology`のIdentifierに関するConformanceをSHALLに変更した
+  
+***v1.1.2***
+
 パブリックコメントやIssue等の指摘を中心に不具合やわかりにくい点について改善を行った。また内視鏡検査および微生物学的検査関連のプロファイルを新規に追加した。主な変更点は以下のとおりである。
 
 * 全般
