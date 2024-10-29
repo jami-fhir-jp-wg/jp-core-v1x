@@ -4,10 +4,8 @@ Title: "JP Core Observation Electrocardiogram Example"
 Description: "安静時12誘導心電図"
 Usage: #example
 * category = $JP_SimpleObservationCategory_CS#procedure "Procedure"
-* category[procedure] = $Loinc_CS#11524-6 "EKG Study"
 * subject = Reference(Patient/jp-patient-example-1)
-* code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#abc-local-456
-* code.coding[+] = $JP_Observationlectrocardiogram_CS#31000296
+* code.coding = $Loinc_CS#11524-6 "EKG Study"
 * effectiveDateTime = "2024-10-19T10:00:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 //* valueQuantity.unit = "kg"
@@ -16,6 +14,9 @@ Usage: #example
 * encounter = Reference(Encounter/jp-encounter-example-1)
 * interpretation[0].code.coding = urn:oid:1.2.392.200119.5.2.4.1.1.3#1-0 "正常"
 * interpretation[0].code.text = "正常"
+* method.extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_Method_Lead"
+* method.extension[0].valueInteger = 12
+*
 * component[0].code.coding = $Loinc_CS#76282-3 "Heart rate.beat-to-beat"
 * component[=].code.text = "Heart rate.beat-to-beat by EKG"
 * component[=].valueQuantity.value = 75
