@@ -82,7 +82,7 @@ menu:
     Medication: group-medication.html
     Diagnostic: group-diagnostic.html
     Clinical: group-clinical.html
-    workflow: group-workflow.html
+    Workflow: group-workflow.html
   Security: security.html
   Artifacts: artifacts.html
   Download: download.html
