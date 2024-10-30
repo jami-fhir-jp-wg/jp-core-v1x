@@ -54,6 +54,7 @@ value : ```医療機関コード（１０桁）```を使用する。
 system要素には保険者番号を示すOID\"urn:oid:1.2.392.100495.20.3.61\"を指定する。"
 * identifier[insurerNumber].system = "urn:oid:1.2.392.100495.20.3.61" (exactly)
 * identifier[insurerNumber].assigner only Reference(JP_Organization)
+* identifier[insurerNumber].value ^comment = "保険者番号。英数字 券面記載の保険者番号。"
 * active ^short = "組織の記録がまだ有効に使われているかどうか【詳細参照】"
 * active ^definition = "このアクティブフラグは、組織を一時的に閉鎖したり、工事中であることを示すために使用されることを意図していない。代わりに、組織内の場所(複数可)は、中断されたステータスを持っている必要がある。一時停止の理由の詳細が必要な場合は、この要素の拡張子を使用する必要がある。  
 この要素は、リソースがエラーで作成されたことをマークするために使用される可能性があるため、修飾子としてラベル付けされている。"

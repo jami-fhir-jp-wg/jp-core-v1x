@@ -21,6 +21,12 @@ Coverageには、保険証レベルの情報が含まれている。これは、
     JP_Coverage_InsuredPersonSymbol named insuredPersonSymbol ..* and
     JP_Coverage_InsuredPersonNumber named insuredPersonNumber ..* and
     JP_Coverage_InsuredPersonSubNumber named insuredPersonSubNumber ..*
+
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier contains
+    insuranceIdentifier ..1
 * identifier ^short = "Business Identifier for the coverage　このカバレッジに割り当てられた一意の識別子【詳細参照】"
 * identifier ^definition = "A unique identifier assigned to this coverage.  
 このカバレッジに割り当てられた一意の識別子。"
@@ -28,9 +34,22 @@ Coverageには、保険証レベルの情報が含まれている。これは、
 カバレッジのメイン（および場合によっては唯一の）識別子-多くの場合、メンバID、証明書番号、個人の健康番号、またはケースIDと呼ばれる。  
 【JP Core仕様】被保険者記号と番号と枝番を全角にした上でダブルコーテーションで囲い、カンマ区切りで連結する。  
 ルール：\"{被保険者記号}\",\"{被保険者番号}\",\"{枝番}\"  
-例：\"１２－３４\",\"５６７８\",\"００\""
+例：\"１２－３４\",\"５６７８\",\"00\""
 * identifier ^requirements = "Allows coverages to be distinguished and referenced.  
 カバレッジを区別して参照できるようにする。"
+* identifier[insuranceIdentifier] ^short = "被保険者識別子"
+* identifier[insuranceIdentifier] ^definition = "被保険者識別子として、保険者情報と被保険者情報とを以下の仕様で連結したひとつの文字列を使用する"
+* identifier[insuranceIdentifier] ^comment = "「被保険者識別子」の文字列仕様(StructureDefinition_JP_Coverage.html#「被保険者識別子」の文字列仕様)を参照のこと"
+* identifier[insuranceIdentifier].system = "http://jpfhir.jp/fhir/core/Idsystem/JP_Insurance_SubscriberID" (exactly)
+* identifier[insuranceIdentifier].value ^short = "被保険者識別子の値を格納" 
+* identifier[insuranceIdentifier].value ^definition = "被保険者識別子として、保険者情報と被保険者情報とを以下の仕様で連結したひとつの文字列を使用する。  
+本仕様では、以下、これを「被保険者個人識別子」と称する。また英数字は１バイト系文字の英数字を指す。  
+被保険者個人識別子:以下の各情報（要素）を半角コロン（文字コード１６進数 5A）で結合する。  
+要素を省略する、とある場合には、長さ０の文字列とする。「被保険者識別子」の文字列仕様(StructureDefinition_JP_Coverage.html#「被保険者識別子」の文字列仕様)を参照のこと"
+* identifier[insuranceIdentifier].assigner only Reference(JP_Organization)
+* identifier[insuranceIdentifier].assigner ^short = "保険者情報を設定"
+* identifier[insuranceIdentifier].assigner ^definition = "保険者情報として[JP_Organization](StructureDefinition-jp-organization.html)を設定する。"
+* identifier[insuranceIdentifier].assigner ^comment = "保険者情報として[JP_Organization](StructureDefinition-jp-organization.html)を設定する。"
 * status ^definition = "The status of the resource instance.  
 リソースインスタンスのステータス。"
 * status ^comment = "This element is labeled as a modifier because the status contains the code entered-in-error that marks the coverage as not currently valid.  
@@ -69,8 +88,8 @@ Coverageには、保険証レベルの情報が含まれている。これは、
 保険者は、連絡や請求（デジタルおよびその他）でこの識別子を要求する。  
 保険会社は、通信および請求（デジタルおよびその他）でこの識別子を要求する。  
 【JP Core仕様】被保険者記号と番号を全角にした上でダブルコーテーションで囲い、カンマ区切りで連結する。  
-ルール：\"{被保険者記号}\",\"{被保険者番号}\"  
-例：\"１２－３４\",\"５６７８\""
+ルール：{被保険者記号}:{被保険者番号}  
+例：\"あいう\",\"５６７８\""
 * beneficiary only Reference(JP_Patient)
 * beneficiary ^definition = "The party who benefits from the insurance coverage; the patient when products and/or services are provided.  
 保険適用から利益を得る当事者、製品および／またはサービスが提供される際の患者。"
@@ -88,7 +107,7 @@ Coverageには、保険証レベルの情報が含まれている。これは、
 一部の補償では、単一の識別子が加入者に発行され、次に一意の従属番号が各受益者に発行される。  
 一部の保険では、単一の識別子が加入者に発行され、その後、各受益者に固有の扶養番号が発行される。  
 【JP Core仕様】医療保険で本リソースを使用する場合には、この要素に拡張 InsuredPersonSubNumberに設定した値と同じ、被保険者番号の枝番号全角2桁を設定する。  
-例：\"００\""
+例：\"00\""
 * relationship ^short = "Beneficiary relationship to the subscriber　加入者との受益者関係"
 * relationship ^definition = "The relationship of beneficiary (patient) to the subscriber.  
 受益者（患者）と加入者の関係。"
@@ -111,6 +130,7 @@ This is not a duration - that's a measure of time (a separate type), but a durat
 * period ^requirements = "Some insurers require the submission of the coverage term.  
 保険会社によっては、補償期間の提出を義務付けているところもある。"
 * payor only Reference(JP_Organization or JP_Patient or RelatedPerson)
+* payor ^short = "支払者に関する情報"
 * payor ^definition = "The program or plan underwriter or payor including both insurance and non-insurance agreements, such as patient-pay agreements.  
 患者負担契約などの保険契約と保険外契約の両方を含むプログラムまたはプランの引受人または支払人。"
 * payor ^comment = "May provide multiple identifiers such as insurance company identifier or business identifier (BIN number).\nFor selfpay it may provide multiple paying persons and/or organizations.  
@@ -229,9 +249,10 @@ Description: "健康保険における被保険者証番号の枝番を示す拡
 * ^context.type = #element
 * ^context.expression = "Coverage"
 * . ^short = "健康保険における被保険者証番号の枝番"
-* . ^comment = "健康保険における被保険者証番号を示す拡張。2桁の全角数字文字列。一桁の場合には先頭に０をつけて2桁にする。"
+* . ^comment = "健康保険における被保険者証番号を示す拡張。2桁の半角数字文字列。一桁の場合には先頭に0をつけて2桁にする。"
 * url = $JP_Coverage_InsuredPersonSubNumber (exactly)
 * value[x] only string
+* value[x] ^comment = "00～99の間の半角数字2桁、1桁の場合ゼロパディングを実施する。"
 
 Extension: JP_Coverage_InsuredPersonSymbol
 Id: jp-coverage-insuredpersonsymbol
