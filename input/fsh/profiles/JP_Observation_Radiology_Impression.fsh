@@ -12,6 +12,7 @@ Description: "このプロファイルはDiagnosticReport_Radiologyリソース�
 * . ^short = "画像診断レポートの結論（インプレッション）"
 * . ^definition = "放射線画像検査に対する画像診断レポートの所見の結論（インプレッション）。"
 * . ^comment = "画像診断レポートの結論（インプレッション）に対応するObservationプロファイル"
+* identifier MS
 * basedOn only 	Reference(ServiceRequest)
 * basedOn ^comment = "このObservationが生成されることになった画像検査に関するオーダ情報"
 * partOf only Reference(JP_ImagingStudy_Radiology)
@@ -22,6 +23,7 @@ Description: "このプロファイルはDiagnosticReport_Radiologyリソース�
 * code.coding.system = $Loinc_CS (exactly)
 * code.coding.code = $Loinc_CS#19005-8 (exactly)
 * code ^comment = "observation(インプレッション)を表すLOINCコード。19005-8, Radiology Imaging study [Impression] (narrative)が指定される。"
+* subject MS
 * subject only Reference(JP_Patient)
 * subject ^comment = "このObservationの対象となる患者。"
 * effective[x] only dateTime
@@ -29,6 +31,7 @@ Description: "このプロファイルはDiagnosticReport_Radiologyリソース�
 * issued ^comment = "「結論」が確定された日時(DateTime)。参照元のDiagnosticReportの日時と一致する必要がある。"
 * performer only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization)
 * performer ^comment = "「結論」を生成した医療者。通常は読影医。"
+* value[x] MS
 * value[x] only string
 * value[x] ^comment = "「結論」の内容。"
 * note ^comment = "診断報告書の「結論」に記載されないコメント等。"
