@@ -8,7 +8,7 @@ Usage: #example
 * category[1] = $Loinc_CS#LP7796-8 "Endoscopy"
 * code
   * coding
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationEndoscopyCode_VS"
+    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_EndoscopyTerminologyCodesJED_CS"
     * code = #19778-0
     * display = "Indications description Narrative Endoscopy"
   * text = "内視鏡所見"
@@ -18,7 +18,7 @@ Usage: #example
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueCodeableConcept
   * coding
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationEndoscopyValueJed_CS"
+    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_EndoscopyTerminologyCodesJED_CS"
     * code = #Z2L20800
     * display = "Size - Major Axis (mm) (Specify) 4mm"
   * text = "大きさ　長径４（ｍｍ）"

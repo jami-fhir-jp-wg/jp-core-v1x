@@ -8,7 +8,7 @@ Usage: #example
 * category[1] = $Loinc_CS#LP7796-8 "Endoscopy"
 * code
   * coding
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationEndoscopyCode_VS"
+    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_EndoscopyTerminologyCodesJED_CS"
     * code = #19811-9
     * display = "Diagnosis Endoscopy Procedure Narrative"
   * text = "内視鏡診断"
@@ -18,7 +18,7 @@ Usage: #example
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueCodeableConcept
   * coding
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationEndoscopyValueJed_CS"
+    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_EndoscopyTerminologyCodesJED_CS"
     * code = #Z2L30301
     * display = "[Tumor] Adenoma / Early Colorectal Cancer"
   * text = "[腫瘍] 腺腫・早期大腸癌"
