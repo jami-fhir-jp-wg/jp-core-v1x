@@ -42,8 +42,9 @@ Description: "このプロファイルはObservationリソースに対して、�
 * performer only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or CareTeam or JP_Patient or RelatedPerson)
 * insert SetDefinition(performer, この心電図検査の責任者/実施者に関する情報)
 * performer ^comment = "参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
-//* insert SetDefinition(value[x], 取得された結果)
-//* insert SetDefinition(dataAbsentReason, このObservationのvalue[x]要素に期待される結果が存在しなかった場合、その理由)
+* insert SetDefinition(value[x], 心電図の測定結果)
+* value[x] ^comment = "心電図検査は一つの測定値のみを用いられることはなく、一連の測定値を元にして所見を得て解釈される。単一の測定値としてのこの項目は空欄であることが前提であるが、送受信側の双方が合意して単一の測定値のみを送信するためにこのリソースを仕様することも許容される。"
+* insert SetDefinition(dataAbsentReason, このObservationのvalue[x]要素に期待される結果が存在しなかった場合、その理由)
 * dataAbsentReason ^comment = "ヌル値または例外値は、FHIRオブザベーションで2つの方法で表すことができる。 1つの方法は、それらを値セットに含めて、値の例外を表す方法である。たとえば、血清学的検査の測定値は、「検出された」、「検出されなかった」、「決定的でない」、または「検体が不十分」である可能性がある。別の方法は、実際の観測にvalue要素を使用し、明示的なdataAbsentReason要素を使用して例外的な値を記録することである。たとえば、測定が完了しなかった場合、dataAbsentReasonコード「error」を使用できる。この場合には、観測値は、報告する値がある場合にのみ報告される可能性があることに注意する必要がある。たとえば、差分セルカウント値は> 0の場合にのみ報告される場合がある。これらのオプションのため、nullまたは例外値の一般的な観測値を解釈するにはユースケースの合意が必要である。"
 * insert SetDefinition(interpretation, 心電図所見)
 * interpretation.code from $JP_Obervation_Electrocardigoram_InterpretationCS (example)
@@ -55,11 +56,11 @@ Description: "このプロファイルはObservationリソースに対して、�
 フリーテキストの追加情報を提供できる必要がある。"
 * insert SetDefinition(bodySite, 対象となった身体部位)
 * insert SetDefinition(method, この心電図検査の実施方法)
-* insert SetDefinition(specimen, このObservationに使われた検体/標本に関する情報)
-* specimen ^comment = "`Observation.code`にあるコードで暗黙的に示されない場合にのみ使用する必要がある。検体自体の観察は行われない。観察（観測、検査）対象者に対して実施されるが、多くの場合には対象者から得られた検体に対して実施される。検体が奥の場合に関わるが、それらは常に追跡され、明示的に報告されるとは限らないことに注意すること。またobservationリソースは、検体を明示的に記述するような状況下（診断レポートなど）で使用される場合があることに注意。"
-* insert SetDefinition(device, このObservationでデータを得るために使われた測定機器に関する情報)
-* device ^comment = "これは、結果の送信に関与するデバイス（ゲートウェイなど）を表すことを意図したものではない。そのようなデバイスは、必要に応じてProvenanceリソースを使用して文書化する。"
-* insert SetDefinition(referenceRange, 基準範囲との比較による結果の解釈方法のガイダンス)
+//* insert SetDefinition(specimen, このObservationに使われた検体/標本に関する情報)
+//* specimen ^comment = "`Observation.code`にあるコードで暗黙的に示されない場合にのみ使用する必要がある。検体自体の観察は行われない。観察（観測、検査）対象者に対して実施されるが、多くの場合には対象者から得られた検体に対して実施される。検体が奥の場合に関わるが、それらは常に追跡され、明示的に報告されるとは限らないことに注意すること。またobservationリソースは、検体を明示的に記述するような状況下（診断レポートなど）で使用される場合があることに注意。"
+* insert SetDefinition(device, この心電図検査を実施した計測機器に対する情報)
+* device ^comment = "これは、心電図検査を計測し記録するために使用された機器に関する情報であり、結果の送信に関与するデバイス（ゲートウェイなど）を表すことを意図したものではない。そのようなデバイスは、必要に応じてProvenanceリソースを使用して文書化する。"
+* insert SetDefinition(referenceRange, 心電図検査の基準範囲は個々の検査値によって異なるために基準範囲との比較による結果の解釈方法のガイダンス)
 * referenceRange ^comment = "通常の範囲または推奨範囲と比較して値を解釈する方法に関するガイダンス。複数の参照範囲は「OR」として解釈される。つまり、2つの異なるターゲット母集団を表すために、2つの `referenceRange`要素が使用される。"
 * referenceRange ^requirements = "どの値が「正常」と見なされるかを知ることは、特定の結果の意義を評価するのに役立つ。さまざまなコンテキストに対応するため複数の参照範囲を提供できる必要がある。"
 * hasMember only Reference(JP_Observation_Common or QuestionnaireResponse or MolecularSequence)
@@ -73,6 +74,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * component ^requirements = "この心電図検査で行われる一連の測定値をまとめるものであり、負荷心電図など複数の心電図検査を一連の検査として行った場合は別Observationインスタンスとして記録される。"
 * component.code from $Loinc_CS (preffered)
 * component.code ^comment = "心電図の各検査項目についてはLOINCなどの特定の用語集を利用することが推奨される。"
+* insert SetDefinition(lead, この心電図を測定したときの計測誘導数)
+*
 
 
 // ==============================
