@@ -49,7 +49,7 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * category ^short = "サービスリクエストの分類"
 * category ^definition = "検索、分類、表示の目的でサービスを分類するコード（例 「外科的手技」）"
 * category ^comment = "リソースを検索または表示するためのコンテキストまたはユースケースに応じて、複数の分類軸が存在する場合がある。粒度のレベルは、Value Setのカテゴリー概念によって定義される。"
-* category from http://hl7.org/fhir/ValueSet/servicerequest-category (example)
+// * category from http://hl7.org/fhir/ValueSet/servicerequest-category (example)
 // 
 * priority ^short = "サービスリクエストの緊急度（routine | urgent | asap | stat）"
 * priority ^definition = "このサービスリクエストはどの程度早く対処されるべきかを示す。"
@@ -62,13 +62,13 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * code ^short = "リクエストの内容を示すコード"
 * code ^definition = "要求された特定のサービス（例、行為、診断のための検査、また検査パネル）の識別子"
 * code ^comment = "多くの検査・放射線処置コードは、血清または血漿グルコース、胸部 X 線など、検体・器官系が検査オーダー名に埋め込まれている。検体は、検査コードとは別に記録されないかもしれない。"
-* code from http://hl7.org/fhir/ValueSet/procedure-code (example)
+// * code from http://hl7.org/fhir/ValueSet/procedure-code (example)
 // 
 * orderDetail ^short = "追加のオーダ情報"
 * orderDetail ^definition = "リクエストの提供方法に関する追加の詳細および指示。例えば、尿道カテーテルのサービスリクエストには、外部または留置カテーテルのリクエストの詳細があり、包帯のサービスリクエストには、包帯の適用方法を指定する追加の指示が必要な場合もある。"
 * orderDetail ^comment = "リクエストされたサービス提供の指示についての医療記録からの情報については、supportingInformation要素を使用。"
 // * orderDetail obeys prr-1
-* orderDetail from http://hl7.org/fhir/ValueSet/servicerequest-orderdetail (example)
+// * orderDetail from http://hl7.org/fhir/ValueSet/servicerequest-orderdetail (example)
 //
 * quantity[x] ^short = "サービスの量"
 * quantity[x] ^definition = "リクエストされるサービスの量。数量（例:1500ドルの住宅改造）、比率（例:1ヶ月に20回の半日訪問）、または範囲（例:1分間に2.0～1.8Gy）。"
