@@ -6,7 +6,7 @@
 * [JP Core FamilyMemberHistory（家族歴）プロファイル][JP_FamilyMemberHistory]
 
 ### Extensions
-なし
+* [JP Core Disease Outcome (病名の転帰を格納するための拡張) Extension][JP_Condition_DiseaseOutcome]
 
 
 {% include markdown-link-references.md %}
