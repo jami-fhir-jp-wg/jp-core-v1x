@@ -24,15 +24,16 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(status, 結果の状態)
 * status ^comment = "このリソースは現在有効でないというマークをするコードを含んでいるため、この要素はモディファイアー（修飾的要素）として位置づけられている。"
 
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "coding.system"
-* category ^slicing.rules = #open
-* category contains
+* category.coding ^slicing.discriminator.type = #value
+* category.coding ^slicing.discriminator.path = "system"
+* category.coding ^slicing.rules = #open
+* category.coding ^slicing.ordered = false
+* category.coding contains
     simpleCategory 0..1
 * insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には procedure が指定される。)
-* category[simpleCategory] ^comment = "心電図検査は procedure に分類されている。"
-* category[simpleCategory] from JP_SimpleObservationCategory_VS (required)
-* category[simpleCategory].coding = $JP_SimpleObservationCategory_CS#procedure "Procedure" (exactly)
+* category.coding[simpleCategory] ^comment = "心電図検査は procedure に分類されている。"
+* category.coding[simpleCategory] from JP_SimpleObservationCategory_VS (required)
+* category.coding[simpleCategory] = $JP_SimpleObservationCategory_CS#procedure "Procedure" (exactly)
 * insert SetDefinition(code, 心電図検査を示すコード)
 * code from $JP_ObservationElectrocardiogramComponentCode_VS (preferred)
 * code.coding = $Loinc_CS#11524-6 "EKG Study"(exactly)
