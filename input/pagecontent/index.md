@@ -43,7 +43,7 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
       * [JP Core Observation BodyMeasurement （身体計測）プロファイル][JP_Observation_BodyMeasurement]
       * [JP Core Observation PhysicalExam （身体所見）プロファイル][JP_Observation_PhysicalExam]
       * [JP Core Observation SocialHistory （生活背景）プロファイル][JP_Observation_SocialHistory]
-      * [JP Core Observation Electrocardiogram （心電図検査結果）プロファイル][JP_Observation_Observation]
+      * [JP Core Observation Electrocardiogram （心電図検査結果）プロファイル][JP_Observation_Electrocardiogram]
       * JP Core Observation Radiology (放射線画像検査)
         * [JP Core Observation Radiology Findings (放射線画像検査所見）プロファイル)][JP_Observation_Radiology_Findings]
         * [JP Core Observation Radiology Impression (放射線画像検査インプレッション)プロファイル][JP_Observation_Radiology_Impression]
@@ -125,7 +125,7 @@ JP Coreは以下の方々、および各サーブワーキンググループの�
   * メンバ：㈱富士通　小山内 尚、西山 喜樹、能崎 克行、東大病院　永島 里美
 
 * Pharmacy and Medication : SWG5
-  * リーダ：国立保健医療科学院　小林 慎治
+  * リーダ：岐阜大学　小林 慎治
   * サブリーダ：日本アイ・ビー・エム㈱　木村 雅彦、㈱メドレー　児玉 義憲
   * メンバ：九州大学　高田 敦史、東大病院　永島 里美、日本調剤㈱　栗原 邦彦、シンクタンク勤務　河﨑 泰子
 

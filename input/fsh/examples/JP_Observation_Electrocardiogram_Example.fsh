@@ -59,8 +59,8 @@ Usage: #example
 * component[=].code.text = "T wave axis"
 * component[=].valueQuantity.value = 45
 * component[=].valueQuantity.unit = "deg"
-* extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_Lead"
+* extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_NumberOfLead"
 * extension[=].valueInteger = 12
-* extension[1].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_MachinaryInterpretation"
-* extension[1].valueBoolean = true
+* extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_MachinaryInterpretation"
+* extension[=].valueBoolean = true
 

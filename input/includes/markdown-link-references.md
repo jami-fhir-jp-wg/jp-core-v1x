@@ -64,6 +64,7 @@
 [JP_MedicationTiming]: StructureDefinition-jp-medicationtiming.html
 [JP_Observation_BodyMeasurement]: StructureDefinition-jp-observation-bodymeasurement.html
 [JP_Observation_Common]: StructureDefinition-jp-observation-common.html
+[JP_Observation_Electrocardiogram]: StructureDefinition-jp-observation-electrocardiogram.html
 [JP_Observation_Endoscopy]: StructureDefinition-jp-observation-endoscopy.html
 [JP_Observation_LabResult]: StructureDefinition-jp-observation-labresult.html
 [JP_Observation_Microbiology]: StructureDefinition-jp-observation-microbiology.html
@@ -110,6 +111,8 @@
 [JP_MedicationDosage_UsageDuration]: StructureDefinition-jp-medicationdosage-usageduration.html
 [JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]: StructureDefinition-jp-medicationrequest-dispenserequest-expectedrepeatcount.html
 [JP_MedicationRequest_DispenseRequest_InstructionForDispense]: StructureDefinition-jp-medicationrequest-dispenserequest-instructionfordispense.html
+[JP_Observation_Electrocardiogram_NumberOfLead]: StructureDefinition-jp-observation-electrocardiogram-number-of-lead.html
+[JP_Observation_Electrocardiogram_MachinaryInterpertation]: StructureDefinition-jp-observation-electrocardiogram-machinary-interpretation.html
 [JP_Organization_InsuranceOrganizationCategory]: StructureDefinition-jp-organization-insuranceorganizationcategory.html
 [JP_Organization_InsuranceOrganizationNo]: StructureDefinition-jp-organization-insuranceorganizationno.html
 [JP_Organization_PrefectureNo]: StructureDefinition-jp-organization-prefectureno.html
