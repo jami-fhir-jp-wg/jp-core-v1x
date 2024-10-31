@@ -62,14 +62,12 @@ code.coding.display = "EKG study"  固定値
 
 | コンフォーマンス | パラメータ | 型 | 例 |
 | --- | --- | --- | --- |
-| SHOULD | patient,category,code | reference,token,token,quantity  | GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org\|11524-6 |
-| SHOULD | patient,category,code,date | reference,token,token,quantity,date  | GET [base]/Observation?patient=123&category=vital-signs&code=http://loinc.org\|11524-6&date=le2020-12-31 |
+| SHOULD | patient,category,code | reference,token,token,quantity  | GET [base]/Observation?patient=123&category=procedure&code=http://loinc.org\|11524-6 |
+| SHOULD | patient,category,code,date | reference,token,token,quantity,date  | GET [base]/Observation?patient=123&category=procedure&code=http://loinc.org\|11524-6&date=le2020-12-31 |
 
 #### 操作詳細
 
 ##### 必須検索パラメータ(SHALL)
-
-
 必須の検索パラメータは設定しない。
 
 
