@@ -14,7 +14,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^comment = "心電図検査についてのプロファイル"
 * extension contains
     JP_Observation_Electrocardiogram_NumberOfLead named lead ..1 and
-    JP_Observation_Electrocardiogram_MachinaryInterpretation named machinaryInterpretation ..1 and
+    JP_Observation_Electrocardiogram_MachinaryInterpretation named machinaryInterpretation ..1
 * insert SetDefinition(identifier, この心電図を表すObservationリソースに対する一意な識別ID)
 * basedOn only 	Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
 * insert SetDefinition(basedOn, このObservationが実施されることになった検査オーダーや計画、提案に関する情報)
@@ -24,7 +24,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(status, 結果の状態)
 * status ^comment = "このリソースは現在有効でないというマークをするコードを含んでいるため、この要素はモディファイアー（修飾的要素）として位置づけられている。"
 * insert SetDefinition(category, 行われた検査の一般的なタイプの分類。JP Core Observation Common Profileの【詳細説明】を参照のこと。)
-* category from $JP_SimpleObservationCategory_VS (required)
+* category from JP_SimpleObservationCategory_VS (required)
 * insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には procedure が指定される。)
 * category ^comment = "心電図検査は procedure に分類されている。"
 * insert SetDefinition(code, 心電図検査を示すコード)
@@ -47,12 +47,12 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(performer, この心電図検査の責任者/実施者に関する情報)
 * performer ^comment = "参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
 * insert SetDefinition(value[x], 心電図の測定結果)
-* value[x] ^comment = "心電図検査は一つの測定値のみを用いられることはなく、一連の測定値を元にして所見を得て解釈される。単一の測定値としてのこの項目は空欄であることが前提であるが、送受信側の双方が合意して単一の測定値のみを送信するためにこのリソースを仕様することも許容される。"
+* value[x] ^comment = "心電図検査は一つの測定値のみを用いられることはなく、一連の測定値を元にして所見を得て総合的に解釈される。単一の測定値としてのこの項目は空欄であることが前提であるが、送受信側の双方が合意して単一の測定値のみを送信するためにこのリソースを仕様することも許容される。"
 * insert SetDefinition(dataAbsentReason, このObservationのvalue[x]要素に期待される結果が存在しなかった場合、その理由)
 * dataAbsentReason ^comment = "ヌル値または例外値は、FHIRオブザベーションで2つの方法で表すことができる。 1つの方法は、それらを値セットに含めて、値の例外を表す方法である。たとえば、血清学的検査の測定値は、「検出された」、「検出されなかった」、「決定的でない」、または「検体が不十分」である可能性がある。別の方法は、実際の観測にvalue要素を使用し、明示的なdataAbsentReason要素を使用して例外的な値を記録することである。たとえば、測定が完了しなかった場合、dataAbsentReasonコード「error」を使用できる。この場合には、観測値は、報告する値がある場合にのみ報告される可能性があることに注意する必要がある。たとえば、差分セルカウント値は> 0の場合にのみ報告される場合がある。これらのオプションのため、nullまたは例外値の一般的な観測値を解釈するにはユースケースの合意が必要である。"
 * insert SetDefinition(interpretation, 心電図所見)
 * interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS
-* interpretation ^comment = "心電図所見については、ミネソタコードを元に学会や検査機器ベンダーが用語集を作成している。必要に応じてそれらのコードを仕様することを推奨する。"
+* interpretation ^comment = "心電図所見・解釈について記載する。心電図所見は測定された結果と1対1で対応するものではなく、総合的に判断されるものである。したがって所見や解釈はこのエレメントに列記することとした。所見については、ミネソタコードを元に学会や検査機器ベンダーが用語集を作成している。必要に応じてそれらのコードを仕様することを推奨する。"
 * interpretation ^requirements = "心電図所見についてのコード集を別途提示する。"
 * insert SetDefinition(note, このObservationに関するコメント)
 * note ^comment = "観察（結果）に関する一般的な記述、重要な、予期しない、または信頼できない結果値に関する記述、またはその解釈に関連する場合はそのソースに関する情報が含まれる場合がある。"
@@ -76,7 +76,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(component, この心電図検査で測定された一連の結果。)
 * component ^comment = "心電図に関する一連の測定結果をまとめるためにコンポーネントを使用する。"
 * component ^requirements = "この心電図検査で行われる一連の測定値をまとめるものであり、負荷心電図など複数の心電図検査を一連の検査として行った場合は別Observationインスタンスとして記録される。"
-* component.code from $Loinc_CS
+* component.code from JP_ObservationElectrocardiogramComponentCode_VS (extensible)
 * component.code ^comment = "心電図の各検査項目についてはLOINCなどの特定の用語集を利用することが推奨される。"
 * component.interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS
 * component.interpretation ^comment = "心電図検査の測定結果と解釈は必ずしも1対1で対応しないが、PR間隔の測定値にPR間隔延長などの固有の所見をつけてもよい"
