@@ -14,7 +14,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^comment = "心電図検査についてのプロファイル"
 * extension contains
     JP_Observation_Electrocardiogram_NumberOfLead named lead ..1 and
-    JP_Observation_Electrocardiogram_MachinaryInterpretation named machinaryInterpretation ..1
+    JP_Observation_Electrocardiogram_DeviceInterpretation named deviceInterpretation ..1
 * insert SetDefinition(identifier, この心電図を表すObservationリソースに対する一意な識別ID)
 * basedOn only Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
 * insert SetDefinition(basedOn, このObservationが実施されることになった検査オーダーや計画、提案に関する情報)
@@ -23,7 +23,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * partOf ^comment = "ObservationをEncounterにencounter要素を使ってリンクする。もうひとつ別のObservationを参照することについては、以降にあるt [Notes](observation.html#obsgrouping)　をガイダンスとして参照のこと。"
 * insert SetDefinition(status, 結果の状態)
 * status ^comment = "このリソースは現在有効でないというマークをするコードを含んでいるため、この要素はモディファイアー（修飾的要素）として位置づけられている。"
-
 * category.coding ^slicing.discriminator.type = #value
 * category.coding ^slicing.discriminator.path = "system"
 * category.coding ^slicing.rules = #open
@@ -100,7 +99,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 // JP_Observation_Electrocardiogram_NumberOfLead
 //-------------------------------
 Extension: JP_Observation_Electrocardiogram_NumberOfLead
-Id: jp-obsrevation-electrocardiogram-numberoflead
+Id: jp-observation-electrocardiogram-numberoflead
 Title: "JP Core Observation Electrocardiogram NumberOfLeed Extention"
 Description: "心電図検査を実施したときに使った誘導の数を示すExtension"
 * ^url = $JP_Observation_Electrocardiogram_NumberOfLead
@@ -118,13 +117,13 @@ Description: "心電図検査を実施したときに使った誘導の数を示
 * value[x] ^definition = "心電図検査で使用した誘導の数"
 
 //-------------------------------
-// JP_Observation_Electrocardiogram_MachinaryInterpretation
+// JP_Observation_Electrocardiogram_DeviceInterpretation
 //-------------------------------
-Extension: JP_Observation_Electrocardiogram_MachinaryInterpretation
-Id: jp-obsrevation-electrocardiogram-machinaryinterpretation
-Title: "JP Core Observation Electrocardiogram MachinaryInterpretation Extention"
+Extension: JP_Observation_Electrocardiogram_DeviceInterpretation
+Id: jp-observation-electrocardiogram-deviceinterpretation
+Title: "JP Core Observation Electrocardiogram Device Interpretation Extention"
 Description: "心電図検査で測定された結果に対しての機械的に判定された所見、解釈の有無"
-* ^url = $JP_Observation_Electrocardiogram_MachinaryInterpretation
+* ^url = $JP_Observation_Electrocardiogram_DeviceInterpretation
 * ^status = #active
 * ^date = "2024-10-31"
 * ^purpose = "心電図検査で測定された結果についての所見や解釈が機械的に判定されたものかどうかを示すために用いられる。"
@@ -132,7 +131,7 @@ Description: "心電図検査で測定された結果に対しての機械的に
 * ^context.expression = "Observation.machinaryInterpretation"
 * . ^short = "機械判定された所見・解釈の有無"
 * . ^definition = "心電図検査の所見が機械的に判定されたものであるかどうかを示す"
-* url = $JP_Observation_Electrocardiogram_MachinaryInterpretation (exactly)
+* url = $JP_Observation_Electrocardiogram_DeviceInterpretation (exactly)
 * value[x] 0..1
 * value[x] only boolean
 * value[x] ^short = "機械判定所見の有無"

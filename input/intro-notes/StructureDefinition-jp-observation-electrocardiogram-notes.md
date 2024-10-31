@@ -1,4 +1,3 @@
-
 ### 必須要素
 
 次のデータ項目はデータが存在しなければ    ならない（必須）、あるいは、データが送信システムに存在する場合はサポートされなければならない（Must Support）要素である。
@@ -8,9 +7,10 @@
 
 - status: 心電図検査の結果の状態を示すために必須である。
 - category: この検査のカテゴリーがprocedureであることを示すために必須である。
-- code︓この検査が心電図検査(LOINC: 11624-5, EKG Study)であることを示すため必須である
+- code︓この検査が心電図検査(LOINC: 11624-5, EKG Study)であることを示すため必須である。
+- subject: この心電図検査の実施対象を示すためにひつようである。
 
-#### MustSupport
+#### MustSupport  
 このプロファイルではMust Supportの要素は存在しない。
 
 ### Extension定義
@@ -20,7 +20,7 @@
 |拡張|説明|定義|値型|
 | --- | --- | --- | --- |
 |誘導の数|心電図検査を行った際に測定される誘導の数|JP_Observation_Electrocardiogram_NumberOfLead|integer|
-|自動判定|自動判定の有無|JP_Observation_Electrocardiogram_MachinaryInterpertation|boolean|
+|自動判定|自動判定の有無|JP_Observation_Electrocardiogram_DeviceInterpertation|boolean|
 
 
 ### 用語定義

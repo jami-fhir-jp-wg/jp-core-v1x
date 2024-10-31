@@ -1,7 +1,7 @@
 ValueSet: JP_ObservationElectrocardiogramComponentCode_VS
 Id: jp-observation-electrocardiogram-component-code-vs
 Title: "JP Core Observation Electrocardiogram Component Code ValueSet"
-Description: "心電図検査の一連の測定値の項目を示す値セット"
+Description: "心電図検査の一連の測定項目を示す値セット"
 * ^url = $JP_ObservationElectrocardiogramComponentCode_VS
 * ^status = #active
 * ^experimental = false

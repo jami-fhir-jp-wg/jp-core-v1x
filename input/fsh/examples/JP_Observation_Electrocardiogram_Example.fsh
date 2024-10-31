@@ -3,7 +3,7 @@ InstanceOf: JP_Observation_Electrocardiogram
 Title: "JP Core Observation Electrocardiogram Example"
 Description: "安静時12誘導心電図"
 Usage: #example
-* category = $JP_SimpleObservationCategory_CS#procedure "Procedure"
+//* category = $JP_SimpleObservationCategory_CS#procedure "Procedure"
 * subject = Reference(Patient/jp-patient-example-1)
 * code.coding = $Loinc_CS#11524-6 "EKG Study"
 * effectiveDateTime = "2024-10-19T10:00:00+09:00"
@@ -59,8 +59,6 @@ Usage: #example
 * component[=].code.text = "T wave axis"
 * component[=].valueQuantity.value = 45
 * component[=].valueQuantity.unit = "deg"
-* extension[+].url = $JP_Observation_Electrocardiogram_NumberOfLead
-* extension[=].valueInteger = 12
-* extension[+].url = $JP_Observation_Electrocardiogram_MachinaryInterpretation
-* extension[=].valueBoolean = true
+* extension[lead].valueInteger = 12
+* extension[deviceInterpretation].valueBoolean = true
 

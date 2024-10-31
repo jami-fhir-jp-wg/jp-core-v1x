@@ -28,7 +28,7 @@
 
 
 ### Extensions
-* [JP_Observation_Electrocardiogram_MachinaryInterpretation]
+* [JP_Observation_Electrocardiogram_DeviceInterpretation]
 * [JP_Observation_Electrocardiogram_NumberOfLead]
 
 {% include markdown-link-references.md %}
