@@ -10,7 +10,7 @@
 - code︓この検査が心電図検査(LOINC: 11624-5, EKG Study)であることを示すため必須である。
 - subject: この心電図検査の実施対象を示すためにひつようである。
 
-#### MustSupport
+#### MustSupport  
 このプロファイルではMust Supportの要素は存在しない。
 
 ### Extension定義
