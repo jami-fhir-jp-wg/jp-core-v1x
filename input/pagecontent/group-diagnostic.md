@@ -7,6 +7,7 @@
     * [JP Core Observation BodyMeasurement （身体計測）プロファイル][JP_Observation_BodyMeasurement]
     * [JP Core Observation PhysicalExam （身体所見）プロファイル][JP_Observation_PhysicalExam]
     * [JP Core Observation SocialHistory （生活背景）プロファイル][JP_Observation_SocialHistory]
+    * [JP Core Observation Electrocardiogram (心電図検査結果)　プロファイル][JP_Observation_ELectrocardiogram]
     * JP Core Observation Radiology (放射線画像検査)
       * [JP Core Observation Radiology Findings (放射線画像検査所見）プロファイル][JP_Observation_Radiology_Findings]
       * [JP Core Observation Radiology Impression (放射線画像検査インプレッション)プロファイル][JP_Observation_Radiology_Impression]
@@ -19,6 +20,7 @@
     * [JP Core DiagnosticReport Microbiology （微生物学検査レポート）プロファイル][JP_DiagnosticReport_Microbiology]
     * [JP Core DiagnosticReport Radiology （放射線検査レポート）プロファイル][JP_DiagnosticReport_Radiology]
     * [JP Core DiagnosticReport Endoscopy （内視鏡レポート）プロファイル][JP_DiagnosticReport_Endoscopy]
+
 
 ### Extensions
 なし
