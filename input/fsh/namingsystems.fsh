@@ -293,22 +293,6 @@ Usage: #definition
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/route-codes"
 * uniqueId[=].preferred = true
 
-Instance: jp-observation-electrocardiogram-interpretation-namingsystem
-InstanceOf: NamingSystem
-Usage: #definition
-* name = "JP_Observation_ElectrocardiogramInterpretation_NamingSystem"
-* status = #active
-* date = "2024-10-31"
-* kind = #codesystem
-* description = "JP Observation Electrocardiogram Interpretation NamingSystem"
-* uniqueId[+].type = #oid
-* uniqueId[=].value = "1.2.392.200119.5.2.4.1.1.3"
-* uniqueId[+].type = #uri
-* uniqueId[=].value = "urn:oid:1.2.392.200119.5.2.4.1.1.3"
-* uniqueId[+].type = #uri
-* uniqueId[=].value = $JP_ObservationElectrocardiogramInterpretationCode_CS
-* uniqueId[=].preferred = true
-
 Instance: jp-observation-jlac10-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition
