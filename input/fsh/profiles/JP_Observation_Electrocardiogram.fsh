@@ -57,7 +57,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(dataAbsentReason, このObservationのvalue[x]要素に期待される結果が存在しなかった場合、その理由)
 * dataAbsentReason ^comment = "ヌル値または例外値は、FHIRオブザベーションで2つの方法で表すことができる。 1つの方法は、それらを値セットに含めて、値の例外を表す方法である。たとえば、血清学的検査の測定値は、「検出された」、「検出されなかった」、「決定的でない」、または「検体が不十分」である可能性がある。別の方法は、実際の観測にvalue要素を使用し、明示的なdataAbsentReason要素を使用して例外的な値を記録することである。たとえば、測定が完了しなかった場合、dataAbsentReasonコード「error」を使用できる。この場合には、観測値は、報告する値がある場合にのみ報告される可能性があることに注意する必要がある。たとえば、差分セルカウント値は> 0の場合にのみ報告される場合がある。これらのオプションのため、nullまたは例外値の一般的な観測値を解釈するにはユースケースの合意が必要である。"
 * insert SetDefinition(interpretation, 心電図所見)
-* interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (preferred)
+* interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (extensible)
 * interpretation ^comment = "心電図所見・解釈について記載する。心電図所見は測定された結果と1対1で対応するものではなく、総合的に判断されるものである。したがって所見や解釈はこのエレメントに列記することとした。所見については、ミネソタコードを元に学会や検査機器ベンダーが用語集を作成している。必要に応じてそれらのコードを仕様することを推奨する。"
 * interpretation ^requirements = "心電図所見についてのコード集を別途提示する。"
 * insert SetDefinition(note, このObservationに関するコメント)
@@ -84,7 +84,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * component ^requirements = "この心電図検査で行われる一連の測定値をまとめるものであり、負荷心電図など複数の心電図検査を一連の検査として行った場合は別Observationインスタンスとして記録される。"
 * component.code from JP_ObservationElectrocardiogramComponentCode_VS (preferred)
 * component.code ^comment = "心電図の各検査項目についてはLOINCなどの特定の用語集を利用することが推奨される。"
-* component.interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (preferred)
+* component.interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (extensible)
 * component.interpretation ^definition = "心電図検査で測定された結果値に対する所見・解釈"
 * component.interpretation ^comment = "心電図検査の測定結果と解釈は必ずしも1対1で対応しないが、PR間隔の測定値にPR間隔延長などの固有の所見をつけてもよい"
 
