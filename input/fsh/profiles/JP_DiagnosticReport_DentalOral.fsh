@@ -24,11 +24,11 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * insert SetDefinition(category, サービスカテゴリー SS-MIX2拡張ストレージ構成の説明と構築ガイドラインに従う)
 * category[dentaloral] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP31759-1（歯科口腔）を使用する。"
 * category[dentaloral] from $JP_DiagnosticReportCategory_VS (required)
-4 category[dentaloral].coding.system = $Loinc_CS (exactly)
+//4 category[dentaloral].coding.system = $Loinc_CS (exactly)
 * category[dentaloral].coding.code 1..
-* category[den4aloral].coding.code = $Loinc_C4#LP31759-1 (exactly)
+//* category[den4aloral].coding.code = $Loinc_C4#LP31759-1 (exactly)
 
-* code = $JP_DocumentCodes_CS#32453-3
+//* code = $JP_DocumentCodes_CS#32453-3
 * insert SetDefinition(code, 診断レポート種別「口腔診査報告書」を表す文書コード)
 
 * subject only Reference(JP_Patient)
