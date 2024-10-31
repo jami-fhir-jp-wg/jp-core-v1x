@@ -142,11 +142,11 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySite_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySiteStatus_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodyStructure_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalFundamentalStatus_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalMissingTeethObservation_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalPresentTeethObservation_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalSipmleMissingTeethObservation_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalSipmlePresentTeethObservation_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalFundamentalStatus_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalSimpleMissingTeethObservation_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalSimplePresentTeethObservation_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_MicrobiologyCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
@@ -272,14 +272,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalBodySite_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalBodySiteStatus_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalBodyStructure_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalMissingTeethObservation_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalPresentTeethObservation_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalSipmleMissingTeethObservation_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalSipmlePresentTeethObservation_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalFundamentalStatus_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeICD10_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeMEDISExchange_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeMEDISRecordNo_VS
@@ -292,6 +284,14 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeJHSD0006_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeReceipt_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionSeverity_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalBodySite_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalBodySiteStatus_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalBodyStructure_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalFundamentalStatus_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalMissingTeethObservation_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalPresentTeethObservation_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalSimpleMissingTeethObservation_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalSimplePresentTeethObservation_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DiagnosticReportCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DICOMModality_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_DiagnosticReport_VS
