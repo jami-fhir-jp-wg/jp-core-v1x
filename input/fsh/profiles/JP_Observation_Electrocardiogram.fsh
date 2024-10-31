@@ -96,16 +96,16 @@ Description: "心電図検査を実施したときに使った誘導の数を示
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_NumberOfLead"
 * ^status = #active
 * ^date = "2024-10-31"
-* ^purpose = "心電図検査で仕様する誘導の数を記録するために用いられる。"
+* ^purpose = "心電図検査で使用した誘導の数を記録するために用いられる。"
 * ^context.type = #element
-* ^context.expression = "Observation.lead"
+* ^context.expression = "Observation"
 * . ^short = "誘導の数"
-* . ^definition = "心電図検査で試用した誘導の数を記録するための拡張"
+* . ^definition = "心電図検査で使用した誘導の数を記録するための拡張"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_NumberOfLead" (exactly)
 * value[x] 0..1
 * value[x] only integer
 * value[x] ^short = "誘導の数"
-* value[x] ^definition = "心電図検査を実施したときに試用した誘導の数"
+* value[x] ^definition = "心電図検査で使用した誘導の数"
 
 //-------------------------------
 // JP_Observation_Electrocardiogram_MachinaryInterpretation
@@ -119,11 +119,11 @@ Description: "心電図検査で測定された結果に対しての機械的に
 * ^date = "2024-10-31"
 * ^purpose = "心電図検査で測定された結果についての所見や解釈が機械的に判定されたものかどうかを示すために用いられる。"
 * ^context.type = #element
-* ^context.expression = "Observation.machinaryInterpretation"
-* . ^short = "機械判定"
+* ^context.expression = "Observation"
+* . ^short = "機械判定所見の有無"
 * . ^definition = "心電図検査の所見が機械的に判定されたものであるかどうかを示す"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_MachinaryInterpretation" (exactly)
 * value[x] 0..1
 * value[x] only boolean
-* value[x] ^short = "機械判定"
+* value[x] ^short = "機械判定所見の有無"
 * value[x] ^definition = "心電図検査が機械的に判定されたものであるかどうかを示す"
