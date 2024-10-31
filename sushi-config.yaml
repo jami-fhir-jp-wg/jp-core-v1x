@@ -182,6 +182,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodySiteStatus
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodyStructure
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_MachinaryInterpretation
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_NumberOfLead
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory
@@ -244,9 +246,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationTiming
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_BodyMeasurement
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_MissingToothCondition
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_ToothExistence
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_ToothTreatmentCondition
-    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_MissingToothCondition
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Electrocardiogram
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Endoscopy
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_LabResult

@@ -102,6 +102,7 @@ Alias: $JP_MedicationDosage_UsageDuration = http://jpfhir.jp/fhir/core/Extension
 Alias: $JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount
 Alias: $JP_MedicationRequest_DispenseRequest_InstructionForDispense = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense
 Alias: $JP_Observation_DentalOral_BodySiteStatus = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodySiteStatus
+Alias: $JP_Observation_DentalOral_BodyStructure = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodyStructure
 Alias: $JP_Observation_Electrocardiogram_NumberOfLead = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_NumberOfLead
 Alias: $JP_Observation_Electrocardiogram_MachinaryInterpretation = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_MachinaryInterpretation
 Alias: $JP_Organization_InsuranceOrganizationCategory = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory
