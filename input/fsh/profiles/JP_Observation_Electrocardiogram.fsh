@@ -29,7 +29,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category ^comment = "心電図検査は procedure に分類されている。"
 * insert SetDefinition(code, 心電図検査を示すコード)
 * code from $JP_ObservationElectrocardiogramComponentCode_VS (preferred)
-* code.coding = $Loinc_CS#11524-6 (exactly)
+* code.coding = $Loinc_CS#11524-6 "EKG Study"(exactly)
 * code ^comment = "心電図検査(EKG Study)を示すLOINCコード 11524-6 を固定値として指定する。"
 * subject only Reference(JP_Patient or Group or Device or JP_Location)
 * insert SetDefinition(subject, このObservationの対象となる患者や患者群、機器、場所に関する情報)
@@ -78,7 +78,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * component ^requirements = "この心電図検査で行われる一連の測定値をまとめるものであり、負荷心電図など複数の心電図検査を一連の検査として行った場合は別Observationインスタンスとして記録される。"
 * component.code from JP_ObservationElectrocardiogramComponentCode_VS (extensible)
 * component.code ^comment = "心電図の各検査項目についてはLOINCなどの特定の用語集を利用することが推奨される。"
-* component.interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS
+* component.interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (extensible)
 * component.interpretation ^definition = "心電図検査で測定された結果値に対する所見・解釈"
 * component.interpretation ^comment = "心電図検査の測定結果と解釈は必ずしも1対1で対応しないが、PR間隔の測定値にPR間隔延長などの固有の所見をつけてもよい"
 
