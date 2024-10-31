@@ -128,7 +128,7 @@ Description: "心電図検査で測定された結果に対しての機械的に
 * ^date = "2024-10-31"
 * ^purpose = "心電図検査で測定された結果についての所見や解釈が機械的に判定されたものかどうかを示すために用いられる。"
 * ^context.type = #element
-* ^context.expression = "Observation.machinaryInterpretation"
+* ^context.expression = "Observation"
 * . ^short = "機械判定された所見・解釈の有無"
 * . ^definition = "心電図検査の所見が機械的に判定されたものであるかどうかを示す"
 * url = $JP_Observation_Electrocardiogram_DeviceInterpretation (exactly)
