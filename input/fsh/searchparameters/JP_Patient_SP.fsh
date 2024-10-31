@@ -9,7 +9,7 @@ Usage: #definition
 * code = #jp-kana-sort
 * base = #Patient
 * type = #string
-* expression = "Patient.name.where(extension('http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation').value.as(code)='SYL' and use='usual').text"
+* expression = "Patient.name.where(extension('http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation').value.ofType(code)='SYL' and use='usual').text"
 * xpath = "f:Patient/f:name[f:extension/@url='http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation' and f:extension/f:valueCode/@value='SYL' and f:use/@value='usual']/f:text"
 * xpathUsage = #normal
 * multipleOr = true

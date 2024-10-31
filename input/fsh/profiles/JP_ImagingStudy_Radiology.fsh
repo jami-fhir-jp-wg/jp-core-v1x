@@ -20,6 +20,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * status ^definition = "ImagingStudyの現在のステータス"
 * status ^comment = "不明(unknown)は「その他」を表すものではない。定義されたステータスの1つを適用する必要がある。不明(unknown)は、オーサリングシステムが現在のステータスを確認できない場合に使用される。  
 【JP-Core仕様】リソースの状態。"
+* modality from $JP_DICOMModality_VS (required)
 * modality ^short = "実際の取得モダリティーの場合、モダリティーの全シリーズ。対応するDICOM tag: (0008, 0061)"
 * modality ^definition = "実際の取得モダリティであるすべてのseries.modality値のリスト、つまりDICOMコンテキストグループ29（値セットOID 1.2.840.10008.6.1.19）の値。"
 * modality ^comment = "コードは、列挙型またはコードリストで、DICOMのモダリティコードを利用する。  
@@ -116,6 +117,7 @@ study階層のidentifierと同じ概念。(0020,000E)にseries固有のUIDが付
 * series.number ^comment = "32ビット数で表す。これより大きい値の場合は、10進数を使用する。  
 上記UIDとは別に、ユーザ（または装置）が自由に決められる番号。"
 * series.modality MS
+* series.modality from $JP_DICOMModality_VS (required)
 * series.modality ^short = "シリーズが取得されたモダリティ"
 * series.modality ^definition = "シリーズが取得されたモダリティー"
 * series.modality ^comment = "JP CoreではDICOMのモダリティコードを利用する。SNOMED CTは推奨しない。  

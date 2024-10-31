@@ -22,8 +22,6 @@
 * [JP_MedicationAdministration_Requester]
 * [JP_MedicationAdministration_UncategorizedComment]
 * [JP_MedicationDispense_Preparation]
-* [JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]
-* [JP_MedicationRequest_DispenseRequest_InstructionForDispense]
 * [JP_MedicationDosage_Device]
 * [JP_MedicationDosage_DosageComment]
 * [JP_MedicationDosage_Line]
@@ -34,5 +32,7 @@
 * [JP_MedicationDosage_RouteComment]
 * [JP_MedicationDosage_SiteComment]
 * [JP_MedicationDosage_UsageDuration]
+* [JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]
+* [JP_MedicationRequest_DispenseRequest_InstructionForDispense]
 
 {% include markdown-link-references.md %}

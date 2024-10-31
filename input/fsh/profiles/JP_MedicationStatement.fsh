@@ -135,6 +135,7 @@ Description: "このProfileは服薬状況を示すものであり，診療情�
 * medication[x] only Reference(Medication)
 
 * medicationReference only Reference(JP_Medication)
+* medicationReference ^definition = "医薬品の識別情報は必須でありmedicationReference.referenceが必ず存在しなければならない、JP Coreでは注射の医薬品情報は単一薬剤の場合も Medicationリソースとして記述し、medicationCodeableConceptは使用しない。参照するMedicationリソースは、MedicationRequest.contained属性に内包することが望ましいが、外部参照としても良い。"
 
 * subject only Reference(JP_Patient)
 * subject ^short = "処方箋が発行された患者に対する参照"
@@ -173,13 +174,4 @@ Description: "このProfileは服薬状況を示すものであり，診療情�
 * dosage ^short = "この薬剤がどのように服用されたのか，服用すべきだったのかを示す情報"
 * dosage ^definition = "患者にこの薬剤がどのように服用すべきかを示す情報"
 * dosage.extension contains
-    JP_MedicationDosage_DosageComment named dosageComment ..* and
-    JP_MedicationDosage_Device named device ..* and
-    JP_MedicationDosage_Line named line ..* and
-    JP_MedicationDosage_LineComment named lineComment ..* and
     JP_MedicationDosage_RateComment named rateComment ..*
-* dosage.route.extension contains JP_MedicationDosage_RouteComment named routeComment ..*
-* dosage.method.extension contains JP_MedicationDosage_MethodComment named methodComment ..*
-* dosage.site.extension contains 
-    $bodySite named bodySite ..* and
-    JP_MedicationDosage_SiteComment named siteComment ..*

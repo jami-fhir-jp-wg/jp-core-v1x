@@ -46,6 +46,11 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
       * JP Core Observation Radiology (放射線画像検査)
         * [JP Core Observation Radiology Findings (放射線画像検査所見）プロファイル)][JP_Observation_Radiology_Findings]
         * [JP Core Observation Radiology Impression (放射線画像検査インプレッション)プロファイル][JP_Observation_Radiology_Impression]
+      * [JP Core Observation Endoscopy （内視鏡検査）プロファイル][JP_Observation_Endoscopy]
+  * Specimen （検体）
+    * [JP Core Specimen Common （共通）プロファイル][JP_Specimen_Common]
+  * Media （メディア）
+    * [JP Core Media Endoscopy（内視鏡検査）プロファイル][JP_Media_Endoscopy]
   * ImagingStudy （画像検査）
     * [JP Core ImagingStudy Radiology（放射線検査）プロファイル][JP_ImagingStudy_Radiology]
     * [JP Core ImagingStudy Endoscopy（内視鏡検査）プロファイル][JP_ImagingStudy_Endoscopy]
@@ -61,6 +66,9 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
     * [JP Core Condition Diagnosis (診断) プロファイル][JP_Condition_Diagnosis]
   * [JP Core Procedure （処置）プロファイル][JP_Procedure]
   * [JP Core FamilyMemberHistory（家族歴）プロファイル][JP_FamilyMemberHistory]
+* [Workflowグループ](group-workflow.html)
+  * ServiceRequest (サービスリクエスト)
+    * [JP Core ServiceRequest Common (共通) プロファイル][JP_ServiceRequest_Common]
 
 #### JP Coreで定義しないProfile(プロファイル)
 次のProfileはJP Coreでは定義を行なわず、FHIR Baseをそのまま利用する。
@@ -94,10 +102,10 @@ JP Core利用にあたり、考慮すべきセキュリティに関する要件�
 ---
 ### Contributors：
 JP Coreは以下の方々、および各サーブワーキンググループのここに記載されていない多くのメンバの献身的な活動や協力により作成されている。
-* FHIR Infrastructure : SWG1
+* FHIR Infrastructure : インフラ基盤WG
   * リーダ：㈱ファインデックス　宮川 力
   * サブリーダ：、㈱ケーアイエス　小西 由貴範、日本総合システム㈱　松本 聖
-  * メンバ：京都大学　須藤 英隼、東京大学　三谷 知宏、日本総合システム㈱　安達 隆佳、岡安 想、中川 雅三、森永 沙紀、ファインデックス　小倉 卓義、（一社）保健医療福祉情報安全管理適合性評価協会　喜多 紘一、山口大学　平野 靖
+  * メンバ：京都大学　須藤 英隼、東京大学　三谷 知宏、日本総合システム㈱　安達 隆佳、岡安 想、中川 雅三、藤野 孝彦、ファインデックス　小倉 卓義、（一社）保健医療福祉情報安全管理適合性評価協会　喜多 紘一
 
 * Diagnostics and Observations : SWG2
   * リーダ：キヤノンメディカルシステムズ㈱　塩川 康成
