@@ -91,9 +91,9 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(derivedFrom, 未使用)
 * insert SetDefinition(component, 特定の現存歯の処置状態)
 
-* component.code ^slicing.discriminator.type = #value
-* component.code ^slicing.discriminator.path = "coding.system"
-* component.code ^slicing.rules = #open
+//* component.code ^slicing.discriminator.type = #value
+//* component.code ^slicing.discriminator.path = "coding.system"
+//* component.code ^slicing.rules = #open
 //* component.code contains
 //    primary 1..1 and
 //    sub 1..1
