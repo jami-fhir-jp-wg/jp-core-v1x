@@ -6,6 +6,10 @@ Parent: JP_Observation_Common
 Id: jp-observation-electrocardiogram
 Title: "JP Core Observation Electrocardiogram Profile"
 Description: "このプロファイルはObservationリソースに対して、心電図データを送受信するための共通の制約と拡張を定めたものである。"
+// extension 参照宣言
+* extension contains
+    JP_Observation_Electrocardiogram_NumberOfLead named lead ..1 and
+    JP_Observation_Electrocardiogram_MachinaryInterpretation named machinaryInterpretation ..1  
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Electrocardiogram"
 * ^status = #draft
 * ^date = "2024-10-07"
@@ -16,7 +20,7 @@ Description: "このプロファイルはObservationリソースに対して、�
     JP_Observation_Electrocardiogram_NumberOfLead named lead ..1 and
     JP_Observation_Electrocardiogram_MachinaryInterpretation named machinaryInterpretation ..1
 * insert SetDefinition(identifier, この心電図を表すObservationリソースに対する一意な識別ID)
-* basedOn only 	Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
+* basedOn only Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
 * insert SetDefinition(basedOn, このObservationが実施されることになった検査オーダーや計画、提案に関する情報)
 * partOf only Reference(JP_MedicationAdministration or JP_MedicationAdministration_Injection or JP_MedicationDispenseBase or MedicationStatement or JP_Procedure or JP_Immunization or ImagingStudy)
 * insert SetDefinition(partOf, このObservationが親イベントの一部を成す要素であるとき、その親イベントに関する情報)
@@ -79,6 +83,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * component.code from JP_ObservationElectrocardiogramComponentCode_VS (extensible)
 * component.code ^comment = "心電図の各検査項目についてはLOINCなどの特定の用語集を利用することが推奨される。"
 * component.interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS
+* component.interpretation ^definition = "心電図検査で測定された結果値に対する所見・解釈"
 * component.interpretation ^comment = "心電図検査の測定結果と解釈は必ずしも1対1で対応しないが、PR間隔の測定値にPR間隔延長などの固有の所見をつけてもよい"
 
 
@@ -119,8 +124,8 @@ Description: "心電図検査で測定された結果に対しての機械的に
 * ^date = "2024-10-31"
 * ^purpose = "心電図検査で測定された結果についての所見や解釈が機械的に判定されたものかどうかを示すために用いられる。"
 * ^context.type = #element
-* ^context.expression = "Observation"
-* . ^short = "機械判定所見の有無"
+* ^context.expression = "Observation.machinaryInterpretation"
+* . ^short = "機械判定された所見・解釈の有無"
 * . ^definition = "心電図検査の所見が機械的に判定されたものであるかどうかを示す"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_MachinaryInterpretation" (exactly)
 * value[x] 0..1
