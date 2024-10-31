@@ -1,23 +1,25 @@
 ***v1.2.0***
 
 * 全般
+  * v1.1.2により不具合の修正および追加プロファイルの対応を実施した
+  * 不具合を除き下位互換性を保つことを重視している
   * 誤字・脱字等の見直しを行なった
   * JP CoreにMustSupportが定義されており、記述の矛盾について見直しを行った
   * Copyrightについて記述の見直しを行った
 * プロファイル関連
-  * Administration
+  * Administration グループ
     * `JP_Coverage`にて被保険者識別子仕様を変更した
       * 被保険者識別子、非保険者識別子（CSV版）の２種類の識別子を定義した
       * 非保険者識別子（CSV版）の先頭に保険者番号を付加する体系に変更した
       * Identifier.assignerに保険者の情報をセットするように記述した
       * 被保険者番号の枝番について、全角⇒半角に仕様を変更した
-  * Medication
+  * Medication グループ
     * `JP_Medication`プロファイルのingredient.strength.denominatorを１回に固定した
     * `JP_MedicationStatement`プロファイルおよび `JP_MedicationStatement_Injection`プロファイルを追加した
     * `JP_MedicationRequest_Injection`プロファイル, `JP_MedicationDispense_Injection`プロファイル, `JP_MedicationAdministration_Injection`プロファイル, `JP_MedicationStatement_Injection`プロファイルに関するmedicationの参照に関する記述を付加した
     * 操作：$everythingが不要であるため記述を削除した
-
-  * Diagnostic
+    * 
+  * Diagnostic グループ
     * Observation
       * `JP_Observation_Radiology_Findings`プロファイルおよび`JP_Observation_Radiology_Impression`プロファイルを追加した
       * `JP_Observation_Electrocardiogram`プロファイルを追加した
@@ -30,13 +32,14 @@
       * `JP_DiagnosticReport_Radiology`プロファイルにて、`JP_Observation_Radiology_Findings`および`JP_Observation_Radiology_Impression`を要素に設定できる点について修正し、その関係性に関する記述を記載した。
     * ImagingStudy
       * `JP_ImagingStudy_Radiology`プロファイルのseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した
-  * Clinical
+  * Clinical グループ
     * `JP_Condition_Diagnosis`プロファイルを追加した
     * `JP_Condition_Diagnosis`にて以下の病名マスタを利用可能とした
       * MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`
       * MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`
       * レセプト電算用傷病名マスタ`JP_ConditionDiseaseCodeReceipt_CS`
-  * Workflow
+      * 
+  * Workflow グループ
     * `JP_ServiceRequest_Common`プロファイルを追加、これにあわせ`JP_ServiceRequest`を削除した
   
   * Terminology関連
