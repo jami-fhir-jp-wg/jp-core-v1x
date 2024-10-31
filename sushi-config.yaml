@@ -143,6 +143,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_MicrobiologyCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrogardiogramCategory_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrogardiogramDuration_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrogardiogramStressType_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_PhysicalExamCode_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureBodySite_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureNotPerformedReason_CS
@@ -286,6 +289,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramComponentCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramInterpretationCode_CS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramInterpretationCode_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrogardiogramCategory_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrogardiogramDuration_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrogardiogramStressType_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationEndoscopyCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationEndoscopyValueJed_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationRadiologyCode_VS
