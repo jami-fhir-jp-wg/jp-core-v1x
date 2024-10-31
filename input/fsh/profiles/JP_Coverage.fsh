@@ -26,19 +26,15 @@ Coverageには、保険証レベルの情報が含まれている。これは、
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
 * identifier contains
-    insuranceIdentifier ..1
+    insuranceIdentifier ..1 and
+    insuranceCsvIdentifier ..1
 * identifier ^short = "Business Identifier for the coverage　このカバレッジに割り当てられた一意の識別子【詳細参照】"
-* identifier ^definition = "A unique identifier assigned to this coverage.  
-このカバレッジに割り当てられた一意の識別子。"
-* identifier ^comment = "The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatenation of the Coverage.SubscriberID and the Coverage.dependent.  
-カバレッジのメイン（および場合によっては唯一の）識別子-多くの場合、メンバID、証明書番号、個人の健康番号、またはケースIDと呼ばれる。  
-【JP Core仕様】被保険者記号と番号と枝番を全角にした上でダブルコーテーションで囲い、カンマ区切りで連結する。  
-ルール：\"{被保険者記号}\",\"{被保険者番号}\",\"{枝番}\"  
-例：\"１２－３４\",\"５６７８\",\"00\""
+* identifier ^definition = "A unique identifier assigned to this coverage.  このカバレッジに割り当てられた一意の識別子。"
+* identifier ^comment = "A unique identifier assigned to this coverage.  このカバレッジに割り当てられた一意の識別子。"
 * identifier ^requirements = "Allows coverages to be distinguished and referenced.  
 カバレッジを区別して参照できるようにする。"
 * identifier[insuranceIdentifier] ^short = "被保険者識別子"
-* identifier[insuranceIdentifier] ^definition = "被保険者識別子として、保険者情報と被保険者情報とを以下の仕様で連結したひとつの文字列を使用する"
+* identifier[insuranceIdentifier] ^definition = "被保険者識別子として、保険者情報と被保険者情報を以下の仕様で連結したひとつの文字列を使用する"
 * identifier[insuranceIdentifier] ^comment = "「被保険者識別子」の文字列仕様(StructureDefinition_JP_Coverage.html#「被保険者識別子」の文字列仕様)を参照のこと"
 * identifier[insuranceIdentifier].system = "http://jpfhir.jp/fhir/core/Idsystem/JP_Insurance_SubscriberID" (exactly)
 * identifier[insuranceIdentifier].value ^short = "被保険者識別子の値を格納" 
@@ -50,6 +46,27 @@ Coverageには、保険証レベルの情報が含まれている。これは、
 * identifier[insuranceIdentifier].assigner ^short = "保険者情報を設定"
 * identifier[insuranceIdentifier].assigner ^definition = "保険者情報として[JP_Organization](StructureDefinition-jp-organization.html)を設定する。"
 * identifier[insuranceIdentifier].assigner ^comment = "保険者情報として[JP_Organization](StructureDefinition-jp-organization.html)を設定する。"
+
+* identifier[insuranceCsvIdentifier] ^short = "被保険者識別子（CSV形式）　\"１２－３４\",\"５６７８\",\"00\""
+* identifier[insuranceCsvIdentifier] ^definition = "被保険者識別子として、保険者情報と被保険者情報をカンマ区切りにて連結する"
+* identifier[insuranceCsvIdentifier] ^comment = "The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatenation of the Coverage.SubscriberID and the Coverage.dependent.  
+カバレッジのメイン（および場合によっては唯一の）識別子-多くの場合、メンバID、証明書番号、個人の健康番号、またはケースIDと呼ばれる。  
+【JP Core仕様】被保険者記号と番号と枝番を全角にした上でダブルコーテーションで囲い、カンマ区切りで連結する。  
+ルール：\"{被保険者記号}\",\"{被保険者番号}\",\"{枝番}\"  
+例：\"１２－３４\",\"５６７８\",\"00\""
+* identifier[insuranceCsvIdentifier].system = "http://jpfhir.jp/fhir/core/Idsystem/JP_Insurance_SubscriberID" (exactly)
+* identifier[insuranceCsvIdentifier].value ^short = "被保険者識別子の値を格納" 
+* identifier[insuranceCsvIdentifier].value ^definition = "The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatenation of the Coverage.SubscriberID and the Coverage.dependent.  
+カバレッジのメイン（および場合によっては唯一の）識別子-多くの場合、メンバID、証明書番号、個人の健康番号、またはケースIDと呼ばれる。  
+【JP Core仕様】被保険者記号と番号と枝番を全角にした上でダブルコーテーションで囲い、カンマ区切りで連結する。  
+ルール：\"{保険者番号:半角英数８桁}\",\"{被保険者記号}\",\"{被保険者番号}\",\"{枝番:半角数字２桁}\"  
+例：\"00012345\",\"１２－３４\",\"５６７８\",\"00\"
+要素を省略する、とある場合には、長さ０の文字列とする。「被保険者識別子」の文字列仕様(StructureDefinition_JP_Coverage.html#「被保険者識別子」の文字列仕様)を参照のこと"
+* identifier[insuranceCsvIdentifier].assigner only Reference(JP_Organization)
+* identifier[insuranceCsvIdentifier].assigner ^short = "保険者情報を設定"
+* identifier[insuranceCsvIdentifier].assigner ^definition = "保険者情報として[JP_Organization](StructureDefinition-jp-organization.html)を設定する。"
+* identifier[insuranceCsvIdentifier].assigner ^comment = "保険者情報として[JP_Organization](StructureDefinition-jp-organization.html)を設定する。"
+
 * status ^definition = "The status of the resource instance.  
 リソースインスタンスのステータス。"
 * status ^comment = "This element is labeled as a modifier because the status contains the code entered-in-error that marks the coverage as not currently valid.  
