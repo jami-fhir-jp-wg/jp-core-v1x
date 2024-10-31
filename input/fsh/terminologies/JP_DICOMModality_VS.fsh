@@ -1,11 +1,12 @@
 ValueSet: JP_DICOMModality_VS
-Id: jp-DICOMmodality-vs
+Id: jp-dicommodality-vs
 Title: "JP Core DICOM Modality ValueSet"
 Description: "放射線モダリテに対する 値セット"
 * ^url = $JP_DICOMModality_VS
 * ^status = #active
 * ^experimental = false
 * ^date = "2023-10-31"
+* ^copyright = "DICOM® is the registered trademark of the National Electrical Manufacturers Association for its Standards publications relating to digital communications of medical information. "
 
 * $dicom-ontology#AR "Autorefraction"
 //* $dicom-ontology#ASMT "Content Assessment Result"

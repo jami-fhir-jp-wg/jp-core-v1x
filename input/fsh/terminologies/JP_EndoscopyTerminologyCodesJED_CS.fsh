@@ -7,7 +7,7 @@ Description: "日本消化器内視鏡学会が推進するJED (Japan Endoscopy 
 * ^url = $JP_EndoscopyTerminologyCodesJED_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-10-31"
+* ^date = "2024-10-29"
 * ^caseSensitive = true
 * ^content = #complete
 * ^copyright = "Copyright JED-Project 一般社団法人 日本消化器内視鏡学会"
@@ -875,6 +875,8 @@ Description: "日本消化器内視鏡学会が推進するJED (Japan Endoscopy 
 * #Z2G20304 "[異常な流出物・内容] ドレイン"
 * #Z2G20401 "[うっ血] あり"
 * #Z2G20402 "[うっ血] なし"
+* #Z2G20501 "[裂傷] あり"
+* #Z2G20502 "[裂傷] なし"
 * #Z2G20601 "[腫瘤] 絨毛状"
 * #Z2G20602 "[腫瘤] 腫瘤状"
 * #Z2G20603 "[腫瘤] 浸潤性"

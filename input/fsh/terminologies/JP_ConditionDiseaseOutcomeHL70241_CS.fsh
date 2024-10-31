@@ -8,7 +8,7 @@ Description: "HL7表0241-Patient Outcome コードシステム"
 * ^date = "2023-08-05"
 * ^caseSensitive = true
 * ^content = #complete
-* ^copyright = "copyright HL7 Japan (出典：HL7-0241)"
+* ^copyright = "Copyright HL7 Japan (出典：HL7-0241)"
 
 * #D "死亡"
 * #R "回復"

@@ -1,5 +1,5 @@
 ValueSet: JP_ObservationRadiologyCode_VS
-Id: jp-ObservationRadiologyCode-vs
+Id: jp-observation-radiology-code-vs
 Title: "JP Core Observation Radiology Code ValueSet"
 Description: "Observation（放射線）コードで使用する項目値セット。LOINCのFindings、Impressionに相当する"
 * ^url = $JP_ObservationRadiologyCode_VS
