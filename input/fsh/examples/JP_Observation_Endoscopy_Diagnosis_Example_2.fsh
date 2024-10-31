@@ -18,7 +18,7 @@ Usage: #example
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueCodeableConcept
   * coding
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_EndoscopyTerminologyCodesJED_CS"
+    * system = $JP_EndoscopyTerminologyCodesJED_CS
     * code = #Z2L30401
     * display = "[Serrated Lesions ] Hyperplastic Polyp <HP>"
   * text = "[鋸歯状病変] HP"
