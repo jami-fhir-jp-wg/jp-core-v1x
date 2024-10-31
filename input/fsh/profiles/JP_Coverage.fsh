@@ -21,7 +21,6 @@ Coverageには、保険証レベルの情報が含まれている。これは、
     JP_Coverage_InsuredPersonSymbol named insuredPersonSymbol ..* and
     JP_Coverage_InsuredPersonNumber named insuredPersonNumber ..* and
     JP_Coverage_InsuredPersonSubNumber named insuredPersonSubNumber ..*
-
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
@@ -54,7 +53,7 @@ Coverageには、保険証レベルの情報が含まれている。これは、
 【JP Core仕様】被保険者記号と番号と枝番を全角にした上でダブルコーテーションで囲い、カンマ区切りで連結する。  
 ルール：\"{保険者番号:半角英数８桁}\",\"{被保険者記号}\",\"{被保険者番号}\",\"{枝番:半角数字２桁}\"  
 例：\"00012345\",\"１２－３４\",\"５６７８\",\"00\"
-要素を省略する、とある場合には、長さ０の文字列とする。" 
+要素を省略する、とある場合には、長さ０の文字列とする。
 例：\"１２－３４\",\"５６７８\",\"00\""
 * identifier[insuranceCsvIdentifier].system = "http://jpfhir.jp/fhir/core/Idsystem/JP_Insurance_SubscriberCsvID" (exactly)
 * identifier[insuranceCsvIdentifier].value ^short = "被保険者識別子の値を格納" 
