@@ -62,5 +62,5 @@ Usage: #example
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_Lead"
 * extension[=].valueInteger = 12
 * extension[1].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_MachinaryInterpretation"
-* extension[1].valueBoolean = true
+* extension[=].valueBoolean = true
 

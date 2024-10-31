@@ -6,17 +6,18 @@ Parent: JP_Observation_Common
 Id: jp-observation-electrocardiogram
 Title: "JP Core Observation Electrocardiogram Profile"
 Description: "このプロファイルはObservationリソースに対して、心電図データを送受信するための共通の制約と拡張を定めたものである。"
+// extension 参照宣言
+* extension contains
+    JP_Observation_Electrocardiogram_NumberOfLead named lead ..1 and
+    JP_Observation_Electrocardiogram_MachinaryInterpretation named machinaryInterpretation ..1  
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Electrocardiogram"
 * ^status = #draft
 * ^date = "2024-10-07"
 * . ^short = "心電図検査結果"
 * . ^definition = "心電図検査結果とその解釈。"
 * . ^comment = "心電図検査についてのプロファイル"
-* extension contains
-    JP_Observation_Electrocardiogram_NumberOfLead named lead ..1 and
-    JP_Observation_Electrocardiogram_MachinaryInterpretation named machinaryInterpretation ..1 and
 * insert SetDefinition(identifier, この心電図を表すObservationリソースに対する一意な識別ID)
-* basedOn only 	Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
+* basedOn only Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
 * insert SetDefinition(basedOn, このObservationが実施されることになった検査オーダーや計画、提案に関する情報)
 * partOf only Reference(JP_MedicationAdministration or JP_MedicationAdministration_Injection or JP_MedicationDispenseBase or MedicationStatement or JP_Procedure or JP_Immunization or ImagingStudy)
 * insert SetDefinition(partOf, このObservationが親イベントの一部を成す要素であるとき、その親イベントに関する情報)
@@ -46,12 +47,12 @@ Description: "このプロファイルはObservationリソースに対して、�
 * performer only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or CareTeam or JP_Patient or RelatedPerson)
 * insert SetDefinition(performer, この心電図検査の責任者/実施者に関する情報)
 * performer ^comment = "参照は、実際のFHIRリソースへの参照である必要があり、解決可能（内容に到達可能）である必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
-* insert SetDefinition(value[x], 心電図の測定結果)
+* insert SetDefinition(value[x], 心電図の測定結果。心電図の測定値は単一の値では示されないため通常は用いられない。)
 * value[x] ^comment = "心電図検査は一つの測定値のみを用いられることはなく、一連の測定値を元にして所見を得て解釈される。単一の測定値としてのこの項目は空欄であることが前提であるが、送受信側の双方が合意して単一の測定値のみを送信するためにこのリソースを仕様することも許容される。"
 * insert SetDefinition(dataAbsentReason, このObservationのvalue[x]要素に期待される結果が存在しなかった場合、その理由)
 * dataAbsentReason ^comment = "ヌル値または例外値は、FHIRオブザベーションで2つの方法で表すことができる。 1つの方法は、それらを値セットに含めて、値の例外を表す方法である。たとえば、血清学的検査の測定値は、「検出された」、「検出されなかった」、「決定的でない」、または「検体が不十分」である可能性がある。別の方法は、実際の観測にvalue要素を使用し、明示的なdataAbsentReason要素を使用して例外的な値を記録することである。たとえば、測定が完了しなかった場合、dataAbsentReasonコード「error」を使用できる。この場合には、観測値は、報告する値がある場合にのみ報告される可能性があることに注意する必要がある。たとえば、差分セルカウント値は> 0の場合にのみ報告される場合がある。これらのオプションのため、nullまたは例外値の一般的な観測値を解釈するにはユースケースの合意が必要である。"
 * insert SetDefinition(interpretation, 心電図所見)
-* interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS
+* interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (extensible)
 * interpretation ^comment = "心電図所見については、ミネソタコードを元に学会や検査機器ベンダーが用語集を作成している。必要に応じてそれらのコードを仕様することを推奨する。"
 * interpretation ^requirements = "心電図所見についてのコード集を別途提示する。"
 * insert SetDefinition(note, このObservationに関するコメント)
@@ -76,9 +77,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(component, この心電図検査で測定された一連の結果。)
 * component ^comment = "心電図に関する一連の測定結果をまとめるためにコンポーネントを使用する。"
 * component ^requirements = "この心電図検査で行われる一連の測定値をまとめるものであり、負荷心電図など複数の心電図検査を一連の検査として行った場合は別Observationインスタンスとして記録される。"
-* component.code from $Loinc_CS
+* component.code from $Loinc_CS (extensible)
 * component.code ^comment = "心電図の各検査項目についてはLOINCなどの特定の用語集を利用することが推奨される。"
 * component.interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS
+* component.interpretation ^definition = "心電図検査で測定された結果値に対する所見・解釈"
 * component.interpretation ^comment = "心電図検査の測定結果と解釈は必ずしも1対1で対応しないが、PR間隔の測定値にPR間隔延長などの固有の所見をつけてもよい"
 
 
@@ -120,10 +122,10 @@ Description: "心電図検査で測定された結果に対しての機械的に
 * ^purpose = "心電図検査で測定された結果についての所見や解釈が機械的に判定されたものかどうかを示すために用いられる。"
 * ^context.type = #element
 * ^context.expression = "Observation.machinaryInterpretation"
-* . ^short = "機械判定"
+* . ^short = "機械判定された所見・解釈の有無"
 * . ^definition = "心電図検査の所見が機械的に判定されたものであるかどうかを示す"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_MachinaryInterpretation" (exactly)
 * value[x] 0..1
 * value[x] only boolean
-* value[x] ^short = "機械判定"
+* value[x] ^short = "機械判定の有無"
 * value[x] ^definition = "心電図検査が機械的に判定されたものであるかどうかを示す"
