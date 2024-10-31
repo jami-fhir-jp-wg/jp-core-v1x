@@ -54,7 +54,7 @@ Coverageには、保険証レベルの情報が含まれている。これは、
 【JP Core仕様】被保険者記号と番号と枝番を全角にした上でダブルコーテーションで囲い、カンマ区切りで連結する。  
 ルール：\"{被保険者記号}\",\"{被保険者番号}\",\"{枝番}\"  
 例：\"１２－３４\",\"５６７８\",\"00\""
-* identifier[insuranceCsvIdentifier].system = "http://jpfhir.jp/fhir/core/Idsystem/JP_Insurance_SubscriberID" (exactly)
+* identifier[insuranceCsvIdentifier].system = "http://jpfhir.jp/fhir/core/Idsystem/JP_Insurance_SubscriberCsvID" (exactly)
 * identifier[insuranceCsvIdentifier].value ^short = "被保険者識別子の値を格納" 
 * identifier[insuranceCsvIdentifier].value ^definition = "The main (and possibly only) identifier for the coverage - often referred to as a Member Id, Certificate number, Personal Health Number or Case ID. May be constructed as the concatenation of the Coverage.SubscriberID and the Coverage.dependent.  
 カバレッジのメイン（および場合によっては唯一の）識別子-多くの場合、メンバID、証明書番号、個人の健康番号、またはケースIDと呼ばれる。  
