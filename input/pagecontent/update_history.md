@@ -1,4 +1,84 @@
-***v1.1.2***  
+***v1.2.0***
+
+* 全般
+  * 誤字・脱字等の見直しを行なった
+  * JP CoreにMustSupportが定義されており、記述の矛盾について見直しを行った
+  * Copyrightについて記述の見直しを行った
+* プロファイル関連
+  * Administration
+    * `JP_Coverage`にて被保険者識別子仕様を変更した
+      * 被保険者識別子、非保険者識別子（CSV版）の２種類の識別子を定義した
+      * 非保険者識別子（CSV版）の先頭に保険者番号を付加する体系に変更した
+      * Identifier.assignerに保険者の情報をセットするように記述した
+      * 被保険者番号の枝番について、全角⇒半角に仕様を変更した
+  * Medication
+    * `JP_Medication`プロファイルのingredient.strength.denominatorを１回に固定した
+    * `JP_MedicationStatement`プロファイルおよび `JP_MedicationStatement_Injection`プロファイルを追加した
+    * `JP_MedicationRequest_Injection`プロファイル, `JP_MedicationDispense_Injection`プロファイル, `JP_MedicationAdministration_Injection`プロファイル, `JP_MedicationStatement_Injection`プロファイルに関するmedicationの参照に関する記述を付加した
+    * 操作：$everythingが不要であるため記述を削除した
+
+  * Diagnostic
+    * Observation
+      * `JP_Observation_Radiology_Findings`プロファイルおよび`JP_Observation_Radiology_Impression`プロファイルを追加した
+      * `JP_Observation_Electrocardiogram`プロファイルを追加した
+      * `JP_Observation_Endoscopy`プロファイルを追加した
+      * `JP_Observation_VitalSigns`プロファイルのcategoryに対する`JP_SimpleObservationCategory_CS`に対する多重度を1..*から0..*に変更した
+      * `JP_Specimen_Common`プロファイルを追加、これにあわせ`JP_Specimen`プロファイルを削除した
+      * `JP_Media_Endoscopy`プロファイルを追加定義した
+    * DiagnosticReport
+      * `JP_DiagnosticReport_Radiology`プロファイルのcategoryに対するバインド対象を`JP_DICOMModality_VS`に変更した
+      * `JP_DiagnosticReport_Radiology`プロファイルにて、`JP_Observation_Radiology_Findings`および`JP_Observation_Radiology_Impression`を要素に設定できる点について修正し、その関係性に関する記述を記載した。
+    * ImagingStudy
+      * `JP_ImagingStudy_Radiology`プロファイルのseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した
+  * Clinical
+    * `JP_Condition_Diagnosis`プロファイルを追加した
+    * `JP_Condition_Diagnosis`にて以下の病名マスタを利用可能とした
+      * MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`
+      * MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`
+      * レセプト電算用傷病名マスタ`JP_ConditionDiseaseCodeReceipt_CS`
+  * Workflow
+    * `JP_ServiceRequest_Common`プロファイルを追加、これにあわせ`JP_ServiceRequest`を削除した
+  
+  * Terminology関連
+    * 以下のCodeSystemおよびValueSet追加した
+      * `JP_ConditionDieaseCodeReceipt_CS`
+      * `JP_ConditionDieaseModifierReceipt_CS`
+      * `JP_ConditionDieaseOutcomeHL70241_CS`
+      * `JP_ConditionDieaseOutcomeJHSD0006_CS`
+      * `JP_ConditionDieaseOutcomeReceipt_CS`
+      * `JP_ConditionDiseaseCodeICD10_CS`
+      * `JP_ConditionDiseaseCodeICD10_VS`
+      * `JP_ConditionDiseaseCodeMEDISExchange_CS`
+      * `JP_ConditionDiseaseCodeMEDISExchange_VS`
+      * `JP_ConditionDiseaseCodeMEDISRecordNo_CS`
+      * `JP_ConditionDiseaseCodeMEDISRecordNo_VS`
+      * `JP_ConditionDiseaseCodeReceipt_VS`
+      * `JP_ConditionDiseaseModifierMEDISExchange_CS`
+      * `JP_ConditionDiseaseModifierMEDISExchange_VS`
+      * `JP_ConditionDiseaseModifierMEDISRecordNo_CS`
+      * `JP_ConditionDiseaseModifierMEDISRecordNo_VS`
+      * `JP_ConditionDiseaseModifierReceipt_VS`
+      * `JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS`
+      * `JP_ConditionDiseaseOutcomeHL70241_VS`
+      * `JP_ConditionDiseaseOutcomeJHSD0006_VS`
+      * `JP_ConditionDiseaseOutcomeReceipt_VS`
+      * `JP_DICOMModality_VS`
+      * `JP_ObservationCategory_Endoscopy_VS`
+      * `JP_ObservationElectrocardiogramInterpretationCode_CS`
+    * 以下のCodeSystem,ValueSetを削除した
+      * `JP_ObservationBodySite_CS`
+      * `JP_ObservationBodySite_VS`
+    * `JP_ObservationBodyMeasurementCode_CS`の記述の不具合を修正した
+    * 病名マスタ(MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`,MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`,レセプト電算用傷病名マスタ`JP_ConditionDiseaseCodeReceipt_CS`)を用語として追加した
+  * SearchParameterおよびOperationについて
+    * SearchParameterの記述不具合（型指定やSearchParameterRegistryとの違い）について修正した
+    * JP Coreで作成したSearchParameterのexpressionのFHIRPath記述の不具合ついて修正した
+    * CapabilityStatementのConformanceの指定、複数パラメータの指定を行った
+    * CapabilityStatementのOperation定義を追加した
+    * `JP_ImagingStudy_Radiology`のIdentifierに関するConformanceをSHALLに変更した
+  
+***v1.1.2***
+
 パブリックコメントやIssue等の指摘を中心に不具合やわかりにくい点について改善を行った。また内視鏡検査および微生物学的検査関連のプロファイルを新規に追加した。主な変更点は以下のとおりである。
 
 * 全般

@@ -30,6 +30,7 @@
     * [JP Core DiagnosticReport DentalOral （口腔診査レポート）プロファイル][JP_DiagnosticReport_DentalOral]
 
 ### Extensions
-なし
+* [JP_Observation_Electrocardiogram_MachinaryInterpretation]
+* [JP_Observation_Electrocardiogram_NumberOfLead]
 
 {% include markdown-link-references.md %}
