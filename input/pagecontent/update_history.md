@@ -65,8 +65,26 @@
       * `JP_ConditionDiseaseOutcomeHL70241_VS`
       * `JP_ConditionDiseaseOutcomeJHSD0006_VS`
       * `JP_ConditionDiseaseOutcomeReceipt_VS`
+      * `JP_DentalBodySite_CS`
+      * `JP_DentalBodySite_VS`
+      * `JP_DentalBodySiteStatus_CS`
+      * `JP_DentalBodySiteStatus_VS`
+      * `JP_DentalBodyStructure_CS`
+      * `JP_DentalBodyStructure_VS`
+      * `JP_DentalFundamentalStatus_CS`
+      * `JP_DentalFundamentalStatus_VS`
+      * `JP_DentalMissingTeethObservation_CS`
+      * `JP_DentalMissingTeethObservation_VS`
+      * `JP_DentalPresentTeethObservation_CS`
+      * `JP_DentalPresentTeethObservation_VS`
+      * `JP_DentalSimpleMissingTeethObservation_CS`
+      * `JP_DentalSimpleMissingTeethObservation_VS`
+      * `JP_DentalSimplePresentTeethObservation_CS`
+      * `JP_DentalSimplePresentTeethObservation_VS`
       * `JP_DICOMModality_VS`
       * `JP_ObservationCategory_Endoscopy_VS`
+      * `JP_ObservationDentalCategory_CS`
+      * `JP_ObservationDentalCategory_VS`
       * `JP_ObservationElectrocardiogramInterpretationCode_CS`
     * 以下のCodeSystem,ValueSetを削除した
       * `JP_ObservationBodySite_CS`
