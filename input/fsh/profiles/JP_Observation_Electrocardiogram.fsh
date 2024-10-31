@@ -23,10 +23,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * partOf ^comment = "ObservationをEncounterにencounter要素を使ってリンクする。もうひとつ別のObservationを参照することについては、以降にあるt [Notes](observation.html#obsgrouping)　をガイダンスとして参照のこと。"
 * insert SetDefinition(status, 結果の状態)
 * status ^comment = "このリソースは現在有効でないというマークをするコードを含んでいるため、この要素はモディファイアー（修飾的要素）として位置づけられている。"
-* insert SetDefinition(category, 行われた検査の一般的なタイプの分類。JP Core Observation Common Profileの【詳細説明】を参照のこと。)
-* category from JP_SimpleObservationCategory_VS (required)
 * insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には procedure が指定される。)
 * category ^comment = "心電図検査は procedure に分類されている。"
+* category from JP_SimpleObservationCategory_VS (required)
+* category.coding = $JP_SimpleObservationCategory_CS#procedure "Procedure" (exactly)
 * insert SetDefinition(code, 心電図検査を示すコード)
 * code from $JP_ObservationElectrocardiogramComponentCode_VS (preferred)
 * code.coding = $Loinc_CS#11524-6 "EKG Study"(exactly)
