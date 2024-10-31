@@ -33,7 +33,9 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には procedure が指定される。)
 * category.coding[simpleCategory] ^comment = "心電図検査は procedure に分類されている。"
 * category.coding[simpleCategory] from JP_SimpleObservationCategory_VS (required)
-* category.coding[simpleCategory] = $JP_SimpleObservationCategory_CS#procedure "Procedure" (exactly)
+* category.coding[simpleCategory].system = $JP_SimpleObservationCategory_CS (exactly)
+* category.coding[simpleCategory].code = $JP_SimpleObservationCategory_CS#procedure (exactly)
+* category.coding[simpleCategory].display = "Procedure" (exactly)
 * insert SetDefinition(code, 心電図検査を示すコード)
 * code from $JP_ObservationElectrocardiogramComponentCode_VS (preferred)
 * code.coding = $Loinc_CS#11524-6 "EKG Study"(exactly)
