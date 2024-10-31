@@ -158,7 +158,10 @@
 [JP_Microbiology_InfectiousAgent_CS]: CodeSystem-jp-microbiology-infectious-agent-cs.html
 [JP_ObservationBodyMeasurementCategory_CS]: CodeSystem-jp-observation-bodymeasurement-category-cs.html
 [JP_ObservationBodyMeasurementCode_CS]: CodeSystem-jp-observation-bodymeasurement-code-cs.html
+[JP_ObservationElectrogardiogramCategory_CS]: CodeSystem-jp-observation-electrocardiogram-category-cs.html
+[JP_ObservationElectrogardiogramDuration_CS]: CodeSystem-jp-observation-electrocardiogram-duration-cs.html
 [JP_ObservationElectrocardiogramInterpretationCode_CS]: CodeSystem-jp-observation-electrocardiogram-interpretation-code-cs.html
+[JP_ObservationElectrogardiogramStressType_CS]: CodeSystem-jp-observation-electrocardiogram-stresstype-cs.html
 [JP_PhysicalExamCode_CS]: CodeSystem-jp-physicalexamcode-cs.html
 [JP_ProcedureBodySite_CS]: CodeSystem-jp-procedure-body-site-cs.html
 [JP_ProcedureNotPerformedReason_CS]: CodeSystem-jp-procedure-not-performed-reason-cs.html
@@ -200,8 +203,11 @@
 [JP_Microbiology_InfectiousAgent_VS]: ValueSet-jp-microbiology-infectious-agent-vs.html
 [JP_ObservationBodyMeasurementCategory_VS]: ValueSet-jp-observation-bodymeasurement-category-vs.html
 [JP_ObservationBodyMeasurementCode_VS]: ValueSet-jp-observation-bodymeasurement-code-vs.html
+[JP_ObservationElectrogardiogramCategory_VS]: ValueSet-jp-observation-electrocardiogram-category-vs.html
 [JP_ObservationElectrocardiogramComponentCode_VS]: ValueSet-jp-observation-electrocardiogram-component-code-vs.html
+[JP_ObservationElectrogardiogramDuration_VS]: ValueSet-jp-observation-electrocardiogram-duration-vs.html
 [JP_ObservationElectrocardiogramInterpretationCode_VS]: ValueSet-jp-observation-electrocardiogram-interpretation-code-vs.html
+[JP_ObservationElectrogardiogramStressType_VS]: ValueSet-jp-observation-electrocardiogram-stresstype-vs.html
 [JP_ObservationEndoscopyCode_VS]: ValueSet-jp-observation-endoscopy-code-vs.html
 [JP_ObservationEndoscopyValueJed_VS]: ValueSet-jp-observation-endoscoy-value-jed-vs.html
 [JP_ObservationRadiologyCode_VS]: ValueSet-jp-observation-radiology-code-vs.html
