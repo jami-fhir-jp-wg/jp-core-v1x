@@ -6,10 +6,6 @@ Parent: JP_Observation_Common
 Id: jp-observation-electrocardiogram
 Title: "JP Core Observation Electrocardiogram Profile"
 Description: "このプロファイルはObservationリソースに対して、心電図データを送受信するための共通の制約と拡張を定めたものである。"
-// extension 参照宣言
-* extension contains
-    JP_Observation_Electrocardiogram_NumberOfLead named lead ..1 and
-    JP_Observation_Electrocardiogram_MachinaryInterpretation named machinaryInterpretation ..1  
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Electrocardiogram"
 * ^status = #draft
 * ^date = "2024-10-07"
@@ -32,8 +28,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には procedure が指定される。)
 * category ^comment = "心電図検査は procedure に分類されている。"
 * insert SetDefinition(code, 心電図検査を示すコード)
-* code.coding.system = $Loinc_CS (exactly)
-* code.coding.code = $Loinc_CS#11524-6 (exactly)
+* code from $JP_ObservationElectrocardiogramComponentCode_VS (preferred)
+* code.coding = $Loinc_CS#11524-6 (exactly)
 * code ^comment = "心電図検査(EKG Study)を示すLOINCコード 11524-6 を固定値として指定する。"
 * subject only Reference(JP_Patient or Group or Device or JP_Location)
 * insert SetDefinition(subject, このObservationの対象となる患者や患者群、機器、場所に関する情報)
