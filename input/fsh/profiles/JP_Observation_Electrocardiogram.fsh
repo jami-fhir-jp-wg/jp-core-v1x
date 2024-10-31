@@ -14,7 +14,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^comment = "心電図検査についてのプロファイル"
 * extension contains
     JP_Observation_Electrocardiogram_NumberOfLead named lead ..1 and
-    JP_Observation_Electrocardiogram_MachinaryInterpretation named machinaryInterpretation ..1 and
+    JP_Observation_Electrocardiogram_MachinaryInterpretation named machinaryInterpretation ..1
 * insert SetDefinition(identifier, この心電図を表すObservationリソースに対する一意な識別ID)
 * basedOn only 	Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
 * insert SetDefinition(basedOn, このObservationが実施されることになった検査オーダーや計画、提案に関する情報)
