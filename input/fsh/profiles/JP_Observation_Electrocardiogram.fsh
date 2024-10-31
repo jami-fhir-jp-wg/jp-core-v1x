@@ -94,7 +94,7 @@ Extension: JP_Observation_Electrocardiogram_NumberOfLead
 Id: jp-obsrevation-electrocardiogram-numberoflead
 Title: "JP Core Observation Electrocardiogram NumberOfLeed Extention"
 Description: "心電図検査を実施したときに使った誘導の数を示すExtension"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_NumberOfLead"
+* ^url = $JP_Observation_Electrocardiogram_NumberOfLead
 * ^status = #active
 * ^date = "2024-10-31"
 * ^purpose = "心電図検査で使用した誘導の数を記録するために用いられる。"
@@ -102,7 +102,7 @@ Description: "心電図検査を実施したときに使った誘導の数を示
 * ^context.expression = "Observation"
 * . ^short = "誘導の数"
 * . ^definition = "心電図検査で使用した誘導の数を記録するための拡張"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_NumberOfLead" (exactly)
+* url = $JP_Observation_Electrocardiogram_NumberOfLead (exactly)
 * value[x] 0..1
 * value[x] only integer
 * value[x] ^short = "誘導の数"
@@ -115,7 +115,7 @@ Extension: JP_Observation_Electrocardiogram_MachinaryInterpretation
 Id: jp-obsrevation-electrocardiogram-machinaryinterpretation
 Title: "JP Core Observation Electrocardiogram MachinaryInterpretation Extention"
 Description: "心電図検査で測定された結果に対しての機械的に判定された所見、解釈の有無"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_MachinaryInterpretation"
+* ^url = $JP_Observation_Electrocardiogram_MachinaryInterpretation
 * ^status = #active
 * ^date = "2024-10-31"
 * ^purpose = "心電図検査で測定された結果についての所見や解釈が機械的に判定されたものかどうかを示すために用いられる。"
@@ -123,7 +123,7 @@ Description: "心電図検査で測定された結果に対しての機械的に
 * ^context.expression = "Observation.machinaryInterpretation"
 * . ^short = "機械判定された所見・解釈の有無"
 * . ^definition = "心電図検査の所見が機械的に判定されたものであるかどうかを示す"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_MachinaryInterpretation" (exactly)
+* url = $JP_Observation_Electrocardiogram_MachinaryInterpretation (exactly)
 * value[x] 0..1
 * value[x] only boolean
 * value[x] ^short = "機械判定所見の有無"
