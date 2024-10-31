@@ -20,7 +20,7 @@
 |拡張|説明|定義|値型|
 | --- | --- | --- | --- |
 |誘導の数|心電図検査を行った際に測定される誘導の数|JP_Observation_Electrocardiogram_NumberOfLead|integer|
-|自動判定|自動判定の有無|JP_Observation_Electrocardiogram_MachinaryInterpertation|boolean|
+|自動判定|自動判定の有無|JP_Observation_Electrocardiogram_DeviceInterpertation|boolean|
 
 
 ### 用語定義

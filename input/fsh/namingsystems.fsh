@@ -293,6 +293,7 @@ Usage: #definition
 * uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/route-codes"
 * uniqueId[=].preferred = true
 
+
 Instance: jp-observation-jlac10-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition
