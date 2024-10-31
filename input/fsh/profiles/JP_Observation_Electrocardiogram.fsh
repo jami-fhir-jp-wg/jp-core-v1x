@@ -16,22 +16,28 @@ Description: "このプロファイルはObservationリソースに対して、�
     JP_Observation_Electrocardiogram_NumberOfLead named lead ..1 and
     JP_Observation_Electrocardiogram_DeviceInterpretation named deviceInterpretation ..1
 * insert SetDefinition(identifier, この心電図を表すObservationリソースに対する一意な識別ID)
-* basedOn only 	Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
+* basedOn only Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
 * insert SetDefinition(basedOn, このObservationが実施されることになった検査オーダーや計画、提案に関する情報)
 * partOf only Reference(JP_MedicationAdministration or JP_MedicationAdministration_Injection or JP_MedicationDispenseBase or MedicationStatement or JP_Procedure or JP_Immunization or ImagingStudy)
 * insert SetDefinition(partOf, このObservationが親イベントの一部を成す要素であるとき、その親イベントに関する情報)
 * partOf ^comment = "ObservationをEncounterにencounter要素を使ってリンクする。もうひとつ別のObservationを参照することについては、以降にあるt [Notes](observation.html#obsgrouping)　をガイダンスとして参照のこと。"
 * insert SetDefinition(status, 結果の状態)
 * status ^comment = "このリソースは現在有効でないというマークをするコードを含んでいるため、この要素はモディファイアー（修飾的要素）として位置づけられている。"
-* insert SetDefinition(category, 行われた検査の一般的なタイプの分類。JP Core Observation Common Profileの【詳細説明】を参照のこと。)
-* category from $JP_SimpleObservationCategory_VS (required)
-* category.coding.system = $JP_SimpleObservationCategory_VS (exactly)
-* category.coding.code = #procedure (exactly)
+* category.coding ^slicing.discriminator.type = #value
+* category.coding ^slicing.discriminator.path = "system"
+* category.coding ^slicing.rules = #open
+* category.coding ^slicing.ordered = false
+* category.coding contains
+    simpleCategory 0..1
 * insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には procedure が指定される。)
-* category ^comment = "心電図検査は procedure に分類されている。"
+* category.coding[simpleCategory] ^comment = "心電図検査は procedure に分類されている。"
+* category.coding[simpleCategory] from JP_SimpleObservationCategory_VS (required)
+* category.coding[simpleCategory].system = $JP_SimpleObservationCategory_CS (exactly)
+* category.coding[simpleCategory].code = $JP_SimpleObservationCategory_CS#procedure (exactly)
+* category.coding[simpleCategory].display = "Procedure" (exactly)
 * insert SetDefinition(code, 心電図検査を示すコード)
-* code.coding.system = $Loinc_CS (exactly)
-* code.coding.code = $Loinc_CS#11524-6 (exactly)
+* code from $JP_ObservationElectrocardiogramComponentCode_VS (preferred)
+* code.coding = $Loinc_CS#11524-6 "EKG Study"(exactly)
 * code ^comment = "心電図検査(EKG Study)を示すLOINCコード 11524-6 を固定値として指定する。"
 * subject only Reference(JP_Patient or Group or Device or JP_Location)
 * insert SetDefinition(subject, このObservationの対象となる患者や患者群、機器、場所に関する情報)
@@ -53,7 +59,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(dataAbsentReason, このObservationのvalue[x]要素に期待される結果が存在しなかった場合、その理由)
 * dataAbsentReason ^comment = "ヌル値または例外値は、FHIRオブザベーションで2つの方法で表すことができる。 1つの方法は、それらを値セットに含めて、値の例外を表す方法である。たとえば、血清学的検査の測定値は、「検出された」、「検出されなかった」、「決定的でない」、または「検体が不十分」である可能性がある。別の方法は、実際の観測にvalue要素を使用し、明示的なdataAbsentReason要素を使用して例外的な値を記録することである。たとえば、測定が完了しなかった場合、dataAbsentReasonコード「error」を使用できる。この場合には、観測値は、報告する値がある場合にのみ報告される可能性があることに注意する必要がある。たとえば、差分セルカウント値は> 0の場合にのみ報告される場合がある。これらのオプションのため、nullまたは例外値の一般的な観測値を解釈するにはユースケースの合意が必要である。"
 * insert SetDefinition(interpretation, 心電図所見)
-* interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS
+* interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (extensible)
 * interpretation ^comment = "心電図所見・解釈について記載する。心電図所見は測定された結果と1対1で対応するものではなく、総合的に判断されるものである。したがって所見や解釈はこのエレメントに列記することとした。所見については、ミネソタコードを元に学会や検査機器ベンダーが用語集を作成している。必要に応じてそれらのコードを仕様することを推奨する。"
 * interpretation ^requirements = "心電図所見についてのコード集を別途提示する。"
 * insert SetDefinition(note, このObservationに関するコメント)
@@ -78,9 +84,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(component, この心電図検査で測定された一連の結果。)
 * component ^comment = "心電図に関する一連の測定結果をまとめるためにコンポーネントを使用する。"
 * component ^requirements = "この心電図検査で行われる一連の測定値をまとめるものであり、負荷心電図など複数の心電図検査を一連の検査として行った場合は別Observationインスタンスとして記録される。"
-* component.code from JP_ObservationElectrocardiogramComponentCode_VS (extensible)
+* component.code from JP_ObservationElectrocardiogramComponentCode_VS (preferred)
 * component.code ^comment = "心電図の各検査項目についてはLOINCなどの特定の用語集を利用することが推奨される。"
-* component.interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS
+* component.interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (extensible)
+* component.interpretation ^definition = "心電図検査で測定された結果値に対する所見・解釈"
 * component.interpretation ^comment = "心電図検査の測定結果と解釈は必ずしも1対1で対応しないが、PR間隔の測定値にPR間隔延長などの固有の所見をつけてもよい"
 
 
@@ -121,8 +128,8 @@ Description: "心電図検査で測定された結果に対しての機械的に
 * ^date = "2024-10-31"
 * ^purpose = "心電図検査で測定された結果についての所見や解釈が機械的に判定されたものかどうかを示すために用いられる。"
 * ^context.type = #element
-* ^context.expression = "Observation"
-* . ^short = "機械判定所見の有無"
+* ^context.expression = "Observation.machinaryInterpretation"
+* . ^short = "機械判定された所見・解釈の有無"
 * . ^definition = "心電図検査の所見が機械的に判定されたものであるかどうかを示す"
 * url = $JP_Observation_Electrocardiogram_DeviceInterpretation (exactly)
 * value[x] 0..1

@@ -14,24 +14,21 @@
 [FHIRJPCoreImplementationGuide]: ImplementationGuide-jpfhir.jp.core.html
 
 <!-- StructureDefinition: Profile, DataType -->
-[JP_Binary]: StructureDefinition-JP-Binary.html
-[JP_CarePlan]: StructureDefinition-JP-CarePlan.html
-[JP_Consent]: StructureDefinition-JP-Consent.html
-[JP_Device]: StructureDefinition-JP-Device.html
-[JP_DeviceUseStatement]: StructureDefinition-JP-DeviceUseStatement.html
-[JP_DocumentReference]: StructureDefinition-JP-DocumentReference.html
-[JP_RelatedPerson]: StructureDefinition-JP-RelatedPerson.html
-[JP_ResearchStudy]: StructureDefinition-JP-ResearchStudy.html
-[JP_ResearchSubject]: StructureDefinition-JP-ResearchSubject.html
 [JP_AllergyIntolerance]: StructureDefinition-jp-allergyintolerance.html
+[JP_Binary]: StructureDefinition-jp-binary.html
+[JP_CarePlan]: StructureDefinition-jp-careplan.html
 [JP_Condition_Diagnosis]: StructureDefinition-jp-condition-diagnosis.html
 [JP_Condition]: StructureDefinition-jp-condition.html
+[JP_Consent]: StructureDefinition-jp-consent.html
 [JP_Coverage]: StructureDefinition-jp-coverage.html
+[JP_Device]: StructureDefinition-jp-device.html
+[JP_DeviceUseStatement]: StructureDefinition-jp-deviceusestatement.html
 [JP_DiagnosticReport_Common]: StructureDefinition-jp-diagnosticreport-common.html
 [JP_DiagnosticReport_Endoscopy]: StructureDefinition-jp-diagnosticreport-endoscopy.html
 [JP_DiagnosticReport_LabResult]: StructureDefinition-jp-diagnosticreport-labresult.html
 [JP_DiagnosticReport_Microbiology]: StructureDefinition-jp-diagnosticreport-microbiology.html
 [JP_DiagnosticReport_Radiology]: StructureDefinition-jp-diagnosticreport-radiology.html
+[JP_DocumentReference]: StructureDefinition-jp-documentreference.html
 [JP_Encounter]: StructureDefinition-jp-encounter.html
 [JP_FamilyMemberHistory]: StructureDefinition-jp-familymemberhistory.html
 [JP_HumanName]: StructureDefinition-jp-humanname.html
@@ -78,6 +75,9 @@
 [JP_Practitioner]: StructureDefinition-jp-practitioner.html
 [JP_PractitionerRole]: StructureDefinition-jp-practitionerrole.html
 [JP_Procedure]: StructureDefinition-jp-procedure.html
+[JP_RelatedPerson]: StructureDefinition-jp-relatedperson.html
+[JP_ResearchStudy]: StructureDefinition-jp-researchstudy.html
+[JP_ResearchSubject]: StructureDefinition-jp-researchsubject.html
 [JP_ServiceRequest_Common]: StructureDefinition-jp-servicerequest-common.html
 [JP_Specimen_Common]: StructureDefinition-jp-specimen-common.html
 
@@ -111,8 +111,8 @@
 [JP_MedicationDosage_UsageDuration]: StructureDefinition-jp-medicationdosage-usageduration.html
 [JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]: StructureDefinition-jp-medicationrequest-dispenserequest-expectedrepeatcount.html
 [JP_MedicationRequest_DispenseRequest_InstructionForDispense]: StructureDefinition-jp-medicationrequest-dispenserequest-instructionfordispense.html
-[JP_Observation_Electrocardiogram_NumberOfLead]: StructureDefinition-jp-observation-electrocardiogram-number-of-lead.html
-[JP_Observation_Electrocardiogram_MachinaryInterpertation]: StructureDefinition-jp-observation-electrocardiogram-machinary-interpretation.html
+[JP_Observation_Electrocardiogram_NumberOfLead]: StructureDefinition-jp-observation-electrocardiogram-numberoflead.html
+[JP_Observation_Electrocardiogram_DeviceInterpertation]: StructureDefinition-jp-observation-electrocardiogram-deviceinterpretation.html
 [JP_Organization_InsuranceOrganizationCategory]: StructureDefinition-jp-organization-insuranceorganizationcategory.html
 [JP_Organization_InsuranceOrganizationNo]: StructureDefinition-jp-organization-insuranceorganizationno.html
 [JP_Organization_PrefectureNo]: StructureDefinition-jp-organization-prefectureno.html
@@ -158,6 +158,10 @@
 [JP_Microbiology_InfectiousAgent_CS]: CodeSystem-jp-microbiology-infectious-agent-cs.html
 [JP_ObservationBodyMeasurementCategory_CS]: CodeSystem-jp-observation-bodymeasurement-category-cs.html
 [JP_ObservationBodyMeasurementCode_CS]: CodeSystem-jp-observation-bodymeasurement-code-cs.html
+[JP_ObservationElectrogardiogramCategory_CS]: CodeSystem-jp-observation-electrocardiogram-category-cs.html
+[JP_ObservationElectrogardiogramDuration_CS]: CodeSystem-jp-observation-electrocardiogram-duration-cs.html
+[JP_ObservationElectrocardiogramInterpretationCode_CS]: CodeSystem-jp-observation-electrocardiogram-interpretation-code-cs.html
+[JP_ObservationElectrogardiogramStressType_CS]: CodeSystem-jp-observation-electrocardiogram-stresstype-cs.html
 [JP_PhysicalExamCode_CS]: CodeSystem-jp-physicalexamcode-cs.html
 [JP_ProcedureBodySite_CS]: CodeSystem-jp-procedure-body-site-cs.html
 [JP_ProcedureNotPerformedReason_CS]: CodeSystem-jp-procedure-not-performed-reason-cs.html
@@ -199,6 +203,11 @@
 [JP_Microbiology_InfectiousAgent_VS]: ValueSet-jp-microbiology-infectious-agent-vs.html
 [JP_ObservationBodyMeasurementCategory_VS]: ValueSet-jp-observation-bodymeasurement-category-vs.html
 [JP_ObservationBodyMeasurementCode_VS]: ValueSet-jp-observation-bodymeasurement-code-vs.html
+[JP_ObservationElectrogardiogramCategory_VS]: ValueSet-jp-observation-electrocardiogram-category-vs.html
+[JP_ObservationElectrocardiogramComponentCode_VS]: ValueSet-jp-observation-electrocardiogram-component-code-vs.html
+[JP_ObservationElectrogardiogramDuration_VS]: ValueSet-jp-observation-electrocardiogram-duration-vs.html
+[JP_ObservationElectrocardiogramInterpretationCode_VS]: ValueSet-jp-observation-electrocardiogram-interpretation-code-vs.html
+[JP_ObservationElectrogardiogramStressType_VS]: ValueSet-jp-observation-electrocardiogram-stresstype-vs.html
 [JP_ObservationEndoscopyCode_VS]: ValueSet-jp-observation-endoscopy-code-vs.html
 [JP_ObservationEndoscopyValueJed_VS]: ValueSet-jp-observation-endoscoy-value-jed-vs.html
 [JP_ObservationRadiologyCode_VS]: ValueSet-jp-observation-radiology-code-vs.html
@@ -270,10 +279,12 @@
 [jp-medicationusagejamiadditional-namingsystem]: NamingSystem-jp-medicationusagejamiadditional-namingsystem.html
 [jp-microbiology-antimicrobialdrug-ns]: NamingSystem-jp-microbiology-antimicrobialdrug-ns.html
 [jp-microbiology-infectious-agent-ns]: NamingSystem-jp-microbiology-infectious-agent-ns.html
+[jp-observation-electrocardiogram-interpretation-namingsystem]: NamingSystem-jp-observation-electrocardiogram-interpretation-namingsystem.html
 [jp-observation-jlac10-namingsystem]: NamingSystem-jp-observation-jlac10-namingsystem.html
 [jp-observation-vitalsignscode-namingsystem]: NamingSystem-jp-observation-vitalsignscode-namingsystem.html
 [jp-prefecturenumber-namingsystem]: NamingSystem-jp-prefecturenumber-namingsystem.html
 [jp-observation-bodyMeasurement-example-1]: Observation-jp-observation-bodyMeasurement-example-1.html
+[jp-observation-electrocardiogram-example-1]: Observation-jp-observation-electrocardiogram-example-1.html
 [jp-observation-endoscopy-example-diagnosis-1]: Observation-jp-observation-endoscopy-example-diagnosis-1.html
 [jp-observation-endoscopy-example-diagnosis-2]: Observation-jp-observation-endoscopy-example-diagnosis-2.html
 [jp-observation-endoscopy-example-findings-1a]: Observation-jp-observation-endoscopy-example-findings-1a.html

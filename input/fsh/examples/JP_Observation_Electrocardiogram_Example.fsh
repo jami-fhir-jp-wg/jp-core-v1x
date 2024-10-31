@@ -11,7 +11,7 @@ Usage: #example
 * status = #final
 * encounter = Reference(Encounter/jp-encounter-example-1)
 * interpretation[0] = urn:oid:1.2.392.200119.5.2.4.1.1.3#1-0 "正常"
-* component[0].code.coding = $Loinc_CS#76282-3 "Heart rate.beat-to-beat"
+* component[+].code.coding = $Loinc_CS#76282-3 "Heart rate.beat-to-beat"
 * component[=].code.text = "Heart rate.beat-to-beat by EKG"
 * component[=].valueQuantity.value = 75
 * component[=].valueQuantity.unit = "{beats}/min"
