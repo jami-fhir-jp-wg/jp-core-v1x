@@ -18,7 +18,6 @@
     * `JP_MedicationStatement`プロファイルおよび `JP_MedicationStatement_Injection`プロファイルを追加した
     * `JP_MedicationRequest_Injection`プロファイル, `JP_MedicationDispense_Injection`プロファイル, `JP_MedicationAdministration_Injection`プロファイル, `JP_MedicationStatement_Injection`プロファイルに関するmedicationの参照に関する記述を付加した
     * 操作：$everythingが不要であるため記述を削除した
-    * 
   * Diagnostic グループ
     * Observation
       * `JP_Observation_Radiology_Findings`プロファイルおよび`JP_Observation_Radiology_Impression`プロファイルを追加した
@@ -26,15 +25,17 @@
       * `JP_Observation_Endoscopy`プロファイルを追加した
       * `JP_Observation_VitalSigns`プロファイルのcategoryに対する`JP_SimpleObservationCategory_CS`に対する多重度を1..*から0..*に変更した
       * `JP_Specimen_Common`プロファイルを追加、これにあわせ`JP_Specimen`プロファイルを削除した
-      * `JP_Media_Endoscopy`プロファイルを追加定義した
       * `JP_Observation_DentalOral_ToothExistence`プロファイルを追加定義した
       * `JP_Observation_DentalOral_ToothTreatmentCondition`プロファイルを追加定義した
       * `JP_Observation_DentalOral_MissingToothCondition`プロファイルを追加定義した
+    * ImagingStudy
+      * `JP_ImagingStudy_Radiology`プロファイルのseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した
     * DiagnosticReport
       * `JP_DiagnosticReport_Radiology`プロファイルのcategoryに対するバインド対象を`JP_DICOMModality_VS`に変更した
       * `JP_DiagnosticReport_Radiology`プロファイルにて、`JP_Observation_Radiology_Findings`および`JP_Observation_Radiology_Impression`を要素に設定できる点について修正し、その関係性に関する記述を記載した。
-    * ImagingStudy
-      * `JP_ImagingStudy_Radiology`プロファイルのseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した
+      * `JP_DiagnosticReport_DentalOral`プロファイルを追加定義した
+    * Media
+      * `JP_Media_Endoscopy`プロファイルを追加定義した
   * Clinical グループ
     * `JP_Condition_Diagnosis`プロファイルを追加した
     * `JP_Condition_Diagnosis`にて以下の病名マスタを利用可能とした
@@ -47,7 +48,6 @@
     * SearchParameterの記述不具合（型指定やSearchParameterRegistryとの違い）について修正した
     * SearchParameterのexpressionのFHIRPath記述に対する指摘に対応した
     * `JP_ImagingStudy_Radiology`のIdentifierに関するConformanceをSHALLに変更した
-     
   * Terminology関連
     * 以下のCodeSystemおよびValueSet追加した
       * `JP_ConditionDieaseCodeReceipt_CS`
