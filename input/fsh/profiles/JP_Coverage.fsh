@@ -32,16 +32,16 @@ Coverageには、保険証レベルの情報が含まれている。これは、
 * identifier ^comment = "A unique identifier assigned to this coverage.  このカバレッジに割り当てられた一意の識別子。"
 * identifier ^requirements = "Allows coverages to be distinguished and referenced.  
 カバレッジを区別して参照できるようにする。"
-* identifier[insuranceIdentifier] ^short = "被保険者識別子　例）00012345:あいう:１８７:05"
-* identifier[insuranceIdentifier] ^definition = "被保険者識別子として、保険者情報と被保険者情報を以下の仕様で連結したひとつの文字列を使用する"
-* identifier[insuranceIdentifier] ^comment = "「被保険者識別子」の文字列仕様を参照のこと"
+* identifier[insuranceIdentifier] ^short = "被保険者個人識別子　例）00012345:あいう:１８７:05"
+* identifier[insuranceIdentifier] ^definition = "被保険者個人識別子として、保険者情報と被保険者情報を以下の仕様で連結したひとつの文字列を使用する"
+* identifier[insuranceIdentifier] ^comment = "「被保険者個人識別子」の文字列仕様を参照のこと"
 * identifier[insuranceIdentifier].system 1..1
-* identifier[insuranceIdentifier].system = "http://jpfhir.jp/fhir/core/Idsystem/JP_Insurance_SubscriberID" (exactly)
-* identifier[insuranceIdentifier].value ^short = "被保険者識別子　例）00012345:あいう:１８７:05" 
-* identifier[insuranceIdentifier].value ^definition = "被保険者識別子として、保険者情報と被保険者情報とを以下の仕様で連結したひとつの文字列を使用する。  
-本仕様では、以下、これを「被保険者識別子」と称する。また英数字は１バイト系文字の英数字を指す。  
-被保険者識別子:以下の各情報（要素）を半角コロン（文字コード１６進数 5A）で結合する。  
-要素を省略する、とある場合には、長さ０の文字列とする。詳細は「被保険者識別子」の文字列仕様を参照のこと"
+* identifier[insuranceIdentifier].system = "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID" (exactly)
+* identifier[insuranceIdentifier].value ^short = "被保険者個人識別子　例）00012345:あいう:１８７:05" 
+* identifier[insuranceIdentifier].value ^definition = "被保険者個人識別子として、保険者情報と被保険者情報とを以下の仕様で連結したひとつの文字列を使用する。  
+本仕様では、以下、これを「被保険者個人識別子」と称する。また英数字は１バイト系文字の英数字を指す。  
+被保険者個人識別子:以下の各情報（要素）を半角コロン（文字コード１６進数 5A）で結合する。  
+要素を省略する、とある場合には、長さ０の文字列とする。詳細は「被保険者個人識別子」の文字列仕様を参照のこと"
 * identifier[insuranceIdentifier].value 1..1
 * identifier[insuranceIdentifier].assigner only Reference(JP_Organization)
 * identifier[insuranceIdentifier].assigner ^short = "保険者情報を設定"
@@ -56,7 +56,7 @@ Coverageには、保険証レベルの情報が含まれている。これは、
 ルール：\"{保険者番号:半角英数８桁}\",\"{被保険者記号}\",\"{被保険者番号}\",\"{枝番:半角数字２桁}\"  
 例：\"00012345\",\"１２－３４\",\"５６７８\",\"00\""
 * identifier[insuranceCsvIdentifier].system 1..1
-* identifier[insuranceCsvIdentifier].system = "http://jpfhir.jp/fhir/core/Idsystem/JP_Insurance_SubscriberCsvID" (exactly)
+* identifier[insuranceCsvIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/JP_Coverage_id" (exactly)
 * identifier[insuranceCsvIdentifier].value 1..1
 * identifier[insuranceCsvIdentifier].value ^short = "被保険者識別子（CSV形式）　\"00012345\",\"１２－３４\",\"５６７８\",\"00\""
 * identifier[insuranceCsvIdentifier].value ^definition = "被保険者識別子として、保険者番号と被保険者記号と番号と枝番を全角にした上でダブルコーテーションで囲い、カンマ区切りで連結する。"
