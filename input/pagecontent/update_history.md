@@ -27,6 +27,9 @@
       * `JP_Observation_VitalSigns`プロファイルのcategoryに対する`JP_SimpleObservationCategory_CS`に対する多重度を1..*から0..*に変更した
       * `JP_Specimen_Common`プロファイルを追加、これにあわせ`JP_Specimen`プロファイルを削除した
       * `JP_Media_Endoscopy`プロファイルを追加定義した
+      * `JP_Observation_DentalOral_ToothExistence`プロファイルを追加定義した
+      * `JP_Observation_DentalOral_ToothTreatmentCondition`プロファイルを追加定義した
+      * `JP_Observation_DentalOral_MissingToothCondition`プロファイルを追加定義した
     * DiagnosticReport
       * `JP_DiagnosticReport_Radiology`プロファイルのcategoryに対するバインド対象を`JP_DICOMModality_VS`に変更した
       * `JP_DiagnosticReport_Radiology`プロファイルにて、`JP_Observation_Radiology_Findings`および`JP_Observation_Radiology_Impression`を要素に設定できる点について修正し、その関係性に関する記述を記載した。
@@ -38,10 +41,13 @@
       * MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`
       * MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`
       * レセプト電算用傷病名マスタ`JP_ConditionDiseaseCodeReceipt_CS`
-      * 
   * Workflow グループ
     * `JP_ServiceRequest_Common`プロファイルを追加、これにあわせ`JP_ServiceRequest`を削除した
-  
+  * SearchParameterおよびOperation関連
+    * SearchParameterの記述不具合（型指定やSearchParameterRegistryとの違い）について修正した
+    * SearchParameterのexpressionのFHIRPath記述に対する指摘に対応した
+    * `JP_ImagingStudy_Radiology`のIdentifierに関するConformanceをSHALLに変更した
+     
   * Terminology関連
     * 以下のCodeSystemおよびValueSet追加した
       * `JP_ConditionDieaseCodeReceipt_CS`
@@ -91,12 +97,11 @@
       * `JP_ObservationBodySite_VS`
     * `JP_ObservationBodyMeasurementCode_CS`の記述の不具合を修正した
     * 病名マスタ(MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`,MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`,レセプト電算用傷病名マスタ`JP_ConditionDiseaseCodeReceipt_CS`)を用語として追加した
-  * SearchParameterおよびOperationについて
-    * SearchParameterの記述不具合（型指定やSearchParameterRegistryとの違い）について修正した
-    * JP Coreで作成したSearchParameterのexpressionのFHIRPath記述の不具合ついて修正した
-    * CapabilityStatementのConformanceの指定、複数パラメータの指定を行った
-    * CapabilityStatementのOperation定義を追加した
-    * `JP_ImagingStudy_Radiology`のIdentifierに関するConformanceをSHALLに変更した
+
+  * Capability Statement関連
+    * 単数パラメーターのConformanceの指定に対応した
+    * 複数パラメータの指定の指定に対応した
+    * Operation定義を追加した
   
 ***v1.1.2***
 
