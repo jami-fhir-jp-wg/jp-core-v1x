@@ -10,7 +10,7 @@ Usage: #example
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber"
 * extension[=].valueString = "１８７"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber"
-* extension[=].valueString = "00"
+* extension[=].valueString = "05"
 * identifier[insuranceIdentifier].system = "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID"
 * identifier[insuranceIdentifier].value = "00012345:あいう:１８７:05"
 * identifier[insuranceIdentifier].assigner = Reference(Organization/jp-organization-example-assigner)
