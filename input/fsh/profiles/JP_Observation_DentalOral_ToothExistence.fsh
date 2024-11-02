@@ -33,9 +33,9 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * insert SetDefinition(category[first], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
 * category[first] from JP_SimpleObservationCategory_VS (required)
-//* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
 * category[first].coding.code 1..1
-//* category[first].coding.code = $JP_SimpleObservationCategory_CS#procedure (exactly)
+* category[first].coding.code = $JP_SimpleObservationCategory_CS#procedure (exactly)
 
 * insert SetDefinition(category[second], このObservationに関するLOINC上の分類、必須項目)
 * category[second].coding.system = $Loinc_CS (exactly)
@@ -44,11 +44,11 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category[second].coding.display = "Dental"
 
 * insert SetDefinition(category[third], このObservationに関する詳細分類、JP_ObservationDentalCategory_VSより選択する、必須項目)
-//* category[third] from $JP_ObservationDentalCategory_VS (required)
-//* category[third].coding.system = $JP_ObservationDentalCategory_CS (exactly)
+* category[third] from $JP_ObservationDentalCategory_VS (required)
+* category[third].coding.system = $JP_ObservationDentalCategory_CS (exactly)
 * category[third].coding.code 1..1
-//* category[third].coding.code = $JP_ObservationDentalCategory_CS#ToothExistence (exactly)
-* category[third].coding.display = "Tooth Existence"
+* category[third].coding.code = $JP_ObservationDentalCategory_CS#DO-1-01 (exactly)
+* category[third].coding.display = "ToothExistence"
 
 * insert SetDefinition(code.coding, このObservationの対象を特定するコード。LOINCより歯の有無・状態を表す54570-7を選択する。)
 * code.coding.system = $Loinc_CS (exactly)
@@ -70,7 +70,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * value[x] only CodeableConcept
 * insert SetDefinition(value[x], 特定の歯の有無（、未検査）)
 * value[x] ^comment = "『有』、『無』、『未検査』以外が選択された場合の第二階層は将来の検討対象"
-//* value[x] from $JP_ToothExistenceCode_VS (required)
+* value[x] from $JP_DentalFundamentalStatus_VS (required)
 
 * insert SetDefinition(dataAbsentReason, 結果が存在しなかった場合、その理由)
 * insert SetDefinition(interpretation, 未使用)
@@ -79,7 +79,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * bodySite ^comment = "優先順位は以下の番号を推奨する。
 1.FDI
 2.厚生労働省標準標準歯式マスタ、レセプト電算処理用コード"
-//* bodySite from JP_DentalBodySite_VS (preferred)
+* bodySite from JP_DentalBodySite_VS (preferred)
 * insert SetDefinition(bodySite, 特定の歯（歯式）)
 
 * insert SetDefinition(method, 検査方法（目視、読影など)
@@ -87,7 +87,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(device, 例：口腔内スキャナなど)
 * insert SetDefinition(referenceRange, 未使用)
 
-* hasMember only Reference(JP_Observation_DentalOral_ToothTreatmentCondition or JP_Observation_DentalOral_MissingToothCondition)
+//* hasMember only Reference(JP_Observation_DentalOral_ToothTreatmentCondition or JP_Observation_DentalOral_MissingToothCondition)
 //* hasMember ^Invariants = "code.coding.where(code = '未検査コード').exists() implies hasMember.empty()"
 
 * insert SetDefinition(derivedFrom, 未使用)
@@ -112,4 +112,4 @@ Description: "歯の状態を格納するための拡張"
 * . ^definition = "歯の状態を格納するための拡張。例：『インプラント』、『その他の生体構造体』"
 * url = $JP_Observation_DentalOral_BodySiteStatus (exactly)
 * value[x] only CodeableConcept
-// * valueCodeableConcept from $JP_DentalBodySiteStatus_VS (preferred)
+* valueCodeableConcept from $JP_DentalBodySiteStatus_VS (preferred)
