@@ -8,5 +8,5 @@ Description: "ICD-10コードを示す値セット"
 * ^date = "2023-08-05"
 * ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 
-* include codes from system $JP_ConditionDiseaseCodeICD10_CS
+* include codes from system $JP_DiseaseICD10_CS
 
