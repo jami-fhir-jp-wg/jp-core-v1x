@@ -120,8 +120,8 @@ Alias: $JP_Patient_KanaSort_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_P
 // CodeSystem
 Alias: $JAMI__MedicationMethodDetailDeviceInjection_CS = urn:oid:1.2.392.200250.2.2.20.45
 Alias: $JP_ConclusionCodeJed_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConclusionCodeJed_CS
-Alias: $JP_ConditionDiseaseCodeICD10_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeICD10_CS
-Alias: $JP_ConditionDiseaseCodeICD11_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeICD11_CS
+// Alias: $JP_ConditionDiseaseCodeICD10_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeICD10_CS
+// Alias: $JP_ConditionDiseaseCodeICD11_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeICD11_CS
 Alias: $JP_ConditionDiseaseCodeMEDISExchange_CS = urn:oid:1.2.392.200119.4.101.6
 Alias: $JP_ConditionDiseaseCodeMEDISRecordNo_CS = urn:oid:1.2.392.200119.4.101.2
 Alias: $JP_ConditionDiseaseCodeReceipt_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeReceipt_CS

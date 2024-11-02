@@ -1,6 +1,6 @@
 //検体材料
 Instance: jp-specimen-example-1
-InstanceOf: Specimen
+InstanceOf: JP_Specimen_Common
 Title: "JP Core Specimen Example 検体材料（尿）"
 Description: "検体材料（尿）"
 Usage: #example
@@ -21,7 +21,7 @@ Usage: #example
 * container.specimenQuantity.unit = "mL"
 
 Instance: jp-specimen-example-2
-InstanceOf: Specimen
+InstanceOf: JP_Specimen_Common
 Title: "JP Core Specimen Example 検体材料（血液）"
 Description: "検体材料（血液）"
 Usage: #example
@@ -44,7 +44,7 @@ Usage: #example
 
 
 Instance: jp-specimen-example-3
-InstanceOf: Specimen
+InstanceOf: JP_Specimen_Common
 Title: "JP Core Specimen Example 検体材料（喀痰）"
 Description: "検体材料（喀痰）"
 Usage: #example

@@ -104,7 +104,7 @@ Description: "このプロファイルはConditionリソースに対して、患
 * code.coding[receipt] ^definition = "レセプト電算用傷病名マスター。"
 * code.coding[receipt] ^comment = "JP_ConditionDiseaseCodeReceipt_VSの中から適切なコードを指定する。"
 * code.coding[icd10] from $JP_ConditionDiseaseCodeICD10_VS (required)
-* code.coding[icd10].system = $JP_ConditionDiseaseCodeICD10_CS (exactly)
+* code.coding[icd10].system = $JP_DiseaseICD10_CS (exactly)
 * code.coding[icd10].code 1..
 * code.coding[icd10] ^short = "ICD-10コード。【詳細参照】"
 * code.coding[icd10] ^definition = "ICD-10コード。"

@@ -24,6 +24,7 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * instantiatesUri ^short = "外部のプロトコール、定義への参照"
 * instantiatesUri ^definition = "このサービスリクエストに部分的、または完全に関わる、外部の管理されたプロトコール、ガイドライン、オーダセットや他の定義へのURL参照"
 * instantiatesUri = "HTMLページ、PDFなど、名前で解決できないURI識別子"
+* instantiatesUri 0..1
 //
 * basedOn ^short = "リクエストするリソースへの参照"
 * basedOn ^definition = "このリクエストによって実施すべき計画、提案、オーダの詳細（への参照）"
