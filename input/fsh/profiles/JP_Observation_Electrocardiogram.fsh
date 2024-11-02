@@ -37,7 +37,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category.coding[simpleCategory].display = "Procedure" (exactly)
 * insert SetDefinition(code, 心電図検査を示すコード)
 * code from $JP_ObservationElectrocardiogramComponentCode_VS (preferred)
-* code.coding = $Loinc_CS#11524-6 "EKG Study"(exactly)
+//* code.coding = $Loinc_CS#11524-6 "EKG Study"(exactly)
+* code.coding.system = #Loinc_CS (exactly)
+* code.coding.code = #11524-6 (exactly)
+* code.coding.display = "EKG Study"
 * code ^comment = "心電図検査(EKG Study)を示すLOINCコード 11524-6 を固定値として指定する。"
 * subject only Reference(JP_Patient or Group or Device or JP_Location)
 * insert SetDefinition(subject, このObservationの対象となる患者や患者群、機器、場所に関する情報)
