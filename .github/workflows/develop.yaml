@@ -26,6 +26,8 @@ jobs:
 
     - name: Extract branch name
       run: |
+        sudo apt install language-pack-ja
+        sudo update-locale LANG=ja_JP.UTF8
         if ["${{ github.event.pull_request.head.ref }}" == ""]; then
           echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
           echo "branch_group=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
@@ -66,10 +68,6 @@ jobs:
     - name: Setup Sushi
       run: |
         sudo npm install -g fsh-sushi
-        sudo apt install language-pack-ja
-        sudo apt update-locale LANG=ja_JP.UTF8
-
-
     - name: Install Jekyll
       run: |
         sudo apt-get install jekyll
