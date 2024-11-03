@@ -37,8 +37,18 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category.coding[simpleCategory].display = "Procedure" (exactly)
 * insert SetDefinition(code, 心電図検査を示すコード)
 * code from $JP_ObservationElectrocardiogramComponentCode_VS (preferred)
-* code.coding = $Loinc_CS#11524-6 "EKG Study"(exactly)
-* code ^comment = "心電図検査(EKG Study)を示すLOINCコード 11524-6 を固定値として指定する。"
+//* code.coding = $Loinc_CS#11524-6 "EKG Study"(exactly)
+* code.coding ^slicing.discriminator.type = #value
+* code.coding ^slicing.discriminator.path = "system"
+* code.coding ^slicing.rules = #open
+* code.coding ^slicing.ordered = false
+* code.coding contains
+    ekgCode 1..1
+* code.coding[ekgCode].system = $Loinc_CS (exactly)
+* code.coding[ekgCode].code = #11524-6 (exactly)
+* code.coding[ekgCode].display = "EKG Study"
+* code.coding[ekgCode] ^short = "心電図検査(EKG Study)を示すLOINCコード 11524-6 を固定値として指定する。"
+* code.coding[ekgCode] ^comment = "心電図検査(EKG Study)を示すLOINCコード 11524-6 を固定値として指定する。"
 * subject only Reference(JP_Patient or Group or Device or JP_Location)
 * insert SetDefinition(subject, このObservationの対象となる患者や患者群、機器、場所に関する情報)
 * subject ^comment = "この要素は1..1のcardinalityになるはずと考えられる。この要素が欠損値になる唯一の状況は、対象患者が不明なデバイスによって観察が行われるケースである。この場合、観察は何らかのコンテキスト/チャネルマッチング技術を介して患者にマッチングされる必要があり、患者にマッチングされれば、その時点で本要素を更新する必要がある。"

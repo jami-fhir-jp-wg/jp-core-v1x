@@ -4,14 +4,14 @@ Title: "JP Core Condition Diagnosis Example 病名（過敏性大腸炎の初期
 Description: "過敏性大腸炎の初期疾患の例"
 Usage: #example
 * extension[0]
-  * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseaseOutcome"
+  * url = $JP_Condition_DiseaseOutcome
   * valueCodeableConcept
     * coding[0]
       * system = "http://terminology.sample.com/CodeSystem/disease-outcome"
       * code = #2
       * display = "寛解"
     * coding[1]
-      * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseOutcomeJHSD0006_CS"
+      * system = $JP_ConditionDiseaseOutcomeJHSD0006_CS
       * code = #M
       * display = "寛解"
     * text = "寛解"
@@ -33,31 +33,31 @@ Usage: #example
     *  code = #problem-list-item
 *  severity
   *  coding[0]
-    *  system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionSeverity_CS"
+    *  system = $JP_ConditionSeverity_CS
     *  code = #MO
     *  display = "中度"
 *  code
   * extension[0]
-    * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePrefixModifier"
+    * url = $JP_Condition_DiseasePrefixModifier
     * valueCodeableConcept
       * coding[0]
-        * system = "urn:oid:1.2.392.200119.4.102.5"
+        * system = $JP_ConditionDiseaseModifierMEDISExchange_CS
         * code = #3216
         * display = "過敏性"
       * text = "過敏性"
   * extension[1]
-    * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePostfixModifier"
+    * url = $JP_Condition_DiseasePostfixModifier
     * valueCodeableConcept
       * coding[0]
-        * system = "urn:oid:1.2.392.200119.4.102.5"
+        * system = $JP_ConditionDiseaseModifierMEDISExchange_CS
         * code = #1111
         * display = "の初期"
       * text = "の初期"
   * extension[2]
-    * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePostfixModifier"
+    * url = $JP_Condition_DiseasePostfixModifier
     * valueCodeableConcept
       * coding[0]
-        * system = "urn:oid:1.2.392.200119.4.102.5"
+        * system = $JP_ConditionDiseaseModifierMEDISExchange_CS
         * code = #08MV
         * display = "疾患"
       * text = "疾患"
@@ -66,7 +66,7 @@ Usage: #example
     * code = #MD13062
     * display = "大腸炎"
   * coding[1]
-    * system = "urn:oid:1.2.392.200119.4.101.6"
+    * system = $JP_ConditionDiseaseCodeMEDISExchange_CS
     * code = #VSES
     * display = "大腸炎"
   *  text = "過敏性大腸炎の初期疾患"

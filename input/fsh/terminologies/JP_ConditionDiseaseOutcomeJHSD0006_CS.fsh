@@ -8,7 +8,7 @@ Description: "JAHIS病名情報データ交換規約Ver.3.1C JHSD表00006-転帰
 * ^date = "2023-08-05"
 * ^caseSensitive = true
 * ^content = #complete
-* ^copyright = "Copyright Japanese  Association of Healthcare Information Systems Industry(JAHIS)  一般社団法人保健医療福祉情報システム工業会"
+* ^copyright = "Copyright Japanese Association of Healthcare Information Systems Industry(JAHIS)  一般社団法人保健医療福祉情報システム工業会"
 
 * #I "中止"
 * #M "寛解"
