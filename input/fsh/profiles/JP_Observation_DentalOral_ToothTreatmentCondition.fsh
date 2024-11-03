@@ -44,8 +44,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category[third] from $JP_ObservationDentalCategory_VS (required)
 * category[third].coding.system = $JP_ObservationDentalCategory_CS (exactly)
 * category[third].coding.code 1..1
-* category[third].coding.code = #ToothTreatmentCondition (exactly)
-* category[third].coding.display = "Tooth Treatment Condition"
+* category[third].coding.code = #DO-1-02 (exactly)
+* category[third].coding.display = "ToothTreatmentCondition"
 
 * insert SetDefinition(code.coding, このObservationの対象を特定するコード。LOINCより歯の有無・状態を表す54570-7を選択する。)
 * code.coding.system = $Loinc_CS (exactly)
@@ -77,7 +77,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 2.厚生労働省標準標準歯式マスタ、レセプト電算処理用コード"
 * bodySite from JP_DentalBodySite_VS (preferred)
 * insert SetDefinition(bodySite, 特定の歯（歯式）)
-* subject.extension contains
+* bodySite.extension contains
     JP_Observation_DentalOral_BodyStructure named bodyStructure ..*
 
 * insert SetDefinition(method, 検査方法（目視、読影など)
@@ -91,27 +91,25 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(derivedFrom, 未使用)
 * insert SetDefinition(component, 特定の現存歯の処置状態)
 
-//* component.code ^slicing.discriminator.type = #value
-//* component.code ^slicing.discriminator.path = "coding.system"
-//* component.code ^slicing.rules = #open
-//* component.code contains
-//    primary 1..1 and
-//    sub 1..1
+* component.code.coding ^slicing.discriminator.type = #value
+* component.code.coding ^slicing.discriminator.path = "system"
+* component.code.coding ^slicing.rules = #open
+* component.code.coding contains
+   primary 1..1 and
+   sub 1..1
 * component.code ^comment = "2つのいずれかのコードを設定する。
 主コード（primary）は、細かい粒度の現存歯の処置状態
 副コード（sub）は、粗い粒度の現存歯の処置状態"
 
-//* insert SetDefinition(component.code[primary], 細かい粒度の現存歯の処置状態)
-//* component.code[primary] from JP_DentalPresentTeethObservation_VS (preferred)
-//* component.code[primary].coding.system = $JP_DentalPresentTeethObservation_CS (exactly)
-//* component.code[primary].coding.code 1..1
-//* component.code[primary].coding.code = $JP_DentalPresentTeethObservation_CS (exactly)
+* insert SetDefinition(component.code.coding[primary], 細かい粒度の現存歯の処置状態)
+* component.code.coding[primary] from JP_DentalPresentTeethObservation_VS (preferred)
+* component.code.coding[primary].system = $JP_DentalPresentTeethObservation_CS (exactly)
+* component.code.coding[primary].code 1..1
 
-//* insert SetDefinition(component.code[sub], 粗い粒度の現存歯の処置状態)
-//* component.code[sub] from JP_DentalSimplePresentTeethObservation_VS (preferred)
-//* component.code[sub].coding.system = $JP_DentalSimplePresentTeethObservation_CS (exactly)
-//* component.code[sub].coding.code 1..1
-//* component.code[sub].coding.code = $JP_DentalSimplePresentTeethObservation_CS (exactly)
+* insert SetDefinition(component.code.coding[sub], 粗い粒度の現存歯の処置状態)
+* component.code.coding[sub] from JP_DentalSimplePresentTeethObservation_VS (preferred)
+* component.code.coding[sub].system = $JP_DentalSimplePresentTeethObservation_CS (exactly)
+* component.code.coding[sub].code 1..1
 
 
 // ==============================
@@ -133,4 +131,4 @@ Description: "特定の歯の歯面を格納するための拡張"
 * . ^definition = "特定の歯の歯面を格納するための拡張"
 * url = $JP_Observation_DentalOral_BodyStructure (exactly)
 * value[x] only CodeableConcept
-* valueCodeableConcept from $JP_DentalBodyStructure_VS (preferred)
+* valueCodeableConcept.coding from $JP_DentalBodyStructure_VS (preferred)

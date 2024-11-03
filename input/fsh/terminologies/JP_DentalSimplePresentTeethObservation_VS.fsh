@@ -1,4 +1,4 @@
-ValueSet: JP_DentalSipmlePresentTeethObservation_VS
+ValueSet: JP_DentalSimplePresentTeethObservation_VS
 Id: jp-dental-simple-presentteeth-observation-vs
 Title: "JP Core Dental SimplePresentTeethObservation ValueSet"
 Description: "JP Coreにて定義した歯科のObservationリソースに関する現存歯の観察結果コード（簡易版）"
