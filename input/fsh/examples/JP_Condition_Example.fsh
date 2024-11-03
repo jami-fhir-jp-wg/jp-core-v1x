@@ -17,7 +17,7 @@ Usage: #example
     *  code = #problem-list-item
 *  severity
   *  coding[0]
-    *  system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionSeverity_CS"
+    *  system = $JP_ConditionSeverity_CS
     *  code = #MO
     *  display = "中度"
 *  code
