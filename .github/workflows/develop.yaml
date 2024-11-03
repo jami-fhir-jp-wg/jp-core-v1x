@@ -64,6 +64,8 @@ jobs:
     - name: Setup Sushi
       run: |
         sudo npm install -g fsh-sushi
+        sudo apt install language-pack-ja
+        sudo apt update-locale LANG=ja_JP.UTF8
 
     - name: Install Jekyll
       run: |
