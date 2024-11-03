@@ -28,21 +28,21 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * insert SetDefinition(category[first], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
 * category[first] from JP_SimpleObservationCategory_VS (required)
-//* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
 * category[first].coding.code 1..1
-//* category[first].coding.code = $JP_SimpleObservationCategory_CS#procedure (exactly)
+* category[first].coding.code = #procedure (exactly)
 
 * insert SetDefinition(category[second], このObservationに関するLOINC上の分類、必須項目)
 * category[second].coding.system = $Loinc_CS (exactly)
 * category[second].coding.code 1..1
-* category[second].coding.code = $Loinc_CS#LP89803-8 (exactly)
+* category[second].coding.code = #LP89803-8 (exactly)
 * category[second].coding.display = "Dental"
 
 * insert SetDefinition(category[third], このObservationに関する詳細分類、JP_ObservationDentalCategory_VSより選択する、必須項目)
-//* category[third] from $JP_ObservationDentalCategory_VS (required)
-//* category[third].coding.system = $JP_ObservationDentalCategory_CS (exactly)
+* category[third] from $JP_ObservationDentalCategory_VS (required)
+* category[third].coding.system = $JP_ObservationDentalCategory_CS (exactly)
 * category[third].coding.code 1..1
-//* category[third].coding.code = $JP_ObservationDentalCategory_CS#MissingToothCondition (exactly)
+* category[third].coding.code = #MissingToothCondition (exactly)
 * category[third].coding.display = "Missing Tooth Condition"
 
 * insert SetDefinition(code.coding, このObservationの対象を特定するコード。LOINCより歯の有無・状態を表す54570-7を選択する。)

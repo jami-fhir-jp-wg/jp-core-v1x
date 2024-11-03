@@ -3,16 +3,13 @@ Parent: JP_Observation_Common
 Id: jp-observation-dentaloral-toothtreatmentcondition
 Title: "JP Core Observation DentalOral Tooth Treatment Condition Profile"
 Description: "このプロファイルはObservationリソースに対して、口腔診査結果（口腔内所見）の特定の現存歯の処置データを送受信するための制約と拡張を定めたものである。"
-// extension 参照宣言
-//* extension contains
-//    JP_Obsercation_DentalOral_BodyStructure named bodyStructure ..1
+//extension 参照宣言
 
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_ToothTreatmentCondition"
 * ^status = #active
 * ^date = "2024-10-31"
 * . ^short = "特定の現存歯の処置状態のプロファイル"
 * . ^definition = "口腔診査結果レポートの特定の現存歯の処置状態のプロファイル"
-
 * insert SetDefinition(identifier, 当該口腔診査（検査項目）に対して、施設内で割り振られる一意の識別子。例えば、実施日に連番を付加した番号など。)
 * insert SetDefinition(basedOn, 未使用)
 * insert SetDefinition(partOf, 未使用)
@@ -32,9 +29,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * insert SetDefinition(category[first], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
 * category[first] from JP_SimpleObservationCategory_VS (required)
-//* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
 * category[first].coding.code 1..1
-//* category[first].coding.code = $JP_SimpleObservationCategory_CS#procedure (exactly)
+* category[first].coding.code = #procedure (exactly)
+* category[first].coding.display = "Procedure"
 
 * insert SetDefinition(category[second], このObservationに関するLOINC上の分類、必須項目)
 * category[second].coding.system = $Loinc_CS (exactly)
@@ -43,10 +41,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category[second].coding.display = "Dental"
 
 * insert SetDefinition(category[third], このObservationに関する詳細分類、JP_ObservationDentalCategory_VSより選択する、必須項目)
-//* category[third] from $JP_ObservationDentalCategory_VS (required)
-//* category[third].coding.system = $JP_ObservationDentalCategory_CS (exactly)
+* category[third] from $JP_ObservationDentalCategory_VS (required)
+* category[third].coding.system = $JP_ObservationDentalCategory_CS (exactly)
 * category[third].coding.code 1..1
-//* category[third].coding.code = $JP_ObservationDentalCategory_CS#ToothTreatmentCondition (exactly)
+* category[third].coding.code = #ToothTreatmentCondition (exactly)
 * category[third].coding.display = "Tooth Treatment Condition"
 
 * insert SetDefinition(code.coding, このObservationの対象を特定するコード。LOINCより歯の有無・状態を表す54570-7を選択する。)
@@ -77,8 +75,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * bodySite ^comment = "優先順位は以下の番号を推奨する。
 1.FDI
 2.厚生労働省標準標準歯式マスタ、レセプト電算処理用コード"
-// bodySite from JP_DentalBodySite_VS (preferred)
+* bodySite from JP_DentalBodySite_VS (preferred)
 * insert SetDefinition(bodySite, 特定の歯（歯式）)
+* subject.extension contains
+    JP_Observation_DentalOral_BodyStructure named bodyStructure ..*
 
 * insert SetDefinition(method, 検査方法（目視、読影など)
 * insert SetDefinition(specimen, 未使用)
@@ -125,12 +125,12 @@ Id: jp-observation-dentaloral-bodystructure
 Title: "JP Core Observation DentalOral BodyStructure Extension"
 Description: "特定の歯の歯面を格納するための拡張"
 * ^url = $JP_Observation_DentalOral_BodyStructure
-* ^status = #active
+//* ^status = #active
 * ^date = "2024-10-31"
 * ^context.type = #element
-* ^context.expression = "BodySite"
+* ^context.expression = "CodeableConcept"
 * . ^short = "特定の歯の歯面"
 * . ^definition = "特定の歯の歯面を格納するための拡張"
 * url = $JP_Observation_DentalOral_BodyStructure (exactly)
 * value[x] only CodeableConcept
-//* valueCodeableConcept from $JP_DentalBodyStructure_VS (preferred)
+* valueCodeableConcept from $JP_DentalBodyStructure_VS (preferred)
