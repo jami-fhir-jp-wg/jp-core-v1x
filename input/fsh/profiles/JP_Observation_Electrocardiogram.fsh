@@ -44,7 +44,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * code.coding ^slicing.ordered = false
 * code.coding contains
     ekgCode 1..1
-* code.coding[ekgCode].system = #Loinc_CS (exactly)
+* code.coding[ekgCode].system = $Loinc_CS (exactly)
 * code.coding[ekgCode].code = #11524-6 (exactly)
 * code.coding[ekgCode].display = "EKG Study"
 * code.coding[ekgCode] ^short = "心電図検査(EKG Study)を示すLOINCコード 11524-6 を固定値として指定する。"
