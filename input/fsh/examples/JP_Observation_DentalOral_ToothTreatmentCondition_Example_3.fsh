@@ -20,4 +20,4 @@ Usage: #example
 * bodyStructure[+] = $JP_DentalBodyStructure_VS#TP-17-01 "遠心面Ｄ"
 * bodyStructure[+] = $JP_DentalBodyStructure_VS#TP-18-01 "歯冠部"
 * component[0].code[primary] = $JP_DentalPresentTeethObservation_VS#TP-11-22 "部分修復（単純・複雑の情報なし）（金属インレー・金色）（Ｉｎ）"
-* component[0].code[sub]= $JP_DentalSimplePresentTeethObservation_VS#TD-2-10 "現在歯【処置歯○】（ブリッジＢｒ支台を含む）"
+* component[0].code[sub] = $JP_DentalSimplePresentTeethObservation_VS#TD-2-10 "現在歯【処置歯○】（ブリッジＢｒ支台を含む）"

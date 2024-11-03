@@ -16,4 +16,4 @@ Usage: #example
 * bodySite = $JP_DentalBodySite_VS#TB-2-1015 "右側上顎第２小臼歯"
 * bodyStructure = $JP_DentalBodyStructure_VS#TP-18-01 "歯冠部"
 * component.code[primary] = $JP_DentalPresentTeethObservation_VS#TP-21-01 "全部修復（全部金属冠・銀色）（ＦＭＣ）"
-* component.code[sub]= $JP_DentalSimplePresentTeethObservation_VS#TD-2-10 "現在歯【処置歯○】（ブリッジＢｒ支台を含む）"
+* component.code[sub] = $JP_DentalSimplePresentTeethObservation_VS#TD-2-10 "現在歯【処置歯○】（ブリッジＢｒ支台を含む）"

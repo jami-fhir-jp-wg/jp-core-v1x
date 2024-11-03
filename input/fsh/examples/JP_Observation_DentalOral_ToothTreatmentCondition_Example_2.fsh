@@ -16,6 +16,6 @@ Usage: #example
 * bodySite = $JP_DentalBodySite_VS#TB-2-1011 "右側上顎中切歯"
 * bodyStructure = $JP_DentalBodyStructure_VS#TP-18-01 "歯冠部"
 * component[0].code[primary] = $JP_DentalPresentTeethObservation_VS#TP-3-02 "失活歯"
-* component[0].code[sub]= $JP_DentalSimplePresentTeethObservation_VS#TD-2-10 "現在歯【処置歯○】（ブリッジＢｒ支台を含む）"
+* component[0].code[sub] = $JP_DentalSimplePresentTeethObservation_VS#TD-2-10 "現在歯【処置歯○】（ブリッジＢｒ支台を含む）"
 * component[+].code[primary] = $JP_DentalPresentTeethObservation_VS#TP-21-06 "全部修復（全部非金属冠・材質不明、又は材質記載なし・歯冠色）（ＪＣ）"
-* component[+].code[sub]= $JP_DentalSimplePresentTeethObservation_VS#TD-2-10 "現在歯【処置歯○】（ブリッジＢｒ支台を含む）"
+* component[+].code[sub] = $JP_DentalSimplePresentTeethObservation_VS#TD-2-10 "現在歯【処置歯○】（ブリッジＢｒ支台を含む）"
