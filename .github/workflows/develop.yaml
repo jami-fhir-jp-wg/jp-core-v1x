@@ -27,8 +27,8 @@ jobs:
     - name: Extract branch name
       run: |
         sudo apt install language-pack-ja
+        sudo yum install glibc-langpack-ja
         sudo update-locale LANG=ja_JP.UTF8
-        sudo apt install glibc-langpack-ja
         sudo localectl set-locale LANG=ja_JP.utf8
         sudo localectl set-keymap jp106
 
@@ -45,8 +45,6 @@ jobs:
       id: extract_date
       shell: bash
       run: |
-        sudo apt install language-pack-ja
-        sudo update-locale LANG=ja_JP.UTF8
         echo "date=$(git log -1 --format="%at" | xargs -I{} date -d @{})" >> $GITHUB_OUTPUT
         title_temp=$(echo ${{ github.event.pull_request.title }} | sed 's/\[/【/g; s/\]/】/g; s/\:/：/g; s/\-/－/g')
         echo "encoded_pullrequest_title=$title_temp" >> $GITHUB_ENV
