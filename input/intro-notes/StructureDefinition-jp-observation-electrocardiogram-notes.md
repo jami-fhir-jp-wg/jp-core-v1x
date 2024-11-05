@@ -21,6 +21,8 @@
 | --- | --- | --- | --- |
 |誘導の数|心電図検査を行った際に測定される誘導の数|JP_Observation_Electrocardiogram_NumberOfLead|integer|
 |自動判定|自動判定の有無|JP_Observation_Electrocardiogram_DeviceInterpertation|boolean|
+|測定時間|測定した時間の長さ|JP_Observation_Electrocardiogram_Duration|Duration, CodeableConcept|
+|負荷条件|負荷心電図の種類|
 
 
 ### 用語定義
