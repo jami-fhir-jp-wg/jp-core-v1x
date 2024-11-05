@@ -1,6 +1,6 @@
 ValueSet: JP_ObservationElectrocardiogramStressType_VS
 Id: jp-observation-electrocardiogram-stresstype-vs
-Title: "JP Core Observation ElectroCardioGram StressType ValueSet"
+Title: "JP Core Observation Electrocardiogram StressType ValueSet"
 Description: "JP Coreにて定義した心電図のObservationリソースに関する詳細分類コード（負荷タイプ）"
 * ^url = $JP_ObservationElectrocardiogramStressType_VS
 * ^status = #active
