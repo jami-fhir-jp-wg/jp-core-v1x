@@ -44,7 +44,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * insert SetDefinition(code, 心電図検査を示すコード)
 * code from $JP_ObservationElectrocardiogramComponentCode_VS (preferred)
-* code.coding = $Loinc_CS#11524-6 (exactly) //"EKG Study"
+* code.coding = $Loinc_CS#11524-6 "EKG Study" (exactly)
 * code ^comment = "心電図検査(EKG Study)を示すLOINCコード 11524-6 を固定値として指定する。"
 * subject only Reference(JP_Patient or Group or Device or JP_Location)
 * insert SetDefinition(subject, このObservationの対象となる患者や患者群、機器、場所に関する情報)
@@ -171,12 +171,12 @@ Description: "心電図検査で測定を行った時間を記録するための
 //-------------------------------
 Extension: JP_Observation_Electrocardiogram_StressType
 Id: jp-observation-electrocardiogram-stresstype
-Title: "JP Core Observation Electrocardiogram Duration Extention"
+Title: "JP Core Observation Electrocardiogram StressType Extention"
 Description: "負荷心電図検査の種別について記録する。"
 * ^url = $JP_Observation_Electrocardiogram_StressType
 * ^status = #active
 * ^date = "2024-11-15"
-* ^purpose = "このプロファイルでは負荷心電図検査を記録するに十分な要素をそろえていないが、将来的に拡張することに備えて負荷心電図の種別について記録で器量にした。"
+* ^purpose = "このプロファイルでは負荷心電図検査を記録するに十分な要素をそろえていないが、将来的に拡張することに備えて負荷心電図の種別について記録できるようにした。"
 * ^context.type = #element
 * ^context.expression = "Observation"
 * . ^short = "負荷心電図種別"
@@ -186,4 +186,4 @@ Description: "負荷心電図検査の種別について記録する。"
 * value[x] only CodeableConcept
 * valueCodeableConcept from JP_ObservationElectrocardiogramStressType_VS (example)
 * value[x] ^short = "心電図の測定時間(長さ)"
-* value[x] ^definition = "心電図を測定した時間の長さを記録するための拡張である。"
+* value[x] ^definition = "心電図を測定した時間の長さを記録するための拡張である。Durationとして数値を示すか、プリセットされた値としてコードを指定することもできる。"
