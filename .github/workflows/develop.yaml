@@ -27,7 +27,6 @@ jobs:
     - name: Extract branch name
       run: |
         sudo apt install language-pack-ja
-        sudo yum install glibc-langpack-ja
         sudo update-locale LANG=ja_JP.UTF8
         sudo localectl set-locale LANG=ja_JP.utf8
         sudo localectl set-keymap jp106
