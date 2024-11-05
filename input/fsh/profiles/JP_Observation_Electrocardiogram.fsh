@@ -42,7 +42,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category.coding[extraCategory].system = $JP_ObservationElectrocardiogramExtraCategory_CS
 
 * insert SetDefinition(code, 心電図検査を示すコード)
-//* code from $Loinc_CS
 * code.coding = $Loinc_CS#11524-6 "EKG Study" (exactly)
 * code ^comment = "心電図検査(LOINC: EKG Study)を示すLOINCコード 11524-6 を固定値として指定する。"
 * subject only Reference(JP_Patient or Group or Device or JP_Location)

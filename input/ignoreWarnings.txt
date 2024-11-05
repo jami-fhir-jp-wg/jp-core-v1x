@@ -20,9 +20,13 @@ ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B
 
 # CodeSystem
 A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
+A definition for CodeSystem 'urn:ietf:rfc:3986' could not be found, so the code cannot be validated
 
 #  Local CodeSystems Warnings
 A definition for CodeSystem 'http://abc-hospital.local/fhir/Observation/localcode' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://abc-hospital.local/fhir/ObservationOrder/localcode' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://terminology.sample.com/CodeSystem/disease/1311234567' could not be found, so the code cannot be validated
 A definition for CodeSystem 'http://terminology.sample.com/CodeSystem/disease-outcome' could not be found, so the code cannot be validated
+
+# language
+%in the language en

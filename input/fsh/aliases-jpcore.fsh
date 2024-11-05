@@ -334,3 +334,8 @@ Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Procedure
 Alias: $JP_ReasonCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCodesJed_VS
 Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
+
+
+//system値
+Alias: $JP_InsuranceOrganization_IdSystem = urn:oid:1.2.392.100495.20.3.61
+Alias: $JP_InsuranceOrganizationNo_IdSystem = urn:oid:1.2.392.100495.20.3.23

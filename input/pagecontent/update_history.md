@@ -1,38 +1,40 @@
 ***v1.2.0***
 
 * 全般
-  * v1.1.2により不具合の修正および追加プロファイルの対応を実施した
-  * 各プロファイルのベースとなるFHIR Versionは4.0.1を維持した。
-  * 不具合を除き下位互換性を保つことを重視している
-  * 誤字・脱字等の見直しを行なった
-   * Copyrightについて記述の見直しを行った
-* プロファイル関連
+  * 主に「v1.1.2に関する不具合」を修正し、新たに「プロファイル」の追加を行った
+  * 各プロファイルのベースとなるFHIR Versionは4.0.1を維持した
+  * 不具合等のやむを得ない場合の除き、下位互換性を保つことを重視している
+  * Copyrightについて記述の見直しを行った
+* Profile関連
   * Administration グループ
-    * `JP_Coverage`にて被保険者識別子仕様を変更した
-      * 被保険者識別子、非保険者識別子（CSV版）の２種類の識別子を定義した
-      * 非保険者識別子（CSV版）の先頭に保険者番号を付加する体系に変更した
-      * Identifier.assignerに保険者の情報をセットするように記述した
+    * `JP_Coverage`にて被保険者の識別子仕様を変更した
+      * 主にレセプト等で利用される被保険者個人識別子とv1.1.2以前より定義される被保険者識別子（CSV版）の２種類を利用できるように拡張した
+      * 厳密な一意性を保つため、被保険者識別子（CSV版）の先頭に保険者番号を付加する体系に変更した
+      * Identifier.assignerに保険者情報を設定した
       * 被保険者番号の枝番について、全角⇒半角に仕様を変更した
   * Medication グループ
-    * `JP_Medication`プロファイルのingredient.strength.denominatorを１回に固定した
+    * `JP_Medication`プロファイルにおいて、ingredient.strength.denominatorを1回の固定値設定した
     * `JP_MedicationStatement`プロファイルおよび `JP_MedicationStatement_Injection`プロファイルを追加した
     * `JP_MedicationRequest_Injection`プロファイル, `JP_MedicationDispense_Injection`プロファイル, `JP_MedicationAdministration_Injection`プロファイル, `JP_MedicationStatement_Injection`プロファイルに関するmedicationの参照に関する記述を付加した
-    * 操作：$everythingが不要であるため記述を削除した
+    * 操作：$everythingが不要であるため、Medication関連プロファイルを記述を削除した
   * Diagnostic グループ
     * Observation
       * `JP_Observation_Radiology_Findings`プロファイルおよび`JP_Observation_Radiology_Impression`プロファイルを追加した
       * `JP_Observation_Electrocardiogram`プロファイルを追加した
       * `JP_Observation_Endoscopy`プロファイルを追加した
       * `JP_Observation_VitalSigns`プロファイルのcategoryに対する`JP_SimpleObservationCategory_CS`に対する多重度を1..*から0..*に変更した
-      * `JP_Specimen_Common`プロファイルを追加、これにあわせ`JP_Specimen`プロファイルを削除した
+      * `JP_Specimen_Common`プロファイルを追加、それに伴い`JP_Specimen`プロファイルを削除した
       * `JP_Observation_DentalOral_ToothExistence`プロファイルを追加定義した
       * `JP_Observation_DentalOral_ToothTreatmentCondition`プロファイルを追加定義した
       * `JP_Observation_DentalOral_MissingToothCondition`プロファイルを追加定義した
     * ImagingStudy
-      * `JP_ImagingStudy_Radiology`プロファイルのseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した
+      * `JP_ImagingStudy_Radiology`プロファイルのmodalityおよびseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した
+      * `JP_ImagingStudy_Endoscopy`プロファイルのmodalityおよびseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した。
     * DiagnosticReport
       * `JP_DiagnosticReport_Radiology`プロファイルのcategoryに対するバインド対象を`JP_DICOMModality_VS`に変更した
       * `JP_DiagnosticReport_Radiology`プロファイルにて、`JP_Observation_Radiology_Findings`および`JP_Observation_Radiology_Impression`を要素に設定できる点について修正し、その関係性に関する記述を記載した。
+      * `JP_DiagnosticReport_Endoscopy`プロファイルにて、`JP_Observation_Endoscopy`を要素に設定できる点について修正し、その関係性に関する記述を記載した。
+
       * `JP_DiagnosticReport_DentalOral`プロファイルを追加定義した
     * Media
       * `JP_Media_Endoscopy`プロファイルを追加定義した
@@ -43,13 +45,13 @@
       * MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`
       * レセプト電算用傷病名マスタ`JP_ConditionDiseaseCodeReceipt_CS`
   * Workflow グループ
-    * `JP_ServiceRequest_Common`プロファイルを追加、これにあわせ`JP_ServiceRequest`を削除した
+    * `JP_ServiceRequest_Common`プロファイルを追加、それに伴い`JP_ServiceRequest`を削除した
   * SearchParameterおよびOperation関連
-    * SearchParameterの記述不具合（型指定やSearchParameterRegistryとの違い）について修正した
+    * SearchParameterの記述不具合（型指定や名称）やSearchParameterRegistryの差異を比較しを修正しました。
     * SearchParameterのexpressionのFHIRPath記述に対する指摘に対応した
     * `JP_ImagingStudy_Radiology`のIdentifierに関するConformanceをSHALLに変更した
   * Terminology関連
-    * 以下のCodeSystemおよびValueSet追加した
+    * 以下のコードシステムおよびバリューセットを追加/削除した
       * `JP_ConditionDieaseCodeReceipt_CS`
       * `JP_ConditionDieaseModifierReceipt_CS`
       * `JP_ConditionDieaseOutcomeHL70241_CS`
@@ -92,6 +94,8 @@
       * `JP_ObservationDentalCategory_CS`
       * `JP_ObservationDentalCategory_VS`
       * `JP_ObservationElectrocardiogramInterpretationCode_CS`
+      * `JP_ObservationEndoscopyCode_VS`
+      * `JP_ObservationEndoscopyValueJed_VS`
     * 以下のCodeSystem,ValueSetを削除した
       * `JP_ObservationBodySite_CS`
       * `JP_ObservationBodySite_VS`
@@ -99,11 +103,11 @@
     * 病名マスタ(MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`,MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`,レセプト電算用傷病名マスタ`JP_ConditionDiseaseCodeReceipt_CS`)を用語として追加した
 
   * Capability Statement関連
-    * 単数パラメーターのConformanceの指定に対応した
-    * 複数パラメータの指定の指定に対応した
+    * 単数パラメータのConformanceの指定に対応した
+    * 複数パラメータの指定に対応した
     * Operation定義を追加した
   * Security関連
-    * JP Core内にてMustSupportはユースケースによっては利用される旨に記載を変更した
+    * JP CoreにおけるMustSupportの記載を、ユースケースによっては利用される場合を考慮し変更した
   
 ***v1.1.2***
 
