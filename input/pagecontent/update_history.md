@@ -28,10 +28,13 @@
       * `JP_Observation_DentalOral_ToothTreatmentCondition`プロファイルを追加定義した
       * `JP_Observation_DentalOral_MissingToothCondition`プロファイルを追加定義した
     * ImagingStudy
-      * `JP_ImagingStudy_Radiology`プロファイルのseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した
+      * `JP_ImagingStudy_Radiology`プロファイルのmodalityおよびseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した
+      * `JP_ImagingStudy_Endoscopy`プロファイルのmodalityおよびseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した。
     * DiagnosticReport
       * `JP_DiagnosticReport_Radiology`プロファイルのcategoryに対するバインド対象を`JP_DICOMModality_VS`に変更した
       * `JP_DiagnosticReport_Radiology`プロファイルにて、`JP_Observation_Radiology_Findings`および`JP_Observation_Radiology_Impression`を要素に設定できる点について修正し、その関係性に関する記述を記載した。
+      * `JP_DiagnosticReport_Endoscopy`プロファイルにて、`JP_Observation_Endoscopy`を要素に設定できる点について修正し、その関係性に関する記述を記載した。
+
       * `JP_DiagnosticReport_DentalOral`プロファイルを追加定義した
     * Media
       * `JP_Media_Endoscopy`プロファイルを追加定義した
@@ -91,6 +94,8 @@
       * `JP_ObservationDentalCategory_CS`
       * `JP_ObservationDentalCategory_VS`
       * `JP_ObservationElectrocardiogramInterpretationCode_CS`
+      * `JP_ObservationEndoscopyCode_VS`
+      * `JP_ObservationEndoscopyValueJed_VS`
     * 以下のCodeSystem,ValueSetを削除した
       * `JP_ObservationBodySite_CS`
       * `JP_ObservationBodySite_VS`
