@@ -16,11 +16,11 @@ env:
   release_version : 1.2.0-dev
 jobs:
   turn:
-    runs-on: ubuntu-latest
     strategy:
       matrix:
         ruby-version: ['3.0']
     environment: SSH_PORT_JPFHIR  # JAMI WG アップロードサイトに関するアクセス情報の環境名
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
 
@@ -68,6 +68,7 @@ jobs:
     - name: Setup Sushi
       run: |
         sudo npm install -g fsh-sushi
+        
     - name: Install Jekyll
       run: |
         sudo apt-get install jekyll

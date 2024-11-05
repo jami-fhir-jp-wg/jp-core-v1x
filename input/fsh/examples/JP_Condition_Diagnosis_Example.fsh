@@ -41,7 +41,7 @@ Usage: #example
     * url = $JP_Condition_DiseasePrefixModifier
     * valueCodeableConcept
       * coding[0]
-        * system = $JP_ConditionDiseaseModifierMEDISExchange_CS
+        * system = $JP_ConditionDiseaseModifierReceipt_CS
         * code = #3216
         * display = "過敏性"
       * text = "過敏性"
@@ -49,7 +49,7 @@ Usage: #example
     * url = $JP_Condition_DiseasePostfixModifier
     * valueCodeableConcept
       * coding[0]
-        * system = $JP_ConditionDiseaseModifierMEDISExchange_CS
+        * system = $JP_ConditionDiseaseModifierReceipt_CS
         * code = #1111
         * display = "の初期"
       * text = "の初期"
@@ -57,7 +57,7 @@ Usage: #example
     * url = $JP_Condition_DiseasePostfixModifier
     * valueCodeableConcept
       * coding[0]
-        * system = $JP_ConditionDiseaseModifierMEDISExchange_CS
+        * system = $JP_ConditionDiseaseModifierReceipt_CS
         * code = #08MV
         * display = "疾患"
       * text = "疾患"
