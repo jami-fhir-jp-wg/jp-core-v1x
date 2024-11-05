@@ -17,25 +17,25 @@ Usage: #example
 * component[=].valueQuantity.unit = "{beats}/min"
 * component[+].code.coding = $Loinc_CS#8637-1 "RR interval"
 * component[=].code.text = "R-R interval by EKG"
-* component[=].valueQuantity.value = 0.8
-* component[=].valueQuantity.unit = "s"
+* component[=].valueQuantity.value = 800
+* component[=].valueQuantity.unit = "ms"
 * component[+].code.coding = $Loinc_CS#8625-6 "PR interval"
 * component[=].code.text = "PR interval"
-* component[=].valueQuantity.value = 0.16
-* component[=].valueQuantity.unit = "s"
+* component[=].valueQuantity.value = 160
+* component[=].valueQuantity.unit = "ms"
 * component[+].code.coding = $Loinc_CS#8633-0 "QRS duration"
 * component[=].code.text = "QRS duration"
 * component[=].valueQuantity.value = 90
 * component[=].valueQuantity.unit = "ms"
 * component[+].code.coding = $Loinc_CS#8634-8 "QT interval"
 * component[=].code.text = "QT interval"
-* component[=].valueQuantity.value = 0.4
-* component[=].valueQuantity.unit = "s"
+* component[=].valueQuantity.value = 400
+* component[=].valueQuantity.unit = "ms"
 * component[+].code.coding = $Loinc_CS#8636-3 "QTC interval"
 * component[=].code.text = "Q-T interval corrected"
-* component[=].valueQuantity.value = 0.42
-* component[=].valueQuantity.unit = "s"
-* component[+].code.coding = $Loinc_CS#9924-2 "P wave axis"
+* component[=].valueQuantity.value = 420
+* component[=].valueQuantity.unit = "ss"
+* component[+].code.coding = $Loinc_CS#8626-4 "P wave axis"
 * component[=].code.text = "P wave axis"
 * component[=].valueQuantity.value = 60
 * component[=].valueQuantity.unit = "deg"
