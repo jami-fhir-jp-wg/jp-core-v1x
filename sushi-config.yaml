@@ -124,7 +124,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - '*/jpfhir.jp.core'
   no-usage-check: 'true'
   i18n-default-lang: 'ja'
-  language: 'ja-JP'
+  i18n-lang: 'ja'
+  language: 'ja'
 
   # logging:
   #   - tx #tx: Messages describing the use of the terminology server (for debugging)
