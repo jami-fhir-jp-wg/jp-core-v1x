@@ -1,6 +1,6 @@
 ValueSet: JP_ObservationElectrocardiogramDuration_VS
 Id: jp-observation-electrocardiogram-duration-vs
-Title: "JP Core Observation ElectroCardioGram Duration ValueSet"
+Title: "JP Core Observation Electrocardiogram Duration ValueSet"
 Description: "JP Coreにて定義した心電図のObservationリソースに関する詳細分類コード（検査時間）"
 * ^url = $JP_ObservationElectrocardiogramDuration_VS
 * ^status = #active
