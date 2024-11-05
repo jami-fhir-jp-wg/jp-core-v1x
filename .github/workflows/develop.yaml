@@ -29,7 +29,6 @@ jobs:
         sudo apt install language-pack-ja
         sudo update-locale LANG=ja_JP.UTF8
         sudo localectl set-locale LANG=ja_JP.utf8
-        sudo localectl set-keymap jp106
 
         if ["${{ github.event.pull_request.head.ref }}" == ""]; then
           echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
