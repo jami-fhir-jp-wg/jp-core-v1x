@@ -5,7 +5,7 @@ Description: "安静時12誘導心電図"
 Usage: #example
 //* category = $JP_SimpleObservationCategory_CS#procedure "Procedure"
 * subject = Reference(Patient/jp-patient-example-1)
-* code.coding[ekgCode] = $Loinc_CS#11524-6 "EKG Study" 
+* code.coding = $Loinc_CS#11524-6 "EKG Study" 
 * effectiveDateTime = "2024-10-19T10:00:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * status = #final

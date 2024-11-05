@@ -21,6 +21,8 @@
 | --- | --- | --- | --- |
 |誘導の数|心電図検査を行った際に測定される誘導の数|JP_Observation_Electrocardiogram_NumberOfLead|integer|
 |自動判定|自動判定の有無|JP_Observation_Electrocardiogram_DeviceInterpertation|boolean|
+|測定時間|測定した時間の長さ|JP_Observation_Electrocardiogram_Duration|Duration, CodeableConcept|
+|負荷条件|負荷心電図の種類|JP_Observation_Electrocardiogram_StressType|CodeableConcept|
 
 
 ### 用語定義
@@ -47,13 +49,13 @@
 
 カテゴリー　必須<br>
 category.system = ["http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS"][JP_SimpleObservationCategory_CS]<br>
-category.code = "procedure"　固定値<br>
-category.display = "Procedure"　固定値<br>
+category.code = "procedure"　<br>
+category.display = "Procedure" <br>
 
 コード 必須　<br>
 code.coding.system = "http://loinc.org"<br>
-code.coding.code = "11524-6" 固定値
-code.coding.display = "EKG study"  固定値
+code.coding.code = "11524-6" <br>
+code.coding.display = "EKG study"<br>  
 
 ### OperationおよびSearch Parameter 一覧
 
