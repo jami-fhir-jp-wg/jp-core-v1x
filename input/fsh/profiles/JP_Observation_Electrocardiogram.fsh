@@ -30,22 +30,21 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category.coding ^slicing.rules = #open
 * category.coding ^slicing.ordered = false
 * category.coding contains
-//    simpleCategory 0..1 and
+    electrocardiogram 1..1 and
     extraCategory 0..1
-* insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には通常 procedure が指定される。必要に応じて)
+* insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には通常 procedure が指定される。必要に応じてextraCategoryを仕様する)
 * category.coding ^comment = "心電図検査は通常 procedure に分類される。"
-* category.coding from JP_SimpleObservationCategory_VS (required)
-//* category.coding[simpleCategory].system = $JP_SimpleObservationCategory_CS (exactly)
-//* category.coding[simpleCategory].code = $JP_SimpleObservationCategory_CS#procedure (exactly)
-//* category.coding[simpleCategory].display = "Procedure" (exactly)
+* category.coding[electrocardiogram] from JP_SimpleObservationCategory_VS (required)
+* category.coding[electrocardiogram].system = $JP_SimpleObservationCategory_CS (exactly)
+* category.coding[electrocardiogram].code = $JP_SimpleObservationCategory_CS#procedure (exactly)
+* category.coding[extraCategory] from JP_ObservationElectrocardiogramExtraCategory_VS (example)
 * category.coding[extraCategory] ^comment = "心電図検査について、負荷試験などの条件をつけた分類"
-* category.coding[extraCategory] from JP_ObservationElectrocardiogramExtraCategory_VS (preferred)
-// * category.coding[extraCategory].system = $JP_ObservationElectrocardiogramExtraCategory_CS
+* category.coding[extraCategory].system = $JP_ObservationElectrocardiogramExtraCategory_CS
 
 * insert SetDefinition(code, 心電図検査を示すコード)
-* code from $JP_ObservationElectrocardiogramComponentCode_VS (preferred)
+//* code from $Loinc_CS
 * code.coding = $Loinc_CS#11524-6 "EKG Study" (exactly)
-* code ^comment = "心電図検査(EKG Study)を示すLOINCコード 11524-6 を固定値として指定する。"
+* code ^comment = "心電図検査(LOINC: EKG Study)を示すLOINCコード 11524-6 を固定値として指定する。"
 * subject only Reference(JP_Patient or Group or Device or JP_Location)
 * insert SetDefinition(subject, このObservationの対象となる患者や患者群、機器、場所に関する情報)
 * subject ^comment = "この要素は1..1のcardinalityになるはずと考えられる。この要素が欠損値になる唯一の状況は、対象患者が不明なデバイスによって観察が行われるケースである。この場合、観察は何らかのコンテキスト/チャネルマッチング技術を介して患者にマッチングされる必要があり、患者にマッチングされれば、その時点で本要素を更新する必要がある。"
