@@ -1,8 +1,8 @@
-CodeSystem: JP_ObservationElectrogardiogramExtraCategory_CS
+CodeSystem: JP_ObservationElectrocardiogramExtraCategory_CS
 Id: jp-observation-electrocardiogram-extracategory-cs
 Title: "JP Core Observation Electrocardiogram Extra Category CodeSystem"
 Description: "JP Coreにて定義した心電図のObservationリソースに関する分類コード"
-* ^url = $JP_ObservationElectrogardiogramExtraCategory_CS
+* ^url = $JP_ObservationElectrocardiogramExtraCategory_CS
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-10-31"

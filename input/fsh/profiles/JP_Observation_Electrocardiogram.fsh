@@ -16,7 +16,7 @@ Description: "このプロファイルはObservationリソースに対して、�
     JP_Observation_Electrocardiogram_NumberOfLead named lead ..1 and
     JP_Observation_Electrocardiogram_DeviceInterpretation named deviceInterpretation ..1 and
     JP_Observation_Electrocardiogram_Duration named duration ..1 and
-    JP_Observation_Electrocardigoram_StressType named stressType ..1
+    JP_Observation_Electrocardiogram_StressType named stressType ..1
 * insert SetDefinition(identifier, この心電図を表すObservationリソースに対する一意な識別ID)
 * basedOn only Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
 * insert SetDefinition(basedOn, このObservationが実施されることになった検査オーダーや計画、提案に関する情報)
@@ -30,17 +30,17 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category.coding ^slicing.rules = #open
 * category.coding ^slicing.ordered = false
 * category.coding contains
-    simpleCategory 1..1 and
+//    simpleCategory 0..1 and
     extraCategory 0..1
-* insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には procedure が指定される。)
-* category.coding[simpleCategory] ^comment = "心電図検査は procedure に分類されている。"
-* category.coding[simpleCategory] from JP_SimpleObservationCategory_VS (required)
-* category.coding[simpleCategory].system = $JP_SimpleObservationCategory_CS (exactly)
-* category.coding[simpleCategory].code = $JP_SimpleObservationCategory_CS#procedure (exactly)
-* category.coding[simpleCategory].display = "Procedure" (exactly)
-* category.coding[extraCategory] ^comment = "心電図検査の分類"
-* category.coding[extraCategory] from JP_Observation_Electrocardigoram_Extra (preferred)
-* category.coding[extraCategory].system = $JP_ObservationElectrogardiogramExtraCategory_CS
+* insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には通常 procedure が指定される。必要に応じて)
+* category.coding ^comment = "心電図検査は通常 procedure に分類される。"
+* category.coding from JP_SimpleObservationCategory_VS (required)
+//* category.coding[simpleCategory].system = $JP_SimpleObservationCategory_CS (exactly)
+//* category.coding[simpleCategory].code = $JP_SimpleObservationCategory_CS#procedure (exactly)
+//* category.coding[simpleCategory].display = "Procedure" (exactly)
+* category.coding[extraCategory] ^comment = "心電図検査について、負荷試験などの条件をつけた分類"
+* category.coding[extraCategory] from JP_ObservationElectrocardiogramExtraCategory_VS (preferred)
+// * category.coding[extraCategory].system = $JP_ObservationElectrocardiogramExtraCategory_CS
 
 * insert SetDefinition(code, 心電図検査を示すコード)
 * code from $JP_ObservationElectrocardiogramComponentCode_VS (preferred)
@@ -161,8 +161,8 @@ Description: "心電図検査で測定を行った時間を記録するための
 * . ^definition = "心電図検査で測定が行われた時間を示す。"
 * url = $JP_Observation_Electrocardiogram_Duration (exactly)
 * value[x] 0..1
-* value[x] CodeableConcept | Duration
-* valueCodeableConcept from JP_ObservationElectrocardiogramDuration_VS 
+* value[x] only CodeableConcept or Duration
+* valueCodeableConcept from JP_ObservationElectrocardiogramDuration_VS (example)
 * value[x] ^short = "心電図の測定時間(長さ)"
 * value[x] ^definition = "心電図を測定した時間の長さを記録するための拡張である。"
 
@@ -184,6 +184,6 @@ Description: "負荷心電図検査の種別について記録する。"
 * url = $JP_Observation_Electrocardiogram_StressType (exactly)
 * value[x] 0..1
 * value[x] only CodeableConcept
-* valueCodeableConcept from JP_ObservationElectrocardiogramStressType_VS 
+* valueCodeableConcept from JP_ObservationElectrocardiogramStressType_VS (example)
 * value[x] ^short = "心電図の測定時間(長さ)"
 * value[x] ^definition = "心電図を測定した時間の長さを記録するための拡張である。"

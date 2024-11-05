@@ -1,8 +1,8 @@
-CodeSystem: JP_ObservationElectrogardiogramDuration_CS
+CodeSystem: JP_ObservationElectrocardiogramDuration_CS
 Id: jp-observation-electrocardiogram-duration-cs
-Title: "JP Core Observation ElectroCardioGram Duration CodeSystem"
+Title: "JP Core Observation Electrocardiogram Duration CodeSystem"
 Description: "JP Coreにて定義した心電図のObservationリソースに関する詳細分類コード（検査時間）"
-* ^url = $JP_ObservationElectrogardiogramDuration_CS
+* ^url = $JP_ObservationElectrocardiogramDuration_CS
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-10-31"
@@ -12,7 +12,7 @@ Description: "JP Coreにて定義した心電図のObservationリソースに関
 * #JECGDU0010 "30s"
 * #JECGDU0020 "1m"
 * #JECGDU0030 "3m"
-* #JECGDU0030 "5m"
+* #JECGDU0040 "5m"
 * #JECGDU0100 "24H"
 * #JECGDU0200 "7日"
 * #JECGDU0300 "14日"

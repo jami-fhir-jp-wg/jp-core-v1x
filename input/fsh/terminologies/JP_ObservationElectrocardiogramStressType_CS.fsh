@@ -1,8 +1,8 @@
-CodeSystem: JP_ObservationElectrogardiogramStressType_CS
+CodeSystem: JP_ObservationElectrocardiogramStressType_CS
 Id: jp-observation-electrocardiogram-stresstype-cs
-Title: "JP Core Observation ElectroCardioGram StressType CodeSystem"
+Title: "JP Core Observation Electrocardiogram StressType CodeSystem"
 Description: "JP Coreにて定義した心電図のObservationリソースに関する詳細分類コード（負荷タイプ）"
-* ^url = $JP_ObservationElectrogardiogramStressType_CS
+* ^url = $JP_ObservationElectrocardiogramStressType_CS
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-10-31"
