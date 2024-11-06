@@ -5,7 +5,9 @@
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
 # IG Defined
-This IG is version 4.0.1, while the IG%
+This IG is version %
+The definition for the element 'Consent.provision.code' binds to the value set 'http://hl7.org/fhir/ValueSet/consent-content-code' which is experimental, but this structure is not labeled as experimental
+
 
 # Warnings for Examples
 %The Implementation Guide contains no examples%
