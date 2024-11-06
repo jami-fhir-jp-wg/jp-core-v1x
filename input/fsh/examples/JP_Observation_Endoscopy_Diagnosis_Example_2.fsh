@@ -5,7 +5,7 @@ Description: "内視鏡診断（[鋸歯状病変] HP）"
 Usage: #example
 * status = #final
 * category[0] = $JP_SimpleObservationCategory_CS#procedure "Procedure"
-* category[1] = $Loinc_CS#LP7796-8 "Endoscopy"
+* category[1] = $Loinc_CS#LP7796-8 "内視鏡"
 * code
   * coding
     * system = $Loinc_CS
