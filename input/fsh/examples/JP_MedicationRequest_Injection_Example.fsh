@@ -54,10 +54,8 @@ Usage: #example
 * authoredOn = "2016-07-01T07:28:17+09:00"
 * requester = Reference(Practitioner/jp-practitioner-example-female-1)
 * insurance = Reference(Coverage/jp-coverage-example-1)
-* dosageInstruction.extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Device"
-* dosageInstruction.extension[=].valueReference = Reference(Device/jp-medicationrequest-injection-device-example-2)
-* dosageInstruction.extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line"
-* dosageInstruction.extension[=].valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
+* dosageInstruction.extension[device].valueReference = Reference(Device/jp-medicationrequest-injection-device-example-2)
+* dosageInstruction.extension[line].valueCodeableConcept.coding = $JP_MedicationExampleLine_CS#01 "末梢ルート"
 * dosageInstruction.text = "主管 静脈注射 左腕"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2016-07-01T08:00:00+09:00"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2016-07-01T13:00:00+09:00"

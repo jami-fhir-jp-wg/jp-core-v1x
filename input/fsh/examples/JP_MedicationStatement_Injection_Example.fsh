@@ -15,10 +15,8 @@ Usage: #example
 * informationSource = Reference(Patient/jp-patient-example-1)
 * derivedFrom = Reference(MedicationRequest/jp-medicationrequest-injection-example-2)
 * reasonCode = urn:oid:1.2.392.200119.4.101.6#TQ7A "急性気管支炎"
-* dosage.extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Device"
-* dosage.extension[=].valueReference = Reference(Device/jp-medicationstatement-injection-device-example-1)
-* dosage.extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line"
-* dosage.extension[=].valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
+* dosage.extension[device].valueReference = Reference(Device/jp-medicationstatement-injection-device-example-1)
+* dosage.extension[line].valueCodeableConcept.coding = $JP_MedicationExampleLine_CS#01 "末梢ルート"
 * dosage.text = "主管 静脈注射 左腕"
 * dosage.timing.repeat.boundsPeriod.start = "2016-07-01T08:00:00+09:00"
 * dosage.timing.repeat.boundsPeriod.end = "2016-07-01T13:00:00+09:00"

@@ -68,8 +68,8 @@ Usage: #example
 * performer.actor = Reference(Practitioner/jp-practitioner-example-female-1) "福岡 花子"
 * request = Reference(MedicationRequest/jp-medicationrequest-injection-example-2)
 * device = Reference(Device/jp-medicationadministration-injection-device-example-2) "IV Pump"
-* dosage.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line"
-* dosage.extension.valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
+* dosage.extension.url = $JP_MedicationDosage_Line
+* dosage.extension.valueCodeableConcept.coding = $JP_MedicationExampleLine_CS#01 "末梢ルート"
 * dosage.site.extension[bodySite].url = $bodySite
 * dosage.site.extension[bodySite].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-2) "左腕"
 * dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
