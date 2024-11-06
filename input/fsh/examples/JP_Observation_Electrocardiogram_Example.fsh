@@ -47,7 +47,7 @@ Usage: #example
 * component[=].code.text = "R wave amplitude in lead V5"
 * component[=].valueQuantity.value = 1.2
 * component[=].valueQuantity.unit = "mV"
-* component[+].code.coding = $Loinc_CS#10040-4 "S wave amplitude.lead V1"
+* component[+].code.coding = $Loinc_CS#10040-4 "S wave amplitude in lead V1"
 * component[=].code.text = "S wave amplitude in lead V1"
 * component[=].valueQuantity.value = 0.9
 * component[=].valueQuantity.unit = "mV"
