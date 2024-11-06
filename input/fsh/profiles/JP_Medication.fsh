@@ -111,3 +111,4 @@ Description: "投与量が製剤単位か成分単位かを格納する拡張"
 * url = $JP_Medication_IngredientStrength_StrengthType (exactly)
 * value[x] only CodeableConcept
 * value[x] from JP_MedicationIngredientStrengthStrengthType_VS (example)
+
