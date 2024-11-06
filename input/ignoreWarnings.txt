@@ -4,29 +4,33 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
+# IG Defined
+This IG is version 4.0.1, while the IG 
+
 # Warnings for Examples
 %The Implementation Guide contains no examples%
-This element does not match any known slice defined in the profile%
-
-# External Terminologies Existence Warnings
-Wrong Display Name%
+!!この要素はどの既知のスライスとも一致しません defined in the profile%
 
 # ベストプラクティス
-Rule dom-6%
+# Rule dom-6%
 
 # DICOM関係
-ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html' not found
-ValueSet 'http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1' not found
+!!ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1が見つかりません
 
 # CodeSystem
-A definition for CodeSystem 'urn:iso:std:iso:3166' could not be found, so the code cannot be validated
-A definition for CodeSystem 'urn:ietf:rfc:3986' could not be found, so the code cannot be validated
+!!!!!!!!CodeSystem urn:iso:std:iso:3166は未知です
+!!!!!!!!CodeSystem urn:ietf:rfc:3986は未知です
 
 #  Local CodeSystems Warnings
-A definition for CodeSystem 'http://abc-hospital.local/fhir/Observation/localcode' could not be found, so the code cannot be validated
-A definition for CodeSystem 'http://abc-hospital.local/fhir/ObservationOrder/localcode' could not be found, so the code cannot be validated
-A definition for CodeSystem 'http://terminology.sample.com/CodeSystem/disease/1311234567' could not be found, so the code cannot be validated
-A definition for CodeSystem 'http://terminology.sample.com/CodeSystem/disease-outcome' could not be found, so the code cannot be validated
+!!!!!!!!CodeSystem http://abc-hospital.local/fhir/Observation/localcodeは未知です
+!!!!!!!!CodeSystem http://abc-hospital.local/fhir/ObservationOrder/localcodeは未知です
+!!!!!!!!CodeSystem http://terminology.sample.com/CodeSystem/disease-outcomeは未知です
+!!!!!!!!CodeSystem http://terminology.sample.com/CodeSystem/disease/1311234567は未知です
 
-# language
-%in the language en
+# information level
+%which has status 'fragment'
+NO_VALID_DISPLAY_FOUND_LANG_NONE_other
+
+# 個別
+	urn:oid:1.2.392.200119.4.403.1#103835401 の誤ったdisplay 'ムコダイン錠２５０ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'ムコダイン錠２５０ｍｇ・杏林製薬' (ja) (言語 'ja-JP' のため)
+    urn:oid:1.2.392.200119.4.403.1#110926901 の誤ったdisplay 'パンスポリンＴ錠１００ １００ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'パンスポリンＴ錠１００・武田薬品' (ja) (言語 'ja-JP' のため)

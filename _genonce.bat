@@ -3,16 +3,10 @@ SET publisher_jar=publisher.jar
 SET input_cache_path=%CD%\input-cache
 
 ECHO Checking internet connection...
-PING tx.fhir.org -4 -n 1 -w 1000 | FINDSTR TTL && GOTO isonline
 ECHO We're offline...
+SET javaoption=-Duser.language=ja -Duser.country=JP -Djava.awt.headless=true
+@REM SET javaoption= -Xmx12G -Duser.language=ja -Duser.country=JP -Djava.awt.headless=true
 SET txoption=-tx n/a
-GOTO igpublish
-
-:isonline
-ECHO We're online
-SET txoption=
-
-:igpublish
 
 SET JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
 
