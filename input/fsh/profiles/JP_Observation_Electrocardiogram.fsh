@@ -64,9 +64,34 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(dataAbsentReason, このObservationのvalue[x]要素に期待される結果が存在しなかった場合、その理由)
 * dataAbsentReason ^comment = "ヌル値または例外値は、FHIRオブザベーションで2つの方法で表すことができる。 1つの方法は、それらを値セットに含めて、値の例外を表す方法である。たとえば、血清学的検査の測定値は、「検出された」、「検出されなかった」、「決定的でない」、または「検体が不十分」である可能性がある。別の方法は、実際の観測にvalue要素を使用し、明示的なdataAbsentReason要素を使用して例外的な値を記録することである。たとえば、測定が完了しなかった場合、dataAbsentReasonコード「error」を使用できる。この場合には、観測値は、報告する値がある場合にのみ報告される可能性があることに注意する必要がある。たとえば、差分セルカウント値は> 0の場合にのみ報告される場合がある。これらのオプションのため、nullまたは例外値の一般的な観測値を解釈するにはユースケースの合意が必要である。"
 * insert SetDefinition(interpretation, 心電図所見)
-* interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (extensible)
+
+//* interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (extensible)
 * interpretation ^comment = "心電図所見・解釈について記載する。心電図所見は測定された結果と1対1で対応するものではなく、総合的に判断されるものである。したがって所見や解釈はこのエレメントに列記することとした。所見については、ミネソタコードを元に学会や検査機器ベンダーが用語集を作成している。必要に応じてそれらのコードを仕様することを推奨する。"
 * interpretation ^requirements = "心電図所見についてのコード集を別途提示する。"
+* interpretation ^slicing.discriminator.type = #value
+* interpretation ^slicing.discriminator.path = "coding.system"
+* interpretation ^slicing.rules = #open
+* interpretation ^slicing.ordered = false
+* interpretation contains
+    ECAPS 0..1 and
+    MINNESOTA1987_NK 0..1 and
+    MINNESOTA2005_NK 0..1 and
+    FKD_GRADE 0..1 and
+    FKD_INTER 0..1 and
+    MINESOTA_CODE 0..1
+* interpretation[ECAPS].coding.system = "urn:oid:1.2.392.200119.5.2.3.3.1" (exactly)
+* interpretation[MINNESOTA1987_NK].coding.system = "urn:oid:1.2.392.200119.5.2.3.3.2.1" (exactly)
+* interpretation[MINNESOTA2005_NK].coding.system = "urn:oid:1.2.392.200119.5.2.3.3.2.2" (exactly)
+* interpretation[FKD_GRADE].coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.1" (exactly)
+* interpretation[FKD_INTER].coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.2" (exactly)
+* interpretation[MINESOTA_CODE].coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.3" (exactly)
+* insert SetDefinition(interpretation[ECAPS].coding.system, ECAPS:日本光電解析コード)
+* insert SetDefinition(interpretation[MINNESOTA1987_NK].coding.system, 日本光電解析ロジックによるミネソタコード1987年版をベースとした分類)
+* insert SetDefinition(interpretation[MINNESOTA2005_NK].coding.system, 日本光電解析ロジックによるミネソタコード2005年版をベースとした分類)
+* insert SetDefinition(interpretation[FKD_INTER].coding.system, フクダ電子所見コード)
+* insert SetDefinition(interpretation[FKD_GRADE].coding.system, フクダ電子判定コード)
+* insert SetDefinition(interpretation[MINESOTA_CODE].coding.system, フクダ電子：ミネソタコードと異常部位を記載)
+
 * insert SetDefinition(note, このObservationに関するコメント)
 * note ^comment = "観察（結果）に関する一般的な記述、重要な、予期しない、または信頼できない結果値に関する記述、またはその解釈に関連する場合はそのソースに関する情報が含まれる場合がある。"
 * note ^requirements = "Need to be able to provide free text additional information.  
@@ -91,10 +116,33 @@ Description: "このプロファイルはObservationリソースに対して、�
 * component ^requirements = "この心電図検査で行われる一連の測定値をまとめるものであり、負荷心電図など複数の心電図検査を一連の検査として行った場合は別Observationインスタンスとして記録される。"
 * component.code from JP_ObservationElectrocardiogramComponentCode_VS (preferred)
 * component.code ^comment = "心電図の各検査項目についてはLOINCなどの特定の用語集を利用することが推奨される。"
-* component.interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (extensible)
+//* component.interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (extensible)
 * component.interpretation ^definition = "心電図検査で測定された結果値に対する所見・解釈"
 * component.interpretation ^comment = "心電図検査の測定結果と解釈は必ずしも1対1で対応しないが、PR間隔の測定値にPR間隔延長などの固有の所見をつけてもよい"
+* component.interpretation ^slicing.discriminator.type = #value
+* component.interpretation ^slicing.discriminator.path = "coding.system"
+* component.interpretation ^slicing.rules = #open
+* component.interpretation ^slicing.ordered = false
+* component.interpretation contains
+    ECAPS 0..1 and
+    MINNESOTA1987_NK 0..1 and
+    MINNESOTA2005_NK 0..1 and
+    FKD_GRADE 0..1 and
+    FKD_INTER 0..1 and
+    MINESOTA_CODE 0..1
+* component.interpretation[ECAPS].coding.system = "urn:oid:1.2.392.200119.5.2.3.3.1" (exactly)
+* component.interpretation[MINNESOTA1987_NK].coding.system = "urn:oid:1.2.392.200119.5.2.3.3.2.1" (exactly)
+* component.interpretation[MINNESOTA2005_NK].coding.system = "urn:oid:1.2.392.200119.5.2.3.3.2.2" (exactly)
+* component.interpretation[FKD_GRADE].coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.1" (exactly)
+* component.interpretation[FKD_INTER].coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.2" (exactly)
+* component.interpretation[MINESOTA_CODE].coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.3" (exactly)
 
+* insert SetDefinition(component.interpretation[ECAPS].coding.system, ECAPS:日本光電解析コード)
+* insert SetDefinition(component.interpretation[MINNESOTA1987_NK].coding.system, 日本光電解析ロジックによるミネソタコード1987年版をベースとした分類)
+* insert SetDefinition(component.interpretation[MINNESOTA2005_NK].coding.system, 日本光電解析ロジックによるミネソタコード2005年版をベースとした分類)
+* insert SetDefinition(component.interpretation[FKD_INTER].coding.system, フクダ電子所見コード)
+* insert SetDefinition(component.interpretation[FKD_GRADE].coding.system, フクダ電子判定コード)
+* insert SetDefinition(component.interpretation[MINESOTA_CODE].coding.system, フクダ電子：ミネソタコードと異常部位を記載)
 
 // ==============================       
 //   Extension 定義
