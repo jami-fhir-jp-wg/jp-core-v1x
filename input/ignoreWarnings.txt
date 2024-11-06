@@ -5,9 +5,11 @@
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
 # IG Defined
-This IG is version %
+This IG is version 4.0.1, while the IG 'jpfhir-terminology' is from version 1.2.1
+This IG is version 4.0.1, while the IG 'hl7.fhir.uv.tools' is from version 5.0.0
 The definition for the element 'Consent.provision.code' binds to the value set 'http://hl7.org/fhir/ValueSet/consent-content-code' which is experimental, but this structure is not labeled as experimental
-
+The definition for the element 'ImagingStudy.series.performer.function' binds to the value set 'http://hl7.org/fhir/ValueSet/series-performer-function' which is experimental, but this structure is not labeled as experimental
+!!コードの検証エラー: 用語サービス無しで実行中
 
 # Warnings for Examples
 %The Implementation Guide contains no examples%
