@@ -29,12 +29,13 @@
       * `JP_Observation_DentalOral_MissingToothCondition`プロファイルを追加定義した
     * ImagingStudy
       * `JP_ImagingStudy_Radiology`プロファイルのmodalityおよびseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した
-      * `JP_ImagingStudy_Endoscopy`プロファイルのmodalityおよびseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した。
+      * `JP_ImagingStudy_Radiology`のIdentifierに関するConformanceをSHALLに変更した
+      * `JP_ImagingStudy_Endoscopy`プロファイルのmodalityおよびseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した
+      * `JP_ImagingStudy_Endoscopy`のIdentifierに関するConformanceをSHALLに変更した
     * DiagnosticReport
       * `JP_DiagnosticReport_Radiology`プロファイルのcategoryに対するバインド対象を`JP_DICOMModality_VS`に変更した
-      * `JP_DiagnosticReport_Radiology`プロファイルにて、`JP_Observation_Radiology_Findings`および`JP_Observation_Radiology_Impression`を要素に設定できる点について修正し、その関係性に関する記述を記載した。
-      * `JP_DiagnosticReport_Endoscopy`プロファイルにて、`JP_Observation_Endoscopy`を要素に設定できる点について修正し、その関係性に関する記述を記載した。
-
+      * `JP_DiagnosticReport_Radiology`プロファイルにて、`JP_Observation_Radiology_Findings`および`JP_Observation_Radiology_Impression`を要素に設定できる点について修正し、その関係性に関する記述を記載した
+      * `JP_DiagnosticReport_Endoscopy`プロファイルにて、`JP_Observation_Endoscopy`を要素に設定できる点について修正し、その関係性に関する記述を記載した
       * `JP_DiagnosticReport_DentalOral`プロファイルを追加定義した
     * Media
       * `JP_Media_Endoscopy`プロファイルを追加定義した
@@ -47,9 +48,8 @@
   * Workflow グループ
     * `JP_ServiceRequest_Common`プロファイルを追加、それに伴い`JP_ServiceRequest`を削除した
   * SearchParameterおよびOperation関連
-    * SearchParameterの記述不具合（型指定や名称）やSearchParameterRegistryの差異を比較しを修正しました。
+    * SearchParameterの記述不具合（型指定や名称）やSearchParameterRegistryの差異を比較しを修正しました
     * SearchParameterのexpressionのFHIRPath記述に対する指摘に対応した
-    * `JP_ImagingStudy_Radiology`のIdentifierに関するConformanceをSHALLに変更した
   * Terminology関連
     * 以下のコードシステムおよびバリューセットを追加/削除した
       * `JP_ConditionDieaseCodeReceipt_CS`
@@ -109,7 +109,6 @@
       * `JP_ObservationBodySite_VS`
     * `JP_ObservationBodyMeasurementCode_CS`の記述の不具合を修正した
     * 病名マスタ(MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`,MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`,レセプト電算用傷病名マスタ`JP_ConditionDiseaseCodeReceipt_CS`)を用語として追加した
-
   * Capability Statement関連
     * 単数パラメータのConformanceの指定に対応した
     * 複数パラメータの指定に対応した
