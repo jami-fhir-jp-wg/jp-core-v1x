@@ -20,7 +20,7 @@ Usage: #example
   * coding
     * system = $JP_EndoscopyTerminologyCodesJED_CS
     * code = #Z2L30301
-    * display = "[Tumor] Adenoma / Early Colorectal Cancer"
+    * display = "[腫瘍] 腺腫・早期大腸癌"
   * text = "[腫瘍] 腺腫・早期大腸癌"
 * hasMember[0] = Reference(Observation/jp-observation-endoscopy-example-findings-1a) "大きさ　長径４（ｍｍ）"
 * hasMember[1] = Reference(Observation/jp-observation-endoscopy-example-findings-1b) "[大腸 肉眼型1] Is(p)"

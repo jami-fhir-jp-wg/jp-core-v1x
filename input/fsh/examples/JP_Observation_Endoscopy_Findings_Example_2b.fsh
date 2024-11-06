@@ -20,5 +20,5 @@ Usage: #example
   * coding
     * system = $JP_EndoscopyTerminologyCodesJED_CS
     * code = #Z2L20305
-    * display = "[Colon Macroscopic Classification] Type0-IIa (Superficial Elevated Type)"
+    * display = "[大腸 肉眼型1] IIa"
   * text = "[大腸 肉眼型1] IIa"

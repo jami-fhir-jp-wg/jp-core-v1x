@@ -20,7 +20,7 @@ Usage: #example
   * coding
     * system = $JP_EndoscopyTerminologyCodesJED_CS
     * code = #Z2L30401
-    * display = "[Serrated Lesions ] Hyperplastic Polyp <HP>"
+    * display = "[鋸歯状病変] HP"
   * text = "[鋸歯状病変] HP"
 * hasMember[0] = Reference(Observation/jp-observation-endoscopy-example-findings-2a) "大きさ　長径５（ｍｍ）"
 * hasMember[1] = Reference(Observation/jp-observation-endoscopy-example-findings-2b) "[大腸 肉眼型1] IIa"

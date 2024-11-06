@@ -20,5 +20,5 @@ Usage: #example
   * coding
     * system = $JP_EndoscopyTerminologyCodesJED_CS
     * code = #Z2L20301
-    * display = "[Colon Macroscopic Classification] Type0-Is(p) (Semipedunculated Type)"
+    * display = "[大腸 肉眼型1] Is(p)"
   * text = "[大腸 肉眼型1] Is(p)"
