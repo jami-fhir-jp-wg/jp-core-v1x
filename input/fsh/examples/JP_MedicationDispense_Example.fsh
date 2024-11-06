@@ -22,7 +22,7 @@ Usage: #example
 * destination = Reference(Location/jp-location-example-ward)
 * note.text = "後発品へ変更可能か依頼医のＡ医師に確認したところ、患者の希望により不可との回答あり。"
 * dosageInstruction.text = "内服・経口・１日３回朝昼夕食後"
-* dosageInstruction.timing.code = $JP_MedicationUsageJAMI_CS#1013044400000000 "内服・経口・１日３回朝昼夕食後"
+* dosageInstruction.timing.code = $JP_MedicationUsageJAMI_CS#1013044400000000 "内服 １日３回 朝昼夕食後"
 * dosageInstruction.route = $JP_MedicationRouteHL70162_CS#PO "口"
 * dosageInstruction.method = $JP_MedicationMethodJAMIDetailUsage_CS#10 "経口"
 * dosageInstruction.doseAndRate.type = $JP_MedicationIngredientStrengthStrengthType_CS#1 "製剤量"
