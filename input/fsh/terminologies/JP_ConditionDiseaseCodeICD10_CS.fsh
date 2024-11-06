@@ -5,7 +5,7 @@ Description: "ICD-10 コードシステム"
 * ^url = $JP_ConditionDiseaseCodeICD10_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-08-05"
+* ^date = "2024-11-18"
 * ^caseSensitive = true
 * ^content = #fragment
 * ^copyright = "Copyright "

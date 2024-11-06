@@ -8,7 +8,7 @@ Title: "JP Core Condition Diagnosis Profile"
 Description: "このプロファイルはConditionリソースに対して、患者の診断に関する情報を送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition_Diagnosis"
 * ^status = #active
-* ^date = "2023-08-05"
+* ^date = "2024-11-18"
 * . ^short = "Detailed information about disease. 患者の診断に関する詳細な情報"
 * . ^definition = "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.\r\n\r\n健康上の懸念となるレベルに達した、身体的、精神的、社会的な負の状態(condition)や問題（problem／issue）、医療者による診断(diagnosis)、生じたイベント(event)、置かれている状況(situation)、臨床的概念(clinical concept)。"
 * extension ^slicing.discriminator.type = #value

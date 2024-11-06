@@ -86,7 +86,7 @@ Id: jp-medication-ingredient-drugno
 Title: "JP Core Medication Ingredient DrugNo Extension"
 Description: "同一剤グループ内での順番を格納する拡張"
 * ^url = $JP_Medication_Ingredient_DrugNo
-* ^date = "2023-10-31"
+* ^date = "2024-11-18"
 * ^purpose = "同一剤グループ内での順番を格納する拡張"
 * ^context.type = #element
 * ^context.expression = "Medication.ingredient"

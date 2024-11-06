@@ -5,7 +5,7 @@ Description: "MEDIS ICD10対応標準病名マスター(修飾語交換用コー
 * ^url = $JP_ConditionDiseaseModifierMEDISExchange_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-08-05"
+* ^date = "2024-11-18"
 * ^caseSensitive = true
 * ^content = #fragment
 * ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター"

@@ -5,6 +5,6 @@ Description: "JP Coreにて定義した心電図のObservationリソースに関
 * ^url = $JP_ObservationElectrocardiogramStressType_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2024-10-31"
+* ^date = "2024-11-18"
 
 * include codes from system $JP_ObservationElectrocardiogramStressType_CS

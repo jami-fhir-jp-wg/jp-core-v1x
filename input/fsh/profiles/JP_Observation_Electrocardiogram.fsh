@@ -8,7 +8,7 @@ Title: "JP Core Observation Electrocardiogram Profile"
 Description: "このプロファイルはObservationリソースに対して、心電図データを送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Electrocardiogram"
 * ^status = #draft
-* ^date = "2024-11-15"
+* ^date = "2024-11-18"
 * . ^short = "心電図検査結果"
 * . ^definition = "心電図検査結果とその解釈。"
 * . ^comment = "心電図検査についてのプロファイル"

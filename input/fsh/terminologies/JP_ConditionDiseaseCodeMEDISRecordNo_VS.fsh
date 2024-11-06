@@ -5,7 +5,7 @@ Description: "MEDIS ICD10対応標準病名マスター(管理番号) を示す�
 * ^url = $JP_ConditionDiseaseCodeMEDISRecordNo_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-08-05"
+* ^date = "2024-11-18"
 * ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
 
 * include codes from system $JP_ConditionDiseaseCodeMEDISRecordNo_CS

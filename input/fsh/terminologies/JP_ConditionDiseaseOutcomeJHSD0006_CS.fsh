@@ -5,7 +5,7 @@ Description: "JAHIS病名情報データ交換規約Ver.3.1C JHSD表00006-転帰
 * ^url = $JP_ConditionDiseaseOutcomeJHSD0006_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-08-05"
+* ^date = "2024-11-18"
 * ^caseSensitive = true
 * ^content = #complete
 * ^copyright = "Copyright Japanese Association of Healthcare Information Systems Industry(JAHIS)  一般社団法人保健医療福祉情報システム工業会"

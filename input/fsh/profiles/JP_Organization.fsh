@@ -8,7 +8,7 @@ Title: "JP Core Organization Profile"
 Description: "このプロファイルはOrganizationリソースに対して、組織情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization"
 * ^status = #active
-* ^date = "2024-10-31"
+* ^date = "2024-11-18"
 * . ^short = "共通の目的を持った人や組織の集まり【詳細参照】"
 * . ^definition = "集団行動の何らかの形での達成を目的として結成された、正式または非公式に認められた人々または組織のグループ。企業、機関、企業、部門、コミュニティグループ、医療実践グループ、支払者/保険者などが含まれる。"
 * extension ^slicing.discriminator.type = #value

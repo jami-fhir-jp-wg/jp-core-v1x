@@ -5,7 +5,7 @@ Description: "Observation（内視鏡）コードで使用する項目値セッ�
 * ^url = $JP_ObservationEndoscopyCode_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2024-07-18"
+* ^date = "2024-11-18"
 * ^copyright = "Copyright JED-Project、JAHIS、日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 // =================================================
 // LOINC

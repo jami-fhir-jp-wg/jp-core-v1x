@@ -5,6 +5,7 @@
   * 各プロファイルのベースとなるFHIR Versionは4.0.1を維持した
   * 不具合等のやむを得ない場合の除き、下位互換性を保つことを重視している
   * Copyrightについて記述の見直しを行った
+  * JP_zzz_dummyのidを命名規則に従って修正
 * Profile関連
   * Administration グループ
     * `JP_Coverage`にて被保険者の識別子仕様を変更した

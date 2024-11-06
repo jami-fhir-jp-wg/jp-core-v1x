@@ -8,7 +8,7 @@ Title: "JP Core Observation Endoscopy Profile"
 Description: "このプロファイルはObservationリソースに対して、内視鏡を使用して実施された検査、治療による観察結果（診断、所見など）の情報を送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Endoscopy"
 * ^status = #active
-* ^date = "2024-08-01"
+* ^date = "2024-11-18"
 * . ^short = "内視鏡検査、治療による観察結果（診断、所見など）の情報。【詳細参照】"
 * . ^definition = "内視鏡検査、治療による観察結果（診断、所見など）の情報。"
 * . ^comment = "内視鏡検査、治療に関するobservation（所見や診断結果など）の制約プロフィール。"
