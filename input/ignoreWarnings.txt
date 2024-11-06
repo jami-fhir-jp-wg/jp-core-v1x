@@ -5,14 +5,14 @@
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
 # IG Defined
-This IG is version 4.0.1, while the IG 
+This IG is version 4.0.1, while the IG%
 
 # Warnings for Examples
 %The Implementation Guide contains no examples%
 !!この要素はどの既知のスライスとも一致しません defined in the profile%
 
 # ベストプラクティス
-# Rule dom-6%
+Rule dom-6%
 
 # DICOM関係
 !!ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1が見つかりません
@@ -32,5 +32,6 @@ This IG is version 4.0.1, while the IG
 NO_VALID_DISPLAY_FOUND_LANG_NONE_other
 
 # 個別
-	urn:oid:1.2.392.200119.4.403.1#103835401 の誤ったdisplay 'ムコダイン錠２５０ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'ムコダイン錠２５０ｍｇ・杏林製薬' (ja) (言語 'ja-JP' のため)
-    urn:oid:1.2.392.200119.4.403.1#110926901 の誤ったdisplay 'パンスポリンＴ錠１００ １００ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'パンスポリンＴ錠１００・武田薬品' (ja) (言語 'ja-JP' のため)
+urn:oid:1.2.392.200119.4.403.1#107750603 の誤ったdisplay 'ソリタ－Ｔ３号輸液５００ｍＬ' - 1 の選択肢のうちの一つであるべきです: 'ソリタ－Ｔ３号輸液・陽進堂' (ja) (言語 'ja-JP' のため)
+urn:oid:1.2.392.200119.4.403.1#103835401 の誤ったdisplay 'ムコダイン錠２５０ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'ムコダイン錠２５０ｍｇ・杏林製薬' (ja) (言語 'ja-JP' のため)
+urn:oid:1.2.392.200119.4.403.1#110926901 の誤ったdisplay 'パンスポリンＴ錠１００ １００ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'パンスポリンＴ錠１００・武田薬品' (ja) (言語 'ja-JP' のため)
