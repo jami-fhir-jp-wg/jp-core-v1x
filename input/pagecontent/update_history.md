@@ -93,7 +93,15 @@
       * `JP_ObservationCategory_Endoscopy_VS`
       * `JP_ObservationDentalCategory_CS`
       * `JP_ObservationDentalCategory_VS`
+      * `JP_ObservationElectrocardiogramComponentCode_VS`
+      * `JP_ObservationElectrocardiogramDuration_VS`
+      * `JP_ObservationElectrocardiogramDuration_CS`
+      * `JP_ObservationElectrocardiogramExtraCategory_CS`
+      * `JP_ObservationElectrocardiogramExtraCategory_VS`
       * `JP_ObservationElectrocardiogramInterpretationCode_CS`
+      * `JP_ObservationElectrocardiogramInterpretationCode_VS`
+      * `JP_ObservationElectrocardiogramStressType_CS`
+      * `JP_ObservationElectrocardiogramStressType_VS`
       * `JP_ObservationEndoscopyCode_VS`
       * `JP_ObservationEndoscopyValueJed_VS`
     * 以下のCodeSystem,ValueSetを削除した
