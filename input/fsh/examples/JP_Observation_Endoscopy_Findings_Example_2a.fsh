@@ -20,5 +20,5 @@ Usage: #example
   * coding
     * system = $JP_EndoscopyTerminologyCodesJED_CS
     * code = #Z2L20800
-    * display = "Size - Major Axis (mm) (Specify) 5mm"
+    * display = "大きさ 長径（mm）（記述する）"
   * text = "大きさ　長径５（ｍｍ）"
