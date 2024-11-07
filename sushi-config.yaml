@@ -345,6 +345,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageSiteComment_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationUncategorizedComment_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationRequestDosageInstructionLine_VS
+    - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationRequestDosageInstructionLine_CS
     - urn:ietf:bcp:13
     - urn:ietf:bcp:47
     - urn:iso:std:iso:3166
