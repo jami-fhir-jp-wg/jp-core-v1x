@@ -48,8 +48,6 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
 | SHALL            | identifier    | token  | GET [base]/MedicationStatement?identifier=http://myhospital.com/fhir/medication\|1234567890 |
 | SHOULD            | patient      | reference | GET [base]/MedicationStatement?patient=123456   |
-| SHOULD           | patient,whenhandedover | referenece,date  | GET [base]/MedicationStatement?patient=123456&whenhandedover=eq2013-01-14 |
-| MAY           | whenhandedover,whenprepared,context,code,performer| date,date,token,token,token | GET [base]/MedicationStatement?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
 
 ##### 必須検索パラメータ
 
@@ -88,21 +86,6 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
    ```
 
    リソースIDが123456の患者のMedicationStatementリソースを含むBundleを検索する。
-
-1. patient,whenhandedover 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationStatementの検索をサポートすることが望ましい（**SHOULD**）
-
-   ```
-   GET [base]/MedicationStatement?patient=[id]&whenhandedover=[date]
-   GET [base]/MedicationStatement?patient=[url]&whenhandedover=[date]
-   ```
-
-   例：
-
-   ```
-   GET [base]/MedicationStatement?patient=123456&whenhandedover=eq2013-01-14
-   ```
-
-   リソースIDが123456の患者の2013-01-14に払い出されたMedicationStatementリソースを含むBundleを検索する。
 
 
 ##### 追加検索パラメータ 
