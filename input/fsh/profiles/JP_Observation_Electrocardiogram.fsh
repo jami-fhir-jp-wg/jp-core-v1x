@@ -42,8 +42,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category.coding[extraCategory].system = $JP_ObservationElectrocardiogramExtraCategory_CS
 
 * insert SetDefinition(code, 心電図検査を示すコード)
-* code.coding = $Loinc_CS#11524-6 "EKG Study"
-* code ^comment = "心電図検査(LOINC: EKG Study)を示すLOINCコード 11524-6 を固定値として指定する。"
+* code = $Loinc_CS#11524-6 "EKG Study"
+* code ^comment = "心電図検査(LOINC: EKG Study)を示すLOINCコード 11524-6 を指定する。"
 * subject only Reference(JP_Patient or Group or Device or JP_Location)
 * insert SetDefinition(subject, このObservationの対象となる患者や患者群、機器、場所に関する情報)
 * subject ^comment = "この要素は1..1のcardinalityになるはずと考えられる。この要素が欠損値になる唯一の状況は、対象患者が不明なデバイスによって観察が行われるケースである。この場合、観察は何らかのコンテキスト/チャネルマッチング技術を介して患者にマッチングされる必要があり、患者にマッチングされれば、その時点で本要素を更新する必要がある。"
