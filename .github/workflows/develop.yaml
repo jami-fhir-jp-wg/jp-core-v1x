@@ -118,11 +118,10 @@ jobs:
       run: | 
         cp -f externalTx/ValueSet-dicom-cid-29-AcquisitionModality.json /home/runner/.fhir/packages/jpfhir-terminology#1.2.1/package/ValueSet-dicom-cid-29-AcquisitionModality.json
         cp -f externalTx/CodeSystem-v3-ActCode.json /home/runner/.fhir/packages/jpfhir-terminology#1.2.1/package/CodeSystem-v3-ActCode.json
-        cp -a externalTx/hl7.fhir.uv.extensions.r4#5.1.0 /home/runner/.fhir/packages/
         mkdir input-cache
         mv publisher.jar ./input-cache/publisher.jar
         unset DISPLAY
-        java -Xmx12G -Duser.language=ja -Duser.country=JP -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx n/a
+        java -Xmx12G -Duser.language=ja -Duser.country=JP -Djava.awt.headless=true -Dfile.encoding=UTF-8 -jar ./input-cache/publisher.jar -ig ig.ini -tx n/a
         mv ./input/landing_page/_index.yml ./output/
 
 
