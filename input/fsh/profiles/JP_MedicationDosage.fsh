@@ -277,7 +277,7 @@ Description: "投与速度コメントを格納するための拡張"
 * ^status = #active
 * ^date = "2023-10-31"
 * ^context[+].type = #element
-* ^context[=].expression = "Dosage"
+* ^context[=].expression = "Dosage.doseAndRate"
 * ^context[+].type = #element
 * ^context[=].expression = "MedicationAdministration.dosage.doseAndRate"
 * . ^short = "投与速度コメント"
@@ -361,12 +361,19 @@ Description: "指示ラインを格納するための拡張"
 * ^context[0].type = #element
 * ^context[=].expression = "Dosage"
 * ^context[+].type = #element
+* ^context[=].expression = "MedicationRequest.dosage"
+* ^context[+].type = #element
 * ^context[=].expression = "MedicationAdministration.dosage"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationStatement.dosage"
+* ^context[+].type = #element
+* ^context[=].expression = "MedicationDispense.dosage"
 * . ^short = "指示ライン"
 * . ^definition = "指示ラインを格納する拡張"
 * url = $JP_MedicationDosage_Line (exactly)
 * value[x] only CodeableConcept
-* valueCodeableConcept.coding from JP_MedicationExampleLine_VS (example)
+* valueCodeableConcept from JP_MedicationExampleLine_VS (example)
+// * valueString ^short = "テキスト記載"
 
 // ------------------------------
 //JP_MedicationDosage_PeriodOfUse
