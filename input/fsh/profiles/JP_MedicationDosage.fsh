@@ -366,7 +366,7 @@ Description: "指示ラインを格納するための拡張"
 * . ^definition = "指示ラインを格納する拡張"
 * url = $JP_MedicationDosage_Line (exactly)
 * value[x] only CodeableConcept
-* valueCodeableConcept.coding from $JP_MedicationExampleLine_VS (example)
+* valueCodeableConcept.coding from JP_MedicationExampleLine_VS (example)
 
 // ------------------------------
 //JP_MedicationDosage_PeriodOfUse
