@@ -116,14 +116,13 @@ jobs:
         
     - name: Run IG Publisher
       run: | 
+        cp -f externalTx/ValueSet-dicom-cid-29-AcquisitionModality.json /home/runner/.fhir/packages/$JPTerminologyCOREdir/package/externalTx/ValueSet-dicom-cid-29-AcquisitionModality.json
+        cp -f externalTx/CodeSystem-v3-ActCode.json /home/runner/.fhir/packages/$JPTerminologyCOREdir/package/externalTx/CodeSystem-v3-ActCode.json
         mkdir input-cache
         mv publisher.jar ./input-cache/publisher.jar
         unset DISPLAY
         java -Xmx12G -Duser.language=ja -Duser.country=JP -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx n/a
         mv ./input/landing_page/_index.yml ./output/
-        Edir
-        cp -f externalTx/ValueSet-dicom-cid-29-AcquisitionModality.json /home/runner/.fhir/packages/$JPTerminologyCOREdir/package/externalTx/ValueSet-dicom-cid-29-AcquisitionModality.json
-        cp -f externalTx/CodeSystem-v3-ActCode.json /home/runner/.fhir/packages/$JPTerminologyCOREdir/package/externalTx/CodeSystem-v3-ActCode.json
 
 
     - name: replace url of html files referring simplifier.net package
