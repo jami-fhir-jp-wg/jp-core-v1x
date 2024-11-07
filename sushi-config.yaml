@@ -136,8 +136,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/HL70241
     - http://jpfhir.jp/fhir/core/CodeSystem/JHSD0006
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeICD10_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeReceipt_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseModifierReceipt_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseOutcomeReceipt_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySite_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySiteStatus_CS
@@ -154,7 +152,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationDentalCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramDuration_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramExtraCategory_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramInterpretationCode_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramStressType_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_PhysicalExamCode_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureBodySite_CS
@@ -215,7 +212,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Consent
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Device
-    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DeviceUseStatement
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Endoscopy
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult
@@ -310,7 +306,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramComponentCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramDuration_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramExtraCategory_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramInterpretationCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramStressType_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationEndoscopyCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationEndoscopyValueJed_VS
@@ -336,7 +331,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageRouteComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationDosageSiteComment_CS
     - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationAdministrationUncategorizedComment_CS
-    - http://jpfhir.jp/fhir/Examples/CodeSystem/JP_MedicationRequestDosageInstructionLine_CS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageComment_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageLineComment_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageMethodComment_VS
@@ -345,6 +339,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageSiteComment_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationUncategorizedComment_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationRequestDosageInstructionLine_VS
+    - http://medis.or.jp/CodeSystem/master-disease-exCode
+    - http://medis.or.jp/CodeSystem/master-disease-modKeyNumber
     - urn:ietf:bcp:13
     - urn:ietf:bcp:47
     - urn:iso:std:iso:3166

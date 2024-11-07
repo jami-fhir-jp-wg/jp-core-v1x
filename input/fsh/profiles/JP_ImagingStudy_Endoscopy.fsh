@@ -16,7 +16,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * identifier ^comment = "Study Instance UIDの値を指定する。"
 * status ^short = "DICOM画像検査のステータス"
 * status ^definition = "DICOM画像検査のステータス。"
-* modality from $JP_DICOMModality_VS (required)
+// * modality from $JP_DICOMModality_VS (required)
 * modality ^short = "DICOM画像検査で使用された撮影装置（モダリティ）【詳細参照】"
 * modality ^definition = "DICOM画像検査で使用された撮影装置（モダリティ）。"
 * modality ^comment = "内視鏡を表すモダリティコード”ES”を指定する。複数モダリティを使用した場合には、該当するモダリティコードを並記する。"
@@ -56,7 +56,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * procedureCode ^short = "実施された処置を表すコード【詳細参照】"
 * procedureCode ^definition = "実施された処置を表すコード。"
 * procedureCode ^comment = "内視鏡では省略してよい。"
-* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
+// * procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
 * location only Reference(JP_Location)
 * location ^short = "DICOM画像検査が実施された場所【詳細参照】"
 * location ^definition = "DICOM画像検査が実施された場所。"
