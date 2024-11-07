@@ -116,8 +116,8 @@ jobs:
         
     - name: Run IG Publisher
       run: | 
-        cp -f externalTx/ValueSet-dicom-cid-29-AcquisitionModality.json /home/runner/.fhir/packages/$JPTerminologyCOREdir/package/ValueSet-dicom-cid-29-AcquisitionModality.json
-        cp -f externalTx/CodeSystem-v3-ActCode.json /home/runner/.fhir/packages/$JPTerminologyCOREdir/package/CodeSystem-v3-ActCode.json
+        cp -f externalTx/ValueSet-dicom-cid-29-AcquisitionModality.json /home/runner/.fhir/packages/jpfhir-terminology#1.2.1/package/ValueSet-dicom-cid-29-AcquisitionModality.json
+        cp -f externalTx/CodeSystem-v3-ActCode.json /home/runner/.fhir/packages/jpfhir-terminology#1.2.1/package/CodeSystem-v3-ActCode.json
         mkdir input-cache
         mv publisher.jar ./input-cache/publisher.jar
         unset DISPLAY
