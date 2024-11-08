@@ -48,6 +48,9 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
         * [JP Core Observation Radiology Findings (放射線画像検査所見）プロファイル)][JP_Observation_Radiology_Findings]
         * [JP Core Observation Radiology Impression (放射線画像検査インプレッション)プロファイル][JP_Observation_Radiology_Impression]
       * [JP Core Observation Endoscopy （内視鏡検査）プロファイル][JP_Observation_Endoscopy]
+      * [JP Core Observation DentalOral Tooth Existence Profile （口腔診査）プロファイル][JP_Observation_DentalOral_ToothExistence]
+      * [JP Core Observation DentalOral Tooth Treatment Condition Profile （口腔診査）プロファイル][JP_Observation_DentalOral_ToothTreatmentCondition]
+      * [JP Core Observation DentalOral Missing Tooth Condition Profile （口腔診査）プロファイル][JP_Observation_DentalOral_MissingToothCondition]
   * Specimen （検体）
     * [JP Core Specimen Common （共通）プロファイル][JP_Specimen_Common]
   * Media （メディア）
@@ -61,6 +64,7 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
       * [JP Core DiagnosticReport Microbiology （微生物学検査レポート）プロファイル][JP_DiagnosticReport_Microbiology]
       * [JP Core DiagnosticReport Radiology （放射線検査レポート）プロファイル][JP_DiagnosticReport_Radiology]
       * [JP Core DiagnosticReport Endoscopy （内視鏡レポート）プロファイル][JP_DiagnosticReport_Endoscopy]
+      * [JP Core DiagnosticReport DentalOral （口腔診査レポート）プロファイル][JP_DiagnosticReport_DentalOral]
 * [Clinicalグループ（診療）](group-clinical.html)
   * [JP Core AllergyIntolerance （アレルギー不耐症）プロファイル][JP_AllergyIntolerance]
   * [JP Core Condition （状態）プロファイル][JP_Condition]
@@ -105,7 +109,7 @@ JP Core利用にあたり、考慮すべきセキュリティに関する要件�
 JP Coreは以下の方々、および各サーブワーキンググループのここに記載されていない多くのメンバの献身的な活動や協力により作成されている。
 * FHIR Infrastructure : インフラ基盤WG
   * リーダ：㈱ファインデックス　宮川 力
-  * サブリーダ：、㈱ケーアイエス　小西 由貴範、日本総合システム㈱　松本 聖
+  * サブリーダ：㈱ケーアイエス　小西 由貴範、日本総合システム㈱　松本 聖
   * メンバ：京都大学　須藤 英隼、東京大学　三谷 知宏、日本総合システム㈱　安達 隆佳、岡安 想、中川 雅三、藤野 孝彦、ファインデックス　小倉 卓義、（一社）保健医療福祉情報安全管理適合性評価協会　喜多 紘一
 
 * Diagnostics and Observations : SWG2
@@ -115,14 +119,14 @@ JP Coreは以下の方々、および各サーブワーキンググループの�
   * 協力者：オリンパスメディカルシステムズ㈱　大森 真一、富士フイルム㈱　三浦 悟朗
 
 * Patient Administration : SWG3
-  * リーダ：日本HL7協会 檀原 一之
+  * リーダ：日本HL7協会　檀原 一之
   * サブリーダ：千葉大学　土井 俊祐、㈱セールスフォース・ジャパン　上中 進太郎
   * メンバ：東京大学　岡本 潤、㈱シーエスアイ　黒澤 亮、中平 顕士、高津 宏徳、日本電気㈱　矢原 潤一、㈱ケーアイエス　小西 由貴範、ＴＩＳ㈱　比留間 健
 
 * Clinical Module : SWG45
-  * リーダ：岐阜大学 小林 慎治、東京大学 河添 悦昌
+  * リーダ：岐阜大学　小林 慎治、東京大学　河添 悦昌
   * サブリーダ：日本アイ・ビー・エム㈱　木村 雅彦、㈱メドレー　児玉 義憲
-  * メンバ：見附市立病院 西野 克彦、九州大学　高田 敦史、東大病院　永島 里美、慶應義塾大学 横山 諒一、シンクタンク勤務　河﨑 泰子
+  * メンバ：見附市立病院　西野 克彦、九州大学　高田 敦史、東大病院　永島 里美、慶應義塾大学 横山 諒一、シンクタンク勤務　河﨑 泰子
 
 * Terminology : SWG6
   * リーダ：東京大学　今井 健

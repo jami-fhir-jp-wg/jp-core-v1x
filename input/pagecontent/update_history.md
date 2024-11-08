@@ -112,7 +112,7 @@
     * 病名マスタ(MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`,MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`,レセプト電算用傷病名マスタ`JP_ConditionDiseaseCodeReceipt_CS`)を用語として追加した
   * Capability Statement関連
     * 単数パラメータのConformanceの指定に対応した
-    * 複数パラメータの指定に対応した
+    * 複数パラメータの記述について追加した
     * Operation定義を追加した
   * Security関連
     * JP CoreにおけるMustSupportの記載を、ユースケースによっては利用される場合を考慮し変更した

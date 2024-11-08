@@ -14,8 +14,8 @@
 [FHIRJPCoreImplementationGuide]: ImplementationGuide-jpfhir.jp.core.html
 
 <!-- StructureDefinition: Profile, DataType -->
-[JP_AllergyIntolerance]: StructureDefinition-jp-allergyintolerance.html
 [JP_Binary]: StructureDefinition-jp-binary.html
+[JP_AllergyIntolerance]: StructureDefinition-jp-allergyintolerance.html
 [JP_CarePlan]: StructureDefinition-jp-careplan.html
 [JP_Condition_Diagnosis]: StructureDefinition-jp-condition-diagnosis.html
 [JP_Condition]: StructureDefinition-jp-condition.html
@@ -24,6 +24,7 @@
 [JP_Device]: StructureDefinition-jp-device.html
 [JP_DeviceUseStatement]: StructureDefinition-jp-deviceusestatement.html
 [JP_DiagnosticReport_Common]: StructureDefinition-jp-diagnosticreport-common.html
+[JP_DiagnosticReport_DentalOral]: StructureDefinition-jp-diagnosticreport-dentaloral.html
 [JP_DiagnosticReport_Endoscopy]: StructureDefinition-jp-diagnosticreport-endoscopy.html
 [JP_DiagnosticReport_LabResult]: StructureDefinition-jp-diagnosticreport-labresult.html
 [JP_DiagnosticReport_Microbiology]: StructureDefinition-jp-diagnosticreport-microbiology.html
@@ -61,6 +62,9 @@
 [JP_MedicationTiming]: StructureDefinition-jp-medicationtiming.html
 [JP_Observation_BodyMeasurement]: StructureDefinition-jp-observation-bodymeasurement.html
 [JP_Observation_Common]: StructureDefinition-jp-observation-common.html
+[JP_Observation_DentalOral_MissingToothCondition]: StructureDefinition-jp-observation-dentaloral-missingtoothcondition.html
+[JP_Observation_DentalOral_ToothExistence]: StructureDefinition-jp-observation-dentaloral-toothexistence.html
+[JP_Observation_DentalOral_ToothTreatmentCondition]: StructureDefinition-jp-observation-dentaloral-toothtreatmentcondition.html
 [JP_Observation_Electrocardiogram]: StructureDefinition-jp-observation-electrocardiogram.html
 [JP_Observation_Endoscopy]: StructureDefinition-jp-observation-endoscopy.html
 [JP_Observation_LabResult]: StructureDefinition-jp-observation-labresult.html
@@ -111,6 +115,10 @@
 [JP_MedicationDosage_UsageDuration]: StructureDefinition-jp-medicationdosage-usageduration.html
 [JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]: StructureDefinition-jp-medicationrequest-dispenserequest-expectedrepeatcount.html
 [JP_MedicationRequest_DispenseRequest_InstructionForDispense]: StructureDefinition-jp-medicationrequest-dispenserequest-instructionfordispense.html
+[JP_Observation_DentalOral_BodySiteStatus]: StructureDefinition-jp-observation-dentaloral-bodysitestatus.html
+[JP_Observation_DentalOral_BodyStructure]: StructureDefinition-jp-observation-dentaloral-bodystructure.html
+[JP_Observation_Electrocardiogram_MachinaryInterpretation]: StructureDefinition-jp-obsrevation-electrocardiogram-machinaryinterpretation.html
+[JP_Observation_Electrocardiogram_NumberOfLead]: StructureDefinition-jp-obsrevation-electrocardiogram-numberoflead.html
 [JP_Observation_Electrocardiogram_DeviceInterpretation]: StructureDefinition-jp-observation-electrocardiogram-deviceinterpretation.html
 [JP_Observation_Electrocardiogram_Duration]: StructureDefinition-jp-observation-electrocardiogram-duration.html
 [JP_Observation_Electrocardiogram_NumberOfLead]: StructureDefinition-jp-observation-electrocardiogram-numberoflead.html
