@@ -138,16 +138,9 @@ Usage: #definition
 * insert PutDefinedSearchParam(MAY, request, MedicationAdministration-request, reference)
 
 // MedicationStatement
-// TODO:修正が入るはず
 * insert SetSearchParameterResourceTwo(MedicationStatement, JP_MedicationStatement, JP_MedicationStatement_Injection)
-* insert PutCombination2(SHOULD, patient, effective-time)
-* insert PutCombination4(MAY, effective-time, code, performer, request)
 * insert PutDefinedSearchParam(SHALL, identifier, clinical-identifier, token)
 * insert PutDefinedSearchParam(SHOULD, patient, clinical-patient, reference)
-* insert PutDefinedSearchParam(MAY, category, MedicationStatement-category, token)
-* insert PutDefinedSearchParam(MAY, code, clinical-code, token)
-* insert PutDefinedSearchParam(MAY, context, MedicationStatement-context, reference)
-* insert PutDefinedSearchParam(MAY, effective, 	MedicationStatement-effective, date)
 
 // Immunization
 * insert SetSearchParameterResource(Immunization, JP_Immunization)
