@@ -16,7 +16,7 @@ Usage: #example
 * derivedFrom = Reference(MedicationRequest/jp-medicationrequest-injection-example-2)
 * reasonCode = urn:oid:1.2.392.200119.4.101.6#TQ7A "急性気管支炎"
 * dosage.extension[device].valueReference = Reference(Device/jp-medicationstatement-injection-device-example-1)
-* dosage.extension[line].valueCodeableConcept.coding = $JP_MedicationExampleLine_CS#01 "末梢ルート"
+* dosage.extension[line].valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
 * dosage.text = "主管 静脈注射 左腕"
 * dosage.timing.repeat.boundsPeriod.start = "2016-07-01T08:00:00+09:00"
 * dosage.timing.repeat.boundsPeriod.end = "2016-07-01T13:00:00+09:00"
