@@ -3,14 +3,14 @@ InstanceOf: JP_Observation_Electrocardiogram
 Title: "JP Core Observation Electrocardiogram Example"
 Description: "安静時12誘導心電図"
 Usage: #example
-//* category = $JP_SimpleObservationCategory_CS#procedure "Procedure"
+* category[first] = $JP_SimpleObservationCategory_CS#procedure "Procedure"
 * subject = Reference(Patient/jp-patient-example-1)
 * code = $Loinc_CS#11524-6 "EKG Study" 
 * effectiveDateTime = "2024-10-19T10:00:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * status = #final
 * encounter = Reference(Encounter/jp-encounter-example-1)
-* interpretation[0] = urn:oid:1.2.392.200119.5.2.4.1.1.3#1-0 "正常"
+* interpretation = urn:oid:1.2.392.200119.5.2.4.1.1.3#1-0 "正常"
 * component[+].code.coding = $Loinc_CS#76282-3 "Heart rate.beat-to-beat by EKG"
 * component[=].code.text = "Heart rate.beat-to-beat by EKG"
 * component[=].valueQuantity.value = 75
