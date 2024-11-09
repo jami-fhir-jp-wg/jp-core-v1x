@@ -25,21 +25,25 @@ Description: "このプロファイルはObservationリソースに対して、�
 * partOf ^comment = "ObservationをEncounterにencounter要素を使ってリンクする。もうひとつ別のObservationを参照することについては、以降にあるt [Notes](observation.html#obsgrouping)　をガイダンスとして参照のこと。"
 * insert SetDefinition(status, 結果の状態)
 * status ^comment = "このリソースは現在有効でないというマークをするコードを含んでいるため、この要素はモディファイアー（修飾的要素）として位置づけられている。"
-* category.coding ^slicing.discriminator.type = #value
-* category.coding ^slicing.discriminator.path = "system"
-* category.coding ^slicing.rules = #open
-* category.coding ^slicing.ordered = false
-* category.coding contains
-    electrocardiogram 1..1 and
-    extraCategory 0..1
+* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.path = "coding.system"
+* category ^slicing.rules = #open
+* category ^slicing.ordered = false
+* category contains
+    first 1..1 and
+    second 0..1 and
+    third 0..1
 * insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には通常 procedure が指定される。必要に応じてextraCategoryを仕様する)
-* category.coding ^comment = "心電図検査は通常 procedure に分類される。"
-* category.coding[electrocardiogram] from JP_SimpleObservationCategory_VS (required)
-* category.coding[electrocardiogram].system = $JP_SimpleObservationCategory_CS (exactly)
-* category.coding[electrocardiogram].code = $JP_SimpleObservationCategory_CS#procedure (exactly)
-* category.coding[extraCategory] from JP_ObservationElectrocardiogramExtraCategory_VS (example)
-* category.coding[extraCategory] ^comment = "心電図検査について、負荷試験などの条件をつけた分類"
-* category.coding[extraCategory].system = $JP_ObservationElectrocardiogramExtraCategory_CS
+* category ^comment = "心電図検査は通常 procedure に分類される。"
+* category[first] from $JP_SimpleObservationCategory_VS (required)
+* category[first].coding.system = $JP_SimpleObservationCategory_CS
+* category[first].coding.code = $JP_SimpleObservationCategory_CS#procedure
+//* category[second] from $Loinc_CS (preferred)
+* category[second].coding.system = $Loinc_CS
+* category[second].coding.code = $Loinc_CS#11524-6
+* category[third] from JP_ObservationElectrocardiogramExtraCategory_VS (preferred)
+* category[third].coding.system = $JP_ObservationElectrocardiogramExtraCategory_CS
+* category[third] ^comment = "心電図検査について、負荷試験などの条件をつけた分類"
 
 * insert SetDefinition(code, 心電図検査を示すコード)
 * code = $Loinc_CS#11524-6 "EKG Study"
@@ -114,7 +118,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(component, この心電図検査で測定された一連の結果。)
 * component ^comment = "心電図に関する一連の測定結果をまとめるためにコンポーネントを使用する。"
 * component ^requirements = "この心電図検査で行われる一連の測定値をまとめるものであり、負荷心電図など複数の心電図検査を一連の検査として行った場合は別Observationインスタンスとして記録される。"
-* component.code from JP_ObservationElectrocardiogramComponentCode_VS (preferred)
+* component.code from $JP_ObservationElectrocardiogramComponentCode_VS (preferred)
 * component.code ^comment = "心電図の各検査項目についてはLOINCなどの特定の用語集を利用することが推奨される。"
 //* component.interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (extensible)
 * component.interpretation ^definition = "心電図検査で測定された結果値に対する所見・解釈"
