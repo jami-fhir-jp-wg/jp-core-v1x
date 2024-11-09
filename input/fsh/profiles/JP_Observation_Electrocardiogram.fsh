@@ -42,6 +42,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category[second].coding.system = $Loinc_CS
 * category[second].coding.code = $Loinc_CS#11524-6
 * category[third] from JP_ObservationElectrocardiogramExtraCategory_VS (preferred)
+* category[third].coding.system = $JP_ObservationElectrocardiogramExtraCategory_CS
 * category[third] ^comment = "心電図検査について、負荷試験などの条件をつけた分類"
 
 * insert SetDefinition(code, 心電図検査を示すコード)
@@ -117,7 +118,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(component, この心電図検査で測定された一連の結果。)
 * component ^comment = "心電図に関する一連の測定結果をまとめるためにコンポーネントを使用する。"
 * component ^requirements = "この心電図検査で行われる一連の測定値をまとめるものであり、負荷心電図など複数の心電図検査を一連の検査として行った場合は別Observationインスタンスとして記録される。"
-* component.code from JP_ObservationElectrocardiogramComponentCode_VS (preferred)
+* component.code from $JP_ObservationElectrocardiogramComponentCode_VS (preferred)
 * component.code ^comment = "心電図の各検査項目についてはLOINCなどの特定の用語集を利用することが推奨される。"
 //* component.interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (extensible)
 * component.interpretation ^definition = "心電図検査で測定された結果値に対する所見・解釈"
