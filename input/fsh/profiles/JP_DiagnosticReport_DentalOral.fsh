@@ -20,13 +20,13 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category ^slicing.discriminator.type = #value
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
-* category contains dentaloral 1..1
+* category contains first 1..1
 * insert SetDefinition(category, サービスカテゴリー SS-MIX2拡張ストレージ構成の説明と構築ガイドラインに従う)
-* category[dentaloral] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP31759-1（歯科口腔）を使用する。"
-* category[dentaloral] from $JP_DiagnosticReportCategory_VS (required)
-* category[dentaloral].coding.system = $Loinc_CS (exactly)
-* category[dentaloral].coding.code 1..
-* category[dentaloral].coding.code = $Loinc_CS#LP31759-1 (exactly)
+* category[first] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP31759-1（歯科口腔）を使用する。"
+* category[first] from $JP_DiagnosticReportCategory_VS (required)
+* category[first].coding.system = $Loinc_CS (exactly)
+* category[first].coding.code 1..
+* category[first].coding.code = $Loinc_CS#LP31759-1 (exactly)
 
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "coding.system"

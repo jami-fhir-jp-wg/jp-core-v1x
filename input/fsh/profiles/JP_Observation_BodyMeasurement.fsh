@@ -17,15 +17,15 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category ^slicing.discriminator.path = "coding.system"
 * category ^slicing.rules = #open
 * category contains
-    bodyMeasurement 1..1 and
-    bodyMeasurementCategory 0..*
-* category[bodyMeasurement] from $JP_SimpleObservationCategory_VS (required)
-* category[bodyMeasurement].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[bodyMeasurement].coding.code 1..
-* category[bodyMeasurement].coding.code = #body-measurement (exactly)
-* category[bodyMeasurementCategory] from JP_ObservationBodyMeasurementCategory_VS (preferred)
-* category[bodyMeasurementCategory].coding.system = $JP_ObservationBodyMeasurementCategory_CS
-* category[bodyMeasurementCategory] ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類2．身体計測の「焦点」"
+    first 1..1 and
+    second 0..*
+* category[first] from $JP_SimpleObservationCategory_VS (required)
+* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[first].coding.code 1..
+* category[first].coding.code = #body-measurement (exactly)
+* category[second] from JP_ObservationBodyMeasurementCategory_VS (preferred)
+* category[second].coding.system = $JP_ObservationBodyMeasurementCategory_CS
+* category[second] ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類2．身体計測の「焦点」"
 * code from JP_ObservationBodyMeasurementCode_VS (preferred)
 * code ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類2．身体計測の「観察名称」"
 * subject 1..
