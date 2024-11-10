@@ -16,11 +16,11 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category ^slicing.discriminator[+].type = #value
 * category ^slicing.discriminator[=].path = "$this"
 * category ^slicing.rules = #open
-* category contains socialHistory 1..1
-* category[socialHistory] from JP_SimpleObservationCategory_VS (required)
-* category[socialHistory].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[socialHistory].coding.code 1..
-* category[socialHistory].coding.code = $JP_SimpleObservationCategory_CS#social-history (exactly)
+* category contains first 1..1
+* category[first] from JP_SimpleObservationCategory_VS (required)
+* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[first].coding.code 1..
+* category[first].coding.code = $JP_SimpleObservationCategory_CS#social-history (exactly)
 * category ^comment = "【JP Core仕様】基底仕様のカテゴリ「social-history」固定とする"
 * code from JP_ObservationSocialHistoryCode_VS (preferred)
 * code ^comment = "MEDISのJ-MIXの「生活背景情報」（※宗教を除く）"

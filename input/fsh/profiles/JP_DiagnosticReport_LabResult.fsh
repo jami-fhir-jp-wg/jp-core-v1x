@@ -31,13 +31,13 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 // #patternでなく#valueでよいはずだが、#valueだと警告"For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance"が出る。
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
-* category contains laboratory 1..1
+* category contains first 1..1
 * insert SetDefinition(category, 診断レポートを作成した臨床分野、部門、または診断サービスを分類するコード。検体査では、LoincコードのLP29693-6 検体検査/LAB を使用する。)
-* category[laboratory] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP29693-6(検体検査/LAB)を使用する。"
-* category[laboratory] from $JP_DiagnosticReportCategory_VS (required)
-* category[laboratory].coding.system = $Loinc_CS (exactly)
-* category[laboratory].coding.code 1..
-* category[laboratory].coding.code = $Loinc_CS#LP29693-6 (exactly)
+* category[first] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP29693-6(検体検査/LAB)を使用する。"
+* category[first] from $JP_DiagnosticReportCategory_VS (required)
+* category[first].coding.system = $Loinc_CS (exactly)
+* category[first].coding.code 1..
+* category[first].coding.code = $Loinc_CS#LP29693-6 (exactly)
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
