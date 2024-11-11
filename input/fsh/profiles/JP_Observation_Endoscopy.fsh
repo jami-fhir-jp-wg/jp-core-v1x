@@ -8,7 +8,7 @@ Title: "JP Core Observation Endoscopy Profile"
 Description: "このプロファイルはObservationリソースに対して、内視鏡を使用して実施された検査、治療による観察結果（診断、所見など）の情報を送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Endoscopy"
 * ^status = #active
-* ^date = "2024-08-01"
+* ^date = "2024-11-18"
 * . ^short = "内視鏡検査、治療による観察結果（診断、所見など）の情報。【詳細参照】"
 * . ^definition = "内視鏡検査、治療による観察結果（診断、所見など）の情報。"
 * . ^comment = "内視鏡検査、治療に関するobservation（所見や診断結果など）の制約プロフィール。"
@@ -27,20 +27,20 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category ^slicing.discriminator.path = "coding.system"
 * category ^slicing.rules = #open
 * category contains
-    endoscopy 1..1 and
-    endoscopy_sub 1..1
+    first 1..1 and
+    second 1..1
 * category ^short = "このObservationを分類するコード【詳細参照】"
 * category ^comment = "内視鏡検査の第1カテゴリはJP_SimpleObservationCategory_VSからprocedureを指定、第2カテゴリはLOINCのPartコードLP7796-8（内視鏡）固定とする。"
-* category[endoscopy] ^short = "内視鏡検査の第1カテゴリはJP_SimpleObservationCategory_VSからprocedureを指定する。"
-* category[endoscopy] from JP_SimpleObservationCategory_VS (required)
-* category[endoscopy].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[endoscopy].coding.code 1..
-* category[endoscopy].coding.code = $JP_SimpleObservationCategory_CS#procedure (exactly)
-* category[endoscopy_sub] ^short = "第2カテゴリはLOINCのPartコードLP7796-8（内視鏡）固定とする。"
-* category[endoscopy_sub] from $JP_ObservationCategory_Endoscopy_VS (required)
-* category[endoscopy_sub].coding.system = $Loinc_CS (exactly)
-* category[endoscopy_sub].coding.code 1..
-* category[endoscopy_sub].coding.code = $Loinc_CS#LP7796-8 (exactly)
+* category[first] ^short = "内視鏡検査の第1カテゴリはJP_SimpleObservationCategory_VSからprocedureを指定する。"
+* category[first] from JP_SimpleObservationCategory_VS (required)
+* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[first].coding.code 1..
+* category[first].coding.code = $JP_SimpleObservationCategory_CS#procedure (exactly)
+* category[second] ^short = "第2カテゴリはLOINCのPartコードLP7796-8（内視鏡）固定とする。"
+* category[second] from $JP_ObservationCategory_Endoscopy_VS (required)
+* category[second].coding.system = $Loinc_CS (exactly)
+* category[second].coding.code 1..
+* category[second].coding.code = $Loinc_CS#LP7796-8 (exactly)
 * code from JP_ObservationEndoscopyCode_VS (preferred)
 * code ^short = "このObservationの対象を特定するコード。【詳細参照】"
 * code ^definition = "このObservationの対象を特定するコード。"

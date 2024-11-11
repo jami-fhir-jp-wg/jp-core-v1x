@@ -8,7 +8,7 @@ Title: "JP Core AllergyIntolerance Profile"
 Description: "このプロファイルはAllergyIntoleranceリソースに対して、患者のアレルギー不耐症に関するデータを送受信するための制約と拡張を定めるものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-11-18"
 * . ^short = "Allergy or Intolerance (generally: Risk of adverse reaction to a substance). アレルギー不耐症 (特定の物質への暴露で生じた有害反応)"
 * . ^definition = "Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.  
 このリソースは患者のアレルギー不耐症を表現する。具体的には、特定の物質または物質群への暴露によって生じる有害反応の傾向や、潜在的なリスクを表現する。"

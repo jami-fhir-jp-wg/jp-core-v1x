@@ -13,7 +13,7 @@ Usage: #example
 * derivedFrom = Reference(MedicationRequest/jp-medicationrequest-example-1)
 * reasonCode = urn:oid:1.2.392.200119.4.101.6#TQ7A "急性気管支炎"
 * dosage.text = "内服・経口・１日３回朝昼夕食後"
-* dosage.timing.code = $JP_MedicationUsageJAMI_CS#1013044400000000 "内服・経口・１日３回朝昼夕食後"
+* dosage.timing.code = $JP_MedicationUsageJAMI_CS#1013044400000000 "内服 １日３回 朝昼夕食後"
 * dosage.route = $JP_MedicationRouteHL70162_CS#PO "口"
 * dosage.method = $JP_MedicationMethodJAMIDetailUsage_CS#10 "経口"
 * dosage.doseAndRate.type = $JP_MedicationIngredientStrengthStrengthType_CS#1 "製剤量"

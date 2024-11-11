@@ -4,11 +4,11 @@ Title: "JP Core Observation Endoscopy Example 所見（[大腸 肉眼型1] IIa�
 Description: "内視鏡所見（[大腸 肉眼型1] IIa）"
 Usage: #example
 * status = #final
-* category[0] = $JP_SimpleObservationCategory_CS#procedure "Procedure"
-* category[1] = $Loinc_CS#LP7796-8 "Endoscopy"
+* category[first] = $JP_SimpleObservationCategory_CS#procedure "Procedure"
+* category[second] = $Loinc_CS#LP7796-8 "内視鏡"
 * code
   * coding
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationEndoscopyCode_VS"
+    * system = $Loinc_CS
     * code = #19778-0
     * display = "Indications description Narrative Endoscopy"
   * text = "内視鏡所見"
@@ -18,7 +18,7 @@ Usage: #example
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueCodeableConcept
   * coding
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationEndoscopyValueJed_CS"
+    * system = $JP_EndoscopyTerminologyCodesJED_CS
     * code = #Z2L20305
-    * display = "[Colon Macroscopic Classification] Type0-IIa (Superficial Elevated Type)"
+    * display = "[大腸 肉眼型1] IIa"
   * text = "[大腸 肉眼型1] IIa"

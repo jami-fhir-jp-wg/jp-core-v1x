@@ -8,10 +8,11 @@ Title: "JP Core DiagnosticReport Radiology Profile"
 Description: "このプロファイルはDiagnosticReportリソースに対して、放射線検査報告書（レポート）のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-11-18"
 * . ^short = "診断レポート-依頼情報、１項目単位の結果、画像、解釈、およびフォーマットされたレポートの組み合わせ　【JP Core仕様】画像結果レポートのプロフィール【詳細参照】"
 * . ^definition = "患者、患者のグループ、デバイス、場所、これらから派生した検体に対して実行された診断的検査の結果と解釈。レポートには、依頼情報や依頼者情報などの臨床コンテキスト（文脈）、および１項目単位の結果、画像、テキストとコード化された解釈、および診断レポートのフォーマットされた表現のいくつかの組み合わせが含まれる。  
 【JP Core仕様】画像結果レポートのプロフィール"
+* text MS
 * text ^short = "人が読める形式で提示された情報。放射線レポートの場合はレポートの所見が保持される【詳細参照】"
 * text ^definition = "リソースの概要を含み、リソースの内容を人間が解釈できる形で表現するために用いられる。すべての構造化データをエンコードする必要はないが、人間がテキストを読むだけで「臨床的に安全」になるように十分な詳細を含める必要がある。リソース定義は、臨床的安全性を確保するために、テキストの中でどのコンテンツを表現すべきかを定義することができる。放射線レポートでは少なくともレポートの所見が格納されることが期待される。また，検索可能な文字列が存在する部位としても利用されることを想定している。"
 * text ^comment = "放射線レポートの場合、主となる所見を表すエレメントは他のリソースエレメントには存在しない。よってこのドメインリソースを用いてレポートの少なくとも「所見」を人間が可読な状態で保持することが求められる。"
@@ -42,24 +43,24 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^slicing.ordered = false
-* category contains radiology 1..1 and radiology_sub ..*
+* category contains first 1..1 and second ..*
 
-* category[radiology] ^short = "レポートを作成した分野を分類するコード【詳細参照】"
-* category[radiology] ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは第1コードとして LP29684-5 を固定値として設定。第2コード以下にDICOMModalityコードを列挙することでレポートの対象検査内容を示す。"
-* category[radiology] from $JP_DiagnosticReportCategory_VS (required)
-//* category[radiology] = $Loinc_CS#LP29684-5  "放射線" (exactly)
-* category[radiology].coding.system = $Loinc_CS (exactly)
-* category[radiology].coding.code 1..
-* category[radiology].coding.code = $Loinc_CS#LP29684-5 (exactly)
+* category[first] ^short = "レポートを作成した分野を分類するコード【詳細参照】"
+* category[first] ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは第1コードとして LP29684-5 を固定値として設定。第2コード以下にDICOMModalityコードを列挙することでレポートの対象検査内容を示す。"
+* category[first] from $JP_DiagnosticReportCategory_VS (required)
+//* category[first] = $Loinc_CS#LP29684-5  "放射線" (exactly)
+* category[first].coding.system = $Loinc_CS (exactly)
+* category[first].coding.code 1..
+* category[first].coding.code = $Loinc_CS#LP29684-5 (exactly)
 
-* category[radiology_sub] ^short = "レポート対象のモダリティを示すコード【詳細参照】"
-* category[radiology_sub] ^definition = "レポート対象のモダリティを示すコード。放射線を表す第1コードのLP29684-5に続くサブカテゴリコードとして第2コード以下に保持される。複数のモダリティの組み合わせを許容するため、コードの列挙を許容する。"
-* category[radiology_sub] from $JP_DICOMModality_VS (required)
-* category[radiology_sub].coding.system = $dicom-ontology (exactly)
-* category[radiology_sub].coding.code ^short = "DICOMのモダリティコードを指定"
-* category[radiology_sub].coding.code ^definition = "DICOMのモダリティコードを指定"
-* category[radiology_sub].coding.display ^short = "DICOMのモダリティコードの意味を記載（例: 超音波検査）"
-* category[radiology_sub].coding.display ^definition = "DICOMのモダリティコードの意味を記載（例: 超音波検査）"
+* category[second] ^short = "レポート対象のモダリティを示すコード【詳細参照】"
+* category[second] ^definition = "レポート対象のモダリティを示すコード。放射線を表す第1コードのLP29684-5に続くサブカテゴリコードとして第2コード以下に保持される。複数のモダリティの組み合わせを許容するため、コードの列挙を許容する。"
+* category[second] from $JP_DICOMModality_VS (required)
+* category[second].coding.system = $dicom-ontology (exactly)
+* category[second].coding.code ^short = "DICOMのモダリティコードを指定"
+* category[second].coding.code ^definition = "DICOMのモダリティコードを指定"
+* category[second].coding.display ^short = "DICOMのモダリティコードの意味を記載（例: 超音波検査）"
+* category[second].coding.display ^definition = "DICOMのモダリティコードの意味を記載（例: 超音波検査）"
 
 * code ^definition = "この診断レポートを表現するコードや名称"
 * code ^comment = "【JP Core仕様】[画像診断レポート交換手順ガイドライン](https://www.jira-net.or.jp/publishing/files/jesra/JESRA_TR-0042_2018.pdf)「5.1 レポート種別コード」に記載されているLOINCコード [Diagnostic imaging study](https://loinc.org/18748-4/) を指定。コードを指定できない場合はCodeableConceptを使用せずテキスト等を直接コーディングすることも許容されるが、要素間の調整と事前・事後の内容の整合性確保のために独自の構造を提供する必要があるので留意すること。"
@@ -113,6 +114,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * specimen ^comment = "【JP Core仕様】未使用  
 ・画像ガイド下生検で得られる検体の可能性は有り得るが、本項目は病理レポートで利用されることを想定し、放射線レポートでは特には規定しない"
 * specimen ^requirements = "レポートの対象となる取集された検体についての情報をレポートできる必要がある。"
+* result MS
 * result only Reference(JP_Observation_Radiology_Findings or JP_Observation_Radiology_Impression or JP_Observation_Common)
 * result ^short = "診断レポートの一部となるObservationリソース【詳細参照】"
 * result ^definition = "【JP Core仕様】所見(findings)や診断の結果(impression)を示すObservationリソースへの参照。この他、計測情報などの付随所見をObservationリソースとして定義できる。関連する検体検査結果（腎機能や感染症情報等）を保持することは可能。"

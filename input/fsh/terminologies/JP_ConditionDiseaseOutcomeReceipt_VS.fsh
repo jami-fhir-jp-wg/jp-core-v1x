@@ -5,7 +5,7 @@ Description: "レセプト電算システムの病名転帰区分を示す値セ
 * ^url = $JP_ConditionDiseaseOutcomeReceipt_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-08-05"
+* ^date = "2024-11-18"
 * ^copyright = "Copyright 社会保険診療報酬支払基金"
 
 * include codes from system $JP_ConditionDiseaseOutcomeReceipt_CS

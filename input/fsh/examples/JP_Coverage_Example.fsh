@@ -3,16 +3,32 @@ InstanceOf: JP_Coverage
 Title: "JP Core Coverage Example 健康保険証"
 Description: "健康保険証"
 Usage: #example
+* contained[+] = jp-organization-example-assigner
 * status = #active
-* extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol"
-* extension[=].valueString = "１２－３４"
-* extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber"
-* extension[=].valueString = "５６７８"
-* extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber"
-* extension[=].valueString = "００"
-* identifier[0].value = "\"１２－３４\",\"５６７８\",\"００\""
-* subscriberId = "\"１２－３４\",\"５６７８\""
-* dependent = "００"
-* payor = Reference(jp-organization-example-payer)
+* extension[0].url = $JP_Coverage_InsuredPersonSymbol
+* extension[=].valueString = "あいう"
+* extension[+].url = $JP_Coverage_InsuredPersonNumber
+* extension[=].valueString = "１８７"
+* extension[+].url = $JP_Coverage_InsuredPersonSubNumber
+* extension[=].valueString = "05"
+* identifier[insuranceIdentifier].system = "http://jpfhir.jp/fhir/clins/Idsystem/JP_Insurance_memberID"
+* identifier[insuranceIdentifier].value = "00012345:あいう:１８７:05"
+* identifier[insuranceIdentifier].assigner = Reference(Organization/jp-organization-example-assigner)
+* subscriberId = "あいう:１８７"
+* dependent = "05"
+* payor = Reference(Organization/jp-organization-example-assigner)
 * beneficiary = Reference(Patient/jp-patient-example-1)
 * type = http://terminology.hl7.org/CodeSystem/v3-ActCode#PUBLICPOL
+
+
+
+Instance: jp-organization-example-assigner
+InstanceOf: JP_Organization
+Title: "JP Core Organization Example ひまわり健康保険組合"
+Description: "あじさい健康保険組合"
+Usage: #inline
+* type = http://terminology.hl7.org/CodeSystem/organization-type#pay "Payer"
+* name = "あじさい健康保険組合"
+* identifier[insurerNumber].system = $JP_InsuranceOrganization_IdSystem
+* identifier[insurerNumber].value = "12345"
+

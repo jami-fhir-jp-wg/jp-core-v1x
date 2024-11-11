@@ -8,9 +8,16 @@
 
   Increases font sizes to 15px.
 */
+
+html {
+  transform: scale(1.2);
+  transform-origin: left top;
+  height: calc(100% / 1.2);
+  width: calc(100% / 1.2);
+}
+
 body, p,
 li, td, tr {
-  font-size: 15px;
   line-height: 1.4em;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -18,7 +25,6 @@ li, td, tr {
 }
 
 ul.dict li {
-  font-size: 15px;
   line-height: 1.4em;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -26,7 +32,6 @@ ul.dict li {
 }
 
 table.dict td {
-  font-size: 15px;
   line-height: 1.4em;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -34,11 +39,9 @@ table.dict td {
 }
 
 table.dict p {
-  font-size: 15px;
 }
 
 table.dict td.structure {
-  font-size: 15px;
   line-height: 1.4em;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -46,21 +49,18 @@ table.dict td.structure {
 }
 
 table.codes td {
-  font-size: 15px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
 }
 
 table.grid th {
-  font-size: 15px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
 }
 
 table.grid td {
-  font-size: 15px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
@@ -115,44 +115,8 @@ div.example {
   font-size: 0.75em;
 }
 
-div.sidebar h2 {
-  font-size: 15px;
-}
-
-div.sidebar p {
-  font-size: 15px;
-}
-
-div.sidebar ul {
-  font-size: 15px;
-}
-
-div.sidebar li {
-  font-size: 15px;
-}
-pre.spec {
-  font-size: 15px;
-}
-
-pre.json {
-  font-size: 15px;
-}
-
-pre.rdf {
-  font-size: 15px;
-}
-
-pre.fhirpath {
-  font-size: 15px;
-}
-
-pre.graphql {
-  font-size: 15px;
-}
-
 pre.xml {
   font-family: "Courier New";
-  font-size: 12pt;
 }
 
 p.example {
@@ -167,42 +131,19 @@ ul.navtop {
     "Helvetica Neue", sans-serif;
 }
 
-ul.navtop a {
-  font-size: 15px;
-}
-
-ul.navtop span {
-  font-size: 15px;
-}
-
-div.sidebar p.note {
-  font-size: 15px;
-}
-
-div.itoc p {
-  font-size: 15px;
-}
-
-div.itoc p.link {
-  font-size: 15px;
-}
-
 .hierarchy {
-  font-size: 15px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
 }
 
 tr.hierarchy {
-  font-size: 15px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
 }
 
 table.lmap th {
-  font-size: 15px;
   line-height: 1.4em;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
@@ -210,7 +151,6 @@ table.lmap th {
 }
 
 table.lmap td {
-  font-size: 15px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;

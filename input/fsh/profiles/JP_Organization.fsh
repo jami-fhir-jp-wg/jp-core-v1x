@@ -8,7 +8,7 @@ Title: "JP Core Organization Profile"
 Description: "このプロファイルはOrganizationリソースに対して、組織情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-11-18"
 * . ^short = "共通の目的を持った人や組織の集まり【詳細参照】"
 * . ^definition = "集団行動の何らかの形での達成を目的として結成された、正式または非公式に認められた人々または組織のグループ。企業、機関、企業、部門、コミュニティグループ、医療実践グループ、支払者/保険者などが含まれる。"
 * extension ^slicing.discriminator.type = #value
@@ -52,8 +52,9 @@ value : ```医療機関コード（１０桁）```を使用する。
 * identifier[medicalInstitutionCode].assigner only Reference(JP_Organization)
 * identifier[insurerNumber] ^comment = "健康保険組合などの保険者の保険者番号を表現する際のIdentifier表現に使用する  
 system要素には保険者番号を示すOID\"urn:oid:1.2.392.100495.20.3.61\"を指定する。"
-* identifier[insurerNumber].system = "urn:oid:1.2.392.100495.20.3.61" (exactly)
+* identifier[insurerNumber].system = $JP_InsuranceOrganization_IdSystem (exactly)
 * identifier[insurerNumber].assigner only Reference(JP_Organization)
+* identifier[insurerNumber].value ^comment = "保険者番号。英数字 券面記載の保険者番号。"
 * active ^short = "組織の記録がまだ有効に使われているかどうか【詳細参照】"
 * active ^definition = "このアクティブフラグは、組織を一時的に閉鎖したり、工事中であることを示すために使用されることを意図していない。代わりに、組織内の場所(複数可)は、中断されたステータスを持っている必要がある。一時停止の理由の詳細が必要な場合は、この要素の拡張子を使用する必要がある。  
 この要素は、リソースがエラーで作成されたことをマークするために使用される可能性があるため、修飾子としてラベル付けされている。"

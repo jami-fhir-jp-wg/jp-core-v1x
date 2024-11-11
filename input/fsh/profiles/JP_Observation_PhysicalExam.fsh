@@ -8,7 +8,7 @@ Title: "JP Core Observation PhysicalExam Profile"
 Description: "このプロファイルはObservationリソースに対して、身体所見のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_PhysicalExam"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-11-18"
 * . ^short = "身体所見に関する測定や簡単な観察事実（assertion）"
 * . ^definition = "身体所見に関する測定や簡単な観察事実"
 * . ^comment = "身体所見に関するObservation（検査測定や観察事実）の制約プロフィール"
@@ -16,11 +16,11 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category ^slicing.discriminator[+].type = #value
 * category ^slicing.discriminator[=].path = "$this"
 * category ^slicing.rules = #open
-* category contains physicalExam 1..1
-* category[physicalExam] from JP_SimpleObservationCategory_VS (required)
-* category[physicalExam].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[physicalExam].coding.code 1..
-* category[physicalExam].coding.code = $JP_SimpleObservationCategory_CS#exam (exactly)
+* category contains first 1..1
+* category[first] from JP_SimpleObservationCategory_VS (required)
+* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[first].coding.code 1..
+* category[first].coding.code = $JP_SimpleObservationCategory_CS#exam (exactly)
 * category ^comment = "【JP Core仕様】基底仕様のカテゴリ「exam」固定とする"
 * code ^comment = "【JP Core仕様】所見の有無を表すコード（固定値）"
 * code from JP_PhysicalExamCode_VS (preferred)

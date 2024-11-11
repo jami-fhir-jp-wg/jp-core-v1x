@@ -3,6 +3,6 @@ Parent:			ResearchSubject
 Id:             jp-researchsubject
 Description:    "JP_ResearchSubject 暫定プロファイル"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchSubject"
-* ^date = "2023-10-31"
+* ^date = "2024-11-18"
 * meta.lastUpdated 0.. MS
 

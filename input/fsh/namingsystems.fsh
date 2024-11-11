@@ -3,7 +3,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_Department_SsMix_NamingSystem"
 * status = #active
-* date = "2023-10-31"
+* date = "2024-11-18"
 * kind = #codesystem
 * description = "JP Core Department SsMix NamingSystem"
 * uniqueId[+].type = #oid

@@ -64,7 +64,7 @@ jobs:
     - name: Setup Sushi
       run: |
         sudo npm install -g fsh-sushi
-
+        
     - name: Install Jekyll
       run: |
         sudo apt-get install jekyll
@@ -73,7 +73,7 @@ jobs:
       uses: Legion2/download-release-action@v2.1.0
       with:
         repository: HL7/fhir-ig-publisher
-        tag: '1.6.27'
+        tag: 'latest'
         path: .
         file: publisher.jar
     
@@ -119,7 +119,7 @@ jobs:
         mkdir input-cache
         mv publisher.jar ./input-cache/publisher.jar
         unset DISPLAY
-        java  -Xmx12G -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx n/a
+        java -Xmx12G -Duser.language=ja -Duser.country=JP -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx n/a
         mv ./input/landing_page/_index.yml ./output/
 
 

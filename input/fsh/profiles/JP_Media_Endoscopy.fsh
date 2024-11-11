@@ -8,7 +8,7 @@ Title: "JP Core media Endoscopy Profile"
 Description: "このプロファイルはMediaリソースに対して、主に内視鏡検査で取得または使用される画像、映像、音声に関わるデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Media_Endoscopy"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-11-18"
 * . ^short = "内視鏡検査で取得または使用される画像、映像、音声に関わる情報。"
 * . ^definition = "内視鏡検査で取得または使用される画像、映像、音声に関わる情報。"
 * identifier ^short = "製品またはシステムが管理する、施設内で画像（JPEG等）、映像（MPEG等）、音声ファイルなどのメディアを一意に識別するためのID。"

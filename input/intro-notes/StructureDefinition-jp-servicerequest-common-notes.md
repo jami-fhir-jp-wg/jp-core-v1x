@@ -60,4 +60,4 @@
 | MAY | priority | [token](http://hl7.org/fhir/R4/search.html#token) | サービスの優先度 | ServiceRequest.priority |
 | MAY | replaces | [reference](http://hl7.org/fhir/R4/search.html#reference) | 代替のサービスリクエスト | ServiceRequest.replaces ([ServiceRequest](http://hl7.org/fhir/R4/servicerequest.html)) |
 | MAY | requisition | [token](http://hl7.org/fhir/R4/search.html#token) | 複合ID | ServiceRequest.requisition |
-| MAY | specimen | [token](http://hl7.org/fhir/R4/search.html#reference) | 検体 | ServiceRequest.specimen ([Specimen](http://hl7.org/fhir/R4/specimen.html)) |
+| MAY | specimen | [reference](http://hl7.org/fhir/R4/search.html#reference) | 検体 | ServiceRequest.specimen ([Specimen](http://hl7.org/fhir/R4/specimen.html)) |

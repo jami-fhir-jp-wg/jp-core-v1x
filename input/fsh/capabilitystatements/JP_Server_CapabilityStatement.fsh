@@ -6,7 +6,7 @@ Usage: #definition
 * title = "JP Core Server CapabilityStatement"
 * status = #active
 * experimental = false
-* date = "2023-10-31"
+* date = "2024-11-18"
 * description = "JP Core実装ガイドを利用したサイトを作成する際にサーバ側で規定するCapabilityStatementのOperationsおよびSearch Parametersのリスト例を提示する。JP Core ServerがサポートするFHIRプロファイルに限定しているため、FHIR Baseのプロファイルを利用する際などは必要な項目を追記すること。"
 * kind = #requirements
 * instantiates = "http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Server_CapabilityStatement"
@@ -137,6 +137,11 @@ Usage: #definition
 * insert PutDefinedSearchParam(MAY, performer, MedicationAdministration-performer, reference)
 * insert PutDefinedSearchParam(MAY, request, MedicationAdministration-request, reference)
 
+// MedicationStatement
+* insert SetSearchParameterResourceTwo(MedicationStatement, JP_MedicationStatement, JP_MedicationStatement_Injection)
+* insert PutDefinedSearchParam(SHALL, identifier, clinical-identifier, token)
+* insert PutDefinedSearchParam(SHOULD, patient, clinical-patient, reference)
+
 // Immunization
 * insert SetSearchParameterResource(Immunization, JP_Immunization)
 * insert PutCombination2(SHOULD, patient, date)
@@ -161,6 +166,11 @@ Usage: #definition
 * insert SetSearchParameterSupportedProfile(JP_Observation_BodyMeasurement)
 * insert SetSearchParameterSupportedProfile(JP_Observation_PhysicalExam)
 * insert SetSearchParameterSupportedProfile(JP_Observation_SocialHistory)
+* insert SetSearchParameterSupportedProfile(JP_Observation_Electrocardiogram)
+* insert SetSearchParameterSupportedProfile(JP_Observation_Radiology_Findings)
+* insert SetSearchParameterSupportedProfile(JP_Observation_Radiology_Impression)
+* insert SetSearchParameterSupportedProfile(JP_Observation_Endoscopy)
+* insert PutCombination3(SHOULD, patient, code, date)
 * insert PutCombination4(SHOULD, patient, code, date, based-on)
 * insert PutCombination5(SHOULD, patient, code, date, value-quantity, based-on)
 * insert PutCombination5(SHOULD, patient, code, date, value-concept, based-on)
@@ -168,6 +178,11 @@ Usage: #definition
 * insert PutCombination3(SHOULD, code, value-quantity, patient)
 * insert PutCombination3(SHOULD, code, value-concept, patient)
 * insert PutCombination3(SHOULD, code, value-string, patient)
+* insert PutCombination3(SHOULD, patient, category, code)
+* insert PutCombination4(SHOULD, patient, category, code, date)
+* insert PutCombination2(SHOULD, patient, code-value-concept)
+* insert PutCombination3(SHOULD, patient, code-value-concept, date)
+* insert PutCombination2(SHOULD, code-value-concept, date)
 * insert PutCombination4(MAY, patient, category, code, value-quantity)
 * insert PutCombination5(MAY, patient, category, code, value-quantity, date)
 * insert PutCombination5(MAY, patient, category, code, value-quantity, encounter)
@@ -182,6 +197,21 @@ Usage: #definition
 * insert PutDefinedSearchParam(MAY, value-concept, Observation-value-concept, token)
 * insert PutDefinedSearchParam(MAY, value-string, Observation-value-string, string)
 * insert PutDefinedSearchParam(MAY, based-on, Observation-based-on, reference)
+* insert PutDefinedSearchParam(MAY, code-value-concept, Observation-code-value-concept, composite)
+
+// Specimen
+* insert SetSearchParameterResource(Specimen, JP_Specimen_Common)
+* insert PutDefinedSearchParam(SHALL, identifier, Specimen-identifier, token)
+
+// Media
+* insert SetSearchParameterResource(Media, JP_Media_Endoscopy)
+* insert PutCombination2(MAY, patient, modality)
+* insert PutCombination2(MAY, patient, created)
+* insert PutCombination3(MAY, patient, modality, created)
+* insert PutDefinedSearchParam(SHALL, identifier, Media-identifier, token)
+* insert PutDefinedSearchParam(MAY, patient, Media-patient, reference)
+* insert PutDefinedSearchParam(MAY, modality, Media-modality, token)
+* insert PutDefinedSearchParam(MAY, created, Media-created, date)
 
 // ImagingStudy
 //TODO: RadiologyとEndoscopeの見分け方が不明
@@ -275,7 +305,37 @@ Usage: #definition
 * insert PutDefinedSearchParam(MAY, status, FamilyMemberHistory-status, token)
 * insert PutDefinedSearchParam(MAY, relationship, FamilyMemberHistory-relationship, token)
 
+// ServiceRequest
+* insert SetSearchParameterResource(ServiceRequest, JP_ServiceRequest_Common)
+* insert PutDefinedSearchParam(SHALL, identifier, clinical-identifier, token)
+* insert PutDefinedSearchParam(SHALL, intent, ServiceRequest-intent, token)
+* insert PutDefinedSearchParam(SHALL, subject, ServiceRequest-subject, reference)
+* insert PutDefinedSearchParam(SHALL, status, ServiceRequest-status, token)
+* insert PutDefinedSearchParam(SHOULD, performer, ServiceRequest-performer, reference)
+* insert PutDefinedSearchParam(SHOULD, occurrence, ServiceRequest-occurrence, date)
+* insert PutDefinedSearchParam(SHOULD, patient, clinical-patient, reference)
+* insert PutDefinedSearchParam(SHOULD, requester, ServiceRequest-requester, reference)
+* insert PutDefinedSearchParam(MAY, authored, ServiceRequest-authored, date)
+* insert PutDefinedSearchParam(MAY, based-on, ServiceRequest-based-on, reference)
+* insert PutDefinedSearchParam(MAY, body-site, ServiceRequest-body-site, token)
+* insert PutDefinedSearchParam(MAY, category, ServiceRequest-category, token)
+* insert PutDefinedSearchParam(MAY, code, clinical-code	, token)
+* insert PutDefinedSearchParam(MAY, encounter, clinical-encounter, reference)
+* insert PutDefinedSearchParam(MAY, instantiates-canonical, ServiceRequest-instantiates-canonical, reference)
+* insert PutDefinedSearchParam(MAY, instantiates-uri, ServiceRequest-instantiates-uri, uri)
+* insert PutDefinedSearchParam(MAY, performer-type, ServiceRequest-performer-type, token)
+* insert PutDefinedSearchParam(MAY, priority, ServiceRequest-priority, token)
+* insert PutDefinedSearchParam(MAY, replaces, ServiceRequest-replaces, reference)
+* insert PutDefinedSearchParam(MAY, requisition, ServiceRequest-requisition, token)
+* insert PutDefinedSearchParam(MAY, specimen, ServiceRequest-specimen, reference)
+
 * rest.interaction[0].code = #transaction
 * rest.interaction[+].code = #batch
 * rest.interaction[+].code = #search-system
 * rest.interaction[+].code = #history-system
+
+
+
+// // 入力テンプレート
+// * insert SetSearchParameterResource(, )
+// * insert PutDefinedSearchParam(MAY, , , )

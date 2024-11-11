@@ -10,7 +10,7 @@ Usage: #example
 * identifier.system = "http://abc-hospital.local/fhir/identifier/endoscopy/report"
 * identifier.value = "123456"
 * status = #final
-* category[endoscopy] = $Loinc_CS#LP7796-8 "内視鏡"
+* category[first] = $Loinc_CS#LP7796-8 "内視鏡"
 * code = $JP_DocumentCodes_CS#18746-8 "下部消化管内視鏡報告書"
 * subject = Reference(Patient/jp-patient-example-1) "山田 太郎"
 * effectiveDateTime = "2024-07-03"
