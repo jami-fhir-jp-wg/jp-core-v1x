@@ -7,7 +7,7 @@ Usage: #example
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-1
 * identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "1"
-* identifier[requestIdentifier].system = $JP_IdSystem_PrescriptionDocumentID
+* identifier[requestIdentifier].system = $JP_ResourceInstance_Identifier
 * identifier[requestIdentifier].value = "1234567890.1"
 * status = #active
 * intent = #order
@@ -42,7 +42,7 @@ Usage: #example
 * contained[+] = jp-medicationrequest-injection-device-example-2
 * identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "2"
-* identifier[requestIdentifier].system = $JP_IdSystem_PrescriptionDocumentID
+* identifier[requestIdentifier].system = $JP_ResourceInstance_Identifier
 * identifier[requestIdentifier].value = "1234567890.2.1"
 * status = #active
 * intent = #order

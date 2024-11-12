@@ -7,7 +7,7 @@ Usage: #example
 * identifier[rpNumber].value = "1"
 * identifier[orderInRp].system = $JP_MedicationAdministrationIndex
 * identifier[orderInRp].value = "1"
-* identifier[requestIdentifier].system = $JP_IdSystem_PrescriptionDocumentID
+* identifier[requestIdentifier].system = $JP_ResourceInstance_Identifier
 * identifier[requestIdentifier].value = "1234567890.1.1"
 * intent = #order
 * status = #active
@@ -38,7 +38,7 @@ Usage: #example
 * identifier[rpNumber].value = "2"
 * identifier[orderInRp].system = $JP_MedicationAdministrationIndex
 * identifier[orderInRp].value = "2"
-* identifier[requestIdentifier].system = $JP_IdSystem_PrescriptionDocumentID
+* identifier[requestIdentifier].system = $JP_ResourceInstance_Identifier
 * identifier[requestIdentifier].value = "1234567890.1.2"
 * intent = #order
 * status = #active
