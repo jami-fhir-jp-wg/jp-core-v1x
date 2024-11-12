@@ -161,7 +161,7 @@ Title: "JP Core Observation Electrocardiogram NumberOfLeed Extention"
 Description: "心電図検査を実施したときに使った誘導の数を示すExtension"
 * ^url = $JP_Observation_Electrocardiogram_NumberOfLead
 * ^status = #active
-* ^date = "2024-10-31"
+* ^date = "2024-11-18"
 * ^purpose = "心電図検査で使用した誘導の数を記録するために用いられる。"
 * ^context.type = #element
 * ^context.expression = "Observation"

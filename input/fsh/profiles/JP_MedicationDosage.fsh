@@ -12,7 +12,7 @@ Title: "JP Core MedicationDosage Base DataType"
 Description: "このデータタイプは薬剤用法のDosageベースとして基礎となる制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDosageBase"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-11-18"
 * . ^short = "薬の服用方法・服用した方法、または服用すべき方法"
 * . ^definition = "薬の服用方法・服用した方法、または服用すべき方法"
 
