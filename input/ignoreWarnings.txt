@@ -6,7 +6,6 @@
 
 # IG Defined
 The definition for the element 'Consent.provision.code' binds to the value set 'http://hl7.org/fhir/ValueSet/consent-content-code' which is experimental, but this structure is not labeled as experimental
-The definition for the element 'ImagingStudy.series.performer.function' binds to the value set 'http://hl7.org/fhir/ValueSet/series-performer-function' which is experimental, but this structure is not labeled as experimental
 !!コードの検証エラー: 用語サービス無しで実行中
 
 # Warnings for Examples
