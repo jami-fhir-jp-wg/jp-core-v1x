@@ -45,7 +45,7 @@
     * `JP_Condition_Diagnosis`にて以下の病名マスタを利用可能とした
       * MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`
       * MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`
-      * レセプト電算用傷病名マスタ`JP_ConditionDiseaseCodeReceipt_CS`
+      * レセプト電算用傷病名マスタ`JP_Disease_Claim_CS`
   * Workflow グループ
     * `JP_ServiceRequest_Common`プロファイルを追加、それに伴い`JP_ServiceRequest`を削除した
   * SearchParameterおよびOperation関連
@@ -109,7 +109,7 @@
       * `JP_ObservationBodySite_CS`
       * `JP_ObservationBodySite_VS`
     * `JP_ObservationBodyMeasurementCode_CS`の記述の不具合を修正した
-    * 病名マスタ(MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`,MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`,レセプト電算用傷病名マスタ`JP_ConditionDiseaseCodeReceipt_CS`)を用語として追加した
+    * 病名マスタ(MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`,MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`,レセプト電算用傷病名マスタ`JP_Disease_Claim_CS`)を用語として追加した
   * Capability Statement関連
     * 単数パラメータのConformanceの指定に対応した
     * 複数パラメータの記述について追加した

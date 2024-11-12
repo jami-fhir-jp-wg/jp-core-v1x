@@ -8,5 +8,5 @@ Description: "MEDIS ICD10対応標準病名マスター(交換用コード) を�
 * ^date = "2024-11-18"
 * ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 
-* include codes from system $JP_ConditionDiseaseCodeMEDISExchange_CS
+* include codes from system $JP_Disease_MEDIS_Concept_CS
 

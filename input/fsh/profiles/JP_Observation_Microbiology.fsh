@@ -1,7 +1,7 @@
 Profile: JP_Observation_Microbiology
 Parent: JP_Observation_Common
 Id: jp-observation-microbiology
-Title: "JP Core Observationsecond Profile"
+Title: "JP Core Observation Microbiology Profile"
 Description: "このプロファイルはObservationリソースに対して、微生物学検査のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Microbiology"
 * ^status = #active

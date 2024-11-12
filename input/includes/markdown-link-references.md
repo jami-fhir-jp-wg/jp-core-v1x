@@ -14,15 +14,14 @@
 [FHIRJPCoreImplementationGuide]: ImplementationGuide-jpfhir.jp.core.html
 
 <!-- StructureDefinition: Profile, DataType -->
-[JP_Binary]: StructureDefinition-jp-binary.html
 [JP_AllergyIntolerance]: StructureDefinition-jp-allergyintolerance.html
+[JP_Binary]: StructureDefinition-jp-binary.html
 [JP_CarePlan]: StructureDefinition-jp-careplan.html
 [JP_Condition_Diagnosis]: StructureDefinition-jp-condition-diagnosis.html
 [JP_Condition]: StructureDefinition-jp-condition.html
 [JP_Consent]: StructureDefinition-jp-consent.html
 [JP_Coverage]: StructureDefinition-jp-coverage.html
 [JP_Device]: StructureDefinition-jp-device.html
-[JP_DeviceUseStatement]: StructureDefinition-jp-deviceusestatement.html
 [JP_DiagnosticReport_Common]: StructureDefinition-jp-diagnosticreport-common.html
 [JP_DiagnosticReport_DentalOral]: StructureDefinition-jp-diagnosticreport-dentaloral.html
 [JP_DiagnosticReport_Endoscopy]: StructureDefinition-jp-diagnosticreport-endoscopy.html
@@ -117,8 +116,6 @@
 [JP_MedicationRequest_DispenseRequest_InstructionForDispense]: StructureDefinition-jp-medicationrequest-dispenserequest-instructionfordispense.html
 [JP_Observation_DentalOral_BodySiteStatus]: StructureDefinition-jp-observation-dentaloral-bodysitestatus.html
 [JP_Observation_DentalOral_BodyStructure]: StructureDefinition-jp-observation-dentaloral-bodystructure.html
-[JP_Observation_Electrocardiogram_MachinaryInterpretation]: StructureDefinition-jp-obsrevation-electrocardiogram-machinaryinterpretation.html
-[JP_Observation_Electrocardiogram_NumberOfLead]: StructureDefinition-jp-obsrevation-electrocardiogram-numberoflead.html
 [JP_Observation_Electrocardiogram_DeviceInterpretation]: StructureDefinition-jp-observation-electrocardiogram-deviceinterpretation.html
 [JP_Observation_Electrocardiogram_Duration]: StructureDefinition-jp-observation-electrocardiogram-duration.html
 [JP_Observation_Electrocardiogram_NumberOfLead]: StructureDefinition-jp-observation-electrocardiogram-numberoflead.html
@@ -179,7 +176,6 @@
 [JP_ObservationDentalCategory_CS]: CodeSystem-jp-observation-dental-category-cs.html
 [JP_ObservationElectrocardiogramDuration_CS]: CodeSystem-jp-observation-electrocardiogram-duration-cs.html
 [JP_ObservationElectrocardiogramExtraCategory_CS]: CodeSystem-jp-observation-electrocardiogram-extracategory-cs.html
-[JP_ObservationElectrocardiogramInterpretationCode_CS]: CodeSystem-jp-observation-electrocardiogram-interpretation-code-cs.html
 [JP_ObservationElectrocardiogramStressType_CS]: CodeSystem-jp-observation-electrocardiogram-stresstype-cs.html
 [JP_PhysicalExamCode_CS]: CodeSystem-jp-physicalexamcode-cs.html
 [JP_ProcedureBodySite_CS]: CodeSystem-jp-procedure-body-site-cs.html
@@ -209,7 +205,7 @@
 [JP_DentalMissingTeethObservation_VS]: ValueSet-jp-dental-missingteeth-observation-vs.html
 [JP_DentalPresentTeethObservation_VS]: ValueSet-jp-dental-presentteeth-observation-vs.html
 [JP_DentalSipmleMissingTeethObservation_VS]: ValueSet-jp-dental-simple-missingteeth-observation-vs.html
-[JP_DentalSipmlePresentTeethObservation_VS]: ValueSet-jp-dental-simple-presentteeth-observation-vs.html
+[JP_DentalSimplePresentTeethObservation_VS]: ValueSet-jp-dental-simple-presentteeth-observation-vs.html
 [JP_DiagnosticReportCategory_VS]: ValueSet-jp-diagnosticreportcategory-vs.html
 [JP_DICOMModality_VS]: ValueSet-jp-dicommodality-vs.html
 [JP_DocumentCodes_DiagnosticReport_VS]: ValueSet-jp-documentcodes-diagnosticreport-vs.html
@@ -231,10 +227,10 @@
 [JP_ObservationBodyMeasurementCategory_VS]: ValueSet-jp-observation-bodymeasurement-category-vs.html
 [JP_ObservationBodyMeasurementCode_VS]: ValueSet-jp-observation-bodymeasurement-code-vs.html
 [JP_ObservationDentalCategory_VS]: ValueSet-jp-observation-dental-category-vs.html
+[JP_ObservationDetailedDentalCategory_VS]: ValueSet-jp-observation-detailed-dental-category-vs.html
 [JP_ObservationElectrocardiogramComponentCode_VS]: ValueSet-jp-observation-electrocardiogram-component-code-vs.html
 [JP_ObservationElectrocardiogramDuration_VS]: ValueSet-jp-observation-electrocardiogram-duration-vs.html
 [JP_ObservationElectrocardiogramExtraCategory_VS]: ValueSet-jp-observation-electrocardiogram-extracategory-vs.html
-[JP_ObservationElectrocardiogramInterpretationCode_VS]: ValueSet-jp-observation-electrocardiogram-interpretation-code-vs.html
 [JP_ObservationElectrocardiogramStressType_VS]: ValueSet-jp-observation-electrocardiogram-stresstype-vs.html
 [JP_ObservationEndoscopyCode_VS]: ValueSet-jp-observation-endoscopy-code-vs.html
 [JP_ObservationEndoscopyValueJed_VS]: ValueSet-jp-observation-endoscoy-value-jed-vs.html
@@ -259,6 +255,7 @@
 [jp-condition-diagnosis-example-1]: Condition-jp-condition-diagnosis-example-1.html
 [jp-condition-example-1]: Condition-jp-condition-example-1.html
 [jp-coverage-example-1]: Coverage-jp-coverage-example-1.html
+[jp-diagnosticreport-dentaloral-example-1]: DiagnosticReport-jp-diagnosticreport-dentaloral-example-1.html
 [jp-diagnosticreport-endoscopy-example-1]: DiagnosticReport-jp-diagnosticreport-endoscopy-example-1.html
 [jp-diagnosticreport-endoscopy-example-2]: DiagnosticReport-jp-diagnosticreport-endoscopy-example-2.html
 [jp-diagnosticreport-labresult-example-1]: DiagnosticReport-jp-diagnosticreport-labresult-example-1.html
@@ -311,6 +308,12 @@
 [jp-observation-vitalsignscode-namingsystem]: NamingSystem-jp-observation-vitalsignscode-namingsystem.html
 [jp-prefecturenumber-namingsystem]: NamingSystem-jp-prefecturenumber-namingsystem.html
 [jp-observation-bodyMeasurement-example-1]: Observation-jp-observation-bodyMeasurement-example-1.html
+[jp-observation-dentaloral-toothexistence-example-1]: Observation-jp-observation-dentaloral-toothexistence-example-1.html
+[jp-observation-dentaloral-toothexistence-example-2]: Observation-jp-observation-dentaloral-toothexistence-example-2.html
+[jp-observation-dentaloral-toothexistence-example-3]: Observation-jp-observation-dentaloral-toothexistence-example-3.html
+[jp-observation-dentaloral-toothtreatmentcondition-example-1]: Observation-jp-observation-dentaloral-toothtreatmentcondition-example-1.html
+[jp-observation-dentaloral-toothtreatmentcondition-example-2]: Observation-jp-observation-dentaloral-toothtreatmentcondition-example-2.html
+[jp-observation-dentaloral-toothtreatmentcondition-example-3]: Observation-jp-observation-dentaloral-toothtreatmentcondition-example-3.html
 [jp-observation-electrocardiogram-example-1]: Observation-jp-observation-electrocardiogram-example-1.html
 [jp-observation-endoscopy-example-diagnosis-1]: Observation-jp-observation-endoscopy-example-diagnosis-1.html
 [jp-observation-endoscopy-example-diagnosis-2]: Observation-jp-observation-endoscopy-example-diagnosis-2.html

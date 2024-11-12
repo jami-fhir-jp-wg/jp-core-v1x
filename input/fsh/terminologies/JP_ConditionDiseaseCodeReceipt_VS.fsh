@@ -8,5 +8,5 @@ Description: "レセプト電算用傷病名マスターを示す値セット"
 * ^date = "2024-11-18"
 * ^copyright = "Copyright 社会保険診療報酬支払基金"
 
-* include codes from system $JP_ConditionDiseaseCodeReceipt_CS
+* include codes from system $JP_Disease_Claim_CS
 

@@ -8,5 +8,5 @@ Description: "MEDIS ICD10対応標準病名マスター(管理番号) を示す�
 * ^date = "2024-11-18"
 * ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
 
-* include codes from system $JP_ConditionDiseaseCodeMEDISRecordNo_CS
+* include codes from system $JP_Disease_MEDIS_ManagementID_CS
 

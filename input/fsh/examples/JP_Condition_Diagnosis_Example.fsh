@@ -41,7 +41,7 @@ Usage: #example
     * url = $JP_Condition_DiseasePrefixModifier
     * valueCodeableConcept
       * coding[0]
-        * system = $JP_ConditionDiseaseModifierMEDISExchange_CS
+        * system = $JP_Modifier_MEDIS_Concept_CS
         * code = #5194
         * display = "右"
       * text = "右"
@@ -49,7 +49,7 @@ Usage: #example
     * url = $JP_Condition_DiseasePostfixModifier
     * valueCodeableConcept
       * coding[0]
-        * system = $JP_ConditionDiseaseModifierMEDISExchange_CS
+        * system = $JP_Modifier_MEDIS_Concept_CS
         * code = #1486
         * display = "の術後"
       * text = "の術後"
@@ -58,7 +58,7 @@ Usage: #example
     * code = #MD13062
     * display = "橈骨遠位端骨折"
   * coding[1]
-    * system = $JP_ConditionDiseaseCodeMEDISExchange_CS
+    * system = $JP_Disease_MEDIS_Concept_CS
     * code = #CJTR
     * display = "橈骨遠位端骨折"
   *  text = "右橈骨遠位端骨折の術後"

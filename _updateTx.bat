@@ -35,9 +35,9 @@ SET /p dterm="download packeges of terminology? (Y/N) "
 IF NOT %dterm:Y=Y%==Y (
     GOTO end
 )
-SET dltermurl=https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.2.1.tgz
-SET localterm=.\\temp\\jpfhir-terminology.r4-1.2.1.tgz
-set term_dir=%fhir_dir%\\packages\\jpfhir-terminology#1.2.1
+SET dltermurl=https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.2.4-url.tgz
+SET localterm=.\\temp\\jpfhir-terminology.r4-1.2.4-url.tgz
+set term_dir=%fhir_dir%\\packages\\jpfhir-terminology.r4#1.2.4-url
 
 CURL %dltermurl% > %localterm%
 

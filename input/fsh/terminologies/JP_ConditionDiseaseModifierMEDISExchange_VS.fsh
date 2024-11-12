@@ -9,5 +9,5 @@ Description: "MEDIS ICD10対応標準病名マスター(修飾語交換用コー
 * ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
 
 // 現状はMEDIS交換用コードのコードシステムをそのまま使用する
-* include codes from system $JP_ConditionDiseaseModifierMEDISExchange_CS
+* include codes from system $JP_Modifier_MEDIS_Concept_CS
 

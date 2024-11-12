@@ -1,3 +1,5 @@
+{% include url-version-headerNote.md %}
+
 本プロファイル説明は、患者に付属する一項目分のバイタルサイン情報について、情報の登録や検索、取得のために、JP_Observation_SocialHistoryリソースを使用するにあたっての、最低限の制約を記述したものである。
 JP_Observation_SocialHistory リソースに対して本プロファイルに準拠する場合に必須となる要素や、サポートすべき拡張、用語、検索パラメータを定義する。
 

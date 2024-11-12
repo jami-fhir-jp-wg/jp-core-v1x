@@ -8,5 +8,5 @@ Description: "MEDIS ICD10対応標準病名マスター(修飾語管理番号) �
 * ^date = "2024-11-18"
 * ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
 
-* include codes from system $JP_ConditionDiseaseModifierMEDISRecordNo_CS
+* include codes from system $JP_Modifier_MEDIS_ManagementID_CS
 
