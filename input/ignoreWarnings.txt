@@ -25,7 +25,7 @@ The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/
 ValueSet http://dicom%
 
 # Wrong Display Name
-Wrong Display Name%
+#Wrong Display Name%
 
 # CodeSystem Content Level #Example or #Fragment Warnings
 #  Error from server: Unable to provide support for code system %
