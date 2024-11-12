@@ -10,15 +10,22 @@ Description: "DiagnosticReportカテゴリ 値セット"
 This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * $Loinc_CS#LP29684-5 //"放射線"
   * ^designation[0].language = #ja
+  * ^designation[0].value = "放射線"
 * $Loinc_CS#LP7839-6 //"病理"
   * ^designation[0].language = #ja
+  * ^designation[0].value = "病理"
 * $Loinc_CS#LP7796-8 //"内視鏡"
   * ^designation[0].language = #ja
+  * ^designation[0].value = "内視鏡"
 * $Loinc_CS#LP29693-6 //"検体検査"
   * ^designation[0].language = #ja
+  * ^designation[0].value = "検体検査"
 * $Loinc_CS#LP29708-2 //"循環器"
   * ^designation[0].language = #ja
+  * ^designation[0].value = "循環器"
 * $Loinc_CS#LP31759-1 //"歯科口腔"
   * ^designation[0].language = #ja
+  * ^designation[0].value = "歯科口腔"
 * $Loinc_CS#LP7819-8 //"微生物検査"
   * ^designation[0].language = #ja
+  * ^designation[0].value = "微生物検査"
