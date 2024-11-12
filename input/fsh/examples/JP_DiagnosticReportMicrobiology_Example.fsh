@@ -3,7 +3,7 @@ InstanceOf: JP_DiagnosticReport_Microbiology
 Title: "JP Core DiagnosticReport_Microbiology Example 一般細菌検査レポート"
 Description: "一般細菌検査レポート"
 Usage: #example
-//* language = #ja
+* language = #ja
 * contained[+] = gram-strain1
 * contained[+] = gram-strain2
 * contained[+] = gram-strain3
