@@ -9,7 +9,8 @@ Usage: #example
 * identifier.system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
 * identifier.value = "123456"
 * status = #final
-* category[first] = $Loinc_CS#LP31759-1 "歯科口腔"
+* category[first].coding.code = #LP31759-1
+* category[first].coding.display = "歯科口腔"
 * code = $JP_DocumentCodes_CS#32453-3 "口腔診査報告書"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2022-10-01"
