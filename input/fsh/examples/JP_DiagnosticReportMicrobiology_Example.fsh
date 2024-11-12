@@ -79,6 +79,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "1+"
+* language = #en
 
 Instance: gram-strain2
 InstanceOf: JP_Observation_Microbiology
@@ -94,6 +95,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "少数"
+* language = #en
 
 Instance: gram-strain3
 InstanceOf: JP_Observation_Microbiology
@@ -109,6 +111,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "1+"
+* language = #en
 
 Instance: gram-strain4
 InstanceOf: JP_Observation_Microbiology
@@ -124,6 +127,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "少数"
+* language = #en
 
 Instance: organism-panels1
 InstanceOf: JP_Observation_Microbiology
@@ -139,6 +143,7 @@ Usage: #inline
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * hasMember[0] = Reference(Observation/organism-id1)
 * hasMember[+] = Reference(Observation/susceptibility-panels1)
+* language = #en
 
 Instance: organism-panels2
 InstanceOf: JP_Observation_Microbiology
@@ -154,6 +159,7 @@ Usage: #inline
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * hasMember[0] = Reference(Observation/organism-id2)
 * hasMember[+] = Reference(Observation/susceptibility-panels2)
+* language = #en
 
 Instance: organism-panels3
 InstanceOf: JP_Observation_Microbiology
@@ -168,6 +174,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * hasMember[0] = Reference(Observation/organism-id3)
+* language = #en
 
 Instance: organism-panels4
 InstanceOf: JP_Observation_Microbiology
@@ -182,6 +189,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * hasMember[0] = Reference(Observation/organism-id4)
+* language = #en
 
 // ----- 第2階層 ----- //
 Instance: organism-id1
@@ -197,6 +205,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "2+"
+* language = #en
 
 Instance: susceptibility-panels1
 InstanceOf: JP_Observation_Microbiology
@@ -217,6 +226,7 @@ Usage: #inline
 * hasMember[+] = Reference(Observation/susceptibility-measurements1-5)
 * hasMember[+] = Reference(Observation/susceptibility-measurements1-6)
 * hasMember[+] = Reference(Observation/susceptibility-measurements1-7)
+* language = #en
 
 Instance: organism-id2
 InstanceOf: JP_Observation_Microbiology
@@ -231,6 +241,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "1+"
+* language = #en
 
 Instance: susceptibility-panels2
 InstanceOf: JP_Observation_Microbiology
@@ -253,6 +264,7 @@ Usage: #inline
 * hasMember[+] = Reference(Observation/susceptibility-measurements2-7)
 * hasMember[+] = Reference(Observation/susceptibility-measurements2-8)
 * hasMember[+] = Reference(Observation/susceptibility-measurements2-9)
+* language = #en
 
 Instance: organism-id3
 InstanceOf: JP_Observation_Microbiology
@@ -267,6 +279,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "1+"
+* language = #en
 
 Instance: organism-id4
 InstanceOf: JP_Observation_Microbiology
@@ -281,6 +294,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "少数"
+* language = #en
 
 // ----- 第3階層 ----- //
 Instance: susceptibility-measurements1-1
@@ -295,6 +309,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
+* language = #en
 
 Instance: susceptibility-measurements1-2
 InstanceOf: JP_Observation_Microbiology
@@ -308,6 +323,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
+* language = #en
 
 Instance: susceptibility-measurements1-3
 InstanceOf: JP_Observation_Microbiology
@@ -321,6 +337,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
+* language = #en
 
 Instance: susceptibility-measurements1-4
 InstanceOf: JP_Observation_Microbiology
@@ -334,6 +351,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
+* language = #en
 
 Instance: susceptibility-measurements1-5
 InstanceOf: JP_Observation_Microbiology
@@ -347,6 +365,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
+* language = #en
 
 Instance: susceptibility-measurements1-6
 InstanceOf: JP_Observation_Microbiology
@@ -360,6 +379,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#I "Intermediate"
+* language = #en
 
 Instance: susceptibility-measurements1-7
 InstanceOf: JP_Observation_Microbiology
@@ -373,6 +393,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
+* language = #en
 
 Instance: susceptibility-measurements2-1
 InstanceOf: JP_Observation_Microbiology
@@ -386,6 +407,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
+* language = #en
 
 Instance: susceptibility-measurements2-2
 InstanceOf: JP_Observation_Microbiology
@@ -399,6 +421,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
+* language = #en
 
 Instance: susceptibility-measurements2-3
 InstanceOf: JP_Observation_Microbiology
@@ -413,6 +436,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
+* language = #en
 
 Instance: susceptibility-measurements2-4
 InstanceOf: JP_Observation_Microbiology
@@ -426,6 +450,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
+* language = #en
 
 Instance: susceptibility-measurements2-5
 InstanceOf: JP_Observation_Microbiology
@@ -439,6 +464,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
+* language = #en
 
 Instance: susceptibility-measurements2-6
 InstanceOf: JP_Observation_Microbiology
@@ -452,6 +478,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
+* language = #en
 
 Instance: susceptibility-measurements2-7
 InstanceOf: JP_Observation_Microbiology
@@ -465,6 +492,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
+* language = #en
 
 Instance: susceptibility-measurements2-8
 InstanceOf: JP_Observation_Microbiology
@@ -478,6 +506,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
+* language = #en
 
 Instance: susceptibility-measurements2-9
 InstanceOf: JP_Observation_Microbiology
@@ -491,3 +520,4 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
+* language = #en
