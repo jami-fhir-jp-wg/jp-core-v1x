@@ -1,4 +1,4 @@
-name: JPCore FHIR Task develop v1.1.3-URL
+name: JPCore FHIR Task develop v1.1.2-URL-LoincTest
 on:
   push:
     branches: 
