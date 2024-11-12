@@ -95,7 +95,7 @@ jobs:
       env:
         JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
         JPTerminologyCOREdir: jpfhir-terminology#1.2.4-url
-        JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.2.4.tgz
+        JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.2.4-url.tgz
       run: |
         mkdir -p /home/runner/.fhir
         mv $JPPACKAGECOREtgz /home/runner/.fhir/
