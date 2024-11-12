@@ -130,6 +130,6 @@ JP Coreは以下の方々、および各サーブワーキンググループの�
 
 * Terminology : SWG6
   * リーダ：東京大学　今井 健
-  * サブリーダ：国立病院機構　堀口 裕正
+  * サブリーダ：愛媛大学　木村映善
 
 {% include markdown-link-references.md %}
