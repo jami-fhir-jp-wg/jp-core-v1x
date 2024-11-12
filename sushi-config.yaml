@@ -314,6 +314,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationCategory_Endoscopy_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationCategory_Microbiology_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationDentalCategory_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationDetailedDentalCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramComponentCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramDuration_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramExtraCategory_VS
