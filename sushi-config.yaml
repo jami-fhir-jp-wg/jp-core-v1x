@@ -99,7 +99,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   no-narrative: 
     - CodeSystem/*
   active-tables: 'false'
-  apply-version: 'true'
+  apply-version: 'false'
   apply-copyright: 'true'
   apply-publisher: 'true'
   apply-contact: 'true'
