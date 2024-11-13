@@ -36,17 +36,16 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationCodeCommon_NamingSystem"
 * status = #active
-* date = "2023-10-31"
+* date = "2024-11-18"
 * kind = #codesystem
 * description = "JP Core MedicationCode Common NamingSystem"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.1.81"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.100495.20.1.81"
-* uniqueId[=].preferred = true
 * uniqueId[+].type = #uri
-* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeCommon_CS"
-
+* uniqueId[=].value = $JP_MedicationCodeCommon_CS
+* uniqueId[=].preferred = true
 
 Instance: jp-medicationcodehot7-namingsystem
 InstanceOf: NamingSystem
