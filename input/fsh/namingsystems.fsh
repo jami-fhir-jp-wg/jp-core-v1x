@@ -145,11 +145,11 @@ Usage: #definition
 * description = "JP Core MedicationMethod JAMI BasicUsage NamingSystem"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.200250.2.2.20.30"
+* uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.200250.2.2.20.30"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = $JP_MedicationMethodJAMIBasicUsage_CS
-* uniqueId[+].type = #uri
-
+* uniqueId[=].preferred = true
 
 Instance: jp-medicationmethodjamidetailusage-namingsystem
 InstanceOf: NamingSystem
