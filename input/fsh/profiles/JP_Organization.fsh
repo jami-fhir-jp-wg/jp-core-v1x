@@ -51,7 +51,7 @@ value : ```医療機関コード（１０桁）```を使用する。
 * identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no" (exactly)
 * identifier[medicalInstitutionCode].assigner only Reference(JP_Organization)
 * identifier[insurerNumber] ^comment = "健康保険組合などの保険者の保険者番号を表現する際のIdentifier表現に使用する  
-system要素には保険者番号を示すOID\" http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber\"を指定する。"
+system要素には保険者番号を示す\"http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber\"を指定する。"
 * identifier[insurerNumber].system = $JP_IdSystem_InsurerNumber (exactly)
 * identifier[insurerNumber].assigner only Reference(JP_Organization)
 * identifier[insurerNumber].value ^comment = "保険者番号。英数字 券面記載の保険者番号。"

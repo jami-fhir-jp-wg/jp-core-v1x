@@ -4,11 +4,11 @@
 |使用|コード名称|OID形式（旧）|URL形式（新）|
 |----|----|----|----|
 |	＊	|	JAMI SSMIX2診療科コード表	|	urn:oid:1.2.392.200250.2.2.2	|	http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment	|
-|	＊	|	JAMI用法コード表ー１６桁バージョン	|	urn:oid:1.2.392.200250.2.2.20	|	http://jami.jp/CodeSystem/MedicationUsage	|
+|	＊	|	JAMI用法コード表ー１６桁バージョン	|	urn:oid:1.2.392.200250.2.2.20.20	|	http://jami.jp/CodeSystem/MedicationUsage	|
 |	＊	|	JAMI用法コード表ー８桁補足用法コード	|	urn:oid:1.2.392.200250.2.2.20.22	|	http://jami.jp/CodeSystem/MedicationUsageAdditional	|
 |	＊	|	JAMI用法コード表ー基本用法コード１桁	|	urn:oid:1.2.392.200250.2.2.20.30	|	http://jami.jp/CodeSystem/MedicationMethodBasicUsage	|
 |		|	JAMI用法コード表ーイベント用法コード３桁	|	urn:oid:1.2.392.200250.2.2.20.31	|	http://jami.jp/CodeSystem/MedicationEventTriggered	|
-|		|	JAMI用法コード表ー外用部位コード表３桁	|	urn:oid:1.2.392.200250.2.2.20.32	|	http://jami.jp/CodeSystem/MedicationBodySiteExternal	|
+|	＊	|	JAMI用法コード表ー外用部位コード表３桁	|	urn:oid:1.2.392.200250.2.2.20.32	|	http://jami.jp/CodeSystem/MedicationBodySiteExternal	|
 |		|	JAMI用法コード表ー投与経路区分コード２桁（基本用法コード１桁と詳細区分コード１桁を連結）	|	urn:oid:1.2.392.200250.2.2.20.40	|	http://jami.jp/CodeSystem/MedicationMethodDetailUsage	|
 |		|	JAMI用法コード表ー内服用法詳細区分コード１桁	|	urn:oid:1.2.392.200250.2.2.20.41	|	http://jami.jp/CodeSystem/MedicationMethodDetailOral	|
 |		|	JAMI用法コード表ー外用用法詳細区分コード１桁	|	urn:oid:1.2.392.200250.2.2.20.42	|	http://jami.jp/CodeSystem/MedicationMethodDetailExternal	|
@@ -16,7 +16,7 @@
 |		|	JAMI用法コード表ー注入用法詳細区分コード１桁	|	urn:oid:1.2.392.200250.2.2.20.44	|	http://jami.jp/CodeSystem/MedicationMethodDetailPouring	|
 |		|	JAMI用法コード表ー時間的要素・機器区分コード1桁	|	urn:oid:1.2.392.200250.2.2.20.45	|	http://jami.jp/CodeSystem/MedicationMethodDetailDeviceInjection	|
 |		|	JAMI用法コード表ー１２桁バージョン（実証実験用）	|	urn:oid:1.2.392.200250.2.2.21	|	http://jami.jp/CodeSystem/MedicationUsage-12digits	|
-|	＊	|	JAMI医薬品調剤指示コード	|	urn:oid:1.2.392.200250.2.2.30.10	|	http://jami.jp/CodeSystem/DrugDispensePreparationMethod	|
+|       |	JAMI医薬品調剤指示コード	|	urn:oid:1.2.392.200250.2.2.30.10	|	http://jami.jp/CodeSystem/DrugDispensePreparationMethod	|
 |	＊	|	MEDISー病名マスター病名管理番号	|	urn:oid:1.2.392.200119.4.101.2	|	http://medis.or.jp/CodeSystem/master-disease-keyNumber	|
 |	＊	|	MEDISー病名マスター病名交換用コード	|	urn:oid:1.2.392.200119.4.101.6	|	http://medis.or.jp/CodeSystem/master-disease-exCode	|
 |	＊	|	MEDISー病名マスター修飾語管理番号	|	urn:oid:1.2.392.200119.4.201.2	|	http://medis.or.jp/CodeSystem/master-disease-modKeyNumber	|
@@ -38,7 +38,7 @@
 |		|	残薬確認指示コード	|	urn:oid:1.2.392.100495.20.2.42	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/RequestCheckRemainingMedicine	|
 |	＊	|	診療科コード	|	urn:oid:1.2.392.100495.20.2.51	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationRequestDepartment	|
 |	＊	|	保険種別コード	|	urn:oid:1.2.392.100495.20.2.61	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/InsuranceMajorCategory	|
-|	＊	|	被保険者区分コード	|	urn:oid:1.2.392.100495.20.2.62	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/InsuredPersonCategory	|
+|		|	被保険者区分コード	|	urn:oid:1.2.392.100495.20.2.62	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/InsuredPersonCategory	|
 |		|	患者一部負担コード	|	urn:oid:1.2.392.100495.20.2.63	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationInsuredPersonClass	|
 |		|	レセプト種別コード	|	urn:oid:1.2.392.100495.20.2.64	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/	|
 | |	医薬品コード（医薬品マスター）	|	(urn:oid:1.2.392.100495.20.2.71)	|	関係者調整中	|

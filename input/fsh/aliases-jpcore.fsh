@@ -182,7 +182,7 @@ Alias: $JP_MedicationMethodJHSI0003_CS = http://jpfhir.jp/fhir/core/CodeSystem/J
 Alias: $JP_MedicationRouteHL70162_CS = http://jpfhir.jp/fhir/core/CodeSystem/route-codes
 Alias: $JP_MedicationSubstitutionNotAllowedReason_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationSubstitutionProhibittedCategory //urn:oid:1.2.392.100495.20.2.41
 Alias: $JP_MedicationUnitMERIT9_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationUnitMERIT9Code //urn:oid:1.2.392.100495.20.2.101
-Alias: $JP_MedicationUsageJAMI_CS = http://jami.jp/CodeSystem/MedicationUsage //urn:oid:1.2.392.200250.2.2.20
+Alias: $JP_MedicationUsageJAMI_CS = http://jami.jp/CodeSystem/MedicationUsage //urn:oid:1.2.392.200250.2.2.20.20
 Alias: $JP_MedicationUsageJAMIAdditional_CS = http://jami.jp/CodeSystem/MedicationUsageAdditional //urn:oid:1.2.392.200250.2.2.20.22
 Alias: $JP_Microbiology_AntiMicrobialDrug_CS = urn:oid:1.2.392.100495.10.3.100.5.11.5.2
 Alias: $JP_Microbiology_InfectiousAgent_CS = urn:oid:1.2.392.100495.10.3.100.5.27.6.1
@@ -369,7 +369,7 @@ Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
 
 
 //system値
-Alias: $JP_IdSystem_InsurerNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber
+Alias: $JP_IdSystem_InsurerNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber  //urn:oid:1.2.392.100495.20.3.61
 Alias: $JP_IdSystem_MedicalOrganizationID = http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicalOrganizationID //urn:oid:1.2.392.100495.20.3.23
 Alias: $JP_IdSystem_PrescriptionDocumentID = urn:oid:1.2.392.100495.20.3.11
 Alias: $JP_IdSystemMedicalRegistrationNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/medicalRegistrationNumber   //urn:oid:1.2.392.100495.20.3.31

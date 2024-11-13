@@ -21,12 +21,12 @@ HL7 V2系では用語集を識別するコーディングシステム名（以�
 
 |分類|用語集|CS名|URI|
 |-----|----|----|---------------------------|
-|病名|MEDIS ICD10対応標準病名マスター(管理番号)|MDCDX2|urn:oid:1.2.392.200119.4.101.2|
+|病名|MEDIS ICD10対応標準病名マスター(管理番号)|MDCDX2|http://medis.or.jp/CodeSystem/master-disease-keyNumber|
 |病名|MEDIS ICD10対応標準病名マスター(交換用コード)|MDCDX2|http://medis.or.jp/CodeSystem/master-disease-exCode|
 |病名|ICD-10|ICD10|http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDisaseCodeICD10_CS|
 |病名|レセプト電算用傷病名マスター|(なし)|http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDisaseCodeReceipt_CS|
-|病名修飾語|MEDIS ICD10対応標準病名マスター(修飾語管理番号)|MDCDX2|urn:oid:1.2.392.200119.4.201.2|
-|病名修飾語|MEDIS ICD10対応標準病名マスター(修飾語交換用コード)|MDCDX2|urn:oid:1.2.392.200119.4.201.5|
+|病名修飾語|MEDIS ICD10対応標準病名マスター(修飾語管理番号)|MDCDX2|http://medis.or.jp/CodeSystem/master-disease-modKeyNumber|
+|病名修飾語|MEDIS ICD10対応標準病名マスター(修飾語交換用コード)|MDCDX2|http://medis.or.jp/CodeSystem/master-disease-modExCode|
 |病名修飾語|レセプト電算用修飾語マスター|(なし)|http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseModifierReceipt_CS|
 |転帰区分|HL7表0241|HL70241|hhttp://jpfhir.jp/fhir/core/CodeSystem/HL70241|
 |転帰区分|JHSD表0006|JHSD0006|http://jpfhir.jp/fhir/core/CodeSystem/JHSD0006|
