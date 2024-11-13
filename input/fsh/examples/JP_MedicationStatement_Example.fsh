@@ -11,7 +11,7 @@ Usage: #example
 * dateAsserted = "2020-05-01T12:28:17+09:00"
 * informationSource = Reference(Patient/jp-patient-example-1)
 * derivedFrom = Reference(MedicationRequest/jp-medicationrequest-example-1)
-* reasonCode = urn:oid:1.2.392.200119.4.101.6#TQ7A "急性気管支炎"
+* reasonCode = $JP_Disease_MEDIS_Concept_CS#TQ7A "急性気管支炎"
 * dosage.text = "内服・経口・１日３回朝昼夕食後"
 * dosage.timing.code = $JP_MedicationUsageJAMI_CS#1013044400000000 "内服 １日３回 朝昼夕食後"
 * dosage.route = $JP_MedicationRouteHL70162_CS#PO "口"

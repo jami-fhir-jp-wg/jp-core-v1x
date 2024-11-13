@@ -209,7 +209,7 @@ Alias: $JP_ProcedureBodySite_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Proce
 Alias: $JP_ProcedureCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCategory_CS
 Alias: $JP_ProcedureCodesDental_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterH-dentalProcedure
 Alias: $JP_ProcedureCodesICHI_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
-Alias: $JP_ProcedureCodesMedical_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterS-medicalProcedure
+Alias: $JP_ProcedureCodesMedical_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesMedical_CS
 Alias: $JP_ProcedureCodesNurse_CS = urn:oid:1.2.392.200119.4.701
 Alias: $JP_ProcedureCodesSTEM7_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureCodesSTEM7_CS
 Alias: $JP_ProcedureCondition_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
@@ -232,13 +232,14 @@ Alias: $JP_Modifier_MEDIS_Concept_CS = http://medis.or.jp/CodeSystem/master-dise
 Alias: $JP_Modifier_MEDIS_ManagementID_CS = http://medis.or.jp/CodeSystem/master-disease-modKeyNumber   //MEDIS病名管理修飾コード    //urn:oid:1.2.392.200119.4.201.2
 Alias: $JP_Modifier_Disease_Claim_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterZ-disease-modifier //  支払基金	修飾語コード    
 
+// Clinsでは定義されているが、JP Coreでは未定義
 // Alias: $JP_BodySite_MEDIS_Concept_CS = http://medis.or.jp/CodeSystem/master-disease-modExCode   //MEDIS病名交換用修飾コード //urn:oid:1.2.392.200119.4.201.5
 // Alias: $JP_BodySite_MEDIS_ManagementID_CS = http://medis.or.jp/CodeSystem/master-disease-modKeyNumber   //MEDIS病名管理修飾コード    //urn:oid:1.2.392.200119.4.201.2
 // Alias: $JP_BodySite_Disease_Claim_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterZ-disease-modifier //  支払基金	修飾語コード 
 
 
 // ValueSet
-Alias: $JAMI__MedicationMethodDetailDeviceInjection_VS = http://jami.jp/ValueSet/MedicationMethodDetailDeviceInjection_VS
+//Alias: $JAMI__MedicationMethodDetailDeviceInjection_VS = http://jami.jp/ValueSet/MedicationMethodDetailDeviceInjection_VS
 Alias: $JP_AllergyIntolerance_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS
 Alias: $JP_ConclusionCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
 Alias: $JP_ConditionDiseaseCodeICD10_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeICD10_VS
@@ -371,7 +372,7 @@ Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
 Alias: $JP_IdSystem_InsurerNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber
 Alias: $JP_IdSystem_MedicalOrganizationID = http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicalOrganizationID //urn:oid:1.2.392.100495.20.3.23
 Alias: $JP_IdSystem_PrescriptionDocumentID = urn:oid:1.2.392.100495.20.3.11
+Alias: $JP_IdSystemMedicalRegistrationNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/medicalRegistrationNumber   //urn:oid:1.2.392.100495.20.3.31
 Alias: $JP_Medication_RPGroupNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumber //urn:oid:1.2.392.100495.20.3.81
 Alias: $JP_MedicationAdministrationIndex = http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicationAdministrationIndex  //	urn:oid:1.2.392.100495.20.3.82
 Alias: $JP_ResourceInstance_Identifier = http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier
-Alias: $JP_IdSystemMedicalRegistrationNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/medicalRegistrationNumber   //urn:oid:1.2.392.100495.20.3.31

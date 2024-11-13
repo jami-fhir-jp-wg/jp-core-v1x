@@ -22,7 +22,7 @@ HL7 V2系では用語集を識別するコーディングシステム名（以�
 |分類|用語集|CS名|URI|
 |-----|----|----|---------------------------|
 |病名|MEDIS ICD10対応標準病名マスター(管理番号)|MDCDX2|urn:oid:1.2.392.200119.4.101.2|
-|病名|MEDIS ICD10対応標準病名マスター(交換用コード)|MDCDX2|urn:oid:1.2.392.200119.4.101.6|
+|病名|MEDIS ICD10対応標準病名マスター(交換用コード)|MDCDX2|http://medis.or.jp/CodeSystem/master-disease-exCode|
 |病名|ICD-10|ICD10|http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDisaseCodeICD10_CS|
 |病名|レセプト電算用傷病名マスター|(なし)|http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDisaseCodeReceipt_CS|
 |病名修飾語|MEDIS ICD10対応標準病名マスター(修飾語管理番号)|MDCDX2|urn:oid:1.2.392.200119.4.201.2|
@@ -167,7 +167,7 @@ HL7 V2系では用語集を識別するコーディングシステム名（以�
 
 ## 注意事項
 ### 病名の識別コードと名称について
-病名を識別するコードと名称は、Condition.code要素に、CodeableConcept型を使用して記録する。標準コードとしては、MEDIS ICD10対応標準病名マスターの交換用コード（"urn:oid:1.2.392.200119.4.101.6"）、ICD-10（"http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDisaseCodeICD10_CS"）、レセプト電算用傷病名マスター（"http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionReceiptCode_CS"）を推奨する。CodeableConcept型はcoding要素を繰り返すことが可能なので、１つの病名の識別情報を複数のコードシステムで記述してもよい。
+病名を識別するコードと名称は、Condition.code要素に、CodeableConcept型を使用して記録する。標準コードとしては、MEDIS ICD10対応標準病名マスターの交換用コード（"http://medis.or.jp/CodeSystem/master-disease-exCode"）、ICD-10（"http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDisaseCodeICD10_CS"）、レセプト電算用傷病名マスター（"http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionReceiptCode_CS"）を推奨する。CodeableConcept型はcoding要素を繰り返すことが可能なので、１つの病名の識別情報を複数のコードシステムで記述してもよい。
 また、Condition.code.text には修飾情報を含めた病名のフルテキストを記述する。
 
 「急性化膿性虫垂炎の疑い」の場合のインスタンス例を示す。
@@ -178,7 +178,7 @@ HL7 V2系では用語集を識別するコーディングシステム名（以�
     "code": "MD03981", 
     "display": "急性化膿性虫垂炎" 
   }, { 
-    "system": "urn:oid:1.2.392.200119.4.101.6", 
+    "system": "http://medis.or.jp/CodeSystem/master-disease-exCode", 
     "code": "HR19", 
     "display": "急性化膿性虫垂炎" 
   }, { 
@@ -226,7 +226,7 @@ HL7 V2系では用語集を識別するコーディングシステム名（以�
     "code": "MD13062", 
     "display": "橈骨遠位端骨折" 
   }, { 
-    "system": "urn:oid:1.2.392.200119.4.101.6", 
+    "system": "http://medis.or.jp/CodeSystem/master-disease-exCode", 
     "code": "CJTR", 
     "display": "橈骨遠位端骨折" 
   } ], 
@@ -306,7 +306,7 @@ abatement[x]要素はCondition.clinicalStatus要素の値が"resolved","remissio
     "code": "MD03981", 
     "display": "急性化膿性虫垂炎" 
   }, { 
-    "system": "urn:oid:1.2.392.200119.4.101.6", 
+    "system": "http://medis.or.jp/CodeSystem/master-disease-exCode", 
     "code": "HR19", 
     "display": "急性化膿性虫垂炎" 
   } ], 

@@ -242,13 +242,13 @@ dosageInstruction.doseAndRate.doseQuantity要素には、情報が得られる�
 
 ### 投与理由（対象疾患等）
 この投薬の理由、対象疾患などを、reasonCode要素にCodeableConcept型で記述する。
-投与理由で使用するコードは、MEDIS標準病名マスター 病名交換用コード("urn:oid:1.2.392.200119.4.101.6")を推奨する。
+投与理由で使用するコードは、MEDIS標準病名マスター 病名交換用コード("http://medis.or.jp/CodeSystem/master-disease-exCode")を推奨する。
 
 ```json
 "reasonCode": {
   "coding": [
     {
-      "system": "urn:oid:1.2.392.200119.4.101.6",
+      "system": "http://medis.or.jp/CodeSystem/master-disease-exCode",
       "code": "B0EF",
       "display": "持続腹痛"
     }

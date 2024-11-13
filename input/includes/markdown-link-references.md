@@ -141,12 +141,6 @@
 
 <!-- CodeSystem -->
 [JP_ConditionDiseaseCodeICD10_CS]: CodeSystem-jp-condition-disease-code-icd10-cs.html
-[JP_ConditionDiseaseCodeMEDISExchange_CS]: CodeSystem-jp-condition-disease-code-medis-exchange-cs.html
-[JP_ConditionDiseaseCodeMEDISRecordNo_CS]: CodeSystem-jp-condition-disease-code-medis-record-no-cs.html
-[JP_ConditionDieaseCodeReceipt_CS]: CodeSystem-jp-condition-disease-code-receipt-cs.html
-[JP_ConditionDiseaseModifierMEDISExchange_CS]: CodeSystem-jp-condition-disease-modifier-medis-exchange-cs.html
-[JP_ConditionDiseaseModifierMEDISRecordNo_CS]: CodeSystem-jp-condition-disease-modifier-medis-record-no-cs.html
-[JP_ConditionDieaseModifierReceipt_CS]: CodeSystem-jp-condition-disease-modifier-receipt-cs.html
 [JP_ConditionDieaseOutcomeHL70241_CS]: CodeSystem-jp-condition-disease-outcome-hl70241-cs.html
 [JP_ConditionDieaseOutcomeJHSD0006_CS]: CodeSystem-jp-condition-disease-outcome-jhsd0006-cs.html
 [JP_ConditionDieaseOutcomeReceipt_CS]: CodeSystem-jp-condition-disease-outcome-receipt-cs.html

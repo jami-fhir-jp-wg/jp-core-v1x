@@ -75,7 +75,7 @@ Description: "このProfileは服薬状況を示すものであり，診療情�
 * reasonCode ^comment = "このコードは疾患分類であっても良い。JP Coreでは傷病名マスターの使用を前提とする。"
 * reasonCode.coding ^short = "投与理由，対象疾患についてのコード"
 // * reasonCode.cosing.system 0..1
-// * reasonCode.cosing.system = "urn:oid:1.2.392.200119.4.101.6" (example)
+// * reasonCode.cosing.system = $JP_Disease_MEDIS_Concept_CS (example)
 // * reasonCode.coding.system ^short = "ここでは傷病名マスタを対象疾患として指定する例を上げる"
 // * reasonCode.coding.system ^definition = "対象疾患を例とする場合は傷病名マスターなどが利用されるが，他の理由コードを利用しても良い。"
 // * reasonCode.coding.code 0..1
@@ -161,7 +161,7 @@ Description: "このProfileは服薬状況を示すものであり，診療情�
 * reasonCode ^comment = "このコードは疾患分類であっても良い。JP Coreでは傷病名マスターの使用を前提とする。"
 * reasonCode.coding ^short = "投与理由，対象疾患についてのコード"
 // * reasonCode.cosing.system 0..1
-// * reasonCode.cosing.system = "urn:oid:1.2.392.200119.4.101.6" (example)
+// * reasonCode.cosing.system = $JP_Disease_MEDIS_Concept_CS (example)
 // * reasonCode.coding.system ^short = "ここでは傷病名マスタを対象疾患として指定する例を上げる"
 // * reasonCode.coding.system ^definition = "対象疾患を例とする場合は傷病名マスターなどが利用されるが，他の理由コードを利用しても良い。"
 // * reasonCode.coding.code 0..1
