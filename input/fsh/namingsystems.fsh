@@ -106,16 +106,16 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationCodeYJ_NamingSystem"
 * status = #active
-* date = "2023-10-31"
+* date = "2024-11-18"
 * kind = #codesystem
 * description = "JP Core MedicationCode YJ NamingSystem"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.1.73"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.100495.20.1.73"
-* uniqueId[=].preferred = true
 * uniqueId[+].type = #uri
-* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCodeYJ_CS"
+* uniqueId[=].value = $JP_MedicationCodeYJ_CS
+* uniqueId[=].preferred = true
 
 
 Instance: jp-medicationingredientstrengthstrengthtype-namingsystem
@@ -283,7 +283,7 @@ Usage: #definition
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:2.16.840.1.113883.3.1937.777.10.5.162"
 * uniqueId[+].type = #uri
-* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/route-codes"
+* uniqueId[=].value = $JP_MedicationRouteHL70162_CS
 * uniqueId[=].preferred = true
 
 
@@ -299,10 +299,9 @@ Usage: #definition
 * uniqueId[=].value = "1.2.392.200119.4.504"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "urn:oid:1.2.392.200119.4.504"
-* uniqueId[=].preferred = true
 * uniqueId[+].type = #uri
-* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationLabResultCode_CS"
-
+* uniqueId[=].value = $JP_ObservationLabResultCode_CS
+* uniqueId[=].preferred = true
 
 Instance: jp-observation-vitalsignscode-namingsystem
 InstanceOf: NamingSystem
