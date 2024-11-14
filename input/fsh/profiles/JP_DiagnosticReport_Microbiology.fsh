@@ -28,7 +28,6 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * insert SetDefinition(category, 診断レポートを作成した臨床分野、部門、または診断サービスを分類するコード。微生物検査では、LoincコードのLP7819-8 微生物検査/MICRO を使用する。)
 * category[first] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP7819-8 (微生物検査/MICRO)を使用する。"
 * category[first] from $JP_DiagnosticReportCategory_VS (required)
-//* category[first] = $Loinc_CS#LP7819-8  "微生物検査" (exactly)
 * category[first].coding.system = $Loinc_CS (exactly)
 * category[first].coding.code 1..
 * category[first].coding.code = $Loinc_CS#LP7819-8 (exactly)

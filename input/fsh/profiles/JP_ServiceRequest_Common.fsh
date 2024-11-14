@@ -140,9 +140,3 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * relevantHistory ^short = "リソースの履歴（バージョン管理）"
 * relevantHistory ^definition = "このリクエストの履歴で重要なもの"
 * relevantHistory ^comment = "この要素はには、ServiceRequestのProvenanceの全てのバージョンではなく、重要と思われたものだけ含められる。現在のバージョンのリソースに関連したProvenanceリソースを含めてはならない（SHALL NOT）。（もし、Provenanceとして重要な変化と思われれば、以降の更新の一部として追加すべきである。それまでは、'_revinclude'を使って指定されたProvenanceのバージョンを直接クエリーできる。全てのProvenanceはこのRequestの履歴を対象とすべきである。）"
-
-
-// Invariant: prr-1
-// Severity: #error
-// Description: "code要素がある場合のみ、orderDetail要素は存在"
-// Expression: "orderDetail.empty() or code.exists()"

@@ -81,29 +81,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(referenceRange, 未使用)
 
 * hasMember only Reference(JP_Observation_Common)
-//* hasMember ^Invariants = "implies hasMember.empty()"
 
 * insert SetDefinition(derivedFrom, 未使用)
 * insert SetDefinition(component, 欠損歯の処置状態)
 
-//* component.code ^slicing.discriminator.type = #value
-//* component.code ^slicing.discriminator.path = "coding.system"
-//* component.code ^slicing.rules = #open
-//* component.code contains
-//    primary 1..1 and
-//    sub 1..1
 * component.code ^comment = "2つのいずれかのコードを設定する。
 主コード（primary）は、細かい粒度の欠損歯の処置状態
 副コード（sub）は、粗い粒度の欠損歯の処置状態"
-
-//* insert SetDefinition(component.code[primary], 細かい粒度の欠損歯の処置状態)
-//* component.code[primary] from JP_DentalMissingTeethObservation_VS (preferred)
-//* component.code[primary].coding.system = $JP_DentalMissingTeethObservation_CS (exactly)
-//* component.code[primary].coding.code 1..1
-//* component.code[primary].coding.code = $JP_DentalMissingTeethObservation_CS (exactly)
-
-//* insert SetDefinition(component.code[sub], 粗い粒度の欠損歯の処置状態)
-//* component.code[sub] from JP_DentalSimpleMissingTeethObservation_VS (preferred)
-//* component.code[sub].coding.system = $JP_DentalSimpleMissingTeethObservation_CS (exactly)
-//* component.code[sub].coding.code 1..1
-//* component.code[sub].coding.code = $JP_DentalSimpleMissingTeethObservation_CS (exactly)

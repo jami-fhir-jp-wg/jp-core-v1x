@@ -28,15 +28,6 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[first].coding.code 1..
 * category[first].coding.code = $Loinc_CS#LP31759-1 (exactly)
 
-// * code.coding ^slicing.discriminator.type = #value
-// * code.coding ^slicing.discriminator.path = "coding.system"
-// * code.coding ^slicing.rules = #open
-// * code.coding contains dentaloral 1..1
-// * insert SetDefinition(code, 診断レポート種別「口腔診査報告書」を表す文書コード)
-// * code.coding[dentaloral].system = $JP_DocumentCodes_CS (exactly)
-// * code.coding[dentaloral].code 1..
-// * code.coding[dentaloral].code = #32453-3 (exactly)
-
 * insert SetDefinition(code, 診断レポート種別「口腔診査報告書」を表す文書コード)
 * code = $JP_DocumentCodes_CS#32453-3 "口腔診査報告書"
 * subject only Reference(JP_Patient)
