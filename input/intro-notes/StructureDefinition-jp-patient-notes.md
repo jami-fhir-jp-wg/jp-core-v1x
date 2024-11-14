@@ -2,7 +2,7 @@
 
 Patient リソースは、次の要素を持たなければならない。
 
-- identifier ：患者を識別するための識別子は必須要素でありidentifier.value が必ず存在しなければならない、またidentifierの名前空間を表すidentifier.systemも組み合わせて、医療機関固有の患者番号を表現することが一般的である
+- identifier : 患者を識別するための識別子は必須要素でありidentifier.value が必ず存在しなければならない、またidentifierの名前空間を表すidentifier.systemも組み合わせて、医療機関固有の患者番号を表現することが一般的である
 
 ### Extensions定義
 

@@ -38,9 +38,9 @@
 
 Coverage リソースは、次の要素を必ず持たなければならない。
 
-- status ： 「リソースのインスタンスの状態」を示すエレメント
+- status : 「リソースのインスタンスの状態」を示すエレメント
 - beneficiary : 「サービスを受ける者」を示すエレメント、Patientリソースを参照する
-- payor ： 「負担者」を示すエレメント。Organization、Patient、RelatedPersonのいずれかを参照する
+- payor : 「負担者」を示すエレメント。Organization、Patient、RelatedPersonのいずれかを参照する
 
 ### Extensions定義
 
