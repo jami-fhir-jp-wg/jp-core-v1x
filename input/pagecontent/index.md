@@ -8,7 +8,7 @@
 * [欠損値の扱い](guide-handlingOfNonExistentData.html)
 * [文字コード](guide-characterEncoding.html)
 * [検索](guide-stringSearch.html)
-* [URIおよびOID定義表](guide-urlmap.html)
+* [OIDマッピング表](guide-urlmap.html)
 * [利用上の注意事項](guide-precautions.html) 
 * [更新履歴](update_history.html)
 
