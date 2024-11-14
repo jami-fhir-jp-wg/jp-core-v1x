@@ -41,10 +41,10 @@
 |		|	被保険者区分コード	|	urn:oid:1.2.392.100495.20.2.62	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/InsuredPersonCategory	|
 |		|	患者一部負担コード	|	urn:oid:1.2.392.100495.20.2.63	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationInsuredPersonClass	|
 |		|	レセプト種別コード	|	urn:oid:1.2.392.100495.20.2.64	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/	|
-| |	医薬品コード（医薬品マスター）	|	(urn:oid:1.2.392.100495.20.2.71)	|	関係者調整中	|
+|       |	医薬品コード（医薬品マスター）	|	(urn:oid:1.2.392.100495.20.2.71)	|	関係者調整中	|
 |		|	薬価基準収載医薬品コード	|	(urn:oid:1.2.392.100495.20.2.72)	|	関係者調整中	|
-|＊	|	個別医薬品コード（YJ コード）リスト	|	(urn:oid:1.2.392.100495.20.2.73)	|	http://capstandard.jp/iyaku.info/CodeSystem/YJ-code	|
-|＊	|	規格別薬剤成分コード（注：YJコードの末尾3桁をZZZとした）|	なし	|	http://capstandard.jp/CodeSystem/KikakubetsuYakuzaiSeibun	|
+|   ＊	|	個別医薬品コード（YJ コード）リスト	|	(urn:oid:1.2.392.100495.20.2.73)	|	http://capstandard.jp/iyaku.info/CodeSystem/YJ-code	|
+|   ＊	|	規格別薬剤成分コード（注：YJコードの末尾3桁をZZZとした）|	なし	|	http://capstandard.jp/CodeSystem/KikakubetsuYakuzaiSeibun	|
 |		|	HOT コード（9 桁）	|	(urn:oid:1.2.392.100495.20.2.74)	|	MEDISー医薬品基準番号（ＨＯＴ９）を参照	|
 |		|	一般名処方マスタ	|	urn:oid:1.2.392.100495.20.2.81	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationGeneralOrderCode	|
 |	＊	|	医薬品単位略号	|	urn:oid:1.2.392.100495.20.2.101	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationUnitMERIT9Code	|
