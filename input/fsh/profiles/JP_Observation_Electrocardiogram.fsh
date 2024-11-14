@@ -38,7 +38,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category[first] from $JP_SimpleObservationCategory_VS (required)
 * category[first].coding.system = $JP_SimpleObservationCategory_CS
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#procedure
-//* category[second] from $Loinc_CS (preferred)
 * category[second].coding.system = $Loinc_CS
 * category[second].coding.code = $Loinc_CS#11524-6
 * category[third] from JP_ObservationElectrocardiogramExtraCategory_VS (preferred)
