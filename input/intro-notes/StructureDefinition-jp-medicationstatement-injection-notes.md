@@ -4,7 +4,7 @@
 MedicationStatement リソースは、次の要素を持たなければならない。
 - status : ステータスは必須である
 - medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない
-- subject :患者の参照情報は必須であり、subject.referenceないしsubject.identifierが必ず存在しなければならない
+- subject : 患者の参照情報は必須であり、subject.referenceないしsubject.identifierが必ず存在しなければならない
 
 ### Extensions定義
 

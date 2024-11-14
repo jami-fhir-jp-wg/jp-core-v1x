@@ -5,7 +5,7 @@
 MedicationAdministrationリソースは、次の要素を持たなければならない。
 - status : ステータスは必須であり、JP Coreでは `completed` or `stopped` に限定される
 - medicationReference : 医薬品の識別情報は必須でありmedicationReference.referenceが必ず存在しなければならない、JP Coreでは注射の医薬品情報は単一薬剤の場合もMedicationリソースとして記述し、MedicationRequest.contained属性に内包しmedicationCodeableConceptは使用しない
-- subject :患者の参照情報は必須でありsubject.referenceないしsubject.identifierが必ず存在しなければならない
+- subject : 患者の参照情報は必須でありsubject.referenceないしsubject.identifierが必ず存在しなければならない
 - effectiveDateTime : 投与実施日時であり、JP Coreでは必須である
 
 MedicationAministrationリソースに内包されるMedicationリソースでは、次の要素を持たなければならない。
