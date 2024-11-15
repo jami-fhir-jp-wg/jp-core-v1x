@@ -55,7 +55,7 @@ fillUrl("CodeSystem", urls)
 fillUrl("ValueSet", urls)
 
 sb << urls.sort_by{ |s| [s.downcase, s] }.join("\n")
-
+sb << "\n"
 Dir.chdir('../..')  ##カレントディレクトリ移動(project配下)
 
 p 'sushi-configの取得'
