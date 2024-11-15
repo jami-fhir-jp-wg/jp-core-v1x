@@ -23,7 +23,7 @@ HL7 V2系では用語集を識別するコーディングシステム名（以�
 |-----|----|----|---------------------------|
 |病名|MEDIS ICD10対応標準病名マスター(管理番号)|MDCDX2|http://medis.or.jp/CodeSystem/master-disease-keyNumber|
 |病名|MEDIS ICD10対応標準病名マスター(交換用コード)|MDCDX2|http://medis.or.jp/CodeSystem/master-disease-exCode|
-|病名|ICD-10|ICD10|http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDisaseCodeICD10_CS|
+|病名|ICD-10|ICD10|http://jpfhir.jp/fhir/core/mhlw/CodeSystem/ICD10-2013-full|
 |病名|レセプト電算用傷病名マスター|(なし)|http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDisaseCodeReceipt_CS|
 |病名修飾語|MEDIS ICD10対応標準病名マスター(修飾語管理番号)|MDCDX2|http://medis.or.jp/CodeSystem/master-disease-modKeyNumber|
 |病名修飾語|MEDIS ICD10対応標準病名マスター(修飾語交換用コード)|MDCDX2|http://medis.or.jp/CodeSystem/master-disease-modExCode|

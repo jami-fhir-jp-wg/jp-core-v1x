@@ -126,13 +126,9 @@ Alias: $JP_Organization_PrefectureNo_SP = http://jpfhir.jp/fhir/core/SearchParam
 Alias: $JP_Patient_KanaSort_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP
 
 // CodeSystem
-Alias: $JAMI__MedicationMethodDetailDeviceInjection_CS = http://jami.jp/CodeSystem/MedicationMethodDetailDeviceInjection  // urn:oid:1.2.392.200250.2.2.20.45
+//Alias: $JAMI__MedicationMethodDetailDeviceInjection_CS = http://jami.jp/CodeSystem/MedicationMethodDetailDeviceInjection  // urn:oid:1.2.392.200250.2.2.20.45
 Alias: $JP_ConclusionCodeJed_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConclusionCodeJed_CS
-Alias: $JP_ConditionDiseaseCodeICD10_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeICD10_CS
-//Alias: $JP_ConditionDiseaseModifierMEDISExchange_CS = urn:oid:1.2.392.200119.4.201.5
-//Alias: $JP_ConditionDiseaseModifierMEDISRecordNo_CS = urn:oid:1.2.392.200119.4.201.2
-//Alias: $JP_ConditionDiseaseModifierReceipt_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseModifierReceipt_CS
-
+Alias: $JP_ConditionDiseaseCodeICD10_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/ICD10-2013-full
 Alias: $JP_ConditionDiseaseOutcomeHL70241_CS = http://jpfhir.jp/fhir/core/CodeSystem/HL70241
 Alias: $JP_ConditionDiseaseOutcomeJHSD0006_CS = http://jpfhir.jp/fhir/core/CodeSystem/JHSD0006
 Alias: $JP_ConditionDiseaseOutcomeReceipt_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseOutcomeReceipt_CS
@@ -146,7 +142,10 @@ Alias: $JP_DentalPresentTeethObservation_CS = http://jpfhir.jp/fhir/core/CodeSys
 Alias: $JP_DentalSimpleMissingTeethObservation_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalSimpleMissingTeethObservation_CS
 Alias: $JP_DentalSimplePresentTeethObservation_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalSimplePresentTeethObservation_CS
 Alias: $JP_Department_SsMix_CS = http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment //urn:oid:1.2.392.200250.2.2.2
-//Alias: $JP_DiseaseICD10_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/ICD10-2013-full
+Alias: $JP_Disease_Claim_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterB-disease    // 支払基金	傷病名コード   
+Alias: $JP_Disease_MEDIS_Concept_CS = http://medis.or.jp/CodeSystem/master-disease-exCode // MEDIS病名交換用コード   //urn:oid:1.2.392.200119.4.101.6
+Alias: $JP_Disease_MEDIS_ManagementID_CS = http://medis.or.jp/CodeSystem/master-disease-keyNumber    // MEDIS病名管理番号
+Alias: $JP_DiseaseCategory_WHO_ICD10_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/ICD10-2013-full  // ICD10  HL7 regisered
 Alias: $JP_DocumentCodes_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_CS
 Alias: $JP_EndoscopyTerminologyCodesJED_CS = urn:oid:1.2.392.200270.4.1000.1
 Alias: $JP_JfagyFoodAllergen_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS
@@ -187,13 +186,16 @@ Alias: $JP_MedicationUsageJAMIAdditional_CS = http://jami.jp/CodeSystem/Medicati
 Alias: $JP_Microbiology_AntiMicrobialDrug_CS = urn:oid:1.2.392.100495.10.3.100.5.11.5.2
 Alias: $JP_Microbiology_InfectiousAgent_CS = urn:oid:1.2.392.100495.10.3.100.5.27.6.1
 Alias: $JP_MicrobiologyCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_MicrobiologyCategory_CS
+Alias: $JP_Modifier_Disease_Claim_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterZ-disease-modifier //  支払基金	修飾語コード    
+Alias: $JP_Modifier_MEDIS_Concept_CS = http://medis.or.jp/CodeSystem/master-disease-modExCode   //MEDIS病名交換用修飾コード //urn:oid:1.2.392.200119.4.201.5
+Alias: $JP_Modifier_MEDIS_ManagementID_CS = http://medis.or.jp/CodeSystem/master-disease-modKeyNumber   //MEDIS病名管理修飾コード    //urn:oid:1.2.392.200119.4.201.2
 Alias: $JP_ObservationBodyMeasurementCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
 Alias: $JP_ObservationBodyMeasurementCode_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
 Alias: $JP_ObservationBodySite_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodySite_CS
 Alias: $JP_ObservationDentalCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationDentalCategory_CS
-Alias: $JP_ObservationElectrocardiogramInterpretationCode_CS =  http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramInterpretationCode_CS
-Alias: $JP_ObservationElectrocardiogramExtraCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramExtraCategory_CS
 Alias: $JP_ObservationElectrocardiogramDuration_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramDuration_CS
+Alias: $JP_ObservationElectrocardiogramExtraCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramExtraCategory_CS
+Alias: $JP_ObservationElectrocardiogramInterpretationCode_CS =  http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramInterpretationCode_CS
 Alias: $JP_ObservationElectrocardiogramStressType_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramStressType_CS
 Alias: $JP_ObservationLabResultCode_CS = http://medis.or.jp/CodeSystem/master-JLAC10-17digits //urn:oid:1.2.392.200119.4.504
 Alias: $JP_ObservationMethod_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationMethod_CS
@@ -221,16 +223,6 @@ Alias: $JP_ProcedureOutcome_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Proced
 Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 Alias: $JP_SimpleObservationCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
 Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
-
-
-Alias: $JP_Disease_MEDIS_Concept_CS = http://medis.or.jp/CodeSystem/master-disease-exCode // MEDIS病名交換用コード   //urn:oid:1.2.392.200119.4.101.6
-Alias: $JP_Disease_MEDIS_ManagementID_CS = http://medis.or.jp/CodeSystem/master-disease-keyNumber    // MEDIS病名管理番号
-Alias: $JP_Disease_Claim_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterB-disease    // 支払基金	傷病名コード   
-Alias: $JP_DiseaseCategory_WHO_ICD10_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/ICD10-2013-full  // ICD10  HL7 regisered
-
-Alias: $JP_Modifier_MEDIS_Concept_CS = http://medis.or.jp/CodeSystem/master-disease-modExCode   //MEDIS病名交換用修飾コード //urn:oid:1.2.392.200119.4.201.5
-Alias: $JP_Modifier_MEDIS_ManagementID_CS = http://medis.or.jp/CodeSystem/master-disease-modKeyNumber   //MEDIS病名管理修飾コード    //urn:oid:1.2.392.200119.4.201.2
-Alias: $JP_Modifier_Disease_Claim_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterZ-disease-modifier //  支払基金	修飾語コード    
 
 // Clinsでは定義されているが、JP Coreでは未定義
 // Alias: $JP_BodySite_MEDIS_Concept_CS = http://medis.or.jp/CodeSystem/master-disease-modExCode   //MEDIS病名交換用修飾コード //urn:oid:1.2.392.200119.4.201.5
@@ -354,9 +346,6 @@ Alias: $JP_ReasonCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCode
 Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
 
-
-
-
 // Alias: $JP_Disease_MEDIS_Concept_VS = http://medis.or.jp/ValueSet/master-disease-exCode // MEDIS病名交換用コード
 // Alias: $JP_Disease_MEDIS_ManagementID_VS = http://medis.or.jp/ValueSet/master-disease-keyNumber    // MEDIS病名管理番号
 // Alias: $JP_Disease_Claim_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/masterB-disease    // 支払基金	傷病名コード
@@ -365,8 +354,6 @@ Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
 // Alias: $JP_BodySite_MEDIS_ManagementID_VS = http://medis.or.jp/ValueSet/master-disease-modKeyNumber
 // Alias: $JP_BodySite_Disease_Claim_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/masterZ-disease-modifier //  支払基金	修飾語コード
 // Alias: $JP_Modifier_Disease_Claim_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/masterZ-disease-modifier //  支払基金	修飾語コード
-
-
 
 //system値
 Alias: $JP_IdSystem_InsurerNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber  //urn:oid:1.2.392.100495.20.3.61
