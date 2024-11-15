@@ -200,6 +200,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race
+    - http://jpfhir.jp/fhir/core/mhlw/CodeSystem/ICD10-2013-full
     - http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterB-disease
     - http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterZ-disease-modifier
     - http://jpfhir.jp/fhir/core/mhlw/ValueSet/masterB-disease
@@ -282,7 +283,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeICD10_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeHL70241_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeJHSD0006_VS

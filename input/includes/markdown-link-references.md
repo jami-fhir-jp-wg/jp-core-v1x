@@ -182,7 +182,6 @@
 
 <!-- ValueSet -->
 [JP_ConclusionCodesJed_VS]: ValueSet-jp-conclusion-codes-jed-vs.html
-[JP_ConditionDiseaseCodeICD10_VS]: ValueSet-jp-condition-disease-code-icd10-vs.html
 [JP_Disease_MEDIS_Concept_VS]: ValueSet-jp-condition-disease-code-medis-exchange-vs.html
 [JP_Disease_MEDIS_ManagementID_VS]: ValueSet-jp-condition-disease-code-medis-record-no-vs.html
 [JP_Disease_Claim_VS]: ValueSet-jp-condition-disease-code-receipt-vs.html
@@ -245,6 +244,7 @@
 [JP_ReasonCodesJed_VS]: ValueSet-jp-reason-codes-jed-vs.html
 [JP_SimpleObservationCategory_VS]: ValueSet-jp-simpleobservationcategory-vs.html
 [JP_Undefined_VS]: ValueSet-jp-undefined-vs.html
+[MHLW_valueSet_icd10_2013_jp]: ValueSet-mhlw-valueset-icd10-2013-jp.html
 
 <!-- Example -->
 [jp-allergyintolerance-example-1]: AllergyIntolerance-jp-allergyintolerance-example-1.html
