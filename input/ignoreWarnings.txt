@@ -38,7 +38,7 @@ http://medis.or.jp/CodeSystem/master-HOT9#103835401 の誤ったdisplay 'ムコ�
 http://medis.or.jp/CodeSystem/master-HOT9#110926901 の誤ったdisplay 'パンスポリンＴ錠１００ １００ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'パンスポリンＴ錠１００・武田薬品' (ja) (言語 'ja-JP' のため)
 http://medis.or.jp/CodeSystem/master-HOT9#111501701 の誤ったdisplay '肺炎球菌ワクチン' - 1 の選択肢のうちの一つであるべきです: 'ニューモバックスＮＰ・ＭＳＤ' (ja) (言語 'ja-JP' のため)
 
-#Terminology関連
+# Terminology関連
 snapshotの生成エラー: null (これは通常、differantialに問題がある場合に発生します)
 !!!!!!!!CodeSystem urn:oid:1.2.392.200119.5.2.4.1.1.3は未知です
 
