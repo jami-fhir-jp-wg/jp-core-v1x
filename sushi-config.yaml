@@ -300,7 +300,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DICOMModality_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_DiagnosticReport_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_Endoscopy_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ImagingStudy_EndoScopy_BodySite_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ImagingStudy_Endoscopy_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ImagingStudy_Radiology_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicalLicenseCertificate_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Microbiology_AntiMicrobialDrug_VS
@@ -321,7 +321,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationEndoscopyValueJed_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationRadiologyCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_PhysicalExamCode_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureBodySite_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_Procedure_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCodesICHI_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCondition_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureDeviceAction_VS
@@ -357,5 +357,4 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://medis.or.jp/ValueSet/master-disease-modKeyNumber
     - urn:oid:1.2.392.100495.10.3.100.5.11.5.2
     - urn:oid:1.2.392.100495.10.3.100.5.27.6.1
-    - urn:oid:1.2.392.200270.4.1000.1
-    
+    - urn:oid:1.2.392.200270.4.1000.1    

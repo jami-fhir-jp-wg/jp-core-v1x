@@ -206,7 +206,7 @@
 [JP_DocumentCodes_DiagnosticReport_VS]: ValueSet-jp-documentcodes-diagnosticreport-vs.html
 [JP_DocumentCodes_Endoscopy_VS]: ValueSet-jp-documentcodes-endoscopy-vs.html
 [JP_ObservationCategory_Endoscopy_VS]: ValueSet-jp-endoscopy-category-vs.html
-[JP_ImagingStudy_EndoScopy_BodySite_VS]: ValueSet-jp-imagingstudy-endoscopy-bodysite-vs.html
+[JP_ImagingStudy_Endoscopy_BodySite_VS]: ValueSet-jp-imagingstudy-endoscopy-bodysite-vs.html
 [JP_ImagingStudy_Radiology_BodySite_VS]: ValueSet-jp-imagingstudy-radiology-bodysite-vs.html
 [JP_MedicalLicenseCertificate_VS]: ValueSet-jp-medicallicensecertificate-vs.html
 [JP_MedicationExampleDosageComment_VS]: ValueSet-jp-medication-example-dosagecomment-vs.html
