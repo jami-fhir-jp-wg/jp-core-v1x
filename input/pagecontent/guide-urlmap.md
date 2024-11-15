@@ -33,16 +33,13 @@
 |		|	医薬品成分コード（電子カルテ共有サービス）	|		|	関係者調整中	|
 |		|	以下は厚労省処方箋CDA記述仕様第1版に収載の表	|		|		|
 |		|	剤形区分コード	|	urn:oid:1.2.392.100495.20.2.21	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationForm	|
-|	＊	|	力価区分コード	|	urn:oid:1.2.392.100495.20.2.22	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationIngredientStrengthType	|
+|	＊	|	力価区分コード	|	urn:oid:1.2.392.100495.20.2.22	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationIngredientStrengthStrengthType	|
 |	＊	|	後発品変更不可コード	|	urn:oid:1.2.392.100495.20.2.41	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationSubstitutionProhibittedCategory	|
 |		|	残薬確認指示コード	|	urn:oid:1.2.392.100495.20.2.42	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/RequestCheckRemainingMedicine	|
 |	＊	|	診療科コード	|	urn:oid:1.2.392.100495.20.2.51	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationRequestDepartment	|
 |	＊	|	保険種別コード	|	urn:oid:1.2.392.100495.20.2.61	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/InsuranceMajorCategory	|
 |		|	被保険者区分コード	|	urn:oid:1.2.392.100495.20.2.62	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/InsuredPersonCategory	|
 |		|	患者一部負担コード	|	urn:oid:1.2.392.100495.20.2.63	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationInsuredPersonClass	|
-|		|	レセプト種別コード	|	urn:oid:1.2.392.100495.20.2.64	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/	|
-|       |	医薬品コード（医薬品マスター）	|	(urn:oid:1.2.392.100495.20.2.71)	|	関係者調整中	|
-|		|	薬価基準収載医薬品コード	|	(urn:oid:1.2.392.100495.20.2.72)	|	関係者調整中	|
 |   ＊	|	個別医薬品コード（YJ コード）リスト	|	(urn:oid:1.2.392.100495.20.2.73)	|	http://capstandard.jp/iyaku.info/CodeSystem/YJ-code	|
 |   ＊	|	規格別薬剤成分コード（注：YJコードの末尾3桁をZZZとした）|	なし	|	http://capstandard.jp/CodeSystem/KikakubetsuYakuzaiSeibun	|
 |		|	HOT コード（9 桁）	|	(urn:oid:1.2.392.100495.20.2.74)	|	MEDISー医薬品基準番号（ＨＯＴ９）を参照	|
