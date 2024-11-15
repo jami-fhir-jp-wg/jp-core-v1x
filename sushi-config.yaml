@@ -200,6 +200,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race
+    - http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterB-disease
+    - http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterZ-disease-modifier
+    - http://jpfhir.jp/fhir/core/mhlw/ValueSet/masterB-disease
+    - http://jpfhir.jp/fhir/core/mhlw/ValueSet/masterZ-disease-modifier
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonNumber_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSubNumber_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSymbol_SP
@@ -279,12 +283,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeICD10_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeMEDISExchange_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeMEDISRecordNo_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeReceipt_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseModifierMEDISExchange_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseModifierMEDISRecordNo_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseModifierReceipt_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeHL70241_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeJHSD0006_VS
@@ -349,6 +347,11 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageRouteComment_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationDosageSiteComment_VS
     - http://jpfhir.jp/fhir/Examples/ValueSet/JP_MedicationAdministrationUncategorizedComment_VS
+    - http://medis.or.jp/CodeSystem/master-disease-modExCode
+    - http://medis.or.jp/ValueSet/master-disease-exCode
+    - http://medis.or.jp/ValueSet/master-disease-keyNumber
+    - http://medis.or.jp/ValueSet/master-disease-modExCode
+    - http://medis.or.jp/ValueSet/master-disease-modKeyNumber
     - urn:ietf:bcp:13
     - urn:ietf:bcp:47
     - urn:iso:std:iso:3166
