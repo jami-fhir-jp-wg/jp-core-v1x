@@ -140,7 +140,6 @@
 [JP_Patient_KanaSort_SP]: SearchParameter-jp-patient-kanasort-sp.html
 
 <!-- CodeSystem -->
-[JP_ConditionDiseaseCodeICD10_CS]: CodeSystem-jp-condition-disease-code-icd10-cs.html
 [JP_ConditionDieaseOutcomeHL70241_CS]: CodeSystem-jp-condition-disease-outcome-hl70241-cs.html
 [JP_ConditionDieaseOutcomeJHSD0006_CS]: CodeSystem-jp-condition-disease-outcome-jhsd0006-cs.html
 [JP_ConditionDieaseOutcomeReceipt_CS]: CodeSystem-jp-condition-disease-outcome-receipt-cs.html

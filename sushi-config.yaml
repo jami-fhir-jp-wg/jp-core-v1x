@@ -138,7 +138,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Server_CapabilityStatement
     - http://jpfhir.jp/fhir/core/CodeSystem/HL70241
     - http://jpfhir.jp/fhir/core/CodeSystem/JHSD0006
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeICD10_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseOutcomeReceipt_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySite_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySiteStatus_CS
