@@ -2,8 +2,8 @@
 
 * 全般
   * 主に「v1.1.2に関する不具合」を修正し、新たに「プロファイル」の追加を行った
-  * 各プロファイルのベースとなるFHIR Versionは4.0.1を維持した
-  * 不具合等のやむを得ない場合の除き、下位互換性を保つことを重視している
+  * 各プロファイルのベースとなるFHIR Versionは4.0.1を維持した、不具合等のやむを得ない場合の除き下位互換性を保つことを重視した
+  * CodeSystemのURLおよび識別子に使われるSystem値にてOID形式で定義されるものの多くをURL形式へ変更を行った
   * Copyrightについて記述の見直しを行った
   * JP_zzz_dummyのidを命名規則に従って修正
 * Profile関連
@@ -49,25 +49,18 @@
   * Workflow グループ
     * `JP_ServiceRequest_Common`プロファイルを追加、それに伴い`JP_ServiceRequest`を削除した
   * SearchParameterおよびOperation関連
-    * SearchParameterの記述不具合（型指定や名称）やSearchParameterRegistryの差異を比較しを修正しました
+    * SearchParameterの記述不具合（型指定や名称）やSearchParameterRegistryの差異を比較しを修正した
     * SearchParameterのexpressionのFHIRPath記述に対する指摘に対応した
   * Terminology関連
     * 以下のコードシステムおよびバリューセットを追加/削除した
-      * `JP_ConditionDieaseCodeReceipt_CS`
-      * `JP_ConditionDieaseModifierReceipt_CS`
       * `JP_ConditionDieaseOutcomeHL70241_CS`
       * `JP_ConditionDieaseOutcomeJHSD0006_CS`
       * `JP_ConditionDieaseOutcomeReceipt_CS`
-      * `JP_ConditionDiseaseCodeICD10_CS`
       * `JP_ConditionDiseaseCodeICD10_VS`
-      * `JP_ConditionDiseaseCodeMEDISExchange_CS`
       * `JP_ConditionDiseaseCodeMEDISExchange_VS`
-      * `JP_ConditionDiseaseCodeMEDISRecordNo_CS`
       * `JP_ConditionDiseaseCodeMEDISRecordNo_VS`
       * `JP_ConditionDiseaseCodeReceipt_VS`
-      * `JP_ConditionDiseaseModifierMEDISExchange_CS`
       * `JP_ConditionDiseaseModifierMEDISExchange_VS`
-      * `JP_ConditionDiseaseModifierMEDISRecordNo_CS`
       * `JP_ConditionDiseaseModifierMEDISRecordNo_VS`
       * `JP_ConditionDiseaseModifierReceipt_VS`
       * `JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS`
