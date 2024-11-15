@@ -140,6 +140,8 @@
 [JP_Patient_KanaSort_SP]: SearchParameter-jp-patient-kanasort-sp.html
 
 <!-- CodeSystem -->
+[JP_ConditionDieaseCodeReceipt_CS]: CodeSystem-jp-condition-disease-code-receipt-cs.html
+[JP_ConditionDieaseModifierReceipt_CS]: CodeSystem-jp-condition-disease-modifier-receipt-cs.html
 [JP_ConditionDieaseOutcomeHL70241_CS]: CodeSystem-jp-condition-disease-outcome-hl70241-cs.html
 [JP_ConditionDieaseOutcomeJHSD0006_CS]: CodeSystem-jp-condition-disease-outcome-jhsd0006-cs.html
 [JP_ConditionDieaseOutcomeReceipt_CS]: CodeSystem-jp-condition-disease-outcome-receipt-cs.html
@@ -176,16 +178,17 @@
 [JP_ProcedureOutcome_CS]: CodeSystem-jp-procedure-outcome-cs.html
 [JP_SimpleObservationCategory_CS]: CodeSystem-jp-simpleobservationcategory-cs.html
 [JP_Undefined_CS]: CodeSystem-jp-undefined-cs.html
+[MEDIS_codeSystem_diseaseName_exchangeCodes_Modifiers]: CodeSystem-medis-codesystem-diseasename-exchangecodes-modifiers.html
 
 <!-- ValueSet -->
 [JP_ConclusionCodesJed_VS]: ValueSet-jp-conclusion-codes-jed-vs.html
 [JP_ConditionDiseaseCodeICD10_VS]: ValueSet-jp-condition-disease-code-icd10-vs.html
-[JP_ConditionDiseaseCodeMEDISExchange_VS]: ValueSet-jp-condition-disease-code-medis-exchange-vs.html
-[JP_ConditionDiseaseCodeMEDISRecordNo_VS]: ValueSet-jp-condition-disease-code-medis-record-no-vs.html
-[JP_ConditionDiseaseCodeReceipt_VS]: ValueSet-jp-condition-disease-code-receipt-vs.html
-[JP_ConditionDiseaseModifierMEDISExchange_VS]: ValueSet-jp-condition-disease-modifier-medis-exchange-vs.html
-[JP_ConditionDiseaseModifierMEDISRecordNo_VS]: ValueSet-jp-condition-disease-modifier-medis-record-no-vs.html
-[JP_ConditionDiseaseModifierReceipt_VS]: ValueSet-jp-condition-disease-modifier-receipt-vs.html
+[JP_Disease_MEDIS_Concept_VS]: ValueSet-jp-condition-disease-code-medis-exchange-vs.html
+[JP_Disease_MEDIS_ManagementID_VS]: ValueSet-jp-condition-disease-code-medis-record-no-vs.html
+[JP_Disease_Claim_VS]: ValueSet-jp-condition-disease-code-receipt-vs.html
+[JP_Modifier_MEDIS_Concept_VS]: ValueSet-jp-condition-disease-modifier-medis-exchange-vs.html
+[JP_Modifier_MEDIS_ManagementID_VS]: ValueSet-jp-condition-disease-modifier-medis-record-no-vs.html
+[JP_Modifier_Disease_Claim_VS]: ValueSet-jp-condition-disease-modifier-receipt-vs.html
 [JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS]: ValueSet-jp-condition-disease-outcome-hl70241-jhsd0006-vs.html
 [JP_ConditionDiseaseOutcomeHL70241_VS]: ValueSet-jp-condition-disease-outcome-hl70241-vs.html
 [JP_ConditionDiseaseOutcomeJHSD0006_VS]: ValueSet-jp-condition-disease-outcome-jhsd0006-vs.html

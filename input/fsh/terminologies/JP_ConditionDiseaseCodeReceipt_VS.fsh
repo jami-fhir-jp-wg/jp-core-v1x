@@ -1,8 +1,8 @@
-ValueSet: JP_ConditionDiseaseCodeReceipt_VS
+ValueSet: JP_Disease_Claim_VS
 Id: jp-condition-disease-code-receipt-vs
 Title: "JP Core Condition Disease Code Receipt System ValueSet"
 Description: "レセプト電算用傷病名マスターを示す値セット"
-* ^url = $JP_ConditionDiseaseCodeReceipt_VS
+* ^url = $JP_Disease_Claim_VS
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-11-18"

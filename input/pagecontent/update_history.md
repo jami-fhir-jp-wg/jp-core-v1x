@@ -57,12 +57,12 @@
       * `JP_ConditionDieaseOutcomeJHSD0006_CS`
       * `JP_ConditionDieaseOutcomeReceipt_CS`
       * `JP_ConditionDiseaseCodeICD10_VS`
-      * `JP_ConditionDiseaseCodeMEDISExchange_VS`
-      * `JP_ConditionDiseaseCodeMEDISRecordNo_VS`
-      * `JP_ConditionDiseaseCodeReceipt_VS`
-      * `JP_ConditionDiseaseModifierMEDISExchange_VS`
-      * `JP_ConditionDiseaseModifierMEDISRecordNo_VS`
-      * `JP_ConditionDiseaseModifierReceipt_VS`
+      * `JP_Disease_MEDIS_Concept_VS`
+      * `JP_Disease_MEDIS_ManagementID_VS`
+      * `JP_Disease_Claim_VS`
+      * `JP_Modifier_MEDIS_Concept_VS`
+      * `JP_Modifier_MEDIS_ManagementID_VS`
+      * `JP_Modifier_Disease_Claim_VS`
       * `JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS`
       * `JP_ConditionDiseaseOutcomeHL70241_VS`
       * `JP_ConditionDiseaseOutcomeJHSD0006_VS`

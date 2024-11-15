@@ -1,8 +1,8 @@
-ValueSet: JP_ConditionDiseaseModifierMEDISExchange_VS
+ValueSet: JP_Modifier_MEDIS_Concept_VS
 Id: jp-condition-disease-modifier-medis-exchange-vs
 Title: "JP Core Condition Disease Modifier MEDIS Exchange ValueSet"
 Description: "MEDIS ICD10対応標準病名マスター(修飾語交換用コード) を示す値セット"
-* ^url = $JP_ConditionDiseaseModifierMEDISExchange_VS
+* ^url = $JP_Modifier_MEDIS_Concept_VS
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-11-18"

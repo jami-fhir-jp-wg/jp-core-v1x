@@ -1,8 +1,8 @@
-ValueSet: JP_ConditionDiseaseModifierReceipt_VS
+ValueSet: JP_Modifier_Disease_Claim_VS
 Id: jp-condition-disease-modifier-receipt-vs
 Title: "JP Core Condition Disease Modifier Receipt System ValueSet"
 Description: "レセプト電算用修飾語マスターを示す値セット"
-* ^url = $JP_ConditionDiseaseModifierReceipt_VS
+* ^url = $JP_Modifier_Disease_Claim_VS
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-11-18"
