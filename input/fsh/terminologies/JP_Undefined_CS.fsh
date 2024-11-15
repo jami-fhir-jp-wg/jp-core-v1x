@@ -7,4 +7,4 @@ Description: "未定義のコードシステム。使用する予定のコード
 * ^experimental = false
 * ^date = "2023-10-31"
 * ^caseSensitive = true
-* ^content = #complete
+* ^content = #fragment
