@@ -11,13 +11,13 @@ genenareted = "./fsh-generated/resources/"
 sushiconfigPath="sushi-config.yaml"
 
 #--- URL抽出処理 ---
-def fillUrl(prefix, sb, extension = false)
+def fillUrl(prefix, urls, extension = false)
   files = Dir.glob(prefix + "-*.json").sort
   for fl in files
       File.open(fl) do |f|
           h = JSON.load(f)
           if (h["type"] == "Extension") == extension then
-            sb << "    - " + h["url"].to_s + "\n"
+            urls << "    - " + h["url"].to_s
           end
       end
   end
@@ -44,13 +44,17 @@ sb = "  special-url:\n"
 
 Dir.chdir(genenareted)  #カレントディレクトリ移動(fshgenerated/resouces)
 
+urls= []
+
 p 'url情報取得'
-fillUrl("StructureDefinition", sb)
-fillUrl("StructureDefinition", sb, true)
-fillUrl("CapabilityStatement", sb)
-fillUrl("SearchParameter", sb)
-fillUrl("CodeSystem", sb)
-fillUrl("ValueSet", sb)
+fillUrl("StructureDefinition", urls)
+fillUrl("StructureDefinition", urls, true)
+fillUrl("CapabilityStatement", urls)
+fillUrl("SearchParameter", urls)
+fillUrl("CodeSystem", urls)
+fillUrl("ValueSet", urls)
+
+sb << urls.sort_by{ |s| [s.downcase, s] }.join("\n")
 
 Dir.chdir('../..')  ##カレントディレクトリ移動(project配下)
 
@@ -58,7 +62,7 @@ p 'sushi-configの取得'
 allText = getConfingText(sushiconfigPath)
 
 p '正規表現による置換'
-regex = /\s{2}special-url:\n(\s{4}-\s(http|urn:oid:).*\n)*/
+regex = /\s{2}special-url:\n(\s{4}-\s(http|urn:).*\n)*/
 allText.gsub!(regex, sb)
 
 p 'sushi-configによる書き込み'
