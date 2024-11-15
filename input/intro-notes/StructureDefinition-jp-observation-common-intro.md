@@ -1,4 +1,3 @@
-{% include url-version-headerNote.md %}
 
 ## 背景および想定シナリオ
 Observationリソースに対する主な用途は以下の通り。

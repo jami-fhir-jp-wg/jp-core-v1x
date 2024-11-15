@@ -1,4 +1,3 @@
-{% include url-version-headerNote.md %}
 
 本プロファイル説明は、患者に関連付けられた検体検査結果を記録、検索、および取得のために、FHIR Observationリソースを使用するにあたっての、最低限の制約を記述したものである。
 

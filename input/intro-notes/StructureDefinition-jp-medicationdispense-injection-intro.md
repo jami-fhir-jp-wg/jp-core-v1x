@@ -1,4 +1,3 @@
-{% include url-version-headerNote.md %}
 
 本プロファイルは注射、注入を含む薬剤処方の調剤情報をMedicationDispenseリソースを使用して表現する。日本国内で規格を運用するためにExtensionの追加や用語集の追加・変更を行った。
 以下、本プロファイルのMedicationDispenseリソースを「JP Core MedicationDispense Injectionリソース」と呼ぶ。

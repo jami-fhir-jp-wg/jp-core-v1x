@@ -1,4 +1,3 @@
-{% include url-version-headerNote.md %}
 
 本プロファイル説明は、患者に付属する画像検査情報について、情報の登録や検索、取得のために、FHIR ImagingStudyリソースを使用するにあたっての、最低限の制約を記述したものである。
 
