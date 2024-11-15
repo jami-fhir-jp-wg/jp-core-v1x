@@ -235,9 +235,10 @@ Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 Alias: $JP_AllergyIntolerance_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS
 Alias: $JP_ConclusionCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
 Alias: $JP_ConditionDiseaseCodeICD10_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeICD10_VS
-Alias: $JP_ConditionDiseaseCodeMEDISExchange_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeMEDISExchange_VS
-Alias: $JP_ConditionDiseaseCodeMEDISRecordNo_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeMEDISRecordNo_VS
-Alias: $JP_ConditionDiseaseCodeReceipt_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeReceipt_VS
+Alias: $JP_Disease_MEDIS_Concept_VS = http://medis.or.jp/ValueSet/master-disease-exCode // MEDIS病名交換用コード
+Alias: $JP_Disease_MEDIS_ManagementID_VS = http://medis.or.jp/ValueSet/master-disease-keyNumber    // MEDIS病名管理番号
+//Alias: $JP_ConditionDiseaseCodeReceipt_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeReceipt_VS
+Alias: $JP_Disease_Claim_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/masterB-disease    // 支払基金	傷病名コード
 Alias: $JP_ConditionDiseaseModifierMEDISExchange_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseModifierMEDISExchange_VS
 Alias: $JP_ConditionDiseaseModifierMEDISRecordNo_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseModifierMEDISRecordNo_VS
 Alias: $JP_ConditionDiseaseModifierReceipt_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseModifierReceipt_VS
@@ -346,9 +347,6 @@ Alias: $JP_ReasonCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCode
 Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
 
-// Alias: $JP_Disease_MEDIS_Concept_VS = http://medis.or.jp/ValueSet/master-disease-exCode // MEDIS病名交換用コード
-// Alias: $JP_Disease_MEDIS_ManagementID_VS = http://medis.or.jp/ValueSet/master-disease-keyNumber    // MEDIS病名管理番号
-// Alias: $JP_Disease_Claim_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/masterB-disease    // 支払基金	傷病名コード
 // Alias: $JP_BodySite_MEDIS_Concept_VS = http://medis.or.jp/ValueSet/master-disease-modExCode
 
 // Alias: $JP_BodySite_MEDIS_ManagementID_VS = http://medis.or.jp/ValueSet/master-disease-modKeyNumber
