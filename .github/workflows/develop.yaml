@@ -97,6 +97,7 @@ jobs:
         JPTerminologyCOREdir: jpfhir-terminology.r4#1.2.4-url
         JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.2.4-url.tgz
       run: |
+        cp ./terminologies-pkg/* /home/runner/.fhir/packages/$JPTerminologyCOREdir
         mkdir -p /home/runner/.fhir
         mv $JPPACKAGECOREtgz /home/runner/.fhir/
         mkdir -p /home/runner/.fhir/work
@@ -108,7 +109,7 @@ jobs:
         cd /home/runner/.fhir
         mkdir -p packages/$JPTerminologyCOREdir
         mv /home/runner/.fhir/work/package /home/runner/.fhir/packages/$JPTerminologyCOREdir
-         
+      
     - name: apply the version of sushi-config.yaml
       run: |
         sed -i 's/releaseLabel: release/releaseLabel: ci-build/g' sushi-config.yaml
