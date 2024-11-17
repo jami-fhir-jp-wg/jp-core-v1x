@@ -111,8 +111,6 @@ jobs:
         mv /home/runner/.fhir/work/package /home/runner/.fhir/packages/$JPTerminologyCOREdir
         ls -l /home/runner/work/jp-core-v1x/jp-core-v1x/terminologies-pkg/*
         cp /home/runner/work/jp-core-v1x/jp-core-v1x/terminologies-pkg/* /home/runner/.fhir/packages/$JPTerminologyCOREdir/package/
-        ls -l /home/runner/.fhir/packages/$JPTerminologyCOREdir/package/CodeSystem-iso-3166-part1.json
-        rm -f /home/runner/.fhir/packages/$JPTerminologyCOREdir/package/CodeSystem-iso-3166-part1.json
       
     - name: apply the version of sushi-config.yaml
       run: |
