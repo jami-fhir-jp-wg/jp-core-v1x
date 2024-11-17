@@ -79,7 +79,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "1+"
-// * language = #en
+* language = #ja
 
 Instance: gram-strain2
 InstanceOf: JP_Observation_Microbiology
