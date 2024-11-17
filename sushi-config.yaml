@@ -354,3 +354,4 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - urn:oid:1.2.392.100495.10.3.100.5.11.5.2
     - urn:oid:1.2.392.100495.10.3.100.5.27.6.1
     - urn:oid:1.2.392.200270.4.1000.1
+    - http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html
