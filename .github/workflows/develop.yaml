@@ -97,6 +97,7 @@ jobs:
         JPTerminologyCOREdir: jpfhir-terminology.r4#1.2.4-url
         JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.2.4-url.tgz
       run: |
+        mkdir /home/runner/.fhir/packages/$JPTerminologyCOREdir/package
         cp ./terminologies-pkg/* /home/runner/.fhir/packages/$JPTerminologyCOREdir/package
         mkdir -p /home/runner/.fhir
         mv $JPPACKAGECOREtgz /home/runner/.fhir/
