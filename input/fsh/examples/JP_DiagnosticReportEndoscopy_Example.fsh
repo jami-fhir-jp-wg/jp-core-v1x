@@ -6,6 +6,7 @@ InstanceOf: JP_DiagnosticReport_Endoscopy
 Title: "JP Core DiagnosticReport Endoscopy Example 内視鏡検査レポート"
 Description: "上部消化管内視鏡検査レポート"
 Usage: #example
+* language = #ja
 * identifier.use = #usual
 * identifier.system = "http://abc-hospital.local/fhir/identifier/endoscopy/report"
 * identifier.value = "123456"

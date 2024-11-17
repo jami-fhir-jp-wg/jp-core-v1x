@@ -3,6 +3,7 @@ InstanceOf: JP_DiagnosticReport_LabResult
 Title: "JP Core DiagnosticReport_LabResult Example 検体検査（血液）レポート"
 Description: "検体検査（血液）レポート"
 Usage: #example
+* language = #ja
 * contained[0] = inner-observation-labresult-1
 * contained[+] = inner-observation-labresult-2
 * contained[+] = inner-observation-labresult-3
