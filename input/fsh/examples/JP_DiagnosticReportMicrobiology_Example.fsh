@@ -205,7 +205,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueString = "2+"
-// * language = #en
+* language = #ja
 
 Instance: susceptibility-panels1
 InstanceOf: JP_Observation_Microbiology
@@ -226,7 +226,7 @@ Usage: #inline
 * hasMember[+] = Reference(Observation/susceptibility-measurements1-5)
 * hasMember[+] = Reference(Observation/susceptibility-measurements1-6)
 * hasMember[+] = Reference(Observation/susceptibility-measurements1-7)
-// * language = #en
+* language = #en
 
 Instance: organism-id2
 InstanceOf: JP_Observation_Microbiology
