@@ -309,7 +309,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#R "Resistant"
-// * language = #en
+* language = #ja
 
 Instance: susceptibility-measurements1-2
 InstanceOf: JP_Observation_Microbiology
@@ -323,7 +323,7 @@ Usage: #inline
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * interpretation = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#S "Susceptible"
-// * language = #en
+* language = #en
 
 Instance: susceptibility-measurements1-3
 InstanceOf: JP_Observation_Microbiology
