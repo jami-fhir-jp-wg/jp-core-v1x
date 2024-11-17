@@ -2,7 +2,7 @@ name: JPCore FHIR develop Task
 on:
   push:
     branches: 
-      - 'develop'
+      - 'feature/imagingStudyTest'
       - 'release/**'
     paths:
       - 'sushi-config.yaml'
