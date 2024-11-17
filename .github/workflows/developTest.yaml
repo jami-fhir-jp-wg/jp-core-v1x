@@ -32,7 +32,6 @@ jobs:
           echo "##[set-output name=branch_group;]$(echo 'pullrequest')"
         fi
       id: extract_branch
-    
     - name: Extract last commit date
       shell: bash
       run: |
