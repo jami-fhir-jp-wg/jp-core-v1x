@@ -84,9 +84,7 @@
       * `JP_DentalSimplePresentTeethObservation_CS`
       * `JP_DentalSimplePresentTeethObservation_VS`
       * `JP_DICOMModality_VS`
-      * `JP_ObservationCategory_Endoscopy_VS`
       * `JP_ObservationDentalCategory_CS`
-      * `JP_ObservationDentalCategory_VS`
       * `JP_ObservationElectrocardiogramComponentCode_VS`
       * `JP_ObservationElectrocardiogramDuration_VS`
       * `JP_ObservationElectrocardiogramDuration_CS`
@@ -101,7 +99,9 @@
     * 以下のCodeSystem,ValueSetを削除した
       * `JP_ObservationBodySite_CS`
       * `JP_ObservationBodySite_VS`
-    * `JP_ObservationBodyMeasurementCode_CS`の記述の不具合を修正した
+      * `JP_ObservationBodyMeasurementCode_CS`
+      * `JP_ObservationCategory_Microbiology_VS`
+    * の記述の不具合を修正した
     * 病名マスタ(MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`,MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`,レセプト電算用傷病名マスタ`JP_Disease_Claim_CS`)を用語として追加した
   * Capability Statement関連
     * 単数パラメータのConformanceの指定に対応した

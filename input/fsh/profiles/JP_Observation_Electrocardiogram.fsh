@@ -25,18 +25,11 @@ Description: "このプロファイルはObservationリソースに対して、�
 * partOf ^comment = "ObservationをEncounterにencounter要素を使ってリンクする。もうひとつ別のObservationを参照することについては、以降にあるt [Notes](observation.html#obsgrouping)　をガイダンスとして参照のこと。"
 * insert SetDefinition(status, 結果の状態)
 * status ^comment = "このリソースは現在有効でないというマークをするコードを含んでいるため、この要素はモディファイアー（修飾的要素）として位置づけられている。"
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "coding.system"
-* category ^slicing.rules = #open
-* category ^slicing.ordered = false
 * category contains
-    first 1..1 and
     second 0..1 and
     third 0..1
 * insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には通常 procedure が指定される。必要に応じてextraCategoryを仕様する)
 * category ^comment = "心電図検査は通常 procedure に分類される。"
-* category[first] from $JP_SimpleObservationCategory_VS (required)
-* category[first].coding.system = $JP_SimpleObservationCategory_CS
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#procedure
 * category[second].coding.system = $Loinc_CS
 * category[second].coding.code = $Loinc_CS#11524-6
