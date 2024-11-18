@@ -21,8 +21,7 @@ JP CoreとしてはsimpleObservationコード体系を必須とし、他のロ�
 * insert SetDefinition(category[first], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
 
-* insert SetDefinition(category[second], このObservationに関するLOINC上の分類、任意項目)
-//* category[second] from $JP_ObservationCategory_Microbiology_VS (preferred)
+* insert SetDefinition(category[second],第2カテゴリはLOINCのコード18725-2固定とする、ValueSetのバインディングを指定していないことに注意すること)
 * category[second].coding.system = $Loinc_CS (exactly)
 * category[second].coding.code 1..
 * category[second].coding.code = $Loinc_CS#18725-2 (exactly)
