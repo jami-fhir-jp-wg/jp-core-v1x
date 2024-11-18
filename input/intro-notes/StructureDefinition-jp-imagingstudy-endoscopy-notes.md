@@ -46,7 +46,7 @@ ImagingStudyはDICOM tagとの対応が重要である。各エレメントとDI
 
 | コンフォーマンス | パラメータ    | 型     | 例          |
 | -------------| ----- | ------ | ----- |
-| SHALL | identifier | token | `GET [base]/ImagingStudy?identifier=urn:oid:2.16.124.999999.9999.1154777499.30246.19789.3503430045` |
+| SHALL | identifier | token | `GET [base]/ImagingStudy?identifier=urn:ietf:rfc:3986|2.16.124.999999.9999.1154777499.30246.19789.3503430045` |
 | SHOULD | patient | reference | `GET [base]/ImagingStudy?patient=123` |
 | SHOULD | patient, modality | reference, token | `GET [base]/ImagingStudy?patient=123&modality=ES` |
 | SHOULD | patient,started | reference, date | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-25` |
@@ -59,7 +59,9 @@ ImagingStudyはDICOM tagとの対応が重要である。各エレメントとDI
 
 ##### 必須検索パラメータ
 
-本プロファイルで必須(**SHALL**)として定義された検索項目はない。
+次の検索パラメータは必須でサポートされなければならない。（**SHALL**）
+
+- identifier
 
 ##### オプション検索パラメータ
 

@@ -1,4 +1,3 @@
-{% include url-version-headerNote.md %}
 
 医療者が組織で一定期間担当する可能性のある特定の役割/場所/専門分野/サービスのセット。
 <br/>
