@@ -84,9 +84,7 @@
       * `JP_DentalSimplePresentTeethObservation_CS`
       * `JP_DentalSimplePresentTeethObservation_VS`
       * `JP_DICOMModality_VS`
-      * `JP_ObservationCategory_Endoscopy_VS`
       * `JP_ObservationDentalCategory_CS`
-      * `JP_ObservationDentalCategory_VS`
       * `JP_ObservationElectrocardiogramComponentCode_VS`
       * `JP_ObservationElectrocardiogramDuration_VS`
       * `JP_ObservationElectrocardiogramDuration_CS`

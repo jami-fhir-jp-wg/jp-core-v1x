@@ -38,7 +38,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#procedure (exactly)
 
 * insert SetDefinition(category[second], このObservationに関するLOINC上の分類、必須項目)
-* category[second] from JP_ObservationDentalCategory_VS (required)
 * category[second].coding.system = $Loinc_CS (exactly)
 * category[second].coding.code 1..1
 * category[second].coding.code = $Loinc_CS#LP89803-8 (exactly)
