@@ -17,6 +17,7 @@ Description: "このプロファイルはDiagnosticReport_Radiologyリソース�
 * basedOn ^comment = "このObservationが生成されることになった画像検査に関するオーダ情報"
 * partOf only Reference(JP_ImagingStudy_Radiology)
 * partOf ^comment = "このObservation（インプレッション）が生成される元になった画像検査"
+* category MS
 * category from $JP_SimpleObservationCategory_VS (required)
 * category ^comment = "このObservationを分類するコード。(imaging)が指定される。"
 * category.coding.system = $JP_SimpleObservationCategory_CS (exactly)
