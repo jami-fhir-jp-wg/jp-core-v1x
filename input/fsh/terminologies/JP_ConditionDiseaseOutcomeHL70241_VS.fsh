@@ -5,7 +5,7 @@ Description: "HL7表0241の病名転帰区分を示す値セット"
 * ^url = $JP_ConditionDiseaseOutcomeHL70241_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-08-05"
+* ^date = "2024-11-18"
 * ^copyright = "Copyright HL7 Japan (出典：HL7-0241)"
 
 * include codes from system $JP_ConditionDiseaseOutcomeHL70241_CS

@@ -3,11 +3,11 @@ InstanceOf: JP_MedicationRequest
 Title: "JP Core MedicationRequest Example 内服処方指示 ムコダイン錠２５０ｍｇ"
 Description: "内服処方指示 ムコダイン錠２５０ｍｇ"
 Usage: #example
-* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "1"
-* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+* identifier[orderInRp].system = $JP_MedicationAdministrationIndex
 * identifier[orderInRp].value = "1"
-* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
+* identifier[requestIdentifier].system = $JP_ResourceInstance_Identifier
 * identifier[requestIdentifier].value = "1234567890.1.1"
 * intent = #order
 * status = #active
@@ -19,7 +19,7 @@ Usage: #example
 * dosageInstruction.extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration"
 * dosageInstruction.extension[=].valueDuration = 3 'd' "日"
 * dosageInstruction.text = "内服・経口・１日３回朝昼夕食後"
-* dosageInstruction.timing.code = $JP_MedicationUsageJAMI_CS#1013044400000000 "内服・経口・１日３回朝昼夕食後"
+* dosageInstruction.timing.code = $JP_MedicationUsageJAMI_CS#1013044400000000 "内服 １日３回 朝昼夕食後"
 * dosageInstruction.route = $JP_MedicationRouteHL70162_CS#PO "口"
 * dosageInstruction.method = $JP_MedicationMethodJAMIDetailUsage_CS#10 "経口"
 * dosageInstruction.doseAndRate.type = $JP_MedicationIngredientStrengthStrengthType_CS#1 "製剤量"
@@ -34,11 +34,11 @@ InstanceOf: JP_MedicationRequest
 Title: "JP Core MedicationRequest Example 内服処方指示 パンスポリンＴ錠１００ １００ｍｇ"
 Description: "内服処方指示 パンスポリンＴ錠１００ １００ｍｇ"
 Usage: #example
-* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "2"
-* identifier[orderInRp].system = "urn:oid:1.2.392.100495.20.3.82"
+* identifier[orderInRp].system = $JP_MedicationAdministrationIndex
 * identifier[orderInRp].value = "2"
-* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
+* identifier[requestIdentifier].system = $JP_ResourceInstance_Identifier
 * identifier[requestIdentifier].value = "1234567890.1.2"
 * intent = #order
 * status = #active
@@ -50,7 +50,7 @@ Usage: #example
 * dosageInstruction.extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_UsageDuration"
 * dosageInstruction.extension[=].valueDuration = 3 'd' "日"
 * dosageInstruction.text = "内服・経口・１日３回朝昼夕食後"
-* dosageInstruction.timing.code = $JP_MedicationUsageJAMI_CS#1013044400000000 "内服・経口・１日３回朝昼夕食後"
+* dosageInstruction.timing.code = $JP_MedicationUsageJAMI_CS#1013044400000000 "内服 １日３回 朝昼夕食後"
 * dosageInstruction.route = $JP_MedicationRouteHL70162_CS#PO "口"
 * dosageInstruction.method = $JP_MedicationMethodJAMIDetailUsage_CS#10 "経口"
 * dosageInstruction.doseAndRate.type = $JP_MedicationIngredientStrengthStrengthType_CS#1 "製剤量"

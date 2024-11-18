@@ -8,19 +8,12 @@ Title: "JP Core Observation SocialHistory Profile"
 Description: "このプロファイルはObservationリソースに対して、生活背景のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_SocialHistory"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-11-18"
 * . ^short = "生活背景の情報"
 * . ^definition = "生活背景の情報"
 * . ^comment = "生活背景に関するObservation（収集したり観察した事実など）の制約プロフィール"
 * category 1..
-* category ^slicing.discriminator[+].type = #value
-* category ^slicing.discriminator[=].path = "$this"
-* category ^slicing.rules = #open
-* category contains socialHistory 1..1
-* category[socialHistory] from JP_SimpleObservationCategory_VS (required)
-* category[socialHistory].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[socialHistory].coding.code 1..
-* category[socialHistory].coding.code = $JP_SimpleObservationCategory_CS#social-history (exactly)
+* category[first].coding.code = $JP_SimpleObservationCategory_CS#social-history (exactly)
 * category ^comment = "【JP Core仕様】基底仕様のカテゴリ「social-history」固定とする"
 * code from JP_ObservationSocialHistoryCode_VS (preferred)
 * code ^comment = "MEDISのJ-MIXの「生活背景情報」（※宗教を除く）"

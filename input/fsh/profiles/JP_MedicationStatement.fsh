@@ -12,7 +12,7 @@ Title: "JP Core MedicationStatement Profile"
 Description: "このProfileは服薬状況を示すものであり，診療情報提供書や退院サマリーなどの他の文書と組み合わせて用いられる。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationStatement"
 * ^status = #active
-* ^date = "2024-08-01"
+* ^date = "2024-11-18"
 * ^purpose = "このProfileは診療情報提供書や退院サマリーなどの医療文書内で服薬情報について記載するために用いられる。このResourceは薬剤処方や，調剤情報，薬剤投与実施情報としては用いられず，それぞれMedicationRequest, MedicationDispense, MedicationAdministrationが用いられる。"
 * . ^short = "服薬情報"
 * . ^definition = "患者が薬剤を服用している状況についての情報である。"
@@ -27,22 +27,6 @@ Description: "このProfileは服薬状況を示すものであり，診療情�
 * statusReason ^comment = "コード化せずにtextのみで表現する。"
 * category ^short = "薬剤使用区分"
 * category ^definition = "薬剤が服用されると想定されている場所。日本では「院外」「院内」「入院」「外来」などの区分を想定する。\r\n一般的には、外来や入院などどこでこの薬剤が投与、内服されるかを想定した区分である。\r\n処方病棟や処方した診療科をOrganization resourceで表現することが冗長である場合にはこの区分が用いられることもある。\r\nHL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicationrequest-category がデフォルトで用いられるが、日本での使用の場合持参薬をカバーする必要があり、JAHIS処方データ規約V3.0Cに記載されているMERIT-9処方オーダ表7とJHSP0007表を組み合わせて持ちいることとする"
-
-// * medicationCodeableConcept only CodeableConcept
-// * medicationCodeableConcept ^binding.strength = #preferred
-// * medicationCodeableConcept ^binding.description = "処方する製剤を表すコード。"
-// * medicationCodeableConcept.coding 1..
-// * medicationCodeableConcept.coding ^short = "医薬品を表すコード"
-// * medicationCodeableConcept.coding ^definition = "医薬品を表すコード。JP Coreでは最低1個のコードを記録しなければならない。\r\n利用できるコードは下記の通りである。\r\n医薬品コード（医薬品マスター）\r\n薬価基準収載医薬品コード\r\nYJコード\r\nHOT コード（9 桁）\r\n一般名処方マスター"
-// * medicationCodeableConcept.coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。\r\n【JP-CORE】Medication要素の説明を参照のこと。"
-// * medicationCodeableConcept.coding.userSelected ^short = "このコードが直接ユーザーが指定したものであるかどうか"
-// * medicationCodeableConcept.coding.userSelected ^definition = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
-// * medicationCodeableConcept.coding.userSelected ^comment = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
-// * medicationCodeableConcept.text ^short = "この概念のプレーンテキスト表現"
-// * medicationCodeableConcept.text ^definition = "入力したユーザーが見た/選択した/発したとおりの概念および・またはユーザーが意図した概念を自然言語で表現したもの。"
-// * medicationCodeableConcept.text ^comment = "textエレメントはcodingのdisplayNameエレメントと一致することがよくある。"
-// * medicationReference only Reference(JP_Medication)
-
 * medication[x] ^short = "What medication was supplied　医薬品"
 * medication[x] ^definition = "Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.\r\n\r\n投与された薬剤を識別する。既知の薬のリストから薬を識別するコード情報を設定する。"
 * medication[x] ^comment = "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.\r\n\r\nひとつのtext要素と、複数のcoding 要素を記述できる。処方オーダ時に選択または入力し、実際に処方箋に印字される文字列を必ずtext要素に格納した上で、それをコード化した情報を1個以上のcoding 要素に記述する。\r\n\r\n厚生労働省標準であるHOT9コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。\r\n\rなお、上記のいずれの標準的コードも付番されていない医薬品や医療材料の場合には、薬機法の下で使用されているGS1標準の識別コードであるGTIN(Global Trade Item Number)の調剤包装単位（最少包装単位、個別包装単位）14桁を使用する。\r\n\rひとつの処方薬、医療材料を複数のコード体系のコードで記述してもよく、その場合にcoding 要素を繰り返して記述する。\rただし、ひとつの処方薬を複数のコードで繰り返し記述する場合には、それらのコードが指し示す処方薬、医療材料は当然同一でなければならない。\rまた、処方を発行した医療機関内でのデータ利用のために、医療機関固有コード体系によるコード（ハウスコード、ローカルコード）の記述を含めてもよいが、その場合でも上述したいずれかの標準コードを同時に記述することが必要である。"
@@ -74,13 +58,6 @@ Description: "このProfileは服薬状況を示すものであり，診療情�
 * reasonCode ^definition = "この薬剤た投与された理由"
 * reasonCode ^comment = "このコードは疾患分類であっても良い。JP Coreでは傷病名マスターの使用を前提とする。"
 * reasonCode.coding ^short = "投与理由，対象疾患についてのコード"
-// * reasonCode.cosing.system 0..1
-// * reasonCode.cosing.system = "urn:oid:1.2.392.200119.4.101.6" (example)
-// * reasonCode.coding.system ^short = "ここでは傷病名マスタを対象疾患として指定する例を上げる"
-// * reasonCode.coding.system ^definition = "対象疾患を例とする場合は傷病名マスターなどが利用されるが，他の理由コードを利用しても良い。"
-// * reasonCode.coding.code 0..1
-// * reasonCode.coding.code ^short = "投与理由に相当する概念に対するコード"
-// * reasonCode.coding.display ^short ="投与理由についてのテキスト表現"
 * reasonReference ^short = "服薬理由を支持するObservation, Condition, DiagnosticReportについての参照。"
 * note ^short = "他のフィールドには記述できないこのstatementについての追加情報"
 * note ^definition = "他の属性には記載できないこのstatementについての備考情報"
@@ -98,7 +75,7 @@ Title: "JP Core MedicationStatement Injection Profile"
 Description: "このProfileは服薬状況を示すものであり，診療情報提供書や退院サマリーなどの他の文書と組み合わせて用いられる。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationStatement_Injection"
 * ^status = #draft
-* ^date = "2022-07-04"
+* ^date = "2024-11-18"
 * ^purpose = "このProfileは診療情報提供書や退院サマリーなどの医療文書内で服薬情報について記載するために用いられる。このResourceは薬剤処方や，調剤情報，薬剤投与実施情報としては用いられず，それぞれMedicationRequest, MedicationDispense, MedicationAdministrationが用いられる。"
 * . ^short = "服薬情報"
 * . ^definition = "患者が薬剤を服用している状況についての情報である。"
@@ -113,22 +90,6 @@ Description: "このProfileは服薬状況を示すものであり，診療情�
 * statusReason ^comment = "コード化せずにtextのみで表現する。"
 * category ^short = "薬剤使用区分"
 * category ^definition = "薬剤が服用されると想定されている場所。日本では「院外」「院内」「入院」「外来」などの区分を想定する。\r\n一般的には、外来や入院などどこでこの薬剤が投与、内服されるかを想定した区分である。\r\n処方病棟や処方した診療科をOrganization resourceで表現することが冗長である場合にはこの区分が用いられることもある。\r\nHL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicationrequest-category がデフォルトで用いられるが、日本での使用の場合持参薬をカバーする必要があり、JAHIS処方データ規約V3.0Cに記載されているMERIT-9処方オーダ表7とJHSP0007表を組み合わせて持ちいることとする"
-
-// * medicationCodeableConcept only CodeableConcept
-// * medicationCodeableConcept ^binding.strength = #preferred
-// * medicationCodeableConcept ^binding.description = "処方する製剤を表すコード。"
-// * medicationCodeableConcept.coding 1..
-// * medicationCodeableConcept.coding ^short = "医薬品を表すコード"
-// * medicationCodeableConcept.coding ^definition = "医薬品を表すコード。JP Coreでは最低1個のコードを記録しなければならない。\r\n利用できるコードは下記の通りである。\r\n医薬品コード（医薬品マスター）\r\n薬価基準収載医薬品コード\r\nYJコード\r\nHOT コード（9 桁）\r\n一般名処方マスター"
-// * medicationCodeableConcept.coding ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。\r\n【JP-CORE】Medication要素の説明を参照のこと。"
-// * medicationCodeableConcept.coding.userSelected ^short = "このコードが直接ユーザーが指定したものであるかどうか"
-// * medicationCodeableConcept.coding.userSelected ^definition = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
-// * medicationCodeableConcept.coding.userSelected ^comment = "ユーザーが直接コーディングしたかどうかを示す。たとえば、有効な項目のリスト（コードか表現）から選択したかどうか。"
-// * medicationCodeableConcept.text ^short = "この概念のプレーンテキスト表現"
-// * medicationCodeableConcept.text ^definition = "入力したユーザーが見た/選択した/発したとおりの概念および・またはユーザーが意図した概念を自然言語で表現したもの。"
-// * medicationCodeableConcept.text ^comment = "textエレメントはcodingのdisplayNameエレメントと一致することがよくある。"
-// * medicationReference only Reference(JP_Medication)
-
 * medication[x] ^short = "What medication was supplied　医薬品"
 * medication[x] ^definition = "Identifies the medication that was administered. This is either a link to a resource representing the details of the medication or a simple attribute carrying a code that identifies the medication from a known list of medications.\r\n\r\n投与された薬剤を識別する。既知の薬のリストから薬を識別するコード情報を設定する。"
 * medication[x] ^comment = "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.\r\n\r\nひとつのtext要素と、複数のcoding 要素を記述できる。処方オーダ時に選択または入力し、実際に処方箋に印字される文字列を必ずtext要素に格納した上で、それをコード化した情報を1個以上のcoding 要素に記述する。\r\n\r\n厚生労働省標準であるHOT9コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。\r\n\rなお、上記のいずれの標準的コードも付番されていない医薬品や医療材料の場合には、薬機法の下で使用されているGS1標準の識別コードであるGTIN(Global Trade Item Number)の調剤包装単位（最少包装単位、個別包装単位）14桁を使用する。\r\n\rひとつの処方薬、医療材料を複数のコード体系のコードで記述してもよく、その場合にcoding 要素を繰り返して記述する。\rただし、ひとつの処方薬を複数のコードで繰り返し記述する場合には、それらのコードが指し示す処方薬、医療材料は当然同一でなければならない。\rまた、処方を発行した医療機関内でのデータ利用のために、医療機関固有コード体系によるコード（ハウスコード、ローカルコード）の記述を含めてもよいが、その場合でも上述したいずれかの標準コードを同時に記述することが必要である。"
@@ -160,13 +121,6 @@ Description: "このProfileは服薬状況を示すものであり，診療情�
 * reasonCode ^definition = "この薬剤た投与された理由"
 * reasonCode ^comment = "このコードは疾患分類であっても良い。JP Coreでは傷病名マスターの使用を前提とする。"
 * reasonCode.coding ^short = "投与理由，対象疾患についてのコード"
-// * reasonCode.cosing.system 0..1
-// * reasonCode.cosing.system = "urn:oid:1.2.392.200119.4.101.6" (example)
-// * reasonCode.coding.system ^short = "ここでは傷病名マスタを対象疾患として指定する例を上げる"
-// * reasonCode.coding.system ^definition = "対象疾患を例とする場合は傷病名マスターなどが利用されるが，他の理由コードを利用しても良い。"
-// * reasonCode.coding.code 0..1
-// * reasonCode.coding.code ^short = "投与理由に相当する概念に対するコード"
-// * reasonCode.coding.display ^short ="投与理由についてのテキスト表現"
 * reasonReference ^short = "服薬理由を支持するObservation, Condition, DiagnosticReportについての参照。"
 * note ^short = "他のフィールドには記述できないこのstatementについての追加情報"
 * note ^definition = "他の属性には記載できないこのstatementについての備考情報"

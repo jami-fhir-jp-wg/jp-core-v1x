@@ -8,7 +8,7 @@ Title: "JP Core ServiceRequest Common Profile"
 Description: "本プロファイル説明は、患者に対し立案・実施されるリクエストの記録で、行為や診断、もしくは他のサービスのために用いられるFHIR ServiceRequestリソースを使用するにあたっての、最低限の制約を記述したものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common"
 * ^status = #active
-* ^date = "2024-09-18"
+* ^date = "2024-11-18"
 * . ^short = "サービスリクエスト"
 * . ^definition = "診断のための検査、治療、手術などのサービスリクエストの記録"
 * meta.lastUpdated 0.. MS
@@ -23,7 +23,7 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 //
 * instantiatesUri ^short = "外部のプロトコール、定義への参照"
 * instantiatesUri ^definition = "このサービスリクエストに部分的、または完全に関わる、外部の管理されたプロトコール、ガイドライン、オーダセットや他の定義へのURL参照"
-* instantiatesUri = "HTMLページ、PDFなど、名前で解決できないURI識別子"
+* instantiatesUri ^comment = "HTMLページ、PDFなど、名前で解決できないURI識別子"
 //
 * basedOn ^short = "リクエストするリソースへの参照"
 * basedOn ^definition = "このリクエストによって実施すべき計画、提案、オーダの詳細（への参照）"
@@ -39,21 +39,17 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * status ^short = "サービスリクエストの状態"
 * status ^definition = "オーダの状態"
 * status ^comment = "status要素は、一般的に発注者の完全な制御下にあり、オーダが起案か有効かを決定し、有効化された後は、競合、停止、または中断される。受注者の活動に関連する状態は、対応するイベント（一般的な議論についてはEventパターンを参照）またはTaskリソースを使用して反映される。"
-// * status from http://hl7.org/fhir/ValueSet/request-status (required)
 // 
 * intent ^short = "サービスリクエストの意図（proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option）"
 * intent ^definition = "この要求が、提案、経過、オリジナル、繰り返しかどうかを示す。"
 * intent ^comment = "この要素は、リソースが実際に適用されるタイミングや方法を意図的に変更するため、修飾子と表現される。"
-// * intent from http://hl7.org/fhir/ValueSet/request-intent (required)
 // 
 * category ^short = "サービスリクエストの分類"
 * category ^definition = "検索、分類、表示の目的でサービスを分類するコード（例 「外科的手技」）"
 * category ^comment = "リソースを検索または表示するためのコンテキストまたはユースケースに応じて、複数の分類軸が存在する場合がある。粒度のレベルは、Value Setのカテゴリー概念によって定義される。"
-// * category from http://hl7.org/fhir/ValueSet/servicerequest-category (example)
 // 
 * priority ^short = "サービスリクエストの緊急度（routine | urgent | asap | stat）"
 * priority ^definition = "このサービスリクエストはどの程度早く対処されるべきかを示す。"
-// * priority from http://hl7.org/fhir/ValueSet/request-priority (requred)
 // 
 * doNotPerform ^short = "値が真の時、サービスや処置は実施不可"
 * doNotPerform ^definition = "要求された特定のサービス（例、手技、診断のための検査、また検査パネル）の識別子"
@@ -62,13 +58,10 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * code ^short = "リクエストの内容を示すコード"
 * code ^definition = "要求された特定のサービス（例、行為、診断のための検査、また検査パネル）の識別子"
 * code ^comment = "多くの検査・放射線処置コードは、血清または血漿グルコース、胸部 X 線など、検体・器官系が検査オーダー名に埋め込まれている。検体は、検査コードとは別に記録されないかもしれない。"
-// * code from http://hl7.org/fhir/ValueSet/procedure-code (example)
 // 
 * orderDetail ^short = "追加のオーダ情報"
 * orderDetail ^definition = "リクエストの提供方法に関する追加の詳細および指示。例えば、尿道カテーテルのサービスリクエストには、外部または留置カテーテルのリクエストの詳細があり、包帯のサービスリクエストには、包帯の適用方法を指定する追加の指示が必要な場合もある。"
 * orderDetail ^comment = "リクエストされたサービス提供の指示についての医療記録からの情報については、supportingInformation要素を使用。"
-// * orderDetail obeys prr-1
-// * orderDetail from http://hl7.org/fhir/ValueSet/servicerequest-orderdetail (example)
 //
 * quantity[x] ^short = "サービスの量"
 * quantity[x] ^definition = "リクエストされるサービスの量。数量（例:1500ドルの住宅改造）、比率（例:1ヶ月に20回の半日訪問）、または範囲（例:1分間に2.0～1.8Gy）。"
@@ -107,7 +100,6 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 //
 * locationCode ^short = "リクエストされた場所"
 * locationCode ^definition = "実際に行為が行われるべき好ましい場所を、コード化またはフリーテキスト形式で記述。例：自宅や介護施設など。"
-// * locationCode from http://terminology.hl7.org/ValueSet/v3-ServiceDeliveryLocationRoleType (exmple)
 //
 * locationReference ^short = "リクエストされた場所（参照）"
 * locationReference ^definition = "実際に行為が行われるべき好ましい場所（複数可）への参照。例：自宅や介護施設など。"
@@ -138,7 +130,6 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * bodySite ^short = "体の部位（別名 場所）"
 * bodySite ^definition = "行為を実施すべき解剖学的部位。目標とする場所。"
 * bodySite ^comment = "ServiceRequest.codeにあるコードに暗黙の了解がない場合にのみ使用する。使用例として、BodySiteをインラインコード化された要素ではなく、別のリソースとして扱う必要がある場合（例えば、別々に識別し追跡するため）、procedure.targetBodyStructureの拡張を使用してください。"
-// * bodySite from http://hl7.org/fhir/ValueSet/body-site (exmple)
 //
 * note ^short = "コメント"
 * note ^definition = "サービス要求について作成された、その他のメモやコメント。例えば、内部請求のメモなど。"
@@ -149,9 +140,3 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * relevantHistory ^short = "リソースの履歴（バージョン管理）"
 * relevantHistory ^definition = "このリクエストの履歴で重要なもの"
 * relevantHistory ^comment = "この要素はには、ServiceRequestのProvenanceの全てのバージョンではなく、重要と思われたものだけ含められる。現在のバージョンのリソースに関連したProvenanceリソースを含めてはならない（SHALL NOT）。（もし、Provenanceとして重要な変化と思われれば、以降の更新の一部として追加すべきである。それまでは、'_revinclude'を使って指定されたProvenanceのバージョンを直接クエリーできる。全てのProvenanceはこのRequestの履歴を対象とすべきである。）"
-
-
-// Invariant: prr-1
-// Severity: #error
-// Description: "code要素がある場合のみ、orderDetail要素は存在"
-// Expression: "orderDetail.empty() or code.exists()"

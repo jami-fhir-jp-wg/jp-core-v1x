@@ -5,7 +5,7 @@ Description: "Observation（放射線）コードで使用する項目値セッ�
 * ^url = $JP_ObservationRadiologyCode_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2024-10-18"
+* ^date = "2024-11-18"
 * ^copyright = "Copyright 日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 // =================================================
 // LOINC

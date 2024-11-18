@@ -4,11 +4,11 @@ Title: "JP Core Observation Endoscopy Example 診断（腺腫）"
 Description: "内視鏡診断（腺腫）"
 Usage: #example
 * status = #final
-* category[0] = $JP_SimpleObservationCategory_CS#procedure "Procedure"
-* category[1] = $Loinc_CS#LP7796-8 "Endoscopy"
+* category[first] = $JP_SimpleObservationCategory_CS#procedure "Procedure"
+* category[second] = $Loinc_CS#LP7796-8 "内視鏡"
 * code
   * coding
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationEndoscopyCode_VS"
+    * system = $Loinc_CS
     * code = #19811-9
     * display = "Diagnosis Endoscopy Procedure Narrative"
   * text = "内視鏡診断"
@@ -18,9 +18,9 @@ Usage: #example
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueCodeableConcept
   * coding
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationEndoscopyValueJed_CS"
+    * system = $JP_EndoscopyTerminologyCodesJED_CS
     * code = #Z2L30301
-    * display = "[Tumor] Adenoma / Early Colorectal Cancer"
+    * display = "[腫瘍] 腺腫・早期大腸癌"
   * text = "[腫瘍] 腺腫・早期大腸癌"
 * hasMember[0] = Reference(Observation/jp-observation-endoscopy-example-findings-1a) "大きさ　長径４（ｍｍ）"
 * hasMember[1] = Reference(Observation/jp-observation-endoscopy-example-findings-1b) "[大腸 肉眼型1] Is(p)"

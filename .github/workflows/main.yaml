@@ -29,8 +29,8 @@ jobs:
           echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
           echo "branch_group=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
         else
-          echo "branch$(echo ${{ github.event.pull_request.head.ref }})" >> $GITHUB_OUTPUT
-          echo "branch_group$(echo 'pullrequest')" >> $GITHUB_OUTPUT
+          echo "branch=$(echo ${{ github.event.pull_request.head.ref }})" >> $GITHUB_OUTPUT
+          echo "branch_group=$(echo 'pullrequest')" >> $GITHUB_OUTPUT
         fi
       id: extract_branch
     
@@ -38,6 +38,8 @@ jobs:
       shell: bash
       run: |
         echo "date=$(git log -1 --format="%at" | xargs -I{} date -d @{})" >> $GITHUB_OUTPUT
+        title_temp=$(echo ${{ github.event.pull_request.title }} | sed 's/\[/【/g; s/\]/】/g; s/\:/：/g; s/\-/－/g')
+        echo "encoded_pullrequest_title=$title_temp" >> $GITHUB_ENV
       id: extract_date
 
     - uses: bluwy/substitute-string-action@v1
@@ -115,7 +117,7 @@ jobs:
         mkdir input-cache
         mv publisher.jar ./input-cache/publisher.jar
         unset DISPLAY
-        java  -Xmx12G -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx n/a
+        java -Xmx12G -Duser.language=ja -Duser.country=JP -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx n/a
         mv ./input/landing_page/_index.yml ./output/
 
 

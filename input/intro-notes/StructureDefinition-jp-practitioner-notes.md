@@ -19,7 +19,7 @@
 | スライシング定義名 | 目的 | 指定方法 |
 | ---------------- | ---------------- | ---------------- |   
 | narcoticPrescriptionLicenseNumber | 麻薬施用者免許番号を表現する | qualification.identifier.system = "urn:oid:1.2.392.100495.20.3.32.1[都道府県番号]" を指定し、麻薬取扱免許番号を同valueに格納する。<br/> [都道府県番号](https://www.mhlw.go.jp/topics/2007/07/dl/tp0727-1d.pdf)  |
-| MedicalRegistrationNumber | 医籍登録者番号を表現する | qualification.identifier.system = "urn:oid:1.2.392.100495.20.3.31" を指定し、医籍登録者番号を同valueに格納する。 |
+| MedicalRegistrationNumber | 医籍登録者番号を表現する | qualification.identifier.system = "http://jpfhir.jp/fhir/core/mhlw/IdSystem/medicalRegistrationNumber" を指定し、医籍登録者番号を同valueに格納する。 |
 
 ## 利用方法
 

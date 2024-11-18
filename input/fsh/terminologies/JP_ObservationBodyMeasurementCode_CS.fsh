@@ -5,7 +5,7 @@ Description: "Observation（身体計測）で使用する項目コードのコ�
 * ^url = $JP_ObservationBodyMeasurementCode_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-11-11"
+* ^date = "2024-11-18"
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationBodyMeasurementCode_VS
 * ^content = #complete

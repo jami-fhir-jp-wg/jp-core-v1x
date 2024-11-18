@@ -3,7 +3,7 @@
 
 次のデータ項目は必須（**SHALL**）である。
 
-- identifier ： レポートの識別子　
+- identifier : レポートの識別子　
 - status : レポートの状態・進捗状況
 - code : レポートの種別
   （[JP Core Document Codes Diagnostic][JP_DocumentCodes_DiagnosticReport_VS]に記載されているLOINCコード(18748-4) "Diagnostic imaging study" を指定）
@@ -22,7 +22,7 @@
 - performer : Practitionerでレポートの関係者（作成者、読影者、確定者など）を列挙
 - resultInterpreter : Practitionerでレポート確定者を示す
 - imagingStudy : 診断の対象となる画像
-- result ： 所見(findings)や診断の結果(impression) を示すObservationリソースへの参照。
+- result : 所見(findings)や診断の結果(impression) を示すObservationリソースへの参照。
 - link : キーイメージの参照先
 - conclusion : 診断の結果、impression
 - presentedForm : レポート本体（全体のイメージあるいは所見等のテキスト）

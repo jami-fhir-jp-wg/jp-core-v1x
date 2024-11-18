@@ -18,5 +18,5 @@ Usage: #Example
 * doseQuantity = 0.45 'mL' "mL"
 * performer.function = http://terminology.hl7.org/CodeSystem/v2-0443#AP "Administering Provider"
 * performer.actor = Reference(Practitioner/jp-practitioner-example-male-1) "大阪 一郎"
-* protocolApplied.targetDisease = urn:oid:1.2.392.200119.4.101.6#VQH3 "肺炎球菌感染症"
+* protocolApplied.targetDisease = $JP_Disease_MEDIS_Concept_CS#VQH3 "肺炎球菌感染症"
 * protocolApplied.doseNumberPositiveInt = 1

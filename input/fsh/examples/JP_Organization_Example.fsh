@@ -5,7 +5,7 @@ Description: "ひまわり健康保険組合"
 Usage: #example
 * type = http://terminology.hl7.org/CodeSystem/organization-type#pay "Payer"
 * name = "ひまわり健康保険組合"
-* identifier[insurerNumber].system = "urn:oid:1.2.392.100495.20.3.61"
+* identifier[insurerNumber].system = $JP_IdSystem_InsurerNumber
 * identifier[insurerNumber].value = "7654321"
 
 Instance: jp-organization-example-clinic
@@ -18,7 +18,7 @@ Usage: #example
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory"
 * extension[=].valueCoding = $JP_MedicalFeeScoreType_CS#1
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
-* extension[=].valueIdentifier.system = "urn:oid:1.2.392.100495.20.3.23"
+* extension[=].valueIdentifier.system = $JP_IdSystem_MedicalOrganizationID 
 * extension[=].valueIdentifier.value = "1234567"
 * identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no"
 * identifier[medicalInstitutionCode].value = "1311234567"
@@ -39,7 +39,7 @@ Usage: #example
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory"
 * extension[=].valueCoding = $JP_MedicalFeeScoreType_CS#1
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
-* extension[=].valueIdentifier.system = "urn:oid:1.2.392.100495.20.3.23"
+* extension[=].valueIdentifier.system = $JP_IdSystem_MedicalOrganizationID 
 * extension[=].valueIdentifier.value = "9876543"
 * identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no"
 * identifier[medicalInstitutionCode].value = "1319876543"

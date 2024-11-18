@@ -12,9 +12,9 @@
 
 ### 背景と状況
 
-現在の検査材料リソースは容器に関して基礎的な情報のみを有する。再帰的な性質の容器や（親容器から分注した？）容器の追跡情報は有していない（例：冷蔵庫内のラック内のトレイ）。一般的な検査、バイオバンク、その他、これらの要素が追跡される頻度は使用状況によって異なる。このリソースに関する査読者からのコメントと、追跡に関してどのような属性を扱う必要があるかのコメントを歓迎しています。
+現在の検査材料リソースは容器に関して基礎的な情報のみを有する。再帰的な性質の容器や（親容器から分注した？）容器の追跡情報は有していない（例：冷蔵庫内のラック内のトレイ）。一般的な検査、バイオバンク、その他、これらの要素が追跡される頻度は使用状況によって異なる。このリソースに関する査読者からのコメントと、追跡に関してどのような属性を扱う必要があるかのコメントを歓迎する。
 
 ### このリソースに対する参照
 
 * リソースに対する参照：
-[DiagnosticReport](https://www.hl7.org/fhir/diagnosticreport.html#DiagnosticReport), [GenomicStudy](https://www.hl7.org/fhir/genomicstudy.html#GenomicStudy), [Group](https://www.hl7.org/fhir/group.html#Group), [ImagingSelection](https://www.hl7.org/fhir/imagingselection.html#ImagingSelection), [ImagingStudy](https://www.hl7.org/fhir/imagingstudy.html#ImagingStudy), [MolecularSequence](https://www.hl7.org/fhir/molecularsequence.html#MolecularSequence), [Observation](https://www.hl7.org/fhir/observation.html#Observation), [Procedure](https://www.hl7.org/fhir/procedure.html#Procedure), [ResearchSubject](https://www.hl7.org/fhir/researchsubject.html#ResearchSubject), [ServiceRequest](https://www.hl7.org/fhir/servicerequest.html#ServiceRequest) そしてSpecimen自身。
+[DiagnosticReport](https://www.hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport), [GenomicStudy](https://www.hl7.org/fhir/R4/genomicstudy.html#GenomicStudy), [Group](https://www.hl7.org/fhir/R4/group.html#Group), [ImagingSelection](https://www.hl7.org/fhir/R4/imagingselection.html#ImagingSelection), [ImagingStudy](https://www.hl7.org/fhir/R4/imagingstudy.html#ImagingStudy), [MolecularSequence](https://www.hl7.org/fhir/R4/molecularsequence.html#MolecularSequence), [Observation](https://www.hl7.org/fhir/R4/observation.html#Observation), [Procedure](https://www.hl7.org/fhir/R4/procedure.html#Procedure), [ResearchSubject](https://www.hl7.org/fhir/researchsubject.html#ResearchSubject), [ServiceRequest](https://www.hl7.org/fhir/R4/servicerequest.html#ServiceRequest) そしてSpecimen自身。

@@ -6,7 +6,9 @@
 * [JP Core FamilyMemberHistory（家族歴）プロファイル][JP_FamilyMemberHistory]
 
 ### Extensions
-なし
+* [JP_Condition_DiseaseOutcome]
+* [JP_Condition_DiseasePostfixModifier]
+* [JP_Condition_DiseasePrefixModifier]
 
 
 {% include markdown-link-references.md %}

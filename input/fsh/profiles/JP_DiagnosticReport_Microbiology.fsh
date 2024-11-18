@@ -8,7 +8,7 @@ Title: "JP Core DiagnosticReport Microbiology Profile"
 Description: "このプロファイルはDiagnosticReportリソースに対して、データを送受信するための微生物学検査レポートの制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Microbiology"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-11-18"
 * . ^short = "診断レポート-依頼情報、１項目単位の結果、画像、解釈、およびフォーマットされたレポートの組み合わせ。【詳細参照】"
 * . ^definition = "患者、患者のグループ、デバイス、場所、これらから派生した検体に対して実行された診断的検査の結果と解釈。レポートには、依頼情報や依頼者情報などの臨床コンテキスト（文脈）、および１項目単位の結果、画像、テキストとコード化された解釈、および診断レポートのフォーマットされた表現のいくつかの組み合わせが含まれる。"
 * . ^comment = "これは単一のレポートをキャプチャすることを目的としており、複数のレポートをカバーする要約情報の表示に使用するのには適していない。たとえば、このリソースは、検査結果の累積レポート形式やシーケンスの詳細な構造化レポート用に作られていない。  
@@ -24,14 +24,13 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 // #patternでなく#valueでよいはずだが、#valueだと警告"For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance"が出る。
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
-* category contains microbiology 1..1
+* category contains first 1..1
 * insert SetDefinition(category, 診断レポートを作成した臨床分野、部門、または診断サービスを分類するコード。微生物検査では、LoincコードのLP7819-8 微生物検査/MICRO を使用する。)
-* category[microbiology] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP7819-8 (微生物検査/MICRO)を使用する。"
-* category[microbiology] from $JP_DiagnosticReportCategory_VS (required)
-//* category[microbiology] = $Loinc_CS#LP7819-8  "微生物検査" (exactly)
-* category[microbiology].coding.system = $Loinc_CS (exactly)
-* category[microbiology].coding.code 1..
-* category[microbiology].coding.code = $Loinc_CS#LP7819-8 (exactly)
+* category[first] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP7819-8 (微生物検査/MICRO)を使用する。"
+* category[first] from $JP_DiagnosticReportCategory_VS (required)
+* category[first].coding.system = $Loinc_CS (exactly)
+* category[first].coding.code 1..
+* category[first].coding.code = $Loinc_CS#LP7819-8 (exactly)
 
 * code = $JP_DocumentCodes_CS#18725-2 "微生物学的検査報告書"
 * insert SetDefinition(code, 診断レポート種別「微生物学的検査報告書」を表す文書コード)
