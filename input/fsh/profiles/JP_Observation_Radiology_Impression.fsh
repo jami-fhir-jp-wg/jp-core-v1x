@@ -2,7 +2,7 @@
 //   Profile 定義
 // ==============================
 Profile: JP_Observation_Radiology_Impression
-Parent: Observation
+Parent: JP_Observation_Common
 Id: jp-observation-radiology-impression
 Title: "JP Core Observation Radiology Impression Profile"
 Description: "このプロファイルはDiagnosticReport_Radiologyリソースに関連する画像診断報告書の「インプレッション」データを送受信するための共通の制約と拡張を定めたものである"
