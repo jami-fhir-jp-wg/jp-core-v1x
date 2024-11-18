@@ -19,6 +19,9 @@ Description: "このプロファイルはDiagnosticReport_Radiologyリソース�
 * partOf ^comment = "このObservation（所見）が生成される元になった画像検査"
 * category from $JP_SimpleObservationCategory_VS (required)
 * category ^comment = "このObservationを分類するコード。(imaging)が指定される。"
+* category.coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category.coding.code 1..
+* category.coding.code = $JP_SimpleObservationCategory_CS#imaging (exactly)
 //* code = $Loinc_CS#18782-3  "Radiology Study observation (narrative)" (exactly)
 * code.coding.system = $Loinc_CS (exactly)
 * code.coding.code = $Loinc_CS#18782-3 (exactly)
