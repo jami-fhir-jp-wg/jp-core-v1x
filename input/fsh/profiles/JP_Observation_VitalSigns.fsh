@@ -13,15 +13,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^definition = "バイタルサインに関する測定と簡単な観察事実（assertion）。"
 * . ^comment = "バイタルサインに関するObservation（検査測定や観察事実）の制約プロフィール"
 * category 1..
-* category ^slicing.discriminator[+].type = #value
-* category ^slicing.discriminator[=].path = "coding.system"
-* category ^slicing.rules = #open
 * category contains
-    first 1..1 and
     second 0..*
-* category[first] from JP_SimpleObservationCategory_VS (required)
-* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[first].coding.code 1..
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#vital-signs (exactly)
 * category[second] from JP_ObservationVitalSignsCategory_VS (preferred)
 * category[second].coding.system = $JP_ObservationVitalSignsCategory_CS (exactly)

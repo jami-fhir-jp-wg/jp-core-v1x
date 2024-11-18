@@ -13,13 +13,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^definition = "生活背景の情報"
 * . ^comment = "生活背景に関するObservation（収集したり観察した事実など）の制約プロフィール"
 * category 1..
-* category ^slicing.discriminator[+].type = #value
-* category ^slicing.discriminator[=].path = "$this"
-* category ^slicing.rules = #open
-* category contains first 1..1
-* category[first] from JP_SimpleObservationCategory_VS (required)
-* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[first].coding.code 1..
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#social-history (exactly)
 * category ^comment = "【JP Core仕様】基底仕様のカテゴリ「social-history」固定とする"
 * code from JP_ObservationSocialHistoryCode_VS (preferred)

@@ -37,11 +37,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * status ^comment = "【JP Core仕様】v2.5の「F」に相当する値は「final」であるが、ここでは 必須コード表「ObservationStatus」より、全てのコード値を使用可とする。  
 (registered | preliminary | final | amended |   corrected | cancelled | entered-in-error | unknown)"
 * category 1..
-
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category contains first 1..1
 * insert SetDefinition(category.coding, コード化されたカテゴリー)
 
 * category[first] ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「furst」固定とする。  
@@ -52,9 +47,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(category[first].coding.system, 検体検査では、http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS のコード表を使用する。)
 * insert SetDefinition(category[first].coding.code, 検体検査を表すコード laboratory を設定する。)
 
-* category[first] from JP_SimpleObservationCategory_VS (required)
-* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[first].coding 1..1
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
 * category[first].coding.system 1..1
 * category[first].coding.code 1..1

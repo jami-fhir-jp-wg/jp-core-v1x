@@ -21,7 +21,17 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(status, 結果の状態)
 * status ^comment = "このリソースは現在有効でないというマークをするコードを含んでいるため、この要素はモディファイアー（修飾的要素）として位置づけられている。"
 * insert SetDefinition(category, 行われた検査の一般的なタイプの分類。JP Core Observation Common Profileの【詳細説明】を参照のこと。)
-* category from $JP_SimpleObservationCategory_VS (preferred)
+//* category from $JP_SimpleObservationCategory_VS (preferred)
+* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.path = "coding.system"
+* category ^slicing.rules = #open
+* category contains
+    first 1..* 
+* category[first] ^short = "検査の第1カテゴリはJP_SimpleObservationCategory_VSから値を指定する。"
+* category[first] from JP_SimpleObservationCategory_VS (required)
+* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[first].coding.code 1..
+
 * insert SetDefinition(category, このObservationを分類するコード)
 * category ^comment = "階層的にカテゴリーを設定することで粒度のレベルを概念定義できる。"
 * insert SetDefinition(code, このObservationの対象を特定するコード)
