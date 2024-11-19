@@ -13,13 +13,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^definition = "身体所見に関する測定や簡単な観察事実"
 * . ^comment = "身体所見に関するObservation（検査測定や観察事実）の制約プロフィール"
 * category 1..
-* category ^slicing.discriminator[+].type = #value
-* category ^slicing.discriminator[=].path = "$this"
-* category ^slicing.rules = #open
-* category contains first 1..1
-* category[first] from JP_SimpleObservationCategory_VS (required)
-* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[first].coding.code 1..
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#exam (exactly)
 * category ^comment = "【JP Core仕様】基底仕様のカテゴリ「exam」固定とする"
 * code ^comment = "【JP Core仕様】所見の有無を表すコード（固定値）"

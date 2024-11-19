@@ -13,23 +13,15 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(partOf, このObservationが親イベントの一部を成す要素であるときこの親イベントに関する情報、未使用)
 * status 1..1
 * category 1..
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "coding.system"
-* category ^slicing.rules = #open
 * category contains
-    first 1..1 and
     second 1..1 and
     third ..1
 * category ^comment = "【JP Core仕様】日本では適切なコード体系が存在しないため、独自のバリューセットを定義する  
 JP CoreとしてはsimpleObservationコード体系を必須とし、他のローカルコード等を使用する場合はCategory要素の2つ目以降に設定する"
 * insert SetDefinition(category[first], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
-* category[first] from JP_SimpleObservationCategory_VS (required)
-* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[first].coding.code 1..
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
 
-* insert SetDefinition(category[second], このObservationに関するLOINC上の分類、任意項目)
-* category[second] from $JP_ObservationCategory_Microbiology_VS (preferred)
+* insert SetDefinition(category[second],第2カテゴリはLOINCのコード18725-2固定とする、ValueSetは指定しない)
 * category[second].coding.system = $Loinc_CS (exactly)
 * category[second].coding.code 1..
 * category[second].coding.code = $Loinc_CS#18725-2 (exactly)

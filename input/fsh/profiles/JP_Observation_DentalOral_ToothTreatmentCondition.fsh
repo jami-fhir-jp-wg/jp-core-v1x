@@ -15,11 +15,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(partOf, 未使用)
 
 * category 3..
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "coding.system"
-* category ^slicing.rules = #open
 * category contains
-    first 1..1 and
     second 1..1 and
     third 1..1
 * category ^comment = "3つのコードを設定する。
@@ -28,14 +24,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 第3コード（third）は、歯の有無や処置状態などを表すコードを設定する。なお、日本では適切なコード体系が存在しないため、独自のバリューセットを定義する。"
 
 * insert SetDefinition(category[first], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
-* category[first] from JP_SimpleObservationCategory_VS (required)
-* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[first].coding.code 1..1
 * category[first].coding.code = #procedure (exactly)
 * category[first].coding.display = "Procedure"
 
-* insert SetDefinition(category[second], このObservationに関するLOINC上の分類、必須項目)
-* category[second] from JP_ObservationDentalCategory_VS (required)
+* insert SetDefinition(category[second],第2カテゴリはLOINCのコードLP89803-8固定で必須とする、ValueSetは指定しない)
 * category[second].coding.system = $Loinc_CS (exactly)
 * category[second].coding.code 1..1
 * category[second].coding.code = $Loinc_CS#LP89803-8 (exactly)

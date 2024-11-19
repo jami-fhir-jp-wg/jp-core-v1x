@@ -21,6 +21,7 @@ dependencies:
   jpfhir-terminology.r4:
     uri: http://jpfhir.jp/fhir/jpfhir-terminology/ImplementationGuide/
     version: 1.2.4-url
+    
 #----------------------------------------
 # ページタイトル名称設定
 #----------------------------------------
@@ -137,6 +138,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Server_CapabilityStatement
     - http://jpfhir.jp/fhir/core/CodeSystem/HL70241
     - http://jpfhir.jp/fhir/core/CodeSystem/JHSD0006
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_BodySite_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseOutcomeReceipt_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySite_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySiteStatus_CS
@@ -155,7 +157,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramExtraCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramStressType_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_PhysicalExamCode_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureBodySite_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureNotPerformedReason_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureOutcome_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
@@ -282,6 +283,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_Condition_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeHL70241_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeJHSD0006_VS
@@ -299,15 +301,15 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DICOMModality_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_DiagnosticReport_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_Endoscopy_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ImagingStudy_Endoscopy_BodySite_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ImagingStudy_Radiology_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MedicalLicenseCertificate_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Microbiology_AntiMicrobialDrug_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Microbiology_InfectiousAgent_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_MicrobiologyCategory_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_Observation_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCode_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationCategory_Endoscopy_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationCategory_Microbiology_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationDentalCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationDetailedDentalCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramComponentCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramDuration_VS
@@ -317,7 +319,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationEndoscopyValueJed_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationRadiologyCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_PhysicalExamCode_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureBodySite_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_Procedure_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCodesICHI_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCondition_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureDeviceAction_VS
@@ -354,4 +356,4 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - urn:oid:1.2.392.100495.10.3.100.5.11.5.2
     - urn:oid:1.2.392.100495.10.3.100.5.27.6.1
     - urn:oid:1.2.392.200270.4.1000.1
-    - http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html
+    - urn:oid:1.2.392.200270.4.1000.1    
