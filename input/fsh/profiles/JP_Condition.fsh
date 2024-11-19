@@ -28,6 +28,7 @@ Description: "このプロファイルはConditionリソースに対して、患
 可能な限り、ターミノロジを用いて重症度をコーディングすることが好ましい。  
 このプロファイルではHL70421 Severity of Illness Code（MI 軽度, MO 中度, SE 重度）を採用。"
 * code ^short = "Identification of the condition, problem or diagnosis. この患者状態の識別コード"
+* bodySite from JP_Condition_BodySite_VS (example)
 * bodySite ^short = "Anatomical location, if relevant. もし関連するのであれば、その人体部位"
 * subject only Reference(JP_Patient)
 * subject ^short = "Who has the condition? 誰がこの状態を有するか"
