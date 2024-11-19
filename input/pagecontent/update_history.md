@@ -5,14 +5,15 @@
   * 主に「v1.1.2に関する不具合」を修正し、新たに「プロファイル」の追加を行った
   * 各プロファイルのベースとなるFHIR Versionは4.0.1を維持した、不具合等のやむを得ない場合の除き下位互換性を保つことを重視した
   * Copyrightについて記述の見直しを行った
-  * JP_zzz_dummyのidを命名規則に従って修正
+  * 命名規則にしたがってファイル名、ID等を修正した。
+  * JP CoreにおけるMustSupportの記載を、ユースケースによっては利用される場合を考慮し変更した
 * Profile関連
   * Administration グループ
     * `JP_Coverage`にて被保険者の識別子仕様を変更した
       * 主にレセプト等で利用される被保険者個人識別子とv1.1.2以前より定義される被保険者識別子（CSV版）の２種類を利用できるように拡張した
       * 厳密な一意性を保つため、被保険者識別子（CSV版）の先頭に保険者番号を付加する体系に変更した
       * Identifier.assignerに保険者情報を設定した
-      * 被保険者番号の枝番について、全角⇒半角に仕様を変更した
+      * 被保険者番号の枝番について全角⇒半角に仕様を変更した
   * Medication グループ
     * `JP_Medication`プロファイルにおいて、ingredient.strength.denominatorを1回の固定値設定した
     * `JP_MedicationStatement`プロファイルおよび `JP_MedicationStatement_Injection`プロファイルを追加した
@@ -20,6 +21,9 @@
     * 操作：$everythingが不要であるため、Medication関連プロファイルを記述を削除した
   * Diagnostic グループ
     * Observation
+      * CategoryのSlicing名称を統一した（first, second, third）
+      * CodeSystem`JP_BodySite_CS`を作成し、各プロファイル用のValueSetから参照するように設定した
+      * 第二カテゴリーの中で、固定値設定のものはValueSetを指定しないこととした
       * `JP_Observation_Radiology_Findings`プロファイルおよび`JP_Observation_Radiology_Impression`プロファイルを追加した
       * `JP_Observation_Electrocardiogram`プロファイルを追加した
       * `JP_Observation_Endoscopy`プロファイルを追加した
@@ -107,9 +111,7 @@
     * 単数パラメータのConformanceの指定に対応した
     * 複数パラメータの記述について追加した
     * Operation定義を追加した
-  * Security関連
-    * JP CoreにおけるMustSupportの記載を、ユースケースによっては利用される場合を考慮し変更した
-  
+
 ***v1.1.2***
 
 パブリックコメントやIssue等の指摘を中心に不具合やわかりにくい点について改善を行った。また内視鏡検査および微生物学的検査関連のプロファイルを新規に追加した。主な変更点は以下のとおりである。
