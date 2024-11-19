@@ -328,6 +328,7 @@ Alias: $JP_ObservationVitalSignsCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP
 Alias: $JP_PhysicalExamCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PhysicalExamCode_VS
 Alias: $JP_PractitionerRole_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PractitionerRole_VS
 Alias: $JP_PrefectureNumber_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PrefectureNumber_VS
+Alias: $JP_Condition_BodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Condition_BodySite_VS
 Alias: $JP_Procedure_BodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Procedure_BodySite_VS
 Alias: $JP_Observation_BodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Observation_BodySite_VS
 Alias: $JP_ImagingStudy_Radiology_BodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ImagingStudy_Radiology_BodySite_VS
