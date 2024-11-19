@@ -182,6 +182,7 @@
 
 <!-- ValueSet -->
 [JP_ConclusionCodesJed_VS]: ValueSet-jp-conclusion-codes-jed-vs.html
+[JP_Condition_BodySite_VS]: ValueSet-jp-condition-bodysite-vs.html
 [JP_Disease_MEDIS_Concept_VS]: ValueSet-jp-condition-disease-code-medis-exchange-vs.html
 [JP_Disease_MEDIS_ManagementID_VS]: ValueSet-jp-condition-disease-code-medis-record-no-vs.html
 [JP_Disease_Claim_VS]: ValueSet-jp-condition-disease-code-receipt-vs.html
