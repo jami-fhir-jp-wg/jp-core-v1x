@@ -25,8 +25,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(category[first], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
 * category[first].coding.code = #procedure (exactly)
 
-* insert SetDefinition(category[second], このObservationに関するLOINC上の分類、必須項目)
-* insert SetDefinition(category[second],第2カテゴリはLOINCのコードLP89803-8固定とする、ValueSetのバインディングを指定していないことに注意すること)
+* insert SetDefinition(category[second],第2カテゴリはLOINCのコードLP89803-8固定とする、ValueSetは指定しない)
 * category[second].coding.system = $Loinc_CS (exactly)
 * category[second].coding.code 1..1
 * category[second].coding.code = #LP89803-8 (exactly)
