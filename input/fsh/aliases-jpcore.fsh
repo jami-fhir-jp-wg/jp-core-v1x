@@ -126,7 +126,6 @@ Alias: $JP_Organization_PrefectureNo_SP = http://jpfhir.jp/fhir/core/SearchParam
 Alias: $JP_Patient_KanaSort_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP
 
 // CodeSystem
-//Alias: $JAMI__MedicationMethodDetailDeviceInjection_CS = http://jami.jp/CodeSystem/MedicationMethodDetailDeviceInjection  // urn:oid:1.2.392.200250.2.2.20.45
 Alias: $JP_ConclusionCodeJed_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConclusionCodeJed_CS
 Alias: $JP_ConditionDiseaseCodeICD10_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/ICD10-2013-full
 Alias: $JP_ConditionDiseaseOutcomeHL70241_CS = http://jpfhir.jp/fhir/core/CodeSystem/HL70241
@@ -191,7 +190,7 @@ Alias: $JP_Modifier_MEDIS_Concept_CS = http://medis.or.jp/CodeSystem/master-dise
 Alias: $JP_Modifier_MEDIS_ManagementID_CS = http://medis.or.jp/CodeSystem/master-disease-modKeyNumber   //MEDIS病名管理修飾コード    //urn:oid:1.2.392.200119.4.201.2
 Alias: $JP_ObservationBodyMeasurementCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCategory_CS
 Alias: $JP_ObservationBodyMeasurementCode_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
-Alias: $JP_ObservationBodySite_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodySite_CS
+//Alias: $JP_ObservationBodySite_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodySite_CS
 Alias: $JP_ObservationDentalCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationDentalCategory_CS
 Alias: $JP_ObservationElectrocardiogramDuration_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramDuration_CS
 Alias: $JP_ObservationElectrocardiogramExtraCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramExtraCategory_CS
@@ -231,7 +230,6 @@ Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 
 
 // ValueSet
-//Alias: $JAMI__MedicationMethodDetailDeviceInjection_VS = http://jami.jp/ValueSet/MedicationMethodDetailDeviceInjection_VS
 Alias: $JP_AllergyIntolerance_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS
 Alias: $JP_ConclusionCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
 Alias: $JP_ConditionDiseaseCodeICD10_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/ICD10-2013-full
@@ -306,9 +304,6 @@ Alias: $JP_Microbiology_InfectiousAgent_VS = http://jpfhir.jp/fhir/core/ValueSet
 Alias: $JP_MicrobiologyCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MicrobiologyCategory_VS
 Alias: $JP_ObservationBodyMeasurementCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCategory_VS
 Alias: $JP_ObservationBodyMeasurementCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationBodyMeasurementCode_VS
-//Alias: $JP_ObservationCategory_Endoscopy_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationCategory_Endoscopy_VS
-//Alias: $JP_ObservationCategory_Microbiology_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationCategory_Microbiology_VS
-//Alias: $JP_ObservationDentalCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationDentalCategory_VS
 Alias: $JP_ObservationDetailedDentalCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationDetailedDentalCategory_VS
 Alias: $JP_ObservationElectrocardiogramComponentCode_VS =  http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramComponentCode_VS
 Alias: $JP_ObservationElectrocardiogramInterpretationCode_VS =  http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramInterpretationCode_VS
@@ -328,9 +323,9 @@ Alias: $JP_ObservationVitalSignsCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP
 Alias: $JP_PhysicalExamCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PhysicalExamCode_VS
 Alias: $JP_PractitionerRole_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PractitionerRole_VS
 Alias: $JP_PrefectureNumber_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PrefectureNumber_VS
-Alias: $JP_Condition_BodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Condition_BodySite_VS
-Alias: $JP_Procedure_BodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Procedure_BodySite_VS
+Alias: $JP_ProcedureBodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureBodySite_VS
 Alias: $JP_Observation_BodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Observation_BodySite_VS
+Alias: $JP_Condition_BodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Condition_BodySite_VS
 Alias: $JP_ImagingStudy_Radiology_BodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ImagingStudy_Radiology_BodySite_VS
 Alias: $JP_ImagingStudy_Endoscopy_BodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ImagingStudy_Endoscopy_BodySite_VS
 Alias: $JP_ProcedureCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCategory_VS
