@@ -18,6 +18,7 @@
     * `JP_Medication`プロファイルにおいて、ingredient.strength.denominatorを1回の固定値設定した
     * `JP_MedicationStatement`プロファイルおよび `JP_MedicationStatement_Injection`プロファイルを追加した
     * `JP_MedicationRequest_Injection`プロファイル, `JP_MedicationDispense_Injection`プロファイル, `JP_MedicationAdministration_Injection`プロファイル, `JP_MedicationStatement_Injection`プロファイルに関するmedicationの参照に関する記述を付加した
+    * Exampleとして提示しているCodeSystemのcontext=completeの状態に変更した
     * 操作：$everythingが不要であるため、Medication関連プロファイルを記述を削除した
   * Diagnostic グループ
     * Observation
@@ -45,10 +46,7 @@
       * `JP_Media_Endoscopy`プロファイルを追加定義した
   * Clinical グループ
     * `JP_Condition_Diagnosis`プロファイルを追加した
-    * `JP_Condition_Diagnosis`にて以下の病名マスタを利用可能とした
-      * MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`
-      * MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`
-      * レセプト電算用傷病名マスタ`JP_Disease_Claim_CS`
+    * `JP_Condition_Diagnosis`にて各種病名マスタを利用可能とした
   * Workflow グループ
     * `JP_ServiceRequest_Common`プロファイルを追加、それに伴い`JP_ServiceRequest`を削除した
   * SearchParameterおよびOperation関連
