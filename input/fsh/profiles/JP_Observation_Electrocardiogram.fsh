@@ -174,7 +174,7 @@ Title: "JP Core Observation Electrocardiogram Device Interpretation Extention"
 Description: "心電図検査で測定された結果に対しての機械的に判定された所見、解釈の有無"
 * ^url = $JP_Observation_Electrocardiogram_DeviceInterpretation
 * ^status = #active
-* ^date = "2024-11-15"
+* ^date = "2024-11-18"
 * ^purpose = "心電図検査で測定された結果についての所見や解釈が機械的に判定されたものかどうかを示すために用いられる。"
 * ^context.type = #element
 * ^context.expression = "Observation"
@@ -195,7 +195,7 @@ Title: "JP Core Observation Electrocardiogram Duration Extention"
 Description: "心電図検査で測定を行った時間を記録するための拡張。"
 * ^url = $JP_Observation_Electrocardiogram_Duration
 * ^status = #active
-* ^date = "2024-11-15"
+* ^date = "2024-11-18"
 * ^purpose = "心電図検査では不整脈の検出などの目的に応じて長時間の測定が行われる。この拡張は測定された時刻を示すのではなく、計測された時間の長さを記録するためのものである。"
 * ^context.type = #element
 * ^context.expression = "Observation"
@@ -217,7 +217,7 @@ Title: "JP Core Observation Electrocardiogram StressType Extention"
 Description: "負荷心電図検査の種別について記録する。"
 * ^url = $JP_Observation_Electrocardiogram_StressType
 * ^status = #active
-* ^date = "2024-11-15"
+* ^date = "2024-11-18"
 * ^purpose = "このプロファイルでは負荷心電図検査を記録するに十分な要素をそろえていないが、将来的に拡張することに備えて負荷心電図の種別について記録できるようにした。"
 * ^context.type = #element
 * ^context.expression = "Observation"
