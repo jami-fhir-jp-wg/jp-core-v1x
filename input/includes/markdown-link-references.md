@@ -231,7 +231,7 @@
 [JP_ObservationEndoscopyValueJed_VS]: ValueSet-jp-observation-endoscoy-value-jed-vs.html
 [JP_ObservationRadiologyCode_VS]: ValueSet-jp-observation-radiology-code-vs.html
 [JP_PhysicalExamCode_VS]: ValueSet-jp-physicalexamcode-vs.html
-[JP_Procedure_BodySite_VS]: ValueSet-jp-procedure-bodysite-vs.html
+[JP_ProcedureBodySite_VS]: ValueSet-jp-procedure-body-site-vs.html
 [JP_ProcedureCodesICHI_VS]: ValueSet-jp-procedure-codes-ichi-vs.html
 [JP_ProcedureCondition_VS]: ValueSet-jp-procedure-condition-vs.html
 [JP_ProcedureDeviceAction_VS]: ValueSet-jp-procedure-device-action-vs.html

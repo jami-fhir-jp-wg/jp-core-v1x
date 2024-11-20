@@ -1,8 +1,8 @@
-ValueSet: JP_Procedure_BodySite_VS
-Id: jp-procedure-bodysite-vs
+ValueSet: JP_ProcedureBodySite_VS
+Id: jp-procedure-body-site-vs
 Title: "JP Core Procedure BodySite ValueSet"
 Description: "処置の対象となる身体部位のコード"
-* ^url = $JP_Procedure_BodySite_VS
+* ^url = $JP_ProcedureBodySite_VS
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-11-18"

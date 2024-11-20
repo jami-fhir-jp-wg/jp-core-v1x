@@ -318,7 +318,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationEndoscopyValueJed_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationRadiologyCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_PhysicalExamCode_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_Procedure_BodySite_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureBodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCodesICHI_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureCondition_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureDeviceAction_VS
@@ -355,4 +355,4 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - urn:oid:1.2.392.100495.10.3.100.5.11.5.2
     - urn:oid:1.2.392.100495.10.3.100.5.27.6.1
     - urn:oid:1.2.392.200270.4.1000.1
-    - urn:oid:1.2.392.200270.4.1000.1    
+    
