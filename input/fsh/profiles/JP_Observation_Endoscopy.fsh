@@ -46,11 +46,13 @@ Description: "このプロファイルはObservationリソースに対して、�
 * effective[x] only dateTime or Period
 * effective[x] ^comment = "【JP Core仕様】effectiveDateTime：診断、所見を記載した際の日時。effectivePeriod：診断、所見以外の観察結果を記載する際、必要に応じて使用。"
 * value[x] MS
-* value[x] from JP_ObservationEndoscopyValueJed_VS (example)
 * value[x] only CodeableConcept or string
 * value[x] ^short = "内視鏡検査、治療の観察結果（診断、所見など）の情報を格納する。診断、所見の場合、病変単位で記載することが望ましい。【詳細参照】"
 * value[x] ^definition = "内視鏡検査、治療の観察結果（診断、所見など）の情報を格納する。診断、所見の場合、病変単位で記載することが望ましい。"
 * value[x] ^comment = "【JP Core仕様】CodeableConcept：診断、所見情報記載時に使用。text記載は必須とし、必要に応じてcodingも使用する。string：診断、所見以外の情報を記載する際、必要に応じて使用。"
+* valueCodeableConcept from JP_ObservationEndoscopyValueJed_VS (example)
+* valueCodeableConcept ^comment = "【JP Core仕様】診断、所見情報記載時に使用。text記載は必須とし、必要に応じてcodingも使用する。"
+* valueString ^comment = "【JP Core仕様】診断、所見以外の情報を記載する際、必要に応じて使用。"
 * hasMember MS
 * hasMember only Reference(JP_Observation_Common or JP_Observation_Endoscopy)
 * hasMember ^short = "内視鏡による観察結果を病変単位で表現する際、診断と所見のobservationを関連付けるためにhasMemberエレメントを使用。"
