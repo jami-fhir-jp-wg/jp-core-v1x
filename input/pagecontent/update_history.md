@@ -3,9 +3,9 @@
 * 全般
   * 「CodeSystem」および「Identifierに対するSystem値」のURIについてOID形式で定義されるものの多くをURL形式に変更を行った。本変更に関して`URIに指定する形式について`の項目で記載をしている。
   * 主に「v1.1.2に関する不具合」を修正し、新たに「プロファイル」の追加を行った
-  * 各プロファイルのベースとなるFHIR Versionは4.0.1を維持した、不具合等のやむを得ない場合の除き下位互換性を保つことを重視した
-  * Copyrightについて記述の見直しを行った
-  * 命名規則にしたがってファイル名、ID等を修正した。
+  * 各プロファイルのベースとなるFHIR Versionは4.0.1を維持した、不具合等のやむを得ない場合の除き下位互換性を保つことを考慮している
+  * 命名規則にしたがってファイル名、ID等を修正した
+  * CodeSystem`JP_BodySite_CS`を作成し、各プロファイル用のValueSetから参照するように設定した
   * JP CoreにおけるMustSupportの記載を、ユースケースによっては利用される場合を考慮し変更した
 * Profile関連
   * Administration グループ
@@ -22,7 +22,6 @@
   * Diagnostic グループ
     * Observation
       * CategoryのSlicing名称を統一した（first, second, third）
-      * CodeSystem`JP_BodySite_CS`を作成し、各プロファイル用のValueSetから参照するように設定した
       * 第二カテゴリーの中で、固定値設定のものはValueSetを指定しないこととした
       * `JP_Observation_Radiology_Findings`プロファイルおよび`JP_Observation_Radiology_Impression`プロファイルを追加した
       * `JP_Observation_Electrocardiogram`プロファイルを追加した
@@ -57,20 +56,25 @@
     * SearchParameterのexpressionのFHIRPath記述に対する指摘に対応した
   * Terminology関連
     * 以下のコードシステムおよびバリューセットを追加/削除した
+      * `JP_BodySite_VS`
       * `JP_ConditionDieaseOutcomeHL70241_CS`
       * `JP_ConditionDieaseOutcomeJHSD0006_CS`
       * `JP_ConditionDieaseOutcomeReceipt_CS`
       * `JP_ConditionDiseaseCodeICD10_VS`
-      * `JP_Disease_MEDIS_Concept_VS`
-      * `JP_Disease_MEDIS_ManagementID_VS`
-      * `JP_Disease_Claim_VS`
-      * `JP_Modifier_MEDIS_Concept_VS`
-      * `JP_Modifier_MEDIS_ManagementID_VS`
-      * `JP_Modifier_Disease_Claim_VS`
+      * `JP_ConditionDiseaseCodeMEDISExchange_VS.`
+      * `JP_ConditionDiseaseCodeMEDISRecordNo_VS`
+      * `JP_ConditionDiseaseCodeReceipt_CS`
+      * `JP_ConditionDiseaseCodeReceipt_VS`
+      * `JP_ConditionDiseaseModifierMEDISExchange_CS`
+      * `JP_ConditionDiseaseModifierMEDISExchange_VS`
+      * `JP_ConditionDiseaseModifierMEDISRecordNo_VS`
+      * `JP_ConditionDiseaseModifierReceipt_CS`
+      * `JP_ConditionDiseaseModifierReceipt_VS`
       * `JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS`
       * `JP_ConditionDiseaseOutcomeHL70241_VS`
       * `JP_ConditionDiseaseOutcomeJHSD0006_VS`
       * `JP_ConditionDiseaseOutcomeReceipt_VS`
+      * `JP_Conditon_BodySite_VS`
       * `JP_DentalBodySite_CS`
       * `JP_DentalBodySite_VS`
       * `JP_DentalBodySiteStatus_CS`
@@ -88,10 +92,18 @@
       * `JP_DentalSimplePresentTeethObservation_CS`
       * `JP_DentalSimplePresentTeethObservation_VS`
       * `JP_DICOMModality_VS`
+      * `JP_Disease_Claim_VS`
+      * `JP_Disease_MEDIS_Concept_VS`
+      * `JP_Disease_MEDIS_ManagementID_VS`
+      * `JP_ImagingStudy_EndoScopy_BodySite_VS`
+      * `JP_ImagingStudy_Radiology_BodySite_VS`
+      * `JP_Modifier_Disease_Claim_VS`
+      * `JP_Modifier_MEDIS_Concept_VS`
+      * `JP_Modifier_MEDIS_ManagementID_VS`
       * `JP_ObservationDentalCategory_CS`
       * `JP_ObservationElectrocardiogramComponentCode_VS`
-      * `JP_ObservationElectrocardiogramDuration_VS`
       * `JP_ObservationElectrocardiogramDuration_CS`
+      * `JP_ObservationElectrocardiogramDuration_VS`
       * `JP_ObservationElectrocardiogramExtraCategory_CS`
       * `JP_ObservationElectrocardiogramExtraCategory_VS`
       * `JP_ObservationElectrocardiogramInterpretationCode_CS`
@@ -101,10 +113,10 @@
       * `JP_ObservationEndoscopyCode_VS`
       * `JP_ObservationEndoscopyValueJed_VS`
     * 以下のCodeSystem,ValueSetを削除した
-      * `JP_ObservationBodySite_CS`
-      * `JP_ObservationBodySite_VS`
       * `JP_ObservationBodyMeasurementCode_CS`
+      * `JP_ObservationBodySite_CS`
       * `JP_ObservationCategory_Microbiology_VS`
+      * `JP_ProcedureBodysite_CS`
     * の記述の不具合を修正した
     * 病名マスタ(MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`,MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`,レセプト電算用傷病名マスタ`JP_Disease_Claim_CS`)を用語として追加した
   * Capability Statement関連
