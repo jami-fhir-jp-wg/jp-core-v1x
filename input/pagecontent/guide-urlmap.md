@@ -35,7 +35,7 @@ JP Core使用欄に＊がある行は、本IGで使用されるコード表に�
 |		|	JAMI用法コード表ー注入用法詳細区分コード１桁	|	urn:oid:1.2.392.200250.2.2.20.44	|	http://jami.jp/CodeSystem/MedicationMethodDetailPouring	|
 |		|	JAMI用法コード表ー時間的要素・機器区分コード1桁	|	urn:oid:1.2.392.200250.2.2.20.45	|	http://jami.jp/CodeSystem/MedicationMethodDetailDeviceInjection	|
 |		|	JAMI用法コード表ー１２桁バージョン（実証実験用）	|	urn:oid:1.2.392.200250.2.2.21	|	http://jami.jp/CodeSystem/MedicationUsage-12digits	|
-|   ＊  |   投与経路|HL7 V2(使用者定義表0162)   |   urn:oid:1.2.392.100495.20.2.34  |   |   http://terminology.hl7.org/CodeSystem/v2-0162    |
+|   ＊  |   投与経路 HL7 V2(使用者定義表0162)   |   urn:oid:1.2.392.100495.20.2.34  |   |   http://terminology.hl7.org/CodeSystem/v2-0162    |
 |       |	JAMI医薬品調剤指示コード	|	urn:oid:1.2.392.200250.2.2.30.10	|	http://jami.jp/CodeSystem/DrugDispensePreparationMethod	|
 |	＊	|	MEDISー病名マスター病名管理番号	|	urn:oid:1.2.392.200119.4.101.2	|	http://medis.or.jp/CodeSystem/master-disease-keyNumber	|
 |	＊	|	MEDISー病名マスター病名交換用コード	|	urn:oid:1.2.392.200119.4.101.6	|	http://medis.or.jp/CodeSystem/master-disease-exCode	|
