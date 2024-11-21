@@ -386,7 +386,7 @@ Usage: #definition
 * name = "JP_Medical_OrganizationID_NamingSystem"
 * status = #active
 * date = "2024-11-18"
-* kind = #IdSystem
+* kind = #identifier 
 * description = "JP Core MedicalOrganizationID NamingSystem 保険医療機関コード（７桁）"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.3.23"
@@ -402,7 +402,7 @@ Usage: #definition
 * name = "JP_Medical_Registration_Number_NamingSystem"
 * status = #active
 * date = "2024-11-18"
-* kind = #IdSystem
+* kind = #identifier 
 * description = "JP Core Medical Registration Number NamingSystem 医籍登録番号"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.3.31"
@@ -418,7 +418,7 @@ Usage: #definition
 * name = "JP_Insurer_Number_NamingSystem"
 * status = #active
 * date = "2024-11-18"
-* kind = #IdSystem
+* kind = #identifier 
 * description = "JP Core Insurer Number NamingSystem 保険者番号"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.3.61"
@@ -435,7 +435,7 @@ Usage: #definition
 * name = "JP_Insured_Person_Symbol_NamingSystem"
 * status = #active
 * date = "2024-11-18"
-* kind = #IdSystem
+* kind = #identifier 
 * description = "JP Core Insured Person Symbol NamingSystem 被保険者証記号"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.3.62"
@@ -451,7 +451,7 @@ Usage: #definition
 * name = "JP_InsuredPersonNumber_NamingSystem"
 * status = #active
 * date = "2024-11-18"
-* kind = #IdSystem
+* kind = #identifier 
 * description = "JP Core Insured Person Number NamingSystem 被保険者証番号"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.3.63"
@@ -467,7 +467,7 @@ Usage: #definition
 * name = "JP_Medication_RpGroup_Number_NamingSystem"
 * status = #active
 * date = "2024-11-18"
-* kind = #IdSystem
+* kind = #identifier 
 * description = "JP Core Medication RpGroup Number NamingSystem RP番号"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.3.81"
@@ -483,7 +483,7 @@ Usage: #definition
 * name = "JP_Medication_RpGruop_Index_NamingSystem"
 * status = #active
 * date = "2024-11-18"
-* kind = #IdSystem
+* kind = #identifier 
 * description = "JP Core Medication RpGruop Index NamingSystem RP内の順序を示す連番"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.3.82"
