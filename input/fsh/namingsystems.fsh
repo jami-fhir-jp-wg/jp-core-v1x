@@ -33,11 +33,11 @@ Usage: #definition
 Instance: jp-medicationusagejamiadditional-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "JP_MedicationUsageJAMIAdditional_NamingSystem JAMI用法コード表ー８桁補足用法コード"
+* name = "JP_MedicationUsageJAMIAdditional_NamingSystem"
 * status = #active
 * date = "2024-11-18"
 * kind = #codesystem
-* description = "JP Core MedicationUsage JAMI Additional NamingSystem"
+* description = "JP Core MedicationUsage JAMI Additional NamingSystem JAMI用法コード表ー８桁補足用法コード"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.200250.2.2.20.22"
 * uniqueId[+].type = #uri
@@ -161,14 +161,14 @@ Usage: #definition
 * uniqueId[=].value = $JP_MedicationCodeHOT13_CS
 * uniqueId[=].preferred = true
 
-Instance: medis-medicationcodehot9-namingsystem
+Instance: jp-medis-medicationcodehot9-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "MEDIS_MedicationCodeHOT9_NamingSystem MEDIS　医薬品基準番号（ＨＯＴ９）"
+* name = "JP_MEDIS_MedicationCodeHOT9_NamingSystem MEDIS"
 * status = #active
 * date = "2024-11-18"
 * kind = #codesystem
-* description = "JP Core MedicationCode HOT9 NamingSystem"
+* description = "JP Core MedicationCode HOT9 NamingSystem MEDIS 医薬品基準番号（ＨＯＴ９）"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.200119.4.403.1"
 * uniqueId[+].type = #uri
@@ -181,14 +181,14 @@ Usage: #definition
 * uniqueId[=].value = $JP_MedicationCodeHOT9_CS
 * uniqueId[=].preferred = true
 
-Instance: medis-medicationcodehot7-namingsystem
+Instance: jp-medis-medicationcodehot7-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "MEDIS_MedicationCodeHOT7_NamingSystem"
+* name = "JP_MEDIS_MedicationCodeHOT7_NamingSystem"
 * status = #active
 * date = "2024-11-18"
 * kind = #codesystem
-* description = "JP Core MedicationCode HOT7 NamingSystem　MEDISー医薬品処方用番号（ＨＯＴ７）"
+* description = "JP Core MedicationCode HOT7 NamingSystem　MEDIS 医薬品処方用番号（ＨＯＴ７）"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.200119.4.403.2"
 * uniqueId[+].type = #uri
@@ -201,11 +201,11 @@ Usage: #definition
 Instance: jp-medis-observation-jlac10-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "MEDIS_Observation_JLAC10_CodeSystem"
+* name = "JP_MEDIS_Observation_JLAC10_CodeSystem"
 * status = #active
 * date = "2023-10-31"
 * kind = #codesystem
-* description = "JP Core Observation JLAC10 NamingSystem MEDISー臨床検査コードまとめ表「17桁コード表」"
+* description = "JP Core Observation JLAC10 NamingSystem MEDIS 臨床検査コードまとめ表「17桁コード表」"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.200119.4.504"
 * uniqueId[+].type = #uri
@@ -215,14 +215,14 @@ Usage: #definition
 * uniqueId[=].preferred = true
 
 // MEDIS看護
-Instance: medis-master-nursingobservationkeycode-namingsystem
+Instance: jp-medis-master-nursingobservationkeycode-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "MEDIS_Master_NursingObservation_KeyCode_NamingSystem"
+* name = "JP_MEDIS_Master_NursingObservation_KeyCode_NamingSystem"
 * status = #active
 * date = "2024-11-18"
 * kind = #codesystem
-* description = "MEDIS 看護観察テーブル（観察名称管理番号（コード）） NamingSystem"
+* description = "MEDIS Master NursingObservation KeyCode NamingSystem MEDIS 看護観察テーブル（観察名称管理番号（コード）） "
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.200119.4.804"
 * uniqueId[+].type = #uri
@@ -251,11 +251,11 @@ Usage: #definition
 Instance: jp-medicationmethodjamidetailusage-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "JP_MedicationMethodJAMIDetailUsage_NamingSystem JAMI用法コード表ー投与経路区分コード２桁（基本用法コード１桁と詳細区分コード１桁を連結）"
+* name = "JP_MedicationMethodJAMIDetailUsage_NamingSystem"
 * status = #active
 * date = "2024-11-18"
 * kind = #codesystem
-* description = "JP Core MedicationMethod JAMI DetailUsage NamingSystem"
+* description = "JP Core MedicationMethod JAMI DetailUsage NamingSystem JAMI用法コード表ー投与経路区分コード２桁（基本用法コード１桁と詳細区分コード１桁を連結）"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.200250.2.2.20.40"
 * uniqueId[+].type = #uri
@@ -271,7 +271,7 @@ Usage: #definition
 * status = #active
 * date = "2023-11-18"
 * kind = #codesystem
-* description = "JP Core MedicationSubstitution NotAllowedReason NamingSystem"
+* description = "JP Core MedicationSubstitution NotAllowedReason NamingSystem 後発品変更不可コード"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.2.41"
 * uniqueId[+].type = #uri
@@ -288,7 +288,7 @@ Usage: #definition
 * status = #active
 * date = "2024-11-18"
 * kind = #codesystem
-* description = "JP Core InsuredPersonCategory NamingSystem 被保険者区分コード	NamingSystem"
+* description = "JP Core InsuredPersonCategory NamingSystem 被保険者区分コード"
 * uniqueId[+].type = #oid
 * uniqueId[=].value = "1.2.392.100495.20.2.51"
 * uniqueId[+].type = #uri
@@ -330,7 +330,6 @@ Usage: #definition
 * uniqueId[=].value = $JP_MedicationCodeCommon_CS
 * uniqueId[=].preferred = true
 
-
 Instance: jp-medicationunitmerit9-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition
@@ -362,7 +361,6 @@ Usage: #definition
 * uniqueId[+].type = #uri
 * uniqueId[=].value = $JP_PrefectureNumber_CS
 * uniqueId[=].preferred = true
-
 
 Instance: jp-medicalfeescoretype-namingsystem
 InstanceOf: NamingSystem
