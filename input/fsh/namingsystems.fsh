@@ -164,7 +164,7 @@ Usage: #definition
 Instance: jp-medis-medicationcodehot9-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition
-* name = "JP_MEDIS_MedicationCodeHOT9_NamingSystem MEDIS"
+* name = "JP_MEDIS_MedicationCodeHOT9_NamingSystem"
 * status = #active
 * date = "2024-11-18"
 * kind = #codesystem
