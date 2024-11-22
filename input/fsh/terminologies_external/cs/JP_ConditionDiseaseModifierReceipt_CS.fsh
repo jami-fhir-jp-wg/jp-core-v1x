@@ -8,7 +8,7 @@ Description: "レセプト電算用修飾語マスター コードシステム"
 * ^date = "2024-11-18"
 * ^caseSensitive = true
 * ^content = #complete
-* ^copyright = "Copyright 社会保険診療報酬支払基金"
+* ^copyright = ""
 
 * #8282	"・高分化型"
 * #8283	"・多形型"
