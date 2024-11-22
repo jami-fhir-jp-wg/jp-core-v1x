@@ -9,7 +9,8 @@ Description: "SS MIX 標準文書コード表"
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * ^content = #complete
-* ^copyright = "Copyright Japan Association of Medical Informatics (JAMI)  一般社団法人日本医療情報学会"
+* ^copyright = "Copyright Japan Association of Medical Informatics (JAMI)  一般社団法人日本医療情報学会 
+This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995+, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 // 以下PDFより参照
 // https://www.jami.jp/jamistd/docs/SS-MIX2/h/SS-MIX2_kakuchoStrgGuidelinesVer.1.2h_CodeTable.pdf
 * #34895-3 "指導書"

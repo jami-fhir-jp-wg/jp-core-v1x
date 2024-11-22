@@ -8,7 +8,7 @@ Description: "レセプト電算用傷病名マスター コードシステム"
 * ^date = "2024-11-18"
 * ^caseSensitive = true
 * ^content = #complete
-* ^copyright = "Copyright 社会保険診療報酬支払基金"
+* ^copyright = ""
 
 * #0000999	"＊＊　未コード化傷病名　＊＊"
 * #8848176	"１１β－水酸化酵素欠損症"
