@@ -323,9 +323,9 @@ Usage: #definition
 * kind = #codesystem
 * description = "JP Core MedicationCode Common NamingSystem 一般名処方マスタ"
 * uniqueId[+].type = #oid
-* uniqueId[=].value = "1.2.392.100495.20.1.81"
+* uniqueId[=].value = "1.2.392.100495.20.2.81"
 * uniqueId[+].type = #uri
-* uniqueId[=].value = "urn:oid:1.2.392.100495.20.1.81"
+* uniqueId[=].value = "urn:oid:1.2.392.100495.20.2.81"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = $JP_MedicationCodeCommon_CS
 * uniqueId[=].preferred = true
