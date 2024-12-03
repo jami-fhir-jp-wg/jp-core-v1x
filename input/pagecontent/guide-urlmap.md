@@ -42,7 +42,7 @@ JP Core使用欄に＊がある行は、本IGで使用されるコード表に�
 |	＊	|	MEDISー病名マスター修飾語管理番号	|	urn:oid:1.2.392.200119.4.201.2	|	http://medis.or.jp/CodeSystem/master-disease-modKeyNumber	|
 |	＊	|	MEDISー病名マスター修飾語交換用コード	|	urn:oid:1.2.392.200119.4.201.5	|	http://medis.or.jp/CodeSystem/master-disease-modExCode	|
 |	＊	|	MEDISー医薬品基準番号（ＨＯＴ１３）	|	urn:oid:1.2.392.200119.4.402.1	|	http://medis.or.jp/CodeSystem/master-HOT13	|
-|	＊	|	MEDISー医薬品基準番号（ＨＯＴ９）	|	urn:oid:1.2.392.200119.4.403.1</p>urn:oid:1.2.392.100495.20.2.74	|	http://medis.or.jp/CodeSystem/master-HOT9	|
+|	＊	|	MEDISー医薬品基準番号（ＨＯＴ９）	|	urn:oid:1.2.392.200119.4.403.1<p/>urn:oid:1.2.392.100495.20.2.74	|	http://medis.or.jp/CodeSystem/master-HOT9	|
 |		|		|		|		|
 |	＊	|	MEDISー医薬品処方用番号（ＨＯＴ７）	|	urn:oid:1.2.392.200119.4.403.2	|	http://medis.or.jp/CodeSystem/master-HOT7	|
 |	＊	|	MEDISー臨床検査コードまとめ表「17桁コード表」	|	urn:oid:1.2.392.200119.4.504	|	http://medis.or.jp/CodeSystem/master-JLAC10-17digits	|
