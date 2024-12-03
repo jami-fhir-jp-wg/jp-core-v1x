@@ -24,7 +24,6 @@ Rule dom-6%
 !!!!!!!!CodeSystem urn:ietf:rfc:3986は未知です
 !!!!!!!!CodeSystem urn:oid:1.2.392.200119.5.2.4.1.1.3は未知です
 The value set expansion is too large, and only a subset has been displayed
-!!value setに大量のcodeが含まれるため、バリデーションできません: 0
 
 
 #  Local CodeSystems Warnings
