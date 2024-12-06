@@ -20,7 +20,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |医薬品|HOT7|http://medis.or.jp/CodeSystem/master-HOT7|
 |医薬品|HOT9|http://medis.or.jp/CodeSystem/master-HOT9|
 |医薬品|HOT13|http://medis.or.jp/CodeSystem/master-HOT13|
-|医薬品|YJコード|http://capstandard.jp/CodeSystem/YJ-code|
+|医薬品|YJコード|http://capstandard.jp/iyaku.info/CodeSystem/YJ-code|
 |医薬品|⼀般処⽅名マスター|http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationGeneralOrderCode|
 |剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationFormMERIT9_CS |
 |薬品単位|MERIT-9(単位）|http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationUnitMERIT9Code|

@@ -32,7 +32,7 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 |---------|----|---------------------------|
 |ワクチン|HOT9|http://medis.or.jp/CodeSystem/master-HOT9|
 |ワクチン|HOT13|http://medis.or.jp/CodeSystem/master-HOT13|
-|ワクチン|YJコード|http://capstandard.jp/CodeSystem/YJ-code|
+|ワクチン|YJコード|http://capstandard.jp/iyaku.info/CodeSystem/YJ-code|
 |対象疾患|MEDIS標準病名マスター病名交換用コード|http://medis.or.jp/CodeSystem/master-disease-exCode|
 
 ### 項目の追加

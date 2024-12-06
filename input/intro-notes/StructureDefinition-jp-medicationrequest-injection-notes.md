@@ -45,7 +45,7 @@ HL7 ver 2系では用語集を識別するコーディングシステム名(以�
 |医薬品|HOT7|http://medis.or.jp/CodeSystem/master-HOT7|
 |医薬品|HOT9|http://medis.or.jp/CodeSystem/master-HOT9|
 |医薬品|HOT13|http://medis.or.jp/CodeSystem/master-HOT13|
-|医薬品|YJコード|http://capstandard.jp/CodeSystem/YJ-code|
+|医薬品|YJコード|http://capstandard.jp/iyaku.info/CodeSystem/YJ-code|
 |剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationFormMERIT9_CS |
 |処方区分|MERIT-9(処方区分)|http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationCategoryMERIT9_CS |
 |処方区分|JAHIS注射データ交換規約Ver.2.1C(JHSI表0001)|http://jpfhir.jp/fhir/core/CodeSystem/JHSI0001|
