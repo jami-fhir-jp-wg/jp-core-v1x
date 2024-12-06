@@ -28,7 +28,6 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 コード体系：HL7 Table 0038のコードと定義"
 * category 1..
 * category ^slicing.discriminator.type = #value
-// #patternでなく#valueでよいはずだが、#valueだと警告"For the complex type CodeableConcept, consider using a pattern rather than a fixed value to avoid over-constraining the instance"が出る。
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains first 1..1
