@@ -39,7 +39,7 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 |用法|JAMI処方・注射オーダ標準用法規格(補足用法コード)|http://jami.jp/CodeSystem/MedicationUsageAdditional|
 |部位|JAMI処方・注射オーダ標準用法規格(部位コード)|http://jami.jp/CodeSystem/MedicationBodySiteExternal|
 |投与方法|JAMI処方・注射オーダ標準用法規格(基本用法区分)|http://jami.jp/CodeSystem/MedicationMethodBasicUsage|
-|投与経路|HL7 V2(使用者定義表0162)|http://terminology.hl7.org/CodeSystem/v2-0162|
+|投与経路|HL7 V2(使用者定義表0162)|http://jpfhir.jp/fhir/core/CodeSystem/route-codes|
 |入外区分|HL7V2(HL7表0482)|http://terminology.hl7.org/CodeSystem/v2-0482|
 
 ### 項目の追加
