@@ -254,7 +254,7 @@ performer.actorには、医療従事者(Practitioner)、または患者(Patient)
   "route": {
     "coding": [
       {
-        "system": "http://terminology.hl7.org/CodeSystem/v2-0162",
+        "system": "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
         "code": "IV",
         "display": "静脈内"
       }
@@ -409,7 +409,7 @@ Medication.ingredientに記述される薬剤の合計容量(mL)を dosage.dose 
   ],
   "coding": [
     {
-      "system": "http://terminology.hl7.org/CodeSystem/v2-0162",
+      "system": "http://jpfhir.jp/fhir/core/CodeSystem/route-codes",
       "code": "IV",
       "display": "静脈内"
     }
