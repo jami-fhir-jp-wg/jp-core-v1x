@@ -26,9 +26,9 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier contains
     rpNumber 1..1 and
     orderInRp 1..1 and
+    requestIdentifier 0..* and
     requestIdentifierCommon 0..1 and
-    requestIdentifier 0..*
-
+    requestIdentifierInstitution 0..1
 * identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
@@ -55,12 +55,14 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[requestIdentifier].system = $JP_ResourceInstance_Identifier (exactly)
 * identifier[requestIdentifier].value 1..
 * identifier[requestIdentifierCommon] ^short = "処方箋に対するID"
-* identifier[requestIdentifierCommon] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。system 要素には、保険医療機関番号を含む処方箋ID（urn:oid:1.2.392.100495.20.3.11.1[保険医療機関コード(10 桁)]）を指定する。全国で⼀意になる発番ルールにもとづく場合には urn:oid:1.2.392.100495.20.3.11 とする。"
+* identifier[requestIdentifierCommon] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。全国で⼀意になる発番ルールにもとづき urn:oid:1.2.392.100495.20.3.11 とする。"
 * identifier[requestIdentifierCommon].system = $JP_IdSystem_PrescriptionDocumentID (exactly)
 * identifier[requestIdentifierCommon].value 1..
-
-
-
+* identifier[requestIdentifierInstitution] ^short = "医療機関毎に管理される処方箋に対するID"
+* identifier[requestIdentifierInstitution] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。system 要素には、保険医療機関番号を含む処方箋ID（urn:oid:1.2.392.100495.20.3.11.1[保険医療機関コード(10 桁)]）を指定する。全国で⼀意になる発番ルールにもとづく場合には urn:oid:1.2.392.100495.20.3.11 とする。"
+* identifier[requestIdentifierInstitution].system ^short = "保険医療機関番号を含む処方箋IDのSystem値（urn:oid:1.2.392.100495.20.3.11.1[保険医療機関コード(10 桁)]）を指定する。"
+* identifier[requestIdentifierInstitution].system ^definition = "保険医療機関番号を含む処方箋IDのSystem値（urn:oid:1.2.392.100495.20.3.11.1[保険医療機関コード(10 桁)]）を指定する。"
+* identifier[requestIdentifierInstitution].value 1..
 * status ^short = "オーダの現在の状態を示すコード"
 * status ^definition = "オーダの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
 * status ^comment = "このエレメントはmodifierとされている。StatusとはこのResourceが現在妥当な状態ではないことも示すからである。"
