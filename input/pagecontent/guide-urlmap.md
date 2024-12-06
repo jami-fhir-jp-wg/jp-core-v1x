@@ -52,7 +52,8 @@ JP Core使用欄に＊がある行は、本IGで使用されるコード表に�
 |		|	電子処方箋管理サービスー処方用法マスタ	|		|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationUsage_ePrescription	|
 |		|	医薬品成分コード（電子カルテ共有サービス）	|		|	関係者調整中	|
 
-以下は厚労省処方箋CDA記述仕様第1版に収載の表
+** 以下は厚労省処方箋CDA記述仕様第1版に収載の表 **
+
 |使用|コード名称|OID形式|URL形式|
 |----|----|----|----|
 |		|	剤形区分コード	|	urn:oid:1.2.392.100495.20.2.21	|	http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationForm	|
