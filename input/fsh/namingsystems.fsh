@@ -290,9 +290,9 @@ Usage: #definition
 * kind = #codesystem
 * description = "JP Core InsuredPersonCategory NamingSystem 被保険者区分コード"
 * uniqueId[+].type = #oid
-* uniqueId[=].value = "1.2.392.100495.20.2.51"
+* uniqueId[=].value = "1.2.392.100495.20.2.62"
 * uniqueId[+].type = #uri
-* uniqueId[=].value = "urn:oid:1.2.392.100495.20.2.51"
+* uniqueId[=].value = "urn:oid:1.2.392.100495.20.2.62"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = $JP_InsuredPersonCategory_CS
 * uniqueId[=].preferred = true
