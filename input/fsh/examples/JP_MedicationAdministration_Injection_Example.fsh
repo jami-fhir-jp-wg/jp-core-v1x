@@ -32,7 +32,7 @@ Usage: #example
 * dosage.site.extension[bodySite].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-1) "右腕"
 * dosage.site.extension[siteComment].url = $JP_MedicationDosage_SiteComment
 * dosage.site.extension[siteComment].valueString = "左利きのため"
-* dosage.route = $JP_MedicationRouteHL70162_CS#IV "Intravenous"
+* dosage.route = $JP_MedicationRouteHL70162_CS#IV "静脈"
 * dosage.method.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_MethodComment"
 * dosage.method.extension.valueString = "１分ほどかけて緩徐に行いました"
 * dosage.method = $JP_MedicationMethodJAMIBasicUsage_CS#3 "注射"
@@ -71,7 +71,7 @@ Usage: #example
 * dosage.extension[line].valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
 * dosage.site.extension[bodySite].url = $bodySite
 * dosage.site.extension[bodySite].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-2) "左腕"
-* dosage.route = $JP_MedicationRouteHL70162_CS#IV "Intravenous"
+* dosage.route = $JP_MedicationRouteHL70162_CS#IV "静脈"
 * dosage.method = $JP_MedicationMethodJAMIDetailUsage_CS#31 "中心静脈注射"
 * dosage.dose = 510 'mL' "mL"
 * dosage.rateRatio.numerator = 102 'mL' "mL"
