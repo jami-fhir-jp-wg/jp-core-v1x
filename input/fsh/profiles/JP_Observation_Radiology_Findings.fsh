@@ -12,6 +12,8 @@ Description: "このプロファイルはDiagnosticReport_Radiologyリソース�
 * . ^short = "画像診断レポートの所見（findings）"
 * . ^definition = "放射線画像検査に対する画像診断レポートの所見の内容（findings）。"
 * . ^comment = "画像診断レポートの所見（findings）に対応するObservationプロファイル"
+* ^copyright = "Copyright JED-Project、JAHIS、日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG  
+This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995+, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * identifier MS
 * basedOn only 	Reference(ServiceRequest)
 * basedOn ^comment = "このObservationが生成されることになった画像検査に関するオーダ情報"
