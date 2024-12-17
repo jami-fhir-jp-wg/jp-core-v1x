@@ -31,7 +31,7 @@ Slice定義は下記のようになる。
 　- requestIdentifier : 処方オーダに対するID  
 　- prescriptionIdentifierCommon : 全国で⼀意になる発番ルールにもとづき発行される処方箋ID  
 [invariantで定義される識別子]  
-　- valid-system-local-prescriptionID : 医療機関毎に管理される処方箋に対するID  "
+　- jp-inv-local-prescriptionid : 医療機関毎に管理される処方箋に対するID  "
 * identifier contains
     rpNumber 1..1 and
     orderInRp 1..1 and
@@ -283,7 +283,7 @@ Slice定義は下記のようになる。
 　- requestIdentifier : 処方オーダに対するID  
 　- prescriptionIdentifierCommon : 全国で⼀意になる発番ルールにもとづき発行される処方箋ID  
 [invariantで定義される識別子]  
-　- valid-system-local-prescriptionID : 医療機関毎に管理される処方箋に対するID  "
+　- jp-inv-local-prescriptionid : 医療機関毎に管理される処方箋に対するID  "
 * identifier contains
     rpNumber 1..1 and
     requestIdentifier 0..* and
