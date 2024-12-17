@@ -11,7 +11,7 @@ Usage: #example
 * identifier[=].value = "1234567890.1.1"
 * identifier[+].system = $JP_IdSystem_PrescriptionDocumentID
 * identifier[=].value = "20241101-0000000000000001"
-* identifier[+].system = "urn:oid:1.2.392.100495.20.3.11.14711234567"
+* identifier[+].system = "urn:oid:1.2.392.100495.20.3.11.11311234567"
 * identifier[=].value = "20241101-00001"
 * intent = #order
 * status = #active
