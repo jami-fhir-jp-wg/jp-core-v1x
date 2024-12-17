@@ -9,6 +9,10 @@ Usage: #example
 * identifier[orderInRp].value = "1"
 * identifier[requestIdentifier].system = $JP_ResourceInstance_Identifier
 * identifier[requestIdentifier].value = "1234567890.1.1"
+* identifier[prescriptionIdentifierCommon].system = $JP_IdSystem_PrescriptionDocumentID
+* identifier[prescriptionIdentifierCommon].value = "20241101-0000000000000001"
+* identifier[+].system = "urn:oid:1.2.392.100495.20.3.11.14711234567"
+* identifier[=].value = "20241101-00001"
 * intent = #order
 * status = #active
 * medicationCodeableConcept = $JP_MedicationCodeHOT9_CS#103835401 "ムコダイン錠２５０ｍｇ"
