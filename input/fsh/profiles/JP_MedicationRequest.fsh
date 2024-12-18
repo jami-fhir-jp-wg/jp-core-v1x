@@ -15,6 +15,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * ^date = "2023-10-31"
 * . ^short = "患者あるいはグループに対しての処方オーダ"
 * . ^definition = "患者への薬の供給と内服・外用薬剤処方の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。MedicationRequestプロファイルからの派生プロファイルである。"
+* identifier obeys jp-inv-local-prescriptionid
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
@@ -22,13 +23,20 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。  
 処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。  
 このIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
-* identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
+* identifier ^comment = "これは業務IDであって、リソースに対するIDではない。  
+Slice定義は下記のようになる。  
+[Sliceで定義される識別子]  
+　- rpNumber : 処方箋内部の剤グループとしてのRp番号  
+　- orderInRp : 同一RP番号（剤グループ）での薬剤の表記順  
+　- requestIdentifier : 処方オーダに対するID  
+　- prescriptionIdentifierCommon : 全国で⼀意になる発番ルールにもとづき発行される処方箋ID  
+[invariantで定義される識別子]  
+　- jp-inv-local-prescriptionid : 医療機関毎に管理される処方箋に対するID  "
 * identifier contains
     rpNumber 1..1 and
     orderInRp 1..1 and
     requestIdentifier 0..* and
-    requestIdentifierCommon 0..1 and
-    requestIdentifierInstitution 0..1
+    prescriptionIdentifierCommon 0..1
 * identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
@@ -54,15 +62,10 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[requestIdentifier] ^definition = "薬剤をオーダする単位としての処方依頼に対するID。MedicationRequestは単一の薬剤でインスタンスが作成される。"
 * identifier[requestIdentifier].system = $JP_ResourceInstance_Identifier (exactly)
 * identifier[requestIdentifier].value 1..
-* identifier[requestIdentifierCommon] ^short = "処方箋に対するID"
-* identifier[requestIdentifierCommon] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。全国で⼀意になる発番ルールにもとづき urn:oid:1.2.392.100495.20.3.11 とする。"
-* identifier[requestIdentifierCommon].system = $JP_IdSystem_PrescriptionDocumentID (exactly)
-* identifier[requestIdentifierCommon].value 1..
-* identifier[requestIdentifierInstitution] ^short = "医療機関毎に管理される処方箋に対するID"
-* identifier[requestIdentifierInstitution] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。system 要素には、保険医療機関番号を含む処方箋ID（urn:oid:1.2.392.100495.20.3.11.1[保険医療機関コード(10 桁)]）を指定する。全国で⼀意になる発番ルールにもとづく場合には urn:oid:1.2.392.100495.20.3.11 とする。"
-* identifier[requestIdentifierInstitution].system ^short = "保険医療機関番号を含む処方箋IDのSystem値（urn:oid:1.2.392.100495.20.3.11.1[保険医療機関コード(10 桁)]）を指定する。"
-* identifier[requestIdentifierInstitution].system ^definition = "保険医療機関番号を含む処方箋IDのSystem値（urn:oid:1.2.392.100495.20.3.11.1[保険医療機関コード(10 桁)]）を指定する。"
-* identifier[requestIdentifierInstitution].value 1..
+* identifier[prescriptionIdentifierCommon] ^short = "処方箋に対するID"
+* identifier[prescriptionIdentifierCommon] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。全国で⼀意になる発番ルールにもとづき urn:oid:1.2.392.100495.20.3.11 とする。"
+* identifier[prescriptionIdentifierCommon].system = $JP_IdSystem_PrescriptionDocumentID (exactly)
+* identifier[prescriptionIdentifierCommon].value 1..
 * status ^short = "オーダの現在の状態を示すコード"
 * status ^definition = "オーダの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
 * status ^comment = "このエレメントはmodifierとされている。StatusとはこのResourceが現在妥当な状態ではないことも示すからである。"
@@ -264,6 +267,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * ^date = "2024-11-18"
 * . ^short = "患者あるいはグループに対しての注射薬剤処方オーダ"
 * . ^definition = "患者への薬の供給と注射や点滴の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。MedicationRequestプロファイルからの派生プロファイルである。"
+* identifier  obeys jp-inv-local-prescriptionid
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
@@ -271,12 +275,19 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。  
 処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。  
 このIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
-* identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
+* identifier ^comment = "これは業務IDであって、リソースに対するIDではない。  
+Slice定義は下記のようになる。  
+[Sliceで定義される識別子]  
+　- rpNumber : 処方箋内部の剤グループとしてのRp番号  
+　- orderInRp : 同一RP番号（剤グループ）での薬剤の表記順  
+　- requestIdentifier : 処方オーダに対するID  
+　- prescriptionIdentifierCommon : 全国で⼀意になる発番ルールにもとづき発行される処方箋ID  
+[invariantで定義される識別子]  
+　- jp-inv-local-prescriptionid : 医療機関毎に管理される処方箋に対するID  "
 * identifier contains
     rpNumber 1..1 and
-    requestIdentifierCommon 0..1 and
-    requestIdentifier 0..*
-
+    requestIdentifier 0..* and
+    prescriptionIdentifierCommon 0..1
 * identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
@@ -291,11 +302,10 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier[requestIdentifier] ^definition = "薬剤をオーダする単位としての処方依頼に対するID。MedicationRequestは単一の薬剤でインスタンスが作成される。"
 * identifier[requestIdentifier].system = $JP_ResourceInstance_Identifier (exactly)
 * identifier[requestIdentifier].value 1..
-* identifier[requestIdentifierCommon] ^short = "処方箋に対するID"
-* identifier[requestIdentifierCommon] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。system 要素には、保険医療機関番号を含む処方箋ID（urn:oid:1.2.392.100495.20.3.11.1[保険医療機関コード(10 桁)]）を指定する。全国で⼀意になる発番ルールにもとづく場合には urn:oid:1.2.392.100495.20.3.11 とする。"
-* identifier[requestIdentifierCommon].system = $JP_IdSystem_PrescriptionDocumentID (exactly)
-* identifier[requestIdentifierCommon].value 1..
-
+* identifier[prescriptionIdentifierCommon] ^short = "処方箋に対するID"
+* identifier[prescriptionIdentifierCommon] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。全国で⼀意になる発番ルールにもとづく場合には urn:oid:1.2.392.100495.20.3.11 とする。"
+* identifier[prescriptionIdentifierCommon].system = $JP_IdSystem_PrescriptionDocumentID (exactly)
+* identifier[prescriptionIdentifierCommon].value 1..
 * status ^short = "オーダの現在の状態を示すコード"
 * status ^definition = "オーダの現在の状態を示すコード。一般的には active か completed の状態であるだろう。"
 * status ^comment = "このエレメントはmodifierとされている。StatusとはこのResourceが現在妥当な状態ではないことも示すからである。"
