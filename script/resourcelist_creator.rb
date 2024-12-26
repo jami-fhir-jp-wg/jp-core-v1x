@@ -53,7 +53,7 @@ end
 # -------------------------------------------------------
 work = "./temp/scriptwork/"
 
-target1 = Dir.home.to_s + "/.fhir/packages/jpfhir-terminology.r4#1.2.4-url/package"
+target1 = Dir.home.to_s + "/.fhir/packages/jpfhir-terminology.r4#1.3.0/package"
 file1 = "resource_info_terminlogy.csv"
 
 target2 = "./fsh-generated/resources/"
