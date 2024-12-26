@@ -156,10 +156,7 @@ jobs:
     - name: STEP5 = upload gtz files and  to remote site by rsync
       run: | 
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'rm -rf ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}'
-        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'mkdir -p ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}; '
+        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'mkdir -p ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}'
         rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  output.tgz  ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}/
-        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}   'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}} ; tar xzf output.tgz
-      env:
-        SSH_PORT: ${{ secrets.SSH_PORT_JPFHIR }}
-        JAMIWG_WEBHOST: ${{ secrets.JAMIWG_WEBHOST }}
-        JAMIWG_WEBPATH: ${{ secrets.JAMIWG_WEBPATH }}
+        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}   'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}} ; tar xzf output.tgz'
+
