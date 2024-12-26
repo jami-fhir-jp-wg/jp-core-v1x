@@ -15,7 +15,6 @@ Description: "ImagingStudy RadLexPlaybook　コード　https://playbook.radlex.
 // * #LETTER_CODE  "SHORT_NAME"   // LONG_NAME:MODALITY:BODY_REGION で作成
 // 
 
-
 * #CTABCA  "CT Abd Angio w/wo"   // RPID2:CT Abdomen Angio w and wo IV Contrast:CT:ABDOMEN
 * #CTABU  "CT Abd wo"   // RPID3:CT Abdomen wo  IV Contrast:CT:ABDOMEN
 * #CTABC  "CT Abd w/wo"   // RPID4:CT Abdomen w and wo IV Contrast:CT:ABDOMEN
@@ -71,7 +70,6 @@ Description: "ImagingStudy RadLexPlaybook　コード　https://playbook.radlex.
 * #CTSIC  "CT Sinuses w/wo"   // RPID98:CT Sinuses w and wo IV Contrast:CT:HEAD
 * #CTSTE  "CT Sella w"   // RPID105:CT Sella Turcica w IV Contrast:CT:HEAD
 * #CTSTU  "CT Sella wo"   // RPID106:CT Sella Turcica wo IV Contrast:CT:HEAD
-* #  "CT UE w/wo"   // RPID107:CT Upper Extremity w and wo IV Contrast:CT:UPPER EXTREMITY
 * #CTUEE  "CT Arm w"   // RPID108:CT Upper Extremity w IV Contrast:CT:UPPER EXTREMITY
 * #CTUEU  "CT Arm wo"   // RPID109:CT Upper Extremity wo IV Contrast:CT:UPPER EXTREMITY
 * #CTCSERN  "CT C-Spine w by Recon Neuro"   // RPID138:CT Cervical Spine w IV Contrast by Reconstruction Neuro:CT:CERVICAL SPINE
@@ -212,7 +210,6 @@ Description: "ImagingStudy RadLexPlaybook　コード　https://playbook.radlex.
 * #CTLEC  "CT Leg w/wo"   // RPID913:CT Lower Extremity w and wo IV Contrast:CT:LOWER EXTREMITY
 * #CTLEULL  "CT Leg wo Leg Length"   // RPID926:CT Lower Extremity wo IV Contrast Leg Length:CT:LOWER EXTREMITY
 * #CTHRUCS  "CT Heart wo Calcium Scoring"   // RPID979:CT Heart wo IV Contrast Calcium Scoring:CT:CHEST
-* #  "CT UE Angio w/wo"   // RPID1018:CT Upper Extremity Angio w and wo IV Contrast:CT:UPPER EXTREMITY
 * #CTTMURD  "CT Temporal Bone wo by Recon"   // RPID1169:CT Temporal Bone wo IV Contrast by Reconstruction:CT:HEAD
 * #CTPLU3D  "CT Pelv wo 3D"   // RPID1278:CT Pelvis wo  IV Contrast Post Processing:CT:PELVIS
 * #CTCHU3D  "CT Chest wo 3D"   // RPID1445:CT Chest wo IV Contrast Post Processing:CT:CHEST
