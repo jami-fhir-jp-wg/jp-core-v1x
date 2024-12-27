@@ -6,5 +6,6 @@ Description: "ImagingStudy RadLexPlaybook　コードのValueSet https://playboo
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-12-27"
-* ^copyright = "Copyright 2014 – The Radiological Society of North America (RSNA), all rights reserved"
+// – The Radiological Society of North America (RSNA), all rights reserved
+* ^copyright = "Copyright 2014"
 * include codes from system JP_ImagingStudy_RadLexPlaybook_CoreDev_CS
