@@ -20,6 +20,8 @@ Usage: #example
 * series.numberOfInstances = 1
 * series.bodySite = http://snomed.info/sct#43799004 "Thoracic cavity"
 * series.instance.uid = "2.16.124.113543.6003.189642796.63084.16748.2599092903"
-* series.instance.sopClass.system = #urn:ietf:rfc:3986
-* series.instance.sopClass.code = #urn:oid:1.2.840.10008.5.1.4.1.1.2
+//* series.instance.sopClass.system = #urn:ietf:rfc:3986
+//* series.instance.sopClass.code = #urn:oid:1.2.840.10008.5.1.4.1.1.2
+* sseries.instance.sopClass = $JP_DICOMSopClass_CS#1.2.840.10008.5.1.4.1.1.2
+
 * series.instance.number = 1
