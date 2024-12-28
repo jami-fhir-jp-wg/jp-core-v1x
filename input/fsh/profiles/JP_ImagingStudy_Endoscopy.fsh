@@ -33,4 +33,4 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.bodySite from $dummy (example)
 //* series.instance.uid MS
 //* series.instance.sopClass MS
-* series.instance.sopClass from JP_ImagingStudy_Radiology_BodySite_VS (extensible)
+* series.instance.sopClass from https://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 (extensible)
