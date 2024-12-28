@@ -81,7 +81,7 @@ DICOMのリソース位置を指定。基本的には1つ。"
 * procedureCode ^comment = "すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係と調整前後の関係を管理するための独自の構造を提供する必要がある。  
 エラーコードなどを記載"
 //* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
-* procedureCode from $dicomLoincRadiologyPlaybookVS
+* procedureCode from $dicomRadLexPlaybookVS
 * procedureCode ^binding.description = "コードは http://playbook.radlex.org/playbook/SearchRadlexAction に該当があれば使わなければならない。ただし、実施された行為のタイプにこれらのコードがなじまない場合は他のコードが利用される可能性がある。"
 * location ^short = "ImagingStudy が実施された場所"
 * location ^definition = "ImagingStudyが実施された主要な物理的な場所。"

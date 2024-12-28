@@ -2,7 +2,7 @@ Alias: $dicomSopClassVS = http://hl7.org/fhir/uv/imaging-service-request-ig/Valu
 // https://build.fhir.org/ig/HL7/imaging-service-request-ig/ValueSet-dicom-sop-classes.html
 Alias: $dicomSopClassCS = http://hl7.org/fhir/uv/imaging-service-request-ig/CodeSystem/dicom-uids
 // https://build.fhir.org/ig/HL7/imaging-service-request-ig/CodeSystem-dicom-uids.html
-Alias: $dicomLoincRadiologyPlaybookVS = http://loinc.org/vs/loinc-rsna-radiology-playbook
+Alias: $dicomRadLexPlaybookVS = http://playbook.radlex.org/playbook/SearchRadlexAction
 // ==============================
 //   Profile 定義
 // ==============================
@@ -62,7 +62,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * procedureCode ^definition = "実施された処置を表すコード。"
 * procedureCode ^comment = "内視鏡では省略してよい。"
 //* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
-* procedureCode from $dicomLoincRadiologyPlaybookVS
+* procedureCode from $dicomRadLexPlaybookVS
 * location only Reference(JP_Location)
 * location ^short = "DICOM画像検査が実施された場所【詳細参照】"
 * location ^definition = "DICOM画像検査が実施された場所。"
