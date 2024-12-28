@@ -1,4 +1,5 @@
 Alias: $dummy = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategory_VS
+Alias: $dicomSopClassVS = http://hl7.org/fhir/uv/imaging-service-request-ig/ValueSet/dicom-transfer-syntaxes
 
 // ==============================
 //   Profile 定義
@@ -33,4 +34,4 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.bodySite from $dummy (example)
 //* series.instance.uid MS
 //* series.instance.sopClass MS
-* series.instance.sopClass from "https://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1" (extensible)
+* series.instance.sopClass from dicomSopClassVS (extensible)
