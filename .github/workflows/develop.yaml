@@ -2,7 +2,7 @@ name: JPCore FHIR develop Task
 on:
   push:
     branches: 
-      - 'terminology1.3.0test'
+      - 'develop'
       - 'release/**'
     paths:
       - 'sushi-config.yaml'
@@ -10,10 +10,10 @@ on:
       - '.github/workflows/develop.yaml'
   pull_request:
     branches:
-      - 'terminology1.3.0test'
+      - 'develop'
       - 'release/**'
 env:
-  release_version : 1.2.0-devTx1.3.0Test
+  release_version : 1.2.0
 jobs:
   turn:
     runs-on: ubuntu-latest
