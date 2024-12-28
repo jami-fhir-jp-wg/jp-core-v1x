@@ -1,6 +1,6 @@
 Alias: $dummy = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationCategory_VS
-Alias: $dicomSopClassVS = http://hl7.org/fhir/uv/imaging-service-request-ig/ValueSet/dicom-transfer-syntaxes
-// https://build.fhir.org/ig/HL7/imaging-service-request-ig/ValueSet-dicom-transfer-syntaxes.html
+Alias: $dicomSopClassVS = http://hl7.org/fhir/uv/imaging-service-request-ig/ValueSet/dicom-sop-classes
+// https://build.fhir.org/ig/HL7/imaging-service-request-ig/ValueSet-dicom-sop-classes.html
 Alias: $dicomSopClassCS = http://hl7.org/fhir/uv/imaging-service-request-ig/CodeSystem/dicom-uids
 // https://build.fhir.org/ig/HL7/imaging-service-request-ig/CodeSystem-dicom-uids.html
 
