@@ -1,5 +1,5 @@
 ValueSet: DICOMTransferSyntaxes
-Id: dicom-transfer-syntaxes
+Id: dicom-transfer-syntaxes-vs
 Title: "DICOM® Transfer Syntaxes"
 Description: "DICOM® Transfer Syntaxes extracted from DICOM PS3.6 Table A-1."
 * ^url = "http://hl7.org/fhir/uv/imaging-service-request-ig/ValueSet/dicom-transfer-syntaxes"

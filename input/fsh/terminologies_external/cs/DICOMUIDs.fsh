@@ -1,5 +1,5 @@
 CodeSystem: DICOMUIDs
-Id: dicom-uids
+Id: dicom-uids-cs
 Title: "DICOM® Unique Identifiers"
 Description: "DICOM® Unique Identifiers extracted from DICOM PS3.6 Table A-1."
 * ^url = "http://hl7.org/fhir/uv/imaging-service-request-ig/CodeSystem/dicom-uids"

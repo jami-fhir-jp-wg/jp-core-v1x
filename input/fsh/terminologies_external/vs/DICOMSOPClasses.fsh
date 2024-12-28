@@ -1,5 +1,5 @@
 ValueSet: DICOMSOPClasses
-Id: dicom-sop-classes
+Id: dicom-sop-classes-vs
 Title: "DICOM® SOP Classes"
 Description: "DICOM® SOP Classes extracted from DICOM PS3.6 Table A-1."
 * ^url = "http://hl7.org/fhir/uv/imaging-service-request-ig/ValueSet/dicom-sop-classes"
