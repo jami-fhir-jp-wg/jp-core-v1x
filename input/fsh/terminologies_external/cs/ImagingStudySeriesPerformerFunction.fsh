@@ -1,7 +1,7 @@
 Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 
-ValueSet: ImagingStudySeriesPerformerFunction
-Id: series-performer-function
+ValueSet: ImagingStudySeriesPerformerFunction-VS
+Id: series-performer-function-vs
 Title: "ImagingStudy series performer function"
 Description: "Performer function of an agent in an imaging study series"
 * ^url =  "http://hl7.org/fhir/ValueSet/series-performer-function"
