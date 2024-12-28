@@ -23,7 +23,6 @@ Description: "DICOM® SOP Classes extracted from DICOM PS3.6 Table A-1."
 * ^contact[+].name = "Bas van den Heuvel"
 * ^contact[=].telecom.system = #email
 * ^contact[=].telecom.value = "bas.van.den.heuvel@philips.com"
-* ^jurisdiction = $m49.htm#001
 * DICOMUIDs#1.2.840.10008.1.1 "Verification"
 * DICOMUIDs#1.2.840.10008.1.3.10 "MediaStorageDirectoryStorage"
 * DICOMUIDs#1.2.840.10008.1.9 "BasicStudyContentNotification"

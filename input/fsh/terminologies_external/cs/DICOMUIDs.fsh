@@ -23,7 +23,6 @@ Description: "DICOM® Unique Identifiers extracted from DICOM PS3.6 Table A-1."
 * ^contact[+].name = "Bas van den Heuvel"
 * ^contact[=].telecom.system = #email
 * ^contact[=].telecom.value = "bas.van.den.heuvel@philips.com"
-* ^jurisdiction = $m49.htm#001
 * ^caseSensitive = true
 * ^content = #complete
 * ^count = 461
