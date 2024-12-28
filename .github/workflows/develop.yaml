@@ -13,7 +13,7 @@ on:
       - 'develop'
       - 'release/**'
 env:
-  release_version : 1.2.0-dev
+  release_version : 1.2.0
 jobs:
   turn:
     runs-on: ubuntu-latest
@@ -88,14 +88,14 @@ jobs:
       uses: suisei-cn/actions-download-file@v1.6.0
       id: downloadfile2
       with:
-        url: "https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.2.4-url.tgz"
+        url: "https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.3.0.tgz"
         target: .    
     
     - name: Prepare for using all dependent packages including Jp modified version of hl7.fhir.r4.core Package 
       env:
         JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
-        JPTerminologyCOREdir: jpfhir-terminology.r4#1.2.4-url
-        JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.2.4-url.tgz
+        JPTerminologyCOREdir: jpfhir-terminology.r4#1.3.0
+        JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.3.0.tgz
       run: |
         mkdir -p /home/runner/.fhir
         mv $JPPACKAGECOREtgz /home/runner/.fhir/
@@ -153,50 +153,10 @@ jobs:
       env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_TO_JPFHIR }}
           
-    - name: STEP2 = prepare gtz files for upload to remote site
-      run: | 
-        tar czf fsh-generated.tgz fsh-generated
-        mkdir -p forPackageRelease/package
-        cp fsh-generated/resources/*.json forPackageRelease/package/
-        cp forPackageRelease/package-${{ env.release_version}}-diff.json forPackageRelease/package/package.json
-        cd forPackageRelease
-        tar czf jp-core.r4-${{ env.release_version}}.tgz package
-        cd ..
-        rm output/full-ig.zip
-        rm output/expansions.json
-        rm output/expansions.xml
-
-    - name: STEP3 = Deploy Implementation Guide
-      if: success()
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        personal_token: ${{ secrets.PERSONAL_TOKEN }}
-        external_repository: jami-fhir-jp-wg/jp-core-v1xpages
-        publish_branch: pages
-        publish_dir: ./output
-        destination_dir: ./jpcore-r4/${{ steps.extract_branch.outputs.branch }}
-
-    - name: STEP4 = generate snapshot package using sushi -s command       
-      run: | 
-        rm -rf fsh-generated
-        sushi -s .
-        mv fsh-generated fsh-generated-snap
-        mkdir -p forPackageRelease/snapshot/package/
-        cp fsh-generated-snap/resources/*.json forPackageRelease/snapshot/package/
-        cp forPackageRelease/package-${{ env.release_version}}-snap.json forPackageRelease/snapshot/package/package.json
-        cd forPackageRelease/snapshot
-        tar czf jp-core.r4-${{ env.release_version}}-snap.tgz package
-        cd ../..
-
     - name: STEP5 = upload gtz files and  to remote site by rsync
       run: | 
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'rm -rf ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}'
-        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'mkdir -p ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}; '
-        rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  output.tgz fsh-generated.tgz forPackageRelease/jp-core.r4-${{ env.release_version}}.tgz forPackageRelease/snapshot/jp-core.r4-${{ env.release_version}}-snap.tgz ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}/
-        # index.htmlはdevelopからは修正しない
-        # rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  other/index.html other/assetsOfIndex ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/
-        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}   'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}} ; tar xzf output.tgz; mv output/* .; rm -rf output'
-      env:
-        SSH_PORT: ${{ secrets.SSH_PORT_JPFHIR }}
-        JAMIWG_WEBHOST: ${{ secrets.JAMIWG_WEBHOST }}
-        JAMIWG_WEBPATH: ${{ secrets.JAMIWG_WEBPATH }}
+        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'mkdir -p ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}'
+        rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  output.tgz  ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}/
+        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}   'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}} ; tar xzf output.tgz'
+

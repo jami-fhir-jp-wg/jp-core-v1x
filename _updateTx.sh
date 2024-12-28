@@ -40,8 +40,8 @@ download_package() {
 download_terminology() {
     read -p "download packages of terminology? (Y/N) " dterm
     if [ "$dterm" == "Y" ] || [ "$dterm" == "y" ]; then
-        dltermurl="https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.2.4-url.tgz"
-        localterm="./temp/jpfhir-terminology.r4-1.2.4-url.tgz"
+        dltermurl="https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.3.0.tgz"
+        localterm="./temp/jpfhir-terminology.r4-1.3.0.tgz"
         term_dir="${fhir_dir}/packages/jpfhir-terminology.r4#1.2.4-url"
         curl -o "${localterm}" "${dltermurl}"
         

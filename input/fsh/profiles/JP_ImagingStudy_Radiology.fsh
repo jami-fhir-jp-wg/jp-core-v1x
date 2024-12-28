@@ -80,7 +80,8 @@ DICOMのリソース位置を指定。基本的には1つ。"
 * procedureCode ^definition = "実施されたProcedureのタイプを表すコード。"
 * procedureCode ^comment = "すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係と調整前後の関係を管理するための独自の構造を提供する必要がある。  
 エラーコードなどを記載"
-* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
+//* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
+* procedureCode from $JP_DICONRadLexPlaybook_VS
 * procedureCode ^binding.description = "コードは http://playbook.radlex.org/playbook/SearchRadlexAction に該当があれば使わなければならない。ただし、実施された行為のタイプにこれらのコードがなじまない場合は他のコードが利用される可能性がある。"
 * location ^short = "ImagingStudy が実施された場所"
 * location ^definition = "ImagingStudyが実施された主要な物理的な場所。"
@@ -171,6 +172,7 @@ bodySiteは、画像化された身体部分の左右差を示している場合
 【JP Core仕様】画像のユニークID。DICOMタグマッピングにある値をそのまま設定。"
 * series.instance.sopClass MS
 * series.instance.sopClass ^comment = "【JP Core仕様】SOPクラスUID。DICOMタグマッピングにある値をそのまま設定。"
+* series.instance.sopClass from $JP_DICOMSopClass_VS (extensible)
 * series.instance.number ^comment = "32ビット数で表す。これより大きい値の場合は、10進数を使用する。  
 【JP Core仕様】ユーザ（または装置）が自由に決められる画像ごとの番号。DICOMタグマッピングにある値をそのまま設定。"
 * series.instance.title ^short = "インスタンスの記述"

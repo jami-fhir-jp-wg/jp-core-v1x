@@ -56,7 +56,8 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * procedureCode ^short = "実施された処置を表すコード【詳細参照】"
 * procedureCode ^definition = "実施された処置を表すコード。"
 * procedureCode ^comment = "内視鏡では省略してよい。"
-* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
+//* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
+* procedureCode from $JP_DICONRadLexPlaybook_VS
 * location only Reference(JP_Location)
 * location ^short = "DICOM画像検査が実施された場所【詳細参照】"
 * location ^definition = "DICOM画像検査が実施された場所。"
@@ -126,6 +127,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.instance.sopClass ^comment = "内視鏡では、主に以下の値が指定される。  
 　VL Endoscopic Image Storage:1.2.840.10008.5.1.4.1.1.77.1.1  
 　Secondary Capture Image Storage:1.2.840.10008.5.1.4.1.1.7"
+* series.instance.sopClass from $JP_DICOMSopClass_VS (extensible)
 * series.instance.number ^short = "SOP Instance UIDとは別に、ユーザー（または装置）が自由に決められるインスタンス（画像）ごとの番号【詳細参照】"
 * series.instance.number ^definition = "SOP Instance UIDとは別に、ユーザー（または装置）が自由に決められるインスタンス（画像）ごとの番号。"
 * series.instance.number ^comment = "Instance Number (0020,0013) に値が入っていた場合は、その値を指定する。"

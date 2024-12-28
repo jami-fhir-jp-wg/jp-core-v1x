@@ -142,6 +142,7 @@ Alias: $JP_DentalPresentTeethObservation_CS = http://jpfhir.jp/fhir/core/CodeSys
 Alias: $JP_DentalSimpleMissingTeethObservation_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalSimpleMissingTeethObservation_CS
 Alias: $JP_DentalSimplePresentTeethObservation_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalSimplePresentTeethObservation_CS
 Alias: $JP_Department_SsMix_CS = http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment //urn:oid:1.2.392.200250.2.2.2
+Alias: $JP_DICOMSopClass_CS = http://hl7.org/fhir/uv/imaging-service-request-ig/CodeSystem/dicom-uids
 Alias: $JP_Disease_Claim_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterB-disease    // 支払基金	傷病名コード   
 Alias: $JP_Disease_MEDIS_Concept_CS = http://medis.or.jp/CodeSystem/master-disease-exCode // MEDIS病名交換用コード   //urn:oid:1.2.392.200119.4.101.6
 Alias: $JP_Disease_MEDIS_ManagementID_CS = http://medis.or.jp/CodeSystem/master-disease-keyNumber    // MEDIS病名管理番号
@@ -253,6 +254,10 @@ Alias: $JP_Department_SsMix2Digits_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_D
 Alias: $JP_Department_SsMix3Digits_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix3Digits_VS
 Alias: $JP_DiagnosticReportCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DiagnosticReportCategory_VS
 Alias: $JP_DICOMModality_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DICOMModality_VS
+
+Alias: $JP_DICOMSopClass_VS = http://hl7.org/fhir/uv/imaging-service-request-ig/ValueSet/dicom-sop-classes
+Alias: $JP_DICONRadLexPlaybook_VS = http://playbook.radlex.org/playbook/SearchRadlexAction
+
 Alias: $JP_Disease_Claim_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/masterB-disease    // 支払基金	傷病名コード
 Alias: $JP_Disease_MEDIS_Concept_VS = http://medis.or.jp/ValueSet/master-disease-exCode // MEDIS病名交換用コード
 Alias: $JP_Disease_MEDIS_ManagementID_VS = http://medis.or.jp/ValueSet/master-disease-keyNumber    // MEDIS病名管理番号
