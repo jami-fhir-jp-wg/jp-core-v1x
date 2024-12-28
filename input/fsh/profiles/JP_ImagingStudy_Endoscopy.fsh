@@ -33,3 +33,4 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.bodySite from $dummy (example)
 //* series.instance.uid MS
 //* series.instance.sopClass MS
+* series.instance.sopClass from JP_ImagingStudy_Radiology_BodySite_VS (example)
