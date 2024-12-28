@@ -23,7 +23,6 @@ Description: "DICOM® Transfer Syntaxes extracted from DICOM PS3.6 Table A-1."
 * ^contact[+].name = "Bas van den Heuvel"
 * ^contact[=].telecom.system = #email
 * ^contact[=].telecom.value = "bas.van.den.heuvel@philips.com"
-* ^ = $m49.htm#001
 * DICOMUIDs#1.2.840.10008.1.2 "ImplicitVRLittleEndian"
 * DICOMUIDs#1.2.840.10008.1.2.1 "ExplicitVRLittleEndian"
 * DICOMUIDs#1.2.840.10008.1.2.1.98 "EncapsulatedUncompressedExplicitVRLittleEndian"
