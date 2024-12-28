@@ -1,3 +1,5 @@
+Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
+
 ValueSet: ImagingStudySeriesPerformerFunction
 Id: series-performer-function
 Title: "ImagingStudy series performer function"

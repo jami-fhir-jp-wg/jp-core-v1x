@@ -171,6 +171,8 @@ bodySiteは、画像化された身体部分の左右差を示している場合
 【JP Core仕様】画像のユニークID。DICOMタグマッピングにある値をそのまま設定。"
 * series.instance.sopClass MS
 * series.instance.sopClass ^comment = "【JP Core仕様】SOPクラスUID。DICOMタグマッピングにある値をそのまま設定。"
+* series.instance.sopClass from $dicomSopClassVS (extensible)
+
 * series.instance.number ^comment = "32ビット数で表す。これより大きい値の場合は、10進数を使用する。  
 【JP Core仕様】ユーザ（または装置）が自由に決められる画像ごとの番号。DICOMタグマッピングにある値をそのまま設定。"
 * series.instance.title ^short = "インスタンスの記述"
