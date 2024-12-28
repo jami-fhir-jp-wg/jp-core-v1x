@@ -19,6 +19,7 @@ dependencies:
   jpfhir-terminology.r4:
     uri: http://jpfhir.jp/fhir/jpfhir-terminology/ImplementationGuide/
     version: 1.3.0
+    
 #----------------------------------------
 # ページタイトル名称設定
 #----------------------------------------
