@@ -61,7 +61,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * procedureCode ^short = "実施された処置を表すコード【詳細参照】"
 * procedureCode ^definition = "実施された処置を表すコード。"
 * procedureCode ^comment = "内視鏡では省略してよい。"
-* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
+//* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
 * location only Reference(JP_Location)
 * location ^short = "DICOM画像検査が実施された場所【詳細参照】"
 * location ^definition = "DICOM画像検査が実施された場所。"
