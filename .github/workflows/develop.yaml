@@ -13,7 +13,7 @@ on:
       - 'develop'
       - 'release/**'
 env:
-  release_version : 1.2.0a
+  release_version : 1.2.0-a-dev
 jobs:
   turn:
     runs-on: ubuntu-latest
