@@ -126,9 +126,11 @@
   * NamingSystem
     * OIDとURL形式の組み合わせおよび推奨値について見直しを行った
 * Capability Statement関連
-  * 単数パラメータのConformanceの指定に対応した
-  * 複数パラメータの記述について追加した
-  * Operation定義を追加した
+  * Search Parameter
+    * 単数パラメータに対するConformance(SHALL, SHOULD, MAY)の指定に対応した
+    * 複数パラメータをConformance(SHALL, SHOULD, MAY)の指定を含め追加した
+  * Operation
+    * 各プロファイルに記載されたOperation定義を、Capability Statementに明記した
 
 ***v1.1.2***
 
