@@ -12,7 +12,7 @@ on:
     branches:
       - 'main'
 env:
-  release_version : 1.2.0a
+  release_version : 1.2.0-a
 jobs:
   turn:
     runs-on: ubuntu-latest
