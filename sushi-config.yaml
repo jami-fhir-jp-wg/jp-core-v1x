@@ -5,7 +5,7 @@ title: "HL7 FHIR JP Core ImplementationGuide"
 description: "日本医療情報学会(JAMI) NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した日本国内におけるベースとなるJP Core実装ガイドのドラフトVer.1.2.0 です。"
 status: active # draft | active | retired | unknown
 version: 1.2.0-temp #-- Action のyaml中で release-version文字列に置き換える
-date: 2024-12-28
+date: 2024-12-30
 fhirVersion: 4.0.1
 copyrightYear: 2022+
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -354,5 +354,4 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - urn:oid:1.2.392.100495.10.3.100.5.11.5.2
     - urn:oid:1.2.392.100495.10.3.100.5.27.6.1
     - urn:oid:1.2.392.200270.4.1000.1
-    - http://playbook.radlex.org/playbook/SearchRadlexAction
     - http://playbook.radlex.org/playbook/SearchRadlexAction-CoreDev-CS
