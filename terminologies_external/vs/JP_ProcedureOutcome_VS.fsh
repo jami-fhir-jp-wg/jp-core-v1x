@@ -6,4 +6,4 @@ Description: "処置が実施されたアウトカムを示す値セット"
 * ^status = #active
 * ^experimental = false
 * ^date = "2023-10-31"
-* include codes from system JP_ProcedureOutcome_CS
+* include codes from system $JP_ProcedureOutcome_CS
