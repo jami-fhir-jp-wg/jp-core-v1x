@@ -13,7 +13,7 @@ on:
       - 'develop'
       - 'release/**'
 env:
-  release_version : 1.2.0-dev
+  release_version : 1.2.0a-pre
 jobs:
   turn:
     runs-on: ubuntu-latest
@@ -73,7 +73,7 @@ jobs:
       uses: Legion2/download-release-action@v2.1.0
       with:
         repository: HL7/fhir-ig-publisher
-        tag: 'latest'
+        tag: '1.8.4'
         path: .
         file: publisher.jar
     
