@@ -16,12 +16,7 @@ The Implementation Guide contains no explicitly linked examples for this profile
 # ベストプラクティス
 Rule dom-6%
 
-# DICOM関係
-!!ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1が見つかりません
-
 # Terminology関連
-!!!!!!!!CodeSystem urn:iso:std:iso:3166は未知です
-!!!!!!!!CodeSystem urn:ietf:rfc:3986は未知です
 !!!!!!!!CodeSystem urn:oid:1.2.392.200119.5.2.4.1.1.3は未知です
 The value set expansion is too large, and only a subset has been displayed
 
