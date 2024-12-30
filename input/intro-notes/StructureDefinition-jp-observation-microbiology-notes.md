@@ -5,7 +5,7 @@ Observation リソースは、次の要素を持たなければならない。
  - status : 検体検査情報項目の状態は必須である
  - category : このリソースが示す検体検査情報項目を分類するための区分であり、このプロファイルでは必須とする
  - code : このリソースは何の検体検査情報項目であるかを示すため必須である
- - subject︓このリソースが示す検体検査情報項目がどの患者のものかを示すためこのプロファイルでは参照するpatientリソースの定義を必須とする
+ - subject：このリソースが示す検体検査情報項目がどの患者のものかを示すためこのプロファイルでは参照するpatientリソースの定義を必須とする
 
 ### Extensions定義
 
@@ -52,7 +52,7 @@ Observation リソースは、次の要素を持たなければならない。
 | SHALL | identifier | token  | GET [base]/Observation?identifier=http://myhospital.com/fhir/observation-id-system\|1234567890 |
 | MAY | patient,category,code,value-quantity | reference,token,token,quantity  | GET [base]/Observation?patient=123&category=http://loinc.org\|18725-2&code=urn:oid:1.2.392.100495.10.3.100.5.11.5.2\|1216&value-quantity=gt4 |
 | MAY | patient,category,code,value-quantity,date | reference,token,token,quantity,date  | GET [base]/Observation?patient=123&category=http://loinc.org\|18725-2&code=urn:oid:1.2.392.100495.10.3.100.5.11.5.2\|1216&value-quantity=gt4&date=le2020-12-31 |
-| MAY | patient,category,code,value-quantity,encounter | reference,token,token,quantity,encounter  | GET [base]/Observation?patient=123&category=http://loinc.org\|18725-2&code=urn:oid:1.2.392.100495.10.3.100.5.11.5.2\|1216&value-quantity=gt4&encounter=456 |
+| MAY | patient,category,code,value-quantity,encounter | reference,token,token,quantity,reference  | GET [base]/Observation?patient=123&category=http://loinc.org\|18725-2&code=urn:oid:1.2.392.100495.10.3.100.5.11.5.2\|1216&value-quantity=gt4&encounter=456 |
 
 #### Operation一覧
 

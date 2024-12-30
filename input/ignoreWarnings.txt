@@ -4,43 +4,36 @@
 # (And include comments like this justifying why)
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
-# Example Existence Warnings
+# IG Defined
+The definition for the element 'Consent.provision.code' binds to the value set 'http://hl7.org/fhir/ValueSet/consent-content-code' which is experimental, but this structure is not labeled as experimental
+!!コードの検証エラー: 用語サービス無しで実行中
+
+# Warnings for Examples
 %The Implementation Guide contains no examples%
-
-# External Terminologies Existence Warnings
-# 下記のurn:iso:std:iso:3166関連警告はなぜ出るかわからないが実害はない
-The definition for the Code System with URI 'urn:iso:std:iso:3166' doesnt provide any codes so the code cannot be validated
-
-# Uniform Reource Locator はValidation不要
-Code System URI 'urn:ietf:rfc:3986' is unknown so the code cannot be validated
+The Implementation Guide contains no explicitly linked examples for this profile
+!!この要素はどの既知のスライスとも一致しません defined in the profile%
 
 # ベストプラクティス
 Rule dom-6%
 
-# DICOM関係
-The valueSet reference http://playbook.radlex.org/playbook/SearchRadlexAction on element ImagingStudy.procedureCode could not be resolved
-The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html on element ImagingStudy.modality could not be resolved
-The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html on element ImagingStudy.series.modality could not be resolved
-The valueSet reference http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1 on element ImagingStudy.series.instance.sopClass could not be resolved
-ValueSet http://dicom%
-!!ValueSet http://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1が見つかりません
+# Terminology関連
+!!!!!!!!CodeSystem urn:oid:1.2.392.200119.5.2.4.1.1.3は未知です
+The value set expansion is too large, and only a subset has been displayed
 
-
-# Wrong Display Name
-Wrong Display Name%
-
-# CodeSystem Content Level #Example or #Fragment Warnings
-#  Error from server: Unable to provide support for code system %
 
 #  Local CodeSystems Warnings
-Code System URI 'http://abc-hospital.local/fhir/Observation/localcode' is unknown so the code cannot be validated
-Code System URI 'http://abc-hospital.local/fhir/ObservationOrder/localcode' is unknown so the code cannot be validated
-Code System URI 'http://abc-hospital.local/fhir/devide/local-device-type' is unknown so the code cannot be validated
+!!!!!!!!CodeSystem http://abc-hospital.local/fhir/Observation/localcodeは未知です
+!!!!!!!!CodeSystem http://abc-hospital.local/fhir/ObservationOrder/localcodeは未知です
+!!!!!!!!CodeSystem http://terminology.sample.com/CodeSystem/disease-outcomeは未知です
+!!!!!!!!CodeSystem http://terminology.sample.com/CodeSystem/disease/1311234567は未知です
 
-The link '#inner-observation-labresult-1' for "ヘモグロビン" cannot be resolved (valid targets: [project-logo, segment-header, project-nav, publish-box, bottom, segment-post-footer, ig-status, top, root, example-diagnosticreport-jp-core-diagnosticreport_labresult-example-検体検査（血液）レポート, stripe, segment-footer, 検体検査報告書-検体検査, segment-navbar, segment-content, segment-breadcrumb])
-The link '#inner-observation-labresult-2' for "赤血球数" cannot be resolved (valid targets: [project-logo, segment-header, project-nav, publish-box, bottom, segment-post-footer, ig-status, top, root, example-diagnosticreport-jp-core-diagnosticreport_labresult-example-検体検査（血液）レポート, stripe, segment-footer, 検体検査報告書-検体検査, segment-navbar, segment-content, segment-breadcrumb])
-The link '#inner-observation-labresult-3' for "ヘマトクリット" cannot be resolved (valid targets: [project-logo, segment-header, project-nav, publish-box, bottom, segment-post-footer, ig-status, top, root, example-diagnosticreport-jp-core-diagnosticreport_labresult-example-検体検査（血液）レポート, stripe, segment-footer, 検体検査報告書-検体検査, segment-navbar, segment-content, segment-breadcrumb])
+# information level
+%which has status 'fragment'
+%no Display Names found for the language ja-JP
 
-# OID CodeSystem not found Warnings (only registered NamingSystem)
-# The following 'urn:oid:1.2.392.200119.4.101.6' was registerd on the JPFHIR TerminologyServer 
-# Code System URI 'urn:oid:1.2.392.200119.4.101.6' is unknown so the code cannot be validated
+# 個別
+http://medis.or.jp/CodeSystem/master-HOT9#107750603 の誤ったdisplay 'ソリタ－Ｔ３号輸液５００ｍＬ' - 1 の選択肢のうちの一つであるべきです: 'ソリタ－Ｔ３号輸液・陽進堂' (ja) (言語 'ja-JP' のため)
+http://medis.or.jp/CodeSystem/master-HOT9#103835401 の誤ったdisplay 'ムコダイン錠２５０ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'ムコダイン錠２５０ｍｇ・杏林製薬' (ja) (言語 'ja-JP' のため)
+http://medis.or.jp/CodeSystem/master-HOT9#110926901 の誤ったdisplay 'パンスポリンＴ錠１００ １００ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'パンスポリンＴ錠１００・武田薬品' (ja) (言語 'ja-JP' のため)
+http://medis.or.jp/CodeSystem/master-HOT9#111501701 の誤ったdisplay '肺炎球菌ワクチン' - 1 の選択肢のうちの一つであるべきです: 'ニューモバックスＮＰ・ＭＳＤ' (ja) (言語 'ja-JP' のため)
+

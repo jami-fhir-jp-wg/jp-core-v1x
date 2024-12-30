@@ -8,24 +8,17 @@ Title: "JP Core Observation VitalSigns Profile"
 Description: "このプロファイルはObservationリソースに対して、バイタルサインのデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_VitalSigns"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-12-30"
 * . ^short = "バイタルサインに関する測定や簡単な観察事実（assertion）"
 * . ^definition = "バイタルサインに関する測定と簡単な観察事実（assertion）。"
 * . ^comment = "バイタルサインに関するObservation（検査測定や観察事実）の制約プロフィール"
 * category 1..
-* category ^slicing.discriminator[+].type = #value
-* category ^slicing.discriminator[=].path = "coding.system"
-* category ^slicing.rules = #open
 * category contains
-    vitalSigns 1..1 and
-    vitalSignCategory 0..*
-* category[vitalSigns] from JP_SimpleObservationCategory_VS (required)
-* category[vitalSigns].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[vitalSigns].coding.code 1..
-* category[vitalSigns].coding.code = $JP_SimpleObservationCategory_CS#vital-signs (exactly)
-* category[vitalSignCategory] from JP_ObservationVitalSignsCategory_VS (preferred)
-* category[vitalSignCategory].coding.system = $JP_ObservationVitalSignsCategory_CS (exactly)
-* category[vitalSignCategory] ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「焦点」"
+    second 0..*
+* category[first].coding.code = $JP_SimpleObservationCategory_CS#vital-signs (exactly)
+* category[second] from JP_ObservationVitalSignsCategory_VS (preferred)
+* category[second].coding.system = $JP_ObservationVitalSignsCategory_CS (exactly)
+* category[second] ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「焦点」"
 * code from JP_ObservationVitalSignsCode_VS (preferred)
 * code ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「観察名称」"
 * subject 1..

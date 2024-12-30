@@ -2,22 +2,21 @@
 ### 必須要素
 
 次の要素は必須（**SHALL**）である。
-- status : リソースの状態（基底のValueSetから選択：registered/available/cancelled/entered-in-error/unknown）
-- subject : JP Core Patientを参照する
+- status : リソースの状態。（基底のValueSetから選択：registered/available/cancelled/entered-in-error/unknown）
+- subject : JP Core Patientを参照する。
 
 #### 必須項目
 ImagingStudyリソースは、次の要素を持たなければならない。(**SHALL**)
-- status : 検査項目情報の状態は必須である
-- subject : このリソースが示す検査項目がどの患者のものかを示すため、参照するpatientリソース定義を必須とした
+- status : 検査項目情報の状態は必須である。
+- subject : このリソースが示す検査項目がどの患者のものかを示すため、参照するpatientリソース定義を必須とした。
 
 #### Must Support
 
-次の要素に関する情報が送信システムに存在する場合、その要素がサポートされなければならないことを意味する（**Must Support**）
-- identifier : DICOMフォーマットのデータが存在する場合、DICOMタグのStudy Instance UID（0020,000D）が保持される必要がある
-- series.modality : DICOMフォーマットのデータが存在する場合、シリーズが取得されたモダリティを示す。DICOMでは必須情報となっており、DICOMタグ（0008,0060）の情報が格納される。内視鏡検査の場合は"ES"が指定される
-- series.instance.uid : DICOMフォーマットのデータ（インスタンス）のユニークIDを示す。DICOMタグ（0008,0018）の情報を格納する
-- series.instance.sopClass : SOPクラスUID。DICOMタグ（0008,0016）の情報を格納する。内視鏡の場合、通常以下のいずれかが指定される
-
+次の要素に関する情報が送信システムに存在する場合、その要素がサポートされなければならないことを意味する。（**Must Support**）
+- identifier : DICOMフォーマットのデータが存在する場合、DICOMタグのStudy Instance UID（0020,000D）が保持される必要がある。
+- series.modality : DICOMフォーマットのデータが存在する場合、シリーズが取得されたモダリティを示す。DICOMでは必須情報となっており、DICOMタグ（0008,0060）の情報が格納される。内視鏡検査の場合は"ES"が指定される。
+- series.instance.uid : DICOMフォーマットのデータ（インスタンス）のユニークIDを示す。DICOMタグ（0008,0018）の情報を格納する。
+- series.instance.sopClass : SOPクラスUID。DICOMタグ（0008,0016）の情報を格納する。内視鏡の場合、通常以下のいずれかが指定される。
 
   |動画・静止画|SOP Class| UID |
   |---------|---------|-----|
@@ -47,6 +46,7 @@ ImagingStudyはDICOM tagとの対応が重要である。各エレメントとDI
 
 | コンフォーマンス | パラメータ    | 型     | 例          |
 | -------------| ----- | ------ | ----- |
+| SHALL | identifier | token | `GET [base]/ImagingStudy?identifier=urn:ietf:rfc:3986|2.16.124.999999.9999.1154777499.30246.19789.3503430045` |
 | SHOULD | patient | reference | `GET [base]/ImagingStudy?patient=123` |
 | SHOULD | patient, modality | reference, token | `GET [base]/ImagingStudy?patient=123&modality=ES` |
 | SHOULD | patient,started | reference, date | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-25` |
@@ -59,7 +59,9 @@ ImagingStudyはDICOM tagとの対応が重要である。各エレメントとDI
 
 ##### 必須検索パラメータ
 
-本プロファイルで必須(**SHALL**)として定義された検索項目はない。
+次の検索パラメータは必須でサポートされなければならない。（**SHALL**）
+
+- identifier
 
 ##### オプション検索パラメータ
 

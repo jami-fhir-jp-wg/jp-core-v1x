@@ -17,7 +17,7 @@ Usage: #example
     *  code = #problem-list-item
 *  severity
   *  coding[0]
-    *  system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionSeverity_CS"
+    *  system = $JP_ConditionSeverity_CS
     *  code = #MO
     *  display = "中度"
 *  code
@@ -35,4 +35,4 @@ Usage: #example
 *  recordedDate = "2022-08-01"
 *  evidence[0]
   *  code[0]
-    * text = "下血"
+    *  text = "下血"

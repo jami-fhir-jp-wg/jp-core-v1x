@@ -49,14 +49,61 @@ RuleSet: SetSearchParameterInteraction
 * rest.resource[=].referencePolicy = #resolves
 * rest.resource[=].searchRevInclude = "Provenance:target"
 
-
+// ------------------------------------------------------
+// 検索パラメータ関連定義
+// ------------------------------------------------------
 // 定義済み検索パラメーターの追加
-RuleSet: PutDefinedSearchParam(name, param-name, type)
-* insert PutSearchParam({name}, http://hl7.org/fhir/SearchParameter/{param-name}, {type})
+RuleSet: PutDefinedSearchParam(expectation, name, param-name, type)
+* insert PutSearchParam({expectation}, {name}, http://hl7.org/fhir/SearchParameter/{param-name}, {type})
 
 // 検索パラメーターの追加
-RuleSet: PutSearchParam(name, definition, type)
-* rest.resource[=].searchParam[+].name = "{name}"
+RuleSet: PutSearchParam(expectation,name, definition, type)
+* rest.resource[=].searchParam[+].extension[+].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].searchParam[=].extension[=].valueCode = #{expectation}
+* rest.resource[=].searchParam[=].name = "{name}"
 * rest.resource[=].searchParam[=].definition = "{definition}"
 * rest.resource[=].searchParam[=].type = #{type}
 
+// 検索パラメーターの結合
+RuleSet: InitializeCombination(expectation)
+* rest.resource[=].extension.url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension.valueCode = #{expectation}
+
+//　複数検索パラメータ定義(6個)
+RuleSet: PutCombination6(expectation, param1, param2 ,param3, param4, param5, param6)
+* insert PutCombination5({expectation}, {param1}, {param2} , {param3}, {param4}, {param5})
+* insert PutCombinationParameter({param6})
+
+//　複数検索パラメータ定義(5個)
+RuleSet: PutCombination5(expectation, param1, param2 ,param3, param4, param5)
+* insert PutCombination4({expectation}, {param1}, {param2} , {param3}, {param4})
+* insert PutCombinationParameter({param5})
+
+//　複数検索パラメータ定義(4個)
+RuleSet: PutCombination4(expectation, param1, param2 ,param3, param4)
+* insert PutCombination3({expectation}, {param1}, {param2} , {param3} )
+* insert PutCombinationParameter({param4})
+
+//　複数検索パラメータ定義(3個)
+RuleSet: PutCombination3(expectation, param1, param2, param3)
+* insert PutCombination2({expectation}, {param1}, {param2})
+* insert PutCombinationParameter({param3})
+
+//　複数検索パラメータ定義(2個)
+RuleSet: PutCombination2(expectation, param1, param2)
+* rest.resource[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-search-parameter-combination"
+* rest.resource[=].extension[=].extension[0].url = "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation"
+* rest.resource[=].extension[=].extension[=].valueCode = #{expectation}
+* insert PutCombinationParameter({param1})
+* insert PutCombinationParameter({param2})
+
+//　パラメータ追加
+RuleSet: PutCombinationParameter(param1)
+* rest.resource[=].extension[=].extension[+].url = "required"
+* rest.resource[=].extension[=].extension[=].valueString = "{param1}"
+
+//　日本語訳の設定
+RuleSet: AddJpDesignation(code, display)
+* ^concept[+].code = #{code}
+* ^concept[=].designation[+].language = #ja
+* ^concept[=].designation[=].value = "{display}"

@@ -5,11 +5,11 @@ Description: "Observation（身体計測）で使用する項目コードのコ�
 * ^url = $JP_ObservationBodyMeasurementCode_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2023-11-11"
+* ^date = "2024-12-30"
 * ^caseSensitive = true
 * ^valueSet = $JP_ObservationBodyMeasurementCode_VS
 * ^content = #complete
-* ^copyright = "Copyright MEDIS-DC 医療情報システム開発センター"
+* ^copyright = "Copyright MEDIS-DC 一般財団法人 医療情報システム開発センター"
 * #31000296 "体重" "体重(Kg)"
 * #31000297 "体重" "体重(g)"
 * #31000298 "身長"

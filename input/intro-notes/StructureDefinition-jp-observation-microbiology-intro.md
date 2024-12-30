@@ -1,3 +1,4 @@
+
 本プロファイル説明は、患者に関連付けられた微生物検査結果を記録、検索、および取得のために、FHIR Observationリソースを使用するにあたっての、最低限の制約を記述したものである。
 Observation リソースに対して本プロファイルに準拠する場合に必須となる要素や、サポートすべき拡張、用語、検索パラメータを定義する。
 
@@ -20,9 +21,9 @@ Observation リソースに対して本プロファイルに準拠する場合�
 
 具体的には .hasMemberエレメントに対して関連する下位の本プロファイルを適用したObservationリソースを関連づけることでグルーピングを行う。微生物学検査で表現する情報群については、図にて表現されるように、検査結果レポートに相当する JP_DiagnosticReport_Microbiologyに（第0層）に対し、
 
-- 第1層：「培養・同定（Organism panels）」、「塗抹（Gram-stain、または AFB-stains、または Others）」  
-- 第2層：「菌名・菌量（Organism Id）」、「培養結果（growth）」、「薬剤感受性（Susceptibility panels）」  
-- 第3層：「感受性結果（Susceptibility Measurement）」
+- 第1層 : 「培養・同定（Organism panels）」、「塗抹（Gram-stain、または AFB-stains、または Others）」  
+- 第2層 : 「菌名・菌量（Organism Id）」、「培養結果（growth）」、「薬剤感受性（Susceptibility panels）」  
+- 第3層 : 「感受性結果（Susceptibility Measurement）」
 
 という情報要素を表現する本プロファイルを適用したObservationリソースを用意する。それぞれの層では一般微生物学検査または抗酸菌検査を実施した際に得られる以下の情報が収容されることを想定している。
 <!-- 

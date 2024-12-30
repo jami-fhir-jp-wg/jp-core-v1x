@@ -61,10 +61,10 @@ var(--publish-box-border); */
   --link-color: #428bca; /* 13. Hyperlink text color */
   --link-hover-color: #2a6496; /* 14. Hyperlink text hover color */
 
-  --publish-box-bg-color: #E9FC7D; /* 15. Publish box background color */
+  --publish-box-bg-color: yellow; /* 15. Publish box background color */
   --publish-box-border: 1px solid #0A0008; /* 16.  Publish box border definition */
 
-  --toc-box-bg-color: #E9FC7D; /* 17.  TOC box background color */
+  --toc-box-bg-color: #ffeb7e; /* 17.  TOC box background color */
   --toc-box-border: 1px solid navy; /* 18. TOC box border definition */
 
   --stu-note-background-color: #fff2ff; /* 19. (STU) Note box background color */
@@ -76,7 +76,7 @@ var(--publish-box-border); */
 
   --footer-text-color: #ffffff; /* 24. Footer highlight font color */
   --footer-hyperlink-text-color: #81BEF7; /* 25. Footer hyperlinks font color */
-  --footer-highlight-text-color: #E9FC7D; /* 26. Footer highlight font color */
+  --footer-highlight-text-color: #ffff77; /* 26. Footer highlight font color */
 
   --breadcrumb-bg-color: #f5f5f5; /* 27. Breadcrumb font color */
   --breadcrumb-text-color: ##555555; /* 28. Breadcrumb font color */
@@ -178,6 +178,15 @@ body {
 }
 #logo img {
   max-width: 100%;
+}
+
+#fcp-nav {
+  line-height: 50px;
+  float: right;
+}
+
+#fcp-nav a {
+  color: inherit;
 }
 
 #project-nav {
@@ -609,7 +618,8 @@ div.markdown-toc p.link
 
 /* Fix to avoid truncating letter descenders in headings */
 h1, h2, h3, h4, h5, h6, .title {
-overflow: visible;
+  overflow: visible;
+  margin: 1em 0 0.4em 0;
 }
 
 /* Common content for section numbering */
@@ -661,6 +671,19 @@ li a[href^="http://"]:not([no-external^="true"]):after,li a[href^="https://"]:no
     color: #3c763d;
     background-color: #dff0d8;
     border-color: #d6e9c6;
+}
+
+.modified-content::before {
+  white-space: pre;
+  content: "Modified Content\A ";
+  color: red;
+  font-weight: bold;}
+.modified-content{
+    margin: 5px;
+    padding: 10px;
+    color: #784212;
+    background-color: #fef9e7;
+    border-color: #f9e79f;
 }
 
 .bg-success{
@@ -740,4 +763,10 @@ li a[href^="http://"]:not([no-external^="true"]):after,li a[href^="https://"]:no
   padding: 0px 0px; 
   border-width: 0px;
   background-color: transparent;
+}
+
+
+code[class*="language-"],
+pre[class*="language-"] {
+    text-shadow: none;
 }

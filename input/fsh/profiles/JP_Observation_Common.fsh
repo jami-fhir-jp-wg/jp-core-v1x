@@ -8,7 +8,7 @@ Title: "JP Core Observation Common Profile"
 Description: "このプロファイルはObservationリソースに対して、データを送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-12-30"
 * . ^short = "測定や簡単な観察事実（assertion）"
 * . ^definition = "患者、デバイス、またはその他の対象について行われた測定と簡単な観察事実（assertion）。"
 * . ^comment = "すべてのObservation（検査測定や観察事実）の共通部分のプロファイル"
@@ -21,7 +21,17 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(status, 結果の状態)
 * status ^comment = "このリソースは現在有効でないというマークをするコードを含んでいるため、この要素はモディファイアー（修飾的要素）として位置づけられている。"
 * insert SetDefinition(category, 行われた検査の一般的なタイプの分類。JP Core Observation Common Profileの【詳細説明】を参照のこと。)
-* category from $JP_SimpleObservationCategory_VS (preferred)
+//* category from $JP_SimpleObservationCategory_VS (preferred)
+* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.path = "coding.system"
+* category ^slicing.rules = #open
+* category contains
+    first 1..* 
+* category[first] ^short = "検査の第1カテゴリはJP_SimpleObservationCategory_VSから値を指定する。"
+* category[first] from JP_SimpleObservationCategory_VS (required)
+* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
+* category[first].coding.code 1..
+
 * insert SetDefinition(category, このObservationを分類するコード)
 * category ^comment = "階層的にカテゴリーを設定することで粒度のレベルを概念定義できる。"
 * insert SetDefinition(code, このObservationの対象を特定するコード)
@@ -52,9 +62,11 @@ Description: "このプロファイルはObservationリソースに対して、�
 * note ^requirements = "Need to be able to provide free text additional information.  
 フリーテキストの追加情報を提供できる必要がある。"
 * insert SetDefinition(bodySite, 対象となった身体部位)
+* bodySite from $JP_Observation_BodySite_VS (example)
 * insert SetDefinition(method, このObservationの実施方法)
 * insert SetDefinition(specimen, このObservationに使われた検体/標本に関する情報)
 * specimen ^comment = "`Observation.code`にあるコードで暗黙的に示されない場合にのみ使用する必要がある。検体自体の観察は行われない。観察（観測、検査）対象者に対して実施されるが、多くの場合には対象者から得られた検体に対して実施される。検体が奥の場合に関わるが、それらは常に追跡され、明示的に報告されるとは限らないことに注意すること。またobservationリソースは、検体を明示的に記述するような状況下（診断レポートなど）で使用される場合があることに注意。"
+* specimen only Reference(JP_Specimen_Common)
 * insert SetDefinition(device, このObservationでデータを得るために使われた測定機器に関する情報)
 * device ^comment = "これは、結果の送信に関与するデバイス（ゲートウェイなど）を表すことを意図したものではない。そのようなデバイスは、必要に応じてProvenanceリソースを使用して文書化する。"
 * insert SetDefinition(referenceRange, 基準範囲との比較による結果の解釈方法のガイダンス)
@@ -62,7 +74,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * referenceRange ^requirements = "どの値が「正常」と見なされるかを知ることは、特定の結果の意義を評価するのに役立つ。さまざまなコンテキストに対応するため複数の参照範囲を提供できる必要がある。"
 * hasMember only Reference(JP_Observation_Common or QuestionnaireResponse or MolecularSequence)
 * insert SetDefinition(hasMember, このObservationに関連する子リソースに関する情報。このObservationに関連する/属するパネル検査や検査セットなどのObservationグループ)
-* hasMember ^comment = "この要素を使用する場合、observationには通常、値または関連するリソースのセットのいじれかを含む。その両方を含む場合もある。複数のobservationをグループに一緒にまとめる方法については、以下の[メモ]（observation.html＃obsgrouping）を参照せよ。システムは、[QuestionnaireResponse]（questionnaireresponse.html）からの結果を計算して最終スコアにし、そのスコアをobservationとして表す場合があることに注意。"
+* hasMember ^comment = "この要素を使用する場合、observationには通常、値または関連するリソースのセットのいずれかを含む。その両方を含む場合もある。複数のobservationをグループに一緒にまとめる方法については、以下の[メモ]（observation.html＃obsgrouping）を参照せよ。システムは、[QuestionnaireResponse]（questionnaireresponse.html）からの結果を計算して最終スコアにし、そのスコアをobservationとして表す場合があることに注意。"
 * derivedFrom only Reference(DocumentReference or ImagingStudy or Media or QuestionnaireResponse or JP_Observation_Common or MolecularSequence)
 * insert SetDefinition(derivedFrom, このObservationの結果の導出元に関する情報。例えば、画像検査から取得された結果となる場合その導出元となる画像検査結果を示すImagingStudyリソース)
 * derivedFrom ^comment = "この要素にリストされているすべての参照の選択肢は、派生値の元のデータなる可能性のある臨床観察やその他の測定値を表すことができる。最も一般的な参照先は、別のobservationである。observationをグループに一緒にまとめる方法については、以下の[メモ]（observation.html＃obsgrouping）を参照すること。"

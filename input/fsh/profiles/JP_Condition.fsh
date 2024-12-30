@@ -8,7 +8,7 @@ Title: "JP Core Condition Profile"
 Description: "このプロファイルはConditionリソースに対して、患者の健康状態に関するデータを送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-12-30"
 * . ^short = "Detailed information about conditions, problems or diagnoses. 患者の臨床状態、問題、または診断に関する詳細な情報"
 * . ^definition = "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.  
 健康上の懸念となるレベルに達した、身体的、精神的、社会的な負の状態(condition)や問題（problem／issue）、医療者による診断(diagnosis)、生じたイベント(event)、置かれている状況(situation)、臨床的概念(clinical concept)。"
@@ -28,6 +28,7 @@ Description: "このプロファイルはConditionリソースに対して、患
 可能な限り、ターミノロジを用いて重症度をコーディングすることが好ましい。  
 このプロファイルではHL70421 Severity of Illness Code（MI 軽度, MO 中度, SE 重度）を採用。"
 * code ^short = "Identification of the condition, problem or diagnosis. この患者状態の識別コード"
+* bodySite from JP_Condition_BodySite_VS (example)
 * bodySite ^short = "Anatomical location, if relevant. もし関連するのであれば、その人体部位"
 * subject only Reference(JP_Patient)
 * subject ^short = "Who has the condition? 誰がこの状態を有するか"

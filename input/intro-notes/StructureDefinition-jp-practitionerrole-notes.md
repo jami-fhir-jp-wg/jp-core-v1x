@@ -26,7 +26,7 @@
 1. identifier 検索パラメータを使用して、職種IDなどの識別子によるPractitionerRoleの検索をサポートしなければならない（**SHALL**）
 
    ```
-   GET [base]/PractitionerRole?identifier={system|}[code]
+   GET [base]/PractitionerRole?identifier={system|}[token]
    ```
 
    例：
@@ -46,7 +46,7 @@
 1. specialty 検索パラメータを使用して、医療者の特定の専門性によるPractitionerRoleの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
-   GET [base]/PractitionerRole?specialty={system|}[code]
+   GET [base]/PractitionerRole?specialty={system|}[token]
    ```
 
    例：

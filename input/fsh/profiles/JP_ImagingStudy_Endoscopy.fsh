@@ -8,7 +8,7 @@ Title: "JP Core ImagingStudy Endoscopy Profile"
 Description: "このプロファイルはImagingStudyリソースに対して、主に内視鏡検査で撮影された画像に関わるデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Endoscopy"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-12-30"
 * . ^short = "内視鏡を使用したDICOM画像検査に関する情報"
 * identifier MS
 * identifier ^short = "DICOM画像検査全体を一意に識別するためのID【詳細参照】"
@@ -16,6 +16,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * identifier ^comment = "Study Instance UIDの値を指定する。"
 * status ^short = "DICOM画像検査のステータス"
 * status ^definition = "DICOM画像検査のステータス。"
+* modality from $JP_DICOMModality_VS (required)
 * modality ^short = "DICOM画像検査で使用された撮影装置（モダリティ）【詳細参照】"
 * modality ^definition = "DICOM画像検査で使用された撮影装置（モダリティ）。"
 * modality ^comment = "内視鏡を表すモダリティコード”ES”を指定する。複数モダリティを使用した場合には、該当するモダリティコードを並記する。"
@@ -55,7 +56,8 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * procedureCode ^short = "実施された処置を表すコード【詳細参照】"
 * procedureCode ^definition = "実施された処置を表すコード。"
 * procedureCode ^comment = "内視鏡では省略してよい。"
-* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
+//* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
+* procedureCode from $JP_DICONRadLexPlaybook_VS
 * location only Reference(JP_Location)
 * location ^short = "DICOM画像検査が実施された場所【詳細参照】"
 * location ^definition = "DICOM画像検査が実施された場所。"
@@ -81,6 +83,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.number ^short = "Series Instance UIDとは別に、ユーザー（または装置）が自由に決められるシリーズ番号"
 * series.number ^definition = "Series Instance UIDとは別に、ユーザー（または装置）が自由に決められるシリーズ番号。"
 * series.modality MS
+* series.modality from $JP_DICOMModality_VS (required)
 * series.modality ^short = "このシリーズが取得された撮影装置（モダリティ）【詳細参照】"
 * series.modality ^definition = "このシリーズが取得された撮影装置（モダリティ）。"
 * series.modality ^comment = "内視鏡を表すモダリティコード”ES”を指定する。1シリーズ1モダリティで、1つのシリーズの中に複数のモダリティが混在することはない。"
@@ -93,6 +96,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.bodySite ^short = "このシリーズの対象となる解剖学的部位【詳細参照】"
 * series.bodySite ^definition = "このシリーズの対象となる解剖学的部位。"
 * series.bodySite ^comment = "内視鏡では省略してよい。"
+* series.bodySite from JP_ImagingStudy_Radiology_BodySite_VS (example)
 * series.laterality ^short = "解剖学的部位の左右【詳細参照】"
 * series.laterality ^definition = "解剖学的部位の左右。"
 * series.laterality ^comment = "内視鏡では省略してよい。"
@@ -123,6 +127,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.instance.sopClass ^comment = "内視鏡では、主に以下の値が指定される。  
 　VL Endoscopic Image Storage:1.2.840.10008.5.1.4.1.1.77.1.1  
 　Secondary Capture Image Storage:1.2.840.10008.5.1.4.1.1.7"
+* series.instance.sopClass from $JP_DICOMSopClass_VS (extensible)
 * series.instance.number ^short = "SOP Instance UIDとは別に、ユーザー（または装置）が自由に決められるインスタンス（画像）ごとの番号【詳細参照】"
 * series.instance.number ^definition = "SOP Instance UIDとは別に、ユーザー（または装置）が自由に決められるインスタンス（画像）ごとの番号。"
 * series.instance.number ^comment = "Instance Number (0020,0013) に値が入っていた場合は、その値を指定する。"

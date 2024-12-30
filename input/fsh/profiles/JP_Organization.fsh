@@ -8,7 +8,7 @@ Title: "JP Core Organization Profile"
 Description: "このプロファイルはOrganizationリソースに対して、組織情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-12-30"
 * . ^short = "共通の目的を持った人や組織の集まり【詳細参照】"
 * . ^definition = "集団行動の何らかの形での達成を目的として結成された、正式または非公式に認められた人々または組織のグループ。企業、機関、企業、部門、コミュニティグループ、医療実践グループ、支払者/保険者などが含まれる。"
 * extension ^slicing.discriminator.type = #value
@@ -25,7 +25,7 @@ valueには都道府県番号2桁の値を格納し、systemには都道府県�
 * extension[organizationCategory] ^comment = "点数表コード１桁（医科１、非保険検診施設２、歯科３、調剤４、訪問看護ステーション６）。systemには点数表番号を表すOID「1.2.392.100495.20.3.22」を指定する。"
 * extension[organizationNo] ^short = "医療機関コード（７桁）を表現するExtension【詳細参照】"
 * extension[organizationNo] ^comment = "医療機関コード（７桁）。Identifier型の拡張「InsuranceOrganizationNo」を使用する。  
-systemには医療機関コードを表すOID「1.2.392.100495.20.3.23」を指定する。  
+systemには医療機関コードを表すOID「http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicalOrganizationID」を指定する。  
 valueには下記の値を格納する。  
 　- 保険医療機関・保険薬局 : `医療機関コード（７桁）`  
 　- 非保険の特定健診・特定保健指導機関 : `機関コード（７桁）`  
@@ -51,9 +51,10 @@ value : ```医療機関コード（１０桁）```を使用する。
 * identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no" (exactly)
 * identifier[medicalInstitutionCode].assigner only Reference(JP_Organization)
 * identifier[insurerNumber] ^comment = "健康保険組合などの保険者の保険者番号を表現する際のIdentifier表現に使用する  
-system要素には保険者番号を示すOID\"urn:oid:1.2.392.100495.20.3.61\"を指定する。"
-* identifier[insurerNumber].system = "urn:oid:1.2.392.100495.20.3.61" (exactly)
+system要素には保険者番号を示す\"http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber\"を指定する。"
+* identifier[insurerNumber].system = $JP_IdSystem_InsurerNumber (exactly)
 * identifier[insurerNumber].assigner only Reference(JP_Organization)
+* identifier[insurerNumber].value ^comment = "保険者番号。英数字 券面記載の保険者番号。"
 * active ^short = "組織の記録がまだ有効に使われているかどうか【詳細参照】"
 * active ^definition = "このアクティブフラグは、組織を一時的に閉鎖したり、工事中であることを示すために使用されることを意図していない。代わりに、組織内の場所(複数可)は、中断されたステータスを持っている必要がある。一時停止の理由の詳細が必要な場合は、この要素の拡張子を使用する必要がある。  
 この要素は、リソースがエラーで作成されたことをマークするために使用される可能性があるため、修飾子としてラベル付けされている。"
@@ -172,10 +173,10 @@ Description: "点数表コード１桁を表現するためのExtension。 JP Co
 * ^context.expression = "Organization"
 * . ^short = "点数表コード１桁【詳細参照】"
 * . ^comment = "点数表コード１桁。systemには点数表番号  
-を表すOID「1.2.392.100495.20.3.22」を指定する。"
+を表すOID「http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationFeeScoreType」を指定する。"
 * url = $JP_Organization_InsuranceOrganizationCategory (exactly)
 * value[x] only Coding
-* valueCoding from JP_MedicalFeeScoreType_VS (extensible)
+* valueCoding from $JP_MedicalFeeScoreType_VS (extensible)
 * valueCoding.system ^definition = "点数表番号の名前空間を識別するURIを指定。固定値。"
 * valueCoding.code ^definition = "点数表コード１桁「1：医科」、「3：歯科」、「4：調剤」、「5：老人保健施設」、「6：訪問看護ステーション」」。"
 
@@ -190,12 +191,12 @@ Description: "保険医療機関番号７桁を表現するためのExtension。
 * ^context.expression = "Organization"
 * . ^short = "保険医療機関番号７桁【詳細参照】"
 * . ^comment = "保険医療機関番号７桁。Identifier型の拡張  
-「InsuranceOrganizationNo」を使用する。systemには医療機関コードを表すOID「1.2.392.100495.20.3.23」を指定する。  
+「InsuranceOrganizationNo」を使用する。systemには医療機関コードを表すOID「$JP_IdSystem_MedicalOrganizationID」を指定する。  
 「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」の定義をベースにしているが、URLを以下に変更している  
 http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
 * url = $JP_Organization_InsuranceOrganizationNo (exactly)
 * value[x] only Identifier
-* value[x].system = "urn:oid:1.2.392.100495.20.3.23" (exactly)
+* value[x].system = $JP_IdSystem_MedicalOrganizationID  (exactly)
 * value[x].system ^definition = "保険医療機関コードの名前空間を識別するURIを指定。固定値。"
 * value[x].value ^definition = "保険医療機関番号７桁。半角数字で７桁固定。"
 
@@ -211,7 +212,7 @@ JP Core Organizationプロファイルで利用されることを想定してい
 * ^context.expression = "Organization"
 * . ^short = "都道府県番号2桁【詳細参照】"
 * . ^comment = "都道府県番号２桁。Identifier型の拡張を使用する。  
-valueには都道府県番号2桁の値を格納し、systemには都道府県番号を表すOID「1.2.392.100495.20.3.21」を指定する。"
+valueには都道府県番号2桁の値を格納し、systemには都道府県番号を表すOID「1http://jpfhir.jp/fhir/core/mhlw/CodeSystem/PrefectureNo-2digits」を指定する。"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo" (exactly)
 * value[x] only Coding
 * valueCoding from JP_PrefectureNumber_VS (extensible)

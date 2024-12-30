@@ -19,9 +19,9 @@
 | SHALL            | identifier                 | token      | GET [base]/Condition?identifier=http://myhospital.com/fhir/condition\|123 |
 | SHOULD           | patient                    | reference  | GET [base]/Condition?patient=Patient/123                                        |
 | MAY              | patient,onset-date         | reference,date | GET [base]/Condition?patient=Patient/123&onset-date=ge2021-08-24             |
-| MAY              | patient,clinical-status     | reference,code | GET [base]/Condition?patient=Patient/123&clinical-status=active              |
-| MAY              | patient,verificationstatus | reference,code | GET [base]/Condition?patient=Patient/123&verificationstatus=confirmed       |
-| MAY              | patient,category           | reference,code | GET [base]/Condition??patient=Patient/123&category=food                  |
+| MAY              | patient,clinical-status     | reference,token | GET [base]/Condition?patient=Patient/123&clinical-status=active              |
+| MAY              | patient,verification-status | reference,token | GET [base]/Condition?patient=Patient/123&verification-status=confirmed       |
+| MAY              | patient,category           | reference,token | GET [base]/Condition??patient=Patient/123&category=food                  |
 
 ##### 必須検索パラメータ
 
@@ -30,7 +30,7 @@
 1. 検索パラメータidentifierを指定し、レコードIDなどの識別子によりConditionを検索
 
    ```
-   GET [base]/Condition?identifier={system|}[code]
+   GET [base]/Condition?identifier={system|}[token]
    ```
    例：
    ```
@@ -74,46 +74,46 @@
    
       指定された患者および日付のすべてのConditionを含むBundleを検索する。
 
-2. 検索パラメータpatientとclinicalstatusを指定し、該当するすべてのConditionを検索
+2. 検索パラメータpatientとclinical-statusを指定し、該当するすべてのConditionを検索
 
-      * OR検索のサポートを含む(例えば clinicalstatus={system\|}[code],{system\|}[code],...)
+      * OR検索のサポートを含む(例えば clinical-status={system\|}[token],{system\|}[token],...)
       
       ```
-      GET [base]/Condition?patient={reference}&clinicalstatus={system|}[code]{,{system|}[code],...}
+      GET [base]/Condition?patient={reference}&clinical-status={system|}[token]{,{system|}[token],...}
       ```
       例：
       ```
-      GET [base]/Condition?patient=Patient/123&clinicalstatus=active
+      GET [base]/Condition?patient=Patient/123&clinical-status=active
       ```
       ```
-      GET [base]/Condition?patient=Patient/123&clinicalstatus=http://hl7.org/fhir/ValueSet/condition-clinical|active
+      GET [base]/Condition?patient=Patient/123&clinical-status=http://hl7.org/fhir/ValueSet/condition-clinical|active
       ```
    
       指定された患者およびステータスのすべてのConditionを含むBundleを検索する。
 
-3. 検索パラメータpatientとverificationstatusを指定し、該当するすべてのConditionを検索
+3. 検索パラメータpatientとverification-statusを指定し、該当するすべてのConditionを検索
 
-      * OR検索のサポートを含む(例えば verificationstatus={system\|}[code],{system\|}[code],...)
+      * OR検索のサポートを含む(例えば verification-status={system\|}[token],{system\|}[token],...)
       
       ```
-      GET [base]/Condition?patient={reference}&verificationstatus={system|}[code]{,{system|}[code],...}
+      GET [base]/Condition?patient={reference}&verification-status={system|}[token]{,{system|}[token],...}
       ```
       例：
       ```
-      GET [base]/Condition?patient=Patient/123&verificationstatus=confirmed
+      GET [base]/Condition?patient=Patient/123&verification-status=confirmed
       ```
       ```
-      GET [base]/Condition?patient=Patient/123&verificationstatus=http://hl7.org/fhir/ValueSet/condition-ver-status|confirmed
+      GET [base]/Condition?patient=Patient/123&verification-status=http://hl7.org/fhir/ValueSet/condition-ver-status|confirmed
       ```
    
       指定された患者およびステータスのすべてのConditionを含むBundleを検索する。
 
 4. 検索パラメータpatientとcategoryを指定し、該当するすべてのConditionを検索
 
-      * OR検索のサポートを含む(例えば category={system\|}[code],{system\|}[code],...)
+      * OR検索のサポートを含む(例えば category={system\|}[token],{system\|}[token],...)
 
       ```
-      GET [base]/Condition?patient={reference}&category={system|}[code]{,{system|}[code],...}
+      GET [base]/Condition?patient={reference}&category={system|}[token]{,{system|}[token],...}
       ```  
       例：
       ```

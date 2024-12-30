@@ -3,12 +3,16 @@ InstanceOf: JP_MedicationRequest_Injection
 Title: "JP Core MedicationRequest Injection Example 注射処方指示 ワンショット静脈注射"
 Description: "注射処方指示 ホリゾン注射液１０ｍｇワンショット静脈注射"
 Usage: #example
-* contained[0] = jp-medicationrequest-injection-medication-example-1
+* contained[+] = jp-medicationrequest-injection-medication-example-1
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-1
-* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
-* identifier[rpNumber].value = "1"
-* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
-* identifier[requestIdentifier].value = "1234567890.1"
+* identifier[+].system = $JP_Medication_RPGroupNumber
+* identifier[=].value = "1"
+* identifier[+].system = $JP_ResourceInstance_Identifier
+* identifier[=].value = "1234567890.1"
+* identifier[+].system = $JP_IdSystem_PrescriptionDocumentID
+* identifier[=].value = "20241101-0000000000000001"
+* identifier[+].system = "urn:oid:1.2.392.100495.20.3.11.11311234567"
+* identifier[=].value = "20241101-00001"
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
@@ -40,9 +44,9 @@ Usage: #example
 * contained[0] = jp-medicationrequest-injection-medication-example-2
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-2
 * contained[+] = jp-medicationrequest-injection-device-example-2
-* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "2"
-* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
+* identifier[requestIdentifier].system = $JP_ResourceInstance_Identifier
 * identifier[requestIdentifier].value = "1234567890.2.1"
 * status = #active
 * intent = #order
@@ -54,10 +58,8 @@ Usage: #example
 * authoredOn = "2016-07-01T07:28:17+09:00"
 * requester = Reference(Practitioner/jp-practitioner-example-female-1)
 * insurance = Reference(Coverage/jp-coverage-example-1)
-* dosageInstruction.extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Device"
-* dosageInstruction.extension[=].valueReference = Reference(Device/jp-medicationrequest-injection-device-example-2)
-* dosageInstruction.extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_Line"
-* dosageInstruction.extension[=].valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
+* dosageInstruction.extension[device].valueReference = Reference(Device/jp-medicationrequest-injection-device-example-2)
+* dosageInstruction.extension[line].valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
 * dosageInstruction.text = "主管 静脈注射 左腕"
 * dosageInstruction.timing.repeat.boundsPeriod.start = "2016-07-01T08:00:00+09:00"
 * dosageInstruction.timing.repeat.boundsPeriod.end = "2016-07-01T13:00:00+09:00"
@@ -75,13 +77,14 @@ Title: "JP Core Medication Example ホリゾン注射液"
 Description: "ホリゾン注射液"
 Usage: #inline
 * status = #active
-* ingredient.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo"
-* ingredient.extension.valueInteger = 1
-* ingredient.itemCodeableConcept = $JP_MedicationCodeHOT9_CS#100558502 "ホリゾン注射液１０ｍｇ"
-* ingredient.strength.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"
-* ingredient.strength.extension.valueCodeableConcept = $JP_MedicationIngredientStrengthStrengthType_CS#1 "製剤量"
-* ingredient.strength.numerator = 1 $JP_MedicationUnitMERIT9_CS#AMP "アンプル"
-* ingredient.strength.denominator = 1 $JP_MedicationUnitMERIT9_CS#TIME "回"
+* ingredient[+].extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo"
+* ingredient[=].extension.valueInteger = 1
+* ingredient[=].itemCodeableConcept = $JP_MedicationCodeHOT9_CS#100558502 "ホリゾン注射液１０ｍｇ"
+* ingredient[=].strength.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"
+* ingredient[=].strength.extension.valueCodeableConcept = $JP_MedicationIngredientStrengthStrengthType_CS#1 "製剤量"
+* ingredient[=].strength.numerator = 1 $JP_MedicationUnitMERIT9_CS#AMP "アンプル"
+* ingredient[=].strength.denominator = 1 $JP_MedicationUnitMERIT9_CS#TIME "回"
+
 
 Instance: jp-medicationrequest-injection-medication-example-2
 InstanceOf: JP_Medication
@@ -107,7 +110,7 @@ Description: "左腕"
 Usage: #inline
 * location = http://terminology.hl7.org/CodeSystem/v2-0550#ARM "Arm"
 * locationQualifier = http://terminology.hl7.org/CodeSystem/v2-0495#L "Left"
-* patient = Reference(Patient/jp-patient-example-1)
+* patient = Reference(Patient/jp-patient-example-1) 
 
 Instance: jp-medicationrequest-injection-bodystructure-example-2
 InstanceOf: BodyStructure

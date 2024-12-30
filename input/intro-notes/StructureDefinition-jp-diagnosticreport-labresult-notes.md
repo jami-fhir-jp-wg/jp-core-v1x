@@ -1,9 +1,9 @@
 ### 必須要素
 DiagnosticReportリソースは、次の要素を持たなければならない。
 
- - status︓検体検査情報項目の状態は必須である
+ - status：検体検査情報項目の状態は必須である
  - category : レポートを作成した臨床分野、部門、または診断サービスを分類するコード。LP29693-6 "検体検査" 固定
- - code︓何の検体検査情報項目であるかを示すため必須である
+ - code：何の検体検査情報項目であるかを示すため必須である
 
 
 ### Extensions定義
@@ -26,7 +26,7 @@ DiagnosticReportリソースは、次の要素を持たなければならない�
 
 1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるDiagnosticReportの検索をサポートしなければならない（**SHALL**）
 ```
-GET [base]/DiagnosticReport?identifier={system|}[code]
+GET [base]/DiagnosticReport?identifier={system|}[token]
 ```
 例：
 ```

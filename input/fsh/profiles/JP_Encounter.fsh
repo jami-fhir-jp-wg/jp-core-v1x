@@ -8,7 +8,7 @@ Title: "JP Core Encounter Profile"
 Description: "このプロファイルはEncounterリソースに対して、来院/入院情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-12-30"
 * . ^short = "患者にサービスが提供されている間の相互作用"
 * . ^definition = "医療サービスの提供または患者の健康状態の評価を目的とした、患者と医療提供者との間の相互作用。Encounterと表現される。  
 【JP Core仕様】外来受診、救急受診、入院、退院、対面診察、電話診察、など。"

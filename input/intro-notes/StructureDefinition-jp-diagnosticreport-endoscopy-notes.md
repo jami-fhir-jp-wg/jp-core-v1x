@@ -3,27 +3,26 @@
 
 次のデータ項目は必須（**SHALL**）である。
 
-- status : レポートの状態・進捗状況
-- category : レポートを作成した臨床分野、部門、または診断サービスを分類するコード。"LP7796-8" Endoscopy 固定
-- code : レポートの種別。SS-MIX2 拡張ストレージ構成の説明と構成ガイドライン Ver1.2h（本実装ガイドライン制定時の最新版） 「別紙：標準文書コード表」の標準コード（LOINCコード）から指定
-
+- status : レポートの状態・進捗状況。
+- category : レポートを作成した臨床分野、部門、または診断サービスを分類するコード。"LP7796-8" Endoscopy 固定。
+- code : レポートの種別。SS-MIX2 拡張ストレージ構成の説明と構成ガイドライン Ver1.2h（本実装ガイドライン制定時の最新版） 「別紙：標準文書コード表」の標準コード（LOINCコード）から指定。
   
 ### MustSupport
 
-次の要素に関する情報が送信システムに存在する場合、その要素がサポートされなければならないことを意味する（**Must Support**）。
+次の要素に関する情報が送信システムに存在する場合、その要素がサポートされなければならないことを意味する。（**Must Support**）
 
-- basedOn : ServiceRequest（オーダを表すリソースへの参照）
-- subject : 患者リソース（Patient）への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
-- effectiveDateTime : レポート作成日時
-- issued : レポート確定日時
-- performer : 内視鏡検査を実施した医師
-- resultInterpreter : レポートの確定者
-- imagingStudy : レポートに添付されるキー画像の参照先（DICOMフォーマット）
-- link : レポートに添付されるキー画像の参照先（非DICOMフォーマット）
-- conclusion : 総合診断としての要約結論
-- conclusionCode : 内視鏡診断レポートの要約結論を表すコード
-- presentedForm : レポート本体（全体のイメージあるいは所見等のテキスト）
-
+- basedOn : ServiceRequest（オーダを表すリソースへの参照）。
+- subject : 患者リソース（Patient）への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される。
+- effectiveDateTime : レポート作成日時。
+- issued : レポート確定日時。
+- performer : 内視鏡検査を実施した医師。
+- resultInterpreter : レポートの確定者。
+- result : 診断レポートの一部となる内視鏡検査、治療による観察結果（診断、所見など）の情報。
+- imagingStudy : レポートに添付されるキー画像の参照先。（DICOMフォーマット）
+- link : レポートに添付されるキー画像の参照先。（非DICOMフォーマット）
+- conclusion : 総合診断としての要約結論。
+- conclusionCode : 内視鏡診断レポートの要約結論を表すコード。
+- presentedForm : レポート本体。（全体のイメージあるいは所見等のテキスト）
 
 ### Extensions定義
 
@@ -33,9 +32,14 @@
 
 ### text
 
-依頼情報や患者基本情報などを含むレポート全体のデータは、presentedForm要素に、base64で符号化されたバイナリデータとして格納される。
-そのため、主にレポートの見読性と検索性の向上を目的に、DiagnosticReportのDomainResourceの1つであるtext要素に、所見を中心としたhuman-readableな[narrative](https://www.hl7.org/fhir/R4/narrative.html)データを格納することを推奨する。
+JP Core V1.2からは、診断、所見などの観察結果についてはDomainResourceのtext要素ではなく、原則としてresult要素が参照するObservationリソースに格納する方針に改めたので注意されたい。
+
+依頼情報や患者基本情報などを含むレポート全体のデータは、presentedForm要素に、base64で符号化されたバイナリデータとして格納される。そこで、所見を中心としたhuman-readableな[narrative](https://www.hl7.org/fhir/R4/narrative.html)データを、主にレポートの見読性と検索性の向上を目的に、JP Core V1.1.2ではDiagnosticReportのDomainResourceの1つであるtext要素に格納することを推奨することとして本プロファイルを初期リリースした。
 (レポートの詳細はpresentedForm要素に格納されるレポート本体での確認を前提とする)
+
+しかし、多くのクラウドシステムではDomainResource.textを検索対象とできない可能性があることが判明したため、JP Core V1.2以降では、V1.1.2での実装から方針を転換し、US Coreの運用方法に倣い、DiagnosticReport.result要素が参照する[JP Core Observation Endoscopy][JP_Observation_Endoscopy]リソースに、診断レポートの一部となる内視鏡検査、治療による観察結果（診断、所見など）の情報を記載し、検索対象のリソースとして用いることとした。
+
+従って、V1.2以降では、.text要素に記述した内容に対する検索性は担保されない可能性を考慮して実装することを推奨する。
 
 ### category
 
@@ -52,11 +56,11 @@
 
 消化器内視鏡においては、[日本消化器内視鏡学会](https://www.jges.net/)が推進する[JED (Japan Endoscopy Database) Project](https://jedproject.jges.net/)で定義されている[JED用語](https://jedproject.jges.net/about/terms-about/)のコード値を設定することを強く推奨する。[JP Core Conclusion Code JED ValueSet][JP_ConclusionCodesJed_VS]として参照する。
 
+(注)2024年11月現在、JED用語のLOINC(http://loinc.org)コードを申請中である。現在、同一用語に対して異なるローカルコードが割り振られている箇所が存在するが、LOINCコード取得時に名寄せする予定となっている。
 
 ### 時間の指定
 
 このプロファイルのリソースでは、effective[x]エレメントにはレポート作成時間を[dateTime](https://www.hl7.org/fhir/R4/datatypes.html#dateTime)で格納する。
-
 
 ### 参照画像
 
@@ -75,12 +79,12 @@
 | MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) | GET [base]/DiagnosticReport?based-on=ServiceRequest/12345 |
 | SHOULD | category | token | レポート種別 | DiagnosticReport.category ([JP Core DiagnosticReport Category ValueSet][JP_DiagnosticReportCategory_VS]) (デフォルト：[LP7796-8](https://loinc.org/LP7796-8/)) | GET [base]/DiagnosticReport?category=LP7796-8 |
 | SHOULD | code | token | レポート全体を示すコード | DiagnosticReport.code ([JP Core DocumentCodes Endoscopy ValueSet][JP_DocumentCodes_Endoscopy_VS])  | GET [base]/DiagnosticReport?code=18751-8 |
-| MAY | conclusionCode | token | 内視鏡診断レポートの要約結論 | DiagnosticReport.conclusionCode ([JP Core Conclusion Code JED ValueSet][JP_ConclusionCodesJed_VS])  | GET [base]/DiagnosticReport?conclusionCode=Z2B32104 |
+| MAY | conclusion | token | 内視鏡診断レポートの要約結論 | DiagnosticReport.conclusionCode ([JP Core Conclusion Code JED ValueSet][JP_ConclusionCodesJed_VS])  | GET [base]/DiagnosticReport?conclusion=Z2B32104 |
 
 
 なお、検索パラメータは複合的に利用できる。詳細は[Search - Chained parameters](https://www.hl7.org/fhir/R4/search.html#chaining)を参照すること。
 
-　例：
+例：
 ```
 GET [base]/DiagnosticReport?patient=123&category=LP7796-8
 ```
@@ -97,7 +101,8 @@ GET [base]/DiagnosticReport?patient=123&category=LP7796-8
  
 #### サンプル
 
-* [**上部消化管検査レポート**][jp-diagnosticreport-endoscopy-example-1]
+* [**上部消化管検査レポート**][jp-diagnosticreport-endoscopy-example-1]：(JP Core V1.1.2準拠)
+* [**下部消化管検査レポート**][jp-diagnosticreport-endoscopy-example-2]：(JP Core V1.2準拠)
 
 ## その他、参考文献・リンク等
 
@@ -106,6 +111,8 @@ GET [base]/DiagnosticReport?patient=123&category=LP7796-8
 2. [JAHIS 内視鏡検査レポート構造化記述規約 Ver.1.0](https://www.jahis.jp/standard/detail/id=824)
 
 また、消化器内視鏡検査レポートについては、[日本消化器内視鏡学会](https://www.jges.net/)が推進する[JED (Japan Endoscopy Database) Project](https://jedproject.jges.net/)に準拠していることが強く推奨（**SHOULD**）される。
+
+(注)2024年11月現在、JED用語のLOINC(http://loinc.org)コードを申請中である。現在、同一用語に対して異なるローカルコードが割り振られている箇所が存在するが、LOINCコード取得時に名寄せする予定である。
 
 {% include markdown-link-references.md %}
 {% include external-link-reference.md %}

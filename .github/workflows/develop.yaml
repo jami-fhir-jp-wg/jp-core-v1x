@@ -11,8 +11,9 @@ on:
   pull_request:
     branches:
       - 'develop'
+      - 'release/**'
 env:
-  release_version : 1.1.2-dev
+  release_version : 1.2.0a
 jobs:
   turn:
     runs-on: ubuntu-latest
@@ -38,6 +39,8 @@ jobs:
       shell: bash
       run: |
         echo "date=$(git log -1 --format="%at" | xargs -I{} date -d @{})" >> $GITHUB_OUTPUT
+        title_temp=$(echo ${{ github.event.pull_request.title }} | sed 's/\[/【/g; s/\]/】/g; s/\:/：/g; s/\-/－/g')
+        echo "encoded_pullrequest_title=$title_temp" >> $GITHUB_ENV
       id: extract_date
 
     - uses: bluwy/substitute-string-action@v1
@@ -50,7 +53,7 @@ jobs:
         date: ${{ steps.extract_date.outputs.date }}
         actor: ${{ github.actor }}
         pullrequest_url: ${{ github.event.pull_request.html_url }}
-        pullrequest_title: ${{ github.event.pull_request.title }}
+        pullrequest_title: ${{ env.encoded_pullrequest_title }}
         _output-file: input/landing_page/_index.yml
 
     - name: Setup npm
@@ -61,7 +64,7 @@ jobs:
     - name: Setup Sushi
       run: |
         sudo npm install -g fsh-sushi
-
+        
     - name: Install Jekyll
       run: |
         sudo apt-get install jekyll
@@ -70,7 +73,7 @@ jobs:
       uses: Legion2/download-release-action@v2.1.0
       with:
         repository: HL7/fhir-ig-publisher
-        tag: 'latest'
+        tag: '1.8.4'
         path: .
         file: publisher.jar
     
@@ -85,14 +88,14 @@ jobs:
       uses: suisei-cn/actions-download-file@v1.6.0
       id: downloadfile2
       with:
-        url: "https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.1.1.tgz"
+        url: "https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.3.0.tgz"
         target: .    
     
     - name: Prepare for using all dependent packages including Jp modified version of hl7.fhir.r4.core Package 
       env:
         JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
-        JPTerminologyCOREdir: jpfhir-terminology#1.1.1
-        JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.1.1.tgz
+        JPTerminologyCOREdir: jpfhir-terminology.r4#1.3.0
+        JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.3.0.tgz
       run: |
         mkdir -p /home/runner/.fhir
         mv $JPPACKAGECOREtgz /home/runner/.fhir/
@@ -109,14 +112,14 @@ jobs:
     - name: apply the version of sushi-config.yaml
       run: |
         sed -i 's/releaseLabel: release/releaseLabel: ci-build/g' sushi-config.yaml
-        sed -i 's/version: 1.0.0-temp/version: ${{ env.release_version }}/g' sushi-config.yaml
+        sed -i 's/version: 1.2.0-temp/version: ${{ env.release_version }}/g' sushi-config.yaml
         
     - name: Run IG Publisher
       run: | 
         mkdir input-cache
         mv publisher.jar ./input-cache/publisher.jar
         unset DISPLAY
-        java  -Xmx12G -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx n/a
+        java -Xmx12G -Duser.language=ja -Duser.country=JP -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx n/a
         mv ./input/landing_page/_index.yml ./output/
 
 
@@ -149,6 +152,7 @@ jobs:
         echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
       env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_TO_JPFHIR }}
+          
           
     - name: STEP2 = prepare gtz files for upload to remote site
       run: | 
@@ -188,12 +192,8 @@ jobs:
     - name: STEP5 = upload gtz files and  to remote site by rsync
       run: | 
         ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'rm -rf ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}'
-        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'mkdir -p ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}; '
-        rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  output.tgz fsh-generated.tgz forPackageRelease/jp-core.r4-${{ env.release_version}}.tgz forPackageRelease/snapshot/jp-core.r4-${{ env.release_version}}-snap.tgz ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}/
-        # index.htmlはdevelopからは修正しない
-        # rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  other/index.html other/assetsOfIndex ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/
-        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}   'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}} ; tar xzf output.tgz; mv output/* .; rm -rf output'
-      env:
-        SSH_PORT: ${{ secrets.SSH_PORT_JPFHIR }}
-        JAMIWG_WEBHOST: ${{ secrets.JAMIWG_WEBHOST }}
-        JAMIWG_WEBPATH: ${{ secrets.JAMIWG_WEBPATH }}
+        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}    'mkdir -p ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}'
+        rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }}"  output.tgz  ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}}/
+        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}   'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}} ; tar xzf output.tgz'
+
+

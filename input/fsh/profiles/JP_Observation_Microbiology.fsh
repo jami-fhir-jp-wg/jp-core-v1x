@@ -3,9 +3,12 @@ Parent: JP_Observation_Common
 Id: jp-observation-microbiology
 Title: "JP Core Observation Microbiology Profile"
 Description: "このプロファイルはObservationリソースに対して、微生物学検査のデータを送受信するための制約と拡張を定めたものである。"
+
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Microbiology"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-12-30"
+* ^copyright = "Copyright JED-Project、JAHIS、日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG  
+This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995+, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * insert SetDefinition(identifier, 当該検査項目に対し施設内で割り振られる一意の識別子があればこれを使用する)
 * insert SetDefinition(basedOn, このObservationが実施されることになった依頼や計画／提案に関する情報、オーダ情報（ServiceRequest）)
 * basedOn only Reference(ServiceRequest)
@@ -13,31 +16,23 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(partOf, このObservationが親イベントの一部を成す要素であるときこの親イベントに関する情報、未使用)
 * status 1..1
 * category 1..
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "coding.system"
-* category ^slicing.rules = #open
 * category contains
-    laboratory 1..1 and
-    microbiology 1..1 and
-    microbiologyCategory ..1
+    second 1..1 and
+    third ..1
 * category ^comment = "【JP Core仕様】日本では適切なコード体系が存在しないため、独自のバリューセットを定義する  
 JP CoreとしてはsimpleObservationコード体系を必須とし、他のローカルコード等を使用する場合はCategory要素の2つ目以降に設定する"
-* insert SetDefinition(category[laboratory], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
-* category[laboratory] from JP_SimpleObservationCategory_VS (required)
-* category[laboratory].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[laboratory].coding.code 1..
-* category[laboratory].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
+* insert SetDefinition(category[first], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
+* category[first].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
 
-* insert SetDefinition(category[microbiology], このObservationに関するLOINC上の分類、任意項目)
-* category[microbiology] from $JP_ObservationCategory_Microbiology_VS (preferred)
-* category[microbiology].coding.system = $Loinc_CS (exactly)
-* category[microbiology].coding.code 1..
-* category[microbiology].coding.code = $Loinc_CS#18725-2 (exactly)
-* category[microbiology].coding.display = "Microbiology studies (set)"
+* insert SetDefinition(category[second],第2カテゴリはLOINCのコード18725-2固定とする、ValueSetは指定しない)
+* category[second].coding.system = $Loinc_CS (exactly)
+* category[second].coding.code 1..
+* category[second].coding.code = $Loinc_CS#18725-2 (exactly)
+* category[second].coding.display = "Microbiology studies (set)"
 
-* insert SetDefinition(category[microbiologyCategory], このObservationに関する詳細分類、JP_MicrobiologyCategory_VSより選択する、任意項目)
-* category[microbiologyCategory] from $JP_MicrobiologyCategory_VS (required)
-* category[microbiologyCategory].coding.system = $JP_MicrobiologyCategory_CS (exactly)
+* insert SetDefinition(category[third], このObservationに関する詳細分類、JP_MicrobiologyCategory_VSより選択する、任意項目)
+* category[third] from $JP_MicrobiologyCategory_VS (required)
+* category[third].coding.system = $JP_MicrobiologyCategory_CS (exactly)
 
 * code 1..
 * code.coding ^slicing.discriminator.type = #value

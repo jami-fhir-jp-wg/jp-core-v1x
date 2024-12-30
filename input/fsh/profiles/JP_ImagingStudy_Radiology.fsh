@@ -8,21 +8,22 @@ Title: "JP Core ImagingStudy Radiology Profile"
 Description: "このプロファイルはImagingStudyリソースに対して、放射線検査画像のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2024-12-30"
 * . ^short = "DICOM画像検査で作成されたコンテンツの表現。スタディは一連のシリーズで構成され、各シリーズには、共通のコンテキストで取得または生成された一連のサービスオブジェクトペアインスタンス（SOPインスタンス-画像またはその他のデータ）が含まれる、シリーズは1つのモダリティ（X線、CT、MR、超音波など）のみだがスタディには複数の異なるモダリティのシリーズが含まれる場合がある"
 * identifier MS
 * identifier ^short = "スタディ全体の識別子"
 * identifier ^definition = "DICOMスタディインスタンスUIDやアクセッション番号などのImagingStudyの識別子。"
-* identifier ^comment = "DICOMスタディインスタンスUIDのエンコードについては、[Imaging Study Implementation Notes]（imagingstudy.html＃notes）の説明を参照。アクセッション番号はACSN識別子タイプを使用する必要がある。  
+* identifier ^comment = "DICOMスタディインスタンスUIDのエンコードについては、[Imaging Study Implementation Notes]（imagingstudy.html#notes）の説明を参照。アクセッション番号はACSN識別子タイプを使用する必要がある。  
 【JP-Core仕様】Study Instance UIDは画像が存在する場合に必須、その他は任意。StudyInstanceUID (0020,000D)"
 * identifier ^requirements = "ImagingStudyに1つ以上のシリーズ要素が存在する場合、1つのDICOMスタディUID識別子が存在する必要がある（[DICOM PS 3.3 C.7.2]（https://dicom.nema.org/medical/dicom/current/output/chtml/part03/sect_C.7.2.html）を参照） 。"
 * status MS
 * status ^definition = "ImagingStudyの現在のステータス"
 * status ^comment = "不明(unknown)は「その他」を表すものではない。定義されたステータスの1つを適用する必要がある。不明(unknown)は、オーサリングシステムが現在のステータスを確認できない場合に使用される。  
 【JP-Core仕様】リソースの状態。"
+* modality from $JP_DICOMModality_VS (required)
 * modality ^short = "実際の取得モダリティーの場合、モダリティーの全シリーズ。対応するDICOM tag: (0008, 0061)"
 * modality ^definition = "実際の取得モダリティであるすべてのseries.modality値のリスト、つまりDICOMコンテキストグループ29（値セットOID 1.2.840.10008.6.1.19）の値。"
-* modality ^comment = "コードは、列挙型またはコードリストで、SNOMED CTなどの非常に正式な定義まで、非常にカジュアルに定義できる。詳細については、HL7v3コア原則を参照のこと。  
+* modality ^comment = "コードは、列挙型またはコードリストで、DICOMのモダリティコードを利用する。  
 ・モダリティのコードを設定。  
 ・Seriesの階層の(0008,0060)を集約する、または(0008,0060)　と　(0008, 0061) のOR。但し、重複する値は1つにまとめて表現。"
 * subject MS
@@ -79,7 +80,8 @@ DICOMのリソース位置を指定。基本的には1つ。"
 * procedureCode ^definition = "実施されたProcedureのタイプを表すコード。"
 * procedureCode ^comment = "すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係と調整前後の関係を管理するための独自の構造を提供する必要がある。  
 エラーコードなどを記載"
-* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
+//* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
+* procedureCode from $JP_DICONRadLexPlaybook_VS
 * procedureCode ^binding.description = "コードは http://playbook.radlex.org/playbook/SearchRadlexAction に該当があれば使わなければならない。ただし、実施された行為のタイプにこれらのコードがなじまない場合は他のコードが利用される可能性がある。"
 * location ^short = "ImagingStudy が実施された場所"
 * location ^definition = "ImagingStudyが実施された主要な物理的な場所。"
@@ -116,13 +118,12 @@ study階層のidentifierと同じ概念。(0020,000E)にseries固有のUIDが付
 * series.number ^comment = "32ビット数で表す。これより大きい値の場合は、10進数を使用する。  
 上記UIDとは別に、ユーザ（または装置）が自由に決められる番号。"
 * series.modality MS
+* series.modality from $JP_DICOMModality_VS (required)
 * series.modality ^short = "シリーズが取得されたモダリティ"
 * series.modality ^definition = "シリーズが取得されたモダリティー"
-* series.modality ^comment = "コードは、列挙型またはコードリストで、SNOMED CTなどの非常に正式な定義まで、非常に柔軟に定義できる。ただしJP CoreではSNOMED CTを推奨しない。詳細については、HL7v3コア原則を参照。  
-当該シリーズのモダリティコード。1シリーズ1モダリティ（1つのシリーズの中に複数のモダリティが混在することはない）。  
-（参照先）  
-ftp://medical.nema.org/medical/dicom/resources/valuesets/fhir/json/CID_29.json  
-https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_29.html"
+* series.modality ^comment = "JP CoreではDICOMのモダリティコードを利用する。SNOMED CTは推奨しない。  
+（参照先）   
+http://jpfhir.jp/fhir/core/ValueSet/JP_DICOMModality_VS.html"
 * series.description ^short = "シリーズの人間可読な形式での短い要約記述"
 * series.description ^definition = "シリーズの記述。"
 * series.description ^comment = "FHIR文字列のサイズは1MBを超えてはならないことに注意。  
@@ -139,6 +140,7 @@ study階層のendpointと同じ。DICOMのリソース位置を指定。基本�
 bodySiteは、画像化された身体部分の左右差を示している場合がある。その場合、ImagingStudy.series.lateralityのコンテンツと一致している必要がある。"
 * series.bodySite ^comment = "コードは、列挙型またはコードリストで、どの部位の検査なのかを示す。フリーではなく、DICOM定義書の中で示される語句（コード）をデフォルトとするが、JJ1017Pの小部位コードの利用を許容する。"
 * series.bodySite ^binding.description = "DICOM tagに設定されているコードをデフォルトとするが、JJ1017Pの小部位コードの利用を許容する。"
+* series.bodySite from $JP_ImagingStudy_Radiology_BodySite_VS (example)
 * series.laterality ^short = "人体部位の左右識別"
 * series.laterality ^definition = "検査した（おそらく対になっている）解剖学的構造の左右識別。  
 例：左膝、両方の肺、または対になっていない腹部。存在する場合は、ImagingStudy.series.bodySiteに示されている左右差情報と一致している必要がある。"
@@ -170,6 +172,7 @@ bodySiteは、画像化された身体部分の左右差を示している場合
 【JP Core仕様】画像のユニークID。DICOMタグマッピングにある値をそのまま設定。"
 * series.instance.sopClass MS
 * series.instance.sopClass ^comment = "【JP Core仕様】SOPクラスUID。DICOMタグマッピングにある値をそのまま設定。"
+* series.instance.sopClass from $JP_DICOMSopClass_VS (extensible)
 * series.instance.number ^comment = "32ビット数で表す。これより大きい値の場合は、10進数を使用する。  
 【JP Core仕様】ユーザ（または装置）が自由に決められる画像ごとの番号。DICOMタグマッピングにある値をそのまま設定。"
 * series.instance.title ^short = "インスタンスの記述"

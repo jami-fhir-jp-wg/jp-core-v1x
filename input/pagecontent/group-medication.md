@@ -6,6 +6,8 @@
 * [JP Core MedicationDispense Injection （注射薬剤処方調剤・払い出し記録）プロファイル][JP_MedicationDispense_Injection]
 * [JP Core MedicationAdministration （内服・外用薬剤投与実施情報）プロファイル][JP_MedicationAdministration]
 * [JP Core MedicationAdministration Injection （注射薬剤投与実施情報）プロファイル][JP_MedicationAdministration_Injection]
+* [JP Core MedicationStatement （内服・外用薬剤投与申告情報）プロファイル][JP_MedicationStatement]
+* [JP Core MedicationStatement Injection （注射薬剤投与申告情報）プロファイル][JP_MedicationStatement_Injection]
 * [JP Core Immunization （予防接種記録）プロファイル][JP_Immunization]
 
 ### Extensions
@@ -20,8 +22,6 @@
 * [JP_MedicationAdministration_Requester]
 * [JP_MedicationAdministration_UncategorizedComment]
 * [JP_MedicationDispense_Preparation]
-* [JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]
-* [JP_MedicationRequest_DispenseRequest_InstructionForDispense]
 * [JP_MedicationDosage_Device]
 * [JP_MedicationDosage_DosageComment]
 * [JP_MedicationDosage_Line]
@@ -32,5 +32,7 @@
 * [JP_MedicationDosage_RouteComment]
 * [JP_MedicationDosage_SiteComment]
 * [JP_MedicationDosage_UsageDuration]
+* [JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]
+* [JP_MedicationRequest_DispenseRequest_InstructionForDispense]
 
 {% include markdown-link-references.md %}

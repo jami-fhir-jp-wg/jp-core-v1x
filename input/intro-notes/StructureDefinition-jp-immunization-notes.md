@@ -30,10 +30,10 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 |分類|名称|URI|
 |---------|----|---------------------------|
-|ワクチン|HOT9|urn:oid:1.2.392.200119.4.403.1|
-|ワクチン|HOT13|urn:oid:1.2.392.100495.20.2.75|
-|ワクチン|YJコード|urn:oid:1.2.392.100495.20.1.73|
-|対象疾患|MEDIS標準病名マスター病名交換用コード|urn:oid:1.2.392.200119.4.101.6|
+|ワクチン|HOT9|http://medis.or.jp/CodeSystem/master-HOT9|
+|ワクチン|HOT13|http://medis.or.jp/CodeSystem/master-HOT13|
+|ワクチン|YJコード|http://capstandard.jp/iyaku.info/CodeSystem/YJ-code|
+|対象疾患|MEDIS標準病名マスター病名交換用コード|http://medis.or.jp/CodeSystem/master-disease-exCode|
 
 ### 項目の追加
 参考にしたワクチン関係の文書やAPIで扱われている項目に合わせ、以下の項目を追加した。
@@ -53,7 +53,7 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 | SHALL            | identifier    | token  | GET [base]/Immunization?identifier=http://myhospital.com/fhir/immunization\|1234567890 |
 | SHOULD            | patient      | reference | GET [base]/Immunization?patient=123456   |
 | SHOULD           | patient,date | reference,date  | GET [base]/Immunization?patient=123456&date=eq2013-01-14 |
-| MAY           | date,lot-number | date,string | GET [base]/Immunization?date=eq2013-01-14  |
+| MAY           | date,lot-number | date,string | GET [base]/Immunization?date=eq2013-01-14&lot-number=FF3620 |
 
 ##### 必須検索パラメータ
 
@@ -62,7 +62,7 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 1. identifier 検索パラメータを使用して、オーダIDなどの識別子によるMedicationRequestの検索をサポートしなければならない（**SHALL**）
 
    ```
-   GET [base]/Immunization?identifier={system|}[code]
+   GET [base]/Immunization?identifier={system|}[token]
    ```
 
    例：
@@ -111,81 +111,7 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 #### Operation一覧
 
-JP Immunization リソースに対して使用される操作は次の通りである。
-
-- $everything：[base]/Immunization/[id]/$everything
-
-  - この操作が呼び出された特定のImmunizationに関連する全ての情報を返す
-    
-
-#### Operation 詳細
-
-#####  $everything 操作
-
-この操作は、この操作が呼び出された特定のImmunizationリソースに関連する全ての情報を返す。応答は "searchset" タイプのBundleリソースである。サーバは、少なくとも、識別されたImmunizationコンパートメントに含まれる全てのリソースと、それらから参照されるすべてのリソースを返すことが望ましい。
-
-この操作の公式なURLは以下である。
-
-```
-http://hl7.jp/fhir/OperationDefinition/Immunization-everything
-```
-
-URL: [base]/Immunization/[id]/$everything
-
-本操作は、べき等な操作である。
-
-
-###### 入力パラメータ
-
-| 名前   | 多重度 | 型      | 説明                                                         |
-| ------ | ------ | ------- | ------------------------------------------------------------ |
-| start  | 0..1   | date    | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。開始日が指定されていない場合、終了日以前のすべてのレコードが対象に含まれる。 |
-| end    | 0..1   | date    | 特定の日付範囲で提供されたケアに関連する全ての記録を意味する。終了日が指定されていない場合、開始日以降のすべてのレコードが対象に含まれる。 |
-| _since | 0..1   | instant | 指定された日時以降に更新されたリソースのみが応答に含まれる。 |
-| _type  | 0..*   | code    | 応答に含むFHIRリソース型を、カンマ区切りで指定する。指定されない場合は、サーバは全てのリソース型を対象とする。 |
-| _count | 0..1   | integer | Bundleの1ページに含まれるリソース件数を指定。                |
-
-###### 出力パラメータ
-
-| 名前   | 多重度 | 型     | 説明                                                         |
-| ------ | ------ | ------ | ------------------------------------------------------------ |
-| return | 1..1   | Bundle | バンドルのタイプは"searchset"である。この操作の結果は、リソースとして直接返される。 |
-
-###### 例
-
-リクエスト：単一のImmunizationに関連する全てのリソースを取得する。
-
-```
-GET [base]/Immunization/1234567890/$everything
-[some headers]
-```
-
-レスポンス：指定されたImmunizationに関連する全てのリソースを返す。
-
-```
-HTTP/1.1 200 OK
-[other headers]
-
-{
-  "resourceType": "Bundle",
-  "id": "example",
-  "meta": {
-    "lastUpdated": "2014-08-18T01:43:33Z"
-  },
-  "type": "searchset",
-  "entry": [
-    {
-      "fullUrl": "http://example.org/fhir/Immunization/1234567890",
-      "resource": {
-        "resourceType": "Immunization",
-
-          ・・・
-
-       },
-    }
-  ]
-}  
-```
+JP Immunization リソースに対する操作は定義されていない。
 
 ### サンプル
 このワクチン接種例では下記の内容をFHIRで表現する場合について解説する。
@@ -214,7 +140,7 @@ Immunizationはワクチンを vaccineCodeとして1つまでしか持つこと�
 "vaccineCode": {
   "coding":  [
     {
-      "system": "urn:oid:1.2.392.100495.20.2.75",
+      "system": "http://medis.or.jp/CodeSystem/master-HOT13",
       "code": "1820201040101",
       "display": "インフルエンザHAワクチン「第一三共」1mL"
     }
@@ -274,7 +200,7 @@ Immunization.occurrenceString要素を使用した例：
 "site": {
   "coding":  [
     {
-      "system": "urn:oid:1.2.392.200250.2.2.20.32"
+      "system": "http://jami.jp/CodeSystem/MedicationBodySiteExternal"
       "code": "74L",
       "display": "左上腕"
     }
@@ -329,7 +255,7 @@ Immunization.occurrenceString要素を使用した例：
 
 ### 予防接種の種類、効果のある疾患の記述方法について
 ワクチン接種により感染や重症化を予防できる疾患（記録によっては「予防接種の種類」と呼ばれることもある）は、Immunization.protocolApplied.targetDisease要素にCodeableConcept型で記述する。使用する用語集としては、「診療情報提供書HL7FHIR記述仕様 第1版」などでも採用されている
-MEDIS標準病名マスターの病名交換用コード("urn:oid:1.2.392.200119.4.101.6")を推奨する。
+MEDIS標準病名マスターの病名交換用コード("http://medis.or.jp/CodeSystem/master-disease-exCode")を推奨する。
 
 ```json
 "protocolApplied": [
@@ -338,7 +264,7 @@ MEDIS標準病名マスターの病名交換用コード("urn:oid:1.2.392.200119
       {
         "coding": [
           {
-            "system": "urn:oid:1.2.392.200119.4.101.6",
+            "system": "http://medis.or.jp/CodeSystem/master-disease-exCode",
             "code": "ES0L",
             "display": "インフルエンザ"
           }

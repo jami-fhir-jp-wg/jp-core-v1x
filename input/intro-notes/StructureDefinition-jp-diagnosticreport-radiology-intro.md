@@ -1,3 +1,4 @@
+
 本プロファイルは、[DiagnosticReportリソース][JP_DiagnosticReport_Radiology] のうち、放射線画像検査における患者、患者群、機器、場所、およびこれらから得られた画像に対して実施された診断結果またはその解釈を示す「報告書」を表現するリソースの定義である。ここでは、DiagnosticReport リソースに対して本プロファイルに準拠する場合に必須となる要素や、サポートすべき拡張、用語、検索パラメータを定義する。
 報告書は、依頼者や撮影の情報などの臨床的背景のほか、いくつかの計測値、画像、テキストおよびコード化された解釈、テンプレート化された診断報告書により構成される。
 
@@ -19,6 +20,7 @@ DiagnosticReportリソースは、診断レポート自体の他に、患者な�
 もっとも典型的にはレポートの診断結果をDiagnosticReport.conclusionエレメントに保持しDiagnosticReport.presentedFormエレメントでレポート全体のデータを持つ。また、キー画像等の添付データはDiagnosticReport.mediaエレメントにMediaリソースへのリンクとして保持する。
 
 レポート全体のデータは、レポーティングシステム等により作成された多彩な表現型（PDF, RichText, xhtml等）でBase64のAttachmentとして提供される。ただし、結果参照や検索の汎用性を担保しHuman readableな形で提供されることを目的とし、レポートの内容はDomainResourceであるDiagnosticReport.textエレメントにも格納される。
+また、構造化されたレポートの内容はDiagnosticReport.resultエレメントに「所見 (findings)」、「結論、インプレッション (impression)」を表すObservationリソースへの参照として定義される。「結論、インプレッション (impression)」のObservationリソースの内容は後方互換のために、DiagnosticReport.conclusionにも保持されることが望ましい。
 
 DiagnosticReportリソースは、過去の結果（リソース内での過去および現在の結果）の提示をサポートすることを意図していない。DiagnosticReportリソースは、シーケンスの構造化を含めレポートの完全なサポートをまだ提供できていないが、将来実装される予定である。
 
