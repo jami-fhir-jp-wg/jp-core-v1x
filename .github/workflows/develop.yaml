@@ -35,6 +35,7 @@ jobs:
         fi
       id: extract_branch
     
+    
     - name: Extract last commit date
       shell: bash
       run: |
