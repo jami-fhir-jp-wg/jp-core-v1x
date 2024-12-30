@@ -3,7 +3,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_Department_SsMix_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core Department SsMix NamingSystem JAMI SSMIX2診療科コード表"
 * uniqueId[+].type = #oid
@@ -19,7 +19,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationUsageJAMI_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP MedicationUsage JAMI NamingSystem JAMI用法コード表ー１６桁バージョン"
 * uniqueId[+].type = #oid
@@ -35,7 +35,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationUsageJAMIAdditional_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core MedicationUsage JAMI Additional NamingSystem JAMI用法コード表ー８桁補足用法コード"
 * uniqueId[+].type = #oid
@@ -52,7 +52,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationMethodJAMIBasicUsage_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core MedicationMethod JAMI BasicUsage NamingSystem JAMI用法コード表ー基本用法コード１桁"
 * uniqueId[+].type = #oid
@@ -68,7 +68,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationBodySiteJAMIExternal_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core Medication BodySite JAMI External NamingSystem JAMI用法コード表ー外用部位コード表３桁"
 * uniqueId[+].type = #oid
@@ -85,7 +85,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MEDIS_Master_Disease_KeyNumber_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP MEDIS Master Disease KeyNumber NamingSystem MEDIS 病名マスタ 病名管理番号 NamingSystem"
 * uniqueId[+].type = #oid
@@ -101,7 +101,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MEDIS_Master_Disease_ExCode_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP MEDIS Master Disease ExCode NamingSystem MEDIS 病名マスタ 病名交換用コード"
 * uniqueId[+].type = #oid
@@ -117,7 +117,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MEDIS_Master_Disease_ModKeyNumber_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP MEDIS Master Disease ModKeyNumber NamingSystem MEDIS 病名マスタ 修飾語管理番号"
 * uniqueId[+].type = #oid
@@ -133,7 +133,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MEDIS_Master_Disease_ModExCode_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP MEDIS Master Disease ModExCode NamingSystem MEDIS 病名マスタ 修飾語交換用コード"
 * uniqueId[+].type = #oid
@@ -150,7 +150,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MEDIS_MedicationCodeHOT13_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core MedicationCode HOT13 NamingSystem MEDIS　医薬品基準番号（ＨＯＴ１３）"
 * uniqueId[+].type = #oid
@@ -166,7 +166,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MEDIS_MedicationCodeHOT9_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core MedicationCode HOT9 NamingSystem MEDIS 医薬品基準番号（ＨＯＴ９）"
 * uniqueId[+].type = #oid
@@ -186,7 +186,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MEDIS_MedicationCodeHOT7_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core MedicationCode HOT7 NamingSystem　MEDIS 医薬品処方用番号（ＨＯＴ７）"
 * uniqueId[+].type = #oid
@@ -220,7 +220,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MEDIS_Master_NursingObservation_KeyCode_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "MEDIS Master NursingObservation KeyCode NamingSystem MEDIS 看護観察テーブル（観察名称管理番号（コード）） "
 * uniqueId[+].type = #oid
@@ -237,7 +237,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationIngredientStrengthStrengthType_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core Medication IngredientStrength StrengthType NamingSystem"
 * uniqueId[+].type = #oid
@@ -253,7 +253,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationMethodJAMIDetailUsage_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core MedicationMethod JAMI DetailUsage NamingSystem JAMI用法コード表ー投与経路区分コード２桁（基本用法コード１桁と詳細区分コード１桁を連結）"
 * uniqueId[+].type = #oid
@@ -269,7 +269,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationSubstitutionNotAllowedReason_NamingSystem"
 * status = #active
-* date = "2023-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core MedicationSubstitution NotAllowedReason NamingSystem 後発品変更不可コード"
 * uniqueId[+].type = #oid
@@ -286,7 +286,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_InsuredPersonCategory_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core InsuredPersonCategory NamingSystem 被保険者区分コード"
 * uniqueId[+].type = #oid
@@ -302,7 +302,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationCodeYJ_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core MedicationCode YJ NamingSystem 個別医薬品コード（YJ コード）リスト"
 * uniqueId[+].type = #oid
@@ -318,7 +318,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationCodeCommon_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core MedicationCode Common NamingSystem 一般名処方マスタ"
 * uniqueId[+].type = #oid
@@ -334,7 +334,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicationUnitMERIT9_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core MedicationUnit MERIT9 NamingSystem 医薬品単位略号"
 * uniqueId[+].type = #oid
@@ -350,7 +350,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_PrefectureNumber_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core PrefectureNumber NamingSystem 都道府県番号"
 * uniqueId[+].type = #oid
@@ -366,7 +366,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_MedicalFeeScoreType_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "JP Core MedicalFeeScoreType NamingSystem 点数表番号"
 * uniqueId[+].type = #oid
@@ -382,7 +382,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_Medical_OrganizationID_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #identifier 
 * description = "JP Core MedicalOrganizationID NamingSystem 保険医療機関コード（７桁）"
 * uniqueId[+].type = #oid
@@ -398,7 +398,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_Medical_Registration_Number_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #identifier 
 * description = "JP Core Medical Registration Number NamingSystem 医籍登録番号"
 * uniqueId[+].type = #oid
@@ -414,7 +414,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_Insurer_Number_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #identifier 
 * description = "JP Core Insurer Number NamingSystem 保険者番号"
 * uniqueId[+].type = #oid
@@ -431,7 +431,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_Insured_Person_Symbol_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #identifier 
 * description = "JP Core Insured Person Symbol NamingSystem 被保険者証記号"
 * uniqueId[+].type = #oid
@@ -447,7 +447,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_InsuredPersonNumber_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #identifier 
 * description = "JP Core Insured Person Number NamingSystem 被保険者証番号"
 * uniqueId[+].type = #oid
@@ -463,7 +463,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_Medication_RpGroup_Number_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #identifier 
 * description = "JP Core Medication RpGroup Number NamingSystem RP番号"
 * uniqueId[+].type = #oid
@@ -479,7 +479,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_Medication_RpGruop_Index_NamingSystem"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * kind = #identifier 
 * description = "JP Core Medication RpGruop Index NamingSystem RP内の順序を示す連番"
 * uniqueId[+].type = #oid
@@ -515,7 +515,7 @@ InstanceOf: NamingSystem
 Usage: #definition
 * name = "JP_Endoscopy_TerminologyCodes_JED_NamingSystem"
 * status = #active
-* date = "2023-10-31"
+* date = "2024-12-30"
 * kind = #codesystem
 * description = "日本消化器内視鏡学会が推進するJED (Japan Endoscopy Database) Projectで定義されるコード"
 * uniqueId[+].type = #oid

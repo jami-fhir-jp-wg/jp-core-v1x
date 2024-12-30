@@ -5,7 +5,7 @@ Description: "レセプト電算用修飾語マスター コードシステム"
 * ^url = "http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterZ-disease-modifier"
 * ^status = #active
 * ^experimental = false
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * ^caseSensitive = true
 * ^content = #complete
 * ^copyright = ""

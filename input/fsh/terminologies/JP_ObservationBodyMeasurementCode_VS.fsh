@@ -5,6 +5,6 @@ Description: "Observation（身体計測）コードで使用する項目値セ�
 * ^url = $JP_ObservationBodyMeasurementCode_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * ^copyright = "Copyright MEDIS-DC 一般財団法人 医療情報システム開発センター"
 * include codes from system JP_ObservationBodyMeasurementCode_CS

@@ -7,7 +7,7 @@ Description: "MEDIS標準病名 修飾語交換用コード"
 * ^url = "http://medis.or.jp/CodeSystem/master-disease-modExCode"
 * ^version = "5.11.0"
 * ^experimental = false
-* ^date = "2023-04-01"
+* ^date = "2024-12-30"
 * ^caseSensitive = false
 * ^copyright = "Copyright © MEDIS-DC and MHLW and JAMI. All Rights Reserved."
 

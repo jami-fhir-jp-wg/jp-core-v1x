@@ -5,7 +5,7 @@ Description: "SS MIX 標準文書コード表"
 * ^url = $JP_DocumentCodes_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * ^caseSensitive = true
 * ^hierarchyMeaning = #is-a
 * ^content = #complete

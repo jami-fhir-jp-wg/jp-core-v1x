@@ -5,7 +5,7 @@ Description: "レセプト電算用傷病名マスター コードシステム"
 * ^url = "http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterB-disease"
 * ^status = #active
 * ^experimental = false
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * ^caseSensitive = true
 * ^content = #complete
 * ^copyright = ""

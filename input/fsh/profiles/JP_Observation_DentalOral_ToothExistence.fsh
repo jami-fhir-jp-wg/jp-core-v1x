@@ -9,7 +9,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_ToothExistence"
 * ^status = #active
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * . ^short = "特定の歯の有無・状態のプロファイル"
 * . ^definition = "口腔診査結果レポートの特定の歯の有無・状態のプロファイル"
 * . ^comment = "本プロファイルと、現存歯の処置状態プロファイルや、欠損歯の処置状態プロファイルなどを組み合わせて利用する。"
@@ -96,7 +96,7 @@ Title: "JP Core Observation DentalOral Body Site Status Extension"
 Description: "歯の状態を格納するための拡張"
 * ^url = $JP_Observation_DentalOral_BodySiteStatus
 * ^status = #active
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * ^context.type = #element
 * ^context.expression = "BodySite"
 * . ^short = "歯の状態"

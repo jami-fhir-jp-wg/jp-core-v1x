@@ -8,7 +8,7 @@ Title: "JP Core ServiceRequest Common Profile"
 Description: "本プロファイル説明は、患者に対し立案・実施されるリクエストの記録で、行為や診断、もしくは他のサービスのために用いられるFHIR ServiceRequestリソースを使用するにあたっての、最低限の制約を記述したものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common"
 * ^status = #active
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * . ^short = "サービスリクエスト"
 * . ^definition = "診断のための検査、治療、手術などのサービスリクエストの記録"
 * meta.lastUpdated 0.. MS

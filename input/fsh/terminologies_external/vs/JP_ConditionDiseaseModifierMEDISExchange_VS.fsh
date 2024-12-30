@@ -5,7 +5,7 @@ Description: "MEDIS ICD10対応標準病名マスター(修飾語交換用コー
 * ^url = $JP_Modifier_MEDIS_Concept_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * ^copyright = "Copyright MEDIS-DC 一般財団法人 医療情報システム開発センター"
 
 // 現状はMEDIS交換用コードのコードシステムをそのまま使用する

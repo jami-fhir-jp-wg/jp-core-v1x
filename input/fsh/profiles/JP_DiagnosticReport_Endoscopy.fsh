@@ -8,7 +8,7 @@ Title: "JP Core DiagnosticReport Endoscopy Profile"
 Description: "このプロファイルはDiagnosticReportリソースに対して、内視鏡を使用して実施された検査、治療に関わるデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Endoscopy"
 * ^status = #active
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * . ^short = "内視鏡を使用して実施された検査、治療に関する診断レポート。"
 * . ^definition = "内視鏡を使用して実施された検査、治療に関する診断レポート。"
 * text ^short = "主にレポートの見読性と検索性の向上を目的に、所見を中心としたhuman-readableなnarrativeデータを格納することを推奨する。【詳細参照】"

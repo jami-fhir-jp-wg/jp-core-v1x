@@ -8,7 +8,7 @@ Title: "JP Core Medication Profile"
 Description: "このプロファイルはMedicationリソースに対して、主に薬剤データを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication"
 * ^status = #active
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * . ^short = "Medication Resourceの定義"
 * . ^definition = "This resource is primarily used for the identification and definition of a medication for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.  
 このResourceは薬剤を処方し、払い出し（調剤）、その投与を定義し、IDを付与するためにまず利用され、薬剤の使用状態を示すためにも使われる。"
@@ -86,7 +86,7 @@ Id: jp-medication-ingredient-drugno
 Title: "JP Core Medication Ingredient DrugNo Extension"
 Description: "同一剤グループ内での順番を格納する拡張"
 * ^url = $JP_Medication_Ingredient_DrugNo
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * ^purpose = "同一剤グループ内での順番を格納する拡張"
 * ^context.type = #element
 * ^context.expression = "Medication.ingredient"
