@@ -103,8 +103,8 @@ Alias: $JP_MedicationRequest_DispenseRequest_InstructionForDispense = http://jpf
 Alias: $JP_Observation_DentalOral_BodySiteStatus = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodySiteStatus
 Alias: $JP_Observation_DentalOral_BodyStructure = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodyStructure
 Alias: $JP_Observation_Electrocardiogram_DeviceInterpretation = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_DeviceInterpretation
-Alias: $JP_Observation_Electrocardiogram_NumberOfLead = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_NumberOfLead
 Alias: $JP_Observation_Electrocardiogram_Duration = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_Duration
+Alias: $JP_Observation_Electrocardiogram_NumberOfLead = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_NumberOfLead
 Alias: $JP_Observation_Electrocardiogram_StressType = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_StressType
 Alias: $JP_Organization_InsuranceOrganizationCategory = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationCategory
 Alias: $JP_Organization_InsuranceOrganizationNo = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo
@@ -254,10 +254,8 @@ Alias: $JP_Department_SsMix2Digits_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_D
 Alias: $JP_Department_SsMix3Digits_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix3Digits_VS
 Alias: $JP_DiagnosticReportCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DiagnosticReportCategory_VS
 Alias: $JP_DICOMModality_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DICOMModality_VS
-
 Alias: $JP_DICOMSopClass_VS = http://hl7.org/fhir/uv/imaging-service-request-ig/ValueSet/dicom-sop-classes
 Alias: $JP_DICONRadLexPlaybook_VS = http://playbook.radlex.org/playbook/SearchRadlexAction
-
 Alias: $JP_Disease_Claim_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/masterB-disease    // 支払基金	傷病名コード
 Alias: $JP_Disease_MEDIS_Concept_VS = http://medis.or.jp/ValueSet/master-disease-exCode // MEDIS病名交換用コード
 Alias: $JP_Disease_MEDIS_ManagementID_VS = http://medis.or.jp/ValueSet/master-disease-keyNumber    // MEDIS病名管理番号
