@@ -42,7 +42,7 @@ download_terminology() {
     if [ "$dterm" == "Y" ] || [ "$dterm" == "y" ]; then
         dltermurl="https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.3.0.tgz"
         localterm="./temp/jpfhir-terminology.r4-1.3.0.tgz"
-        term_dir="${fhir_dir}/packages/jpfhir-terminology.r4#1.2.4-url"
+        term_dir="${fhir_dir}/packages/jpfhir-terminology.r4#1.3.0"
         curl -o "${localterm}" "${dltermurl}"
         
         if [ ! -d "${term_dir}" ]; then
