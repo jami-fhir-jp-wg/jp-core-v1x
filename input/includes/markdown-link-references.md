@@ -140,9 +140,6 @@
 [JP_Patient_KanaSort_SP]: SearchParameter-jp-patient-kanasort-sp.html
 
 <!-- CodeSystem -->
-[JP_BodySite_CS]: CodeSystem-jp-bodysite-cs.html
-[JP_ConditionDieaseCodeReceipt_CS]: CodeSystem-jp-condition-disease-code-receipt-cs.html
-[JP_ConditionDieaseModifierReceipt_CS]: CodeSystem-jp-condition-disease-modifier-receipt-cs.html
 [JP_ConditionDieaseOutcomeHL70241_CS]: CodeSystem-jp-condition-disease-outcome-hl70241-cs.html
 [JP_ConditionDieaseOutcomeJHSD0006_CS]: CodeSystem-jp-condition-disease-outcome-jhsd0006-cs.html
 [JP_ConditionDieaseOutcomeReceipt_CS]: CodeSystem-jp-condition-disease-outcome-receipt-cs.html
@@ -154,46 +151,20 @@
 [JP_DentalPresentTeethObservation_CS]: CodeSystem-jp-dental-presentteeth-observation-cs.html
 [JP_DentalSipmleMissingTeethObservation_CS]: CodeSystem-jp-dental-simple-missingteeth-observation-cs.html
 [JP_DentalSipmlePresentTeethObservation_CS]: CodeSystem-jp-dental-simple-presentteeth-observation-cs.html
-[JP_DocumentCodes_CS]: CodeSystem-jp-documentcodes-cs.html
-[JP_EndoscopyTerminologyCodesJED_CS]: CodeSystem-jp-endoscopyterminology-codes-jed-cs.html
-[JP_MedicationExampleDosageComment_CS]: CodeSystem-jp-medication-example-dosagecomment-cs.html
-[JP_MedicationExampleLine_CS]: CodeSystem-jp-medication-example-line-cs.html
-[JP_MedicationExampleLineComment_CS]: CodeSystem-jp-medication-example-linecomment-cs.html
-[JP_MedicationExampleMethodComment_CS]: CodeSystem-jp-medication-example-methodcomment-cs.html
-[JP_MedicationExampleRateComment_CS]: CodeSystem-jp-medication-example-ratecomment-cs.html
-[JP_MedicationExampleRouteComment_CS]: CodeSystem-jp-medication-example-routecomment-cs.html
-[JP_MedicationExampleSiteComment_CS]: CodeSystem-jp-medication-example-sitecomment-cs.html
-[JP_MedicationExampleUncategorizedComment_CS]: CodeSystem-jp-medication-example-uncategorized-comment-cs.html
-[JP_Microbiology_AntiMicrobialDrug_CS]: CodeSystem-jp-microbiology-anti-microbial-drug-cs.html
-[JP_MicrobiologyCategory_CS]: CodeSystem-jp-microbiology-category-cs.html
-[JP_Microbiology_InfectiousAgent_CS]: CodeSystem-jp-microbiology-infectious-agent-cs.html
 [JP_ObservationBodyMeasurementCategory_CS]: CodeSystem-jp-observation-bodymeasurement-category-cs.html
 [JP_ObservationBodyMeasurementCode_CS]: CodeSystem-jp-observation-bodymeasurement-code-cs.html
 [JP_ObservationDentalCategory_CS]: CodeSystem-jp-observation-dental-category-cs.html
 [JP_ObservationElectrocardiogramDuration_CS]: CodeSystem-jp-observation-electrocardiogram-duration-cs.html
 [JP_ObservationElectrocardiogramExtraCategory_CS]: CodeSystem-jp-observation-electrocardiogram-extracategory-cs.html
 [JP_ObservationElectrocardiogramStressType_CS]: CodeSystem-jp-observation-electrocardiogram-stresstype-cs.html
-[JP_PhysicalExamCode_CS]: CodeSystem-jp-physicalexamcode-cs.html
-[JP_ProcedureNotPerformedReason_CS]: CodeSystem-jp-procedure-not-performed-reason-cs.html
-[JP_ProcedureOutcome_CS]: CodeSystem-jp-procedure-outcome-cs.html
-[JP_SimpleObservationCategory_CS]: CodeSystem-jp-simpleobservationcategory-cs.html
 [JP_Undefined_CS]: CodeSystem-jp-undefined-cs.html
-[MEDIS_codeSystem_diseaseName_exchangeCodes_Modifiers]: CodeSystem-medis-codesystem-diseasename-exchangecodes-modifiers.html
 
 <!-- ValueSet -->
-[JP_ConclusionCodesJed_VS]: ValueSet-jp-conclusion-codes-jed-vs.html
 [JP_Condition_BodySite_VS]: ValueSet-jp-condition-bodysite-vs.html
-[JP_Disease_MEDIS_Concept_VS]: ValueSet-jp-condition-disease-code-medis-exchange-vs.html
-[JP_Disease_MEDIS_ManagementID_VS]: ValueSet-jp-condition-disease-code-medis-record-no-vs.html
-[JP_Disease_Claim_VS]: ValueSet-jp-condition-disease-code-receipt-vs.html
-[JP_Modifier_MEDIS_Concept_VS]: ValueSet-jp-condition-disease-modifier-medis-exchange-vs.html
-[JP_Modifier_MEDIS_ManagementID_VS]: ValueSet-jp-condition-disease-modifier-medis-record-no-vs.html
-[JP_Modifier_Disease_Claim_VS]: ValueSet-jp-condition-disease-modifier-receipt-vs.html
 [JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS]: ValueSet-jp-condition-disease-outcome-hl70241-jhsd0006-vs.html
 [JP_ConditionDiseaseOutcomeHL70241_VS]: ValueSet-jp-condition-disease-outcome-hl70241-vs.html
 [JP_ConditionDiseaseOutcomeJHSD0006_VS]: ValueSet-jp-condition-disease-outcome-jhsd0006-vs.html
 [JP_ConditionDiseaseOutcomeReceipt_VS]: ValueSet-jp-condition-disease-outcome-receipt-vs.html
-[JP_ConditionSeverity_VS]: ValueSet-jp-condition-severity-vs.html
 [JP_DentalBodySite_VS]: ValueSet-jp-dental-bodysite-vs.html
 [JP_DentalBodySiteStatus_VS]: ValueSet-jp-dental-bodysitestatus-vs.html
 [JP_DentalBodyStructure_VS]: ValueSet-jp-dental-bodystructure-vs.html
@@ -202,24 +173,9 @@
 [JP_DentalPresentTeethObservation_VS]: ValueSet-jp-dental-presentteeth-observation-vs.html
 [JP_DentalSipmleMissingTeethObservation_VS]: ValueSet-jp-dental-simple-missingteeth-observation-vs.html
 [JP_DentalSimplePresentTeethObservation_VS]: ValueSet-jp-dental-simple-presentteeth-observation-vs.html
-[JP_DiagnosticReportCategory_VS]: ValueSet-jp-diagnosticreportcategory-vs.html
 [JP_DICOMModality_VS]: ValueSet-jp-dicommodality-vs.html
-[JP_DocumentCodes_DiagnosticReport_VS]: ValueSet-jp-documentcodes-diagnosticreport-vs.html
-[JP_DocumentCodes_Endoscopy_VS]: ValueSet-jp-documentcodes-endoscopy-vs.html
 [JP_ImagingStudy_Endoscopy_BodySite_VS]: ValueSet-jp-imagingstudy-endoscopy-bodysite-vs.html
 [JP_ImagingStudy_Radiology_BodySite_VS]: ValueSet-jp-imagingstudy-radiology-bodysite-vs.html
-[JP_MedicalLicenseCertificate_VS]: ValueSet-jp-medicallicensecertificate-vs.html
-[JP_MedicationExampleDosageComment_VS]: ValueSet-jp-medication-example-dosagecomment-vs.html
-[JP_MedicationExampleLine_VS]: ValueSet-jp-medication-example-line-vs.html
-[JP_MedicationExampleLineComment_VS]: ValueSet-jp-medication-example-linecomment-vs.html
-[JP_MedicationExampleMethodComment_VS]: ValueSet-jp-medication-example-methodcomment-vs.html
-[JP_MedicationExampleRateComment_VS]: ValueSet-jp-medication-example-ratecomment-vs.html
-[JP_MedicationExampleRouteComment_VS]: ValueSet-jp-medication-example-routecomment-vs.html
-[JP_MedicationExampleSiteComment_VS]: ValueSet-jp-medication-example-sitecomment-vs.html
-[JP_MedicationExampleUncategorizedComment_VS]: ValueSet-jp-medication-example-uncategorized-comment-vs.html
-[JP_Microbiology_AntiMicrobialDrug_VS]: ValueSet-jp-microbiology-anti-microbial-drug-vs.html
-[JP_MicrobiologyCategory_VS]: ValueSet-jp-microbiology-category-vs.html
-[JP_Microbiology_InfectiousAgent_VS]: ValueSet-jp-microbiology-infectious-agent-vs.html
 [JP_ObservationBodyMeasurementCategory_VS]: ValueSet-jp-observation-bodymeasurement-category-vs.html
 [JP_ObservationBodyMeasurementCode_VS]: ValueSet-jp-observation-bodymeasurement-code-vs.html
 [JP_Observation_BodySite_VS]: ValueSet-jp-observation-bodysite-vs.html
@@ -232,20 +188,7 @@
 [JP_ObservationEndoscopyValueJed_VS]: ValueSet-jp-observation-endoscoy-value-jed-vs.html
 [JP_ObservationRadiologyCode_VS]: ValueSet-jp-observation-radiology-code-vs.html
 [JP_PhysicalExamCode_VS]: ValueSet-jp-physicalexamcode-vs.html
-[JP_ProcedureBodySite_VS]: ValueSet-jp-procedure-body-site-vs.html
-[JP_ProcedureCodesICHI_VS]: ValueSet-jp-procedure-codes-ichi-vs.html
-[JP_ProcedureCondition_VS]: ValueSet-jp-procedure-condition-vs.html
-[JP_ProcedureDeviceAction_VS]: ValueSet-jp-procedure-device-action-vs.html
-[JP_ProcedureDeviceKind_VS]: ValueSet-jp-procedure-devicekind-vs.html
-[JP_ProcedureFollowUp_VS]: ValueSet-jp-procedure-followup-vs.html
-[JP_ProcedureNotPerformedReason_VS]: ValueSet-jp-procedure-not-performed-reason-vs.html
-[JP_ProcedureOutcome_VS]: ValueSet-jp-procedure-outcome-vs.html
-[JP_ProcedurePerformerRole_VS]: ValueSet-jp-procedure-performer-role-vs.html
-[JP_ProcedureReason_VS]: ValueSet-jp-procedure-reason-vs.html
-[JP_ReasonCodesJed_VS]: ValueSet-jp-reason-codes-jed-vs.html
-[JP_SimpleObservationCategory_VS]: ValueSet-jp-simpleobservationcategory-vs.html
 [JP_Undefined_VS]: ValueSet-jp-undefined-vs.html
-[MHLW_valueSet_icd10_2013_jp]: ValueSet-mhlw-valueset-icd10-2013-jp.html
 
 <!-- Example -->
 [jp-allergyintolerance-example-1]: AllergyIntolerance-jp-allergyintolerance-example-1.html
