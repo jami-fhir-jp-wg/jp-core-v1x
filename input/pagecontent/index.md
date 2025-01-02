@@ -111,6 +111,7 @@ JP Core利用にあたり、考慮すべきセキュリティに関する要件�
 ---
 ### Contributors：
 JP Coreは以下の方々、および各サーブワーキンググループのここに記載されていない多くのメンバの献身的な活動や協力により作成されている。<br>
+
 * <a href="https://jpfhir.jp/">日本医療情報学会NeXEHRS研究会FHIR日本実装検討WG</a>
   * NeXEHRS研究会代表幹事・FHIR日本実装検討WG座長　大江和彦（東京大学）
   * Infrastructure : インフラ基盤SWG
