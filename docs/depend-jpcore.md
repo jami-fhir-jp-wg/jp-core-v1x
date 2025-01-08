@@ -1,9 +1,14 @@
 ## JP Coreを利用した実装ガイドの作成方法
 
-## パッケージファイルの配置
+### パッケージファイルの取得
 
 _updateTx.bat,shを参考にローカルパッケージキャッシュを事前にダウンロード&解凍します。
-jpcoreのパッケージはsnapshotのパッケージを取得します。
+jpcoreのインデックスページ(https://jpfhir.jp/fhir/core/)より、snapshotのパッケージを取得します。
+
+### パッケージファイルの解凍
+.fhirフォルダに対して、パッケージファイルを解凍し配置します。
+フォルダ名は、後述するsushi-config.yamlのバージョンとあわせます。
+
 
 ```
 .fhir ─ package ┬ fhir.jp.core#(対象バージョン)
@@ -23,3 +28,7 @@ dependencies:
     uri: http://jpfhir.jp/fhir/jpfhir-terminology/ImplementationGuide/
     version: (バージョン)
 ```
+
+### 確認
+JP_xxxxを親に指定して、プロファイルを作成します。
+sushiコマンドを実行し、エラーがなく、parentが指定されていることを確認します。
