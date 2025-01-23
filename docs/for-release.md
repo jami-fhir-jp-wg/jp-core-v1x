@@ -135,7 +135,7 @@ env:
 
 ## 公開作業
 
-### 1. 履歴用ホームページ(https://jpfhir.jp/fhir/core/index.html)の修正
+### 1. 履歴用ホームページ（https://jpfhir.jp/fhir/core/index.html）の修正
 * other/index.htmlの修正
   * 最新との差分を確認すること
   * ホームページおよびpackageファイルパスが間違っていないかを特に確認する
