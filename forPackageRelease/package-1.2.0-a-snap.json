@@ -3,7 +3,6 @@
   "version": "1.2.0-a",
   "canonical": "http://jpfhir.jp/fhir/core",
   "url": "http://jpfhir.jp/fhir/core",
-  "homepage": "https://jpfhir.jp/",
   "title": "JP-CORE IG",
   "description": "JP-CORE IG V1.2.0a snapshot package for release",
   "fhirVersions": [
@@ -12,6 +11,5 @@
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1"
   },
-  "author": "JAMI NeXEHRS FHIR IGWG(JAPAN)",
-  "jurisdiction" : "http://unstats.un.org/unsd/methods/m49/m49.htm#392"
+  "author": "JAMI NeXEHRS FHIR IGWG(JAPAN)"
 }
