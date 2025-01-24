@@ -1,7 +1,6 @@
 ## JP Coreを利用した実装ガイドの作成方法
 
 ### パッケージファイルの取得
-
 _updateTx.bat,shを参考にローカルパッケージキャッシュを事前にダウンロード&解凍します。
 jpcoreのインデックスページ(https://jpfhir.jp/fhir/core/)より、snapshotのパッケージを取得します。
 
