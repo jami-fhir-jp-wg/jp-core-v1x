@@ -4,6 +4,7 @@ Title: "JP Core FamilyMember CodeSystem"
 Description: "FamilyMemberコード"
 * ^content = #supplement
 * ^supplements = "http://terminology.ht7.org/Codesystem/v3-ActCode"
+* ^url = "http://jpfhir.jp/fhir/core/CodeSystem/JP_FamilyMember_CS"
 
 * insert AddJpDesignation(FAMMEMB, "家族")
 * insert AddJpDesignation(CHILD, "子供")
