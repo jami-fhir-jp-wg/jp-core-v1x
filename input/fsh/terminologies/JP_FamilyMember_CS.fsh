@@ -1,10 +1,16 @@
-CodeSystem: JP_FamilyMember_CS
-Id: jp-family-member-cs
-Title: "JP Core FamilyMember CodeSystem"
-Description: "FamilyMemberコード"
+CodeSystem: JP_v3ActCode_FAMMEB_Suppl
+Id: jp-v3ActCode-fammeb-cs
+Title: "Japanese supplement for HL7 v3 ActCode FAMMEB CodeSystem"
+Description: "http://terminology.ht7.org/Codesystem/v3-ActCode where concept is-a FAMMEB の日本語補足"
 * ^content = #supplement
+* ^url = "http://jpfhir.jp/fhir/core/CodeSystem/JP_v3ActCode_FAMMEB_Suppl"
+* ^status = #active
+* ^experimental = false
+* ^date = "2025-03-31"
+* ^publisher = "（一社）日本医療情報学会"
+* ^copyright = "（一社）日本医療情報学会. CC BY-ND 4.0"
+
 * ^supplements = "http://terminology.ht7.org/Codesystem/v3-ActCode"
-* ^url = "http://jpfhir.jp/fhir/core/CodeSystem/JP_FamilyMember_CS"
 
 * insert AddJpDesignation(FAMMEMB, "家族")
 * insert AddJpDesignation(CHILD, "子供")
