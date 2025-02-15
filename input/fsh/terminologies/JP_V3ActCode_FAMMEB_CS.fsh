@@ -1,9 +1,9 @@
-CodeSystem: JP_v3ActCode_FAMMEB_CS
-Id: jp-v3ActCode-fammeb-cs
+CodeSystem: JP_v3ActCode_FamMeb_CS
+Id: jp-v3ActCode-famMeb-cs
 Title: "Japanese supplement for HL7 v3 ActCode FAMMEB CodeSystem"
 Description: "http://terminology.ht7.org/Codesystem/v3-ActCode where concept is-a FAMMEB の日本語補足"
 * ^content = #supplement
-* ^url = $JP_v3ActCode_FAMMEB_CS
+* ^url = $JP_v3ActCode_FamMeb_CS
 * ^status = #active
 * ^experimental = false
 * ^date = "2025-03-31"
