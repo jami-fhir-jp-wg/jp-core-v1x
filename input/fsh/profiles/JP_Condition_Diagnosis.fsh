@@ -47,8 +47,8 @@ Description: "このプロファイルはConditionリソースに対して、患
 * code.coding[medisRecordNo] from $JP_Disease_MEDIS_ManagementID_VS (required)
 * code.coding[medisRecordNo].system = $JP_Disease_MEDIS_ManagementID_CS (exactly)
 * code.coding[medisRecordNo].code 1..
-* code.coding[medisRecordNo] ^short = "MEDIS ICD10対応標準病名マスター(管理番号)。【詳細参照】"
-* code.coding[medisRecordNo] ^definition = "MEDIS ICD10対応標準病名マスターの管理番号。"
+* code.coding[medisRecordNo] ^short = "MEDIS ICD10対応標準病名マスターの交換用コード。"
+* code.coding[medisRecordNo] ^definition = "MEDIS ICD10対応標準病名マスターの交換用コード。"
 * code.coding[medisRecordNo] ^comment = "JP_Disease_MEDIS_ManagementID_VSの中から適切なコードを指定する。"
 * code.coding[receipt] from $JP_Disease_Claim_VS (required)
 * code.coding[receipt].system = $JP_Disease_Claim_CS (exactly)
