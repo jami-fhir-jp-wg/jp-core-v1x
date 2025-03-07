@@ -195,7 +195,7 @@ HL7 V2系では用語集を識別するコーディングシステム名（以�
 ```
 
 ### 病名修飾語について
-病名修飾語は「急性」「過敏性」「症候群」などの修飾を病名に付加するためのものであり、Condition.code要素に対して定義した拡張「JP_Condition_DiseasePrefixModifier」「JP_Condition_DiseasePostfixModifier」を使用し、CodeableConcept型を使用して記録する。標準コードとしては、MEDIS ICD10対応標準病名マスターの修飾語交換用コード（"urn:oid:1.2.392.200119.4.102.5"）ないしレセプト電算資システム用修飾語コード("http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseModifierReceipt_CS")を推奨する。この拡張を繰り返すことにより、複数の修飾語を記述することができる。
+病名修飾語は「急性」「過敏性」「症候群」などの修飾を病名に付加するためのものであり、Condition.code要素に対して定義した拡張「JP_Condition_DiseasePrefixModifier」「JP_Condition_DiseasePostfixModifier」を使用し、CodeableConcept型を使用して記録する。標準コードとしては、MEDIS ICD10対応標準病名マスターの修飾語交換用コード（"urn:oid:1.2.392.200119.4.102.5"）、レセプト電算資システム用修飾語コード("http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseModifierReceipt_CS")またはMEDIS ICD10対応標準病名マスターの修飾語管理番号（"http://medis.or.jp/CodeSystem/master-disease-modKeyNumber"）を推奨する。この拡張を繰り返すことにより、複数の修飾語を記述することができる。
 
 「過敏性大腸炎の初期疾患」の場合のインスタンス例を示す。（★適用順序が分からないがよいか？★）
 ```json
