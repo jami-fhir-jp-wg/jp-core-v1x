@@ -8,7 +8,7 @@ Title: "JP Core Condition Diagnosis Profile"
 Description: "このプロファイルはConditionリソースに対して、患者の診断に関する情報を送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition_Diagnosis"
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2024-11-18"
 * . ^short = "Detailed information about disease. 患者の診断に関する詳細な情報"
 * . ^definition = "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.\r\n\r\n健康上の懸念となるレベルに達した、身体的、精神的、社会的な負の状態(condition)や問題（problem／issue）、医療者による診断(diagnosis)、生じたイベント(event)、置かれている状況(situation)、臨床的概念(clinical concept)。"
 * extension ^slicing.discriminator.type = #value
@@ -74,7 +74,8 @@ Description: "このプロファイルはConditionリソースに対して、患
 * abatement[x] ^short = "転帰日（病名終了日）。診断された疾患や症状がいつ治癒／寛解／軽快したか。【詳細参照】"
 * abatement[x] ^definition = "診断された疾患や症状が解決または寛解した日付または推定日付。 「寛解(remission)」や「解決(resolution)」には過剰な意味合いがあるため「軽減(abatement)」と呼ばれる。つまり、疾患や症状は本当に解決されることはないが、軽減することはある。"
 * abatement[x] ^comment = "転帰日が不明の場合、病名終了日（当該病名の診療を終了した日）を記述してもよい。多くのケースでは解決と寛解の区別は明確でないため、これらに明確な区別はない。 年齢は通常、患者の症状が軽減した年齢を報告する場合に使用される。abatement要素がない場合、症状が解決したか寛解に入ったかは不明である。 アプリケーションとユーザーは通常、状態がまだ有効であると想定する必要がある。 abatementString が存在する場合、状態が軽減されることを意味する。"
-
+* evidence.code ^definition = "この状態の記録に至った徴候や症状。"
+* evidence.code ^short = "徴候や症状"
 // ==============================
 //   Extension 定義
 // ==============================
@@ -87,7 +88,7 @@ Title: "JP Core Disease Outcome Extension"
 Description: "病名の転帰を格納するための拡張"
 * ^url = $JP_Condition_DiseaseOutcome
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2024-08-31"
 * ^context.type = #element
 * ^context.expression = "Condition"
 * . ^short = "病名転帰"
@@ -131,7 +132,7 @@ Title: "JP Core Disease Prefix Modifier Extension"
 Description: "病名の前置修飾語を格納するための拡張"
 * ^url = $JP_Condition_DiseasePrefixModifier
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2023-08-05"
 * ^context.type = #element
 * ^context.expression = "Condition.code"
 * . ^short = "前置修飾語"
@@ -175,7 +176,7 @@ Title: "JP Core Disease Postfix Modifier Extension"
 Description: "病名の後置修飾語を格納するための拡張"
 * ^url = $JP_Condition_DiseasePostfixModifier
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2023-08-05"
 * ^context.type = #element
 * ^context.expression = "Condition.code"
 * . ^short = "後置修飾語"
