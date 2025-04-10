@@ -4,7 +4,7 @@ Usage: #definition
 * url = "http://jpfhir.jp/fhir/core/SearchParameter/JP_MedicationRequest_Start_SP"
 * name = "JP_MedicationRequest_Start_SP"
 * status = #active
-* date = "2024-11-18"
+* date = "2024-12-30"
 * description = "MedicationRequestリソースをExtensionの服用期間の開始日で検索するパラメータを定義する。"
 * code = #jp-medication-start
 * base = #MedicationRequest

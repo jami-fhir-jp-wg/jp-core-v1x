@@ -5,7 +5,7 @@ Description: "レセプト電算システム 転帰区分 コードシステム"
 * ^url = $JP_ConditionDiseaseOutcomeReceipt_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * ^caseSensitive = true
 * ^content = #complete
 * ^copyright = "Copyright 社会保険診療報酬支払基金"

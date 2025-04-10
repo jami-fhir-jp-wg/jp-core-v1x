@@ -30,10 +30,10 @@ HL7 FHIRの基底規格では、ワクチンコードとして CVX コードが�
 
 |分類|名称|URI|
 |---------|----|---------------------------|
-|ワクチン|HOT9|urn:oid:1.2.392.200119.4.403.1|
-|ワクチン|HOT13|urn:oid:1.2.392.100495.20.2.75|
-|ワクチン|YJコード|urn:oid:1.2.392.100495.20.1.73|
-|対象疾患|MEDIS標準病名マスター病名交換用コード|urn:oid:1.2.392.200119.4.101.6|
+|ワクチン|HOT9|http://medis.or.jp/CodeSystem/master-HOT9|
+|ワクチン|HOT13|http://medis.or.jp/CodeSystem/master-HOT13|
+|ワクチン|YJコード|http://capstandard.jp/iyaku.info/CodeSystem/YJ-code|
+|対象疾患|MEDIS標準病名マスター病名交換用コード|http://medis.or.jp/CodeSystem/master-disease-exCode|
 
 ### 項目の追加
 参考にしたワクチン関係の文書やAPIで扱われている項目に合わせ、以下の項目を追加した。
@@ -140,7 +140,7 @@ Immunizationはワクチンを vaccineCodeとして1つまでしか持つこと�
 "vaccineCode": {
   "coding":  [
     {
-      "system": "urn:oid:1.2.392.100495.20.2.75",
+      "system": "http://medis.or.jp/CodeSystem/master-HOT13",
       "code": "1820201040101",
       "display": "インフルエンザHAワクチン「第一三共」1mL"
     }
@@ -200,7 +200,7 @@ Immunization.occurrenceString要素を使用した例：
 "site": {
   "coding":  [
     {
-      "system": "urn:oid:1.2.392.200250.2.2.20.32"
+      "system": "http://jami.jp/CodeSystem/MedicationBodySiteExternal"
       "code": "74L",
       "display": "左上腕"
     }
@@ -255,7 +255,7 @@ Immunization.occurrenceString要素を使用した例：
 
 ### 予防接種の種類、効果のある疾患の記述方法について
 ワクチン接種により感染や重症化を予防できる疾患（記録によっては「予防接種の種類」と呼ばれることもある）は、Immunization.protocolApplied.targetDisease要素にCodeableConcept型で記述する。使用する用語集としては、「診療情報提供書HL7FHIR記述仕様 第1版」などでも採用されている
-MEDIS標準病名マスターの病名交換用コード("urn:oid:1.2.392.200119.4.101.6")を推奨する。
+MEDIS標準病名マスターの病名交換用コード("http://medis.or.jp/CodeSystem/master-disease-exCode")を推奨する。
 
 ```json
 "protocolApplied": [
@@ -264,7 +264,7 @@ MEDIS標準病名マスターの病名交換用コード("urn:oid:1.2.392.200119
       {
         "coding": [
           {
-            "system": "urn:oid:1.2.392.200119.4.101.6",
+            "system": "http://medis.or.jp/CodeSystem/master-disease-exCode",
             "code": "ES0L",
             "display": "インフルエンザ"
           }

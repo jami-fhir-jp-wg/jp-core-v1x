@@ -5,6 +5,6 @@ Description: "心電図検査の一連の測定項目を示す値セット"
 * ^url = $JP_ObservationElectrocardiogramComponentCode_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * ^copyright = "Copyright Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee. "
 * include codes from system $Loinc_CS

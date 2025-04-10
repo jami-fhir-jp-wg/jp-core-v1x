@@ -5,7 +5,7 @@ Description: "HL7表0241-Patient Outcome コードシステム"
 * ^url = $JP_ConditionDiseaseOutcomeHL70241_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * ^caseSensitive = true
 * ^content = #complete
 * ^copyright = "Copyright HL7 Japan (出典：HL7-0241)"

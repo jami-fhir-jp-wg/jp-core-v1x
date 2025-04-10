@@ -8,7 +8,7 @@ Title: "JP Core Procedure Profile"
 Description: "このプロファイルはProcedureリソースに対して、患者に対する医療的な処置のデータを送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Procedure"
 * ^status = #active
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * . ^short = "Procedureリソース"
 * . ^definition = "患者に対して、または患者のために実行されているか実行されたアクション。これは、手術のような身体的介入、または長期サービス、カウンセリング、催眠療法のような低侵襲性である可能性がある。"
 * text ^short = "このリソースを人間が解釈するためのテキスト要約"
@@ -44,9 +44,9 @@ Description: "このプロファイルはProcedureリソースに対して、患
 * subject ^definition = "プロシジャーが実行された対象の人、動物、またはグループ。"
 * subject ^comment = "参照は、実際のFHIRリソースへの参照であり、解決可能でなければならない（アクセス制御、一時的な利用不能などを可能にする）。解決は、URLからの検索、またはリソースタイプによって該当する場合は、絶対参照を正規のURLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
 * encounter only Reference(JP_Encounter)
-* encounter ^short = "このプロシジャーの記録が作成された受療の状況"
-* encounter ^definition = "プロシジャーが作成または実行された受療の状況、またはこの記録の作成が緊密に関連している受療の状況。"
-* encounter ^comment = "これは通常、イベントが発生した出会いの中で行われるが、活動によっては、出会いの公式な終了前または終了後に開始されても、出会いの文脈と結びついている場合がある。"
+* encounter ^short = "このプロシジャーの記録が作成されたEncounterの状況"
+* encounter ^definition = "プロシジャーが作成または実行されたEncounterの状況、またはこの記録の作成が緊密に関連している受療の状況。"
+* encounter ^comment = "これは通常、イベントが発生したEncounterの中で行われるが、活動によっては、Encounterの公式な終了前または終了後に開始されても、Encounterの文脈と結びついている場合がある。"
 * performed[x] ^short = "いつこのプロシジャーが実施されたか"
 * performed[x] ^definition = "Procedureが行われた推定または実際の日付、日時、期間、または年齢。複数の日付にまたがる複雑なProcedureをサポートするために期間を許可し、Procedureの長さを把握することも可能。"
 * performed[x] ^comment = "年齢は一般的に、患者が手技が行われた年齢を報告するときに使用される。  

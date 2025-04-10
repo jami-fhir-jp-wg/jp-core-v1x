@@ -5,10 +5,10 @@
 #### 必須
 このプロファイルでは、次の要素を持たなければならない。
 
-- status: 心電図検査の結果の状態を示すために必須である。
-- category: この検査のカテゴリーがprocedureであることを示すために必須である。
-- code︓この検査が心電図検査(LOINC: 11624-5, EKG Study)であることを示すため必須である。
-- subject: この心電図検査の実施対象を示すために必須である。
+- status : 心電図検査の結果の状態を示すために必須である。
+- category : JP Coreではcategoryを3層に分けている。このプロファイルでは第1層としてprocedureを割り当て、第2層として心電図検査であることを示し、第3層で心電図検査の分類を示している。第1層は必須であるが、第2層以下は任意とする
+- code : この検査が心電図検査(LOINC: 11624-5, EKG Study)であることを示すため必須である。
+- subject : この心電図検査の実施対象を示すために必須である。
 
 #### MustSupport  
 このプロファイルではMust Supportの要素は存在しない。
@@ -114,3 +114,4 @@ code.coding.display = "EKG study"<br>
 
 
 {% include markdown-link-references.md %}
+{% include external-link-reference.md %}

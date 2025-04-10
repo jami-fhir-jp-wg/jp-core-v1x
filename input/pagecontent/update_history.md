@@ -1,25 +1,33 @@
 ***v1.2.0***
 
 * 全般
-  * 主に「v1.1.2に関する不具合」を修正し、新たに「プロファイル」の追加を行った
-  * 各プロファイルのベースとなるFHIR Versionは4.0.1を維持した
-  * 不具合等のやむを得ない場合の除き、下位互換性を保つことを重視している
-  * Copyrightについて記述の見直しを行った
-  * JP_zzz_dummyのidを命名規則に従って修正
+  * v1.1.2の不具合を修正し、新たにプロファイルを追加した。
+  * 「CodeSystem」および「Identifierのsystem要素」にOID形式で定義されていたURIを、URL形式の定義があるものについてはURL形式に変更した。本変更に関して`OIDマッピング表`の項目で記載をしている。
+  * 各プロファイルのベースとなるFHIRバージョンは4.0.1を維持し、不具合などやむを得ない場合を除き、下位互換性を保つように考慮している
+  * 命名規則に従い、ファイル名、ID等を修正した
+  * CodeSystem`JP_BodySite_CS`を作成し、各プロファイル用のValueSetから参照するように設定した
+  * JP CoreではMustSupportを利用しない方針であったがユースケースによってはMustSupportの記述を追加している、MustSupportの方針もあわせて記載している
+  * ビルド時の引数に、言語：日本語、国：日本を指定するようにした
+  * Copyrightの見直しを実施した
 * Profile関連
   * Administration グループ
     * `JP_Coverage`にて被保険者の識別子仕様を変更した
       * 主にレセプト等で利用される被保険者個人識別子とv1.1.2以前より定義される被保険者識別子（CSV版）の２種類を利用できるように拡張した
-      * 厳密な一意性を保つため、被保険者識別子（CSV版）の先頭に保険者番号を付加する体系に変更した
+      * 被保険者識別子（CSV版）の一意性を確保するため、先頭に保険者番号を付加する体系に変更した
       * Identifier.assignerに保険者情報を設定した
-      * 被保険者番号の枝番について、全角⇒半角に仕様を変更した
+      * 被保険者番号の枝番について全角⇒半角に仕様を変更した
   * Medication グループ
-    * `JP_Medication`プロファイルにおいて、ingredient.strength.denominatorを1回の固定値設定した
+    * `JP_Medication`プロファイルにおいて、ingredient.strength.denominatorを固定値（1回）に設定した
     * `JP_MedicationStatement`プロファイルおよび `JP_MedicationStatement_Injection`プロファイルを追加した
     * `JP_MedicationRequest_Injection`プロファイル, `JP_MedicationDispense_Injection`プロファイル, `JP_MedicationAdministration_Injection`プロファイル, `JP_MedicationStatement_Injection`プロファイルに関するmedicationの参照に関する記述を付加した
+    * Exampleとして提示しているCodeSystemのcontext=completeの状態に変更した
     * 操作：$everythingが不要であるため、Medication関連プロファイルを記述を削除した
+    * 施設ごとに管理される処方箋IDのSystem値に関するルールを、コメントに加えて制約（invariant）にて記述するようにした
   * Diagnostic グループ
     * Observation
+      * Categoryのスライシング名を first, second, third に統一した
+      * 第二カテゴリーの中で、固定値設定のものはValueSetを指定しないこととした
+      * 第二(second)のCategoryに対し、固定値設定の要素には１つの項目しかないValueSetを作成せず、固定値のみを指定することとした
       * `JP_Observation_Radiology_Findings`プロファイルおよび`JP_Observation_Radiology_Impression`プロファイルを追加した
       * `JP_Observation_Electrocardiogram`プロファイルを追加した
       * `JP_Observation_Endoscopy`プロファイルを追加した
@@ -42,81 +50,88 @@
       * `JP_Media_Endoscopy`プロファイルを追加定義した
   * Clinical グループ
     * `JP_Condition_Diagnosis`プロファイルを追加した
-    * `JP_Condition_Diagnosis`にて以下の病名マスタを利用可能とした
-      * MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`
-      * MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`
-      * レセプト電算用傷病名マスタ`JP_ConditionDiseaseCodeReceipt_CS`
+    * `JP_Condition_Diagnosis`にて各種病名マスタを利用可能とした
   * Workflow グループ
     * `JP_ServiceRequest_Common`プロファイルを追加、それに伴い`JP_ServiceRequest`を削除した
   * SearchParameterおよびOperation関連
-    * SearchParameterの記述不具合（型指定や名称）やSearchParameterRegistryの差異を比較しを修正しました
+    * SearchParameterの記述不具合（型指定や名称）やSearchParameterRegistryの差異を比較しを修正した
     * SearchParameterのexpressionのFHIRPath記述に対する指摘に対応した
-  * Terminology関連
-    * 以下のコードシステムおよびバリューセットを追加/削除した
-      * `JP_ConditionDieaseCodeReceipt_CS`
-      * `JP_ConditionDieaseModifierReceipt_CS`
-      * `JP_ConditionDieaseOutcomeHL70241_CS`
-      * `JP_ConditionDieaseOutcomeJHSD0006_CS`
-      * `JP_ConditionDieaseOutcomeReceipt_CS`
-      * `JP_ConditionDiseaseCodeICD10_CS`
-      * `JP_ConditionDiseaseCodeICD10_VS`
-      * `JP_ConditionDiseaseCodeMEDISExchange_CS`
-      * `JP_ConditionDiseaseCodeMEDISExchange_VS`
-      * `JP_ConditionDiseaseCodeMEDISRecordNo_CS`
-      * `JP_ConditionDiseaseCodeMEDISRecordNo_VS`
-      * `JP_ConditionDiseaseCodeReceipt_VS`
-      * `JP_ConditionDiseaseModifierMEDISExchange_CS`
-      * `JP_ConditionDiseaseModifierMEDISExchange_VS`
-      * `JP_ConditionDiseaseModifierMEDISRecordNo_CS`
-      * `JP_ConditionDiseaseModifierMEDISRecordNo_VS`
-      * `JP_ConditionDiseaseModifierReceipt_VS`
-      * `JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS`
-      * `JP_ConditionDiseaseOutcomeHL70241_VS`
-      * `JP_ConditionDiseaseOutcomeJHSD0006_VS`
-      * `JP_ConditionDiseaseOutcomeReceipt_VS`
-      * `JP_DentalBodySite_CS`
-      * `JP_DentalBodySite_VS`
-      * `JP_DentalBodySiteStatus_CS`
-      * `JP_DentalBodySiteStatus_VS`
-      * `JP_DentalBodyStructure_CS`
-      * `JP_DentalBodyStructure_VS`
-      * `JP_DentalFundamentalStatus_CS`
-      * `JP_DentalFundamentalStatus_VS`
-      * `JP_DentalMissingTeethObservation_CS`
-      * `JP_DentalMissingTeethObservation_VS`
-      * `JP_DentalPresentTeethObservation_CS`
-      * `JP_DentalPresentTeethObservation_VS`
-      * `JP_DentalSimpleMissingTeethObservation_CS`
-      * `JP_DentalSimpleMissingTeethObservation_VS`
-      * `JP_DentalSimplePresentTeethObservation_CS`
-      * `JP_DentalSimplePresentTeethObservation_VS`
-      * `JP_DICOMModality_VS`
-      * `JP_ObservationCategory_Endoscopy_VS`
-      * `JP_ObservationDentalCategory_CS`
-      * `JP_ObservationDentalCategory_VS`
-      * `JP_ObservationElectrocardiogramComponentCode_VS`
-      * `JP_ObservationElectrocardiogramDuration_VS`
-      * `JP_ObservationElectrocardiogramDuration_CS`
-      * `JP_ObservationElectrocardiogramExtraCategory_CS`
-      * `JP_ObservationElectrocardiogramExtraCategory_VS`
-      * `JP_ObservationElectrocardiogramInterpretationCode_CS`
-      * `JP_ObservationElectrocardiogramInterpretationCode_VS`
-      * `JP_ObservationElectrocardiogramStressType_CS`
-      * `JP_ObservationElectrocardiogramStressType_VS`
-      * `JP_ObservationEndoscopyCode_VS`
-      * `JP_ObservationEndoscopyValueJed_VS`
-    * 以下のCodeSystem,ValueSetを削除した
-      * `JP_ObservationBodySite_CS`
-      * `JP_ObservationBodySite_VS`
-    * `JP_ObservationBodyMeasurementCode_CS`の記述の不具合を修正した
-    * 病名マスタ(MEDIS病名交換用コード`JP_ConditionDiseaseCodeMEDISExchange_CS`,MEDIS ICD10対応標準病名マスター(管理番号)`JP_ConditionDiseaseCodeMEDISRecordNo_CS`,レセプト電算用傷病名マスタ`JP_ConditionDiseaseCodeReceipt_CS`)を用語として追加した
-  * Capability Statement関連
-    * 単数パラメータのConformanceの指定に対応した
-    * 複数パラメータの指定に対応した
-    * Operation定義を追加した
-  * Security関連
-    * JP CoreにおけるMustSupportの記載を、ユースケースによっては利用される場合を考慮し変更した
-  
+* Terminology関連
+  * 以下のコードシステムおよびバリューセットを追加/削除した
+    * `JP_BodySite_VS`
+    * `JP_ConditionDieaseOutcomeHL70241_CS`
+    * `JP_ConditionDieaseOutcomeJHSD0006_CS`
+    * `JP_ConditionDieaseOutcomeReceipt_CS`
+    * `JP_ConditionDiseaseCodeICD10_VS`
+    * `JP_ConditionDiseaseCodeMEDISExchange_VS.`
+    * `JP_ConditionDiseaseCodeMEDISRecordNo_VS`
+    * `JP_ConditionDiseaseCodeReceipt_CS`
+    * `JP_ConditionDiseaseCodeReceipt_VS`
+    * `JP_ConditionDiseaseModifierMEDISExchange_CS`
+    * `JP_ConditionDiseaseModifierMEDISExchange_VS`
+    * `JP_ConditionDiseaseModifierMEDISRecordNo_VS`
+    * `JP_ConditionDiseaseModifierReceipt_CS`
+    * `JP_ConditionDiseaseModifierReceipt_VS`
+    * `JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS`
+    * `JP_ConditionDiseaseOutcomeHL70241_VS`
+    * `JP_ConditionDiseaseOutcomeJHSD0006_VS`
+    * `JP_ConditionDiseaseOutcomeReceipt_VS`
+    * `JP_Conditon_BodySite_VS`
+    * `JP_DentalBodySite_CS`
+    * `JP_DentalBodySite_VS`
+    * `JP_DentalBodySiteStatus_CS`
+    * `JP_DentalBodySiteStatus_VS`
+    * `JP_DentalBodyStructure_CS`
+    * `JP_DentalBodyStructure_VS`
+    * `JP_DentalFundamentalStatus_CS`
+    * `JP_DentalFundamentalStatus_VS`
+    * `JP_DentalMissingTeethObservation_CS`
+    * `JP_DentalMissingTeethObservation_VS`
+    * `JP_DentalPresentTeethObservation_CS`
+    * `JP_DentalPresentTeethObservation_VS`
+    * `JP_DentalSimpleMissingTeethObservation_CS`
+    * `JP_DentalSimpleMissingTeethObservation_VS`
+    * `JP_DentalSimplePresentTeethObservation_CS`
+    * `JP_DentalSimplePresentTeethObservation_VS`
+    * `JP_DICOMModality_VS`
+    * `JP_Disease_Claim_VS`
+    * `JP_Disease_MEDIS_Concept_VS`
+    * `JP_Disease_MEDIS_ManagementID_VS`
+    * `JP_ImagingStudy_EndoScopy_BodySite_VS`
+    * `JP_ImagingStudy_Radiology_BodySite_VS`
+    * `JP_Modifier_Disease_Claim_VS`
+    * `JP_Modifier_MEDIS_Concept_VS`
+    * `JP_Modifier_MEDIS_ManagementID_VS`
+    * `JP_ObservationDentalCategory_CS`
+    * `JP_ObservationElectrocardiogramComponentCode_VS`
+    * `JP_ObservationElectrocardiogramDuration_CS`
+    * `JP_ObservationElectrocardiogramDuration_VS`
+    * `JP_ObservationElectrocardiogramExtraCategory_CS`
+    * `JP_ObservationElectrocardiogramExtraCategory_VS`
+    * `JP_ObservationElectrocardiogramInterpretationCode_CS`
+    * `JP_ObservationElectrocardiogramInterpretationCode_VS`
+    * `JP_ObservationElectrocardiogramStressType_CS`
+    * `JP_ObservationElectrocardiogramStressType_VS`
+    * `JP_ObservationEndoscopyCode_VS`
+    * `JP_ObservationEndoscopyValueJed_VS`
+  * 以下のCodeSystem,ValueSetを削除した
+    * `JP_ObservationBodyMeasurementCode_CS`
+    * `JP_ObservationBodySite_CS`
+    * `JP_ObservationCategory_Microbiology_VS`
+    * `JP_ProcedureBodysite_CS`
+  * 病名マスタに以下のコードを追加した
+    * MEDIS病名交換用コード (`JP_ConditionDiseaseCodeMEDISExchange_CS`)
+    * MEDIS ICD10対応標準病名マスター（管理番号）(`JP_ConditionDiseaseCodeMEDISRecordNo_CS`)
+    * レセプト電算用傷病名マスタ (`JP_Disease_Claim_CS`) 
+  * NamingSystem
+    * OIDとURL形式の組み合わせおよび推奨値について見直しを行った
+* Capability Statement関連
+  * Search Parameter
+    * 単数パラメータに対するConformance(SHALL, SHOULD, MAY)の指定に対応した
+    * 複数パラメータをConformance(SHALL, SHOULD, MAY)の指定を含め追加した
+  * Operation
+    * 各プロファイルに記載されたOperation定義を、Capability Statementに明記した
+
 ***v1.1.2***
 
 パブリックコメントやIssue等の指摘を中心に不具合やわかりにくい点について改善を行った。また内視鏡検査および微生物学的検査関連のプロファイルを新規に追加した。主な変更点は以下のとおりである。

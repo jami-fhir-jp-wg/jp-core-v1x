@@ -6,8 +6,8 @@
 #### 必須
 このプロファイルでは、次の要素を持たなければならない。
 
-- status︓検査項目情報の状態は必須である
-- code︓このプロファイルは何の検査項目であるかを示すため必須である
+- status : 検査項目情報の状態は必須である
+- code : このプロファイルは何の検査項目であるかを示すため必須である
 
 #### MustSupport
 このプロファイルではMust Supportの要素は存在しない。
@@ -506,3 +506,4 @@ effectiveDateTimeとeffectivePeriodは、検査に密接に関連する時間情
 遺伝情報の報告には、DiagnosticReportリソースとObservationリソースを主に使用する。遺伝情報に関する結果の記述についての実装ガイドは[こちら](https://hl7.org/fhir/uv/genomics-reporting/)を参照されたい。
 
 {% include markdown-link-references.md %}
+{% include external-link-reference.md %}

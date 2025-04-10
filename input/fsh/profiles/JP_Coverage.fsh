@@ -8,7 +8,7 @@ Title: "JP Core Coverage Profile"
 Description: "このプロファイルはCoverageリソースに対して、保険・公費のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage"
 * ^status = #active
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * . ^short = "Insurance or medical plan or a payment agreement　保険または医療費支払いプラン、または合意された支払い方法"
 * . ^definition = "Financial instrument which may be used to reimburse or pay for health care products and services. Includes both insurance and self-payment.  
 ヘルスケア製品およびサービスの償還または支払いに使用される可能性のある金融商品。 保険と自己負担の両方が含まれる。"
@@ -83,7 +83,7 @@ Coverageには、保険証レベルの情報が含まれている。これは、
 補償の種類：社会プログラム、医療計画、事故補償（労働者災害補償、自動車）、グループの健康、または個人または組織による支払い。"
 * type ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.  
 すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係とpre-coordinationとpost-coordinationの用語関係を管理するための独自の構造を提供する必要がある。  
-【JP Core仕様】「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」等で使用される保険種別コード（system=”urn:oid:1.2.392.100495.20.2.61”）として、https://www.mhlw.go.jp/content/10800000/000342368.pdf　の別表１１が使用している例があげられている。JP Coreとして本項目に対する用語のバインドは現時点では定義するまでに至っていない。"
+【JP Core仕様】「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」等で使用される保険種別コード（system=”http://jpfhir.jp/fhir/core/mhlw/IdSystem/medicalRegistrationNumber”）として、https://www.mhlw.go.jp/content/10800000/000342368.pdf　の別表１１が使用している例があげられている。JP Coreとして本項目に対する用語のバインドは現時点では定義するまでに至っていない。"
 * type ^requirements = "The order of application of coverages is dependent on the types of coverage.  
 カバレッジの適用順序は、カバレッジのタイプによって異なる。"
 * policyHolder only Reference(JP_Patient or RelatedPerson or JP_Organization)
@@ -136,7 +136,7 @@ Coverageには、保険証レベルの情報が含まれている。これは、
 一般的に、個人は、他人が所有するポリシよりも、自分のポリシ（relationship='self'）を使用する。"
 * relationship ^requirements = "To determine relationship between the patient and the subscriber to determine coordination of benefits.  
 患者と加入者の関係を決定し、給付の調整を決定する。  
-【JP Core仕様】「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」等で使用される被保険者区分コード（system=”urn:oid:1.2.392.100495.20.2.62”）として、https://www.mhlw.go.jp/content/10800000/000342368.pdf　の別表１２が使用できる。  
+【JP Core仕様】「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」等で使用される被保険者区分コード（system=”http://jpfhir.jp/fhir/core/mhlw/CodeSystem/InsuredPersonCategory”）として、https://www.mhlw.go.jp/content/10800000/000342368.pdf　の別表１２が使用できる。  
 　1 被保険者  
 　2 被扶養者"
 * period ^definition = "Time period during which the coverage is in force. A missing start date indicates the start date isn't known, a missing end date means the coverage is continuing to be in force.  

@@ -8,4 +8,4 @@ Description: "身体所見の区分を表す値セット"
 * ^date = "2023-10-31"
 * ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 
-* include codes from system JP_PhysicalExamCode_CS
+* include codes from system $JP_PhysicalExamCode_CS

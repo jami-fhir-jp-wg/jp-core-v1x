@@ -2,23 +2,26 @@
 //   Profile 定義
 // ==============================
 Profile: JP_Observation_Radiology_Findings
-Parent: Observation
+Parent: JP_Observation_Common
 Id: jp-observation-radiology-findings
 Title: "JP Core Observation Radiology Findings Profile"
 Description: "このプロファイルはDiagnosticReport_Radiologyリソースに関連する画像診断報告書の「所見」データを送受信するための共通の制約と拡張を定めたものである。"
-* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Radiology_Findings"
+* ^url = $JP_Observation_Radiology_Findings
 * ^status = #active
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * . ^short = "画像診断レポートの所見（findings）"
 * . ^definition = "放射線画像検査に対する画像診断レポートの所見の内容（findings）。"
 * . ^comment = "画像診断レポートの所見（findings）に対応するObservationプロファイル"
+* ^copyright = "Copyright JED-Project、JAHIS、日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG  
+This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995+, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * identifier MS
 * basedOn only 	Reference(ServiceRequest)
 * basedOn ^comment = "このObservationが生成されることになった画像検査に関するオーダ情報"
 * partOf only Reference(JP_ImagingStudy_Radiology)
 * partOf ^comment = "このObservation（所見）が生成される元になった画像検査"
-* category from $JP_SimpleObservationCategory_VS (required)
-* category ^comment = "このObservationを分類するコード。(imaging)が指定される。"
+* category[first] MS
+* category[first] ^comment = "このObservationを分類するコード。(imaging)が指定される。"
+* category[first].coding.code = $JP_SimpleObservationCategory_CS#imaging (exactly)
 //* code = $Loinc_CS#18782-3  "Radiology Study observation (narrative)" (exactly)
 * code.coding.system = $Loinc_CS (exactly)
 * code.coding.code = $Loinc_CS#18782-3 (exactly)

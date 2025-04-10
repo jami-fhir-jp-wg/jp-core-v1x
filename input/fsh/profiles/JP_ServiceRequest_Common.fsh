@@ -8,7 +8,7 @@ Title: "JP Core ServiceRequest Common Profile"
 Description: "本プロファイル説明は、患者に対し立案・実施されるリクエストの記録で、行為や診断、もしくは他のサービスのために用いられるFHIR ServiceRequestリソースを使用するにあたっての、最低限の制約を記述したものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common"
 * ^status = #active
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * . ^short = "サービスリクエスト"
 * . ^definition = "診断のための検査、治療、手術などのサービスリクエストの記録"
 * meta.lastUpdated 0.. MS
@@ -23,8 +23,7 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 //
 * instantiatesUri ^short = "外部のプロトコール、定義への参照"
 * instantiatesUri ^definition = "このサービスリクエストに部分的、または完全に関わる、外部の管理されたプロトコール、ガイドライン、オーダセットや他の定義へのURL参照"
-* instantiatesUri = "HTMLページ、PDFなど、名前で解決できないURI識別子"
-* instantiatesUri 0..1
+* instantiatesUri ^comment = "HTMLページ、PDFなど、名前で解決できないURI識別子"
 //
 * basedOn ^short = "リクエストするリソースへの参照"
 * basedOn ^definition = "このリクエストによって実施すべき計画、提案、オーダの詳細（への参照）"
@@ -141,9 +140,3 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * relevantHistory ^short = "リソースの履歴（バージョン管理）"
 * relevantHistory ^definition = "このリクエストの履歴で重要なもの"
 * relevantHistory ^comment = "この要素はには、ServiceRequestのProvenanceの全てのバージョンではなく、重要と思われたものだけ含められる。現在のバージョンのリソースに関連したProvenanceリソースを含めてはならない（SHALL NOT）。（もし、Provenanceとして重要な変化と思われれば、以降の更新の一部として追加すべきである。それまでは、'_revinclude'を使って指定されたProvenanceのバージョンを直接クエリーできる。全てのProvenanceはこのRequestの履歴を対象とすべきである。）"
-
-
-// Invariant: prr-1
-// Severity: #error
-// Description: "code要素がある場合のみ、orderDetail要素は存在"
-// Expression: "orderDetail.empty() or code.exists()"

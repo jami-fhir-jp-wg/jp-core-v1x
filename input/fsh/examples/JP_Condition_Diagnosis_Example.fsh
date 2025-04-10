@@ -41,37 +41,29 @@ Usage: #example
     * url = $JP_Condition_DiseasePrefixModifier
     * valueCodeableConcept
       * coding[0]
-        * system = $JP_ConditionDiseaseModifierReceipt_CS
-        * code = #3216
-        * display = "過敏性"
-      * text = "過敏性"
+        * system = $JP_Modifier_MEDIS_Concept_CS
+        * code = #5194
+        * display = "右"
+      * text = "右"
   * extension[1]
     * url = $JP_Condition_DiseasePostfixModifier
     * valueCodeableConcept
       * coding[0]
-        * system = $JP_ConditionDiseaseModifierReceipt_CS
-        * code = #1111
-        * display = "の初期"
-      * text = "の初期"
-  * extension[2]
-    * url = $JP_Condition_DiseasePostfixModifier
-    * valueCodeableConcept
-      * coding[0]
-        * system = $JP_ConditionDiseaseModifierReceipt_CS
-        * code = #08MV
-        * display = "疾患"
-      * text = "疾患"
+        * system = $JP_Modifier_MEDIS_Concept_CS
+        * code = #1486
+        * display = "の術後"
+      * text = "の術後"
   * coding[0]
     * system = "http://terminology.sample.com/CodeSystem/disease/1311234567"
     * code = #MD13062
-    * display = "大腸炎"
+    * display = "橈骨遠位端骨折"
   * coding[1]
-    * system = $JP_ConditionDiseaseCodeMEDISExchange_CS
-    * code = #VSES
-    * display = "大腸炎"
-  *  text = "過敏性大腸炎の初期疾患"
+    * system = $JP_Disease_MEDIS_Concept_CS
+    * code = #CJTR
+    * display = "橈骨遠位端骨折"
+  *  text = "右橈骨遠位端骨折の術後"
 *  bodySite[0]
-  *  text = "大腸"
+  *  text = "右橈骨遠位端"
 *  subject
   *  reference = "Patient/jp-patient-example-1"
   *  display = "山田 太郎"

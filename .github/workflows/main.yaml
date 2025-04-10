@@ -12,7 +12,7 @@ on:
     branches:
       - 'main'
 env:
-  release_version : 1.2.0
+  release_version : 1.3.0-dev
 jobs:
   turn:
     runs-on: ubuntu-latest
@@ -29,8 +29,8 @@ jobs:
           echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
           echo "branch_group=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
         else
-          echo "branch$(echo ${{ github.event.pull_request.head.ref }})" >> $GITHUB_OUTPUT
-          echo "branch_group$(echo 'pullrequest')" >> $GITHUB_OUTPUT
+          echo "branch=$(echo ${{ github.event.pull_request.head.ref }})" >> $GITHUB_OUTPUT
+          echo "branch_group=$(echo 'pullrequest')" >> $GITHUB_OUTPUT
         fi
       id: extract_branch
     
@@ -38,6 +38,8 @@ jobs:
       shell: bash
       run: |
         echo "date=$(git log -1 --format="%at" | xargs -I{} date -d @{})" >> $GITHUB_OUTPUT
+        title_temp=$(echo ${{ github.event.pull_request.title }} | sed 's/\[/【/g; s/\]/】/g; s/\:/：/g; s/\-/－/g')
+        echo "encoded_pullrequest_title=$title_temp" >> $GITHUB_ENV
       id: extract_date
 
     - uses: bluwy/substitute-string-action@v1
@@ -50,7 +52,7 @@ jobs:
         date: ${{ steps.extract_date.outputs.date }}
         actor: ${{ github.actor }}
         pullrequest_url: ${{ github.event.pull_request.html_url }}
-        pullrequest_title: ${{ github.event.pull_request.title }}
+        pullrequest_title: ${{ env.encoded_pullrequest_title }}
         _output-file: input/landing_page/_index.yml
 
     - name: Setup npm
@@ -85,14 +87,14 @@ jobs:
       uses: suisei-cn/actions-download-file@v1.6.0
       id: downloadfile2
       with:
-        url: "https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.2.1.tgz"
+        url: "https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.3.0.tgz"
         target: .    
       
     - name: Prepare for using all dependent packages including Jp modified version of hl7.fhir.r4.core Package 
       env:
         JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
-        JPTerminologyCOREdir: jpfhir-terminology#1.2.1
-        JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.2.1.tgz
+        JPTerminologyCOREdir: jpfhir-terminology.r4#1.3.0
+        JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.3.0.tgz
       run: |
         mkdir -p /home/runner/.fhir
         mv $JPPACKAGECOREtgz /home/runner/.fhir/
@@ -115,9 +117,8 @@ jobs:
         mkdir input-cache
         mv publisher.jar ./input-cache/publisher.jar
         unset DISPLAY
-        java  -Xmx12G -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx n/a
+        java -Xmx12G -Duser.language=ja -Duser.country=JP -Djava.awt.headless=true -jar ./input-cache/publisher.jar -ig ig.ini -tx n/a
         mv ./input/landing_page/_index.yml ./output/
-
 
     - name: replace url of html files referring simplifier.net package
       run:  |

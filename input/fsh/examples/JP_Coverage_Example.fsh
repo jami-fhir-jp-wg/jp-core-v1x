@@ -29,6 +29,6 @@ Description: "あじさい健康保険組合"
 Usage: #inline
 * type = http://terminology.hl7.org/CodeSystem/organization-type#pay "Payer"
 * name = "あじさい健康保険組合"
-* identifier[insurerNumber].system = $JP_InsuranceOrganization_IdSystem
+* identifier[insurerNumber].system = $JP_IdSystem_InsurerNumber
 * identifier[insurerNumber].value = "12345"
 

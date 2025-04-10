@@ -101,3 +101,9 @@ RuleSet: PutCombination2(expectation, param1, param2)
 RuleSet: PutCombinationParameter(param1)
 * rest.resource[=].extension[=].extension[+].url = "required"
 * rest.resource[=].extension[=].extension[=].valueString = "{param1}"
+
+//　日本語訳の設定
+RuleSet: AddJpDesignation(code, display)
+* ^concept[+].code = #{code}
+* ^concept[=].designation[+].language = #ja
+* ^concept[=].designation[=].value = "{display}"

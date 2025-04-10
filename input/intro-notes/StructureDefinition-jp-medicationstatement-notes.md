@@ -4,7 +4,7 @@
 MedicationStatement リソースは、次の要素を持たなければならない。
 - status : ステータスは必須である
 - medicationCodeableConcept : 医薬品の識別情報は必須であり、medicationCodeableConcept.coding.system, medicationCodeableConcept.coding.code, medicationCodeableConcept.coding.display が必ず存在しなければならない
-- subject :患者の参照情報は必須であり、subject.referenceないしsubject.identifierが必ず存在しなければならない
+- subject : 患者の参照情報は必須であり、subject.referenceないしsubject.identifierが必ず存在しなければならない
 
 ### Extensions定義
 
@@ -17,19 +17,19 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 
 |分類|CS名|URI|
 |---------|----|---------------------------|
-|医薬品|HOT7|urn:oid:1.2.392.200119.4.403.2|
-|医薬品|HOT9|urn:oid:1.2.392.200119.4.403.1|
-|医薬品|HOT13|urn:oid:1.2.392.200119.4.402.1|
-|医薬品|YJコード|urn:oid:1.2.392.100495.20.1.73|
-|医薬品|⼀般処⽅名マスター|urn:oid:1.2.392.100495.20.1.81|
+|医薬品|HOT7|http://medis.or.jp/CodeSystem/master-HOT7|
+|医薬品|HOT9|http://medis.or.jp/CodeSystem/master-HOT9|
+|医薬品|HOT13|http://medis.or.jp/CodeSystem/master-HOT13|
+|医薬品|YJコード|http://capstandard.jp/iyaku.info/CodeSystem/YJ-code|
+|医薬品|⼀般処⽅名マスター|http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationGeneralOrderCode|
 |剤形|MERIT-9(剤形)|http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationFormMERIT9_CS |
-|薬品単位|MERIT-9(単位）|urn:oid:1.2.392.100495.20.2.101|
-|力価区分|処方情報 HL7FHIR 記述仕様(力価区分)|urn:oid:1.2.392.100495.20.2.22|
-|用法|JAMI処方・注射オーダ標準用法規格(用法コード)|urn:oid:1.2.392.200250.2.2.20.20|
-|用法|JAMI処方・注射オーダ標準用法規格(補足用法コード)|urn:oid:1.2.392.200250.2.2.20.22|
-|部位|JAMI処方・注射オーダ標準用法規格(部位コード)|urn:oid:1.2.392.200250.2.2.20.32|
-|投与方法|JAMI処方・注射オーダ標準用法規格(基本用法区分)|urn:oid:1.2.392.200250.2.2.20.30|
-|投与経路|HL7 V2(使用者定義表0162)|http://terminology.hl7.org/CodeSystem/v2-0162|
+|薬品単位|MERIT-9(単位）|http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationUnitMERIT9Code|
+|力価区分|処方情報 HL7FHIR 記述仕様(力価区分)|http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationIngredientStrengthType|
+|用法|JAMI処方・注射オーダ標準用法規格(用法コード)|http://jami.jp/CodeSystem/MedicationUsage|
+|用法|JAMI処方・注射オーダ標準用法規格(補足用法コード)|http://jami.jp/CodeSystem/MedicationUsageAdditional|
+|部位|JAMI処方・注射オーダ標準用法規格(部位コード)|http://jami.jp/CodeSystem/MedicationBodySiteExternal|
+|投与方法|JAMI処方・注射オーダ標準用法規格(基本用法区分)|http://jami.jp/CodeSystem/MedicationMethodBasicUsage|
+|投与経路|HL7 V2(使用者定義表0162)| http://jpfhir.jp/fhir/core/CodeSystem/route-codes|
 |入外区分|HL7V2(HL7表0482)|http://terminology.hl7.org/CodeSystem/v2-0482|
 
 ## 利用方法
@@ -40,8 +40,6 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
 | SHALL            | identifier    | token  | GET [base]/MedicationStatement?identifier=http://myhospital.com/fhir/medication\|1234567890 |
 | SHOULD            | patient      | reference | GET [base]/MedicationStatement?patient=123456   |
-| SHOULD           | patient,whenhandedover | referenece,date  | GET [base]/MedicationStatement?patient=123456&whenhandedover=eq2013-01-14 |
-| MAY           | whenhandedover,whenprepared,context,code,performer| date,date,token,token,token | GET [base]/MedicationStatement?code=urn:oid:1.2.392.200119.4.403.1\|105271807  |
 
 ##### 必須検索パラメータ
 
@@ -81,20 +79,6 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 
    リソースIDが123456の患者のMedicationStatementリソースを含むBundleを検索する。
 
-1. patient,whenhandedover 検索パラメータを使用して、患者のリファレンス情報と払い出し日によるMedicationStatementの検索をサポートすることが望ましい（**SHOULD**）
-
-   ```
-   GET [base]/MedicationStatement?patient=[id]&whenhandedover=[date]
-   GET [base]/MedicationStatement?patient=[url]&whenhandedover=[date]
-   ```
-
-   例：
-
-   ```
-   GET [base]/MedicationStatement?patient=123456&whenhandedover=eq2013-01-14
-   ```
-
-   リソースIDが123456の患者の2013-01-14に払い出されたMedicationStatementリソースを含むBundleを検索する。
 
 
 ##### 追加検索パラメータ 
@@ -127,7 +111,7 @@ MedicationStatementは薬剤をCodeableConceptとして1つまでしか持つか
 "medicationCodeableConcept": {
   "coding": [
     {
-      "system": "urn:oid:1.2.392.200119.4.403.1",
+      "system": "http://medis.or.jp/CodeSystem/master-HOT9",
       "code": "105271807",
       "display": "プレドニン錠５ｍｇ"
     }
@@ -192,13 +176,13 @@ MedicationStatementは薬剤をCodeableConceptとして1つまでしか持つか
 
 ### 服用理由（対象疾患等）
 この投薬の理由、対象疾患などを、reasonCode要素にCodeableConcept型で記述する。
-服用理由で使用するコードは、MEDIS標準病名マスター 病名交換用コード("urn:oid:1.2.392.200119.4.101.6")を推奨する。
+服用理由で使用するコードは、MEDIS標準病名マスター 病名交換用コード("http://medis.or.jp/CodeSystem/master-disease-exCode")を推奨する。
 
 ```json
 "reasonCode": {
   "coding": [
     {
-      "system": "urn:oid:1.2.392.200119.4.101.6",
+      "system": "http://medis.or.jp/CodeSystem/master-disease-exCode",
       "code": "B0EF",
       "display": "持続腹痛"
     }

@@ -3,8 +3,8 @@
 
 次の要素は必須（**SHALL**）である。
 
-- status：リソースの状態。原則、`completed`。
-- content：メディアの実際のコンテンツーインラインまたはメディアソースファイルへの直接参照。
+- status : リソースの状態。原則、`completed`。
+- content : メディアの実際のコンテンツーインラインまたはメディアソースファイルへの直接参照。
 
 ### Must Support
 このプロファイルではMust Supportとなる要素はない。
@@ -30,7 +30,7 @@ Mediaリソースには、いくつかのdate/timesが含まれている。
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
-| SHALL | identifier | token | `GET [base]/media?identifier=urn:oid:2.16.124.999999.9999.1154777499.30246.19789.3503430045` |
+| SHALL | identifier | token | `GET [base]/media?identifier=http://samplehospital.org/fhir/endoscopysystem/imaging-orders/202304250945280001` |
 | MAY | patient | reference | `GET [base]/media?patient=123` |
 | MAY | patient,modality | reference,token | `GET [base]/media?patient=123&modality=ES` |
 | MAY | patient,created | reference,date | `GET [base]/media?patient=123&created=eq2021-06-25` |
@@ -38,7 +38,9 @@ Mediaリソースには、いくつかのdate/timesが含まれている。
 
 #### 必須検索パラメータ
 
-本プロファイルで必須(**SHALL**)として定義された検索項目はない。
+次の検索パラメータは必須でサポートされなければならない。（**SHALL**）
+
+- identifier
 
 #### オプション検索パラメータ
 

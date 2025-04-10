@@ -8,7 +8,7 @@ Title: "JP Core Observation LabResult Profile"
 Description: "このプロファイルはObservationリソースに対して、検体検査結果のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_LabResult"
 * ^status = #active
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * . ^short = "検体検査結果"
 * . ^definition = "検体検査結果の格納に使用する。"
 * . ^comment = "すべてのObservation（検査測定や観察事実）の制約プロファイル"
@@ -37,27 +37,19 @@ Description: "このプロファイルはObservationリソースに対して、�
 * status ^comment = "【JP Core仕様】v2.5の「F」に相当する値は「final」であるが、ここでは 必須コード表「ObservationStatus」より、全てのコード値を使用可とする。  
 (registered | preliminary | final | amended |   corrected | cancelled | entered-in-error | unknown)"
 * category 1..
-
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "$this"
-* category ^slicing.rules = #open
-* category contains laboratory 1..1
 * insert SetDefinition(category.coding, コード化されたカテゴリー)
 
-* category[laboratory] ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「laboratory」固定とする。  
+* category[first] ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「furst」固定とする。  
 (social-history | vital-signs | imaging | laboratory | procedure | survey | exam | therapy | activity)"
-* category[laboratory].coding ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「laboratory」固定とする。"
+* category[first].coding ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「laboratory」固定とする。"
 
-* insert SetDefinition(category[laboratory], 検体検査では、http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS のコード表から\"laboratory\"を設定する。)
-* insert SetDefinition(category[laboratory].coding.system, 検体検査では、http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS のコード表を使用する。)
-* insert SetDefinition(category[laboratory].coding.code, 検体検査を表すコード laboratory を設定する。)
+* insert SetDefinition(category[first], 検体検査では、http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS のコード表から\"laboratory\"を設定する。)
+* insert SetDefinition(category[first].coding.system, 検体検査では、http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS のコード表を使用する。)
+* insert SetDefinition(category[first].coding.code, 検体検査を表すコード laboratory を設定する。)
 
-* category[laboratory] from JP_SimpleObservationCategory_VS (required)
-* category[laboratory].coding.system = $JP_SimpleObservationCategory_CS (exactly)
-* category[laboratory].coding 1..1
-* category[laboratory].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
-* category[laboratory].coding.system 1..1
-* category[laboratory].coding.code 1..1
+* category[first].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
+* category[first].coding.system 1..1
+* category[first].coding.code 1..1
 
 * code from $JP_ObservationLabResultCode_VS (preferred)
 * code ^definition = "検査の内容の説明。検査名称。"

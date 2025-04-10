@@ -4,7 +4,7 @@ Id: jp-specimen-common
 Description: "このプロファイルはSpecimenリソースに対して、患者のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common"
 * ^status = #active
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * meta.lastUpdated 0.. MS
 * . ^short = "検査のための材料"
 * . ^definition = "患者に対して、または患者のために実行されているか実行されたアクション。これは、手術のような身体的介入、または長期サービス、カウンセリング、催眠療法のような低侵襲性である可能性がある。"

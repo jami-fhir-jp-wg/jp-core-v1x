@@ -1,5 +1,4 @@
-このドキュメントは日本医療情報学会NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した実装ガイドのVer.1.1.2である。実装や利用は全て自己責任で行なうこと。 <br/>
-
+このドキュメントは日本医療情報学会NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した実装ガイドのVer.1.3.0-devである。
 
 ### 概要
 ガイダンス: JP Coreでの全体に関わる規則や注意事項を記載している。
@@ -8,6 +7,7 @@
 * [欠損値の扱い](guide-handlingOfNonExistentData.html)
 * [文字コード](guide-characterEncoding.html)
 * [検索](guide-stringSearch.html)
+* [OIDマッピング表](guide-urlmap.html)
 * [利用上の注意事項](guide-precautions.html) 
 * [更新履歴](update_history.html)
 
@@ -48,6 +48,9 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
         * [JP Core Observation Radiology Findings (放射線画像検査所見）プロファイル)][JP_Observation_Radiology_Findings]
         * [JP Core Observation Radiology Impression (放射線画像検査インプレッション)プロファイル][JP_Observation_Radiology_Impression]
       * [JP Core Observation Endoscopy （内視鏡検査）プロファイル][JP_Observation_Endoscopy]
+      * [JP Core Observation DentalOral Tooth Existence Profile （口腔診査）プロファイル][JP_Observation_DentalOral_ToothExistence]
+      * [JP Core Observation DentalOral Tooth Treatment Condition Profile （口腔診査）プロファイル][JP_Observation_DentalOral_ToothTreatmentCondition]
+      * [JP Core Observation DentalOral Missing Tooth Condition Profile （口腔診査）プロファイル][JP_Observation_DentalOral_MissingToothCondition]
   * Specimen （検体）
     * [JP Core Specimen Common （共通）プロファイル][JP_Specimen_Common]
   * Media （メディア）
@@ -61,6 +64,7 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
       * [JP Core DiagnosticReport Microbiology （微生物学検査レポート）プロファイル][JP_DiagnosticReport_Microbiology]
       * [JP Core DiagnosticReport Radiology （放射線検査レポート）プロファイル][JP_DiagnosticReport_Radiology]
       * [JP Core DiagnosticReport Endoscopy （内視鏡レポート）プロファイル][JP_DiagnosticReport_Endoscopy]
+      * [JP Core DiagnosticReport DentalOral （口腔診査レポート）プロファイル][JP_DiagnosticReport_DentalOral]
 * [Clinicalグループ（診療）](group-clinical.html)
   * [JP Core AllergyIntolerance （アレルギー不耐症）プロファイル][JP_AllergyIntolerance]
   * [JP Core Condition （状態）プロファイル][JP_Condition]
@@ -102,30 +106,32 @@ JP Core利用にあたり、考慮すべきセキュリティに関する要件�
 
 ---
 ### Contributors：
-JP Coreは以下の方々、および各サーブワーキンググループのここに記載されていない多くのメンバの献身的な活動や協力により作成されている。
-* FHIR Infrastructure : インフラ基盤WG
-  * リーダ：㈱ファインデックス　宮川 力
-  * サブリーダ：、㈱ケーアイエス　小西 由貴範、日本総合システム㈱　松本 聖
-  * メンバ：京都大学　須藤 英隼、東京大学　三谷 知宏、日本総合システム㈱　安達 隆佳、岡安 想、中川 雅三、藤野 孝彦、ファインデックス　小倉 卓義、（一社）保健医療福祉情報安全管理適合性評価協会　喜多 紘一
+JP Coreは以下の方々、および各サーブワーキンググループのここに記載されていない多くのメンバの献身的な活動や協力により作成されている。<br>
+* <a href="https://jpfhir.jp/">日本医療情報学会NeXEHRS研究会FHIR日本実装検討WG</a>
+  * NeXEHRS研究会代表幹事・FHIR日本実装検討WG座長　大江和彦（東京大学）
+  * Infrastructure : インフラ基盤SWG
+    * リーダ：㈱ファインデックス　宮川 力
+    * サブリーダ：㈱ケーアイエス　小西 由貴範、日本総合システム㈱　松本 聖
+    * メンバ：京都大学　須藤 英隼、東京大学　三谷 知宏、日本総合システム㈱　安達 隆佳、岡安 想、中川 雅三、藤野 孝彦、ファインデックス　小倉 卓義、（一社）保健医療福祉情報安全管理適合性評価協会　喜多 紘一
 
-* Diagnostics and Observations : SWG2
-  * リーダ：キヤノンメディカルシステムズ㈱　塩川 康成
-  * サブリーダ：㈱ケーアイエス　平山 照幸
-  * メンバ：東京大学　横田慎一郎、富士通㈱　石原 正樹、㈱セールスフォース・ジャパン　上中進太郎、㈱エイアンドティー　千葉 信行、㈱NTTデータ　川田 剛、H.U.グループホールディングス㈱　和田 征剛、岩手医科大学　田中 良一、大船中央病院　青木 陽介、北海道科学大学　谷川 琢海、旭川医科大学　谷 祐児、京都大学　山口 泉、東京大学　三谷 知広、今井 健、岐阜大学　小林 慎治、オリンパスメディカルシステムズ㈱　尾崎 孝史、富士フイルムホールディングス㈱　龍田 岳一
-  * 協力者：オリンパスメディカルシステムズ㈱　大森 真一、富士フイルム㈱　三浦 悟朗
+  * Diagnostics and Observations : 診断・検査SWG
+    * リーダ：キヤノンメディカルシステムズ㈱　塩川 康成
+    * サブリーダ：㈱ケーアイエス　平山 照幸
+    * メンバ：千葉大学　横田 慎一郎、富士通㈱　石原 正樹、㈱セールスフォース・ジャパン　上中 進太郎、㈱エイアンドティー　千葉 信行、深川 一成、㈱日立ハイテク　川田 剛、H.U.グループホールディングス㈱　和田 征剛、岩手医科大学　田中 良一、見附市立病院　西野 克彦、大船中央病院　青木 陽介、北海道科学大学　谷川 琢海、谷川原 綾子、旭川医科大学　谷 祐児、京都大学　山口 泉、東京大学　三谷 知広、今井 健、井田 有亮、岐阜大学　小林 慎治、オリンパスメディカルシステムズ㈱　尾崎 孝史、富士フイルムホールディングス㈱　龍田 岳一、藤田医科大学　苅谷 敬士、キヤノンITSメディカル㈱　瀧上 悟、川部 鉄士、大阪大学　野崎 一徳、東北大学　中山 雅晴、日本IBM㈱　木村 雅彦
+    * 協力者：オリンパスメディカルシステムズ㈱　大森 真一、富士フイルム㈱　三浦 悟朗、日本光電工業㈱　越後 洋一、竹田 敦、フクダ電子㈱　山田 剛、嶋井 洋介
 
-* Patient Administration : SWG3
-  * リーダ：日本HL7協会 檀原 一之
-  * サブリーダ：千葉大学　土井 俊祐、㈱セールスフォース・ジャパン　上中 進太郎
-  * メンバ：東京大学　岡本 潤、㈱シーエスアイ　黒澤 亮、中平 顕士、高津 宏徳、日本電気㈱　矢原 潤一、㈱ケーアイエス　小西 由貴範、ＴＩＳ㈱　比留間 健
+  * Administration : アドミニストレーションSWG
+    * リーダ：日本HL7協会　檀原 一之
+    * サブリーダ：千葉大学　土井 俊祐、㈱セールスフォース・ジャパン　上中 進太郎
+    * メンバ：東京大学　岡本 潤、千葉大学　木村 倫人、㈱シーエスアイ　黒澤 亮、中平 顕士、高津 宏徳、日本電気㈱　矢原 潤一、㈱ケーアイエス　小西 由貴範、ＴＩＳ㈱　比留間 健
 
-* Clinical Module : SWG45
-  * リーダ：岐阜大学 小林 慎治、東京大学 河添 悦昌
-  * サブリーダ：日本アイ・ビー・エム㈱　木村 雅彦、㈱メドレー　児玉 義憲
-  * メンバ：見附市立病院 西野 克彦、九州大学　高田 敦史、東大病院　永島 里美、慶應義塾大学 横山 諒一、シンクタンク勤務　河﨑 泰子
+  * Clinical Module : 臨床・薬剤SWG
+    * リーダ：岐阜大学　小林 慎治、東京大学　河添 悦昌
+    * サブリーダ：日本アイ・ビー・エム㈱　木村 雅彦、㈱メドレー　児玉 義憲
+    * メンバ：見附市立病院　西野 克彦、九州大学　高田 敦史、東大病院　永島 里美、慶應義塾大学 横山 諒一、シンクタンク勤務　河﨑 泰子
 
-* Terminology : SWG6
-  * リーダ：東京大学　今井 健
-  * サブリーダ：国立病院機構　堀口 裕正
+  * Terminology : ターミノロジーSWG
+    * リーダ：東京大学　今井 健
+    * サブリーダ：愛媛大学　木村映善
 
 {% include markdown-link-references.md %}

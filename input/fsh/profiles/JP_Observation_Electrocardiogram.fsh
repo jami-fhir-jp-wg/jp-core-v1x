@@ -8,7 +8,7 @@ Title: "JP Core Observation Electrocardiogram Profile"
 Description: "このプロファイルはObservationリソースに対して、心電図データを送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Electrocardiogram"
 * ^status = #draft
-* ^date = "2024-11-18"
+* ^date = "2024-12-30"
 * . ^short = "心電図検査結果"
 * . ^definition = "心電図検査結果とその解釈。"
 * . ^comment = "心電図検査についてのプロファイル"
@@ -25,25 +25,21 @@ Description: "このプロファイルはObservationリソースに対して、�
 * partOf ^comment = "ObservationをEncounterにencounter要素を使ってリンクする。もうひとつ別のObservationを参照することについては、以降にあるt [Notes](observation.html#obsgrouping)　をガイダンスとして参照のこと。"
 * insert SetDefinition(status, 結果の状態)
 * status ^comment = "このリソースは現在有効でないというマークをするコードを含んでいるため、この要素はモディファイアー（修飾的要素）として位置づけられている。"
-* category.coding ^slicing.discriminator.type = #value
-* category.coding ^slicing.discriminator.path = "system"
-* category.coding ^slicing.rules = #open
-* category.coding ^slicing.ordered = false
-* category.coding contains
-    electrocardiogram 1..1 and
-    extraCategory 0..1
+* category contains
+    second 0..1 and
+    third 0..1
 * insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には通常 procedure が指定される。必要に応じてextraCategoryを仕様する)
-* category.coding ^comment = "心電図検査は通常 procedure に分類される。"
-* category.coding[electrocardiogram] from JP_SimpleObservationCategory_VS (required)
-* category.coding[electrocardiogram].system = $JP_SimpleObservationCategory_CS (exactly)
-* category.coding[electrocardiogram].code = $JP_SimpleObservationCategory_CS#procedure (exactly)
-* category.coding[extraCategory] from JP_ObservationElectrocardiogramExtraCategory_VS (example)
-* category.coding[extraCategory] ^comment = "心電図検査について、負荷試験などの条件をつけた分類"
-* category.coding[extraCategory].system = $JP_ObservationElectrocardiogramExtraCategory_CS
+* category ^comment = "心電図検査は通常 procedure に分類される。"
+* category[first].coding.code = $JP_SimpleObservationCategory_CS#procedure
+* category[second].coding.system = $Loinc_CS
+* category[second].coding.code = $Loinc_CS#11524-6
+* category[third] from JP_ObservationElectrocardiogramExtraCategory_VS (preferred)
+* category[third].coding.system = $JP_ObservationElectrocardiogramExtraCategory_CS
+* category[third] ^comment = "心電図検査について、負荷試験などの条件をつけた分類"
 
 * insert SetDefinition(code, 心電図検査を示すコード)
-* code.coding = $Loinc_CS#11524-6 "EKG Study" (exactly)
-* code ^comment = "心電図検査(LOINC: EKG Study)を示すLOINCコード 11524-6 を固定値として指定する。"
+* code = $Loinc_CS#11524-6 "EKG Study"
+* code ^comment = "心電図検査(LOINC: EKG Study)を示すLOINCコード 11524-6 を指定する。"
 * subject only Reference(JP_Patient or Group or Device or JP_Location)
 * insert SetDefinition(subject, このObservationの対象となる患者や患者群、機器、場所に関する情報)
 * subject ^comment = "この要素は1..1のcardinalityになるはずと考えられる。この要素が欠損値になる唯一の状況は、対象患者が不明なデバイスによって観察が行われるケースである。この場合、観察は何らかのコンテキスト/チャネルマッチング技術を介して患者にマッチングされる必要があり、患者にマッチングされれば、その時点で本要素を更新する必要がある。"
@@ -114,7 +110,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(component, この心電図検査で測定された一連の結果。)
 * component ^comment = "心電図に関する一連の測定結果をまとめるためにコンポーネントを使用する。"
 * component ^requirements = "この心電図検査で行われる一連の測定値をまとめるものであり、負荷心電図など複数の心電図検査を一連の検査として行った場合は別Observationインスタンスとして記録される。"
-* component.code from JP_ObservationElectrocardiogramComponentCode_VS (preferred)
+* component.code from $JP_ObservationElectrocardiogramComponentCode_VS (preferred)
 * component.code ^comment = "心電図の各検査項目についてはLOINCなどの特定の用語集を利用することが推奨される。"
 //* component.interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (extensible)
 * component.interpretation ^definition = "心電図検査で測定された結果値に対する所見・解釈"
@@ -157,7 +153,7 @@ Title: "JP Core Observation Electrocardiogram NumberOfLeed Extention"
 Description: "心電図検査を実施したときに使った誘導の数を示すExtension"
 * ^url = $JP_Observation_Electrocardiogram_NumberOfLead
 * ^status = #active
-* ^date = "2024-10-31"
+* ^date = "2024-12-30"
 * ^purpose = "心電図検査で使用した誘導の数を記録するために用いられる。"
 * ^context.type = #element
 * ^context.expression = "Observation"
@@ -178,7 +174,7 @@ Title: "JP Core Observation Electrocardiogram Device Interpretation Extention"
 Description: "心電図検査で測定された結果に対しての機械的に判定された所見、解釈の有無"
 * ^url = $JP_Observation_Electrocardiogram_DeviceInterpretation
 * ^status = #active
-* ^date = "2024-11-15"
+* ^date = "2024-12-30"
 * ^purpose = "心電図検査で測定された結果についての所見や解釈が機械的に判定されたものかどうかを示すために用いられる。"
 * ^context.type = #element
 * ^context.expression = "Observation"
@@ -199,7 +195,7 @@ Title: "JP Core Observation Electrocardiogram Duration Extention"
 Description: "心電図検査で測定を行った時間を記録するための拡張。"
 * ^url = $JP_Observation_Electrocardiogram_Duration
 * ^status = #active
-* ^date = "2024-11-15"
+* ^date = "2024-12-30"
 * ^purpose = "心電図検査では不整脈の検出などの目的に応じて長時間の測定が行われる。この拡張は測定された時刻を示すのではなく、計測された時間の長さを記録するためのものである。"
 * ^context.type = #element
 * ^context.expression = "Observation"
@@ -221,7 +217,7 @@ Title: "JP Core Observation Electrocardiogram StressType Extention"
 Description: "負荷心電図検査の種別について記録する。"
 * ^url = $JP_Observation_Electrocardiogram_StressType
 * ^status = #active
-* ^date = "2024-11-15"
+* ^date = "2024-12-30"
 * ^purpose = "このプロファイルでは負荷心電図検査を記録するに十分な要素をそろえていないが、将来的に拡張することに備えて負荷心電図の種別について記録できるようにした。"
 * ^context.type = #element
 * ^context.expression = "Observation"

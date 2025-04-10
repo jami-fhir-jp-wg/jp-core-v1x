@@ -4,8 +4,8 @@ Title: "JP Core Observation Endoscopy Example 所見（大きさ　長径４（�
 Description: "内視鏡所見（大きさ　長径４（ｍｍ））"
 Usage: #example
 * status = #final
-* category[0] = $JP_SimpleObservationCategory_CS#procedure "Procedure"
-* category[1] = $Loinc_CS#LP7796-8 "内視鏡"
+* category[first] = $JP_SimpleObservationCategory_CS#procedure "Procedure"
+* category[second] = $Loinc_CS#LP7796-8 "内視鏡"
 * code
   * coding
     * system = $Loinc_CS

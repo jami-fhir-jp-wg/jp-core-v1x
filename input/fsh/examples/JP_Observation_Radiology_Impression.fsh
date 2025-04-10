@@ -8,7 +8,6 @@ Usage: #example
 //* partOf only Reference(JP_ImagingStudy_Radiology)
 * category = $JP_SimpleObservationCategory_CS#imaging "Imaging"
 * category.text = "Imaging"
-//* code = $Loinc_CS#19005-8  "Radiology Imaging study [Impression] (narrative)" (exactly)
 * code = $Loinc_CS#19005-8 "Radiology Imaging study [Impression] (narrative)"
 * subject = Reference(Patient/jp-patient-example-1)
 * valueString = "ひだり肺上葉の空洞性病変。 肺腺癌を疑う。みぎ肺上葉陳旧性炎症性瘢痕。"

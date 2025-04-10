@@ -6,16 +6,16 @@ Usage: #example
 * contained[0] = jp-medicationadministration-injection-medication-example-1
 * contained[+] = jp-medicationadministration-injection-bodystructure-example-1
 * extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestDepartment"
-* extension[=].valueCodeableConcept = urn:oid:1.2.392.200250.2.2.2#01 "内科"
+* extension[=].valueCodeableConcept = $JP_Department_SsMix_CS#01 "内科"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Requester"
 * extension[=].valueReference = Reference(Practitioner/jp-practitioner-example-male-1) "大阪 一郎"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_RequestAuthoredOn"
 * extension[=].valueDateTime = "2016-07-01T00:00:00+09:00"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location"
 * extension[=].valueReference = Reference(Location/jp-location-example-ward) "09A病棟 021病室 4ベッド"
-* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "1"
-* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
+* identifier[requestIdentifier].system = $JP_IdSystem_PrescriptionDocumentID
 * identifier[requestIdentifier].value = "1234567890.1"
 * status = #completed
 * category = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
@@ -32,7 +32,7 @@ Usage: #example
 * dosage.site.extension[bodySite].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-1) "右腕"
 * dosage.site.extension[siteComment].url = $JP_MedicationDosage_SiteComment
 * dosage.site.extension[siteComment].valueString = "左利きのため"
-* dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
+* dosage.route = $JP_MedicationRouteHL70162_CS#IV "静脈内"
 * dosage.method.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_MethodComment"
 * dosage.method.extension.valueString = "１分ほどかけて緩徐に行いました"
 * dosage.method = $JP_MedicationMethodJAMIBasicUsage_CS#3 "注射"
@@ -54,9 +54,9 @@ Usage: #example
 * extension[=].valueDateTime = "2016-07-01T00:00:00+09:00"
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location"
 * extension[=].valueReference = Reference(Location/jp-location-example-ward) "09A病棟 021病室 4ベッド"
-* identifier[rpNumber].system = "urn:oid:1.2.392.100495.20.3.81"
+* identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "2"
-* identifier[requestIdentifier].system = "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier"
+* identifier[requestIdentifier].system = $JP_IdSystem_PrescriptionDocumentID
 * identifier[requestIdentifier].value = "1234567890.2"
 * status = #completed
 * category = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
@@ -68,11 +68,10 @@ Usage: #example
 * performer.actor = Reference(Practitioner/jp-practitioner-example-female-1) "福岡 花子"
 * request = Reference(MedicationRequest/jp-medicationrequest-injection-example-2)
 * device = Reference(Device/jp-medicationadministration-injection-device-example-2) "IV Pump"
-* dosage.extension.url = $JP_MedicationDosage_Line
-* dosage.extension.valueCodeableConcept.coding = $JP_MedicationExampleLine_CS#01 "末梢ルート"
+* dosage.extension[line].valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
 * dosage.site.extension[bodySite].url = $bodySite
 * dosage.site.extension[bodySite].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-2) "左腕"
-* dosage.route = http://terminology.hl7.org/CodeSystem/v2-0162#IV "Intravenous"
+* dosage.route = $JP_MedicationRouteHL70162_CS#IV "静脈内"
 * dosage.method = $JP_MedicationMethodJAMIDetailUsage_CS#31 "中心静脈注射"
 * dosage.dose = 510 'mL' "mL"
 * dosage.rateRatio.numerator = 102 'mL' "mL"

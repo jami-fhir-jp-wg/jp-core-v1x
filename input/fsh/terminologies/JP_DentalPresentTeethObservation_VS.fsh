@@ -5,6 +5,6 @@ Description: "JP Coreにて定義した歯科のObservationリソースに関す
 * ^url = $JP_DentalPresentTeethObservation_VS
 * ^status = #active
 * ^experimental = false
-* ^date = "2024-10-31"
+* ^date = "2024-12-30"
 
 * include codes from system $JP_DentalPresentTeethObservation_CS
