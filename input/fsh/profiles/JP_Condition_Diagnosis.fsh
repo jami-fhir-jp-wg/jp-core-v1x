@@ -47,8 +47,8 @@ Description: "このプロファイルはConditionリソースに対して、患
 * code.coding[medisRecordNo] from $JP_Disease_MEDIS_ManagementID_VS (required)
 * code.coding[medisRecordNo].system = $JP_Disease_MEDIS_ManagementID_CS (exactly)
 * code.coding[medisRecordNo].code 1..
-* code.coding[medisRecordNo] ^short = "MEDIS ICD10対応標準病名マスター(管理番号)。【詳細参照】"
-* code.coding[medisRecordNo] ^definition = "MEDIS ICD10対応標準病名マスターの管理番号。"
+* code.coding[medisRecordNo] ^short = "MEDIS ICD10対応標準病名マスターの交換用コード。"
+* code.coding[medisRecordNo] ^definition = "MEDIS ICD10対応標準病名マスターの交換用コード。"
 * code.coding[medisRecordNo] ^comment = "JP_Disease_MEDIS_ManagementID_VSの中から適切なコードを指定する。"
 * code.coding[receipt] from $JP_Disease_Claim_VS (required)
 * code.coding[receipt].system = $JP_Disease_Claim_CS (exactly)
@@ -76,6 +76,7 @@ Description: "このプロファイルはConditionリソースに対して、患
 * abatement[x] ^comment = "転帰日が不明の場合、病名終了日（当該病名の診療を終了した日）を記述してもよい。多くのケースでは解決と寛解の区別は明確でないため、これらに明確な区別はない。 年齢は通常、患者の症状が軽減した年齢を報告する場合に使用される。abatement要素がない場合、症状が解決したか寛解に入ったかは不明である。 アプリケーションとユーザーは通常、状態がまだ有効であると想定する必要がある。 abatementString が存在する場合、状態が軽減されることを意味する。"
 * evidence.code ^definition = "この状態の記録に至った徴候や症状。"
 * evidence.code ^short = "徴候や症状"
+
 // ==============================
 //   Extension 定義
 // ==============================
