@@ -167,7 +167,7 @@ HL7 V2系では用語集を識別するコーディングシステム名（以�
 
 ## 注意事項
 ### 病名の識別コードと名称について
-病名を識別するコードと名称は、Condition.code要素に、CodeableConcept型を使用して記録する。標準コードとしては、MEDIS ICD10対応標準病名マスターの交換用コード（"http://medis.or.jp/CodeSystem/master-disease-exCode"）、ICD-10（"http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDisaseCodeICD10_CS"）、レセプト電算用傷病名マスター（"http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionReceiptCode_CS"）を推奨する。CodeableConcept型はcoding要素を繰り返すことが可能なので、１つの病名の識別情報を複数のコードシステムで記述してもよい。
+病名を識別するコードと名称は、Condition.code要素に、CodeableConcept型を使用して記録する。標準コードとしては、MEDIS ICD10対応標準病名マスターの交換用コード（"http://medis.or.jp/CodeSystem/master-disease-exCode"）、MEDIS ICD10対応標準病名マスターの管理コード（http://medis.or.jp/CodeSystem/master-disease-keyNumber）、ICD-10（"http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDisaseCodeICD10_CS"）、レセプト電算用傷病名マスター（"http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionReceiptCode_CS"）を推奨する。CodeableConcept型はcoding要素を繰り返すことが可能なので、１つの病名の識別情報を複数のコードシステムで記述してもよい。
 また、Condition.code.text には修飾情報を含めた病名のフルテキストを記述する。
 
 「急性化膿性虫垂炎の疑い」の場合のインスタンス例を示す。
