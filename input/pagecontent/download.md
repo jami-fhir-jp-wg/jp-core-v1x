@@ -1,3 +1,5 @@
+### Packageファイル(IG Publisher生成)
+- [package.tgz](package.tgz)
 
 ### Definitions(定義情報)
 - [JSON](definitions.json.zip)
