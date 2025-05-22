@@ -1,8 +1,29 @@
-FHIR®では[JSON](https://www.hl7.org/fhir/R4/json.html#2.6.2)および[XML](https://www.hl7.org/fhir/R4/xml.html)いずれにおいてもオブジェクトは空ではならない。リソース内にエレメントが存在している場合、そのエレメントはそのタイプに応じた何らかのプロパティか1つ以上の拡張を持つ必要がある（[2.6.2 JSON Representation of Resources](https://www.hl7.org/fhir/R4/json.html#:~:text=Objects%20are%20never%20empty), [2.6.1 XML Representation of Resources](https://www.hl7.org/fhir/R4/xml.html#:~:text=FHIR%20elements%20are%20never%20empty)）。string型の値は空文字列であってはならず、そのプロパティが存在するのであれば、1字以上の文字を含む必要がある（[2.24.0.1 Primitive Types](https://www.hl7.org/fhir/R4/datatypes.html#:~:text=strings%20SHOULD%20always%20contain%20non-whitespace)）。
+FHIRではリソース内に要素が存在している場合に、中身がまったくない「空の入れ物（オブジェクト）」を作ることはできない。
+具体的には、リソース（患者情報や検査結果といった情報のまとまり）の中に何らかの要素（例えば「患者さんの名前」や「検査日」といった個別のデータ項目）を記述する場合、その要素には必ず以下のいずれかの情報が含まれている必要がある。
 
-データがない場合に、[Data Absent Reason拡張](https://www.hl7.org/fhir/R4/extension-data-absent-reason.html)を用いて、データが欠損している理由を表すことができる。
+1. 要素の種類に応じた具体的なデータ
+
+例えば、「患者さんの名前」という要素であれば、実際の名前の文字列（例: "山田 太郎"）が入っている、といった具合であり、要素が持つべき何らかの値（プロパティ）が必要になる。
+
+1. 1つ以上の「拡張（extension）」
+
+標準で定義されていない情報を追加するための特別な仕組みである「拡張」が、少なくとも1つ設定されている。
+
+特に文字列（string型）として扱われるデータ項目（例：自由記述のメモなど）は、以下のルールがあるため、いずれかの理由によって実データを渡すことができない場合に空文字にて回避することができない。
+
+* 値として、文字が一つも含まれない「空っぽの文字列」（例: "" のような状態）を使用することはできない。
+* もし文字列のデータ項目を記述するならば、必ず1文字以上の実際の文字を含んでいる必要がある。
+  （これらのルールは、FHIR仕様の 2.6.2 JSON Representation of Resources, 2.6.1 XML Representation of Resources, および 2.24.0.1 Primitive Types に基づいています。）
+
+そのためデータが入手できない、わからないなどの場合に対処するために、[Data Absent Reason拡張](https://www.hl7.org/fhir/R4/extension-data-absent-reason.html)を用いて、データが欠損している理由を表現することが検討すること。
+
+
+実装ガイド作成時に、多重度を1以上やMust Supportの付与を変更した場合は、欠損値の対処方法についてのルールをあらかじめ定めることを推奨する。
+
+JP Coreにおいて多重度が設定された場合のルール以下のようになる。
 
 JP Core の検索要求するクライアント(Requester)およびサーバ(Responder)は以下の要求を満たすこと (**SHALL**)。
+
 ### クライアント(Requester)
 ---
 #### 実装ガイドに準拠するクライアントは、Cardinalityが1以上が付与された要素を含むリソースを受信した場合、エラーを発生させたりアプリケーションを失敗させることなく、それらの値を処理することができなければならない (**SHALL**)。
