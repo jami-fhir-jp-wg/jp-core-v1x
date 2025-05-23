@@ -230,14 +230,16 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 
 * insert MedicationAdministrationBaseRules_dosageText
 * insert MedicationAdministrationBaseRules_dosageSite
-* dosage.site.extension contains
-    $bodySite named bodySite ..* and
-    JP_MedicationDosage_SiteComment named siteComment ..*
 
 * dosage.route.extension contains JP_MedicationDosage_RouteComment named routeComment ..*
 * insert MedicationAdministrationBaseRules_dosageRoute
 * dosage.method.extension contains JP_MedicationDosage_MethodComment named methodComment ..*
 * insert MedicationAdministrationBaseRules_dosageMethod2Dose
+
+* dosage.dose.extension contains
+    $bodySite named bodySite ..* and
+    JP_MedicationDosage_SiteComment named siteComment ..*
+
 * insert MedicationAdministrationBaseRules_dosageRateX
 //--以下１行を追加（2023.9.6)
 * dosage.rateRatio only JP_MedicationRatio_DosePerPeriod

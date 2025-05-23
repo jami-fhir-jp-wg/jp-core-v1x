@@ -28,14 +28,14 @@ Usage: #example
 * request = Reference(MedicationRequest/jp-medicationrequest-injection-example-1)
 * dosage.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_DosageComment"
 * dosage.extension.valueString = "痙攣が発生したため、主治医に確認の上実施しました"
-* dosage.site.extension[bodySite].url = $bodySite
-* dosage.site.extension[bodySite].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-1) "右腕"
-* dosage.site.extension[siteComment].url = $JP_MedicationDosage_SiteComment
-* dosage.site.extension[siteComment].valueString = "左利きのため"
 * dosage.route = $JP_MedicationRouteHL70162_CS#IV "静脈内"
 * dosage.method.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_MethodComment"
 * dosage.method.extension.valueString = "１分ほどかけて緩徐に行いました"
 * dosage.method = $JP_MedicationMethodJAMIBasicUsage_CS#3 "注射"
+* dosage.dose.extension[bodySite].url = $bodySite
+* dosage.dose.extension[bodySite].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-1) "右腕"
+* dosage.dose.extension[siteComment].url = $JP_MedicationDosage_SiteComment
+* dosage.dose.extension[siteComment].valueString = "左利きのため"
 * dosage.dose = 2 'mL' "mL"
 
 Instance: jp-medicationadministration-injection-example-2
@@ -69,10 +69,10 @@ Usage: #example
 * request = Reference(MedicationRequest/jp-medicationrequest-injection-example-2)
 * device = Reference(Device/jp-medicationadministration-injection-device-example-2) "IV Pump"
 * dosage.extension[line].valueCodeableConcept = $JP_MedicationExampleLine_CS#01 "末梢ルート"
-* dosage.site.extension[bodySite].url = $bodySite
-* dosage.site.extension[bodySite].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-2) "左腕"
 * dosage.route = $JP_MedicationRouteHL70162_CS#IV "静脈内"
 * dosage.method = $JP_MedicationMethodJAMIDetailUsage_CS#31 "中心静脈注射"
+* dosage.dose.extension[bodySite].url = $bodySite
+* dosage.dose.extension[bodySite].valueReference = Reference(BodyStructure/jp-medicationadministration-injection-bodystructure-example-2) "左腕"
 * dosage.dose = 510 'mL' "mL"
 * dosage.rateRatio.numerator = 102 'mL' "mL"
 * dosage.rateRatio.denominator = 1 'h' "hour"
