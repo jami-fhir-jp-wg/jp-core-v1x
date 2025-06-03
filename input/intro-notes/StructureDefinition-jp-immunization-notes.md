@@ -243,10 +243,10 @@ Immunization.occurrenceString要素を使用した例：
 ```
 
 ### 接種を行わなかった理由の記述方法について
-ワクチン接種を行わなかった理由を記述したい場合は、Immunization.reasonCode要素にCodeableConcept型で記述する。適当な標準コードが整備されていないため、ローカルコードを定義するか、CodeableConcept.text要素にテキストとして記述する。
+ワクチン接種を行わなかった理由を記述したい場合は、Immunization.statusReason要素にCodeableConcept型で記述する。適当な標準コードが整備されていないため、ローカルコードを定義するか、CodeableConcept.text要素にテキストとして記述する。
 
 ```json
-"reasonCode": [
+"statusReason": [
   {
     "text": "37.5℃以上の発熱があったため。"
   }
