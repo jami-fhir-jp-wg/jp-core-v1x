@@ -18,7 +18,7 @@ Description: "このプロファイルはConditionリソースに対して、患
     JP_Condition_DiseaseOutcome named diseaseOutcome ..1
 * clinicalStatus ^short = "active | recurrence | relapse | inactive | remission | resolved （アクティブ | 再発 | 再燃 | インアクティブ | 寛解 | 完治）【詳細参照】"
 * clinicalStatus ^definition = "The clinical status of the condition.\r\n\r\nこの患者状態の臨床的ステータス（アクティブか否かなど）"
-* clinicalStatus ^comment = "診断の場合、転帰区分を指定するのに使用する。使用する場合、ConditionClinicalStatusCodesは必須で、それ以外にHL7表0241、JHSD表0006、レセプト電算システム転帰区分コードが使用できる。"
+* clinicalStatus ^comment = "データ型はCodeableConceptである。clinicalStatusには何らかの臨床的判断が伴うため、FHIRで指定されたvalue setよりも特異性のあるvalue setが必要となりうる。これは、いわゆる転帰(outcome)のみを意味しない。使用する場合、ConditionClinicalStatusCodesを必須として指定し、それ以外にHL7表0241、JHSD表0006、レセプト電算システム転帰区分コードが使用できる。"
 * verificationStatus ^short = "unconfirmed | provisional | differential | confirmed | refuted | entered-in-error（十分に確認されていない | 暫定的 | 鑑別的 | 十分な根拠で存在 | 十分な根拠で否定 | 誤記載）。【詳細参照】"
 * verificationStatus ^definition = "The verification status to support the clinical status of the condition.\r\n\r\n この患者状態が存在するかどうかの検証状況。"
 * verificationStatus ^comment = "疑い病名を指定するのに使用する。疑い病名の場合は 'unconfirmed'を、確定病名の場合は'confirmed'をそれぞれ指定する。"
