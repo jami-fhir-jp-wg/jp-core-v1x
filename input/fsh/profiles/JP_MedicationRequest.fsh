@@ -111,6 +111,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * doNotPerform ^definition = "このオーダが実施していけないものであればTrueを表示される"
 * doNotPerform ^comment = "もし、doNotPerformに指定がなければ、オーダは実施してもよいものである。(たとえば、「実施せよ」)"
 * doNotPerform ^isModifierReason = "このエレメントは実施すべきオーダを否定するものであるため、このエレメントはmodifierとされている。（たとえば、この薬剤オーダが不適切なものであったり初歩宇部着物ではない場合)"
+* reported[x] only Reference(Patient or JP_Patient or Practitioner or JP_Practitioner or PractitionerRole or JP_PractitionerRole or RelatedPerson or Organization or JP_Organization)
 * reported[x] ^short = "初期記録にはない報告"
 * reported[x] ^definition = "このレコードは元々の一次記録から報告されたものか、二次的に「報告された」資料から取り込まれたものかを示す。報告の情報源についても示される。"
 * subject 1..1
@@ -348,6 +349,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * doNotPerform ^definition = "このオーダが実施していけないものであればTrueを表示される"
 * doNotPerform ^comment = "もし、doNotPerformに指定がなければ、オーダは実施してもよいものである。(たとえば、「実施せよ」)"
 * doNotPerform ^isModifierReason = "このエレメントは実施すべきオーダを否定するものであるため、このエレメントはmodifierとされている。（たとえば、この薬剤オーダが不適切なものであったり初歩宇部着物ではない場合)"
+* reported[x] only Reference(Patient or JP_Patient or Practitioner or JP_Practitioner or PractitionerRole or JP_PractitionerRole or RelatedPerson or Organization or JP_Organization)
 * reported[x] ^short = "初期記録にはない報告"
 * reported[x] ^definition = "このレコードは元々の一次記録から報告されたものか、二次的に「報告された」資料から取り込まれたものかを示す。報告の情報源についても示される。"
 * subject 1..1
