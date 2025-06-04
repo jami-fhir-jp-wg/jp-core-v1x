@@ -70,7 +70,7 @@ Description: "このプロファイルはImmunizationリソースに対して日
 * education ^definition = "ワクチンを接種するときに患者（あるいは保護者）に提示された教材。"
 * programEligibility ^short = "ワクチン接種計画での患者適格性"
 * programEligibility ^definition = "ワクチン接種計画での患者適格性を示す"
-* fundingSource ^short = "ワクチン接種計画のの資金源"
+* fundingSource ^short = "ワクチン接種計画の資金源"
 * fundingSource ^definition = "ワクチンが実際に接種されるときの資金源を示す。これは患者適格性（たとえば，公的に購入されたワクチンには適格性があるが，在庫の問題で私的資金で購入されたワクチンを投与するような場合）とは異なることがある。"
 * reaction ^short = "予防接種後に起こった反応についての詳細な記録"
 * reaction ^definition = "予防接種に関連する時期に発生した副反応を示す分類されたデータ。"
