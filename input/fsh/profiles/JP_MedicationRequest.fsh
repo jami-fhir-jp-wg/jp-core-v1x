@@ -129,7 +129,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * supportingInformation ^definition = "薬剤をオーダするときに補助的となる追加情報（たとえば、患者の身長や体重））を含む。"
 * supportingInformation ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * authoredOn 1..
-* authoredOn ^short = "この処方オーダが最初に記述された日"
+* authoredOn ^short = "この処方オーダが最初に記述された日時"
 * authoredOn ^definition = "JP Coreでは必須。処方指示が最初に作成された日時。秒の精度まで記録する。タイムゾーンも付与しなければならない。"
 * requester only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or RelatedPerson or Device)
 * requester ^short = "このオーダを発行した人・物"
@@ -366,7 +366,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * supportingInformation ^definition = "薬剤をオーダするときに補助的となる追加情報（たとえば、患者の身長や体重））を含む。"
 * supportingInformation ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * authoredOn 1..
-* authoredOn ^short = "この処方オーダが最初に記述された日"
+* authoredOn ^short = "この処方オーダが最初に記述された日時"
 * authoredOn ^definition = "JP Coreでは必須。処方指示が最初に作成された日時。秒の精度まで記録する。タイムゾーンも付与しなければならない。"
 * requester only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or RelatedPerson or Device)
 * requester ^short = "このオーダを発行した人・物"
