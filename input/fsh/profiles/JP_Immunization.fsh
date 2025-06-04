@@ -45,6 +45,7 @@ Description: "このプロファイルはImmunizationリソースに対して日
 * lotNumber ^definition = "ワクチン製剤のロット番号。"
 * expirationDate ^short = "ワクチンの使用期限"
 * expirationDate ^definition = "ワクチンの消費期限を表す日。"
+* site from $JP_MedicationBodySiteJAMIExternal_VS (preferred)
 * site ^short = "ワクチンが接種された身体部位"
 * site ^definition = "ワクチンが接種された身体部位"
 * route ^short = "ワクチンを接種した経路"
