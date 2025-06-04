@@ -39,7 +39,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category 1..
 * insert SetDefinition(category.coding, コード化されたカテゴリー)
 
-* category[first] ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「furst」固定とする。  
+* category[first] 1..1 
+* category[first] ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「laboratory」固定とする。  
 (social-history | vital-signs | imaging | laboratory | procedure | survey | exam | therapy | activity)"
 * category[first].coding ^comment = "【JP Core仕様】推奨コード表「JP Core Simple Observation Category CodeSystem」より、このプロファイルでは「laboratory」固定とする。"
 
@@ -84,6 +85,7 @@ URIは本WGで定義する。"
 * effective[x] 1..
 * effective[x] only dateTime or Period or Timing
 * effective[x] ^definition = "検体検査の場合は、検体採取日時。"
+* effective[x] ^short = "検体を採取した日時または期間"
 * effective[x] ^comment = "【JP Core仕様】このプロファイルでは、検体採取日時を設定し、必須とする。  
 effectiveInstant  
 instant型はイベント発生のログ時間であり、未使用とする。"
@@ -92,7 +94,7 @@ instant型はイベント発生のログ時間であり、未使用とする。"
 * performer ^definition = "検査値を確認した責任者。検査実施責任者情報。"
 * performer ^comment = "【JP Core仕様】検査に直接責任を負う個人(つまり検査を実行、もしくは検証した人)の識別子。"
 * value[x] only Quantity or CodeableConcept or string
-* value[x] ^short = "同じ検査項目でも、システム（施設）により、使うデータ型が異なる可能性あり【詳細参照】"
+* value[x] ^short = "検体検査結果の値"
 * value[x] ^definition = "検体検査の結果として決定された情報。"
 * value[x] ^comment = "以下のデータ型はSS-MIX2では未使用のため、未使用とした。今後の議論で使用の必要性が出れば復活させる。  
 valueBoolean  
