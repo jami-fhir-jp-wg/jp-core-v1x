@@ -50,10 +50,10 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 
 ### 制約一覧
 JP Core MedicationRequest リソースは、以下の制約を満たさなければならない。
-- dosageInstruction.doseAndRage.rateRatio.denominator.value : １日量を記述する場合"1"に固定される
-- dosageInstruction.doseAndRage.rateRatio.denominator.unit : １日量を記述する場合"日"に固定される
-- dosageInstruction.doseAndRage.rateRatio.denominator.system : １日量を記述する場合"http://unitsofmeasure.org"に固定される
-- dosageInstruction.doseAndRage.rateRatio.denominator.code : １日量を記述する場合"d"に固定される
+- dosageInstruction.doseAndRate.rateRatio.denominator.value : １日量を記述する場合"1"に固定される
+- dosageInstruction.doseAndRate.rateRatio.denominator.unit : １日量を記述する場合"日"に固定される
+- dosageInstruction.doseAndRate.rateRatio.denominator.system : １日量を記述する場合"http://unitsofmeasure.org"に固定される
+- dosageInstruction.doseAndRate.rateRatio.denominator.code : １日量を記述する場合"d"に固定される
 
 ### 項目の追加
 療養担当則23条では、「保険医は、処方箋を交付する場合には、様式第二号若しくは第二号の二又はこれらに準ずる様式の処方箋に必要な事項を記載しなければならない。」とされており、外来処方、院内処方の区分を明示していない。したがって、個別のユースケースにおいては一部を省略されることも前提の上で、規格としてはこれに準拠すべきと考え、様式に収載されている以下の項目を追加した。
