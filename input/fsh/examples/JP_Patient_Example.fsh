@@ -23,7 +23,7 @@ Usage: #example
 * telecom.use = #home
 * gender = #male
 * birthDate = "1970-01-01"
-* address.postalCode = "1600023"
+* address.postalCode = "160-0023"
 * address.text = "東京都新宿区"
 * extension[0].url = $patient-religion
 * extension[=].valueCodeableConcept = http://terminology.hl7.org/CodeSystem/v3-ReligiousAffiliation#1046 "Shinto"
