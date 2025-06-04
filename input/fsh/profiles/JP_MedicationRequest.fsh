@@ -163,6 +163,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * instantiatesUri ^short = "外部プロトコルまたは定義のインスタンス"
 * instantiatesUri ^definition = "このMedicationRequestの一部あるいは全部が遵守するprotocolやguideline, ordersetなど他の定義を示すURL。"
 * instantiatesUri ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
+* basedOn only Reference(CarePlan or JP_CarePlan or MedicationRequest or JP_MedicationRequest or ServiceRequest or JP_ServiceRequest or ImmunizationRecommendation)
 * basedOn ^short = "オーダが実施される根拠"
 * basedOn ^definition = "このMedicationRequestの全部あるいは一部を満たす計画やオーダ。"
 * basedOn ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
@@ -400,6 +401,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * instantiatesUri ^short = "外部プロトコルまたは定義のインスタンス"
 * instantiatesUri ^definition = "このMedicationRequestの一部あるいは全部が遵守するprotocolやguideline, ordersetなど他の定義を示すURL。"
 * instantiatesUri ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
+* basedOn only Reference(CarePlan or JP_CarePlan or MedicationRequest or JP_MedicationRequest or ServiceRequest or JP_ServiceRequest or ImmunizationRecommendation)
 * basedOn ^short = "オーダが実施される根拠"
 * basedOn ^definition = "このMedicationRequestの全部あるいは一部を満たす計画やオーダ。"
 * basedOn ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
