@@ -2,13 +2,13 @@ Profile: JP_Immunization
 Parent: Immunization
 Id: jp-immunization
 Title: "JP Core Immunization Profile"
-Description: "このプロファイルはImmunizationリソースに対して日本での予防接種データを送受信するための制約を加えたものである。"
+Description: "このプロファイルはImmunizationリソースに対して日本での予防接種情報を送受信するための制約を加えたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
 * ^status = #active
 * ^date = "2024-12-30"
 // * ^purpose = "予防接種の記録を交換するために用いられる。"
 * . ^short = "予防接種"
-* . ^definition = "ワクチンを接種したときの記録，あるいは予防接種について患者や医療従事者などが報告した記録。"
+* . ^definition = "予防接種時の記録，あるいは予防接種について患者や医療従事者などが報告した記録。"
 * id ^short = "このResourceに対する論理ID"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
