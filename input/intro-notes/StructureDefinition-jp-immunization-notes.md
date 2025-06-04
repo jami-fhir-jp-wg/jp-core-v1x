@@ -208,7 +208,7 @@ Immunization.occurrenceString要素を使用した例：
 }
 ```
 
-### 摂取量の記述方法について
+### 接種量の記述方法について
 ワクチンの接種量は Immunization.doseQuantity要素にSimpleQuantity型で記述する。全体の容量をUCUM("http://unitsofmeasure.org")を使用してmL単位で指定する。
 
 ```json

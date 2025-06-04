@@ -37,7 +37,7 @@ Description: "このプロファイルはImmunizationリソースに対して日
 * reportOrigin ^definition = "予防接種を実施した時に，ワクチンを接種した人以外からの報告からの情報である場合のデータの発生源。"
 * location only Reference(JP_Location)
 * location ^short = "ワクチンを接種した場所"
-* location ^definition = "接種医療機関。ワクチン接種がどこで実施されたかを表す。サービスが提供された場所。摂取された身体部位ではない。"
+* location ^definition = "接種医療機関。ワクチン接種がどこで実施されたかを表す。サービスが提供された場所。接種された身体部位ではない。"
 * manufacturer only Reference(JP_Organization)
 * manufacturer ^short = "ワクチンメーカー"
 * manufacturer ^definition = "ワクチメーカーの名前。"
@@ -80,7 +80,7 @@ Description: "このプロファイルはImmunizationリソースに対して日
 Extension: JP_Immunization_DueDateOfNextDose
 Id: jp-immunization-duedateofnextdose
 Title: "JP Core Immunization DueDateOfNextDose Extension"
-Description: "次回摂取予定日"
+Description: "次回接種予定日"
 * ^url = $JP_Immunization_DueDateOfNextDose
 * ^status = #active
 * ^context.type = #element
