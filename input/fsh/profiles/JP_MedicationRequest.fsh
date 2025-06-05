@@ -219,12 +219,12 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * dispenseRequest.numberOfRepeatsAllowed ^definition = "リフィル回数を示す整数である。患者が処方された薬を最初の払い出しから追加で受け取ることができる回数である。使用上の注意：この整数には最初の払い出しが含まれない。オーダが「30錠に加えて3回リフィル可」であれば、このオーダで合計で最大4回、120錠が患者に受け渡される。この数字を0とすることで，処方者がリフィルを許可しないということを明示することができる。"
 * dispenseRequest.numberOfRepeatsAllowed ^comment = "許可された払い出し回数は，最大でこの数字に1を足したものである。"
 * dispenseRequest.quantity only JP_MedicationSimpleQuantity
-* dispenseRequest.quantity ^short = "調剤量"
+* dispenseRequest.quantity ^short = "払い出される薬剤量"
 * dispenseRequest.quantity ^definition = "1回の調剤で払い出される薬剤の量"
-* dispenseRequest.quantity ^comment = "このエレメントはどのような量を表現するか定義するためにコンテキストにあわせてよく定義される。したがって、どのような単位でも利用することができる。使用されるコンテキストによってcomparatorエレメントで値が定義されることもある。"
-* dispenseRequest.expectedSupplyDuration ^short = "調剤日数"
-* dispenseRequest.expectedSupplyDuration ^definition = "供給される製品が使用されるか、あるいは払い出しが想定されている時間を指定する期間。"
-* dispenseRequest.expectedSupplyDuration ^comment = "状況によっては、この属性は物理的に供給される量というよりも、想定されている期間に供給される薬剤の量を指定する数量の代わりに使われることもある。たとえば、薬剤が90日間供給される（オーダされた量に基づいて）など。可能であれば、量も示した方がより正確になる。expectedSupplyDurationは外部要因に影響をうけることのある予測値である。"
+* dispenseRequest.quantity ^comment = "調剤後に払い出されるべき薬剤の量である。1日3錠、7日分という指示であれば21錠が払い出されるべき量である"
+* dispenseRequest.expectedSupplyDuration ^short = "薬剤が提供されると想定された期間"
+* dispenseRequest.expectedSupplyDuration ^definition = "供給あるいは払い出す薬剤が使用されると想定された期間。"
+* dispenseRequest.expectedSupplyDuration ^comment = "状況によっては、薬剤が供給される量として、物理的に供給される薬剤の錠数などの物理的量よりも、想定されている供給期間を使って表現されることもある。たとえば、薬剤を90日分提供する（オーダされた量に基づいて）など。可能であれば、量も示した方がより正確になる。ただし、実際には飲み忘れや紛失もあるためexpectedSupplyDurationは外部要因に影響をうけることのある予測値である。"
 * dispenseRequest.expectedSupplyDuration.unit = "日" (exactly)
 * dispenseRequest.expectedSupplyDuration.system = "http://unitsofmeasure.org" (exactly)
 * dispenseRequest.expectedSupplyDuration.code = #d (exactly)
