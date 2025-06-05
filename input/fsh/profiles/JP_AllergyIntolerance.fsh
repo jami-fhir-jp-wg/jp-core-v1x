@@ -44,9 +44,9 @@ AllergyIntolerance.codeのみを処理し、AllergyIntolerance.reaction.substanc
 * encounter ^short = "Encounter when the allergy or intolerance was asserted. このアレルギー不耐症が判明した受療の状況（外来、入院、救急、在宅など）"
 * encounter ^definition = "The encounter when the allergy or intolerance was asserted.  
 このアレルギー不耐症が判明した受療の状況（外来、入院、救急、在宅など）"
-* onset[x] ^short = "When allergy or intolerance was identified. このアレルギー不耐症のオンセット"
+* onset[x] ^short = "When allergy or intolerance was identified. アレルギー不耐症が出現した時期"
 * onset[x] ^definition = "Estimated or actual date, date-time, or age when allergy or intolerance was identified.  
-このアレルギー不耐症が同定された事実もしくは推定された時期（日付、日時、年齢）。"
+このアレルギー不耐症が確認された、もしくは推定された時期（日付、日時、年齢）"
 * recordedDate ^short = "Date first version of the resource instance was recorded. このアレルギー不耐症が初めて記録された日時"
 * recordedDate ^definition = "The recordedDate represents when this particular AllergyIntolerance record was created in the system, which is often a system-generated date. このアレルギー不耐症の記録がシステムで作成された日時を表し、多くの場合、システムが生成した日付である。"
 * recorder only Reference(JP_Practitioner or JP_PractitionerRole or JP_Patient or RelatedPerson)
