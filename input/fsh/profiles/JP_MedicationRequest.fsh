@@ -222,9 +222,9 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * dispenseRequest.quantity ^short = "払い出される薬剤量"
 * dispenseRequest.quantity ^definition = "1回の調剤で払い出される薬剤の量"
 * dispenseRequest.quantity ^comment = "調剤後に払い出されるべき薬剤の量である。1日3錠、7日分という指示であれば21錠が払い出されるべき量である"
-* dispenseRequest.expectedSupplyDuration ^short = "想定された使用期間"
-* dispenseRequest.expectedSupplyDuration ^definition = "提供する薬剤が使用されることを想定した使用期間。"
-* dispenseRequest.expectedSupplyDuration ^comment = "状況によっては、薬剤が供給される量として、物理的に供給される薬剤の錠数などの物理的量よりも、想定されている供給期間を使って表現されることもある。たとえば、薬剤を90日分提供する（オーダされた量に基づいて）など。可能であれば、量も示した方がより正確になる。ただし、実際には飲み忘れや紛失もあるためexpectedSupplyDurationは外部要因に影響をうけることのある予測値である。"
+* dispenseRequest.expectedSupplyDuration ^short = "払い出される薬剤が想定された使用期間"
+* dispenseRequest.expectedSupplyDuration ^definition = "払い出される薬剤が使用されることが想定された期間。"
+* dispenseRequest.expectedSupplyDuration ^comment = "状況によっては、薬剤が供給される量として薬剤の錠数などの物理的量よりも、想定される供給期間を使って表現されることもある。たとえば、オーダされた量に基づいて薬剤を90日分提供するなど。可能であれば、量も示した方がより正確になる。ただし、実際には飲み忘れや紛失もあるためexpectedSupplyDurationは外部要因に影響をうけることのある予測値である。"
 * dispenseRequest.expectedSupplyDuration.unit = "日" (exactly)
 * dispenseRequest.expectedSupplyDuration.system = "http://unitsofmeasure.org" (exactly)
 * dispenseRequest.expectedSupplyDuration.code = #d (exactly)
