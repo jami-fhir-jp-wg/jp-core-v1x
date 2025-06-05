@@ -25,6 +25,7 @@ RuleSet: MedicationAdministrationBaseRules_subject2note
 * reasonReference only Reference(JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)
 * reasonReference ^definition = "薬が投与された理由を裏付ける状態または観察"
 * reasonReference ^comment = "これは、投薬要求の理由である状態への参照。コードのみが存在する場合は、reasonCodeを使用する。"
+* request only Reference(MedicationRequest or JP_MedicationRequest or JP_MedicationRequest_Injection)
 * request ^short = "実施された元の投与依頼情報"
 * request ^definition = "投与を実行する元になった投与指示や権限への参照情報。"
 * request ^comment = "これは、orderまたはinstance-orderのいずれかであるMedicationRequestへの参照。インテントが他の値である場合は、MedicationRequestsを参照しないこと。"
