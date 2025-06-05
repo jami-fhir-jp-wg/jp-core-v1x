@@ -415,11 +415,11 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 ```
 
 ### 処方箋番号(オーダID)の記述方法
-処方箋を識別する番号も、同様に MedicationRequestリソースの identifier 要素で表現することができる。Identifier 型のsystem 要素には、保険医療機関番号を含む処方箋ID の名前空間を表すOID（urn:oid:1.2.392.100495.20.3.11.1[保険医療機関コード(10 桁)]）を指定する。全国で⼀意になる発番ルールにもとづく場合には "urn:oid:1.2.392.100495.20.3.11" とする。
+処方箋（処方オーダ）の識別子も、同様に MedicationRequestリソースの identifier 要素で表現することができる。
 ```json
 "identifier": [
   {
-    "system": "urn:oid:1.2.392.100495.20.3.11.1.11311234567",
+    "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
     "value": "2020-00123456"
   },
 ]
