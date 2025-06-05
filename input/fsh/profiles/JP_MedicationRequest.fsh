@@ -303,7 +303,6 @@ Slice定義は下記のようになる。
 * identifier[requestIdentifier] ^short = "処方オーダに対するID"
 * identifier[requestIdentifier] ^definition = "薬剤をオーダする単位としての処方依頼に対するID。MedicationRequestは単一の薬剤でインスタンスが作成される。"
 * identifier[requestIdentifier].system = $JP_ResourceInstance_Identifier (exactly)
-* identifier[requestIdentifier].system ^short = "処方オーダを発行する"
 * identifier[requestIdentifier].value 1..
 * identifier[prescriptionIdentifierCommon] ^short = "全国で⼀意となる処方箋ID"
 * identifier[prescriptionIdentifierCommon] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。全国で⼀意になる発番ルールにもとづく場合には urn:oid:1.2.392.100495.20.3.11 とする。"
