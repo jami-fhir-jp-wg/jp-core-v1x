@@ -38,9 +38,11 @@ jobs:
     
     - name: Extract last commit date
       shell: bash
+      env:
+        PR_TITLE: ${{ github.event.pull_request.title }}
       run: |
         echo "date=$(git log -1 --format="%at" | xargs -I{} date -d @{})" >> $GITHUB_OUTPUT
-        title_temp=$(echo ${{ github.event.pull_request.title }} | sed 's/\#/＃/g; s/\n/\\n/g; s/\r/\\r/g; s/\t/\\t/g; s/\[/【/g; s/\]/】/g; s/\:/：/g; s/\-/－/g')
+        title_temp=$(printf '%s' "$PR_TITLE" | sed 's/#/＃/g; s/\n/\\n/g; s/\r/\\r/g; s/\t/\\t/g; s/\[/【/g; s/\]/】/g; s/\:/：/g; s/\-/－/g')
         echo "encoded_pullrequest_title=$title_temp" >> $GITHUB_ENV
       id: extract_date
 
