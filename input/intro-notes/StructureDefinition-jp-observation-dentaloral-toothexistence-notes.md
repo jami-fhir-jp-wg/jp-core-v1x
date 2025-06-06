@@ -25,11 +25,11 @@
 -->
 
 ### サンプル
- [公益社団法人 日本歯科医師会 「口腔状態モデルケースとコード化例」（2023年3月）](https://www.jda.or.jp/dentist/program/pdf/Oral-examination-Information-Standard-Code_v1.02-proportional.pdf)の記載例１を参考にサンプルデータを作成した。
+ [公益社団法人 日本歯科医師会 「口腔状態モデルケースとコード化例」（2023年3月）](https://www.jda.or.jp/dentist/program/pdf/Oral-examination-Information-Standard-Code_v1.02-proportional.pdf)の記載例１（現存歯の処置歯３本）を参考にサンプルデータを作成した。
 
-* [**検査結果1（歯の有無）**][jp-observation-dentaloral-toothexistence-example-1]  
-* [**検査結果2（歯の有無）**][jp-observation-dentaloral-toothexistence-example-2]
-* [**検査結果3（歯の有無）**][jp-observation-dentaloral-toothexistence-example-3]
+* [**口腔診査結果1（歯の有無）**][jp-observation-dentaloral-toothexistence-example-1]  
+* [**口腔診査結果2（歯の有無）**][jp-observation-dentaloral-toothexistence-example-2]
+* [**口腔診査結果3（歯の有無）**][jp-observation-dentaloral-toothexistence-example-3]
 
 ## その他、参考文献、リンク等
 - [公益社団法人 日本歯科医師会 「口腔診査情報標準コード仕様 Ver.1.02」（2023年3月）](https://www.jda.or.jp/dentist/program/pdf/Oral-examination-Information-Standard-Code_v1.02.pdf)
