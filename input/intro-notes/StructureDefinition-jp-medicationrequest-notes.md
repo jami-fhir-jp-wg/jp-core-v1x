@@ -496,15 +496,15 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 処方オーダに付随するコメントには、薬剤単位につけられるもの、用法指示などRP単位につけられるもの、処方オーダ全体につけられるものがある。
 
 * 処方オーダ全体に対するコメント
-  * Communicationリソースを使用する。
+    * Communicationリソースを使用する。
 * 薬剤単位、RP単位のコメント
-  * 調剤指示に関するコメント
-    *  dispenseRequest要素に対して定義した拡張 InstructionForDispense を使用する。
-  * 調剤指示以外についてのコメント
-    * コード化されているもの
-      * dosageInstruction.additionalInstruction を使用する。
-    * コード化されていないもの
-      * dosageInstruction.patientInstruction を使用する。
+    * 調剤指示に関するコメント
+        *  dispenseRequest要素に対して定義した拡張 InstructionForDispense を使用する。
+    * 調剤指示以外についてのコメント
+        * コード化されているもの
+            * dosageInstruction.additionalInstruction を使用する。
+        * コード化されていないもの
+            * dosageInstruction.patientInstruction を使用する。
 
 ### 不均等投与の記述方法
 不均等用法は、「朝1 錠、昼2 錠、夕3 錠服用」など、1 日の中の服用タイミングごとに服用量が変化する用法である。不均等投与を1回投与ごとの複数の用法（1回用法）に分けて記述できる場合は、服用タイミングが異なる複数の剤グループとして表現することができる。しかし、不均等投与を1つの剤グループとして１つの用法（1日用法）でしか表現できないシステムもある。以下では、1回用法のインスタンス例と、1日用法でのインスタンス例をそれぞれ示す。
