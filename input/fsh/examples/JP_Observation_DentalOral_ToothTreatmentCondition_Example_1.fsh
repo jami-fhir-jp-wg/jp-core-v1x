@@ -1,6 +1,6 @@
 Instance: jp-observation-dentaloral-toothtreatmentcondition-example-1
 InstanceOf: JP_Observation_DentalOral_ToothTreatmentCondition
-Title: "JP Core Observation DentalOral Tooth Treatment Condition Example 口腔診査結果２（現存歯の処置状態）"
+Title: "JP Core Observation DentalOral Tooth Treatment Condition Example 口腔診査結果１（現存歯の処置状態）"
 Description: "口腔診査結果１（現存歯の処置状態）"
 Usage: #example
 * status = #final

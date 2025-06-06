@@ -77,6 +77,23 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(derivedFrom, 未使用)
 * insert SetDefinition(component, 欠損歯の処置状態)
 
+* component.code.coding.code 1..
+* component.code.coding ^slicing.discriminator.type = #value
+* component.code.coding ^slicing.discriminator.path = "system"
+* component.code.coding ^slicing.rules = #open
+* component.code.coding contains
+   primary ..1 and
+   sub ..1
 * component.code ^comment = "2つのいずれかのコードを設定する。
 主コード（primary）は、細かい粒度の欠損歯の処置状態
 副コード（sub）は、粗い粒度の欠損歯の処置状態"
+
+* insert SetDefinition(component.code.coding[primary], 細かい粒度の欠損歯の処置状態)
+* component.code.coding[primary] from JP_DentalMissingTeethObservation_VS (preferred)
+* component.code.coding[primary].system = $JP_DentalMissingTeethObservation_CS (exactly)
+* component.code.coding[primary].code ..1
+
+* insert SetDefinition(component.code.coding[sub], 粗い粒度の欠損歯の処置状態)
+* component.code.coding[sub] from JP_DentalSimpleMissingTeethObservation_VS (preferred)
+* component.code.coding[sub].system = $JP_DentalSimpleMissingTeethObservation_CS (exactly)
+* component.code.coding[sub].code ..1
