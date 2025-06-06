@@ -232,7 +232,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * insert MedicationAdministrationBaseRules_dosageText
 * insert MedicationAdministrationBaseRules_dosageSite
 * dosage.site.extension contains
-    $bodySite named bodySite ..* and
+    $bodySite|4.0.1 named bodySite ..* and
     JP_MedicationDosage_SiteComment named siteComment ..*
 
 * dosage.route.extension contains JP_MedicationDosage_RouteComment named routeComment ..*

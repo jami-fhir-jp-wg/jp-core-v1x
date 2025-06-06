@@ -180,7 +180,7 @@ Description: "このデータタイプは注射用法の制約と拡張のうち
 // site
 * site.extension contains
     JP_MedicationDosage_SiteComment named siteComment ..* and
-    $bodySite named bodySite ..*
+    $bodySite|4.0.1 named bodySite ..*
 * site.extension[bodySite] ^short = "身体部位の位置に関する詳細"
 * site.extension[bodySite] ^definition = "身体部位の位置に関する詳細情報。site概念がユースケースに必要な詳細を提供しない場合に使用される。"
 // method
