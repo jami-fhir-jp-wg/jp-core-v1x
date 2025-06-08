@@ -4,8 +4,8 @@ Title: "JP Core Observation DentalOral Tooth Existence Example 口腔診査結�
 Description: "口腔診査結果２（歯の有無）"
 Usage: #example
 * status = #final
-* category[first].coding.code = #procedure
-* category[first].coding.display = "Procedure"
+* category[first].coding.code = #exam
+* category[first].coding.display = "exam"
 * category[second].coding.code = #LP89803-8
 * category[second].coding.display = "Dental"
 * category[third].coding.code = #DO-1-01

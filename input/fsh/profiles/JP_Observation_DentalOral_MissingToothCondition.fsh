@@ -18,12 +18,12 @@ Description: "このプロファイルはObservationリソースに対して、�
     second 1..1 and
     third 1..1
 * category ^comment = "3つのコードを設定する。
-第1コード（first）は、simpleObservationコード体系を必須とし、procedureを設定する。
+第1コード（first）は、simpleObservationコード体系を必須とし、examを設定する。
 第2コード（second）は、歯科を表すコードLP89803-8を設定する。
 第3コード（third）は、歯の有無や処置状態などを表すコードを設定する。なお、日本では適切なコード体系が存在しないため、独自のバリューセットを定義する。"
 
 * insert SetDefinition(category[first], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
-* category[first].coding.code = #procedure (exactly)
+* category[first].coding.code = #exam (exactly)
 
 * insert SetDefinition(category[second],第2カテゴリはLOINCのコードLP89803-8固定で必須とする、ValueSetは指定しない)
 * category[second].coding.system = $Loinc_CS (exactly)
