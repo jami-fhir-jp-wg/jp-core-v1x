@@ -106,12 +106,13 @@ jobs:
         mv $JPTerminologyCOREPtgz /home/runner/.fhir/work/$JPTerminologyCOREPtgz
         cd /home/runner/.fhir
         tar xzf $JPPACKAGECOREtgz
+        # 一時的に削除
+        rmdir /home/runner/.fhir/packages/hl7.terminology#5.2.0
         cd /home/runner/.fhir/work
         tar xzf $JPTerminologyCOREPtgz
         cd /home/runner/.fhir
         mkdir -p packages/$JPTerminologyCOREdir
         mv /home/runner/.fhir/work/package /home/runner/.fhir/packages/$JPTerminologyCOREdir
-        rmdir /home/runner/.fhir/packages/$JPTerminologyCOREdir/hl7.terminology#5.2.0
          
     - name: apply the version of sushi-config.yaml
       run: |
