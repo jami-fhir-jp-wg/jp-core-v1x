@@ -94,6 +94,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * component.code.coding[primary].code ..1
 
 * insert SetDefinition(component.code.coding[sub], 粗い粒度の欠損歯の処置状態)
-* component.code.coding[sub] from JP_DentalSimpleMissingTeethObservation_VS (preferred)
+* component.code.coding[sub] from $JP_DentalSimpleMissingTeethObservation_VS (preferred)
 * component.code.coding[sub].system = $JP_DentalSimpleMissingTeethObservation_CS (exactly)
 * component.code.coding[sub].code ..1

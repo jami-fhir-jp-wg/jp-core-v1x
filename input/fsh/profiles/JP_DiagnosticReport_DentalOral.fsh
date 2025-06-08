@@ -51,7 +51,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * performer only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or CareTeam)
 * insert SetDefinition(performer, レポート内容に責任をもつ診断的サービス  
 【JP Core仕様】レポート確定者)
-*performer ^comment = "例：歯科医師など"
+* performer ^comment = "例：歯科医師など"
 
 * insert SetDefinition(resultsInterpreter,  結果の一次解釈者  
 【JP Core仕様】レポートの作成者)

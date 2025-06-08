@@ -1,4 +1,4 @@
-Instance: jp-observation-dentaloral-missingtoothcondition-example-5
+Instance: jp-observation-dentaloral-missingtoothcondition-example-6
 InstanceOf: JP_Observation_DentalOral_MissingToothCondition
 Title: "JP Core Observation DentalOral Missing Tooth Condition Example 口腔診査結果５（欠損歯の状態）"
 Description: "口腔診査結果５（欠損歯の状態）"
@@ -8,7 +8,6 @@ Usage: #example
 * category[first].coding.display = "Procedure"
 * category[second].coding.code = #LP89803-8
 * category[second].coding.display = "Dental"
-* category[third].coding.code = #DO-1-02
 * category[third].coding.display = "ToothTreatmentCondition"
 * category.text = "現存歯の処置状態"
 * code = $Loinc_CS#54570-7 "Oral/Dental Status"

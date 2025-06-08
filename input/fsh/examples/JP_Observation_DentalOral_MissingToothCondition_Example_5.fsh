@@ -8,7 +8,6 @@ Usage: #example
 * category[first].coding.display = "Procedure"
 * category[second].coding.code = #LP89803-8
 * category[second].coding.display = "Dental"
-* category[third].coding.code = #DO-1-02
 * category[third].coding.display = "ToothTreatmentCondition"
 * category.text = "現存歯の処置状態"
 * code = $Loinc_CS#54570-7 "Oral/Dental Status"
