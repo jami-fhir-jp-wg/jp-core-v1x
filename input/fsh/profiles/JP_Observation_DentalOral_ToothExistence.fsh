@@ -71,6 +71,9 @@ Description: "このプロファイルはObservationリソースに対して、�
 1.FDI
 2.厚生労働省標準標準歯式マスタ、レセプト電算処理用コード"
 * bodySite from JP_DentalBodySite_VS (preferred)
+* bodySite.extension contains
+    JP_Observation_DentalOral_BodySiteStatus named bodySiteStatus ..*
+
 * insert SetDefinition(bodySite, 特定の歯（歯式）)
 
 * insert SetDefinition(method, 検査方法（目視、読影など)
@@ -98,7 +101,7 @@ Description: "歯の状態を格納するための拡張"
 * ^status = #active
 * ^date = "2024-12-30"
 * ^context.type = #element
-* ^context.expression = "BodySite"
+* ^context.expression = "CodeableConcept"
 * . ^short = "歯の状態"
 * . ^definition = "歯の状態を格納するための拡張。例：『インプラント』、『その他の生体構造体』"
 * url = $JP_Observation_DentalOral_BodySiteStatus (exactly)
