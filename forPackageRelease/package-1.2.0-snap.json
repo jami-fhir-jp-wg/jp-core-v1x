@@ -1,10 +1,10 @@
 {
   "name": "jp-core.r4",
-  "version": "1.2.0-a",
+  "version": "1.2.0",
   "canonical": "http://jpfhir.jp/fhir/core",
   "url": "http://jpfhir.jp/fhir/core",
   "title": "JP-CORE IG",
-  "description": "JP-CORE IG V1.2.0a snapshot package for release",
+  "description": "JP-CORE IG V1.2.0 snapshot package for release",
   "fhirVersions": [
     "4.0.1"
   ],
