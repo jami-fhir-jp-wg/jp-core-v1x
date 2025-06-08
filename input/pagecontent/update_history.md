@@ -1,6 +1,7 @@
 ***v1.2.0***
 
 * 全般
+  * 説明文や翻訳部分の語句の修正を中心にパブリックコメントの対応を行った。
   * v1.1.2の不具合を修正し、新たにプロファイルを追加した。
   * 「CodeSystem」および「Identifierのsystem要素」にOID形式で定義されていたURIを、URL形式の定義があるものについてはURL形式に変更した。本変更に関して`OIDマッピング表`の項目で記載をしている。
   * 各プロファイルのベースとなるFHIRバージョンは4.0.1を維持し、不具合などやむを得ない場合を除き、下位互換性を保つように考慮している
@@ -23,6 +24,7 @@
     * Exampleとして提示しているCodeSystemのcontext=completeの状態に変更した
     * 操作：$everythingが不要であるため、Medication関連プロファイルを記述を削除した
     * 施設ごとに管理される処方箋IDのSystem値に関するルールを、コメントに加えて制約（invariant）にて記述するようにした
+    * JP_MedicationInstructionForDispenseJHSP0002_VSのURLの一部に不具合があり修正を行った。
   * Diagnostic グループ
     * Observation
       * Categoryのスライシング名を first, second, third に統一した
@@ -131,6 +133,8 @@
     * 複数パラメータをConformance(SHALL, SHOULD, MAY)の指定を含め追加した
   * Operation
     * 各プロファイルに記載されたOperation定義を、Capability Statementに明記した
+* Security関連
+  * 医療情報システム・サービス提供事業者安全管理ガイドラインの変更に伴い、修正を実施した。
 
 ***v1.1.2***
 
