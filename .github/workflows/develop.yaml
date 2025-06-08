@@ -108,6 +108,7 @@ jobs:
         tar xzf $JPPACKAGECOREtgz
         # 一時的に削除
         ls /home/runner/.fhir/packages/
+        rm -r /home/runner/.fhir/packages/hl7.fhir.r5.core#5.0.0
         rm -r /home/runner/.fhir/packages/hl7.terminology#5.2.0
         rm -r /home/runner/.fhir/packages/hl7.terminology.r5#5.2.0
         cd /home/runner/.fhir/work
