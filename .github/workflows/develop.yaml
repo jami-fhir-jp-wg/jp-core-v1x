@@ -107,13 +107,14 @@ jobs:
         cd /home/runner/.fhir
         tar xzf $JPPACKAGECOREtgz
         # 一時的に削除
+        ls /home/runner/.fhir/packages/
         rm -r /home/runner/.fhir/packages/hl7.terminology#5.2.0
-        rmdir --ignore-fail-on-non-empty /home/runner/.fhir/packages/hl7.terminology#5.2.0
         cd /home/runner/.fhir/work
         tar xzf $JPTerminologyCOREPtgz
         cd /home/runner/.fhir
         mkdir -p packages/$JPTerminologyCOREdir
         mv /home/runner/.fhir/work/package /home/runner/.fhir/packages/$JPTerminologyCOREdir
+        ls /home/runner/.fhir/packages/
          
     - name: apply the version of sushi-config.yaml
       run: |
