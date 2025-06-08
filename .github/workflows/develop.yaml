@@ -107,6 +107,7 @@ jobs:
         cd /home/runner/.fhir
         tar xzf $JPPACKAGECOREtgz
         # 一時的に削除
+        ls /home/runner/.fhir/packages/
         rmdir /home/runner/.fhir/packages/hl7.terminology#5.2.0
         cd /home/runner/.fhir/work
         tar xzf $JPTerminologyCOREPtgz
