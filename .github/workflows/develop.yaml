@@ -111,7 +111,7 @@ jobs:
         cd /home/runner/.fhir
         mkdir -p packages/$JPTerminologyCOREdir
         mv /home/runner/.fhir/work/package /home/runner/.fhir/packages/$JPTerminologyCOREdir
-        rd /home/runner/.fhir/packages/$JPTerminologyCOREdir/hl7.terminology#5.2.0
+        rmdir /home/runner/.fhir/packages/$JPTerminologyCOREdir/hl7.terminology#5.2.0
          
     - name: apply the version of sushi-config.yaml
       run: |
