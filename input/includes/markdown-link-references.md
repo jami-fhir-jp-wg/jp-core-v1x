@@ -149,7 +149,7 @@
 [JP_DentalFundamentalStatus_CS]: CodeSystem-jp-dental-fundamentalstatus-cs.html
 [JP_DentalMissingTeethObservation_CS]: CodeSystem-jp-dental-missingteeth-observation-cs.html
 [JP_DentalPresentTeethObservation_CS]: CodeSystem-jp-dental-presentteeth-observation-cs.html
-[JP_DentalSipmleMissingTeethObservation_CS]: CodeSystem-jp-dental-simple-missingteeth-observation-cs.html
+[JP_DentalSimpleMissingTeethObservation_CS]: CodeSystem-jp-dental-simple-missingteeth-observation-cs.html
 [JP_DentalSipmlePresentTeethObservation_CS]: CodeSystem-jp-dental-simple-presentteeth-observation-cs.html
 [JP_ObservationBodyMeasurementCategory_CS]: CodeSystem-jp-observation-bodymeasurement-category-cs.html
 [JP_ObservationBodyMeasurementCode_CS]: CodeSystem-jp-observation-bodymeasurement-code-cs.html

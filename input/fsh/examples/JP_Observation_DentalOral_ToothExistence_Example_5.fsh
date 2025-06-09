@@ -16,6 +16,6 @@ Usage: #example
 * valueCodeableConcept = $JP_DentalFundamentalStatus_CS#TB-3-2 "欠損歯"
 * effectiveDateTime = "2022-10-01"
 * issued = "2022-10-24T17:30:00+09:00"
-* hasMember = Reference(Observation/jp-observation-dentaloral-missingtoothcondition-example-1)
+* hasMember = Reference(Observation/jp-observation-dentaloral-missingtoothcondition-example-5)
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * bodySite = $JP_DentalBodySite_CS#TB-2-1046 "右側下顎第１大臼歯"
