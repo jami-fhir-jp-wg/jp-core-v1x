@@ -115,6 +115,8 @@ jobs:
         rm -r /home/runner/.fhir/packages/hl7.fhir.xver-extensions#0.0.12
         rm -r /home/runner/.fhir/packages/hl7.terminology#5.2.0
         rm -r /home/runner/.fhir/packages/hl7.terminology.r5#5.2.0
+        rm -r /home/runner/.fhir/packages/hl7.terminology.r4#5.2.0
+        rm -r /home/runner/.fhir/packages/hl7.terminology.r4#6.0.1
         cd /home/runner/.fhir/work
         tar xzf $JPTerminologyCOREPtgz
         cd /home/runner/.fhir
