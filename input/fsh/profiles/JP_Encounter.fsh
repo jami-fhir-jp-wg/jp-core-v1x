@@ -32,7 +32,7 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * statusHistory.period ^short = "そのエピソードが指定された状態になっていた時間"
 * statusHistory.period ^definition = "そのエピソードが指定された状態になっていた時間。"
 * statusHistory.period ^comment = "期間とは時間の範囲で指定される。範囲全体が適用されるか（たとえば、「患者はこの時間範囲で入院していた」）、または範囲から1つの値が適用されるか（たとえば、「これら2回の間に患者に与える」）を指定する。 期間が必要な場合は、タイプをInterval | Durationとして指定する。"
-* class ^short = "患者とのEncounterの分類【詳細参照】"
+* class ^short = "患者との受療行動の分類【詳細参照】"
 * class ^definition = "外来（外来）、入院、救急、在宅医療、その他の地域差による患者Encounterの分類を表す概念。"
 * class ^comment = "コードは列挙やコードリストの中で非常にカジュアルに定義されることもあれば、SNOMED CTのような非常にフォーマルな定義まである。 - 詳細はHL7 v3コア・プリンシプルを参照すること。"
 * classHistory ^short = "過去のEncounter classのリスト【詳細参照】"
