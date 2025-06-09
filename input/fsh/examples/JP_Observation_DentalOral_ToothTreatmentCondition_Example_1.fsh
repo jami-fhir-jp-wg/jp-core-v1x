@@ -4,8 +4,8 @@ Title: "JP Core Observation DentalOral Tooth Treatment Condition Example 口腔�
 Description: "口腔診査結果１（現存歯の処置状態）"
 Usage: #example
 * status = #final
-* category[first].coding.code = #exam
-* category[first].coding.display = "exam"
+* category[first].coding.code = #procedure
+* category[first].coding.display = "Procedure"
 * category[second].coding.code = #LP89803-8
 * category[second].coding.display = "Dental"
 * category[third].coding.code = #DO-1-02

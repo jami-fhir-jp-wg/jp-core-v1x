@@ -196,7 +196,6 @@
 [jp-condition-example-1]: Condition-jp-condition-example-1.html
 [jp-coverage-example-1]: Coverage-jp-coverage-example-1.html
 [jp-diagnosticreport-dentaloral-example-1]: DiagnosticReport-jp-diagnosticreport-dentaloral-example-1.html
-[jp-diagnosticreport-dentaloral-example-2]: DiagnosticReport-jp-diagnosticreport-dentaloral-example-2.html
 [jp-diagnosticreport-endoscopy-example-1]: DiagnosticReport-jp-diagnosticreport-endoscopy-example-1.html
 [jp-diagnosticreport-endoscopy-example-2]: DiagnosticReport-jp-diagnosticreport-endoscopy-example-2.html
 [jp-diagnosticreport-labresult-example-1]: DiagnosticReport-jp-diagnosticreport-labresult-example-1.html
