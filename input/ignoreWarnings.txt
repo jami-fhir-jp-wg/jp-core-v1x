@@ -34,5 +34,5 @@ The value set expansion is too large, and only a subset has been displayed
 # 個別
 http://medis.or.jp/CodeSystem/master-HOT9#107750603 の誤ったdisplay 'ソリタ－Ｔ３号輸液５００ｍＬ' - 1 の選択肢のうちの一つであるべきです: 'ソリタ－Ｔ３号輸液・陽進堂' (ja) (言語 'ja-JP' のため)
 http://medis.or.jp/CodeSystem/master-HOT9#103835401 の誤ったdisplay 'ムコダイン錠２５０ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'ムコダイン錠２５０ｍｇ・杏林製薬' (ja) (言語 'ja-JP' のため)
-http://medis.or.jp/CodeSystem/master-HOT9#110926901 の誤ったdisplay 'パンスポリンＴ錠１００ １００ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'パンスポリンＴ錠１００・武田薬品' (ja-JP) (言語 'ja' のため)
+http://medis.or.jp/CodeSystem/master-HOT9#110926901 の誤ったdisplay 'パンスポリンＴ錠１００ １００ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'パンスポリンＴ錠１００・武田薬品' (ja) (言語 'ja-JP' のため)
 http://medis.or.jp/CodeSystem/master-HOT9#111501701 の誤ったdisplay '肺炎球菌ワクチン' - 1 の選択肢のうちの一つであるべきです: 'ニューモバックスＮＰ・ＭＳＤ' (ja) (言語 'ja-JP' のため)
