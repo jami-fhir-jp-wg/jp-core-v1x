@@ -18,6 +18,7 @@
 | SHALL            | name | string | GET [base]/Location?name=３南 |
 | SHALL            | identifier | token | GET [base]/Location?identifier=http://myhospital.com/fhir/Locationid\|1234 |
 | SHOULD           | address | string | GET [base]/Location?address=東京都文京区本郷７丁目３−１ |
+| SHOULD           | address-line | string | GET [base]/Location?address-line=本郷７丁目３−１ |
 | SHOULD           | address-city | string | GET [base]/Location?address-city=文京区 |
 | SHOULD           | address-state | string | GET [base]/Location?address-state=東京都 |
 | SHOULD           | address-postalcode | string | GET [base]/Location?address-postalcode=1130033 |
@@ -72,6 +73,20 @@
    ```
 
    住所文字列が一致するLocationリソースを含むBundleを取得する。
+
+1. address-line 検索パラメータを使用して、住所の家番号、アパート番号、通りの方向、P.OによるLocationの検索をサポートすることが望ましい（**SHOULD**）
+
+   ```
+   GET [base]/Location?address-line={string}
+   ```
+
+   例：
+
+   ```
+   GET [base]/Location?address-line=本郷７丁目３−１
+   ```
+
+   指定された住所の家番号、アパート番号、通りの方向、P.Oが一致するLocationリソースを含むBundleを取得する。
 
 1. address-city 検索パラメータを使用して、住所の市町村名によるLocationの検索をサポートすることが望ましい（**SHOULD**）
 
