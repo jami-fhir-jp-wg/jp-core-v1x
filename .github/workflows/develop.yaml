@@ -76,7 +76,7 @@ jobs:
       uses: Legion2/download-release-action@v2.1.0
       with:
         repository: HL7/fhir-ig-publisher
-        tag: '1.8.16'
+        tag: 'latest'
         path: .
         file: publisher.jar
     
