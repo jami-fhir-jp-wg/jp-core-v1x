@@ -29,7 +29,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category ^comment = "3つのコードを設定する。
 第1コード（first）は、simpleObservationコード体系を必須とし、exam を設定する。
 第2コード（second）は、歯科を表すコード LP89803-8 を設定する。
-第3コード（third）は、診療情報提供書を表すコード DO-1-04 を設定する。なお、日本では適切なコード体系が存在しないため、独自のバリューセットを定義する。"
+第3コード（third）は、診療情報提供書(ClinicalInformationSharing)を表すコード DO-1-04 を設定する。なお、日本では適切なコード体系が存在しないため、独自のバリューセットを定義する。"
 
 * insert SetDefinition(category[first], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#exam (exactly)
@@ -75,7 +75,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * value[x] only CodeableConcept
 * insert SetDefinition(value[x], 実際の結果値  
 【JP Core仕様】歯の処置状態。現存歯、欠損歯、粒度の細かさ、粗さにかかわらず、そのうち一つをVSより選択する)
-* value[x] from $JP_DentalFundamentalStatus_VS (required) // TBD
+//* value[x] from $JP_ToothStatusObservation_VS (required) //TBD
 
 * insert SetDefinition(dataAbsentReason, 結果が欠損値である理由
 【JP Core仕様】結果が存在しなかった場合、その理由)
@@ -89,14 +89,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(bodySite, 観察された身体部位  
 【JP Core仕様】未使用)
 
-// extension 参照宣言
-* extension contains
-    JP_Observation_DentalOral_BodyStructure_eCS named bodyStructure 1..
-
-//* insert SetDefinition(method, 検査方法（目視、読影など)
-//* insert SetDefinition(specimen, 未使用)
 * device ^comment = "例：口腔内スキャナなど"
-//* insert SetDefinition(referenceRange, 未使用)
 * insert SetDefinition(hasMember, observationグループに属する関連リソース
 【JP Core仕様】未使用)
 
@@ -105,3 +98,19 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * insert SetDefinition(component, 複合的な結果
 【JP Core仕様】未使用)
+
+// extension 参照宣言
+/*
+* extension contains
+    JP_Observation_DentalOral_BodyStructure_eCS named bodyStructure 1..
+
+* extension contains
+    JP_Observation_DentalOral_ToothRoot named toothRoot 0..1
+
+* extension contains
+    JP_Observation_DentalOral_BodySiteStatus named bodySiteStatus 1..1
+* insert SetDefinition(bodySiteStatus, 【JP Core仕様】特定の状態を示さない 0 を指定)
+* bodySiteStatus.valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS (exactly)
+* bodySiteStatus.valueCodeableConcept.coding.code 1..1
+* bodySiteStatus.valueCodeableConcept.coding.code = #0 (exactly)
+*/

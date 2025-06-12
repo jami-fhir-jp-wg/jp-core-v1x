@@ -11,7 +11,6 @@ Alias: $JP_Consent = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Consent
 Alias: $JP_Coverage = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Coverage
 Alias: $JP_Device = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Device
 Alias: $JP_DiagnosticReport_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common
-Alias: $JP_DiagnosticReport_DentalOral_eCS = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_DentalOral_eCS
 Alias: $JP_DiagnosticReport_DentalOral = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_DentalOral
 Alias: $JP_DiagnosticReport_Endoscopy = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Endoscopy
 Alias: $JP_DiagnosticReport_LabResult = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult
