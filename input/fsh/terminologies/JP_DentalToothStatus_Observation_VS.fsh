@@ -7,4 +7,4 @@ Description: "JP Coreにて定義した紹介状やサマリーに記載する�
 * ^experimental = false
 * ^date = "2025-06-12"
 
-include codes from system $JP_DentalToothStatus_Observation_CS
+* include codes from system $JP_DentalToothStatus_Observation_CS
