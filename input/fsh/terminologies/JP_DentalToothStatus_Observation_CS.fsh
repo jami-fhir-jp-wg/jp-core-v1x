@@ -2,7 +2,7 @@ CodeSystem: JP_DentalToothStatus_Observation_CS
 Id: jp-dental-toothstatus-observation-cs
 Title: "JP Core Dental ToothStatus CodeSystem"
 Description: "JP Coreにて定義した紹介状やサマリーに記載する歯科のObservationリソースに関する歯についての状態コード"
-* ^url = $JP_DentalToothStatus_CS
+* ^url = $JP_DentalToothStatus_Observation_CS
 * ^status = #active
 * ^experimental = false
 * ^date = "2025-06-12"
