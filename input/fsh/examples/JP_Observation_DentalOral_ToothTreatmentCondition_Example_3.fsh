@@ -5,8 +5,8 @@ Description: "口腔診査結果３（現存歯の処置状態）"
 Usage: #example
 * status = #final
 * category[first].coding.system = $JP_SimpleObservationCategory_CS
-* category[first].coding.code = #procedure
-* category[first].coding.display = "Procedure"
+* category[first].coding.code = #exam
+* category[first].coding.display = "exam"
 * category[second].coding.system = $Loinc_CS
 * category[second].coding.code = #LP89803-8
 * category[second].coding.display = "Dental"
