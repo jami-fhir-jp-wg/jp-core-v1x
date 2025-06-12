@@ -149,7 +149,7 @@
 [JP_DentalFundamentalStatus_CS]: CodeSystem-jp-dental-fundamentalstatus-cs.html
 [JP_DentalMissingTeethObservation_CS]: CodeSystem-jp-dental-missingteeth-observation-cs.html
 [JP_DentalPresentTeethObservation_CS]: CodeSystem-jp-dental-presentteeth-observation-cs.html
-[JP_DentalSipmleMissingTeethObservation_CS]: CodeSystem-jp-dental-simple-missingteeth-observation-cs.html
+[JP_DentalSimpleMissingTeethObservation_CS]: CodeSystem-jp-dental-simple-missingteeth-observation-cs.html
 [JP_DentalSipmlePresentTeethObservation_CS]: CodeSystem-jp-dental-simple-presentteeth-observation-cs.html
 [JP_ObservationBodyMeasurementCategory_CS]: CodeSystem-jp-observation-bodymeasurement-category-cs.html
 [JP_ObservationBodyMeasurementCode_CS]: CodeSystem-jp-observation-bodymeasurement-code-cs.html
@@ -196,6 +196,7 @@
 [jp-condition-example-1]: Condition-jp-condition-example-1.html
 [jp-coverage-example-1]: Coverage-jp-coverage-example-1.html
 [jp-diagnosticreport-dentaloral-example-1]: DiagnosticReport-jp-diagnosticreport-dentaloral-example-1.html
+[jp-diagnosticreport-dentaloral-example-2]: DiagnosticReport-jp-diagnosticreport-dentaloral-example-2.html
 [jp-diagnosticreport-endoscopy-example-1]: DiagnosticReport-jp-diagnosticreport-endoscopy-example-1.html
 [jp-diagnosticreport-endoscopy-example-2]: DiagnosticReport-jp-diagnosticreport-endoscopy-example-2.html
 [jp-diagnosticreport-labresult-example-1]: DiagnosticReport-jp-diagnosticreport-labresult-example-1.html

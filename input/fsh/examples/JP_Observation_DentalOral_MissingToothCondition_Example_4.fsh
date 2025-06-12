@@ -4,8 +4,8 @@ Title: "JP Core Observation DentalOral Missing Tooth Condition Example 口腔診
 Description: "口腔診査結果４（欠損歯の状態）"
 Usage: #example
 * status = #final
-* category[first].coding.code = #procedure
-* category[first].coding.display = "Procedure"
+* category[first].coding.code = #exam
+* category[first].coding.display = "exam"
 * category[second].coding.code = #LP89803-8
 * category[second].coding.display = "Dental"
 * category[third].coding.display = "MissingToothCondition"
