@@ -23,6 +23,7 @@
 [JP_Coverage]: StructureDefinition-jp-coverage.html
 [JP_Device]: StructureDefinition-jp-device.html
 [JP_DiagnosticReport_Common]: StructureDefinition-jp-diagnosticreport-common.html
+[JP_DiagnosticReport_DentalOral_eCS]: StructureDefinition-jp-diagnosticreport-dentaloral-ecs.html
 [JP_DiagnosticReport_DentalOral]: StructureDefinition-jp-diagnosticreport-dentaloral.html
 [JP_DiagnosticReport_Endoscopy]: StructureDefinition-jp-diagnosticreport-endoscopy.html
 [JP_DiagnosticReport_LabResult]: StructureDefinition-jp-diagnosticreport-labresult.html
@@ -61,6 +62,7 @@
 [JP_MedicationTiming]: StructureDefinition-jp-medicationtiming.html
 [JP_Observation_BodyMeasurement]: StructureDefinition-jp-observation-bodymeasurement.html
 [JP_Observation_Common]: StructureDefinition-jp-observation-common.html
+[JP_Observation_DentalOral_eCS]: StructureDefinition-jp-observation-dentaloral-ecs.html
 [JP_Observation_DentalOral_MissingToothCondition]: StructureDefinition-jp-observation-dentaloral-missingtoothcondition.html
 [JP_Observation_DentalOral_ToothExistence]: StructureDefinition-jp-observation-dentaloral-toothexistence.html
 [JP_Observation_DentalOral_ToothTreatmentCondition]: StructureDefinition-jp-observation-dentaloral-toothtreatmentcondition.html
@@ -115,6 +117,7 @@
 [JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]: StructureDefinition-jp-medicationrequest-dispenserequest-expectedrepeatcount.html
 [JP_MedicationRequest_DispenseRequest_InstructionForDispense]: StructureDefinition-jp-medicationrequest-dispenserequest-instructionfordispense.html
 [JP_Observation_DentalOral_BodySiteStatus]: StructureDefinition-jp-observation-dentaloral-bodysitestatus.html
+[JP_Observation_DentalOral_BodyStructure_eCS]: StructureDefinition-jp-observation-dentaloral-bodystructure-ecs.html
 [JP_Observation_DentalOral_BodyStructure]: StructureDefinition-jp-observation-dentaloral-bodystructure.html
 [JP_Observation_Electrocardiogram_DeviceInterpretation]: StructureDefinition-jp-observation-electrocardiogram-deviceinterpretation.html
 [JP_Observation_Electrocardiogram_Duration]: StructureDefinition-jp-observation-electrocardiogram-duration.html
@@ -141,7 +144,6 @@
 
 <!-- CodeSystem -->
 [JP_ConditionDieaseOutcomeHL70241_CS]: CodeSystem-jp-condition-disease-outcome-hl70241-cs.html
-[JP_ConditionDieaseOutcomeJHSD0006_CS]: CodeSystem-jp-condition-disease-outcome-jhsd0006-cs.html
 [JP_ConditionDieaseOutcomeReceipt_CS]: CodeSystem-jp-condition-disease-outcome-receipt-cs.html
 [JP_DentalBodySite_CS]: CodeSystem-jp-dental-bodysite-cs.html
 [JP_DentalBodySiteStatus_CS]: CodeSystem-jp-dental-bodysitestatus-cs.html
@@ -149,9 +151,11 @@
 [JP_DentalFundamentalStatus_CS]: CodeSystem-jp-dental-fundamentalstatus-cs.html
 [JP_DentalMissingTeethObservation_CS]: CodeSystem-jp-dental-missingteeth-observation-cs.html
 [JP_DentalPresentTeethObservation_CS]: CodeSystem-jp-dental-presentteeth-observation-cs.html
+[JP_DentalRootBodyStructure_CS]: CodeSystem-jp-dental-rootbodystructure-cs.html
 [JP_DentalSimpleMissingTeethObservation_CS]: CodeSystem-jp-dental-simple-missingteeth-observation-cs.html
 [JP_DentalSipmlePresentTeethObservation_CS]: CodeSystem-jp-dental-simple-presentteeth-observation-cs.html
-[JP_ObservationBodyMeasurementCategory_CS]: CodeSystem-jp-observation-bodymeasurement-category-cs.html
+[JP_DentalSurfaceBodyStructure_CS]: CodeSystem-jp-dental-surfacebodystructure-cs.html
+[JP_DentalToothStatus_Observation_CS]: CodeSystem-jp-dental-toothstatus-observation-cs.html
 [JP_ObservationBodyMeasurementCode_CS]: CodeSystem-jp-observation-bodymeasurement-code-cs.html
 [JP_ObservationDentalCategory_CS]: CodeSystem-jp-observation-dental-category-cs.html
 [JP_ObservationElectrocardiogramDuration_CS]: CodeSystem-jp-observation-electrocardiogram-duration-cs.html
@@ -161,9 +165,6 @@
 
 <!-- ValueSet -->
 [JP_Condition_BodySite_VS]: ValueSet-jp-condition-bodysite-vs.html
-[JP_ConditionDiseaseOutcomeHL70241_JHSD0006_VS]: ValueSet-jp-condition-disease-outcome-hl70241-jhsd0006-vs.html
-[JP_ConditionDiseaseOutcomeHL70241_VS]: ValueSet-jp-condition-disease-outcome-hl70241-vs.html
-[JP_ConditionDiseaseOutcomeJHSD0006_VS]: ValueSet-jp-condition-disease-outcome-jhsd0006-vs.html
 [JP_ConditionDiseaseOutcomeReceipt_VS]: ValueSet-jp-condition-disease-outcome-receipt-vs.html
 [JP_DentalBodySite_VS]: ValueSet-jp-dental-bodysite-vs.html
 [JP_DentalBodySiteStatus_VS]: ValueSet-jp-dental-bodysitestatus-vs.html
@@ -171,13 +172,14 @@
 [JP_DentalFundamentalStatus_VS]: ValueSet-jp-dental-fundamentalstatus-vs.html
 [JP_DentalMissingTeethObservation_VS]: ValueSet-jp-dental-missingteeth-observation-vs.html
 [JP_DentalPresentTeethObservation_VS]: ValueSet-jp-dental-presentteeth-observation-vs.html
+[JP_DentalRootBodyStructure_VS]: ValueSet-jp-dental-rootbodystructure-vs.html
 [JP_DentalSipmleMissingTeethObservation_VS]: ValueSet-jp-dental-simple-missingteeth-observation-vs.html
 [JP_DentalSimplePresentTeethObservation_VS]: ValueSet-jp-dental-simple-presentteeth-observation-vs.html
+[JP_DentalSurfaceBodyStructure_VS]: ValueSet-jp-dental-surfacebodystructure-vs.html
+[JP_DentalToothStatus_Observation_VS]: ValueSet-jp-dental-toothstatus-observation-vs.html
 [JP_DICOMModality_VS]: ValueSet-jp-dicommodality-vs.html
 [JP_ImagingStudy_Endoscopy_BodySite_VS]: ValueSet-jp-imagingstudy-endoscopy-bodysite-vs.html
 [JP_ImagingStudy_Radiology_BodySite_VS]: ValueSet-jp-imagingstudy-radiology-bodysite-vs.html
-[JP_ObservationBodyMeasurementCategory_VS]: ValueSet-jp-observation-bodymeasurement-category-vs.html
-[JP_ObservationBodyMeasurementCode_VS]: ValueSet-jp-observation-bodymeasurement-code-vs.html
 [JP_Observation_BodySite_VS]: ValueSet-jp-observation-bodysite-vs.html
 [JP_ObservationDetailedDentalCategory_VS]: ValueSet-jp-observation-detailed-dental-category-vs.html
 [JP_ObservationElectrocardiogramComponentCode_VS]: ValueSet-jp-observation-electrocardiogram-component-code-vs.html
@@ -187,7 +189,6 @@
 [JP_ObservationEndoscopyCode_VS]: ValueSet-jp-observation-endoscopy-code-vs.html
 [JP_ObservationEndoscopyValueJed_VS]: ValueSet-jp-observation-endoscoy-value-jed-vs.html
 [JP_ObservationRadiologyCode_VS]: ValueSet-jp-observation-radiology-code-vs.html
-[JP_PhysicalExamCode_VS]: ValueSet-jp-physicalexamcode-vs.html
 [JP_Undefined_VS]: ValueSet-jp-undefined-vs.html
 
 <!-- Example -->
@@ -261,9 +262,15 @@
 [jp-microbiology-infectious-agent-ns]: NamingSystem-jp-microbiology-infectious-agent-ns.html
 [jp-prefecturenumber-namingsystem]: NamingSystem-jp-prefecturenumber-namingsystem.html
 [jp-observation-bodyMeasurement-example-1]: Observation-jp-observation-bodyMeasurement-example-1.html
+[jp-observation-dentaloral-missingtoothcondition-example-4]: Observation-jp-observation-dentaloral-missingtoothcondition-example-4.html
+[jp-observation-dentaloral-missingtoothcondition-example-5]: Observation-jp-observation-dentaloral-missingtoothcondition-example-5.html
+[jp-observation-dentaloral-missingtoothcondition-example-6]: Observation-jp-observation-dentaloral-missingtoothcondition-example-6.html
 [jp-observation-dentaloral-toothexistence-example-1]: Observation-jp-observation-dentaloral-toothexistence-example-1.html
 [jp-observation-dentaloral-toothexistence-example-2]: Observation-jp-observation-dentaloral-toothexistence-example-2.html
 [jp-observation-dentaloral-toothexistence-example-3]: Observation-jp-observation-dentaloral-toothexistence-example-3.html
+[jp-observation-dentaloral-toothexistence-example-4]: Observation-jp-observation-dentaloral-toothexistence-example-4.html
+[jp-observation-dentaloral-toothexistence-example-5]: Observation-jp-observation-dentaloral-toothexistence-example-5.html
+[jp-observation-dentaloral-toothexistence-example-6]: Observation-jp-observation-dentaloral-toothexistence-example-6.html
 [jp-observation-dentaloral-toothtreatmentcondition-example-1]: Observation-jp-observation-dentaloral-toothtreatmentcondition-example-1.html
 [jp-observation-dentaloral-toothtreatmentcondition-example-2]: Observation-jp-observation-dentaloral-toothtreatmentcondition-example-2.html
 [jp-observation-dentaloral-toothtreatmentcondition-example-3]: Observation-jp-observation-dentaloral-toothtreatmentcondition-example-3.html
