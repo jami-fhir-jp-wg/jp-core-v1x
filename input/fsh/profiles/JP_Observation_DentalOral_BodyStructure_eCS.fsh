@@ -6,7 +6,7 @@ Context: Observation
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodyStructure_eCS"
 * ^version = "1.2.0"
 * ^status = #active
-* ^date = "2025-06-06"
+* ^date = "2025-06-24"
 * ^publisher = "FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)"
 * ^contact.name = "FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)"
 * ^contact.telecom[0].system = #url
