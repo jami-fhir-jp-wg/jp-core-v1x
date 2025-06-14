@@ -214,7 +214,7 @@ Title: "JP Core MedicationAdministration Injection Profile"
 Description: "このプロファイルはMedicationAdministrationリソースに対して、注射薬剤処方投与実施情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration_Injection"
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2025-06-24"
 * . ^short = "患者への注射薬剤投与記録"
 * extension contains
     JP_MedicationAdministration_UncategorizedComment named uncategorizedComment ..*

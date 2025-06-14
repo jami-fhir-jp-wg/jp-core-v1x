@@ -5,7 +5,7 @@ Title: "JP Core Observation DentalOral eCS Profile"
 Description: "このプロファイルはObservationリソースに対して、診療情報提供書用のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_eCS"
 * ^status = #active
-* ^date = "2025-06-11"
+* ^date = "2025-06-24"
 * . ^short = "診療情報提供書用のプロファイル"
 * . ^definition = "歯科臨床においては、複数の部位が同一の疾患を有していたり、複数部位からなる疾患が存在するため、複数の部位を表現することのできるプロファイルが必要である"
 

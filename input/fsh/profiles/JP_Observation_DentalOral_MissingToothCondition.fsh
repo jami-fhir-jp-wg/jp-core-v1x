@@ -5,7 +5,7 @@ Title: "JP Core Observation DentalOral Missing Tooth Condition Profile"
 Description: "このプロファイルはObservationリソースに対して、口腔診査結果（口腔所見）の特定の欠損歯の処置データを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_MissingToothCondition"
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2024-06-24"
 * . ^short = "特定の欠損歯の処置状態のプロファイル"
 * . ^definition = "口腔審査結果レポートの特定の欠損歯の処置状態のプロファイル"
 
