@@ -214,7 +214,7 @@ Immunization.occurrenceString要素を使用した例：
 ```
 
 ### 接種実施者の記述方法について
-ワクチンの接種実施者 Immunization.performer.actor要素にReference型でPractitionerリソースの参照情報を記述する。Immunization.performer.functionにはValueSet "http://hl7.org/fhir/ValueSet/immunization-function"から"AP" (Administering Provider)を指定する。
+ワクチンの接種実施者 Immunization.performer.actor要素にReference型でPractitionerリソースの参照情報を記述する。Immunization.performer.functionにはValueSet "https://hl7.org/fhir/R4/valueset-immunization-function.html"から"AP" (Administering Provider)を指定する。
 
 ```json
 "performer": [
