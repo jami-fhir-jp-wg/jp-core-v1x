@@ -12,7 +12,7 @@
 
 ### FHIR Base 定義済み検索パラメーター
 FHIR Baseにて定義済み検索パラメータ([Defined Search Parameters](https://www.hl7.org/fhir/R4/searchparameter-registry.html))が記載されており、相互運用性の高めるためにもこれを利用することを推奨する(**SHOULD**)。<br/>
-定義済み検索パラメータは``` http://hl7.org/fhir/R4/SearchParameter/[id] ```の命名規則の定義URLにて利用可能である。
+定義済み検索パラメータは``` http://hl7.org/fhir/SearchParameter/[id] ```の命名規則の定義URLにて利用可能である。
 
 
 {% include markdown-link-references.md %}
