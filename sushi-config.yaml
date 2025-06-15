@@ -17,8 +17,8 @@ copyright: Copyright FHIR Japanese implementation research working group in Japa
 jurisdiction: urn:iso:std:iso:3166#JP "Japan"
 dependencies:
   jpfhir-terminology.r4:
-    uri: http://jpfhir.jp/fhir/jpfhir-terminology/ImplementationGuide/
-    version: 1.3.0
+    uri: http://jpfhir.jp/fhir/jpfhir-terminology/ImplementationGuide/jpfhir-terminology
+    version: 1.4.0
     
 #----------------------------------------
 # ページタイトル名称設定
