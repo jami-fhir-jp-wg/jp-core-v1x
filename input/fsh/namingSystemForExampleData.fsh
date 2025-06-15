@@ -1,15 +1,4 @@
 
-Instance: jp-local-patient-identifier-root
-InstanceOf: NamingSystem
-Usage: #definition
-* name = "JP_local_patient_identifier_root_NamingSystem"
-* status = #active
-* date = "2025-05-25"
-* kind = #root
-* description = "JP_local_patient-identifier_root_NamingSystem"
-* uniqueId[+].type = #uri
-* uniqueId[=].value = "urn:oid:1.2.392.100495.20.3.51"
-
 Instance: jp-local-identifier-11311234567
 InstanceOf: NamingSystem
 Usage: #definition
