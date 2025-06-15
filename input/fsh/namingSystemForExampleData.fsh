@@ -49,3 +49,5 @@ Usage: #definition
 * uniqueId[=].value = "http://abc-hospital.local/identifiers/collections"
 * uniqueId[+].type = #uri
 * uniqueId[=].value = "http://abc-hospital.local/specimens/2011"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://abc-hospital.local/fhir/mb/reportid"

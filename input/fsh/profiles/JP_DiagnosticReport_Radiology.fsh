@@ -43,14 +43,14 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category ^slicing.rules = #open
 * category ^slicing.ordered = false
 * category contains first 1..1 and second ..*
-
+* category[first] MS
 * category[first] ^short = "レポートを作成した分野を分類するコード【詳細参照】"
 * category[first] ^definition = "レポートを作成した臨床分野・部門、または診断サービス（CT, US, MRIなど）を分類するコード。 これは、検索、並べ替え、および表示の目的で使用される。【JP-Core仕様】放射線レポートは第1コードとして LP29684-5 を固定値として設定。第2コード以下にDICOMModalityコードを列挙することでレポートの対象検査内容を示す。"
 * category[first] from $JP_DiagnosticReportCategory_VS (required)
 * category[first].coding.system = $Loinc_CS (exactly)
 * category[first].coding.code 1..
 * category[first].coding.code = $Loinc_CS#LP29684-5 (exactly)
-
+* category[second] MS
 * category[second] ^short = "レポート対象のモダリティを示すコード【詳細参照】"
 * category[second] ^definition = "レポート対象のモダリティを示すコード。放射線を表す第1コードのLP29684-5に続くサブカテゴリコードとして第2コード以下に保持される。複数のモダリティの組み合わせを許容するため、コードの列挙を許容する。"
 * category[second] from $JP_DICOMModality_VS (required)
