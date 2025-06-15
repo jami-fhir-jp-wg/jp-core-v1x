@@ -12,7 +12,8 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * . ^short = "患者にサービスが提供されている間の相互作用"
 * . ^definition = "医療サービスの提供または患者の健康状態の評価を目的とした、患者と医療提供者との間の相互作用。Encounterと表現される。  
 【JP Core仕様】外来受診、救急受診、入院、退院、対面診察、電話診察、など。"
-* extension contains $encounter-associatedEncounter named associatedEncounter ..1
+//* extension contains $encounter-associatedEncounter named associatedEncounter ..1
+* extension contains http://hl7.org/fhir/StructureDefinition/encounter-associatedEncounter|4.0.1 named associatedEncounter ..1
 * extension[associatedEncounter] ^short = "関連するEncounter"
 * extension[associatedEncounter] ^definition = "関連するEncounter"
 * identifier ^short = "このEncounterが知られている識別子（複数可）"
