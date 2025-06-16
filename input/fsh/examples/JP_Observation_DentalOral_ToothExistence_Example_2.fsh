@@ -18,5 +18,5 @@ Usage: #example
 * issued = "2022-10-24T17:30:00+09:00"
 * hasMember = Reference(Observation/jp-observation-dentaloral-toothtreatmentcondition-example-2)
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
-* bodySite = $JP_DentalBodySite_CS#TB-2-1011 "右側上顎中切歯"
-//* bodySiteStatus = $JP_DentalBodySiteStatus_VS#TB-3-3 "支台歯"
+* bodySite = $JP_DentalBodySite_CS#1011 "右側上顎中切歯"
+* bodySiteStatus = $JP_DentalBodySiteStatus_CS#0

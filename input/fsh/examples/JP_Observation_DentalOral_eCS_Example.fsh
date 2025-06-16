@@ -19,10 +19,10 @@ Usage: #example
 
 /*
 * extension[structure][0].valueCodeableConcept.coding.system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySite_CS"
-* extension[structure][=].valueCodeableConcept.coding.code = #TB-2-1042
+* extension[structure][=].valueCodeableConcept.coding.code = #1042
 * extension[structure][=].valueCodeableConcept.coding.display = "右側下顎側切歯"
 * extension[structure][+].valueCodeableConcept.coding.system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySite_CS"
-* extension[structure][=].valueCodeableConcept.coding.code = #TB-2-1041
+* extension[structure][=].valueCodeableConcept.coding.code = #1041
 * extension[structure][=].valueCodeableConcept.coding.display = "右側下顎中切歯"
 * bodySite.extension[bodyStructure][+].valueCodeableConcept.coding.system = "http://jpfhir.jp/fhir/core/ValueSet/JP_DentalBodyStructure_VS"
 * bodySite.extension[bodyStructure][=].valueCodeableConcept.coding.code = "TP-18-01"

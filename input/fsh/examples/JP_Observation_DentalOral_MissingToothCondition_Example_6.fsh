@@ -3,6 +3,7 @@ InstanceOf: JP_Observation_DentalOral_MissingToothCondition
 Title: "JP Core Observation DentalOral Missing Tooth Condition Example 口腔診査結果５（欠損歯の状態）"
 Description: "口腔診査結果５（欠損歯の状態）"
 Usage: #example
+* identifier[0].value = "20221001-0006"
 * status = #final
 * category[first].coding.code = #exam
 * category[first].coding.display = "exam"
@@ -15,7 +16,7 @@ Usage: #example
 * effectiveDateTime = "2022-10-01"
 * issued = "2022-10-24T17:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
-* bodySite = $JP_DentalBodySite_CS#TB-2-1046 "右側下顎第１大臼歯"
+* bodySite = $JP_DentalBodySite_CS#1046 "右側下顎第１大臼歯"
 //* bodySite.extension[bodyStructure].valueCodeableConcept.coding = $JP_DentalBodyStructure_CS#TP-18-01 "歯冠部"
 * component.code.coding[primary].code = #TM-4-02
 * component.code.coding[primary].display = "有床義歯（レジン床）"

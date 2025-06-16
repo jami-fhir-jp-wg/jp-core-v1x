@@ -19,7 +19,7 @@ Usage: #example
 * effectiveDateTime = "2022-10-01"
 * issued = "2022-10-24T17:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
-* bodySite = $JP_DentalBodySite_CS#TB-2-1026 "左側上顎第１大臼歯"
+* bodySite = $JP_DentalBodySite_CS#1026 "左側上顎第１大臼歯"
 * bodySite.extension[bodyStructure][+].valueCodeableConcept.coding = $JP_DentalBodyStructure_CS#TP-13-01 "切端・咬合面ＩＯ（切端I又は咬合面Ｏ）"
 * bodySite.extension[bodyStructure][+].valueCodeableConcept.coding = $JP_DentalBodyStructure_CS#TP-15-01 "口蓋側面・舌側面ＰＬ（口蓋側面Ｐ又は舌側面Ｌ（Ｌｉ））"
 * bodySite.extension[bodyStructure][+].valueCodeableConcept.coding = $JP_DentalBodyStructure_CS#TP-16-01 "近心面Ｍ"

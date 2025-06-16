@@ -53,7 +53,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * code 1..1
 * insert SetDefinition(code.coding, observation のタイプ（コードまたはタイプ）
-【JP Core仕様】57133-1 (Referral note) を指定する)
+【JP Core仕様】57133-1（Referral note）を指定する)
 * code.coding.system = $Loinc_CS (exactly)
 * code.coding.code 1..1
 * code.coding.code = $Loinc_CS#57133-1 (exactly)
@@ -151,10 +151,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * extension[bodyStructure].extension[qualifier] ^slicing.discriminator.type = #value
 * extension[bodyStructure].extension[qualifier] ^slicing.discriminator.path = "url"
 * extension[bodyStructure].extension[qualifier] ^slicing.rules = #open
-* insert SetDefinition(extension[bodyStructure].extension[qualifier], 【JP Core仕様】
-・特定の歯の『歯根』
-・特定の歯の『歯面』
-の２項目を指定)
+* insert SetDefinition(extension[bodyStructure].extension[qualifier], 【JP Core仕様】特定の歯の歯根と、歯面の２項目を指定)
 
 * extension[bodyStructure].extension[qualifier] contains
     root 1..1 and

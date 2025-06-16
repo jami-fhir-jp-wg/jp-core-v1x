@@ -56,7 +56,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * code 1..1
 * insert SetDefinition(code.coding, observation のタイプ（コードまたはタイプ）
-【JP Core仕様】54570-7 (Oral/dental status) を指定する)
+【JP Core仕様】54570-7（Oral/dental status）を指定する)
 * code.coding.system = $Loinc_CS (exactly)
 * code.coding.code 1..1
 * code.coding.code = $Loinc_CS#54570-7 (exactly)
