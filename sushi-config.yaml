@@ -125,8 +125,8 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - '*/jpfhir.jp.core'
   no-usage-check: 'true'
   i18n-default-lang: 'ja'
-  pin-canonicals: 'pin-all'
-  
+  pin-canonicals: 'pin-multiples'
+
   # logging:
   #   - tx #tx: Messages describing the use of the terminology server (for debugging)
   #   - html #html: Log when validating an html page (troubleshooting only - leave off)
