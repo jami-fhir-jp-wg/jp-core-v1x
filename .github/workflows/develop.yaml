@@ -3,7 +3,6 @@ on:
   push:
     branches: 
       - 'develop'
-      - 'develop-kohetest'
       - 'release/**'
     paths:
       - 'sushi-config.yaml'
@@ -11,7 +10,6 @@ on:
       - '.github/workflows/develop.yaml'
   pull_request:
     branches:
-      - 'develop-kohetest'
       - 'develop'
       - 'release/**'
 env:
