@@ -9,16 +9,21 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^short = "診療情報提供書用のプロファイル"
 * . ^definition = "歯科臨床においては、複数の部位が同一の疾患を有していたり、複数部位からなる疾患が存在するため、複数の部位を表現することのできるプロファイルが必要である"
 
-* insert SetDefinition(identifier, 当該口腔診査（検査項目）に対して、施設内で割り振られる一意の識別子があればそれを使用する。例えば、実施日に連番を付加した番号など。)
 * identifier 0..
+* insert SetDefinition(identifier, Observationのためのビジネス識別子  
+【JP Core仕様】当該口腔診査（検査項目）に対して、施設内で割り振られる一意の識別子。)
+* identifier ^comment = "例：実施日に連番を付加した番号"
 
+* basedOn 0..*
 * insert SetDefinition(basedOn, 実施されるプラン、提案、依頼  
 【JP Core仕様】未使用)
 * basedOn ^comment = "本プロファイル（複数の部位が同一の疾患を有していたり、複数部位からなる疾患が存在した際に、複数の部位を表現することのできるプロファイル）は診療情報提供書に紐付く前提のため、本プロファイル特有の定義はしない。"
 
+* partOf 0..
 * insert SetDefinition(partOf, 参照されるイベントの一部分
 【JP Core仕様】未使用)
 
+* status 1..1
 * insert SetDefinition(status, 結果の状態  
 【JP Core仕様】ステータス)
 
@@ -26,10 +31,11 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category contains
     second 1..1 and
     third 1..1
-* category ^comment = "3つのコードを設定する。
-第1コード（first）は、simpleObservationコード体系を必須とし、exam を設定する。
-第2コード（second）は、歯科を表すコード LP89803-8 を設定する。
-第3コード（third）は、診療情報提供書(ClinicalInformationSharing)を表すコード DO-1-04 を設定する。なお、日本では適切なコード体系が存在しないため、独自のバリューセットを定義する。"
+* insert SetDefinition(category, Observationの種類（タイプ）の分類
+【JP Core仕様】以下を指定する。
+第1コード：exam
+第2コード：LP89803-8（Dental）
+第3コード：DO-1-04（ClinicalInformationSharing）)
 
 * insert SetDefinition(category[first], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#exam (exactly)
@@ -45,7 +51,9 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category[third].coding.code 1..1
 * category[third].coding.code = #DO-1-04 (exactly)
 
-* insert SetDefinition(code.coding, このObservationの対象を特定するコード。LOINCよりReferral noteを表す 57133-1 を選択する。)
+* code 1..1
+* insert SetDefinition(code.coding, observation のタイプ（コードまたはタイプ）
+【JP Core仕様】57133-1 (Referral note) を指定する)
 * code.coding.system = $Loinc_CS (exactly)
 * code.coding.code 1..1
 * code.coding.code = $Loinc_CS#57133-1 (exactly)
@@ -56,61 +64,101 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(subject, 観察対象者  
 【JP Core仕様】患者情報)
 
+* focus 0..
 * insert SetDefinition(focus, subject 要素が実際のobservationの対象でない場合に、observation の対象物。  
 【JP Core仕様】未使用)
 
+* encounter 0..1
 * insert SetDefinition(encounter, このobservationが行われるヘルスケアイベント)
 * encounter ^comment = "例：診療、歯科検診"
 
+* effective[x] 0..1
 * effective[x] only dateTime
 * insert SetDefinition(effective[x], 臨床的に関連する時刻または時間  
 【JP Core仕様】実施日時)
 
+* issued 0..1
 * insert SetDefinition(issued, このバージョンが利用可能となった日時  
 【JP Core仕様】所見確定日時)
 
+* performer 0..*
 * insert SetDefinition(performer, observationに責任をもつ者)
 * performer ^comment = "例：歯科医師など"
 
+* value[x] 0..1
 * value[x] only CodeableConcept
 * insert SetDefinition(value[x], 実際の結果値  
 【JP Core仕様】歯の処置状態。現存歯、欠損歯、粒度の細かさ、粗さにかかわらず、そのうち一つをVSより選択する)
 //* value[x] from $JP_ToothStatusObservation_VS (required) //TBD
 
+* dataAbsentReason 0..1
 * insert SetDefinition(dataAbsentReason, 結果が欠損値である理由
 【JP Core仕様】結果が存在しなかった場合、その理由)
 
+* interpretation 0..*
 * insert SetDefinition(interpretation, 高、低、正常等の結果のカテゴリ分けした評価
 【JP Core仕様】未使用)
 
+* note 0..*
 * insert SetDefinition(note, 結果に対するコメント  
 【JP Core仕様】未使用)
 
+* bodySite 0..1
 * insert SetDefinition(bodySite, 観察された身体部位  
 【JP Core仕様】未使用)
 
+* method 0..1
+* insert SetDefinition(method, 検査方法（目視、読影など)
+
+* specimen 0..1
+* insert SetDefinition(specimen, 観察（観測、検査）に使われた検体材料
+【JP Core仕様】未使用)
+
+* device 0..1
 * device ^comment = "例：口腔内スキャナなど"
+
+* referenceRange 0..0
+//* insert SetDefinition(referenceRange, 未使用)
+
+* hasMember 0..
 * insert SetDefinition(hasMember, observationグループに属する関連リソース
 【JP Core仕様】未使用)
 
+* derivedFrom 0..
 * insert SetDefinition(derivedFrom, observationの発生源に関連する測定
 【JP Core仕様】未使用)
 
+* component 0..
 * insert SetDefinition(component, 複合的な結果
 【JP Core仕様】未使用)
 
 // extension 参照宣言
-/*
-* extension contains
-    JP_Observation_DentalOral_BodyStructure_eCS named bodyStructure 1..
-
-* extension contains
-    JP_Observation_DentalOral_ToothRoot named toothRoot 0..1
-
 * extension contains
     JP_Observation_DentalOral_BodySiteStatus named bodySiteStatus 1..1
 * insert SetDefinition(bodySiteStatus, 【JP Core仕様】特定の状態を示さない 0 を指定)
 * bodySiteStatus.valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS (exactly)
 * bodySiteStatus.valueCodeableConcept.coding.code 1..1
 * bodySiteStatus.valueCodeableConcept.coding.code = #0 (exactly)
-*/
+
+* extension contains
+    JP_Observation_DentalOral_BodyStructure_eCS named bodyStructure 0..1
+
+* extension[bodyStructure].extension[structure].valueCodeableConcept from JP_DentalBodySite_VS (required)
+* insert SetDefinition(extension[bodyStructure].extension[structure], 【JP Core仕様】複数の『歯』を繰り返し指定)
+
+// qualifier拡張に対するslicing
+* extension[bodyStructure].extension contains qualifier 2..*
+* extension[bodyStructure].extension[qualifier] ^slicing.discriminator.type = #value
+* extension[bodyStructure].extension[qualifier] ^slicing.discriminator.path = "url"
+* extension[bodyStructure].extension[qualifier] ^slicing.rules = #open
+* insert SetDefinition(extension[bodyStructure].extension[qualifier], 【JP Core仕様】
+・特定の歯の『歯根』
+・特定の歯の『歯面』
+の２項目を指定)
+
+* extension[bodyStructure].extension[qualifier] contains
+    root 1..1 and
+    surface 1..1
+
+* extension[bodyStructure].extension[qualifier][root].valueCodeableConcept from JP_DentalRootBodyStructure_VS (required)
+* extension[bodyStructure].extension[qualifier][surface].valueCodeableConcept from JP_DentalSurfaceBodyStructure_VS (required)
