@@ -28,7 +28,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category ^short = "このObservationを分類するコード【詳細参照】"
 * category ^comment = "内視鏡検査の第1カテゴリはJP_SimpleObservationCategory_VSからprocedureを指定、第2カテゴリはLOINCのPartコードLP7796-8（内視鏡）固定とする。"
 * category[first] MS
-^short = "内視鏡検査の第1カテゴリはJP_SimpleObservationCategory_VSからprocedureを指定する。"
+* category[first] ^short = "内視鏡検査の第1カテゴリはJP_SimpleObservationCategory_VSからprocedureを指定する。"
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#procedure (exactly)
 * insert SetDefinition(category[second],第2カテゴリはLOINCのPartコードLP7796-8（内視鏡）固定とする。ValueSetは指定しない)
 * category[second] MS
