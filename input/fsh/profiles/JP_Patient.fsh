@@ -12,8 +12,8 @@ Description: "このプロファイルはPatientリソースに対して、患�
 * . ^short = "医療サービスを受けている個人または動物に関する情報"
 * . ^definition = "ケアまたはその他の健康関連サービスを受けている個人または動物に関する基本情報およびその他の管理情報。"
 * extension contains
-    $patient-religion|4.0.1 named religion ..* and
-    $patient-birthPlace|4.0.1 named birthPlace ..1 and
+    $patient-religion named religion ..* and
+    $patient-birthPlace named birthPlace ..1 and
     JP_Patient_Race named race ..*
 * extension[religion] ^short = "患者の宗教 【詳細参照】"
 * extension[religion] ^definition = "患者の公言された宗教的所属。"
