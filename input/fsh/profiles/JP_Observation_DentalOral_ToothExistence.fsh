@@ -9,7 +9,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_ToothExistence"
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2024-06-24"
 * . ^short = "特定の歯の有無・状態のプロファイル"
 * . ^definition = "口腔診査結果レポートの特定の歯の有無・状態のプロファイル"
 * . ^comment = "本プロファイルと、現存歯の処置状態プロファイルや、欠損歯の処置状態プロファイルなどを組み合わせて利用する。"
@@ -113,8 +113,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * extension contains
     JP_Observation_DentalOral_BodySiteStatus named bodySiteStatus 1..1
-* insert SetDefinition(bodySiteStatus, 【JP Core仕様】特定の状態を示さない 0 を指定)
-* bodySiteStatus.coding.code = $JP_DentalBodySiteStatus_CS#0 (exactly)
+* insert SetDefinition(extension[bodySiteStatus], 【JP Core仕様】特定の状態を示さない 0 を指定)
+* extension[bodySiteStatus].valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS (exactly)
+* extension[bodySiteStatus].valueCodeableConcept.coding.code 1..1
+* extension[bodySiteStatus].valueCodeableConcept.coding.code = #0 (exactly)
 
 * method 0..1
 * insert SetDefinition(method, 検査方法（目視、読影など)

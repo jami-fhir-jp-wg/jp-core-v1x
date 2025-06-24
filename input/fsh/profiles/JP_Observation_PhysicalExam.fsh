@@ -38,7 +38,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 effectivePeriod：医療者が確認した期間"
 * valueCodeableConcept from $v2-0136 (preferred)
 * valueCodeableConcept ^short = "所見の有無（Y or N）を指定する"
-* bodySite from JP_ObservationPhysicalExamBodySite_VS (preferred)
+//* bodySite from JP_ObservationPhysicalExamBodySite_VS (preferred)
 * bodySite ^comment = "ICD-11"
 * method from JP_ObservationPhysicalExamMethod_VS (preferred)
 * method ^comment = "MEDIS症状・所見マスターの「診察方法」"

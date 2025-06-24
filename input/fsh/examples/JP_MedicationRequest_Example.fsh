@@ -35,8 +35,8 @@ Usage: #example
 
 Instance: jp-medicationrequest-example-2
 InstanceOf: JP_MedicationRequest
-Title: "JP Core MedicationRequest Example 内服処方指示 パンスポリンＴ錠１００ １００ｍｇ"
-Description: "内服処方指示 パンスポリンＴ錠１００ １００ｍｇ"
+Title: "JP Core MedicationRequest Example 内服処方指示 パンスポリンＴ錠１００　１００ｍｇ"
+Description: "内服処方指示 パンスポリンＴ錠１００　１００ｍｇ"
 Usage: #example
 * identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "2"
@@ -46,7 +46,7 @@ Usage: #example
 * identifier[requestIdentifier].value = "1234567890.1.2"
 * intent = #order
 * status = #active
-* medicationCodeableConcept = $JP_MedicationCodeHOT9_CS#110926901 "パンスポリンＴ錠１００ １００ｍｇ"
+* medicationCodeableConcept = $JP_MedicationCodeHOT9_CS#110926901 "パンスポリンＴ錠１００　１００ｍｇ"
 * subject = Reference(Patient/jp-patient-example-1)
 * authoredOn = "2020-04-01T12:28:17+09:00"
 * dosageInstruction.extension[0].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationDosage_PeriodOfUse"

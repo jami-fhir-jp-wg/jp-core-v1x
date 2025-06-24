@@ -11,4 +11,4 @@ Description: "歯根を格納するための拡張"
 * . ^definition = "歯根を格納するための拡張"
 * url = $JP_Observation_DentalOral_ToothRoot (exactly)
 * value[x] only CodeableConcept
-* valueCodeableConcept from $JP_DentalRootBodyStructure_VS (preferred)
+//* valueCodeableConcept from $JP_DentalRootBodyStructure_VS (preferred)

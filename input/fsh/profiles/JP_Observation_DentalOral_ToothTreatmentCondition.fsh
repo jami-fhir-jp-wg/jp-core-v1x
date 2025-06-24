@@ -7,7 +7,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_ToothTreatmentCondition"
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2024-06-24"
 * . ^short = "特定の現存歯の処置状態のプロファイル"
 * . ^definition = "口腔診査結果レポートの特定の現存歯の処置状態のプロファイル"
 
@@ -112,11 +112,11 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * extension contains
     JP_Observation_DentalOral_ToothRoot named toothRoot 0..1
-* insert SetDefinition(toothRoot, 【JP Core仕様】特定の歯の歯根を指定)
+* insert SetDefinition(extension[toothRoot], 【JP Core仕様】特定の歯の歯根を指定)
 
 * extension contains
     JP_Observation_DentalOral_BodyStructure named bodyStructure ..*
-* insert SetDefinition(bodyStructure, 【JP Core仕様】特定の歯の歯面を指定)
+* insert SetDefinition(extension[bodyStructure], 【JP Core仕様】特定の歯の歯面を指定)
 
 * method 0..1
 * insert SetDefinition(method, 検査方法（目視、読影など)

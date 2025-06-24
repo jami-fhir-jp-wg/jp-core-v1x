@@ -11,4 +11,4 @@ Description: "特定の歯の歯面を格納するための拡張"
 * . ^definition = "特定の歯の歯面を格納するための拡張"
 * url = $JP_Observation_DentalOral_BodyStructure (exactly)
 * value[x] only CodeableConcept
-* valueCodeableConcept.coding from $JP_DentalBodyStructure_VS (preferred)
+//* valueCodeableConcept.coding from $JP_DentalBodyStructure_VS (preferred)

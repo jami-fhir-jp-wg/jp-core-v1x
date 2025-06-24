@@ -5,7 +5,7 @@ Title: "JP Core Observation DentalOral eCS Profile"
 Description: "このプロファイルはObservationリソースに対して、診療情報提供書用のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_eCS"
 * ^status = #active
-* ^date = "2025-06-11"
+* ^date = "2025-06-24"
 * . ^short = "診療情報提供書用のプロファイル"
 * . ^definition = "歯科臨床においては、複数の部位が同一の疾患を有していたり、複数部位からなる疾患が存在するため、複数の部位を表現することのできるプロファイルが必要である"
 
@@ -103,9 +103,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(note, 結果に対するコメント  
 【JP Core仕様】未使用)
 
-* text 0..1
-* insert SetDefinition(text, 観察結果のテキスト表現  
-【JP Core仕様】口腔または歯の状態”)
+// * text 0..1
+// * insert SetDefinition(text, 観察結果のテキスト表現  
+// 【JP Core仕様】口腔または歯の状態”)
+// 
 
 * bodySite 0..1
 * insert SetDefinition(bodySite, 観察された身体部位  
@@ -139,10 +140,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 // extension 参照宣言
 * extension contains
     JP_Observation_DentalOral_BodySiteStatus named bodySiteStatus 1..1
-* insert SetDefinition(bodySiteStatus, 【JP Core仕様】特定の状態を示さない 0 を指定)
-* bodySiteStatus.valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS (exactly)
-* bodySiteStatus.valueCodeableConcept.coding.code 1..1
-* bodySiteStatus.valueCodeableConcept.coding.code = #0 (exactly)
+* insert SetDefinition(extension[bodySiteStatus], 【JP Core仕様】特定の状態を示さない0 を指定)
+* extension[bodySiteStatus].valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS (exactly)
+* extension[bodySiteStatus].valueCodeableConcept.coding.code 1..1
+* extension[bodySiteStatus].valueCodeableConcept.coding.code = #0 (exactly)
 
 * extension contains
     JP_Observation_DentalOral_BodyStructure_eCS named bodyStructure 0..1
@@ -150,16 +151,17 @@ Description: "このプロファイルはObservationリソースに対して、�
 * extension[bodyStructure].extension[structure].valueCodeableConcept from JP_DentalBodySite_VS (required)
 * insert SetDefinition(extension[bodyStructure].extension[structure], 【JP Core仕様】複数の『歯』を繰り返し指定)
 
-// qualifier拡張に対するslicing
-* extension[bodyStructure].extension contains qualifier 2..*
-* extension[bodyStructure].extension[qualifier] ^slicing.discriminator.type = #value
-* extension[bodyStructure].extension[qualifier] ^slicing.discriminator.path = "url"
-* extension[bodyStructure].extension[qualifier] ^slicing.rules = #open
 * insert SetDefinition(extension[bodyStructure].extension[qualifier], 【JP Core仕様】特定の歯の歯根と、歯面の２項目を指定)
 
 * extension[bodyStructure].extension[qualifier] contains
     root 1..1 and
     surface 1..1
 
-* extension[bodyStructure].extension[qualifier][root].valueCodeableConcept from JP_DentalRootBodyStructure_VS (required)
-* extension[bodyStructure].extension[qualifier][surface].valueCodeableConcept from JP_DentalSurfaceBodyStructure_VS (required)
+* extension[bodyStructure].extension[qualifier] ^slicing.discriminator.type = #value
+* extension[bodyStructure].extension[qualifier] ^slicing.discriminator.path = "url"
+* extension[bodyStructure].extension[qualifier] ^slicing.rules = #open
+
+
+//TODO 定義がないので、VSを作成する必要がある。
+//* extension[bodyStructure].extension[qualifier][root].valueCodeableConcept from JP_DentalRootBodyStructure_VS (required)
+//* extension[bodyStructure].extension[qualifier][surface].valueCodeableConcept from JP_DentalSurfaceBodyStructure_VS (required)

@@ -96,7 +96,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.bodySite ^short = "このシリーズの対象となる解剖学的部位【詳細参照】"
 * series.bodySite ^definition = "このシリーズの対象となる解剖学的部位。"
 * series.bodySite ^comment = "内視鏡では省略してよい。"
-* series.bodySite from JP_ImagingStudy_Radiology_BodySite_VS (example)
+//* series.bodySite from JP_ImagingStudy_Radiology_BodySite_VS (example)
 * series.laterality ^short = "解剖学的部位の左右【詳細参照】"
 * series.laterality ^definition = "解剖学的部位の左右。"
 * series.laterality ^comment = "内視鏡では省略してよい。"

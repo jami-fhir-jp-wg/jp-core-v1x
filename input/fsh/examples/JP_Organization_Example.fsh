@@ -20,7 +20,7 @@ Usage: #example
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
 * extension[=].valueIdentifier.system = $JP_IdSystem_MedicalOrganizationID 
 * extension[=].valueIdentifier.value = "1234567"
-* identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/medicalInstitutionCode"
+* identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no"
 * identifier[medicalInstitutionCode].value = "1311234567"
 * name = "太郎花子クリニック"
 * address.text = "東京都文京区本郷Ｘ−Ｘ−Ｘ"
@@ -42,7 +42,7 @@ Usage: #example
 * extension[+].url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
 * extension[=].valueIdentifier.system = $JP_IdSystem_MedicalOrganizationID 
 * extension[=].valueIdentifier.value = "9876543"
-* identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/medicalInstitutionCode"
+* identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no"
 * identifier[medicalInstitutionCode].value = "1319876543"
 * name = "健康第一病院"
 * address.text = "東京都文京区本郷Ｙ−Ｙ−Ｙ"
