@@ -9,7 +9,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^short = "診療情報提供書用のプロファイル"
 * . ^definition = "歯科臨床においては、複数の部位が同一の疾患を有していたり、複数部位からなる疾患が存在するため、複数の部位を表現することのできるプロファイルが必要である"
 
-* identifier 0..
+* identifier 0..*
 * insert SetDefinition(identifier, Observationのためのビジネス識別子  
 【JP Core仕様】当該口腔診査（検査項目）に対して、施設内で割り振られる一意の識別子。)
 * identifier ^comment = "例：実施日に連番を付加した番号"
@@ -19,7 +19,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 【JP Core仕様】未使用)
 * basedOn ^comment = "本プロファイル（複数の部位が同一の疾患を有していたり、複数部位からなる疾患が存在した際に、複数の部位を表現することのできるプロファイル）は診療情報提供書に紐付く前提のため、本プロファイル特有の定義はしない。"
 
-* partOf 0..
+* partOf 0..*
 * insert SetDefinition(partOf, 参照されるイベントの一部分
 【JP Core仕様】未使用)
 
@@ -27,7 +27,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(status, 結果の状態  
 【JP Core仕様】ステータス)
 
-* category 3..
+* category 3..*
 * category contains
     second 1..1 and
     third 1..1
@@ -64,7 +64,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(subject, 観察対象者  
 【JP Core仕様】患者情報)
 
-* focus 0..
+* focus 0..*
 * insert SetDefinition(focus, subject 要素が実際のobservationの対象でない場合に、observation の対象物。  
 【JP Core仕様】未使用)
 
@@ -103,6 +103,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(note, 結果に対するコメント  
 【JP Core仕様】未使用)
 
+* text 0..1
+* insert SetDefinition(text, 観察結果のテキスト表現  
+【JP Core仕様】口腔または歯の状態”)
+
 * bodySite 0..1
 * insert SetDefinition(bodySite, 観察された身体部位  
 【JP Core仕様】未使用)
@@ -120,7 +124,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * referenceRange 0..0
 //* insert SetDefinition(referenceRange, 未使用)
 
-* hasMember 0..
+* hasMember 0..*
 * insert SetDefinition(hasMember, observationグループに属する関連リソース
 【JP Core仕様】未使用)
 
