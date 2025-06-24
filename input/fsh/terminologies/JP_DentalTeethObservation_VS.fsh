@@ -7,4 +7,7 @@ Description: "JP Coreにて定義した歯科のObservationリソースに関す
 * ^experimental = false
 * ^date = "2025-06-24"
 
-* include codes from system $JP_DentalPresentTeethObservation_CS $JP_DentalSimplePresentTeethObservation_CS $JP_DentalMissingTeethObservation_CS $JP_DentalSimpleMissingTeethObservation_CS
+* include codes from system $JP_DentalPresentTeethObservation_CS
+* include codes from system $JP_DentalSimplePresentTeethObservation_CS
+* include codes from system $JP_DentalMissingTeethObservation_CS
+* include codes from system $JP_DentalSimpleMissingTeethObservation_CS
