@@ -7,4 +7,4 @@ Description: "JP Coreにて定義した歯科のObservationリソースに関す
 * ^experimental = false
 * ^date = "2024-12-30"
 
-* include codes from system $JP_DentalBodyStructure_CS
+* include codes from system $JP_DentalSurfaceBodyStructure_CS
