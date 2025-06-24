@@ -112,11 +112,11 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * extension contains
     JP_Observation_DentalOral_ToothRoot named toothRoot 0..1
-* insert SetDefinition(toothRoot, 【JP Core仕様】特定の歯の歯根を指定)
+* insert SetDefinition(extension[toothRoot], 【JP Core仕様】特定の歯の歯根を指定)
 
 * extension contains
     JP_Observation_DentalOral_BodyStructure named bodyStructure ..*
-* insert SetDefinition(bodyStructure, 【JP Core仕様】特定の歯の歯面を指定)
+* insert SetDefinition(extension[bodyStructure], 【JP Core仕様】特定の歯の歯面を指定)
 
 * method 0..1
 * insert SetDefinition(method, 検査方法（目視、読影など)

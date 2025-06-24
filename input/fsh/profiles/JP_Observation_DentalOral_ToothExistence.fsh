@@ -113,8 +113,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * extension contains
     JP_Observation_DentalOral_BodySiteStatus named bodySiteStatus 1..1
-* insert SetDefinition(bodySiteStatus, 【JP Core仕様】特定の状態を示さない 0 を指定)
-* bodySiteStatus.coding.code = $JP_DentalBodySiteStatus_CS#0 (exactly)
+* insert SetDefinition(extension[bodySiteStatus], 【JP Core仕様】特定の状態を示さない 0 を指定)
+* extension[bodySiteStatus].valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS (exactly)
+* extension[bodySiteStatus].valueCodeableConcept.coding.code 1..1
+* extension[bodySiteStatus].valueCodeableConcept.coding.code = #0 (exactly)
 
 * method 0..1
 * insert SetDefinition(method, 検査方法（目視、読影など)

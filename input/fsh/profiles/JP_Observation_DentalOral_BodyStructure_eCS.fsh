@@ -2,20 +2,19 @@ Extension: JP_Observation_DentalOral_BodyStructure_eCS
 Id: jp-observation-dentaloral-bodystructure-ecs
 Title: "JP Core Observation DentalOral BodyStructure Extension"
 Description: "特定の歯を格納するための拡張"
-//Context: Observation
-* context.type = #element
-* context.expression = "Observation"
+* ^context[+].type = #element
+* ^context[=].expression = "Observation"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodyStructure_eCS"
 * ^version = "1.2.0"
 * ^status = #active
 * ^date = "2025-06-06"
-* ^publisher = "FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)"
-* ^contact.name = "FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)"
-* ^contact.telecom[0].system = #url
-* ^contact.telecom[=].value = "http://jpfhir.jp"
-* ^contact.telecom[+].system = #email
-* ^contact.telecom[=].value = "office@hlfhir.jp"
-* ^jurisdiction = urn:iso:std:iso:3166#JP "Japan"
+// * ^publisher = "FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)"
+// * ^contact.name = "FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)"
+// * ^contact.telecom[0].system = #url
+// * ^contact.telecom[=].value = "http://jpfhir.jp"
+// * ^contact.telecom[+].system = #email
+// * ^contact.telecom[=].value = "office@hlfhir.jp"
+// * ^jurisdiction = urn:iso:std:iso:3166#JP "Japan"
 * ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 * . ^short = "特定の歯"
 * . ^definition = "特定の歯を格納するための拡張"
