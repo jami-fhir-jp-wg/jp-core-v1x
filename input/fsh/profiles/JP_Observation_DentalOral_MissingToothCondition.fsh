@@ -59,78 +59,38 @@ Description: "このプロファイルはObservationリソースに対して、�
 * code.coding.code = $Loinc_CS#54570-7 (exactly)
 * code.coding.display = "Oral/Dental Status"
 
-* subject 0..1
 * subject only Reference(JP_Patient)
-* insert SetDefinition(subject, 観察対象者  
-【JP Core仕様】患者情報)
-
-* focus 0..*
-* insert SetDefinition(focus, subject 要素が実際のobservationの対象でない場合に、observation の対象物。  
-【JP Core仕様】未使用)
-
-* encounter 0..1
+* insert SetDefinition(subject, 観察対象者 【JP Core仕様】患者情報)
+* insert SetDefinition(focus, subject 要素が実際のobservationの対象でない場合に、observation の対象物。  【JP Core仕様】未使用)
 * insert SetDefinition(encounter, このobservationが行われるヘルスケアイベント)
 * encounter ^comment = "例：診療、歯科検診、身元不明者調査"
 
-* effective[x] 0..1
 * effective[x] only dateTime
-* insert SetDefinition(effective[x], 臨床的に関連する時刻または時間  
-【JP Core仕様】実施日時)
+* insert SetDefinition(effective[x], 臨床的に関連する時刻または時間  【JP Core仕様】実施日時)
 
-* issued 0..1
-* insert SetDefinition(issued, このバージョンが利用可能となった日時  
-【JP Core仕様】所見確定日時)
-
-* performer 0..
+* insert SetDefinition(issued, このバージョンが利用可能となった日時  【JP Core仕様】所見確定日時)
 * insert SetDefinition(performer, observationに責任をもつ者)
 * performer ^comment = "例：歯科医師など"
 
-* value[x] 0..1
 * value[x] only CodeableConcept
-* insert SetDefinition(value[x], 実際の結果値  
-【JP Core仕様】component要素を利用して複数の結果を表現することを考慮しているため、本要素は使用しない)
+* insert SetDefinition(value[x], 実際の結果値  【JP Core仕様】component要素を利用して複数の結果を表現することを考慮しているため、本要素は使用しない)
+* insert SetDefinition(dataAbsentReason, 結果が欠損値である理由  【JP Core仕様】結果が存在しなかった場合、その理由)
+* insert SetDefinition(interpretation, 高、低、正常等の結果のカテゴリ分けした評価【JP Core仕様】未使用)
+* insert SetDefinition(note, 結果に対するコメント  【JP Core仕様】未使用)
+* insert SetDefinition(bodySite, 観察された身体部位  【JP Core仕様】特定の歯（歯式）を指定)
 
-* dataAbsentReason 0..1
-* insert SetDefinition(dataAbsentReason, 結果が欠損値である理由  
-【JP Core仕様】結果が存在しなかった場合、その理由)
-
-* interpretation 0..*
-* insert SetDefinition(interpretation, 高、低、正常等の結果のカテゴリ分けした評価
-【JP Core仕様】未使用)
-
-* note 0..*
-* insert SetDefinition(note, 結果に対するコメント  
-【JP Core仕様】未使用)
-
-* bodySite 0..1
-* insert SetDefinition(bodySite, 観察された身体部位  
-【JP Core仕様】特定の歯（歯式）を指定)
-//* bodySite from JP_DentalBodySite_VS (preferred)
-
-* method 0..1
+* bodySite from JP_DentalBodySite_VS (preferred)
 * insert SetDefinition(method, 検査方法（目視、読影など)
+* insert SetDefinition(specimen, 観察（観測、検査）に使われた検体材料 【JP Core仕様】未使用)
 
-* specimen 0..1
-* insert SetDefinition(specimen, 観察（観測、検査）に使われた検体材料
-【JP Core仕様】未使用)
-
-* device 0..1
 * device ^comment = "例：口腔内スキャナなど"
-
-* referenceRange 0..0
 //* insert SetDefinition(referenceRange, 未使用)
-
-* hasMember 0..0
 //* insert SetDefinition(hasMember, 未使用)
 
-* derivedFrom 0..
-* insert SetDefinition(derivedFrom, observationの発生源に関連する測定
-【JP Core仕様】未使用)
+* insert SetDefinition(derivedFrom, observationの発生源に関連する測定 【JP Core仕様】未使用)
 
-* component 0..
-* insert SetDefinition(component, 複合的な結果
-【JP Core仕様】欠損歯の処置状態)
-
+//TODO:　要確認
+* insert SetDefinition(component, 複合的な結果 【JP Core仕様】欠損歯の処置状態)
 * component.code.coding.code 1..
 * component.code.coding ^slicing.discriminator.type = #value
 * component.code.coding ^slicing.discriminator.path = "system"

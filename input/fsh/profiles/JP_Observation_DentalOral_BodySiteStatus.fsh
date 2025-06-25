@@ -4,7 +4,7 @@ Title: "JP Core Observation DentalOral Body Site Status Extension"
 Description: "歯の状態を格納するための拡張"
 * ^url = $JP_Observation_DentalOral_BodySiteStatus
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2025-06-25"
 * ^context.type = #element
 * ^context.expression = "CodeableConcept"
 * . ^short = "歯の状態"
