@@ -111,8 +111,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 【JP Core仕様】特定の歯（歯式）を指定)
 * bodySite from JP_DentalBodySite_VS (preferred)
 
-* extension contains
-    JP_Observation_DentalOral_BodySiteStatus named bodySiteStatus 1..1
 * insert SetDefinition(extension[bodySiteStatus], 【JP Core仕様】特定の状態を示さない 0 を指定)
 * extension[bodySiteStatus].valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS (exactly)
 * extension[bodySiteStatus].valueCodeableConcept.coding.code 1..1
