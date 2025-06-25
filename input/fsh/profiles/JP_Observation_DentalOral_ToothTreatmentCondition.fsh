@@ -98,7 +98,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * bodySite from JP_DentalBodySite_VS (preferred)
 
 * extension contains
-    JP_Observation_DentalOral_ToothRoot named toothRoot 0..1
+    JP_Observation_DentalOral_ToothRoot named toothRoot 0..1 and
     JP_Observation_DentalOral_BodyStructure named bodyStructure ..*
 * insert SetDefinition(extension[toothRoot], 【JP Core仕様】特定の歯の歯根を指定)
 * insert SetDefinition(extension[bodyStructure], 【JP Core仕様】特定の歯の歯面を指定)
