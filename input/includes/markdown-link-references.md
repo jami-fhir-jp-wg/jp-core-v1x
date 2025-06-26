@@ -23,7 +23,6 @@
 [JP_Coverage]: StructureDefinition-jp-coverage.html
 [JP_Device]: StructureDefinition-jp-device.html
 [JP_DiagnosticReport_Common]: StructureDefinition-jp-diagnosticreport-common.html
-[JP_DiagnosticReport_DentalOral_eCS]: StructureDefinition-jp-diagnosticreport-dentaloral-ecs.html
 [JP_DiagnosticReport_DentalOral]: StructureDefinition-jp-diagnosticreport-dentaloral.html
 [JP_DiagnosticReport_Endoscopy]: StructureDefinition-jp-diagnosticreport-endoscopy.html
 [JP_DiagnosticReport_LabResult]: StructureDefinition-jp-diagnosticreport-labresult.html
