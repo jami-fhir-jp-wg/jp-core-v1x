@@ -24,3 +24,5 @@ Thumbs.db
 .index.json
 .index.db
 
+# for Claude code
+CLAUDE.md
