@@ -103,16 +103,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(extension[bodyStructure].extension[structure], 【JP Core仕様】複数の『歯』を繰り返し指定)
 * insert SetDefinition(extension[bodyStructure].extension[qualifier], 【JP Core仕様】特定の歯の歯根と、歯面の２項目を指定)
 
-// TODO:qualifierは複数の歯に対して同じ値を指定することになるので、slicingは不要ではないか？
-* extension[bodyStructure].extension[qualifier] contains
-    root 0..* and
-    surface 0..*
-
-// * extension[bodyStructure].extension[qualifier] ^slicing.discriminator.type = #value
-// * extension[bodyStructure].extension[qualifier] ^slicing.discriminator.path = "url"
-// * extension[bodyStructure].extension[qualifier] ^slicing.rules = #open
-
-
-//TODO 定義がないので、VSを作成する必要がある。
-* extension[bodyStructure].extension[qualifier][root].valueCodeableConcept from JP_DentalRootBodyStructure_VS (required)
-* extension[bodyStructure].extension[qualifier][surface].valueCodeableConcept from JP_DentalSurfaceBodyStructure_VS (required)
+// ベース拡張でslicingが定義されているため、プロファイルでは制約のみ適用
+* extension[bodyStructure].extension[qualifier].valueCodeableConcept.coding[root] from JP_DentalRootBodyStructure_VS (required)
+* extension[bodyStructure].extension[qualifier].valueCodeableConcept.coding[surface] from JP_DentalSurfaceBodyStructure_VS (required)
