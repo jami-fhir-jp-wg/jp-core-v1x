@@ -65,7 +65,11 @@ Description: "特定の歯を格納するための拡張"
 * extension[qualifier].value[x].coding contains
     root 0..* and
     surface 0..*
+* extension[qualifier].value[x].coding[root] ^short = "特定の歯の『歯根』を指定"
+* extension[qualifier].value[x].coding[root] ^definition = "特定の歯の『歯根』を指定"
 * extension[qualifier].value[x].coding[root] from $JP_DentalRootBodyStructure_VS (preferred)
 * extension[qualifier].value[x].coding[root].system = $JP_DentalRootBodyStructure_CS (exactly)
+* extension[qualifier].value[x].coding[surface] ^short = "特定の歯の『歯面』を指定"
+* extension[qualifier].value[x].coding[surface] ^definition = "特定の歯の『歯面』を指定"
 * extension[qualifier].value[x].coding[surface] from $JP_DentalSurfaceBodyStructure_VS (preferred)
 * extension[qualifier].value[x].coding[surface].system = $JP_DentalSurfaceBodyStructure_CS (exactly)
