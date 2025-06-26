@@ -6,7 +6,7 @@ Description: "歯根を格納するための拡張"
 * ^status = #active
 * ^date = "2024-12-30"
 * ^context[+].type = #element
-* ^context[=].expression = "CodeableConcept"
+* ^context[=].expression = "Observation.bodySite"
 * . ^short = "歯根"
 * . ^definition = "歯根を格納するための拡張"
 * url = $JP_Observation_DentalOral_ToothRoot (exactly)

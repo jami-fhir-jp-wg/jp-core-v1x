@@ -105,12 +105,12 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 // TODO:qualifierは複数の歯に対して同じ値を指定することになるので、slicingは不要ではないか？
 * extension[bodyStructure].extension[qualifier] contains
-    root 0..1 and
-    surface 0..1
+    root 0..* and
+    surface 0..*
 
-* extension[bodyStructure].extension[qualifier] ^slicing.discriminator.type = #value
-* extension[bodyStructure].extension[qualifier] ^slicing.discriminator.path = "url"
-* extension[bodyStructure].extension[qualifier] ^slicing.rules = #open
+// * extension[bodyStructure].extension[qualifier] ^slicing.discriminator.type = #value
+// * extension[bodyStructure].extension[qualifier] ^slicing.discriminator.path = "url"
+// * extension[bodyStructure].extension[qualifier] ^slicing.rules = #open
 
 
 //TODO 定義がないので、VSを作成する必要がある。

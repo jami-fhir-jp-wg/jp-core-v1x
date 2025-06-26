@@ -1,7 +1,7 @@
-Instance: jp-observation-dentaloral-toothexistence-example-4
+Instance: jp-observation-dentaloral-toothexistence-example-5
 InstanceOf: JP_Observation_DentalOral_ToothExistence
-Title: "JP Core Observation DentalOral Tooth Existence Example 口腔診査結果４（歯の有無）"
-Description: "口腔診査結果４（歯の有無）"
+Title: "JP Core Observation DentalOral Tooth Existence Example 口腔診査結果５（歯の有無）"
+Description: "口腔診査結果５（歯の有無）"
 Usage: #example
 * status = #final
 * category[first].coding.code = #exam
@@ -16,7 +16,7 @@ Usage: #example
 * valueCodeableConcept = $JP_DentalFundamentalStatus_CS#TB-3-2 "欠損歯"
 * effectiveDateTime = "2022-10-01"
 * issued = "2022-10-24T17:30:00+09:00"
-* hasMember = Reference(Observation/jp-observation-dentaloral-missingtoothcondition-example-4)
+* hasMember = Reference(Observation/jp-observation-dentaloral-missingtoothcondition-example-5)
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
-* bodySite = $JP_DentalBodySite_CS#1047 "右側下顎第２大臼歯"
-* bodySiteStatus = $JP_DentalBodySiteStatus_CS#0
+* bodySite = $JP_DentalBodySite_CS#1046 "右側下顎第１大臼歯"
+* extension[bodySiteStatus].valueCodeableConcept = $JP_DentalBodySiteStatus_CS#0

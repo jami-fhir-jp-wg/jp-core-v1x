@@ -96,12 +96,11 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * insert SetDefinition(bodySite, 観察された身体部位 【JP Core仕様】特定の歯（歯式）を指定)
 * bodySite from JP_DentalBodySite_VS (preferred)
-
-* extension contains
-    JP_Observation_DentalOral_ToothRoot named toothRoot 0..1 and
-    JP_Observation_DentalOral_BodyStructure named bodyStructure ..*
-* insert SetDefinition(extension[toothRoot], 【JP Core仕様】特定の歯の歯根を指定)
-* insert SetDefinition(extension[bodyStructure], 【JP Core仕様】特定の歯の歯面を指定)
+* bodySite.extension contains
+    JP_Observation_DentalOral_ToothRoot named toothRoot 0..* and
+    JP_Observation_DentalOral_ToothSurface named toothSurface 0..*
+* insert SetDefinition(bodySite.extension[toothRoot], 【JP Core仕様】特定の歯の歯根を指定)
+* insert SetDefinition(bodySite.extension[toothSurface], 【JP Core仕様】特定の歯の歯面を指定)
 * insert SetDefinition(method, 検査方法（目視、読影など)
 * insert SetDefinition(specimen, 観察（観測、検査）に使われた検体材料 【JP Core仕様】未使用)
 

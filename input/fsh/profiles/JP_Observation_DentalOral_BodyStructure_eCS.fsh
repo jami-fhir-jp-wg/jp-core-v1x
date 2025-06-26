@@ -3,7 +3,7 @@ Id: jp-observation-dentaloral-bodystructure-ecs
 Title: "JP Core Observation DentalOral BodyStructure Extension"
 Description: "特定の歯を格納するための拡張"
 * ^context[+].type = #element
-* ^context[=].expression = "Observation"
+* ^context[=].expression = "Observation.bodySite"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodyStructure_eCS"
 * ^status = #active
 * ^date = "2025-06-24"
@@ -63,8 +63,8 @@ Description: "特定の歯を格納するための拡張"
 * extension[qualifier].value[x].coding ^slicing.ordered = false
 * extension[qualifier].value[x].coding ^slicing.rules = #open
 * extension[qualifier].value[x].coding contains
-    root 0..1 and
-    surface 0..1
+    root 0..* and
+    surface 0..*
 * extension[qualifier].value[x].coding[root] from $JP_DentalRootBodyStructure_VS (preferred)
 * extension[qualifier].value[x].coding[root].system = $JP_DentalRootBodyStructure_CS (exactly)
 * extension[qualifier].value[x].coding[surface] from $JP_DentalSurfaceBodyStructure_VS (preferred)
