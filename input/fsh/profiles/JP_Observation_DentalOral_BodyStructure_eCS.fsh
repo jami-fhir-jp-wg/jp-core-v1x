@@ -64,8 +64,8 @@ Description: "特定の歯を格納するための拡張"
 * extension[qualifier].value[x].coding ^slicing.rules = #open
 * extension[qualifier].value[x].coding contains
     root 0..1 and
-    suface 0..1
+    surface 0..1
 * extension[qualifier].value[x].coding[root] from $JP_DentalRootBodyStructure_VS (preferred)
 * extension[qualifier].value[x].coding[root].system = $JP_DentalRootBodyStructure_CS (exactly)
-* extension[qualifier].value[x].coding[suface] from $JP_DentalSurfaceBodyStructure_VS (preferred)
-* extension[qualifier].value[x].coding[suface].system = $JP_DentalSurfaceBodyStructure_CS (exactly)
+* extension[qualifier].value[x].coding[surface] from $JP_DentalSurfaceBodyStructure_VS (preferred)
+* extension[qualifier].value[x].coding[surface].system = $JP_DentalSurfaceBodyStructure_CS (exactly)
