@@ -58,3 +58,14 @@ Description: "特定の歯を格納するための拡張"
 * extension[qualifier].url only uri
 * extension[qualifier].value[x] 1..1
 * extension[qualifier].value[x] only CodeableConcept
+* extension[qualifier].value[x].coding ^slicing.discriminator.type = #value
+* extension[qualifier].value[x].coding ^slicing.discriminator.path = "system"
+* extension[qualifier].value[x].coding ^slicing.ordered = false
+* extension[qualifier].value[x].coding ^slicing.rules = #open
+* extension[qualifier].value[x].coding contains
+    root 0..1 and
+    suface 0..1
+* extension[qualifier].value[x].coding[root] from $JP_DentalRootBodyStructure_VS (preferred)
+* extension[qualifier].value[x].coding[root].system = $JP_DentalRootBodyStructure_CS (exactly)
+* extension[qualifier].value[x].coding[suface] from $JP_DentalSurfaceBodyStructure_VS (preferred)
+* extension[qualifier].value[x].coding[suface].system = $JP_DentalSurfaceBodyStructure_CS (exactly)
