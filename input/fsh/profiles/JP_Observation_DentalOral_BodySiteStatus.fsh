@@ -5,8 +5,8 @@ Description: "歯の状態を格納するための拡張"
 * ^url = $JP_Observation_DentalOral_BodySiteStatus
 * ^status = #active
 * ^date = "2025-06-25"
-* ^context.type = #element
-* ^context.expression = "CodeableConcept"
+* ^context[+].type = #element
+* ^context[=].expression = "Observation"
 * . ^short = "歯の状態"
 * . ^definition = "歯の状態を格納するための拡張。例：『インプラント』、『その他の生体構造体』"
 * url = $JP_Observation_DentalOral_BodySiteStatus (exactly)
