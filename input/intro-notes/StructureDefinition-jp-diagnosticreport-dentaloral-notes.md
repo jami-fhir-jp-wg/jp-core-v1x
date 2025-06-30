@@ -55,7 +55,7 @@
 * [**口腔診査レポート1（現存歯）**][jp-diagnosticreport-dentaloral-example-1]
 * [**口腔診査レポート2（欠損歯）**][jp-diagnosticreport-dentaloral-example-2]
 
-なお、result要素の参照先であるObservationリソースは [公益社団法人 日本歯科医師会 「口腔状態モデルケースとコード化例」（2023年3月）](https://www.jda.or.jp/dentist/program/pdf/Oral-examination-Information-Standard-Code_v1.02-proportional.pdf)の記載例１（現存歯の処置歯3本）および記載例１２（欠損歯3本）を参考にサンプルデータを作成した。
+なお、result要素の参照先であるObservationリソースは [公益社団法人 日本歯科医師会 「口腔状態モデルケースとコード化例」（2023年3月）](https://www.jda.or.jp/dentist/program/pdf/Oral-examination-Information-Standard-Code_v1.02-proportional.pdf)の記載例１（現存歯の処置歯3本）、記載例１１（歯冠破折２本）、記載例１２（欠損歯3本）を参考にサンプルデータを作成した。
 
 ## その他、参考文献、リンク等
 - [公益社団法人 日本歯科医師会 「口腔診査情報標準コード仕様 Ver.1.02」（2023年3月）](https://www.jda.or.jp/dentist/program/pdf/Oral-examination-Information-Standard-Code_v1.02.pdf)

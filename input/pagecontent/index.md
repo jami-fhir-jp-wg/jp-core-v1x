@@ -51,6 +51,7 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
       * [JP Core Observation DentalOral Tooth Existence Profile （口腔診査）プロファイル][JP_Observation_DentalOral_ToothExistence]
       * [JP Core Observation DentalOral Tooth Treatment Condition Profile （口腔診査）プロファイル][JP_Observation_DentalOral_ToothTreatmentCondition]
       * [JP Core Observation DentalOral Missing Tooth Condition Profile （口腔診査）プロファイル][JP_Observation_DentalOral_MissingToothCondition]
+      * [JP Core Observation DentalOral eCS Profile （口腔診査結果・診療情報提供書用）プロファイル][JP_Observation_DentalOral_eCS]
   * Specimen （検体）
     * [JP Core Specimen Common （共通）プロファイル][JP_Specimen_Common]
   * Media （メディア）
