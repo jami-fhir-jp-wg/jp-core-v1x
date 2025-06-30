@@ -32,7 +32,13 @@
     * [JP Core DiagnosticReport DentalOral （口腔診査レポート）プロファイル][JP_DiagnosticReport_DentalOral]
 
 ### Extensions
+* [JP_Observation_DentalOral_BodySiteStatus]
+* [JP_Observation_DentalOral_BodyStructure_eCS]
+* [JP_Observation_DentalOral_ToothRoot]
+* [JP_Observation_DentalOral_ToothSurface]
 * [JP_Observation_Electrocardiogram_DeviceInterpretation]
+* [JP_Observation_Electrocardiogram_Duration]
 * [JP_Observation_Electrocardiogram_NumberOfLead]
+* [JP_Observation_Electrocardiogram_StressType]
 
 {% include markdown-link-references.md %}
