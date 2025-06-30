@@ -2,19 +2,11 @@ Extension: JP_Observation_DentalOral_BodyStructure_eCS
 Id: jp-observation-dentaloral-bodystructure-ecs
 Title: "JP Core Observation DentalOral BodyStructure Extension"
 Description: "特定の歯を格納するための拡張"
-Context: Observation
+* ^context[+].type = #element
+* ^context[=].expression = "Observation.bodySite"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodyStructure_eCS"
-* ^version = "1.2.0"
 * ^status = #active
 * ^date = "2025-06-24"
-* ^publisher = "FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)"
-* ^contact.name = "FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)"
-* ^contact.telecom[0].system = #url
-* ^contact.telecom[=].value = "http://jpfhir.jp"
-* ^contact.telecom[+].system = #email
-* ^contact.telecom[=].value = "office@hlfhir.jp"
-* ^jurisdiction = urn:iso:std:iso:3166#JP "Japan"
-* ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 * . ^short = "特定の歯"
 * . ^definition = "特定の歯を格納するための拡張"
 * extension contains
@@ -22,6 +14,7 @@ Context: Observation
     laterality 0..1 and
     bodyLandmarkOrientation 0..* and
     qualifier 0..*
+//TO:extensionではなく、Slicingを定義している。
 * extension[structure] only Extension
 * extension[structure].url only uri
 * extension[structure].value[x] 1..1
@@ -31,6 +24,7 @@ Context: Observation
 * extension[laterality].value[x] 1..1
 * extension[laterality].value[x] only CodeableConcept
 * extension[bodyLandmarkOrientation] only Extension
+//TODO:extensionではなく、Slicingを定義している。
 * extension[bodyLandmarkOrientation].extension contains
     landmarkDescription 0..1 and
     clockFacePosition 0..1 and
@@ -64,3 +58,18 @@ Context: Observation
 * extension[qualifier].url only uri
 * extension[qualifier].value[x] 1..1
 * extension[qualifier].value[x] only CodeableConcept
+* extension[qualifier].value[x].coding ^slicing.discriminator.type = #value
+* extension[qualifier].value[x].coding ^slicing.discriminator.path = "system"
+* extension[qualifier].value[x].coding ^slicing.ordered = false
+* extension[qualifier].value[x].coding ^slicing.rules = #open
+* extension[qualifier].value[x].coding contains
+    root 0..* and
+    surface 0..*
+* extension[qualifier].value[x].coding[root] ^short = "特定の歯の『歯根』を指定"
+* extension[qualifier].value[x].coding[root] ^definition = "特定の歯の『歯根』を指定"
+* extension[qualifier].value[x].coding[root] from $JP_DentalRootBodyStructure_VS (preferred)
+* extension[qualifier].value[x].coding[root].system = $JP_DentalRootBodyStructure_CS (exactly)
+* extension[qualifier].value[x].coding[surface] ^short = "特定の歯の『歯面』を指定"
+* extension[qualifier].value[x].coding[surface] ^definition = "特定の歯の『歯面』を指定"
+* extension[qualifier].value[x].coding[surface] from $JP_DentalSurfaceBodyStructure_VS (preferred)
+* extension[qualifier].value[x].coding[surface].system = $JP_DentalSurfaceBodyStructure_CS (exactly)

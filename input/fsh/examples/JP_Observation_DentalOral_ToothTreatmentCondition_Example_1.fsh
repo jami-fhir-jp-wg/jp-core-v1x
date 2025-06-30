@@ -16,8 +16,8 @@ Usage: #example
 * effectiveDateTime = "2022-10-01"
 * issued = "2022-10-24T17:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
-* bodySite = $JP_DentalBodySite_CS#TB-2-1015 "右側上顎第２小臼歯"
-* bodySite.extension[bodyStructure].valueCodeableConcept.coding = $JP_DentalBodyStructure_CS#TP-18-01 "歯冠部"
+* bodySite = $JP_DentalBodySite_CS#1015 "右側上顎第２小臼歯"
+* bodySite.extension[toothSurface].valueCodeableConcept = $JP_DentalSurfaceBodyStructure_CS#TP-18 "歯冠部"
 * component.code.coding[primary].code = #TP-21-01
 * component.code.coding[primary].display = "全部修復（全部金属冠・銀色）（ＦＭＣ）"
 * component.code.coding[sub].code = #TD-2-10

@@ -140,18 +140,13 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseOutcomeReceipt_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySite_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySiteStatus_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodyStructure_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalFundamentalStatus_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalMissingTeethObservation_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalPresentTeethObservation_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalRootBodyStructure_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalRootBodyStructure_VS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalSimpleMissingTeethObservation_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalSimplePresentTeethObservation_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalSurfaceBodyStructure_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalSurfaceBodyStructure_VS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalToothStatus_Observation_CS
-    - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalToothStatus_Observation_VS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationDentalCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramDuration_CS
@@ -188,8 +183,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationRequest_DispenseRequest_InstructionForDispense
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodySiteStatus
-    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodyStructure
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodyStructure_eCS
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_ToothRoot
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_ToothSurface
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_DeviceInterpretation
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_Duration
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_Electrocardiogram_NumberOfLead
@@ -216,7 +212,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Device
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Common
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_DentalOral
-    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_DentalOral_eCS
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Endoscopy
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Microbiology
@@ -281,12 +276,14 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeReceipt_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalBodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalBodySiteStatus_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalBodyStructure_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalFundamentalStatus_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalMissingTeethObservation_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalPresentTeethObservation_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalRootBodyStructure_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalSimpleMissingTeethObservation_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalSimplePresentTeethObservation_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalSurfaceBodyStructure_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalTeethObservation_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DICOMModality_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ImagingStudy_Endoscopy_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ImagingStudy_Radiology_BodySite_VS

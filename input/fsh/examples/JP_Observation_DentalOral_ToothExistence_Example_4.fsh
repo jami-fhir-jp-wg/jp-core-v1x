@@ -18,4 +18,5 @@ Usage: #example
 * issued = "2022-10-24T17:30:00+09:00"
 * hasMember = Reference(Observation/jp-observation-dentaloral-missingtoothcondition-example-4)
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
-* bodySite = $JP_DentalBodySite_CS#TB-2-1047 "右側下顎第２大臼歯"
+* bodySite = $JP_DentalBodySite_CS#1047 "右側下顎第２大臼歯"
+* extension[bodySiteStatus].valueCodeableConcept = $JP_DentalBodySiteStatus_CS#0
