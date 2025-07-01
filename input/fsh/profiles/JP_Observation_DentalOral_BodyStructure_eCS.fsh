@@ -20,6 +20,7 @@ Description: "特定の歯を格納するための拡張"
 * extension[structure].value[x] 1..1
 * extension[structure].value[x] only CodeableConcept
 * extension[laterality] only Extension
+* extension[laterality].value[x] 1..1
 * extension[laterality].value[x] only CodeableConcept
 * extension[bodyLandmarkOrientation] only Extension
 * extension[bodyLandmarkOrientation].extension contains
