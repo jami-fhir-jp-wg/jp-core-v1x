@@ -10,66 +10,84 @@ Description: "特定の歯を格納するための拡張"
 * . ^short = "特定の歯"
 * . ^definition = "特定の歯を格納するための拡張"
 * extension contains
-    structure 1..1 and
-    laterality 0..1 and
-    bodyLandmarkOrientation 0..* and
-    qualifier 0..*
-//TO:extensionではなく、Slicingを定義している。
-* extension[structure] only Extension
-* extension[structure].url only uri
-* extension[structure].value[x] 1..1
-* extension[structure].value[x] only CodeableConcept
-* extension[laterality] only Extension
-* extension[laterality].url only uri
-* extension[laterality].value[x] 1..1
-* extension[laterality].value[x] only CodeableConcept
-* extension[bodyLandmarkOrientation] only Extension
-//TODO:extensionではなく、Slicingを定義している。
-* extension[bodyLandmarkOrientation].extension contains
-    landmarkDescription 0..1 and
-    clockFacePosition 0..1 and
-    distanceFromLandmark 0..1 and
-    surfaceOrientation 0..1
-* extension[bodyLandmarkOrientation].extension[landmarkDescription] only Extension
-* extension[bodyLandmarkOrientation].extension[landmarkDescription].url only uri
-* extension[bodyLandmarkOrientation].extension[landmarkDescription].url = "landmarkDescription" (exactly)
-* extension[bodyLandmarkOrientation].extension[landmarkDescription].value[x] 1..1
-* extension[bodyLandmarkOrientation].extension[landmarkDescription].value[x] only CodeableConcept
-* extension[bodyLandmarkOrientation].extension[clockFacePosition] only Extension
-* extension[bodyLandmarkOrientation].extension[clockFacePosition].url only uri
-* extension[bodyLandmarkOrientation].extension[clockFacePosition].url = "clockFacePosition" (exactly)
-* extension[bodyLandmarkOrientation].extension[clockFacePosition].value[x] 1..1
-* extension[bodyLandmarkOrientation].extension[clockFacePosition].value[x] only CodeableConcept
-* extension[bodyLandmarkOrientation].extension[distanceFromLandmark] only Extension
-* extension[bodyLandmarkOrientation].extension[distanceFromLandmark].url only uri
-* extension[bodyLandmarkOrientation].extension[distanceFromLandmark].url = "distanceFromLandmark" (exactly)
-* extension[bodyLandmarkOrientation].extension[distanceFromLandmark].extension contains value 1..1
-* extension[bodyLandmarkOrientation].extension[distanceFromLandmark].extension[value] only Extension
-* extension[bodyLandmarkOrientation].extension[distanceFromLandmark].extension[value].url only uri
-* extension[bodyLandmarkOrientation].extension[distanceFromLandmark].extension[value].url = "value" (exactly)
-* extension[bodyLandmarkOrientation].extension[distanceFromLandmark].extension[value].value[x] 1..1
-* extension[bodyLandmarkOrientation].extension[distanceFromLandmark].extension[value].value[x] only Quantity
-* extension[bodyLandmarkOrientation].extension[surfaceOrientation] only Extension
-* extension[bodyLandmarkOrientation].extension[surfaceOrientation].url only uri
-* extension[bodyLandmarkOrientation].extension[surfaceOrientation].url = "surfaceOrientation" (exactly)
-* extension[bodyLandmarkOrientation].extension[surfaceOrientation].value[x] 1..1
-* extension[bodyLandmarkOrientation].extension[surfaceOrientation].value[x] only CodeableConcept
-* extension[qualifier] only Extension
-* extension[qualifier].url only uri
-* extension[qualifier].value[x] 1..1
-* extension[qualifier].value[x] only CodeableConcept
-* extension[qualifier].value[x].coding ^slicing.discriminator.type = #value
-* extension[qualifier].value[x].coding ^slicing.discriminator.path = "system"
-* extension[qualifier].value[x].coding ^slicing.ordered = false
-* extension[qualifier].value[x].coding ^slicing.rules = #open
-* extension[qualifier].value[x].coding contains
-    root 0..* and
-    surface 0..*
-* extension[qualifier].value[x].coding[root] ^short = "特定の歯の『歯根』を指定"
-* extension[qualifier].value[x].coding[root] ^definition = "特定の歯の『歯根』を指定"
-* extension[qualifier].value[x].coding[root] from $JP_DentalRootBodyStructure_VS (preferred)
-* extension[qualifier].value[x].coding[root].system = $JP_DentalRootBodyStructure_CS (exactly)
-* extension[qualifier].value[x].coding[surface] ^short = "特定の歯の『歯面』を指定"
-* extension[qualifier].value[x].coding[surface] ^definition = "特定の歯の『歯面』を指定"
-* extension[qualifier].value[x].coding[surface] from $JP_DentalSurfaceBodyStructure_VS (preferred)
-* extension[qualifier].value[x].coding[surface].system = $JP_DentalSurfaceBodyStructure_CS (exactly)
+  JP_Observation_DentalOral_BodyStructure_IncludedStructure named includedStructure 1..*
+  //  and JP_Observation_DentalOral_BodyStructure_ExcludedStructure excludedStructure 0..*
+* value[x] 0..0
+
+
+// Extension: JP_Observation_DentalOral_BodyStructure_ExcludedStructure
+// Id: jp-observation-dentaloral-bodystructure-excludedstructure
+// Title: "JP Observation DentalOral BodyStructure ExcludedStructure"
+// Description: "特定の歯を格納するための拡張"
+// * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodyStructure_ExcludedStructure"
+// * ^status = #active
+// * url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_ExcludedStructure"
+// * ^context[+].type = #Element
+
+Extension: JP_Observation_DentalOral_BodyStructure_IncludedStructure
+Id: jp-observation-dentaloral-bodystructure-includedstructure
+Title: "JP Observation DentalOral BodyStructure IncludedStructure"
+Description: "特定の歯を格納するための拡張"
+* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodyStructure_IncludedStructure"
+* ^status = #active
+* extension contains
+  JP_Observation_DentalOral_BodyStructure_Structure named structure 1..1 and
+  JP_Observation_DentalOral_BodyStructure_Laterality named laterality 0..1 and
+  JP_Observation_DentalOral_BodyStructure_BodyLandmarkOrientation named bodyLandmarkOrientation 0..* and
+  JP_Observation_DentalOral_BodyStructure_Qualifier named qualifier 0..*
+
+Extension: JP_Observation_DentalOral_BodyStructure_Structure
+Id: jp-observation-dentaloral-bodystructure-structure
+Title: "JP Observation DentalOral BodyStructure Structure"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_Structure"
+* ^status = #active
+* value[x] only CodeableConcept
+
+
+Extension: JP_Observation_DentalOral_BodyStructure_Laterality
+Id: jp-observation-dentaloral-bodystructure-laterality
+Title: "JP Observation DentalOral BodyStructure Laterality"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_Laterality"
+* ^status = #active
+* value[x] only CodeableConcept
+
+
+Extension: JP_Observation_DentalOral_BodyStructure_BodyLandmarkOrientation
+Id: jp-observation-dentaloral-bodystructure-bodylandmarkorientation	
+Title: "JP Observation DentalOral BodyStructure Laterality"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_BodyLandmarkOrientation"
+* ^status = #active
+* extension contains
+  landmarkDescription	0..1 and
+  distanceFromLandmark 0..1 and
+  surfaceOrientation 0..*
+* value[x] 0..0
+
+Extension: JP_Observation_DentalOral_BodyStructure_LandmarkDescription
+Id: jp-observation-dentaloral-bodystructure-landmarkdescription
+Title: "JP Observation DentalOral BodyStructure Laterality"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_LandmarkDescription"
+* ^status = #active
+* value[x] only CodeableConcept
+
+
+Extension: JP_Observation_DentalOral_BodyStructure_Qualifier
+Id: jp-observation-dentaloral-bodystructure-qualifier	
+Title: "JP Observation DentalOral BodyStructure Qualifier"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_Qualifier"
+* ^status = #active
+* value[x] only CodeableConcept
+* value[x].coding ^slicing.discriminator.type = #value
+* value[x].coding ^slicing.discriminator.path = "system"
+* value[x].coding ^slicing.rules = #open
+* value[x].coding contains
+  root 0..* and
+  surface 0..*
+* valueCodeableConcept.coding[root] from $JP_DentalRootBodyStructure_VS (preferred)
+* valueCodeableConcept.coding[root].system = $JP_DentalRootBodyStructure_CS (exactly)
+* valueCodeableConcept.coding[root] ^short = "特定の歯の『歯根』を指定"
+* valueCodeableConcept.coding[root] ^definition = "特定の歯の『歯根』を指定"
+* valueCodeableConcept.coding[surface] ^short = "特定の歯の『歯面』を指定"
+* valueCodeableConcept.coding[surface] ^definition = "特定の歯の『歯面』を指定"
+* valueCodeableConcept.coding[surface] from $JP_DentalSurfaceBodyStructure_VS (preferred)
+* valueCodeableConcept.coding[surface].system = $JP_DentalSurfaceBodyStructure_CS (exactly)

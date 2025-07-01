@@ -92,17 +92,17 @@ Description: "このプロファイルはObservationリソースに対して、�
     $JP_Observation_DentalOral_BodySiteStatus named bodySiteStatus 1..1 and
     $JP_Observation_DentalOral_BodyStructure_eCS named bodyStructure 0..1
 
-//TODO:固定値にするのであれば定義する意味はないのでは。
-* insert SetDefinition(extension[bodySiteStatus], 【JP Core仕様】特定の状態を示さない0 を指定)
-* extension[bodySiteStatus].valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS (exactly)
-* extension[bodySiteStatus].valueCodeableConcept.coding.code 1..1
-* extension[bodySiteStatus].valueCodeableConcept.coding.code = #0 (exactly)
+// //TODO:固定値にするのであれば定義する意味はないのでは。
+// * insert SetDefinition(extension[bodySiteStatus], 【JP Core仕様】特定の状態を示さない0 を指定)
+// * extension[bodySiteStatus].valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS (exactly)
+// * extension[bodySiteStatus].valueCodeableConcept.coding.code 1..1
+// * extension[bodySiteStatus].valueCodeableConcept.coding.code = #0 (exactly)
 
-//todo:extension定義で記載するのでは？
-* extension[bodyStructure].extension[structure].valueCodeableConcept from JP_DentalBodySite_VS (required)
-* insert SetDefinition(extension[bodyStructure].extension[structure], 【JP Core仕様】複数の『歯』を繰り返し指定)
-* insert SetDefinition(extension[bodyStructure].extension[qualifier], 【JP Core仕様】特定の歯の歯根と、歯面の２項目を指定)
+// //todo:extension定義で記載するのでは？
+// * extension[bodyStructure].extension[structure].valueCodeableConcept from JP_DentalBodySite_VS (required)
+// * insert SetDefinition(extension[bodyStructure].extension[structure], 【JP Core仕様】複数の『歯』を繰り返し指定)
+// * insert SetDefinition(extension[bodyStructure].extension[qualifier], 【JP Core仕様】特定の歯の歯根と、歯面の２項目を指定)
 
-// ベース拡張でslicingが定義されているため、プロファイルでは制約のみ適用
-* extension[bodyStructure].extension[qualifier].valueCodeableConcept.coding[root] from JP_DentalRootBodyStructure_VS (required)
-* extension[bodyStructure].extension[qualifier].valueCodeableConcept.coding[surface] from JP_DentalSurfaceBodyStructure_VS (required)
+// // ベース拡張でslicingが定義されているため、プロファイルでは制約のみ適用
+// * extension[bodyStructure].extension[qualifier].valueCodeableConcept.coding[root] from JP_DentalRootBodyStructure_VS (required)
+// * extension[bodyStructure].extension[qualifier].valueCodeableConcept.coding[surface] from JP_DentalSurfaceBodyStructure_VS (required)

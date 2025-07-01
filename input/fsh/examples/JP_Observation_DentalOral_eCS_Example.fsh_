@@ -16,6 +16,7 @@ Usage: #example
 * effectiveDateTime = "2022-10-01"
 * issued = "2022-10-24T17:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
+* extension[JP_Observation_DentalOral_BodyStructure_eCS].extension[structure] = $JP_DentalBodySiteStatus_CS#0
 
 /*
 * extension[structure][0].valueCodeableConcept.coding.system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySite_CS"
