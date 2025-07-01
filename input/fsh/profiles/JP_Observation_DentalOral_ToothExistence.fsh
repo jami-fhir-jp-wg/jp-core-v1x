@@ -14,8 +14,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * extension contains
     $JP_Observation_DentalOral_BodySiteStatus named bodySiteStatus ..1
 
-* insert SetDefinition(identifier, Observationのためのビジネス識別子  
-【JP Core仕様】当該口腔診査（検査項目）に対して、施設内で割り振られる一意の識別子。)
+* insert SetDefinition(identifier, Observationのためのビジネス識別子 【JP Core仕様】当該口腔診査（検査項目）に対して、施設内で割り振られる一意の識別子。)
 * identifier ^comment = "例：実施日に連番を付加した番号"
 
 * insert SetDefinition(basedOn, 実施されるプラン、提案、依頼  
@@ -25,12 +24,12 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(partOf, 参照されるイベントの一部分 【JP Core仕様】未使用)
 * insert SetDefinition(status, 結果の状態 【JP Core仕様】ステータス)
 
-* category 3..
-* insert SetDefinition(category, Observationの種類（タイプ）の分類
-【JP Core仕様】以下を指定する。
+* insert SetDefinition(category, Observationの種類（タイプ）の分類)
+* category ^comment = "【JP Core仕様】以下を指定する。
 第1コード：exam
 第2コード：LP89803-8 （Dental）
-第3コード：DO-1-01 （ToothExistence）)
+第3コード：DO-1-01 （ToothExistence）"
+
 * category contains
     second 1..1 and
     third 1..1
@@ -70,7 +69,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * value[x] only CodeableConcept
 * insert SetDefinition(value[x], 実際の結果値 【JP Core仕様】特定の歯の有無)
-* value[x] from $JP_DentalFundamentalStatus_VS (required)
+* value[x] from $JP_DentalFundamentalStatus_VS (preferred)
 
 * insert SetDefinition(dataAbsentReason, 結果が欠損値である理由 【JP Core仕様】結果が存在しなかった場合、その理由)
 * insert SetDefinition(interpretation, 高、低、正常等の結果のカテゴリ分けした評価 【JP Core仕様】未使用)

@@ -55,25 +55,19 @@ Description: "このプロファイルはObservationリソースに対して、�
 * subject 1..1
 * subject only Reference(JP_Patient)
 * insert SetDefinition(subject, 観察対象者 【JP Core仕様】患者情報)
-
 * insert SetDefinition(focus, subject 要素が実際のobservationの対象でない場合に、observation の対象物。 【JP Core仕様】未使用)
-
 * insert SetDefinition(encounter, このobservationが行われるヘルスケアイベント)
 * encounter ^comment = "例：診療、歯科検診"
 
 * effective[x] only dateTime
 * insert SetDefinition(effective[x], 臨床的に関連する時刻または時間 【JP Core仕様】実施日時)
-
 * insert SetDefinition(issued, このバージョンが利用可能となった日時 JP Core仕様】所見確定日時)
-
 * insert SetDefinition(performer, observationに責任をもつ者)
 * performer ^comment = "例：歯科医師など"
 
-
 * value[x] only CodeableConcept
-* insert SetDefinition(value[x], 実際の結果値 JP Core仕様】歯の処置状態。現存歯、欠損歯、粒度の細かさ、粗さにかかわらず、そのうち一つをVSより選択する)
-//TODO: ValueSetをしているとエラーになる。
-//* value[x] from $JP_ToothStatusObservation_VS (required) 
+* insert SetDefinition(value[x], 実際の結果値 【JP Core仕様】歯の処置状態。現存歯、欠損歯、粒度の細かさ、粗さにかかわらず、そのうち一つをVSより選択する)
+* value[x] from $JP_DentalPresentTeethObservation_CS (preferred) 
 
 * insert SetDefinition(dataAbsentReason, 結果が欠損値である理由 【JP Core仕様】結果が存在しなかった場合、その理由)
 * insert SetDefinition(interpretation, 高、低、正常等の結果のカテゴリ分けした評価 【JP Core仕様】未使用)

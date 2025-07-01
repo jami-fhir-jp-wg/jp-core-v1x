@@ -34,6 +34,6 @@ Usage: #example
 * extension[bodyStructure].extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.code = #TP-18
 * extension[bodyStructure].extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.display = "歯冠部"
 
-// * component[+].code.system = $JP_DentalPresentTeethObservation_CS
-// * component[=].code.code = #TP09-15
-// * component[=].code.display = "歯の破折（ＦｒＴ）"
+* valueCodeableConcept.coding.system = $JP_DentalPresentTeethObservation_CS
+* valueCodeableConcept.coding.code = #TP-9-15
+* valueCodeableConcept.coding.display = "歯の破折（ＦｒＴ）"
