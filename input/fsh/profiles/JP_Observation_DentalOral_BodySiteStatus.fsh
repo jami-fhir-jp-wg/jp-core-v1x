@@ -6,8 +6,6 @@ Description: "歯の状態を格納するための拡張"
 * ^status = #active
 * ^date = "2025-06-24"
 * ^context[+].type = #element
-* ^context[=].expression = "Observation"
-* ^context[+].type = #element
 * ^context[=].expression = "Observation.bodySite"
 * . ^short = "歯の状態"
 * . ^definition = "歯の状態を格納するための拡張。例：『インプラント』、『その他の生体構造体』"

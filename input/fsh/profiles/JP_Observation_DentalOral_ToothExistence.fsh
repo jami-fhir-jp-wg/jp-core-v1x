@@ -11,7 +11,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^comment = "本プロファイルと、現存歯の処置状態プロファイルや、欠損歯の処置状態プロファイルなどを組み合わせて利用する。"
 
 // extension 参照宣言
-* extension contains
+* bodySite.extension contains
     $JP_Observation_DentalOral_BodySiteStatus named bodySiteStatus ..1
 
 * insert SetDefinition(identifier, Observationのためのビジネス識別子 【JP Core仕様】当該口腔診査（検査項目）に対して、施設内で割り振られる一意の識別子。)
@@ -74,10 +74,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(bodySite, 観察された身体部位 【JP Core仕様】特定の歯（歯式）を指定)
 * bodySite from JP_DentalBodySite_VS (preferred)
 
-* insert SetDefinition(extension[bodySiteStatus], 【JP Core仕様】特定の状態を示さない 0 を指定)
-* extension[bodySiteStatus].valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS (exactly)
-* extension[bodySiteStatus].valueCodeableConcept.coding.code 1..1
-* extension[bodySiteStatus].valueCodeableConcept.coding.code = #0 (exactly)
+* insert SetDefinition(bodySite.extension[bodySiteStatus], 【JP Core仕様】特定の状態を示さない 0 を指定)
+* bodySite.extension[bodySiteStatus].valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS (exactly)
+* bodySite.extension[bodySiteStatus].valueCodeableConcept.coding.code 1..1
+* bodySite.extension[bodySiteStatus].valueCodeableConcept.coding.code = #0 (exactly)
 
 * insert SetDefinition(method, 検査方法（目視、読影など)
 * insert SetDefinition(specimen, 観察（観測、検査）に使われた検体材料 【JP Core仕様】未使用)
