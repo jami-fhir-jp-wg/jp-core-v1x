@@ -60,7 +60,7 @@ Title: "JP Observation DentalOral BodyStructure Laterality"
 * extension contains
   JP_Observation_DentalOral_BodyStructure_LandmarkDescription named landmarkDescription	0..1 and
   distanceFromLandmark 0..1 and
-  surfaceOrientation 0..*
+  JP_Observation_DentalOral_BodyStructure_SurfaceOrientation named surfaceOrientation 0..*
 * value[x] 0..0
 
 Extension: JP_Observation_DentalOral_BodyStructure_LandmarkDescription

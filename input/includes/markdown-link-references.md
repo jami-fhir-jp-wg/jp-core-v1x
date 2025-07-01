@@ -116,7 +116,14 @@
 [JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount]: StructureDefinition-jp-medicationrequest-dispenserequest-expectedrepeatcount.html
 [JP_MedicationRequest_DispenseRequest_InstructionForDispense]: StructureDefinition-jp-medicationrequest-dispenserequest-instructionfordispense.html
 [JP_Observation_DentalOral_BodySiteStatus]: StructureDefinition-jp-observation-dentaloral-bodysitestatus.html
+[JP_Observation_DentalOral_BodyStructure_BodyLandmarkOrientation]: StructureDefinition-jp-observation-dentaloral-bodystructure-bodylandmarkorientation.html
 [JP_Observation_DentalOral_BodyStructure_eCS]: StructureDefinition-jp-observation-dentaloral-bodystructure-ecs.html
+[JP_Observation_DentalOral_BodyStructure_IncludedStructure]: StructureDefinition-jp-observation-dentaloral-bodystructure-includedstructure.html
+[JP_Observation_DentalOral_BodyStructure_LandmarkDescription]: StructureDefinition-jp-observation-dentaloral-bodystructure-landmarkdescription.html
+[JP_Observation_DentalOral_BodyStructure_Laterality]: StructureDefinition-jp-observation-dentaloral-bodystructure-laterality.html
+[JP_Observation_DentalOral_BodyStructure_Qualifier]: StructureDefinition-jp-observation-dentaloral-bodystructure-qualifier.html
+[JP_Observation_DentalOral_BodyStructure_Structure]: StructureDefinition-jp-observation-dentaloral-bodystructure-structure.html
+[JP_Observation_DentalOral_BodyStructure_SurfaceOrientation]: StructureDefinition-jp-observation-dentaloral-bodystructure-surfaceorientation.html
 [JP_Observation_DentalOral_ToothRoot]: StructureDefinition-jp-observation-dentaloral-toothroot.html
 [JP_Observation_DentalOral_ToothSurface]: StructureDefinition-jp-observation-dentaloral-toothsurface.html
 [JP_Observation_Electrocardiogram_DeviceInterpretation]: StructureDefinition-jp-observation-electrocardiogram-deviceinterpretation.html
@@ -270,7 +277,6 @@
 [jp-prefecturenumber-namingsystem]: NamingSystem-jp-prefecturenumber-namingsystem.html
 [jp-specimen]: NamingSystem-jp-specimen.html
 [jp-observation-bodyMeasurement-example-1]: Observation-jp-observation-bodyMeasurement-example-1.html
-[jp-observation-dentaloral-ecs-example]: Observation-jp-observation-dentaloral-ecs-example.html
 [jp-observation-dentaloral-missingtoothcondition-example-4]: Observation-jp-observation-dentaloral-missingtoothcondition-example-4.html
 [jp-observation-dentaloral-missingtoothcondition-example-5]: Observation-jp-observation-dentaloral-missingtoothcondition-example-5.html
 [jp-observation-dentaloral-missingtoothcondition-example-6]: Observation-jp-observation-dentaloral-missingtoothcondition-example-6.html
