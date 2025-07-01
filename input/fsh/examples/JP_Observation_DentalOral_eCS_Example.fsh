@@ -24,13 +24,14 @@ Usage: #example
 * bodySite.extension[bodyStructure].extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.code = #1042
 * bodySite.extension[bodyStructure].extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.display = "右側下顎側切歯"
 * bodySite.extension[bodyStructure].extension[includedStructure][=].extension[qualifier][+].valueCodeableConcept.coding.system = $JP_DentalSurfaceBodyStructure_CS
-* bodySite.extension[bodyStructure].extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.code = #TP-18-01
+* bodySite.extension[bodyStructure].extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.code = #TP-18
 * bodySite.extension[bodyStructure].extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.display = "歯冠部"
+
 * bodySite.extension[bodyStructure].extension[includedStructure][+].extension[structure].valueCodeableConcept.coding.system = $JP_DentalBodySite_CS
 * bodySite.extension[bodyStructure].extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.code = #1041
 * bodySite.extension[bodyStructure].extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.display = "右側下顎中切歯"
 * bodySite.extension[bodyStructure].extension[includedStructure][=].extension[qualifier][+].valueCodeableConcept.coding.system = $JP_DentalSurfaceBodyStructure_CS
-* bodySite.extension[bodyStructure].extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.code = #TP-18-01
+* bodySite.extension[bodyStructure].extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.code = #TP-18
 * bodySite.extension[bodyStructure].extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.display = "歯冠部"
 
 // * component[+].code.system = $JP_DentalPresentTeethObservation_CS
