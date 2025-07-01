@@ -17,13 +17,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(identifier, Observationのためのビジネス識別子 【JP Core仕様】当該口腔診査（検査項目）に対して、施設内で割り振られる一意の識別子。)
 * identifier ^comment = "例：実施日に連番を付加した番号"
 
-* insert SetDefinition(basedOn, 実施されるプラン、提案、依頼  
-【JP Core仕様】未使用)
+* insert SetDefinition(basedOn, 実施されるプラン、提案、依頼 【JP Core仕様】未使用)
 * basedOn ^comment = "本プロファイル（特定の歯の有無・状態）は口腔診査レポートに紐付く前提のため、本プロファイル特有の定義はしない。"
-
 * insert SetDefinition(partOf, 参照されるイベントの一部分 【JP Core仕様】未使用)
 * insert SetDefinition(status, 結果の状態 【JP Core仕様】ステータス)
-
 * insert SetDefinition(category, Observationの種類（タイプ）の分類)
 * category ^comment = "【JP Core仕様】以下を指定する。
 第1コード：exam
