@@ -67,7 +67,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * value[x] only CodeableConcept
 * insert SetDefinition(value[x], 実際の結果値 【JP Core仕様】歯の処置状態。現存歯、欠損歯、粒度の細かさ、粗さにかかわらず、そのうち一つをVSより選択する)
-* value[x] from $JP_DentalPresentTeethObservation_CS (preferred) 
+* value[x] from $JP_DentalPresentTeethObservation_VS (preferred) 
 
 * insert SetDefinition(dataAbsentReason, 結果が欠損値である理由 【JP Core仕様】結果が存在しなかった場合、その理由)
 * insert SetDefinition(interpretation, 高、低、正常等の結果のカテゴリ分けした評価 【JP Core仕様】未使用)
