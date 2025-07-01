@@ -58,7 +58,7 @@ Title: "JP Observation DentalOral BodyStructure Laterality"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_BodyLandmarkOrientation"
 * ^status = #active
 * extension contains
-  landmarkDescription	0..1 and
+  JP_Observation_DentalOral_BodyStructure_LandmarkDescription named landmarkDescription	0..1 and
   distanceFromLandmark 0..1 and
   surfaceOrientation 0..*
 * value[x] 0..0
@@ -71,23 +71,17 @@ Title: "JP Observation DentalOral BodyStructure Laterality"
 * value[x] only CodeableConcept
 
 
+Extension: JP_Observation_DentalOral_BodyStructure_SurfaceOrientation
+Id: jp-observation-dentaloral-bodystructure-surfaceorientation
+Title: "JP Observation DentalOral BodyStructure urfaceOrientation"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_urfaceOrientation"
+* ^status = #active
+* value[x] only CodeableConcept
+
+
 Extension: JP_Observation_DentalOral_BodyStructure_Qualifier
 Id: jp-observation-dentaloral-bodystructure-qualifier	
 Title: "JP Observation DentalOral BodyStructure Qualifier"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_Qualifier"
 * ^status = #active
 * value[x] only CodeableConcept
-* value[x].coding ^slicing.discriminator.type = #value
-* value[x].coding ^slicing.discriminator.path = "system"
-* value[x].coding ^slicing.rules = #open
-* value[x].coding contains
-  root 0..* and
-  surface 0..*
-* valueCodeableConcept.coding[root] from $JP_DentalRootBodyStructure_VS (preferred)
-* valueCodeableConcept.coding[root].system = $JP_DentalRootBodyStructure_CS (exactly)
-* valueCodeableConcept.coding[root] ^short = "特定の歯の『歯根』を指定"
-* valueCodeableConcept.coding[root] ^definition = "特定の歯の『歯根』を指定"
-* valueCodeableConcept.coding[surface] ^short = "特定の歯の『歯面』を指定"
-* valueCodeableConcept.coding[surface] ^definition = "特定の歯の『歯面』を指定"
-* valueCodeableConcept.coding[surface] from $JP_DentalSurfaceBodyStructure_VS (preferred)
-* valueCodeableConcept.coding[surface].system = $JP_DentalSurfaceBodyStructure_CS (exactly)
