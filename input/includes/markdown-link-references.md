@@ -175,7 +175,6 @@
 [JP_DentalSurfaceBodyStructure_VS]: ValueSet-jp-dental-surfacebodystructure-vs.html
 [JP_DentalTeethObservation_VS]: ValueSet-jp-dental-teethobservation-vs.html
 [JP_DICOMModality_VS]: ValueSet-jp-dicommodality-vs.html
-[JP_ImagingStudy_Endoscopy_BodySite_VS]: ValueSet-jp-imagingstudy-endoscopy-bodysite-vs.html
 [JP_ImagingStudy_Radiology_BodySite_VS]: ValueSet-jp-imagingstudy-radiology-bodysite-vs.html
 [JP_Observation_BodySite_VS]: ValueSet-jp-observation-bodysite-vs.html
 [JP_ObservationDetailedDentalCategory_VS]: ValueSet-jp-observation-detailed-dental-category-vs.html
