@@ -48,22 +48,23 @@ Title: "JP Observation DentalOral BodyStructure Laterality"
 * value[x] only CodeableConcept
 
 Extension: JP_Observation_DentalOral_BodyStructure_BodyLandmarkOrientation
-Id: jp-observation-dentaloral-bodystructure-bodylandmarkorientation	
-Title: "JP Observation DentalOral BodyStructure Laterality"
+Id: jp-observation-dentaloral-bodystructure-bodylandmarkorientation
+Title: "JP Observation DentalOral BodyStructure BodyLandmarkOrientation"
 * ^context[+].type = #element
 * ^context[=].expression = "Extension"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_BodyLandmarkOrientation"
 * ^status = #active
 * ^date = "2025-06-24"
 * extension contains
-  JP_Observation_DentalOral_BodyStructure_LandmarkDescription named landmarkDescription	0..1 and
-  distanceFromLandmark 0..1 and
+  JP_Observation_DentalOral_BodyStructure_LandmarkDescription named landmarkDescription	0..* and
+  JP_Observation_DentalOral_BodyStructure_ClockFacePosition named clockFacePosition 0..* and
+  JP_Observation_DentalOral_BodyStructure_DistanceFromLandmark named distanceFromLandmark 0..* and
   JP_Observation_DentalOral_BodyStructure_SurfaceOrientation named surfaceOrientation 0..*
 * value[x] 0..0
 
 Extension: JP_Observation_DentalOral_BodyStructure_LandmarkDescription
 Id: jp-observation-dentaloral-bodystructure-landmarkdescription
-Title: "JP Observation DentalOral BodyStructure Laterality"
+Title: "JP Observation DentalOral BodyStructure LandmarkDescription"
 * ^context[+].type = #element
 * ^context[=].expression = "Extension"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_LandmarkDescription"
@@ -71,9 +72,19 @@ Title: "JP Observation DentalOral BodyStructure Laterality"
 * ^date = "2025-06-24"
 * value[x] only CodeableConcept
 
+Extension: JP_Observation_DentalOral_BodyStructure_ClockFacePosition
+Id: jp-observation-dentaloral-bodystructure-clockfaceposition
+Title: "JP Observation DentalOral BodyStructure ClockFacePosition"
+* ^context[+].type = #element
+* ^context[=].expression = "Extension"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_ClockFacePosition"
+* ^status = #active
+* ^date = "2025-06-24"
+* value[x] only CodeableConcept
+
 Extension: JP_Observation_DentalOral_BodyStructure_DistanceFromLandmark
 Id: jp-observation-dentaloral-bodystructure-distancefromlandmark
-Title: "JP Observation DentalOral BodyStructure urfaceOrientation"
+Title: "JP Observation DentalOral BodyStructure DistanceFromLandmark"
 * ^context[+].type = #element
 * ^context[=].expression = "Extension"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_DistanceFromLandmark"
@@ -83,7 +94,7 @@ Title: "JP Observation DentalOral BodyStructure urfaceOrientation"
 
 Extension: JP_Observation_DentalOral_BodyStructure_SurfaceOrientation
 Id: jp-observation-dentaloral-bodystructure-surfaceorientation
-Title: "JP Observation DentalOral BodyStructure urfaceOrientation"
+Title: "JP Observation DentalOral BodyStructure SurfaceOrientation"
 * ^context[+].type = #element
 * ^context[=].expression = "Extension"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_SurfaceOrientation"
