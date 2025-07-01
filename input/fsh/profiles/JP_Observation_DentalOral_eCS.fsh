@@ -83,31 +83,31 @@ Description: "このプロファイルはObservationリソースに対して、�
 // extension 参照宣言
 * extension contains
     $JP_Observation_DentalOral_BodySiteStatus named bodySiteStatus 1..1 and
-    $JP_Observation_DentalOral_BodyStructure_eCS named bodyStructure 0..1
+    $JP_Observation_DentalOral_BodyStructure_eCS named includedStructure 0..*
 
 * insert SetDefinition(extension[bodySiteStatus], 【JP Core仕様】特定の状態を示さない0 を指定)
 * extension[bodySiteStatus].valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS (exactly)
 * extension[bodySiteStatus].valueCodeableConcept.coding.code 1..1
 * extension[bodySiteStatus].valueCodeableConcept.coding.code = #0 (exactly)
 
-* extension[bodyStructure].extension[includedStructure].extension[structure].valueCodeableConcept from JP_DentalBodySite_VS (required)
-* insert SetDefinition(extension[bodyStructure].extension[includedStructure].extension[structure], 【JP Core仕様】複数の『歯』を繰り返し指定)
+* extension[includedStructure].extension[structure].valueCodeableConcept from JP_DentalBodySite_VS (required)
+* insert SetDefinition(extension[includedStructure].extension[structure], 【JP Core仕様】複数の『歯』を繰り返し指定)
 
-* extension[bodyStructure].extension[includedStructure].extension[qualifier].value[x].coding ^slicing.discriminator.type = #value
-* extension[bodyStructure].extension[includedStructure].extension[qualifier].value[x].coding ^slicing.discriminator.path = "system"
-* extension[bodyStructure].extension[includedStructure].extension[qualifier].value[x].coding ^slicing.rules = #open
-* extension[bodyStructure].extension[includedStructure].extension[qualifier].value[x].coding contains
+* extension[includedStructure].extension[qualifier].value[x].coding ^slicing.discriminator.type = #value
+* extension[includedStructure].extension[qualifier].value[x].coding ^slicing.discriminator.path = "system"
+* extension[includedStructure].extension[qualifier].value[x].coding ^slicing.rules = #open
+* extension[includedStructure].extension[qualifier].value[x].coding contains
   root 0..* and
   surface 0..*
-* insert SetDefinition(extension[bodyStructure].extension[includedStructure].extension[qualifier], 【JP Core仕様】特定の歯の歯根と、歯面の２項目を指定)
+* insert SetDefinition(extension[includedStructure].extension[qualifier], 【JP Core仕様】特定の歯の歯根と、歯面の２項目を指定)
 
-* extension[bodyStructure].extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[root] from $JP_DentalRootBodyStructure_VS (required)
-* extension[bodyStructure].extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[root].system = $JP_DentalRootBodyStructure_CS (exactly)
-* extension[bodyStructure].extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[root] ^short = "特定の歯の『歯根』を指定"
-* extension[bodyStructure].extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[root] ^definition = "特定の歯の『歯根』を指定"
+* extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[root] from $JP_DentalRootBodyStructure_VS (required)
+* extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[root].system = $JP_DentalRootBodyStructure_CS (exactly)
+* extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[root] ^short = "特定の歯の『歯根』を指定"
+* extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[root] ^definition = "特定の歯の『歯根』を指定"
 
-* extension[bodyStructure].extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[surface] from $JP_DentalSurfaceBodyStructure_VS (required)
-* extension[bodyStructure].extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[surface].system = $JP_DentalSurfaceBodyStructure_CS (exactly)
-* extension[bodyStructure].extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[surface] ^short = "特定の歯の『歯面』を指定"
-* extension[bodyStructure].extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[surface] ^definition = "特定の歯の『歯面』を指定"
+* extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[surface] from $JP_DentalSurfaceBodyStructure_VS (required)
+* extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[surface].system = $JP_DentalSurfaceBodyStructure_CS (exactly)
+* extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[surface] ^short = "特定の歯の『歯面』を指定"
+* extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[surface] ^definition = "特定の歯の『歯面』を指定"
 

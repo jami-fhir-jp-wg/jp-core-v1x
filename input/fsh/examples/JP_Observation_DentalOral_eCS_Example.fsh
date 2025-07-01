@@ -20,19 +20,19 @@ Usage: #example
 * extension[bodySiteStatus].valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS
 * extension[bodySiteStatus].valueCodeableConcept.coding.code = #0
 
-* extension[bodyStructure].extension[includedStructure][+].extension[structure].valueCodeableConcept.coding.system = $JP_DentalBodySite_CS
-* extension[bodyStructure].extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.code = #1042
-* extension[bodyStructure].extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.display = "右側下顎側切歯"
-* extension[bodyStructure].extension[includedStructure][=].extension[qualifier][+].valueCodeableConcept.coding.system = $JP_DentalSurfaceBodyStructure_CS
-* extension[bodyStructure].extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.code = #TP-18
-* extension[bodyStructure].extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.display = "歯冠部"
+* extension[includedStructure][+].extension[structure].valueCodeableConcept.coding.system = $JP_DentalBodySite_CS
+* extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.code = #1042
+* extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.display = "右側下顎側切歯"
+* extension[includedStructure][=].extension[qualifier][+].valueCodeableConcept.coding.system = $JP_DentalSurfaceBodyStructure_CS
+* extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.code = #TP-18
+* extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.display = "歯冠部"
 
-* extension[bodyStructure].extension[includedStructure][+].extension[structure].valueCodeableConcept.coding.system = $JP_DentalBodySite_CS
-* extension[bodyStructure].extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.code = #1041
-* extension[bodyStructure].extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.display = "右側下顎中切歯"
-* extension[bodyStructure].extension[includedStructure][=].extension[qualifier][+].valueCodeableConcept.coding.system = $JP_DentalSurfaceBodyStructure_CS
-* extension[bodyStructure].extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.code = #TP-18
-* extension[bodyStructure].extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.display = "歯冠部"
+* extension[includedStructure][+].extension[structure].valueCodeableConcept.coding.system = $JP_DentalBodySite_CS
+* extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.code = #1041
+* extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.display = "右側下顎中切歯"
+* extension[includedStructure][=].extension[qualifier][+].valueCodeableConcept.coding.system = $JP_DentalSurfaceBodyStructure_CS
+* extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.code = #TP-18
+* extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.display = "歯冠部"
 
 * valueCodeableConcept.coding.system = $JP_DentalPresentTeethObservation_CS
 * valueCodeableConcept.coding.code = #TP-9-15
