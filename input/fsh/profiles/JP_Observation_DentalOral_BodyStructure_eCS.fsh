@@ -17,30 +17,36 @@ Description: "特定の歯を格納するための拡張"
     bodyLandmarkOrientation 0..* and
     qualifier 0..*
 * extension[structure] only Extension
+* extension[structure].value[x] 1..1
 * extension[structure].value[x] only CodeableConcept
 * extension[laterality] only Extension
 * extension[laterality].value[x] only CodeableConcept
 * extension[bodyLandmarkOrientation] only Extension
 * extension[bodyLandmarkOrientation].extension contains
-    landmarkDescription 0..1 and
-    clockFacePosition 0..1 and
-    distanceFromLandmark 0..1 and
-    surfaceOrientation 0..1
+    landmarkDescription 0..* and
+    clockFacePosition 0..* and
+    distanceFromLandmark 0..* and
+    surfaceOrientation 0..*
 * extension[bodyLandmarkOrientation].extension[landmarkDescription] only Extension
 * extension[bodyLandmarkOrientation].extension[landmarkDescription].url = "landmarkDescription" (exactly)
+* extension[bodyLandmarkOrientation].extension[landmarkDescription].value[x] 1..1
 * extension[bodyLandmarkOrientation].extension[landmarkDescription].value[x] only CodeableConcept
 * extension[bodyLandmarkOrientation].extension[clockFacePosition] only Extension
 * extension[bodyLandmarkOrientation].extension[clockFacePosition].url = "clockFacePosition" (exactly)
+* extension[bodyLandmarkOrientation].extension[clockFacePosition].value[x] 1..1
 * extension[bodyLandmarkOrientation].extension[clockFacePosition].value[x] only CodeableConcept
 * extension[bodyLandmarkOrientation].extension[distanceFromLandmark] only Extension
 * extension[bodyLandmarkOrientation].extension[distanceFromLandmark].extension contains
-    value 1..1
+    value 0..*
 * extension[bodyLandmarkOrientation].extension[distanceFromLandmark].url = "distanceFromLandmark" (exactly)
 * extension[bodyLandmarkOrientation].extension[distanceFromLandmark].extension[value] only Extension
 * extension[bodyLandmarkOrientation].extension[distanceFromLandmark].extension[value].url = "value" (exactly)
+* extension[bodyLandmarkOrientation].extension[distanceFromLandmark].extension[value].value[x] 1..1
 * extension[bodyLandmarkOrientation].extension[distanceFromLandmark].extension[value].value[x] only Quantity
 * extension[bodyLandmarkOrientation].extension[surfaceOrientation] only Extension
 * extension[bodyLandmarkOrientation].extension[surfaceOrientation].url = "surfaceOrientation" (exactly)
+* extension[bodyLandmarkOrientation].extension[surfaceOrientation].value[x] 1..1
 * extension[bodyLandmarkOrientation].extension[surfaceOrientation].value[x] only CodeableConcept
 * extension[qualifier] only Extension
+* extension[qualifier].value[x] 1..1
 * extension[qualifier].value[x] only CodeableConcept
