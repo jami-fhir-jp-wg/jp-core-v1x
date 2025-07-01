@@ -1,9 +1,7 @@
 Extension: JP_Observation_DentalOral_BodyStructure_eCS
 Id: jp-observation-dentaloral-bodystructure-ecs
-Title: "JP Core Observation DentalOral BodyStructure Extension"
+Title: "JP Core Observation DentalOral BodyStructure IncludedStructure Extension"
 Description: "特定の歯を格納するための拡張"
-* ^context[+].type = #element
-* ^context[=].expression = "Observation"
 * ^context[+].type = #element
 * ^context[=].expression = "Observation.bodySite"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodyStructure_eCS"
