@@ -3,6 +3,8 @@ Id: jp-observation-dentaloral-bodystructure-ecs
 Title: "JP Core Observation DentalOral BodyStructure Extension"
 Description: "特定の歯を格納するための拡張"
 * ^context[+].type = #element
+* ^context[=].expression = "Observation"
+* ^context[+].type = #element
 * ^context[=].expression = "Observation.bodySite"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodyStructure_eCS"
 * ^status = #active
@@ -16,7 +18,7 @@ Description: "特定の歯を格納するための拡張"
 Extension: JP_Observation_DentalOral_BodyStructure_IncludedStructure
 Id: jp-observation-dentaloral-bodystructure-includedstructure
 Title: "JP Observation DentalOral BodyStructure IncludedStructure"
-Description: "特定の歯を格納するための拡張"
+Description: "内部に含まれる構造の拡張"
 * ^context[+].type = #element
 * ^context[=].expression = "Extension"
 * ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Observation_DentalOral_BodyStructure_IncludedStructure"
@@ -30,6 +32,7 @@ Description: "特定の歯を格納するための拡張"
 Extension: JP_Observation_DentalOral_BodyStructure_Structure
 Id: jp-observation-dentaloral-bodystructure-structure
 Title: "JP Observation DentalOral BodyStructure Structure"
+Description: "構造に関する拡張"
 * ^context[+].type = #element
 * ^context[=].expression = "Extension"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_Structure"
@@ -40,6 +43,7 @@ Title: "JP Observation DentalOral BodyStructure Structure"
 Extension: JP_Observation_DentalOral_BodyStructure_Laterality
 Id: jp-observation-dentaloral-bodystructure-laterality
 Title: "JP Observation DentalOral BodyStructure Laterality"
+Description: "左右をあらわす拡張"
 * ^context[+].type = #element
 * ^context[=].expression = "Extension"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_Laterality"
@@ -50,6 +54,7 @@ Title: "JP Observation DentalOral BodyStructure Laterality"
 Extension: JP_Observation_DentalOral_BodyStructure_BodyLandmarkOrientation
 Id: jp-observation-dentaloral-bodystructure-bodylandmarkorientation
 Title: "JP Observation DentalOral BodyStructure BodyLandmarkOrientation"
+Description: "ランドマークに関する拡張"
 * ^context[+].type = #element
 * ^context[=].expression = "Extension"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_BodyLandmarkOrientation"
@@ -65,6 +70,7 @@ Title: "JP Observation DentalOral BodyStructure BodyLandmarkOrientation"
 Extension: JP_Observation_DentalOral_BodyStructure_LandmarkDescription
 Id: jp-observation-dentaloral-bodystructure-landmarkdescription
 Title: "JP Observation DentalOral BodyStructure LandmarkDescription"
+Description: "ランドマークに関する説明の拡張"
 * ^context[+].type = #element
 * ^context[=].expression = "Extension"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_LandmarkDescription"
@@ -75,6 +81,7 @@ Title: "JP Observation DentalOral BodyStructure LandmarkDescription"
 Extension: JP_Observation_DentalOral_BodyStructure_ClockFacePosition
 Id: jp-observation-dentaloral-bodystructure-clockfaceposition
 Title: "JP Observation DentalOral BodyStructure ClockFacePosition"
+Description: "時計の方向に関する位置の拡張"
 * ^context[+].type = #element
 * ^context[=].expression = "Extension"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_ClockFacePosition"
@@ -85,6 +92,7 @@ Title: "JP Observation DentalOral BodyStructure ClockFacePosition"
 Extension: JP_Observation_DentalOral_BodyStructure_DistanceFromLandmark
 Id: jp-observation-dentaloral-bodystructure-distancefromlandmark
 Title: "JP Observation DentalOral BodyStructure DistanceFromLandmark"
+Description: "ランドマークからの距離に関する拡張"
 * ^context[+].type = #element
 * ^context[=].expression = "Extension"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_DistanceFromLandmark"
@@ -95,6 +103,7 @@ Title: "JP Observation DentalOral BodyStructure DistanceFromLandmark"
 Extension: JP_Observation_DentalOral_BodyStructure_SurfaceOrientation
 Id: jp-observation-dentaloral-bodystructure-surfaceorientation
 Title: "JP Observation DentalOral BodyStructure SurfaceOrientation"
+Description: "表面上の向きに関する拡張"
 * ^context[+].type = #element
 * ^context[=].expression = "Extension"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_SurfaceOrientation"
@@ -105,6 +114,7 @@ Title: "JP Observation DentalOral BodyStructure SurfaceOrientation"
 Extension: JP_Observation_DentalOral_BodyStructure_Qualifier
 Id: jp-observation-dentaloral-bodystructure-qualifier
 Title: "JP Observation DentalOral BodyStructure Qualifier"
+Description: "修飾子に関する拡張"
 * ^context[+].type = #element
 * ^context[=].expression = "Extension"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_BodyStructure_Qualifier"
