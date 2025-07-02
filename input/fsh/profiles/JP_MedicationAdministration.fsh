@@ -115,7 +115,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
     JP_MedicationAdministration_Requester named requester ..*
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministrationBase"
 * ^status = #active
-* ^date = "2025-05-24"
+* ^date = "2025-07-04"
 * . ^short = "患者への薬剤投与記録"
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
