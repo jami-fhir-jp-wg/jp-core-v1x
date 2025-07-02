@@ -6,7 +6,7 @@ Description: "特定の歯を格納するための拡張"
 * ^context[=].expression = "Observation.bodySite"
 * ^url = $JP_Observation_DentalOral_BodyStructure_eCS
 * ^status = #active
-* ^date = "2025-06-24"
+* ^date = "2025-07-04"
 * . ^short = "特定の歯"
 * . ^definition = "特定の歯を格納するための拡張"
 * url = $JP_Observation_DentalOral_BodyStructure_eCS (exactly)

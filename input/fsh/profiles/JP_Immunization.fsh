@@ -5,7 +5,7 @@ Title: "JP Core Immunization Profile"
 Description: "このプロファイルはImmunizationリソースに対して日本での予防接種情報を送受信するための制約と拡張を加えたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
 * ^status = #active
-* ^date = "2025-06-24"
+* ^date = "2025-07-04"
 * . ^short = "予防接種"
 * . ^definition = "予防接種時の記録，あるいは予防接種について患者や医療従事者などが報告した記録。"
 * id ^short = "このResourceに対する論理ID"
@@ -86,7 +86,7 @@ Description: "次回接種予定日"
 * ^context.expression = "Immunization"
 * . ^short = "次回接種予定日"
 * . ^definition = "次回接種を予定している日、期限"
-* ^date = "2025-06-24"
+* ^date = "2025-07-04"
 * url = $JP_Immunization_DueDateOfNextDose (exactly)
 * value[x] only date
 
@@ -100,7 +100,7 @@ Description: "検定年月日"
 * ^context.expression = "Immunization"
 * . ^short = "検定年月日"
 * . ^definition = "ワクチンが検定された年月日"
-* ^date = "2025-06-24"
+* ^date = "2025-07-04"
 * url = $JP_Immunization_CertificatedDate (exactly)
 * value[x] only date
 
@@ -114,6 +114,6 @@ Description: "製造年月日"
 * ^context.expression = "Immunization"
 * . ^short = "製造年月日"
 * . ^definition = "ワクチンが製造された年月日"
-* ^date = "2025-06-24"
+* ^date = "2025-07-04"
 * url = $JP_Immunization_ManufacturedDate (exactly)
 * value[x] only date

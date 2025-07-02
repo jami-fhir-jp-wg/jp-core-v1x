@@ -4,7 +4,7 @@ Title: "JP Core Observation DentalOral ToothSurface Extension"
 Description: "特定の歯の歯面を格納するための拡張"
 * ^url = $JP_Observation_DentalOral_ToothSurface
 * ^status = #active
-* ^date = "2025-06-24"
+* ^date = "2025-07-04"
 * ^context[+].type = #element
 * ^context[=].expression = "Observation.bodySite"
 * . ^short = "特定の歯の歯面"

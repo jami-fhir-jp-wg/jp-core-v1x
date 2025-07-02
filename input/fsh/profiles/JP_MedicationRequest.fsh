@@ -12,7 +12,7 @@ Title: "JP Core MedicationRequest Profile"
 Description: "このプロファイルはMedicationRequestリソースに対して、内服・外用薬剤処方のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
 * ^status = #active
-* ^date = "2025-06-24"
+* ^date = "2025-07-04"
 * . ^short = "患者あるいはグループに対しての処方オーダ"
 * . ^definition = "患者への薬の供給と内服・外用薬剤処方の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。MedicationRequestプロファイルからの派生プロファイルである。"
 * identifier obeys jp-inv-local-prescriptionid
@@ -40,9 +40,9 @@ Slice定義は下記のようになる。
 * identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
-* identifier[rpNumber].system = $JP_Medication_RPGroupNumber (exactly)
 * identifier[rpNumber].system ^short = "Rp番号(剤グループ番号)についてのsystem値"
 * identifier[rpNumber].system ^definition = "ここで付番されたIDがRp番号であることを明示するためにOID-urlとして定義された。http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumberで固定される。"
+* identifier[rpNumber].system = $JP_Medication_RPGroupNumber (exactly)
 * identifier[rpNumber].value 1..
 * identifier[rpNumber].value ^short = "Rp番号(剤グループ番号)"
 * identifier[rpNumber].value ^definition = "Rp番号(剤グループ番号)。\"1\"など。"
@@ -266,7 +266,7 @@ Title: "JP Core MedicationRequest Injection Profile"
 Description: "このプロファイルはMedicationRequestリソースに対して、注射薬剤処方のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection"
 * ^status = #active
-* ^date = "2025-06-24"
+* ^date = "2025-07-04"
 * . ^short = "患者あるいはグループに対しての注射薬剤処方オーダ"
 * . ^definition = "患者への薬の供給と注射や点滴の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。MedicationRequestプロファイルからの派生プロファイルである。"
 * identifier  obeys jp-inv-local-prescriptionid
