@@ -18,7 +18,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(partOf, 参照されるイベントの一部分 【JP Core仕様】未使用)
 * insert SetDefinition(status, 結果の状態 【JP Core仕様】ステータス)
 
-* category 3..*
 * category contains
     second 1..1 and
     third 1..1
@@ -51,7 +50,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * code.coding.code = $Loinc_CS#57133-1 (exactly)
 * code.coding.display = "Referral note"
 
-//TODO:Commonで0を許容しているのに、1にしているのはなぜ？
 * subject 1..1
 * subject only Reference(JP_Patient)
 * insert SetDefinition(subject, 観察対象者 【JP Core仕様】患者情報)
