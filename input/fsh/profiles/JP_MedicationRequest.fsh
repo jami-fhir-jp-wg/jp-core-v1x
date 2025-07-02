@@ -36,8 +36,7 @@ Slice定義は下記のようになる。
     rpNumber 1..1 and
     orderInRp 1..1 and
     requestIdentifier 0..* and
-    prescriptionIdentifierCommon 0..1 and
-    other 0..*
+    prescriptionIdentifierCommon 0..1
 * identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
@@ -290,8 +289,7 @@ Slice定義は下記のようになる。
 * identifier contains
     rpNumber 1..1 and
     requestIdentifier 0..* and
-    prescriptionIdentifierCommon 0..1 and 
-    other 0..*
+    prescriptionIdentifierCommon 0..1
 * identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"

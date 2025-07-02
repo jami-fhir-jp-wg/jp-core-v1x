@@ -8,8 +8,8 @@ Usage: #example
 * identifier[rpNumber].value = "1"
 * identifier[requestIdentifier].value = "1234567890.1"
 * identifier[prescriptionIdentifierCommon].value = "20241101-0000000000000001"
-* identifier[other].system = "urn:oid:1.2.392.100495.20.3.11.11311234567"
-* identifier[other].value = "20241101-00001"
+* identifier[+].system = "urn:oid:1.2.392.100495.20.3.11.11311234567"
+* identifier[=].value = "20241101-00001"
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
