@@ -13,3 +13,4 @@ Description: "JP Coreにて定義した歯科のObservationリソースに関す
 * #DO-1-01 "ToothExistence"
 * #DO-1-02 "ToothTreatmentCondition"
 * #DO-1-03 "MissingToothCondition"
+* #DO-1-04 "ClinicalInformationSharing"

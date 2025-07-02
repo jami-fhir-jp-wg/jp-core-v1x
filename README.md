@@ -10,8 +10,9 @@ FHIRのJp Core実装のための開発用レポジトリです。
 | JPCore ver | BASE Ver|対象レポジトリ | 状況 | コメント | 
 | - | - | - | - | - |
 | v2.0.0  | 4.3.0 | https://github.com/jami-fhir-jp-wg/fhir-jp-core-r4 | 開発中 | リリース時期未定<p/>影響点の大きな修正はを本バージョンに投入する。Base VerがR4.3.0であることに注意|
-| v1.2.0  | 4.0.1 | https://github.com/jami-fhir-jp-wg/jp-core-v1x | 開発中 | 2024年秋リリース予定<p/>不具合や影響の少ないリソース追加の修正に利用 |
-| [v1.1.2](https://jpfhir.jp/fhir/core/1.1.2/index.html)  | 4.0.1 | https://github.com/jami-fhir-jp-wg/jp-core-v1x/releases/tag/v1.1.2 (編集不可) | リリース済 | 現行リリースの最新バージョン | 
+| v1.3.0  | 4.0.1 | https://github.com/jami-fhir-jp-wg/jp-core-v1x/ | 開発中 | 次期リリース予定<p/>不具合や影響の少ないリソース追加の修正に利用 |
+| [v1.2.0](https://jpfhir.jp/fhir/core/1.2.0/index.html)  | 4.0.1 | https://github.com/jami-fhir-jp-wg/jp-core-v1x/releases/tag/v1.2.0 (編集不可) | リリース済 | 現行リリースの最新バージョン |
+| [v1.1.2](https://jpfhir.jp/fhir/core/1.1.2/index.html)  | 4.0.1 | https://github.com/jami-fhir-jp-wg/jp-core-v1x/releases/tag/v1.1.2 (編集不可) | リリース済 | 内視鏡、微生物学検査プロファイルの追加等 | 
 | [v1.1.1](https://jpfhir.jp/fhir/core/1.1.1/index.html)  | 4.0.1 | https://github.com/jami-fhir-jp-wg/jp-core-v1x/releases/tag/v1.1.1 (編集不可) | リリース済 | v1.1.0からの不具合修正バージョン<p/>Patch version to V1.1.0<p/>リリース済のため編集不可　|
 | [v1.1.0](https://jpfhir.jp/fhir/core/1.1.0/index.html)  | 4.0.1 | https://github.com/jami-fhir-jp-wg/jp-core-v1x/releases/tag/v1.1.0 (編集不可) | リリース済 | 開発環境のSushi&IG Publisherへの移行ver1.0.5のブラッシュアップ実施<p/>IG publisher version from V1.0.5 |
 | [v1.0.5](https://jpfhir.jp/jpcorev1ig/index.html)  | 4.0.1 | 旧開発環境で開発されたたため、ソースファイル非公開 | リリース済<p/>編集不可 | 初期バージョン<p/>Initial release<p/>現在サポート対象外 | 
@@ -81,7 +82,8 @@ $ bash _genonce.sh
 * [プロファイル説明用Markdown記載ルール](docs/template_intronotes.md)
 * [github 利用ルール](docs/githubflow.md)
 * [文書記載ルール](docs/ig_rules.md)
-* [バージョンリリース時注意事項](docs/for-release.md)
+* [リリースルール](docs/release_rule.md)
+* [リリース手順](docs/for-release.md)
 
 ## 資料・学習用サイト等
 * [FHIR Shorthand FSH School(外部リンク)](https://fshschool.org/)

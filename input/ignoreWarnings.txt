@@ -5,7 +5,6 @@
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
 # IG Defined
-The definition for the element 'Consent.provision.code' binds to the value set 'http://hl7.org/fhir/ValueSet/consent-content-code' which is experimental, but this structure is not labeled as experimental
 !!コードの検証エラー: 用語サービス無しで実行中
 
 # Warnings for Examples
@@ -36,4 +35,3 @@ http://medis.or.jp/CodeSystem/master-HOT9#107750603 の誤ったdisplay 'ソリ�
 http://medis.or.jp/CodeSystem/master-HOT9#103835401 の誤ったdisplay 'ムコダイン錠２５０ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'ムコダイン錠２５０ｍｇ・杏林製薬' (ja) (言語 'ja-JP' のため)
 http://medis.or.jp/CodeSystem/master-HOT9#110926901 の誤ったdisplay 'パンスポリンＴ錠１００ １００ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'パンスポリンＴ錠１００・武田薬品' (ja) (言語 'ja-JP' のため)
 http://medis.or.jp/CodeSystem/master-HOT9#111501701 の誤ったdisplay '肺炎球菌ワクチン' - 1 の選択肢のうちの一つであるべきです: 'ニューモバックスＮＰ・ＭＳＤ' (ja) (言語 'ja-JP' のため)
-

@@ -1,4 +1,4 @@
-CodeSystem: JP_DentalSipmleMissingTeethObservation_CS
+CodeSystem: JP_DentalSimpleMissingTeethObservation_CS
 Id: jp-dental-simple-missingteeth-observation-cs
 Title: "JP Core Dental SimpleMissingTeethObservation CodeSystem"
 Description: "JP Coreにて定義した歯科のObservationリソースに関する欠損歯の観察結果コード（簡易版）"

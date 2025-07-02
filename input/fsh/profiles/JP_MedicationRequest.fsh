@@ -12,7 +12,7 @@ Title: "JP Core MedicationRequest Profile"
 Description: "このプロファイルはMedicationRequestリソースに対して、内服・外用薬剤処方のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest"
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2025-07-04"
 * . ^short = "患者あるいはグループに対しての処方オーダ"
 * . ^definition = "患者への薬の供給と内服・外用薬剤処方の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。MedicationRequestプロファイルからの派生プロファイルである。"
 * identifier obeys jp-inv-local-prescriptionid
@@ -40,9 +40,9 @@ Slice定義は下記のようになる。
 * identifier[rpNumber] ^short = "処方箋内部の剤グループとしてのRp番号"
 * identifier[rpNumber] ^definition = "処方箋内で同一用法の薬剤を慣用的にまとめて、Rpに番号をつけて剤グループとして一括指定されることがある。このスライスでは剤グループに対して割り振られたRp番号を記録する。"
 * identifier[rpNumber] ^comment = "剤グループに複数の薬剤が含まれる場合、このグループ内の薬剤には同じRp番号が割り振られる。"
-* identifier[rpNumber].system = $JP_Medication_RPGroupNumber (exactly)
 * identifier[rpNumber].system ^short = "Rp番号(剤グループ番号)についてのsystem値"
 * identifier[rpNumber].system ^definition = "ここで付番されたIDがRp番号であることを明示するためにOID-urlとして定義された。http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumberで固定される。"
+* identifier[rpNumber].system = $JP_Medication_RPGroupNumber (exactly)
 * identifier[rpNumber].value 1..
 * identifier[rpNumber].value ^short = "Rp番号(剤グループ番号)"
 * identifier[rpNumber].value ^definition = "Rp番号(剤グループ番号)。\"1\"など。"
@@ -62,7 +62,7 @@ Slice定義は下記のようになる。
 * identifier[requestIdentifier] ^definition = "薬剤をオーダする単位としての処方依頼に対するID。MedicationRequestは単一の薬剤でインスタンスが作成される。"
 * identifier[requestIdentifier].system = $JP_ResourceInstance_Identifier (exactly)
 * identifier[requestIdentifier].value 1..
-* identifier[prescriptionIdentifierCommon] ^short = "処方箋に対するID"
+* identifier[prescriptionIdentifierCommon] ^short = "全国で⼀意となる処方箋ID"
 * identifier[prescriptionIdentifierCommon] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。全国で⼀意になる発番ルールにもとづき urn:oid:1.2.392.100495.20.3.11 とする。"
 * identifier[prescriptionIdentifierCommon].system = $JP_IdSystem_PrescriptionDocumentID (exactly)
 * identifier[prescriptionIdentifierCommon].value 1..
@@ -94,7 +94,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 投与された薬剤を識別する。既知の薬のリストから薬を識別するコード情報を設定する。"
 * medication[x] ^comment = "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.  
 ひとつのtext要素と、複数のcoding 要素を記述できる。処方オーダ時に選択または入力し、実際に処方箋に印字される文字列を必ずtext要素に格納した上で、それをコード化した情報を1個以上のcoding 要素に記述する。  
-厚生労働省標準であるHOT9コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。  
+厚生労働省標準であるHOT9、HOT13コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。  
 なお、上記のいずれの標準的コードも付番されていない医薬品や医療材料の場合には、薬機法の下で使用されているGS1標準の識別コードであるGTIN(Global Trade Item Number)の調剤包装単位（最少包装単位、個別包装単位）14桁を使用する。  
 ひとつの処方薬、医療材料を複数のコード体系のコードで記述してもよく、その場合にcoding 要素を繰り返して記述する。  
 ただし、ひとつの処方薬を複数のコードで繰り返し記述する場合には、それらのコードが指し示す処方薬、医療材料は当然同一でなければならない。  
@@ -111,6 +111,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * doNotPerform ^definition = "このオーダが実施していけないものであればTrueを表示される"
 * doNotPerform ^comment = "もし、doNotPerformに指定がなければ、オーダは実施してもよいものである。(たとえば、「実施せよ」)"
 * doNotPerform ^isModifierReason = "このエレメントは実施すべきオーダを否定するものであるため、このエレメントはmodifierとされている。（たとえば、この薬剤オーダが不適切なものであったり初歩宇部着物ではない場合)"
+* reported[x] only Reference(Patient or JP_Patient or Practitioner or JP_Practitioner or PractitionerRole or JP_PractitionerRole or RelatedPerson or Organization or JP_Organization)
 * reported[x] ^short = "初期記録にはない報告"
 * reported[x] ^definition = "このレコードは元々の一次記録から報告されたものか、二次的に「報告された」資料から取り込まれたものかを示す。報告の情報源についても示される。"
 * subject 1..1
@@ -129,7 +130,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * supportingInformation ^definition = "薬剤をオーダするときに補助的となる追加情報（たとえば、患者の身長や体重））を含む。"
 * supportingInformation ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * authoredOn 1..
-* authoredOn ^short = "この処方オーダが最初に記述された日"
+* authoredOn ^short = "この処方オーダが最初に記述された日時"
 * authoredOn ^definition = "JP Coreでは必須。処方指示が最初に作成された日時。秒の精度まで記録する。タイムゾーンも付与しなければならない。"
 * requester only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or RelatedPerson or Device)
 * requester ^short = "このオーダを発行した人・物"
@@ -163,6 +164,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * instantiatesUri ^short = "外部プロトコルまたは定義のインスタンス"
 * instantiatesUri ^definition = "このMedicationRequestの一部あるいは全部が遵守するprotocolやguideline, ordersetなど他の定義を示すURL。"
 * instantiatesUri ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
+* basedOn only Reference(CarePlan or JP_CarePlan or MedicationRequest or JP_MedicationRequest or ServiceRequest or JP_ServiceRequest_Common or ImmunizationRecommendation)
 * basedOn ^short = "オーダが実施される根拠"
 * basedOn ^definition = "このMedicationRequestの全部あるいは一部を満たす計画やオーダ。"
 * basedOn ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
@@ -176,7 +178,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * insurance ^short = "適用される保険"
 * insurance ^definition = "リクエストされたサービスについて支払いが求め裸得ることになる、保険のプランや適応範囲の拡大、事前の権限付与、かつ/または事前の判定。"
 * insurance ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
-* note ^short = "薬剤単位の備考"
+* note ^short = "薬剤オーダごとの備考"
 * note ^definition = "他の属性では伝えることができなかったMedicationRequestについての付加的情報。"
 * note ^comment = "構造化されたアノテーションが内システムでは、作成者や記録時間のない一つのアノテーションで情報を伝達している。このエレメントに情報の修正を要する可能性があるためにナラティブな情報も必要としている。Annotationsには機械処理が可能で修正される（\"modifying\")情報を伝達することに使うべきではない(SHOULD NOT)。これがSHOULDである理由はユーザの行動を強制することはほぼ不可能であるからである。"
 
@@ -217,12 +219,12 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * dispenseRequest.numberOfRepeatsAllowed ^definition = "リフィル回数を示す整数である。患者が処方された薬を最初の払い出しから追加で受け取ることができる回数である。使用上の注意：この整数には最初の払い出しが含まれない。オーダが「30錠に加えて3回リフィル可」であれば、このオーダで合計で最大4回、120錠が患者に受け渡される。この数字を0とすることで，処方者がリフィルを許可しないということを明示することができる。"
 * dispenseRequest.numberOfRepeatsAllowed ^comment = "許可された払い出し回数は，最大でこの数字に1を足したものである。"
 * dispenseRequest.quantity only JP_MedicationSimpleQuantity
-* dispenseRequest.quantity ^short = "調剤量"
+* dispenseRequest.quantity ^short = "払い出される薬剤量"
 * dispenseRequest.quantity ^definition = "1回の調剤で払い出される薬剤の量"
-* dispenseRequest.quantity ^comment = "このエレメントはどのような量を表現するか定義するためにコンテキストにあわせてよく定義される。したがって、どのような単位でも利用することができる。使用されるコンテキストによってcomparatorエレメントで値が定義されることもある。"
-* dispenseRequest.expectedSupplyDuration ^short = "調剤日数"
-* dispenseRequest.expectedSupplyDuration ^definition = "供給される製品が使用されるか、あるいは払い出しが想定されている時間を指定する期間。"
-* dispenseRequest.expectedSupplyDuration ^comment = "状況によっては、この属性は物理的に供給される量というよりも、想定されている期間に供給される薬剤の量を指定する数量の代わりに使われることもある。たとえば、薬剤が90日間供給される（オーダされた量に基づいて）など。可能であれば、量も示した方がより正確になる。expectedSupplyDurationは外部要因に影響をうけることのある予測値である。"
+* dispenseRequest.quantity ^comment = "調剤後に払い出されるべき薬剤の量である。1日3錠、7日分という指示であれば21錠が払い出されるべき量である"
+* dispenseRequest.expectedSupplyDuration ^short = "払い出される薬剤が想定された使用期間"
+* dispenseRequest.expectedSupplyDuration ^definition = "払い出される薬剤が使用されることが想定された期間。"
+* dispenseRequest.expectedSupplyDuration ^comment = "状況によっては、薬剤が供給される量として薬剤の錠数などの物理的量よりも、想定される供給期間を使って表現されることもある。たとえば、オーダされた量に基づいて薬剤を90日分提供するなど。可能であれば、量も示した方がより正確になる。ただし、実際には飲み忘れや紛失もあるためexpectedSupplyDurationは外部要因に影響をうけることのある予測値である。"
 * dispenseRequest.expectedSupplyDuration.unit = "日" (exactly)
 * dispenseRequest.expectedSupplyDuration.system = "http://unitsofmeasure.org" (exactly)
 * dispenseRequest.expectedSupplyDuration.code = #d (exactly)
@@ -264,7 +266,7 @@ Title: "JP Core MedicationRequest Injection Profile"
 Description: "このプロファイルはMedicationRequestリソースに対して、注射薬剤処方のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRequest_Injection"
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2025-07-04"
 * . ^short = "患者あるいはグループに対しての注射薬剤処方オーダ"
 * . ^definition = "患者への薬の供給と注射や点滴の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。MedicationRequestプロファイルからの派生プロファイルである。"
 * identifier  obeys jp-inv-local-prescriptionid
@@ -302,7 +304,7 @@ Slice定義は下記のようになる。
 * identifier[requestIdentifier] ^definition = "薬剤をオーダする単位としての処方依頼に対するID。MedicationRequestは単一の薬剤でインスタンスが作成される。"
 * identifier[requestIdentifier].system = $JP_ResourceInstance_Identifier (exactly)
 * identifier[requestIdentifier].value 1..
-* identifier[prescriptionIdentifierCommon] ^short = "処方箋に対するID"
+* identifier[prescriptionIdentifierCommon] ^short = "全国で⼀意となる処方箋ID"
 * identifier[prescriptionIdentifierCommon] ^definition = "薬剤をオーダする単位としての処方箋に対するID。MedicationRequestは単一の薬剤でインスタンスが作成されるが、それの集合としての処方箋のID。全国で⼀意になる発番ルールにもとづく場合には urn:oid:1.2.392.100495.20.3.11 とする。"
 * identifier[prescriptionIdentifierCommon].system = $JP_IdSystem_PrescriptionDocumentID (exactly)
 * identifier[prescriptionIdentifierCommon].value 1..
@@ -333,7 +335,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 投与された薬剤を識別する。既知の薬のリストから薬を識別するコード情報を設定する。"
 * medication[x] ^comment = "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of the medication resource is recommended.  For example, if you require form or lot number, then you must reference the Medication resource.  
 ひとつのtext要素と、複数のcoding 要素を記述できる。処方オーダ時に選択または入力し、実際に処方箋に印字される文字列を必ずtext要素に格納した上で、それをコード化した情報を1個以上のcoding 要素に記述する。  
-厚生労働省標準であるHOT9コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。  
+厚生労働省標準であるHOT9コード、HOT13コード（販社指定が不要な場合にはHOT7コード）または広く流通しているYJコードを用いるか、一般名処方の場合には厚生労働省保険局一般名処方マスタのコードを使用して、Coding要素（コードsystemを識別するURI、医薬品のコード、そのコード表における医薬品の名称の3つからなる）で記述する。  
 なお、上記のいずれの標準的コードも付番されていない医薬品や医療材料の場合には、薬機法の下で使用されているGS1標準の識別コードであるGTIN(Global Trade Item Number)の調剤包装単位（最少包装単位、個別包装単位）14桁を使用する。  
 ひとつの処方薬、医療材料を複数のコード体系のコードで記述してもよく、その場合にcoding 要素を繰り返して記述する。  
 ただし、ひとつの処方薬を複数のコードで繰り返し記述する場合には、それらのコードが指し示す処方薬、医療材料は当然同一でなければならない。  
@@ -348,6 +350,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * doNotPerform ^definition = "このオーダが実施していけないものであればTrueを表示される"
 * doNotPerform ^comment = "もし、doNotPerformに指定がなければ、オーダは実施してもよいものである。(たとえば、「実施せよ」)"
 * doNotPerform ^isModifierReason = "このエレメントは実施すべきオーダを否定するものであるため、このエレメントはmodifierとされている。（たとえば、この薬剤オーダが不適切なものであったり初歩宇部着物ではない場合)"
+* reported[x] only Reference(Patient or JP_Patient or Practitioner or JP_Practitioner or PractitionerRole or JP_PractitionerRole or RelatedPerson or Organization or JP_Organization)
 * reported[x] ^short = "初期記録にはない報告"
 * reported[x] ^definition = "このレコードは元々の一次記録から報告されたものか、二次的に「報告された」資料から取り込まれたものかを示す。報告の情報源についても示される。"
 * subject 1..1
@@ -366,7 +369,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * supportingInformation ^definition = "薬剤をオーダするときに補助的となる追加情報（たとえば、患者の身長や体重））を含む。"
 * supportingInformation ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * authoredOn 1..
-* authoredOn ^short = "この処方オーダが最初に記述された日"
+* authoredOn ^short = "この処方オーダが最初に記述された日時"
 * authoredOn ^definition = "JP Coreでは必須。処方指示が最初に作成された日時。秒の精度まで記録する。タイムゾーンも付与しなければならない。"
 * requester only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization or JP_Patient or RelatedPerson or Device)
 * requester ^short = "このオーダを発行した人・物"
@@ -400,6 +403,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * instantiatesUri ^short = "外部プロトコルまたは定義のインスタンス"
 * instantiatesUri ^definition = "このMedicationRequestの一部あるいは全部が遵守するprotocolやguideline, ordersetなど他の定義を示すURL。"
 * instantiatesUri ^comment = "以下参照。 http://en.wikipedia.org/wiki/Uniform_resource_identifier"
+* basedOn only Reference(CarePlan or JP_CarePlan or MedicationRequest or JP_MedicationRequest or ServiceRequest or JP_ServiceRequest_Common or ImmunizationRecommendation)
 * basedOn ^short = "オーダが実施される根拠"
 * basedOn ^definition = "このMedicationRequestの全部あるいは一部を満たす計画やオーダ。"
 * basedOn ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"

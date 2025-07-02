@@ -2,13 +2,12 @@ Profile: JP_Immunization
 Parent: Immunization
 Id: jp-immunization
 Title: "JP Core Immunization Profile"
-Description: "このプロファイルはImmunizationリソースに対して日本での予防接種データを送受信するための制約を加えたものである。"
+Description: "このプロファイルはImmunizationリソースに対して日本での予防接種情報を送受信するための制約と拡張を加えたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization"
 * ^status = #active
-* ^date = "2024-12-30"
-// * ^purpose = "予防接種の記録を交換するために用いられる。"
+* ^date = "2025-07-04"
 * . ^short = "予防接種"
-* . ^definition = "ワクチンを接種したときの記録，あるいは予防接種について患者や医療従事者などが報告した記録。"
+* . ^definition = "予防接種時の記録，あるいは予防接種について患者や医療従事者などが報告した記録。"
 * id ^short = "このResourceに対する論理ID"
 * extension ^slicing.discriminator.type = #value
 * extension ^slicing.discriminator.path = "url"
@@ -37,7 +36,7 @@ Description: "このプロファイルはImmunizationリソースに対して日
 * reportOrigin ^definition = "予防接種を実施した時に，ワクチンを接種した人以外からの報告からの情報である場合のデータの発生源。"
 * location only Reference(JP_Location)
 * location ^short = "ワクチンを接種した場所"
-* location ^definition = "接種医療機関。ワクチン接種がどこで実施されたかを表す。サービスが提供された場所。摂取された身体部位ではない。"
+* location ^definition = "接種医療機関。ワクチン接種がどこで実施されたかを表す。サービスが提供された場所。接種された身体部位ではない。"
 * manufacturer only Reference(JP_Organization)
 * manufacturer ^short = "ワクチンメーカー"
 * manufacturer ^definition = "ワクチメーカーの名前。"
@@ -45,6 +44,7 @@ Description: "このプロファイルはImmunizationリソースに対して日
 * lotNumber ^definition = "ワクチン製剤のロット番号。"
 * expirationDate ^short = "ワクチンの使用期限"
 * expirationDate ^definition = "ワクチンの消費期限を表す日。"
+* site from $JP_MedicationBodySiteJAMIExternal_VS (preferred)
 * site ^short = "ワクチンが接種された身体部位"
 * site ^definition = "ワクチンが接種された身体部位"
 * route ^short = "ワクチンを接種した経路"
@@ -69,7 +69,7 @@ Description: "このプロファイルはImmunizationリソースに対して日
 * education ^definition = "ワクチンを接種するときに患者（あるいは保護者）に提示された教材。"
 * programEligibility ^short = "ワクチン接種計画での患者適格性"
 * programEligibility ^definition = "ワクチン接種計画での患者適格性を示す"
-* fundingSource ^short = "ワクチン接種計画のの資金源"
+* fundingSource ^short = "ワクチン接種計画の資金源"
 * fundingSource ^definition = "ワクチンが実際に接種されるときの資金源を示す。これは患者適格性（たとえば，公的に購入されたワクチンには適格性があるが，在庫の問題で私的資金で購入されたワクチンを投与するような場合）とは異なることがある。"
 * reaction ^short = "予防接種後に起こった反応についての詳細な記録"
 * reaction ^definition = "予防接種に関連する時期に発生した副反応を示す分類されたデータ。"
@@ -79,13 +79,14 @@ Description: "このプロファイルはImmunizationリソースに対して日
 Extension: JP_Immunization_DueDateOfNextDose
 Id: jp-immunization-duedateofnextdose
 Title: "JP Core Immunization DueDateOfNextDose Extension"
-Description: "次回摂取予定日"
+Description: "次回接種予定日"
 * ^url = $JP_Immunization_DueDateOfNextDose
 * ^status = #active
 * ^context.type = #element
 * ^context.expression = "Immunization"
 * . ^short = "次回接種予定日"
 * . ^definition = "次回接種を予定している日、期限"
+* ^date = "2025-07-04"
 * url = $JP_Immunization_DueDateOfNextDose (exactly)
 * value[x] only date
 
@@ -99,6 +100,7 @@ Description: "検定年月日"
 * ^context.expression = "Immunization"
 * . ^short = "検定年月日"
 * . ^definition = "ワクチンが検定された年月日"
+* ^date = "2025-07-04"
 * url = $JP_Immunization_CertificatedDate (exactly)
 * value[x] only date
 
@@ -112,5 +114,6 @@ Description: "製造年月日"
 * ^context.expression = "Immunization"
 * . ^short = "製造年月日"
 * . ^definition = "ワクチンが製造された年月日"
+* ^date = "2025-07-04"
 * url = $JP_Immunization_ManufacturedDate (exactly)
 * value[x] only date

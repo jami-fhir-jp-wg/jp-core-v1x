@@ -8,12 +8,12 @@ Title: "JP Core Patient Profile"
 Description: "このプロファイルはPatientリソースに対して、患者のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient"
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2025-07-04"
 * . ^short = "医療サービスを受けている個人または動物に関する情報"
-* . ^definition = "ケアまたはその他の健康関連サービスを受けている個人または動物に関する人口統計およびその他の管理情報。"
+* . ^definition = "ケアまたはその他の健康関連サービスを受けている個人または動物に関する基本情報およびその他の管理情報。"
 * extension contains
-    $patient-religion named religion ..* and
-    $patient-birthPlace named birthPlace ..1 and
+    $patient-religion|4.0.1 named religion ..* and
+    $patient-birthPlace|4.0.1 named birthPlace ..1 and
     JP_Patient_Race named race ..*
 * extension[religion] ^short = "患者の宗教 【詳細参照】"
 * extension[religion] ^definition = "患者の公言された宗教的所属。"
@@ -161,9 +161,9 @@ FHIRデータ型仕様に従って、以下の内容を採用する。
 * address.state ^comment = "１MBを超えないこと。  都道府県名。「都」「道」「府」「県」のそれぞれの文字を含める。 例：東京都"
 * address.postalCode ^short = "郵便番号 【詳細参照】"
 * address.postalCode ^comment = "郵便番号。日本の郵便番号の場合には3桁数字とハイフン1文字と4桁数字からなる半角８文字、または最初の3桁だけの3文字のいずれかとする。 例：113-8655"
-* address.country ^short = "国名またはISO 3166コード　(ISO 3166 2 or 3文字こーど)"
+* address.country ^short = "国名またはISO 3166コード　(ISO 3166 2 or 3文字コード)"
 * address.country ^definition = "国-一般的に理解されている、または一般的に受け入れられている国の国名かコード。"
-* address.country ^comment = "ISO 3166 3文字コードは、人間が読める国名の代わりに使用する。  ISO 3166の2文字または3文字のコード.  日本であれば、jpまたはjpn"
+* address.country ^comment = "ISO 3166 3文字コードは、人間が読める国名の代わりに使用する。  ISO 3166の2文字または3文字のコード.  日本であれば、JPまたはJPN"
 * address.period ^short = "住所が使用されていた（いる）期間"
 * address.period ^definition = "住所が使用されていた（いる）期間"
 * address.period ^comment = "住所が使用されていた/されている期間。 期間は時間の範囲を指定する。使用状況はその期間全体に適用されるか、範囲から1つの値が適用される。  期間は、時間間隔（経過時間の測定値）には使用されない。"

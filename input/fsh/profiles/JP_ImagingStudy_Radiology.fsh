@@ -140,7 +140,7 @@ study階層のendpointと同じ。DICOMのリソース位置を指定。基本�
 bodySiteは、画像化された身体部分の左右差を示している場合がある。その場合、ImagingStudy.series.lateralityのコンテンツと一致している必要がある。"
 * series.bodySite ^comment = "コードは、列挙型またはコードリストで、どの部位の検査なのかを示す。フリーではなく、DICOM定義書の中で示される語句（コード）をデフォルトとするが、JJ1017Pの小部位コードの利用を許容する。"
 * series.bodySite ^binding.description = "DICOM tagに設定されているコードをデフォルトとするが、JJ1017Pの小部位コードの利用を許容する。"
-* series.bodySite from $JP_ImagingStudy_Radiology_BodySite_VS (example)
+//* series.bodySite from $JP_ImagingStudy_Radiology_BodySite_VS (example)
 * series.laterality ^short = "人体部位の左右識別"
 * series.laterality ^definition = "検査した（おそらく対になっている）解剖学的構造の左右識別。  
 例：左膝、両方の肺、または対になっていない腹部。存在する場合は、ImagingStudy.series.bodySiteに示されている左右差情報と一致している必要がある。"

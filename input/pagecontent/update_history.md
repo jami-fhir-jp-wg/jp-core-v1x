@@ -1,6 +1,7 @@
 ***v1.2.0***
 
 * 全般
+  * 説明文や翻訳部分の語句の修正を中心にパブリックコメントの対応を行った。
   * v1.1.2の不具合を修正し、新たにプロファイルを追加した。
   * 「CodeSystem」および「Identifierのsystem要素」にOID形式で定義されていたURIを、URL形式の定義があるものについてはURL形式に変更した。本変更に関して`OIDマッピング表`の項目で記載をしている
   * 各プロファイルのベースとなるFHIRバージョンは4.0.1を維持し、不具合などやむを得ない場合を除き、下位互換性を保つように考慮している
@@ -23,6 +24,7 @@
     * Exampleとして提示しているCodeSystemのcontext=completeの状態に変更した
     * 操作：$everythingが不要であるため、Medication関連プロファイルを記述を削除した
     * 施設ごとに管理される処方箋IDのSystem値に関するルールを、コメントに加えて制約（invariant）にて記述するようにした
+    * JP_MedicationInstructionForDispenseJHSP0002_VSのURLの一部に不具合があり修正を行った。
   * Diagnostic グループ
     * Observation
       * Categoryのスライシング名を first, second, third に統一した
@@ -36,6 +38,16 @@
       * `JP_Observation_DentalOral_ToothExistence`プロファイルを追加定義した
       * `JP_Observation_DentalOral_ToothTreatmentCondition`プロファイルを追加定義した
       * `JP_Observation_DentalOral_MissingToothCondition`プロファイルを追加定義した
+      * `JP_Observation_DentalOral_MissingToothCondition`プロファイルを追加定義した
+      * `JP_Observation_DentalOral_eCS`プロファイルを追加定義した
+      * `JP_Observation_DentalOral_BodySiteStatus`Extensionを追加定義した
+      * `JP_Observation_DentalOral_BodyStructure_eCS`Extensionを追加定義した
+      * `JP_Observation_DentalOral_ToothRoot`Extensionを追加定義した
+      * `JP_Observation_DentalOral_ToothSurface`Extensionを追加定義した
+      * `JP_Observation_Electrocardiogram_DeviceInterpretation`Extensionを追加定義した
+      * `JP_Observation_Electrocardiogram_Duration`Extensionを追加定義した
+      * `JP_Observation_Electrocardiogram_NumberOfLead`Extensionを追加定義した
+      * `JP_Observation_Electrocardiogram_StressType`Extensionを追加定義した
     * ImagingStudy
       * `JP_ImagingStudy_Radiology`プロファイルのmodalityおよびseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した
       * `JP_ImagingStudy_Radiology`のIdentifierに関するConformanceをSHALLに変更した
@@ -58,7 +70,6 @@
     * SearchParameterのexpressionのFHIRPath記述に対する指摘に対応した
 * Terminology関連
   * 以下のコードシステムおよびバリューセットを追加/削除した
-    * `JP_BodySite_VS`
     * `JP_ConditionDieaseOutcomeHL70241_CS`
     * `JP_ConditionDieaseOutcomeJHSD0006_CS`
     * `JP_ConditionDieaseOutcomeReceipt_CS`
@@ -76,7 +87,6 @@
     * `JP_ConditionDiseaseOutcomeHL70241_VS`
     * `JP_ConditionDiseaseOutcomeJHSD0006_VS`
     * `JP_ConditionDiseaseOutcomeReceipt_VS`
-    * `JP_Conditon_BodySite_VS`
     * `JP_DentalBodySite_CS`
     * `JP_DentalBodySite_VS`
     * `JP_DentalBodySiteStatus_CS`
@@ -131,6 +141,8 @@
     * 複数パラメータをConformance(SHALL, SHOULD, MAY)の指定を含め追加した
   * Operation
     * 各プロファイルに記載されたOperation定義を、Capability Statementに明記した
+* Security関連
+  * 医療情報システム・サービス提供事業者安全管理ガイドラインの変更に伴い、修正を実施した。
 
 ***v1.1.2***
 

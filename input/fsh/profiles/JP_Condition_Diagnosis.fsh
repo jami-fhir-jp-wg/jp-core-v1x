@@ -8,7 +8,7 @@ Title: "JP Core Condition Diagnosis Profile"
 Description: "このプロファイルはConditionリソースに対して、患者の診断に関する情報を送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition_Diagnosis"
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2025-07-04"
 * . ^short = "Detailed information about disease. 患者の診断に関する詳細な情報"
 * . ^definition = "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.\r\n\r\n健康上の懸念となるレベルに達した、身体的、精神的、社会的な負の状態(condition)や問題（problem／issue）、医療者による診断(diagnosis)、生じたイベント(event)、置かれている状況(situation)、臨床的概念(clinical concept)。"
 * extension ^slicing.discriminator.type = #value
@@ -18,7 +18,7 @@ Description: "このプロファイルはConditionリソースに対して、患
     JP_Condition_DiseaseOutcome named diseaseOutcome ..1
 * clinicalStatus ^short = "active | recurrence | relapse | inactive | remission | resolved （アクティブ | 再発 | 再燃 | インアクティブ | 寛解 | 完治）【詳細参照】"
 * clinicalStatus ^definition = "The clinical status of the condition.\r\n\r\nこの患者状態の臨床的ステータス（アクティブか否かなど）"
-* clinicalStatus ^comment = "診断の場合、転帰区分を指定するのに使用する。使用する場合、ConditionClinicalStatusCodesは必須で、それ以外にHL7表0241、JHSD表0006、レセプト電算システム転帰区分コードが使用できる。"
+* clinicalStatus ^comment = "データ型はCodeableConceptである。clinicalStatusには何らかの臨床的判断が伴うため、FHIRで指定されたvalue setよりも特異性のあるvalue setが必要となりうる。これは、いわゆる転帰(outcome)のみを意味しない。使用する場合、ConditionClinicalStatusCodesを必須として指定し、それ以外にHL7表0241、JHSD表0006、レセプト電算システム転帰区分コードが使用できる。"
 * verificationStatus ^short = "unconfirmed | provisional | differential | confirmed | refuted | entered-in-error（十分に確認されていない | 暫定的 | 鑑別的 | 十分な根拠で存在 | 十分な根拠で否定 | 誤記載）。【詳細参照】"
 * verificationStatus ^definition = "The verification status to support the clinical status of the condition.\r\n\r\n この患者状態が存在するかどうかの検証状況。"
 * verificationStatus ^comment = "疑い病名を指定するのに使用する。疑い病名の場合は 'unconfirmed'を、確定病名の場合は'confirmed'をそれぞれ指定する。"
@@ -47,8 +47,8 @@ Description: "このプロファイルはConditionリソースに対して、患
 * code.coding[medisRecordNo] from $JP_Disease_MEDIS_ManagementID_VS (required)
 * code.coding[medisRecordNo].system = $JP_Disease_MEDIS_ManagementID_CS (exactly)
 * code.coding[medisRecordNo].code 1..
-* code.coding[medisRecordNo] ^short = "MEDIS ICD10対応標準病名マスター(管理番号)。【詳細参照】"
-* code.coding[medisRecordNo] ^definition = "MEDIS ICD10対応標準病名マスターの管理番号。"
+* code.coding[medisRecordNo] ^short = "MEDIS ICD10対応標準病名マスターの交換用コード。"
+* code.coding[medisRecordNo] ^definition = "MEDIS ICD10対応標準病名マスターの交換用コード。"
 * code.coding[medisRecordNo] ^comment = "JP_Disease_MEDIS_ManagementID_VSの中から適切なコードを指定する。"
 * code.coding[receipt] from $JP_Disease_Claim_VS (required)
 * code.coding[receipt].system = $JP_Disease_Claim_CS (exactly)
@@ -74,6 +74,8 @@ Description: "このプロファイルはConditionリソースに対して、患
 * abatement[x] ^short = "転帰日（病名終了日）。診断された疾患や症状がいつ治癒／寛解／軽快したか。【詳細参照】"
 * abatement[x] ^definition = "診断された疾患や症状が解決または寛解した日付または推定日付。 「寛解(remission)」や「解決(resolution)」には過剰な意味合いがあるため「軽減(abatement)」と呼ばれる。つまり、疾患や症状は本当に解決されることはないが、軽減することはある。"
 * abatement[x] ^comment = "転帰日が不明の場合、病名終了日（当該病名の診療を終了した日）を記述してもよい。多くのケースでは解決と寛解の区別は明確でないため、これらに明確な区別はない。 年齢は通常、患者の症状が軽減した年齢を報告する場合に使用される。abatement要素がない場合、症状が解決したか寛解に入ったかは不明である。 アプリケーションとユーザーは通常、状態がまだ有効であると想定する必要がある。 abatementString が存在する場合、状態が軽減されることを意味する。"
+* evidence.code ^definition = "この状態の記録に至った徴候や症状。"
+* evidence.code ^short = "徴候や症状"
 
 // ==============================
 //   Extension 定義
@@ -87,7 +89,7 @@ Title: "JP Core Disease Outcome Extension"
 Description: "病名の転帰を格納するための拡張"
 * ^url = $JP_Condition_DiseaseOutcome
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2025-07-04"
 * ^context.type = #element
 * ^context.expression = "Condition"
 * . ^short = "病名転帰"
@@ -131,7 +133,7 @@ Title: "JP Core Disease Prefix Modifier Extension"
 Description: "病名の前置修飾語を格納するための拡張"
 * ^url = $JP_Condition_DiseasePrefixModifier
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2023-08-05"
 * ^context.type = #element
 * ^context.expression = "Condition.code"
 * . ^short = "前置修飾語"

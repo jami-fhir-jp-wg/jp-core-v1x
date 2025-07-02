@@ -8,10 +8,10 @@ Title: "JP Core AllergyIntolerance Profile"
 Description: "このプロファイルはAllergyIntoleranceリソースに対して、患者のアレルギー不耐症に関するデータを送受信するための制約と拡張を定めるものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance"
 * ^status = #active
-* ^date = "2024-12-30"
-* . ^short = "Allergy or Intolerance (generally: Risk of adverse reaction to a substance). アレルギー不耐症 (特定の物質への暴露で生じた有害反応)"
+* ^date = "2025-07-04"
+* . ^short = "Allergy or Intolerance (generally: Risk of adverse reaction to a substance). アレルギー不耐症 (特定の物質への曝露で生じた有害反応)"
 * . ^definition = "Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.  
-このリソースは患者のアレルギー不耐症を表現する。具体的には、特定の物質または物質群への暴露によって生じる有害反応の傾向や、潜在的なリスクを表現する。"
+このリソースは患者のアレルギー不耐症を表現する。具体的には、特定の物質または物質群へのに曝露よって生じる有害反応の傾向や、潜在的なリスクを表現する。"
 * text ^short = "Text summary of the resource, for human interpretation. このリソースを人間が解釈するためのテキスト要約"
 * clinicalStatus ^short = "active | inactive | resolved (アクティブ | 非アクティブ | 解決済み)"
 * clinicalStatus ^definition = "The clinical status of the allergy or intolerance.  
@@ -44,9 +44,9 @@ AllergyIntolerance.codeのみを処理し、AllergyIntolerance.reaction.substanc
 * encounter ^short = "Encounter when the allergy or intolerance was asserted. このアレルギー不耐症が判明した受療の状況（外来、入院、救急、在宅など）"
 * encounter ^definition = "The encounter when the allergy or intolerance was asserted.  
 このアレルギー不耐症が判明した受療の状況（外来、入院、救急、在宅など）"
-* onset[x] ^short = "When allergy or intolerance was identified. このアレルギー不耐症のオンセット"
+* onset[x] ^short = "When allergy or intolerance was identified. アレルギー不耐症が出現した時期"
 * onset[x] ^definition = "Estimated or actual date, date-time, or age when allergy or intolerance was identified.  
-このアレルギー不耐症が同定された事実もしくは推定された時期（日付、日時、年齢）。"
+このアレルギー不耐症が確認された、もしくは推定された時期（日付、日時、年齢）"
 * recordedDate ^short = "Date first version of the resource instance was recorded. このアレルギー不耐症が初めて記録された日時"
 * recordedDate ^definition = "The recordedDate represents when this particular AllergyIntolerance record was created in the system, which is often a system-generated date. このアレルギー不耐症の記録がシステムで作成された日時を表し、多くの場合、システムが生成した日付である。"
 * recorder only Reference(JP_Practitioner or JP_PractitionerRole or JP_Patient or RelatedPerson)
@@ -63,9 +63,9 @@ AllergyIntolerance.codeのみを処理し、AllergyIntolerance.reaction.substanc
 * note ^short = "Additional text not captured in other fields. 他のフィールド要素では記述できない追加テキスト"
 * note ^definition = "Additional narrative about the propensity for the Adverse Reaction, not captured in other fields.  
 他のフィールド要素では表現できない、このアレルギー不耐症に関する追加的な記述。"
-* reaction ^short = "Adverse Reaction Events linked to exposure to substance. このアレルゲンへの暴露に関連する有害反応"
+* reaction ^short = "Adverse Reaction Events linked to exposure to substance. このアレルゲンへの曝露に関連する有害反応"
 * reaction ^definition = "Details about each adverse reaction event linked to exposure to the identified substance.  
-同定された物質への暴露に関連する個々の有害反応に関する詳細情報。"
+同定された物質への曝露に関連する個々の有害反応に関する詳細情報。"
 * reaction.substance ^short = "Specific substance or pharmaceutical product considered to be responsible for event. 有害反応の原因と考えられる特定の物質または医薬品"
 * reaction.substance ^definition = "Identification of the specific substance (or pharmaceutical product) considered to be responsible for the Adverse Reaction event. Note: the substance for a specific reaction may be different from the substance identified as the cause of the risk, but it must be consistent with it. For instance, it may be a more specific substance (e.g. a brand medication) or a composite product that includes the identified substance. It must be clinically safe to only process the 'code' and ignore the 'reaction.substance'.  If a receiving system is unable to confirm that AllergyIntolerance.reaction.substance falls within the semantic scope of AllergyIntolerance.code, then the receiving system should ignore AllergyIntolerance.reaction.substance.  
 有害反応の原因と考えられる物質（または医薬品）。  
@@ -84,9 +84,9 @@ AllergyIntolerance.codeのみを処理し、AllergyIntolerance.reaction.substanc
 * reaction.severity ^short = "mild | moderate | severe (of event as a whole) （軽度 | 中度 | 重度）"
 * reaction.severity ^definition = "Clinical assessment of the severity of the reaction event as a whole, potentially considering multiple different manifestations.  
 有害反応の重症度の全体としての臨床的な評価で、潜在的には複数の異なる症状兆候を考慮して決める。"
-* reaction.exposureRoute ^short = "How the subject was exposed to the substance. 患者がこの物質にどのように暴露したか"
+* reaction.exposureRoute ^short = "How the subject was exposed to the substance. 患者がこの物質にどのように曝露したか"
 * reaction.exposureRoute ^definition = "Identification of the route by which the subject was exposed to the substance.  
-患者がどのような経路でこの物質に暴露したかの同定。"
+患者がどのような経路でこの物質に曝露したかの同定。"
 * reaction.note ^short = "Text about event not captured in other fields. 他のフィールド要素では記述できない追加テキスト"
 * reaction.note ^definition = "Additional text about the adverse reaction event not captured in other fields.  
 他のフィールド要素では記述できない、有害反応に関する追加テキスト。"

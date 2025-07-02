@@ -25,6 +25,7 @@ RuleSet: MedicationAdministrationBaseRules_subject2note
 * reasonReference only Reference(JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)
 * reasonReference ^definition = "薬が投与された理由を裏付ける状態または観察"
 * reasonReference ^comment = "これは、投薬要求の理由である状態への参照。コードのみが存在する場合は、reasonCodeを使用する。"
+* request only Reference(MedicationRequest or JP_MedicationRequest or JP_MedicationRequest_Injection)
 * request ^short = "実施された元の投与依頼情報"
 * request ^definition = "投与を実行する元になった投与指示や権限への参照情報。"
 * request ^comment = "これは、orderまたはinstance-orderのいずれかであるMedicationRequestへの参照。インテントが他の値である場合は、MedicationRequestsを参照しないこと。"
@@ -114,7 +115,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
     JP_MedicationAdministration_Requester named requester ..*
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministrationBase"
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2025-05-24"
 * . ^short = "患者への薬剤投与記録"
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
@@ -174,7 +175,7 @@ Title: "JP Core MedicationAdministration Profile"
 Description: "このプロファイルはMedicationAdministrationリソースに対して、内服・外用薬剤処方投与実施情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration"
 * ^status = #active
-* ^date = "2023-10-31"
+* ^date = "2025-07-04"
 
 * identifier contains
     orderInRp 1..1
@@ -213,7 +214,7 @@ Title: "JP Core MedicationAdministration Injection Profile"
 Description: "このプロファイルはMedicationAdministrationリソースに対して、注射薬剤処方投与実施情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration_Injection"
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2025-07-04"
 * . ^short = "患者への注射薬剤投与記録"
 * extension contains
     JP_MedicationAdministration_UncategorizedComment named uncategorizedComment ..*

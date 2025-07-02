@@ -50,10 +50,10 @@ HL7 V2系では用語集を識別するコーディングシステム名(以下�
 
 ### 制約一覧
 JP Core MedicationRequest リソースは、以下の制約を満たさなければならない。
-- dosageInstruction.doseAndRage.rateRatio.denominator.value : １日量を記述する場合"1"に固定される
-- dosageInstruction.doseAndRage.rateRatio.denominator.unit : １日量を記述する場合"日"に固定される
-- dosageInstruction.doseAndRage.rateRatio.denominator.system : １日量を記述する場合"http://unitsofmeasure.org"に固定される
-- dosageInstruction.doseAndRage.rateRatio.denominator.code : １日量を記述する場合"d"に固定される
+- dosageInstruction.doseAndRate.rateRatio.denominator.value : １日量を記述する場合"1"に固定される
+- dosageInstruction.doseAndRate.rateRatio.denominator.unit : １日量を記述する場合"日"に固定される
+- dosageInstruction.doseAndRate.rateRatio.denominator.system : １日量を記述する場合"http://unitsofmeasure.org"に固定される
+- dosageInstruction.doseAndRate.rateRatio.denominator.code : １日量を記述する場合"d"に固定される
 
 ### 項目の追加
 療養担当則23条では、「保険医は、処方箋を交付する場合には、様式第二号若しくは第二号の二又はこれらに準ずる様式の処方箋に必要な事項を記載しなければならない。」とされており、外来処方、院内処方の区分を明示していない。したがって、個別のユースケースにおいては一部を省略されることも前提の上で、規格としてはこれに準拠すべきと考え、様式に収載されている以下の項目を追加した。
@@ -225,7 +225,7 @@ Timingデータ型のrepeat.boundsDuration要素を使用した服用期間の�
 ``` 
 
 ### １回量と１日量の記述方法
-2010年1月に医療ミス防止の観点から、慣例として普及していた一日量処方ではなく、1回量処方を推奨するという「内服薬処方せんの記載方法の在り方に関する検討会報告書」が厚生労働省から出された。そもそも、HL7 FHIRでは1回量処方を前提としていることから、本ワーキンググループでも、1回量処方のみの対応で良いとの意見も出た。しかし、8年経過した＝ても処方箋の8割が一日量処方を使用しているとの報告があり、システムによっては1回量処方に対応していないことから一日量処方にも対応することとした。
+2010年1月に医療ミス防止の観点から、慣例として普及していた一日量処方ではなく、1回量処方を推奨するという「内服薬処方せんの記載方法の在り方に関する検討会報告書」が厚生労働省から出された。そもそも、HL7 FHIRでは1回量処方を前提としていることから、本ワーキンググループでも、1回量処方のみの対応で良いとの意見も出た。しかし、2018年の調査でも処方箋の8割が一日量処方を使用しているとの報告があり、システムによっては1回量処方に対応していないことから一日量処方にも対応することとした。
 
 1回量は、dosageInstruction.doseAndRate.doseQuantity要素 にSimpleQuantity型で記述する。単位コードには、医薬品単位略号を使用する。
 
@@ -260,7 +260,7 @@ Timingデータ型のrepeat.boundsDuration要素を使用した服用期間の�
 doseQuantityエレメントは省略可能(0..1)である。
 
 ### 力価区分の記述方法
-用量は製剤量で記述することを基本とするが、必要に応じて原薬量指定も可能とする。この識別は、dosageInstruction.doseAndRate.type 要素に、力価区分コードを指定することで行い、製剤量は「1」、原薬量は「2」とする。本要素は、安全性のため省略せずに必須とする。
+用量は製剤量で記述することを基本とするが、必要に応じて原薬量指定も可能とする。この識別は、dosageInstruction.doseAndRate.type 要素に、力価区分コードを指定することで行い、製剤量は「1」、原薬量は「2」とする。本要素は、省略せず記入されることが望ましい。
 
 投与量「1回1錠（1日3錠）」を製剤量で記録したインスタンス例を示す。
 ```json
@@ -415,11 +415,11 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 ```
 
 ### 処方箋番号(オーダID)の記述方法
-処方箋を識別する番号も、同様に MedicationRequestリソースの identifier 要素で表現することができる。Identifier 型のsystem 要素には、保険医療機関番号を含む処方箋ID の名前空間を表すOID（urn:oid:1.2.392.100495.20.3.11.1[保険医療機関コード(10 桁)]）を指定する。全国で⼀意になる発番ルールにもとづく場合には "urn:oid:1.2.392.100495.20.3.11" とする。
+処方箋（処方オーダ）の識別子も、同様に MedicationRequestリソースの identifier 要素で表現することができる。
 ```json
 "identifier": [
   {
-    "system": "urn:oid:1.2.392.100495.20.3.11.1.11311234567",
+    "system": "http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier",
     "value": "2020-00123456"
   },
 ]
@@ -493,8 +493,18 @@ HL7 FHIRでは、処方箋の中で同一の用法を持つ剤グループ(RP)�
 ```
 
 ### 各種コメントの記述方法
-薬剤オーダのコメントとしては、薬剤単位につくもの、用法指示などRP単位につくもの、処方箋全体につくものがある。
-全体のコメントはCommunicationリソースを使用し、薬剤単位、RP単位のコメントは、調剤指示以外はコード化されていれば dosageInstruction.additionalInstruction 要素ないしそうでないものは dosageInstruction.patientInstruction 要素を使用し、調剤指示は dispenseRequest要素に対して定義した拡張「InstructionForDispense」を使用する。
+処方オーダに付随するコメントには、薬剤単位につけられるもの、用法指示などRP単位につけられるもの、処方オーダ全体につけられるものがある。
+
+* 処方オーダ全体に対するコメント
+    * Communicationリソースを使用する。
+* 薬剤単位、RP単位のコメント
+    * 調剤指示に関するコメント
+        *  dispenseRequest要素に対して定義した拡張 InstructionForDispense を使用する。
+    * 調剤指示以外についてのコメント
+        * コード化されているもの
+            * dosageInstruction.additionalInstruction を使用する。
+        * コード化されていないもの
+            * dosageInstruction.patientInstruction を使用する。
 
 ### 不均等投与の記述方法
 不均等用法は、「朝1 錠、昼2 錠、夕3 錠服用」など、1 日の中の服用タイミングごとに服用量が変化する用法である。不均等投与を1回投与ごとの複数の用法（1回用法）に分けて記述できる場合は、服用タイミングが異なる複数の剤グループとして表現することができる。しかし、不均等投与を1つの剤グループとして１つの用法（1日用法）でしか表現できないシステムもある。以下では、1回用法のインスタンス例と、1日用法でのインスタンス例をそれぞれ示す。
