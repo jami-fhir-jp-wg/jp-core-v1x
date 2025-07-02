@@ -17,17 +17,23 @@ Usage: #example
 * issued = "2022-10-24T17:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 
-/*
-* extension[structure][0].valueCodeableConcept.coding.system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySite_CS"
-* extension[structure][=].valueCodeableConcept.coding.code = #1042
-* extension[structure][=].valueCodeableConcept.coding.display = "右側下顎側切歯"
-* extension[structure][+].valueCodeableConcept.coding.system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySite_CS"
-* extension[structure][=].valueCodeableConcept.coding.code = #1041
-* extension[structure][=].valueCodeableConcept.coding.display = "右側下顎中切歯"
-* bodySite.extension[bodyStructure][+].valueCodeableConcept.coding.system = "http://jpfhir.jp/fhir/core/ValueSet/JP_DentalBodyStructure_VS"
-* bodySite.extension[bodyStructure][=].valueCodeableConcept.coding.code = "TP-18-01"
-* bodySite.extension[bodyStructure][=].valueCodeableConcept.coding.display = "歯冠部"
-* component[0].valueCodeableConcept.coding.system = $JP_DentalPresentTeethObservation_CS
-* component[=].valueCodeableConcept.coding.code = #TP09-15
-* component[=].valueCodeableConcept.coding.display = "歯の破折（ＦｒＴ）"
-*/
+* bodySite.extension[bodySiteStatus].valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS
+* bodySite.extension[bodySiteStatus].valueCodeableConcept.coding.code = #0
+
+* bodySite.extension[includedStructure][+].extension[structure].valueCodeableConcept.coding.system = $JP_DentalBodySite_CS
+* bodySite.extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.code = #1042
+* bodySite.extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.display = "右側下顎側切歯"
+* bodySite.extension[includedStructure][=].extension[qualifier][+].valueCodeableConcept.coding.system = $JP_DentalSurfaceBodyStructure_CS
+* bodySite.extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.code = #TP-18
+* bodySite.extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.display = "歯冠部"
+
+* bodySite.extension[includedStructure][+].extension[structure].valueCodeableConcept.coding.system = $JP_DentalBodySite_CS
+* bodySite.extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.code = #1041
+* bodySite.extension[includedStructure][=].extension[structure].valueCodeableConcept.coding.display = "右側下顎中切歯"
+* bodySite.extension[includedStructure][=].extension[qualifier][+].valueCodeableConcept.coding.system = $JP_DentalSurfaceBodyStructure_CS
+* bodySite.extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.code = #TP-18
+* bodySite.extension[includedStructure][=].extension[qualifier][=].valueCodeableConcept.coding.display = "歯冠部"
+
+* valueCodeableConcept.coding.system = $JP_DentalPresentTeethObservation_CS
+* valueCodeableConcept.coding.code = #TP-9-15
+* valueCodeableConcept.coding.display = "歯の破折（ＦｒＴ）"

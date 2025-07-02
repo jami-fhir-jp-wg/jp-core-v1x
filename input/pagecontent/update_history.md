@@ -38,6 +38,16 @@
       * `JP_Observation_DentalOral_ToothExistence`プロファイルを追加定義した
       * `JP_Observation_DentalOral_ToothTreatmentCondition`プロファイルを追加定義した
       * `JP_Observation_DentalOral_MissingToothCondition`プロファイルを追加定義した
+      * `JP_Observation_DentalOral_MissingToothCondition`プロファイルを追加定義した
+      * `JP_Observation_DentalOral_eCS`プロファイルを追加定義した
+      * `JP_Observation_DentalOral_BodySiteStatus`Extensionを追加定義した
+      * `JP_Observation_DentalOral_BodyStructure_eCS`Extensionを追加定義した
+      * `JP_Observation_DentalOral_ToothRoot`Extensionを追加定義した
+      * `JP_Observation_DentalOral_ToothSurface`Extensionを追加定義した
+      * `JP_Observation_Electrocardiogram_DeviceInterpretation`Extensionを追加定義した
+      * `JP_Observation_Electrocardiogram_Duration`Extensionを追加定義した
+      * `JP_Observation_Electrocardiogram_NumberOfLead`Extensionを追加定義した
+      * `JP_Observation_Electrocardiogram_StressType`Extensionを追加定義した
     * ImagingStudy
       * `JP_ImagingStudy_Radiology`プロファイルのmodalityおよびseries.modalityに対するバインド対象を`JP_DICOMModality_VS`に変更した
       * `JP_ImagingStudy_Radiology`のIdentifierに関するConformanceをSHALLに変更した
@@ -60,7 +70,6 @@
     * SearchParameterのexpressionのFHIRPath記述に対する指摘に対応した
 * Terminology関連
   * 以下のコードシステムおよびバリューセットを追加/削除した
-    * `JP_BodySite_VS`
     * `JP_ConditionDieaseOutcomeHL70241_CS`
     * `JP_ConditionDieaseOutcomeJHSD0006_CS`
     * `JP_ConditionDieaseOutcomeReceipt_CS`
@@ -78,7 +87,6 @@
     * `JP_ConditionDiseaseOutcomeHL70241_VS`
     * `JP_ConditionDiseaseOutcomeJHSD0006_VS`
     * `JP_ConditionDiseaseOutcomeReceipt_VS`
-    * `JP_Conditon_BodySite_VS`
     * `JP_DentalBodySite_CS`
     * `JP_DentalBodySite_VS`
     * `JP_DentalBodySiteStatus_CS`

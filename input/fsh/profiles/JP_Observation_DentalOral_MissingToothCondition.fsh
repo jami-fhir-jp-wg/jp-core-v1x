@@ -14,25 +14,16 @@ Description: "このプロファイルはObservationリソースに対して、�
 【JP Core仕様】当該口腔診査（検査項目）に対して、施設内で割り振られる一意の識別子。)
 * identifier ^comment = "例：実施日に連番を付加した番号"
 
-* basedOn 0..
-* insert SetDefinition(basedOn, 実施されるプラン、提案、依頼  
-【JP Core仕様】未使用)
+* insert SetDefinition(basedOn, 実施されるプラン、提案、依頼  【JP Core仕様】未使用)
 * basedOn ^comment = "本プロファイル（特定の歯の有無・状態）は口腔診査レポートに紐付く前提のため、本プロファイル特有の定義はしない。"
+* insert SetDefinition(partOf, 参照されるイベントの一部分 【JP Core仕様】未使用)
+* insert SetDefinition(status, 結果の状態 【JP Core仕様】ステータス)
 
-* partOf 0..*
-* insert SetDefinition(partOf, 参照されるイベントの一部分  
-【JP Core仕様】未使用)
-
-* status 1..1
-* insert SetDefinition(status, 結果の状態  
-【JP Core仕様】ステータス)
-
-* category 3..
-* insert SetDefinition(category, Observationの種類（タイプ）の分類
-【JP Core仕様】以下を指定する。
+* insert SetDefinition(category, Observationの種類（タイプ）の分類)
+* category ^comment = "【JP Core仕様】以下を指定する。
 第1コード：exam
 第2コード：LP89803-8 （Dental）
-第3コード：DO-1-03 （MissingToothCondition）)
+第3コード：DO-1-03 （MissingToothCondition）"
 * category contains
     second 1..1 and
     third 1..1
@@ -51,7 +42,6 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category[third].coding.code 1..1
 * category[third].coding.code = #DO-1-03 (exactly)
 
-* code 1..1
 * insert SetDefinition(code.coding, observation のタイプ（コードまたはタイプ）
 【JP Core仕様】54570-7（Oral/dental status）を指定する)
 * code.coding.system = $Loinc_CS (exactly)
@@ -88,11 +78,9 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(bodySite.extension[toothSurface], 【JP Core仕様】特定の歯の歯面を指定)
 * insert SetDefinition(method, 検査方法（目視、読影など)
 * insert SetDefinition(specimen, 観察（観測、検査）に使われた検体材料 【JP Core仕様】未使用)
-
 * device ^comment = "例：口腔内スキャナなど"
-* hasMember 0..0
-* insert SetDefinition(hasMember, observationグループに属する関連リソース 【JP Core仕様】欠損歯の処置状態は最終的な観察結果のため、他のObservationリソースを参照しない)
 
+* insert SetDefinition(hasMember, observationグループに属する関連リソース 【JP Core仕様】欠損歯の処置状態は最終的な観察結果のため、他のObservationリソースを参照しない)
 * insert SetDefinition(derivedFrom, observationの発生源に関連する測定 【JP Core仕様】未使用)
 
 //TODO:　要確認

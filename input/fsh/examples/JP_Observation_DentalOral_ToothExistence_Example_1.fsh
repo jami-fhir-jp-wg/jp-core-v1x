@@ -19,4 +19,4 @@ Usage: #example
 * hasMember = Reference(Observation/jp-observation-dentaloral-toothtreatmentcondition-example-1)
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * bodySite = $JP_DentalBodySite_CS#1015 "右側上顎第２小臼歯"
-* extension[bodySiteStatus].valueCodeableConcept = $JP_DentalBodySiteStatus_CS#0
+* bodySite.extension[bodySiteStatus].valueCodeableConcept = $JP_DentalBodySiteStatus_CS#0
