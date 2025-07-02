@@ -4,6 +4,7 @@ Title: "JP Core MedicationRequest Example 内服処方指示 ムコダイン錠�
 Description: "内服処方指示 ムコダイン錠２５０ｍｇ"
 Usage: #example
 // * identifier[rpNumber][+].system = $JP_Medication_RPGroupNumber
+* identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "1"
 * identifier[orderInRp].value = "1"
 * identifier[requestIdentifier].value = "1234567890.1.1"

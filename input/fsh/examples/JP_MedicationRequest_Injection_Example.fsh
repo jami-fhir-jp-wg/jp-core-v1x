@@ -5,6 +5,7 @@ Description: "注射処方指示 ホリゾン注射液１０ｍｇワンショ�
 Usage: #example
 * contained[+] = jp-medicationrequest-injection-medication-example-1
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-1
+* identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "1"
 * identifier[requestIdentifier].value = "1234567890.1"
 * identifier[prescriptionIdentifierCommon].value = "20241101-0000000000000001"
