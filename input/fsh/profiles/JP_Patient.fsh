@@ -8,7 +8,7 @@ Title: "JP Core Patient Profile"
 Description: "このプロファイルはPatientリソースに対して、患者のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient"
 * ^status = #active
-* ^date = "2025-06-24"
+* ^date = "2025-07-04"
 * . ^short = "医療サービスを受けている個人または動物に関する情報"
 * . ^definition = "ケアまたはその他の健康関連サービスを受けている個人または動物に関する基本情報およびその他の管理情報。"
 * extension contains
