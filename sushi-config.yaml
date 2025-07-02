@@ -285,7 +285,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalSurfaceBodyStructure_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalTeethObservation_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DICOMModality_VS
-    - http://jpfhir.jp/fhir/core/ValueSet/JP_ImagingStudy_Endoscopy_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ImagingStudy_Radiology_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Observation_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationDetailedDentalCategory_VS

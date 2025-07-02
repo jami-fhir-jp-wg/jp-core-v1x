@@ -16,10 +16,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * basedOn ^comment = "本プロファイル（複数の部位が同一の疾患を有していたり、複数部位からなる疾患が存在した際に、複数の部位を表現することのできるプロファイル）は診療情報提供書に紐付く前提のため、本プロファイル特有の定義はしない。"
 
 * insert SetDefinition(partOf, 参照されるイベントの一部分 【JP Core仕様】未使用)
-
 * insert SetDefinition(status, 結果の状態 【JP Core仕様】ステータス)
 
-* category 3..*
 * category contains
     second 1..1 and
     third 1..1
@@ -52,29 +50,22 @@ Description: "このプロファイルはObservationリソースに対して、�
 * code.coding.code = $Loinc_CS#57133-1 (exactly)
 * code.coding.display = "Referral note"
 
-//TODO:Commonで0を許容しているのに、1にしているのはなぜ？
 * subject 1..1
 * subject only Reference(JP_Patient)
 * insert SetDefinition(subject, 観察対象者 【JP Core仕様】患者情報)
-
 * insert SetDefinition(focus, subject 要素が実際のobservationの対象でない場合に、observation の対象物。 【JP Core仕様】未使用)
-
 * insert SetDefinition(encounter, このobservationが行われるヘルスケアイベント)
 * encounter ^comment = "例：診療、歯科検診"
 
 * effective[x] only dateTime
 * insert SetDefinition(effective[x], 臨床的に関連する時刻または時間 【JP Core仕様】実施日時)
-
 * insert SetDefinition(issued, このバージョンが利用可能となった日時 JP Core仕様】所見確定日時)
-
 * insert SetDefinition(performer, observationに責任をもつ者)
 * performer ^comment = "例：歯科医師など"
 
-
 * value[x] only CodeableConcept
-* insert SetDefinition(value[x], 実際の結果値 JP Core仕様】歯の処置状態。現存歯、欠損歯、粒度の細かさ、粗さにかかわらず、そのうち一つをVSより選択する)
-//TODO: ValueSetをしているとエラーになる。
-//* value[x] from $JP_ToothStatusObservation_VS (required) 
+* insert SetDefinition(value[x], 実際の結果値 【JP Core仕様】歯の処置状態。現存歯、欠損歯、粒度の細かさ、粗さにかかわらず、そのうち一つをVSより選択する)
+* value[x] from $JP_DentalPresentTeethObservation_VS (preferred) 
 
 * insert SetDefinition(dataAbsentReason, 結果が欠損値である理由 【JP Core仕様】結果が存在しなかった場合、その理由)
 * insert SetDefinition(interpretation, 高、低、正常等の結果のカテゴリ分けした評価 【JP Core仕様】未使用)
@@ -88,21 +79,33 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(component, 複合的な結果 【JP Core仕様】未使用)
 
 // extension 参照宣言
-* extension contains
+* bodySite.extension contains
     $JP_Observation_DentalOral_BodySiteStatus named bodySiteStatus 1..1 and
-    $JP_Observation_DentalOral_BodyStructure_eCS named bodyStructure 0..1
+    $JP_Observation_DentalOral_BodyStructure_eCS named includedStructure 0..*
 
-//TODO:固定値にするのであれば定義する意味はないのでは。
-* insert SetDefinition(extension[bodySiteStatus], 【JP Core仕様】特定の状態を示さない0 を指定)
-* extension[bodySiteStatus].valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS (exactly)
-* extension[bodySiteStatus].valueCodeableConcept.coding.code 1..1
-* extension[bodySiteStatus].valueCodeableConcept.coding.code = #0 (exactly)
+* insert SetDefinition(bodySite.extension[bodySiteStatus], 【JP Core仕様】特定の状態を示さない0 を指定)
+* bodySite.extension[bodySiteStatus].valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS (exactly)
+* bodySite.extension[bodySiteStatus].valueCodeableConcept.coding.code 1..1
+* bodySite.extension[bodySiteStatus].valueCodeableConcept.coding.code = #0 (exactly)
 
-//todo:extension定義で記載するのでは？
-* extension[bodyStructure].extension[structure].valueCodeableConcept from JP_DentalBodySite_VS (required)
-* insert SetDefinition(extension[bodyStructure].extension[structure], 【JP Core仕様】複数の『歯』を繰り返し指定)
-* insert SetDefinition(extension[bodyStructure].extension[qualifier], 【JP Core仕様】特定の歯の歯根と、歯面の２項目を指定)
+* bodySite.extension[includedStructure].extension[structure].valueCodeableConcept from JP_DentalBodySite_VS (required)
+* insert SetDefinition(bodySite.extension[includedStructure].extension[structure], 【JP Core仕様】複数の『歯』を繰り返し指定)
 
-// ベース拡張でslicingが定義されているため、プロファイルでは制約のみ適用
-* extension[bodyStructure].extension[qualifier].valueCodeableConcept.coding[root] from JP_DentalRootBodyStructure_VS (required)
-* extension[bodyStructure].extension[qualifier].valueCodeableConcept.coding[surface] from JP_DentalSurfaceBodyStructure_VS (required)
+* bodySite.extension[includedStructure].extension[qualifier].value[x].coding ^slicing.discriminator.type = #value
+* bodySite.extension[includedStructure].extension[qualifier].value[x].coding ^slicing.discriminator.path = "system"
+* bodySite.extension[includedStructure].extension[qualifier].value[x].coding ^slicing.rules = #open
+* bodySite.extension[includedStructure].extension[qualifier].value[x].coding contains
+  root 0..* and
+  surface 0..*
+* insert SetDefinition(bodySite.extension[includedStructure].extension[qualifier], 【JP Core仕様】特定の歯の歯根と、歯面の２項目を指定)
+
+* bodySite.extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[root] from $JP_DentalRootBodyStructure_VS (required)
+* bodySite.extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[root].system = $JP_DentalRootBodyStructure_CS (exactly)
+* bodySite.extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[root] ^short = "特定の歯の『歯根』を指定"
+* bodySite.extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[root] ^definition = "特定の歯の『歯根』を指定"
+
+* bodySite.extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[surface] from $JP_DentalSurfaceBodyStructure_VS (required)
+* bodySite.extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[surface].system = $JP_DentalSurfaceBodyStructure_CS (exactly)
+* bodySite.extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[surface] ^short = "特定の歯の『歯面』を指定"
+* bodySite.extension[includedStructure].extension[qualifier].valueCodeableConcept.coding[surface] ^definition = "特定の歯の『歯面』を指定"
+
