@@ -1,4 +1,4 @@
-name: JPCore FHIR main Task
+name: JPCore FHIR main Task 
 on:
   push:
     branches: 
