@@ -11,10 +11,12 @@
 本プロファイルでは上記想定シナリオにて用いられるObservationの用途がスコープであり、診療情報提供書用に、複数の部位が同一の疾患を有していたり、複数部位からなる疾患が存在した際に、複数の部位を表現することを取り扱うために、必要な要件を定義している。
 診療情報提供書用であるため、情報共有を行う特定の範囲等を示すため、全ての歯の状態は網羅されていない。
 
+
 <!-- 
 ![](intoronotes-resources/observation_dentaloral_ecs_structure.png) -->
 <img src="intoronotes-resources/observation_dentaloral_ecs_structure.png" height="100%" alt="診療情報提供書のプロファイルにおける口腔所見のデータ構造"/>
 
 ## プロファイル定義
+
 
 {% include markdown-link-references.md %}
