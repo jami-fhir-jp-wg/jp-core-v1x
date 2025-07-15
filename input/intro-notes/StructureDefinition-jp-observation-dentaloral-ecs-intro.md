@@ -14,9 +14,8 @@
 
 <!-- 
 ![](intoronotes-resources/observation_dentaloral_ecs_structure.png) -->
-<img src="intoronotes-resources/observation_dentaloral_ecs_structure2.png" width="100%" alt="診療情報提供書のプロファイルにおける口腔所見のデータ構造"/>
+<img src="intoronotes-resources/observation_dentaloral_ecs_structure.png" width="100%" alt="診療情報提供書のプロファイルにおける口腔所見のデータ構造"/>
  
 ## プロファイル定義
-
 
 {% include markdown-link-references.md %}
