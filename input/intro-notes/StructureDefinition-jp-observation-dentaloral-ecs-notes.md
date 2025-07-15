@@ -11,12 +11,8 @@
 
 ### Extensions定義
 本プロファイルでは、以下の要素を拡張する
-
-- includedstructure : 複数の『歯』を繰り返し表現するため、このelementで示す
-- qualifier : 『歯根』、『歯面』の2項目をこのelementで示す
 - bodySiteStatus : 特定の状態を示さない 0 を指定する（標準歯式コード仕様の5桁目であるが、歯式にも関わらず状態を示すコードのため、状態なしである 0 を選択する）
-- ToothRoot : 特定の歯の歯根を示す
-- bodystructure : 特定の歯の歯面を示す
+- includedStructure : 複数の『歯』を繰り返し表現するため、このelementで示す
 
 <!--
 
