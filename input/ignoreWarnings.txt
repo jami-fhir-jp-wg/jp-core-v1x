@@ -13,7 +13,7 @@ The Implementation Guide contains no explicitly linked examples for this profile
 !!この要素はどの既知のスライスとも一致しません defined in the profile%
 
 # ベストプラクティス
-Rule dom-6%
+# Rule dom-6%
 
 # Terminology関連
 !!!!!!!!CodeSystem urn:oid:1.2.392.200119.5.2.4.1.1.3は未知です
