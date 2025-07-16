@@ -98,6 +98,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   path-pages:
     - input/pagecontent
     - input/intro-notes
+    - input/images
     - fsh-generated/includes
     #- input/summaries
   path-expansion-params: '../../input/_resources/exp-params.json'
