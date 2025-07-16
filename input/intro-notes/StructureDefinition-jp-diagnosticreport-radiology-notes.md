@@ -47,8 +47,8 @@ JP Core V1.2からは、診断、所見などの観察結果についてはDomai
 また、所見(findings)や診断の結果(impression)は対応するObservationリソースに内容が保持されるので、全文検索等の目的で構造化された情報を利用する場合はこれらを参照すること。
 
 <!-- 
-![](intoronotes-resources/observation_radiology_structure.png) -->
-<img src="intoronotes-resources/observation_radiology_structure.png" width="100%" alt="放射線画像診断報告書Observationの構造"/>
+![](observation_radiology_structure.png) -->
+<img src="observation_radiology_structure.png" width="100%" alt="放射線画像診断報告書Observationの構造"/>
 
 具体的な構造については [**放射線読影レポート**][jp-diagnosticreport-radiology-example-1]を参照のこと
 
