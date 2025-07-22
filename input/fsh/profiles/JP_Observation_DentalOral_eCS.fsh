@@ -81,9 +81,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 // extension 参照宣言
 * bodySite.extension contains
     $JP_Observation_DentalOral_BodySiteStatus named bodySiteStatus 1..1 and
-    $JP_Observation_DentalOral_BodyStructure_eCS named includedStructure 0..*
+    $JP_Observation_DentalOral_BodyStructure_eCS named includedStructure 1..*
 
-* insert SetDefinition(bodySite.extension[bodySiteStatus], 【JP Core仕様】特定の状態を示さない0 を指定)
+* insert SetDefinition(bodySite.extension[bodySiteStatus], 【JP Core仕様】特定の状態を示さない 0 を指定)
+* bodySite.extension[bodySiteStatus] ^comment = "標準歯式コード仕様の5桁目、歯式にも関わらず状態を示すコードのため、状態なしである 0 を選択"
 * bodySite.extension[bodySiteStatus].valueCodeableConcept.coding.system = $JP_DentalBodySiteStatus_CS (exactly)
 * bodySite.extension[bodySiteStatus].valueCodeableConcept.coding.code 1..1
 * bodySite.extension[bodySiteStatus].valueCodeableConcept.coding.code = #0 (exactly)
