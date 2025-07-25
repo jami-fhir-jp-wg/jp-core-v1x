@@ -521,7 +521,7 @@ Description: "頓用回数"
 * value[x] ^definition = "頓用回数"
 
 //-------------------------------
-// JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount
+// JP_MedicationRequest_DispenseRequest_InstructionForDispense
 //-------------------------------
 Extension: JP_MedicationRequest_DispenseRequest_InstructionForDispense
 Id: jp-medicationrequest-dispenserequest-instructionfordispense
@@ -539,4 +539,3 @@ Description: "調剤指示。薬剤単位の調剤指示を表現するための
 * value[x] ^short = "調剤指示"
 * value[x] ^definition = "薬剤単位の調剤・払い出し指示"
 * valueCodeableConcept.coding from $JP_MedicationInstructionForDispense_VS (preferred)
-
