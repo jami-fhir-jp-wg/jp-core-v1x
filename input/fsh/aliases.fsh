@@ -23,5 +23,9 @@ Alias: $dicom-ontology = http://dicom.nema.org/resources/ontology/DCM
 // loinc
 Alias: $Loinc_CS = http://loinc.org
 
-// JPCor定義はaliases-jpcore.fshに記載すること
+// JAMI
+Alias: $jami-ePreDispenseInstruction-vs = http://jpfhir.jp/fhir/ePrescription/ValueSet/jami-ePreDispenseInstruction
+Alias: $jami-DrugDispensePreparationMethod-cs = http://jami.jp/CodeSystem/DrugDispensePreparationMethod
 
+
+// JPCor定義はaliases-jpcore.fshに記載すること
