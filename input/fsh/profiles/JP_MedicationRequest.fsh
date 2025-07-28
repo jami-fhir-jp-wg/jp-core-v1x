@@ -538,4 +538,4 @@ Description: "調剤指示。薬剤単位の調剤指示を表現するための
 * value[x] only CodeableConcept
 * value[x] ^short = "調剤指示"
 * value[x] ^definition = "薬剤単位の調剤・払い出し指示"
-* valueCodeableConcept.coding from $JP_MedicationInstructionForDispense_VS (preferred)
+* valueCodeableConcept.coding from $jami-ePreDispenseInstruction-vs (preferred)
