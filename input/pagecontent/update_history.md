@@ -24,6 +24,7 @@
     * 操作：$everythingが不要であるため、Medication関連プロファイルを記述を削除した
     * 施設ごとに管理される処方箋IDのSystem値に関するルールを、コメントに加えて制約（invariant）にて記述するようにした
     * JP_MedicationInstructionForDispenseJHSP0002_VSのURLの一部に不具合があり修正を行った。
+    * `JP_MedicationRequest_DispenseRequest_InstructionForDispense`、`JP_MedicationDispense_Preparation`の調剤に関する拡張にて指定されるValueSetを`JP_MedicationInstructionForDispenseJHSP0002_VS`よりhttp://jpfhir.jp/fhir/ePrescription/ValueSet/jami-ePreDispenseInstructionに変更した。
   * Diagnostic グループ
     * Observation
       * Categoryのスライシング名を first, second, third に統一した
@@ -181,7 +182,6 @@
       * `JP_ImagingStudy_Endoscopy`  
     * `JP_ImagingStudy_Radiology`の説明を見直し、進捗に関する記述の追加やSearchParameterの要求レベル等を修正した、またExampleのテキストエリアの見直した
   * Medication
-    * `JP_MedicationRequest_DispenseRequest_InstructionForDispense`、`JP_MedicationDispense_Preparation`の調剤に関する拡張にて指定されるValueSetを`JP_MedicationInstructionForDispenseJHSP0002_VS`よりhttp://jpfhir.jp/fhir/ePrescription/ValueSet/jami-ePreDispenseInstructionに変更した。
     * `JP_MedicationRequest`, `JP_MedicationRequest_Injection`に対し、`JP_MedicationDispense_Preparation`拡張定義が誤って定義されていたため、これを削除した
 
 * Terminology関連
