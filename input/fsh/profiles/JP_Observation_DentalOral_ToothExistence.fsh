@@ -5,7 +5,7 @@ Title: "JP Core Observation DentalOral Tooth Existence Profile"
 Description: "このプロファイルはObservationリソースに対して、口腔診査結果（口腔内所見）の特定の歯の有無・状態データを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_ToothExistence"
 * ^status = #active
-* ^date = "2025-07-04"
+* ^date = "2025-07-30"
 * . ^short = "特定の歯の有無・状態のプロファイル"
 * . ^definition = "口腔診査結果レポートの特定の歯の有無・状態のプロファイル"
 * . ^comment = "本プロファイルと、現存歯の処置状態プロファイルや、欠損歯の処置状態プロファイルなどを組み合わせて利用する。"

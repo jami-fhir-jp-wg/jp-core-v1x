@@ -4,7 +4,7 @@ Title: "JP Core Observation DentalOral Tooth Root Status Extension"
 Description: "歯根を格納するための拡張"
 * ^url = $JP_Observation_DentalOral_ToothRoot
 * ^status = #active
-* ^date = "2025-07-04"
+* ^date = "2025-07-30"
 * ^context[+].type = #element
 * ^context[=].expression = "Observation.bodySite"
 * . ^short = "歯根"
