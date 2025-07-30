@@ -6,7 +6,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_DentalOral_ToothTreatmentCondition"
 * ^status = #active
-* ^date = "2024-06-24"
+* ^date = "2025-07-04"
 * . ^short = "特定の現存歯の処置状態のプロファイル"
 * . ^definition = "口腔診査結果レポートの特定の現存歯の処置状態のプロファイル"
 
