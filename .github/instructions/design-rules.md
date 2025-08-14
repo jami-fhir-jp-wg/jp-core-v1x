@@ -66,6 +66,7 @@ input/fsh/
 ├── profiles/                # Profile、Extension用
 ├── searchparameters/        # SearchParameter用
 └── terminologies/           # ValueSet、CodeSystem、ConceptMap用
+
 ```
 
 #### ファイル命名
@@ -82,6 +83,15 @@ examples/JP_Patient_Example.fsh
 // Terminology
 terminologies/JP_Gender_CS.fsh
 terminologies/JP_Gender_VS.fsh
+```
+
+```markdown
+// 冒頭説明用資料
+intro-notes/StructureDefinition-{id}-intro.md
+intro-notes/CapabilityStatement-{id}-intro.md
+// 注意事項
+intro-notes/CapabilityStatement-{id}-notes.md
+intro-notes/StructureDefinition-{id}-notes.md
 ```
 
 ### 2.3 FSHコード品質
@@ -138,6 +148,11 @@ Id: jp-patient
 // 既存のバインディングより厳格な制約
 * status from JP_ObservationStatus_VS (required)  // extensibleからrequiredに強化
 ```
+
+#### 派生先実装ガイドに拡張するガイドを考慮する
+* なるべくHL7 BASEにルールに従い、必要な際に定義する
+* Siicingを伴わない、多重度や固定値、バインディングの強制などは行わないこと
+
 
 #### 日本固有の考慮事項
 ```fsh
@@ -378,14 +393,6 @@ Usage: #example
 - Visual Studio Code + FSH拡張機能の使用推奨
 - 定期的なSUSHI/IG Publisherバージョン更新
 - Git管理による変更履歴の保持
-
-### 10.2 品質管理
-```bash
-# 定期的な品質チェック
-sushi .                          # FSH→JSON変換
-ruby script/markdownlink_creator.rb  # リンク更新
-ruby script/specialurls_creator.rb   # URL更新
-```
 
 ---
 
