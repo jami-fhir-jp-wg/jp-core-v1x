@@ -16,15 +16,18 @@ Alias: $JP_DiagnosticReport_Endoscopy = http://jpfhir.jp/fhir/core/StructureDefi
 Alias: $JP_DiagnosticReport_LabResult = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult
 Alias: $JP_DiagnosticReport_Microbiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Microbiology
 Alias: $JP_DiagnosticReport_Radiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology
+Alias: $JP_DiagnosticReport_Pathology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Pathology
 Alias: $JP_DocumentReference = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DocumentReference
 Alias: $JP_Encounter = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter
 Alias: $JP_FamilyMemberHistory = http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory
 Alias: $JP_HumanName = http://jpfhir.jp/fhir/core/StructureDefinition/JP_HumanName
 Alias: $JP_ImagingStudy_Endoscopy = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Endoscopy
 Alias: $JP_ImagingStudy_Radiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology
+Alias: $JP_ImagingStudy_Pathology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Pathology
 Alias: $JP_Immunization = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization
 Alias: $JP_Location = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Location
 Alias: $JP_Media_Endoscopy = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Media_Endoscopy
+Alias: $JP_Media_Pathology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Media_Pathology
 Alias: $JP_Medication = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication
 Alias: $JP_MedicationAdministration = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration
 Alias: $JP_MedicationAdministration_Injection = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration_Injection
@@ -57,6 +60,7 @@ Alias: $JP_OBservation_Electrocardiogram = http://jpfhir.jp/fhir/core/StructureD
 Alias: $JP_Observation_Endoscopy = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Endoscopy
 Alias: $JP_Observation_LabResult = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_LabResult
 Alias: $JP_Observation_Microbiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Microbiology
+Alias: $JP_Observation_Pathology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Pathology
 Alias: $JP_Observation_PhysicalExam = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_PhysicalExam
 Alias: $JP_Observation_Radiology_Findings = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Radiology_Findings
 Alias: $JP_Observation_Radiology_Impression = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Radiology_Impression
@@ -354,6 +358,15 @@ Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Procedure
 Alias: $JP_ReasonCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCodesJed_VS
 Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
+
+// Pathology Terminology
+Alias: $JP_PathologyTerminology_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_PathologyTerminology_CS
+Alias: $JP_PathologyDiagnosis_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PathologyDiagnosis_VS
+Alias: $JP_PathologySpecimenType_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PathologySpecimenType_VS
+Alias: $JP_PathologyStaining_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PathologyStaining_VS
+Alias: $JP_PathologyOrgan_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PathologyOrgan_VS
+Alias: $JP_PathologyObservationCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PathologyObservationCode_VS
+Alias: $JP_DocumentCodes_Pathology_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_Pathology_VS
 
 // Alias: $JP_BodySite_MEDIS_Concept_VS = http://medis.or.jp/ValueSet/master-disease-modExCode
 
