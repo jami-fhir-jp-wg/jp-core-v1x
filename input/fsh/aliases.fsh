@@ -27,5 +27,10 @@ Alias: $Loinc_CS = http://loinc.org
 Alias: $jami-ePreDispenseInstruction-vs = http://jpfhir.jp/fhir/ePrescription/ValueSet/jami-ePreDispenseInstruction
 Alias: $jami-DrugDispensePreparationMethod-cs = http://jami.jp/CodeSystem/DrugDispensePreparationMethod
 
+// SNOMED CT
+Alias: $SnomedCT_CS = http://snomed.info/sct
+
+// ICD-10
+Alias: $ICD10_CS = http://hl7.org/fhir/sid/icd-10
 
 // JPCor定義はaliases-jpcore.fshに記載すること
