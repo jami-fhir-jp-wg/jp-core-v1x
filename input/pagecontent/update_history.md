@@ -1,3 +1,29 @@
+***v1.3.0***
+
+* 全般
+  * 🆕 **病理診断プロファイル群の新規追加** - JAHIS病理診断報告書構造化記述規約v2.0に準拠した包括的な病理診断関連プロファイルを追加
+  * 🆕 **病理診断専用用語体系の追加** - 組織診・細胞診、臓器分類、染色方法を含む日本の病理診断業務に特化したCodeSystem/ValueSetを追加
+  * 🆕 **WSI（Whole Slide Imaging）サポート** - DICOM病理画像およびバーチャルスライド画像の標準対応を追加
+
+* Profile関連
+  * Diagnostic グループ
+    * 🆕 **[JP_DiagnosticReport_Pathology][JP_DiagnosticReport_Pathology]** - 病理診断レポートプロファイル。検体連携、診断結論、画像・メディア参照機能を持つ
+    * 🆕 **[JP_Observation_Pathology][JP_Observation_Pathology]** - 病理観察結果プロファイル。階層構造診断、染色方法、組織部位指定に対応
+    * 🆕 **[JP_ImagingStudy_Pathology][JP_ImagingStudy_Pathology]** - 病理画像検査プロファイル。General Microscopy（GM）モダリティ、WSI、顕微鏡画像に対応
+    * 🆕 **[JP_Media_Pathology][JP_Media_Pathology]** - 病理メディアプロファイル。マクロ写真、WSI、非DICOM病理画像の標準化
+
+* Terminology関連
+  * 🆕 **[JP_PathologyTerminology_CS][JP_PathologyTerminology_CS]** - 50以上の病理専門用語を含む包括的CodeSystem
+  * 🆕 **[JP_PathologyDiagnosis_VS][JP_PathologyDiagnosis_VS]** - 組織診・細胞診診断コード用ValueSet
+  * 🆕 **[JP_PathologyOrgan_VS][JP_PathologyOrgan_VS]** - 病理臓器分類用ValueSet  
+  * 🆕 **[JP_PathologyStaining_VS][JP_PathologyStaining_VS]** - 病理染色方法用ValueSet
+  * 🆕 **[JP_PathologySpecimenType_VS][JP_PathologySpecimenType_VS]** - 病理検体タイプ用ValueSet
+
+* Example関連
+  * 🆕 **乳癌浸潤性導管癌の完全な病理診断例** - HE染色、免疫染色、画像連携を含む
+  * 🆕 **子宮頸部細胞診例** - Papanicolaou染色による細胞診スクリーニング
+  * 🆕 **結腸癌病理診断例** - 内視鏡生検による腺癌診断ワークフロー
+
 ***v1.2.0***
 
 * 全般

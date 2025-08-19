@@ -1,5 +1,11 @@
 このドキュメントは日本医療情報学会NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した実装ガイドのVer.1.3.0-devである。
 
+### 🆕 v1.3.0の主な更新内容
+
+**病理診断プロファイル群を新規追加**しました。JAHIS病理診断レポート構造化記述規約Ver.2.0に対応し、日本の病理診断業務における複雑な診断情報の構造化記録・交換を支援します。
+
+詳細は[Diagnosticグループ](group-diagnostic.html#病理診断プロファイル)をご確認ください。
+
 ### 概要
 ガイダンス: JP Coreでの全体に関わる規則や注意事項を記載している。
 * [総合ガイダンス](guide-general.html)
@@ -44,6 +50,7 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
       * [JP Core Observation PhysicalExam （身体所見）プロファイル][JP_Observation_PhysicalExam]
       * [JP Core Observation SocialHistory （生活背景）プロファイル][JP_Observation_SocialHistory]
       * [JP Core Observation Electrocardiogram （心電図検査結果）プロファイル][JP_Observation_Electrocardiogram]
+      * [JP Core Observation Pathology][JP_Observation_Pathology] 病理観察結果プロファイル（階層化された所見構造をサポート）
       * JP Core Observation Radiology (放射線画像検査)
         * [JP Core Observation Radiology Findings (放射線画像検査所見）プロファイル)][JP_Observation_Radiology_Findings]
         * [JP Core Observation Radiology Impression (放射線画像検査インプレッション)プロファイル][JP_Observation_Radiology_Impression]
@@ -56,15 +63,18 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
     * [JP Core Specimen Common （共通）プロファイル][JP_Specimen_Common]
   * Media （メディア）
     * [JP Core Media Endoscopy（内視鏡検査）プロファイル][JP_Media_Endoscopy]
+    * [JP Core Media Pathology（病理メディア（肉眼写真・デジタル顕微鏡画像）プロファイル）][JP_Media_Pathology] 
   * ImagingStudy （画像検査）
     * [JP Core ImagingStudy Radiology（放射線検査）プロファイル][JP_ImagingStudy_Radiology]
     * [JP Core ImagingStudy Endoscopy（内視鏡検査）プロファイル][JP_ImagingStudy_Endoscopy]
+    * [JP Core ImagingStudy Pathology（病理画像検査）プロファイル（WSI対応）][JP_ImagingStudy_Pathology]
   * DiagnosticReport （診断レポート）
     * [JP Core DiagnosticReport Common （共通）プロファイル][JP_DiagnosticReport_Common]
       * [JP Core DiagnosticReport LabResult （検体検査レポート）プロファイル][JP_DiagnosticReport_LabResult]
       * [JP Core DiagnosticReport Microbiology （微生物学検査レポート）プロファイル][JP_DiagnosticReport_Microbiology]
       * [JP Core DiagnosticReport Radiology （放射線検査レポート）プロファイル][JP_DiagnosticReport_Radiology]
       * [JP Core DiagnosticReport Endoscopy （内視鏡レポート）プロファイル][JP_DiagnosticReport_Endoscopy]
+      * [JP Core DiagnosticReport Pathology　（病理診断レポート）プロファイル][JP_DiagnosticReport_Pathology]
       * [JP Core DiagnosticReport DentalOral （口腔診査レポート）プロファイル][JP_DiagnosticReport_DentalOral]
 * [Clinicalグループ（診療）](group-clinical.html)
   * [JP Core AllergyIntolerance （アレルギー不耐症）プロファイル][JP_AllergyIntolerance]
