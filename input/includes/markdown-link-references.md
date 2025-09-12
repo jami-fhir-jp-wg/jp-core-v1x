@@ -11,7 +11,7 @@
 [JP_Observation_Common_Operation]: StructureDefinition-jp-observation-common.html#operation一覧
 
 <!-- ImplementationGuide -->
-[FHIRJPCoreImplementationGuide]: ImplementationGuide-jpfhir.jp.core.html
+[FHIR_JP_Core_Implementation_Guide]: ImplementationGuide-jpfhir.jp.core.html
 
 <!-- StructureDefinition: Profile, DataType -->
 [JP_AllergyIntolerance]: StructureDefinition-jp-allergyintolerance.html
