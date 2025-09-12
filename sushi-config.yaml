@@ -149,10 +149,13 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalSimplePresentTeethObservation_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalSurfaceBodyStructure_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationDentalCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramDuration_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramExtraCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramStressType_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_PathologyMediaModality_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_PathologyStainMethod_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseaseOutcome
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePostfixModifier
@@ -160,9 +163,14 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_DiagnosticReport_Pathology_SpecimenReceivedTime
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_ImagingStudy_Pathology_ScannerInfo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Media_Pathology_Magnification
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Media_Pathology_SpecimenLabel
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Media_Pathology_StainMethod
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_Ingredient_DrugNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_MedicationAdministration_Location
@@ -195,6 +203,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Specimen_Pathology_BlockNumber
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Specimen_Pathology_SlideNumber
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Specimen_Pathology_StainMethod
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonNumber_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSubNumber_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSymbol_SP
@@ -216,16 +227,19 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Endoscopy
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Microbiology
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Pathology
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_DocumentReference
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_HumanName
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Endoscopy
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Pathology
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Location
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Media_Endoscopy
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Media_Pathology
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration_Injection
@@ -258,6 +272,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Endoscopy
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_LabResult
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Microbiology
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Pathology
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_PhysicalExam
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Radiology_Findings
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Radiology_Impression
@@ -273,6 +288,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchSubject
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Pathology
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Condition_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeReceipt_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalBodySite_VS
@@ -286,6 +302,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalSurfaceBodyStructure_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalTeethObservation_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DICOMModality_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_Pathology_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ImagingStudy_Radiology_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Observation_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationDetailedDentalCategory_VS
@@ -295,6 +312,13 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationElectrocardiogramStressType_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationEndoscopyCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationEndoscopyValueJed_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationPathologyCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationRadiologyCode_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_PathologyDiagnosis_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_PathologyMediaModality_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_PathologyStainMethod_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_SpecimenCollectionMethod_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_SpecimenProcessingProcedure_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_SpecimenType_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
     - http://playbook.radlex.org/playbook/SearchRadlexAction-CoreDev-CS
