@@ -1,15 +1,16 @@
 {
   "name": "jp-core.r4",
   "version": "1.2.0",
-  "canonical": "http://jpfhir.jp/fhir/core",
-  "url": "http://jpfhir.jp/fhir/core",
-  "title": "JP-CORE IG",
-  "description": "JP-CORE IG V1.2.0 snapshot package for release",
+  "description": "JP-CORE V1.2.0 snapshot package for release",
+  "author": "JAMI NeXEHRS FHIR IGWG",
   "fhirVersions": [
     "4.0.1"
   ],
   "dependencies": {
     "hl7.fhir.r4.core": "4.0.1"
   },
-  "author": "JAMI NeXEHRS FHIR IGWG(JAPAN)"
+  "url": "http://jpfhir.jp/fhir/core",
+  "canonical": "http://jpfhir.jp/fhir/core"
 }
+
+
