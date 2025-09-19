@@ -27,16 +27,19 @@
 [JP_DiagnosticReport_Endoscopy]: StructureDefinition-jp-diagnosticreport-endoscopy.html
 [JP_DiagnosticReport_LabResult]: StructureDefinition-jp-diagnosticreport-labresult.html
 [JP_DiagnosticReport_Microbiology]: StructureDefinition-jp-diagnosticreport-microbiology.html
+[JP_DiagnosticReport_Pathology]: StructureDefinition-jp-diagnosticreport-pathology.html
 [JP_DiagnosticReport_Radiology]: StructureDefinition-jp-diagnosticreport-radiology.html
 [JP_DocumentReference]: StructureDefinition-jp-documentreference.html
 [JP_Encounter]: StructureDefinition-jp-encounter.html
 [JP_FamilyMemberHistory]: StructureDefinition-jp-familymemberhistory.html
 [JP_HumanName]: StructureDefinition-jp-humanname.html
 [JP_ImagingStudy_Endoscopy]: StructureDefinition-jp-imagingstudy-endoscopy.html
+[JP_ImagingStudy_Pathology]: StructureDefinition-jp-imagingstudy-pathology.html
 [JP_ImagingStudy_Radiology]: StructureDefinition-jp-imagingstudy-radiology.html
 [JP_Immunization]: StructureDefinition-jp-immunization.html
 [JP_Location]: StructureDefinition-jp-location.html
 [JP_Media_Endoscopy]: StructureDefinition-jp-media-endoscopy.html
+[JP_Media_Pathology]: StructureDefinition-jp-media-pathology.html
 [JP_Medication]: StructureDefinition-jp-medication.html
 [JP_MedicationAdministration_Injection]: StructureDefinition-jp-medicationadministration-injection.html
 [JP_MedicationAdministration]: StructureDefinition-jp-medicationadministration.html
@@ -69,6 +72,7 @@
 [JP_Observation_Endoscopy]: StructureDefinition-jp-observation-endoscopy.html
 [JP_Observation_LabResult]: StructureDefinition-jp-observation-labresult.html
 [JP_Observation_Microbiology]: StructureDefinition-jp-observation-microbiology.html
+[JP_Observation_Pathology]: StructureDefinition-jp-observation-pathology.html
 [JP_Observation_PhysicalExam]: StructureDefinition-jp-observation-physicalexam.html
 [JP_Observation_Radiology_Findings]: StructureDefinition-jp-observation-radiology-findings.html
 [JP_Observation_Radiology_Impression]: StructureDefinition-jp-observation-radiology-impression.html
@@ -84,6 +88,7 @@
 [JP_ResearchSubject]: StructureDefinition-jp-researchsubject.html
 [JP_ServiceRequest_Common]: StructureDefinition-jp-servicerequest-common.html
 [JP_Specimen_Common]: StructureDefinition-jp-specimen-common.html
+[JP_Specimen_Pathology]: StructureDefinition-jp-specimen-pathology.html
 
 <!-- StructureDefinition: Extension -->
 [JP_Condition_DiseaseOutcome]: StructureDefinition-jp-condition-disease-outcome.html
@@ -92,9 +97,14 @@
 [JP_Coverage_InsuredPersonNumber]: StructureDefinition-jp-coverage-insuredpersonnumber.html
 [JP_Coverage_InsuredPersonSubNumber]: StructureDefinition-jp-coverage-insuredpersonsubnumber.html
 [JP_Coverage_InsuredPersonSymbol]: StructureDefinition-jp-coverage-insuredpersonsymbol.html
+[JP_DiagnosticReport_Pathology_SpecimenReceivedTime]: StructureDefinition-jp-diagnosticreport-pathology-specimenreceivedtime.html
+[JP_ImagingStudy_Pathology_ScannerInfo]: StructureDefinition-jp-imagingstudy-pathology-scannerinfo.html
 [JP_Immunization_CertificatedDate]: StructureDefinition-jp-immunization-certificateddate.html
 [JP_Immunization_DueDateOfNextDose]: StructureDefinition-jp-immunization-duedateofnextdose.html
 [JP_Immunization_ManufacturedDate]: StructureDefinition-jp-immunization-manufactureddate.html
+[JP_Media_Pathology_Magnification]: StructureDefinition-jp-media-pathology-magnification.html
+[JP_Media_Pathology_SpecimenLabel]: StructureDefinition-jp-media-pathology-specimenlabel.html
+[JP_Media_Pathology_StainMethod]: StructureDefinition-jp-media-pathology-stainmethod.html
 [JP_Medication_Ingredient_DrugNo]: StructureDefinition-jp-medication-ingredient-drugno.html
 [JP_Medication_IngredientStrength_StrengthType]: StructureDefinition-jp-medication-ingredientstrength-strengthtype.html
 [JP_MedicationAdministration_Location]: StructureDefinition-jp-medicationadministration-location.html
@@ -127,6 +137,9 @@
 [JP_Organization_InsuranceOrganizationNo]: StructureDefinition-jp-organization-insuranceorganizationno.html
 [JP_Organization_PrefectureNo]: StructureDefinition-jp-organization-prefectureno.html
 [JP_Patient_Race]: StructureDefinition-jp-patient-race.html
+[JP_Specimen_Pathology_BlockNumber]: StructureDefinition-jp-specimen-pathology-blocknumber.html
+[JP_Specimen_Pathology_SlideNumber]: StructureDefinition-jp-specimen-pathology-slidenumber.html
+[JP_Specimen_Pathology_StainMethod]: StructureDefinition-jp-specimen-pathology-stainmethod.html
 
 <!-- CapabilityStatement -->
 [JP_Client_CapabilityStatement]: CapabilityStatement-jp-client-capabilitystatement.html
@@ -159,6 +172,9 @@
 [JP_ObservationElectrocardiogramDuration_CS]: CodeSystem-jp-observation-electrocardiogram-duration-cs.html
 [JP_ObservationElectrocardiogramExtraCategory_CS]: CodeSystem-jp-observation-electrocardiogram-extracategory-cs.html
 [JP_ObservationElectrocardiogramStressType_CS]: CodeSystem-jp-observation-electrocardiogram-stresstype-cs.html
+[JP_ObservationCategory_CS]: CodeSystem-jp-observationcategory-cs.html
+[JP_PathologyMediaModality_CS]: CodeSystem-jp-pathologymediamodality-cs.html
+[JP_PathologyStainMethod_CS]: CodeSystem-jp-pathologystainmethod-cs.html
 [JP_Undefined_CS]: CodeSystem-jp-undefined-cs.html
 
 <!-- ValueSet -->
@@ -175,6 +191,7 @@
 [JP_DentalSurfaceBodyStructure_VS]: ValueSet-jp-dental-surfacebodystructure-vs.html
 [JP_DentalTeethObservation_VS]: ValueSet-jp-dental-teethobservation-vs.html
 [JP_DICOMModality_VS]: ValueSet-jp-dicommodality-vs.html
+[JP_DocumentCodes_Pathology_VS]: ValueSet-jp-documentcodes-pathology-vs.html
 [JP_ImagingStudy_Radiology_BodySite_VS]: ValueSet-jp-imagingstudy-radiology-bodysite-vs.html
 [JP_Observation_BodySite_VS]: ValueSet-jp-observation-bodysite-vs.html
 [JP_ObservationDetailedDentalCategory_VS]: ValueSet-jp-observation-detailed-dental-category-vs.html
@@ -185,6 +202,13 @@
 [JP_ObservationEndoscopyCode_VS]: ValueSet-jp-observation-endoscopy-code-vs.html
 [JP_ObservationEndoscopyValueJed_VS]: ValueSet-jp-observation-endoscoy-value-jed-vs.html
 [JP_ObservationRadiologyCode_VS]: ValueSet-jp-observation-radiology-code-vs.html
+[JP_ObservationPathologyCode_VS]: ValueSet-jp-observationpathologycode-vs.html
+[JP_PathologyDiagnosis_VS]: ValueSet-jp-pathologydiagnosis-vs.html
+[JP_PathologyMediaModality_VS]: ValueSet-jp-pathologymediamodality-vs.html
+[JP_PathologyStainMethod_VS]: ValueSet-jp-pathologystainmethod-vs.html
+[JP_SpecimenCollectionMethod_VS]: ValueSet-jp-specimencollectionmethod-vs.html
+[JP_SpecimenProcessingProcedure_VS]: ValueSet-jp-specimenprocessingprocedure-vs.html
+[JP_SpecimenType_VS]: ValueSet-jp-specimentype-vs.html
 [JP_Undefined_VS]: ValueSet-jp-undefined-vs.html
 
 <!-- Example -->
@@ -192,6 +216,13 @@
 [jp-condition-diagnosis-example-1]: Condition-jp-condition-diagnosis-example-1.html
 [jp-condition-example-1]: Condition-jp-condition-example-1.html
 [jp-coverage-example-1]: Coverage-jp-coverage-example-1.html
+[DiagnosticReportBreastCancer]: DiagnosticReport-DiagnosticReportBreastCancer.html
+[DiagnosticReportCervicalCytology]: DiagnosticReport-DiagnosticReportCervicalCytology.html
+[DiagnosticReportColonPolyp]: DiagnosticReport-DiagnosticReportColonPolyp.html
+[DiagnosticReportLungCancer]: DiagnosticReport-DiagnosticReportLungCancer.html
+[DiagnosticReportPathologyExample]: DiagnosticReport-DiagnosticReportPathologyExample.html
+[DiagnosticReportProstateBiopsy]: DiagnosticReport-DiagnosticReportProstateBiopsy.html
+[DiagnosticReportSkinMelanoma]: DiagnosticReport-DiagnosticReportSkinMelanoma.html
 [jp-diagnosticreport-dentaloral-example-1]: DiagnosticReport-jp-diagnosticreport-dentaloral-example-1.html
 [jp-diagnosticreport-dentaloral-example-2]: DiagnosticReport-jp-diagnosticreport-dentaloral-example-2.html
 [jp-diagnosticreport-endoscopy-example-1]: DiagnosticReport-jp-diagnosticreport-endoscopy-example-1.html
@@ -202,12 +233,14 @@
 [jp-encounter-example-1]: Encounter-jp-encounter-example-1.html
 [endpoint-dicom-wadors-example]: Endpoint-endpoint-dicom-wadors-example.html
 [jp-familymemberhistory-example-1]: FamilyMemberHistory-jp-familymemberhistory-example-1.html
+[ImagingStudyPathologyWSI]: ImagingStudy-ImagingStudyPathologyWSI.html
 [jp-imagingstudy-endoscopy-example-1]: ImagingStudy-jp-imagingstudy-endoscopy-example-1.html
 [jp-imagingstudy-radiology-example-1]: ImagingStudy-jp-imagingstudy-radiology-example-1.html
 [jp-immunization-example-1]: Immunization-jp-immunization-example-1.html
 [jp-location-example-examinationroom]: Location-jp-location-example-examinationroom.html
 [jp-location-example-ope]: Location-jp-location-example-ope.html
 [jp-location-example-ward]: Location-jp-location-example-ward.html
+[MediaPathologyMicrophoto]: Media-MediaPathologyMicrophoto.html
 [jp-media-endoscopy-example-1]: Media-jp-media-endoscopy-example-1.html
 [jp-medication-example-1]: Medication-jp-medication-example-1.html
 [jp-medication-example-2]: Medication-jp-medication-example-2.html
@@ -268,6 +301,23 @@
 [jp-prefecture-IdSystem]: NamingSystem-jp-prefecture-IdSystem.html
 [jp-prefecturenumber-namingsystem]: NamingSystem-jp-prefecturenumber-namingsystem.html
 [jp-specimen]: NamingSystem-jp-specimen.html
+[ObservationBreastER]: Observation-ObservationBreastER.html
+[ObservationBreastHER2]: Observation-ObservationBreastHER2.html
+[ObservationBreastMicro]: Observation-ObservationBreastMicro.html
+[ObservationCervicalCytology]: Observation-ObservationCervicalCytology.html
+[ObservationColonGross]: Observation-ObservationColonGross.html
+[ObservationColonMicro]: Observation-ObservationColonMicro.html
+[ObservationLungGross]: Observation-ObservationLungGross.html
+[ObservationLungImmunoTTF1]: Observation-ObservationLungImmunoTTF1.html
+[ObservationLungMicro]: Observation-ObservationLungMicro.html
+[ObservationPathologyDiagnosis]: Observation-ObservationPathologyDiagnosis.html
+[ObservationPathologyGross]: Observation-ObservationPathologyGross.html
+[ObservationPathologyImmuno]: Observation-ObservationPathologyImmuno.html
+[ObservationPathologyMicro]: Observation-ObservationPathologyMicro.html
+[ObservationProstateGleason]: Observation-ObservationProstateGleason.html
+[ObservationSkinHMB45]: Observation-ObservationSkinHMB45.html
+[ObservationSkinMicro]: Observation-ObservationSkinMicro.html
+[ObservationSkinS100]: Observation-ObservationSkinS100.html
 [jp-observation-bodyMeasurement-example-1]: Observation-jp-observation-bodyMeasurement-example-1.html
 [jp-observation-dentaloral-ecs-example]: Observation-jp-observation-dentaloral-ecs-example.html
 [jp-observation-dentaloral-missingtoothcondition-example-4]: Observation-jp-observation-dentaloral-missingtoothcondition-example-4.html
@@ -299,6 +349,13 @@
 [jp-organization-example-hospital]: Organization-jp-organization-example-hospital.html
 [jp-organization-example-inspection]: Organization-jp-organization-example-inspection.html
 [jp-organization-example-payer]: Organization-jp-organization-example-payer.html
+[PatientBreastCancer]: Patient-PatientBreastCancer.html
+[PatientCervicalCytology]: Patient-PatientCervicalCytology.html
+[PatientColonPolyp]: Patient-PatientColonPolyp.html
+[PatientLungCancer]: Patient-PatientLungCancer.html
+[PatientPathologyExample]: Patient-PatientPathologyExample.html
+[PatientProstateBiopsy]: Patient-PatientProstateBiopsy.html
+[PatientSkinBiopsy]: Patient-PatientSkinBiopsy.html
 [jp-patient-example-1]: Patient-jp-patient-example-1.html
 [jp-practitioner-example-female-1]: Practitioner-jp-practitioner-example-female-1.html
 [jp-practitioner-example-female-2]: Practitioner-jp-practitioner-example-female-2.html
@@ -306,6 +363,13 @@
 [jp-practitioner-example-male-2]: Practitioner-jp-practitioner-example-male-2.html
 [jp-practitionerrole-example-1]: PractitionerRole-jp-practitionerrole-example-1.html
 [jp-procedure-example-1]: Procedure-jp-procedure-example-1.html
+[SpecimenBreastBiopsy]: Specimen-SpecimenBreastBiopsy.html
+[SpecimenCervicalCytology]: Specimen-SpecimenCervicalCytology.html
+[SpecimenColonPolyp]: Specimen-SpecimenColonPolyp.html
+[SpecimenLungResection]: Specimen-SpecimenLungResection.html
+[SpecimenPathologyBiopsy]: Specimen-SpecimenPathologyBiopsy.html
+[SpecimenProstateBiopsy1]: Specimen-SpecimenProstateBiopsy1.html
+[SpecimenSkinBiopsy]: Specimen-SpecimenSkinBiopsy.html
 [jp-specimen-example-1]: Specimen-jp-specimen-example-1.html
 [jp-specimen-example-2]: Specimen-jp-specimen-example-2.html
 [jp-specimen-example-3]: Specimen-jp-specimen-example-3.html
