@@ -10,6 +10,21 @@ genenareted = "./fsh-generated/resources/"
 maptablePath="makeSymbolicLink.bash"
 
 #--- URL抽出処理 ---
+def HasHtml(jsonObj)
+  url = jsonObj["url"].to_s
+  if(url.start_with?("urn:") == true) then
+    return false
+  end
+  type = jsonObj["resourceType"].to_s
+  if(type == "CodeSystem") then
+    if(jsonObj["content"] == "supplement") then
+      return false
+    end
+  end
+  return true
+end
+
+
 def fillUrl(prefix, sb, extension = false)
   files = Dir.glob(prefix + "-*.json").sort
   for fl in files
@@ -17,7 +32,7 @@ def fillUrl(prefix, sb, extension = false)
           h = JSON.load(f)
           if (h["type"] == "Extension") == extension then
             url = h["url"].to_s
-            if url.start_with?("urn:") == false then                    
+            if(HasHtml(h)) then
                 pathfilebase = File.basename(URI.parse(fl).path,".json")
                 if File.basename(URI.parse(url).path) != "" then
                   urlfilebase = prefix + "-" + File.basename(URI.parse(url).path)
