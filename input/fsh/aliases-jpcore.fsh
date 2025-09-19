@@ -1,5 +1,5 @@
 // ImplementationGuide
-Alias: $FHIRJPCoreImplementationGuide = http://jpfhir.jp/fhir/core/ImplementationGuide/jpfhir.jp.core
+Alias: $FHIR_JP_Core_Implementation_Guide = http://jpfhir.jp/fhir/core/ImplementationGuide/jpfhir.jp.core
 
 // StructureDefinition: Profile, DataType
 Alias: $JP_AllergyIntolerance = http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance
