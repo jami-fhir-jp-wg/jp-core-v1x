@@ -10,21 +10,19 @@
 # Warnings for Examples
 %The Implementation Guide contains no examples%
 The Implementation Guide contains no explicitly linked examples for this profile
-!!この要素はどの既知のスライスとも一致しません defined in the profile%
+この要素はどの既知のスライスとも一致しません defined in the profile%
 
 # ベストプラクティス
 # Rule dom-6%
 
 # Terminology関連
-!!!!!!!!CodeSystem urn:oid:1.2.392.200119.5.2.4.1.1.3は未知です
 The value set expansion is too large, and only a subset has been displayed
 
 
 #  Local CodeSystems Warnings
-!!!!!!!!CodeSystem http://abc-hospital.local/fhir/Observation/localcodeは未知です
-!!!!!!!!CodeSystem http://abc-hospital.local/fhir/ObservationOrder/localcodeは未知です
-!!!!!!!!CodeSystem http://terminology.sample.com/CodeSystem/disease-outcomeは未知です
-!!!!!!!!CodeSystem http://terminology.sample.com/CodeSystem/disease/1311234567は未知です
+A definition for CodeSystem%
+!!!!!!CodeSystem http://abc-hospital.local/fhir/Observation/localcodeは未知です
+
 
 # information level
 %which has status 'fragment'
