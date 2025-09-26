@@ -5,7 +5,8 @@
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
 # IG Defined
-!!コードの検証エラー: 用語サービス無しで実行中
+コードの検証エラー: 用語サービス無しで実行中
+The concepts in the value set include have not been validated because there is no terminology server
 
 # Warnings for Examples
 %The Implementation Guide contains no examples%
