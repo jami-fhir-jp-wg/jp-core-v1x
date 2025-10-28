@@ -160,6 +160,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Department
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate
@@ -264,6 +265,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_SocialHistory
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_VitalSigns
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization_Department
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_PractitionerRole
