@@ -9,5 +9,5 @@ Description:    "JP_DocumentReference　暫定プロファイル"
 * type ^short = "参照される文書の文書コード。適当なものがない場合には、type要素を省略してもよい。"
 * type ^definition = "参照される文書の文書コード。適当なものがない場合には、type要素を省略してもよい。"
 * type ^comment = "例）臨床経過　11506-3  \"Provider-unspecified Progress note\"または\"経過記録\"。その他、https://hl7.org/fhir/R4/valueset-c80-doc-typecodes.html　に記載されているValueSet http://hl7.org/fhir/ValueSet/c80-doc-typecodesから適切なコードを選択する。対応する日本語名称は、SS MIX 標準文書コード表を参照できる（https://jpfhir.jp/fhir/core/terminology/igv1/CodeSystem-jp-documentcodes-cs.html）。"
-//* type from http://hl7.org/fhir/ValueSet/c80-doc-typecodes
+* type from http://hl7.org/fhir/ValueSet/c80-doc-typecodes
 
