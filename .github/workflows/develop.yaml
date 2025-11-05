@@ -2,7 +2,7 @@ name: JPCore FHIR Task develop v1.1.3-URL
 on:
   push:
     branches: 
-      - 'v1.1.2-URL'
+      - 'v1.1.2-URLtest'
       - 'release/**'
 
     paths:
