@@ -1,7 +1,7 @@
 {
   "name": "jp-core.r4",
   "version": "1.1.2-clins",
-  "description": "JP-CORE V1.1.2-clins snapshot package for release",
+  "description": "JP-CORE V1.1.2-clins differential package for release. build 2025.11.05: Changing the binding strength of DocumentReference.type from required to preferred.",
   "author": "JAMI NeXEHRS FHIR IGWG",
   "fhirVersions": [
     "4.0.1"
