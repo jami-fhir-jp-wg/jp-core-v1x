@@ -7,40 +7,38 @@
 # なお、入力ファイルは、コマンドライン引数で指定する。
 # 例：python test2.py input.html
 
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 import re
 import sys
+from urllib.parse import urlparse, parse_qs, unquote
+from html import unescape
 
-with open(sys.argv[1], "r") as f:
-    for line in f:
-#        sys.stderr.write(line)
-# 次のようなパターンを見つけて、canonical= 値の部分だけに置き換える：https://simplifier.net/resolve?canonical=http%3A%2F%2Fjpfhir.jp%2Ffhir%2Fcore%2FValueSet%2FJP_MedicationSubstitutionNotAllowedReason_VS&scope=jpfhir-terminology@1.1.1
+# resolveリンクだけを拾う正規表現（http/https 両対応、空白/引用符/< で打ち切る）
+_RESOLVE_RE = re.compile(r'https?://simplifier\.net/resolve\?[^"\'>\s]+')
 
-        if "https://simplifier.net/resolve?" in line:
-            m1 = re.finditer('https:\/\/simplifier\.net\/resolve\?scope=(.*?)&amp;canonical=',line)
-            m2 = re.finditer('https:\/\/simplifier\.net\/resolve\?canonical=(.*?)&amp;scope=(.*?)"',line)
-            m11 = re.finditer('https:\/\/simplifier\.net\/resolve\?scope=(.*?)&amp;amp;canonical=',line)
-            m12 = re.finditer('https:\/\/simplifier\.net\/resolve\?canonical=(.*?)&amp;amp;scope=(.*?)"',line)
-            if m1 :
-                for mm in m1:
-                    scope = mm.group(1)
-                    line = line.replace('https://simplifier.net/resolve?scope='+scope+'&amp;canonical=','', 1)
-            elif m2 :
-                for mm in m2:
-                    canonical = mm.group(1)
-                    scope = mm.group(2)
-                    line = line.replace('https://simplifier.net/resolve?canonical='+canonical+'&amp;scope='+scope,canonical, 1)
-            if m11 :
-                for mm in m11:
-                    scope = mm.group(1)
-                    line = line.replace('https://simplifier.net/resolve?scope='+scope+'&amp;amp;canonical=','', 1)
-            elif m12 :
-                for mm in m12:
-                    canonical = mm.group(1)
-                    scope = mm.group(2)
-                    line = line.replace('https://simplifier.net/resolve?scope='+canonical+'&amp;amp;scope=','', 1)
-            else:
-                print(line)
-                continue
-            print(line)
-        else:
-            print(line)
+def rewrite_simplifier_links(html):
+    def _repl(m):
+        url = m.group(0)
+        # HTML属性中だと & が &amp; になるので正式にアンエスケープ
+        url_for_parse = unescape(url)
+        qs = parse_qs(urlparse(url_for_parse).query)
+        canonical = qs.get('canonical', [None])[0]
+        return unquote(canonical) if canonical else url  # なければ元のURLを返す
+    return _RESOLVE_RE.sub(_repl, html)
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: {} input.html".format(sys.argv[0]), file=sys.stderr)
+        sys.exit(1)
+
+    input_file = sys.argv[1]
+    with open(input_file, encoding="utf-8") as f:
+        html = f.read()
+
+    converted_html = rewrite_simplifier_links(html)
+    sys.stdout.write(converted_html)
+
+if __name__ == "__main__":
+    main()
