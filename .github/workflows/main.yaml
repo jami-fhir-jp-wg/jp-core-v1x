@@ -3,7 +3,7 @@ name: JPCore FHIR Task
 on:
   push:
     branches: 
-      - 'v1.1.2-URL'
+      - 'v1.1.2-URLtest'
     paths:
       - 'sushi-config.yaml'
       - 'input/**'
@@ -12,7 +12,7 @@ on:
     branches:
       - 'v1.1.2-URL'
 env:
-  release_version : 1.1.2-clins
+  release_version : 1.1.2-clins-test
 
 
 jobs:
