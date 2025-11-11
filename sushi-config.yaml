@@ -2,7 +2,7 @@ id: jpfhir.jp.core
 canonical: http://jpfhir.jp/fhir/core
 name: "FHIRJPCoreImplementationGuide"
 title: "HL7 FHIR JP Core ImplementationGuide"
-description: "日本医療情報学会(JAMI) NeXEHRS課題研究会「HL7®FHIR® 日本実装検討WG」で作成した日本国内におけるベースとなるJP Core実装ガイドのドラフトVer.1.2.0 です。"
+description: "日本医療情報学会 FHIR 国内実装基盤研究会で作成した日本国内におけるベースとなるJP Core実装ガイドのドラフトVer.1.2.0 です。"
 status: active # draft | active | retired | unknown
 version: 1.2.0-temp #-- Action のyaml中で release-version文字列に置き換える
 date: 2024-07-04
@@ -13,7 +13,7 @@ publisher:
   name: FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)
   url: http://jpfhir.jp
   email: office@hlfhir.jp
-copyright: Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG
+copyright: Copyright Japan FHIR Implementation Infrastructure Study Group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会FHIR国内実装基盤研究会
 jurisdiction: urn:iso:std:iso:3166#JP "Japan"
 dependencies:
   jpfhir-terminology.r4:

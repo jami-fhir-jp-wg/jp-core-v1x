@@ -6,6 +6,6 @@ Description: "日本消化器内視鏡学会が推進するJED (Japan Endoscopy 
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-12-30"
-* ^copyright = "Copyright JED-Project、JAHIS、日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
+* ^copyright = "Copyright JED-Project、JAHIS、日本医療情報学会FHIR国内実装基盤研究会"
 
 * include codes from system $JP_EndoscopyTerminologyCodesJED_CS
