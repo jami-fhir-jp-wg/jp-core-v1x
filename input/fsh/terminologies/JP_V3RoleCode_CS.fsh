@@ -75,7 +75,7 @@ Description: "http://terminology.ht7.org/Codesystem/v3-RoleCode where concept is
 * insert AddJpDesignation(PRN, "親")
 * insert AddJpDesignation(ADOPTP, "養父母")
 * insert AddJpDesignation(ADOPTF, "養父")
-* insert AddJpDesignation(ADOPTM, "養子母")
+* insert AddJpDesignation(ADOPTM, "養母")
 * insert AddJpDesignation(FTH, "父")
 * insert AddJpDesignation(FTHFOST, "養父")
 * insert AddJpDesignation(NFTH, "実父")
