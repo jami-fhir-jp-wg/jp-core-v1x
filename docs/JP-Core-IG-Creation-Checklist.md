@@ -1,6 +1,6 @@
 # FHIR JP Core 派生実装ガイド作成チェックリスト
 
-FHIR 実装に慣れた読者が、JP Core をベースに 実装ガイド（以下、IG）を組み立てる際に抜け漏れなく進められるように整理したチェックリストです。
+FHIR 実装に慣れた読者が、JP Core をベースに実装ガイド（以下、IG）を組み立てる際に抜け漏れなく進められるよう整理したチェックリストです。
 ---
 
 ## 0. 方針決定
@@ -18,7 +18,7 @@ FHIR 実装に慣れた読者が、JP Core をベースに 実装ガイド（以
 
 ### 1.2 バージョン戦略
 - [ ] (SHALL) **採用する JP Core バージョンを固定し、理由を記録した**
-- [ ] (SHALL) **JP Coreを採用せず、 FHIRベースを直接派生する場合、そのバージョンを明記した**（通常 4.0.1）
+- [ ] (SHALL) **JP Core を採用せず、FHIR ベースを直接派生する場合、そのバージョンを明記した**（通常 4.0.1）
 - [ ] (SHOULD) **追加で依存する国内外 IG を洗い出した**
 ---
 
@@ -54,7 +54,7 @@ FHIR 実装に慣れた読者が、JP Core をベースに 実装ガイド（以
 - [ ] (SHOULD) **アクタ相関図を掲載した**
 
 ### 3.3 トランザクション設計
-- [ ] (SHOULD) **各トランザクションのリクエスト/レスポンス/OperationOutcome を記述した**
+- [ ] (SHOULD) **各トランザクションのリクエスト / レスポンス / OperationOutcome を記述した**
 - [ ] (SHOULD) **HTTP ステータスと再送・エラー処理方針を定義した**
 
 ### 3.4 CapabilityStatement
@@ -70,20 +70,20 @@ FHIR 実装に慣れた読者が、JP Core をベースに 実装ガイド（以
 ### 4.1 設計方針
 - [ ] (SHALL) **既存 JP Core / International / 他 IG の再利用を優先している**
 - [ ] (SHOULD) **Must Support 要素の送受信要件（実装期待値）をドキュメント化した**  
-JP Coreの定義をそのまま利用する場合はその旨をドキュメントに記載する。
+JP Core の定義をそのまま利用する場合は、その旨をドキュメントに記載する。
 
 ### 4.2 プロファイル定義
 - [ ] (SHOULD) **JP Core プロファイルを親にして派生させた**（例：JP_Patient → 派生 Patient）
-- [ ] (SHOULD) **MustSupport・Cardinality・制約を変更した場合、理由をプロファイル解説ページに記載した**
-- [ ] (SHOULD) **新規 Extension や ValueSet の必要性をレビュー記録に残した**
+- [ ] (SHOULD) **Must Support・Cardinality・Binding 強度・制約を変更した場合、理由をプロファイル解説ページに記載した**
+これらの定義は派生先で強める方向（例：`0..* → 1..*`、`preferred → required`）にしか変更できないため、注意すること。
 - [ ] (SHOULD) **Slicing・Discriminator が正しく設定されているか検証した**
 
 ### 4.3 拡張機能 (Extension)
 - [ ] (SHALL) **既存 Extension の再利用を優先している**
 - [ ] (SHOULD) **新規 Extension 作成時は JP Core / 他 IG に同様の定義が無いことを確認した**
 - [ ] (SHOULD) **Extension の URL / status / context / description / copyright を正しく設定した**
-- [ ] (SHOULD) **Extension のValue[x]に適切な DataType を使用した**
-- [ ] (SHOULD) **Extension にてValueCode, ValueCoding, ValueCodeableConcept が設定される場合、Bindingも行うこと**
+- [ ] (SHOULD) **Extension の Value[x] に適切な DataType を使用した**
+- [ ] (SHOULD) **Extension で ValueCode / ValueCoding / ValueCodeableConcept を用いる場合、対象 ValueSet を Binding した**
 ---
 
 ## 5. 用語・コード体系
@@ -91,7 +91,7 @@ JP Coreの定義をそのまま利用する場合はその旨をドキュメン�
 ### 5.1 用語の採用
 - [ ] (SHALL) **JLAC / HOT / 厚労省コード等の国内標準との整合性を確認した**
 - [ ] (SHALL) **JP Core 既存 ValueSet / CodeSystem に定義されているものを利用している**
-- [ ] (SHALL) **国内では包括的な SNOMED CT ライセンスが無いことを踏まえ、DICOM / IPS など明示的に許可された範囲以内であることを明記した**
+- [ ] (SHALL) **国内では包括的な SNOMED CT ライセンスが無い点を踏まえ、DICOM / IPS など明示的に許可された範囲内であることを明記した**
 - [ ] (SHALL) **IGが利用している用語の出典を明示した**
 ``` markdown
 <!--IGPublisherの場合、mdファイルに下記語句を記載することで著作権一覧（IPStatement)が自動生成される。
@@ -100,11 +100,11 @@ JP Coreの定義をそのまま利用する場合はその旨をドキュメン�
  ```
 
 ### 5.2 ValueSet
-- [ ] (SHALL) **既存 ValueSet 再利用を優先している**
+- [ ] (SHALL) **既存 ValueSet の再利用を優先している**
 - [ ] (SHALL) **URL / status / copyright を正しく設定した**
-- [ ] (SHOULD) **1件のみのコードを指定することは避ける。複数コードを含む ValueSet と固定値等で代替している**
-- [ ] (SHOULD) **Bindingの強度は `required` / `extensible` / `preferred` / `example` のいずれかを使用し、要件に応じて選択している**  
-Binding強度は派生先では強い方向（例：`preferred` → `required`）にしか変更できないため、注意すること。
+- [ ] (SHOULD) **単一コードのみの ValueSet 指定は避け、複数コードを含む ValueSet と固定値等で代替している**
+- [ ] (SHOULD) **Binding の強度は `required` / `extensible` / `preferred` / `example` から要件に応じて選択している**  
+Binding 強度も派生先では強める方向（例：`preferred` → `required`）にしか変更できないため、注意すること。
 
 ### 5.3 CodeSystem
 - [ ] (SHALL) **既存 CodeSystem で表現できない範囲のみ新規作成した**
@@ -123,11 +123,11 @@ Binding強度は派生先では強い方向（例：`preferred` → `required`�
 ---
 ## 7. サンプルとテスト
 ### 7.1 サンプル
-- [ ] (SHOULD) **各プロファイルに少なくとも 1 つの Instance を作成し、Title/Description を付与した**
+- [ ] (SHOULD) **各プロファイルに少なくとも 1 つの Instance を作成し、Title / Description を付与した**
 - [ ] (SHOULD) **主要ユースケースをカバーするサンプルセットを `input/fsh/examples/` に配置した**
 
 ### 7.2 テスト
-- [ ] (SHALL) **FSH 生成物を FHIR Validator でpackageファイルを指定し検証し、エラー 0 を確認した**
+- [ ] (SHALL) **FSH 生成物を FHIR Validator で package ファイルを指定して検証し、エラー 0 を確認した**
 - [ ] (SHOULD) **CapabilityStatement に沿ったシナリオテストを実施した**
 
 ---
@@ -184,7 +184,7 @@ FHIRの構造として多重派生は実現できないため、拡張性を考�
 COMMONやBASEクラスに相当する基底プロファイルの作成はなるべく避け、必要に応じてExtensionやBackboneElement、要素となっているDataTypeを派生することで包含関係を表現する。
 
 ### 拡張性の確保
-- [ ] (SHOULD) **過度な多重度の強制（数量を限定方向に変更する。 *→1→0等）や固定値を控え、派生先拡張を阻害しない**
+- [ ] (SHOULD) **過度な多重度の強制（例：`* → 1 → 0` などの数量縮小）や固定値を控え、派生先拡張を阻害しない**
 - [ ] (SHOULD) **Extension slicing を基本 open とし、閉じる場合は理由を記述した**
 
 ### ライセンスとコンプライアンス
