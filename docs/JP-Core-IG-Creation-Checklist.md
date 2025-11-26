@@ -1,14 +1,12 @@
 # FHIR JP Core 派生実装ガイド作成チェックリスト
 
-FHIR 実装に慣れた読者が、JP Core をベースに IG を組み立てる際に抜け漏れなく進められるように整理したチェックリストです。まずは共通章（0〜10）を順番に確認し、その後に派生方針に応じて章 11（さらに派生させる場合）または章 12（最終形で提供する場合）を追加で実施してください。
-
+FHIR 実装に慣れた読者が、JP Core をベースに 実装ガイド（以下、IG）を組み立てる際に抜け漏れなく進められるように整理したチェックリストです。
 ---
 
 ## 0. 方針決定
 - [ ] (SHALL) **IG の立ち位置を明確化した**
   - 派生される IG 向け：後続 IG が再派生する前提で、制約やライセンスを緩めに設計する
   - 派生されない IG 向け：対象シナリオが固定で、必要に応じて強い制約や固定値を設定する
-- [ ] (SHOULD) **どちらの追加チェック（章 11 / 章 12）を適用するか事前に宣言した**
 
 ---
 
@@ -16,20 +14,18 @@ FHIR 実装に慣れた読者が、JP Core をベースに IG を組み立てる
 
 ### 1.1 スコープの明確化
 - [ ] (SHALL) **対象領域・対象外領域をドキュメント化した**（例：在宅医療、透析、地域連携 等）
-- [ ] (SHALL) **対象業務フローを定義した**（外来、入院、検査、処方など）
-- [ ] (SHOULD) **ユースケースを複数列挙し、優先度を付けた**
+- [ ] (SHOULD) **対象のユースケースの整理および業務フローを定義した**（外来、入院、検査、処方など）
 
 ### 1.2 バージョン戦略
 - [ ] (SHALL) **採用する JP Core バージョンを固定し、理由を記録した**
-- [ ] (SHALL) **ベースとなる FHIR R4 バージョンを明記した**（通常 4.0.1）
+- [ ] (SHALL) **JP Coreを採用せず、 FHIRベースを直接派生する場合、そのバージョンを明記した**（通常 4.0.1）
 - [ ] (SHOULD) **追加で依存する国内外 IG を洗い出した**
-
 ---
 
 ## 2. 基本設定
 
 ### 2.1 ライセンスと表記
-- [ ] (SHALL) **著作権者・発行主体を明示した**
+- [ ] (SHALL) **IGの著作権者・発行主体を明示した**
 - [ ] (SHOULD) **IG 全体のライセンスを選定し、再利用条件を示した**
 - [ ] (SHOULD) **FHIR® / HL7® 等の商標表記を適切に記載した**
 
@@ -41,58 +37,74 @@ FHIR 実装に慣れた読者が、JP Core をベースに IG を組み立てる
 ### 2.3 依存パッケージ
 - [ ] (SHALL) **`dependencies` に JP Core / R4 Core などの固定バージョンを明記した**
 - [ ] (SHOULD) **依存パッケージのライセンスと入手先を README 等に記載した**
-
+``` markdown
+<!--IGPublisherの場合、mdファイルに下記語句を記載することで依存関係情報が自動生成される。
+ガイダンスページ等に記載することが望ましい-->
+ {% include cross-version-analysis.xhtml %} 
+ ```
 ---
 
-## 3. アーキテクチャ設計（アクタ / トランザクション / ユースケース）
+## 3. 機能要件（アクタ / トランザクション / ユースケース）
 
-### 3.1 アクタ定義
-- [ ] (SHALL) **全アクタを列挙し、役割・責務を表形式で整理した**
-- [ ] (SHOULD) **Mermaid などでアクタ相関図を掲載した**
+### 3.1 ユースケース
+- [ ] (SHOULD) **主要ユースケースシナリオを文章＋図で説明した**
 
-### 3.2 トランザクション設計
+### 3.2 アクタ定義
+- [ ] (SHOULD) **全アクタを列挙し、役割・責務を表形式で整理した**
+- [ ] (SHOULD) **アクタ相関図を掲載した**
+
+### 3.3 トランザクション設計
 - [ ] (SHOULD) **各トランザクションのリクエスト/レスポンス/OperationOutcome を記述した**
 - [ ] (SHOULD) **HTTP ステータスと再送・エラー処理方針を定義した**
 
-### 3.3 ユースケース
-- [ ] (SHOULD) **主要ユースケースシナリオを文章＋図で説明した**
-- [ ] (SHOULD) **ユースケースとトランザクション・プロファイルの対応表を作成した**
-
 ### 3.4 CapabilityStatement
-- [ ] (SHALL) **アクタ単位で CapabilityStatement を作成し、対応リソースを列挙した**
-- [ ] (SHALL) **必須/推奨/任意を `SHALL/SHOULD/MAY` で明示した**
-- [ ] (SHALL) **検索パラメータ・操作・セキュリティ要件を定義した**
+- [ ] (SHOULD) **アクタ単位で CapabilityStatement を作成し、対応リソースを列挙した**
+- [ ] (SHOULD) **必須/推奨/任意を `SHALL/SHOULD/MAY` で明示した**
+- [ ] (SHOULD) **検索パラメータ(Search Parameter)・操作(Operation)についても同様に要件を定義した**
+
+### 3.5 セキュリティ要件
+- [ ] (SHOULD) **必要性に応じ、セキュリティ要件（OAuth、mTLS、署名 など）をドキュメント化した**
 
 ---
-
 ## 4. プロファイル設計
-
 ### 4.1 設計方針
-- [ ] (SHALL) **既存 JP Core / International / 他 IG の再利用を優先する指針を確認した**
-- [ ] (SHOULD) **MS 要素の送受信要件（実装期待値）をドキュメント化した**
-- [ ] (SHOULD) **セキュリティ要件（OAuth、mTLS など）を共通節にまとめた**
+- [ ] (SHALL) **既存 JP Core / International / 他 IG の再利用を優先している**
+- [ ] (SHOULD) **Must Support 要素の送受信要件（実装期待値）をドキュメント化した**  
+JP Coreの定義をそのまま利用する場合はその旨をドキュメントに記載する。
 
 ### 4.2 プロファイル定義
-- [ ] (SHALL) **JP Core プロファイルを親にして派生させた**（例：JP_Patient → 派生 Patient）
-- [ ] (SHOULD) **制約・Cardinality 変更の理由をプロファイル解説ページに記載した**
-- [ ] (SHALL) **Must Support 要素と解釈を定義した**
+- [ ] (SHOULD) **JP Core プロファイルを親にして派生させた**（例：JP_Patient → 派生 Patient）
+- [ ] (SHOULD) **MustSupport・Cardinality・制約を変更した場合、理由をプロファイル解説ページに記載した**
 - [ ] (SHOULD) **新規 Extension や ValueSet の必要性をレビュー記録に残した**
-- [ ] (SHALL) **Slicing・Discriminator が正しく設定されているか検証した**
-- [ ] (SHOULD) **`^slicing.rules = #open` など派生先拡張を阻害しない設計を維持した**
+- [ ] (SHOULD) **Slicing・Discriminator が正しく設定されているか検証した**
 
+### 4.3 拡張機能 (Extension)
+- [ ] (SHALL) **既存 Extension の再利用を優先している**
+- [ ] (SHOULD) **新規 Extension 作成時は JP Core / 他 IG に同様の定義が無いことを確認した**
+- [ ] (SHOULD) **Extension の URL / status / context / description / copyright を正しく設定した**
+- [ ] (SHOULD) **Extension のValue[x]に適切な DataType を使用した**
+- [ ] (SHOULD) **Extension にてValueCode, ValueCoding, ValueCodeableConcept が設定される場合、Bindingも行うこと**
 ---
 
 ## 5. 用語・コード体系
 
-### 5.1 標準用語の採用
-- [ ] (SHALL) **JP Core 既存 ValueSet / CodeSystem を最優先で利用した**
-- [ ] (SHOULD) **MEDIS / JLAC / 厚労省コード等の国内標準との整合性を確認した**
+### 5.1 用語の採用
+- [ ] (SHALL) **JLAC / HOT / 厚労省コード等の国内標準との整合性を確認した**
+- [ ] (SHALL) **JP Core 既存 ValueSet / CodeSystem に定義されているものを利用している**
+- [ ] (SHALL) **国内では包括的な SNOMED CT ライセンスが無いことを踏まえ、DICOM / IPS など明示的に許可された範囲以内であることを明記した**
+- [ ] (SHALL) **IGが利用している用語の出典を明示した**
+``` markdown
+<!--IGPublisherの場合、mdファイルに下記語句を記載することで著作権一覧（IPStatement)が自動生成される。
+ガイダンスページ等に記載することが望ましい-->
+{% include ip-statements.xhtml %}
+ ```
 
 ### 5.2 ValueSet
-- [ ] (SHALL) **既存 ValueSet 再利用可否を調査し、結果を記録した**
-- [ ] (SHOULD) **新規 ValueSet は重複を避け、複数プロファイルで共有した**
-- [ ] (SHOULD) **外部用語（LOINC等）のライセンス記述を追加した**
-- [ ] (SHALL) **国内では包括的な SNOMED CT ライセンスが無いことを踏まえ、DICOM / IPS など明示的に許可された範囲以内でのみ利用することを確認した**
+- [ ] (SHALL) **既存 ValueSet 再利用を優先している**
+- [ ] (SHALL) **URL / status / copyright を正しく設定した**
+- [ ] (SHOULD) **1件のみのコードを指定することは避ける。複数コードを含む ValueSet と固定値等で代替している**
+- [ ] (SHOULD) **Bindingの強度は `required` / `extensible` / `preferred` / `example` のいずれかを使用し、要件に応じて選択している**  
+Binding強度は派生先では強い方向（例：`preferred` → `required`）にしか変更できないため、注意すること。
 
 ### 5.3 CodeSystem
 - [ ] (SHALL) **既存 CodeSystem で表現できない範囲のみ新規作成した**
@@ -100,32 +112,27 @@ FHIR 実装に慣れた読者が、JP Core をベースに IG を組み立てる
 - [ ] (SHOULD) **各コードに display / definition / designation（翻訳）を付与した**
 
 ---
-
 ## 6. ドキュメント作成
 
 ### 6.1 必須ページ
 - [ ] (SHALL) **トップページで IG 目的・適用範囲・主要成果物を明記した**
-- [ ] (SHOULD) **アクタ / トランザクション / ユースケースの各章を整備した**
-- [ ] (SHALL) **各プロファイルの説明ページを用意し、利用方法と制約理由を記載した**
-- [ ] (SHOULD) **ライセンス / Dependencies / Release Notes ページを作成した**
+- [ ] (SHOULD) **ユースケース / アクタ / トランザクション の各章を整備した**
+- [ ] (SHOULD) **各プロファイルの説明ページを用意し、利用方法と制約理由を記載した**
+- [ ] (SHOULD) **ライセンス / 著作権 / 依存関係 / 更新履歴 に関するページを作成した**
 
 ---
-
 ## 7. サンプルとテスト
-
 ### 7.1 サンプル
 - [ ] (SHOULD) **各プロファイルに少なくとも 1 つの Instance を作成し、Title/Description を付与した**
 - [ ] (SHOULD) **主要ユースケースをカバーするサンプルセットを `input/fsh/examples/` に配置した**
 
 ### 7.2 テスト
-- [ ] (SHALL) **FSH 生成物を FHIR Validator で検証し、エラー 0 を確認した**
-- [ ] (SHALL) **JP Core 適合性チェックを実施した**
+- [ ] (SHALL) **FSH 生成物を FHIR Validator でpackageファイルを指定し検証し、エラー 0 を確認した**
 - [ ] (SHOULD) **CapabilityStatement に沿ったシナリオテストを実施した**
 
 ---
 
 ## 8. 品質管理
-
 ### 8.1 IG Publisher / Sushi
 - [ ] (SHOULD) **Sushi 警告を解消し、不可避な警告は理由を記録した**
 - [ ] (SHOULD) **QA レポートの WARNING/ERROR をレビューし、対応方針を残した**
@@ -137,7 +144,6 @@ FHIR 実装に慣れた読者が、JP Core をベースに IG を組み立てる
 - [ ] (SHOULD) **外部リンク切れを検査し、メタデータ（publisher/contact 等）を最新化した**
 
 ---
-
 ## 9. 公開準備
 ### 9.1 リポジトリ整備（推奨）
 - [ ] (SHOULD) **FSH / sushi-config.yaml などビルド可能なソース一式を公開した**
@@ -154,7 +160,7 @@ FHIR 実装に慣れた読者が、JP Core をベースに IG を組み立てる
 
 ### 9.4 レビューとフィードバック
 - [ ] (SHOULD) **技術・臨床・セキュリティ観点の内部レビューを実施した**
-- [ ] (MAY) **HL7 Japan WG 等に外部レビューを依頼した**
+- [ ] (MAY) **HL7 Japan WG 等に外部レビューの必要性を確認した**
 - [ ] (MAY) **パブコメを実施し、反映結果を記録した**
 
 ### 9.5 保守計画
@@ -172,8 +178,13 @@ FHIR 実装に慣れた読者が、JP Core をベースに IG を組み立てる
 - [ ] (SHALL) **JP Core・国際版・他 IG の再利用可能なアーティファクトを確認済みである**
 - [ ] (SHALL) **新規作成時は既存調査の記録を残している**
 
+### 継承よりもコンポジション（集約・包含）を優先する
+- [ ] (SHOULD) **可能な限り派生よりもコンポジションを利用している**  
+FHIRの構造として多重派生は実現できないため、拡張性を考慮してコンポジションを優先する。
+COMMONやBASEクラスに相当する基底プロファイルの作成はなるべく避け、必要に応じてExtensionやBackboneElement、要素となっているDataTypeを派生することで包含関係を表現する。
+
 ### 拡張性の確保
-- [ ] (SHOULD) **過度な 0..0 や固定値を控え、派生先拡張を阻害しない**
+- [ ] (SHOULD) **過度な多重度の強制（数量を限定方向に変更する。 *→1→0等）や固定値を控え、派生先拡張を阻害しない**
 - [ ] (SHOULD) **Extension slicing を基本 open とし、閉じる場合は理由を記述した**
 
 ### ライセンスとコンプライアンス
@@ -197,42 +208,5 @@ FHIR 実装に慣れた読者が、JP Core をベースに IG を組み立てる
 
 ---
 
-## 12. 派生されない実装ガイド向け追加チェック
-
-本 IG を最終形として提供する場合に、運用側で必要となる厳密な定義を確認する。
-
-- [ ] (SHOULD) **固定値・必須値 (`fixed[x]` / `pattern[x]`) を確定させ、範囲外データを排除した**
-- [ ] (SHOULD) **Cardinality / Binding を強化し、運用必須要件を明示した**
-- [ ] (SHOULD) **不要エレメントに `0..0` を設定し、Interpretation 差異を排除した**
-- [ ] (SHOULD) **Extension 追加ポリシーを閉じる（あるいは承認プロセスを定義する）ことを決定した**
-- [ ] (SHOULD) **主要ユースケースごとの完全なサンプルを整備し、手順を説明した**
-- [ ] (SHOULD) **接続相手・通信方式（REST / Message / Batch 等）を明文化した**
-- [ ] (SHOULD) **ローカルガバナンス（変更申請窓口、改訂サイクル、教育計画）を提示した**
-
----
-
-## 13. チェックリスト完了確認
-
-- [ ] (SHALL) **すべての SHALL 項目にチェックが付いた**
-- [ ] (SHOULD) **SHOULD 項目を可能な限り実践した**
-- [ ] (SHALL) **設計原則（章 10）を満たしている**
-- [ ] (SHOULD) **ドキュメント・サンプル・テスト・QA が完了している**
-- [ ] (SHOULD) **公開準備（章 9）と保守計画が整っている**
-
----
-
-## 14. 参考リンク
-
-- [FHIR JP Core 実装ガイド](https://jpfhir.jp/fhir/core/)
-- [HL7 FHIR R4 仕様](http://hl7.org/fhir/R4/)
-- [FHIR Shorthand (FSH) 仕様](https://build.fhir.org/ig/HL7/fhir-shorthand/)
-- [IG Publisher ドキュメント](https://confluence.hl7.org/display/FHIR/IG+Publisher+Documentation)
-- [IHE プロファイル](https://www.ihe.net/)
-
----
-
 **本チェックリストは、JP Core 派生 IG を高品質かつ拡張性の高い状態でリリースするためのガードレールです。各項目を確認し、必要に応じて作業ログやドキュメントへのリンクを残してください。**
 
-```
-
-```
