@@ -57,6 +57,6 @@ Title: "JP Core Organization Example ＡＢＣ検査株式会社"
 Description: "ＡＢＣ検査株式会社"
 Usage: #example
 * type = http://terminology.hl7.org/CodeSystem/organization-type#team "Organizational team"
-* name = "ひまわりＡＢＣ検査株式会社健康保険組合"
+* name = "ＡＢＣ検査株式会社"
 * identifier[+].system = "http://abc-hospital.local/fhir/Organization/localcode"
 * identifier[=].value = "000-000-000"
