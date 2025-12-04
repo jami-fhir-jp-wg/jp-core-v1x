@@ -1,7 +1,7 @@
 ValueSet: JP_GenderedSiblingOrder_VS
 Id: jp-genderedsiblingorder-vs
 Title: "JP Core Gendered Sibling Order ValueSet"
-Description: "同性同胞内での出生順を表すValueSet。JP_GenderedSiblingOrder_CS のジェンダー別コードを包含します。"
+Description: "性別の同胞内出生順を表すValueSet。JP_GenderedSiblingOrder_CS を包含。"
 * ^url = "http://jpfhir.jp/fhir/core/ValueSet/JP_GenderedSiblingOrder_VS"
 * ^status = #active
 * ^experimental = false
