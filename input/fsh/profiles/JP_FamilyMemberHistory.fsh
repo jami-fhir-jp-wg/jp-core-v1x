@@ -14,5 +14,3 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 患者の診療に関連する、患者家族の疾患に関する情報。"
 * patient only Reference(JP_Patient)
 * reasonReference only Reference(QuestionnaireResponse or DocumentReference or JP_AllergyIntolerance or JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)
-// extension 参照宣言
-* relationship contains JP_FamilyMemberHistory_GenderedSiblingOrder named genderedSiblingOrder 0..1
