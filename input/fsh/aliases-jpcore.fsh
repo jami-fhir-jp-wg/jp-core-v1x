@@ -223,7 +223,7 @@ Alias: $JP_ProcedureOutcome_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Proced
 Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 Alias: $JP_SimpleObservationCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
 Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
-
+Alias: $JP_GenderedSiblingOrder_CS = http://jpfhir.jp/fhir/core/ValueSet/JP_GenderedSiblingOrder_VS
 
 // Clinsでは定義されているが、JP Coreでは未定義
 // Alias: $JP_BodySite_MEDIS_Concept_CS = http://medis.or.jp/CodeSystem/master-disease-modExCode   //MEDIS病名交換用修飾コード //urn:oid:1.2.392.200119.4.201.5
@@ -349,6 +349,7 @@ Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Procedure
 Alias: $JP_ReasonCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCodesJed_VS
 Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
+Alias: $JP_GenderedSiblingOrder_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_GenderedSiblingOrder_VS
 
 // Alias: $JP_BodySite_MEDIS_Concept_VS = http://medis.or.jp/ValueSet/master-disease-modExCode
 
