@@ -7,24 +7,26 @@ Description: "性別の同胞内出生順を表すValueSet。JP_GenderedSiblingO
 * ^experimental = false
 * ^date = "2025-12-01"
 
+* include codes from system $JP_GenderedSiblingOrder_CS
+
 // Include all gendered sibling order codes
-* include codes $JP_GenderedSiblingOrder_CS#GSO1_M
-* include codes $JP_GenderedSiblingOrder_CS#GSO1_F
-* include codes $JP_GenderedSiblingOrder_CS#GSO2_M
-* include codes $JP_GenderedSiblingOrder_CS#GSO2_F
-* include codes $JP_GenderedSiblingOrder_CS#GSO3_M
-* include codes $JP_GenderedSiblingOrder_CS#GSO3_F
-* include codes $JP_GenderedSiblingOrder_CS#GSO4_M
-* include codes $JP_GenderedSiblingOrder_CS#GSO4_F
-* include codes $JP_GenderedSiblingOrder_CS#GSO5_M
-* include codes $JP_GenderedSiblingOrder_CS#GSO5_F
-* include codes $JP_GenderedSiblingOrder_CS#GSO6_M
-* include codes $JP_GenderedSiblingOrder_CS#GSO6_F
-* include codes $JP_GenderedSiblingOrder_CS#GSO7_M
-* include codes $JP_GenderedSiblingOrder_CS#GSO7_F
-* include codes $JP_GenderedSiblingOrder_CS#GSO8_M
-* include codes $JP_GenderedSiblingOrder_CS#GSO8_F
-* include codes $JP_GenderedSiblingOrder_CS#GSO9_M
-* include codes $JP_GenderedSiblingOrder_CS#GSO9_F
-* include codes $JP_GenderedSiblingOrder_CS#GSO10_M
-* include codes $JP_GenderedSiblingOrder_CS#GSO10_F
+// * include codes $JP_GenderedSiblingOrder_CS#GSO1_M
+// * include codes $JP_GenderedSiblingOrder_CS#GSO1_F
+// * include codes $JP_GenderedSiblingOrder_CS#GSO2_M
+// * include codes $JP_GenderedSiblingOrder_CS#GSO2_F
+// * include codes $JP_GenderedSiblingOrder_CS#GSO3_M
+// * include codes $JP_GenderedSiblingOrder_CS#GSO3_F
+// * include codes $JP_GenderedSiblingOrder_CS#GSO4_M
+// * include codes $JP_GenderedSiblingOrder_CS#GSO4_F
+// * include codes $JP_GenderedSiblingOrder_CS#GSO5_M
+// * include codes $JP_GenderedSiblingOrder_CS#GSO5_F
+// * include codes $JP_GenderedSiblingOrder_CS#GSO6_M
+// * include codes $JP_GenderedSiblingOrder_CS#GSO6_F
+// * include codes $JP_GenderedSiblingOrder_CS#GSO7_M
+// * include codes $JP_GenderedSiblingOrder_CS#GSO7_F
+// * include codes $JP_GenderedSiblingOrder_CS#GSO8_M
+// * include codes $JP_GenderedSiblingOrder_CS#GSO8_F
+// * include codes $JP_GenderedSiblingOrder_CS#GSO9_M
+// * include codes $JP_GenderedSiblingOrder_CS#GSO9_F
+// * include codes $JP_GenderedSiblingOrder_CS#GSO10_M
+// * include codes $JP_GenderedSiblingOrder_CS#GSO10_F
