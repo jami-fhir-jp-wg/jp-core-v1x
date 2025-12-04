@@ -15,4 +15,4 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 * patient only Reference(JP_Patient)
 * reasonReference only Reference(QuestionnaireResponse or DocumentReference or JP_AllergyIntolerance or JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)
 // extension 参照宣言
-* relationship contains JP_FamilyMemberHistory_GenderedBirthOrder named genderedBirthOrder 0..1
+* relationship contains JP_FamilyMemberHistory_GenderedSiblingOrder named genderedSiblingOrder 0..1
