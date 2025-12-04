@@ -43,8 +43,6 @@ Usage: #example
     * system = "http://hl7.org/fhir/administrative-gender"
     * code = #male
 * extension[0].url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory_GenderedSiblingOrder"
-* extension[0].extension[relationshipReference].url = "relationshipReference"
-* extension[0].extension[relationshipReference].valueCode = #SON
 * extension[0].extension[genderedSiblingOrder].url = "genderedSiblingOrder"
 * extension[0].extension[genderedSiblingOrder].valueCodeableConcept.coding = $JP_GenderedSiblingOrder_CS#GSO1_M "長男"
 * reasonCode[0]
