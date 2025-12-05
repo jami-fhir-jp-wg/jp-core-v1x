@@ -41,14 +41,14 @@ Description: "このプロファイルはConditionリソースに対して、患
 * code.coding[medisExchange] from $JP_Disease_MEDIS_Concept_VS (required)
 * code.coding[medisExchange].system = $JP_Disease_MEDIS_Concept_CS (exactly)
 * code.coding[medisExchange].code 1..
-* code.coding[medisExchange] ^short = "MEDIS ICD10対応標準病名マスター(交換用コード)。【詳細参照】"
-* code.coding[medisExchange] ^definition = "MEDIS ICD10対応標準病名マスターの管理番号。"
+* code.coding[medisExchange] ^short = "MEDIS ICD10対応標準病名マスターの交換用コード。【詳細参照】"
+* code.coding[medisExchange] ^definition = "MEDIS ICD10対応標準病名マスターの交換用コード。"
 * code.coding[medisExchange] ^comment = "JP_Disease_MEDIS_Concept_VSの中から適切なコードを指定する。"
 * code.coding[medisRecordNo] from $JP_Disease_MEDIS_ManagementID_VS (required)
 * code.coding[medisRecordNo].system = $JP_Disease_MEDIS_ManagementID_CS (exactly)
 * code.coding[medisRecordNo].code 1..
-* code.coding[medisRecordNo] ^short = "MEDIS ICD10対応標準病名マスターの交換用コード。"
-* code.coding[medisRecordNo] ^definition = "MEDIS ICD10対応標準病名マスターの交換用コード。"
+* code.coding[medisRecordNo] ^short = "MEDIS ICD10対応標準病名マスターの管理番号。"
+* code.coding[medisRecordNo] ^definition = "MEDIS ICD10対応標準病名マスターの管理番号。"
 * code.coding[medisRecordNo] ^comment = "JP_Disease_MEDIS_ManagementID_VSの中から適切なコードを指定する。"
 * code.coding[receipt] from $JP_Disease_Claim_VS (required)
 * code.coding[receipt].system = $JP_Disease_Claim_CS (exactly)
@@ -152,13 +152,13 @@ Description: "病名の前置修飾語を格納するための拡張"
 * valueCodeableConcept.coding[medisExchange] from $JP_Modifier_MEDIS_Concept_VS (required)
 * valueCodeableConcept.coding[medisExchange].system = $JP_Modifier_MEDIS_Concept_CS (exactly)
 * valueCodeableConcept.coding[medisExchange].code 1..
-* valueCodeableConcept.coding[medisExchange] ^short = "MEDIS ICD10対応標準病名マスター(修飾語交換用コード) 。【詳細参照】"
+* valueCodeableConcept.coding[medisExchange] ^short = "MEDIS ICD10対応標準病名マスター修飾語交換用コード 。【詳細参照】"
 * valueCodeableConcept.coding[medisExchange] ^definition = "MEDIS ICD10対応標準病名マスターの修飾語交換用コード "
 * valueCodeableConcept.coding[medisExchange] ^comment = "JP_Modifier_MEDIS_Concept_VSの中から適切なコードを指定する。"
 * valueCodeableConcept.coding[medisRecordNo] from $JP_Modifier_MEDIS_ManagementID_VS (required)
 * valueCodeableConcept.coding[medisRecordNo].system = $JP_Modifier_MEDIS_ManagementID_CS (exactly)
 * valueCodeableConcept.coding[medisRecordNo].code 1..
-* valueCodeableConcept.coding[medisRecordNo] ^short = "MEDIS ICD10対応標準病名マスター(修飾語管理番号) 。【詳細参照】"
+* valueCodeableConcept.coding[medisRecordNo] ^short = "MEDIS ICD10対応標準病名マスター修飾語管理番号 。【詳細参照】"
 * valueCodeableConcept.coding[medisRecordNo] ^definition = "MEDIS ICD10対応標準病名マスターの修飾語管理番号 "
 * valueCodeableConcept.coding[medisRecordNo] ^comment = "JP_ConditionDiseaseModifierMEDISRercordNo_VSの中から適切なコードを指定する。"
 * valueCodeableConcept.coding[receipt] from $JP_Modifier_Disease_Claim_VS (required)
