@@ -8,7 +8,7 @@ Usage: #example
 * identifier[0].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no"
 * identifier[=].value = "1234567890"
 * type[departmentType] = http://terminology.hl7.org/CodeSystem/organization-type#dept "Hospital Department"
-* type[+] = $JP_Department_SsMix_CS#01 "内科"
+* type[departmentType].coding[+] = $JP_Department_SsMix_CS#01 "内科"
 * name = "第一内科"
 * telecom[0].system = #phone
 * telecom[=].value = "03-1234-5678"
@@ -23,7 +23,7 @@ Description: "JP_Organization_Departmentリソースの例。整形外科診療�
 Usage: #example
 * meta.profile = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization_Department"
 * type[departmentType] = http://terminology.hl7.org/CodeSystem/organization-type#dept "Hospital Department"
-* type[+] = $JP_Department_SsMix_CS#16 "整形外科"
+* type[departmentType].coding[+] = $JP_Department_SsMix_CS#16 "整形外科"
 * name = "整形外科"
 * partOf = Reference(jp-organization-example-hospital)
 * partOf.display = "健康第一病院"
