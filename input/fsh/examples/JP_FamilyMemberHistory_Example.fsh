@@ -24,11 +24,11 @@ Usage: #example
   * code
     * text = "難聴"
 
-// Example: FamilyMemberHistory for eldest son (長男) with gendered sibling order annotation
+// Example: FamilyMemberHistory for eldest son (長男) with sibling order annotation
 Instance: jp-familymemberhistory-example-2
 InstanceOf: JP_FamilyMemberHistory
 Title: "JP Core FamilyMemberHistory Example 家族歴（息子 長男）"
-Description: "息子（長男）の家族歴の例。性別同胞内出生順拡張を付ける例。"
+Description: "息子（長男）の家族歴の例。同胞内出生順拡張を付ける例。"
 Usage: #example
 * status = #partial
 * patient
@@ -42,11 +42,11 @@ Usage: #example
   * coding[0]
     * system = "http://hl7.org/fhir/administrative-gender"
     * code = #male
-* extension[+].url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory_GenderedSiblingOrder"
-* extension[=].extension[+].url = "genderedSiblingOrder"
+* extension[+].url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory_SiblingOrder"
+* extension[=].extension[+].url = "siblingOrder"
 * extension[=].extension[=].valueInteger = 1
-* extension[=].extension[+].url = "genderedSiblingDisplay"
-* extension[=].extension[=].valueCodeableConcept.coding = $JP_GenderedSiblingOrder_CS#GSO1_M "長男"
+* extension[+].url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory_GenderedSiblingOrder"
+* extension[=].valueCodeableConcept.coding = $JP_GenderedSiblingOrder_CS#GSO1_M "長男"
 * reasonCode[0]
   * text = "糖尿病"
 * condition[0]
