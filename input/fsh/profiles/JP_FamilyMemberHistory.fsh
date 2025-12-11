@@ -16,7 +16,7 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 * reasonReference only Reference(QuestionnaireResponse or DocumentReference or JP_AllergyIntolerance or JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)
 
 // Extension 参照宣言
-* extension contains JP_FamilyMemberHistory_SiblingOrder named siblingOrder 0..1
+* extension contains JP_FamilyMemberHistory_SiblingOrder named siblingOrder ..1
 
 
 // ==============================
@@ -29,22 +29,24 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 Extension: JP_FamilyMemberHistory_SiblingOrder
 Id: jp-familymemberhistory-siblingorder
 Title: "JP Core FamilyMemberHistory Sibling Order Extension"
-Description: "同胞内出生順（長男、長女など）をFamilyMemberHistoryに付記するための拡張。"
-* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory_SiblingOrder"
+Description: "同胞内順位をFamilyMemberHistoryに付記するための拡張。"
+* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_SiblingOrder"
 * ^status = #active
 * ^date = "2025-12-01"
 * ^context.type = #element
 * ^context.expression = "FamilyMemberHistory"
 * . ^short = "同胞内出生順"
 * . ^definition = "FamilyMemberHistoryのrelationship（続柄）と組み合わせて、関連する家族成員の同胞内出生順を表現する拡張。同胞内の順位を整数で、性別の同胞内の出生準名（長男、長女、次男、次女など）を CodeableConcept で表現する。この拡張は社会学的・文化的文脈で利用され、医学的な遺伝情報とは独立している。遺伝学的家系図はスコープ外。"
-* url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory_SiblingOrder" (exactly)
+* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_SiblingOrder" (exactly)
 * extension contains 
-    siblingBirthOrder 0..1 MS and 
-    genderedSiblingBirthOrder 0..1 MS
+    siblingBirthOrder ..1 MS and 
+    genderedSiblingBirthOrder ..1 MS
+//
 * extension[siblingBirthOrder] ^short = "同胞内出生順（整数）"
 * extension[siblingBirthOrder] ^definition = "同胞内での出生順を表現した数値。性別に関係なく、単純に出生順を示す。例えば、男、男、女の出生順の場合、長男は1、次男は2、長女は3など。"
 * extension[siblingBirthOrder].value[x] only integer
 * extension[siblingBirthOrder].value[x] ^minValueInteger = 1
+//
 * extension[genderedSiblingBirthOrder] ^short = "性別同胞内出生順名称（用語）"
 * extension[genderedSiblingBirthOrder] ^definition = "同胞内の性別の出生順を表す用語（例：長男、長女、次男、次女）。"
 * extension[genderedSiblingBirthOrder].value[x] only CodeableConcept

@@ -110,6 +110,7 @@ Alias: $JP_Organization_InsuranceOrganizationCategory = http://jpfhir.jp/fhir/co
 Alias: $JP_Organization_InsuranceOrganizationNo = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo
 Alias: $JP_Organization_PrefectureNo = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo
 Alias: $JP_Patient_Race = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race
+Alias: $JP_FamilyMemberHistory_SiblingOrder = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_SiblingOrder
 
 // CapabilityStatement
 Alias: $JP_Client_CapabilityStatement = http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement

@@ -8,7 +8,19 @@
 
 ### Extensions定義
 
- 本プロファイルで追加定義された拡張はない。
+ 本プロファイルで使用される拡張は次の通りである。
+
+- [JP_SiblingOrder][JP_FamilyMemberHistory_SiblingOrder]
+
+  - 同胞内出生順の複合拡張
+
+- [JP_SiblingBirthOrder][JP_FamilyMemberHistory_SiblingBirthOrder]
+
+  - 同胞内出生順を表す数値
+
+- [JP_GenderedSiblingBirthOrder][JP_FamilyMemberHistory_GenderedSiblingBirthOrder]
+
+  - 性別同胞内出生順名称を表す用語（長男、長女、次男、次女など）
 
 ## 利用方法
 
