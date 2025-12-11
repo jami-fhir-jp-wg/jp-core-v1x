@@ -30,14 +30,14 @@ Extension: JP_FamilyMemberHistory_SiblingOrder
 Id: jp-familymemberhistory-siblingorder
 Title: "JP Core FamilyMemberHistory Sibling Order Extension"
 Description: "同胞内順位をFamilyMemberHistoryに付記するための拡張。"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_SiblingOrder"
+* ^url = $JP_FamilyMemberHistory_SiblingOrder
 * ^status = #active
 * ^date = "2025-12-01"
 * ^context.type = #element
 * ^context.expression = "FamilyMemberHistory"
 * . ^short = "同胞内出生順"
 * . ^definition = "FamilyMemberHistoryのrelationship（続柄）と組み合わせて、関連する家族成員の同胞内出生順を表現する拡張。同胞内の順位を整数で、性別の同胞内の出生準名（長男、長女、次男、次女など）を CodeableConcept で表現する。この拡張は社会学的・文化的文脈で利用され、医学的な遺伝情報とは独立している。遺伝学的家系図はスコープ外。"
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_SiblingOrder" (exactly)
+* url = $JP_FamilyMemberHistory_SiblingOrder (exactly)
 * extension contains 
     siblingBirthOrder ..1 MS and 
     genderedSiblingBirthOrder ..1 MS
