@@ -15,8 +15,8 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 * patient only Reference(JP_Patient)
 * reasonReference only Reference(QuestionnaireResponse or DocumentReference or JP_AllergyIntolerance or JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)
 
-
-
+//extension 参照宣言
+* extension contains P_FamilyMemberHistory_SiblingOrder
 
 // ==============================
 //   Extension 定義
@@ -28,7 +28,7 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 Extension: JP_FamilyMemberHistory_SiblingOrder
 Id: jp-familymemberhistory-siblingorder
 Title: "JP Core FamilyMemberHistory Sibling Order Extension"
-Description: "同胞内出生順（長男、長女など）をFamilyMemberHistoryに付記するための拡張。valueは CodeableConcept で、JP_SiblingOrder_VS のコード（SO1, SO1F など）を推奨する。"
+Description: "同胞内出生順（長男、長女など）をFamilyMemberHistoryに付記するための拡張。同胞はvalueは CodeableConcept で、JP_SiblingOrder_VS のコード（SO1, SO1F など）を推奨する。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory_SiblingOrder"
 * ^status = #active
 * ^date = "2025-12-01"
@@ -37,9 +37,7 @@ Description: "同胞内出生順（長男、長女など）をFamilyMemberHistor
 * . ^short = "同胞内出生順"
 * . ^definition = "FamilyMemberHistory リソース全体に対して、関連する家族成員の同胞内出生順を表現する拡張。日本語での表現（長男、長女、次男など）を CodeableConcept で提供する。この拡張は社会学的・文化的文脈で利用され、医学的な遺伝情報とは独立している。家系図はスコープ外。"
 * url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory_SiblingOrder" (exactly)
-* extension contains
-    siblingOrder 0..1 MS and
-    genderedSiblingOrder 0..1 MS
+
 * extension[siblingOrder] ^short = "同胞内出生順（整数）"
 * extension[siblingOrder] ^definition = "同胞内での出生順を表現した数値。性別に関係なく、単純に出生順を示す。例えば、男、男、女の出生順の場合、長男は1、次男は2、長女は3など。"
 * extension[siblingOrder].value[x] only integer
