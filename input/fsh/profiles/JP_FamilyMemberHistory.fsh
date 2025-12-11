@@ -16,7 +16,8 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 * reasonReference only Reference(QuestionnaireResponse or DocumentReference or JP_AllergyIntolerance or JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)
 
 //extension 参照宣言
-* extension contains P_FamilyMemberHistory_SiblingOrder
+* extension contains 
+    JP_FamilyMemberHistory_SiblingOrder named siblingOrder 0..1 MS and genderedSiblingOrder 0..1 MS
 
 // ==============================
 //   Extension 定義
