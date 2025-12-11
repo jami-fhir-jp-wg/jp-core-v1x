@@ -28,7 +28,7 @@ Usage: #example
 Instance: jp-familymemberhistory-example-2
 InstanceOf: JP_FamilyMemberHistory
 Title: "JP Core FamilyMemberHistory Example 家族歴（息子 長男）"
-Description: "息子（長男）の家族歴の例。同胞内出生順拡張を付ける例。"
+Description: "息子（長男）の家族歴、同胞内出生順拡張を付ける例。"
 Usage: #example
 * status = #partial
 * patient
@@ -43,9 +43,9 @@ Usage: #example
     * system = "http://hl7.org/fhir/administrative-gender"
     * code = #male
 * extension[+].url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory_SiblingOrder"
-* extension[=].extension[+].url = "siblingOrder"
+* extension[=].extension[+].url = "siblingBirthOrder"
 * extension[=].extension[=].valueInteger = 1
-* extension[+].url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory_GenderedSiblingOrder"
+* extension[=].extension[+].url = "genderedsSiblingBirthOrder"
 * extension[=].valueCodeableConcept.coding = $JP_GenderedSiblingOrder_CS#GSO1_M "長男"
 * reasonCode[0]
   * text = "糖尿病"
