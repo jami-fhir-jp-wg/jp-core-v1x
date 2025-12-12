@@ -2,7 +2,7 @@ CodeSystem: JP_GenderedSiblingOrder_CS
 Id: jp-genderedsiblingorder-cs
 Title: "JP Core Gendered Sibling Order CodeSystem"
 Description: "性別の同胞内出生順を表す日本語ラベル（長男、長女、次男、次女など）を定義するCodeSystem。社会学的・文化的表現。"
-* ^url = "http://jpfhir.jp/fhir/core/CodeSystem/JP_GenderedSiblingOrder_CS"
+* ^url = $JP_GenderedSiblingOrder_CS
 * ^status = #active
 * ^experimental = false
 * ^date = "2025-12-01"
