@@ -350,7 +350,7 @@ Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Procedure
 Alias: $JP_ReasonCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCodesJed_VS
 Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
-Alias: $JP_GenderedSiblingOrder_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_GenderedSiblingOrder_VS
+Alias: $JP_GenogramBasedSiblingOrder_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_GenogramBasedSiblingOrder_VS
 
 // Alias: $JP_BodySite_MEDIS_Concept_VS = http://medis.or.jp/ValueSet/master-disease-modExCode
 
