@@ -1,7 +1,7 @@
 CodeSystem: JP_GenderedSiblingBirthOrder_CS
 Id: jp-genderedsiblingbirthorder-cs
 Title: "JP Core Gendered Sibling Birth Order CodeSystem"
-Description: "社会学的・文化的な性別の同胞内出生順の名称を定義するCodeSystem。日本国内では、長女、長男、次女、次男など。性の多様性はtext要素に詳述（code要素は、#OTHER、#NOS）。外国人の場合、出身国の文化に基づく同胞内出生順の名称を表現するコードシステムを拡張することで対応できる。"
+Description: "社会学的・文化的な性別の同胞内出生順の名称を定義するCodeSystem。日本国内では、長女、長男、次女、次男など。性の多様性はtext要素に詳述。外国人の場合、出身国の文化に基づく同胞内出生順の名称を表現するコードシステムを拡張することで対応できる。"
 * ^url = $JP_GenderedSiblingBirthOrder_CS
 * ^status = #active
 * ^experimental = false
@@ -30,5 +30,3 @@ Description: "社会学的・文化的な性別の同胞内出生順の名称を
 * #GSBO10_F "十女"
 * #GSBO_OTHER "その他（text要素に詳細を記載）"
 * #GSBO_NOS "詳細不明(text要素に詳細を記載)"
-
-// 備考: この CodeSystem は日本固有の社会学的・文化的表現を提供します。医学的に厳密な遺伝情報については、GA4GH等のプロファイルを参照してください。
