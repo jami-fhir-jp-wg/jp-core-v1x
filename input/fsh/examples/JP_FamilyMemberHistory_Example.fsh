@@ -32,8 +32,8 @@ Description: "息子（長男）の家族歴、同胞内出生順拡張を付け
 Usage: #example
 * status = #partial
 * patient
-  * reference = "Patient/jp-patient-example-1"
-  * display = "山田 太郎"
+  * reference = "Patient/jp-patient-example-2"
+  * display = "山田 次郎"
 * relationship
   * coding[0]
     * system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -46,7 +46,7 @@ Usage: #example
 * extension[=].extension[+].url = "siblingBirthOrder"
 * extension[=].extension[=].valueInteger = 1
 * extension[=].extension[+].url = "genderedSiblingBirthOrder"
-* extension[=].valueCodeableConcept.coding = $JP_GenderedSiblingBirthOrder_CS#GSBO1_M "長男"
+* extension[=].extension[=].valueCodeableConcept.coding = #GSBO1_M
 * reasonCode[0]
   * text = "糖尿病"
 * condition[0]
