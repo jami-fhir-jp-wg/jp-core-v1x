@@ -16,7 +16,7 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 * reasonReference only Reference(QuestionnaireResponse or DocumentReference or JP_AllergyIntolerance or JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)
 
 // Extension 参照宣言
-* extension contains JP_FamilyMemberHistory_SiblingOrder named siblingOrder ..1
+* extension contains JP_FamilyMemberHistory_GenogramBasedSiblingOrder named genogramBasedSiblingOrder ..1
 
 
 // ==============================
@@ -50,4 +50,4 @@ Description: "同胞内順位をFamilyMemberHistoryに付記するための拡�
 * extension[genderedSiblingBirthOrder] ^short = "性別同胞内出生順名称（用語）"
 * extension[genderedSiblingBirthOrder] ^definition = "同胞内の性別の出生順の名称。国内では、長男、長女、次男、次女などであるが、国ごとに社会学的・文化的文脈で用いられる名称。"
 * extension[genderedSiblingBirthOrder].value[x] only CodeableConcept
-* extension[genderedSiblingBirthOrder].valueCodeableConcept from $JP_GenderedSiblingOrder_VS (preferred)
+* extension[genderedSiblingBirthOrder].valueCodeableConcept from $JP_GenderedSiblingBirthOrder_VS (preferred)
