@@ -45,8 +45,8 @@ Usage: #example
 * extension[+].url = $JP_FamilyMemberHistory_GenogramBasedSiblingOrder
 * extension[=].extension[+].url = "siblingBirthOrder"
 * extension[=].extension[=].valueInteger = 1
-* extension[=].extension[+].url = "genderedsSiblingBirthOrder"
-* extension[=].valueCodeableConcept.coding = $JP_GenderedSiblingBirthOrder_CS#GSO1_M "長男"
+* extension[=].extension[+].url = "genderedSiblingBirthOrder"
+* extension[=].valueCodeableConcept.coding = $JP_GenderedSiblingBirthOrder_CS#GSBO1_M "長男"
 * reasonCode[0]
   * text = "糖尿病"
 * condition[0]
