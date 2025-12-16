@@ -10,17 +10,33 @@
 
  本プロファイルで使用される拡張は次の通りである。
 
-- [JP_SiblingOrder][JP_FamilyMemberHistory_SiblingOrder]
+<table  class="extension_description">
+  <tr>
+    <th>拡張</th>
+    <th>説明</th>
+    <th>URL</th>
+    <th>値の型</th>
+  </tr>
+  <tr>
+    <td>ジェノグラム用同胞内出生順</td>
+    <td>ジェノグラムを用途とした社会学的・文化的な同胞内出生順の複合拡張</td>
+    <td>http://jpfhir.jp/fhir/core/ValueSet/JP_GenderedSiblingOrder_VS</td>
+    <td>Extension</td>
+  </tr>
+</table>
 
-  - 同胞内出生順の複合拡張
+
+- [JP_SiblingOrder][JP_FamilyMemberHistory_GenogramBasedSiblingOrder]
+
+  - ジェノグラムを用途とした社会学的・文化的な同胞内出生順の複合拡張
 
 - [JP_SiblingBirthOrder][JP_FamilyMemberHistory_SiblingBirthOrder]
 
-  - 同胞内出生順を表す数値
+  - 同胞内出生順を表す数値。社会学的な出生順を格納し、また、臨床においてしばし発生する不完全な家族歴の聴取を補完し、病歴聴取時の出生順を入力すること用途としている。
 
 - [JP_GenderedSiblingBirthOrder][JP_FamilyMemberHistory_GenderedSiblingBirthOrder]
 
-  - 性別同胞内出生順名称を表す用語（長男、長女、次男、次女など）
+  - 社会学的、文化的な視点から、性別同胞内出生順名称を表す名称（長男、長女、次男、次女など）。性の多様性はtext要素に詳述（code要素は、#OTHER、#NOS）。外国人の場合、出身国の文化に基づく同胞内出生順の名称を表現するコードシステムを拡張することで対応できる。
 
 ## 利用方法
 
