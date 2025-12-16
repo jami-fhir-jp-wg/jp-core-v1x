@@ -42,11 +42,11 @@ Usage: #example
   * coding[0]
     * system = "http://hl7.org/fhir/administrative-gender"
     * code = #male
-* extension[+].url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory_SiblingOrder"
+* extension[+].url = $JP_FamilyMemberHistory_GenogramBasedSiblingOrder
 * extension[=].extension[+].url = "siblingBirthOrder"
 * extension[=].extension[=].valueInteger = 1
 * extension[=].extension[+].url = "genderedsSiblingBirthOrder"
-* extension[=].valueCodeableConcept.coding = $JP_GenderedSiblingOrder_CS#GSO1_M "長男"
+* extension[=].valueCodeableConcept.coding = $JP_GenderedSiblingBirthOrder_CS#GSO1_M "長男"
 * reasonCode[0]
   * text = "糖尿病"
 * condition[0]
