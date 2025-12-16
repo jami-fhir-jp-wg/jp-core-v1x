@@ -73,7 +73,7 @@ Alias: $JP_ServiceRequest_Common = http://jpfhir.jp/fhir/core/StructureDefinitio
 Alias: $JP_Specimen_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
 
 // StructureDefinition: Extension
-Alias: $JP_Department = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Department
+Alias: $JP_Common_Department = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Common_Department
 Alias: $JP_Condition_DiseaseOutcome = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseaseOutcome
 Alias: $JP_Condition_DiseasePostfixModifier = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePostfixModifier
 Alias: $JP_Condition_DiseasePrefixModifier = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePrefixModifier

@@ -5,7 +5,7 @@ InstanceOf: JP_MedicationRequest
 Title: "JP Core MedicationRequest with Department Extension Example (CodeableConcept)"
 Description: "JP_Department拡張を使用したMedicationRequestの例。診療科情報をSS-MIX2コードで表現する。"
 Usage: #example
-* extension[http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Department].valueCodeableConcept = $JP_Department_SsMix_CS#01 "内科"
+* extension[http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Common_Department].valueCodeableConcept = $JP_Department_SsMix_CS#01 "内科"
 * identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "1"
 * identifier[orderInRp].system = $JP_MedicationAdministrationIndex
@@ -31,8 +31,8 @@ InstanceOf: JP_MedicationRequest
 Title: "JP Core MedicationRequest with Department Extension Example (Reference)"
 Description: "JP_Department拡張を使用したMedicationRequestの例。診療科情報をJP_Organization_Departmentへの参照で表現する。"
 Usage: #example
-* extension[http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Department].valueReference = Reference(jp-organization-department-example-01)
-* extension[http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Department].valueReference.display = "第一内科"
+* extension[http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Common_Department].valueReference = Reference(jp-organization-department-example-01)
+* extension[http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Common_Department].valueReference.display = "第一内科"
 * identifier[rpNumber].system = $JP_Medication_RPGroupNumber
 * identifier[rpNumber].value = "2"
 * identifier[orderInRp].system = $JP_MedicationAdministrationIndex
@@ -58,7 +58,7 @@ InstanceOf: JP_ServiceRequest_Common
 Title: "JP Core ServiceRequest with Department Extension Example (Text only)"
 Description: "JP_Department拡張を使用したServiceRequestの例。診療科情報をテキストのみで表現する。"
 Usage: #example
-* extension[http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Department].valueCodeableConcept.text = "消化器腫瘍外科"
+* extension[http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Common_Department].valueCodeableConcept.text = "消化器腫瘍外科"
 * identifier[0].system = "http://abc-hospital.local/serviceRequest-identifier"
 * identifier[=].value = "SR-2023-0401-001"
 * status = #active

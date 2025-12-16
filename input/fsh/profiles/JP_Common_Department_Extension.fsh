@@ -1,11 +1,11 @@
 // ==============================
 //   Extension 定義
 // ==============================
-Extension: JP_Department
-Id: jp-department
-Title: "JP Core Department Extension"
+Extension: JP_Common_Department
+Id: jp-common-department
+Title: "JP Core Common Department Extension"
 Description: "診療科情報を格納するための汎用的な拡張。様々なリソースで診療科情報を表現する際に使用できる。診療科コード（CodeableConcept）または診療科組織への参照（Reference）のいずれかを指定する。"
-* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Department"
+* ^url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Common_Department"
 * ^status = #active
 * ^date = "2025-10-28"
 * ^context[0].type = #element
@@ -18,7 +18,7 @@ Description: "診療科情報を格納するための汎用的な拡張。様々
 
 用途に応じて適切な表現方法を選択すること。診療科名称の統一が困難な場合は、CodeableConceptのtext要素を使用してテキストベースで診療科名を記録することも可能。"""
 
-* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Department" (exactly)
+* url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Common_Department" (exactly)
 * value[x] only CodeableConcept or Reference(JP_Organization_Department)
 * valueCodeableConcept from $JP_Department_SsMix_VS (preferred)
 * valueCodeableConcept ^short = "診療科コード"
