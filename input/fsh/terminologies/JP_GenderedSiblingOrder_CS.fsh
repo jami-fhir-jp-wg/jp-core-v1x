@@ -1,13 +1,11 @@
 CodeSystem: JP_GenderedSiblingOrder_CS
 Id: jp-genderedsiblingorder-cs
 Title: "JP Core Gendered Sibling Order CodeSystem"
-Description: "性別の同胞内出生順を表す日本語ラベル（長男、長女、次男、次女など）を定義するCodeSystem。社会学的・文化的表現。"
+Description: "性別の同胞内出生順の名称（長男、長女、次男、次女など）を定義するCodeSystem。社会学的・文化的表現。"
 * ^url = $JP_GenderedSiblingOrder_CS
 * ^status = #active
 * ^experimental = false
 * ^date = "2025-12-01"
-* ^publisher = "（一社）日本医療情報学会"
-* ^copyright = "（一社）日本医療情報学会. CC BY-ND 4.0"
 * ^content = #complete
 
 // Gendered labels for same-sex sibling ordering
