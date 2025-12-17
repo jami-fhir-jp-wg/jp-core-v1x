@@ -32,7 +32,7 @@
   <tr>
     <td>性別同胞内出生順名称</td>
     <td>同胞内の性別の出生順の名称。国内では、長男、長女、次男、次女などであるが、国ごとに社会学的・文化的文脈で用いられる名称。</td>
-    <td>GenderedSiblingBirthOrder</td>
+    <td>genderedSiblingBirthOrder</td>
     <td>CodeableConcept</td>
   </tr>
 
