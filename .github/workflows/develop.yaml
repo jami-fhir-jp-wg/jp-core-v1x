@@ -46,7 +46,7 @@ jobs:
         echo "encoded_pullrequest_title=$title_temp" >> $GITHUB_ENV
       id: extract_date
 
-    - uses: bluwy/substitute-string-action@v3
+    - uses: bluwy/substitute-string-action@v1
       id: substitute_index
       with:
         _input-file: input/landing_page/_index.yml
@@ -102,16 +102,15 @@ jobs:
       run: |
         mkdir -p /home/runner/.fhir
         mv $JPPACKAGECOREtgz /home/runner/.fhir/
-        mv $JPTerminologyCOREPtgz /home/runner/.fhir/$JPTerminologyCOREPtgz
+        mkdir -p /home/runner/.fhir/work
+        mv $JPTerminologyCOREPtgz /home/runner/.fhir/work/$JPTerminologyCOREPtgz
         cd /home/runner/.fhir
         tar xzf $JPPACKAGECOREtgz
-        rm -rf "/home/runner/.fhir/packages/$JPTerminologyCOREdir"
-        mkdir -p "/home/runner/.fhir/packages/$JPTerminologyCOREdir"
-        tar xzf "/home/runner/.fhir/$JPTerminologyCOREPtgz" -C "/home/runner/.fhir/packages/$JPTerminologyCOREdir"
-
-        test -f "/home/runner/.fhir/packages/$JPTerminologyCOREdir/package/package.json"
-        echo "Installed terminology package:" "/home/runner/.fhir/packages/$JPTerminologyCOREdir"
-        cat "/home/runner/.fhir/packages/$JPTerminologyCOREdir/package/package.json" | head -n 40
+        cd /home/runner/.fhir/work
+        tar xzf $JPTerminologyCOREPtgz
+        cd /home/runner/.fhir
+        mkdir -p packages/$JPTerminologyCOREdir
+        mv /home/runner/.fhir/work/package /home/runner/.fhir/packages/$JPTerminologyCOREdir
          
     - name: apply the version of sushi-config.yaml
       run: |
