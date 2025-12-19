@@ -11,18 +11,11 @@ JP Core Immunization リソースは、次の要素を持たなければなら�
 
 JP Core Immunization リソースで使用される拡張は次の通りである。
 
-#### JP Core Immunization独自で追加されたExtension
-
 |拡張|説明|定義|値型|
 |:----|:----|:----|:----|
 | DueDateOfNextDose | 次回接種予定日 | [JP_Immunization_DueDateOfNextDose] |dateTime|
 | ManufacturedDate | 製造年月日 | [JP_Immunization_ManufacturedDate] |dateTime |
 | CertificatedDate | 検定年月日 | [JP_Immunization_CertificatedDate] |dateTime |
-
-#### 既存のExtensionの利用
-
-既存のExtensionの利用はない。
-
 
 ### 用語定義
 
@@ -208,7 +201,7 @@ Immunization.occurrenceString要素を使用した例：
 }
 ```
 
-### 摂取量の記述方法について
+### 接種量の記述方法について
 ワクチンの接種量は Immunization.doseQuantity要素にSimpleQuantity型で記述する。全体の容量をUCUM("http://unitsofmeasure.org")を使用してmL単位で指定する。
 
 ```json
@@ -221,7 +214,7 @@ Immunization.occurrenceString要素を使用した例：
 ```
 
 ### 接種実施者の記述方法について
-ワクチンの接種実施者 Immunization.performer.actor要素にReference型でPractitionerリソースの参照情報を記述する。Immunization.performer.functionにはValueSet "http://hl7.org/fhir/ValueSet/immunization-function"から"AP" (Administering Provider)を指定する。
+ワクチンの接種実施者 Immunization.performer.actor要素にReference型でPractitionerリソースの参照情報を記述する。Immunization.performer.functionにはValueSet "https://hl7.org/fhir/R4/valueset-immunization-function.html"から"AP" (Administering Provider)を指定する。
 
 ```json
 "performer": [
@@ -243,10 +236,10 @@ Immunization.occurrenceString要素を使用した例：
 ```
 
 ### 接種を行わなかった理由の記述方法について
-ワクチン接種を行わなかった理由を記述したい場合は、Immunization.reasonCode要素にCodeableConcept型で記述する。適当な標準コードが整備されていないため、ローカルコードを定義するか、CodeableConcept.text要素にテキストとして記述する。
+ワクチン接種を行わなかった理由を記述したい場合は、Immunization.statusReason要素にCodeableConcept型で記述する。適当な標準コードが整備されていないため、ローカルコードを定義するか、CodeableConcept.text要素にテキストとして記述する。
 
 ```json
-"reasonCode": [
+"statusReason": [
   {
     "text": "37.5℃以上の発熱があったため。"
   }

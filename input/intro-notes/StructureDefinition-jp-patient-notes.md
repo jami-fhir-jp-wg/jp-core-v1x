@@ -22,7 +22,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 
 - [nameRepresentationUse](https://hl7.org/fhir/R4/extension-iso21090-en-representation.html)
 
-  - 患者氏名(Patient.name)の漢字表記・カナ表記識別のために使用する
+  - 患者氏名(Patient.name)の漢字表記・カナ・ローマ字表記識別のために使用する
 
 ## 利用方法
 

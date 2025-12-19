@@ -206,7 +206,7 @@ HTTP/1.1 200 OK
 ## 注意事項
 
 Encounterリソースは、予定情報や予約の保存には使用されない。予約の保存にはAppointmentリソースを利用すること。FHIRでは、Appointmentは診察の日付を決定するのに利用されるのに対して、Encounterは実際に患者が来院して診察が実施されたことを表現する。
-そのため、「計画済み」 status の Encounter は実際に発生する前の Encounter であり、診療行為が完了するまで更新されることが期待される。
+そのため、「planned」の status の Encounter は実際に発生する前の Encounter であり、診療行為が完了するまで更新されることが期待される。
 
 ## その他、参考文献・リンク等
 

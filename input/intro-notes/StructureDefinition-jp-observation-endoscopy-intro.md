@@ -36,8 +36,8 @@ JP Core DiagnosticReport Endoscopyを用いて、大腸内視鏡検査レポー�
 | ||所見2：肉眼型IIa（表面隆起型）|
 
 <!-- 
-![](intoronotes-resources/observation_endoscopy_structure.png) -->
-<img src="intoronotes-resources/observation_endoscopy_structure.png" width="100%" alt="内視鏡Observationの構造"/>
+![](observation_endoscopy_structure.png) -->
+<img src="observation_endoscopy_structure.png" width="100%" alt="内視鏡Observationの構造"/>
 
 ## プロファイル定義
 

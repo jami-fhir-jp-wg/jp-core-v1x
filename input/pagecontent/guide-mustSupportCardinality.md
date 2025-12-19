@@ -1,10 +1,11 @@
 ### CardinalityとMustSupport組み合わせ
+この節では各CardinalityとMustSupportの状態ごとのサーバおよびクライアント動作について表形式にて記載している。
 #### MustSupportが付与されていない要素について
-この節では各CardinalityとMustSupportの状態ごとのサーバおよびクライアント動作について表形式にて記載している。JP Coreでは、日本国内で患者データにアクセスするための最小限の適合性要件を定めるという理念に基づき、ユースケースが定まっておりMust Supportに対する揺らがない場合を除き、付与をしないようにした。
+JP Coreは、日本国内における患者データアクセスのための最小限の適合性要件を定めるという理念に基づいている。そのため、MustSupportフラグの付与は原則として派生プロジェクトに委ねており、JP Core自体では行っていない。ただし、一部の分野では、派生実装ガイドにおける特定のユースケースが明確であり、かつJP Core側でMustSupport付与の妥当性を十分に検討できた要素については、例外的にJP Coreでも定義を行っている。
 
 なお、データが存在しない場合の取り扱いについては、[欠損値（データが存在しない場合）の扱い](guide-handlingOfNonExistentData.html)にて詳細を記載した。
 
-[最小Cardinalityが1であることは、必ずしも有効なデータを持つことを意味しない](https://www.hl7.org/fhir/R4/conformance-rules.html#:~:text=an%20element%20to%20a-,minimum%20cardinality%20of%201,-does%20not%20ensure)。最小Cardinalityが1であることは、要素が存在することのみを要求しており、例えば、その要素はDataAbsentReason拡張のみを持つかもしれない。
+[最小Cardinalityが1であることは、必ずしも有効なデータを持つことを意味しない](https://www.hl7.org/fhir/R4/conformance-rules.html#:~:text=an%20element%20to%20a-,minimum%20cardinality%20of%201,-does%20not%20ensure)。最小Cardinalityが1であることは、要素が存在することのみを要求している。そのデータの性質上データを持たない可能性がある場合はDataAbsentReason拡張を定義し、この要素はDataAbsentReason拡張のみを持つことで要素の存在を担保することを検討すること。
 
 プロファイルによっては、各要素のCardinalityに加えてConstraintsによってさらなる制約が規定されていることがあるので注意すること。
 
@@ -19,7 +20,7 @@ MustSupportフラグが無い場合はFHIRの規約通りであり、以下に�
 
 \*2 is-modifierフラグのついたエレメント全てにMustSupportフラグが付与することができれば、MustSupportフラグのついていない全てのエレメントを安全に無視できるようになる。
 
-\*3 [Transaction Integrity](https://www.hl7.org/fhir/R4/http.html#transactional-integrity)に、サーバがCreateの要求からエレメントを変更・削除する場合の例が挙げられており、その中に「サーバがサポートしていない場合」が含まれる。MustSupportのエレメントを変更・削除する場合は、それ以外の理由に限られるべきと考えられる。
+\*3 [トランザクションの完全性(Transaction Integrity)](https://www.hl7.org/fhir/R4/http.html#transactional-integrity)に、リソースの作成および更新処理において、FHIRサーバーはリソース全体をそのまま受け入れる義務がないことが記載されています。そのためClientの送信したデータがServerへのクエリに結果が反映されないことに注意する必要があります。一致させるためには要素に対してis-modifierやMustSupportの付与を検討ください。
 
 #### 推奨するMustSupportの定義
 なお、本プロファイルから派生するプロファイルにおいては、下記のMustSupport定義を推奨する (**MAY**) 。また、「あるエレメントがMustSupportとマークされている場合、そのエレメントの全ての下位エレメントもMustSupportとみなす」よう定義することを推奨する (**MAY**)。

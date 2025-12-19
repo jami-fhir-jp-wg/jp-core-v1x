@@ -6,6 +6,6 @@ Description: "投与ラインの値セット例"
 * ^status = #active
 * ^experimental = false
 * ^date = "2024-12-30"
-* ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
+* ^copyright = "Copyright Japan FHIR Implementation Infrastructure Study Group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会FHIR国内実装基盤研究会"
 
 * include codes from system $JP_MedicationExampleLine_CS

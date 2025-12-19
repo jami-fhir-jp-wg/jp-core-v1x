@@ -8,7 +8,7 @@ Title: "JP Core Observation Common Profile"
 Description: "このプロファイルはObservationリソースに対して、データを送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Common"
 * ^status = #active
-* ^date = "2024-12-30"
+* ^date = "2025-07-30"
 * . ^short = "測定や簡単な観察事実（assertion）"
 * . ^definition = "患者、デバイス、またはその他の対象について行われた測定と簡単な観察事実（assertion）。"
 * . ^comment = "すべてのObservation（検査測定や観察事実）の共通部分のプロファイル"
@@ -62,7 +62,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * note ^requirements = "Need to be able to provide free text additional information.  
 フリーテキストの追加情報を提供できる必要がある。"
 * insert SetDefinition(bodySite, 対象となった身体部位)
-* bodySite from $JP_Observation_BodySite_VS (example)
+//* bodySite from $JP_Observation_BodySite_VS (example)
 * insert SetDefinition(method, このObservationの実施方法)
 * insert SetDefinition(specimen, このObservationに使われた検体/標本に関する情報)
 * specimen ^comment = "`Observation.code`にあるコードで暗黙的に示されない場合にのみ使用する必要がある。検体自体の観察は行われない。観察（観測、検査）対象者に対して実施されるが、多くの場合には対象者から得られた検体に対して実施される。検体が奥の場合に関わるが、それらは常に追跡され、明示的に報告されるとは限らないことに注意すること。またobservationリソースは、検体を明示的に記述するような状況下（診断レポートなど）で使用される場合があることに注意。"
