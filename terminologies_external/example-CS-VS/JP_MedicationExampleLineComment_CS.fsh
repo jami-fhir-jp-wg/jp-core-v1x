@@ -8,7 +8,7 @@ Description: "注射ラインコメントのコードシステム例"
 * ^date = "2023-10-31"
 * ^caseSensitive = true
 * ^content = #fragment
-* ^copyright = "Copyright Japan FHIR Implementation Infrastructure Study Group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会FHIR国内実装基盤研究会"
+* ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG"
 * #01 "末梢キープ"
 * #02 "生食ロック"
 * #03 "ヘパリンロック"

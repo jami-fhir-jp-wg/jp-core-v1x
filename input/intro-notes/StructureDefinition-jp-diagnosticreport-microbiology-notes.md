@@ -1,7 +1,7 @@
 ### 必須要素
 本プロファイルでは、次の要素を持たなければならない。
 
- - status : 診断レポートのステータスは必須である。http://hl7.org/fhir/R4/diagnostic-report-status　よりひとつを選択する。final：完成レポート、cancelled：取り消しレポート、partial：部分作成レポート（不完全）など。
+ - status : 診断レポートのステータスは必須である。http://hl7.org/fhir/diagnostic-report-status　よりひとつを選択する。final：完成レポート、cancelled：取り消しレポート、partial：部分作成レポート（不完全）など。
  - category : レポートを作成した臨床分野、部門、または診断サービスを分類するコード。LP7819-8 "微生物検査" 固定、必須。
  - code : レポート種別コード。system："http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_CS"　code: "18725-2" 　display: "微生物学的検査報告書" 　固定、必須。
 
@@ -41,8 +41,8 @@
 
 次のDiagnosticReportリソースの例は、関連するObservationを使用して、1レベルと2レベルのネストされた菌および感受性パネルを備えた培養・同定結果と感受性結果の例を示す。
 
-<!-- ![](observation_microbiology_structure.png) -->
-<img src="observation_microbiology_structure.png" width="100%" alt="培養・同定と感受性のネスト構造"/>
+<!-- ![](intoronotes-resources/observation_microbiology_structure.PNG) -->
+<img src="intoronotes-resources/observation_microbiology_structure.PNG" width="100%" alt="培養・同定と感受性のネスト構造"/>
 
 ## その他、参考文献・リンク等
 

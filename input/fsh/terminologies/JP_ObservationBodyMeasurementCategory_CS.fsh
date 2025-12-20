@@ -7,6 +7,7 @@ Description: "Observation（身体計測）で使用する分類のコード　�
 * ^experimental = false
 * ^date = "2024-12-30"
 * ^caseSensitive = true
+* ^valueSet = $JP_ObservationBodyMeasurementCategory_VS
 * ^content = #complete
 * ^copyright = "Copyright MEDIS-DC 一般財団法人 医療情報システム開発センター"
 * #weight "体重"

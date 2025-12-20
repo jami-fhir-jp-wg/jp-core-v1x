@@ -128,14 +128,12 @@ env:
 
 ### 4. mainブランチへのマージ
 * releaseブランチを作成を作成し、リリース作業と今後更新作業を分離する
-* moduleがFixedしたら、mainブランチへのマージをおこなう
-
-※mainモジュールへの更新の際は、「sushi-config.yamlのバージョン」に対し細心の注意を払う必要がある、バージョンをそのままに更新すると公開されているフォルダが上書きされてしまう
+* リリース作業と
 
 
 ## 公開作業
 
-### 1. 履歴用ホームページ（https://jpfhir.jp/fhir/core/index.html）の修正
+### 1. 履歴用ホームページ(https://jpfhir.jp/fhir/core/index.html)の修正
 * other/index.htmlの修正
   * 最新との差分を確認すること
   * ホームページおよびpackageファイルパスが間違っていないかを特に確認する

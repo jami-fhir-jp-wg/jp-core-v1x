@@ -5,6 +5,7 @@
 本プロファイルは、以下のようなユースケースを想定している。
 
  - 歯科診療所など歯科診療において、口腔診査の結果の記録に利用する。
+ - 院内の歯科から医科、院外の医療機関、介護施設との診療情報提供に記載する歯式情報
  - 歯科診療所、病院の診療記録、健康診断の結果などに基づき、身元確認のために共有する歯式情報
 
 ## スコープ
@@ -21,8 +22,8 @@
 という情報要素を表現する本プロファイルを適用したObservationリソースを用意する。それぞれの層では口腔診査を実施した際に得られる以下の情報が収容されることを想定している。
 
 <!-- 
-![](observation_dentaloral_structure.png) -->
-<img src="observation_dentaloral_structure.png" width="100%" alt="歯科口腔診査レポートと口腔所見のデータ構造"/>
+![](intoronotes-resources/observation_dentaloral_structure.png) -->
+<img src="intoronotes-resources/observation_dentaloral_structure.png" width="100%" alt="歯科口腔診査レポートと口腔所見のデータ構造"/>
 
 ※ 図中には、categolyの第３コードを表示している
 

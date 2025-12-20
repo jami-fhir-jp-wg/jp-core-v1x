@@ -41,7 +41,7 @@ Description: "このデータタイプはQuantity DataTypeに対して、JP Core
 Profile: JP_MedicationSimpleQuantity
 Parent: SimpleQuantity
 Id: jp-medicationsimplequantity
-Title: "JP Core Medication Simple Quantity DataType"
+Title: "JP Core Medication Quantity DataType"
 Description: "このデータタイプはSimpleQuantity DataTypeに対して、JP Coreにおける薬剤量に関する定義を行なったものである"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationSimpleQuantity"
 * ^status = #active

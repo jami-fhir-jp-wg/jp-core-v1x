@@ -25,3 +25,7 @@ Thumbs.db
 /.vscode
 .index.json
 .index.db
+
+# for IntelliJ IDEA
+/.idea
+

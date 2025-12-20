@@ -5,29 +5,35 @@
 # See https://github.com/FHIR/sample-ig/blob/master/input/ignoreWarnings.txt for examples
 
 # IG Defined
-コードの検証エラー: 用語サービス無しで実行中
-The concepts in the value set include have not been validated because there is no terminology server
+The definition for the element 'Consent.provision.code' binds to the value set 'http://hl7.org/fhir/ValueSet/consent-content-code' which is experimental, but this structure is not labeled as experimental
+!!コードの検証エラー: 用語サービス無しで実行中
 
 # Warnings for Examples
 %The Implementation Guide contains no examples%
 The Implementation Guide contains no explicitly linked examples for this profile
-この要素はどの既知のスライスとも一致しません defined in the profile%
+!!この要素はどの既知のスライスとも一致しません defined in the profile%
 
 # ベストプラクティス
-# Rule dom-6%
+Rule dom-6%
 
 # Terminology関連
+!!!!!!!!CodeSystem urn:oid:1.2.392.200119.5.2.4.1.1.3は未知です
 The value set expansion is too large, and only a subset has been displayed
 
 
 #  Local CodeSystems Warnings
-A definition for CodeSystem%
-!!!!!!CodeSystem http://abc-hospital.local/fhir/Observation/localcodeは未知です
-!!!!!!CodeSystem http://abc-hospital.local/fhir/ObservationOrder/localcodeは未知です
-!!!!!!CodeSystem http://terminology.sample.com/CodeSystem/disease/1311234567は未知です
-!!!!!!CodeSystem http://terminology.sample.com/CodeSystem/disease-outcomeは未知です
-!!!!!!CodeSystem urn:oid:1.2.392.200119.5.2.4.1.1.3は未知です
+!!!!!!!!CodeSystem http://abc-hospital.local/fhir/Observation/localcodeは未知です
+!!!!!!!!CodeSystem http://abc-hospital.local/fhir/ObservationOrder/localcodeは未知です
+!!!!!!!!CodeSystem http://terminology.sample.com/CodeSystem/disease-outcomeは未知です
+!!!!!!!!CodeSystem http://terminology.sample.com/CodeSystem/disease/1311234567は未知です
 
 # information level
 %which has status 'fragment'
+%no Display Names found for the language ja-JP
+
+# 個別
+http://medis.or.jp/CodeSystem/master-HOT9#107750603 の誤ったdisplay 'ソリタ－Ｔ３号輸液５００ｍＬ' - 1 の選択肢のうちの一つであるべきです: 'ソリタ－Ｔ３号輸液・陽進堂' (ja) (言語 'ja-JP' のため)
+http://medis.or.jp/CodeSystem/master-HOT9#103835401 の誤ったdisplay 'ムコダイン錠２５０ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'ムコダイン錠２５０ｍｇ・杏林製薬' (ja) (言語 'ja-JP' のため)
+http://medis.or.jp/CodeSystem/master-HOT9#110926901 の誤ったdisplay 'パンスポリンＴ錠１００ １００ｍｇ' - 1 の選択肢のうちの一つであるべきです: 'パンスポリンＴ錠１００・武田薬品' (ja) (言語 'ja-JP' のため)
+http://medis.or.jp/CodeSystem/master-HOT9#111501701 の誤ったdisplay '肺炎球菌ワクチン' - 1 の選択肢のうちの一つであるべきです: 'ニューモバックスＮＰ・ＭＳＤ' (ja) (言語 'ja-JP' のため)
 

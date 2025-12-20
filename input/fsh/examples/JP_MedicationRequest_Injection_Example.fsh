@@ -5,11 +5,14 @@ Description: "注射処方指示 ホリゾン注射液１０ｍｇワンショ�
 Usage: #example
 * contained[+] = jp-medicationrequest-injection-medication-example-1
 * contained[+] = jp-medicationrequest-injection-bodystructure-example-1
-* identifier[rpNumber].value = "1"
-* identifier[requestIdentifier].value = "1234567890.1"
-* identifier[prescriptionIdentifierCommon].value = "20241101-0000000000000001"
-// * identifier[+].system = "urn:oid:1.2.392.100495.20.3.11.11311234567"
-// * identifier[=].value = "20241101-00001"
+* identifier[+].system = $JP_Medication_RPGroupNumber
+* identifier[=].value = "1"
+* identifier[+].system = $JP_ResourceInstance_Identifier
+* identifier[=].value = "1234567890.1"
+* identifier[+].system = $JP_IdSystem_PrescriptionDocumentID
+* identifier[=].value = "20241101-0000000000000001"
+* identifier[+].system = "urn:oid:1.2.392.100495.20.3.11.11311234567"
+* identifier[=].value = "20241101-00001"
 * status = #active
 * intent = #order
 * category[0] = http://terminology.hl7.org/CodeSystem/v2-0482#I "Inpatient Order"
@@ -89,12 +92,12 @@ Title: "JP Core Medication Example ソリタ－＋アドナ注"
 Description: "ソリタ－＋アドナ注"
 Usage: #inline
 * status = #active
-* ingredient[0].itemCodeableConcept = $JP_MedicationCodeHOT9_CS#107750603 "ソリタ－Ｔ３号輸液　５００ｍＬ"
+* ingredient[0].itemCodeableConcept = $JP_MedicationCodeHOT9_CS#107750603 "ソリタ－Ｔ３号輸液５００ｍＬ"
 * ingredient[=].strength.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"
 * ingredient[=].strength.extension.valueCodeableConcept = $JP_MedicationIngredientStrengthStrengthType_CS#1 "製剤量"
 * ingredient[=].strength.numerator = 1 $JP_MedicationUnitMERIT9_CS#HON "本"
 * ingredient[=].strength.denominator = 1 $JP_MedicationUnitMERIT9_CS#TIME "回"
-* ingredient[+].itemCodeableConcept = $JP_MedicationCodeHOT9_CS#108010002 "アドナ注（静脈用）５０ｍｇ　０．５％１０ｍＬ"
+* ingredient[+].itemCodeableConcept = $JP_MedicationCodeHOT9_CS#108010002 "アドナ注（静脈用）５０ｍｇ／１０ｍＬ"
 * ingredient[=].strength.extension.url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Medication_IngredientStrength_StrengthType"
 * ingredient[=].strength.extension.valueCodeableConcept = $JP_MedicationIngredientStrengthStrengthType_CS#1 "製剤量"
 * ingredient[=].strength.numerator = 1 $JP_MedicationUnitMERIT9_CS#AMP "アンプル"

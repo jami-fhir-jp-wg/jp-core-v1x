@@ -24,16 +24,16 @@ Usage: #example
   * code
     * text = "難聴"
 
-// Example: FamilyMemberHistory for eldest son (長男) with sibling order annotation
+// Example: FamilyMemberHistory for eldest son with sibling order annotation
 Instance: jp-familymemberhistory-example-2
 InstanceOf: JP_FamilyMemberHistory
 Title: "JP Core FamilyMemberHistory Example 家族歴（息子 長男）"
-Description: "息子（長男）の家族歴、同胞内出生順拡張を付ける例。"
+Description: "息子（長男）。同胞内出生順名称（長男）を付与した例。"
 Usage: #example
 * status = #partial
 * patient
-  * reference = "Patient/jp-patient-example-2"
-  * display = "山田 次郎"
+  * reference = "Patient/jp-patient-example-1"
+  * display = "山田 太郎"
 * relationship
   * coding[0]
     * system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -52,3 +52,18 @@ Usage: #example
 * condition[0]
   * code
     * text = "糖尿病"
+
+// Example: FamilyMemberHistory for domestic partner
+Instance: jp-familymemberhistory-example-3
+InstanceOf: JP_FamilyMemberHistory
+Title: "JP Core FamilyMemberHistory Example 家族歴（内縁の妻）"
+Description: "内縁の妻。血縁関係がなく、病歴情報（reasonCode、condition）はない。"
+Usage: #example
+* status = #partial
+* patient
+  * reference = "Patient/jp-patient-example-1"
+  * display = "山田　太郎"
+* relationship
+  * coding[0]
+    * system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
+    * code = #DOMPART

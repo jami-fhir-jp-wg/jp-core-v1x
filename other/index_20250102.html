@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Ver. 1.1.2 -->
+<!DOCTYPE HTML>
+<html xml:lang="ja" xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Publication History</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assetsOfIndex/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assetsOfIndex/css/project.css" rel="stylesheet"/>
+    <link href="assetsOfIndex/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assetsOfIndex/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assetsOfIndex/css/prism.css" rel="stylesheet" />
+
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assetsOfIndex/css/JPCore.css" rel="stylesheet"/>
+    <link href="assetsOfIndex/css/fix-fonts.css" rel="stylesheet"/>
+    
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assetsOfIndex/js/html5shiv.js"></script>
+    <script src="assetsOfIndex/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assetsOfIndex/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assetsOfIndex/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assetsOfIndex/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assetsOfIndex/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assetsOfIndex/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assetsOfIndex/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:""}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="https://www.jami.jp/">
+           <img height="65" alt="Visit JAMI website" src="assetsOfIndex/images/jami-logo.svg"/>
+          </a>
+        </div>
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 FHIR JP Core ImplementationGuide</span>
+            <br/>
+            <span style="display:inline-block;">JP Core実装ガイド
+              <img alt="Japan flag" src="assetsOfIndex/images/jpn.svg" height="16" title="Japan"/>
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+         
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+        HL7 FHIR Jp Core Implementation Guide(Jp Core実装ガイド)
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <h2>公開バージョン履歴 Publication (Version) History</h2>
+  <hr/>
+    <p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<p>JP Coreにて公開を行なった実装ガイドの履歴</p>
+
+<table class="history-grid">
+  <thread>
+    <tr bgcolor="lightgray">
+      <th>Date</th>
+      <th>IG Version</th>
+      <th>FHIR Version</th>
+      <th>Description</th>
+      <th>Package</th>
+    </tr>
+  </thread>
+  <tbody>
+    <tr bgcolor="F2F2F2">
+      <td colspan="5"  font-style="bold">Current Versions</td>
+    </tr>
+    <tr>
+      <td>2023-11-11</td>
+      <td><a href="https://jpfhir.jp/fhir/core/1.1.2/index.html">1.1.2</a></td>
+      <td><a href="http://hl7.org/fhir/R4/index.html">4.0.1</a></td>
+      <td>正式に公開された最新バージョンの実装ガイド<br/>Latest official release version</td>    
+      <td>
+        <a href="https://jpfhir.jp/fhir/core/1.1.2/jp-core.r4-1.1.2.tgz"><img src="assetsOfIndex/ico/npm.png" title="NMP Package"/></a>
+        <a href="https://jpfhir.jp/fhir/core/1.1.2/jp-core.r4-1.1.2-snap.tgz"><img src="assetsOfIndex/ico/snapshotPackage.png" title="NMP Sanpshot Package"/></a>
+      </td>
+    </tr>
+    <tr bgcolor="F2F2F2">
+      <td colspan="5" font-style="bold">Public Comment Phase</td>
+    </tr>
+    <tr>
+      <td>2024-12-30</td>
+      <td><a href="https://jpfhir.jp/fhir/core/1.2.0-a/index.html">1.2.0a</a></td>
+      <td><a href="http://hl7.org/fhir/R4/index.html">4.0.1</a></td>
+      <td>パブリックコメント用のバージョン<br/>pre-release phase for public comment<br/>コメント送付先：comment＠jpfhir.jp (＠を半角に変更してください)</td>    
+      <td>
+        <a href="https://jpfhir.jp/fhir/core/1.2.0-a/jp-core.r4-1.2.0-a.tgz"><img src="assetsOfIndex/ico/npm.png" title="NMP Package"/></a>
+        <a href="https://jpfhir.jp/fhir/core/1.2.0-a/jp-core.r4-1.2.0-a-snap.tgz"><img src="assetsOfIndex/ico/snapshotPackage.png" title="NMP Sanpshot Package"/></a>
+      </td>
+    </tr>
+    <tr bgcolor="F2F2F2">
+      <td colspan="5" font-style="bold">R4 Sequence(current)</td>
+    </tr>
+    <tr>
+      <td>2023-11-11</td>
+      <td><a href="https://jpfhir.jp/fhir/core/1.1.2/index.html">1.1.2</a></td>
+      <td><a href="http://hl7.org/fhir/R4/index.html">4.0.1</a></td>
+      <td>正式に公開された最新バージョンの実装ガイド<br/>Latest official release version	</td>    
+      <td>
+        <a href="https://jpfhir.jp/fhir/core/1.1.2/jp-core.r4-1.1.2.tgz"><img src="assetsOfIndex/ico/npm.png" title="NMP Package"/></a>
+        <a href="https://jpfhir.jp/fhir/core/1.1.2/jp-core.r4-1.1.2-snap.tgz"><img src="assetsOfIndex/ico/snapshotPackage.png" title="NMP Sanpshot Package"/></a>
+      </td>
+    </tr>
+    <tr>
+        <td>2023-11-03</td>
+        <td><a href="https://jpfhir.jp/fhir/core/terminology/ig/">1.1.1</a></td>
+        <td><a href="http://hl7.org/fhir/R4/index.html">4.0.1</a></td>
+        <td>JP Core v1.1.2とセットで使用するJP Coreに含まれないTerminologyとそのパッケージ</td>    
+        <td>
+          <a href="https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.1.1.tgz"><img src="assetsOfIndex/ico/npm.png" title="NMP Package"/></a>
+        </td>
+    </tr>
+    <tr>
+      <td>2022-11-02</td>
+      <td><a href="https://jpfhir.jp/fhir/core/1.1.1/index.html">1.1.1</a></td>
+      <td><a href="http://hl7.org/fhir/R4/index.html">4.0.1</a></td>
+      <td>v1.1.0からの不具合修正バージョン<br/>Patch version to V1.1.0</td>    
+      <td>
+        <a href="https://jpfhir.jp/fhir/core/1.1.1/package.tgz"><img src="assetsOfIndex/ico/npm.png" title="NMP Package"/></a>
+      </td>
+    </tr>
+    <tr>
+      <td>2022-10-24</td>
+      <td><a href="https://jpfhir.jp/fhir/core/1.1.0/index.html">1.1.0</a></td>
+      <td><a href="http://hl7.org/fhir/R4/index.html">4.0.1</a></td>
+      <td>開発環境のSushi&amp;IG Publisherへの移行<br/>ver1.0.5のブラッシュアップ実施<br/>IG publisher version from V1.0.5</td>
+      <td>
+        <a href="https://jpfhir.jp/fhir/core/1.1.0/package.tgz"><img src="assetsOfIndex/ico/npm.png" title="NMP Package"/></a>
+      </td>
+    </tr>
+    <tr>
+      <td>2022-02-26</td>
+      <td><a href="https://jpfhir.jp/jpcorev1ig/index.html">1.0.5</a></td>
+      <td><a href="http://hl7.org/fhir/R4/index.html">4.0.1</a></td>
+      <td>初期バージョン<br/>Initial release</td>
+      <td>
+        <a href="https://jpfhir.jp/fhir/core/1.0.5/package_1.0.5.tgz"><img src="assetsOfIndex/ico/npm.png" title="NMP Package"/></a>
+      </td>
+    </tr>
+    <tr bgcolor="F2F2F2">
+      <td colspan="5" font-style="bold">Latest Development Version</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td><a href="https://jpfhir.jp/fhir/core/1.3.0-dev/output">1.3.0-dev</a></td>
+      <td><a href="http://hl7.org/fhir/R4/index.html">4.0.1</a></td>
+      <td>1.3.0の開発用ブランチ<br/>Latest pre-release version</td>
+      <td>
+        <a href="https://jpfhir.jp/fhir/core/1.3.0-dev/output/package.tgz"><img src="assetsOfIndex/ico/npm.png" title="NMP Package"/></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+アイコン説明；<br/>
+<img src="assetsOfIndex/ico/npm.png"> NPM Package(differential type)<br/>
+<img src="assetsOfIndex/ico/snapshotPackage.png"> NPM Package(snapshot type)<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assetsOfIndex/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assetsOfIndex/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2022+ <a style="color:var(--footer-hyperlink-text-color)" href="http://jpfhir.jp">FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)</a>.  
+          <br/>
+          <br/>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assetsOfIndex/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assetsOfIndex/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assetsOfIndex/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assetsOfIndex/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assetsOfIndex/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

@@ -8,7 +8,7 @@ Title: "JP Core Observation Endoscopy Profile"
 Description: "このプロファイルはObservationリソースに対して、内視鏡を使用して実施された検査、治療による観察結果（診断、所見など）の情報を送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Endoscopy"
 * ^status = #active
-* ^date = "2025-07-30"
+* ^date = "2024-12-30"
 * . ^short = "内視鏡検査、治療による観察結果（診断、所見など）の情報。【詳細参照】"
 * . ^definition = "内視鏡検査、治療による観察結果（診断、所見など）の情報。"
 * . ^comment = "内視鏡検査、治療に関するobservation（所見や診断結果など）の制約プロフィール。"
@@ -27,11 +27,9 @@ Description: "このプロファイルはObservationリソースに対して、�
     second 1..1
 * category ^short = "このObservationを分類するコード【詳細参照】"
 * category ^comment = "内視鏡検査の第1カテゴリはJP_SimpleObservationCategory_VSからprocedureを指定、第2カテゴリはLOINCのPartコードLP7796-8（内視鏡）固定とする。"
-* category[first] MS
 * category[first] ^short = "内視鏡検査の第1カテゴリはJP_SimpleObservationCategory_VSからprocedureを指定する。"
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#procedure (exactly)
 * insert SetDefinition(category[second],第2カテゴリはLOINCのPartコードLP7796-8（内視鏡）固定とする。ValueSetは指定しない)
-* category[second] MS
 * category[second].coding.system = $Loinc_CS (exactly)
 * category[second].coding.code 1..
 * category[second].coding.code = $Loinc_CS#LP7796-8 (exactly)

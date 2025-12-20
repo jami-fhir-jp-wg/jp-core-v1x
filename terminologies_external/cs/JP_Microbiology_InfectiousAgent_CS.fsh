@@ -11,7 +11,7 @@ Description: "微生物学的検査感染性物質コード
 * ^date = "2023-10-31"
 * ^caseSensitive = true
 * ^content = #complete
-* ^copyright = "Copyright Japan FHIR Implementation Infrastructure Study Group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会FHIR国内実装基盤研究会  
+* ^copyright = "Copyright FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会NeXEHRS課題研究会FHIR日本実装検討WG  
 厚生労働省院内感染対策サーベイランス事業(https://janis.mhlw.go.jp/)"
 
 * #1011 "Gram-positive cocci"

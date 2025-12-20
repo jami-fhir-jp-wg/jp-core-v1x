@@ -23,7 +23,7 @@ Description: "このデータタイプはRange DataTypeに対して、薬剤量�
 Profile: JP_MedicationRange_UnitOfTime
 Parent: Range
 Id: jp-medicationrange-unitoftime
-Title: "JP Core Medication Time Range DataType"
+Title: "JP Core Medication Range DataType"
 Description: "このデータタイプはRange DataTypeに対して、時間の上限下限に関する定義を行なったものである"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationRange_UnitOfTime"
 * ^status = #active
