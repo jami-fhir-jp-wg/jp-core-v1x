@@ -115,6 +115,7 @@ Alias: $JP_Organization_InsuranceOrganizationCategory = http://jpfhir.jp/fhir/co
 Alias: $JP_Organization_InsuranceOrganizationNo = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo
 Alias: $JP_Organization_PrefectureNo = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo
 Alias: $JP_Patient_Race = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race
+Alias: $JP_FamilyMemberHistory_GenogramBasedSiblingOrder = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_GenogramBasedSiblingOrder
 
 // CapabilityStatement
 Alias: $JP_Client_CapabilityStatement = http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement
@@ -230,6 +231,7 @@ Alias: $JP_ProcedureOutcome_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Proced
 Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 Alias: $JP_SimpleObservationCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
 Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
+Alias: $JP_GenderedSiblingBirthOrder_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_GenderedSiblingBirthOrder_CS
 
 // 病名修飾コード（MEDIS病名交換用/管理修飾コード、支払基金修飾語コード）の CodeSystem alias は
 // Clins では定義されているが JP Core では未定義のため、ここでは定義しない（将来採用時に追加）。
@@ -356,6 +358,7 @@ Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Procedure
 Alias: $JP_ReasonCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCodesJed_VS
 Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
+Alias: $JP_GenderedSiblingBirthOrder_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_GenderedSiblingBirthOrder_VS
 
 // 病名修飾コード（MEDIS病名交換用/管理修飾コード、支払基金修飾語コード）の ValueSet alias は
 // Clins では定義されているが JP Core では未定義のため、ここでは定義しない（将来採用時に追加）。
