@@ -8,7 +8,43 @@
 
 ### Extensions定義
 
- 本プロファイルで追加定義された拡張はない。
+JP Core FamilymMemberHistoryプロファイルで使用される拡張は次の通りである。
+
+<table  class="extension_description">
+  <tr>
+    <th>拡張</th>
+    <th>説明</th>
+    <th>URL</th>
+    <th>値の型</th>
+  </tr>
+  <tr>
+    <td>ジェノグラムのための同胞内出生順</td>
+    <td>ジェノグラムを用途とした社会学的・文化的な同胞内出生順の複合拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_GenogramBasedSiblingOrder</td>
+    <td>Extension</td>
+  </tr>
+  <tr>
+    <td>同胞内出生順</td>
+    <td>ジェノグラムのための同胞内出生順の複合拡張の要素。社会的・文化的な同胞内出生順の整数値。</td>
+    <td>siblingBirthOrder</td>
+    <td>integer</td>
+  </tr>
+  <tr>
+    <td>性別同胞内出生順名称</td>
+    <td>同胞内の性別の出生順の名称。国内では、長男、長女、次男、次女などであるが、国ごとに社会学的・文化的文脈で用いられる名称。</td>
+    <td>genderedSiblingBirthOrder</td>
+    <td>CodeableConcept</td>
+  </tr>
+
+</table>
+
+### 用語定義
+
+|分類|CS名|URI|
+|---------|----|---------------------------|
+|続柄|relathionship|http://terminology.hl7.org/ValueSet/v3-FamilyMember|
+|性別同胞内出生順名称|GenderedSiblingBirthOrder|http://jpfhir.jp/fhir/core/CodeSystem/JP_GenderedSiblingBirthOrder_CS|
+
 
 ## 利用方法
 
@@ -78,5 +114,7 @@
 #### サンプル
 
 * [**家族歴（母親）**][jp-familymemberhistory-example-1]
+* [**家族歴（息子、長男）**][jp-familymemberhistory-example-2]
+* [**家族歴（内縁の妻）**][jp-familymemberhistory-example-3]
 
 {% include markdown-link-references.md %}
