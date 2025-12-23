@@ -66,11 +66,6 @@ Organization.typeには以下の2種類のコードを設定する：
         {
           "system": "http://terminology.hl7.org/CodeSystem/organization-type",
           "code": "dept"
-        },
-        {
-          "system": "http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment",
-          "code": "03",
-          "display": "循環器内科"
         }
       ]
     }
