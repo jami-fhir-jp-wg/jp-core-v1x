@@ -5,18 +5,26 @@
 
 - Organization.type: 診療科・部門であることを示すため、`dept`コードの設定が必須
 
-### Extensions定義
+### 診療科識別子（identifier）
 
-本プロファイルでは、JP_Organizationプロファイルで定義されている拡張を継承して使用できる。
+診療科の識別子は以下の2つのパターンで指定できる。両方を併用することを推奨する。
 
-- [JP_OrganizationCategory][JP_Organization_InsuranceOrganizationCategory]
-  - 点数表コード１桁の情報を表す
-- [JP_OrganizationNo][JP_Organization_InsuranceOrganizationNo]
-  - 保険医療機関番号７桁を表す
-- [JP_PrefectureNo][JP_Organization_PrefectureNo]
-  - 都道府県番号2桁を表す
+#### 1. 医療機関固有の診療科コード（ローカルコード）
 
-### 診療科コード
+医療機関が独自に定義した診療科コードを使用する場合：
+
+- system: `http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationRequestDepartment/{医療機関識別OID番号}`
+- 医療機関識別OID番号は、医療機関コード（10桁）の先頭に1をつけた11桁とする
+- 例：医療機関コード「1312345670」の場合、systemは `http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationRequestDepartment/11312345670`
+
+#### 2. SS-MIX2標準診療科コード
+
+SS-MIX2で定義された標準診療科コードを使用する場合：
+
+- system: `http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment`
+- SS-MIX2標準診療科コードの値を設定する（例：01=内科、03=循環器内科、07=整形外科など）
+
+### 診療科コード（type）
 
 Organization.typeには以下の2種類のコードを設定する：
 
@@ -37,20 +45,37 @@ Organization.typeには以下の2種類のコードを設定する：
 
 診療科は通常、医療機関に所属するため、Organization.partOf要素で親組織（医療機関）を参照することを推奨する。
 
+以下は、ローカルコードとSS-MIX2コードの両方を使用した診療科の例である：
+
 ```json
 {
   "resourceType": "Organization",
+  "identifier": [
+    {
+      "system": "http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationRequestDepartment/11312345670",
+      "value": "CARD-001"
+    },
+    {
+      "system": "http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment",
+      "value": "03"
+    }
+  ],
   "type": [
     {
       "coding": [
         {
           "system": "http://terminology.hl7.org/CodeSystem/organization-type",
           "code": "dept"
+        },
+        {
+          "system": "http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment",
+          "code": "03",
+          "display": "循環器内科"
         }
       ]
     }
   ],
-  "name": "内科",
+  "name": "循環器内科",
   "partOf": {
     "reference": "Organization/hospital-001",
     "display": "健康第一病院"
@@ -63,8 +88,6 @@ Organization.typeには以下の2種類のコードを設定する：
 ### OperationおよびSearch Parameter 一覧
 
 #### Search Parameter一覧
-
-JP_Organizationプロファイルの検索パラメータを継承する。
 
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
@@ -93,16 +116,24 @@ JP_Organizationプロファイルの検索パラメータを継承する。
    GET [base]/Organization?partof=Organization/hospital-001
    ```
 
-### サンプル  
+4. 診療科識別子での検索
 
-* [**内科診療科**][jp-organization-department-example-01]
-* [**整形外科診療科**][jp-organization-department-example-02]
+   ```
+   GET [base]/Organization?identifier=http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment|03
+   ```
+
+### サンプル
+
+* [**循環器内科（両方のコード使用）**][jp-organization-department-example-01]
+* [**内科診療科（ローカルコード使用）**][jp-organization-department-example-02]
+* [**整形外科診療科（SS-MIX2コード使用）**][jp-organization-department-example-03]
 
 ## 注意事項
 
 - 診療科名称は医療法施行規則に規定されている「標榜診療科」を超えて、医療機関ごとに独自の名称を持つことが多い
 - 同じ医師が外来と入院で異なる診療科に所属するケースなど、所属マトリックスが複雑になる場合がある
 - 診療科情報を使用する際は、用途（診療報酬請求、患者管理、統計等）に応じて適切な表現方法を選択すること
+- 相互運用性を高めるため、ローカルコードとSS-MIX2標準コードの両方を設定することを推奨する
 
 ## その他、参考文献、リンク等
 
