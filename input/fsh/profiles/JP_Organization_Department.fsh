@@ -1,12 +1,4 @@
 // ==============================
-//   Invariant 定義
-// ==============================
-Invariant: jp-org-dept-identifier-local-system
-Description: "ローカル診療科コードのsystemは 'http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationRequestDepartment/' で始まる必要がある"
-Expression: "system.exists() implies (system.startsWith('http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment') or system.startsWith('http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationRequestDepartment/'))"
-Severity: #warning
-
-// ==============================
 //   Profile 定義
 // ==============================
 Profile: JP_Organization_Department

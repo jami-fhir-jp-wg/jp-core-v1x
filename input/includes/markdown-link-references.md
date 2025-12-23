@@ -74,8 +74,8 @@
 [JP_Observation_Radiology_Impression]: StructureDefinition-jp-observation-radiology-impression.html
 [JP_Observation_SocialHistory]: StructureDefinition-jp-observation-socialhistory.html
 [JP_Observation_VitalSigns]: StructureDefinition-jp-observation-vitalsigns.html
-[JP_Organization]: StructureDefinition-jp-organization.html
 [JP_Organization_Department]: StructureDefinition-jp-organization-department.html
+[JP_Organization]: StructureDefinition-jp-organization.html
 [JP_Patient]: StructureDefinition-jp-patient.html
 [JP_Practitioner]: StructureDefinition-jp-practitioner.html
 [JP_PractitionerRole]: StructureDefinition-jp-practitionerrole.html
@@ -87,6 +87,7 @@
 [JP_Specimen_Common]: StructureDefinition-jp-specimen-common.html
 
 <!-- StructureDefinition: Extension -->
+[JP_Common_Department]: StructureDefinition-jp-common-department.html
 [JP_Condition_DiseaseOutcome]: StructureDefinition-jp-condition-disease-outcome.html
 [JP_Condition_DiseasePostfixModifier]: StructureDefinition-jp-condition-disease-postfix-modifier.html
 [JP_Condition_DiseasePrefixModifier]: StructureDefinition-jp-condition-disease-prefix-modifier.html
@@ -128,7 +129,6 @@
 [JP_Organization_InsuranceOrganizationNo]: StructureDefinition-jp-organization-insuranceorganizationno.html
 [JP_Organization_PrefectureNo]: StructureDefinition-jp-organization-prefectureno.html
 [JP_Patient_Race]: StructureDefinition-jp-patient-race.html
-[JP_Common_Department]: StructureDefinition-jp-common-department.html
 
 <!-- CapabilityStatement -->
 [JP_Client_CapabilityStatement]: CapabilityStatement-jp-client-capabilitystatement.html
@@ -219,6 +219,8 @@
 [jp-medicationadministration-injection-example-2]: MedicationAdministration-jp-medicationadministration-injection-example-2.html
 [jp-medicationdispense-example-1]: MedicationDispense-jp-medicationdispense-example-1.html
 [jp-medicationdispense-injection-example-1]: MedicationDispense-jp-medicationdispense-injection-example-1.html
+[jp-medicationrequest-department-example-01]: MedicationRequest-jp-medicationrequest-department-example-01.html
+[jp-medicationrequest-department-example-02]: MedicationRequest-jp-medicationrequest-department-example-02.html
 [jp-medicationrequest-example-1]: MedicationRequest-jp-medicationrequest-example-1.html
 [jp-medicationrequest-example-2]: MedicationRequest-jp-medicationrequest-example-2.html
 [jp-medicationrequest-injection-example-1]: MedicationRequest-jp-medicationrequest-injection-example-1.html
@@ -251,6 +253,7 @@
 [jp-medicationingredientstrengthstrengthtype-namingsystem]: NamingSystem-jp-medicationingredientstrengthstrengthtype-namingsystem.html
 [jp-medicationmethodjamibasicusage-namingsystem]: NamingSystem-jp-medicationmethodjamibasicusage-namingsystem.html
 [jp-medicationmethodjamidetailusage-namingsystem]: NamingSystem-jp-medicationmethodjamidetailusage-namingsystem.html
+[jp-medicationrequestdepartment-namingsystem]: NamingSystem-jp-medicationrequestdepartment-namingsystem.html
 [jp-medicationroute-hl7-0162-namingsystem]: NamingSystem-jp-medicationroute-hl7-0162-namingsystem.html
 [jp-medicationsubstitutionnotallowedreason-namingsystem]: NamingSystem-jp-medicationsubstitutionnotallowedreason-namingsystem.html
 [jp-medicationunitmerit9-namingsystem]: NamingSystem-jp-medicationunitmerit9-namingsystem.html
@@ -297,6 +300,9 @@
 [jp-observation-radiology-impression-example-1]: Observation-jp-observation-radiology-impression-example-1.html
 [jp-observation-socialhistory-example-1]: Observation-jp-observation-socialhistory-example-1.html
 [jp-observation-vitalsigns-example-1]: Observation-jp-observation-vitalsigns-example-1.html
+[jp-organization-department-example-01]: Organization-jp-organization-department-example-01.html
+[jp-organization-department-example-02]: Organization-jp-organization-department-example-02.html
+[jp-organization-department-example-03]: Organization-jp-organization-department-example-03.html
 [jp-organization-example-clinic]: Organization-jp-organization-example-clinic.html
 [jp-organization-example-hospital]: Organization-jp-organization-example-hospital.html
 [jp-organization-example-inspection]: Organization-jp-organization-example-inspection.html
@@ -308,6 +314,7 @@
 [jp-practitioner-example-male-2]: Practitioner-jp-practitioner-example-male-2.html
 [jp-practitionerrole-example-1]: PractitionerRole-jp-practitionerrole-example-1.html
 [jp-procedure-example-1]: Procedure-jp-procedure-example-1.html
+[jp-servicerequest-department-example-03]: ServiceRequest-jp-servicerequest-department-example-03.html
 [jp-specimen-example-1]: Specimen-jp-specimen-example-1.html
 [jp-specimen-example-2]: Specimen-jp-specimen-example-2.html
 [jp-specimen-example-3]: Specimen-jp-specimen-example-3.html

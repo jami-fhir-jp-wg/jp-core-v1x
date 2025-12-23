@@ -9,6 +9,7 @@
 * [JP Core PractitionerRole （医療従事者役割）プロファイル][JP_PractitionerRole]
 
 ### Extensions
+* [JP_Common_Department]
 * [JP_Coverage_InsuredPersonNumber]
 * [JP_Coverage_InsuredPersonSubNumber]
 * [JP_Coverage_InsuredPersonSymbol]
@@ -16,6 +17,5 @@
 * [JP_Organization_InsuranceOrganizationNo]
 * [JP_Organization_PrefectureNo]
 * [JP_Patient_Race]
-* [JP_Common_Department]
 
 {% include markdown-link-references.md %}
