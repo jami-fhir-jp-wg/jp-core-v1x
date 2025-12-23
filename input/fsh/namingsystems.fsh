@@ -14,6 +14,23 @@ Usage: #definition
 * uniqueId[=].value = $JP_Department_SsMix_CS
 * uniqueId[=].preferred = true
 
+// 診療科コード（医療機関固有）
+Instance: jp-medicationrequestdepartment-namingsystem
+InstanceOf: NamingSystem
+Usage: #definition
+* name = "JP_MedicationRequestDepartment_NamingSystem"
+* status = #active
+* date = "2025-01-01"
+* kind = #codesystem
+* description = "JP Core MedicationRequestDepartment NamingSystem 処方オーダ時に使用する診療科コード。医療機関固有の診療科コードを識別するためのコード体系。"
+* uniqueId[+].type = #oid
+* uniqueId[=].value = "1.2.392.100495.20.2.51"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "urn:oid:1.2.392.100495.20.2.51"
+* uniqueId[+].type = #uri
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationRequestDepartment"
+* uniqueId[=].preferred = true
+
 Instance: jp-medicationusagejami-namingsystem
 InstanceOf: NamingSystem
 Usage: #definition

@@ -23,6 +23,36 @@ Description: "このプロファイルはJP_Organizationリソースに対して
 * type[departmentType] ^short = "診療科・部門を示す組織タイプ"
 * type[departmentType] ^definition = "この組織が診療科・部門であることを示すコード。固定値でdept（部門）を設定する。"
 
+// ==============================
+//   Identifier スライシング定義
+// ==============================
+* identifier ^short = "診療科の識別子 【詳細参照】"
+* identifier ^definition = "診療科を識別するための識別子。"
+* identifier ^comment = "診療科の識別子は以下の2つのパターンで指定できる。
+1. 医療機関固有の診療科コード（ローカルコード）
+   - system: http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationRequestDepartment/{医療機関識別OID番号}
+   - 医療機関識別OID番号は、医療機関コード（10桁）の先頭に1をつけた11桁とする
+   - 例：医療機関コード「1312345670」の場合「http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationRequestDepartment/11312345670」
+2. SS-MIX2標準診療科コード（ssmixDepartmentCodeスライス）
+   - system: http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment
+   - SS-MIX2で定義された診療科コードを使用"
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier contains
+    ssmixDepartmentCode ..1
+
+* identifier[ssmixDepartmentCode] ^short = "SS-MIX2標準診療科コード"
+* identifier[ssmixDepartmentCode] ^definition = "SS-MIX2で定義された標準診療科コード。"
+* identifier[ssmixDepartmentCode] ^comment = "SS-MIX2に準拠した診療科コードを指定する場合に使用する。"
+* identifier[ssmixDepartmentCode].system = "http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment" (exactly)
+* identifier[ssmixDepartmentCode].system ^short = "SS-MIX2診療科コード体系のURI"
+* identifier[ssmixDepartmentCode].system ^definition = "SS-MIX2で定義された診療科コード体系を示すURI。"
+* identifier[ssmixDepartmentCode].value 1..
+* identifier[ssmixDepartmentCode].value ^short = "SS-MIX2診療科コードの値"
+* identifier[ssmixDepartmentCode].value ^definition = "SS-MIX2で定義された診療科コードの値。"
+* identifier[ssmixDepartmentCode].value ^comment = "SS-MIX2標準診療科コードの値を設定する（例：01=内科、02=精神科など）。"
+
 * partOf only Reference(JP_Organization)
 * partOf ^short = "所属する医療機関"
 * partOf ^definition = "この診療科が所属する上位組織（医療機関）への参照"
