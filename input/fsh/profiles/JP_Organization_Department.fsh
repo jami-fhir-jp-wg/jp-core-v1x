@@ -2,10 +2,10 @@
 //   Profile 定義
 // ==============================
 Profile: JP_Organization_Department
-Parent: JP_Organization
+Parent: Organization
 Id: jp-organization-department
 Title: "JP Core Organization Department Profile"
-Description: "このプロファイルはJP_Organizationリソースに対して、診療科情報のデータを送受信するための制約と拡張を定めたものである。診療科を表すOrganizationとして利用することを想定している。"
+Description: "このプロファイルはOrganizationリソースに対して、診療科情報のデータを送受信するための制約と拡張を定めたものである。診療科を表すOrganizationとして利用することを想定している。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization_Department"
 * ^status = #active
 * ^date = "2025-10-28"
