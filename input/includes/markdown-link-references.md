@@ -75,6 +75,7 @@
 [JP_Observation_SocialHistory]: StructureDefinition-jp-observation-socialhistory.html
 [JP_Observation_VitalSigns]: StructureDefinition-jp-observation-vitalsigns.html
 [JP_Organization]: StructureDefinition-jp-organization.html
+[JP_Organization_Department]: StructureDefinition-jp-organization-department.html
 [JP_Patient]: StructureDefinition-jp-patient.html
 [JP_Practitioner]: StructureDefinition-jp-practitioner.html
 [JP_PractitionerRole]: StructureDefinition-jp-practitionerrole.html
@@ -127,6 +128,7 @@
 [JP_Organization_InsuranceOrganizationNo]: StructureDefinition-jp-organization-insuranceorganizationno.html
 [JP_Organization_PrefectureNo]: StructureDefinition-jp-organization-prefectureno.html
 [JP_Patient_Race]: StructureDefinition-jp-patient-race.html
+[JP_Common_Department]: StructureDefinition-jp-common-department.html
 
 <!-- CapabilityStatement -->
 [JP_Client_CapabilityStatement]: CapabilityStatement-jp-client-capabilitystatement.html

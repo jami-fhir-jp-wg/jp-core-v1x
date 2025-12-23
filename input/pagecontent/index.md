@@ -21,6 +21,7 @@ JP Core FHIRコンテンツ: JP Coreで利用するFHIRの詳細について記�
   * [JP Core Encounter （来院・入院）プロファイル][JP_Encounter]
   * [JP Core Location （所在場所）プロファイル][JP_Location]
   * [JP Core Organization （組織）プロファイル][JP_Organization]
+  * [JP Core Organization Department （診療科）プロファイル][JP_Organization_Department]
   * [JP Core Practitioner （医療従事者）プロファイル][JP_Practitioner]
   * [JP Core PractitionerRole （医療従事者役割）プロファイル][JP_PractitionerRole]
 * [Medicationグループ （薬剤リスト）](group-medication.html)
