@@ -97,7 +97,7 @@ jobs:
     - name: Prepare for using all dependent packages including Jp modified version of hl7.fhir.r4.core Package 
       env:
         JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
-        JPTerminologyCOREdir: jpfhir-terminology.r4#1.4.0
+        JPTerminologyCOREdir: jpfhir-terminology#1.4.0
         JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.4.0.tgz
       run: |
         mkdir -p /home/runner/.fhir

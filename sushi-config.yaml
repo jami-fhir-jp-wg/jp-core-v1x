@@ -16,7 +16,7 @@ publisher:
 copyright: Copyright Japan FHIR Implementation Infrastructure Study Group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会FHIR国内実装基盤研究会
 jurisdiction: urn:iso:std:iso:3166#JP "Japan"
 dependencies:
-  jpfhir-terminology.r4:
+  jpfhir-terminology:
     uri: http://jpfhir.jp/fhir/jpfhir-terminology/ImplementationGuide/jpfhir-terminology
     version: 1.4.0
     
