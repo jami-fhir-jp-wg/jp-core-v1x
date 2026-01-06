@@ -35,7 +35,7 @@ Description: "同胞内順位をFamilyMemberHistoryに付記するための拡�
 * ^context.type = #element
 * ^context.expression = "FamilyMemberHistory"
 * . ^short = "同胞内出生順"
-* . ^definition = "FamilyMemberHistoryのrelationship（続柄）と組み合わせて、関連する家族成員の同胞内出生順を表現する拡張。同胞内の順位を整数で、性別の同胞内の出生準名称（長男、長女、次男、次女など）を CodeableConcept で表現する。ジェノグラム（家族図）において社会学的・文化的文脈で利用される。また、臨床の現場で家族全員の生年月日や年齢を聴取できないが表現しておきたい場合も想定している。遺伝学的血統図を用途としておらず、その場合は、FamilyMemberHistory Geneticリソースや、GA4GH等のプロファイルを参照すること。"
+* . ^definition = "FamilyMemberHistoryのrelationship（続柄）と組み合わせて、関連する家族成員の同胞内出生順を表現する拡張。同胞内の順位を整数で、性別の同胞内の出生準の名称（長男、長女、次男、次女など）を CodeableConcept で表現する。特に、ジェノグラム（家族図）のように社会的・文化的文脈で利用される。また、臨床の現場で、家族の氏名が聴取されない場合、家族全員の生年月日や年齢を聴取できない場合を想定している。遺伝学的血統図を用途としておらず、その場合は、FamilyMemberHistory Geneticリソースや、GA4GH等のプロファイルを参照すること。"
 * url = $JP_FamilyMemberHistory_GenogramBasedSiblingOrder (exactly)
 * extension contains
 siblingBirthOrder ..1 MS and
@@ -46,7 +46,7 @@ genderedSiblingBirthOrder ..1 MS
 * extension[siblingBirthOrder].value[x] only integer
 * extension[siblingBirthOrder].value[x] ^minValueInteger = 1
 //
-* extension[genderedSiblingBirthOrder] ^short = "性別同胞内出生順名称（用語）"
-* extension[genderedSiblingBirthOrder] ^definition = "同胞内の性別の出生順の名称。国内では、長男、長女、次男、次女などであるが、国ごとに社会学的・文化的文脈で用いられる名称。"
+* extension[genderedSiblingBirthOrder] ^short = "性別同胞内出生順（用語）"
+* extension[genderedSiblingBirthOrder] ^definition = "同胞内の性別の出生順。国内では、長男、長女、次男、次女などであるが、国ごとに社会学的・文化的文脈で変わる。"
 * extension[genderedSiblingBirthOrder].value[x] only CodeableConcept
 * extension[genderedSiblingBirthOrder].valueCodeableConcept from $JP_GenderedSiblingBirthOrder_VS (preferred)
