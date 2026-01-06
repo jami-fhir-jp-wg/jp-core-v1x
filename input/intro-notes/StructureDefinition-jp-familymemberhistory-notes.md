@@ -18,20 +18,20 @@ JP Core FamilymMemberHistoryプロファイルで使用される拡張は次の�
     <th>値の型</th>
   </tr>
   <tr>
-    <td>ジェノグラムのための同胞内出生順</td>
-    <td>ジェノグラムを用途とした社会学的・文化的な同胞内出生順の複合拡張</td>
+    <td>同胞内出生順</td>
+    <td>ジェノグラムを用途とした社会的な同胞内出生順の複合拡張</td>
     <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_GenogramBasedSiblingOrder</td>
     <td>Extension</td>
   </tr>
   <tr>
-    <td>同胞内出生順</td>
-    <td>ジェノグラムのための同胞内出生順の複合拡張の要素。社会的・文化的な同胞内出生順の整数値。</td>
+    <td>同胞内出生順（整数）</td>
+    <td>同胞内における社会的な出生順（整数値）</td>
     <td>siblingBirthOrder</td>
     <td>integer</td>
   </tr>
   <tr>
-    <td>性別同胞内出生順名称</td>
-    <td>同胞内の性別の出生順の名称。国内では、長男、長女、次男、次女などであるが、国ごとに社会学的・文化的文脈で用いられる名称。</td>
+    <td>性別同胞内出生順（用語）</td>
+    <td>同胞内における性別の社会的な出生順（用語）。国内では、長男、長女、次男、次女など。国際化対応は、designationにより、出身国の用語を追加定義することで表現可能。</td>
     <td>genderedSiblingBirthOrder</td>
     <td>CodeableConcept</td>
   </tr>
