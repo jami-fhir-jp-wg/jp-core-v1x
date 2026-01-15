@@ -298,3 +298,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationRadiologyCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
     - http://playbook.radlex.org/playbook/SearchRadlexAction-CoreDev-CS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_GenderedSiblingBirthOrder_VS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_GenderedSiblingBirthOrder_CS
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_GenogramBasedSiblingOrder
