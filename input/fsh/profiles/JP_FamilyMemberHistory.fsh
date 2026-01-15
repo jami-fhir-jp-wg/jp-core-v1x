@@ -47,6 +47,6 @@ genderedSiblingBirthOrder ..1 MS
 * extension[siblingBirthOrder].value[x] ^minValueInteger = 1
 //
 * extension[genderedSiblingBirthOrder] ^short = "性別同胞内出生順名称（コード値）"
-* extension[genderedSiblingBirthOrder] ^definition = "同胞内の性別の出生順名称。日本語は、長男、長女、次男、次女など、designationにより出身国の用語を追加定義することで国際化にも対応可能。"
+* extension[genderedSiblingBirthOrder] ^definition = "同胞内の性別の出生順名称。日本語は、長男、長女、次男、次女など、designationにより出身国の用語を追加定義することで国際化にも対応。"
 * extension[genderedSiblingBirthOrder].value[x] only CodeableConcept
 * extension[genderedSiblingBirthOrder].valueCodeableConcept from $JP_GenderedSiblingBirthOrder_VS (preferred)
