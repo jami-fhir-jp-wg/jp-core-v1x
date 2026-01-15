@@ -17,8 +17,8 @@
 JP_FamilyMemberHistoryインスタンスへの参照をListリソースインスタンスに結合することで、個人の家族歴全体を表現することができる。
 
 ## スコープ
-- 本プロファイルは、一般的な家族歴とジェノグラムを
-- 遺伝学的血統図は対象外であり、[Genetic Pedigree](https://hl7.org/fhir/r4/familymemberhistory-genetic.html)プロファイルを参照すること。
+- 本プロファイルは、基本的な家族歴とジェノグラムを対象とする。
+- 遺伝学的血統図は対象外である。本実装ガイド（Version 1.2.0）の範囲外であるが、 参考としてGenetic Pedigreeプロファイルを参照すること。
 
 
 ## 想定シナリオ
