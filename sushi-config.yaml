@@ -18,8 +18,8 @@ jurisdiction: urn:iso:std:iso:3166#JP
 dependencies:
   jpfhir-terminology.r4:
     uri: http://jpfhir.jp/fhir/jpfhir-terminology/
-    version: 1.3.0
-    
+    version: 1.7.0
+
 #----------------------------------------
 # ページタイトル名称設定
 #----------------------------------------
