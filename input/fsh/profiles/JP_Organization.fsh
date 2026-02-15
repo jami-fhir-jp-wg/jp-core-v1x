@@ -20,12 +20,12 @@ Description: "このプロファイルはOrganizationリソースに対して、
     JP_Organization_InsuranceOrganizationNo named organizationNo ..1
 * extension[prefectureNo] ^short = "都道府県番号２桁を表現するExtension"
 * extension[prefectureNo] ^comment = "都道府県番号２桁。Identifier型の拡張を使用する。  
-valueには都道府県番号2桁の値を格納し、systemには都道府県番号を表すOID「1.2.392.100495.20.3.21」を指定する。"
+valueには都道府県番号2桁の値を格納し、systemには都道府県番号を表す「http://jpfhir.jp/fhir/core/mhlw/CodeSystem/PrefectureNo-2digits」を指定する。"
 * extension[organizationCategory] ^short = "点数表コード１桁（医科１、非保険検診施設２、歯科３、調剤４、訪問看護ステーション６）を表現するExtension【詳細参照】"
-* extension[organizationCategory] ^comment = "点数表コード１桁（医科１、非保険検診施設２、歯科３、調剤４、訪問看護ステーション６）。systemには点数表番号を表すOID「1.2.392.100495.20.3.22」を指定する。"
+* extension[organizationCategory] ^comment = "点数表コード１桁（医科１、非保険検診施設２、歯科３、調剤４、訪問看護ステーション６）。systemには点数表番号を表す「http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationFeeScoreType」を指定する。"
 * extension[organizationNo] ^short = "医療機関コード（７桁）を表現するExtension【詳細参照】"
 * extension[organizationNo] ^comment = "医療機関コード（７桁）。Identifier型の拡張「InsuranceOrganizationNo」を使用する。  
-systemには医療機関コードを表すOID「http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicalOrganizationID」を指定する。  
+systemには医療機関コードを表す「http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicalOrganizationID」を指定する。  
 valueには下記の値を格納する。  
 　- 保険医療機関・保険薬局 : `医療機関コード（７桁）`  
 　- 非保険の特定健診・特定保健指導機関 : `機関コード（７桁）`  
@@ -172,12 +172,11 @@ Title: "JP Core Organization InsuranceOrganizationCategory Extension"
 Description: "点数表コード１桁を表現するためのExtension。 JP Core Organizationプロファイルで利用されることを想定しているが、他のリソースでも利用可能である"
 * ^url = $JP_Organization_InsuranceOrganizationCategory
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2026-02-16"
 * ^context.type = #element
 * ^context.expression = "Organization"
 * . ^short = "点数表コード１桁【詳細参照】"
-* . ^comment = "点数表コード１桁。systemには点数表番号  
-を表すOID「http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationFeeScoreType」を指定する。"
+* . ^comment = "点数表コード１桁。systemには点数表番号を表す「http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationFeeScoreType」を指定する。"
 * url = $JP_Organization_InsuranceOrganizationCategory (exactly)
 * value[x] only Coding
 * valueCoding from $JP_MedicalFeeScoreType_VS (extensible)

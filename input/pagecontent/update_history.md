@@ -1,3 +1,9 @@
+***v1.1.2-clins　2026.2.16 ***  
+
+    - JP_Organization_eCS のextension:prefectureNo　の詳細説明（Comments)のsystem値の記載にOID記載が残っていたため、CodeSystemのURL記載に修正。（urn:oid:1.2.392.100495.20.3.21　→　http://jpfhir.jp/fhir/core/mhlw/CodeSystem/PrefectureNo-2digits）
+    - JP_Organization_eCS のextension:organizationCategory　の詳細説明（Comments)のsystem値の記載にOID記載が残っていたため、CodeSystemのURL記載に修正。（urn:oid:1.2.392.100495.20.3.22　→　http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationFeeScoreType）
+    - IGをビルドする際の依存パッケージをjpfhir-terminology.r4のVer2系列に変更した。
+
 ***v1.1.2-clins***  
 
  CLINS用のパッケージとするため、CodeSystemの識別子をOID形式からURL形式に変更した（一部はOID形式のまま）。これに伴い、依存パッケージをjpfhir-terminology.r4-1.2.3-url.tgzに改訂した。

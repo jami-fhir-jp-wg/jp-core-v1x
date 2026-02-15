@@ -254,7 +254,8 @@ Usage: #definition
 * uniqueId[=].value = "urn:oid:1.2.392.100495.20.3.22"
 * uniqueId[=].preferred = true
 * uniqueId[+].type = #uri
-* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicalFeeScoreType_CS"
+//* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicalFeeScoreType_CS"
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationFeeScoreType"
 
 Instance: jp-prefecturenumber-namingsystem
 InstanceOf: NamingSystem
@@ -270,7 +271,8 @@ Usage: #definition
 * uniqueId[=].value = "urn:oid:1.2.392.100495.20.3.21"
 * uniqueId[=].preferred = true
 * uniqueId[+].type = #uri
-* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_PrefectureNumber_CS"
+//* uniqueId[=].value = "http://jpfhir.jp/fhir/core/CodeSystem/JP_PrefectureNumber_CS"
+* uniqueId[=].value = "http://jpfhir.jp/fhir/core/mhlw/CodeSystem/PrefectureNo-2digits"
 
 
 Instance: jp-medicationroute-hl7-0162-namingsystem
