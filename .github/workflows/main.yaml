@@ -140,6 +140,16 @@ jobs:
           
     - name: STEP2 = prepare gtz files for upload to remote site
       run: | 
+        ruby ./script/create_symbolic_link_from_file2url.rb
+        : # 上記rubyにより、sushi_configのspecial_URLブロックに出力されるの同じテキストが作成され、各行にln -sコマンドとしてmakeSymbolicLink.bashファイルに出力される。
+        cat makeSymbolicLink.bash
+        echo "cat makeSymbolicLink.bash completed"
+        ls -l output
+        cd output
+        echo "cd output completed"
+        source ../makeSymbolicLink.bash
+        echo "source ../makeSymbolicLink.bash completed"
+        : # 
         tar czf fsh-generated.tgz fsh-generated
         mkdir -p forPackageRelease/package
         cp fsh-generated/resources/*.json forPackageRelease/package/
