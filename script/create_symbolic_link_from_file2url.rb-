@@ -1,5 +1,8 @@
 # =======================================================
-# CanonicalURLでアクセスできるようにシンボリックファイルを作成する
+# sushi-config.yaml　special url　生成スクリプト
+# 処理概要：
+# cannonical urlの命名規則の警告を避けるため、リソースファイル
+# url情報を抽出し、sushi-config.yamlを書き換える処理を行なう。
 # =======================================================
 require "json"
 require "uri"
@@ -19,11 +22,23 @@ def fillUrl(prefix, sb, extension = false)
             url = h["url"].to_s
             if url.start_with?("urn:") == false then                    
                 pathfilebase = File.basename(URI.parse(fl).path,".json")
-                if File.basename(URI.parse(url).path) != "" then
-                  urlfilebase = prefix + "-" + File.basename(URI.parse(url).path)
-                  sb << "ln -s " + pathfilebase + ".json.html " + urlfilebase + ".json.html" + "\n"
-                  sb << "ln -s " + pathfilebase + ".html " + urlfilebase + ".html" + "\n"
-                  sb << "ln -s " + pathfilebase + ".json " + urlfilebase + ".json" + "\n"
+                pathdir1 = File.dirname(URI.parse(url).path,level=1)  #最後のファイル名を除く手前までのパス
+                pathdir2 = File.dirname(URI.parse(url).path,level=2)  #最後のファイル名と直前のを除く手前までのパス
+                pathdir2filebase = File.basename(pathdir2)  #最後のファイル名と直前のを除く手前までのパスの最後のフォルダ名
+                pathdir1filebase = File.basename(pathdir1)  #最後のファイル名を除く手前までのパスの最後のフォルダ名
+                p "url="+url+" pathdir1="+pathdir1 + " pathdir2=" + pathdir2 + " pathdir1filebase="+pathdir1filebase+ " pathdir2filebase="+pathdir2filebase
+                if pathdir2filebase == "CodeSystem" || pathdir2filebase == "ValueSet" then
+                  fileID = pathdir1filebase + "-" + File.basename(URI.parse(url).path)
+                else
+                  fileID = File.basename(URI.parse(url).path)
+                end
+                if fileID != "" then
+                  urlfilebase = prefix + "-" + fileID
+                  if pathfilebase != urlfilebase
+                    sb << "ln -s " + pathfilebase + ".json.html " + urlfilebase + ".json.html" + "\n"
+                    sb << "ln -s " + pathfilebase + ".html " + urlfilebase + ".html" + "\n"
+                    sb << "ln -s " + pathfilebase + ".json " + urlfilebase + ".json" + "\n"
+                  end
                 end
             end
           end
@@ -31,7 +46,7 @@ def fillUrl(prefix, sb, extension = false)
   end
 end
 
-# configの読み込み
+# configの読み込み　使わない
 def getConfingText(path)
   File.open(path, 'r') do |fr|
     return fr.read()
@@ -70,5 +85,5 @@ allText = sb
 #regex = /\s{2}special-url:\n(\s{4}-\s(http|urn:oid:).*\n)*/
 #allText.gsub!(regex, sb)
 
-#p 'sushi-configによる書き込み'
+#p 'maptablePathファイルに書き込み'
 setConfigText(maptablePath, allText)
