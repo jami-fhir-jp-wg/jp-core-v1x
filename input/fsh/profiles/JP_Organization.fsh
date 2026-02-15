@@ -194,7 +194,7 @@ Description: "保険医療機関番号７桁を表現するためのExtension。
 * ^context.expression = "Organization"
 * . ^short = "保険医療機関番号７桁【詳細参照】"
 * . ^comment = "保険医療機関番号７桁。Identifier型の拡張  
-「InsuranceOrganizationNo」を使用する。systemには医療機関コードを表すOID「$JP_IdSystem_MedicalOrganizationID」を指定する。  
+「InsuranceOrganizationNo」を使用する。systemには医療機関コードを表す「$JP_IdSystem_MedicalOrganizationID」を指定する。  
 「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」の定義をベースにしているが、URLを以下に変更している  
 http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo"
 * url = $JP_Organization_InsuranceOrganizationNo (exactly)
@@ -215,7 +215,7 @@ JP Core Organizationプロファイルで利用されることを想定してい
 * ^context.expression = "Organization"
 * . ^short = "都道府県番号2桁【詳細参照】"
 * . ^comment = "都道府県番号２桁。Identifier型の拡張を使用する。  
-valueには都道府県番号2桁の値を格納し、systemには都道府県番号を表すOID「1http://jpfhir.jp/fhir/core/mhlw/CodeSystem/PrefectureNo-2digits」を指定する。"
+valueには都道府県番号2桁の値を格納し、systemには都道府県番号を表す「http://jpfhir.jp/fhir/core/mhlw/CodeSystem/PrefectureNo-2digits」を指定する。"
 * url = "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo" (exactly)
 * value[x] only Coding
 * valueCoding from JP_PrefectureNumber_VS (extensible)
