@@ -8,7 +8,7 @@ Title: "JP Core Organization Profile"
 Description: "このプロファイルはOrganizationリソースに対して、組織情報のデータを送受信するための基礎となる制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization"
 * ^status = #active
-* ^date = "2023-06-26"
+* ^date = "2026-02-15"
 * . ^short = "共通の目的を持った人や組織の集まり【詳細参照】"
 * . ^definition = "集団行動の何らかの形での達成を目的として結成された、正式または非公式に認められた人々または組織のグループ。企業、機関、企業、部門、コミュニティグループ、医療実践グループ、支払者/保険者などが含まれる。"
 * extension ^slicing.discriminator.type = #value
@@ -20,9 +20,9 @@ Description: "このプロファイルはOrganizationリソースに対して、
     JP_Organization_InsuranceOrganizationNo named organizationNo ..1
 * extension[prefectureNo] ^short = "都道府県番号２桁を表現するExtension"
 * extension[prefectureNo] ^comment = "都道府県番号２桁。Identifier型の拡張を使用する。  
-valueには都道府県番号2桁の値を格納し、systemには都道府県番号を表すOID「.100495.20.3.21」を指定する。"
+valueには都道府県番号2桁の値を格納し、systemには都道府県番号を表すOID「1.2.392.100495.20.3.21」を指定する。"
 * extension[organizationCategory] ^short = "点数表コード１桁（医科１、非保険検診施設２、歯科３、調剤４、訪問看護ステーション６）を表現するExtension【詳細参照】"
-* extension[organizationCategory] ^comment = "点数表コード１桁（医科１、非保険検診施設２、歯科３、調剤４、訪問看護ステーション６）。systemには点数表番号を表すOID「.100495.20.3.22」を指定する。"
+* extension[organizationCategory] ^comment = "点数表コード１桁（医科１、非保険検診施設２、歯科３、調剤４、訪問看護ステーション６）。systemには点数表番号を表すOID「1.2.392.100495.20.3.22」を指定する。"
 * extension[organizationNo] ^short = "医療機関コード（７桁）を表現するExtension【詳細参照】"
 * extension[organizationNo] ^comment = "医療機関コード（７桁）。Identifier型の拡張「InsuranceOrganizationNo」を使用する。  
 systemには医療機関コードを表すOID「http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicalOrganizationID」を指定する。  
@@ -51,7 +51,7 @@ value : ```医療機関コード（１０桁）```を使用する。
 * identifier[medicalInstitutionCode].system = "http://jpfhir.jp/fhir/core/IdSystem/insurance-medical-institution-no" (exactly)
 * identifier[medicalInstitutionCode].assigner only Reference(JP_Organization)
 * identifier[insurerNumber] ^comment = "健康保険組合などの保険者の保険者番号を表現する際のIdentifier表現に使用する  
-system要素には保険者番号を示すOID\" http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber\"を指定する。"
+system要素には保険者番号を示す\"http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber\"を指定する。"
 * identifier[insurerNumber].system = $JP_IdSystem_InsurerNumber (exactly)
 * identifier[insurerNumber].assigner only Reference(JP_Organization)
 * active ^short = "組織の記録がまだ有効に使われているかどうか【詳細参照】"
