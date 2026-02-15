@@ -120,7 +120,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - '*/jpfhir.jp.core'
   no-usage-check: 'true'
   i18n-default-lang: 'ja'
-  pin-canonicals: 'pin-multiples'
+  
   special-url:
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Binary
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_CarePlan
