@@ -18,67 +18,67 @@
 JP Core FHIR コンテンツ: JP Core で利用する FHIR の詳細について記載をしている。
 
 #### [Profiles （プロファイル）](artifacts.html#structures-resource-profiles)
-
-- [Administration グループ （運営管理）](group-administration.html)
-  - [JP Core Patient （患者）プロファイル][JP_Patient]
-  - [JP Core Coverage （保険・公費）プロファイル][JP_Coverage]
-  - [JP Core Encounter （来院・入院）プロファイル][JP_Encounter]
-  - [JP Core Location （所在場所）プロファイル][JP_Location]
-  - [JP Core Organization （組織）プロファイル][JP_Organization]
-  - [JP Core Practitioner （医療従事者）プロファイル][JP_Practitioner]
-  - [JP Core PractitionerRole （医療従事者役割）プロファイル][JP_PractitionerRole]
-- [Medication グループ （薬剤リスト）](group-medication.html)
-  - [JP Core Medication （薬剤）プロファイル][JP_Medication]
-  - [JP Core MedicationRequest （内服・外用薬剤処方）プロファイル][JP_MedicationRequest]
-  - [JP Core MedicationRequest Injection （注射薬剤処方）プロファイル][JP_MedicationRequest_Injection]
-  - [JP Core MedicationDispense （内服・外用薬剤処方調剤・払い出し記録）プロファイル][JP_MedicationDispense]
-  - [JP Core MedicationDispense Injection （注射薬剤処方調剤・払い出し記録）プロファイル][JP_MedicationDispense_Injection]
-  - [JP Core MedicationAdministration （内服・外用薬剤投与実施情報）プロファイル][JP_MedicationAdministration]
-  - [JP Core MedicationAdministration Injection （注射薬剤投与実施情報）プロファイル][JP_MedicationAdministration_Injection]
-  - [JP Core MedicationStatement （内服・外用薬剤服薬情報）プロファイル][JP_MedicationStatement]
-  - [JP Core MedicationStatement Injection （注射薬剤服薬情報）プロファイル][JP_MedicationStatement_Injection]
-  - [JP Core Immunization （予防接種記録）プロファイル][JP_Immunization]
-- [Diagnostic グループ （診断）](group-diagnostic.html)
-  - Observation （検査）
-    - [JP Core Observation Common （共通）プロファイル][JP_Observation_Common]
-      - [JP Core Observation LabResult （検体検査）プロファイル][JP_Observation_LabResult]
-      - [JP Core Observation Microbiology （微生物学検査結果）プロファイル][JP_Observation_Microbiology]
-      - [JP Core Observation VitalSigns （バイタルサイン）プロファイル][JP_Observation_VitalSigns]
-      - [JP Core Observation BodyMeasurement （身体計測）プロファイル][JP_Observation_BodyMeasurement]
-      - [JP Core Observation PhysicalExam （身体所見）プロファイル][JP_Observation_PhysicalExam]
-      - [JP Core Observation SocialHistory （生活背景）プロファイル][JP_Observation_SocialHistory]
-      - [JP Core Observation Electrocardiogram （心電図検査結果）プロファイル][JP_Observation_Electrocardiogram]
-      - JP Core Observation Radiology (放射線画像検査)
-        - [JP Core Observation Radiology Findings (放射線画像検査所見）プロファイル)][JP_Observation_Radiology_Findings]
-        - [JP Core Observation Radiology Impression (放射線画像検査インプレッション)プロファイル][JP_Observation_Radiology_Impression]
-      - [JP Core Observation Endoscopy （内視鏡検査）プロファイル][JP_Observation_Endoscopy]
-      - [JP Core Observation DentalOral Tooth Existence Profile （口腔診査）プロファイル][JP_Observation_DentalOral_ToothExistence]
-      - [JP Core Observation DentalOral Tooth Treatment Condition Profile （口腔診査）プロファイル][JP_Observation_DentalOral_ToothTreatmentCondition]
-      - [JP Core Observation DentalOral Missing Tooth Condition Profile （口腔診査）プロファイル][JP_Observation_DentalOral_MissingToothCondition]
-      - [JP Core Observation DentalOral eCS Profile （口腔診査結果・診療情報提供書用）プロファイル][JP_Observation_DentalOral_eCS]
-  - Specimen （検体）
-    - [JP Core Specimen Common （共通）プロファイル][JP_Specimen_Common]
-  - Media （メディア）
-    - [JP Core Media Endoscopy（内視鏡検査）プロファイル][JP_Media_Endoscopy]
-  - ImagingStudy （画像検査）
-    - [JP Core ImagingStudy Radiology（放射線検査）プロファイル][JP_ImagingStudy_Radiology]
-    - [JP Core ImagingStudy Endoscopy（内視鏡検査）プロファイル][JP_ImagingStudy_Endoscopy]
-  - DiagnosticReport （診断レポート）
-    - [JP Core DiagnosticReport Common （共通）プロファイル][JP_DiagnosticReport_Common]
-      - [JP Core DiagnosticReport LabResult （検体検査レポート）プロファイル][JP_DiagnosticReport_LabResult]
-      - [JP Core DiagnosticReport Microbiology （微生物学検査レポート）プロファイル][JP_DiagnosticReport_Microbiology]
-      - [JP Core DiagnosticReport Radiology （放射線検査レポート）プロファイル][JP_DiagnosticReport_Radiology]
-      - [JP Core DiagnosticReport Endoscopy （内視鏡レポート）プロファイル][JP_DiagnosticReport_Endoscopy]
-      - [JP Core DiagnosticReport DentalOral （口腔診査レポート）プロファイル][JP_DiagnosticReport_DentalOral]
-- [Clinical グループ（診療）](group-clinical.html)
-  - [JP Core AllergyIntolerance （アレルギー不耐症）プロファイル][JP_AllergyIntolerance]
-  - [JP Core Condition （状態）プロファイル][JP_Condition]
-    - [JP Core Condition Diagnosis (診断) プロファイル][JP_Condition_Diagnosis]
-  - [JP Core Procedure （処置）プロファイル][JP_Procedure]
-  - [JP Core FamilyMemberHistory（家族歴）プロファイル][JP_FamilyMemberHistory]
-- [Workflow グループ](group-workflow.html)
-  - ServiceRequest (サービスリクエスト)
-    - [JP Core ServiceRequest Common (共通) プロファイル][JP_ServiceRequest_Common]
+* [Administrationグループ （運営管理）](group-administration.html)
+  * [JP Core Patient （患者）プロファイル][JP_Patient]
+  * [JP Core Coverage （保険・公費）プロファイル][JP_Coverage]
+  * [JP Core Encounter （来院・入院）プロファイル][JP_Encounter]
+  * [JP Core Location （所在場所）プロファイル][JP_Location]
+  * [JP Core Organization （組織）プロファイル][JP_Organization]
+  * [JP Core Organization Department （診療科）プロファイル][JP_Organization_Department]
+  * [JP Core Practitioner （医療従事者）プロファイル][JP_Practitioner]
+  * [JP Core PractitionerRole （医療従事者役割）プロファイル][JP_PractitionerRole]
+* [Medicationグループ （薬剤リスト）](group-medication.html)
+  * [JP Core Medication （薬剤）プロファイル][JP_Medication]
+  * [JP Core MedicationRequest （内服・外用薬剤処方）プロファイル][JP_MedicationRequest]
+  * [JP Core MedicationRequest Injection （注射薬剤処方）プロファイル][JP_MedicationRequest_Injection]
+  * [JP Core MedicationDispense （内服・外用薬剤処方調剤・払い出し記録）プロファイル][JP_MedicationDispense]
+  * [JP Core MedicationDispense Injection （注射薬剤処方調剤・払い出し記録）プロファイル][JP_MedicationDispense_Injection]
+  * [JP Core MedicationAdministration （内服・外用薬剤投与実施情報）プロファイル][JP_MedicationAdministration]
+  * [JP Core MedicationAdministration Injection （注射薬剤投与実施情報）プロファイル][JP_MedicationAdministration_Injection]
+  * [JP Core MedicationStatement （内服・外用薬剤服薬情報）プロファイル][JP_MedicationStatement]
+  * [JP Core MedicationStatement Injection （注射薬剤服薬情報）プロファイル][JP_MedicationStatement_Injection]
+  * [JP Core Immunization （予防接種記録）プロファイル][JP_Immunization]
+* [Diagnosticグループ （診断）](group-diagnostic.html)
+  * Observation （検査）
+    * [JP Core Observation Common （共通）プロファイル][JP_Observation_Common]
+      * [JP Core Observation LabResult （検体検査）プロファイル][JP_Observation_LabResult]
+      * [JP Core Observation Microbiology （微生物学検査結果）プロファイル][JP_Observation_Microbiology]
+      * [JP Core Observation VitalSigns （バイタルサイン）プロファイル][JP_Observation_VitalSigns]
+      * [JP Core Observation BodyMeasurement （身体計測）プロファイル][JP_Observation_BodyMeasurement]
+      * [JP Core Observation PhysicalExam （身体所見）プロファイル][JP_Observation_PhysicalExam]
+      * [JP Core Observation SocialHistory （生活背景）プロファイル][JP_Observation_SocialHistory]
+      * [JP Core Observation Electrocardiogram （心電図検査結果）プロファイル][JP_Observation_Electrocardiogram]
+      * JP Core Observation Radiology (放射線画像検査)
+        * [JP Core Observation Radiology Findings (放射線画像検査所見）プロファイル)][JP_Observation_Radiology_Findings]
+        * [JP Core Observation Radiology Impression (放射線画像検査インプレッション)プロファイル][JP_Observation_Radiology_Impression]
+      * [JP Core Observation Endoscopy （内視鏡検査）プロファイル][JP_Observation_Endoscopy]
+      * [JP Core Observation DentalOral Tooth Existence Profile （口腔診査）プロファイル][JP_Observation_DentalOral_ToothExistence]
+      * [JP Core Observation DentalOral Tooth Treatment Condition Profile （口腔診査）プロファイル][JP_Observation_DentalOral_ToothTreatmentCondition]
+      * [JP Core Observation DentalOral Missing Tooth Condition Profile （口腔診査）プロファイル][JP_Observation_DentalOral_MissingToothCondition]
+      * [JP Core Observation DentalOral eCS Profile （口腔診査結果・診療情報提供書用）プロファイル][JP_Observation_DentalOral_eCS]
+  * Specimen （検体）
+    * [JP Core Specimen Common （共通）プロファイル][JP_Specimen_Common]
+  * Media （メディア）
+    * [JP Core Media Endoscopy（内視鏡検査）プロファイル][JP_Media_Endoscopy]
+  * ImagingStudy （画像検査）
+    * [JP Core ImagingStudy Radiology（放射線検査）プロファイル][JP_ImagingStudy_Radiology]
+    * [JP Core ImagingStudy Endoscopy（内視鏡検査）プロファイル][JP_ImagingStudy_Endoscopy]
+  * DiagnosticReport （診断レポート）
+    * [JP Core DiagnosticReport Common （共通）プロファイル][JP_DiagnosticReport_Common]
+      * [JP Core DiagnosticReport LabResult （検体検査レポート）プロファイル][JP_DiagnosticReport_LabResult]
+      * [JP Core DiagnosticReport Microbiology （微生物学検査レポート）プロファイル][JP_DiagnosticReport_Microbiology]
+      * [JP Core DiagnosticReport Radiology （放射線検査レポート）プロファイル][JP_DiagnosticReport_Radiology]
+      * [JP Core DiagnosticReport Endoscopy （内視鏡レポート）プロファイル][JP_DiagnosticReport_Endoscopy]
+      * [JP Core DiagnosticReport DentalOral （口腔診査レポート）プロファイル][JP_DiagnosticReport_DentalOral]
+* [Clinicalグループ（診療）](group-clinical.html)
+  * [JP Core AllergyIntolerance （アレルギー不耐症）プロファイル][JP_AllergyIntolerance]
+  * [JP Core Condition （状態）プロファイル][JP_Condition]
+    * [JP Core Condition Diagnosis (診断) プロファイル][JP_Condition_Diagnosis]
+  * [JP Core Procedure （処置）プロファイル][JP_Procedure]
+  * [JP Core FamilyMemberHistory（家族歴）プロファイル][JP_FamilyMemberHistory]
+* [Workflowグループ](group-workflow.html)
+  * ServiceRequest (サービスリクエスト)
+    * [JP Core ServiceRequest Common (共通) プロファイル][JP_ServiceRequest_Common]
 
 #### JP Core で定義しない Profile(プロファイル)
 

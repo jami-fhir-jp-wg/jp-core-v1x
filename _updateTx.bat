@@ -37,7 +37,7 @@ IF NOT %dterm:Y=Y%==Y (
 )
 SET dltermurl=https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.4.0.tgz
 SET localterm=.\\temp\\jpfhir-terminology.r4-1.4.0.tgz
-set term_dir=%fhir_dir%\\packages\\jpfhir-terminology.r4#1.4.0
+set term_dir=%fhir_dir%\\packages\\jpfhir-terminology#1.4.0
 
 CURL %dltermurl% > %localterm%
 

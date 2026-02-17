@@ -16,7 +16,7 @@ publisher:
 copyright: Copyright Japan FHIR Implementation Infrastructure Study Group in Japan Association of Medical Informatics (JAMI) 一般社団法人日本医療情報学会FHIR国内実装基盤研究会
 jurisdiction: urn:iso:std:iso:3166#JP "Japan"
 dependencies:
-  jpfhir-terminology.r4:
+  jpfhir-terminology:
     uri: http://jpfhir.jp/fhir/jpfhir-terminology/ImplementationGuide/jpfhir-terminology
     version: 1.4.0
     
@@ -154,6 +154,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramExtraCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramStressType_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Common_Department
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseaseOutcome
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePostfixModifier
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePrefixModifier
@@ -264,6 +265,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_SocialHistory
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_VitalSigns
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization_Department
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_PractitionerRole

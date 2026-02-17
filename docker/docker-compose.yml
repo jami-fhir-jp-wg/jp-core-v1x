@@ -5,7 +5,7 @@ services:
         dockerfile: Dockerfile
         args:
           JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
-          JPTerminologyCOREdir: jpfhir-terminology.r4#1.4.0
+          JPTerminologyCOREdir: jpfhir-terminology#1.4.0
           JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.4.0.tgz
     volumes:
       - ../:/repository

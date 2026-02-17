@@ -31,7 +31,7 @@ Kebab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 | 項目 | ルール <br/> `(例)`  |
 | --- | --- | 
 | profile | jp-{profile} <br/>`jp-patient`|  |
-| extension | jp-{profile}-{element}-{extension} <br/>`jp-medicationrequest-dispenserequest-expectedrepeatcount` <br/>64文字を超える場合は、**{element}-** を省略可能とする |
+| extension | jp-{profile}-{element}-{extension} <br/>`jp-medicationrequest-dispenserequest-expectedrepeatcount` <br/>64文字を超える場合は、**{element}-** を省略可能とする <br/> 利用されるprofile、elementが定まらない場合は、jp-common-{extension}とする |
 | datetype | jp-{datatype} <br/>`jp-humanname `| |
 | search parameter | jp-{profile}-{parameter}-sp <br/>`jp-patient-birthdate-sp` | |
 | capability statement | jp-{actor}-capabilitystatement <br/>`jp-client-capabilitystatement` |
@@ -48,7 +48,7 @@ Kebab Case形式(小文字) [ **aaa-bbb-ccc** ]を採用する。<br/>
 | 項目 | ルール <br/> `(例)`  |
 | --- | --- | 
 | profile | JP_{Profile} <br/>`JP_Patient`|  |
-| extension | JP_{Profile}\_{Element}\_{Extension} <br/>`JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount` |
+| extension | JP_{Profile}\_{Element}\_{Extension} <br/>`JP_MedicationRequest_DispenseRequest_ExpectedRepeatCount` <br/> 利用されるprofile、elementが定まらない場合は、jp-common-{extension}とする|
 | datetype | JP_{DataType} <br/>`JP_HumanName `| |
 | search parameter | JP_{Profile}_{Parameter}_SP <br/>`JP_Patient_Birthdate_SP` | |
 | capability statement | JP_{Actor}_CapabilityStatement <br/>`JP_Client_CapabilityStatement` |
