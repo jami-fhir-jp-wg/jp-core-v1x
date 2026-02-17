@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:hl7.org)",
+      "WebFetch(domain:build.fhir.org)",
+      "WebFetch(domain:hl7.org.au)",
+      "WebFetch(domain:simplifier.net)",
+      "WebFetch(domain:fhir.ch)",
+      "WebSearch",
+      "WebFetch(domain:www.hl7.org)",
+      "WebFetch(domain:www.hl7.eu)",
+      "Bash(ls:*)",
+      "Bash(grep:*)"
+    ]
+  }
+}
