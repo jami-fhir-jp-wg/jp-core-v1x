@@ -1,23 +1,4 @@
-# 口腔診査品質基準 (Dental Examination Quality Standards)
-
-> **出典**: `.specify/memory/constitution.md` v1.1.1 にて分離。
-> 本ドキュメントはドメイン固有の品質基準と既知の問題を記録する。
-
-## 主要な口腔診査アーティファクト
-
-### コアプロファイル
-
-- **`JP_DiagnosticReport_DentalOral`**: 口腔診査レポート
-- **`JP_Observation_DentalOral_ToothExistence`**: 歯の有無・存在
-- **`JP_Observation_DentalOral_ToothTreatmentCondition`**: 現存歯の処置状態
-- **`JP_Observation_DentalOral_MissingToothCondition`**: 欠損歯の処置状態
-
-### 拡張（Extension）
-
-- **`JP_Observation_DentalOral_BodySiteStatus`**: 身体部位状態
-- **`JP_Observation_DentalOral_BodyStructure`**: 歯の構造（歯面等）
-- **`JP_Observation_DentalOral_ToothRoot`**: 歯根指定
-
+・
 ### 用語集
 
 - **13 の歯科固有 CodeSystem**: 歯式、処置状態、身体構造等
