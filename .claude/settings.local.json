@@ -22,7 +22,11 @@
       "Bash(powershell.exe -ExecutionPolicy Bypass -File .specify/scripts/powershell/check-prerequisites.ps1 -Json)",
       "Bash(powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks)",
       "Bash(sushi:*)",
-      "Bash(powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/check-prerequisites.ps1 -Json)"
+      "Bash(powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/check-prerequisites.ps1 -Json)",
+      "WebFetch(domain:oraios.github.io)",
+      "Bash(uvx:*)",
+      "Bash(uv:*)",
+      "Bash(claude mcp add serena -- uvx --from \"git+https://github.com/oraios/serena\" serena start-mcp-server --context claude-code --project \"C:/Users/rikim/git/jp-core-v1x\")"
     ]
   }
 }
