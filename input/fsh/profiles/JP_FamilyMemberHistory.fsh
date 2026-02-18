@@ -15,7 +15,7 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 * patient only Reference(JP_Patient)
 * reasonReference only Reference(QuestionnaireResponse or DocumentReference or JP_AllergyIntolerance or JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)
 // Extension 参照宣言
-* extension contains JP_FamilyMemberHistory_GenogramBasedSiblingOrder named genogramBasedSiblingOrder ..1
+* extension contains JP_FamilyMemberHistory_SiblingOrder named SiblingOrder ..1
 
 
 // ==============================
@@ -25,18 +25,18 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 // JP_FamilyMemberHistory_SiblingOrder
 //-------------------------------
 
-Extension: JP_FamilyMemberHistory_GenogramBasedSiblingOrder
-Id: jp-familymemberhistory-genogrambasedsiblingorder
+Extension: JP_FamilyMemberHistory_SiblingOrder
+Id: jp-familymemberhistory-siblingorder
 Title: "JP Core FamilyMemberHistory Sibling Order Extension"
-Description: "同胞内順位をFamilyMemberHistoryに付記するための拡張。"
-* ^url = $JP_FamilyMemberHistory_GenogramBasedSiblingOrder
+Description: "同胞内出生順をFamilyMemberHistoryに付記するための拡張。"
+* ^url = $JP_FamilyMemberHistory_SiblingOrder
 * ^status = #active
 * ^date = "2025-12-01"
 * ^context.type = #element
 * ^context.expression = "FamilyMemberHistory"
 * . ^short = "同胞内出生順"
-* . ^definition = "FamilyMemberHistoryのrelationship（続柄）と組み合わせて、関連する家族構成員の同胞内出生順と性別同胞内出生順を表現する拡張。同胞内の順位を整数で、性別の同胞内の出生順の名称（長男、長女、次男、次女など）を CodeableConcept で表現する。特に、ジェノグラム（家族図）のように社会的・文化的文脈で利用される。また、日常の臨床では家族の氏名が聴取されずに続柄で記述され、家族全員の生年月日や年齢を聴取できない場合が多いことを想定している。遺伝学的血統図は対象外である。本実装ガイド（Version 1.2.0）の範囲外であるが、 参考としてGenetic Pedigreeプロファイルを参照すること。"
-* url = $JP_FamilyMemberHistory_GenogramBasedSiblingOrder (exactly)
+* . ^definition = "FamilyMemberHistoryのrelationship（続柄）と組み合わせて、関連する家族構成員の同胞内出生順と性別同胞内出生順名称を表現する拡張。同胞内の順位を整数で、性別の同胞内の出生順の名称（長男、長女、次男、次女など）をCodeableConceptで表現する。日常の臨床では家族の氏名は聴取されずに続柄で記述され、また、関係者全員の生年月日や年齢を聴取できない場合が多いことを想定している。また、遺伝学的血統図は対象外である。本実装ガイド（Version 1.2.0）の範囲外であるが、 参考として[Genetic Pedigreeプロファイル](https://hl7.org/fhir/R4/familymemberhistory-genetic.html)を参照すること。"
+* url = $JP_FamilyMemberHistory_SiblingOrder (exactly)
 * extension contains
 siblingBirthOrder ..1 MS and
 siblingBirthOrderByGender ..1 MS
