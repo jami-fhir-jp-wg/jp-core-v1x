@@ -26,7 +26,10 @@
       "WebFetch(domain:oraios.github.io)",
       "Bash(uvx:*)",
       "Bash(uv:*)",
-      "Bash(claude mcp add serena -- uvx --from \"git+https://github.com/oraios/serena\" serena start-mcp-server --context claude-code --project \"C:/Users/rikim/git/jp-core-v1x\")"
+      "Bash(claude mcp add serena -- uvx --from \"git+https://github.com/oraios/serena\" serena start-mcp-server --context claude-code --project \"C:/Users/rikim/git/jp-core-v1x\")",
+      "mcp__serena__list_dir",
+      "mcp__serena__write_memory",
+      "mcp__serena__list_memories"
     ]
   }
 }
