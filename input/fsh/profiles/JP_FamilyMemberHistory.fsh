@@ -39,14 +39,14 @@ Description: "同胞内順位をFamilyMemberHistoryに付記するための拡�
 * url = $JP_FamilyMemberHistory_GenogramBasedSiblingOrder (exactly)
 * extension contains
 siblingBirthOrder ..1 MS and
-genderedSiblingBirthOrder ..1 MS
+siblingBirthOrderByGender ..1 MS
 //
 * extension[siblingBirthOrder] ^short = "同胞内出生順（整数）"
-* extension[siblingBirthOrder] ^definition = "同胞内での出生順を表現した数値。家族歴の聴取が不完全な場合、年齢や生年月日が不明な場合に、同胞内の出生順（1、2、3、、）を表現するために用いる。"
+* extension[siblingBirthOrder] ^definition = "同胞内の出生順を表す数値。家族歴の聴取が不完全で年齢または生年月日が不明な場合に、出生順（1、2、3…）を表現するために用いる。"
 * extension[siblingBirthOrder].value[x] only integer
 * extension[siblingBirthOrder].value[x] ^minValueInteger = 1
 //
-* extension[genderedSiblingBirthOrder] ^short = "性別同胞内出生順名称（コード値）"
-* extension[genderedSiblingBirthOrder] ^definition = "同胞内の性別の出生順名称。日本語は、長男、長女、次男、次女など、designationにより出身国の用語を追加定義することで国際化にも対応。"
-* extension[genderedSiblingBirthOrder].value[x] only CodeableConcept
-* extension[genderedSiblingBirthOrder].valueCodeableConcept from $JP_GenderedSiblingBirthOrder_VS (preferred)
+* extension[siblingBirthOrderByGender] ^short = "性別同胞内出生順名称（コード値）"
+* extension[siblingBirthOrderByGender] ^definition = "同胞内の出生順を、性別を考慮した呼称（例：長男、長女、次男、次女）で表す。国際化対応の対応のため、designation により対象者の出身国の用語を追加定義できる。"
+* extension[siblingBirthOrderByGender].value[x] only CodeableConcept
+* extension[siblingBirthOrderByGender].valueCodeableConcept from $JP_SiblingBirthOrderByGender_VS (preferred)
