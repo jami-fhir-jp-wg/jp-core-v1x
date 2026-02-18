@@ -10,7 +10,19 @@
       "WebFetch(domain:www.hl7.org)",
       "WebFetch(domain:www.hl7.eu)",
       "Bash(ls:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(gh issue view:*)",
+      "Bash(gh.exe issue view:*)",
+      "Bash(where.exe:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(git fetch:*)",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File .specify/scripts/powershell/check-prerequisites.ps1 -Json -PathsOnly)",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File .specify/scripts/powershell/setup-plan.ps1 -Json)",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File .specify/scripts/powershell/update-agent-context.ps1 -AgentType claude)",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File .specify/scripts/powershell/check-prerequisites.ps1 -Json)",
+      "Bash(powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks)",
+      "Bash(sushi:*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/check-prerequisites.ps1 -Json)"
     ]
   }
 }
