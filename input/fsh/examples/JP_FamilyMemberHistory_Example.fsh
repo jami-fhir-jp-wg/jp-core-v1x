@@ -1,7 +1,7 @@
 Instance: jp-familymemberhistory-example-1
 InstanceOf: JP_FamilyMemberHistory
 Title: "JP Core FamilyMemberHistory Example-1 基本的な家族歴（母親）"
-Description: "基本的な家族歴の例：難聴に罹患している患者（山田太郎）の母親が糖尿病と難聴を有する"
+Description: "基本的な家族歴の例：MELASが疑われる患者（山田太郎）の母親が糖尿病と難聴を有する"
 Usage: #example
 * status = #partial
 * patient
@@ -28,7 +28,7 @@ Usage: #example
 Instance: jp-familymemberhistory-example-2
 InstanceOf: JP_FamilyMemberHistory
 Title: "JP Core FamilyMemberHistory Example-2 家族歴（息子 長男）、氏名が不明"
-Description: "同胞内出生順名称の例：MELASが疑われる糖尿病患者（山田太郎）の息子(#SON）が長男（#SBO1_M）は、花粉症の病歴のみ、糖尿病の既往なし。"
+Description: "同胞内出生順名称の例：MELASが疑われる糖尿病患者（山田太郎）の息子(#SON）が長男（#SBO1_M）は、花粉症の病歴のみで糖尿病の既往なし。"
 Usage: #example
 * status = #partial
 * patient
@@ -48,7 +48,7 @@ Usage: #example
 * extension[=].extension[+].url = "siblingBirthOrderByGender"
 * extension[=].extension[=].valueCodeableConcept
   * coding[0]
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_SiblingBirthOrderByGender_CS" // ← 実際のCodeSystem URLに置換してください
+    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_SiblingBirthOrderByGender_CS"
     * code = #SBO1_M
     * display = "長男"
 * reasonCode[0].text = "糖尿病"
@@ -79,7 +79,7 @@ Usage: #example
 Instance: jp-familymemberhistory-example-4
 InstanceOf: JP_FamilyMemberHistory
 Title: "JP Core FamilyMemberHistory Example-4 母方のおば（次女）"
-Description: "母方のおば（次女）。母が長女、母方のおじが長男、おばの出生順は３番目。糖尿病に罹患。"
+Description: "MELAS疑い患者の母方のおば（次女）。母が長女、母方のおじが長男、おばの出生順は３番目。糖尿病に罹患。"
 Usage: #example
 * status = #partial
 * patient
@@ -101,7 +101,7 @@ Usage: #example
 * extension[=].extension[=].valueCodeableConcept.coding = #GSBO2_F
 * extension[=].extension[=].valueCodeableConcept
   * coding[0]
-    * system = "http://example.org/CodeSystem/JP_SiblingBirthOrderByGender" // ← 実際のCodeSystem URLに置換してください
+    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_SiblingBirthOrderByGender_CS"
     * code = #SBO2_F
     * display = "次女"
 * condition[0]
