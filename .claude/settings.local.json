@@ -26,10 +26,14 @@
       "WebFetch(domain:oraios.github.io)",
       "Bash(uvx:*)",
       "Bash(uv:*)",
-      "Bash(claude mcp add serena -- uvx --from \"git+https://github.com/oraios/serena\" serena start-mcp-server --context claude-code --project \"C:/Users/rikim/git/jp-core-v1x\")",
+      "Bash(claude mcp add serena -- uvx --from \"git+https://github.com/oraios/serena\" serena start-mcp-server --context claude-code --project .)",
       "mcp__serena__list_dir",
       "mcp__serena__write_memory",
-      "mcp__serena__list_memories"
+      "mcp__serena__list_memories",
+      "Bash(powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/setup-plan.ps1 -Json)",
+      "Bash(powershell -ExecutionPolicy Bypass -File .specify/scripts/powershell/update-agent-context.ps1 -AgentType claude)",
+      "Bash(pwsh -NoProfile -Command \".specify/scripts/powershell/check-prerequisites.ps1 -Json\")",
+      "Bash(pwsh -NoProfile -Command \".specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks\":*)"
     ]
   }
 }

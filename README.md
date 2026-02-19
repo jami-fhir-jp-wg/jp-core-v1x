@@ -87,6 +87,12 @@ $ bash _updatePublisher.sh
 $ bash _genonce.sh
 ```
 
+## 生成AI活用ガイド
+
+本プロジェクトでは生成AIを活用した開発を一部取り入れています。
+
+- [生成AI活用ガイド](docs/ai-guide.md)
+
 ## FSH & Markdown 記載ルール
 
 - [FHIR Shorthand 記載ルール](docs/fishingrule.md)
