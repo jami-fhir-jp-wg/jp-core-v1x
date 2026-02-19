@@ -91,8 +91,8 @@ Usage: #example
     * code = #MAUNT
 * sex
   * coding[0]
-  * system = "http://hl7.org/fhir/administrative-gender"
-* code = #female 
+    * system = "http://hl7.org/fhir/administrative-gender"
+    * code = #female
 * name = "母方のおば（次女）"
 * extension[+].url = $JP_FamilyMemberHistory_SiblingOrder
 * extension[=].extension[+].url = "siblingBirthOrder"
