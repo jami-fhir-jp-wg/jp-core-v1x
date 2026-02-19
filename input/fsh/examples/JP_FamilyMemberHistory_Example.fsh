@@ -97,7 +97,7 @@ Usage: #example
 * extension[+].url = $JP_FamilyMemberHistory_SiblingOrder
 * extension[=].extension[+].url = "siblingBirthOrder"
 * extension[=].extension[=].valueInteger = 3
-* extension[=].extension[+].url = "genderedSiblingBirthOrder"
+* extension[=].extension[+].url = "siblingBirthOrderByGender"
 * extension[=].extension[=].valueCodeableConcept
   * coding[0]
     * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_SiblingBirthOrderByGender_CS"
