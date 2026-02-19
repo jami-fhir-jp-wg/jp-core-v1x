@@ -98,7 +98,6 @@ Usage: #example
 * extension[=].extension[+].url = "siblingBirthOrder"
 * extension[=].extension[=].valueInteger = 3
 * extension[=].extension[+].url = "genderedSiblingBirthOrder"
-* extension[=].extension[=].valueCodeableConcept.coding = #GSBO2_F
 * extension[=].extension[=].valueCodeableConcept
   * coding[0]
     * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_SiblingBirthOrderByGender_CS"
