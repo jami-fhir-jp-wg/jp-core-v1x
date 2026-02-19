@@ -40,10 +40,10 @@ JP Core FamilymMemberHistoryプロファイルで使用される拡張は次の�
 
 ### 用語定義
 
-|分類|CS名|URI|
-|---------|----|---------------------------|
-|続柄|relathionship|http://terminology.hl7.org/ValueSet/v3-FamilyMember|
-|性別同胞内出生順名称|GenderedSiblingBirthOrder|http://jpfhir.jp/fhir/core/CodeSystem/JP_GenderedSiblingBirthOrder_CS|
+|分類| CS名                       | URI                                                                   |
+|---------|---------------------------|-----------------------------------------------------------------------|
+|続柄| relathionship             | http://terminology.hl7.org/ValueSet/v3-FamilyMember                   |
+|性別同胞内出生順名称| SiblingBirthOrderByGender | http://jpfhir.jp/fhir/core/CodeSystem/JP_SiblingBirthOrderByGender_CS |
 
 
 ## 利用方法
@@ -116,5 +116,6 @@ JP Core FamilymMemberHistoryプロファイルで使用される拡張は次の�
 * [**家族歴（母親）**][jp-familymemberhistory-example-1]
 * [**家族歴（息子、長男）**][jp-familymemberhistory-example-2]
 * [**家族歴（内縁の妻）**][jp-familymemberhistory-example-3]
+* [**家族歴（母方のおば）**][jp-familymemberhistory-example-4]
 
 {% include markdown-link-references.md %}
