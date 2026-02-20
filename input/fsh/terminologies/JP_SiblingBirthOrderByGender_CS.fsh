@@ -1,7 +1,7 @@
 CodeSystem: JP_SiblingBirthOrderByGender_CS
 Id: jp-siblingbirthorderbygender-cs
 Title: "JP Core Sibling Birth Order By Gender CodeSystem"
-Description: "同胞内における性別の出生順名称を定義するCodeSystem。日本国内では、長女、長男、次女、次男など。性の多様性は、コード\"#SBO_OTHER\"を適用し、text要素に詳述。国際化対応は、designationにより出身国の用語を追加定義することで表現可能。"
+Description: "同胞内における性別の出生順名称を定義するCodeSystem。日本国内では、長女、長男、次女、次男など。十男・十女以上の出生順、性の多様性は、コード\"#SBO_OTHER\"を適用し、text要素に詳述。国際化対応は、designationにより出身国の用語を追加定義することで表現可能。"
 * ^url = $JP_SiblingBirthOrderByGender_CS
 * ^status = #active
 * ^experimental = false
@@ -28,7 +28,7 @@ Description: "同胞内における性別の出生順名称を定義するCodeSy
 * #SBO9_F "九女"
 * #SBO10_M "十男"
 * #SBO10_F "十女"
-* #SBO_OTHER "その他（text要素に詳細を記載）"
+* #SBO_OTHER "その他（十男・十女以上の出生順、性の多様性、その他の場合はtext要素に詳細を記載）"
 * #SBO_NOS "詳細不明(text要素に詳細を記載)"
 
 // ===== English designations =====
@@ -83,7 +83,7 @@ Description: "同胞内における性別の出生順名称を定義するCodeSy
 * #SBO10_F ^designation[=].value = "Tenth daughter"
 
 * #SBO_OTHER ^designation[+].language = #en
-* #SBO_OTHER ^designation[=].value = "Other (specify in text)"
+* #SBO_OTHER ^designation[=].value = "Other (specify in text for birth order of 11th or higher, gender diversity, or other cases)"
 
 * #SBO_NOS ^designation[+].language = #en
 * #SBO_NOS ^designation[=].value = "Unknown (specify in text)"
