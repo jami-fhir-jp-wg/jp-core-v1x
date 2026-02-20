@@ -31,7 +31,7 @@ JP Core FamilymMemberHistoryプロファイルで使用される拡張は次の�
   <tr>
     <td>同胞内出生順</td>
     <td>同胞内出生順の複合拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_SiblingOrder</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_Relatiohship_SiblingOrder</td>
     <td>Extension</td>
   </tr>
   <tr>
