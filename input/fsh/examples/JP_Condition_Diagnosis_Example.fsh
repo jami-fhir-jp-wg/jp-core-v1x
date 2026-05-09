@@ -1,28 +1,28 @@
 Instance:  jp-condition-diagnosis-example-1
 InstanceOf: JP_Condition_Diagnosis
-Title: "JP Core Condition Diagnosis Example 病名（過敏性大腸炎の初期疾患）"
-Description: "過敏性大腸炎の初期疾患の例"
+Title: "JP Core Condition Diagnosis Example 病名（右橈骨遠位端骨折の術後）"
+Description: "右橈骨遠位端骨折の術後の例"
 Usage: #example
 * extension[0]
   * url = $JP_Condition_DiseaseOutcome
   * valueCodeableConcept
     * coding[0]
       * system = "http://terminology.sample.com/CodeSystem/disease-outcome"
-      * code = #2
-      * display = "寛解"
+      * code = #1
+      * display = "中止"
     * coding[1]
       * system = $JP_ConditionDiseaseOutcomeJHSD0006_CS
-      * code = #M
-      * display = "寛解"
-    * text = "寛解"
+      * code = #I
+      * display = "中止"
+    * text = "中止(転医)"
 *  identifier
   * system = "http://terminology.sample.com/IdSystem/disease/1311234567"
   * value = "123456789012345"
 *  clinicalStatus
   * coding[0]
     * system = "http://terminology.hl7.org/CodeSystem/condition-clinical"
-    * code = #remission
-    * display = "Remission"
+    * code = #inactive
+    * display = "Inactive"
 *  verificationStatus
   *  coding[0]
     *  system = "http://terminology.hl7.org/CodeSystem/condition-ver-status"
