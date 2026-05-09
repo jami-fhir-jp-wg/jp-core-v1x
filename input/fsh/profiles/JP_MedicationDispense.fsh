@@ -124,8 +124,9 @@ TG : 治療的に同等のジェネリック間で置換が発生したか、許
 F  : 処方ガイドラインに準拠。  
 N  : 置換は発生しなかったか、許可されていない。"
 * substitution.type ^comment = ""
-* substitution.reason ^short = "置換が実施された理由"
-* substitution.reason ^definition = "治療継続性確保のため、FP:処方方針、 OS: 在庫欠品、  RR:代替えを義務付けまたは禁止する規制要件に従った"
+* substitution.reason from $JP_MedicationSubstitutionProhibitionReason_VS (preferred)
+* substitution.reason ^short = "置換が実施された（あるいは、されなかった）理由"
+* substitution.reason ^definition = "【JP Core仕様】置換が実施された、あるいは実施されなかった理由を示す。令和6年保険改訂により、処方箋上で長期収載医薬品の変更不可が指定されている場合は「医療上の必要性がある」または「患者希望による」のいずれかを指定する。"
 * substitution.reason ^comment = ""
 * substitution.responsibleParty only Reference(JP_Practitioner or JP_PractitionerRole)
 * substitution.responsibleParty ^short = "置換責任者"
