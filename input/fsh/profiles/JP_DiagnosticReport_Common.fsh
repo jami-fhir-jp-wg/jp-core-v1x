@@ -11,10 +11,10 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * ^date = "2024-12-30"
 * . ^short = "診断レポート-依頼情報、１項目単位の結果、画像、解釈、およびフォーマットされたレポートの組み合わせ【詳細参照】"
 * . ^definition = "患者、患者のグループ、デバイス、場所、これらから派生した検体に対して実行された診断的検査の結果と解釈。レポートには、依頼情報や依頼者情報などの臨床コンテキスト（文脈）、および１項目単位の結果、画像、テキストとコード化された解釈、および診断レポートのフォーマットされた表現のいくつかの組み合わせが含まれる。"
-* . ^comment = "これは単一のレポートをキャプチャすることを目的としており、複数のレポートをカバーする要約情報の表示に使用するのには適していない。たとえば、このリソースは、検査結果の累積レポート形式やシーケンスの詳細な構造化レポート用に作られていない。  
+* . ^comment = "これは単一のレポートを格納することを目的としており、複数のレポートを含む要約情報の表示に使用するのには適していない。たとえば、このリソースは、検査結果の累積レポート形式やシーケンスの詳細な構造化レポート用に作られていない。  
 【JP Core仕様】DiagnosticReportリソースの共通プロフィール"
 * insert SetDefinition(identifier, 実行者/実施者または他のシステムによって、この診断レポートに割り当てられた識別子)
-* identifier ^comment = "通常、診断サービスプロバイダの情報システム（フィラーID）によって割り当てられる。"
+* identifier ^comment = "通常、診断サービスを実施した施設の情報システム（実施者ID、HL7 v2 の filler ID）によって割り当てられる。"
 * identifier ^requirements = "発生源の検査室からこのレポートについてクエリを作成するとき、およびFHIRコンテキスト外のレポートにリンクするときに使用する識別子を知る必要がある。"
 * basedOn only Reference(CarePlan or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
 * insert SetDefinition(basedOn, 元になった検査や診断の依頼に関する情報)
@@ -34,7 +34,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * insert SetDefinition(subject, 診断レポートの対象患者に関する情報)
 * subject ^comment = "レポートの対象、通常、Patientリソースへの参照。ただし、他のさまざまなソースから収集された検体を対象とすることもある。参照は内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。"
 * encounter only Reference(JP_Encounter)
-* insert SetDefinition(encounter, 診断レポートが関係するヘルスケアイベントに関する情報)
+* insert SetDefinition(encounter, 診断レポートが関係する診療イベントに関する情報)
 * encounter ^comment = "受診、入院、診察など。通常、イベントが発生したEncounterであるが、一部のイベントは、Encounterの正式な完了の前または後に開始される場合があり、その場合でもEncounterのコンテキストに関連付けられている（例：入院前の臨床検査）。"
 * insert SetDefinition(effective[x], 診断レポートの作成日時)
 * effective[x] ^comment = "診断手順が患者に対して実行された場合、これは実施された時間である。対象が検体である場合は、検体採取時間から診断関連時刻を導き出すことができるが、検体情報が常に入手できるとは限らず、検体と診断関連時刻の正確な関係は必ずしも自明ではない。"

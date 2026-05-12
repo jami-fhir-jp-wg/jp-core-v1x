@@ -78,7 +78,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * subject ^comment = "参照は実際のFHIRリソースへの参照であり、解決可能である必要がある。解決はURLから取得するか、または、リソースタイプが利用できる場合は絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索する。  
 【JP Core仕様】Patient リソースを参照"
 * subject ^requirements = "対象のコンテキストが必要である。"
-* encounter ^definition = "この診断レポートが関するヘルスケアイベント。"
+* encounter ^definition = "この診断レポートが関する診療イベント。"
 * encounter ^comment = "これは通常、レポートの作成が発生するEncounterだが、一部のイベントはEncounterの正式な完了の前または後に開始される場合がある（例えば入院前の検査）。その場合でも（入院に関連して検査が行われる場合など）、Encounterのコンテキストに関連付けられる。  
 【JP Core仕様】このレポートを書く切っ掛けとなる Encounterリソース（例：術前検査の場合、術前訪問） を参照"
 * encounter ^requirements = "Encounterコンテキストへのリンクが必要である"

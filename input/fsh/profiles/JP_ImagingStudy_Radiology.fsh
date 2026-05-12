@@ -36,7 +36,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 ・不明患者は、空もしくは不明を指すPatientリソースを参照。"
 * encounter only Reference(JP_Encounter)
 * encounter ^short = "この画像検査が関連しているEncounterリソース"
-* encounter ^definition = "このImagingStudyが行われるヘルスケアイベント（患者とヘルスケアプロバイダの相互作用など）。"
+* encounter ^definition = "このImagingStudyが行われる診療イベント（患者と医療提供者の相互作用など）。"
 * encounter ^comment = "これは通常、イベントが発生したEncounterであるが、一部のイベントは、Encounterの正式な完了の前または後に開始される場合があり、それでもそのEncounterのコンテキストに関連付けられている（例：入院前の検査）  
 受付を示すEncounterリソースを参照。  
 （補足：訪問診療では医療者が患者と会った事を指す）"
@@ -104,8 +104,7 @@ JP Coreでは未使用"
 コメント（Annotation型による記述）"
 * description ^short = "機関生成の記述"
 * description ^definition = "スタディのイメージングマネージャの説明。実施されたスタディ（コンポーネント）の機関生成の説明または分類。"
-* description ^comment = "FHIR文字列のサイズは1MBを超えてはならないことに注意。  
-検査に関するフリーコメント。"
+* description ^comment = "検査に関するフリーコメント。"
 * series ^short = "個々のスタディはインスタンスの１以上のシリーズを有する"
 * series ^definition = "個々のスタディは画像か他の内容の１以上のシリーズを有する。"
 * series ^comment = "シリーズ（大まかな画像のグループ）"
@@ -126,8 +125,7 @@ study階層のidentifierと同じ概念。(0020,000E)にseries固有のUIDが付
 http://jpfhir.jp/fhir/core/ValueSet/JP_DICOMModality_VS.html"
 * series.description ^short = "シリーズの人間可読な形式での短い要約記述"
 * series.description ^definition = "シリーズの記述。"
-* series.description ^comment = "FHIR文字列のサイズは1MBを超えてはならないことに注意。  
-シリーズごとにつけられるフリーコメント。"
+* series.description ^comment = "シリーズごとにつけられるフリーコメント。"
 * series.numberOfInstances ^definition = "スタディの中のSOPインスタンスの数。指定されたこの値は、リソースの可用性、セキュリティ、またはその他の要因により、このリソースに含まれるインスタンス要素の数よりも大きい場合がある。インスタンス要素が存在する場合は、この要素が存在する必要がある。"
 * series.numberOfInstances ^comment = "32ビット数で表す。これより大きい値の場合は、10進数を使用する。  
 シリーズに含まれる画像枚数"

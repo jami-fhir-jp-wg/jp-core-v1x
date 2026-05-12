@@ -55,7 +55,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * subject only Reference(JP_Patient)
 * insert SetDefinition(subject, 観察対象者 【JP Core仕様】患者情報)
 * insert SetDefinition(focus, subject 要素が実際のobservationの対象でない場合に、observation の対象物。 【JP Core仕様】未使用)
-* insert SetDefinition(encounter, このobservationが行われるヘルスケアイベント)
+* insert SetDefinition(encounter, このobservationが行われる診療イベント)
 * encounter ^comment = "例：診療、歯科検診、身元不明者調査"
 
 * effective[x] only dateTime

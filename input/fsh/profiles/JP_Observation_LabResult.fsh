@@ -65,8 +65,8 @@ SS-MIX2だとCWE.1 ～CWE.3に標準コード、CWE.4～CWE.6にローカルコ�
 * code.coding.system ^comment = "【JP Core仕様】標準コードの場合、JLAC10を表すURIを設定。  
 URIは本WGで定義する。"
 * code.coding.version ^comment = "Where the terminology does not clearly define what string should be used to identify code system versions, the recommendation is to use the date (expressed in FHIR date format) on which that version was officially published as the version date."
-* code.coding.code ^comment = "Note that FHIR strings SHALL NOT exceed 1MB in size"
-* code.coding.display ^comment = "Note that FHIR strings SHALL NOT exceed 1MB in size"
+* code.coding.code ^comment = ""
+* code.coding.display ^comment = ""
 * code.coding.userSelected ^definition = "このコードが利用者によって、例えば利用可能なコードの選択リストから、など、直接選択されたものであることを示す。"
 * code.coding.userSelected ^comment = "【JP Core仕様】当面は未使用とする。"
 * code.text 1..
@@ -79,7 +79,7 @@ URIは本WGで定義する。"
 * subject ^comment = "【JP Core仕様】このプロファイルでは、Patient 限定、かつ必須とする。"
 * focus ^definition = "患者当人ではなく、患者の胎児、親、ドナーなどの検査、観察の場合、その対象を示す。"
 * focus ^comment = "【JP Core仕様】当面は未使用とする。"
-* encounter ^definition = "この検査が行われるヘルスケアイベント。医療提供者と患者の接点。"
+* encounter ^definition = "この検査が行われる診療イベント。医療提供者と患者の接点。"
 * encounter ^comment = "【JP Core仕様】入院外来の区別や所在場所、担当診療科の情報に使用する。  
 ※このプロファイルの用途では通常は必須と考えられるが、ユースケースにより使用されない場合を考慮し、1..1に制約しない。"
 * effective[x] 1..
@@ -159,7 +159,7 @@ https://www.hl7.org/fhir/R4/valueset-observation-interpretation.html"
 * referenceRange.age ^definition = "基準値が適用される年齢。新生児の場合、週数もありうる。"
 * referenceRange.age ^comment = "The stated low and high value are assumed to have arbitrarily high precision when it comes to determining which values are in the range. I.e. 1.99 is not in the range 2 -> 3."
 * referenceRange.text ^definition = "量的範囲で表せない場合などに使用する。"
-* referenceRange.text ^comment = "Note that FHIR strings SHALL NOT exceed 1MB in size"
+* referenceRange.text ^comment = ""
 * hasMember ^definition = "グループ検査の場合、この検査に含まれる複数の検査結果項目を示す。"
 * hasMember ^comment = "【JP Core仕様】この1検査結果で複数の検査結果項目を含むような場合、value[x]には結果値を設定せず、それら検査結果項目を示すJP_Observation_LabResultへのReferenceをhasMemberに設定する。"
 * derivedFrom ^definition = "この検査値の発生元である関連リソース。例えば他のObservation を受けて、本検査値が発生した場合など。"
