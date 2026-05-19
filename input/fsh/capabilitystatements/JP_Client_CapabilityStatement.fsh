@@ -36,6 +36,7 @@ Usage: #definition
 * insert PutDefinedSearchParam(MAY, gender, individual-gender, token)
 * insert PutDefinedSearchParam(MAY, phone, individual-phone, token)
 * insert PutDefinedSearchParam(MAY, address-postalcode, individual-address-postalcode, string)
+* insert PutSearchParam(MAY, jp-kana-sort, http://jpfhir.jp/fhir/core/SearchParameter/JP_Patient_KanaSort_SP, string)
 
 // Coverage
 * insert SetSearchParameterResource(Coverage, JP_Coverage)
@@ -50,6 +51,9 @@ Usage: #definition
 * insert PutDefinedSearchParam(SHOULD, status, Coverage-status, token)
 * insert PutDefinedSearchParam(SHOULD, subscriber, Coverage-subscriber, reference)
 * insert PutDefinedSearchParam(SHOULD, type, Coverage-type, token)
+* insert PutSearchParam(MAY, jp-insured-personnumber, http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonNumber_SP, string)
+* insert PutSearchParam(MAY, jp-insured-personsubnumber, http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSubNumber_SP, string)
+* insert PutSearchParam(MAY, jp-insured-personsymbol, http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSymbol_SP, string)
 
 // Encounter
 * insert SetSearchParameterResource(Encounter, JP_Encounter)
@@ -83,6 +87,9 @@ Usage: #definition
 * insert PutDefinedSearchParam(SHALL, identifier, Organization-identifier, token)
 * insert PutDefinedSearchParam(SHOULD, name, Organization-name, string)
 * insert PutDefinedSearchParam(SHOULD, address, Organization-address, string)
+* insert PutSearchParam(MAY, jp-insurance-organizationcategory, http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationCategory_SP, token)
+* insert PutSearchParam(MAY, jp-insurance-organizationno, http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_InsuranceOrganizationNo_SP, token)
+* insert PutSearchParam(MAY, jp-prefectureno, http://jpfhir.jp/fhir/core/SearchParameter/JP_Organization_PrefectureNo_SP, token)
 
 // Practitioner
 * insert SetSearchParameterResource(Practitioner, JP_Practitioner)
