@@ -19,6 +19,7 @@ Description: "このプロファイルはSpecimenリソースに対して、患�
 * extension ^short = "実装で定義された追加コンテンツ"
 * modifierExtension ^short = "無視できない拡張機能"
 * text ^short = "このリソースを人間が解釈するためのテキスト要約"
+* identifier MS
 * identifier ^short = "外部識別子"
 * accessionIdentifier ^short = "検査部門で採番された識別子"
 * type ^short = "検査材料の種類"

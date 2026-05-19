@@ -15,6 +15,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * ^date = "2025-07-30"
 * . ^short = "患者あるいはグループに対しての処方オーダ"
 * . ^definition = "患者への薬の供給と内服・外用薬剤処方の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。MedicationRequestプロファイルからの派生プロファイルである。"
+* identifier MS
 * identifier obeys jp-inv-local-prescriptionid
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
@@ -270,6 +271,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * ^date = "2025-07-30"
 * . ^short = "患者あるいはグループに対しての注射薬剤処方オーダ"
 * . ^definition = "患者への薬の供給と注射や点滴の指示を共に提供するオーダ。ケアプランやワークフローパターンとハーモナイズし、入院や外来でも使えるようにするため、このリソースは\"MedicationPrescription\"や\"MedicationOrder\"ではなく、\"MedicationRequest\"と呼ばれる。MedicationRequestプロファイルからの派生プロファイルである。"
+* identifier MS
 * identifier  obeys jp-inv-local-prescriptionid
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"

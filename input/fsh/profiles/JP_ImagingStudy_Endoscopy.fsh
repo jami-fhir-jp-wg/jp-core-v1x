@@ -14,6 +14,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * identifier ^short = "DICOM画像検査全体を一意に識別するためのID【詳細参照】"
 * identifier ^definition = "DICOM画像検査全体を一意に識別するためのID。"
 * identifier ^comment = "Study Instance UIDの値を指定する。"
+* status MS
 * status ^short = "DICOM画像検査のステータス"
 * status ^definition = "DICOM画像検査のステータス。"
 * modality from $JP_DICOMModality_VS (required)

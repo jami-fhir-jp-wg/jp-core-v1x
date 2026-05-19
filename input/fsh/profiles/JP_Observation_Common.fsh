@@ -13,6 +13,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^definition = "患者、デバイス、またはその他の対象について行われた測定と簡単な観察事実（assertion）。"
 * . ^comment = "すべてのObservation（検査測定や観察事実）の共通部分のプロファイル"
 * insert SetDefinition(identifier, このObservationリソースの一意な識別ID)
+* identifier MS
 * basedOn only 	Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
 * insert SetDefinition(basedOn, このObservationが実施されることになった依頼や計画、提案に関する情報)
 * partOf only Reference(JP_MedicationAdministration or JP_MedicationAdministration_Injection or JP_MedicationDispenseBase or MedicationStatement or JP_Procedure or JP_Immunization or ImagingStudy)

@@ -13,6 +13,7 @@ Description: "このプロファイルはConditionリソースに対して、患
 * . ^definition = "A clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern.  
 健康上の懸念となるレベルに達した、身体的、精神的、社会的な負の状態(condition)や問題（problem／issue）、医療者による診断(diagnosis)、生じたイベント(event)、置かれている状況(situation)、臨床的概念(clinical concept)。"
 * text ^short = "Text summary of the resource, for human interpretation. このリソースを人間が解釈するためのテキスト要約"
+* identifier MS
 * clinicalStatus ^short = "active | recurrence | relapse | inactive | remission | resolved （アクティブ | 再発 | 再燃 | インアクティブ | 寛解 | 完治）"
 * clinicalStatus ^definition = "The clinical status of the condition.  
 この患者状態の臨床的ステータス（アクティブか否かなど）"

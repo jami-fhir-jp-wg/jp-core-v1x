@@ -16,6 +16,7 @@ Description: "このプロファイルはImmunizationリソースに対して日
     JP_Immunization_DueDateOfNextDose named dueDateOfNextDose ..1 and
     JP_Immunization_ManufacturedDate named manufacturedDate ..1 and
     JP_Immunization_CertificatedDate named certificatedDate ..1
+* identifier MS
 * status ^definition = "予防接種記録の現在の状態を示すコード"
 * status ^binding.description = "予防接種の現在の状態を表すコード"
 * statusReason ^short = "実施しなかった理由"

@@ -14,6 +14,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * . ^comment = "これは単一のレポートをキャプチャすることを目的としており、複数のレポートをカバーする要約情報の表示に使用するのには適していない。たとえば、このリソースは、検査結果の累積レポート形式やシーケンスの詳細な構造化レポート用に作られていない。  
 【JP Core仕様】DiagnosticReportリソースの共通プロフィール"
 * insert SetDefinition(identifier, 実行者/実施者または他のシステムによって、この診断レポートに割り当てられた識別子)
+* identifier MS
 * identifier ^comment = "通常、診断サービスプロバイダの情報システム（フィラーID）によって割り当てられる。"
 * identifier ^requirements = "発生源の検査室からこのレポートについてクエリを作成するとき、およびFHIRコンテキスト外のレポートにリンクするときに使用する識別子を知る必要がある。"
 * basedOn only Reference(CarePlan or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)

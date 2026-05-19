@@ -11,6 +11,7 @@ Description: "このプロファイルはPractitionerRoleリソースに対し�
 * ^date = "2024-12-30"
 * . ^short = "医療従事者が関連付けられている役割/組織"
 * . ^definition = "医療従事者が一定期間、組織で行うことができる役割／場所／専門性／サービスの特定のセット。"
+* identifier MS
 * identifier ^short = "役割/場所に固有のビジネス識別子"
 * identifier ^definition = "役割/場所に固有のビジネス識別子。"
 * identifier ^requirements = "多くの場合、エージェントには特定の識別子が割り当てられている。"

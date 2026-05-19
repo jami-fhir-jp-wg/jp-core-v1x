@@ -12,6 +12,7 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * . ^short = "ヘルスケアまたは関連サービスの提供に正式な責任を負う人"
 * . ^definition = "A person who is directly or indirectly involved in the provisioning of healthcare.  
 医療の提供に直接または間接的に関与する者をいう。"
+* identifier MS
 * identifier ^short = "An identifier for the person as this agent Practitionerリソースに対する識別子【詳細参照】"
 * identifier ^definition = "An identifier that applies to this person in this role.  
 ある役割の人に適用される識別子。"
@@ -34,6 +35,7 @@ Practitioner.identifier.systemは以下の割り当てる。
 * active ^definition = "この医療従事者の記録がアクティブに使用されているかどうかを示す。"
 * active ^comment = "医療従事者がある組織で使用されていない場合、別のロールでアクティブになっている可能性があるので、(例えそれらがアクティブであっても)PractitionerRoleに有効期間を終了日でマークしておく必要がある。"
 * active ^requirements = "医療従事者のレコードを誤って作成してしまったとき、使用しないようにマークできるようにする必要がある。"
+* name MS
 * name only JP_HumanName
 * name ^definition = "医療従事者の氏名（複数の場合もある）"
 * name ^comment = "プロパティの選択は、指定された単一の通常の名前があることを保証しなければならず、他の値はニックネーム（別名）、旧名、または他の値を適切に使用する。  

@@ -18,6 +18,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * id ^short = "このアーチファクトに対する論理ID"
 * id ^definition = "リソースに対するURLとして使われるリソースの論理ID。この値は一度割り当てられたら変更されることはない。"
 * id ^comment = "ResourceにIDがない時期は、create操作のためにサーバにResourceが送信されている時期だけである。"
+* identifier MS
 * identifier ^short = "この薬剤に関する業務用のID"
 * identifier ^definition = "この薬剤に関する業務用のID"
 * identifier ^comment = "IDとしてシリアルナンバーを使うこともできる。"
