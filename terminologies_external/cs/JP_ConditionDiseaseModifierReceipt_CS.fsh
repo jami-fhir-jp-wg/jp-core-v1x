@@ -1,4 +1,4 @@
-CodeSystem: JP_ConditionDieaseModifierReceipt_CS
+CodeSystem: JP_ConditionDiseaseModifierReceipt_CS
 Id: jp-condition-disease-modifier-receipt-cs
 Title: "JP Core Condition Disease Modifier Receipt System CodeSystem"
 Description: "レセプト電算用修飾語マスター コードシステム"

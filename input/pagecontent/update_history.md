@@ -70,9 +70,9 @@
     * SearchParameterのexpressionのFHIRPath記述に対する指摘に対応した
 * Terminology関連
   * 以下のコードシステムおよびバリューセットを追加/削除した
-    * `JP_ConditionDieaseOutcomeHL70241_CS`
-    * `JP_ConditionDieaseOutcomeJHSD0006_CS`
-    * `JP_ConditionDieaseOutcomeReceipt_CS`
+    * `JP_ConditionDiseaseOutcomeHL70241_CS`
+    * `JP_ConditionDiseaseOutcomeJHSD0006_CS`
+    * `JP_ConditionDiseaseOutcomeReceipt_CS`
     * `JP_ConditionDiseaseCodeICD10_VS`
     * `JP_ConditionDiseaseCodeMEDISExchange_VS.`
     * `JP_ConditionDiseaseCodeMEDISRecordNo_VS`

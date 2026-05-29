@@ -1,4 +1,4 @@
-CodeSystem: JP_ConditionDieaseCodeReceipt_CS
+CodeSystem: JP_ConditionDiseaseCodeReceipt_CS
 Id: jp-condition-disease-code-receipt-cs
 Title: "JP Core Condition Disease Code Receipt System CodeSystem"
 Description: "レセプト電算用傷病名マスター コードシステム"

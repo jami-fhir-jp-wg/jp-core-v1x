@@ -1,4 +1,4 @@
-ValueSet: JP_DentalSipmleMissingTeethObservation_VS
+ValueSet: JP_DentalSimpleMissingTeethObservation_VS
 Id: jp-dental-simple-missingteeth-observation-vs
 Title: "JP Core Dental SimpleMissingTeethObservation ValueSet"
 Description: "JP Coreにて定義した歯科のObservationリソースに関する欠損歯の観察結果コード（簡易版）"
