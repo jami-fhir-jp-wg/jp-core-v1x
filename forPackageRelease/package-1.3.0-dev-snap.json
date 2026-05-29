@@ -7,7 +7,8 @@
     "4.0.1"
   ],
   "dependencies": {
-    "hl7.fhir.r4.core": "4.0.1"
+    "hl7.fhir.r4.core": "4.0.1",
+    "jpfhir-terminology": "1.4.0"
   },
   "url": "http://jpfhir.jp/fhir/core",
   "canonical": "http://jpfhir.jp/fhir/core"
