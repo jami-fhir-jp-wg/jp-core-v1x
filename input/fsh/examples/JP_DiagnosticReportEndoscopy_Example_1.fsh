@@ -7,7 +7,7 @@ Title: "JP Core DiagnosticReport Endoscopy Example 内視鏡検査レポート"
 Description: "上部消化管内視鏡検査レポート"
 Usage: #example
 * identifier.use = #usual
-* identifier.system = "http://abc-hospital.local/fhir/identifier/endoscopy/report"
+* identifier.system = "http://example.org/abc-hospital/fhir/identifier/endoscopy/report"
 * identifier.value = "123456"
 * status = #final
 * category[first] = $Loinc_CS#LP7796-8 "内視鏡"

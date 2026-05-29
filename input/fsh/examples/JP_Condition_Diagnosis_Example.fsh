@@ -7,7 +7,7 @@ Usage: #example
   * url = $JP_Condition_DiseaseOutcome
   * valueCodeableConcept
     * coding[0]
-      * system = "http://terminology.sample.com/CodeSystem/disease-outcome"
+      * system = "http://example.org/terminology/CodeSystem/disease-outcome"
       * code = #1
       * display = "中止"
     * coding[1]
@@ -16,7 +16,7 @@ Usage: #example
       * display = "中止"
     * text = "中止(転医)"
 *  identifier
-  * system = "http://terminology.sample.com/IdSystem/disease/1311234567"
+  * system = "http://example.org/terminology/IdSystem/disease/1311234567"
   * value = "123456789012345"
 *  clinicalStatus
   * coding[0]
@@ -54,7 +54,7 @@ Usage: #example
         * display = "の術後"
       * text = "の術後"
   * coding[0]
-    * system = "http://terminology.sample.com/CodeSystem/disease/1311234567"
+    * system = "http://example.org/terminology/CodeSystem/disease/1311234567"
     * code = #MD13062
     * display = "橈骨遠位端骨折"
   * coding[1]
