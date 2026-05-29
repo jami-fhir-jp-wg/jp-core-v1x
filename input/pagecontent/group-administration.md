@@ -6,6 +6,7 @@
 * [JP Core Organization （組織）プロファイル][JP_Organization]
 * [JP Core Organization Department （診療科）プロファイル][JP_Organization_Department]
 * [JP Core Practitioner （医療従事者）プロファイル][JP_Practitioner]
+* [JP Core HumanName （人名）プロファイル][JP_HumanName]
 * [JP Core PractitionerRole （医療従事者役割）プロファイル][JP_PractitionerRole]
 
 ### Extensions
