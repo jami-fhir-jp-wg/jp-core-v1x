@@ -6,7 +6,7 @@ Usage: #example
 * category[first] = $JP_SimpleObservationCategory_CS#body-measurement "Body Measurement"
 * category[second] = $JP_ObservationBodyMeasurementCategory_CS#weight "体重"
 * subject = Reference(Patient/jp-patient-example-1)
-* code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#abc-local-456
+* code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#abc-local-456 "体重"
 * code.coding[+] = $JP_ObservationBodyMeasurementCode_CS#31000296
 * effectiveDateTime = "2021-10-19T10:00:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)

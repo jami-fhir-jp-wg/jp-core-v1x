@@ -122,7 +122,7 @@
     GET [base]/AllergyIntolerance?patient=Patient/123&type=allergy
     ```
     ```
-    GET [base]/AllergyIntolerance?patient=Patient/123&category=http://hl7.org/fhir/ValueSet/allergy-intolerance-type|allergy
+    GET [base]/AllergyIntolerance?patient=Patient/123&type=http://hl7.org/fhir/ValueSet/allergy-intolerance-type|allergy
     ```
     
     指定された患者およびステータスのすべてのAllergyIntoleranceを含むBundleを返却する。
@@ -144,7 +144,7 @@
   
   指定された患者およびステータスのすべてのAllergyIntoleranceを含むBundleを返却する。
 
-1. 検索パラメータpatientとcriticality組みを指定し、該当するすべてのAllergyIntoleranceを検索
+6. 検索パラメータpatientとcriticality組みを指定し、該当するすべてのAllergyIntoleranceを検索
 
     * OR検索のサポートを含む(例えば criticality=[token],[token],...)
     
