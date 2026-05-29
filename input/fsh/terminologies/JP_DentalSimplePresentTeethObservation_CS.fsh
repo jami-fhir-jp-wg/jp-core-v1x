@@ -1,4 +1,4 @@
-CodeSystem: JP_DentalSipmlePresentTeethObservation_CS
+CodeSystem: JP_DentalSimplePresentTeethObservation_CS
 Id: jp-dental-simple-presentteeth-observation-cs
 Title: "JP Core Dental SimplePresentTeethObservation CodeSystem"
 Description: "JP Coreにて定義した歯科のObservationリソースに関する現存歯の観察結果コード（簡易版）"

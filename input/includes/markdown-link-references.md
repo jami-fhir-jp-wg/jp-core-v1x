@@ -145,8 +145,8 @@
 [JP_Patient_KanaSort_SP]: SearchParameter-jp-patient-kanasort-sp.html
 
 <!-- CodeSystem -->
-[JP_ConditionDieaseOutcomeHL70241_CS]: CodeSystem-jp-condition-disease-outcome-hl70241-cs.html
-[JP_ConditionDieaseOutcomeReceipt_CS]: CodeSystem-jp-condition-disease-outcome-receipt-cs.html
+[JP_ConditionDiseaseOutcomeHL70241_CS]: CodeSystem-jp-condition-disease-outcome-hl70241-cs.html
+[JP_ConditionDiseaseOutcomeReceipt_CS]: CodeSystem-jp-condition-disease-outcome-receipt-cs.html
 [JP_DentalBodySite_CS]: CodeSystem-jp-dental-bodysite-cs.html
 [JP_DentalBodySiteStatus_CS]: CodeSystem-jp-dental-bodysitestatus-cs.html
 [JP_DentalFundamentalStatus_CS]: CodeSystem-jp-dental-fundamentalstatus-cs.html
@@ -154,7 +154,7 @@
 [JP_DentalPresentTeethObservation_CS]: CodeSystem-jp-dental-presentteeth-observation-cs.html
 [JP_DentalRootBodyStructure_CS]: CodeSystem-jp-dental-rootbodystructure-cs.html
 [JP_DentalSimpleMissingTeethObservation_CS]: CodeSystem-jp-dental-simple-missingteeth-observation-cs.html
-[JP_DentalSipmlePresentTeethObservation_CS]: CodeSystem-jp-dental-simple-presentteeth-observation-cs.html
+[JP_DentalSimplePresentTeethObservation_CS]: CodeSystem-jp-dental-simple-presentteeth-observation-cs.html
 [JP_DentalSurfaceBodyStructure_CS]: CodeSystem-jp-dental-surfacebodystructure-cs.html
 [JP_ObservationBodyMeasurementCode_CS]: CodeSystem-jp-observation-bodymeasurement-code-cs.html
 [JP_ObservationDentalCategory_CS]: CodeSystem-jp-observation-dental-category-cs.html
@@ -172,7 +172,7 @@
 [JP_DentalMissingTeethObservation_VS]: ValueSet-jp-dental-missingteeth-observation-vs.html
 [JP_DentalPresentTeethObservation_VS]: ValueSet-jp-dental-presentteeth-observation-vs.html
 [JP_DentalRootBodyStructure_VS]: ValueSet-jp-dental-rootbodystructure-vs.html
-[JP_DentalSipmleMissingTeethObservation_VS]: ValueSet-jp-dental-simple-missingteeth-observation-vs.html
+[JP_DentalSimpleMissingTeethObservation_VS]: ValueSet-jp-dental-simple-missingteeth-observation-vs.html
 [JP_DentalSimplePresentTeethObservation_VS]: ValueSet-jp-dental-simple-presentteeth-observation-vs.html
 [JP_DentalSurfaceBodyStructure_VS]: ValueSet-jp-dental-surfacebodystructure-vs.html
 [JP_DentalTeethObservation_VS]: ValueSet-jp-dental-teethobservation-vs.html

@@ -14,8 +14,8 @@
 
 <!-- 外部定義されたリンク -->
 [JP_BodySite_CS]: https://jpfhir.jp/fhir/core/CodeSystem/JP_BodySite_CS.html
-[JP_ConditionDieaseCodeReceipt_CS]: https://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterB-disease.html
-[JP_ConditionDieaseModifierReceipt_CS]: https://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterZ-disease-modifier.html
+[JP_ConditionDiseaseCodeReceipt_CS]: https://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterB-disease.html
+[JP_ConditionDiseaseModifierReceipt_CS]: https://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterZ-disease-modifier.html
 [JP_DocumentCodes_CS]: https://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_CS.html
 [JP_EndoscopyTerminologyCodesJED_CS]: https://jpfhir.jp/fhir/core/CodeSystem/JP_EndoscopyTerminologyCodesJED_CS.html
 [JP_SimpleObservationCategory_CS]: https://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS.html
