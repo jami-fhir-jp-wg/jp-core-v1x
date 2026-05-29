@@ -196,20 +196,15 @@ jobs:
         tar czf jp-core.r4-${{ inputs.release-version }}-snap.tgz package
         cd ../..
 
-    - name: STEP5 = upload all files to remote site by rsync
-      if: ${{ inputs.upload-packages }}
+    - name: STEP5 = upload files to remote site by rsync
       run: |
         ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }} 'rm -rf ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ inputs.release-version }}'
         ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }} 'mkdir -p ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ inputs.release-version }}'
-        rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }}" output.tgz fsh-generated.tgz forPackageRelease/jp-core.r4-${{ inputs.release-version }}.tgz forPackageRelease/snapshot/jp-core.r4-${{ inputs.release-version }}-snap.tgz ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ inputs.release-version }}/
-        # index.htmlはdevelopからは修正しない
-        rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }}" other/index.html other/assetsOfIndex ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/
-        ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }} 'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ inputs.release-version }} ; tar xzf output.tgz; mv output/* .; rm -rf output'
-
-    - name: STEP5 = upload output to remote site by rsync
-      if: ${{ !inputs.upload-packages }}
-      run: |
-        ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }} 'rm -rf ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ inputs.release-version }}'
-        ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }} 'mkdir -p ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ inputs.release-version }}'
-        rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }}" output.tgz ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ inputs.release-version }}/
-        ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }} 'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ inputs.release-version }} ; tar xzf output.tgz'
+        if ${{ inputs.upload-packages }}; then
+          rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }}" output.tgz fsh-generated.tgz forPackageRelease/jp-core.r4-${{ inputs.release-version }}.tgz forPackageRelease/snapshot/jp-core.r4-${{ inputs.release-version }}-snap.tgz ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ inputs.release-version }}/
+          rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }}" other/index.html other/assetsOfIndex ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/
+          ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }} 'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ inputs.release-version }} ; tar xzf output.tgz; mv output/* .; rm -rf output'
+        else
+          rsync -auzrvl -e "ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }}" output.tgz ${{ secrets.JAMIWG_WEBHOST }}:${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ inputs.release-version }}/
+          ssh -i key -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }} 'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ inputs.release-version }} ; tar xzf output.tgz'
+        fi
