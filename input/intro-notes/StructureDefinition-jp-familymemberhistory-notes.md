@@ -14,16 +14,17 @@ JP Core FamilyMemberHistoryプロファイルで使用される拡張は次の�
 
 - `FamilyMemberHistory`は、患者に関連する個人を`relationship`要素で指定し、その個人1人につき1リソース作成する。
 - 家族歴を記録する理由（契機）は、`reasonCode`要素に記述する。
-- 患者に関連する家族の病名は、`condition`要素に記述する。`condition.code.text`要素に自由記載もでき、`condition.code.coding`要素にコードを付与してもよい。
+- 患者に関連する家族の病名は、`condition`要素に記述する。`condition.code.coding`要素にコード値、`condition.code.text`要素には自由記載できる。
 - 関連する家族が聴取したい病名に罹患していない旨を記録する場合は、`note`要素に記述する。
 
 
-- 本プロファイルでは、「兄弟姉妹（長女、長男、二女、二男）」の関係について、社会的出生順（`SocialBirthOrder`）という拡張で表現する。 
+- 本プロファイルでは、「兄弟姉妹（長女、長男、二女、二男など）」の家族内の呼称について、出生順（`BirthOrder`）という拡張で表現する。 
+- この「兄弟姉妹」関係は、続柄の
+- 用語も
 - 「兄弟姉妹」の定義は、戸籍法施行規則に基づき、完全同胞および半同胞に加え、養子縁組・継子等の法的親子関係に基づく非血縁の同胞関係が含まれ、特定の家族の社会的文脈における相対的な出生順を示す。
-- 出生順は、`socialBirthOrderNumber`要素で整数で表現する。
-- 出生順名称は、`socialBirthOrderLabel`要素でコード値で表現する。
 - 非血縁関係が含まれるため、遺伝学的血統図にはそのまま利用できないが、基礎資料として利用されることを想定している。遺伝学的血統図は関連する血縁関係の家族全員の生年月日が必要である。しかし、基礎的な家族歴では、氏名や生年月日が不明な場合が多く、同一人物の追跡も困難になる。
 - 本拡張により、血統図の自動配置（同胞の並び順の決定）と、追加聴取による家系情報の更新（差分修正）を容易にする。
+- 複数の FamilyMemberHistory インスタンスを List リソースで集約することで、患者の家族歴全体を統合的に表現できる。
 
 
 <table  class="extension_description">
@@ -34,20 +35,14 @@ JP Core FamilyMemberHistoryプロファイルで使用される拡張は次の�
     <th>値の型</th>
   </tr>
   <tr>
-    <td>同胞内出生順</td>
-    <td>同胞内出生順の複合拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_Relatiohship_SiblingOrder</td>
+    <td>出生順</td>
+    <td>出生順の拡張</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_BirthOrder</td>
     <td>Extension</td>
   </tr>
   <tr>
-    <td>同胞内出生順（整数）</td>
-    <td>同胞内における社会的な出生順（整数値）</td>
-    <td>siblingBirthOrder</td>
-    <td>integer</td>
-  </tr>
-  <tr>
-    <td>性別同胞内出生順名称（コード値）</td>
-    <td>同胞内における性別の社会的な出生順名称（コード値）。国内では、長男、長女、次男、次女など。国際化対応は、designationで出身国の用語を追加定義することで表現可能。</td>
+    <td>出生順名称（コード値）</td>
+    <td>出生順名称（コード値）。国内では、長男、長女、次男、次女など。国際化対応は、designationで出身国の用語を追加定義することで表現可能。</td>
     <td>SiblingBirthOrderByGender</td>
     <td>CodeableConcept</td>
   </tr>
@@ -141,5 +136,6 @@ JP Core FamilyMemberHistoryプロファイルで使用される拡張は次の�
 * [**息子（長男）**][jp-familymemberhistory-example-2]
 * [**内縁の妻**][jp-familymemberhistory-example-3]
 * [**母方のおば（次女）**][jp-familymemberhistory-example-4]
+
 
 {% include markdown-link-references.md %}

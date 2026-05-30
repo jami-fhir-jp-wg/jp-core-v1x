@@ -1,8 +1,8 @@
-CodeSystem: JP_SiblingBirthOrderByGender_CS
-Id: jp-siblingbirthorderbygender-cs
-Title: "JP Core Sibling Birth Order By Gender CodeSystem"
+CodeSystem: JP_FamilyMemberHistory_BirthOrderLabel_CS
+Id: jp-familymemberhistory-birthorderlabel-cs
+Title: "JP Core Family Member History Birth Order Label CodeSystem"
 Description: "同胞内における性別の出生順名称を定義するCodeSystem。日本国内では、長女、長男、次女、次男など。十男・十女以上の出生順、性の多様性は、コード\"#SBO_OTHER\"を適用し、text要素に詳述。国際化対応は、designationにより出身国の用語を追加定義することで表現可能。"
-* ^url = $JP_SiblingBirthOrderByGender_CS
+* ^url = $JP_BirthOrderLabel_CS
 * ^status = #active
 * ^experimental = false
 * ^date = "2025-12-01"
