@@ -15,38 +15,28 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 * patient only Reference(JP_Patient)
 * reasonReference only Reference(QuestionnaireResponse or DocumentReference or JP_AllergyIntolerance or JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)
 // Extension 参照宣言
-* relationship.extension contains JP_FamilyMemberHistory_Relationship_SiblingOrder named SiblingOrder ..1
+* extension contains JP_FamilyMemberHistory_BirthOrder named BirthOrder ..1
 
 
 // ==============================
 //   Extension 定義
 // ==============================
 //-------------------------------
-// JP_FamilyMemberHistory_Relationship_SiblingOrder
+// JP_FamilyMemberHistory_BirthOrder
 //-------------------------------
-
-Extension: JP_FamilyMemberHistory_Relationship_SiblingOrder
-Id: jp-familymemberhistory-relationship-siblingorder
-Title: "JP Core FamilyMemberHistory Sibling Order Extension"
-Description: "同胞内出生順をFamilyMemberHistoryに付記するための拡張。"
-* ^url = $JP_FamilyMemberHistory_Relationship_SiblingOrder
+Extension: JP_FamilyMemberHistory_BirthOrder
+Id: jp-familymemberhistory-birthorder
+Title: "JP Core FamilyMemberHistory Birth Order Extension"
+Description: "続柄（relationship）を補足し、家族内で用いられる出生順に基づく呼称（長男、二男、長女、二女など）を表現する。"
+* ^url = $JP_FamilyMemberHistory_BirthOrder
 * ^status = #active
 * ^date = "2025-12-01"
 * ^context.type = #element
-* ^context.expression = "FamilyMemberHistory.relationship"
-* . ^short = "同胞内出生順"
-* . ^definition = "FamilyMemberHistoryのrelationship（続柄）と組み合わせて、関連する家族構成員の同胞内出生順と性別同胞内出生順名称を表現する拡張。同胞内の順位を整数で、性別の同胞内の出生順の名称（長男、長女、次男、次女など）をCodeableConceptで表現する。日常の臨床では家族の氏名は聴取されずに続柄で記述され、また、関係者全員の生年月日や年齢を聴取できない場合が多いことを想定している。また、遺伝学的血統図は対象外である。本実装ガイド（Version 1.2.0）の範囲外であるが、 参考として[Genetic Pedigreeプロファイル](https://hl7.org/fhir/R4/familymemberhistory-genetic.html)を参照すること。"
-* url = $JP_FamilyMemberHistory_Relationship_SiblingOrder (exactly)
-* extension contains
-birthOrder ..1 MS and
-birthOrderLabel ..1 MS
-//
-* extension[birthOrder] ^short = "同胞内出生順（整数）"
-* extension[birthOrder] ^definition = "同胞内の出生順を表す数値。関連する家族構成員の全員を聴取できず、年齢または生年月日が不明な場合に、出生順（1、2、3…）を表現するために用いる。"
-* extension[birthOrder].value[x] only integer
-* extension[birthOrder].value[x] ^minValueInteger = 1
-//
-* extension[birthOrderLabel] ^short = "性別同胞内出生順名称（コード値）"
-* extension[birthOrderLabel] ^definition = "同胞内の出生順を、性別を考慮した呼称（例：長男、長女、次男、次女）で表す。国際化対応の対応のため、designation により対象者の出身国の用語を追加定義できる。"
-* extension[birthOrderLabel].value[x] only CodeableConcept
-* extension[birthOrderLabel].valueCodeableConcept from $JP_SiblingBirthOrderByGender_VS (preferred)
+* ^context.expression = "FamilyMemberHistory"
+* . ^short = "出生順（呼称）"
+* . ^definition = "FamilyMemberHistoryにおいて、対象となる家族構成員について、家族内で用いられる出生順に基づく呼称を表現する。これは、患者との続柄そのものを置き換えるものではなく、FamilyMemberHistory.relationshipで表現される続柄を補足する情報である。日常の臨床では家族の氏名まで聴取されずに、長女、二男などの呼称で記述され、関係者全員の生年月日や年齢も聴取できない場合が多いことを想定している。"
+* url = $JP_FamilyMemberHistory_BirthOrderLabel (exactly)
+* value[x] only CodeableConcept
+* value[x] ^short = "出生順呼称（CodeableConcept）"
+* value[x] ^definition = "出生順の呼称（長男、長女、二男、二女）を表す。国際化対応の対応のため、designation により対象者の出身国の用語を追加定義できる。"
+* valueCodeableConcept from $JP_SocialBirthOrderLabel_VS (preferred)
