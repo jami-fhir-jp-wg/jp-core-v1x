@@ -1,68 +1,83 @@
 ### 必須要素
 
-本プロファイルに準拠するためには、次の項目の値が存在しなければならない。
+本プロファイルに準拠するためには、次の要素の値が存在しなければならない。
 
-- patient : 本リソースを有する患者
-- relationship : 患者と家族との続柄（父、母、兄弟など）
-- status : 家族歴のステータス（部分的 \| 完全 \| 記録エラー \| 健康状態不明）
+- `patient` : 本リソースが対象とする患者
+- `relationship` : 患者と家族との続柄（父、母、兄弟姉妹など）
+- `status` : 家族歴の記録状態（partial | completed | entered-in-error | health-unknown）
 
-### Extensions定義
+
+### 実装ガイダンス
+
+#### 記録単位
+
+`FamilyMemberHistory` は、患者に関連する個人1人につき1リソースとして記録する。
+
+#### 続柄 relationship の記録
+
+患者と対象となる家族構成員との関係は `FamilyMemberHistory.relationship` に記録する。  
+`relationship` には、HL7 V3 RoleCode の FamilyMember ValueSet を使用する。
+
+#### 出生順呼称 BirthOrderLabel の記録
+
+家族内で用いられる「長男」「二男」「長女」「二女」などの出生順に基づく呼称は、`BirthOrderLabel` 拡張で記録する。
+
+出生順呼称は、患者との続柄そのものを置き換えるものではない。患者との関係は `relationship` で表現し、出生順呼称は対象となる家族構成員に関する補足情報として記録する。
+
+出生順呼称は、必ずしも客観的に算出された生物学的出生順位、戸籍上の記載、または遺伝学的血統図における出生順と一致するとは限らない。日常診療で患者または情報提供者から申告された家族内呼称を記録することを想定する。
+
+#### 疾患情報 condition の記録
+
+対象となる家族構成員の疾患情報は `condition` 要素に記録する。  
+疾患をコード化できる場合は `condition.code.coding` に記録し、必要に応じて `condition.code.text` に自由記載を行う。
+
+#### 補足情報 note の使用
+
+血縁関係、法的関係、同居関係、内縁関係など、`relationship` と出生順呼称のみでは十分に表現できない情報は、必要に応じて `note` に記録する。
+
+#### 複数の家族歴の集約
+
+複数の `FamilyMemberHistory` インスタンスをまとめて扱う場合は、`List` リソース等を用いて患者の家族歴全体を集約できる。
+
+
+### 拡張定義
 
 JP Core FamilyMemberHistoryプロファイルで使用される拡張は次の通りである。
 
-#### モデリング上の注意（運用ルール）
-
-- `FamilyMemberHistory`は、患者に関連する個人を`relationship`要素で指定し、その個人1人につき1リソース作成する。
-- 家族歴を記録する理由（契機）は、`reasonCode`要素に記述する。
-- 患者に関連する家族の病名は、`condition`要素に記述する。`condition.code.coding`要素にコード値、`condition.code.text`要素には自由記載できる。
-- 関連する家族が聴取したい病名に罹患していない旨を記録する場合は、`note`要素に記述する。
-
-
-- 本プロファイルでは、「兄弟姉妹（長女、長男、二女、二男など）」の家族内の呼称について、出生順（`BirthOrder`）という拡張で表現する。 
-- この「兄弟姉妹」関係は、続柄の
-- 用語も
-- 「兄弟姉妹」の定義は、戸籍法施行規則に基づき、完全同胞および半同胞に加え、養子縁組・継子等の法的親子関係に基づく非血縁の同胞関係が含まれ、特定の家族の社会的文脈における相対的な出生順を示す。
-- 非血縁関係が含まれるため、遺伝学的血統図にはそのまま利用できないが、基礎資料として利用されることを想定している。遺伝学的血統図は関連する血縁関係の家族全員の生年月日が必要である。しかし、基礎的な家族歴では、氏名や生年月日が不明な場合が多く、同一人物の追跡も困難になる。
-- 本拡張により、血統図の自動配置（同胞の並び順の決定）と、追加聴取による家系情報の更新（差分修正）を容易にする。
-- 複数の FamilyMemberHistory インスタンスを List リソースで集約することで、患者の家族歴全体を統合的に表現できる。
-
-
-<table  class="extension_description">
+<table class="extension_description">
   <tr>
     <th>拡張</th>
     <th>説明</th>
     <th>URL</th>
     <th>値の型</th>
+    <th>Binding</th>
   </tr>
   <tr>
-    <td>出生順</td>
-    <td>出生順の拡張</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_BirthOrder</td>
-    <td>Extension</td>
-  </tr>
-  <tr>
-    <td>出生順名称（コード値）</td>
-    <td>出生順名称（コード値）。国内では、長男、長女、次男、次女など。国際化対応は、designationで出身国の用語を追加定義することで表現可能。</td>
-    <td>SiblingBirthOrderByGender</td>
+    <td>出生順呼称</td>
+    <td>FamilyMemberHistory.relationshipで表現される続柄を補足し、家族内で用いられる出生順に基づく呼称（長男、二男、長女、二女など）を表現する。</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_BirthOrderLabel</td>
     <td>CodeableConcept</td>
+    <td>JP_BirthOrderLabel_VS(preferred)</td>
   </tr>
-
 </table>
-
 
 
 ### 用語定義
 
-#### 続柄（`relationship`）日本語翻訳時の注意点
+#### 続柄
 
-- 「おじ」「おば」の漢字は、両親より年上の時は「伯父」「伯母」、年下の時は「叔父」「叔母」の２つあり、V3RoleCodeの`UNCLE`は「おじ」, `AUNT`は「おば」と平仮名を使用した。
-- 「養子」の漢字は総称と男性の両方に使われるため、`CHLDADOPT`を「養子」、 `SONADOPT`を「養子（男子）」とした。
+`relationship` には HL7 V3 RoleCode の FamilyMember ValueSet を使用する。
 
-| 分類         | CS名                       | URI                                                                   |
-|------------|---------------------------|-----------------------------------------------------------------------|
-| 続柄         | relathionship             | http://terminology.hl7.org/ValueSet/v3-FamilyMember                   |
-| 性別同胞内出生順名称 | SiblingBirthOrderByGender | http://jpfhir.jp/fhir/core/CodeSystem/JP_SiblingBirthOrderByGender_CS |
+#### 出生順呼称
 
+出生順呼称には、JP_BirthOrderLabel_CS および JP_BirthOrderLabel_VS を使用する。
+
+
+| 分類 | 名称 | URI |
+|----|---|---|
+| 続柄 | HL7 V3 FamilyMember ValueSet | http://terminology.hl7.org/ValueSet/v3-FamilyMember |
+| 出生順呼称 | JP BirthOrderLabel CodeSystem | http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrderLabel_CS |
+| 出生順呼称 | JP BirthOrderLabel ValueSet | http://jpfhir.jp/fhir/core/ValueSet/JP_BirthOrderLabel_VS |
 
 
 ## 利用方法
@@ -71,12 +86,12 @@ JP Core FamilyMemberHistoryプロファイルで使用される拡張は次の�
 
 #### Search Parameter一覧
 
-| コンフォーマンス | パラメータ                | 型                   | 例                                                                                             |
-|----------|----------------------|---------------------|-----------------------------------------------------------------------------------------------|
-| SHALL    | identifier           | token               | GET [base]/FamilyMemberHistory?identifier=http://myhospital.com/fhir/gamilymemberhistory\|123 |
-| SHOULD   | patient              | reference           | GET [base]/FamilyMemberHistory?patient=Patient/123                                            |
-| MAY      | patient,relationship | reference,reference | GET [base]/FamilyMemberHistory?patient=Patient/123&relationship=FAMMEMB                       |
-| MAY      | patient,status       | reference,token     | GET [base]/FamilyMemberHistory?patient=Patient/123&status=completed                           |
+| コンフォーマンス | パラメータ                | 型               | 例                                                                                             |
+|----------|----------------------|-----------------|-----------------------------------------------------------------------------------------------|
+| SHALL    | identifier           | token           | GET [base]/FamilyMemberHistory?identifier=http://myhospital.com/fhir/familymemberhistory\|123 |
+| SHOULD   | patient              | reference       | GET [base]/FamilyMemberHistory?patient=Patient/123                                            |
+| MAY      | patient,relationship | reference,token | GET [base]/FamilyMemberHistory?patient=Patient/123&relationship=FAMMEMB                       |
+| MAY      | patient,status       | reference,token | GET [base]/FamilyMemberHistory?patient=Patient/123&status=completed                           |
 
 ##### 必須検索パラメータ
 
