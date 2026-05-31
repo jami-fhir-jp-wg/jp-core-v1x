@@ -25,7 +25,7 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 // JP_FamilyMemberHistory_BirthOrderLabel
 //-------------------------------
 Extension: JP_FamilyMemberHistory_BirthOrderLabel
-Id: jp-familymemberhistory-birthorder
+Id: jp-familymemberhistory-birthorderlabel
 Title: "JP Core FamilyMemberHistory Birth Order Label Extension"
 Description: "続柄（relationship）を補足し、家族内で用いられる出生順に基づく呼称（長男、二男、長女、二女など）を表現する。"
 * ^url = $JP_FamilyMemberHistory_BirthOrderLabel
