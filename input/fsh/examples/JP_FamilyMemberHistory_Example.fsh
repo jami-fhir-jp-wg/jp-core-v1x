@@ -1,7 +1,7 @@
 Instance: jp-familymemberhistory-example-1
 InstanceOf: JP_FamilyMemberHistory
 Title: "JP Core FamilyMemberHistory Example-1 母親"
-Description: "基本的な家族歴の例：MELASが疑われる患者（山田太郎）の母親が糖尿病と難聴を有する"
+Description: "基本的な家族歴の例：MELASが疑われる患者（山田太郎）の母親が糖尿病と難聴を有する。"
 Usage: #example
 * status = #partial
 * patient
@@ -28,7 +28,7 @@ Usage: #example
 Instance: jp-familymemberhistory-example-2
 InstanceOf: JP_FamilyMemberHistory
 Title: "JP Core FamilyMemberHistory Example-2 息子（長男）"
-Description: "同胞内出生順名称の例：MELASが疑われる糖尿病患者（山田太郎）の息子が長男で、花粉症の病歴のみを有し、糖尿病の既往はない。"
+Description: "出生順呼称の例1（子世代）：MELASが疑われる糖尿病患者（山田太郎）の息子（長男）で、花粉症の病歴のみを有し、糖尿病の既往はない。"
 Usage: #example
 * status = #partial
 * patient
@@ -39,12 +39,12 @@ Usage: #example
     * system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
     * code = #SON
     * display = "実息子"
-  * extension[SiblingOrder].extension[siblingBirthOrder].valueInteger = 1
-  * extension[SiblingOrder].extension[siblingBirthOrderByGender].valueCodeableConcept
-    * coding[0]
-      * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_SiblingBirthOrderByGender_CS"
-      * code = #SBO1_M
-      * display = "長男"
+* extension[BirthOrderLabel].valueCodeableConcept
+  * coding[0]
+    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrderLabel_CS"
+    * code = #son-1
+    * display = "first son"
+  * text = "長男"
 * sex
   * coding[0]
     * system = "http://hl7.org/fhir/administrative-gender"
@@ -81,7 +81,7 @@ Usage: #example
 Instance: jp-familymemberhistory-example-4
 InstanceOf: JP_FamilyMemberHistory
 Title: "JP Core FamilyMemberHistory Example-4 母方のおば（次女）"
-Description: "同胞内出生順と性別同胞内出生順名称の出生順が異なる例：MELASが疑われる患者の母方のおば（次女）。糖尿病に罹患しており、MELAS保因者と思われる。次女であるが出生順は３番目で、姉１人、兄１人がいることが推論される。"
+Description: "出生順呼称の例2（親世代）：MELASが疑われる患者の母方のおばが、家族内で次女と呼称されている例。"
 Usage: #example
 * status = #partial
 * patient
@@ -92,12 +92,12 @@ Usage: #example
     * system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
     * code = #MAUNT
     * display = "母方のおば"
-  * extension[SiblingOrder].extension[siblingBirthOrder].valueInteger = 3
-  * extension[SiblingOrder].extension[siblingBirthOrderByGender].valueCodeableConcept
-    * coding[0]
-      * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_SiblingBirthOrderByGender_CS"
-      * code = #SBO2_F
-      * display = "次女"
+* extension[BirthOrderLabel].valueCodeableConcept
+  * coding[0]
+    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrderLabel_CS"
+    * code = #daughter-2
+    * display = "second daughter"
+  * text = "次女"
 * sex
   * coding[0]
     * system = "http://hl7.org/fhir/administrative-gender"
@@ -107,3 +107,25 @@ Usage: #example
 * condition[0]
   * code
     * text = "糖尿病"
+* note[+].text = "糖尿病に罹患しており、MELAS保因者と思われる。"
+
+
+Instance: jp-familymemberhistory-example-list
+InstanceOf: List
+Usage: #example
+* status = #current
+* mode = #snapshot
+* code.coding[0].system = "http://loinc.org"
+* code.coding[0].code = #8670-2
+* code.coding[0].display = "History of family member diseases"
+* code.text = "家族歴"
+* subject.reference = "Patient/jp-patient-example-1"
+* subject.display = "山田 太郎"
+* entry[0].item.reference = "FamilyMemberHistory/jp-familymemberhistory-example-1"
+* entry[0].item.display = "母親"
+* entry[1].item.reference = "FamilyMemberHistory/jp-familymemberhistory-example-2"
+* entry[1].item.display = "息子（長男）"
+* entry[2].item.reference = "FamilyMemberHistory/jp-familymemberhistory-example-3"
+* entry[2].item.display = "内縁のパートナー"
+* entry[3].item.reference = "FamilyMemberHistory/jp-familymemberhistory-example-4"
+* entry[3].item.display = "母方のおば（次女）"
