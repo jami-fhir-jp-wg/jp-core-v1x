@@ -22,13 +22,13 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 //   Extension 定義
 // ==============================
 //-------------------------------
-// JP_FamilyMemberHistory_BirthOrder
+// JP_FamilyMemberHistory_BirthOrderLabel
 //-------------------------------
-Extension: JP_FamilyMemberHistory_BirthOrder
+Extension: JP_FamilyMemberHistory_BirthOrderLabel
 Id: jp-familymemberhistory-birthorder
-Title: "JP Core FamilyMemberHistory Birth Order Extension"
+Title: "JP Core FamilyMemberHistory Birth Order Label Extension"
 Description: "続柄（relationship）を補足し、家族内で用いられる出生順に基づく呼称（長男、二男、長女、二女など）を表現する。"
-* ^url = $JP_FamilyMemberHistory_BirthOrder
+* ^url = $JP_FamilyMemberHistory_BirthOrderLabel
 * ^status = #active
 * ^date = "2025-12-01"
 * ^context.type = #element
@@ -39,4 +39,4 @@ Description: "続柄（relationship）を補足し、家族内で用いられる
 * value[x] only CodeableConcept
 * value[x] ^short = "出生順呼称（CodeableConcept）"
 * value[x] ^definition = "出生順の呼称（長男、長女、二男、二女）を表す。国際化対応の対応のため、designation により対象者の出身国の用語を追加定義できる。"
-* valueCodeableConcept from $JP_SocialBirthOrderLabel_VS (preferred)
+* valueCodeableConcept from $JP_BirthOrderLabel_VS (preferred)
