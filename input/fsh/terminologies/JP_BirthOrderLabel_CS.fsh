@@ -1,0 +1,175 @@
+CodeSystem: JP_BirthOrderLabel_CS
+Id: jp-birthorderlabel-cs
+Title: "JP Core Birth Order Label CodeSystem"
+Description: "FamilyMemberHistoryにおいて、家族内で用いられる出生順に基づく呼称（長男、二男、長女、二女など）を表現するためのCodeSystem。これらのコードは患者との続柄そのものではなく、FamilyMemberHistory.relationshipを補足する出生順の呼称を表す。"
+* ^url = $JP_BirthOrderLabel_CS
+* ^status = #active
+* ^experimental = false
+* ^caseSensitive = true
+* ^content = #complete
+* ^property[0].code = #category
+* ^property[=].description = "出生順呼称の区分。"
+* ^property[=].type = #code
+* ^property[+].code = #order
+* ^property[=].description = "区分ないでの順位。"
+* ^property[=].type = #integer
+
+// ===== Sons =====
+* #son-1 "first son"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #son
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 1
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "長男"
+  * ^designation[+].language = #en
+  * ^designation[=].value = "eldest son"
+* #son-2 "second son"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #son
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 2
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "二男"
+  * ^designation[+].language = #ja
+  * ^designation[=].value = "次男"
+* #son-3 "third son"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #son
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 3
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "三男"
+* #son-4 "fourth son"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #son
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 4
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "四男"
+* #son-5 "fifth son"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #son
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 5
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "五男"
+* #son-6 "sixth son"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #son
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 6
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "六男"
+* #son-7 "seventh son"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #son
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 7
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "七男"
+* #son-8 "eighth son"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #son
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 8
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "八男"
+* #son-9 "ninth son"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #son
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 9
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "九男"
+* #son-10 "tenth son"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #son
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 10
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "十男"
+
+// ===== Daughters =====
+* #daughter-1 "first daughter"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #daughter
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 1
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "長女"
+  * ^designation[+].language = #en
+  * ^designation[=].value = "eldest daughter"
+* #daughter-2 "second daughter"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #daughter
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 2
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "二女"
+  * ^designation[+].language = #ja
+  * ^designation[=].value = "次女"
+* #daughter-3 "third daughter"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #daughter
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 3
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "三女"
+* #daughter-4 "fourth daughter"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #daughter
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 4
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "四女"
+* #daughter-5 "fifth daughter"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #daughter
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 5
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "五女"
+* #daughter-6 "sixth daughter"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #daughter
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 6
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "六女"
+* #daughter-7 "seventh daughter"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #daughter
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 7
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "七女"
+* #daughter-8 "eighth daughter"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #daughter
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 8
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "八女"
+* #daughter-9 "ninth daughter"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #daughter
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 9
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "九女"
+* #daughter-10 "tenth daughter"
+  * ^property[0].code = #category
+  * ^property[=].valueCode = #daughter
+  * ^property[+].code = #order
+  * ^property[=].valueInteger = 10
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "十女"
+
+// ===== Exceptional / unspecified cases =====
+* #other "other" "その他（十男・十女以上の出生順、性の多様性、その他の場合はtext要素に詳細を記載）"
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "その他"
+* #unknown "unknown" "詳細不明(text要素に詳細を記載)"
+  * ^designation[0].language = #ja
+  * ^designation[=].value = "不明"
