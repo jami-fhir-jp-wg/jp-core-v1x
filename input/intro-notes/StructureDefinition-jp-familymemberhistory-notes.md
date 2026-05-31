@@ -149,7 +149,7 @@ JP Core FamilyMemberHistoryプロファイルで使用される拡張は次の�
 
 * [**母親**][jp-familymemberhistory-example-1]
 * [**息子（長男）**][jp-familymemberhistory-example-2]
-* [**内縁の妻**][jp-familymemberhistory-example-3]
+* [**内縁のパートナー**][jp-familymemberhistory-example-3]
 * [**母方のおば（次女）**][jp-familymemberhistory-example-4]
 * [**家族歴一覧**][jp-familymemberhistory-example-list]
 
