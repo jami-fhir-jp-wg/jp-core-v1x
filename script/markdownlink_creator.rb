@@ -98,7 +98,7 @@ def putMarkdownLink(prefix, fw, extension = false)
     File.open(fl) do |f|
       hash = JSON.load(f)
       if (hash["type"] == "Extension") != extension then
-        break
+        next
       end
       putAlias(hash["name"].to_s, fl.gsub(/.json/, '.html'), fw)
     end
