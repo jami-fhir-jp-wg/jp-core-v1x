@@ -140,6 +140,8 @@ jobs:
         cat makeSymbolicLink.bash
         cd output
         source ../makeSymbolicLink.bash
+        # 壊れた（リンク先が存在しない）シンボリックリンクを列挙して削除
+        find . -xtype l -print -delete
         ls -l
         cd ..
         tar czf output.tgz output
