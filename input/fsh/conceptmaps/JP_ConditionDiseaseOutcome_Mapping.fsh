@@ -10,9 +10,7 @@ Usage: #definition
 * status = #active
 * experimental = false
 * date = "2025-07-30"
-* description = "HL7 v2 Table 0241（Patient Outcome）コードと JAHIS JHSD表0006（転帰区分）との対応マッピング。\
-JP Core JP_Condition_Diagnosis プロファイルにおいて、両コード体系で転帰を記録する際の変換の参考として使用する。\
-2 つの体系は概念的粒度が異なるため、一部のコードは wider または inexact となる。"
+* description = "HL7 v2 Table 0241（Patient Outcome）コードと JAHIS JHSD表0006（転帰区分）との対応マッピング。JP Core JP_Condition_Diagnosis プロファイルにおいて、両コード体系で転帰を記録する際の変換の参考として使用する。2 つの体系は概念的粒度が異なるため、一部のコードは wider または inexact となる。"
 * copyright = "JP Core: Copyright HL7 Japan (出典：HL7-0241) / JHSD0006: Copyright Japanese Association of Healthcare Information Systems Industry(JAHIS) 一般社団法人保健医療福祉情報システム工業会"
 * sourceUri = "http://jpfhir.jp/fhir/core/CodeSystem/HL70241"
 * targetUri = "http://jpfhir.jp/fhir/core/CodeSystem/JHSD0006"
@@ -79,8 +77,7 @@ Usage: #definition
 * status = #active
 * experimental = false
 * date = "2025-07-30"
-* description = "HL7 v2 Table 0241（Patient Outcome）コードとレセプト電算システム転帰区分との対応マッピング。\
-JP Core JP_Condition_Diagnosis プロファイルにおいて、両コード体系で転帰を記録する際の変換の参考として使用する。"
+* description = "HL7 v2 Table 0241（Patient Outcome）コードとレセプト電算システム転帰区分との対応マッピング。JP Core JP_Condition_Diagnosis プロファイルにおいて、両コード体系で転帰を記録する際の変換の参考として使用する。"
 * copyright = "JP Core: Copyright HL7 Japan (出典：HL7-0241) / レセプト電算: Copyright 社会保険診療報酬支払基金"
 * sourceUri = "http://jpfhir.jp/fhir/core/CodeSystem/HL70241"
 * targetUri = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseOutcomeReceipt_CS"

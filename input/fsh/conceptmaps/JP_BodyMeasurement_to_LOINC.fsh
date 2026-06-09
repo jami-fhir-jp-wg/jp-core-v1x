@@ -10,9 +10,7 @@ Usage: #definition
 * status = #active
 * experimental = false
 * date = "2025-07-30"
-* description = "JP Core 身体計測コード（MEDIS 看護実践用語標準マスター由来）と LOINC との対応マッピング。\
-相互運用性向上のための参考マッピングであり、すべての項目を網羅しているわけではない。\
-マッピングの採用にあたっては各施設の臨床的判断が必要。"
+* description = "JP Core 身体計測コード（MEDIS 看護実践用語標準マスター由来）と LOINC との対応マッピング。相互運用性向上のための参考マッピングであり、すべての項目を網羅しているわけではない。マッピングの採用にあたっては各施設の臨床的判断が必要。"
 * copyright = "JP Core: Copyright MEDIS-DC 一般財団法人 医療情報システム開発センター / LOINC: This content LOINC® is copyright © 1995+ Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc."
 * sourceUri = "http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationBodyMeasurementCode_CS"
 * targetUri = "http://loinc.org"

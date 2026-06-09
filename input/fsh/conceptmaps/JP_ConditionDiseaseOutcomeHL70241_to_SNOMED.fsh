@@ -10,9 +10,7 @@ Usage: #definition
 * status = #active
 * experimental = false
 * date = "2025-07-30"
-* description = "HL7 v2 Table 0241（Patient Outcome）コードと SNOMED CT との対応マッピング。\
-国際的な相互運用性のための参考マッピングであり、SNOMED CT ライセンスの取得が必要。\
-マッピングの採用にあたっては最新の SNOMED CT リリースでの確認が必要。"
+* description = "HL7 v2 Table 0241（Patient Outcome）コードと SNOMED CT との対応マッピング。国際的な相互運用性のための参考マッピングであり、SNOMED CT ライセンスの取得が必要。マッピングの採用にあたっては最新の SNOMED CT リリースでの確認が必要。"
 * copyright = "JP Core: Copyright HL7 Japan / SNOMED CT: This material includes SNOMED Clinical Terms® (SNOMED CT®) which is used by permission of the International Health Terminology Standards Development Organisation (IHTSDO). All rights reserved. SNOMED CT®, was originally created by The College of American Pathologists."
 * sourceUri = "http://jpfhir.jp/fhir/core/CodeSystem/HL70241"
 * targetUri = "http://snomed.info/sct"
