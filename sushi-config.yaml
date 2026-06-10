@@ -8,6 +8,7 @@ version: 1.2.0-temp #-- Action のyaml中で release-version文字列に置き�
 date: 2024-07-04
 fhirVersion: 4.0.1
 copyrightYear: 2022+
+license: CC0-1.0 # SPDX。JAMIが権利を有する成果物に適用。第三者用語は各権利者の条件に従う（NOTICE.md 参照）
 releaseLabel: release # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 publisher:
   name: FHIR Japanese implementation research working group in Japan Association of Medical Informatics (JAMI)
