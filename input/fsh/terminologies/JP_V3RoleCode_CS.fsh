@@ -1,7 +1,7 @@
 CodeSystem: JP_V3RoleCode_CS
 Id: jp-v3RoleCode-cs
 Title: "JP Core FamilyMember CodeSystem"
-Description: "http://terminology.ht7.org/Codesystem/v3-RoleCode where concept is-a FAMMEB の日本語補足"
+Description: "http://terminology.hl7.org/Codesystem/v3-RoleCode where concept is-a FAMMEB の日本語補足"
 * ^content = #supplement
 * ^url = "http://jpfhir.jp/fhir/Common/CodeSystem/JP_V3RoleCode_CS"
 * ^status = #active
@@ -10,7 +10,7 @@ Description: "http://terminology.ht7.org/Codesystem/v3-RoleCode where concept is
 * ^publisher = "（一社）日本医療情報学会"
 * ^copyright = "（一社）日本医療情報学会. CC BY-ND 4.0"
 
-* ^supplements = "http://terminology.ht7.org/Codesystem/v3-RoleCode"
+* ^supplements = "http://terminology.hl7.org/Codesystem/v3-RoleCode"
 
 * insert AddJpDesignation(FAMMEMB, "家族")
 * insert AddJpDesignation(CHILD, "子供")
