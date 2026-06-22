@@ -22,8 +22,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 * status ^comment = "このリソースは現在有効でないというマークをするコードを含んでいるため、この要素はモディファイアー（修飾的要素）として位置づけられている。"
 * insert SetDefinition(category, 行われた検査の一般的なタイプの分類。JP Core Observation Common Profileの【詳細説明】を参照のこと。)
 //* category from $JP_SimpleObservationCategory_VS (preferred)
-* category ^slicing.discriminator.type = #value
-* category ^slicing.discriminator.path = "coding.system"
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains
     first 1..* 
