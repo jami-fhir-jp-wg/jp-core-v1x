@@ -94,6 +94,10 @@ Sync Impact Report
   `jp-org-dept-identifier-local-system`）。
   各インバリアントには重大度（error/warning）、人間可読な説明、
   FHIRPath 式を含めなければならない
+- **SearchParameter**: `multipleOr` / `multipleAnd` を明示しなければならない。
+  サーバーが当該検索パラメータで OR/AND 結合をサポートするか否かを
+  曖昧にしないため、全 SearchParameter で両要素を指定し、
+  `capabilitystatement-expectation` 拡張により期待度を示す（既定は `#MAY`）。
 
 ### V. リソース組織化 (Resource Organization)
 
