@@ -59,7 +59,7 @@ Title: "JP Core ServiceRequest with Department Extension Example (Text only)"
 Description: "JP_Department拡張を使用したServiceRequestの例。診療科情報をテキストのみで表現する。"
 Usage: #example
 * extension[http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Common_Department].valueCodeableConcept.text = "消化器腫瘍外科"
-* identifier[0].system = "http://abc-hospital.local/serviceRequest-identifier"
+* identifier[0].system = "http://example.org/abc-hospital/serviceRequest-identifier"
 * identifier[=].value = "SR-2023-0401-001"
 * status = #active
 * intent = #order

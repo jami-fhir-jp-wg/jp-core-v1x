@@ -4,9 +4,9 @@ InstanceOf: JP_Specimen_Common
 Title: "JP Core Specimen Example 検体材料（尿）"
 Description: "検体材料（尿）"
 Usage: #example
-* identifier.system = "http://abc-hospital.local/identifiers/collections"
+* identifier.system = "http://example.org/abc-hospital/identifiers/collections"
 * identifier.value = "23234352356"
-* accessionIdentifier.system = "http://abc-hospital.local/specimens/2011"
+* accessionIdentifier.system = "http://example.org/abc-hospital/specimens/2011"
 * accessionIdentifier.value = "X352356"
 * status = #available
 * type = http://terminology.hl7.org/CodeSystem/v2-0487#UR ""
@@ -25,9 +25,9 @@ InstanceOf: JP_Specimen_Common
 Title: "JP Core Specimen Example 検体材料（血液）"
 Description: "検体材料（血液）"
 Usage: #example
-* identifier.system = "http://abc-hospital.local/identifiers/collections"
+* identifier.system = "http://example.org/abc-hospital/identifiers/collections"
 * identifier.value = "23234352357"
-* accessionIdentifier.system = "http://abc-hospital.local/specimens/2011"
+* accessionIdentifier.system = "http://example.org/abc-hospital/specimens/2011"
 * accessionIdentifier.value = "X352357"
 * status = #available
 * type = http://terminology.hl7.org/CodeSystem/v2-0487#BLD "Whole blood"
@@ -48,9 +48,9 @@ InstanceOf: JP_Specimen_Common
 Title: "JP Core Specimen Example 検体材料（喀痰）"
 Description: "検体材料（喀痰）"
 Usage: #example
-* identifier.system = "http://abc-hospital.local/identifiers/collections"
+* identifier.system = "http://example.org/abc-hospital/identifiers/collections"
 * identifier.value = "23234352358"
-* accessionIdentifier.system = "http://abc-hospital.local/specimens/2011"
+* accessionIdentifier.system = "http://example.org/abc-hospital/specimens/2011"
 * accessionIdentifier.value = "X352358"
 * status = #available
 * type = http://terminology.hl7.org/CodeSystem/v2-0487#BLD "Whole blood"

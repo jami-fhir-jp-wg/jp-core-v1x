@@ -7,7 +7,7 @@ Usage: #example
 * contained[+] = inner-observation-labresult-2
 * contained[+] = inner-observation-labresult-3
 * status = #final
-* identifier.system = "http://abc-hospital.local/fhir/lab/reportid"
+* identifier.system = "http://example.org/abc-hospital/fhir/lab/reportid"
 * identifier.value = "5234342"
 * category[first] = $Loinc_CS#LP29693-6 "検体検査"
 * code = $JP_DocumentCodes_CS#11502-2 "検体検査報告書"
@@ -30,7 +30,7 @@ InstanceOf: JP_Observation_LabResult
 Usage: #inline
 * status = #final
 * category[first] = $JP_SimpleObservationCategory_CS#laboratory
-* code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#123 "ヘモグロビン"
+* code.coding[0] = http://example.org/abc-hospital/fhir/Observation/localcode#123 "ヘモグロビン"
 * code.coding[+] = $JP_ObservationLabResultCode_CS#2A990000001930953
 * code.text = "ヘモグロビン"
 * subject = Reference(Patient/jp-patient-example-1)
@@ -46,7 +46,7 @@ InstanceOf: JP_Observation_LabResult
 Usage: #inline
 * status = #final
 * category[first] = $JP_SimpleObservationCategory_CS#laboratory
-* code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#456 "赤血球数"
+* code.coding[0] = http://example.org/abc-hospital/fhir/Observation/localcode#456 "赤血球数"
 * code.coding[+] = $JP_ObservationLabResultCode_CS#2A990000001992051
 * code.text = "赤血球数"
 * subject = Reference(Patient/jp-patient-example-1)
@@ -63,7 +63,7 @@ InstanceOf: JP_Observation_LabResult
 Usage: #inline
 * status = #final
 * category[first] = $JP_SimpleObservationCategory_CS#laboratory
-* code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#789 "ヘマトクリット"
+* code.coding[0] = http://example.org/abc-hospital/fhir/Observation/localcode#789 "ヘマトクリット"
 * code.coding[+] = $JP_ObservationLabResultCode_CS#2A990000001930954
 * code.text = "ヘマトクリット"
 * subject = Reference(Patient/jp-patient-example-1)
