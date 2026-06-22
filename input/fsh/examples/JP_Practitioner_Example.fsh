@@ -14,15 +14,15 @@ Usage: #example
 * name[=].family = "トウキョウ"
 * name[=].given = "ハルコ"
 * gender = #female
-* qualification[0].identifier.system = "urn:oid:1.2.392.100495.20.3.32.113"
-* qualification[=].identifier.value  = "999-12345"
-* qualification[=].code = $JP_MedicalLicenseCertificate_CS#narcotics-practitioner
-* qualification[+].identifier.system = "urn:oid:1.2.392.100495.20.3.32.101"
-* qualification[=].identifier.value  = "999-54321"
-* qualification[=].code = $JP_MedicalLicenseCertificate_CS#narcotics-practitioner
-* qualification[+].identifier.system = $JP_IdSystemMedicalRegistrationNumber
-* qualification[=].identifier.value = "999999-00001"
-* qualification[=].code = $JP_MedicalLicenseCertificate_CS#medical-registration
+* qualification[narcoticPrescriptionLicenseNumber][+].identifier.system = "urn:oid:1.2.392.100495.20.3.32.113"
+* qualification[narcoticPrescriptionLicenseNumber][=].identifier.value  = "999-12345"
+* qualification[narcoticPrescriptionLicenseNumber][=].code = $JP_MedicalLicenseCertificate_CS#narcotics-practitioner
+* qualification[narcoticPrescriptionLicenseNumber][+].identifier.system = "urn:oid:1.2.392.100495.20.3.32.101"
+* qualification[narcoticPrescriptionLicenseNumber][=].identifier.value  = "999-54321"
+* qualification[narcoticPrescriptionLicenseNumber][=].code = $JP_MedicalLicenseCertificate_CS#narcotics-practitioner
+* qualification[medicalRegistrationNumber].identifier.system = $JP_IdSystemMedicalRegistrationNumber
+* qualification[medicalRegistrationNumber].identifier.value = "999999-00001"
+* qualification[medicalRegistrationNumber].code = $JP_MedicalLicenseCertificate_CS#medical-registration
 
 Instance: jp-practitioner-example-female-2
 InstanceOf: JP_Practitioner
