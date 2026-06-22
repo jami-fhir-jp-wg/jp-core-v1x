@@ -1,4 +1,4 @@
-CodeSystem: JP_ConditionDieaseOutcomeHL70241_CS
+CodeSystem: JP_ConditionDiseaseOutcomeHL70241_CS
 Id: jp-condition-disease-outcome-hl70241-cs
 Title: "JP Core Condition Disease Outcome HL7 Table 0241 - Patient Outcome CodeSystem"
 Description: "HL7表0241-Patient Outcome コードシステム"

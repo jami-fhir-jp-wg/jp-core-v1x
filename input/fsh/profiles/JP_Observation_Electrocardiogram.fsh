@@ -64,8 +64,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 //* interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (extensible)
 * interpretation ^comment = "心電図所見・解釈について記載する。心電図所見は測定された結果と1対1で対応するものではなく、総合的に判断されるものである。したがって所見や解釈はこのエレメントに列記することとした。所見については、ミネソタコードを元に学会や検査機器ベンダーが用語集を作成している。必要に応じてそれらのコードを仕様することを推奨する。"
 * interpretation ^requirements = "心電図所見についてのコード集を別途提示する。"
-* interpretation ^slicing.discriminator.type = #value
-* interpretation ^slicing.discriminator.path = "coding.system"
+* interpretation ^slicing.discriminator.type = #pattern
+* interpretation ^slicing.discriminator.path = "$this"
 * interpretation ^slicing.rules = #open
 * interpretation ^slicing.ordered = false
 * interpretation contains
@@ -115,8 +115,8 @@ Description: "このプロファイルはObservationリソースに対して、�
 //* component.interpretation from JP_ObservationElectrocardiogramInterpretationCode_VS (extensible)
 * component.interpretation ^definition = "心電図検査で測定された結果値に対する所見・解釈"
 * component.interpretation ^comment = "心電図検査の測定結果と解釈は必ずしも1対1で対応しないが、PR間隔の測定値にPR間隔延長などの固有の所見をつけてもよい"
-* component.interpretation ^slicing.discriminator.type = #value
-* component.interpretation ^slicing.discriminator.path = "coding.system"
+* component.interpretation ^slicing.discriminator.type = #pattern
+* component.interpretation ^slicing.discriminator.path = "$this"
 * component.interpretation ^slicing.rules = #open
 * component.interpretation ^slicing.ordered = false
 * component.interpretation contains

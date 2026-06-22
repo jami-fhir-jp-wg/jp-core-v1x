@@ -1,4 +1,4 @@
-CodeSystem: JP_ConditionDieaseOutcomeReceipt_CS
+CodeSystem: JP_ConditionDiseaseOutcomeReceipt_CS
 Id: jp-condition-disease-outcome-receipt-cs
 Title: "JP Core Condition Disease Outcome Receipt CodeSystem"
 Description: "レセプト電算システム 転帰区分 コードシステム"

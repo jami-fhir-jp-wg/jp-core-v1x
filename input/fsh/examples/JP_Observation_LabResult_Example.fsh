@@ -6,7 +6,7 @@ Usage: #example
 * contained[0] = jp-servicerequest-example-1
 * category[first] = $JP_SimpleObservationCategory_CS#laboratory
 * basedOn = Reference(ServiceRequest/jp-servicerequest-example-1)
-* code.coding[0] = http://abc-hospital.local/fhir/Observation/localcode#05104 "尿酸"
+* code.coding[0] = http://example.org/abc-hospital/fhir/Observation/localcode#05104 "尿酸"
 * code.coding[+] = $JP_ObservationLabResultCode_CS#3C020000002327101
 * code.text = "尿酸"
 * interpretation.coding = http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation#H "High"
@@ -28,7 +28,7 @@ InstanceOf: ServiceRequest
 Usage: #inline
 * status = #active
 * intent = #original-order
-* code = http://abc-hospital.local/fhir/ObservationOrder/localcode#12345678
+* code = http://example.org/abc-hospital/fhir/ObservationOrder/localcode#12345678
 * code.text = "生化学検査"
 * subject = Reference(Patient/jp-patient-example-1)
 * encounter = Reference(Encounter/jp-encounter-example-1)

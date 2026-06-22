@@ -1,4 +1,4 @@
-CodeSystem: JP_ConditionDieaseOutcomeJHSD0006_CS
+CodeSystem: JP_ConditionDiseaseOutcomeJHSD0006_CS
 Id: jp-condition-disease-outcome-jhsd0006-cs
 Title: "JP Core Condition Disease Outcome JHSD0006 CodeSystem"
 Description: "JAHIS病名情報データ交換規約Ver.3.1C JHSD表00006-転帰区分 コードシステム"

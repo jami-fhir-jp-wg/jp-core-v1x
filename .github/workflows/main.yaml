@@ -25,7 +25,7 @@ jobs:
 
     - name: Extract branch name
       run: |
-        if ["${{ github.event.pull_request.head.ref }}" == ""]; then
+        if [ "${{ github.event.pull_request.head.ref }}" == "" ]; then
           echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
           echo "branch_group=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
         else
@@ -140,6 +140,8 @@ jobs:
         cat makeSymbolicLink.bash
         cd output
         source ../makeSymbolicLink.bash
+        # 壊れた（リンク先が存在しない）シンボリックリンクを列挙して削除
+        find . -xtype l -print -delete
         ls -l
         cd ..
         tar czf output.tgz output
