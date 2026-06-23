@@ -13,6 +13,7 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * . ^definition = "診断のための検査、治療、手術などのサービスリクエストの記録"
 * meta.lastUpdated 0.. MS
 //
+* identifier MS
 * identifier ^short = "サービスリクエストを識別する業務ID。"
 * identifier ^definition = "リクエストの発注者、受注者、サービスの実施者によるインスタンスに割り当てられた識別子。"
 * identifier ^comment = "この要素は、発注者（HL7 v2 では 'Placer' ）とリクエストに応じて観察、行為等を実施した者（HL7 v2 では 'Filler' ）を区別するために用いられる。"
@@ -36,10 +37,12 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * requisition ^definition = "一人の発注者によっておおよそ同時に署名されたサービスリクエストの全てに共通する識別子で、複合、またはグループIDを表現する。"
 * requisition ^comment = "サービスリクエストは、basedOn要素、このrequisition要素によって関係付けられる。同じrequisition要素の一部であるサービスリクエストは、初めに作成された後にその状態と管理が変化する視点から、一般的に独立して扱われる。"
 // 
+* status MS
 * status ^short = "サービスリクエストの状態"
 * status ^definition = "オーダの状態"
 * status ^comment = "status要素は、一般的に発注者の完全な制御下にあり、オーダが起案か有効かを決定し、有効化された後は、競合、停止、または中断される。受注者の活動に関連する状態は、対応するイベント（一般的な議論についてはEventパターンを参照）またはTaskリソースを使用して反映される。"
 // 
+* intent MS
 * intent ^short = "サービスリクエストの意図（proposal | plan | directive | order | original-order | reflex-order | filler-order | instance-order | option）"
 * intent ^definition = "この要求が、提案、経過、オリジナル、繰り返しかどうかを示す。"
 * intent ^comment = "この要素は、リソースが実際に適用されるタイミングや方法を意図的に変更するため、修飾子と表現される。"
@@ -67,6 +70,7 @@ Description: "本プロファイル説明は、患者に対し立案・実施さ
 * quantity[x] ^definition = "リクエストされるサービスの量。数量（例:1500ドルの住宅改造）、比率（例:1ヶ月に20回の半日訪問）、または範囲（例:1分間に2.0～1.8Gy）。"
 * quantity[x] ^comment = "サービスリクエスト時に、項目とは別に数を指定する必要がある。"
 //
+* subject MS
 * subject ^short = "サービスリクエストの対象（個人または集団）"
 * subject ^definition = "サービスが実行される対象（人または物）。多くは患者だが、動物、集団（人または動物）、透析器のような装置、また場所（点家的には環境調査）も対象となる。"
 * subject only Reference(JP_Patient or JP_Location)

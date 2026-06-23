@@ -16,6 +16,7 @@ Description: "このProfileは服薬状況を示すものであり，診療情�
 * ^purpose = "このProfileは診療情報提供書や退院サマリーなどの医療文書内で服薬情報について記載するために用いられる。このResourceは薬剤処方や，調剤情報，薬剤投与実施情報としては用いられず，それぞれMedicationRequest, MedicationDispense, MedicationAdministrationが用いられる。"
 * . ^short = "服薬情報"
 * . ^definition = "患者が薬剤を服用している状況についての情報である。"
+* identifier MS
 * identifier ^short = "外部から参照されるID"
 * identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。それ以外に任意のIDを付与してもよい。\r\nこのIDは業務手順によって定められた処方オーダーに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
@@ -79,6 +80,7 @@ Description: "このProfileは服薬状況を示すものであり，診療情�
 * ^purpose = "このProfileは診療情報提供書や退院サマリーなどの医療文書内で服薬情報について記載するために用いられる。このResourceは薬剤処方や，調剤情報，薬剤投与実施情報としては用いられず，それぞれMedicationRequest, MedicationDispense, MedicationAdministrationが用いられる。"
 * . ^short = "服薬情報"
 * . ^definition = "患者が薬剤を服用している状況についての情報である。"
+* identifier MS
 * identifier ^short = "外部から参照されるID"
 * identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。それ以外に任意のIDを付与してもよい。\r\nこのIDは業務手順によって定められた処方オーダーに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"

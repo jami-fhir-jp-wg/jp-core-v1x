@@ -38,7 +38,7 @@ Description: "このプロファイルはPatientリソースに対して、患�
 　- 2112-1 ドイツ人  
 　  
 など"
-* identifier 1..
+* identifier 1.. MS
 * identifier ^short = "患者の識別子【詳細参照】"
 * identifier ^definition = "患者の識別子。"
 * identifier ^comment = "IDの名前空間を表す Patient.identifier.system と ID値そのものを表す Patient.identifier.value の組み合わせとして表現する。  

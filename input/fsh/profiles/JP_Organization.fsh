@@ -32,6 +32,7 @@ valueには下記の値を格納する。
 　  
 医療機関コードの詳しい説明は、Organizationプロファイルの医療機関コード１０桁の説明を参照すること。  
 なお上記に該当しない施設は、本拡張は使用しない。"
+* identifier MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open

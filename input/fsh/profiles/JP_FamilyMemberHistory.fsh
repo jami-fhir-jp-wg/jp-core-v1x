@@ -13,4 +13,5 @@ Description: "このプロファイルはFamilyMemberHistoryリソースに対�
 * . ^definition = "Significant health conditions for a person related to the patient relevant in the context of care for the patient.  
 患者の診療に関連する、患者家族の疾患に関する情報。"
 * patient only Reference(JP_Patient)
+* identifier MS
 * reasonReference only Reference(QuestionnaireResponse or DocumentReference or JP_AllergyIntolerance or JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common)

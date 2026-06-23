@@ -111,6 +111,7 @@ Coverageには、保険証レベルの情報が含まれている。これは、
 【JP Core仕様】被保険者記号と番号を全角にした上でダブルコーテーションで囲い、カンマ区切りで連結する。  
 ルール：{被保険者記号}:{被保険者番号}  
 例：\"あいう\",\"５６７８\""
+* beneficiary MS
 * beneficiary only Reference(JP_Patient)
 * beneficiary ^definition = "The party who benefits from the insurance coverage; the patient when products and/or services are provided.  
 保険適用から利益を得る当事者、製品および／またはサービスが提供される際の患者。"

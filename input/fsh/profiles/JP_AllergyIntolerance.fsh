@@ -13,6 +13,7 @@ Description: "このプロファイルはAllergyIntoleranceリソースに対し
 * . ^definition = "Risk of harmful or undesirable, physiological response which is unique to an individual and associated with exposure to a substance.  
 このリソースは患者のアレルギー不耐症を表現する。具体的には、特定の物質または物質群へのに曝露よって生じる有害反応の傾向や、潜在的なリスクを表現する。"
 * text ^short = "Text summary of the resource, for human interpretation. このリソースを人間が解釈するためのテキスト要約"
+* identifier MS
 * clinicalStatus ^short = "active | inactive | resolved (アクティブ | 非アクティブ | 解決済み)"
 * clinicalStatus ^definition = "The clinical status of the allergy or intolerance.  
 このアレルギー不耐症のステータス。"

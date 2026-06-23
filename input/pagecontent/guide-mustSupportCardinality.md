@@ -1,7 +1,10 @@
 ### CardinalityとMustSupport組み合わせ
 この節では各CardinalityとMustSupportの状態ごとのサーバおよびクライアント動作について表形式にて記載している。
 #### MustSupportが付与されていない要素について
-JP Coreは、日本国内における患者データアクセスのための最小限の適合性要件を定めるという理念に基づいている。そのため、MustSupportフラグの付与は原則として派生プロジェクトに委ねており、JP Core自体では行っていない。ただし、一部の分野では、派生実装ガイドにおける特定のユースケースが明確であり、かつJP Core側でMustSupport付与の妥当性を十分に検討できた要素については、例外的にJP Coreでも定義を行っている。
+JP Coreは、日本国内における患者データアクセスのための最小限の適合性要件を定めるという理念に基づいている。そのため、MustSupportフラグの付与は原則として派生プロジェクトに委ねており、JP Core自体では行っていない。ただし、以下の場合には例外的にJP Coreでも定義を行っている。
+
+- JP Core サーバ CapabilityStatement において SHALL 検索パラメータとして定義されている要素（例：identifier, name, beneficiary, status, intent, subject 等）は、実装ベンダが検索機能を実装する際に必須のデータ要素であるため、対応する Profile で MustSupport を付与する。
+- 派生実装ガイドにおける特定のユースケースが明確であり、かつJP Core側でMustSupport付与の妥当性を十分に検討できた要素については、例外的にJP Coreでも定義を行っている。
 
 なお、データが存在しない場合の取り扱いについては、[欠損値（データが存在しない場合）の扱い](guide-handlingOfNonExistentData.html)にて詳細を記載した。
 

@@ -117,6 +117,7 @@ Description: "このプロファイルはMedicationAdministrationリソースに
 * ^status = #active
 * ^date = "2025-07-30"
 * . ^short = "患者への薬剤投与記録"
+* identifier MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open

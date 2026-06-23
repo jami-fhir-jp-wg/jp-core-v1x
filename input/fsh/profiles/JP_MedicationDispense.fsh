@@ -11,6 +11,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * ^date = "2024-12-30"
 * . ^short = "指定された患者への薬剤の払い出し"
 * . ^definition = "指定された患者・個人へ薬剤が払い出されたか払い出される予定のものを示す。これには（供給される）提供される製品についての説明や薬剤の服用に関する指示も含まれる。薬剤払い出しは薬剤オーダに対して薬局システムが対応した結果となる。"
+* identifier MS
 * identifier ^slicing.discriminator.type = #value
 * identifier ^slicing.discriminator.path = "system"
 * identifier ^slicing.rules = #open
