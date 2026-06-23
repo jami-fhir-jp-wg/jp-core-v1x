@@ -23,6 +23,7 @@ The value set expansion is too large, and only a subset has been displayed
 #  Local CodeSystems Warnings
 A definition for CodeSystem%
 CodeSystem urn:oid:1.2.392.200119.5.2.4.1.1.3は未知です
+CodeSystem urn:oid:1.2.392.100495.20.2.31は未知です
 CodeSystem http://example.org/terminology/CodeSystem/disease-outcomeは未知です
 CodeSystem http://example.org/terminology/CodeSystem/disease/1311234567は未知です
 CodeSystem http://example.org/abc-hospital/fhir/Observation/localcodeは未知です
