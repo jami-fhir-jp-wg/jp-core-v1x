@@ -5,7 +5,7 @@ Profile: JP_FamilyMemberHistory
 Parent: FamilyMemberHistory
 Id: jp-familymemberhistory
 Title: "JP Core FamilyMemberHistory Profile"
-Description: "このプロファイルはFamilyMemberHistoryリソースに対して、データを送受信するための共通の制約と拡張を定めたものである。"
+Description: "このプロファイルはFamilyMemberHistoryリソースに対して、患者の家族歴のデータを送受信するための共通の制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory"
 * ^status = #active
 * ^date = "2024-12-30"
