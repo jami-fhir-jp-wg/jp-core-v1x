@@ -31,10 +31,10 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には通常 procedure が指定される。必要に応じてextraCategoryを仕様する)
 * category ^comment = "心電図検査は通常 procedure に分類される。"
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#procedure
-* category[second].coding.system = $Loinc_CS
+* category[second] = $Loinc_CS#11524-6
 * category[second].coding.code = $Loinc_CS#11524-6
 * category[third] from JP_ObservationElectrocardiogramExtraCategory_VS (preferred)
-* category[third].coding.system = $JP_ObservationElectrocardiogramExtraCategory_CS
+* category[third] ^patternCodeableConcept.coding.system = $JP_ObservationElectrocardiogramExtraCategory_CS
 * category[third] ^comment = "心電図検査について、負荷試験などの条件をつけた分類"
 
 * insert SetDefinition(code, 心電図検査を示すコード)
@@ -75,12 +75,12 @@ Description: "このプロファイルはObservationリソースに対して、�
     FKD_GRADE 0..1 and
     FKD_INTER 0..1 and
     MINESOTA_CODE 0..1
-* interpretation[ECAPS].coding.system = "urn:oid:1.2.392.200119.5.2.3.3.1" (exactly)
-* interpretation[MINNESOTA1987_NK].coding.system = "urn:oid:1.2.392.200119.5.2.3.3.2.1" (exactly)
-* interpretation[MINNESOTA2005_NK].coding.system = "urn:oid:1.2.392.200119.5.2.3.3.2.2" (exactly)
-* interpretation[FKD_GRADE].coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.1" (exactly)
-* interpretation[FKD_INTER].coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.2" (exactly)
-* interpretation[MINESOTA_CODE].coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.3" (exactly)
+* interpretation[ECAPS] ^patternCodeableConcept.coding.system = "urn:oid:1.2.392.200119.5.2.3.3.1"
+* interpretation[MINNESOTA1987_NK] ^patternCodeableConcept.coding.system = "urn:oid:1.2.392.200119.5.2.3.3.2.1"
+* interpretation[MINNESOTA2005_NK] ^patternCodeableConcept.coding.system = "urn:oid:1.2.392.200119.5.2.3.3.2.2"
+* interpretation[FKD_GRADE] ^patternCodeableConcept.coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.1"
+* interpretation[FKD_INTER] ^patternCodeableConcept.coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.2"
+* interpretation[MINESOTA_CODE] ^patternCodeableConcept.coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.3"
 * insert SetDefinition(interpretation[ECAPS].coding.system, ECAPS:日本光電解析コード)
 * insert SetDefinition(interpretation[MINNESOTA1987_NK].coding.system, 日本光電解析ロジックによるミネソタコード1987年版をベースとした分類)
 * insert SetDefinition(interpretation[MINNESOTA2005_NK].coding.system, 日本光電解析ロジックによるミネソタコード2005年版をベースとした分類)
@@ -126,12 +126,12 @@ Description: "このプロファイルはObservationリソースに対して、�
     FKD_GRADE 0..1 and
     FKD_INTER 0..1 and
     MINESOTA_CODE 0..1
-* component.interpretation[ECAPS].coding.system = "urn:oid:1.2.392.200119.5.2.3.3.1" (exactly)
-* component.interpretation[MINNESOTA1987_NK].coding.system = "urn:oid:1.2.392.200119.5.2.3.3.2.1" (exactly)
-* component.interpretation[MINNESOTA2005_NK].coding.system = "urn:oid:1.2.392.200119.5.2.3.3.2.2" (exactly)
-* component.interpretation[FKD_GRADE].coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.1" (exactly)
-* component.interpretation[FKD_INTER].coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.2" (exactly)
-* component.interpretation[MINESOTA_CODE].coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.3" (exactly)
+* component.interpretation[ECAPS] ^patternCodeableConcept.coding.system = "urn:oid:1.2.392.200119.5.2.3.3.1"
+* component.interpretation[MINNESOTA1987_NK] ^patternCodeableConcept.coding.system = "urn:oid:1.2.392.200119.5.2.3.3.2.1"
+* component.interpretation[MINNESOTA2005_NK] ^patternCodeableConcept.coding.system = "urn:oid:1.2.392.200119.5.2.3.3.2.2"
+* component.interpretation[FKD_GRADE] ^patternCodeableConcept.coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.1"
+* component.interpretation[FKD_INTER] ^patternCodeableConcept.coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.2"
+* component.interpretation[MINESOTA_CODE] ^patternCodeableConcept.coding.system = "urn:oid:1.2.392.200119.5.2.4.1.1.3"
 
 * insert SetDefinition(component.interpretation[ECAPS].coding.system, ECAPS:日本光電解析コード)
 * insert SetDefinition(component.interpretation[MINNESOTA1987_NK].coding.system, 日本光電解析ロジックによるミネソタコード1987年版をベースとした分類)

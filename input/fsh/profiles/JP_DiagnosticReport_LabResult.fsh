@@ -27,7 +27,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 設定する値は、DiagnosticReportStatus（コード）から1つ選ぶ  
 コード体系：HL7 Table 0038のコードと定義"
 * category 1..
-* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains first 1..1

@@ -13,7 +13,7 @@ Usage: #example
 * category[third].coding.system = $JP_ObservationDentalCategory_CS
 * category[third].coding.code = #DO-1-02
 * category[third].coding.display = "ToothTreatmentCondition"
-* category.text = "現存歯の処置状態"
+* category[first].text = "現存歯の処置状態"
 * code = $Loinc_CS#54570-7 "Oral/Dental Status"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2022-10-01"

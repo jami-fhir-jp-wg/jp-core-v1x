@@ -157,7 +157,7 @@ Periodにはその資格の開始日・終了日を入力する。（例：麻�
 * qualification.issuer ^definition = "資格を規制し、発行する機関"
 * qualification.issuer ^comment = "参照は実際のFHIRリソースへの参照でなければならず、解決可能でなければならない。解決は URL からの検索、またはリソースタイプによって、絶対参照を正規の URL として扱い、ローカルのレジストリ/リポジトリで検索することで行うことができる。"
 * qualification ^slicing.discriminator.type = #pattern
-* qualification ^slicing.discriminator.path = "$this"
+* qualification ^slicing.discriminator.path = "code"
 * qualification ^slicing.rules = #open
 * qualification contains
     narcoticPrescriptionLicenseNumber ..47 and

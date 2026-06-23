@@ -32,7 +32,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#procedure (exactly)
 * insert SetDefinition(category[second],第2カテゴリはLOINCのPartコードLP7796-8（内視鏡）固定とする。ValueSetは指定しない)
 * category[second] MS
-* category[second].coding.system = $Loinc_CS (exactly)
+* category[second] = $Loinc_CS#LP7796-8
 * category[second].coding.code 1..
 * category[second].coding.code = $Loinc_CS#LP7796-8 (exactly)
 * code from JP_ObservationEndoscopyCode_VS (preferred)

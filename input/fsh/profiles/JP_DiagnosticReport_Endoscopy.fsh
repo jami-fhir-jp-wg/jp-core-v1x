@@ -25,7 +25,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * status ^comment = "「preliminary」（作成中、未確定、未承認）もしくは 「final」（作成完了、確定済、承認済）を指定する。"
 * category MS
 * category 1..*
-* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category ^slicing.ordered = false
@@ -37,9 +37,8 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[first] ^definition = "診断レポートの分野を表すコード。"
 * category[first] ^comment = "JP_DiagnosticReportCategory_VSの中から「LP7796-8」（Endoscopy（内視鏡））を指定する。"
 * category[first] from $JP_DiagnosticReportCategory_VS (required)
-* category[first].coding.system = $Loinc_CS (exactly)
 * category[first].coding.code 1.. 
-* category[first].coding.code = $Loinc_CS#LP7796-8 (exactly)
+* category[first].coding.code = $Loinc_CS#LP7796-8
 * code from $JP_DocumentCodes_Endoscopy_VS (extensible)
 * code ^short = "内視鏡分野の診断レポートを分類するためのコード。【詳細参照】"
 * code ^definition = "内視鏡分野の診断レポートを分類するためのコード。"

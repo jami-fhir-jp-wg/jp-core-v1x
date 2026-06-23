@@ -17,7 +17,7 @@ Description: "このプロファイルはObservationリソースに対して、�
     second 0..*
 * category[first].coding.code = $JP_SimpleObservationCategory_CS#vital-signs (exactly)
 * category[second] from JP_ObservationVitalSignsCategory_VS (preferred)
-* category[second].coding.system = $JP_ObservationVitalSignsCategory_CS (exactly)
+* category[second] ^patternCodeableConcept.coding.system = $JP_ObservationVitalSignsCategory_CS
 * category[second] ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「焦点」"
 * code from JP_ObservationVitalSignsCode_VS (preferred)
 * code ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類１．バイタルサインの「観察名称」"

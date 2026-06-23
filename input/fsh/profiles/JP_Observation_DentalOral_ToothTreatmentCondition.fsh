@@ -35,7 +35,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category[first].coding.display = "exam"
 
 * insert SetDefinition(category[second],第2カテゴリはLOINCのコードLP89803-8固定で必須とする、ValueSetは指定しない)
-* category[second].coding.system = $Loinc_CS (exactly)
+* category[second] = $Loinc_CS#LP89803-8
 * category[second].coding.code 1..1
 * category[second].coding.code = $Loinc_CS#LP89803-8 (exactly)
 

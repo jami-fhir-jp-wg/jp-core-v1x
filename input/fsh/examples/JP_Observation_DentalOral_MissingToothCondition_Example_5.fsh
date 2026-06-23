@@ -5,12 +5,16 @@ Description: "口腔診査結果５（欠損歯の状態）"
 Usage: #example
 * identifier[0].value = "20221001-0005"
 * status = #final
+* category[first].coding.system = $JP_SimpleObservationCategory_CS
 * category[first].coding.code = #exam
 * category[first].coding.display = "exam"
+* category[second].coding.system = $Loinc_CS
 * category[second].coding.code = #LP89803-8
 * category[second].coding.display = "Dental"
+* category[third].coding.system = $JP_ObservationDentalCategory_CS
+* category[third].coding.code = #DO-1-03
 * category[third].coding.display = "MissingToothCondition"
-* category.text = "欠損歯の処置状態"
+* category[first].text = "欠損歯の処置状態"
 * code = $Loinc_CS#54570-7 "Oral/Dental Status"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2022-10-01"

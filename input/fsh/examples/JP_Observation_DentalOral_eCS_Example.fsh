@@ -4,13 +4,10 @@ Title: "JP Core Observation DentalOral eCS Example 口腔診査結果（診療�
 Description: "口腔診査結果（現存複数歯の処置状態）"
 Usage: #example
 * status = #final
-* category[first].coding.code = #exam
-* category[first].coding.display = "exam"
-* category[second].coding.code = #LP89803-8
-* category[second].coding.display = "Dental"
-* category[third].coding.code = #DO-1-04
-* category[third].coding.display = "ClinicalInformationSharing"
-* category.text = "現存歯の処置状態"
+* category[first] = $JP_SimpleObservationCategory_CS#exam "exam"
+* category[first].text = "現存歯の処置状態"
+* category[second] = $Loinc_CS#LP89803-8 "Dental"
+* category[third] = $JP_ObservationDentalCategory_CS#DO-1-04 "ClinicalInformationSharing"
 * code = $Loinc_CS#57133-1 "Referral note"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2022-10-01"

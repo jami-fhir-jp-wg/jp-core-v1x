@@ -18,16 +18,15 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * insert SetDefinition(basedOn, 元になった検査や診断の依頼  【JP Core仕様】オーダ発生元のServiceRequestまたはCarePlanへの参照)
 * insert SetDefinition(status, 診断レポートのステータス  【JP Core仕様】レポートの記載状況をバインディングされたコードセットから必ず一つ選ぶ。)
 
-* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains first 1..1
 * insert SetDefinition(category, サービスカテゴリー SS-MIX2拡張ストレージ構成の説明と構築ガイドラインに従う)
 * category[first] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP31759-1（歯科口腔）を使用する。"
 * category[first] from $JP_DiagnosticReportCategory_VS (required)
-* category[first].coding.system = $Loinc_CS (exactly)
 * category[first].coding.code 1..
-* category[first].coding.code = $Loinc_CS#LP31759-1 (exactly)
+* category[first].coding.code = $Loinc_CS#LP31759-1
 
 * insert SetDefinition(code, 診断レポート種別「口腔診査報告書」を表す文書コード)
 * code = $JP_DocumentCodes_CS#32453-3 "口腔診査報告書"

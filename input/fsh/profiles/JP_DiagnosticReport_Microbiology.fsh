@@ -20,7 +20,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * status 1..
 * insert SetDefinition(status, 診断レポートのステータス)
 * category 1..
-* category ^slicing.discriminator.type = #value
+* category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains first 1..1

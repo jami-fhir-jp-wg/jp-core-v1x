@@ -4,13 +4,16 @@ Title: "JP Core Observation DentalOral Tooth Existence Example 口腔診査結�
 Description: "口腔診査結果２（歯の有無）"
 Usage: #example
 * status = #final
+* category[first].coding.system = $JP_SimpleObservationCategory_CS
 * category[first].coding.code = #exam
 * category[first].coding.display = "exam"
+* category[second].coding.system = $Loinc_CS
 * category[second].coding.code = #LP89803-8
 * category[second].coding.display = "Dental"
+* category[third].coding.system = $JP_ObservationDentalCategory_CS
 * category[third].coding.code = #DO-1-01
 * category[third].coding.display = "ToothExistence"
-* category.text = "歯の有無"
+* category[first].text = "歯の有無"
 * code = $Loinc_CS#54570-7 "Oral/Dental Status"
 * subject = Reference(Patient/jp-patient-example-1)
 * valueCodeableConcept = $JP_DentalFundamentalStatus_CS#TB-3-0 "現存歯"
