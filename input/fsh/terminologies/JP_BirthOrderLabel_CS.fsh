@@ -8,10 +8,12 @@ Description: "FamilyMemberHistoryにおいて、家族内で用いられる出�
 * ^caseSensitive = true
 * ^content = #complete
 * ^property[0].code = #category
+* ^property[=].uri = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrderLabel_CS#category"
 * ^property[=].description = "出生順呼称の区分。"
 * ^property[=].type = #code
 * ^property[+].code = #order
-* ^property[=].description = "区分ないでの順位。"
+* ^property[=].uri = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrderLabel_CS#order"
+* ^property[=].description = "区分内での順位。"
 * ^property[=].type = #integer
 
 // ===== Sons =====
