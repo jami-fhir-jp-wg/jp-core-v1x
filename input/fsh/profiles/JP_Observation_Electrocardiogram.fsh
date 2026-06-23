@@ -30,10 +30,10 @@ Description: "このプロファイルはObservationリソースに対して、�
     third 0..1
 * insert SetDefinition(category, Observationリソースに対する分類コード。心電図検査には通常 procedure が指定される。必要に応じてextraCategoryを仕様する)
 * category ^comment = "心電図検査は通常 procedure に分類される。"
-* category[first].coding.code = $JP_SimpleObservationCategory_CS#procedure
+* category[first] = $JP_SimpleObservationCategory_CS#procedure
 * category[second] = $Loinc_CS#11524-6
-* category[second].coding.code = $Loinc_CS#11524-6
 * category[third] from JP_ObservationElectrocardiogramExtraCategory_VS (preferred)
+* category[third].coding.system = $JP_ObservationElectrocardiogramExtraCategory_CS
 * category[third] ^patternCodeableConcept.coding.system = $JP_ObservationElectrocardiogramExtraCategory_CS
 * category[third] ^comment = "心電図検査について、負荷試験などの条件をつけた分類"
 

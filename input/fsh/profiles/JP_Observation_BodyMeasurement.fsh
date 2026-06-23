@@ -17,6 +17,7 @@ Description: "このプロファイルはObservationリソースに対して、�
     second 0..*
 * category[first].coding.code = #body-measurement (exactly)
 * category[second] from $JP_ObservationBodyMeasurementCategory_VS (preferred)
+* category[second].coding.system = $JP_ObservationBodyMeasurementCategory_CS
 * category[second] ^patternCodeableConcept.coding.system = $JP_ObservationBodyMeasurementCategory_CS
 * category[second] ^comment = "MEDISの看護実践用語標準マスター＜看護観察編＞の大分類１．バイタルサイン・基本情報、中分類2．身体計測の「焦点」"
 * code from JP_ObservationBodyMeasurementCode_VS (preferred)

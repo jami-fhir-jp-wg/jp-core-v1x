@@ -30,4 +30,11 @@ CodeSystem http://example.org/abc-hospital/fhir/Observation/localcodeは未知�
 
 # information level
 %which has status 'fragment'
+The discriminator type 'pattern' is deprecated in R5+. For future compatibility, you could consider using type=value with a pattern[x] instead (if this is not an inherited slicing)
 
+# category スライス（#pattern/$this 判別）で system のみを指定した patternCodeableConcept への警告
+# 対象 VS が複数コードを含み preferred バインディングのため特定コードを固定できず、
+# system のみで判別するのが正しい設計（BodyMeasurement / VitalSigns / Electrocardiogram の category）
+No code provided for CodeSystem 'http://jpfhir.jp/fhir/core/CodeSystem/JP_Observation%Category_CS%
+
+No code provided for CodeSystem 'http://jpfhir.jp/fhir/core/CodeSystem/%
