@@ -9,7 +9,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * . ^short = "診断レポート-依頼情報、１項目単位の結果、画像、解釈、およびフォーマットされたレポートの組み合わせ　【JP Core仕様】口腔診査結果レポートのプロフィール"
 * . ^definition = "患者、患者のグループ、デバイス、場所、これらから派生した対象に対して実行された診断的検査の結果と解釈。レポートには、依頼情報や依頼者情報などの臨床コンテキスト（文脈）、および１項目単位の結果、画像、テキストとコード化された解釈、および診断レポートのフォーマットされた表現のいくつかの組み合わせが含まれる。
 【JP Core仕様】口腔診査結果レポートのプロファイル"
-* . ^comment = "これは単一のレポートをキャプチャすることを目的としており、複数のレポートをカバーする要約情報の表示に使用するのには適していない。たとえば、このリソースは、検査結果の累積レポート形式やシーケンスの詳細な構造化レポート用に作られていない。
+* . ^comment = "これは単一のレポートを格納することを目的としており、複数のレポートを含む要約情報の表示に使用するのには適していない。たとえば、このリソースは、検査結果の累積レポート形式やシーケンスの詳細な構造化レポート用に作られていない。
 【JP Core仕様】DiagnosticReportリソースの共通プロファイル"
 
 * insert SetDefinition(identifier, レポートを識別するビジネス識別子 【JP Core仕様】当該検査項目に対して、施設内で割り振られる一位の識別子があればそちらを使用する。)
@@ -33,7 +33,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * subject only Reference(JP_Patient)
 * insert SetDefinition(subject, レポートの対象、常にではないが、通常は患者  【JP Core仕様】Patientリソースを参照)
 * encounter only Reference(JP_Encounter)
-* insert SetDefinition(encounter, 依頼時におけるヘルスケアイベント（受診など） 【JP Core仕様】このレポートを書く切っ掛けとなるEncounterリソースを参照)
+* insert SetDefinition(encounter, 依頼時における診療イベント（受診など） 【JP Core仕様】このレポートを書く切っ掛けとなるEncounterリソースを参照)
 * encounter ^comment = "例：診療、歯科健診（検診）、身元不明者調査 ※JP Coreに網羅されていない"
 
 * effective[x] only dateTime
