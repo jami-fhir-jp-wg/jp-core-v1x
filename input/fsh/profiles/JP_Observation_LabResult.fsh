@@ -48,7 +48,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(category[first].coding.system, 検体検査では、http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS のコード表を使用する。)
 * insert SetDefinition(category[first].coding.code, 検体検査を表すコード laboratory を設定する。)
 
-* category[first].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
+* category[first] = $JP_SimpleObservationCategory_CS#laboratory
 * category[first].coding.system 1..1
 * category[first].coding.code 1..1
 

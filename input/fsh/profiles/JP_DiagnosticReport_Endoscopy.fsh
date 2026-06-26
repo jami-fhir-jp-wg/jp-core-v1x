@@ -38,7 +38,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[first] ^comment = "JP_DiagnosticReportCategory_VSの中から「LP7796-8」（Endoscopy（内視鏡））を指定する。"
 * category[first] from $JP_DiagnosticReportCategory_VS (required)
 * category[first].coding.code 1.. 
-* category[first].coding.code = $Loinc_CS#LP7796-8
+* category[first] = $Loinc_CS#LP7796-8 "Endoscopy（内視鏡）"
 * code from $JP_DocumentCodes_Endoscopy_VS (extensible)
 * code ^short = "内視鏡分野の診断レポートを分類するためのコード。【詳細参照】"
 * code ^definition = "内視鏡分野の診断レポートを分類するためのコード。"

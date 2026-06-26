@@ -16,7 +16,7 @@ Usage: #example
 * identifier[ssmixDepartmentCode].system = "http://jami.jp/SS-MIX2/CodeSystem/ClinicalDepartment"
 * identifier[ssmixDepartmentCode].value = "03"
 * type[departmentType].coding[0] = http://terminology.hl7.org/CodeSystem/organization-type#dept "Hospital Department"
-* type[departmentType].coding[+] = $JP_Department_SsMix_CS#81 "循環器内科"
+* type[departmentType].coding[+] = $JP_Department_SsMix_CS#081 "循環器内科"
 * name = "循環器内科"
 * telecom[0].system = #phone
 * telecom[=].value = "03-1234-5680"

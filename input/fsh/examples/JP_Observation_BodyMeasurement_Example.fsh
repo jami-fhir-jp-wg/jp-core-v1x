@@ -3,7 +3,7 @@ InstanceOf: JP_Observation_BodyMeasurement
 Title: "JP Core Observation BodyMeasurement Example 身体計測（体重）"
 Description: "身体計測（体重）"
 Usage: #example
-* category[first] = $JP_SimpleObservationCategory_CS#body-measurement "Body Measurement"
+* category[first] = $JP_SimpleObservationCategory_CS#body-measurement "身体計測"
 * category[second] = $JP_ObservationBodyMeasurementCategory_CS#weight "体重"
 * subject = Reference(Patient/jp-patient-example-1)
 * code.coding[0] = http://example.org/abc-hospital/fhir/Observation/localcode#abc-local-456

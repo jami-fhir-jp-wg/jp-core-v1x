@@ -9,7 +9,7 @@ Usage: #example
 * identifier.system = $JP_IdSystem_PrescriptionDocumentID
 * identifier.value = "123456"
 * status = #final
-* category[first] = $Loinc_CS#LP29684-5   "放射線"
+* category[first] = $Loinc_CS#LP29684-5 "放射線"
 * category[second] = $dicom-ontology#CT
 * code = $JP_DocumentCodes_CS#18748-4 "画像検査報告書"
 * subject = Reference(Patient/jp-patient-example-1)
