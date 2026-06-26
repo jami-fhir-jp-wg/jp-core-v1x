@@ -7,7 +7,7 @@ Usage: #example
 * identifier.system = $JP_IdSystem_PrescriptionDocumentID
 * identifier.value = "123456"
 * status = #final
-* category[first] = $Loinc_CS#LP31759-1 "DENTAL"
+* category[first] = $Loinc_CS#LP31759-1 "歯科口腔"
 * code = $JP_DocumentCodes_CS#32453-3 "口腔診査報告書"
 * subject = Reference(Patient/jp-patient-example-1)
 * effectiveDateTime = "2022-10-01"
