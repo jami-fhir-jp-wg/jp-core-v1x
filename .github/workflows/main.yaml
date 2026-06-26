@@ -42,11 +42,27 @@ jobs:
         echo "encoded_pullrequest_title=$title_temp" >> $GITHUB_ENV
       id: extract_date
 
+    # sushi-config.yaml を single source of truth とし、ビルド用の version / releaseLabel を確定させる
+    - name: apply the version of sushi-config.yaml
+      run: |
+        sed -i 's/version: 1.2.0-temp/version: ${{ env.release_version }}/g' sushi-config.yaml
+
+    # 確定した version / releaseLabel を sushi-config.yaml から読み取り、_index.yml に注入する
+    - name: Read version and releaseLabel from sushi-config.yaml
+      id: sushi_meta
+      run: |
+        version=$(grep -E '^version:' sushi-config.yaml | head -1 | sed -E 's/^version:[[:space:]]*//; s/[[:space:]]*#.*$//; s/[[:space:]]*$//')
+        release_type=$(grep -E '^releaseLabel:' sushi-config.yaml | head -1 | sed -E 's/^releaseLabel:[[:space:]]*//; s/[[:space:]]*#.*$//; s/[[:space:]]*$//')
+        echo "version=$version" >> $GITHUB_OUTPUT
+        echo "release_type=$release_type" >> $GITHUB_OUTPUT
+
     - uses: bluwy/substitute-string-action@v1
       id: substitute_index
       with:
         _input-file: input/landing_page/_index.yml
         _format-key: '%%key%%'
+        version: ${{ steps.sushi_meta.outputs.version }}
+        release_type: ${{ steps.sushi_meta.outputs.release_type }}
         group: ${{ steps.extract_branch.outputs.branch_group }}
         branch: ${{ steps.extract_branch.outputs.branch }}
         date: ${{ steps.extract_date.outputs.date }}
@@ -108,10 +124,6 @@ jobs:
         mkdir -p packages/$JPTerminologyCOREdir
         mv /home/runner/.fhir/work/package /home/runner/.fhir/packages/$JPTerminologyCOREdir
 
-    - name: apply the version of sushi-config.yaml
-      run: |
-        sed -i 's/version: 1.2.0-temp/version: ${{ env.release_version }}/g' sushi-config.yaml
-        
     - name: Run IG Publisher
       run: | 
         mkdir input-cache
