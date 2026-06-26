@@ -231,10 +231,8 @@ Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefin
 Alias: $JP_SimpleObservationCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
 Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 
-// Clinsでは定義されているが、JP Coreでは未定義
-// Alias: $JP_BodySite_MEDIS_Concept_CS = http://medis.or.jp/CodeSystem/master-disease-modExCode   //MEDIS病名交換用修飾コード //urn:oid:1.2.392.200119.4.201.5
-// Alias: $JP_BodySite_MEDIS_ManagementID_CS = http://medis.or.jp/CodeSystem/master-disease-modKeyNumber   //MEDIS病名管理修飾コード    //urn:oid:1.2.392.200119.4.201.2
-// Alias: $JP_BodySite_Disease_Claim_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterZ-disease-modifier //  支払基金	修飾語コード 
+// 病名修飾コード（MEDIS病名交換用/管理修飾コード、支払基金修飾語コード）の CodeSystem alias は
+// Clins では定義されているが JP Core では未定義のため、ここでは定義しない（将来採用時に追加）。
 
 
 // ValueSet
@@ -359,11 +357,8 @@ Alias: $JP_ReasonCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCode
 Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
 
-// Alias: $JP_BodySite_MEDIS_Concept_VS = http://medis.or.jp/ValueSet/master-disease-modExCode
-
-// Alias: $JP_BodySite_MEDIS_ManagementID_VS = http://medis.or.jp/ValueSet/master-disease-modKeyNumber
-// Alias: $JP_BodySite_Disease_Claim_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/masterZ-disease-modifier //  支払基金	修飾語コード
-// Alias: $JP_Modifier_Disease_Claim_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/masterZ-disease-modifier //  支払基金	修飾語コード
+// 病名修飾コード（MEDIS病名交換用/管理修飾コード、支払基金修飾語コード）の ValueSet alias は
+// Clins では定義されているが JP Core では未定義のため、ここでは定義しない（将来採用時に追加）。
 
 //system値
 Alias: $JP_IdSystem_InsurerNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber  //urn:oid:1.2.392.100495.20.3.61
