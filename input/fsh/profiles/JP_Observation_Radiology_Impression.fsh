@@ -21,7 +21,7 @@ This material contains content from LOINC (http://loinc.org). LOINC is copyright
 * partOf ^comment = "このObservation（インプレッション）が生成される元になった画像検査"
 * category[first] MS
 * category[first] ^comment = "このObservationを分類するコード。(imaging)が指定される。"
-* category[first].coding.code = $JP_SimpleObservationCategory_CS#imaging (exactly)
+* category[first] = $JP_SimpleObservationCategory_CS#imaging
 //* code = $Loinc_CS#19005-8  "Radiology Imaging study [Impression] (narrative)" (exactly)
 * code.coding.system = $Loinc_CS (exactly)
 * code.coding.code = $Loinc_CS#19005-8 (exactly)

@@ -29,20 +29,17 @@ Description: "このプロファイルはObservationリソースに対して、�
 第3コード：DO-1-04（ClinicalInformationSharing）"
 
 * insert SetDefinition(category[first], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
-* category[first].coding.system = $JP_SimpleObservationCategory_CS (exactly)
 * category[first].coding.code 1..1
-* category[first].coding.code = #exam (exactly)
+* category[first] = $JP_SimpleObservationCategory_CS#exam
 
 * insert SetDefinition(category[second],第2カテゴリはLOINCのコードLP89803-8固定で必須とする、ValueSetは指定しない)
 * category[second] = $Loinc_CS#LP89803-8
 * category[second].coding.code 1..1
-* category[second].coding.code = #LP89803-8 (exactly)
 
 * insert SetDefinition(category[third], このObservationに関する詳細分類、JP_ObservationDetailedDentalCategory_VSより選択する、必須項目)
 * category[third] from $JP_ObservationDetailedDentalCategory_VS (required)
-* category[third].coding.system = $JP_ObservationDentalCategory_CS (exactly)
 * category[third].coding.code 1..1
-* category[third].coding.code = #DO-1-04 (exactly)
+* category[third] = $JP_ObservationDentalCategory_CS#DO-1-04
 
 * insert SetDefinition(code.coding, observation のタイプ（コードまたはタイプ 【JP Core仕様】57133-1（Referral note）を指定する)
 * code.coding.system = $Loinc_CS (exactly)

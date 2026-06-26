@@ -34,20 +34,17 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * insert SetDefinition(category, 診断レポートを作成した臨床分野、部門、または診断サービスを分類するコード。検体査では、LoincコードのLP29693-6 検体検査/LAB を使用する。)
 * category[first] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP29693-6(検体検査/LAB)を使用する。"
 * category[first] from $JP_DiagnosticReportCategory_VS (required)
-* category[first].coding.system = $Loinc_CS (exactly)
 * category[first].coding.code 1..
-* category[first].coding.code = $Loinc_CS#LP29693-6 (exactly)
-* code.coding ^slicing.discriminator.type = #value
-* code.coding ^slicing.discriminator.path = "system"
+* category[first] = $Loinc_CS#LP29693-6 "検体検査/LAB"
+* code.coding ^slicing.discriminator.type = #pattern
+* code.coding ^slicing.discriminator.path = "$this"
 * code.coding ^slicing.rules = #open
 * code.coding contains laboratoryCode 0..1
 * code.coding[laboratoryCode] ^short = "検体検査レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している【詳細参照】"
 * code.coding[laboratoryCode] ^definition = "検体検査レポート項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。"
 * code.coding[laboratoryCode] ^comment = "推奨コードは必須ではない、派生先によるコード体系を作成し割り振ることを否定しない"
-* code.coding[laboratoryCode].system = $JP_DocumentCodes_CS (exactly)
 * code.coding[laboratoryCode].code 1..
-* code.coding[laboratoryCode].code = $JP_DocumentCodes_CS#11502-2 (exactly)
-* code.coding[laboratoryCode].display = "検体検査報告書"
+* code.coding[laboratoryCode] = $JP_DocumentCodes_CS#11502-2 "検体検査報告書"
 * subject only Reference(JP_Patient)
 * subject ^short = "レポートの対象、常にではないが、通常は患者"
 * subject ^comment = "参照は、実際のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。  

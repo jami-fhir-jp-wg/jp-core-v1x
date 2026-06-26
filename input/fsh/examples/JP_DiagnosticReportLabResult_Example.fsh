@@ -9,7 +9,7 @@ Usage: #example
 * status = #final
 * identifier.system = "http://example.org/abc-hospital/fhir/lab/reportid"
 * identifier.value = "5234342"
-* category[first] = $Loinc_CS#LP29693-6 "検体検査"
+* category[first] = $Loinc_CS#LP29693-6 "検体検査/LAB"
 * code = $JP_DocumentCodes_CS#11502-2 "検体検査報告書"
 * subject = Reference(Patient/jp-patient-example-1)
 * encounter = Reference(Encounter/jp-encounter-example-1)

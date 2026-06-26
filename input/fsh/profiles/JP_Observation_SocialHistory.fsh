@@ -13,7 +13,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * . ^definition = "生活背景の情報"
 * . ^comment = "生活背景に関するObservation（収集したり観察した事実など）の制約プロフィール"
 * category 1..
-* category[first].coding.code = $JP_SimpleObservationCategory_CS#social-history (exactly)
+* category[first] = $JP_SimpleObservationCategory_CS#social-history
 * category ^comment = "【JP Core仕様】基底仕様のカテゴリ「social-history」固定とする"
 * code from JP_ObservationSocialHistoryCode_VS (preferred)
 * code ^comment = "MEDISのJ-MIXの「生活背景情報」（※宗教を除く）"

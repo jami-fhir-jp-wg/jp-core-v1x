@@ -15,7 +15,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category 1..
 * category contains
     second 0..*
-* category[first].coding.code = $JP_SimpleObservationCategory_CS#vital-signs (exactly)
+* category[first] = $JP_SimpleObservationCategory_CS#vital-signs
 * category[second] from JP_ObservationVitalSignsCategory_VS (preferred)
 * category[second].coding.system = $JP_ObservationVitalSignsCategory_CS
 * category[second] ^patternCodeableConcept.coding.system = $JP_ObservationVitalSignsCategory_CS

@@ -26,7 +26,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[first] ^comment = "【JP Core仕様】レポートカテゴリーとして、LoincコードのLP31759-1（歯科口腔）を使用する。"
 * category[first] from $JP_DiagnosticReportCategory_VS (required)
 * category[first].coding.code 1..
-* category[first].coding.code = $Loinc_CS#LP31759-1
+* category[first] = $Loinc_CS#LP31759-1 "歯科口腔"
 
 * insert SetDefinition(code, 診断レポート種別「口腔診査報告書」を表す文書コード)
 * code = $JP_DocumentCodes_CS#32453-3 "口腔診査報告書"

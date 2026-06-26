@@ -17,14 +17,13 @@ Description: "このプロファイルはObservationリソースに対して、�
 * category ^comment = "【JP Core仕様】基底仕様のカテゴリ「exam」固定とする"
 * code ^comment = "【JP Core仕様】所見の有無を表すコード（固定値）"
 * code from JP_PhysicalExamCode_VS (preferred)
-* code.coding ^slicing.discriminator.type = #value
-* code.coding ^slicing.discriminator.path = "system"
+* code.coding ^slicing.discriminator.type = #pattern
+* code.coding ^slicing.discriminator.path = "$this"
 * code.coding ^slicing.rules = #open
 * code.coding contains physicalExamCode 0..1
 * code.coding[physicalExamCode] from JP_PhysicalExamCode_VS (required)
-* code.coding[physicalExamCode].system = $JP_PhysicalExamCode_CS (exactly)
 * code.coding[physicalExamCode].code 1..
-* code.coding[physicalExamCode].code = $JP_PhysicalExamCode_CS#physical-findings  (exactly)
+* code.coding[physicalExamCode] = $JP_PhysicalExamCode_CS#physical-findings
 * code.coding[physicalExamCode].display = "Physical Findings"
 * code.coding[physicalExamCode] ^short = "身体所見項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している【詳細参照】"
 * code.coding[physicalExamCode] ^definition = "身体所見項目コード。本ユースケースにおける項目コード推奨値をスライスにて示している。"

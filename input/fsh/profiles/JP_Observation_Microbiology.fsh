@@ -22,12 +22,11 @@ This material contains content from LOINC (http://loinc.org). LOINC is copyright
 * category ^comment = "【JP Core仕様】日本では適切なコード体系が存在しないため、独自のバリューセットを定義する  
 JP CoreとしてはsimpleObservationコード体系を必須とし、他のローカルコード等を使用する場合はCategory要素の2つ目以降に設定する"
 * insert SetDefinition(category[first], このObservationに関する分類（JP_SimpleObservationCategory_VS）、必須項目)
-* category[first].coding.code = $JP_SimpleObservationCategory_CS#laboratory (exactly)
+* category[first] = $JP_SimpleObservationCategory_CS#laboratory
 
 * insert SetDefinition(category[second],第2カテゴリはLOINCのコード18725-2固定とする、ValueSetは指定しない)
 * category[second] = $Loinc_CS#18725-2
 * category[second].coding.code 1..
-* category[second].coding.code = $Loinc_CS#18725-2 (exactly)
 * category[second].coding.display = "Microbiology studies (set)"
 
 * insert SetDefinition(category[third], このObservationに関する詳細分類、JP_MicrobiologyCategory_VSより選択する、任意項目)
