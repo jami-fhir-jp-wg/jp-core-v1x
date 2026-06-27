@@ -2,3 +2,6 @@
 * [Medicationグループ](group-medication.html)
 * [Diagnosticグループ](group-diagnostic.html)
 * [Clinicalグループ](group-clinical.html)
+* [Workflowグループ](group-workflow.html)
+* [CapabilityStatementグループ](group-capabilityStatement.html)
+* [SearchParameterグループ](group-searchParameter.html)
