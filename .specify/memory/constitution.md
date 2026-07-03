@@ -1,14 +1,9 @@
 <!--
 Sync Impact Report
-- Version change: 1.1.1 → 1.1.2
+- Version change: 1.1.2 → 1.2.0
 - Modified principles:
-  - II. Must Support 方針: 既存プロファイルの過渡期維持を明記
-  - IV. FSH記述規則: インバリアントキー形式を実態に合わせ修正
-    (jpcore-[abbrev]-[3digits] → jp-[type]-[descriptive-name])
-- Modified sections:
-  - 欠損データ処理: DataAbsentReason を将来目標（SHOULD）に変更
-  - アーキテクチャパターン: Core Principles/適合性基準と
-    重複する「用語バインディング」「設定より規約」を削除
+  - II. Must Support 方針: MS ポリシーを「基本要素に MS を付与する」に改訂
+    （Case B: Policy Revision に基づく。issue #MS-policy-discrepancy 対応）
 - Templates requiring updates:
   - .specify/templates/plan-template.md: ✅ No changes needed
   - .specify/templates/spec-template.md: ✅ No changes needed
@@ -38,11 +33,10 @@ Sync Impact Report
 
 ### II. Must Support 方針 (Must Support Policy)
 
-**基本方針**: Must Support（MS）フラグは原則として付与しない。
-ユースケースが明確に限定でき、臨床的正当性がある場合にのみ付与する。
+**基本方針**: JP Core では、各プロファイルにおいてデータの相互運用性のために重要な基本要素に Must Support（MS）フラグを付与する。
 
-- MS フラグの付与には、対象ユースケースと臨床的根拠の文書化が
-  必須である
+- MS フラグの付与対象は、プロファイルの目的に照らして
+  相互運用性の確保に不可欠な基本要素とする
 - MS フラグを付与する場合、以下の非対称義務を定義しなければならない:
   - **データ提供者（サーバ/送信者）**: 値が既知である場合、
     MS 要素を設定しなければならない（SHALL populate-if-known）
@@ -50,14 +44,10 @@ Sync Impact Report
     リソースインスタンスをエラーなく処理しなければならない
     （SHALL no-error）。MS 要素の表示または保存を行うべきである
     （SHOULD display/store）
-- MS フラグのないプロファイルは、データ構造の定義と
-  用語バインディングのみを規定する
+- 派生プロジェクトにおいては、JP Core で定義された MS 要素に加えて、
+  各ユースケースに応じた追加の MS フラグの付与が可能である
 - 各 MS 要素は、トレーサビリティマトリクスにより
   正当化するユースケースと紐づけなければならない
-- **既存プロファイルの扱い**: 本方針策定以前に作成された
-  プロファイルの既存 MS フラグはそのまま維持する。
-  新規プロファイルから本方針を適用し、既存プロファイルは
-  今後の見直し時に段階的に整理する
 
 > **参考**: US Core, AU Core, UK Core, IPS の各国 Core IG が
 > 非対称義務モデルを採用している。UK Core は臨床的正当性が
@@ -418,4 +408,4 @@ workflow:
     重要な指針の拡充
   - **PATCH**: 文言修正、誤字修正、意味に影響しない改善
 
-**Version**: 1.1.2 | **Ratified**: 2026-02-17 | **Last Amended**: 2026-02-17
+**Version**: 1.2.0 | **Ratified**: 2026-02-17 | **Last Amended**: 2026-05-19
