@@ -73,7 +73,7 @@ Usage: #inline
 * category[second] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[third] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
-* code.coding[+] = http://example.org/abc-hospital/fhir/Observation/localcode#6A0100000061704Z1 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザー定義1(白血球)"
+* code.coding[+] = http://example.org/abc-hospital/fhir/Observation/localcode#6A0100000061704Z1 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義1(白血球)"
 * code.text = "白血球"
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
@@ -88,7 +88,7 @@ Usage: #inline
 * category[second] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[third] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
-* code.coding[+] = http://example.org/abc-hospital/fhir/Observation/localcode#6A0100000061704Z2 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザー定義2(上皮細胞)"
+* code.coding[+] = http://example.org/abc-hospital/fhir/Observation/localcode#6A0100000061704Z2 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義2(上皮細胞)"
 * code.text = "上皮細胞"
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
@@ -103,7 +103,7 @@ Usage: #inline
 * category[second] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[third] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
-* code.coding[+] = http://example.org/abc-hospital/fhir/Observation/localcode#6A0100000061704Z3 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザー定義3(グラム陽性球菌（GPC）)"
+* code.coding[+] = http://example.org/abc-hospital/fhir/Observation/localcode#6A0100000061704Z3 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義3(グラム陽性球菌（GPC）)"
 * code.text = "グラム陽性球菌（GPC）"
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
@@ -118,7 +118,7 @@ Usage: #inline
 * category[second] = $Loinc_CS#18725-2 "Microbiology studies (set)"
 * category[third] = $JP_MicrobiologyCategory_CS#gram-stain "Gram stain"
 * code.coding[jlac10] = $JP_ObservationLabResultCode_CS#6A010000006170449 "塗抹鏡検(一般細菌)_喀痰_グラム染色"
-* code.coding[+] = http://example.org/abc-hospital/fhir/Observation/localcode#6A0100000061704Z4 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザー定義4(グラム陽性桿菌（GPR）)"
+* code.coding[+] = http://example.org/abc-hospital/fhir/Observation/localcode#6A0100000061704Z4 "塗抹鏡検(一般細菌)_喀痰_グラム染色_ユーザ定義4(グラム陽性桿菌（GPR）)"
 * code.text = "グラム陽性桿菌（GPR）"
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
