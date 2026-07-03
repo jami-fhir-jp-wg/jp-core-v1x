@@ -23,7 +23,7 @@ Description: "このプロファイルはEncounterリソースに対して、来
 * status ^comment = "内部のビジネス・ルールは、ステータス(およびクラス)間で発生する可能性のある適切な遷移を検出することに注意すること。"
 * status ^isModifierReason = "この要素は、リソースを有効なものとして扱うべきではないことを意味する status entered-in-error を含む status 要素であるため、修飾子としてラベル付けされる。"
 * statusHistory ^short = "過去のEncounterのステータス一覧【詳細参照】"
-* statusHistory ^definition = "ステータス履歴(status History)は、リソースの歴史的なバージョンを読み込んだり、サーバに保存させたりすることなく、Encounterリソースがステータス履歴を含むことを可能にする。"
+* statusHistory ^definition = "ステータス履歴(status History)は、リソースの歴史的なバージョンを読み込んだり、サーバーに保存させたりすることなく、Encounterリソースがステータス履歴を含むことを可能にする。"
 * statusHistory ^comment = "現在のステータスは、ステータスの履歴ではなく、常にリソースの現在のバージョンにある。"
 * statusHistory.status ^short = "planned | arrived | triaged | in-progress | onleave | finished | cancelled + / 予定｜到着｜トリアージ｜進行中｜保留中｜終了｜キャンセル+."
 * statusHistory.status ^definition = "planned | arrived | triaged | in-progress | onleave | finished | cancelled +.  

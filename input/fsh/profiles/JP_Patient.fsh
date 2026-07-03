@@ -256,7 +256,7 @@ FHIRデータ型仕様に従って、以下の内容を採用する。
 * link ^comment = "リンクされた患者記録に相互リンクがあるという仮定はない。"
 * link ^requirements = "複数のユースケースがある。  
 　- 事務的なエラーのため一貫して人間を特定することが困難であり患者の記録が重複している  
-　- 複数のサーバにわたり患者情報が配布されている"
+　- 複数のサーバーにわたり患者情報が配布されている"
 * link ^isModifierReason = "この要素は、メインのPatientリソースではない可能性があるため、修飾子としてラベル付けされ、このPatientレコードの代わりに参照された患者を使用する必要がある。link.type値が 'replaced-by'の場合"
 * link.other only Reference(JP_Patient or RelatedPerson)
 * link.other ^definition = "リンクが参照する他の患者リソース。"

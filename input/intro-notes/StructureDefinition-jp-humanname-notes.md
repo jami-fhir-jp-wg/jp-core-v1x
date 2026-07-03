@@ -13,7 +13,7 @@ JP_HumanNameは名前の表記分類として[iso21090-EN-representation extensi
 
 ### iso21090-EN-representation extensionの多重度
 
-JP Coreでは国外ベンダを考慮し、[iso21090-EN-representation extension](http://hl7.org/fhir/R4/extension-iso21090-en-representation.html)の拡張は多重度0を許容している。実装ガイド作成の際は、アプリケーションの実装等やデータ収集の精度を考慮した上で多重度を決定すること。
+JP Coreでは国外ベンダーを考慮し、[iso21090-EN-representation extension](http://hl7.org/fhir/R4/extension-iso21090-en-representation.html)の拡張は多重度0を許容している。実装ガイド作成の際は、アプリケーションの実装等やデータ収集の精度を考慮した上で多重度を決定すること。
 
 ### textの区切り文字
 

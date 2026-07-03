@@ -58,7 +58,7 @@ Description: "このプロファイルはMediaリソースに対して、主に�
 * bodySite ^comment = "内視鏡では省略してよい。将来的にニーズが出てきた場合には検討する。"
 * deviceName ^short = "このメディアを生成した装置名。"
 * deviceName ^definition = "このメディアを生成した装置名。"
-* deviceName ^comment = "原則機種名（スコープ）を記載する。デジカメの場合Exifヘッダの機種名とする。"
+* deviceName ^comment = "原則機種名（スコープ）を記載する。デジカメの場合Exifヘッダーの機種名とする。"
 * device ^short = "メディアの収集に使用されるデバイス。"
 * device ^definition = "メディアの収集に使用されるデバイス。"
 * device ^comment = "内視鏡では省略してよい。使用する場合には、参照するリソースで定義して使用する。"

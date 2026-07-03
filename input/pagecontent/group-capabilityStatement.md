@@ -37,7 +37,7 @@ FHIR BASEにある定義済み検索パラメータ([Defined Search Parameters](
 
 |アクタ|説明|
 |---|---|
-| Server | FHIR準拠したサーバで、Resourceを永続化して保持ししているものに対して検索のサービスを提供する。|
+| Server | FHIR準拠したサーバーで、Resourceを永続化して保持ししているものに対して検索のサービスを提供する。|
 | Client | FHIR準拠したクライアントにて、リソースに対する検索機能を有する。|
 
 #### Server CapabilityStatement

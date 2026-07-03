@@ -17,7 +17,7 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * ingredient.strength.extension contains JP_Medication_IngredientStrength_StrengthType named strengthType ..*
 * id ^short = "このアーチファクトに対する論理ID"
 * id ^definition = "リソースに対するURLとして使われるリソースの論理ID。この値は一度割り当てられたら変更されることはない。"
-* id ^comment = "ResourceにIDがない時期は、create操作のためにサーバにResourceが送信されている時期だけである。"
+* id ^comment = "ResourceにIDがない時期は、create操作のためにサーバーにResourceが送信されている時期だけである。"
 * identifier ^short = "この薬剤に関する業務用のID"
 * identifier ^definition = "この薬剤に関する業務用のID"
 * identifier ^comment = "IDとしてシリアルナンバーを使うこともできる。"
@@ -26,8 +26,8 @@ Description: "このプロファイルはMedicationリソースに対して、�
 * code ^definition = "A code (or set of codes) that specify this medication, or a textual description if no code is available. Usage note: This could be a standard medication code such as a code from RxNorm, SNOMED CT, IDMP etc. It could also be a national or local formulary code, optionally with translations to other code systems.  
 この薬剤を指定するコード。該当するコードがない場合はテキスト表記。  
 使用法について注記：日本ではHOTコードを利用することが推奨される。一般的な薬剤コードとしてRxNorm、SNOMD CT, IDMPなど標準的な医薬品コードを使うことができる。国や地域に特有のローカルコードも使うことができ、他のコードに変換することもできる。"
-* code ^comment = "使われるコンテキストによるが、ユーザ(処方や調剤などを行った人）によって実際にコードが選択されたのであれば、coding.userSelectedはtrueとすることとなる。Codingのデータ型で説明されているように、「ユーザインターフェース（たとえば、選択肢から特定の項目をユーザが選択するような形式）で特定のコードをユーザが選択したのであれば、\"userSelected\"に記録されてもよい」  
-ユーザが選択したコードがあれば、その選択がコード変換などで優先される。そのほかのコードは代替のコードシステムか低粒度のコード（たとえば、ベンダー固有の初期値のための一般的なコード）に文字列変換変換するしかない。"
+* code ^comment = "使われるコンテキストによるが、ユーザー(処方や調剤などを行った人）によって実際にコードが選択されたのであれば、coding.userSelectedはtrueとすることとなる。Codingのデータ型で説明されているように、「ユーザーインターフェース（たとえば、選択肢から特定の項目をユーザーが選択するような形式）で特定のコードをユーザーが選択したのであれば、\"userSelected\"に記録されてもよい」  
+ユーザーが選択したコードがあれば、その選択がコード変換などで優先される。そのほかのコードは代替のコードシステムか低粒度のコード（たとえば、ベンダー固有の初期値のための一般的なコード）に文字列変換変換するしかない。"
 * code ^binding.description = "薬品の種類を規定するコード化された概念"
 * status 1..
 * status ^definition = "薬剤が有効に使われているかどうかを指定するコード。"

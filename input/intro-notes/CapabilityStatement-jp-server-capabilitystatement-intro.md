@@ -19,7 +19,7 @@ JP Core Clientは個別のユースケースや意味的な要請に応じてこ
 
 - セキュリティ  
   - See the General Security Considerations section for requirements and recommendations.
-  - サーバはunauthorizedなリクエストに対してはHTTP 401を返さなければならない。(**SHALL**)
+  - サーバーはunauthorizedなリクエストに対してはHTTP 401を返さなければならない。(**SHALL**)
 
 ## RESTful Capabilities by Resource/Profile:
 
