@@ -5,7 +5,7 @@ Profile: JP_MedicationDispenseBase
 Parent: MedicationDispense
 Id: jp-medicationdispensebase
 Title: "JP Core MedicationDispenseBase Profile"
-Description: "このプロファイルはユーザは直接適用するものではなく、JP_MedicationDispenseとJP_MedicationDispenseInjectionの共通の親となる抽象プロファイルである。このプロファイルはMedicationDispenseリソースに対して、内服・外用薬剤処方調剤・払い出し記録のデータを送受信するため、JP_MedicationDispenseとJP_MedicationDispenseInjectionの各プロファイルの基礎となる制約と拡張のうち共通部分を定めている。"
+Description: "このプロファイルはユーザーは直接適用するものではなく、JP_MedicationDispenseとJP_MedicationDispenseInjectionの共通の親となる抽象プロファイルである。このプロファイルはMedicationDispenseリソースに対して、内服・外用薬剤処方調剤・払い出し記録のデータを送受信するため、JP_MedicationDispenseとJP_MedicationDispenseInjectionの各プロファイルの基礎となる制約と拡張のうち共通部分を定めている。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationDispenseBase"
 * ^status = #active
 * ^date = "2024-12-30"
@@ -17,7 +17,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * identifier ^short = "外部から参照されるID"
 * identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。  
 処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。  
-このIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
+このIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバーからサーバーに転送されたとしても固定のものとして存続する。"
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。"
 * identifier contains
     rpNumber 1..1 and
@@ -106,7 +106,7 @@ JP Coreでは必須
 * note ^short = "調剤に関する備考"
 * note ^definition = "他の要素では伝達できなかった調剤に関する追加情報。"
 * note ^comment = "構造化された注釈（アノテーション）を持たないシステムの場合、作成者や時間なしで単一の注釈を簡単に伝達できる。情報を変更する可能性があるため、この要素をナラティブに含める必要がある場合がある。  
-*注釈は、計算機処理れきる「変更」情報を伝達するために使用されるべきではない*。 （ユーザの行動を強制することはほとんど不可能であるため、これはSHOULDとする）。"
+*注釈は、計算機処理れきる「変更」情報を伝達するために使用されるべきではない*。 （ユーザーの行動を強制することはほとんど不可能であるため、これはSHOULDとする）。"
 * dosageInstruction only JP_MedicationDosageBase
 * substitution ^short = "調剤の一部として置換が行われたかどうかを示す。場合によっては、置換が期待されるが発生しない場合もあれば、置換が予期されないが発生する場合もある。このブロックは、置換が行われたか行われなかったか、およびその理由を説明する。何も指定されていない場合、置換は行われていない。"
 * substitution.wasSubstituted ^short = "調剤で置換が実行されたか、あるいはされていないかを'true'または'false'で表す"

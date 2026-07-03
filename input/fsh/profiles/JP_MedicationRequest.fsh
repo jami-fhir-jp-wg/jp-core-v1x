@@ -22,7 +22,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier ^short = "外部から参照されるID"
 * identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。  
 処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。  
-このIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
+このIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバーからサーバーに転送されたとしても固定のものとして存続する。"
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。  
 Slice定義は下記のようになる。  
 [Sliceで定義される識別子]  
@@ -180,7 +180,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * insurance ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * note ^short = "薬剤オーダごとの備考"
 * note ^definition = "他の属性では伝えることができなかったMedicationRequestについての付加的情報。"
-* note ^comment = "構造化されたアノテーションが内システムでは、作成者や記録時間のない一つのアノテーションで情報を伝達している。このエレメントに情報の修正を要する可能性があるためにナラティブな情報も必要としている。Annotationsには機械処理が可能で修正される（\"modifying\")情報を伝達することに使うべきではない(SHOULD NOT)。これがSHOULDである理由はユーザの行動を強制することはほぼ不可能であるからである。"
+* note ^comment = "構造化されたアノテーションが内システムでは、作成者や記録時間のない一つのアノテーションで情報を伝達している。このエレメントに情報の修正を要する可能性があるためにナラティブな情報も必要としている。Annotationsには機械処理が可能で修正される（\"modifying\")情報を伝達することに使うべきではない(SHOULD NOT)。これがSHOULDである理由はユーザーの行動を強制することはほぼ不可能であるからである。"
 
 * dosageInstruction only JP_MedicationDosage
 
@@ -252,7 +252,7 @@ Indicates the intended dispensing Organization specified by the prescriber."
 * detectedIssue ^definition = "患者に対して1回以上の実施されたか提案された診療行為によって、実際に起きたあるいは起きる可能性のある臨床的問題。たとえば、薬剤官相互作用や重複治療、薬剤量についての警告など。DetectedIssueリソースへの参照。"
 * detectedIssue ^comment = "このエレメントは意思決定支援システムや臨床医によって指摘された問題点を扱うことができ、問題を表すためのステップについての情報を扱ってもよい。"
 * eventHistory ^short = "ライフサイクルで関心のあるイベントのリスト"
-* eventHistory ^definition = "このリソースの現在のバージョンをユーザから見て関係していそうなキーとなる更新や状態遷移と識別される過去のバージョンのこのリソースあるいは調剤請求あるいはEvent ResourceについてのProvenance resourceへの参照。"
+* eventHistory ^definition = "このリソースの現在のバージョンをユーザーから見て関係していそうなキーとなる更新や状態遷移と識別される過去のバージョンのこのリソースあるいは調剤請求あるいはEvent ResourceについてのProvenance resourceへの参照。"
 * eventHistory ^comment = "このエレメントには全てのバージョンのMedicationRequestについてのProvenanceが取り込まれているわけではない。「関連する」あるいは重要と思われたものだけである。現在のバージョンのResourceに関連したProvenance resourceを含めてはならない(SHALL NOT)。（もし、Provenanceとして「関連した」変化と思われれば、後の更新の一部として取り込まれる必要があるだろう。それまでは、このバージョンを_revincludeを使ってprovenanceとして指定して直接クエリーを発行することができる。全てのProvenanceがこのRequestについての履歴を対象として持つべきである。）"
 
 
@@ -277,7 +277,7 @@ Description: "このプロファイルはMedicationRequestリソースに対し�
 * identifier ^short = "外部から参照されるID"
 * identifier ^definition = "このインスタンスが外部から参照されるために使われるIDである。処方箋全体としてのIDとしては使用しない。  
 処方箋内で同一の用法をまとめて表記されるRp番号はこのIdentifier elementの別スライスで表現する。それ以外に任意のIDを付与してもよい。  
-このIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバからサーバに転送されたとしても固定のものとして存続する。"
+このIDは業務手順によって定められた処方オーダに対して、直接的なURL参照が適切でない場合も含めて関連付けるために使われる。この業務手順のIDは実施者によって割り当てられたものであり、リソースが更新されたりサーバーからサーバーに転送されたとしても固定のものとして存続する。"
 * identifier ^comment = "これは業務IDであって、リソースに対するIDではない。  
 Slice定義は下記のようになる。  
 [Sliceで定義される識別子]  
@@ -420,7 +420,7 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * insurance ^comment = "参照先は実存するFHIR Resourceでなければならず(SHALL)、解決可能(アクセスコントロールや、一時的に利用不可であることなどは許容される)でなければならない(SHALL)。解決の方法はURLから取得可能であるか、Resource型が適応できるかどうか、正規のURLとして絶対的参照を扱うことができるか、ローカルのレジストリ／リポジトリから参照することができるかである。"
 * note ^short = "薬剤単位の備考"
 * note ^definition = "他の属性では伝えることができなかったMedicationRequestについての付加的情報。"
-* note ^comment = "構造化されたアノテーションが内システムでは、作成者や記録時間のない一つのアノテーションで情報を伝達している。このエレメントに情報の修正を要する可能性があるためにナラティブな情報も必要としている。Annotationsには機械処理が可能で修正される（\"modifying\")情報を伝達することに使うべきではない(SHOULD NOT)。これがSHOULDである理由はユーザの行動を強制することはほぼ不可能であるからである。"
+* note ^comment = "構造化されたアノテーションが内システムでは、作成者や記録時間のない一つのアノテーションで情報を伝達している。このエレメントに情報の修正を要する可能性があるためにナラティブな情報も必要としている。Annotationsには機械処理が可能で修正される（\"modifying\")情報を伝達することに使うべきではない(SHOULD NOT)。これがSHOULDである理由はユーザーの行動を強制することはほぼ不可能であるからである。"
 
 * dosageInstruction only JP_MedicationDosage_Injection
 
@@ -492,7 +492,7 @@ Indicates the intended dispensing Organization specified by the prescriber."
 * detectedIssue ^definition = "患者に対して1回以上の実施されたか提案された診療行為によって、実際に起きたあるいは起きる可能性のある臨床的問題。たとえば、薬剤官相互作用や重複治療、薬剤量についての警告など。DetectedIssueリソースへの参照。"
 * detectedIssue ^comment = "このエレメントは意思決定支援システムや臨床医によって指摘された問題点を扱うことができ、問題を表すためのステップについての情報を扱ってもよい。"
 * eventHistory ^short = "ライフサイクルで関心のあるイベントのリスト"
-* eventHistory ^definition = "このリソースの現在のバージョンをユーザから見て関係していそうなキーとなる更新や状態遷移と識別される過去のバージョンのこのリソースあるいは調剤請求あるいはEvent ResourceについてのProvenance resourceへの参照。"
+* eventHistory ^definition = "このリソースの現在のバージョンをユーザーから見て関係していそうなキーとなる更新や状態遷移と識別される過去のバージョンのこのリソースあるいは調剤請求あるいはEvent ResourceについてのProvenance resourceへの参照。"
 * eventHistory ^comment = "このエレメントには全てのバージョンのMedicationRequestについてのProvenanceが取り込まれているわけではない。「関連する」あるいは重要と思われたものだけである。現在のバージョンのResourceに関連したProvenance resourceを含めてはならない(SHALL NOT)。（もし、Provenanceとして「関連した」変化と思われれば、後の更新の一部として取り込まれる必要があるだろう。それまでは、このバージョンを_revincludeを使ってprovenanceとして指定して直接クエリーを発行することができる。全てのProvenanceがこのRequestについての履歴を対象として持つべきである。）"
 
 

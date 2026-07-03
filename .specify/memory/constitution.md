@@ -1,6 +1,17 @@
 <!--
 Sync Impact Report
-- Version change: 1.1.1 → 1.1.2
+- Version change: 1.1.2 → 1.1.3
+- Modified principles:
+  - VI. 日本語化基準: カタカナ語末長音を「省略」から内閣告示準拠の
+    「付与」へ変更（JIS/IT 慣用語は例外として省略維持）(#1061)
+- Modified sections: None
+- Templates requiring updates:
+  - .specify/templates/plan-template.md: ✅ No changes needed
+  - .specify/templates/spec-template.md: ✅ No changes needed
+  - .specify/templates/tasks-template.md: ✅ No changes needed
+- Follow-up TODOs: None
+
+Sync Impact Report (1.1.1 → 1.1.2)
 - Modified principles:
   - II. Must Support 方針: 既存プロファイルの過渡期維持を明記
   - IV. FSH記述規則: インバリアントキー形式を実態に合わせ修正
@@ -114,7 +125,10 @@ Sync Impact Report
 - デフォルト言語は日本語（`ja`）とする
 - ドキュメントは常体（断定調）を使用する
 - 句読点は「、」と「。」を使用する
-- カタカナの長音記号は省略する
+- カタカナ語末尾の長音記号は、内閣告示「外来語の表記」に従い付与する
+  （例:「サーバー」「ユーザー」「メンバー」「プロバイダー」「ポリシー」）。
+  ただし JIS/IT 慣用で長音を省く語（「パラメータ」「フィルタ」「スキャナ」
+  「モニタ」等）は例外として省略形を維持し、その旨を記録する
 - 全ドキュメントは日本語で記述可能とし、英語補足は任意とする
 
 #### 用語の使い分け: Coding / コード化
@@ -418,4 +432,4 @@ workflow:
     重要な指針の拡充
   - **PATCH**: 文言修正、誤字修正、意味に影響しない改善
 
-**Version**: 1.1.2 | **Ratified**: 2026-02-17 | **Last Amended**: 2026-02-17
+**Version**: 1.1.3 | **Ratified**: 2026-02-17 | **Last Amended**: 2026-07-03

@@ -97,10 +97,10 @@ JP Coreでは未使用"
 * reasonReference ^definition = "このスタディを正当化する別のリソースを示す。"
 * reasonReference ^comment = "参照は、実在のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。  
 実施理由が書かれたDiagnosticReportリソースを参照。"
-* note ^short = "ユーザが定義したコメント"
+* note ^short = "ユーザーが定義したコメント"
 * note ^definition = "推奨されるDICOMマッピングによると、この要素はスタディの説明属性（0008,1030）から派生している。画像検査に関する観察または所見は、この要素に記述するのではなく、Observationのような別のリソースに記録する必要がある。"
 * note ^comment = "構造化された注釈（アノテーション）を持たないシステムの場合、作成者や時間なしで単一の注釈を簡単に伝達できる。情報を変更する可能性があるため、この要素をナラティブに含める必要がある場合がある。  
-*注釈は、計算機処理れきる「変更」情報を伝達するために使用されるべきではない*。 （ユーザの行動を強制することはほとんど不可能であるため、これはSHOULDとする）。  
+*注釈は、計算機処理れきる「変更」情報を伝達するために使用されるべきではない*。 （ユーザーの行動を強制することはほとんど不可能であるため、これはSHOULDとする）。  
 コメント（Annotation型による記述）"
 * description ^short = "機関生成の記述"
 * description ^definition = "スタディのイメージングマネージャの説明。実施されたスタディ（コンポーネント）の機関生成の説明または分類。"
@@ -115,7 +115,7 @@ study階層のidentifierと同じ概念。(0020,000E)にseries固有のUIDが付
 * series.number ^short = "このシリーズの数値型識別子"
 * series.number ^definition = "このシリーズの数値型識別子"
 * series.number ^comment = "32ビット数で表す。これより大きい値の場合は、10進数を使用する。  
-上記UIDとは別に、ユーザ（または装置）が自由に決められる番号。"
+上記UIDとは別に、ユーザー（または装置）が自由に決められる番号。"
 * series.modality MS
 * series.modality from $JP_DICOMModality_VS (required)
 * series.modality ^short = "シリーズが取得されたモダリティ"
@@ -147,7 +147,7 @@ bodySiteは、画像化された身体部分の左右差を示している場合
 * series.specimen ^short = "画像検査をした検体"
 * series.specimen ^definition = "例えば、生検のスライド全体の画像化のために画像化された標本。通常の放射線画像検査では使用されない。（DICOMを用いた病理画像検査で用いられる）"
 * series.specimen ^comment = "参照は、実在のFHIRリソースへの参照である必要があり、内容に辿り着ける（解決できる）必要がある（アクセス制御、一時的な使用不可などを考慮に入れる）。解決は、URLから取得するか、リソースタイプによって該当する場合は、絶対参照を正規URLとして扱い、ローカルレジストリ/リポジトリで検索することによって行うことができる。  
-【JP Core仕様】UIDは別のtagが存在するので、ユーザ側で自由に付与していい番号と思われる。"
+【JP Core仕様】UIDは別のtagが存在するので、ユーザー側で自由に付与していい番号と思われる。"
 * series.started ^short = "シリーズの開始時期"
 * series.started ^definition = "シリーズの開始日付、日時。"
 * series.started ^comment = "シリーズ単位での開始時刻。最初にシリーズを取得 or 定義した時刻。"
@@ -172,7 +172,7 @@ bodySiteは、画像化された身体部分の左右差を示している場合
 * series.instance.sopClass ^comment = "【JP Core仕様】SOPクラスUID。DICOMタグマッピングにある値をそのまま設定。"
 * series.instance.sopClass from $JP_DICOMSopClass_VS (extensible)
 * series.instance.number ^comment = "32ビット数で表す。これより大きい値の場合は、10進数を使用する。  
-【JP Core仕様】ユーザ（または装置）が自由に決められる画像ごとの番号。DICOMタグマッピングにある値をそのまま設定。"
+【JP Core仕様】ユーザー（または装置）が自由に決められる画像ごとの番号。DICOMタグマッピングにある値をそのまま設定。"
 * series.instance.title ^short = "インスタンスの記述"
 * series.instance.title ^definition = "インスタンスの記述"
 * series.instance.title ^comment = "【JP Core仕様】画像に対する説明。DICOMタグマッピングにある値があれば、そのまま設定  

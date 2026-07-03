@@ -21,7 +21,7 @@ ImagingStudyリソースはDICOMの検査、シリーズおよび画像に関連
 
 各属性の名前と値の表現（データ型）は、DICOM Part6 Data Dictionary に記載されている。 使用についての詳細な説明を含む、情報オブジェクトのコンテキストでの属性の使用は、DICOM Part3 Information Object Definitions に記載されている。 「検査中のインスタンス数」など、DICOMクエリ情報モデルで使用される属性は、DICOM Part4 Annex C に記載されている。
 
-最も単純なケースではImagingStudy は、DICOM query（例えばQIDO-RS）を行うことなく重要なDICOM情報へのアクセスを提供する。一方で、DICOMの実画像情報などのインスタンスはImagingStudyリソースには保存されないため、この情報を保存するためにはDICOM WADO-RSサーバやほかのストレージ機能を利用する必要がある。 （FHIRではREST APIを用いることが想定されており，親和性の観点からはDICOM web accessの利用が想定される。）
+最も単純なケースではImagingStudy は、DICOM query（例えばQIDO-RS）を行うことなく重要なDICOM情報へのアクセスを提供する。一方で、DICOMの実画像情報などのインスタンスはImagingStudyリソースには保存されないため、この情報を保存するためにはDICOM WADO-RSサーバーやほかのストレージ機能を利用する必要がある。 （FHIRではREST APIを用いることが想定されており，親和性の観点からはDICOM web accessの利用が想定される。）
 
 ImagingStudyは一つのDICOMの検査を参照する必要があり、またその検査のサブセットに対する参照にも利用できる。一方で、複数のImagingStudyリソースが同じDICOMの検査を参照することや、同じDICOMの検査内の異なるサブセット（シリーズ）を参照することもあり得る。
 
