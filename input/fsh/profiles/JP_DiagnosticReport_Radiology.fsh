@@ -60,7 +60,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * category[second].coding.display ^definition = "DICOMのモダリティコードの意味を記載（例: 超音波検査）"
 
 * code ^definition = "この診断レポートを表現するコードや名称"
-* code ^comment = "【JP Core仕様】[画像診断レポート交換手順ガイドライン](https://www.jira-net.or.jp/publishing/files/jesra/JESRA_TR-0042_2018.pdf)「5.1 レポート種別コード」に記載されているLOINCコード [Diagnostic imaging study](https://loinc.org/18748-4/) を指定。コードを指定できない場合はCodeableConceptを使用せずテキスト等を直接コーディングすることも許容されるが、要素間の調整と事前・事後の内容の整合性確保のために独自の構造を提供する必要があるので留意すること。"
+* code ^comment = "【JP Core仕様】[画像診断レポート交換手順ガイドライン](https://www.jira-net.or.jp/publishing/files/jesra/JESRA_TR-0042_2018.pdf)「5.1 レポート種別コード」に記載されているLOINCコード [Diagnostic imaging study](https://loinc.org/18748-4/) を指定。コードを指定できない場合はCodeableConceptを使用せずテキスト等を直接コード化することも許容されるが、要素間の調整と事前・事後の内容の整合性確保のために独自の構造を提供する必要があるので留意すること。"
 * code.coding ^slicing.discriminator.type = #value
 * code.coding ^slicing.discriminator.path = "system"
 * code.coding ^slicing.rules = #open
@@ -140,7 +140,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 【JP Core仕様】放射線レポートの結果/結論/インプレッションの文章を記載"
 * conclusion ^requirements = "基本的な結果で、失われない結論を提供する必要がある。"
 * conclusionCode ^definition = "診断レポートの要約の結論 (interpretation/impression) を表す 1 つ以上のコード。"
-* conclusionCode ^comment = "すべての用語の使用がこの一般的なパターンに適合するわけではない。 場合によっては、モデルにcodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係と事前調整および事後調整を管理するための独自の構造を提供する必要がある。   
+* conclusionCode ^comment = "すべての用語の使用がこの一般的なパターンに適合するわけではない。 場合によっては、モデルにcodeableConceptを使用せず、`Coding`を直接使用して、テキスト、`Coding`、翻訳、および要素間の関係と事前調整および事後調整を管理するための独自の構造を提供する必要がある。   
 【JP Core仕様】・放射線レポートの所見の結論となるコードを設定。  
 ・例えば、ICD 病名コード"
 * presentedForm MS

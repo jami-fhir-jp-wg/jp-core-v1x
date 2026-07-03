@@ -78,7 +78,7 @@ DICOMのリソース位置を指定。基本的には1つ。"
 進捗状況に関するProcedureリソースを参照。"
 * procedureCode ^short = "実施されたProcedureのコード"
 * procedureCode ^definition = "実施されたProcedureのタイプを表すコード。"
-* procedureCode ^comment = "すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係と調整前後の関係を管理するための独自の構造を提供する必要がある。  
+* procedureCode ^comment = "すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、`Coding`を直接使用して、テキスト、`Coding`、翻訳、および要素間の関係と調整前後の関係を管理するための独自の構造を提供する必要がある。  
 エラーコードなどを記載"
 //* procedureCode from http://playbook.radlex.org/playbook/SearchRadlexAction (extensible)
 * procedureCode from $JP_DICONRadLexPlaybook_VS
@@ -90,7 +90,7 @@ DICOMのリソース位置を指定。基本的には1つ。"
 撮影室を示すLocationリソースを参照。"
 * reasonCode ^short = "スタディが依頼された理由"
 * reasonCode ^definition = "ImagingStudyが要求された理由を示す臨床状態の説明。"
-* reasonCode ^comment = "すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係と調整前後の関係を管理するための独自の構造を提供する必要がある。  
+* reasonCode ^comment = "すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、`Coding`を直接使用して、テキスト、`Coding`、翻訳、および要素間の関係と調整前後の関係を管理するための独自の構造を提供する必要がある。  
 JP Coreでは未使用"
 * reasonReference only Reference(JP_Condition or JP_Observation_Common or Media or JP_DiagnosticReport_Common or DocumentReference)
 * reasonReference ^short = "スタディが実施された理由"

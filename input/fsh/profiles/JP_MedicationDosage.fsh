@@ -53,7 +53,7 @@ Medication(薬剤)が必要なときに指定された量とスケジュール�
 * route from $JP_MedicationRouteHL70162_VS (preferred)
 * route ^short = "投与経路"
 * route ^definition = "投与経路"
-* route ^comment = "投与経路の一般的パターンに全てのターミノロジが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。  
+* route ^comment = "投与経路の一般的パターンに全てのターミノロジが適応しているわけではない。情報モデルはCodeableConceptではなく、直接`Coding`を使用してテキストや`Coding`、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。
 【JP Core仕様】HL7表0162をベースにした投与経路コードを使用することが望ましいが、ローカルコードも使用可能。"
 // method
 * method ^short = "投与方法"
@@ -70,13 +70,13 @@ Medication(薬剤)が必要なときに指定された量とスケジュール�
 * method.coding[unitDigit1].system = $JP_MedicationMethodJAMIBasicUsage_CS (exactly)
 * method.coding[unitDigit1] ^short = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コード"
 * method.coding[unitDigit1] ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コードを識別するURI。"
-* method.coding[unitDigit1] ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
+* method.coding[unitDigit1] ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコード化に関する規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
 * method.coding[unitDigit1] ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
 * method.coding[unitDigit2] from JP_MedicationMethodJAMIDetailUsage_VS (preferred)
 * method.coding[unitDigit2].system = $JP_MedicationMethodJAMIDetailUsage_CS (exactly)
 * method.coding[unitDigit2] ^short = "投与⽅法に対応するJAMI 用法コード表基本用法2桁コード"
 * method.coding[unitDigit2] ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法2桁コードを識別するURI。２桁コードhttp://jami.jp/CodeSystem/MedicationUsage"
-* method.coding[unitDigit2] ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
+* method.coding[unitDigit2] ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコード化に関する規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
 * method.coding[unitDigit2] ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
 * method.text ^short = "投与⽅法のテキスト表現"
 * method.text ^definition = "投与⽅法のテキスト表現。コードで指定できない場合、本要素で文字列として指定してもよい。"
@@ -94,7 +94,7 @@ Medication(薬剤)が必要なときに指定された量とスケジュール�
 * doseAndRate.type from $JP_MedicationIngredientStrengthStrengthType_VS (preferred)
 * doseAndRate.type ^short = "力価区分"
 * doseAndRate.type ^definition = "力価区分"
-* doseAndRate.type ^comment = "投与速度・量の一般的パターンに全てのターミノロジが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。"
+* doseAndRate.type ^comment = "投与速度・量の一般的パターンに全てのターミノロジが適応しているわけではない。情報モデルはCodeableConceptではなく、直接`Coding`を使用してテキストや`Coding`、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。"
 * doseAndRate.type ^requirements = "このtypeに値が指定されていなければ、\"ordered\"であることが想定される。"
 
 // doseAndRate
