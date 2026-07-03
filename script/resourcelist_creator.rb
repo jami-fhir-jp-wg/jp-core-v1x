@@ -54,7 +54,7 @@ end
 work = "./temp/scriptwork/"
 
 target1 = Dir.home.to_s + "/.fhir/packages/jpfhir-terminology#1.4.0/package"
-file1 = "resource_info_terminlogy.csv"
+file1 = "resource_info_terminology.csv"
 
 target2 = "./fsh-generated/resources/"
 file2 = "resource_info_jpcore.csv"
