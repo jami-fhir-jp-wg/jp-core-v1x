@@ -77,7 +77,7 @@ Description: "このプロファイルはユーザは直接適用するもので
 * authorizingPrescription ^definition = "調剤の元になった処方オーダを表すMedicationRequestリソースへの参照。"
 * type ^short = "実行される調剤イベント"
 * type ^definition = "実行される調剤イベントのタイプを示す。たとえば、トライアルフィル、トライアルの完了、部分フィル、緊急フィル、サンプルなどである。"
-* type ^comment = "すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係とpre-coordinationとpost-coordinationの用語関係を管理するための独自の構造を提供する必要がある。"
+* type ^comment = "すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、`Coding`を直接使用して、テキスト、`Coding`、翻訳、および要素間の関係とpre-coordinationとpost-coordinationの用語関係を管理するための独自の構造を提供する必要がある。"
 * quantity 1..
 * quantity only JP_MedicationSimpleQuantity
 * quantity ^short = "払い出される薬剤の量"

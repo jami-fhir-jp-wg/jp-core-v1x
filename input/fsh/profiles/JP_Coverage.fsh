@@ -82,7 +82,7 @@ Coverageには、保険証レベルの情報が含まれている。これは、
 * type ^definition = "The type of coverage: social program, medical plan, accident coverage (workers compensation, auto), group health or payment by an individual or organization.  
 補償の種類：社会プログラム、医療計画、事故補償（労働者災害補償、自動車）、グループの健康、または個人または組織による支払い。"
 * type ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.  
-すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、コーディングを直接使用して、テキスト、コーディング、翻訳、および要素間の関係とpre-coordinationとpost-coordinationの用語関係を管理するための独自の構造を提供する必要がある。  
+すべてのターミノロジの使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、`Coding`を直接使用して、テキスト、`Coding`、翻訳、および要素間の関係とpre-coordinationとpost-coordinationの用語関係を管理するための独自の構造を提供する必要がある。  
 【JP Core仕様】「[処方情報 HL7FHIR 記述仕様](https://std.jpfhir.jp/stddoc/ePrescriptionDataFHIR_v1x.pdf)」等で使用される保険種別コード（system=”http://jpfhir.jp/fhir/core/mhlw/IdSystem/medicalRegistrationNumber”）として、https://www.mhlw.go.jp/content/10800000/000342368.pdf　の別表１１が使用している例があげられている。JP Coreとして本項目に対する用語のバインドは現時点では定義するまでに至っていない。"
 * type ^requirements = "The order of application of coverages is dependent on the types of coverage.  
 保険適用の適用順序は、保険適用のタイプによって異なる。"
@@ -168,7 +168,7 @@ This is not a duration - that's a measure of time (a separate type), but a durat
 * class.type ^definition = "The type of classification for which an insurer-specific class label or number and optional name is provided, for example may be used to identify a class of coverage or employer group, Policy, Plan.  
 保険者固有のクラスラベルまたは番号、任意の名前が提供されている分類のタイプを表す。例えば、保険のクラスまたは雇用者グループ、保険契約、Planを識別するために使用することができる。"
 * class.type ^comment = "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.  
-すべての用語の使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係、および事前・事後の用語結合を管理するための独自の構造を提供することが望ましい。"
+すべての用語の使用がこの一般的なパターンに適合するわけではない。場合によっては、モデルはCodeableConceptを使用せず、`Coding`を直接使用し、テキスト、`Coding`、翻訳、要素間の関係、および事前・事後の用語結合を管理するための独自の構造を提供することが望ましい。"
 * class.type ^requirements = "The insurer issued label for a specific health card value.  
 保険者が発行した特定の健康カード番号のラベル。"
 * class.value ^definition = "The alphanumeric string value associated with the insurer issued label.  

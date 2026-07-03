@@ -243,7 +243,7 @@ Indicates the intended dispensing Organization specified by the prescriber."
 * substitution.reason from $JP_MedicationSubstitutionProhibitionReason_VS (preferred)
 * substitution.reason ^short = "後発医薬品への変更不可理由"
 * substitution.reason ^definition = "【JP Core仕様】後発医薬品への変更不可の理由を示す。令和6年保険改訂により、長期収載医薬品の変更不可を指定する場合は「医療上の必要性がある」または「患者希望による」のいずれかを指定する。"
-* substitution.reason ^comment = "代替品の理由を表す一般的パターンに全てのターミノロジが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。"
+* substitution.reason ^comment = "代替品の理由を表す一般的パターンに全てのターミノロジが適応しているわけではない。情報モデルはCodeableConceptではなく、直接`Coding`を使用してテキストや`Coding`、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。"
 * priorPrescription only Reference(MedicationRequest)
 * priorPrescription ^short = "前回のオーダ/処方"
 * priorPrescription ^definition = "関連する先行オーダや処方を表現するMedicationRequest Resourceへのリンク。"
@@ -483,7 +483,7 @@ Indicates the intended dispensing Organization specified by the prescriber."
 * substitution.reason from $JP_MedicationSubstitutionProhibitionReason_VS (preferred)
 * substitution.reason ^short = "後発医薬品への変更不可理由"
 * substitution.reason ^definition = "【JP Core仕様】後発医薬品への変更不可の理由を示す。令和6年保険改訂により、長期収載医薬品の変更不可を指定する場合は「医療上の必要性がある」または「患者希望による」のいずれかを指定する。"
-* substitution.reason ^comment = "代替品の理由を表す一般的パターンに全てのターミノロジが適応しているわけではない。情報モデルはCodeableConceptではなく、直接Codingをを使用してテキストやコーディング、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。"
+* substitution.reason ^comment = "代替品の理由を表す一般的パターンに全てのターミノロジが適応しているわけではない。情報モデルはCodeableConceptではなく、直接`Coding`を使用してテキストや`Coding`、翻訳、そしてエレメントと事前条件、事後条件の関係について管理するためにその構造を提示する必要がある。"
 * priorPrescription only Reference(MedicationRequest)
 * priorPrescription ^short = "前回のオーダ/処方"
 * priorPrescription ^definition = "関連する先行オーダや処方を表現するMedicationRequest Resourceへのリンク。"

@@ -149,7 +149,7 @@ Periodにはその資格の開始日・終了日を入力する。（例：麻�
 　　（都道府県OID番号は、都道府県番号2桁の先頭に１をつけた3桁の番号）"
 * qualification.identifier ^requirements = "多くの場合、資格には特定の識別子が割り当てられる。"
 * qualification.code ^definition = "資格のコード化された表現。"
-* qualification.code ^comment = "すべての用語の使用がこの一般的なパターンに適合するわけではない。いくつかのケースでは、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係、および事前・事後の用語結合を管理するための独自の構造を提供することが望ましい。"
+* qualification.code ^comment = "すべての用語の使用がこの一般的なパターンに適合するわけではない。いくつかのケースでは、モデルはCodeableConceptを使用せず、`Coding`を直接使用し、テキスト、`Coding`、翻訳、要素間の関係、および事前・事後の用語結合を管理するための独自の構造を提供することが望ましい。"
 * qualification.period ^definition = "資格が有効な期間。"
 * qualification.period ^comment = "使用のコンテキストは、範囲全体が適用されるか（例：「患者はこの時間範囲で病院の入院患者であった」）、範囲内の1つの値が適用されるか（例：「この2つの時間の間に患者に与える」）を指定する。  
 期間は、期間(経過時間の尺度)には使用されない。[Duration](http://hl7.org/fhir/R4/datatypes.html#Duration)を参照のこと。"
