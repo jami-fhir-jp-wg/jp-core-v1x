@@ -9,11 +9,11 @@ Profile: JP_MedicationStatement
 Parent: MedicationStatement
 Id: jp-medicationstatement
 Title: "JP Core MedicationStatement Profile"
-Description: "このProfileは服薬状況を示すものであり，診療情報提供書や退院サマリーなどの他の文書と組み合わせて用いられる。"
+Description: "このProfileは服薬状況を示すものであり、診療情報提供書や退院サマリーなどの他の文書と組み合わせて用いられる。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationStatement"
 * ^status = #active
 * ^date = "2024-12-30"
-* ^purpose = "このProfileは診療情報提供書や退院サマリーなどの医療文書内で服薬情報について記載するために用いられる。このResourceは薬剤処方や，調剤情報，薬剤投与実施情報としては用いられず，それぞれMedicationRequest, MedicationDispense, MedicationAdministrationが用いられる。"
+* ^purpose = "このProfileは診療情報提供書や退院サマリーなどの医療文書内で服薬情報について記載するために用いられる。このResourceは薬剤処方や、調剤情報、薬剤投与実施情報としては用いられず、それぞれMedicationRequest, MedicationDispense, MedicationAdministrationが用いられる。"
 * . ^short = "服薬情報"
 * . ^definition = "患者が薬剤を服用している状況についての情報である。"
 * identifier ^short = "外部から参照されるID"
@@ -57,12 +57,12 @@ Description: "このProfileは服薬状況を示すものであり，診療情�
 * reasonCode ^short = "この投薬の理由。対象疾患"
 * reasonCode ^definition = "この薬剤た投与された理由"
 * reasonCode ^comment = "このコードは疾患分類であっても良い。JP Coreでは傷病名マスターの使用を前提とする。"
-* reasonCode.coding ^short = "投与理由，対象疾患についてのコード"
+* reasonCode.coding ^short = "投与理由、対象疾患についてのコード"
 * reasonReference ^short = "服薬理由を支持するObservation, Condition, DiagnosticReportについての参照。"
 * note ^short = "他のフィールドには記述できないこのstatementについての追加情報"
 * note ^definition = "他の属性には記載できないこのstatementについての備考情報"
 * dosage only JP_MedicationDosage
-* dosage ^short = "この薬剤がどのように服用されたのか，服用すべきだったのかを示す情報"
+* dosage ^short = "この薬剤がどのように服用されたのか、服用すべきだったのかを示す情報"
 * dosage ^definition = "患者にこの薬剤がどのように服用すべきかを示す情報"
 
 //---------------------------------------
@@ -72,11 +72,11 @@ Profile: JP_MedicationStatement_Injection
 Parent: MedicationStatement
 Id: jp-medicationstatement-injection
 Title: "JP Core MedicationStatement Injection Profile"
-Description: "このProfileは服薬状況を示すものであり，診療情報提供書や退院サマリーなどの他の文書と組み合わせて用いられる。"
+Description: "このProfileは服薬状況を示すものであり、診療情報提供書や退院サマリーなどの他の文書と組み合わせて用いられる。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationStatement_Injection"
 * ^status = #draft
 * ^date = "2024-12-30"
-* ^purpose = "このProfileは診療情報提供書や退院サマリーなどの医療文書内で服薬情報について記載するために用いられる。このResourceは薬剤処方や，調剤情報，薬剤投与実施情報としては用いられず，それぞれMedicationRequest, MedicationDispense, MedicationAdministrationが用いられる。"
+* ^purpose = "このProfileは診療情報提供書や退院サマリーなどの医療文書内で服薬情報について記載するために用いられる。このResourceは薬剤処方や、調剤情報、薬剤投与実施情報としては用いられず、それぞれMedicationRequest, MedicationDispense, MedicationAdministrationが用いられる。"
 * . ^short = "服薬情報"
 * . ^definition = "患者が薬剤を服用している状況についての情報である。"
 * identifier ^short = "外部から参照されるID"
@@ -120,12 +120,12 @@ Description: "このProfileは服薬状況を示すものであり，診療情�
 * reasonCode ^short = "この投薬の理由。対象疾患"
 * reasonCode ^definition = "この薬剤た投与された理由"
 * reasonCode ^comment = "このコードは疾患分類であっても良い。JP Coreでは傷病名マスターの使用を前提とする。"
-* reasonCode.coding ^short = "投与理由，対象疾患についてのコード"
+* reasonCode.coding ^short = "投与理由、対象疾患についてのコード"
 * reasonReference ^short = "服薬理由を支持するObservation, Condition, DiagnosticReportについての参照。"
 * note ^short = "他のフィールドには記述できないこのstatementについての追加情報"
 * note ^definition = "他の属性には記載できないこのstatementについての備考情報"
 * dosage only JP_MedicationDosage_Injection
-* dosage ^short = "この薬剤がどのように服用されたのか，服用すべきだったのかを示す情報"
+* dosage ^short = "この薬剤がどのように服用されたのか、服用すべきだったのかを示す情報"
 * dosage ^definition = "患者にこの薬剤がどのように服用すべきかを示す情報"
 * dosage.extension contains
     JP_MedicationDosage_RateComment named rateComment ..*

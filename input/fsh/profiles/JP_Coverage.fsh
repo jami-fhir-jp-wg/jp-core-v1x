@@ -187,7 +187,7 @@ This is not a duration - that's a measure of time (a separate type), but a durat
 32 ビットの数値、これより大きい値の場合は 10 進数を使用する。"
 * order ^requirements = "Used in managing the coordination of benefits.  
 保険給付の調整管理に使用する。  
-【JP Core仕様】公費情報で本リソースを使用する場合で、複数の公費負担情報がある場合に、その適用順序番号を示す１，２，３．．．を設定する。"
+【JP Core仕様】公費情報で本リソースを使用する場合で、複数の公費負担情報がある場合に、その適用順序番号を示す１、２、３…を設定する。"
 * network ^definition = "The insurer-specific identifier for the insurer-defined network of providers to which the beneficiary may seek treatment which will be covered at the 'in-network' rate, otherwise 'out of network' terms and conditions apply.  
 保険者が定義した医療提供者の保険者定義ネットワークの保険者固有の識別子で、被保険者が「ネットワーク内」の料金でカバーされる治療を受けることができるが、そうでなければ「ネットワーク外」の条件が適用される。"
 * network ^requirements = "Used in referral for treatment and in claims processing.  
