@@ -216,8 +216,8 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * dispenseRequest.validityPeriod.end ^definition = "期間の終了時刻。もし、期間の終了が示されていなければ、このインスタンスが生成された時点での終了時刻が不明であったか計画されていなかったかである。開始時刻(start)は過去であることもあり、終了時刻(end)は未来であることもあり、その時点での見込みあるいは予定された終了時刻を意味する。"
 * dispenseRequest.validityPeriod.end ^comment = "終了時刻は全ての日付・時刻に対応する。たとえば、2012-02-03T10:00:00は2012-02-03を終了時刻(end)の値とする期間を示す。"
 * dispenseRequest.numberOfRepeatsAllowed ^short = "許可されたリフィル回数"
-* dispenseRequest.numberOfRepeatsAllowed ^definition = "リフィル回数を示す整数である。患者が処方された薬を最初の払い出しから追加で受け取ることができる回数である。使用上の注意：この整数には最初の払い出しが含まれない。オーダが「30錠に加えて3回リフィル可」であれば、このオーダで合計で最大4回、120錠が患者に受け渡される。この数字を0とすることで，処方者がリフィルを許可しないということを明示することができる。"
-* dispenseRequest.numberOfRepeatsAllowed ^comment = "許可された払い出し回数は，最大でこの数字に1を足したものである。"
+* dispenseRequest.numberOfRepeatsAllowed ^definition = "リフィル回数を示す整数である。患者が処方された薬を最初の払い出しから追加で受け取ることができる回数である。使用上の注意：この整数には最初の払い出しが含まれない。オーダが「30錠に加えて3回リフィル可」であれば、このオーダで合計で最大4回、120錠が患者に受け渡される。この数字を0とすることで、処方者がリフィルを許可しないということを明示することができる。"
+* dispenseRequest.numberOfRepeatsAllowed ^comment = "許可された払い出し回数は、最大でこの数字に1を足したものである。"
 * dispenseRequest.quantity only JP_MedicationSimpleQuantity
 * dispenseRequest.quantity ^short = "払い出される薬剤量"
 * dispenseRequest.quantity ^definition = "1回の調剤で払い出される薬剤の量"
@@ -456,8 +456,8 @@ HL7 FHIRではvalue setとして http://terminology.hl7.org/CodeSystem/medicatio
 * dispenseRequest.validityPeriod.end ^definition = "期間の終了時刻。もし、期間の終了が示されていなければ、このインスタンスが生成された時点での終了時刻が不明であったか計画されていなかったかである。開始時刻(start)は過去であることもあり、終了時刻(end)は未来であることもあり、その時点での見込みあるいは予定された終了時刻を意味する。"
 * dispenseRequest.validityPeriod.end ^comment = "終了時刻は全ての日付・時刻に対応する。たとえば、2012-02-03T10:00:00は2012-02-03を終了時刻(end)の値とする期間を示す。"
 * dispenseRequest.numberOfRepeatsAllowed ^short = "許可されたリフィル回数"
-* dispenseRequest.numberOfRepeatsAllowed ^definition = "リフィル回数を示す整数である。患者が処方された薬を最初の払い出しから追加で受け取ることができる回数である。使用上の注意：この整数には最初の払い出しが含まれない。オーダが「30錠に加えて3回リフィル可」であれば、このオーダで合計で最大4回、120錠が患者に受け渡される。この数字を0とすることで，処方者がリフィルを許可しないということを明示することができる。"
-* dispenseRequest.numberOfRepeatsAllowed ^comment = "許可された払い出し回数は，最大でこの数字に1を足したものである。"
+* dispenseRequest.numberOfRepeatsAllowed ^definition = "リフィル回数を示す整数である。患者が処方された薬を最初の払い出しから追加で受け取ることができる回数である。使用上の注意：この整数には最初の払い出しが含まれない。オーダが「30錠に加えて3回リフィル可」であれば、このオーダで合計で最大4回、120錠が患者に受け渡される。この数字を0とすることで、処方者がリフィルを許可しないということを明示することができる。"
+* dispenseRequest.numberOfRepeatsAllowed ^comment = "許可された払い出し回数は、最大でこの数字に1を足したものである。"
 * dispenseRequest.quantity only JP_MedicationSimpleQuantity
 * dispenseRequest.quantity ^short = "調剤量"
 * dispenseRequest.quantity ^definition = "1回の調剤で払い出される薬剤の量"
