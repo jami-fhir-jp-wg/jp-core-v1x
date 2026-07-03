@@ -25,7 +25,7 @@ Description: "このプロファイルはConditionリソースに対して、患
 * severity ^definition = "A subjective assessment of the severity of the condition as evaluated by the clinician.  
 医療者によって評価されたこの患者状態の重症度。"
 * severity ^comment = "Coding of the severity with a terminology is preferred, where possible.  
-可能な限り、ターミノロジを用いて重症度をコーディングすることが好ましい。  
+可能な限り、ターミノロジを用いて重症度をコード化することが好ましい。  
 このプロファイルではHL70421 Severity of Illness Code（MI 軽度, MO 中度, SE 重度）を採用。"
 * code ^short = "Identification of the condition, problem or diagnosis. この患者状態の識別コード"
 //* bodySite from JP_Condition_BodySite_VS (example)

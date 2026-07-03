@@ -42,7 +42,7 @@ RuleSet: MedicationAdministrationBaseRules_dosageText
 * dosage ^short = "薬の服用方法の詳細"
 * dosage ^definition = "投薬量情報の詳細を説明する。線量、率、場所、ルートなど。"
 * dosage.text ^short = "フリーテキストの投与方法の説明　SIG:用法"
-* dosage.text ^definition = "フリーテキストの投与量用法は、投与される投与量や用法が複雑すぎてコーディングできない場合に使用できる。コード化された投与量や用法が存在する場合、フリーテキストの投与量や用法は、人間に表示するためにまだ存在している可能性がある。  
+* dosage.text ^definition = "フリーテキストの投与量用法は、投与される投与量や用法が複雑すぎてコード化できない場合に使用できる。コード化された投与量や用法が存在する場合、フリーテキストの投与量や用法は、人間に表示するためにまだ存在している可能性がある。  
 投与量や用法のこの指示は、実際に投与される薬の投与量や用法を反映する必要がある。"
 
 RuleSet: MedicationAdministrationBaseRules_dosageSite
@@ -72,13 +72,13 @@ RuleSet: MedicationAdministrationBaseRules_dosageMethod2Dose
 * dosage.method.coding[unitDigit1].system = $JP_MedicationMethodJAMIBasicUsage_CS (exactly)
 * dosage.method.coding[unitDigit1] ^short = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コード"
 * dosage.method.coding[unitDigit1] ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法１桁コードを識別するURI。"
-* dosage.method.coding[unitDigit1] ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
+* dosage.method.coding[unitDigit1] ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコード化に関する規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
 * dosage.method.coding[unitDigit1] ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
 * dosage.method.coding[unitDigit2] from JP_MedicationMethodJAMIDetailUsage_VS (preferred)
 * dosage.method.coding[unitDigit2].system = $JP_MedicationMethodJAMIDetailUsage_CS (exactly)
 * dosage.method.coding[unitDigit2] ^short = "投与⽅法に対応するJAMI 用法コード表基本用法2桁コード"
 * dosage.method.coding[unitDigit2] ^definition = "投与⽅法に対応するJAMI 用法コード表基本用法2桁コードを識別するURI。２桁コードhttp://jami.jp/CodeSystem/MedicationUsage"
-* dosage.method.coding[unitDigit2] ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコーディング規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
+* dosage.method.coding[unitDigit2] ^comment = "コードは臨時で列記したものや、コードのリストからSNOMED CTのように公式に定義されたものまである（HL7 v3 core principle を参照)。FHIR自体ではコード化に関する規約を定めてはいないし、意味を暗示するために利用されない(SHALL NOT)。一般的に UserSelected = trueの場合には一つのコードシステムが使われる。"
 * dosage.method.coding[unitDigit2] ^requirements = "他のコードシステムへの変換や代替のコードシステムを使ってエンコードしてもよい。"
 * dosage.method.text ^short = "投与⽅法のテキスト表現"
 * dosage.method.text ^definition = "投与⽅法のテキスト表現。コードで指定できない場合、本要素で文字列として指定してもよい。"
