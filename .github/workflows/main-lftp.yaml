@@ -217,17 +217,19 @@ jobs:
       env:
         MY_SECRET_CMD: ${{ secrets.REPLACE_TOKEN }}
       run: |
-        lftp -v -u  ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
+        lftp  -u  ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
+         debug 5
          cd private_tools
          get ${{ secrets.DEPLOY_PHP}}
         bye
         EOF
         eval "$MY_SECRET_CMD"
 
-    - name: STEP5 = = upload zip file to remote site by lftp, and  upzaip by the PHP script on remote site
+    - name: STEP5 = upload zip file to remote site by lftp, and  upzaip by the PHP script on remote site
       run: |
-        lftp -v -u  ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
+        lftp -u  ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
          # output.zipと展開スクリプトをリモートディレクトリ　jpfhir.jp/fhir/core/　へ書き込み
+         debug 5
          cd jpfhir.jp/fhir/core
          put output.zip
          put ${{ secrets.DEPLOY_PHP}}
@@ -238,8 +240,9 @@ jobs:
           --data-urlencode "token=${{ secrets.DEPLOY_TOKEN }}" \
           --data-urlencode "destination=${{ env.release_version }}" \
           'https://jpfhir.jp/fhir/core/${{ secrets.DEPLOY_PHP}}'
-        lftp -v -u  ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
+        lftp -u  ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
          # forPackageRelease/jp-core.r4-${{ env.release_version}}.tgz, 同-snap.tgz の4つのファイルと展開スクリプトをリモートディレクトリ　jpfhir.jp/fhir/core/${{ env.release_version}}　へ書き込み (fsh-generated.tgzがアップされていたが取りやめ)
+         debug 5
          cd jpfhir.jp/fhir/core/${{ env.release_version}}
          lcd forPackageRelease
          put jp-core.r4-${{ env.release_version}}.tgz
@@ -253,7 +256,8 @@ jobs:
 
     - name: STEP6 = delete php script
       run: |
-        lftp -v -u  ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
+        lftp -u  ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
+         debug 5
          cd jpfhir.jp/fhir/core
          # rm -f ${{ secrets.DEPLOY_PHP}}
         bye
