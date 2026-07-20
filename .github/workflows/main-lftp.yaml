@@ -217,7 +217,7 @@ jobs:
       env:
         MY_SECRET_CMD: ${{ secrets.REPLACE_TOKEN }}
       run: |
-        lftp -uv ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
+        lftp -v -u  ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
          cd private_tools
          get ${{ secrets.DEPLOY_PHP}}
         bye
@@ -226,7 +226,7 @@ jobs:
 
     - name: STEP5 = = upload zip file to remote site by lftp, and  upzaip by the PHP script on remote site
       run: |
-        lftp -uv ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
+        lftp -v -u  ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
          # output.zipと展開スクリプトをリモートディレクトリ　jpfhir.jp/fhir/core/　へ書き込み
          cd jpfhir.jp/fhir/core
          put output.zip
@@ -238,7 +238,7 @@ jobs:
           --data-urlencode "token=${{ secrets.DEPLOY_TOKEN }}" \
           --data-urlencode "destination=${{ env.release_version }}" \
           'https://jpfhir.jp/fhir/core/${{ secrets.DEPLOY_PHP}}'
-        lftp -uv ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
+        lftp -v -u  ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
          # forPackageRelease/jp-core.r4-${{ env.release_version}}.tgz, 同-snap.tgz の4つのファイルと展開スクリプトをリモートディレクトリ　jpfhir.jp/fhir/core/${{ env.release_version}}　へ書き込み (fsh-generated.tgzがアップされていたが取りやめ)
          cd jpfhir.jp/fhir/core/${{ env.release_version}}
          lcd forPackageRelease
@@ -253,7 +253,7 @@ jobs:
 
     - name: STEP6 = delete php script
       run: |
-        lftp -uv ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
+        lftp -v -u  ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
          cd jpfhir.jp/fhir/core
          # rm -f ${{ secrets.DEPLOY_PHP}}
         bye
