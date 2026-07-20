@@ -2,7 +2,7 @@ name: JPCore FHIR develop Task (develop-lftp.yaml)
 on:
   push:
     branches: 
-      - 'feature-kohe-ftp'
+      - 'feature-kohe-lftp'
       - 'release/**'
     paths:
       - 'sushi-config.yaml'
