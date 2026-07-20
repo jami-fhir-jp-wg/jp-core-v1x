@@ -255,6 +255,6 @@ jobs:
       run: |
         lftp -uv ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
          cd jpfhir.jp/fhir/core
-#         rm -f ${{ secrets.DEPLOY_PHP}}
+         # rm -f ${{ secrets.DEPLOY_PHP}}
         bye
         EOF
