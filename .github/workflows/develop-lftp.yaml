@@ -212,16 +212,11 @@ jobs:
       run: |
         lftp --version
 
-    - name: STEP5 = setting deploy_output_zip.php
+    - name: STEP5 = setting  php script
       env:
         MY_SECRET_CMD: ${{ secrets.REPLACE_TOKEN }}
       run: |
         lftp -u ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
-         set cmd:fail-exit yes
-         set net:max-retries 3
-         set net:timeout 30
-         set net:reconnect-interval-base 5
-         set ftp:passive-mode true
          cd private_tools
          get ${{ secrets.DEPLOY_PHP}}
         bye
@@ -231,11 +226,6 @@ jobs:
     - name: STEP5 = = upload zip file and  to remote site by lftp and  script on remote site
       run: |
         lftp -u ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
-         set cmd:fail-exit yes
-         set net:max-retries 3
-         set net:timeout 30
-         set net:reconnect-interval-base 5
-         set ftp:passive-mode true
          # 既存のディレクトリを削除して新規作成
          rm -rf jpfhir.jp/fhir/core/${{ env.release_version}}'
          mkdir -p jpfhir.jp/fhir/core/${{ env.release_version}}'
@@ -250,3 +240,11 @@ jobs:
           --data-urlencode "token=${{ secrets.DEPLOY_TOKEN }}" \
           --data-urlencode "destination=output${{ env.release_version }}" \
           'https://jpfhir.jp/fhir/core/${{ env.release_version}}/${{ secrets.DEPLOY_PHP}}'
+
+    - name: STEP5 = delete php script
+      run: |
+        lftp -u ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
+         cd jpfhir.jp/fhir/core/${{ env.release_version}}
+         rm -f ${{ secrets.DEPLOY_PHP}}
+        bye
+        EOF
