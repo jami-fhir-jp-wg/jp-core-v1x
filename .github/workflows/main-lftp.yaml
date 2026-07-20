@@ -3,7 +3,7 @@ on:
   push:
     branches: 
 #     - 'main'
-      - 'feature-kohe--main-lftp'   # 削除必要
+      - 'feature-kohe-main-lftp'   # 削除必要
       - 'hotfix/**'
     paths:
       - 'sushi-config.yaml'
@@ -12,7 +12,7 @@ on:
   pull_request:
     branches:
 #      - 'main'
-      - 'feature-kohe--main-lftp'   # 削除必要
+      - 'feature-kohe-main-lftp'   # 削除必要
 env:
   release_version : 1.2.0-lftp  # 変更必要
 jobs:
