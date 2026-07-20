@@ -203,6 +203,15 @@ jobs:
 #        ssh -i key  -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no  -p ${{ secrets.SSH_PORT_JPFHIR }} ${{ secrets.JAMIWG_WEBHOST }}   'cd ${{ secrets.JAMIWG_WEBPATH }}/jpfhir.jp/fhir/core/${{ env.release_version}} ; tar xzf output.tgz'
 
 # 
+
+    - name: Install lftp
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y lftp
+    - name: Check Version of lftp
+      run: |
+        lftp --version
+
     - name: STEP5 = setting deploy_output_zip.php
       env:
         MY_SECRET_CMD: ${{ secrets.REPLACE_TOKEN }}
