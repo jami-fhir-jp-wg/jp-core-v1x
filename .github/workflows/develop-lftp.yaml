@@ -249,7 +249,7 @@ jobs:
         curl --fail-with-body --request POST \
           --data-urlencode "token=${{ secrets.DEPLOY_TOKEN }}" \
           --data-urlencode "destination=output" \
-          'https://jpfhir.jp/fhir/core/${{ secrets.DEPLOY_PHP}}'
+          'https://jpfhir.jp/fhir/core/${{ env.release_version}}/${{ secrets.DEPLOY_PHP}}'
 
     - name: STEP7 = delete php script
       run: |
