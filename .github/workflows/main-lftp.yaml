@@ -233,7 +233,7 @@ jobs:
          put ${{ secrets.DEPLOY_PHP}}
         bye
         EOF  
-    - name: STEP6 = upzaip output.zip       
+    - name: STEP6 = upzip output.zip       
       run: |
         : #　PHPスクリプトによって、output.zip　を　outputフォルダに展開したあと outputフォルダを${{ env.release_version}}フォルダ　にrename
         curl --fail-with-body --request POST \
