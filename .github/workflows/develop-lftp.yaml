@@ -9,7 +9,7 @@ on:
       - 'sushi-config.yaml'
       - 'input/**'
       - '.github/workflows/develop.yaml'
-      - '.github/workflows/main-lftp.yaml' # 変更必要
+      - '.github/workflows/develop-lftp.yaml' # 変更必要
   pull_request:
     branches:
       - 'develop'
