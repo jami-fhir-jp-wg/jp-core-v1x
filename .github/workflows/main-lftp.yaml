@@ -234,12 +234,17 @@ jobs:
          put output.zip
          put ${{ secrets.DEPLOY_PHP}}
         bye
-        EOF         
+        EOF  
+    - name: STEP6 = upzaip output.zip       
+      run: |
         : #　PHPスクリプトによって、output.zip　を　outputフォルダに展開したあと outputフォルダを${{ env.release_version}}フォルダ　にrename
         curl --fail-with-body --request POST \
           --data-urlencode "token=${{ secrets.DEPLOY_TOKEN }}" \
           --data-urlencode "destination=${{ env.release_version }}" \
           'https://jpfhir.jp/fhir/core/${{ secrets.DEPLOY_PHP}}'
+
+    - name: STEP7 = lftp diff and snap packages
+      run: |
         lftp -u  ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
          # forPackageRelease/jp-core.r4-${{ env.release_version}}.tgz, 同-snap.tgz の4つのファイルと展開スクリプトをリモートディレクトリ　jpfhir.jp/fhir/core/${{ env.release_version}}　へ書き込み (fsh-generated.tgzがアップされていたが取りやめ)
          debug 5
@@ -254,7 +259,7 @@ jobs:
          bye 
         EOF
 
-    - name: STEP6 = delete php script
+    - name: STEP8 = delete php script
       run: |
         lftp -u  ${{ secrets.FTP_USERID }},${{ secrets.FTP_PASS }} ${{ secrets.FTP_HOST }} <<EOF
          debug 5
