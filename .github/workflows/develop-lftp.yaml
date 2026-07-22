@@ -15,6 +15,7 @@ on:
       - 'develop'
       - 'release/**'
       - 'feature-kohe-main-lftp'   # 削除必要
+      
 env:
   release_version : 1.2.0-b-lftp     # 変更必要(forPackageReleaseの下にこれに合わせた名前のファイルを置いている)
 jobs:
