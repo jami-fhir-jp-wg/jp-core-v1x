@@ -34,8 +34,8 @@ Usage: #example
 * subject = Reference(Patient/jp-patient-example-1)
 * receivedTime = "2021-08-11T11:03:00+09:00"
 * container.identifier.value = "48736-15394-75467"
-* container.description = "採血菅"
-* container.type.text = "採血菅"
+* container.description = "採血管"
+* container.type.text = "採血管"
 * container.capacity.value = 20
 * container.capacity.unit = "mL"
 * container.specimenQuantity.value = 18
@@ -53,12 +53,12 @@ Usage: #example
 * accessionIdentifier.system = "http://example.org/abc-hospital/specimens/2011"
 * accessionIdentifier.value = "X352358"
 * status = #available
-* type = http://terminology.hl7.org/CodeSystem/v2-0487#BLD "Whole blood"
+* type = http://terminology.hl7.org/CodeSystem/v2-0487#SPT "Sputum"
 * subject = Reference(Patient/jp-patient-example-1)
 * receivedTime = "2021-08-11T11:03:00+09:00"
 * container.identifier.value = "48736-15394-75468"
-* container.description = "採血菅"
-* container.type.text = "採血菅"
+* container.description = "採痰容器"
+* container.type.text = "採痰容器"
 * container.capacity.value = 20
 * container.capacity.unit = "mL"
 * container.specimenQuantity.value = 3
