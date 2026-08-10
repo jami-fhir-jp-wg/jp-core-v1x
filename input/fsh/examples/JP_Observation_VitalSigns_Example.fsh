@@ -9,8 +9,10 @@ Usage: #example
 * code.coding[0] = http://example.org/abc-hospital/fhir/Observation/localcode#abc-local-456 "呼吸数"
 * code.coding[+] = $JP_ObservationVitalSignsCode_CS#31001369 "呼吸数"
 * effectiveDateTime = "2021-10-19T10:00:00+09:00"
-* valueQuantity.unit = "回"
-* valueQuantity.value = 400
+* valueQuantity.unit = "回/分"
+* valueQuantity.value = 16
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #/min
 * performer = Reference(jp-practitioner-example-male-2)
 * status = #final
 * encounter = Reference(Encounter/jp-encounter-example-1)
