@@ -23,6 +23,7 @@ Description: "このプロファイルはMediaリソースに対して、病理�
 * type ^short = "メディアの種類。【詳細参照】"
 * type ^definition = "メディアの種類。"
 * type ^comment = "使用する場合は、\"image\"を使用する。"
+* type.coding.code = #image (exactly)
 * modality ^short = "メディアを取得・撮影した装置（モダリティ）。【詳細参照】"
 * modality ^definition = "メディアを取得・撮影した装置（モダリティ）。"
 * modality ^comment = "使用する場合、臓器画像は\"XC\"、顕微鏡画像は\"GM\"を指定する。"
