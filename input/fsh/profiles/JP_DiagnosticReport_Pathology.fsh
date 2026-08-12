@@ -1,18 +1,17 @@
 Profile: JP_DiagnosticReport_Pathology
-Parent: DiagnosticReport
+Parent: JP_DiagnosticReport_Common
 Id: jp-diagnosticreport-pathology
 Title: "JP Core DiagnosticReport Pathology Profile"
-Description: "病理にて作成された診断レポート。"
+Description: "このプロファイルはDiagnosticReportリソースに対して、病理分野の診断レポートのデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Pathology"
 * ^status = #active
 * ^version = "1.0.0"
-* ^publisher = "FHIR Japanese Implementation Research Working Group in JAMI"
 * . ^short = "病理にて作成された診断レポート。"
 * . ^definition = "病理にて作成された診断レポート。"
 * identifier ^short = "システムが管理する、施設内で診断レポートを一意に識別するためのID【詳細参照】"
 * identifier ^definition = "システムが管理する、施設内で診断レポートを一意に識別するためのID。"
 * identifier ^comment = "病理では標本番号（受付番号、病理番号）＋版数を指定する。"
-* basedOn only Reference(ServiceRequest)
+* basedOn only Reference(JP_ServiceRequest_Common)
 * basedOn ^short = "他のシステムから依頼されたオーダ情報【詳細参照】"
 * basedOn ^definition = "他のシステムから依頼されたオーダ情報。"
 * basedOn ^comment = "通常、依頼元となるServiceRequestリソースを参照する。他のシステムと連携していない場合は参照不要。"
@@ -47,24 +46,25 @@ Description: "病理にて作成された診断レポート。"
 * resultsInterpreter ^short = "この診断レポートの作成者【詳細参照】"
 * resultsInterpreter ^definition = "この診断レポートの作成者。"
 * resultsInterpreter ^comment = "複数いる場合は、列記する。"
-* specimen only Reference(JP_Specimen_Common)
+* specimen only Reference(JP_Specimen_Pathology)
 * specimen ^short = "この診断レポートの検体に関する情報【詳細参照】"
 * specimen ^definition = "この診断レポートの検体に関する情報。"
-* specimen ^comment = "JP Core Specimenリソースを参照する。"
+* specimen ^comment = "JP Core Specimen Pathologyリソースを参照する。"
 * result only Reference(JP_Observation_Common)
 * result ^short = "この診断レポートの一部となるObservationに関する情報【詳細参照】"
 * result ^definition = "この診断レポートの一部となるObservationに関する情報。"
 * result ^comment = "病理では未使用。"
+* imagingStudy only Reference(JP_ImagingStudy_Pathology)
 * imagingStudy ^short = "診断レポートに関連づけれられたDICOM画像に関する情報【詳細参照】"
 * imagingStudy ^definition = "診断レポートに関連づけれられたDICOM画像に関する情報。"
-* imagingStudy ^comment = "JP Core ImagingStudy Pthologyリソースを参照する。"
+* imagingStudy ^comment = "JP Core ImagingStudy Pathologyリソースを参照する。"
 * media ^short = "診断レポートに関連づけられたメディアに関する情報【詳細参照】"
 * media ^definition = "診断レポートに関連づけられたメディアに関する情報。"
 * media ^comment = "主に、レポートに添付される画像を指す。"
 * media.comment ^short = "メディアに関するコメント【詳細参照】"
 * media.comment ^definition = "メディアに関するコメント。"
 * media.comment ^comment = "以下のいずれかを記載する。参照画像としての添付されたイメージ、診断用スライドをスキャンしたイメージ。"
-* media.link only Reference(Media)
+* media.link only Reference(JP_Media_Pathology)
 * media.link ^short = "メディアの参照先【詳細参照】"
 * media.link ^definition = "メディアの参照先。"
 * media.link ^comment = "JP Core Media Pathologyリソースを参照する。"

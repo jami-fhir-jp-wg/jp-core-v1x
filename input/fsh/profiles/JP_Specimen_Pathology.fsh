@@ -1,12 +1,11 @@
 Profile: JP_Specimen_Pathology
-Parent: Specimen
+Parent: JP_Specimen_Common
 Id: jp-specimen-pathology
 Title: "JP Core Specimen Pathology Profile"
-Description: "病理診断レポートにおいて臓器そのものを表現する検体情報を定義したプロファイル"
+Description: "このプロファイルはSpecimenリソースに対して、病理診断レポートにおいて臓器そのものを表現する検体情報のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Pathology"
 * ^status = #active
 * ^version = "1.0.0"
-* ^publisher = "日本医療情報学会 FHIR国内実装基盤研究会"
 * . ^short = "病理診断レポートにおいて臓器そのものを表現する検体情報"
 * . ^definition = "病理診断レポートにおいて臓器そのものを表現する検体情報"
 * identifier ^short = "オーダ側（依頼元）が発番した検体識別番号"
@@ -30,6 +29,7 @@ Description: "病理診断レポートにおいて臓器そのものを表現す
 * collection ^definition = "検体採取に関する詳細情報"
 * collection.collector ^short = "検体採取した人"
 * collection.collector ^definition = "検体採取した人"
+* collection.collected[x] only dateTime
 * collection.collected[x] ^short = "検体採取日時"
 * collection.collected[x] ^definition = "検体採取日時"
 * collection.duration ^short = "検体採取期間"

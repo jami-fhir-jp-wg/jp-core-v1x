@@ -15,16 +15,19 @@ Alias: $JP_DiagnosticReport_DentalOral = http://jpfhir.jp/fhir/core/StructureDef
 Alias: $JP_DiagnosticReport_Endoscopy = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Endoscopy
 Alias: $JP_DiagnosticReport_LabResult = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult
 Alias: $JP_DiagnosticReport_Microbiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Microbiology
+Alias: $JP_DiagnosticReport_Pathology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Pathology
 Alias: $JP_DiagnosticReport_Radiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology
 Alias: $JP_DocumentReference = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DocumentReference
 Alias: $JP_Encounter = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter
 Alias: $JP_FamilyMemberHistory = http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory
 Alias: $JP_HumanName = http://jpfhir.jp/fhir/core/StructureDefinition/JP_HumanName
 Alias: $JP_ImagingStudy_Endoscopy = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Endoscopy
+Alias: $JP_ImagingStudy_Pathology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Pathology
 Alias: $JP_ImagingStudy_Radiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology
 Alias: $JP_Immunization = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization
 Alias: $JP_Location = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Location
 Alias: $JP_Media_Endoscopy = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Media_Endoscopy
+Alias: $JP_Media_Pathology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Media_Pathology
 Alias: $JP_Medication = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication
 Alias: $JP_MedicationAdministration = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration
 Alias: $JP_MedicationAdministration_Injection = http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration_Injection
@@ -71,6 +74,7 @@ Alias: $JP_Procedure = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Procedu
 Alias: $JP_RelatedPerson = http://jpfhir.jp/fhir/core/StructureDefinition/JP_RelatedPerson
 Alias: $JP_ServiceRequest_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common
 Alias: $JP_Specimen_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
+Alias: $JP_Specimen_Pathology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Pathology
 
 // StructureDefinition: Extension
 Alias: $JP_Common_Department = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Common_Department

@@ -2,16 +2,15 @@ Profile: JP_Media_Pathology
 Parent: Media
 Id: jp-media-pathology
 Title: "JP Core Media Pathology Profile"
-Description: "病理で取得または使用される画像に関わる情報を扱うプロファイル"
+Description: "このプロファイルはMediaリソースに対して、病理で取得または使用される画像に関わるデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Media_Pathology"
 * ^status = #active
 * ^version = "1.0.0"
-* ^publisher = "日本医療情報学会 NeXEHRS課題研究会"
 * . ^short = "病理で取得または使用される画像に関わる情報。"
 * . ^definition = "病理で取得または使用される画像に関わる情報。"
 * identifier ^short = "システムが管理する、施設内で画像（JPEG等）、のメディアを一意に識別するためのID"
 * identifier ^definition = "システムが管理する、施設内で画像（JPEG等）、のメディアを一意に識別するためのID"
-* basedOn only Reference(ServiceRequest or CarePlan)
+* basedOn only Reference(JP_ServiceRequest_Common or CarePlan)
 * basedOn ^short = "他のシステムから依頼されたオーダ情報。【詳細参照】"
 * basedOn ^definition = "他のシステムから依頼されたオーダ情報。"
 * basedOn ^comment = "通常、依頼元となるServiceRequestリソースを参照する。他のシステムと連携していない場合は参照不要。"
