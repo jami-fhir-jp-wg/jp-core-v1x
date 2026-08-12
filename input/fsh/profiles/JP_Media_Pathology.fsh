@@ -5,7 +5,6 @@ Title: "JP Core Media Pathology Profile"
 Description: "このプロファイルはMediaリソースに対して、病理で取得または使用される画像に関わるデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Media_Pathology"
 * ^status = #active
-* ^version = "1.0.0"
 * . ^short = "病理で取得または使用される画像に関わる情報。"
 * . ^definition = "病理で取得または使用される画像に関わる情報。"
 * identifier ^short = "システムが管理する、施設内で画像（JPEG等）、のメディアを一意に識別するためのID"

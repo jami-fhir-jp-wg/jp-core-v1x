@@ -5,7 +5,6 @@ Title: "JP Core ImagingStudy Pathology Profile"
 Description: "このプロファイルはImagingStudyリソースに対して、病理WSIのDICOM画像に関するデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Pathology"
 * ^status = #active
-* ^version = "1.0.0"
 * . ^short = "病理WSIのDICOM画像に関する情報。"
 * . ^definition = "病理WSIのDICOM画像に関する情報。"
 * identifier ^short = "DICOM画像全体を一意に識別するためのID【詳細参照】"

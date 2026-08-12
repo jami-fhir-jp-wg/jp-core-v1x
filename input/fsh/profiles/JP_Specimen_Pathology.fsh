@@ -5,7 +5,6 @@ Title: "JP Core Specimen Pathology Profile"
 Description: "このプロファイルはSpecimenリソースに対して、病理診断レポートにおいて臓器そのものを表現する検体情報のデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Pathology"
 * ^status = #active
-* ^version = "1.0.0"
 * . ^short = "病理診断レポートにおいて臓器そのものを表現する検体情報"
 * . ^definition = "病理診断レポートにおいて臓器そのものを表現する検体情報"
 * identifier ^short = "オーダ側（依頼元）が発番した検体識別番号"

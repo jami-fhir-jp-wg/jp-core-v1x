@@ -5,7 +5,6 @@ Title: "JP Core DiagnosticReport Pathology Profile"
 Description: "このプロファイルはDiagnosticReportリソースに対して、病理分野の診断レポートのデータを送受信するための制約と拡張を定めたものである。"
 * ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Pathology"
 * ^status = #active
-* ^version = "1.0.0"
 * . ^short = "病理にて作成された診断レポート。"
 * . ^definition = "病理にて作成された診断レポート。"
 * identifier ^short = "システムが管理する、施設内で診断レポートを一意に識別するためのID【詳細参照】"
@@ -18,9 +17,17 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * status ^short = "診断レポートのステータス【詳細参照】"
 * status ^definition = "診断レポートのステータス。"
 * status ^comment = "preliminary（中間）|final（確定済、承認済）|appended（追加）|amended（修正）|corrected（訂正）"
-* category ^short = "診断レポートの分野を表すコード【詳細参照】"
-* category ^definition = "診断レポートの分野を表すコード。"
-* category ^comment = "Value Set：JPCore_DiagnosticReport_Categoryの中から「LP7839-6」（Pathology（病理））を指定する。"
+* category 1..
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category contains first 1..1
+* category[first] ^short = "診断レポートの分野を表すコード【詳細参照】"
+* category[first] ^definition = "診断レポートの分野を表すコード。"
+* category[first] ^comment = "Value Set：JPCore_DiagnosticReport_Categoryの中から「LP7839-6」（Pathology（病理））を指定する。"
+* category[first] from $JP_DiagnosticReportCategory_VS (required)
+* category[first].coding.code 1.. 
+* category[first] = $Loinc_CS#LP7839-6 "病理"
 * code ^short = "病理分野の診断レポートを分類するためのコード【詳細参照】"
 * code ^definition = "病理分野の診断レポートを分類するためのコード。"
 * code ^comment = "Value Set：JPCore_DocumentCodeの中から適切な病理分野の報告書のコードを指定する。例：組織診は「11526-1」（病理検査報告書）、細胞診は「47526-9」（細胞診報告書）、剖検は「18743-5」（剖検報告書）を指定する。"
