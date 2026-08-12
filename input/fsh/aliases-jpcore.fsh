@@ -15,15 +15,15 @@ Alias: $JP_DiagnosticReport_DentalOral = http://jpfhir.jp/fhir/core/StructureDef
 Alias: $JP_DiagnosticReport_Endoscopy = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Endoscopy
 Alias: $JP_DiagnosticReport_LabResult = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_LabResult
 Alias: $JP_DiagnosticReport_Microbiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Microbiology
-Alias: $JP_DiagnosticReport_Radiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology
 Alias: $JP_DiagnosticReport_Pathology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Pathology
+Alias: $JP_DiagnosticReport_Radiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Radiology
 Alias: $JP_DocumentReference = http://jpfhir.jp/fhir/core/StructureDefinition/JP_DocumentReference
 Alias: $JP_Encounter = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Encounter
 Alias: $JP_FamilyMemberHistory = http://jpfhir.jp/fhir/core/StructureDefinition/JP_FamilyMemberHistory
 Alias: $JP_HumanName = http://jpfhir.jp/fhir/core/StructureDefinition/JP_HumanName
 Alias: $JP_ImagingStudy_Endoscopy = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Endoscopy
-Alias: $JP_ImagingStudy_Radiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology
 Alias: $JP_ImagingStudy_Pathology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Pathology
+Alias: $JP_ImagingStudy_Radiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ImagingStudy_Radiology
 Alias: $JP_Immunization = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Immunization
 Alias: $JP_Location = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Location
 Alias: $JP_Media_Endoscopy = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Media_Endoscopy
@@ -60,13 +60,13 @@ Alias: $JP_OBservation_Electrocardiogram = http://jpfhir.jp/fhir/core/StructureD
 Alias: $JP_Observation_Endoscopy = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Endoscopy
 Alias: $JP_Observation_LabResult = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_LabResult
 Alias: $JP_Observation_Microbiology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Microbiology
-Alias: $JP_Observation_Pathology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Pathology
 Alias: $JP_Observation_PhysicalExam = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_PhysicalExam
 Alias: $JP_Observation_Radiology_Findings = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Radiology_Findings
 Alias: $JP_Observation_Radiology_Impression = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_Radiology_Impression
 Alias: $JP_Observation_SocialHistory = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_SocialHistory
 Alias: $JP_Observation_VitalSigns = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Observation_VitalSigns
 Alias: $JP_Organization = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization
+Alias: $JP_Organization_Department = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Organization_Department
 Alias: $JP_Patient = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Patient
 Alias: $JP_Practitioner = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Practitioner
 Alias: $JP_PractitionerRole = http://jpfhir.jp/fhir/core/StructureDefinition/JP_PractitionerRole
@@ -74,8 +74,10 @@ Alias: $JP_Procedure = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Procedu
 Alias: $JP_RelatedPerson = http://jpfhir.jp/fhir/core/StructureDefinition/JP_RelatedPerson
 Alias: $JP_ServiceRequest_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common
 Alias: $JP_Specimen_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
+Alias: $JP_Specimen_Pathology = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Pathology
 
 // StructureDefinition: Extension
+Alias: $JP_Common_Department = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Common_Department
 Alias: $JP_Condition_DiseaseOutcome = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseaseOutcome
 Alias: $JP_Condition_DiseasePostfixModifier = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePostfixModifier
 Alias: $JP_Condition_DiseasePrefixModifier = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePrefixModifier
@@ -190,6 +192,7 @@ Alias: $JP_MedicationMethodJAMIDetailUsage_CS = http://jami.jp/CodeSystem/Medica
 Alias: $JP_MedicationMethodJHSI0003_CS = http://jpfhir.jp/fhir/core/CodeSystem/JHSI0003
 Alias: $JP_MedicationRouteHL70162_CS = http://jpfhir.jp/fhir/core/CodeSystem/route-codes
 Alias: $JP_MedicationSubstitutionNotAllowedReason_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationSubstitutionProhibittedCategory //urn:oid:1.2.392.100495.20.2.41
+Alias: $JP_MedicationSubstitutionProhibitionReason_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_MedicationSubstitutionProhibitionReason_CS
 Alias: $JP_MedicationUnitMERIT9_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/MedicationUnitMERIT9Code //urn:oid:1.2.392.100495.20.2.101
 Alias: $JP_MedicationUsageJAMI_CS = http://jami.jp/CodeSystem/MedicationUsage //urn:oid:1.2.392.200250.2.2.20.20
 Alias: $JP_MedicationUsageJAMIAdditional_CS = http://jami.jp/CodeSystem/MedicationUsageAdditional //urn:oid:1.2.392.200250.2.2.20.22
@@ -232,10 +235,8 @@ Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefin
 Alias: $JP_SimpleObservationCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
 Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 
-// Clinsでは定義されているが、JP Coreでは未定義
-// Alias: $JP_BodySite_MEDIS_Concept_CS = http://medis.or.jp/CodeSystem/master-disease-modExCode   //MEDIS病名交換用修飾コード //urn:oid:1.2.392.200119.4.201.5
-// Alias: $JP_BodySite_MEDIS_ManagementID_CS = http://medis.or.jp/CodeSystem/master-disease-modKeyNumber   //MEDIS病名管理修飾コード    //urn:oid:1.2.392.200119.4.201.2
-// Alias: $JP_BodySite_Disease_Claim_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/masterZ-disease-modifier //  支払基金	修飾語コード 
+// 病名修飾コード（MEDIS病名交換用/管理修飾コード、支払基金修飾語コード）の CodeSystem alias は
+// Clins では定義されているが JP Core では未定義のため、ここでは定義しない（将来採用時に追加）。
 
 
 // ValueSet
@@ -308,6 +309,7 @@ Alias: $JP_MedicationMethodJAMIDetailUsage_VS = http://jpfhir.jp/fhir/core/Value
 Alias: $JP_MedicationMethodJHSI0003_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationMethodJHSI0003_VS
 Alias: $JP_MedicationRouteHL70162_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationRouteHL70162_VS
 Alias: $JP_MedicationSubstitutionNotAllowedReason_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationSubstitutionNotAllowedReason_VS
+Alias: $JP_MedicationSubstitutionProhibitionReason_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationSubstitutionProhibitionReason_VS
 Alias: $JP_MedicationUnitMERIT9_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUnitMERIT9_VS
 Alias: $JP_MedicationUsageInjection_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUsageInjection_VS
 Alias: $JP_MedicationUsageJAMI_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_MedicationUsageJAMI_VS
@@ -359,20 +361,8 @@ Alias: $JP_ReasonCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCode
 Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
 
-// Pathology Terminology
-Alias: $JP_PathologyTerminology_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_PathologyTerminology_CS
-Alias: $JP_PathologyDiagnosis_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PathologyDiagnosis_VS
-Alias: $JP_PathologySpecimenType_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PathologySpecimenType_VS
-Alias: $JP_PathologyStaining_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PathologyStaining_VS
-Alias: $JP_PathologyOrgan_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PathologyOrgan_VS
-Alias: $JP_PathologyObservationCode_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_PathologyObservationCode_VS
-Alias: $JP_DocumentCodes_Pathology_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_Pathology_VS
-
-// Alias: $JP_BodySite_MEDIS_Concept_VS = http://medis.or.jp/ValueSet/master-disease-modExCode
-
-// Alias: $JP_BodySite_MEDIS_ManagementID_VS = http://medis.or.jp/ValueSet/master-disease-modKeyNumber
-// Alias: $JP_BodySite_Disease_Claim_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/masterZ-disease-modifier //  支払基金	修飾語コード
-// Alias: $JP_Modifier_Disease_Claim_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/masterZ-disease-modifier //  支払基金	修飾語コード
+// 病名修飾コード（MEDIS病名交換用/管理修飾コード、支払基金修飾語コード）の ValueSet alias は
+// Clins では定義されているが JP Core では未定義のため、ここでは定義しない（将来採用時に追加）。
 
 //system値
 Alias: $JP_IdSystem_InsurerNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/InsurerNumber  //urn:oid:1.2.392.100495.20.3.61
