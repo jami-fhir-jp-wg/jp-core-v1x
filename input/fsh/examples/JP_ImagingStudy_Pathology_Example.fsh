@@ -26,11 +26,11 @@ Description: "病理WSI画像のImagingStudyリソース例"
 * series.started = "2021-01-15T10:30:00+09:00"
 * series.instance[0].uid = "1.2.392.200119.99999.100.1.20210101120000.1.1"
 * series.instance[0].sopClass.system = $JP_DICOMSopClass_CS
-* series.instance[0].sopClass.code = #urn:oid:1.2.840.10008.5.1.4.1.1.77.1.6
+* series.instance[0].sopClass.code = #1.2.840.10008.5.1.4.1.1.77.1.6
 * series.instance[0].number = 1
 * series.instance[0].title = "WSI Image 1"
 * series.instance[+].uid = "1.2.392.200119.99999.100.1.20210101120000.1.2"
 * series.instance[=].sopClass.system = $JP_DICOMSopClass_CS
-* series.instance[=].sopClass.code = #urn:oid:1.2.840.10008.5.1.4.1.1.77.1.6
+* series.instance[=].sopClass.code = #1.2.840.10008.5.1.4.1.1.77.1.6
 * series.instance[=].number = 2
 * series.instance[=].title = "WSI Image 2"
