@@ -16,7 +16,8 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * modality ^short = "DICOM画像で使用された撮影装置（モダリティ）【詳細参照】"
 * modality ^definition = "DICOM画像で使用された撮影装置（モダリティ）"
 * modality ^comment = "病理（WSI）を表すモダリティコード\"SM\"を指定する。"
-* modality.code = #SM (exactly)
+* modality from $JP_DICOMModality_VS (required)
+* modality = $dicom-ontology#SM "Slide Microscopy"
 * subject only Reference(JP_Patient)
 * subject ^short = "DICOM画像の対象患者に関する情報【詳細参照】"
 * subject ^definition = "DICOM画像の対象患者に関する情報。"
@@ -77,7 +78,8 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * series.modality ^short = "このシリーズが取得された撮影装置（モダリティ）【詳細参照】"
 * series.modality ^definition = "このシリーズが取得された撮影装置（モダリティ）。"
 * series.modality ^comment = "病理（WSI）を表すモダリティコード\"SM\"を指定する。1シリーズ1モダリティで、1つのシリーズの中に複数のモダリティが混在することはない。"
-* series.modality.code = #SM (exactly)
+* series.modality from $JP_DICOMModality_VS (required)
+* series.modality = $dicom-ontology#SM "Slide Microscopy"
 * series.description ^short = "このシリーズに関する記述。"
 * series.description ^definition = "このシリーズに関する記述。"
 * series.numberOfInstances ^short = "このシリーズに含まれる画像枚数。"

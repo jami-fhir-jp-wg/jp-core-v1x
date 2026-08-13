@@ -26,6 +26,7 @@ Description: "このプロファイルはMediaリソースに対して、病理�
 * modality ^short = "メディアを取得・撮影した装置（モダリティ）。【詳細参照】"
 * modality ^definition = "メディアを取得・撮影した装置（モダリティ）。"
 * modality ^comment = "使用する場合、臓器画像は\"XC\"、顕微鏡画像は\"GM\"を指定する。"
+* modality from $JP_DICOMModality_VS (required)
 * view ^short = "メディアのイメージングビュー。【詳細参照】"
 * view ^definition = "メディアのイメージングビュー。"
 * view ^comment = "病理では原則使用しない。将来的にニーズが出てきた場合には検討する。"
