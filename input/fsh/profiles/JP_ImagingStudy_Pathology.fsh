@@ -54,6 +54,7 @@ Description: "このプロファイルはImagingStudyリソースに対して、
 * procedureCode ^short = "実施された処置を表すコード【詳細参照】"
 * procedureCode ^definition = "実施された処置を表すコード。"
 * procedureCode ^comment = "病理では原則使用しない。"
+* procedureCode from $JP_DICONRadLexPlaybook_VS
 * location only Reference(JP_Location)
 * location ^short = "ImagingStudyが実行された場所（画像がスキャンされた場所）を示すLocationリソースがある場合には、これを参照。"
 * location ^definition = "ImagingStudyが実行された場所（画像がスキャンされた場所）を示すLocationリソースがある場合には、これを参照。"
