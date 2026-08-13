@@ -12,9 +12,9 @@ Description: "病理診断レポート用検体情報のサンプルインスタ
 * type.coding.code = #TISS
 * type.coding.display = "Tissue"
 * type.text = "組織"
-* subject = Reference(Patient/jp-patient-example)
+* subject = Reference(Patient/jp-patient-example-1)
 * receivedTime = "2026-08-10T10:30:00+09:00"
-* collection.collector = Reference(Practitioner/jp-practitioner-example)
+* collection.collector = Reference(Practitioner/jp-practitioner-example-female-1)
 * collection.collectedDateTime = "2026-08-10T09:00:00+09:00"
 * collection.method.text = "生検"
 * collection.bodySite.text = "胃"

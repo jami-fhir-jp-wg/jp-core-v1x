@@ -8,7 +8,7 @@ Description: "病理画像メディアのサンプルインスタンス"
 * status = #completed
 * type = http://terminology.hl7.org/CodeSystem/media-type#image "Image"
 * modality = http://dicom.nema.org/resources/ontology/DCM#XC "External-camera Photography"
-* subject = Reference(Patient/jp-patient-example-01)
+* subject = Reference(Patient/jp-patient-example-1)
 * issued = "2026-08-10T10:30:00+09:00"
 * content.contentType = #image/jpeg
 * content.url = "http://example.org/fhir/media/pathology/specimen-001.jpg"
