@@ -13,8 +13,8 @@
 
 - basedOn : ServiceRequest（オーダを表すリソースへの参照）。
 - subject : 患者リソース（Patient）への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される。
-- effectiveDateTime : レポート作成日時。
-- issued : レポート確定日時。
+- effectiveDateTime : 診断レポートの対象となる内視鏡の検査・処置が実施された日時。
+- issued : このバージョンの診断レポートが医療者に提供/確定された日時。
 - performer : 内視鏡検査を実施した医師。
 - resultInterpreter : レポートの確定者。
 - result : 診断レポートの一部となる内視鏡検査、治療による観察結果（診断、所見など）の情報。
@@ -60,7 +60,7 @@ JP Core V1.2からは、診断、所見などの観察結果についてはDomai
 
 ### 時間の指定
 
-このプロファイルのリソースでは、effective[x]エレメントにはレポート作成時間を[dateTime](https://www.hl7.org/fhir/R4/datatypes.html#dateTime)で格納する。
+このプロファイルのリソースでは、effective[x]エレメントには診断レポートの対象となる内視鏡の検査・処置が実施された日時を[dateTime](https://www.hl7.org/fhir/R4/datatypes.html#dateTime)で格納する。
 
 ### 参照画像
 
@@ -108,7 +108,7 @@ GET [base]/DiagnosticReport?patient=123&category=LP7796-8
 
 本プロファイルそのものの定義には影響しないが、presentedFormに格納するレポートのコンテンツを作成するレポーティングシステムにおいて、標準化に関する参考資料となる。
 1. [JAHIS 診療文書構造化記述規約 共通編 Ver.2.0](https://www.jahis.jp/standard/detail/id=729)
-2. [JAHIS 内視鏡検査レポート構造化記述規約 Ver.1.0](https://www.jahis.jp/standard/detail/id=824)
+2. [JAHIS 内視鏡検査レポート構造化記述規約 Ver.1.1](https://www.jahis.jp/standard/detail/id=1253)
 
 また、消化器内視鏡検査レポートについては、[日本消化器内視鏡学会](https://www.jges.net/)が推進する[JED (Japan Endoscopy Database) Project](https://jedproject.jges.net/)に準拠していることが強く推奨（**SHOULD**）される。
 
