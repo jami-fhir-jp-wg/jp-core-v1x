@@ -1,0 +1,50 @@
+name: DCO Check
+
+# Pull Request 内の各コミットに DCO 署名（Signed-off-by）が付与されているかを確認する。
+# 詳細は CONTRIBUTING.md を参照。`git commit -s` で署名できる。
+
+on:
+  pull_request:
+    branches:
+      - 'main'
+      - 'develop'
+      - 'release/**'
+
+jobs:
+  dco:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Verify Signed-off-by on all commits
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          fail=0
+          for sha in $(git rev-list "${BASE_SHA}..${HEAD_SHA}"); do
+            # マージコミット（親が2つ以上）はスキップ
+            parents=$(git rev-list --parents -n 1 "$sha" | wc -w)
+            if [ "$parents" -gt 2 ]; then
+              continue
+            fi
+            if ! git log -1 --format=%B "$sha" | grep -qiE '^Signed-off-by: .+ <.+@.+>'; then
+              subject=$(git log -1 --format=%s "$sha")
+              echo "::error::コミット $sha に Signed-off-by がありません: $subject"
+              fail=1
+            fi
+          done
+          if [ "$fail" -ne 0 ]; then
+            echo ""
+            echo "DCO チェックに失敗しました。すべてのコミットに署名が必要です。"
+            echo "  git commit -s ...            (新規コミット)"
+            echo "  git commit --amend -s        (直近コミットに付与)"
+            echo "  git rebase --signoff <base>  (複数コミットに付与)"
+            echo "詳細は CONTRIBUTING.md を参照してください。"
+            exit 1
+          fi
+          echo "すべてのコミットに DCO 署名が確認できました。"
