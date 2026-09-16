@@ -204,6 +204,9 @@
 [jp-encounter-example-1]: Encounter-jp-encounter-example-1.html
 [endpoint-dicom-wadors-example]: Endpoint-endpoint-dicom-wadors-example.html
 [jp-familymemberhistory-example-1]: FamilyMemberHistory-jp-familymemberhistory-example-1.html
+[jp-familymemberhistory-example-2]: FamilyMemberHistory-jp-familymemberhistory-example-2.html
+[jp-familymemberhistory-example-3]: FamilyMemberHistory-jp-familymemberhistory-example-3.html
+[jp-familymemberhistory-example-4]: FamilyMemberHistory-jp-familymemberhistory-example-4.html
 [jp-imagingstudy-endoscopy-example-1]: ImagingStudy-jp-imagingstudy-endoscopy-example-1.html
 [jp-imagingstudy-radiology-example-1]: ImagingStudy-jp-imagingstudy-radiology-example-1.html
 [jp-immunization-example-1]: Immunization-jp-immunization-example-1.html
