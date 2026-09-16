@@ -27,16 +27,19 @@
 [JP_DiagnosticReport_Endoscopy]: StructureDefinition-jp-diagnosticreport-endoscopy.html
 [JP_DiagnosticReport_LabResult]: StructureDefinition-jp-diagnosticreport-labresult.html
 [JP_DiagnosticReport_Microbiology]: StructureDefinition-jp-diagnosticreport-microbiology.html
+[JP_DiagnosticReport_Pathology]: StructureDefinition-jp-diagnosticreport-pathology.html
 [JP_DiagnosticReport_Radiology]: StructureDefinition-jp-diagnosticreport-radiology.html
 [JP_DocumentReference]: StructureDefinition-jp-documentreference.html
 [JP_Encounter]: StructureDefinition-jp-encounter.html
 [JP_FamilyMemberHistory]: StructureDefinition-jp-familymemberhistory.html
 [JP_HumanName]: StructureDefinition-jp-humanname.html
 [JP_ImagingStudy_Endoscopy]: StructureDefinition-jp-imagingstudy-endoscopy.html
+[JP_ImagingStudy_Pathology]: StructureDefinition-jp-imagingstudy-pathology.html
 [JP_ImagingStudy_Radiology]: StructureDefinition-jp-imagingstudy-radiology.html
 [JP_Immunization]: StructureDefinition-jp-immunization.html
 [JP_Location]: StructureDefinition-jp-location.html
 [JP_Media_Endoscopy]: StructureDefinition-jp-media-endoscopy.html
+[JP_Media_Pathology]: StructureDefinition-jp-media-pathology.html
 [JP_Medication]: StructureDefinition-jp-medication.html
 [JP_MedicationAdministration_Injection]: StructureDefinition-jp-medicationadministration-injection.html
 [JP_MedicationAdministration]: StructureDefinition-jp-medicationadministration.html
@@ -85,6 +88,7 @@
 [JP_ResearchSubject]: StructureDefinition-jp-researchsubject.html
 [JP_ServiceRequest_Common]: StructureDefinition-jp-servicerequest-common.html
 [JP_Specimen_Common]: StructureDefinition-jp-specimen-common.html
+[JP_Specimen_Pathology]: StructureDefinition-jp-specimen-pathology.html
 
 <!-- StructureDefinition: Extension -->
 [JP_Common_Department]: StructureDefinition-jp-common-department.html
@@ -156,6 +160,7 @@
 [JP_DentalSimpleMissingTeethObservation_CS]: CodeSystem-jp-dental-simple-missingteeth-observation-cs.html
 [JP_DentalSimplePresentTeethObservation_CS]: CodeSystem-jp-dental-simple-presentteeth-observation-cs.html
 [JP_DentalSurfaceBodyStructure_CS]: CodeSystem-jp-dental-surfacebodystructure-cs.html
+[JP_MedicationSubstitutionProhibitionReason_CS]: CodeSystem-jp-medication-substitution-prohibition-reason-cs.html
 [JP_ObservationBodyMeasurementCode_CS]: CodeSystem-jp-observation-bodymeasurement-code-cs.html
 [JP_ObservationDentalCategory_CS]: CodeSystem-jp-observation-dental-category-cs.html
 [JP_ObservationElectrocardiogramDuration_CS]: CodeSystem-jp-observation-electrocardiogram-duration-cs.html
@@ -178,6 +183,7 @@
 [JP_DentalTeethObservation_VS]: ValueSet-jp-dental-teethobservation-vs.html
 [JP_DICOMModality_VS]: ValueSet-jp-dicommodality-vs.html
 [JP_ImagingStudy_Radiology_BodySite_VS]: ValueSet-jp-imagingstudy-radiology-bodysite-vs.html
+[JP_MedicationSubstitutionProhibitionReason_VS]: ValueSet-jp-medication-substitution-prohibition-reason-vs.html
 [JP_Observation_BodySite_VS]: ValueSet-jp-observation-bodysite-vs.html
 [JP_ObservationDetailedDentalCategory_VS]: ValueSet-jp-observation-detailed-dental-category-vs.html
 [JP_ObservationElectrocardiogramComponentCode_VS]: ValueSet-jp-observation-electrocardiogram-component-code-vs.html

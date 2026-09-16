@@ -18,11 +18,14 @@
       * [JP Core Observation DentalOral eCS Profile （口腔診査結果・診療情報提供書用）プロファイル][JP_Observation_DentalOral_eCS]
   * Specimen （検体）
     * [JP Core Specimen Common （共通）プロファイル][JP_Specimen_Common]
+      * [JP Core Specimen Pathology（病理）プロファイル][JP_Specimen_Pathology]
   * Media （メディア）
     * [JP Core Media Endoscopy（内視鏡検査）プロファイル][JP_Media_Endoscopy]
+    * [JP Core Media Pathology（病理）プロファイル][JP_Media_Pathology]
   * ImagingStudy （画像検査）
     * [JP Core ImagingStudy Radiology（放射線検査）プロファイル][JP_ImagingStudy_Radiology]
     * [JP Core ImagingStudy Endoscopy（内視鏡検査）プロファイル][JP_ImagingStudy_Endoscopy]
+    * [JP Core ImagingStudy Pathology（病理）プロファイル][JP_ImagingStudy_Pathology]
   * DiagnosticReport （診断レポート）
     * [JP Core DiagnosticReport Common （共通）プロファイル][JP_DiagnosticReport_Common]
     * [JP Core DiagnosticReport LabResult （検体検査レポート）プロファイル][JP_DiagnosticReport_LabResult]
@@ -30,6 +33,7 @@
     * [JP Core DiagnosticReport Radiology （放射線検査レポート）プロファイル][JP_DiagnosticReport_Radiology]
     * [JP Core DiagnosticReport Endoscopy （内視鏡レポート）プロファイル][JP_DiagnosticReport_Endoscopy]
     * [JP Core DiagnosticReport DentalOral （口腔診査レポート）プロファイル][JP_DiagnosticReport_DentalOral]
+    * [JP Core DiagnosticReport Pathology （病理レポート）プロファイル][JP_DiagnosticReport_Pathology]
 
 ### Extensions
 * [JP_Observation_DentalOral_BodySiteStatus]

@@ -1,0 +1,87 @@
+Profile: JP_DiagnosticReport_Pathology
+Parent: JP_DiagnosticReport_Common
+Id: jp-diagnosticreport-pathology
+Title: "JP Core DiagnosticReport Pathology Profile"
+Description: "このプロファイルはDiagnosticReportリソースに対して、病理分野の診断レポートのデータを送受信するための制約と拡張を定めたものである。"
+* ^url = "http://jpfhir.jp/fhir/core/StructureDefinition/JP_DiagnosticReport_Pathology"
+* ^status = #active
+* . ^short = "病理にて作成された診断レポート。"
+* . ^definition = "病理にて作成された診断レポート。"
+* identifier ^short = "システムが管理する、施設内で診断レポートを一意に識別するためのID【詳細参照】"
+* identifier ^definition = "システムが管理する、施設内で診断レポートを一意に識別するためのID。"
+* identifier ^comment = "病理では標本番号（受付番号、病理番号）＋版数を指定する。"
+* basedOn only Reference(JP_ServiceRequest_Common)
+* basedOn ^short = "他のシステムから依頼されたオーダ情報【詳細参照】"
+* basedOn ^definition = "他のシステムから依頼されたオーダ情報。"
+* basedOn ^comment = "通常、依頼元となるServiceRequestリソースを参照する。他のシステムと連携していない場合は参照不要。"
+* status ^short = "診断レポートのステータス【詳細参照】"
+* status ^definition = "診断レポートのステータス。"
+* status ^comment = "preliminary（中間）|final（確定済、承認済）|appended（追加）|amended（修正）|corrected（訂正）"
+* category 1..
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
+* category contains first 1..1
+* category[first] ^short = "診断レポートの分野を表すコード【詳細参照】"
+* category[first] ^definition = "診断レポートの分野を表すコード。"
+* category[first] ^comment = "Value Set：JPCore_DiagnosticReport_Categoryの中から「LP7839-6」（Pathology（病理））を指定する。"
+* category[first] from $JP_DiagnosticReportCategory_VS (required)
+* category[first].coding.code 1.. 
+* category[first] = $Loinc_CS#LP7839-6 "病理"
+* code ^short = "病理分野の診断レポートを分類するためのコード【詳細参照】"
+* code ^definition = "病理分野の診断レポートを分類するためのコード。"
+* code ^comment = "Value Set：JPCore_DocumentCodeの中から適切な病理分野の報告書のコードを指定する。例：組織診は「11526-1」（病理検査報告書）、細胞診は「47526-9」（細胞診報告書）、剖検は「18743-5」（剖検報告書）を指定する。"
+* subject only Reference(JP_Patient)
+* subject ^short = "診断レポートの対象患者に関する情報【詳細参照】"
+* subject ^definition = "診断レポートの対象患者に関する情報。"
+* subject ^comment = "JP Core Patientリソースを参照する。"
+* encounter only Reference(JP_Encounter)
+* encounter ^short = "この診断レポートを書くきっかけとなった情報【詳細参照】"
+* encounter ^definition = "この診断レポートを書くきっかけとなった情報。"
+* encounter ^comment = "JP Core Encounterリソースを参照する。"
+* effective[x] only dateTime
+* effective[x] ^short = "診断レポートの作成日時【詳細参照】"
+* effective[x] ^definition = "診断レポートの作成日時。"
+* effective[x] ^comment = "DateTimeを採用する。"
+* issued ^short = "レポート確定日時【詳細参照】"
+* issued ^definition = "レポート確定日時。"
+* issued ^comment = "StatusがFinalになった日時を指定する。"
+* performer only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization)
+* performer ^short = "レポートを確定した医師。"
+* performer ^definition = "レポートを確定した医師。"
+* resultsInterpreter only Reference(JP_Practitioner or JP_PractitionerRole or JP_Organization)
+* resultsInterpreter ^short = "この診断レポートの作成者【詳細参照】"
+* resultsInterpreter ^definition = "この診断レポートの作成者。"
+* resultsInterpreter ^comment = "複数いる場合は、列記する。"
+* specimen only Reference(JP_Specimen_Pathology)
+* specimen ^short = "この診断レポートの検体に関する情報【詳細参照】"
+* specimen ^definition = "この診断レポートの検体に関する情報。"
+* specimen ^comment = "JP Core Specimen Pathologyリソースを参照する。"
+* result only Reference(JP_Observation_Common)
+* result ^short = "この診断レポートの一部となるObservationに関する情報【詳細参照】"
+* result ^definition = "この診断レポートの一部となるObservationに関する情報。"
+* result ^comment = "病理では未使用。"
+* imagingStudy only Reference(JP_ImagingStudy_Pathology)
+* imagingStudy ^short = "診断レポートに関連づけれられたDICOM画像に関する情報【詳細参照】"
+* imagingStudy ^definition = "診断レポートに関連づけれられたDICOM画像に関する情報。"
+* imagingStudy ^comment = "JP Core ImagingStudy Pathologyリソースを参照する。"
+* media ^short = "診断レポートに関連づけられたメディアに関する情報【詳細参照】"
+* media ^definition = "診断レポートに関連づけられたメディアに関する情報。"
+* media ^comment = "主に、レポートに添付される画像を指す。"
+* media.comment ^short = "メディアに関するコメント【詳細参照】"
+* media.comment ^definition = "メディアに関するコメント。"
+* media.comment ^comment = "以下のいずれかを記載する。参照画像としての添付されたイメージ、診断用スライドをスキャンしたイメージ。"
+* media.link only Reference(JP_Media_Pathology)
+* media.link ^short = "メディアの参照先【詳細参照】"
+* media.link ^definition = "メディアの参照先。"
+* media.link ^comment = "JP Core Media Pathologyリソースを参照する。"
+* conclusion ^short = "総合診断に相当する要約結論【詳細参照】"
+* conclusion ^definition = "総合診断に相当する要約結論。"
+* conclusion ^comment = "テキストで可能な限り記載する。"
+* conclusionCode ^short = "病理診断レポートの要約結論を表す1つ以上のコード【詳細参照】"
+* conclusionCode ^definition = "病理診断レポートの要約結論を表す1つ以上のコード。"
+* conclusionCode ^comment = "腫瘍の場合はICD-O-3、腫瘍以外はICD-10、ICD-11の病名を設定する。ただし、運用上コード指定ができない場合、設定されなくてもよい。"
+* presentedForm MS
+* presentedForm ^short = "診断レポート本体【詳細参照】"
+* presentedForm ^definition = "診断レポート本体。"
+* presentedForm ^comment = "診断レポート本体をPDF形式やxml形式などで添付する（フォーマットは不問）。"
