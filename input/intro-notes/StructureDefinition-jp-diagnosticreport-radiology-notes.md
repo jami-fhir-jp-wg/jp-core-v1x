@@ -18,7 +18,7 @@
 - basedOn : レポートあるいは画像検査のServiceRequest
 - subject : 患者リソース(Patient)への参照。殆どの場合存在するが、緊急検査等で患者リソースが確定していない場合が想定される
 - effectiveDateTime : レポートの対象となる画像検査が施行された日時（ImagingStudyの日時に相当）
-- issued : レポート確定日時
+- issued : レポート確定日時。この版の診断レポートが作成され、確定された日時。訂正により新たな版を作成した場合は、その訂正版の日時を設定する。
 - performer : Practitionerでレポートの関係者（作成者、読影者、確定者など）を列挙
 - resultInterpreter : Practitionerでレポート確定者を示す
 - imagingStudy : 診断の対象となる画像
@@ -103,7 +103,7 @@ DiagnosticReport_Radiology リソースではtypeエレメントを明示する�
 
 ### 時間の指定
 
-このプロファイルのリソースでは、effective[x]エレメントにはレポート作成時間を[dateTime](https://www.hl7.org/fhir/R4/datatypes.html#dateTime)で格納する。
+このプロファイルのリソースでは、effective[x]エレメントには画像検査の実施時間を[dateTime](https://www.hl7.org/fhir/R4/datatypes.html#dateTime)で格納する。
 
 ### 関連するObservation
 
