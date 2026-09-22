@@ -18,9 +18,9 @@
 患者と対象となる家族構成員との関係は `FamilyMemberHistory.relationship` に記録する。  
 `relationship` には、HL7 V3 RoleCode の FamilyMember ValueSet を使用する。
 
-#### 出生順呼称 BirthOrderLabel の記録
+#### 出生順呼称 BirthOrder の記録
 
-家族内で用いられる「長男」「二男」「長女」「二女」などの出生順に基づく呼称は、`BirthOrderLabel` 拡張で記録する。
+家族内で用いられる「長男」「二男」「長女」「二女」などの出生順に基づく呼称は、`BirthOrder` 拡張で記録する。
 
 出生順呼称は、患者との続柄そのものを置き換えるものではない。患者との関係は `relationship` で表現し、出生順呼称は対象となる家族構成員に関する補足情報として記録する。
 
@@ -46,10 +46,10 @@
     }]
   },
   "extension": [{
-    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_BirthOrderLabel",
+    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_BirthOrder",
     "valueCodeableConcept": {
       "coding": [{
-        "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrderLabel_CS",
+        "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS",
         "code": "daughter-2",
         "display": "second daughter"
       }],
@@ -65,7 +65,7 @@
 }
 ```
 
-上記例では、`relationship` に `MAUNT`（母方のおば）を記録し、`extension` に `BirthOrderLabel` 拡張を追加して「次女」（`daughter-2`）を補足情報として記録している。これにより、患者との続柄と家族内での出生順呼称を区別して表現できる。
+上記例では、`relationship` に `MAUNT`（母方のおば）を記録し、`extension` に `BirthOrder` 拡張を追加して「次女」（`daughter-2`）を補足情報として記録している。これにより、患者との続柄と家族内での出生順呼称を区別して表現できる。
 
 #### 疾患情報 condition の記録
 
@@ -96,9 +96,9 @@ JP Core FamilyMemberHistoryプロファイルで使用される拡張は次の�
   <tr>
     <td>出生順呼称</td>
     <td>FamilyMemberHistory.relationshipで表現される続柄を補足し、家族内で用いられる出生順に基づく呼称（長男、二男、長女、二女など）を表現する。</td>
-    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_BirthOrderLabel</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_BirthOrder</td>
     <td>CodeableConcept</td>
-    <td>JP_BirthOrderLabel_VS(preferred)</td>
+    <td>JP_BirthOrder_VS(preferred)</td>
   </tr>
 </table>
 
@@ -111,14 +111,14 @@ JP Core FamilyMemberHistoryプロファイルで使用される拡張は次の�
 
 #### 出生順呼称
 
-出生順呼称には、JP_BirthOrderLabel_CS および JP_BirthOrderLabel_VS を使用する。
+出生順呼称には、JP_BirthOrder_CS および JP_BirthOrder_VS を使用する。
 
 
 | 分類 | 名称 | URI |
 |----|---|---|
 | 続柄 | HL7 V3 FamilyMember ValueSet | http://terminology.hl7.org/ValueSet/v3-FamilyMember |
-| 出生順呼称 | JP BirthOrderLabel CodeSystem | http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrderLabel_CS |
-| 出生順呼称 | JP BirthOrderLabel ValueSet | http://jpfhir.jp/fhir/core/ValueSet/JP_BirthOrderLabel_VS |
+| 出生順呼称 | JP BirthOrder CodeSystem | http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS |
+| 出生順呼称 | JP BirthOrder ValueSet | http://jpfhir.jp/fhir/core/ValueSet/JP_BirthOrder_VS |
 
 
 ## 利用方法

@@ -39,9 +39,9 @@ Usage: #example
     * system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
     * code = #SON
     * display = "実息子"
-* extension[BirthOrderLabel].valueCodeableConcept
+* extension[BirthOrder].valueCodeableConcept
   * coding[0]
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrderLabel_CS"
+    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS"
     * code = #son-1
     * display = "first son"
   * text = "長男"
@@ -92,9 +92,9 @@ Usage: #example
     * system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
     * code = #MAUNT
     * display = "母方のおば"
-* extension[BirthOrderLabel].valueCodeableConcept
+* extension[BirthOrder].valueCodeableConcept
   * coding[0]
-    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrderLabel_CS"
+    * system = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS"
     * code = #daughter-2
     * display = "second daughter"
   * text = "次女"

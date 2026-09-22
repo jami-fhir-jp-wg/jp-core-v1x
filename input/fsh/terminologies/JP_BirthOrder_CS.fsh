@@ -1,18 +1,18 @@
-CodeSystem: JP_BirthOrderLabel_CS
-Id: jp-birthorderlabel-cs
-Title: "JP Core Birth Order Label CodeSystem"
+CodeSystem: JP_BirthOrder_CS
+Id: jp-birthorder-cs
+Title: "JP Core Birth Order CodeSystem"
 Description: "FamilyMemberHistoryにおいて、家族内で用いられる出生順に基づく呼称（長男、二男、長女、二女など）を表現するためのCodeSystem。これらのコードは患者との続柄そのものではなく、FamilyMemberHistory.relationshipを補足する出生順の呼称を表す。"
-* ^url = $JP_BirthOrderLabel_CS
+* ^url = $JP_BirthOrder_CS
 * ^status = #active
 * ^experimental = false
 * ^caseSensitive = true
 * ^content = #complete
 * ^property[0].code = #category
-* ^property[=].uri = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrderLabel_CS#category"
+* ^property[=].uri = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS#category"
 * ^property[=].description = "出生順呼称の区分。"
 * ^property[=].type = #code
 * ^property[+].code = #order
-* ^property[=].uri = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrderLabel_CS#order"
+* ^property[=].uri = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS#order"
 * ^property[=].description = "区分内での順位。"
 * ^property[=].type = #integer
 
