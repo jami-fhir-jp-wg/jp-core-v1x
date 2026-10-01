@@ -138,6 +138,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement
     - http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Server_CapabilityStatement
     - http://jpfhir.jp/fhir/core/CodeSystem/HL70241
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseOutcomeReceipt_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySite_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySiteStatus_CS
@@ -162,6 +163,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_BirthOrder
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_CertificatedDate
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_DueDateOfNextDose
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Immunization_ManufacturedDate
@@ -276,6 +278,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchSubject
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_BirthOrder_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Condition_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeReceipt_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalBodySite_VS
