@@ -137,6 +137,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
   special-url:
     - http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement
     - http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Server_CapabilityStatement
+    - http://jpfhir.jp/fhir/core/ConceptMap/JP_BodyMeasurement_to_LOINC
+    - http://jpfhir.jp/fhir/core/ConceptMap/JP_ConditionDiseaseOutcomeHL70241_to_SNOMED
+    - http://jpfhir.jp/fhir/core/ConceptMap/JP_ConditionDiseaseOutcomeHL70241_to_JHSD0006
+    - http://jpfhir.jp/fhir/core/ConceptMap/JP_ConditionDiseaseOutcomeHL70241_to_Receipt
     - http://jpfhir.jp/fhir/core/CodeSystem/HL70241
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseOutcomeReceipt_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_DentalBodySite_CS

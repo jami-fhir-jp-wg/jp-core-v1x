@@ -120,6 +120,12 @@ Alias: $JP_Patient_Race = http://jpfhir.jp/fhir/core/Extension/StructureDefiniti
 Alias: $JP_Client_CapabilityStatement = http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement
 Alias: $JP_Server_CapabilityStatement = http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Server_CapabilityStatement
 
+// ConceptMap
+Alias: $JP_BodyMeasurement_to_LOINC = http://jpfhir.jp/fhir/core/ConceptMap/JP_BodyMeasurement_to_LOINC
+Alias: $JP_ConditionDiseaseOutcomeHL70241_to_SNOMED = http://jpfhir.jp/fhir/core/ConceptMap/JP_ConditionDiseaseOutcomeHL70241_to_SNOMED
+Alias: $JP_ConditionDiseaseOutcomeHL70241_to_JHSD0006 = http://jpfhir.jp/fhir/core/ConceptMap/JP_ConditionDiseaseOutcomeHL70241_to_JHSD0006
+Alias: $JP_ConditionDiseaseOutcomeHL70241_to_Receipt = http://jpfhir.jp/fhir/core/ConceptMap/JP_ConditionDiseaseOutcomeHL70241_to_Receipt
+
 // SearchParameter
 Alias: $JP_Coverage_InsuredPersonNumber_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonNumber_SP
 Alias: $JP_Coverage_InsuredPersonSubNumber_SP = http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSubNumber_SP
