@@ -54,12 +54,12 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * encounter ^comment = "JP Core Encounterリソースを参照する。"
 * effective[x] MS
 * effective[x] only dateTime
-* effective[x] ^short = "診断レポートの作成日時。【詳細参照】"
-* effective[x] ^definition = "診断レポートの作成日時。"
+* effective[x] ^short = "診断レポートの対象となる内視鏡の検査・処置が実施された日時。【詳細参照】"
+* effective[x] ^definition = "診断レポートの対象となる内視鏡の検査・処置が実施された日時。"
 * effective[x] ^comment = "DateTimeを採用する。"
 * issued MS
-* issued ^short = "レポート確定日時。【詳細参照】"
-* issued ^definition = "レポート確定日時。"
+* issued ^short = "このバージョンの診断レポートが医療者に提供/確定された日時。【詳細参照】"
+* issued ^definition = "このバージョンの診断レポートが医療者に提供/確定された日時。"
 * issued ^comment = "StatusがFinalになった日時を指定する。"
 * performer MS
 * performer only Reference(JP_Practitioner)
