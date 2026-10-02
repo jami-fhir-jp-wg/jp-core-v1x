@@ -18,8 +18,8 @@ JP Core Clientは個別のユースケースや意味的な要請に応じてこ
   - 各インスタンス を、FHIR meta.profile 属性の一部としてサポートされる JP Core profileとして認識すること
 
 - セキュリティ  
-  - See the General Security Considerations section for requirements and recommendations.
-  - サーバーはunauthorizedなリクエストに対してはHTTP 401を返さなければならない。(**SHALL**)
+  - セキュリティに関する要件および推奨事項は[Security （セキュリティ）](security.html)を参照すること
+  - サーバーは、認証されていないリクエストに対してHTTP 401を返さなければならない (**SHALL**)
 
 ## RESTful Capabilities by Resource/Profile:
 
