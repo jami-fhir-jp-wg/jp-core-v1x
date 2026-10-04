@@ -70,6 +70,7 @@ Alias: $JP_PractitionerRole = http://jpfhir.jp/fhir/core/StructureDefinition/JP_
 Alias: $JP_Procedure = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Procedure
 Alias: $JP_RelatedPerson = http://jpfhir.jp/fhir/core/StructureDefinition/JP_RelatedPerson
 Alias: $JP_ServiceRequest_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common
+Alias: $JP_ServiceRequest_Order_Medication_Requesting = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Order_Medication_Requesting
 Alias: $JP_Specimen_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
 
 // StructureDefinition: Extension
@@ -228,6 +229,7 @@ Alias: $JP_ProcedureFollowUp_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undef
 Alias: $JP_ProcedureNotPerformedReason_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureNotPerformedReason_CS
 Alias: $JP_ProcedureOutcome_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureOutcome_CS
 Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
+Alias: $JP_ServiceRequestOrderCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ServiceRequestOrderCategory_CS
 Alias: $JP_SimpleObservationCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
 Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 
@@ -354,6 +356,7 @@ Alias: $JP_ProcedureOutcome_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Procedur
 Alias: $JP_ProcedurePerformerRole_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedurePerformerRole_VS
 Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureReason_VS
 Alias: $JP_ReasonCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCodesJed_VS
+Alias: $JP_ServiceRequestOrderCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ServiceRequestOrderCategory_VS
 Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
 

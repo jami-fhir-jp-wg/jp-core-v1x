@@ -84,6 +84,7 @@
 [JP_ResearchStudy]: StructureDefinition-jp-researchstudy.html
 [JP_ResearchSubject]: StructureDefinition-jp-researchsubject.html
 [JP_ServiceRequest_Common]: StructureDefinition-jp-servicerequest-common.html
+[JP_ServiceRequest_Order_Medication_Requesting]: StructureDefinition-jp-servicerequest-order-medication-requesting.html
 [JP_Specimen_Common]: StructureDefinition-jp-specimen-common.html
 
 <!-- StructureDefinition: Extension -->
@@ -156,11 +157,13 @@
 [JP_DentalSimpleMissingTeethObservation_CS]: CodeSystem-jp-dental-simple-missingteeth-observation-cs.html
 [JP_DentalSimplePresentTeethObservation_CS]: CodeSystem-jp-dental-simple-presentteeth-observation-cs.html
 [JP_DentalSurfaceBodyStructure_CS]: CodeSystem-jp-dental-surfacebodystructure-cs.html
+[JP_MedicationSubstitutionProhibitionReason_CS]: CodeSystem-jp-medication-substitution-prohibition-reason-cs.html
 [JP_ObservationBodyMeasurementCode_CS]: CodeSystem-jp-observation-bodymeasurement-code-cs.html
 [JP_ObservationDentalCategory_CS]: CodeSystem-jp-observation-dental-category-cs.html
 [JP_ObservationElectrocardiogramDuration_CS]: CodeSystem-jp-observation-electrocardiogram-duration-cs.html
 [JP_ObservationElectrocardiogramExtraCategory_CS]: CodeSystem-jp-observation-electrocardiogram-extracategory-cs.html
 [JP_ObservationElectrocardiogramStressType_CS]: CodeSystem-jp-observation-electrocardiogram-stresstype-cs.html
+[JP_ServiceRequestOrderCategory_CS]: CodeSystem-jp-servicerequest-ordercategory-cs.html
 [JP_Undefined_CS]: CodeSystem-jp-undefined-cs.html
 
 <!-- ValueSet -->
@@ -178,6 +181,7 @@
 [JP_DentalTeethObservation_VS]: ValueSet-jp-dental-teethobservation-vs.html
 [JP_DICOMModality_VS]: ValueSet-jp-dicommodality-vs.html
 [JP_ImagingStudy_Radiology_BodySite_VS]: ValueSet-jp-imagingstudy-radiology-bodysite-vs.html
+[JP_MedicationSubstitutionProhibitionReason_VS]: ValueSet-jp-medication-substitution-prohibition-reason-vs.html
 [JP_Observation_BodySite_VS]: ValueSet-jp-observation-bodysite-vs.html
 [JP_ObservationDetailedDentalCategory_VS]: ValueSet-jp-observation-detailed-dental-category-vs.html
 [JP_ObservationElectrocardiogramComponentCode_VS]: ValueSet-jp-observation-electrocardiogram-component-code-vs.html
@@ -187,6 +191,7 @@
 [JP_ObservationEndoscopyCode_VS]: ValueSet-jp-observation-endoscopy-code-vs.html
 [JP_ObservationEndoscopyValueJed_VS]: ValueSet-jp-observation-endoscoy-value-jed-vs.html
 [JP_ObservationRadiologyCode_VS]: ValueSet-jp-observation-radiology-code-vs.html
+[JP_ServiceRequestOrderCategory_VS]: ValueSet-jp-servicerequest-ordercategory-vs.html
 [JP_Undefined_VS]: ValueSet-jp-undefined-vs.html
 
 <!-- Example -->
@@ -315,6 +320,8 @@
 [jp-practitionerrole-example-1]: PractitionerRole-jp-practitionerrole-example-1.html
 [jp-procedure-example-1]: Procedure-jp-procedure-example-1.html
 [jp-servicerequest-department-example-03]: ServiceRequest-jp-servicerequest-department-example-03.html
+[jp-servicerequest-order-medication-requesting-example-1]: ServiceRequest-jp-servicerequest-order-medication-requesting-example-1.html
+[jp-servicerequest-order-medication-requesting-example-2]: ServiceRequest-jp-servicerequest-order-medication-requesting-example-2.html
 [jp-specimen-example-1]: Specimen-jp-specimen-example-1.html
 [jp-specimen-example-2]: Specimen-jp-specimen-example-2.html
 [jp-specimen-example-3]: Specimen-jp-specimen-example-3.html

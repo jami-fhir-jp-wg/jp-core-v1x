@@ -80,6 +80,7 @@ JP Core FHIR コンテンツ: JP Core で利用する FHIR の詳細について
 * [Workflowグループ](group-workflow.html)
   * ServiceRequest (サービスリクエスト)
     * [JP Core ServiceRequest Common (共通) プロファイル][JP_ServiceRequest_Common]
+    * [JP Core ServiceRequest Order Medication Requesting (処方・注射オーダ) プロファイル][JP_ServiceRequest_Order_Medication_Requesting]
 
 #### JP Core で定義しない Profile(プロファイル)
 
