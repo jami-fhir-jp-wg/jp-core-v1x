@@ -55,7 +55,7 @@ GET [base]/DiagnosticReport?patient={reference}&category={token}&based-on={refer
 ```
 GET [base]/DiagnosticReport?patient=123&category=http://loinc.org|LP29693-6&based-on=ServiceRequest/456
 ```
-1. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、date(レポート作成日)を指定した検索をサポートすることが望ましい。（**SHOULD**）  
+1. 臨床での検索：subject = Patient（対象患者）、category(対象レポートカテゴリ)、date(検体採取日)を指定した検索をサポートすることが望ましい。（**SHOULD**）  
 patient,category,dateの各検索パラメータに一致するObservationリソースを含むBundleを取得することができる。  
 ```
 GET [base]/DiagnosticReport?patient={reference}&category={token}&date={date}
