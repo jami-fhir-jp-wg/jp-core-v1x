@@ -54,8 +54,18 @@ JP Core では、依頼単位と個別検査項目との関係付けの方法を
 * intent ^comment = "【JP Core仕様】このプロファイルでは order に固定する。
 intent はオーダの種類を表す要素であり、依頼単位と個別検査項目の親子を区別するためには使用しない。"
 //
+* category 1..
+* category ^slicing.discriminator.type = #pattern
+* category ^slicing.discriminator.path = "$this"
+* category ^slicing.rules = #open
 * category ^short = "検査の区分【詳細参照】"
-* category ^comment = "【JP Core仕様】検体検査であることを示す区分を設定する。使用するコード表は個別仕様で定めてよい。"
+* category ^comment = "【JP Core仕様】このプロファイルでは必須とする。
+検体検査の依頼であることを判別できるよう、laboratory スライスを必ず設定する。施設固有の区分などを追加で設定してもよい。"
+* category contains laboratory 1..1
+* category[laboratory] = $JP_SimpleObservationCategory_CS#laboratory
+* category[laboratory] ^short = "検体検査を示す区分（laboratory 固定）【詳細参照】"
+* category[laboratory] ^definition = "検体検査の依頼であることを示す区分。"
+* category[laboratory] ^comment = "【JP Core仕様】結果として返される Observation（JP_Observation_LabResult）の category と同じコード表（JP Core Simple Observation Category CodeSystem）を使用し、laboratory に固定する。"
 //
 * priority ^short = "緊急度（routine | urgent | asap | stat）【詳細参照】"
 * priority ^comment = "【JP Core仕様】値セット（RequestPriority）は required であり、値は変更できない。日本の運用との対応は次を目安とする。
@@ -66,14 +76,17 @@ intent はオーダの種類を表す要素であり、依頼単位と個別検�
 省略した場合は routine とみなす。"
 //
 * code 1..
+* code from $JP_ObservationLabResultCode_VS (preferred)
+* code ^binding.description = "MEDIS 臨床検査マスター"
 * code ^short = "検査項目のコード【詳細参照】"
 * code ^definition = "依頼された個別の検査項目を識別するコード。"
 * code ^comment = "【JP Core仕様】このプロファイルでは必須とする。
 標準コードとして JLAC10（または JLAC11）を使用する。結果として返される Observation（JP_Observation_LabResult）の code と同じコード体系を使用すると、依頼と結果の突合が容易になる。"
 * code.id ^short = "要素間参照のための一意なID"
 * code.extension ^short = "実装によって定義される追加コンテンツ"
+* code.coding 1..
 * code.coding ^short = "検査項目のコード（標準コード、ローカルコード）【詳細参照】"
-* code.coding ^comment = "【JP Core仕様】標準コードとローカルコードの両方を設定できる。いずれか一方は設定すること。JLAC10 と JLAC11 など複数の標準コードを設定できるよう、上限は設けない。"
+* code.coding ^comment = "【JP Core仕様】このプロファイルでは必須とする。標準コードとローカルコードの両方を設定できる。いずれか一方は設定すること。JLAC10 と JLAC11 など複数の標準コードを設定できるよう、上限は設けない。"
 * code.text 1..
 * code.text ^short = "検査項目の名称"
 * code.text ^definition = "検査項目の表示名。オーダ票や報告書に記載する名称。"
@@ -105,3 +118,17 @@ intent はオーダの種類を表す要素であり、依頼単位と個別検�
 依頼時点で検体が未採取の場合は設定せず、Specimen リソース側から ServiceRequest を参照する。"
 //
 * bodySite ^comment = "【JP Core仕様】検体検査では、JLAC10 の材料コードなど code に検体や部位が含まれることが多いため、通常は使用しない。code から部位が分からない場合にのみ使用する。"
+//
+* reasonCode ^short = "検査目的、依頼病名【詳細参照】"
+* reasonCode ^definition = "検査を依頼する理由。検査目的や依頼病名をコードまたはテキストで表現する。"
+* reasonCode ^comment = "【JP Core仕様】検査目的は自由記載が多いため、text に設定する。依頼病名は、コード化されている場合は coding に、コード化されていない場合は text に設定する。
+病名を Condition リソースとして参照できる場合は reasonReference を使用する。同じ理由を reasonCode と reasonReference の両方に重複して設定しないこと。"
+//
+* reasonReference ^short = "依頼病名などへの参照【詳細参照】"
+* reasonReference ^definition = "検査を依頼する理由となるリソースへの参照。"
+* reasonReference ^comment = "【JP Core仕様】依頼病名を Condition リソース（JP_Condition）として参照できる場合に使用する。"
+//
+* supportingInfo ^comment = "【JP Core仕様】検査の実施や結果の解釈に必要な患者情報（身長、体重、採取時の状態など）を、Observation などのリソースへの参照として設定する。"
+//
+* note ^short = "依頼コメント【詳細参照】"
+* note ^comment = "【JP Core仕様】検査部門への連絡事項など、他の要素で表現できない依頼コメントをテキストで設定する。"
