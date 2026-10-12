@@ -9,6 +9,33 @@
 
 ### 実装ガイダンス
 
+
+### 典型的な例
+
+家族歴を表現する典型的な例を下記に示す。`condition` は必須ではないが、基本的に必要となる要素である。
+
+```json
+{
+  "resourceType": "FamilyMemberHistory",
+  "status": "partial",
+  "patient": {
+    "reference": "Patient/jp-patient-example-1",
+    "display": "山田 太郎"
+  },
+  "relationship": {
+    "coding": [{
+      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "code": "MTH",
+      "display": "母親"
+    }]
+  },
+  "condition": [{
+    "code": { "text": "糖尿病" }
+  }]
+}
+```
+
+
 #### 記録単位
 
 `FamilyMemberHistory` は、患者に関連する個人1人につき1リソースとして記録する。
