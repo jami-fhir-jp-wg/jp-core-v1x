@@ -109,23 +109,3 @@ Usage: #example
     * text = "糖尿病"
 * note[+].text = "糖尿病に罹患しており、MELAS保因者と思われる。"
 
-
-Instance: jp-familymemberhistory-example-list
-InstanceOf: List
-Usage: #example
-* status = #current
-* mode = #snapshot
-* code.coding[0].system = "http://loinc.org"
-* code.coding[0].code = #8670-2
-* code.coding[0].display = "History of family member diseases"
-* code.text = "家族歴"
-* subject.reference = "Patient/jp-patient-example-1"
-* subject.display = "山田 太郎"
-* entry[0].item.reference = "FamilyMemberHistory/jp-familymemberhistory-example-1"
-* entry[0].item.display = "母親"
-* entry[1].item.reference = "FamilyMemberHistory/jp-familymemberhistory-example-2"
-* entry[1].item.display = "息子（長男）"
-* entry[2].item.reference = "FamilyMemberHistory/jp-familymemberhistory-example-3"
-* entry[2].item.display = "内縁のパートナー"
-* entry[3].item.reference = "FamilyMemberHistory/jp-familymemberhistory-example-4"
-* entry[3].item.display = "母方のおば（次女）"
