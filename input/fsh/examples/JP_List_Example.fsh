@@ -1,6 +1,6 @@
-Instance: jp-list-example-1
+Instance: jp-familymemberhistory-example-list-1
 InstanceOf: List
-Title: "JP Core List Example-1 家族歴一覧"
+Title: "JP Core FamilyMemberHistory List Example-1 家族歴一覧"
 Description: "家族歴一覧の例：MELASが疑われる患者（山田太郎）の家族構成員（母親、息子、内縁のパートナー、母方のおば）のFamilyMemberHistoryを一覧化したListリソース。"
 Usage: #example
 * status = #current
