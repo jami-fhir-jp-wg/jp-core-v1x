@@ -10,7 +10,7 @@
 ### 実装ガイダンス
 
 
-### 典型的な例
+#### 典型的な例
 
 家族歴を表現する典型的な例を下記に示す。`condition` は必須ではないが、基本的に必要となる要素である。
 
@@ -42,8 +42,11 @@
 
 #### 続柄 relationship の記録
 
-患者と対象となる家族構成員との関係は `FamilyMemberHistory.relationship` に記録する。  
-`relationship` には、HL7 V3 RoleCode の FamilyMember ValueSet を使用する。
+患者と対象となる家族構成員との関係は `FamilyMemberHistory.relationship` に記録する。`relationship` には、HL7 V3 RoleCode の FamilyMember ValueSet を使用する。`relationship` は**患者からの方向**で記録する。
+
+- 父方／母方の区別は、`FTH`／`MTH`、`PUNCLE`（父方のおじ）／`MUNCLE`（母方のおじ）、`PAUNT`（父方のおば）／`MAUNT`（母方のおば）など方向を内包するコードで表す。
+- JP Core は `v3-RoleCode` の各コードに日本語の designation を付与した CodeSystem [JP_V3RoleCode_CS] を用意している。`display` に日本語を用いる根拠とする。
+
 
 #### 出生順呼称 BirthOrder の記録
 
