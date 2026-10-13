@@ -20,7 +20,7 @@ SS-MIX2等からのデータ移行における互換性担保のためにCT検�
 | MAY | category | token | レポート種別 | DiagnosticReport.category ([ValueSet](https://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html)) |
 | MAY | code | token | レポート全体を示すコード | DiagnosticReport.code |
 | MAY | conclusion | token | コード化されたレポートの conclusion (interpretation/impression) | DiagnosticReport.conclusionCode |
-| MAY | date | date | レポート作成日 | DiagnosticReport.effectiveDate |
+| MAY | date | date | 診断レポートの対象となる検査・処置が実施された日時 | DiagnosticReport.effectiveDateTime |
 | MAY | encounter | reference | オーダが発行された際の Encounter | DiagnosticReport.encounter ([Encounter][JP_Encounter]) |
 | SHALL | identifier | token | レポートの identifier（識別子） | DiagnosticReport.identifier |
 | SHOULD | issued | date | レポート発行日（確定日） | DiagnosticReport.issued |
