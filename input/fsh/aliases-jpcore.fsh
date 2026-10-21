@@ -232,6 +232,7 @@ Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefin
 Alias: $JP_SimpleObservationCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
 Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 Alias: $JP_BirthOrder_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS
+Alias: $JP_V3RoleCode_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_V3RoleCode_CS
 
 // 病名修飾コード（MEDIS病名交換用/管理修飾コード、支払基金修飾語コード）の CodeSystem alias は
 // Clins では定義されているが JP Core では未定義のため、ここでは定義しない（将来採用時に追加）。
