@@ -97,6 +97,83 @@
 
 上記例では、`relationship` に `MAUNT`（母方のおば）を記録し、`extension` に `BirthOrder` 拡張を追加して家族内の呼称である「次女」（`daughter-2`）を補足情報として記録している。これにより、患者との続柄と家族内での出生順呼称を区別して表現できる。
 
+#### 氏名・生年月日の追加と記録の更新
+
+`BirthOrder` 拡張は、対象となる家族構成員の氏名や生年月日までは聴取できていない家族歴を補足することを目的としている。日常診療では続柄と出生順呼称が記録されていればよく、氏名と生年月日は必ずしも必須ではない。
+
+その一方で、診療の継続により、氏名や生年月日といった個人を特定できる情報が聴取された場合は、**同じ FamilyMemberHistory を更新して**反映する。
+
+想定する段階は次のとおりである。
+
+| 段階 | 想定される場面 | 記録される情報 |
+|---|---|---|
+| 初期記録 | プライマリケアにおける日常診療 | `relationship` と `BirthOrder` 拡張による続柄と出生順呼称 |
+| 更新 | 高次医療機関における遺伝カウンセリング等 | 上記に加えて `name`（氏名）と `bornDate`（生年月日） |
+
+`status` はこれらの段階と連動して自動的に変わる値ではない。段階とは別に、その家族構成員について取得できた**健康情報**の完全さを示す値として保持する（下記参照）。
+
+##### 更新のしかた
+
+更新時には、次の要素を用いて追加の内容と変遷を示す。
+
+- `date` : 家族歴が記録された、または最終更新された日時を設定する。更新時には更新後の値とする。
+- `status` : その家族構成員について取得できた**健康情報**の完全さを示す。`name` や `bornDate` の追加そのものによって変化する値ではなく、関連する健康情報が取得時点で記録し尽くされた場合に `partial` から `completed` へ更新する。
+- `note` : `Annotation` を用い、いつ、誰が、どの根拠で追加したかを変遷として残す。
+
+**実装例：母方のおば（次女）の記録を更新した場合**
+
+前述の「母方のおば（次女）」の例（初期記録）に対して、高次医療機関での遺伝カウンセリングにより氏名と生年月日を聴取できた場合の更新を示す。`relationship` と `sex` は初期記録から変更しない。
+
+```json
+{
+  "resourceType": "FamilyMemberHistory",
+  "id": "jp-familymemberhistory-example-4",
+  "status": "partial",
+  "date": "2026-10-01T10:00:00+09:00",
+  "patient": {
+    "reference": "Patient/jp-patient-example-1",
+    "display": "山田 太郎"
+  },
+  "relationship": {
+    "coding": [{
+      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "code": "MAUNT",
+      "display": "母方のおば"
+    }]
+  },
+  "extension": [{
+    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_BirthOrder",
+    "valueCodeableConcept": {
+      "coding": [{
+        "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS",
+        "code": "daughter-2",
+        "display": "second daughter"
+      }],
+      "text": "次女"
+    }
+  }],
+  "name": "山田 次子",
+  "bornDate": "1965-04-01",
+  "sex": {
+    "coding": [{
+      "system": "http://hl7.org/fhir/administrative-gender",
+      "code": "female"
+    }]
+  },
+  "condition": [{
+    "code": { "text": "糖尿病" }
+  }],
+  "note": [{
+    "authorString": "遺伝外来",
+    "time": "2026-10-01T10:00:00+09:00",
+    "text": "2026-04 の初回聴取時は出生順呼称のみを記録していた。2026-10 の遺伝カウンセリングにて本人の同意のもとに氏名と生年月日を確認した。本家族構成員については現時点で糖尿病以外の既往歴を確認できておらず、status は partial のままとしている。"
+  }]
+}
+```
+
+上記例では、`name` に氏名、`bornDate` に生年月日を記録している。`status` は健康情報の完全さを示す値であるため、氏名と生年月日の追加だけでは `completed` に変わらず `partial` を維持する。`note` には追加の根拠と時期、ならびに未聴取の項目を残している。
+
+
 #### 疾患情報 condition の記録
 
 対象となる家族構成員の疾患情報は `condition` 要素に記録する。  
