@@ -15,7 +15,7 @@ Description: "このプロファイルはObservationリソースに対して、�
 * insert SetDefinition(identifier, このObservationリソースの一意な識別ID)
 * basedOn only 	Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or JP_MedicationRequest or JP_MedicationRequest_Injection or NutritionOrder or ServiceRequest)
 * insert SetDefinition(basedOn, このObservationが実施されることになった依頼や計画、提案に関する情報)
-* partOf only Reference(JP_MedicationAdministration or JP_MedicationAdministration_Injection or JP_MedicationDispenseBase or MedicationStatement or JP_Procedure or JP_Immunization or ImagingStudy)
+* partOf only Reference(JP_MedicationAdministration or JP_MedicationAdministration_Injection or JP_MedicationDispenseBase or JP_MedicationStatement or JP_MedicationStatement_Injection or JP_Procedure or JP_Immunization or ImagingStudy)
 * insert SetDefinition(partOf, このObservationが親イベントの一部を成す要素であるとき、その親イベントに関する情報)
 * partOf ^comment = "ObservationをEncounterにencounter要素を使ってリンクする。もうひとつ別のObservationを参照することについては、以降にあるt [Notes](observation.html#obsgrouping)　をガイダンスとして参照のこと。"
 * insert SetDefinition(status, 結果の状態)
@@ -38,9 +38,9 @@ Description: "このプロファイルはObservationリソースに対して、�
 * code ^comment = "observationの意味を正しく理解するには、すべてのcode-valueペアと、さらに存在する場合にはcomponent.code-component.valueのペアが、考慮される必要がある。"
 * subject only Reference(JP_Patient or Group or Device or JP_Location)
 * insert SetDefinition(subject, このObservationの対象となる患者や患者群、機器、場所に関する情報)
-* subject ^comment = "この要素は1..1のcardinalityになるはずと考えられる。この要素が欠損値になる唯一の状況は、対象患者が不明な機器によって観察が行われるケースである。この場合、観察は何らかのコンテキスト・チャネル照合技術を介して患者に照合される必要があり、患者に照合されれば、その時点で本要素を更新する必要がある。"
+* subject ^comment = "原則subjectを記述すべきだが、対象患者が不明なデバイス観察のケースを考慮し、cardinalityは0..1とする。"
 * insert SetDefinition(focus, 配偶者、親、胎児、ドナーなど、このObservationのsubject要素が実際の対象でない場合、その実際の対象に関する情報)
-* focus ^comment = "T通常、observationは対象（患者、または患者のグループ、場所、またはデバイス）について行われ、対象とobservationのために直接測定されるものとの区別は、observationコード自体（例：「血糖値」 ）で記述され、この要素を使用して個別に表す必要はない。検体（標本）への参照が必要な場合は、 `specimen`要素を使用する。リソースの代わりにコードが必要な場合は、人体部位には`bodysite`要素を使用するか、標準の拡張機能[focusCode]（extension-observation-focuscode.html）を使用する。"
+* focus ^comment = "通常、observationは対象（患者、または患者のグループ、場所、またはデバイス）について行われ、対象とobservationのために直接測定されるものとの区別は、observationコード自体（例：「血糖値」 ）で記述され、この要素を使用して個別に表す必要はない。検体（標本）への参照が必要な場合は、 `specimen`要素を使用する。リソースの代わりにコードが必要な場合は、人体部位には`bodysite`要素を使用するか、標準の拡張機能[focusCode]（extension-observation-focuscode.html）を使用する。"
 * encounter only Reference(JP_Encounter)
 * insert SetDefinition(encounter, 診察や入院など、このObservationが実施されるきっかけとなった診療イベントに関する情報)
 * encounter ^comment = "通常、イベントが発生したEncounterであるが、一部のイベントは、Encounterの正式な完了の前または後に開始される場合があり、その場合でもEncounterのコンテキストに関連付けられている（例：入院前の臨床検査）。"
@@ -80,4 +80,4 @@ Description: "このプロファイルはObservationリソースに対して、�
 * derivedFrom ^comment = "この要素にリストされているすべての参照の選択肢は、派生値の元のデータなる可能性のある臨床観察やその他の測定値を表すことができる。最も一般的な参照先は、別のobservationである。observationをグループに一緒にまとめる方法については、以下の[メモ]（observation.html＃obsgrouping）を参照すること。"
 * insert SetDefinition(component, 複合的な結果。例えば、血圧測定値ではそれを構成する収縮期および拡張期の値の組み合わせ)
 * component ^comment = "複数のObservation をグループに一緒にまとめる方法については、以下の[Notes]（observation.html＃notes）を参照すること。"
-* component ^requirements = "コンポーネントobservation は プライマリobservation としてのobservation リソースの中で同じ属性を共有し、常に単一のobservation の一部として扱われる（つまりそれらは分離可能ではないん）。ただし、プライマリobservationのreference rangeはコンポーネント値に継承されないため、reference rangeは各コンポーネントobservation に適切であれば必要である。"
+* component ^requirements = "コンポーネントobservation は プライマリobservation としてのobservation リソースの中で同じ属性を共有し、常に単一のobservation の一部として扱われる（つまりそれらは分離可能ではない）。ただし、プライマリobservationのreference rangeはコンポーネント値に継承されないため、reference rangeは各コンポーネントobservation に適切であれば必要である。"

@@ -23,3 +23,8 @@ Thumbs.db
 /.vscode
 .index.json
 .index.db
+
+# for OpenSpec
+/openspec/
+/.claude/commands/opsx/
+/.claude/skills/openspec-*/

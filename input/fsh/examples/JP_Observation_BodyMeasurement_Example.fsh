@@ -6,11 +6,13 @@ Usage: #example
 * category[first] = $JP_SimpleObservationCategory_CS#body-measurement "身体計測"
 * category[second] = $JP_ObservationBodyMeasurementCategory_CS#weight "体重"
 * subject = Reference(Patient/jp-patient-example-1)
-* code.coding[0] = http://example.org/abc-hospital/fhir/Observation/localcode#abc-local-456
-* code.coding[+] = $JP_ObservationBodyMeasurementCode_CS#31000296
+* code.coding[0] = http://example.org/abc-hospital/fhir/Observation/localcode#abc-local-456 "体重"
+* code.coding[+] = $JP_ObservationBodyMeasurementCode_CS#31000296 "体重"
 * effectiveDateTime = "2021-10-19T10:00:00+09:00"
 * performer = Reference(Practitioner/jp-practitioner-example-male-1)
 * valueQuantity.unit = "kg"
 * valueQuantity.value = 63.5
+* valueQuantity.system = "http://unitsofmeasure.org"
+* valueQuantity.code = #kg
 * status = #final
 * encounter = Reference(Encounter/jp-encounter-example-1)

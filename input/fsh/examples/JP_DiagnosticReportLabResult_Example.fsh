@@ -20,7 +20,6 @@ Usage: #example
 * presentedForm.language = #ja-JP
 * presentedForm.data = "JVBERi0xLjUNCiW1tbW1DQoxIDAgb2JqDQo8PC9UeXBlL0NhdGFsb2cvUGFnZXMgMiAwIFIvTGFuZyhqYS1KUCkgL1N0cnVjdFRyZWVSb290IDEzIDAgUi9NYXJrSW5mbzw8L01hcmtlZCB0cnVlPj4+Pg0KZW5kb2JqDQoyIDAgb2JqDQo8PC9UeXBlL1BhZ2VzL0NvdW50IDEvS2lkc1sgMyAwIFJdID4+DQplbmRvYmoNCjMgMCBvYmoN"
 * presentedForm.title = "検査結果PDFレポート"
-* effectiveDateTime = "2021-08-25T08:30:00+09:00"
 * result[0] = Reference(Observation/inner-observation-labresult-1)
 * result[+] = Reference(Observation/inner-observation-labresult-2)
 * result[+] = Reference(Observation/inner-observation-labresult-3)
@@ -55,7 +54,6 @@ Usage: #inline
 * referenceRange.low = 4.2 '10*6/uL' "10*6./L"
 * referenceRange.high = 6 '10*6/uL' "10*6./L"
 * effectiveDateTime = "2021-03-04T08:30:00+09:00"
-* effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * specimen = Reference(Specimen/jp-specimen-example-2)
 
 Instance: inner-observation-labresult-3
@@ -76,5 +74,4 @@ Usage: #inline
 * referenceRange.low.unit = "%"
 * referenceRange.high.value = 52
 * referenceRange.high.unit = "%"
-* effectiveDateTime = "2021-03-04T08:30:00+09:00"
 * specimen = Reference(Specimen/jp-specimen-example-2)

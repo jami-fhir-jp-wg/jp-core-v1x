@@ -20,7 +20,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * insert SetDefinition(basedOn, 元になった検査や診断の依頼に関する情報)
 * basedOn ^comment = "通常、１結果ごとに１つの検査依頼があるが、状況によっては、複数の検査要求に対して１レポートがある場合がある。また１つの検査依頼に対して複数のレポートが作成される場合もあることに注意。"
 * insert SetDefinition(status, 診断レポートのステータス)
-//* category from $JP_DiagnosticReportCategory_VS (preferred)
+* category from $JP_DiagnosticReportCategory_VS (preferred)
 * insert SetDefinition(category, 診断レポートを作成した臨床分野、部門、または診断サービス（心臓病学、生化学、血液学、放射線医学など）を分類するコード)
 * category ^comment = "これは、検索、並べ替え、および表示の目的で使用される。"
 * insert SetDefinition(category.coding.system, カテゴリーコードシステムの識別URL)
@@ -36,7 +36,7 @@ Description: "このプロファイルはDiagnosticReportリソースに対し�
 * encounter only Reference(JP_Encounter)
 * insert SetDefinition(encounter, 診断レポートが関係する診療イベントに関する情報)
 * encounter ^comment = "受診、入院、診察など。通常、イベントが発生したEncounterであるが、一部のイベントは、Encounterの正式な完了の前または後に開始される場合があり、その場合でもEncounterのコンテキストに関連付けられている（例：入院前の臨床検査）。"
-* insert SetDefinition(effective[x], 診断レポートの作成日時)
+* insert SetDefinition(effective[x], 診断レポートの対象となる検査・処置が実施された日時)
 * effective[x] ^comment = "診断手順が患者に対して実行された場合、これは実施された時間である。対象が検体である場合は、検体採取時間から診断関連時刻を導き出すことができるが、検体情報が常に入手できるとは限らず、検体と診断関連時刻の正確な関係は必ずしも自明ではない。"
 * insert SetDefinition(issued, このバージョンの診断レポートが医療者に提供/確定された日時)
 * issued ^comment = "通常、レポートがレビューおよび検証・確定された後となる。リソース自体の更新時刻とは異なる場合がある。これは、レポートの実際の提供時刻ではなく、リソース自体の更新時刻はレコード（場合によってはセカンダリコピー）のステータスの更新時刻となるため。"
