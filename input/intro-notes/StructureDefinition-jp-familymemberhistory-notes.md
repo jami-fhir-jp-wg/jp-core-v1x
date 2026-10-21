@@ -1,14 +1,232 @@
 ### 必須要素
 
-本プロファイルに準拠するためには、次の項目の値が存在しなければならない。
+本プロファイルに準拠するためには、次の要素の値が存在しなければならない。
 
-- patient : 本リソースを有する患者
-- relationship : 患者と家族との関係の種類（父、母、兄弟など）
-- status : 家族歴のステータス（部分的 \| 完全 \| 記録エラー \| 健康状態不明）
+- `patient` : 本リソースが対象とする患者
+- `relationship` : 患者と家族との続柄（父、母、兄弟姉妹など）
+- `status` : 家族歴の記録状態（partial | completed | entered-in-error | health-unknown）
 
-### Extensions定義
 
- 本プロファイルで追加定義された拡張はない。
+### 実装ガイダンス
+
+
+#### 典型的な例
+
+家族歴を表現する典型的な例を下記に示す。`condition` は必須ではないが、基本的に必要となる要素である。
+
+```json
+{
+  "resourceType": "FamilyMemberHistory",
+  "status": "partial",
+  "patient": {
+    "reference": "Patient/jp-patient-example-1",
+    "display": "山田 太郎"
+  },
+  "relationship": {
+    "coding": [{
+      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "code": "MTH",
+      "display": "母親"
+    }]
+  },
+  "condition": [{
+    "code": { "text": "糖尿病" }
+  }]
+}
+```
+
+
+#### 記録単位
+
+`FamilyMemberHistory` は、患者に関連する個人1人につき1リソースとして記録する。
+
+#### 続柄 relationship の記録
+
+患者と対象となる家族構成員との関係は `FamilyMemberHistory.relationship` に記録する。`relationship` には、HL7 V3 RoleCode の FamilyMember ValueSet を使用する。`relationship` は**患者からの方向**で記録する。
+
+- 父方／母方の区別は、`FTH`／`MTH`、`PUNCLE`（父方のおじ）／`MUNCLE`（母方のおじ）、`PAUNT`（父方のおば）／`MAUNT`（母方のおば）など方向を内包するコードで表す。
+- JP Core は `v3-RoleCode` の各コードに日本語の designation を付与した CodeSystem [JP_V3RoleCode_CS] を用意している。`display` に日本語を用いる根拠とする。
+
+
+#### 出生順呼称 BirthOrder の記録
+
+家族内で用いられる「長男」「二男」「長女」「二女」などの出生順に基づく呼称は、`BirthOrder` 拡張で記録する。
+
+出生順呼称は、患者との続柄 `relationship` そのものを置き換えるものではない。続柄 `relationship` に併記し、対象となる家族構成員の兄弟姉妹内の出生順に基づく呼称を補足情報として記録する。
+
+出生順呼称は、必ずしも客観的に算出された生物学的出生順位、戸籍上の記載、または遺伝学的血統図における出生順と一致するとは限らない。日常診療で患者または情報提供者から申告された家族内呼称を記録することを想定する。
+
+**実装例：母方のおば（次女）の場合**
+
+以下の例は、患者の母方のおばが、母の兄弟姉妹の中で「次女」と呼称されている場合の実装を示す。
+
+```json
+{
+  "resourceType": "FamilyMemberHistory",
+  "status": "partial",
+  "patient": {
+    "reference": "Patient/jp-patient-example-1",
+    "display": "山田 太郎"
+  },
+  "relationship": {
+    "coding": [{
+      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "code": "MAUNT",
+      "display": "母方のおば"
+    }]
+  },
+  "extension": [{
+    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_BirthOrder",
+    "valueCodeableConcept": {
+      "coding": [{
+        "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS",
+        "code": "daughter-2",
+        "display": "second daughter"
+      }],
+      "text": "次女"
+    }
+  }],
+  "sex": {
+    "coding": [{
+      "system": "http://hl7.org/fhir/administrative-gender",
+      "code": "female"
+    }]
+  }
+}
+```
+
+上記例では、`relationship` に `MAUNT`（母方のおば）を記録し、`extension` に `BirthOrder` 拡張を追加して家族内の呼称である「次女」（`daughter-2`）を補足情報として記録している。これにより、患者との続柄と家族内での出生順呼称を区別して表現できる。
+
+#### 氏名・生年月日の追加と記録の更新
+
+`BirthOrder` 拡張は、対象となる家族構成員の氏名や生年月日までは聴取できていない家族歴を補足することを目的としている。日常診療では続柄と出生順呼称が記録されていればよく、氏名と生年月日は必ずしも必須ではない。
+
+その一方で、診療の継続により、氏名や生年月日といった個人を特定できる情報が聴取された場合は、**同じ FamilyMemberHistory を更新して**反映する。
+
+想定する段階は次のとおりである。
+
+| 段階 | 想定される場面 | 記録される情報 |
+|---|---|---|
+| 初期記録 | プライマリケアにおける日常診療 | `relationship` と `BirthOrder` 拡張による続柄と出生順呼称 |
+| 更新 | 高次医療機関における遺伝カウンセリング等 | 上記に加えて `name`（氏名）と `bornDate`（生年月日） |
+
+`status` はこれらの段階と連動して自動的に変わる値ではない。段階とは別に、その家族構成員について取得できた**健康情報**の完全さを示す値として保持する（下記参照）。
+
+##### 更新のしかた
+
+更新時には、次の要素を用いて追加の内容と変遷を示す。
+
+- `date` : 家族歴が記録された、または最終更新された日時を設定する。更新時には更新後の値とする。
+- `status` : その家族構成員について取得できた**健康情報**の完全さを示す。`name` や `bornDate` の追加そのものによって変化する値ではなく、関連する健康情報が取得時点で記録し尽くされた場合に `partial` から `completed` へ更新する。
+- `note` : `Annotation` を用い、いつ、誰が、どの根拠で追加したかを変遷として残す。
+
+**実装例：母方のおば（次女）の記録を更新した場合**
+
+前述の「母方のおば（次女）」の例（初期記録）に対して、高次医療機関での遺伝カウンセリングにより氏名と生年月日を聴取できた場合の更新を示す。`relationship` と `sex` は初期記録から変更しない。
+
+```json
+{
+  "resourceType": "FamilyMemberHistory",
+  "id": "jp-familymemberhistory-example-4",
+  "status": "partial",
+  "date": "2026-10-01T10:00:00+09:00",
+  "patient": {
+    "reference": "Patient/jp-patient-example-1",
+    "display": "山田 太郎"
+  },
+  "relationship": {
+    "coding": [{
+      "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+      "code": "MAUNT",
+      "display": "母方のおば"
+    }]
+  },
+  "extension": [{
+    "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_BirthOrder",
+    "valueCodeableConcept": {
+      "coding": [{
+        "system": "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS",
+        "code": "daughter-2",
+        "display": "second daughter"
+      }],
+      "text": "次女"
+    }
+  }],
+  "name": "山田 次子",
+  "bornDate": "1965-04-01",
+  "sex": {
+    "coding": [{
+      "system": "http://hl7.org/fhir/administrative-gender",
+      "code": "female"
+    }]
+  },
+  "condition": [{
+    "code": { "text": "糖尿病" }
+  }],
+  "note": [{
+    "authorString": "遺伝外来",
+    "time": "2026-10-01T10:00:00+09:00",
+    "text": "2026-04 の初回聴取時は出生順呼称のみを記録していた。2026-10 の遺伝カウンセリングにて本人の同意のもとに氏名と生年月日を確認した。本家族構成員については現時点で糖尿病以外の既往歴を確認できておらず、status は partial のままとしている。"
+  }]
+}
+```
+
+上記例では、`name` に氏名、`bornDate` に生年月日を記録している。`status` は健康情報の完全さを示す値であるため、氏名と生年月日の追加だけでは `completed` に変わらず `partial` を維持する。`note` には追加の根拠と時期、ならびに未聴取の項目を残している。
+
+
+#### 疾患情報 condition の記録
+
+対象となる家族構成員の疾患情報は `condition` 要素に記録する。  
+疾患をコード化できる場合は `condition.code.coding` に記録し、必要に応じて `condition.code.text` に自由記載を行う。
+
+#### 補足情報 note の使用
+
+血縁関係、法的関係、同居関係、内縁関係など、`relationship` と出生順呼称のみでは十分に表現できない情報は、必要に応じて `note` に記録する。
+
+#### 複数の家族歴の集約
+
+複数の `FamilyMemberHistory` インスタンスをまとめて扱う場合は、`List` リソース等を用いて患者の家族歴全体を集約できる。
+
+
+### 拡張定義
+
+JP Core FamilyMemberHistoryプロファイルで使用される拡張は次の通りである。
+
+<table class="extension_description">
+  <tr>
+    <th>拡張</th>
+    <th>説明</th>
+    <th>URL</th>
+    <th>値の型</th>
+    <th>Binding</th>
+  </tr>
+  <tr>
+    <td>出生順呼称</td>
+    <td>FamilyMemberHistory.relationshipで表現される続柄を補足し、家族内で用いられる出生順に基づく呼称（長男、二男、長女、二女など）を表現する。</td>
+    <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_BirthOrder</td>
+    <td>CodeableConcept</td>
+    <td>JP_BirthOrder_VS(preferred)</td>
+  </tr>
+</table>
+
+
+### 用語定義
+
+#### 続柄
+
+`relationship` には HL7 V3 RoleCode の FamilyMember ValueSet を使用する。
+
+#### 出生順呼称
+
+出生順呼称には、JP_BirthOrder_CS および JP_BirthOrder_VS を使用する。
+
+
+| 分類 | 名称 | URI |
+|----|---|---|
+| 続柄 | HL7 V3 FamilyMember ValueSet | http://terminology.hl7.org/ValueSet/v3-FamilyMember |
+| 出生順呼称 | JP BirthOrder CodeSystem | http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS |
+| 出生順呼称 | JP BirthOrder ValueSet | http://jpfhir.jp/fhir/core/ValueSet/JP_BirthOrder_VS |
+
 
 ## 利用方法
 
@@ -16,12 +234,12 @@
 
 #### Search Parameter一覧
 
-| コンフォーマンス    | パラメータ             | 型                  | 例                                                           |
-| ---------------- | -------------------- | ------------------- | ------------------------------------------------------------ |
-| SHALL            | identifier           | token               | GET [base]/FamilyMemberHistory?identifier=http://myhospital.com/fhir/gamilymemberhistory\|123 |
-| SHOULD           | patient              | reference           | GET [base]/FamilyMemberHistory?patient=Patient/123           |
-| MAY              | patient,relationship | reference,reference | GET [base]/FamilyMemberHistory?patient=Patient/123&relationship=FAMMEMB |
-| MAY              | patient,status       | reference,token      | GET [base]/FamilyMemberHistory?patient=Patient/123&status=completed     |
+| コンフォーマンス | パラメータ                | 型               | 例                                                                                             |
+|----------|----------------------|-----------------|-----------------------------------------------------------------------------------------------|
+| SHALL    | identifier           | token           | GET [base]/FamilyMemberHistory?identifier=http://myhospital.com/fhir/familymemberhistory\|123 |
+| SHOULD   | patient              | reference       | GET [base]/FamilyMemberHistory?patient=Patient/123                                            |
+| MAY      | patient,relationship | reference,token | GET [base]/FamilyMemberHistory?patient=Patient/123&relationship=FAMMEMB                       |
+| MAY      | patient,status       | reference,token | GET [base]/FamilyMemberHistory?patient=Patient/123&status=completed                           |
 
 ##### 必須検索パラメータ
 
@@ -55,7 +273,7 @@
 
 ##### 追加検索パラメータ
 
-オプションとして次の検索パラメータをサポートすることができる（MAY）
+オプションとして次の検索パラメータをサポートできる（MAY）
 
 1. 検索パラメータpatientとstatusの組みを指定し、該当するすべてのFamilyMemberHistoryを検索
 
@@ -77,6 +295,10 @@
 
 #### サンプル
 
-* [**家族歴（母親）**][jp-familymemberhistory-example-1]
+* [**母親**][jp-familymemberhistory-example-1]
+* [**息子（長男）**][jp-familymemberhistory-example-2]
+* [**内縁のパートナー**][jp-familymemberhistory-example-3]
+* [**母方のおば（次女）**][jp-familymemberhistory-example-4]
+* [**家族歴一覧**][jp-familymemberhistory-example-list-1]
 
 {% include markdown-link-references.md %}
