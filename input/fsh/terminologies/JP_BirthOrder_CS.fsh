@@ -9,11 +9,11 @@ Description: "FamilyMemberHistoryにおいて、家族内で用いられる出�
 * ^content = #complete
 * ^property[0].code = #category
 * ^property[=].uri = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS#category"
-* ^property[=].description = "出生順呼称の区分。"
+* ^property[=].description = "出生順呼称の系列を分類する。son は長男・二男...の系列、daughter は長女・二女...の系列を示す。"
 * ^property[=].type = #code
 * ^property[+].code = #order
 * ^property[=].uri = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS#order"
-* ^property[=].description = "区分内での順位。"
+* ^property[=].description = "系列内での順位（1を最年長とする）。"
 * ^property[=].type = #integer
 
 // ===== Sons =====
@@ -172,6 +172,6 @@ Description: "FamilyMemberHistoryにおいて、家族内で用いられる出�
 * #other "other" "その他（十男・十女以上の出生順、性の多様性、その他の場合はtext要素に詳細を記載）"
   * ^designation[0].language = #ja
   * ^designation[=].value = "その他"
-* #unknown "unknown" "詳細不明(text要素に詳細を記載)"
+* #unknown "unknown" "詳細不明（text要素に詳細を記載）"
   * ^designation[0].language = #ja
   * ^designation[=].value = "不明"
