@@ -1,7 +1,7 @@
 CodeSystem: JP_BirthOrder_CS
 Id: jp-birthorder-cs
 Title: "JP Core Birth Order CodeSystem"
-Description: "FamilyMemberHistoryにおいて、家族内で用いられる出生順に基づく呼称（長男、二男、長女、二女など）を表現するためのCodeSystem。これらのコードは患者との続柄そのものではなく、FamilyMemberHistory.relationshipを補足する出生順の呼称を表す。"
+Description: "FamilyMemberHistoryにおいて、家族内で用いられる出生順に基づく呼称（長男、次男、長女、次女など）を表現するためのCodeSystem。これらのコードは患者との続柄そのものではなく、FamilyMemberHistory.relationshipを補足する出生順の呼称を表す。"
 * ^url = $JP_BirthOrder_CS
 * ^status = #active
 * ^experimental = false
@@ -9,7 +9,7 @@ Description: "FamilyMemberHistoryにおいて、家族内で用いられる出�
 * ^content = #complete
 * ^property[0].code = #category
 * ^property[=].uri = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS#category"
-* ^property[=].description = "出生順呼称の系列を分類する。son は長男・二男...の系列、daughter は長女・二女...の系列を示す。"
+* ^property[=].description = "出生順呼称の系列を分類する。son は長男・次男...の系列、daughter は長女・次女...の系列を示す。"
 * ^property[=].type = #code
 * ^property[+].code = #order
 * ^property[=].uri = "http://jpfhir.jp/fhir/core/CodeSystem/JP_BirthOrder_CS#order"

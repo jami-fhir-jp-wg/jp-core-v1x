@@ -50,7 +50,7 @@
 
 #### 出生順呼称 BirthOrder の記録
 
-家族内で用いられる「長男」「二男」「長女」「二女」などの出生順に基づく呼称は、`BirthOrder` 拡張で記録する。
+家族内で用いられる「長男」「次男」「長女」「次女」などの出生順に基づく呼称は、`BirthOrder` 拡張で記録する。
 
 出生順呼称は、患者との続柄 `relationship` そのものを置き換えるものではない。続柄 `relationship` に併記し、対象となる家族構成員の兄弟姉妹内の出生順に基づく呼称を補足情報として記録する。
 
@@ -202,7 +202,7 @@ JP Core FamilyMemberHistoryプロファイルで使用される拡張は次の�
   </tr>
   <tr>
     <td>出生順呼称</td>
-    <td>FamilyMemberHistory.relationshipで表現される続柄を補足し、家族内で用いられる出生順に基づく呼称（長男、二男、長女、二女など）を表現する。</td>
+    <td>FamilyMemberHistory.relationshipで表現される続柄を補足し、家族内で用いられる出生順に基づく呼称（長男、次男、長女、次女など）を表現する。</td>
     <td>http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_FamilyMemberHistory_BirthOrder</td>
     <td>CodeableConcept</td>
     <td>JP_BirthOrder_VS(preferred)</td>
