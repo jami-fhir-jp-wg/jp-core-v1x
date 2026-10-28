@@ -5,6 +5,7 @@ Description: "FamilyMemberHistoryにおいて、家族内で用いられる出�
 * ^url = $JP_BirthOrder_CS
 * ^status = #active
 * ^experimental = false
+* ^date = "2026-10-29"
 * ^caseSensitive = true
 * ^content = #complete
 * ^property[0].code = #category
