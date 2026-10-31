@@ -70,6 +70,7 @@ Alias: $JP_PractitionerRole = http://jpfhir.jp/fhir/core/StructureDefinition/JP_
 Alias: $JP_Procedure = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Procedure
 Alias: $JP_RelatedPerson = http://jpfhir.jp/fhir/core/StructureDefinition/JP_RelatedPerson
 Alias: $JP_ServiceRequest_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common
+Alias: $JP_ServiceRequest_OrderCommon = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_OrderCommon
 Alias: $JP_Specimen_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
 
 // StructureDefinition: Extension
@@ -115,6 +116,7 @@ Alias: $JP_Organization_InsuranceOrganizationCategory = http://jpfhir.jp/fhir/co
 Alias: $JP_Organization_InsuranceOrganizationNo = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo
 Alias: $JP_Organization_PrefectureNo = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo
 Alias: $JP_Patient_Race = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race
+Alias: $JP_ServiceRequest_OrderType = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_ServiceRequest_OrderType
 
 // CapabilityStatement
 Alias: $JP_Client_CapabilityStatement = http://jpfhir.jp/fhir/core/CapabilityStatement/JP_Client_CapabilityStatement
@@ -228,6 +230,7 @@ Alias: $JP_ProcedureFollowUp_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undef
 Alias: $JP_ProcedureNotPerformedReason_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureNotPerformedReason_CS
 Alias: $JP_ProcedureOutcome_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ProcedureOutcome_CS
 Alias: $JP_ProcedureReason_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
+Alias: $JP_ServiceRequest_OrderCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ServiceRequest_OrderCategory_CS
 Alias: $JP_SimpleObservationCategory_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_SimpleObservationCategory_CS
 Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 
@@ -354,6 +357,7 @@ Alias: $JP_ProcedureOutcome_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Procedur
 Alias: $JP_ProcedurePerformerRole_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedurePerformerRole_VS
 Alias: $JP_ProcedureReason_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ProcedureReason_VS
 Alias: $JP_ReasonCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ReasonCodesJed_VS
+Alias: $JP_ServiceRequest_OrderCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ServiceRequest_OrderCategory_VS
 Alias: $JP_SimpleObservationCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_SimpleObservationCategory_VS
 Alias: $JP_Undefined_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
 
@@ -368,3 +372,4 @@ Alias: $JP_IdSystemMedicalRegistrationNumber = http://jpfhir.jp/fhir/core/mhlw/I
 Alias: $JP_Medication_RPGroupNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumber //urn:oid:1.2.392.100495.20.3.81
 Alias: $JP_MedicationAdministrationIndex = http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicationAdministrationIndex  //	urn:oid:1.2.392.100495.20.3.82
 Alias: $JP_ResourceInstance_Identifier = http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier
+Alias: $JP_ServiceRequset_OrderID = http://jpfhir.jp/fhir/core/IdSystem/orderID
