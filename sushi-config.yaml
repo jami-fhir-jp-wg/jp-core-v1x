@@ -154,6 +154,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramDuration_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramExtraCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramStressType_CS
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ServiceRequest_OrderCategory_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Common_Department
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseaseOutcome
@@ -197,6 +198,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_ServiceRequest_OrderType
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonNumber_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSubNumber_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSymbol_SP
@@ -275,6 +277,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchStudy
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchSubject
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_OrderCommon
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Condition_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeReceipt_VS
@@ -300,5 +303,6 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationEndoscopyCode_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationEndoscopyValueJed_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ObservationRadiologyCode_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ServiceRequest_OrderCategory_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Undefined_VS
     - http://playbook.radlex.org/playbook/SearchRadlexAction-CoreDev-CS

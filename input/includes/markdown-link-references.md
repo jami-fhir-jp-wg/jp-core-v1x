@@ -84,6 +84,7 @@
 [JP_ResearchStudy]: StructureDefinition-jp-researchstudy.html
 [JP_ResearchSubject]: StructureDefinition-jp-researchsubject.html
 [JP_ServiceRequest_Common]: StructureDefinition-jp-servicerequest-common.html
+[JP_ServiceRequest_OrderCommon]: StructureDefinition-jp-servicerequest-ordercommon.html
 [JP_Specimen_Common]: StructureDefinition-jp-specimen-common.html
 
 <!-- StructureDefinition: Extension -->
@@ -129,6 +130,7 @@
 [JP_Organization_InsuranceOrganizationNo]: StructureDefinition-jp-organization-insuranceorganizationno.html
 [JP_Organization_PrefectureNo]: StructureDefinition-jp-organization-prefectureno.html
 [JP_Patient_Race]: StructureDefinition-jp-patient-race.html
+[JP_ServiceRequest_OrderType]: StructureDefinition-jp-servicerequest-ordertype.html
 
 <!-- CapabilityStatement -->
 [JP_Client_CapabilityStatement]: CapabilityStatement-jp-client-capabilitystatement.html
