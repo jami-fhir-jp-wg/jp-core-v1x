@@ -1,11 +1,12 @@
 CodeSystem: JP_BirthOrder_CS
 Id: jp-birthorder-cs
 Title: "JP Core Birth Order CodeSystem"
-Description: "FamilyMemberHistoryにおいて、家族内で用いられる出生順に基づく呼称（長男、次男、長女、次女など）を表現するためのCodeSystem。これらのコードは患者との続柄そのものではなく、FamilyMemberHistory.relationshipを補足する出生順の呼称を表す。各コードには機械処理用のプロパティ（category：呼称系列、order：系列内順位）を付与しており、プログラムによる判定・集計に利用できる。"
+Description: "JP Coreにて定義した家族歴のFamilyMemberHistoryリソースに関する家族内の出生順呼称コード"
 * ^url = $JP_BirthOrder_CS
 * ^status = #active
 * ^experimental = false
-* ^date = "2026-10-29"
+* ^date = "2026-11-01"
+* ^purpose = "本コードシステムは、患者との続柄そのものを表すのではなく、FamilyMemberHistory.relationship を補足する情報として、家族内で用いられる出生順に基づく呼称を表現するために定義した。各コードには機械処理用のプロパティ（category：呼称系列、order：系列内順位）を付与しており、プログラムによる判定・集計に利用できる。"
 * ^caseSensitive = true
 * ^content = #complete
 * ^property[0].code = #category
