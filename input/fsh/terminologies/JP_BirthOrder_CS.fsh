@@ -27,7 +27,7 @@ Description: "FamilyMemberHistoryにおいて、家族内で用いられる出�
   * ^designation[=].value = "長男"
   * ^designation[+].language = #en
   * ^designation[=].value = "eldest son"
-* #son-2 "second son"
+* #son-2 "second son" "「次男」「二男」のいずれも使用可能である（戸籍の続柄欄では「二男」を使用）。"
   * ^property[0].code = #category
   * ^property[=].valueCode = #son
   * ^property[+].code = #order
@@ -35,7 +35,6 @@ Description: "FamilyMemberHistoryにおいて、家族内で用いられる出�
   * ^designation[0].language = #ja
   * ^designation[=].value = "次男"
   * ^designation[+].language = #ja
-  * ^designation[=].use = http://snomed.info/sct#900000000000013009 "Synonym (core metadata concept)"
   * ^designation[=].value = "二男"
 * #son-3 "third son"
   * ^property[0].code = #category
@@ -104,7 +103,7 @@ Description: "FamilyMemberHistoryにおいて、家族内で用いられる出�
   * ^designation[=].value = "長女"
   * ^designation[+].language = #en
   * ^designation[=].value = "eldest daughter"
-* #daughter-2 "second daughter"
+* #daughter-2 "second daughter" "「次女」「二女」のいずれも使用可能である（戸籍の続柄欄では「二女」を使用）。"
   * ^property[0].code = #category
   * ^property[=].valueCode = #daughter
   * ^property[+].code = #order
@@ -112,7 +111,6 @@ Description: "FamilyMemberHistoryにおいて、家族内で用いられる出�
   * ^designation[0].language = #ja
   * ^designation[=].value = "次女"
   * ^designation[+].language = #ja
-  * ^designation[=].use = http://snomed.info/sct#900000000000013009 "Synonym (core metadata concept)"
   * ^designation[=].value = "二女"
 * #daughter-3 "third daughter"
   * ^property[0].code = #category
