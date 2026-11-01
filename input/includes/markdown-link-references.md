@@ -17,6 +17,7 @@
 [JP_AllergyIntolerance]: StructureDefinition-jp-allergyintolerance.html
 [JP_Binary]: StructureDefinition-jp-binary.html
 [JP_CarePlan]: StructureDefinition-jp-careplan.html
+[JP_Composition_ProgressNote]: StructureDefinition-jp-composition-progressnote.html
 [JP_Condition_Diagnosis]: StructureDefinition-jp-condition-diagnosis.html
 [JP_Condition]: StructureDefinition-jp-condition.html
 [JP_Consent]: StructureDefinition-jp-consent.html
@@ -88,6 +89,10 @@
 
 <!-- StructureDefinition: Extension -->
 [JP_Common_Department]: StructureDefinition-jp-common-department.html
+[JP_Composition_DataEnterDateTime]: StructureDefinition-jp-composition-dataenterdatetime.html
+[JP_Composition_EventDateTime]: StructureDefinition-jp-composition-eventdatetime.html
+[JP_Composition_ItemSequence]: StructureDefinition-jp-composition-itemsequence.html
+[JP_Composition_ThumbnailImage]: StructureDefinition-jp-composition-thumnailimage.html
 [JP_Condition_DiseaseOutcome]: StructureDefinition-jp-condition-disease-outcome.html
 [JP_Condition_DiseasePostfixModifier]: StructureDefinition-jp-condition-disease-postfix-modifier.html
 [JP_Condition_DiseasePrefixModifier]: StructureDefinition-jp-condition-disease-prefix-modifier.html
@@ -164,6 +169,7 @@
 [JP_Undefined_CS]: CodeSystem-jp-undefined-cs.html
 
 <!-- ValueSet -->
+[JP_Composition_ProgressNote_Type_VS]: ValueSet-jp-composition-progressnote-type-vs.html
 [JP_Condition_BodySite_VS]: ValueSet-jp-condition-bodysite-vs.html
 [JP_ConditionDiseaseOutcomeReceipt_VS]: ValueSet-jp-condition-disease-outcome-receipt-vs.html
 [JP_DentalBodySite_VS]: ValueSet-jp-dental-bodysite-vs.html
@@ -191,6 +197,7 @@
 
 <!-- Example -->
 [jp-allergyintolerance-example-1]: AllergyIntolerance-jp-allergyintolerance-example-1.html
+[jp-composition-progressnote-example-1]: Composition-jp-composition-progressnote-example-1.html
 [jp-condition-diagnosis-example-1]: Condition-jp-condition-diagnosis-example-1.html
 [jp-condition-example-1]: Condition-jp-condition-example-1.html
 [jp-coverage-example-1]: Coverage-jp-coverage-example-1.html
