@@ -18,6 +18,7 @@ Alias: $patient-race-vs = http://terminology.hl7.org/ValueSet/v3-Race
 Alias: $v2-0136 = http://terminology.hl7.org/ValueSet/v2-0136
 Alias: $v2-order-type-vs = http://terminology.hl7.org/ValueSet/v2-0482
 Alias: $v2-order-type-cs = http://terminology.hl7.org/CodeSystem/v2-0482
+Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
 
 // dicom
 Alias: $dicom-ontology = http://dicom.nema.org/resources/ontology/DCM

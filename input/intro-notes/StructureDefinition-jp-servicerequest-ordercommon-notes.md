@@ -19,8 +19,8 @@
 ### 項目の追加
 本プロファイルでは、オーダ情報の共通的な属性として、以下の項目の記述方法を定義する。
 
-* 依頼科（拡張「JP_Common_Department」を使用）
-* 入外区分（拡張「JP_ServiceRequest_OrderType」を使用）
+* 依頼科（拡張「[JP_Common_Department]」を使用）
+* 入外区分（拡張「[JP_ServiceRequest_OrderType]」を使用）
 * オーダID（identifier要素の追加インスタンスを使用）
 * オーダ種別（category要素を使用）
 * 優先度（priority要素を使用）
@@ -141,7 +141,7 @@
 ServiceRequestリソース単体でオーダ情報を完全な形で記述することは難しいため、オーダ単位のServiceRequestと項目単位のServiceRequestを組み合わせ、basedOn要素で関連付ける実装例もみられるが、basedOn属性のそのような使い方はFHIR基底仕様の本来の意図とは異なるとされており、本プロファイルでは、このような使い方は採用せず、オーダの階層構造の具体的な記述方法は定めない。なお、ユースケースレベルのプロファイルでの上記のような使い方を妨げるものではない。
 
 ### 依頼科の記述方法について
-依頼科（オーダを依頼した診療科）は、ServiceRequestリソースの標準的な要素では記述が難しいため、JP_Common_Department拡張を使用してCodeableConcept型で記述する。使用する標準コードはSS-MIX2診療科コードを推奨する。
+依頼科（オーダを依頼した診療科）は、ServiceRequestリソースの標準的な要素では記述が難しいため、「[JP_Common_Department]」拡張を使用してCodeableConcept型で記述する。使用する標準コードはSS-MIX2診療科コードを推奨する。
 
 依頼科が「内科」のインスタンス例を示す。
 ```json
@@ -166,7 +166,7 @@ ServiceRequestリソース単体でオーダ情報を完全な形で記述する
 ```
 
 ### オーダ入外区分の記述方法について
-オーダの入外区分は、ServiceRequestリソースの標準的な要素では記述が難しいため、JP_ServiceRequest_OrderType拡張を使用してCodeableConcept型で記述する。使用する標準コードはHL7表0482を推奨する。
+オーダの入外区分は、ServiceRequestリソースの標準的な要素では記述が難しいため、「[JP_ServiceRequest_OrderType]」拡張を使用してCodeableConcept型で記述する。使用する標準コードはHL7表0482を推奨する。
 
 入外区分が「外来」のインスタンス例を示す。
 ```json
@@ -191,7 +191,7 @@ ServiceRequestリソース単体でオーダ情報を完全な形で記述する
 ```
 
 ### オーダIDの記述方法について
-オーダIDは、発行したオーダに対してオーダエントリシステムにより採番された一意の文字列である。本プロファイルでは、identifier要素の追加インスタンスとしてIdentifier型で記述する。system値には固定値「http://jpfhir.jp/fhir/core/IdSystem/orderID」を指定する。
+オーダIDは、発行したオーダに対してオーダエントリシステムにより採番された一意の文字列である。本プロファイルでは、identifier要素の追加インスタンスとしてIdentifier型で記述する。Identifier.typeには固定値「PLAC」 (Placer Identifier)を指定する
 
 オーダIDが「202612270000301」のインスタンス例を示す。
 ```json
@@ -203,7 +203,16 @@ ServiceRequestリソース単体でオーダ情報を完全な形で記述する
       "system": "http://myhospital.com/IdSystem/ServiceRequest",
       "value": "00000020.20261227.162128.Z999.2.16.XA0.1"
     }, {
-      "system": "http://jpfhir.jp/fhir/core/IdSystem/orderID",
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "PLAC",
+            "display": "Placer Identifier"
+          }
+        ]
+      },
+      "system": "http://myhospital.com/IDSystem/OrderID",
       "value": "202612270000301"
     }
   ]
@@ -211,7 +220,7 @@ ServiceRequestリソース単体でオーダ情報を完全な形で記述する
 ```
 
 ### オーダ種別の記述方法について
-オーダ種別は、検体検査、放射線検査、生理機能検査、などのオーダの大まかな分類を示す種別であり、本プロファイルでは、category要素を使用してCodeableConcept型で記述する。コード表は「JP_ServiceRequest_OrderCategory_CS」を使用し、system値には固定値「http://jpfhir.jp/fhir/core/CodeSystem/JP_ServiceRequest_OrderCategory」を指定する。
+オーダ種別は、検体検査、放射線検査、生理機能検査、などのオーダの大まかな分類を示す種別であり、本プロファイルでは、category要素を使用してCodeableConcept型で記述する。コード表は「[JP_ServiceRequest_OrderCategory_CS]」を使用し、system値には固定値「http://jpfhir.jp/fhir/core/CodeSystem/JP_ServiceRequest_OrderCategory」を指定する。
 
 オーダIDが「202612270000301」のインスタンス例を示す。
 ```json

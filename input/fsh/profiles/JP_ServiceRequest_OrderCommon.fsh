@@ -27,12 +27,17 @@ Description: "本プロファイルは、オーダエントリシステムで作
 【JP Core】本プロファイルでは追加インスタンスでオーダIDを記述する。"
 * identifier ^comment = "この要素は、発注者（HL7 v2 では 'Placer' ）とリクエストに応じて観察、行為等を実施した者（HL7 v2 では 'Filler' ）を区別するために用いられる。"
 * identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.discriminator.path = "type.coding.code"
 * identifier ^slicing.rules = #open
 * identifier contains orderID 0..1
 * identifier[orderID] ^short = "オーダID"
 * identifier[orderID] ^definition = "オーダIDを記述する"
-* identifier[orderID].system = $JP_ServiceRequset_OrderID (exactly)
+* identifier[orderID].type 1..
+* identifier[orderID].type.coding 1..
+* identifier[orderID].type.coding.system 1..
+* identifier[orderID].type.coding.system = $v2-0203 (exactly)
+* identifier[orderID].type.coding.code 1..
+* identifier[orderID].type.coding.code = #PLAC (exactly)
 
 // 
 * intent = #order (exactly)
@@ -52,6 +57,8 @@ Description: "本プロファイルは、オーダエントリシステムで作
 * category[first] ^short = "オーダ種別"
 * category[first] ^definition = "オーダ種別を記述する"
 * category[first] from $JP_ServiceRequest_OrderCategory_VS (required)
+* category[first].coding.system 1..
+* category[first].coding.system = $JP_ServiceRequest_OrderCategory_CS
 * category[first].coding.code 1..
 
 // 
@@ -83,6 +90,10 @@ Description: "本プロファイルは、オーダエントリシステムで作
 【JP Core】本プロファイルではConditionリソースとして表された「依頼病名」を参照できる。"
 * reasonReference ^comment = "この要素は照会理由を表し、サービスがどのように実行されるか、あるいは全く実行されないかどうかを決定するために使用される。可能な限り具体的にするために、ObservationやConditionリソースへの参照が可能であれば使用されるべきである。また、DiagnosticReport を参照する場合は、DiagnosticReport.conclusion および/または DiagnosticReport.conclusionCode を参照する必要がある。DocumentReference への参照を使用する場合、ターゲット文書は、このサービス要求の関連理由を提供する明確な所見言語を含んでいなければならない。CTスキャンの例に示すように、データが自由記述（符号化されていない）の場合、 ServiceRequest.reasonCodeにCodeableConcept.text要素を使用する。"
 * reasonReference only Reference(JP_Condition or JP_Observation_Common or JP_DiagnosticReport_Common or DocumentReference)
+//
+* insurance ^short = "関連する保険情報（【JP Core】適用保険）"
+* insurance ^definition = "リクエストされたサービスを提供するために必要な保険プラン、適用範囲拡大、事前承認、および/または事前決定がある。\n
+【JP Core】本プロファイルではCoverageリソースとして表された「適用保険」を参照する。"
 //
 * note ^short = "コメント（【JP Core】依頼コメント）"
 * note ^definition = "サービス要求について作成された、その他のメモやコメント。例えば、内部請求のメモなど。\n

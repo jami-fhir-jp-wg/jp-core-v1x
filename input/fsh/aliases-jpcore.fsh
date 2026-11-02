@@ -372,4 +372,3 @@ Alias: $JP_IdSystemMedicalRegistrationNumber = http://jpfhir.jp/fhir/core/mhlw/I
 Alias: $JP_Medication_RPGroupNumber = http://jpfhir.jp/fhir/core/mhlw/IdSystem/Medication-RPGroupNumber //urn:oid:1.2.392.100495.20.3.81
 Alias: $JP_MedicationAdministrationIndex = http://jpfhir.jp/fhir/core/mhlw/IdSystem/MedicationAdministrationIndex  //	urn:oid:1.2.392.100495.20.3.82
 Alias: $JP_ResourceInstance_Identifier = http://jpfhir.jp/fhir/core/IdSystem/resourceInstance-identifier
-Alias: $JP_ServiceRequset_OrderID = http://jpfhir.jp/fhir/core/IdSystem/orderID
