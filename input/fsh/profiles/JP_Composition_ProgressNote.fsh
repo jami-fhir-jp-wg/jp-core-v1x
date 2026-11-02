@@ -19,11 +19,14 @@ Description: "このプロファイルは、Compositionリソースに対して�
     $version-number named versionNumber ..1 and
     JP_Common_Department named department ..1 and
     JP_Composition_EventDateTime named eventDateTime ..1
+* extension[versionNumber] ^short = "記録の版数"
+* extension[versionNumber] ^definition = "記録の版数。形式は実装依存とし、本プロファイルでは規定しない。"
 
 * type MS
-* type ^short = "記録種別"
+* type ^short = "記録の種別"
 * type ^definition = "記録の種別を表すコード。"
 * type from $JP_Composition_ProgressNote_Type_VS (preferred)
+* type.coding.system 1..
 * type.coding.code 1.. 
 
 * subject 1.. MS
@@ -57,6 +60,9 @@ Description: "このプロファイルは、Compositionリソースに対して�
 * section
   * title 1.. MS
   * code 1.. MS
+    * coding 1..
+      * system 1..
+      * code 1..
   * text 0..0
   * section
     * extension ^slicing.discriminator.type = #value
@@ -73,6 +79,7 @@ Description: "このプロファイルは、Compositionリソースに対して�
   * ^short = "Problems Section"
   * code = $Loinc_CS#11450-4
   * entry only Reference(Condition)
+  * section ..0
 
 // Subjective Section
 * section[subjective]
@@ -80,6 +87,7 @@ Description: "このプロファイルは、Compositionリソースに対して�
   * ^short = "Subjective Section"
   * code = $Loinc_CS#61150-9
   * entry 0..0
+  * section 1..
 
 // Objective Section
 * section[objective]
@@ -87,6 +95,7 @@ Description: "このプロファイルは、Compositionリソースに対して�
   * ^short = "Objective Section"
   * code = $Loinc_CS#61149-1
   * entry 0..0
+  * section 1..
 
 // Assesment Section
 * section[assessment]
@@ -94,6 +103,7 @@ Description: "このプロファイルは、Compositionリソースに対して�
   * ^short = "Assessment Section"
   * code = $Loinc_CS#51848-0
   * entry 0..0
+  * section 1..
 
 // Plan Section
 * section[plan]
@@ -101,6 +111,7 @@ Description: "このプロファイルは、Compositionリソースに対して�
   * ^short = "Plan Section"
   * code = $Loinc_CS#18776-5
   * entry 0..0
+  * section 1..
 
 // Additional Documentation Section
 * section[additional]
@@ -108,3 +119,4 @@ Description: "このプロファイルは、Compositionリソースに対して�
   * ^short = "Additional Documentation Section"
   * code = $Loinc_CS#77599-9
   * entry 0..0
+  * section 1..
