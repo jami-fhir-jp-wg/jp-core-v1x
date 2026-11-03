@@ -79,6 +79,7 @@ Description: "このプロファイルは、Compositionリソースに対して�
   * ^short = "Problems Section"
   * code = $Loinc_CS#11450-4
   * entry only Reference(Condition)
+    * display MS
   * section ..0
 
 // Subjective Section
