@@ -88,6 +88,7 @@ Description: "このプロファイルは、Compositionリソースに対して�
   * code = $Loinc_CS#61150-9
   * entry 0..0
   * section 1..
+    * text MS
 
 // Objective Section
 * section[objective]
@@ -96,6 +97,7 @@ Description: "このプロファイルは、Compositionリソースに対して�
   * code = $Loinc_CS#61149-1
   * entry 0..0
   * section 1..
+    * text MS
 
 // Assesment Section
 * section[assessment]
@@ -104,6 +106,7 @@ Description: "このプロファイルは、Compositionリソースに対して�
   * code = $Loinc_CS#51848-0
   * entry 0..0
   * section 1..
+    * text MS
 
 // Plan Section
 * section[plan]
@@ -112,6 +115,7 @@ Description: "このプロファイルは、Compositionリソースに対して�
   * code = $Loinc_CS#18776-5
   * entry 0..0
   * section 1..
+    * text MS
 
 // Additional Documentation Section
 * section[additional]
@@ -120,3 +124,4 @@ Description: "このプロファイルは、Compositionリソースに対して�
   * code = $Loinc_CS#77599-9
   * entry 0..0
   * section 1..
+    * text MS

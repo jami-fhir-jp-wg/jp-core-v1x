@@ -3,7 +3,7 @@
 本プロファイルに準拠するためには、次の項目の値が存在しなければならない。
 
 - status : 記録のステータス
-- type : 記録のタイプ
+- type : 記録の種別
 - subject : 記録が書かれた対象の患者
 - date : 記録の作成日時
 - author : 記録の作成者
@@ -36,7 +36,7 @@
 
 本プロファイルで追加された制約は以下の通りである。
 
-- type : ValueSet「[JP_Composition_ProgressNote_Type_VS]」 を使用する。経過記録の場合、LOINCコード「11506-3」(Progress note)となる。
+- type : ValueSet「[JP_Composition_ProgressNote_Type_VS]」 の使用を推奨する。経過記録の場合、LOINCコード「11506-3」(Progress note)となる。
 - subject : 本プロファイルでは必須とする
 - section : 上記「使用するセクション」で定義されたセクションに限定する
 
@@ -145,13 +145,13 @@
       ```
       例：
       ```
-      GET [base]/Compoisition?patient=Patient/123&clinical-status=active
+      GET [base]/Compoisition?patient=Patient/123&type=11506-3&date=ge2026-08-24
       ```
       ```
-      GET [base]/Compoisition?patient=Patient/123&clinical-status=http://hl7.org/fhir/ValueSet/Compoisition-clinical|active
+      GET [base]/Compoisition?patient=Patient/123&type=11506-3&date=ge2026-08-24
       ```
    
-      指定された患者およびステータスのすべてのCompoisitionを含むBundleを検索する。
+      指定された患者、記録種別、入力日のすべてのCompoisitionを含むBundleを検索する。
 
 ##### オプション検索パラメータ 
 
@@ -296,7 +296,7 @@ O欄に複数の記事を記載した場合のインスタンス例を示す。
 ```
 
 ### 記事順序の記述方法について
-同一のSOAP種別に複数の記事があるとサブセクション(section.section)が複数並ぶことになるが、その並び順を明示したい場合、「[JP_Composition_ItemSequence]」拡張を使用して、同一SOAP種別内での記事の記録順序をinteger型で記述する。
+同一のSOAP種別に複数の記事があるとサブセクション(section.section)が複数並ぶことになるが、その並び順を明示したい場合、サブセクションの「[JP_Composition_ItemSequence]」拡張を使用して、同一SOAP種別内での記事の記録順序をinteger型で記述する。
 
 記事順序を明示した場合のインスタンス例を示す。
 ```json
@@ -341,7 +341,7 @@ O欄に複数の記事を記載した場合のインスタンス例を示す。
 ```
 
 ### 記事入力日時の記述方法について
-記事ごとの入力日時は通常date要素と同じ値になるが、確定後の追記によりdate要素と異なる値となる場合がある。その場合、「[JP_Composition_DataEnterDateTime]」拡張を使用して、dateTime型で記述する。
+記事ごとの入力日時は通常date要素と同じ値になるが、確定後の追記によりdate要素と異なる値となる場合がある。その場合、サブセクションの「[JP_Composition_DataEnterDateTime]」拡張を使用して、dateTime型で記述する。
 
 下記はO欄の一部の記事のみ入力日時が異なる場合のインスタンス例を示す。
 ```json
@@ -395,7 +395,7 @@ O欄に複数の記事を記載した場合のインスタンス例を示す。
 ### 添付ファイル、添付画像とそのサムネイル画像の記述方法について
 記事に張り付けた添付ファイルや添付画像は、DocumentReferenceリソースを使用して記述し、サブセクションのentry要素から参照することとする。DocumentReferenceでの記述方法は本プロファイルでは規定しない。
 
-また、添付ファイルや添付画像のサムネイル画像を記述するには、「[JP_Composition_ThumbnailImage]」拡張を使用して、Attachment型で記述する。画像データはdata要素にBase64でエンコードしたテキストとしてセットし、そのMIMEタイプをcontentType要素にセットする。
+また、添付ファイルや添付画像のサムネイル画像を記述するには、サブセクションの「[JP_Composition_ThumbnailImage]」拡張を使用して、Attachment型で記述する。画像データはdata要素にBase64でエンコードしたテキストとしてセットし、そのMIMEタイプをcontentType要素にセットする。
 
 添付画像本体とサムネイル画像のインスタンス例を示す。（サムネイル画像の画像データは先頭部分のみ）
 ```json

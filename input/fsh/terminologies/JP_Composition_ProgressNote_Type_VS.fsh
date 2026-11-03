@@ -1,6 +1,6 @@
 ValueSet: JP_Composition_ProgressNote_Type_VS
 Id: jp-composition-progressnote-type-vs
-Title: "JP Core Composition Progress Note TYpe ValueSet"
+Title: "JP Core Composition Progress Note Type ValueSet"
 Description: "SOAP形式の記録種別を示す値セット"
 * ^url = $JP_Composition_ProgressNote_Type_VS
 * ^status = #active
