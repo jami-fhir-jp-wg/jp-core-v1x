@@ -71,6 +71,7 @@ Alias: $JP_Procedure = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Procedu
 Alias: $JP_RelatedPerson = http://jpfhir.jp/fhir/core/StructureDefinition/JP_RelatedPerson
 Alias: $JP_ServiceRequest_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common
 Alias: $JP_ServiceRequest_OrderCommon = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_OrderCommon
+Alias: $JP_ServiceRequest_OrderRequesting = http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_OrderRequesting
 Alias: $JP_Specimen_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
 
 // StructureDefinition: Extension
