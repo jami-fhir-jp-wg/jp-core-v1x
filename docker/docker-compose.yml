@@ -1,14 +1,17 @@
 services:
   ig_compiler:
     build:
-        context: .
-        dockerfile: Dockerfile
-        args:
-          JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
-          JPTerminologyCOREdir: jpfhir-terminology#1.4.0
-          JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.4.0.tgz
+      context: .
+      dockerfile: Dockerfile
+      args:
+        JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
+        JPTerminologyCOREdir: jpfhir-terminology#1.4.0
+        JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.4.0.tgz
     volumes:
-      - ../:/repository
-      - ./entrypoint.sh:/bin/entrypoint.sh
+      - ig-work:/repository
+      - ./entrypoint.sh:/bin/entrypoint.sh:ro
     working_dir: /app
     entrypoint: /bin/entrypoint.sh
+
+volumes:
+  ig-work:
