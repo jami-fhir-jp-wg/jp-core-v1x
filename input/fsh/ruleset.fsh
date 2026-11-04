@@ -104,6 +104,11 @@ RuleSet: PutCombinationParameter(param1)
 
 //　日本語訳の設定
 RuleSet: AddJpDesignation(code, display)
-* ^concept[+].code = #{code}
-* ^concept[=].designation[+].language = #ja
-* ^concept[=].designation[=].value = "{display}"
+* #{code} "{display}"
+* #{code} ^designation[0].language = #ja
+* #{code} ^designation[0].value = "{display}"
+
+RuleSet: AddJpDesignation2(parent, code, display)
+* #{parent} #{code} "{display}"
+* #{parent} #{code} ^designation[0].language = #ja
+* #{parent} #{code} ^designation[0].value = "{display}"

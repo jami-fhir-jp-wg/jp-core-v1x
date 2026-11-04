@@ -84,6 +84,8 @@
 [JP_ResearchStudy]: StructureDefinition-jp-researchstudy.html
 [JP_ResearchSubject]: StructureDefinition-jp-researchsubject.html
 [JP_ServiceRequest_Common]: StructureDefinition-jp-servicerequest-common.html
+[JP_ServiceRequest_OrderCommon]: StructureDefinition-jp-servicerequest-ordercommon.html
+[JP_ServiceRequest_OrderRequesting]: StructureDefinition-jp-servicerequest-orderrequesting.html
 [JP_Specimen_Common]: StructureDefinition-jp-specimen-common.html
 
 <!-- StructureDefinition: Extension -->
@@ -129,6 +131,7 @@
 [JP_Organization_InsuranceOrganizationNo]: StructureDefinition-jp-organization-insuranceorganizationno.html
 [JP_Organization_PrefectureNo]: StructureDefinition-jp-organization-prefectureno.html
 [JP_Patient_Race]: StructureDefinition-jp-patient-race.html
+[JP_ServiceRequest_OrderType]: StructureDefinition-jp-servicerequest-ordertype.html
 
 <!-- CapabilityStatement -->
 [JP_Client_CapabilityStatement]: CapabilityStatement-jp-client-capabilitystatement.html
@@ -315,6 +318,7 @@
 [jp-practitionerrole-example-1]: PractitionerRole-jp-practitionerrole-example-1.html
 [jp-procedure-example-1]: Procedure-jp-procedure-example-1.html
 [jp-servicerequest-department-example-03]: ServiceRequest-jp-servicerequest-department-example-03.html
+[jp-servicerequest-orderrequesting-example-1]:ServiceRequest-jp-servicerequest-orderrequesting-example-1.html
 [jp-specimen-example-1]: Specimen-jp-specimen-example-1.html
 [jp-specimen-example-2]: Specimen-jp-specimen-example-2.html
 [jp-specimen-example-3]: Specimen-jp-specimen-example-3.html
