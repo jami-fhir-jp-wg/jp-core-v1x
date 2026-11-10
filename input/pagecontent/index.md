@@ -77,6 +77,7 @@ JP Core FHIR コンテンツ: JP Core で利用する FHIR の詳細について
     * [JP Core Condition Diagnosis (診断) プロファイル][JP_Condition_Diagnosis]
   * [JP Core Procedure （処置）プロファイル][JP_Procedure]
   * [JP Core FamilyMemberHistory（家族歴）プロファイル][JP_FamilyMemberHistory]
+  * [JP Core Composition ProgressNote （経過記録）プロファイル][JP_Composition_ProgressNote]
 * [Workflowグループ](group-workflow.html)
   * ServiceRequest (サービスリクエスト)
     * [JP Core ServiceRequest Common (共通) プロファイル][JP_ServiceRequest_Common]

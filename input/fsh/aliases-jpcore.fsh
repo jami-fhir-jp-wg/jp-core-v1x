@@ -5,6 +5,7 @@ Alias: $FHIRJPCoreImplementationGuide = http://jpfhir.jp/fhir/core/Implementatio
 Alias: $JP_AllergyIntolerance = http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance
 Alias: $JP_Binary = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Binary
 Alias: $JP_CarePlan = http://jpfhir.jp/fhir/core/StructureDefinition/JP_CarePlan
+Alias: $JP_Composition_ProgressNote = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Composition_ProgressNote
 Alias: $JP_Condition = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition
 Alias: $JP_Condition_Diagnosis = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition_Diagnosis
 Alias: $JP_Consent = http://jpfhir.jp/fhir/core/StructureDefinition/JP_Consent
@@ -74,6 +75,11 @@ Alias: $JP_Specimen_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_S
 
 // StructureDefinition: Extension
 Alias: $JP_Common_Department = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Common_Department
+Alias: $JP_Composition_DataEnterDateTime = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_DataEnterDateTime
+Alias: $JP_Composition_EventDateTime = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_EventDateTime
+Alias: $JP_Composition_GroupNo = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_GroupNo
+Alias: $JP_Composition_ItemSequence = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_ItemSequence
+Alias: $JP_Composition_ThumbnailImage = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_ThumbnailImage
 Alias: $JP_Condition_DiseaseOutcome = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseaseOutcome
 Alias: $JP_Condition_DiseasePostfixModifier = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePostfixModifier
 Alias: $JP_Condition_DiseasePrefixModifier = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePrefixModifier
@@ -238,6 +244,7 @@ Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 // ValueSet
 Alias: $JP_AllergyIntolerance_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS
 Alias: $JP_ConclusionCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
+Alias: $JP_Composition_ProgressNote_Type_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Composiiton_ProgressNote_Type_VS
 Alias: $JP_Condition_BodySite_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Condition_BodySite_VS
 Alias: $JP_ConditionDiseaseCodeICD10_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/ICD10-2013-full
 Alias: $JP_ConditionDiseaseCodeReceipt_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeReceipt_VS

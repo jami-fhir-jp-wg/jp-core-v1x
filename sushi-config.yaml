@@ -156,6 +156,10 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ObservationElectrocardiogramStressType_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Common_Department
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_DataEnterDateTime
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_EventDateTIme
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_ItemSequence
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_ThumbnailImage
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseaseOutcome
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePostfixModifier
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseasePrefixModifier
@@ -208,6 +212,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_AllergyIntolerance
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Binary
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_CarePlan
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Composition_ProgressNote
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Condition_Diagnosis
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Consent
@@ -276,6 +281,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchSubject
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest_Common
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen_Common
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_Composition_ProgressNote_Type_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_Condition_BodySite_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseOutcomeReceipt_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_DentalBodySite_VS
