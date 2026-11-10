@@ -91,6 +91,7 @@
 [JP_Common_Department]: StructureDefinition-jp-common-department.html
 [JP_Composition_DataEnterDateTime]: StructureDefinition-jp-composition-dataenterdatetime.html
 [JP_Composition_EventDateTime]: StructureDefinition-jp-composition-eventdatetime.html
+[JP_Composition_GroupNo]: StructureDefinition-jp-composition-groupno.html
 [JP_Composition_ItemSequence]: StructureDefinition-jp-composition-itemsequence.html
 [JP_Composition_ThumbnailImage]: StructureDefinition-jp-composition-thumnailimage.html
 [JP_Condition_DiseaseOutcome]: StructureDefinition-jp-condition-disease-outcome.html

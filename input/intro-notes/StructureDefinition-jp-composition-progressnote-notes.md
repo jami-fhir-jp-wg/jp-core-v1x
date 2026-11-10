@@ -16,6 +16,7 @@
 |拡張|説明|定義|値型|
 |:----|:----|:----|:----|
 |イベント日時|記録/記事が書かれた対象の日時<br/>《リソース直下ないしsection.section配下》|[JP_Common_Department]|CodeableConcept|
+|記事グループNo|記事グループの連番<br/>《section配下》|[JP_Common_GroupNo]|integer|
 |記事順序|記事ごとの記載順序<br/>《section.section配下》|[JP_Composition_ItemSequence]|integer|
 |記事入力日時|記事ごとの入力日時<br/>《section.section配下》|[JP_Composition_DataEnterDateTime]|dateTime|
 |サムネイル画像|添付ファイルや添付画像のサムネイル画像<br/>《section.section配下》|[JP_Composition_ThumbnailImage]|Attachment|
@@ -52,6 +53,7 @@
 * 入力日時（date要素を使用）：記録全体を入力した日時
 * 入力者（author要素を使用）：記録全体を入力した医療従事者
 * タイトル（title要素を使用）：記録全体のタイトル
+* 記事グループNo（拡張「[JP_Composition_GroupNo]」を使用）：記事グループをまとめる連番
 * 記事順序（拡張「[JP_Composition_ItemSequence]」を使用）：同一セクション内での記事の記録順序
 * 記事入力日時（拡張「[JP_Composition_DataEnterDateTime]」を使用）：記事を入力した日時。記事の入力日時は通常date要素と同じになるが、確定後の追記によりdate要素と異なる場合に使用する。
 * 記事入力者（section.section.authorを使用）：記事を入力した医療従事者
@@ -199,7 +201,9 @@ category要素には、type要素と同じ値を指定することを推奨す�
 ```
 
 ### 記事テキストの記述方法について
-C-CDA on FHIRのProgress Noteでは、セクションごとのインスタンスは最大１個に制限されている一方、日本の電子カルテシステムの実装では複数の記事が記載できる場合がある。そこで、本プロファイルでは、常にサブセクション（section.section要素）を使用して記事を記述することとする。記事テキストは、サブセクションのtext.div要素にXHTML形式で記述する。
+C-CDA on FHIRのProgress Noteでは、セクションごとのインスタンスは最大１個に制限されている一方、日本の電子カルテシステムの実装では複数の記事が記載できる場合がある。そこで、本プロファイルでは、セクションごとのインスタンスは最大１個に制限しつつ、常にサブセクション（section.section要素）を使用して記事を記述し、サブセクションを複数許すことで複数の記事を記述できるようにする。（後述するように、複数の記事グループがある場合は例外とする。）
+
+なお、記事テキストは、サブセクションのtext.div要素にXHTML形式で記述する。
 
 O欄に複数の記事を記載した場合のインスタンス例を示す。
 ```json
@@ -419,6 +423,93 @@ O欄に複数の記事を記載した場合のインスタンス例を示す。
       "entry": [ {
         "reference": "DocumentReference/00000040.20240819.110720.Z999.1.20.000.-3.O00.0"
       } ]
+    } ]
+  } ]
+```
+
+### 複数の記事グループの記述方法について
+本プロファイルでは、１つの記録の中に対象プロブレムおよびSOAP形式の記事のセット（以下、「記事グループ」と呼ぶ）が複数存在する場合に対応する。そのような場合には、記事グループごとに１から始まる連番を振り、各セクションについて「[JP_Composition_GroupNo]」拡張を使用してその連番を記述することで、どの記事グループに属するかを識別できるようにする。記事グループが１つしかない場合はこの拡張は省略することができる。
+
+なお、トップレベルのセクションのインスタンスは、記事グループ、セクションコードごとに最大１個までに制限されることに注意する。
+
+記事グループが２つあるインスタンス例を示す。
+```json
+  "section": [ {
+    "extension": [ {
+      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_GroupNo",
+      "valueInteger": 1
+    } ],
+    "title": "Problems Section",
+    "code": {
+      "coding": [ {
+        "system": "http://loinc.org",
+        "code": "11450-4",
+        "display": "Problems Section"
+      } ]
+    },
+    "entry": [ {
+      "reference": "Condition/00000040.-3.0",
+      "display": "D#0　全体に関係 (医師)"
+    } ]
+  }, {
+    "extension": [ {
+      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_GroupNo",
+      "valueInteger": 1
+    } ],
+    "title": "Objective Section",
+    "code": {
+      "coding": [ {
+        "system": "http://loinc.org",
+        "code": "61149-1",
+        "display": "Objective Section"
+      } ]
+    },
+    "section": [ {
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>臥床がちに過ごす。顔色不良。バイタルは著変無し。本日心内受診予定であったが、混んでいたため、明日に変更となる。</p></div>"
+      }
+    } ]
+  },{
+    "extension": [ {
+      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_GroupNo",
+      "valueInteger": 2
+    } ],
+    "title": "Problems Section",
+    "code": {
+      "coding": [ {
+        "system": "http://loinc.org",
+        "code": "11450-4",
+        "display": "Problems Section"
+      } ]
+    },
+    "entry": [ {
+      "reference": "Condition/00000040.3.0",
+      "display": "D#1　ＲＳウイルス肺炎"
+    } ]
+  },{
+    "extension": [ {
+      "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_GroupNo",
+      "valueInteger": 2
+    } ],
+    "title": "Objective Section",
+    "code": {
+      "coding": [ {
+        "system": "http://loinc.org",
+        "code": "61149-1",
+        "display": "Objective Section"
+      } ]
+    },
+    "section": [ {
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>ﾊﾟｯﾁﾃｽﾄ施行する。25日判定とする。掻痒感出現時は伝えるように話す。</p></div>"
+      }
+    }, {
+      "text": {
+        "status": "additional",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>尿混濁あるため〇〇Ｄｒよりﾊﾟﾝｽﾎﾟﾘﾝの処方あり。</p></div>"
+      }
     } ]
   } ]
 ```

@@ -77,6 +77,7 @@ Alias: $JP_Specimen_Common = http://jpfhir.jp/fhir/core/StructureDefinition/JP_S
 Alias: $JP_Common_Department = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Common_Department
 Alias: $JP_Composition_DataEnterDateTime = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_DataEnterDateTime
 Alias: $JP_Composition_EventDateTime = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_EventDateTime
+Alias: $JP_Composition_GroupNo = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_GroupNo
 Alias: $JP_Composition_ItemSequence = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_ItemSequence
 Alias: $JP_Composition_ThumbnailImage = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Composition_ThumbnailImage
 Alias: $JP_Condition_DiseaseOutcome = http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Condition_DiseaseOutcome
