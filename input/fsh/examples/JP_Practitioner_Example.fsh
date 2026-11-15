@@ -21,7 +21,7 @@ Usage: #example
 * qualification[narcoticPrescriptionLicenseNumber][=].identifier.value  = "999-54321"
 * qualification[narcoticPrescriptionLicenseNumber][=].code = $JP_MedicalLicenseCertificate_CS#narcotics-practitioner
 * qualification[medicalRegistrationNumber].identifier.system = $JP_IdSystemMedicalRegistrationNumber
-* qualification[medicalRegistrationNumber].identifier.value = "999999-00001"
+* qualification[medicalRegistrationNumber].identifier.value = "9999901"
 * qualification[medicalRegistrationNumber].code = $JP_MedicalLicenseCertificate_CS#medical-registration
 
 Instance: jp-practitioner-example-female-2
@@ -59,7 +59,7 @@ Usage: #example
 * name[=].given = "イチロウ"
 * gender = #male
 * qualification[0].identifier.system = $JP_IdSystemMedicalRegistrationNumber
-* qualification[=].identifier.value = "999999-00001"
+* qualification[=].identifier.value = "9999902"
 * qualification[=].code = $JP_MedicalLicenseCertificate_CS#medical-registration
 
 Instance: jp-practitioner-example-male-2
