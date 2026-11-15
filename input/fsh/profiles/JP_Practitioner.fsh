@@ -16,7 +16,7 @@ Description: "このプロファイルはPractitionerリソースに対して、
 * identifier ^definition = "An identifier that applies to this person in this role.  
 ある役割の人に適用される識別子。"
 * identifier ^comment = "【JP Core仕様】IDの名前空間を表す Practitioner.identifier.systemと ID値そのものを表す Practitioner.identifier.value の組み合わせとして表現する。  
-Practitioner.identifier.systemは以下の割り当てる。  
+Practitioner.identifier.systemは以下の通り割り当てる。  
 　  
 　- 医師の場合 : urn:oid:1.2.392.100495.20.3.41.医療機関識別OID番号  
 　- 歯科医師の場合、urn:oid:1.2.392.100495.20.3.42.医療機関識別OID番号  
