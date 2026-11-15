@@ -75,6 +75,6 @@ Usage: #example
 * name[+].extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation"
 * name[=].extension.valueCode = #SYL
 * name[=].text = "アイチ タロウ"
-* name[=].family = "チバ"
+* name[=].family = "アイチ"
 * name[=].given = "タロウ"
 * gender = #male
