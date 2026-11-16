@@ -86,7 +86,7 @@ Description: "このプロファイルは、Compositionリソースに対して�
   * ^label = "Problems Section"
   * ^short = "Problems Section"
   * code = $Loinc_CS#11450-4
-  * entry only Reference(Condition)
+  * entry only Reference(JP_Condition)
     * display MS
   * section ..0
 
