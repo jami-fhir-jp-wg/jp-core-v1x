@@ -16,7 +16,7 @@
 |拡張|説明|定義|値型|
 |:----|:----|:----|:----|
 |イベント日時|記録/記事が書かれた対象の日時<br/>《リソース直下ないしsection.section配下》|[JP_Common_Department]|CodeableConcept|
-|記事グループNo|記事グループの連番<br/>《section配下》|[JP_Common_GroupNo]|integer|
+|記事グループNo|記事グループの連番<br/>《section配下》|[JP_Composition_GroupNo]|integer|
 |記事順序|記事ごとの記載順序<br/>《section.section配下》|[JP_Composition_ItemSequence]|integer|
 |記事入力日時|記事ごとの入力日時<br/>《section.section配下》|[JP_Composition_DataEnterDateTime]|dateTime|
 |サムネイル画像|添付ファイルや添付画像のサムネイル画像<br/>《section.section配下》|[JP_Composition_ThumbnailImage]|Attachment|
