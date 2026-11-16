@@ -8,6 +8,7 @@ Alias: $iso21090-EN-representation = http://hl7.org/fhir/StructureDefinition/iso
 Alias: $patient-birthPlace = http://hl7.org/fhir/StructureDefinition/patient-birthPlace
 Alias: $patient-religion = http://hl7.org/fhir/StructureDefinition/patient-religion
 Alias: $units-of-time = http://hl7.org/fhir/ValueSet/units-of-time
+Alias: $version-number = http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber
 
 // hl7-terminology
 Alias: $diagnostic-service-sectionid-cs = http://terminology.hl7.org/CodeSystem/v2-0074
