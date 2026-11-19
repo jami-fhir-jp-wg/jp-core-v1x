@@ -106,4 +106,4 @@ RuleSet: PutCombinationParameter(param1)
 RuleSet: AddJpDesignation(code, display)
 * ^concept[+].code = #{code}
 * ^concept[=].designation[+].language = #ja
-* ^concept[=].designation[=].value = "{display}"
+* ^concept[=].designation[=].value = {display}
